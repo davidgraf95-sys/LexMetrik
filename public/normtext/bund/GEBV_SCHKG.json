@@ -2,35 +2,426 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
-      "id": "bund/GEBV_SCHKG/art_16",
+      "id": "bund/GEBV_SCHKG/art_1",
       "ebene": "bund",
       "quelle": "GEBV_SCHKG",
       "erlass": "GebV SchKG",
-      "artikel": "16",
-      "artikelLabel": "Art. 16",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für den Erlass, die doppelte Ausfertigung, die Eintragung und die Zustellung des Zahlungsbefehls bemisst sich nach der Forderung und beträgt:"
+          "text": "Diese Verordnung regelt die Gebühren und Entschädigungen der Ämter, Behörden und übrigen Organe, die in Anwendung des SchKG oder anderer Erlasse des Bundes im Rahmen einer Zwangsvollstreckung, eines Nachlassverfahrens oder einer Notstundung Verrichtungen vornehmen."
         },
         {
           "absatz": "2",
-          "text": "Die Gebühr für jede weitere doppelte Ausfertigung beträgt die Hälfte der Gebühr nach Absatz 1."
-        },
-        {
-          "absatz": "3",
-          "text": "Die Gebühr für jeden Zustellungsversuch beträgt 7 Franken je Zahlungsbefehl."
-        },
-        {
-          "absatz": "4",
-          "text": "Die Gebühr für die Eintragung eines vor Ausfertigung des Zahlungsbefehls zurückgezogenen Betreibungsbegehrens beträgt, ohne Rücksicht auf die Höhe der Forderung, 5 Franken."
+          "text": "Für Verrichtungen, die in dieser Verordnung nicht besonders tarifiert sind, kann eine Gebühr bis zu 150 Franken erhoben werden. Die Aufsichtsbehörde kann höhere Gebühren festsetzen, wenn die Schwierigkeit der Sache, der Umfang der Bemühungen oder der Zeitaufwand es rechtfertigt."
         }
       ],
       "stand": "2026-01-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_16",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "57484565807243216d3e58ba13f9cc5803b200dc0e9693a7edd8cf75b6daa398"
+      "sha": "4b7f665129383f2c6c8444cd43dcb5b4d97b6b3731ef7bbba9bc77d49ec3a2a8"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_2",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufsichtsbehörde überwacht die Anwendung der Verordnung; den Betreibungs- und Konkursbeamten, ausseramtlichen Konkursverwaltern, Sachwaltern und Liquidatoren steht das Recht der Weiterziehung zu (Art. 18 und 19 SchKG)."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c572a36c462b37fcda4a9f0f119e9d7a833de6b452756b901ef2a1e17cef7fde"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_3",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Verlangen einer Partei wird auf deren Kosten eine detaillierte Kostenrechnung, welche die entsprechenden Bestimmungen dieser Verordnung nennen muss, erstellt; die Gebühr bestimmt sich nach Artikel 9."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_3",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "5f39e0184f3c465aedbba4d2bbd57076bf24904055046d6a472a552113f93591"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_4",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Gebühr nach Zeitaufwand zu berechnen, so fällt die für den Gang oder die Reise beanspruchte Zeit ausser Betracht."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bruchteil einer halben Stunde zählt als halbe Stunde."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dauer der Verrichtung ist in der Urkunde anzugeben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_4",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9782e29d95b83c172668fd08535ceae3ee42ad15dcb635bcf69c393d98b27265"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_5",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Gebühr nach der Anzahl Seiten eines Schriftstückes zu berechnen, so gilt jede beschriebene Seite als ganze Seite."
+        },
+        {
+          "absatz": "2",
+          "text": "Seiten, die ausschliesslich Standardtexte wie Gesetzestexte oder Erläuterungen enthalten, werden nicht gezählt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "4a90c07a71a23f1dc26b7d181cc8e61d17dd4a529e0fcbcd9b8fd969addb7268"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_6",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist die Gebühr nach dem Betrag der in Betreibung gesetzten Forderung zu berechnen, so fallen nicht bezifferte Zinsen ausser Betracht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "bc478b5e5d1b075bed8be108954fb6d89845e8ec28aa4010fea367c6b941bb15"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_7",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Zustellung auf Ersuchen eines anderen Amtes, einschliesslich Eintragung, beträgt 10 Franken je Zustellung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_7",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "188b573217d009a25f3968d4fc149f0e9d2e5c431c45441ff6830381e519f9c3"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_8",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr wird verdoppelt, wenn die Verrichtung ausserhalb des Amtslokals in der Zeit von 20 Uhr bis 7 Uhr, an Sonntagen oder an staatlich anerkannten Feiertagen (Art. 56 Ziff. 1 SchKG) vorgenommen werden muss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_8",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "598510e455e8bac00e93c3621c5040c029ecbf614f67a0d6db4ca31b2018d37b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_9",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Erstellung eines nicht besonders tarifierten Schriftstücks beträgt:"
+        },
+        {
+          "absatz": "1",
+          "text": "bis Erfordert die Erstellung eines Schriftstücks mehr als eine Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        },
+        {
+          "absatz": "2",
+          "text": "Schriftstücke im Geldverkehr und Aktenexemplare sind gebührenfrei."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Fotokopien aus bestehenden Akten kann das Amt eine Gebühr von 2 Franken je Kopie erheben."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Amt kann für das Ausfüllen von Formularen für Begehren eine Gebühr bis zu 5 Franken erheben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_9",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "8bd3846e8446e0dc2ec41874514ffab95d221731a8a8c5f7dfab94af606ef6eb"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_10",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für ein Telefongespräch kann eine Gebühr von 5 Franken erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Versand eines Schriftstücks per Telefax kann eine Gebühr von 1 Franken erhoben werden. Umfasst das Schriftstück mehr als 5 Seiten, so erhöht sich die Gebühr um 1 Franken für jeweils weitere 5 Seiten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_10",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "a3f5e932d2441e8d3fb53474c2c419ac6e838f4e5b5dafb4321600228045fc7e"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_10_bis",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "10_bis",
+      "artikelLabel": "Art. 10bis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wurde mindestens einmal erfolglos versucht, dem Schuldner einen Zahlungsbefehl, eine Pfändungsankündigung oder eine Konkursandrohung zuzustellen, und wird er daraufhin schriftlich aufgefordert, das Dokument persönlich auf dem Betreibungsamt abzuholen, so beträgt die Gebühr für dieses Schreiben 8 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_10_bis",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "01082d6e6ff5fc05fa672be96b9f24f0b763027669d1b99bef142f95a2211a3c"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_11",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für eine öffentliche Bekanntmachung beträgt bis 40 Franken. Übersteigt der Zeitaufwand eine halbe Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "3bb5d1b54f80a6ef98667a5b442323bfa30d6f30ceb753814212175327ef99a8"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_12",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Vorlegung von Akten oder für Auskünfte aus Akten beträgt 9 Franken. Die Vorlegung von Forderungstiteln (Art. 73 SchKG) und Auskünfte darüber sind gebührenfrei."
+        },
+        {
+          "absatz": "2",
+          "text": "Übersteigt der Zeitaufwand eine halbe Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        },
+        {
+          "absatz": "3",
+          "text": "Für schriftliche Auskünfte wird zusätzlich die Gebühr nach Artikel 9 erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_12",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "0e7a535906d0d87cea673323f1c9762c8f04a22bd8259fb504c2e95b43c5860f"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_12_a",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für einen schriftlichen Auszug aus dem Betreibungsregister beträgt unabhängig von der Seitenzahl pauschal 17 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Registerauszug dem Antragsteller per Post, Fax oder elektronisch zugestellt, so beträgt die Gebühr inklusive Zustellung 18 Franken. Wünscht der Empfänger eine Zustellung per eingeschriebener Post, so beträgt die Gebühr inklusive Zustellung 22 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Sieht das Bundesrecht vor, dass gegenüber Gerichts- und Verwaltungsbehörden Auskunft zu erteilen ist, so wird für den schriftlichen Auszug aus dem Betreibungsregister von den betreffenden Behörden keine Gebühr erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_12_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "21d5b71650220608b1648d572973c6314066a90b5ac9d2fb6ead8a82f913d398"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_12_b",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "12_b",
+      "artikelLabel": "Art. 12b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für das Gesuch nach Artikel 8 a Absatz 3 Buchstabe d SchKG beträgt pauschal 40 Franken. Mit der Bezahlung der Gebühr sind sämtliche nachfolgenden Verfahrensschritte sowie alle Auslagen abgegolten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr ist in jedem Fall und unabhängig vom Ausgang des Verfahrens durch den Gesuchsteller zu bezahlen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_12_b",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "d711de79627aa553edff4d51760f09d6c8a892cf7c1de94f8819c791fb96ee27"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_13",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "1 Auslagen sind zu ersetzen. Als Auslagen gelten namentlich Verwaltungskosten, Post- und Fernmeldetaxen, Honorare für Sachverständige, Kosten für den Beizug der Polizei sowie Bankspesen. Die Mehrkosten einer Nachnahme trägt die Partei, welche sie verursacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Zustellung durch das Amt gelten als Auslagen nur die dadurch eingesparten Posttaxen."
+        },
+        {
+          "absatz": "3",
+          "text": "Keinen Anspruch auf Ersatz begründen:"
+        },
+        {
+          "absatz": "4",
+          "text": "Bedient sich das Amt bei der Zustellung eines Zahlungsbefehls, einer Pfändungsankündigung oder einer Konkursandrohung eines besonderen Zustelldienstes der Schweizerischen Post, so können die die Einschreibegebühr übersteigenden Kosten der sie verursachenden Partei überbunden werden, sofern vorher mindestens ein erfolgloser Zustellungsversuch stattgefunden hat."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_13",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "ec3250a40b2662c711e1c0faef816c03fe2ac5416c350fa4e0918a13ead79680"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_14",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Wegentschädigung, einschliesslich Transportkosten, beträgt 2 Franken für jeden Kilometer des Hin- und des Rückweges."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entschädigung für Mahlzeiten, Übernachtungen und Nebenauslagen bestimmt sich nach der Verordnung des EFD vom 6. Dezember 2001 zur Bundespersonalverordnung (VBPV)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde kann in besonderen Fällen die Entschädigung angemessen erhöhen, wenn die Entlegenheit des Ortes einen Aufwand an Zeit oder Kosten verursacht, den die in den Absätzen 1 und 2 vorgesehene Entschädigung offensichtlich nicht deckt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_14",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c0574f79ca2c94742517844d1805dd26ef076bb15220fa2182007d50ef707c36"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_15",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mehrere Verrichtungen sind soweit möglich miteinander zu besorgen; die Wegentschädigung ist auf die verschiedenen Verrichtungen zu gleichen Teilen umzulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden an mehreren Orten Verrichtungen besorgt, so ist die Entschädigung nach der Entfernung der Orte verhältnismässig auf die einzelnen Verrichtungen umzulegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_15",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "171ba1363ad5b3ea6762b0c606a16c6ef855e82f614b2168efe32ecdcba975b5"
     },
     {
       "id": "bund/GEBV_SCHKG/art_15_a",
@@ -66,6 +457,1091 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
       "sha": "45bef5a2be5c150eb47e0db93bd91f6193df57ee453241419e0825734b09d69b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_15_b",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "15_b",
+      "artikelLabel": "Art. 15b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Beitritt und den Zugang zum eSchKG-Verbund werden von jedem Teilnehmer im eSchKG-Verbund einmalige Kosten von 400 Franken erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Ab dem zweiten Kalenderjahr werden für die Erneuerung des Zugangs zum Verbund die folgenden jährlichen Gebühren erhoben:"
+        },
+        {
+          "absatz": "3",
+          "text": "Für das Ausstellen und für jede Erneuerung der Signaturzertifikate der Betreibungsämter werden 50 Franken erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist ein Beizug Dritter notwendig, so sind alle diesbezüglichen Auslagen, insbesondere Honorare für Sachverständige, von demjenigen Teilnehmer zu ersetzen, der diese Kosten verursacht hat."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Rechnungstellung erfolgt durch das BJ oder eine von ihm beauftragte Stelle."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_15_b",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9178ff7ce007bb0be08fec4f6e952dcd20aad58122b6815eeae65832e3f6f570"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_16",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Erlass, die doppelte Ausfertigung, die Eintragung und die Zustellung des Zahlungsbefehls bemisst sich nach der Forderung und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für jede weitere doppelte Ausfertigung beträgt die Hälfte der Gebühr nach Absatz 1."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für jeden Zustellungsversuch beträgt 7 Franken je Zahlungsbefehl."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühr für die Eintragung eines vor Ausfertigung des Zahlungsbefehls zurückgezogenen Betreibungsbegehrens beträgt, ohne Rücksicht auf die Höhe der Forderung, 5 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_16",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "57484565807243216d3e58ba13f9cc5803b200dc0e9693a7edd8cf75b6daa398"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_17",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Feststellung der Miet- und Pachtverhältnisse bei Grundstücken beträgt 40 Franken je halbe Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_17",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "e7da3590c99311f12fef5f049458659689c162aa2a166178bd4fd86177213773"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_18",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die mit dem Rechtsvorschlag verbundenen Verrichtungen sind gebührenfrei."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_18",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "5b78f169866f7fd7403142a123a888f81c71fc6440b34ed66a3fa04b0b25ba48"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_19",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Entgegennahme einer Zahlung und deren Überweisung an einen Gläubiger bemisst sich nach der betreffenden Summe und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Einzahlungen des Amtes auf ein Depot und Abhebungen sind gebührenfrei (Art. 9 SchKG)."
+        },
+        {
+          "absatz": "3",
+          "text": "Auslagen für die Überweisung von Zahlungen an einen Gläubiger gehen zu seinen Lasten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_19",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "d12fccaab6f1fca19a4233e5cf445ae748b26eb61b372a85934a2c08c7f5cd97"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_20",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Vollzug einer Pfändung, einschliesslich Abfassung der Pfändungsurkunde, bemisst sich nach der Forderung und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für eine fruchtlose Pfändung beträgt die Hälfte der Gebühr nach Absatz 1, jedoch mindestens 10 Franken. Für einen erfolglosen Pfändungsversuch beträgt die Gebühr 10 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Erfordert der Vollzug mehr als eine Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühr für die Protokollierung des Fortsetzungsbegehrens, das infolge Zahlung, Rückzug des Fortsetzungsbegehrens, Einstellung oder Aufhebung der Betreibung zu keiner Pfändung führt, beträgt 5 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_20",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9497871022bed99a5db31ef2d385bcfa0152c35261842692d3399c1789c4d717"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_21",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für den Arrestvollzug und für die Aufnahme eines Retentionsverzeichnisses bemisst sich nach Artikel 20."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_21",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "b1d5cf49f7a0cce89949cd8bab53591e1b7e45638294d7621822b8a38f947bdc"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_22",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für eine Ergänzung der Pfändung (Art. 110 und 111 SchKG) und für eine Nachpfändung von Amtes wegen (Art. 145 SchKG) oder auf Begehren eines Gläubigers bestimmt sich nach Artikel 20."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Vormerkung der Teilnahme eines weiteren Gläubigers an der Pfändung ohne Ergänzung derselben beträgt 6 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für die Revision der Einkommenspfändung (Art. 93 SchKG) beträgt die Hälfte der Gebühr nach Artikel 20 Absatz 1."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_22",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9f366514eb93293ad8d7f7df3efc5af9c15342e47d6c5079c4fbf76405c60f77"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_23",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gleichzeitige Pfändung für mehrere Forderungen gegen denselben Schuldner gilt als eine Pfändung. Die Gebühr bemisst sich nach dem Gesamtbetrag der Forderungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Gebühren und Auslagen sind auf die einzelnen Betreibungen im Verhältnis der Forderungsbeträge zu verteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Verursacht ein Gläubiger zusätzliche Gebühren und Auslagen, so sind diese einzeln nach dem Verursacherprinzip zu verrechnen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_23",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "f149752bc9c70a464e8abc80a90df4d0bb8cf2515046e051b90244f7e6a86145"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_24",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Abschrift der Pfändungsurkunde (Art. 112 SchKG) oder eines Nachtrages dazu (Art. 113 SchKG) bestimmt sich nach Artikel 9 Absatz 1."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_24",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "874cf0b4da293db482d05889da9fdd9666010331cf8b8a5af50f84f02cb106ef"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_25",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Vorlegung der Beweismittel für einen Drittanspruch im Pfändungs‑, Arrest- oder Retentionsverfahren geht zu Lasten des Gesuchstellers und bestimmt sich nach Artikel 12."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_25",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c5d5f58bc29234b110e7d609449f167ebdf7a04c610710f73e2d28473e581d95"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_26",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Verwahrung von gepfändeten oder arrestierten Wertschriften sowie von Wertschriften, die zur Faustpfandverwertung eingeliefert wurden, beträgt monatlich 0,3 Promille vom Kurswert oder, wenn dieser nicht feststellbar ist, vom Schätzungswert, höchstens jedoch 500 Franken insgesamt je Verwahrung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Verwahrung von Pfandtiteln, die beim Gläubiger in der Betreibung auf Grundpfandverwertung eingefordert wurden, beträgt monatlich 0,1 Promille vom Nennwert, höchstens jedoch 500 Franken insgesamt je Verwahrung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für die Verwahrung einer anderen Wertsache beträgt je Stück 5 Franken monatlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Amt setzt für die Verwahrung von Gebrauchs- oder Verbrauchsgegenständen, unter Berücksichtigung des Schätzungswertes, eine angemessene Gebühr fest."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_26",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "95eb4dedd9009374300fa49ea87f754f41d961cf5cc14333336cfccb379cd0ad"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_27",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Verwaltung von Grundstücken, einschliesslich Abschluss von Miet- oder Pachtverträgen sowie Buch- und Rechnungsführung, beträgt 5 Prozent der während der Dauer der Verwaltung erzielten oder erzielbaren Miet- oder Pachtzinse."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird das Grundstück nicht genutzt, so beträgt die jährliche Gebühr 1 Promille des Schätzungswertes des Grundstücks."
+        },
+        {
+          "absatz": "3",
+          "text": "Die tatsächlichen Verwaltungskosten (Unkosten, Barauslagen) gelten als Auslagen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Aufsichtsbehörde kann in besonderen Fällen die Gebühr angemessen erhöhen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_27",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "24bf199f60277ed0c671302590ede2a3fb56ee5c40fbc2b0f9e10f588918f0e2"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_28",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gebühren und Auslagen für die Schätzung von Faustpfändern und Grundstücken bei Betreibung auf Pfandverwertung, einschliesslich Abfassung der Schätzungsurkunde, bestimmen sich nach Artikel 20."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_28",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9162c89312058ecde03f90edd3fc6ee4242385c84fc243c19ba9a243eb96761b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_29",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Aufstellung des Lastenverzeichnisses beträgt 300 Franken für jedes Grundstück."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Festsetzung der Steigerungsbedingungen beträgt 150 Franken für jedes Grundstück."
+        },
+        {
+          "absatz": "3",
+          "text": "Sind für bewegliche Sachen besondere Steigerungsbedingungen festzusetzen, so beträgt die Gebühr 100 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühr für die Bereinigung des Lastenverzeichnisses und der Steigerungsbedingungen für weitere Steigerungen beträgt die Hälfte der Gebühren nach den Absätzen 1 und 2."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_29",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "a7435bc6a32b1b7d6d3f381b95518d10f3516648b3540002149728005e3c2143"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_30",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Vorbereitung und Durchführung einer Versteigerung, eines Freihandverkaufs oder eines Ausverkaufs, einschliesslich Abfassung des Protokolls, bemisst sich:"
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beträgt:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr darf auf keinen Fall den erzielten Erlös übersteigen."
+        },
+        {
+          "absatz": "4",
+          "text": "Findet sich kein Erwerber, so bemisst sich die Gebühr nach dem Schätzungswert und vermindert sich um die Hälfte, beträgt aber höchstens 1000 Franken."
+        },
+        {
+          "absatz": "5",
+          "text": "Dauert die Verwertung länger als eine Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Kosten für Gehilfen und Lokale gelten als Auslagen."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Gebühr für die Eintragung des Verwertungsbegehrens beträgt 5 Franken, wenn die Verwertung infolge Zahlung, Rückzug des Begehrens oder Einstellung der Betreibung nicht durchgeführt wird. Erfolgt der Rückzug oder die Zahlung erst nach der Bekanntmachung, so bemisst sich die Gebühr nach Absatz 4."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_30",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "4f4cc72b2673a7e12db715c539b1713a37f81b34449f8eea0923db9ae2b74a27"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_31",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Werden Gegenstände aus verschiedenen Betreibungen gleichzeitig verwertet, so ist die Verwertungsgebühr nach dem Gesamterlös zu berechnen. Dieser Betrag ist auf die einzelnen Betreibungen zu verteilen, und zwar im Verhältnis des Erlöses aus den betreffenden Objekten oder, wenn sich kein Erwerber findet, im Verhältnis zu den Schätzungswerten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_31",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9d1694047ea7e97f0e60866d9b9bf750587f78d546ec710ee366b3901f93b9e3"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_32",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die doppelt auszufertigende Mitteilung einer Handänderung an das Grundbuchamt sowie die Veranlassung der erforderlichen Löschungen und Umschreibungen (Art. 150 Abs. 3 SchKG) beträgt 100 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_32",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "26de1d9a5503dfb651e715f0f3d95271ab350e7f4e6f4610f6f4fee2de70bbd3"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_33",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für den Einzug des Verwertungserlöses und der Zahlungen aus Einkommenspfändungen und deren Überweisung an einen Gläubiger bestimmt sich nach Artikel 19; überbundene Beträge gelten nicht als Verwertungserlös."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_33",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9813d562dd6e3178641004d0c8b8e2cc3e34adf1481219bed5de8d2023160fb0"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_34",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Erstellung eines Kollokations- und Verteilungsplanes beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Abrechnung einer Einkommenspfändung, für die kein Verteilungsplan notwendig ist, beträgt 10 Franken je Betreibung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_34",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "e78f882c18d27b87e469aa072b03d8ad7041b153f3d5df87bda863104c51edbf"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_35",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Anweisung von Forderungen des Schuldners an Zahlungs Statt (Art. 131 Abs. 1 SchKG) bestimmt sich sinngemäss nach Artikel 19 Absatz 1."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Anweisung von Forderungen des Schuldners zur Eintreibung (Art. 131 Abs. 2 SchKG) beträgt 20 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_35",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "01ebe695d3117cc26915e2f2c17418dd9cc68e99914e42fd2bbf78506e46bd65"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_36",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Feststellung, dass eine in bar zu tilgende Forderung auf andere Weise abgegolten wird, beträgt 20 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_36",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c3ee8c509deb5c82531b92d41a80afa77466370d2313f4d8ea7933e3489d3edc"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_37",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Verrichtungen bei der Eintragung von Eigentumsvorbehalten nach Verordnung vom 19. Dezember 1910 betreffend die Eintragung der Eigentumsvorbehalte geht zu Lasten des Antragstellers und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Löschung einer Eintragung und die Bestätigung von Verrichtungen im Sinne von Absatz 1 Buchstaben a und b auf dem Vertrag sind gebührenfrei."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Falle des Verkaufs derselben Sache an mehrere Erwerber mit Wohnsitz im gleichen Registerkreis ist nur eine Gebühr geschuldet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_37",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "93422e9dd9cec42e426efeb9a55eec18f255d0d638310de8f95dbb27bddb6eb5"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_38",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Festsetzung des Kompetenzbetrages ausserhalb der Zwangsvollstreckung geht zu Lasten des Gesuchstellers und beträgt 40 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Dauert die Verrichtung länger als eine Stunde, so beträgt die Gebühr 40 Franken für jede weitere halbe Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_38",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "02ae668de676b7a2dea1cfbf854a6e983922ac6189c4deb2f6e6da08ea0fd0ac"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_39",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für den Erlass der Konkursandrohung bestimmt sich nach Artikel 16."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_39",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "dffb467a7dd3a7c20bc1202966a92bdc897ec8868aa7363082cea6f30611ef04"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_40",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Erstellung eines Güterverzeichnisses (Art. 162 und 163 SchKG) beträgt 40 Franken je halbe Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_40",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c3e2611ad6c39a3bb8493aa1a8c6bca36a491174e8594bb83de546982d4abd5a"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_41",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Protokollierung des Rückzugs einer Betreibung und die Löschung eines Verlustscheines sind gebührenfrei."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_41",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "06c155291d6276b7b0632c1b6362e7f65f15a9ec51d11493f593818e69446777"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_42",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für eine in den Artikeln 16–41 nicht besonders tarifierte Eintragung beträgt 5 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_42",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "e9b1a9dbc2a21f619808fa84d2da53e28e37f2a20cf5704728ae51b90d8b1c4c"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_43",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühren nach den Artikeln 44–46 gelten sowohl für die amtliche wie für die ausseramtliche Konkursverwaltung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_43",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "f6446ad4874e28a32a7df110f829fcbf0f84fa81e6887dac696d5bdb3d983d5a"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_44",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr beträgt 50 Franken je halbe Stunde für die:"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_44",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "8bc395ded6c0b9422f5ca80f7622ef162cd4ea855434dfbab59c1c34328379d2"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_45",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die Ausarbeitung des Berichtes an die Gläubigerversammlung, für deren Leitung und für die Protokollierung bemisst sich nach den durch das Inventar ausgewiesenen Aktiven und beträgt:"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_45",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "884fe1f065808770e405f198024c8b4d637dbbe37283be2122bdb7fce453f7b3"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_46",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Im übrigen bestimmen sich die Gebühren sinngemäss nach:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entschädigung je halbe Sitzungsstunde beträgt:"
+        },
+        {
+          "absatz": "4",
+          "text": "Für Verrichtungen ausserhalb von Sitzungen beträgt die Entschädigung für den Präsidenten und die übrigen Mitglieder des Gläubigerausschusses 50 Franken je halbe Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_46",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "e2bf5358cf7763ac9b2b3cd9c4ae3624a0d8eadd691e068c6c3a1a4068894c10"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_47",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Verfahren, die besondere Abklärungen des Sachverhaltes oder von Rechtsfragen erfordern, setzt die Aufsichtsbehörde das Entgelt für die amtliche und die ausseramtliche Konkursverwaltung fest; sie berücksichtigt dabei namentlich die Schwierigkeit und die Bedeutung der Sache, den Umfang der Bemühungen sowie den Zeitaufwand."
+        },
+        {
+          "absatz": "2",
+          "text": "Ferner kann in solchen Verfahren die Aufsichtsbehörde sowohl bei amtlicher wie bei ausseramtlicher Konkursverwaltung die Entschädigungsansätze für die Mitglieder des Gläubigerausschusses (Art. 46 Abs. 3 und 4) erhöhen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_47",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "e11f1a5785916693cc2c97c3090b8cf4c8323788cf2f97fdfde582076fbca2f7"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_48",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern diese Verordnung nichts anderes vorsieht, bestimmt sich die Gebühr für einen gerichtlichen Entscheid in betreibungsrechtlichen Summarsachen (Art. 251 der Schweizerischen Zivilprozessordnung, ZPO) wie folgt nach dem Streitwert:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für den gerichtlichen Entscheid über die Vollstreckbarkeit eines ausländischen Entscheids gemäss Artikel 271 Absatz 3 SchKG beträgt höchstens 1000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Keine Entscheidgebühr wird erhoben, wenn es um die Sicherung oder Vollstreckung eines Anspruchs aus einer Streitigkeit gemäss Artikel 114 ZPO geht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_48",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "300a4ac2b1bf8d7028d930bbac3fec388d02e3ca393e7c1c16ebb81b11fca215"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_49_50",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "49_50",
+      "artikelLabel": "Art. 4950",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "und 50 29 29 Aufgehoben durch Ziff. II 5 der V vom 18. Juni 2010 über die Anpassung von Verordnungen an die Schweizerische Zivilprozessordnung, mit Wirkung seit 1. Jan. 2011 ( AS 2010 3053 )."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_49_50",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "1ce18f857aa16cea28295193dfb49668d8c51011578ac76ac816b073876b13c9"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_51",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für einen Entscheid über Aufhebung des Rechtsstillstandes (Art. 57 d SchKG) beträgt 40–150 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_51",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "619a4cf0cd9541ef1b155d003f3dfc5ce05ac52c69e76841c9a6352e67ef1991"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_52",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für den Entscheid über die Konkurseröffnung beträgt:"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_52",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "58b0b3aa5ab5751cc8f8abf7d60b33631465efa997bab03d2d25a7deb596a5ba"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_53",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr beträgt 40–200 Franken für:"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_53",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "d13aef945d4360b9e0f094ba89a0f6df0ce726b9a0c158beebfef5456504c88c"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_54",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für Entscheide des Nachlassgerichts beträgt 200–2500 Franken; das Nachlassgericht kann sie in besonderen Fällen bis auf 5000 Franken erhöhen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_54",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "ded30dcc9d980310ebd47eda18fc387017abb30b95333f9fe28582059136c93b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_55",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Nachlassgericht setzt das Honorar des Sachwalters sowie im Falle eines Liquidationsvergleichs das Honorar der Liquidatoren und der Mitglieder des Gläubigerausschusses pauschal fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Falle eines Nachlassvertrages im Konkurs setzt die Aufsichtsbehörde das Honorar der Konkursverwaltung pauschal fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Festsetzung des Honorars nach den Absätzen 1 und 2 werden namentlich die Schwierigkeit und die Bedeutung der Sache, der Umfang der Bemühungen, der Zeitaufwand sowie die Auslagen berücksichtigt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_55",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "831775d076bb854a5ce98e6b0cad8e3942b66eb03155b01a1aff91aa924acf98"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_56",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Bewilligung, Verlängerung oder Widerruf der Stundung beträgt 40–200 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Festsetzung des Honorars des Sachwalters gilt Artikel 55 sinngemäss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_56",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "d64b1c5daed426783e8737aea75a590fb3527700a7dee6d8ecdb15194bd635f7"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_57",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gebühren und Honorare im Notstundungsverfahren bestimmen sich sinngemäss nach den Artikeln 40, 54 und 55."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_57",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "37335f73936fa68aab3c5442b09b45615e8973b46ff6ee96d9b4233bf970a697"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_58_60",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "58_60",
+      "artikelLabel": "Art. 5860",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "30 30 Aufgehoben durch Anhang 1 Ziff. 3 der Finanzmarktinfrastrukturverordnung vom 25. Nov. 2015, mit Wirkung seit 1. Jan. 2016 ( AS 2015 5413 )."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_58_60",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "9f4b83add26b251b1a045f21ab66eba4d061c861a9ed72280731700ef0d5b64a"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_61",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das obere Gericht, an das eine betreibungsrechtliche Summarsache (Art. 251 ZPO) weitergezogen wird, kann für seinen Entscheid eine Gebühr erheben, die höchstens das Anderthalbfache der für die Vorinstanz zulässigen Gebühr beträgt."
+        },
+        {
+          "absatz": "2",
+          "text": "Unentgeltlich sind:"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_61",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "ef471bf1c8480e4ea203076d02407a82ac0c33f77b881ac7c640095ff53bd60b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_62",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Im Beschwerdeverfahren nach den Artikeln 17–19 des SchKG darf keine Parteientschädigung zugesprochen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_62",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "c919efc2ec7c179b7630445d2d0a908c04b7c1711c72bbcf75f8bf8bdc59731b"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_63",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebührenverordnung vom 7. Juli 1971 zum Bundesgesetz über Schuldbetreibung und Konkurs wird aufgehoben. Sie findet jedoch Anwendung auf Verrichtungen, die bis 31. Dezember 1996 vorgenommen wurden und für welche später abgerechnet wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Verordnung tritt am 1. Januar 1997 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_63",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "807e6d72e08c9aca29df5a8f1c0a07d08343f4c7d8ee26bb04d7e5e661f0151f"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_63_a",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "63_a",
+      "artikelLabel": "Art. 63a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Handlungen, die vor Inkrafttreten der Änderung vom 28. April 2021 vorgenommen wurden, jedoch erst nach diesem Zeitpunkt abgerechnet werden, findet das bisherige Recht Anwendung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_63_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "7bb05667b25a51c52fd4a9b5d1a8e08fde642ebde4a3f60838aa4d7fdd6388fb"
     }
   ]
 }

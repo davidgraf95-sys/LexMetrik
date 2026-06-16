@@ -2,6 +2,106 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
+      "id": "bund/STG/art_1",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund erhebt Stempelabgaben:"
+        },
+        {
+          "absatz": "2",
+          "text": "Werden bei den in Absatz 1 erwähnten Rechtsvorgängen keine Urkunden ausgestellt oder umgesetzt, so treten an ihre Stelle die der Feststellung der Rechtsvorgänge dienenden Geschäftsbücher oder sonstigen Urkunden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "a7d7377d5c175a937a29ddaacaa79a03dabb87d68aaf7af37989a6b739e818b9"
+    },
+    {
+      "id": "bund/STG/art_2",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "13 13 Aufgehoben durch Ziff. I des BG vom 5. Okt. 1984, mit Wirkung seit 1. Jan. 1986 ( AS 1985 1963 ; BBl 1981 III 737 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "6bea1c50880f1f440b48e0dff31a51399c5ba72ca58532db0851066e255f1461"
+    },
+    {
+      "id": "bund/STG/art_3",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Urkunden, welche dieses Gesetz als Gegenstand einer Stempelabgabe oder steuerfrei erklärt, dürfen von den Kantonen nicht mit gleichgearteten Abgaben oder Registrierungsgebühren belastet werden. Anstände, die sich auf Grund dieser Bestimmung ergeben, beurteilt das Bundesgericht als einzige Instanz (Art. 116 des Bundesrechtspflegegesetzes vom 16. Dez. 1943 – OG)."
+        },
+        {
+          "absatz": "2",
+          "text": "Zu den steuerfreien Urkunden gehören auch die Frachturkunden im Gepäck-, Tier- und Güterverkehr der Schweizerischen Bundesbahnen und der vom Bund konzessionierten Transportunternehmen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_3",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "9c976b313221cce996c7a04f2932a96a7e5282fc430880144312528d222fe8df"
+    },
+    {
+      "id": "bund/STG/art_4",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Inländer ist, wer im Inland Wohnsitz, dauernden Aufenthalt, statutarischen oder gesetzlichen Sitz hat oder als Unternehmen im inländischen Handelsregister eingetragen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Investmentgesellschaften mit festem Kapital nach Artikel 110 KAG werden in diesem Gesetz den Kapitalgesellschaften gleichgestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Obligationen sind schriftliche, auf feste Beträge lautende Schuldanerkennungen, die zum Zwecke der kollektiven Kapitalbeschaffung oder Anlagegewährung oder der Konsolidierung von Verbindlichkeiten in einer Mehrzahl von Exemplaren ausgegeben werden, namentlich Anleihensobligationen mit Einschluss der Partialen von Anleihen, für welche ein Grundpfandrecht gemäss Artikel 875 des Zivilgesetzbuches besteht, Rententitel, Pfandbriefe, Kassenobligationen, Kassen- und Depositenscheine sowie Schuldbuchforderungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Den Obligationen gleichgestellt sind:"
+        },
+        {
+          "absatz": "5",
+          "text": "Geldmarktpapiere sind Obligationen mit einer festen Laufzeit von nicht mehr als zwölf Monaten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_4",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "edc10f950c7423e7bcd1fe62ef87b1dbae9587801a7bf109fcac351687bf8f6a"
+    },
+    {
       "id": "bund/STG/art_5",
       "ebene": "bund",
       "quelle": "STG",
@@ -25,6 +125,25 @@
       "sha": "2e920c7e34d66151bbf2707b3e4adcddf86c500e3785a60073db93c91c8cf52d"
     },
     {
+      "id": "bund/STG/art_5_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "5_a",
+      "artikelLabel": "Art. 5a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "a 29 29 Eingefügt durch Ziff. I des BG vom 4. Okt. 1991 ( AS 1993 222 ; BBl 1991 IV 497 521 ). Aufgehoben durch Anhang Ziff. 2 des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), mit Wirkung seit 1. März 2012 ( AS 2012 811 ; BBl 2011 4717 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "c56530befe298d5aa4d88c0053d23fb1686630d7a66b171dbb1209d9f01fb993"
+    },
+    {
       "id": "bund/STG/art_6",
       "ebene": "bund",
       "quelle": "STG",
@@ -46,6 +165,29 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
       "sha": "69efdf117e1d0d387b77228cebfdef2e0fcd47ad33715c0999d1430f47bafe1c"
+    },
+    {
+      "id": "bund/STG/art_7",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabeforderung entsteht:"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_7",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "2cbaaf3654ad480185780cfe0ffea2813d16d4656aee447e30d49417d50c07c0"
     },
     {
       "id": "bund/STG/art_8",
@@ -73,6 +215,1250 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
       "sha": "3a2e96826062e25caacf58cec8376e0343da2606854401db791f4fbec1cf41ae"
+    },
+    {
+      "id": "bund/STG/art_9",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Von den Einzahlungen, die während eines Geschäftsjahres auf das Genossenschaftskapital gemacht werden, wird die Abgabe nur soweit erhoben, als diese Einzahlungen die Rückzahlungen auf dem Genossenschaftskapital während des gleichen Geschäftsjahres übersteigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Auf den Beträgen , die der Gesellschaft im Rahmen eines Kapitalbands nach den Artikeln 653 s ff. des Obligationenrechts zufliessen, wird die Abgabe nur soweit erhoben, als diese Zuflüsse die Rückzahlungen im Rahmen dieses Kapitalbands übersteigen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_9",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "768a74f2780db6bd2067301342748482964b3c2ca988b4a402813db43ee4e4bd"
+    },
+    {
+      "id": "bund/STG/art_9_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "9_a",
+      "artikelLabel": "Art. 9a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "a 63 63 Eingefügt durch Ziff. I des BG vom 4. Okt. 1991 ( AS 1993 222 ; BBl 1991 IV 497 521 ). Aufgehoben durch Anhang Ziff. 2 des BG vom 30. Sept. 2011 (Stärkung der Stabilität im Finanzsektor), mit Wirkung seit 1. März 2012 ( AS 2012 811 ; BBl 2011 4717 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_9_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "69711e1697a9185abb49e7f946d7f494a752866fb20e47fec0f0da32ea5c6f11"
+    },
+    {
+      "id": "bund/STG/art_10",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Beteiligungsrechte ist die Gesellschaft oder Genossenschaft abgabepflichtig. Für die beim Handwechsel der Mehrheit von Beteiligungsrechten (Art. 5 Abs. 2 Bst. b ) geschuldete Abgabe haftet der Veräusserer der Beteiligungsrechte solidarisch."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "und 4 …"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_10",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "3c7dc3973f7be0f977f8e9f9840112d0e593d5e184588abd089ebfa9496e1aae"
+    },
+    {
+      "id": "bund/STG/art_11",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Abgabe wird fällig:"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "4f905f3c970c04c0be4f766414c2247fdccf1e5ef5019e60fe9dbefe4946859b"
+    },
+    {
+      "id": "bund/STG/art_12",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wenn bei der offenen oder stillen Sanierung einer Aktiengesellschaft, Kommanditaktiengesellschaft, Gesellschaft mit beschränkter Haftung oder Genossenschaft die Erhebung der Emissionsabgabe eine offenbare Härte bedeuten würde, so soll die Abgabe gestundet oder erlassen werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_12",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "e49678ecd143af3be18a530b8cc2c59fa76b63c951a745d8452dbb4b709637f5"
+    },
+    {
+      "id": "bund/STG/art_13",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegenstand der Abgabe ist die entgeltliche Übertragung von Eigentum an den in Absatz 2 bezeichneten Urkunden, sofern eine der Vertragsparteien oder einer der Vermittler Effektenhändler nach Absatz 3 ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuerbare Urkunden sind:"
+        },
+        {
+          "absatz": "3",
+          "text": "Effektenhändler sind:"
+        },
+        {
+          "absatz": "4",
+          "text": "Als inländische Einrichtungen der beruflichen Vorsorge und der gebundenen Vorsorge nach Absatz 3 Buchstabe d gelten:"
+        },
+        {
+          "absatz": "5",
+          "text": "Als inländische Einrichtungen der Sozialversicherung nach Absatz 3 Buchstabe f gelten: der Ausgleichsfonds der Alters- und Hinterlassenenversicherung sowie der Ausgleichsfonds der Arbeitslosenversicherung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_13",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "25ae71e1aede191cc744f84f66d623aba6e7722958a005db113e32c79b93df3b"
+    },
+    {
+      "id": "bund/STG/art_14",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Abgabe sind ausgenommen:"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Der gewerbsmässige Effektenhändler gemäss Artikel 13 Absatz 3 Buchstabe a und b Ziffer 1 ist von dem auf ihn selbst entfallenden Teil der Abgaben befreit, soweit er Titel aus seinem Handelsbestand veräussert oder zur Äufnung dieses Bestandes erwirbt. Als Handelsbestand gelten die aus steuerbaren Urkunden zusammengesetzten Titelbestände, die sich aus der Handelstätigkeit der gewerbsmässigen Händler ergeben, nicht aber Beteiligungen und Bestände mit Anlagecharakter."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_14",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "b08c56a342470327ab9ba65f51df2cd562e158c04a063dce9c7febe1e9da0167"
+    },
+    {
+      "id": "bund/STG/art_15",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabeforderung entsteht mit dem Abschluss des Geschäftes."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei bedingten oder ein Wahlrecht einräumenden Geschäften entsteht die Abgabeforderung mit der Erfüllung des Geschäftes."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_15",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "5eedf8398a3071eb7d254e02176b5645bdba04628d9e2443604d82751f884d3d"
+    },
+    {
+      "id": "bund/STG/art_16",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe wird auf dem Entgelt berechnet und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht das Entgelt nicht in einer Geldsumme, so ist der Verkehrswert der vereinbarten Gegenleistung massgebend."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_16",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "40a5da5ffa90f4abbeae8ccd7b99972b3b8467ae98fd098408b65b51914bc4af"
+    },
+    {
+      "id": "bund/STG/art_17",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abgabepflichtig ist der Effektenhändler."
+        },
+        {
+          "absatz": "2",
+          "text": "Er schuldet eine halbe Abgabe:"
+        },
+        {
+          "absatz": "3",
+          "text": "Der Effektenhändler gilt als Vermittler, wenn er"
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "e6d12f760495943daaa4f31d582f31e8f425f16aedd5701666be8729caf7b928"
+    },
+    {
+      "id": "bund/STG/art_17_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Abgabe nach Artikel 17 Absatz 2 befreit sind:"
+        },
+        {
+          "absatz": "2",
+          "text": "Als ausländische Einrichtungen der Sozialversicherung gelten Einrichtungen, welche die gleichen Aufgaben wie inländische Einrichtungen nach Artikel 13 Absatz 5 erfüllen und einer der Bundesaufsicht vergleichbaren Aufsicht unterstellt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Als ausländische Einrichtungen der beruflichen Vorsorge gelten Einrichtungen:"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "17a2144efa263f5a7618531e1c2121649496a9fbd94372c5b8575a239c419802"
+    },
+    {
+      "id": "bund/STG/art_18",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Effektenhändler gilt als Vertragspartei, wenn er die Urkunden bei ihrer Emission fest übernimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Übernimmt der Effektenhändler die Urkunden als Unterbeteiligter von einem andern Effektenhändler und gibt er sie während der Emission weiter, so ist er von dem auf ihn entfallenden Teil der Abgaben ausgenommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Effektenhändler gilt ferner als Vertragspartei, wenn er Ausweise über Unterbeteiligungen an Darlehensforderungen ausgibt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_18",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "11f91f8777ce3a3f4d820e046301752ff2884ab2352b435e3f5d89ca58852948"
+    },
+    {
+      "id": "bund/STG/art_19",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist beim Abschluss eines Geschäftes eine ausländische Bank, ein ausländischer Börsenagent oder eine zentrale Gegenpartei im Sinne des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 Vertragspartei, so entfällt die diese Partei betreffende halbe Abgabe. Das Gleiche gilt für Titel, die von einer als Gegenpartei auftretenden Börse bei der Ausübung von standardisierten Derivaten übernommen oder geliefert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_19",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "099c7cb2d3f1bc3c2a8aa0b5ecb755eb18477144e427efff056f9269ac6403cb"
+    },
+    {
+      "id": "bund/STG/art_19_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer im Wohnsitzstaat einer natürlichen Person einer staatlichen Bewilligungs- oder Kontrollpflicht untersteht und ausschliesslich die Melde- und Steuerpflichten für deren in der Schweiz gehaltene Vermögenswerte erfüllt, ist für die damit verbundenen Geschäfte von der Umsatzabgabe befreit."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_19_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "89a213b6068b625a1d2d5ba80877acd2bc230d8f4b713bb4b41127ded5a7779d"
+    },
+    {
+      "id": "bund/STG/art_20",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Abgabe wird 30 Tage nach Ablauf des Vierteljahres fällig, in dem die Abgabeforderung entstanden ist (Art. 15)."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_20",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "fd373165d9df8113b0011025dc5612f16cb1f293d60bc7004402b517daed49f7"
+    },
+    {
+      "id": "bund/STG/art_21",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gegenstand der Abgabe sind die Prämienzahlungen für Versicherungen,"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_21",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "cea04f2eda8a682590408cf456631a350fdfd0e0e07effc4535604ce36ddcf28"
+    },
+    {
+      "id": "bund/STG/art_22",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Von der Abgabe ausgenommen sind die Prämienzahlungen für die"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_22",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "f94819fecf13256404a6ce28b9b13c71a7b2c37019692e9550f52375713bb981"
+    },
+    {
+      "id": "bund/STG/art_23",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Abgabeforderung entsteht mit der Zahlung der Prämie."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_23",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "a330f324d2d7f91f826c6b37b08068ec8c0381daf4c8a2313c4369beef8493ce"
+    },
+    {
+      "id": "bund/STG/art_24",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe beträgt 5 Prozent der Barprämie; für die Lebensversicherung beträgt sie 2,5 Prozent der Barprämie."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abgabepflichtigen haben in ihren Büchern für jeden einzelnen Versicherungszweig die steuerbaren und die befreiten Prämien gesondert auszuweisen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_24",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "e7afb15dea8045f99d2ea9af6f35ec45b70174659ec151b934e7fc03d2da3096"
+    },
+    {
+      "id": "bund/STG/art_25",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Abgabepflichtig ist der Versicherer. Ist die Versicherung mit einem ausländischen Versicherer abgeschlossen worden (Art. 21 Bst. b ), so hat der inländische Versicherungsnehmer die Abgabe zu entrichten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_25",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "22902a709a36d242ced719f866d0a477c6e17e4d4fe5060c1c199bcb6a687b8a"
+    },
+    {
+      "id": "bund/STG/art_26",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Abgabe wird 30 Tage nach Ablauf des Vierteljahres fällig, in dem die Abgabeforderung entstanden ist (Art. 23)."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_26",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "5305757c916c8f4bb77a83d46c63b6e42a3631f46365e486e7a3a68039ca4aa1"
+    },
+    {
+      "id": "bund/STG/art_27",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Festsetzung der Abgaben ist der wirkliche Inhalt der Urkunden oder Rechtsvorgänge massgebend; von den Beteiligten gebrauchte unrichtige Bezeichnungen und Ausdrucksweisen fallen nicht in Betracht."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann der für die Abgabepflicht oder für die Abgabebemessung massgebende Sachverhalt nicht eindeutig abgeklärt werden, so ist er durch Abwägung aller auf Grund pflichtgemässer Ermittlung festgestellten Umstände zu erschliessen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_27",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "66fb7445a3b09cbe4907ed8b2242277263e01b4589c6c0f65a0a26abeaf62fa8"
+    },
+    {
+      "id": "bund/STG/art_28",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lautet der für die Abgabeberechnung massgebende Betrag auf eine ausländische Währung, so ist er auf den Zeitpunkt der Entstehung der Abgabeforderung (Art. 7, 15, 23) in Schweizerfranken umzurechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist unter den Parteien kein bestimmter Umrechnungskurs vereinbart worden, so ist der Umrechnung das Mittel der Geld- und Briefkurse am letzten Werktage vor der Entstehung der Abgabeforderung zugrunde zu legen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_28",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "464eb9d69a4e4da802308c2bb32dd404536930d4997ca50d6bb522aa97b83e80"
+    },
+    {
+      "id": "bund/STG/art_29",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Abgabebeträgen, die nach Ablauf der in den Artikeln 11, 20 und 26 geregelten Fälligkeitstermine ausstehen, ist ohne Mahnung ein Verzugszins geschuldet. Der Zinssatz wird vom Eidgenössischen Finanzdepartement bestimmt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_29",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "93d90d6cfd254afebd2979211e4e38ebdd8ab34bd1c2a1f1e462bf7a99519f0b"
+    },
+    {
+      "id": "bund/STG/art_30",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabeforderung verjährt fünf Jahre nach Ablauf des Kalenderjahres, in dem sie entstanden ist (Art. 7, 15, 23)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verjährung beginnt nicht oder steht still, solange die Abgabeforderung sichergestellt oder gestundet ist oder keiner der Zahlungspflichtigen im Inland Wohnsitz hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verjährung wird unterbrochen durch jede Anerkennung der Abgabeforderung von Seiten eines Zahlungspflichtigen sowie durch jede auf Geltendmachung des Abgabeanspruches gerichtete Amtshandlung, die einem Zahlungspflichtigen zur Kenntnis gebracht wird; mit der Unterbrechung beginnt die Verjährung von neuem."
+        },
+        {
+          "absatz": "4",
+          "text": "Stillstand und Unterbrechung wirken gegenüber allen Zahlungspflichtigen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_30",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "c3459be550e989085f4245d540090ddbb5f52b2a95e54944984e06cfb7a9dcfa"
+    },
+    {
+      "id": "bund/STG/art_31",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Eidgenössische Steuerverwaltung (ESTV) erlässt für die Erhebung der Stempelabgaben alle Weisungen, Verfügungen und Entscheide, die nicht ausdrücklich einer anderen Behörde vorbehalten sind."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_31",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "e82077c3b0f69dd31b255dd83dbeb19cef5f53d6bf0021442af4ef9396af4051"
+    },
+    {
+      "id": "bund/STG/art_32",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuerbehörden der Kantone, Bezirke, Kreise und Gemeinden und die ESTV unterstützen sich gegenseitig in der Erfüllung ihrer Aufgabe; sie haben sich kostenlos die zweckdienlichen Meldungen zu erstatten, die benötigten Auskünfte zu erteilen und in amtliche Akten Einsicht zu gewähren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwaltungsbehörden des Bundes und die andern als die in Absatz 1 genannten Behörden der Kantone, Bezirke, Kreise und Gemeinden sind gegenüber der Eidgenössischen Steuerverwaltung auskunftspflichtig, sofern die verlangten Auskünfte für die Durchführung dieses Gesetzes von Bedeutung sein können. Eine Auskunft darf nur verweigert werden, soweit ihr wesentliche öffentliche Interessen, insbesondere die innere oder äussere Sicherheit des Bundes oder der Kantone entgegenstehen, oder die Auskunft die angegangene Behörde in der Durchführung ihrer Aufgabe wesentlich beeinträchtigen würde. Das Post‑, Telefon- und Telegrafengeheimnis ist zu wahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Anstände über die Auskunftspflicht von Verwaltungsbehörden des Bundes entscheidet der Bundesrat, Anstände über die Auskunftspflicht von Behörden der Kantone, Bezirke, Kreise und Gemeinden, sofern die kantonale Regierung das Auskunftsbegehren abgelehnt hat, das Bundesgericht (Art. 120 des Bundesgerichtsgesetzes vom 17. Juni 2005)."
+        },
+        {
+          "absatz": "4",
+          "text": "Die mit öffentlich-rechtlichen Aufgaben betrauten Organisationen sind im Rahmen dieser Aufgaben gleich den Behörden zur Auskunft verpflichtet; Absatz 3 findet sinngemässe Anwendung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_32",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "5da44cb6b534dd49732e44dc89748f0b2a2e724870d2de1f46192f67d44a44f7"
+    },
+    {
+      "id": "bund/STG/art_32_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "32_a",
+      "artikelLabel": "Art. 32a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ESTV betreibt zur Erfüllung der Aufgaben nach diesem Gesetz ein Informationssystem. Dieses kann besonders schützenswerte Personendaten über administrative und strafrechtliche Sanktionen enthalten, die steuerrechtlich wesentlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ESTV und die Behörden nach Artikel 32 Absatz 1 geben einander die Daten weiter, die für die Erfüllung ihrer Aufgaben dienlich sein können. Die Behörden nach Artikel 32 Absätze 2 und 4 geben der ESTV die Daten weiter, die für die Durchführung dieses Gesetzes von Bedeutung sein können."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Daten werden einzeln, auf Listen oder auf elektronischen Datenträgern übermittelt. Sie können auch mittels eines Abrufverfahrens zugänglich gemacht werden. Diese Amtshilfe ist kostenlos."
+        },
+        {
+          "absatz": "4",
+          "text": "Personendaten und die zu ihrer Bearbeitung verwendeten Einrichtungen wie Datenträger, EDV-Programme und Programmdokumentationen sind vor unbefugtem Verwenden, Verändern oder Zerstören sowie vor Diebstahl zu schützen."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Bundesrat kann Ausführungsbestimmungen erlassen, insbesondere über die Organisation und den Betrieb des Informationssystems, über die Kategorien der zu erfassenden Daten, über die Zugriffs- und Bearbeitungsberechtigung, über die Aufbewahrungsdauer sowie die Archivierung und Vernichtung der Daten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_32_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "75e126a2e4d8534b84a12bec5fec6b1f3eb7e62817a2bd6e7e95d6539f80d943"
+    },
+    {
+      "id": "bund/STG/art_33",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer mit dem Vollzug dieses Gesetzes betraut ist oder dazu beigezogen wird, hat gegenüber andern Amtsstellen und Privaten über die in Ausübung seines Amtes gemachten Wahrnehmungen Stillschweigen zu bewahren und den Einblick in amtliche Akten zu verweigern."
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Geheimhaltungspflicht besteht:"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_33",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "a41f1e7c162d17ace1fed8438cd46ecb1d5a197614ccdaf93cf00c796d899111"
+    },
+    {
+      "id": "bund/STG/art_34",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer auf Grund dieses Gesetzes abgabepflichtig wird, hat sich unaufgefordert bei der ESTV anzumelden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Abgabepflichtige hat der ESTV bei Fälligkeit der Abgabe (Art. 11, 20, 26) unaufgefordert die vorgeschriebene Abrechnung mit den Belegen einzureichen und gleichzeitig die Abgabe zu entrichten."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_34",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "7de9d31a9cc4fdd1f09d80c3561db365c85b5de9a29aadf3d821d107ae9f1e70"
+    },
+    {
+      "id": "bund/STG/art_35",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Abgabepflichtige hat der ESTV über alle Tatsachen, die für die Abgabepflicht oder für die Abgabebemessung von Bedeutung sein können, nach bestem Wissen und Gewissen Auskunft zu erteilen; er hat insbesondere:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestreitung der Abgabepflicht entbindet nicht von der Auskunftspflicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Auskunftspflicht bestritten, so trifft die ESTV eine Verfügung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_35",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "7e55144d558a7fa1a30094a6eeed5c5707fe08bcf9a2ff3a3417120b0be26bfe"
+    },
+    {
+      "id": "bund/STG/art_36",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die bei der Gründung oder Kapitalerhöhung einer Gesellschaft oder Genossenschaft mitwirkenden Personen (insbesondere Banken, Notare und Treuhänder) haben der ESTV auf Verlangen über alle Tatsachen, die für die Abgabepflicht oder für die Bemessung der Emissionsabgabe von Bedeutung sein können, nach bestem Wissen und Gewissen Auskunft zu erteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Auskunftspflicht bestritten, so findet Artikel 35 Absatz 3 Anwendung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_36",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "f8778c0a33275992828694f7c1f0d9e6195f67231cfdfd4e59f54777cd30b1a5"
+    },
+    {
+      "id": "bund/STG/art_37",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erfüllung der Pflicht zur Anmeldung als Abgabepflichtiger sowie die Steuerabrechnungen und -ablieferungen werden von der ESTV überprüft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ESTV kann zur Abklärung des Sachverhalts die Geschäftsbücher, die Belege und andere Urkunden des Abgabepflichtigen an Ort und Stelle prüfen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ergibt sich, dass der Abgabepflichtige seinen gesetzlichen Pflichten nicht nachgekommen ist, so ist ihm Gelegenheit zu geben, zu den erhobenen Aussetzungen Stellung zu nehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Lässt sich der Anstand nicht erledigen, so trifft die ESTV einen Entscheid."
+        },
+        {
+          "absatz": "5",
+          "text": "Die anlässlich einer Prüfung gemäss Absatz 1 oder 2 bei einer Bank oder Sparkasse im Sinne des Bankengesetzes vom 8. November 1934, bei der Schweizerischen Nationalbank oder bei einer Pfandbriefzentrale gemachten Feststellungen dürfen ausschliesslich für die Durchführung der Stempelabgaben verwendet werden. Das Bankgeheimnis ist zu wahren."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_37",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "8f212cfa09716729681c69fb194e8a74e155e01cdf7f660c6ac3bf36b993d839"
+    },
+    {
+      "id": "bund/STG/art_38",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die ESTV trifft alle Verfügungen und Entscheide, welche die Abgabeerhebung notwendig macht; sie trifft einen Entscheid insbesondere dann, wenn"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_38",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "506a4c98b957772e0c662ccbccef95956c8d9909b756e27bbec70ac0d0dd43db"
+    },
+    {
+      "id": "bund/STG/art_39",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen und Entscheide der ESTV können innert 30 Tagen nach der Eröffnung mit Einsprache angefochten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einsprache ist schriftlich bei der ESTV einzureichen; sie hat einen bestimmten Antrag zu enthalten und die zu seiner Begründung dienenden Tatsachen anzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist gültig Einsprache erhoben worden, so hat die ESTV die Verfügung oder den Entscheid ohne Bindung an die gestellten Anträge zu überprüfen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Einspracheverfahren ist trotz Rückzug der Einsprache weiterzuführen, wenn Anhaltspunkte dafür vorliegen, dass die Verfügung oder der Entscheid dem Gesetz nicht entspricht."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Einspracheentscheid ist zu begründen und hat eine Rechtsmittelbelehrung zu enthalten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_39",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "aa9164474b4af937a4304e270365ffe7cef66809c87e0f2cf6c8ff99edaeed59"
+    },
+    {
+      "id": "bund/STG/art_39_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "39_a",
+      "artikelLabel": "Art. 39a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "a 134 134 Eingefügt durch Anhang Ziff. 26 des BG vom 4. Okt. 1991 ( AS 1992 288 ; BBl 1991 II 465 ). Aufgehoben durch Anhang Ziff. 51 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 ( AS 2006 2197 ; BBl 2001 4202 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_39_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "18b9f015bf424b144ccb7a71dcb02fa49961dd3b54188ee357c4f74503a2409a"
+    },
+    {
+      "id": "bund/STG/art_40",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "135 135 Aufgehoben durch Anhang Ziff. 51 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 ( AS 2006 2197 ; BBl 2001 4202 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_40",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "a79168cd5574f2df1c7db9e4cbfa4997c8e59a63ea7113283752095248808929"
+    },
+    {
+      "id": "bund/STG/art_41",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Veranlagungs- und im Einspracheverfahren werden in der Regel keine Kosten berechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Ohne Rücksicht auf den Ausgang des Verfahrens können die Kosten von Untersuchungsmassnahmen demjenigen auferlegt werden, der sie schuldhaft verursacht hat."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_41",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "efbde6aa07d23afd7f4acdc1da81e250ccd1ee8d2e8c3fe05d90ed19ed6140f9"
+    },
+    {
+      "id": "bund/STG/art_41_a",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "41_a",
+      "artikelLabel": "Art. 41a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann die elektronische Durchführung von Verfahren nach diesem Gesetz vorschreiben. Dabei regelt er die Modalitäten der Durchführung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ESTV stellt bei der elektronischen Durchführung von Verfahren die Authentizität und Integrität der übermittelten Daten sicher."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann bei der elektronischen Einreichung von Eingaben, deren Unterzeichnung gesetzlich vorgeschrieben ist, anstelle der qualifizierten elektronischen Signatur eine andere elektronische Bestätigung der Angaben durch die abgabepflichtige Person anerkennen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_41_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "ee337035fe9a5ab68c99f8ce056a7b1fa5165650db59a53ebed3a2b6481b8dbd"
+    },
+    {
+      "id": "bund/STG/art_42",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird der Anspruch auf Abgaben, Zinsen und Kosten auf Mahnung hin nicht befriedigt, so ist Betreibung einzuleiten; vorbehalten bleibt die Eingabe in einem Konkurs."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Abgabeforderung noch nicht rechtskräftig festgesetzt und wird sie bestritten, so unterbleibt ihre endgültige Kollokation, bis ein rechtskräftiger Abgabeentscheid vorliegt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_42",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "12c5d6f696e100f8a65b4b18dfc82d95049e4e63fb0076cf92b25dd10f6a5ba7"
+    },
+    {
+      "id": "bund/STG/art_43",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ESTV kann Abgaben, Zinsen und Kosten, auch wenn sie weder rechtskräftig festgesetzt noch fällig sind, sicherstellen lassen, wenn"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sicherstellungsverfügung hat den Rechtsgrund der Sicherstellung, den sicherzustellenden Betrag und die Stelle, welche die Sicherheiten entgegennimmt, anzugeben. Wird die Sicherstellung aufgrund von Absatz 1 Buchstaben a oder b angeordnet, so gilt die Sicherstellungsverfügung als Arrestbefehl im Sinne von Artikel 274 des Bundesgesetzes über Schuldbetreibung und Konkurs; die Einsprache gegen den Arrestbefehl ist ausgeschlossen."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegen Sicherstellungsverfügungen der ESTV kann beim Bundesverwaltungsgericht Beschwerde geführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Beschwerden gegen Sicherstellungsverfügungen haben keine aufschiebende Wirkung."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_43",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "7cc42054af58bda19ee75dab17f62cd553883829fe5bd067912824c9baff18ff"
+    },
+    {
+      "id": "bund/STG/art_44",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf die Revision und die Erläuterung von Entscheiden der ESTV werden die Artikel 66–69 des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 sinngemäss angewandt."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_44",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "18b6de519bfc09da66b27d47b00e6f4f8f55fa3883fbfe910dc3cf132afbadeb"
+    },
+    {
+      "id": "bund/STG/art_45",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer vorsätzlich oder fahrlässig, zum eigenen oder zum Vorteil eines andern, dem Bunde Stempelabgaben vorenthält oder sich oder einem andern auf andere Weise einen unrechtmässigen Abgabevorteil verschafft, wird, sofern nicht die Strafbestimmung von Artikel 14 des Verwaltungsstrafrechtsgesetzes vom 22. März 1974 zutrifft, wegen Hinterziehung mit Busse bis zu 30 000 Franken oder, sofern dies einen höheren Betrag ergibt, bis zum Dreifachen der hinterzogenen Abgabe oder des unrechtmässigen Vorteils bestraft."
+        },
+        {
+          "absatz": null,
+          "text": "2–4 …"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_45",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "92ae6f18a3776c07fb4eda93177d619f279fa5216a26534e7174146fbd59afe4"
+    },
+    {
+      "id": "bund/STG/art_46",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer die gesetzmässige Erhebung der Stempelabgaben gefährdet, indem er vorsätzlich oder fahrlässig"
+        },
+        {
+          "absatz": null,
+          "text": "wird, sofern nicht eine der Strafbestimmungen der Artikel 14–16 des Verwaltungsstrafrechtsgesetzes vom 22. März 1974 zutrifft, mit Busse bis zu 20 000 Franken bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer Widerhandlung im Sinne von Absatz 1 Buchstabe e bleibt die Strafverfolgung nach Artikel 285 des Strafgesetzbuches vorbehalten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_46",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "b434fffc9de88b6ce436b344eb87594c00cae7c50a7c42ba5a25192c662ad29b"
+    },
+    {
+      "id": "bund/STG/art_47",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Bedingung, an die eine besondere Bewilligung geknüpft wurde, nicht einhält,"
+        },
+        {
+          "absatz": null,
+          "text": "wer einer Vorschrift dieses Gesetzes, einer Verordnung oder einer auf Grund solcher Vorschriften erlassenen allgemeinen Weisung oder unter Hinweis auf die Strafdrohung dieses Artikels an ihn gerichteten Einzelverfügung zuwiderhandelt,"
+        },
+        {
+          "absatz": null,
+          "text": "wird mit Busse bis zu 5000 Franken bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Strafbar ist auch die fahrlässige Begehung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_47",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "55137df1b2e5113b62713bdb9e5616860c5052f558f549228be0b99292357088"
+    },
+    {
+      "id": "bund/STG/art_48_49",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "48_49",
+      "artikelLabel": "Art. 4849",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "152 152 Aufgehoben durch Ziff. 8 des Anhangs zum VStrR, mit Wirkung seit 1. Jan. 1975 ( AS 1974 1857 ; BBl 1971 I 993 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_48_49",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "d54e92bf39f0646ff93d00a720381fcad4677246c6eb5f4d974e67e20f858bd6"
+    },
+    {
+      "id": "bund/STG/art_50",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsstrafrechtsgesetz vom 22. März 1974 findet Anwendung; verfolgende und urteilende Verwaltungsbehörde im Sinne jenes Gesetzes ist die ESTV."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_50",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "b26aceccee46aaf3af45b43caaee2c4e91bc2a1c802245a97797acda2fc458bf"
+    },
+    {
+      "id": "bund/STG/art_51",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "157 157 Aufgehoben durch Ziff. I 3 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, mit Wirkung seit 1.April 1998 ( AS 1998 669 ; BBl 1997 II 1164 )."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_51",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "6b4d6669b56bb9f92cf62588c9cf29b9b5ed7cba99b2c156b85c92633e260651"
+    },
+    {
+      "id": "bund/STG/art_52",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_52",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/STG/art_53",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Inkrafttreten dieses Gesetzes werden aufgehoben:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die ausser Kraft gesetzten Bestimmungen bleiben in Bezug auf Abgabeforderungen, Tatsachen und Rechtsverhältnisse, die vor dem Inkrafttreten dieses Gesetzes entstanden oder eingetreten sind, auch nach diesem Zeitpunkt anwendbar."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_53",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "de1e936af665af53dbb9e8ff5cfc1f4305048ef1e59848b667a8345205be91db"
+    },
+    {
+      "id": "bund/STG/art_54",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt die für den Vollzug erforderlichen Vorschriften."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_54",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "3fe67e284cb3d08ec358c5d4fd0ec019d93b6d91755ad1e2ef921a6c1eede863"
+    },
+    {
+      "id": "bund/STG/art_55",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat bestimmt den Zeitpunkt des Inkrafttretens dieses Gesetzes."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_55",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "a97726632a7577d117be7c08255fef4dfdb400594445a34e458f6dcabfd6d206"
     }
   ]
 }

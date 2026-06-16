@@ -2,6 +2,487 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
+      "id": "bund/VMWG/art_1",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als Sachen, die der Vermieter dem Mieter zusammen mit Wohn- und Geschäftsräumen zum Gebrauch überlässt, gelten insbesondere Mobilien, Garagen, Autoeinstell- und Abstellplätze sowie Gärten."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "4727e0720d0f26503898824298254ee5097ffdaabdcbfca4a6fcbd05ef7f0c14"
+    },
+    {
+      "id": "bund/VMWG/art_2",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für luxuriöse Wohnungen und Einfamilienhäuser mit sechs oder mehr Wohnräumen (ohne Anrechnung der Küche) gilt der 2. Abschnitt des Achten Titels des OR (Art. 269–270 e ) nicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Wohnungen, deren Bereitstellung von der öffentlichen Hand gefördert wurde und deren Mietzinse durch eine Behörde kontrolliert werden, gelten nur die Artikel 253–268 b , 269, 269 d Absatz 3, 270 e und 271–273 c OR sowie die Artikel 3–10 und 20–23 dieser Verordnung."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "6a4e0f01eeddbd6a43060238953d437086e706d163a85fb1f9567a7de30aefcd"
+    },
+    {
+      "id": "bund/VMWG/art_3",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als Koppelungsgeschäft im Sinne von Artikel 254 OR gilt insbesondere die Verpflichtung des Mieters, die Mietsache, Möbel oder Aktien zu kaufen oder einen Versicherungsvertrag abzuschliessen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_3",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "60b38408a625f2b08b5c8ed70a946c09b4b442beb9d4f67e40292b5bf5c24aac"
+    },
+    {
+      "id": "bund/VMWG/art_4",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erhebt der Vermieter die Nebenkosten aufgrund einer Abrechnung, muss er diese jährlich mindestens einmal erstellen und dem Mieter vorlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erhebt er sie pauschal, muss er auf Durchschnittswerte dreier Jahre abstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die für die Erstellung der Abrechnung entstehenden Verwaltungskosten dürfen nach Aufwand oder im Rahmen der üblichen Ansätze angerechnet werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_4",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "91453e51fbfd32694f6e839d58309820d751b141d6a30a869258e267d840e516"
+    },
+    {
+      "id": "bund/VMWG/art_5",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Heizungs- und Warmwasserkosten anrechenbar sind die tatsächlichen Aufwendungen, die mit dem Betrieb der Heizungsanlage oder der zentralen Warmwasseraufbereitungsanlage direkt zusammenhängen."
+        },
+        {
+          "absatz": "2",
+          "text": "Darunter fallen insbesondere die Aufwendungen für:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für die Wartung und die Verwaltung dürfen nach Aufwand oder im Rahmen der üblichen Ansätze angerechnet werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "524775e2d9f1fb006d01448e3ff6a9114cd9ca0b9f2eb340d0e82b0fe8a471ce"
+    },
+    {
+      "id": "bund/VMWG/art_6",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nicht als Heizungs- und Warmwasseraufbereitungskosten anrechenbar sind die Aufwendungen für:"
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "87eeaab1facb983201668fa14820ffe700f2441f671915589e60714c83e2a3fa"
+    },
+    {
+      "id": "bund/VMWG/art_6_a",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bezieht der Vermieter Heizenergie oder Warmwasser aus einer nicht zur Liegenschaft gehörenden Zentrale, die nicht Teil der Anlagekosten ist, kann er die tatsächlich anfallenden Kosten in Rechnung stellen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "a0cd7eecf7f5d1665130bf91bbfca257597a7fd023d513dd1caf2950abc423c5"
+    },
+    {
+      "id": "bund/VMWG/art_6_b",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "6_b",
+      "artikelLabel": "Art. 6b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Vermieter kann im Rahmen eines Zusammenschlusses gemäss Artikel 17 des Energiegesetzes vom 30. September 2016 die Kosten nach Artikel 16 a und 16 b der Energieverordnung vom 1. November 2017 als Nebenkosten in Rechnung stellen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6_b",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "c41a7829f473756a49376c48bec0a57670498e2e9669d8e56c32deae52f9960f"
+    },
+    {
+      "id": "bund/VMWG/art_6_c",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "6_c",
+      "artikelLabel": "Art. 6c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Energiespar-Contracting liegt vor, wenn ein Dienstleister sich gegen Vergütung verpflichtet, den Energieverbrauch einer Liegenschaft durch geeignete Energiesparmassnahmen zu senken."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Energiesparmassnahmen nach Absatz 1 gelten insbesondere:"
+        },
+        {
+          "absatz": "3",
+          "text": "Der Vermieter kann die im Rahmen eines Energiespar-Contractings anfallenden Kosten während höchstens 10 Jahren als Nebenkosten in Rechnung stellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der jährlich in Rechnung gestellte Betrag darf nicht höher sein als die Energiekosten, die der Mieter mit dem Energiespar-Contracting während dieses Abrechnungszeitraums einspart."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der Berechnung der Einsparung sind Witterungseinflüsse zu berücksichtigen."
+        },
+        {
+          "absatz": "6",
+          "text": "Förderbeiträge für energetische Verbesserungen sind im Umfang des Anteils, der bei gleichmässiger Verteilung über die Dauer des Energiespar-Contractings auf ein Jahr entfällt, vom Betrag nach Absatz 4 in Abzug zu bringen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6_c",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "6f68434d499735f2c6f056cb1976ea04e146f7e0154ff8f0795d64d37bc8a7cb"
+    },
+    {
+      "id": "bund/VMWG/art_7",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Heizungskosten für nicht vermietete Wohn- und Geschäftsräume trägt der Vermieter."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind keine Geräte zur Erfassung des Wärmeverbrauchs der einzelnen Verbraucher installiert und wurden nicht vermietete Wohn- und Geschäftsräume nachweisbar nur soweit geheizt, als dies zur Verhinderung von Frostschäden notwendig ist, muss der Vermieter nur einen Teil der Heizungskosten übernehmen, die nach dem normalen Verteilungsschlüssel auf Wohn- und Geschäftsräume entfallen. Dieser Teil beträgt in der Regel:"
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_7",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "48a5715d879da05795f53ae831197f94640135c86cd3ad8d30bb6ccd2bf00b15"
+    },
+    {
+      "id": "bund/VMWG/art_8",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erhält der Mieter mit der jährlichen Heizungskostenrechnung nicht eine detaillierte Abrechnung und Aufteilung der Heizungs- und Warmwasseraufbereitungskosten, so ist auf der Rechnung ausdrücklich darauf hinzuweisen, dass er die detaillierte Abrechnung verlangen kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Mieter oder sein bevollmächtigter Vertreter ist berechtigt, die sachdienlichen Originalunterlagen einzusehen und über den Anfangs- und Endbestand von Heizmaterialien Auskunft zu verlangen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_8",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "32efee1addcb1d22a7e178217437ac9f09e1e9262d023a7b84dc6e2e293113ec"
+    },
+    {
+      "id": "bund/VMWG/art_9",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Formular für die Mitteilung der Kündigung im Sinne von Artikel 266 l Absatz 2 OR muss enthalten:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone sorgen dafür, dass in den Gemeinden Formulare in genügender Zahl zur Verfügung stehen. Sie können zu diesem Zweck eigene Formulare in den Gemeindekanzleien auflegen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_9",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "79fa1ebc170765dd289ea1b0ebb984e3065875c70b73605812d25489372b27b6"
+    },
+    {
+      "id": "bund/VMWG/art_10",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als offensichtlich übersetzt im Sinne von Artikel 269 OR gilt ein Kaufpreis, der den Ertragswert einer Liegenschaft, berechnet auf den orts- oder quartierüblichen Mietzinsen für gleichartige Objekte, erheblich übersteigt."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_10",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "ba950d0677d3cfcd9205455ab25f0b3c9f1cd9e5ea9b19258cedff43689ca4b8"
+    },
+    {
+      "id": "bund/VMWG/art_11",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Massgeblich für die Ermittlung der orts- und quartierüblichen Mietzinse im Sinne von Artikel 269 a Buchstabe a OR sind die Mietzinse für Wohn- und Geschäftsräume, die nach Lage, Grösse, Ausstattung, Zustand und Bauperiode mit der Mietsache vergleichbar sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Geschäftsräumen kann der Vergleich im Sinne von Artikel 269 a Buchstabe a OR mit den quartierüblichen Quadratmeterpreisen gleichartiger Objekte erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ausser Betracht fallen Mietzinse, die auf einer Marktbeherrschung durch einen Vermieter oder eine Vermietergruppe beruhen."
+        },
+        {
+          "absatz": "4",
+          "text": "Amtliche Statistiken sind zu berücksichtigen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "c56bf03b361e5d49e215db0357fac584d7e307259cfad4b129ab920c0fd1f362"
+    },
+    {
+      "id": "bund/VMWG/art_12",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Kostensteigerungen im Sinne von Artikel 269 a Buchstabe b OR gelten insbesondere Erhöhungen des Hypothekarzinssatzes, der Gebühren, Objektsteuern, Baurechtszinse, Versicherungsprämien sowie Erhöhungen der Unterhaltskosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Aus Handänderungen sich ergebende Kosten gelten als Teil der Erwerbskosten und nicht als Kostensteigerungen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_12",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "7730463c9d07db9e472519a60527ee19f40363222dc9128bfbe44aac77cfcc5d"
+    },
+    {
+      "id": "bund/VMWG/art_12_a",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Mietzinsanpassungen aufgrund von Änderungen des Hypothekarzinssatzes gilt ein Referenzzinssatz. Dieser stützt sich auf den vierteljährlich erhobenen, volumengewichteten Durchschnittszinssatz für inländische Hypothekarforderungen und wird durch kaufmännische Rundung in Viertelprozenten festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Eidgenössische Departement für Wirtschaft, Bildung und Forschung (WBF) gibt den Referenzzinssatz vierteljährlich bekannt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das WBF kann für den technischen Vollzug der Datenerhebung und die Berechnung des Durchschnittszinssatzes für inländische Hypothekarforderungen Dritte beiziehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Es erlässt Bestimmungen über die technische Definition, Erhebung und Veröffentlichung des Durchschnittszinssatzes für inländische Hypothekarforderungen gemäss Absatz 1. Die Banken müssen dem WBF die notwendigen Daten melden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_12_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "b55e15195848eee17bd2aead218a515f03234428b3658c6c1c8bade422cd2c4b"
+    },
+    {
+      "id": "bund/VMWG/art_13",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Hypothekarzinserhöhung von einem Viertel Prozent berechtigt in der Regel zu einer Mietzinserhöhung von höchstens:"
+        },
+        {
+          "absatz": null,
+          "text": "Bei Hypothekarzinssenkungen sind die Mietzinse entsprechend herabzusetzen oder die Einsparungen mit inzwischen eingetretenen Kostensteigerungen zu verrechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Zahlungsplänen im Sinne von Artikel 269 a Buchstabe d und Rahmenmietverträgen im Sinne von Artikel 269 a Buchstabe f OR gelten bei Hypothekarzinsänderungen stattdessen die für solche Fälle vereinbarten Regelungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird unter Verzicht auf Quartierüblichkeit und Teuerungsausgleich dauernd mit der reinen Kostenmiete gerechnet, so kann der Mietzins bei Hypothekarzinserhöhungen im Umfang der Mehrbelastung für das gesamte investierte Kapital erhöht werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Mietzinsanpassungen infolge von Hypothekarzinsänderungen ist im Übrigen zu berücksichtigen, ob und inwieweit frühere Hypothekarzinsänderungen zu Mietzinsanpassungen geführt haben."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_13",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "e57828415d53c5caf7cd0d761b822b488f35114a382aab381f7beb7852c0bfa7"
+    },
+    {
+      "id": "bund/VMWG/art_14",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Mehrleistungen im Sinne von Artikel 269 a Buchstabe b OR gelten Investitionen für wertvermehrende Verbesserungen, die Vergrösserung der Mietsache sowie zusätzliche Nebenleistungen. Die Kosten umfassender Überholungen gelten in der Regel zu 50–70 Prozent als wertvermehrende Investitionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Mehrleistungen gelten auch die folgenden energetischen Verbesserungen:"
+        },
+        {
+          "absatz": "3",
+          "text": "Als Mehrleistung kann nur der Teil der Kosten geltend gemacht werden, der die Kosten zur Wiederherstellung oder Erhaltung des ursprünglichen Zustandes übersteigt."
+        },
+        {
+          "absatz": null,
+          "text": "3bis Förderbeiträge, die für wertvermehrende Verbesserungen gewährt werden, sind vom Betrag der Mehrleistungen abzuziehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Mietzinserhöhungen wegen wertvermehrender Investitionen und energetischer Verbesserungen sind nicht missbräuchlich, wenn sie den angemessenen Satz für Verzinsung, Amortisation und Unterhalt der Investition nicht überschreiten."
+        },
+        {
+          "absatz": "5",
+          "text": "Mietzinserhöhungen wegen wertvermehrender Investitionen und energetischer Verbesserungen dürfen erst angezeigt werden, wenn die Arbeiten ausgeführt sind und die sachdienlichen Belege vorliegen. Bei grösseren Arbeiten sind gestaffelte Mietzinserhöhungen nach Massgabe bereits erfolgter Zahlungen zulässig."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_14",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "6451ad88ecae148330e423b71914f8ff051b6b850f9898aba3c7fbf2568931e2"
+    },
+    {
+      "id": "bund/VMWG/art_15",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bruttorendite im Sinne von Artikel 269 a Buchstabe c OR wird auf den Anlagekosten berechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausser Betracht fallen offensichtlich übersetzte Land-, Bau- und Erwerbskosten."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_15",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "2b36ff47b0ac7541ac2d5106d6bfa89f90596d3c42cccee1a45c1ccdf8718f40"
+    },
+    {
       "id": "bund/VMWG/art_16",
       "ebene": "bund",
       "quelle": "VMWG",
@@ -50,6 +531,25 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
       "sha": "2cbabacae3d8caf1363eb93372f64dfea1af5f28ef8464ddbabb3f929da7e20a"
+    },
+    {
+      "id": "bund/VMWG/art_18",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Macht der Vermieter die ihm zustehende Mietzinsanpassung nicht vollständig geltend, hat er diesen Vorbehalt in Franken oder in Prozenten des Mietzinses festzulegen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_18",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "9062e4be5c7499ab70a9cdba40abb4ee132211a29056c096138b8c0b7881a79b"
     },
     {
       "id": "bund/VMWG/art_19",
@@ -104,6 +604,190 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
       "sha": "6d66a6a362ffba3633ff18d9c2ce05fb7a7e6d4f9a3d1ecf5cb0cb436a4c997e"
+    },
+    {
+      "id": "bund/VMWG/art_20",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Mietzinserhöhungen wegen Kostensteigerungen oder wegen wertvermehrenden Verbesserungen des Vermieters kann der Mieter verlangen, dass der geltend gemachte Differenzbetrag zahlenmässig begründet wird. Die 30-tägige Anfechtungsfrist wird dadurch nicht berührt."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Schlichtungsverfahren kann der Mieter verlangen, dass für alle geltend gemachten Gründe der Mietzinserhöhung die sachdienlichen Belege vorgelegt werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_20",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "ccd8618f9f35e565221b108e1b2ccbb40b7a790821796ee81354a1467c9e8009"
+    },
+    {
+      "id": "bund/VMWG/art_21",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsbehörden haben im Schlichtungsverfahren eine Einigung der Parteien anzustreben, die sich auf das gesamte Mietverhältnis (Höhe des Mietzinses, Dauer des Vertrags, Kündigungsfrist usw.) erstreckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schlichtungsbehörden sind verpflichtet, Mieter und Vermieter ausserhalb eines Anfechtungsverfahrens, insbesondere vor Abschluss eines Mietvertrags, zu beraten. Sie haben namentlich Mietern und Vermietern behilflich zu sein, sich selbst ein Urteil darüber zu bilden, ob ein Mietzins missbräuchlich ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Schlichtungsbehörden können einzelne Mitglieder oder das Sekretariat mit der Beratung betrauen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_21",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "ebc324452cde5b2528952543896719496a67f9587caa547ae4f1af13a1ab01cb"
+    },
+    {
+      "id": "bund/VMWG/art_22",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone sind verpflichtet, die Zusammensetzung der Schlichtungsbehörden und deren Zuständigkeit periodisch zu veröffentlichen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_22",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "19bb1eb548a64f2a365ef586d29c6be7db6572660e948ce098ff54cddfa5a9ed"
+    },
+    {
+      "id": "bund/VMWG/art_23",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone haben dem WBF halbjährlich über die Tätigkeit der Schlichtungsbehörden Bericht zu erstatten. Aus dem Bericht müssen die Zahl der Fälle, der jeweilige Grund der Anrufung sowie die Art der Erledigung ersichtlich sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone haben die zuständigen kantonalen richterlichen Behörden zu verpflichten, ein Doppel der Urteile über angefochtene Mietzinse und andere Forderungen der Vermieter dem WBF zuzustellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das WBF sorgt für deren Auswertung und Veröffentlichung in geeigneter Form."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_23",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "e8a01b5b1e4b933a642dd57b1c60abfe798627a597d530faef3b73e510ab5bf7"
+    },
+    {
+      "id": "bund/VMWG/art_24",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das WBF ist mit dem Vollzug beauftragt."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_24",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "20a27ad920773e9922f979e41a60c9699db203fec0696a5f81439f0d7744c85b"
+    },
+    {
+      "id": "bund/VMWG/art_25",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verordnung vom 10. Juli 1972 über Massnahmen gegen Missbräuche im Mietwesen wird aufgehoben."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_25",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "5b52ee33c68620ff824ef78a0f8e3161eb6a2df0977ad8fc67d3ff8e26d11276"
+    },
+    {
+      "id": "bund/VMWG/art_26",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorschriften über den Schutz vor missbräuchlichen Mietzinsen und andern missbräuchlichen Forderungen des Vermieters bei der Miete von Wohn- und Geschäftsräumen sind anwendbar auf Anfangsmietzinse oder Mietzinserhöhungen, die mit Wirkung auf einen Zeitpunkt nach dem 1. Juli 1990 festgelegt oder mitgeteilt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde eine Mietzinserhöhung vor dem 1. Juli 1990, aber mit Wirkung auf einen Zeitpunkt danach mitgeteilt, so beginnt die Frist für die Anfechtung (Art. 270 b OR) am 1. Juli 1990 zu laufen. Für die Anfechtung eines Anfangsmietzinses, der vor dem 1. Juli 1990, aber mit Wirkung auf einen Zeitpunkt danach festgelegt wurde, gilt die Frist gemäss Artikel 270 OR."
+        },
+        {
+          "absatz": "3",
+          "text": "Mietverhältnisse mit indexierten oder gestaffelten Mietzinsen, die nach dem 1. Juli 1990 beginnen, unterstehen dem neuen Recht; Mietverhältnisse mit indexierten oder gestaffelten Mietzinsen, die vor dem 1. Juli 1990 begonnen haben aber erst später enden, unterstehen dem alten Recht."
+        },
+        {
+          "absatz": "4",
+          "text": "Basiert der Mietzins am 1. Juli 1990 auf einem Hypothekarzinsstand von weniger als 6 Prozent, so kann der Vermieter auch später für jedes Viertelprozent, das unter diesem Stand liegt, den Mietzins um 3,5 Prozent erhöhen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_26",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "c01497a758242eda01ee9a7ce19ec2e0866c8894474a6eefd659905ee70ca9cc"
+    },
+    {
+      "id": "bund/VMWG/art_27",
+      "ebene": "bund",
+      "quelle": "VMWG",
+      "erlass": "VMWG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Juli 1990 in Kraft."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_27",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20251001",
+      "sha": "32736122a3678b22067cfc616814e4e9c6c84a6b1417534cd408acd8480c8698"
     }
   ]
 }

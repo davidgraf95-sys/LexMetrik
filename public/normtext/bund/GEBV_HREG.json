@@ -2,6 +2,44 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
+      "id": "bund/GEBV_HREG/art_1",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gebührenpflicht 1 Wer eine Verfügung einer Handelsregisterbehörde veranlasst oder von dieser eine Dienstleistung beansprucht, hat eine Gebühr zu bezahlen. 2 Haben mehrere Personen gemeinsam eine Verfügung veranlasst oder eine Dienstleistung beansprucht, so haften sie für die Gebühr solidarisch."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "5ff2797c67d4fc12339d15aae9705b8af0aac58f26535cf5af12bc559dd93e97"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_2",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verzicht auf Gebührenerhebung 1 Die Handelsregisterbehörde erhebt keine Gebühr für: a. Eintragungen, die ein Gericht oder eine Verwaltungsbehörde in einem Urteil oder in einer Verfügung anordnet; b. Mitteilungen und Auskünfte an andere Behörden. 2 Auf die Gebührenerhebung kann verzichtet werden: a. wenn ein überwiegendes öffentliches Interesse an der Verfügung oder Dienstleistung besteht; b. wenn es sich um Verfügungen oder Dienstleistungen mit geringem Aufwand, insbesondere um einfache Auskünfte, handelt; c. soweit die Gebühr voraussichtlich uneinbringlich ist, namentlich weil die gebührenpflichtige Person nachweislich mittellos, ohne bekannte Adresse oder im Ausland ist."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "2ce09a4e7d3621ede805bb38444e4381e673cdf7f9d689c309696b757939b64d"
+    },
+    {
       "id": "bund/GEBV_HREG/art_3",
       "ebene": "bund",
       "quelle": "GEBV_HREG",
@@ -40,6 +78,63 @@
       "sha": "7e93ca3009d4aa01d3088d3f2f4f08c2a1be8713fbfc1397677868faed41b01b"
     },
     {
+      "id": "bund/GEBV_HREG/art_5",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vorschuss und Vorauszahlung Die Handelsregisterbehörde kann von der gebührenpflichtigen Person einen Vorschuss oder eine Vorauszahlung verlangen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "2c5fa8ca72e55add31a6608e77bf48d16d9d6e795ca0a1dfcd4da1107f6b7471"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_6",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rechnungsstellung und Fälligkeit Die Gebühr wird mit der Rechnungsstellung oder mit Rechtskraft der Verfügung fällig."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "58d37293f7f211eb7a82f97910e922aadd54dad52887c1c92522fa8abbb6deb7"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_7",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verjährung 1 Die Gebührenforderung verjährt fünf Jahre nach Eintritt der Fälligkeit. 2 Die Verjährung wird durch jede Verwaltungshandlung unterbrochen, mit der die Gebührenforderung bei der gebührenpflichtigen Person geltend gemacht wird. 3 Mit der Unterbrechung beginnt die Verjährung von Neuem."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_7",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "34bb79f2210e0806770cd1d8c2bb7ff58f80b874025f921752b34328f68f580e"
+    },
+    {
       "id": "bund/GEBV_HREG/art_8",
       "ebene": "bund",
       "quelle": "GEBV_HREG",
@@ -57,6 +152,63 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20210101",
       "sha": "514993a5a1767b30239671eabfd3cf665a51092faa524f8f63f8851869564247"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_9",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Übergangsbestimmung Die Zahlungsmodalitäten und die Höhe von Gebühren für Verfügungen und Dienstleistungen, die vor Inkrafttreten dieser Verordnung ergehen beziehungsweise erbracht wurden, richten sich nach bisherigem Recht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_9",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "3074919782f10bfc60b35e098bd138966e8ab13c333397510128bcab6222e3e3"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_10",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufhebung eines anderen Erlasses Die Verordnung vom 3. Dezember 1954 2 über die Gebühren für das Handelsregister wird aufgehoben. 2 [ AS 1954 1189 , 1972 2771 , 1974 191 , 1982 1998 , 1992 1223 , 1997 2233 , 2004 2669 Anhang Ziff. 1, 2007 4851 Anhang Ziff. II 2]"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_10",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "42be6071eeea9402555e10b8604129930cadb988694d9d2edd6425bcf3863917"
+    },
+    {
+      "id": "bund/GEBV_HREG/art_11",
+      "ebene": "bund",
+      "quelle": "GEBV_HREG",
+      "erlass": "GebV-HReg",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Inkrafttreten Diese Verordnung tritt am 1. Januar 2021 in Kraft."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20210101",
+      "sha": "ee5f773f7db5a91f87bb994a577095b0082bcf1628eb2d6fdda0897f3762f6b4"
     }
   ]
 }

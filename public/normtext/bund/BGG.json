@@ -2,6 +2,1164 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
+      "id": "bund/BGG/art_1",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht ist die oberste Recht sprechende Behörde des Bundes."
+        },
+        {
+          "absatz": "2",
+          "text": "Es übt die Aufsicht über die Geschäftsführung des Bundesstrafgerichts, des Bundesverwaltungsgerichts und des Bundespatentgerichts aus."
+        },
+        {
+          "absatz": "3",
+          "text": "Es besteht aus 35–45 ordentlichen Bundesrichtern und Bundesrichterinnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Es besteht ausserdem aus nebenamtlichen Bundesrichtern und Bundesrichterinnen; deren Zahl beträgt höchstens zwei Drittel der Zahl der ordentlichen Richter und Richterinnen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Bundesversammlung legt die Zahl der Richter und Richterinnen in einer Verordnung fest."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "c537eaa5ca9ae1ea56c6040aaeae0048f31dd3b52119675e431c0522abb76198"
+    },
+    {
+      "id": "bund/BGG/art_2",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht ist in seiner Recht sprechenden Tätigkeit unabhängig und nur dem Recht verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Seine Entscheide können nur von ihm selbst nach Massgabe der gesetzlichen Bestimmungen aufgehoben oder geändert werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6ca052620cd1c29d8b5b3c894deab1a3cd694356a7f1fddaa1b335db5336b0b4"
+    },
+    {
+      "id": "bund/BGG/art_3",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundesversammlung übt die Oberaufsicht über das Bundesgericht aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie entscheidet jährlich über die Genehmigung des Voranschlags, der Rechnung und des Geschäftsberichts des Bundesgerichts."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_3",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "e44a3a9eab518030f3bf1d875febfd4fbb2c1c83e41a8de74b1a6d1fb84c5b05"
+    },
+    {
+      "id": "bund/BGG/art_4",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sitz des Bundesgerichts ist Lausanne."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine oder mehrere Abteilungen haben ihren Standort in Luzern."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_4",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "5d409ea806772608ffe4f3443d7dd564b96d408ed5488a5e5dbc5f179af226f2"
+    },
+    {
+      "id": "bund/BGG/art_5",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundesversammlung wählt die Richter und Richterinnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wählbar ist, wer in eidgenössischen Angelegenheiten stimmberechtigt ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "1bfeb77c8fb21365bd0134cd2cc985bb1c0a2d3dd5f8211887ff1eabbb3bb131"
+    },
+    {
+      "id": "bund/BGG/art_6",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Richter und Richterinnen dürfen weder der Bundesversammlung noch dem Bundesrat angehören und in keinem anderen Arbeitsverhältnis mit dem Bund stehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen weder eine Tätigkeit ausüben, welche die Erfüllung der Amtspflichten, die Unabhängigkeit oder das Ansehen des Gerichts beeinträchtigt, noch berufsmässig Dritte vor dem Bundesgericht vertreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie dürfen keine amtliche Funktion für einen ausländischen Staat ausüben und keine Titel oder Orden ausländischer Behörden annehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die ordentlichen Richter und Richterinnen dürfen kein Amt eines Kantons bekleiden und keine andere Erwerbstätigkeit ausüben. Sie dürfen auch nicht als Mitglied der Geschäftsleitung, der Verwaltung, der Aufsichtsstelle oder der Revisionsstelle eines wirtschaftlichen Unternehmens tätig sein."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "7466652b183b161fd73cd92e4aaa0bd63a29212c04c98b506253b92d1db4d1c3"
+    },
+    {
+      "id": "bund/BGG/art_7",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht kann den ordentlichen Richtern und Richterinnen gestatten, eine Nebenbeschäftigung ohne Erwerbszweck auszuüben, wenn die uneingeschränkte Erfüllung der Amtspflichten, die Unabhängigkeit und das Ansehen des Gerichts dadurch nicht beeinträchtigt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Es bestimmt die Voraussetzungen für diese Bewilligung in einem Reglement."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_7",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d9c0008bafd5b84e438aaef2879ecaa3b0a8129b9babf9320e6e6ff1d1d75e66"
+    },
+    {
+      "id": "bund/BGG/art_8",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Bundesgericht dürfen nicht gleichzeitig als Richter oder Richterinnen angehören:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Regelung von Absatz 1 Buchstabe d gilt bei dauernden Lebensgemeinschaften sinngemäss."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_8",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "7f82d4e584b02618420deb40f3b38db00bcc90720df87646cd89d929bb552565"
+    },
+    {
+      "id": "bund/BGG/art_9",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Amtsdauer der Richter und Richterinnen beträgt sechs Jahre."
+        },
+        {
+          "absatz": "2",
+          "text": "Richter und Richterinnen scheiden am Ende des Jahres aus ihrem Amt aus, in dem sie das 68. Altersjahr vollenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Frei gewordene Stellen werden für den Rest der Amtsdauer wieder besetzt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_9",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6f9a555e942fee56a116aef1e49b4e9dee0c90358ac3eb306ce00017d93f296b"
+    },
+    {
+      "id": "bund/BGG/art_10",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Richter und Richterinnen werden vor ihrem Amtsantritt auf gewissenhafte Pflichterfüllung vereidigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vereidigung erfolgt durch die Abteilung unter dem Vorsitz des Präsidenten oder der Präsidentin des Bundesgerichts."
+        },
+        {
+          "absatz": "3",
+          "text": "Statt des Eids kann ein Gelübde abgelegt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_10",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "09de8015f5a815f9b35f04e8782b910cb063a164c58d30925f804341d380f131"
+    },
+    {
+      "id": "bund/BGG/art_11",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "5 5 Aufgehoben durch Anhang Ziff. 3 des BG vom 17. Juni 2011 (Gesuche um Aufhebung der Immunität), mit Wirkung seit 5. Dez. 2011 ( AS 2011 4627 ; BBl 2010 7345 7385 )."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2f0168390ace6b2c532241077da2746b9ee24d64f8353d627d0b38b78cb07618"
+    },
+    {
+      "id": "bund/BGG/art_12",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Richter und Richterinnen können ihren Wohnort in der Schweiz frei wählen; ordentliche Richter und Richterinnen müssen jedoch das Gericht in kurzer Zeit erreichen können."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_12",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "e9c26731ce02f7aed11fdcb39722b13e9320a0e3b7a32c27834ec59f84255666"
+    },
+    {
+      "id": "bund/BGG/art_13",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesgericht regelt seine Organisation und Verwaltung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_13",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "02d54aa4056212047cc119a0e0f5f1727a9270496c1e9eb07a3f7cd721199a90"
+    },
+    {
+      "id": "bund/BGG/art_14",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bundesversammlung wählt aus den ordentlichen Richtern und Richterinnen:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wahl erfolgt für zwei Jahre; einmalige Wiederwahl ist zulässig."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Präsident oder die Präsidentin führt den Vorsitz im Gesamtgericht und in der Verwaltungskommission (Art. 17). Er oder sie vertritt das Gericht nach aussen."
+        },
+        {
+          "absatz": "4",
+          "text": "Er oder sie wird durch den Vizepräsidenten oder die Vizepräsidentin oder, falls dieser oder diese verhindert ist, durch den Richter oder die Richterin mit dem höchsten Dienstalter vertreten; bei gleichem Dienstalter ist das höhere Lebensalter massgebend."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_14",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "4b2b429fffbd56d8f825c17495854f8e717d3a7d06989e259c03e103c0de071f"
+    },
+    {
+      "id": "bund/BGG/art_15",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesamtgericht besteht aus den ordentlichen Richtern und Richterinnen. Es ist zuständig für:"
+        },
+        {
+          "absatz": "2",
+          "text": "Beschlüsse des Gesamtgerichts sind gültig, wenn an der Sitzung oder am Zirkulationsverfahren mindestens zwei Drittel aller Richter und Richterinnen teilnehmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_15",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3686cccd4b30a3d937af4b399f1519e0e10932f05be4a2b0c12016643a83d3a5"
+    },
+    {
+      "id": "bund/BGG/art_16",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Präsidentenkonferenz besteht aus den Präsidenten und Präsidentinnen der Abteilungen. Sie konstituiert sich selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentenkonferenz ist zuständig für:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_16",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b46bae303e305c1e72ace8f16da4d6e2ad343d2d310a9e674e4152801d1c826f"
+    },
+    {
+      "id": "bund/BGG/art_17",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission setzt sich zusammen aus:"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Generalsekretär oder die Generalsekretärin nimmt mit beratender Stimme an den Sitzungen der Verwaltungskommission teil."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Richter und Richterinnen nach Absatz 1 Buchstabe c werden vom Gesamtgericht für zwei Jahre gewählt; einmalige Wiederwahl ist zulässig."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verwaltungskommission trägt die Verantwortung für die Gerichtsverwaltung. Sie ist zuständig für:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_17",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d1f935de00beab58473e8b0e81ea8e50db2168077b7ece9e490ea16b6ef940c2"
+    },
+    {
+      "id": "bund/BGG/art_18",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilungen werden jeweils für zwei Jahre bestellt. Ihre Zusammensetzung wird öffentlich bekannt gemacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Bestellung sind die fachlichen Kenntnisse der Richter und Richterinnen sowie die Amtssprachen angemessen zu berücksichtigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Richter und Richterinnen sind zur Aushilfe in anderen Abteilungen verpflichtet."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_18",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "00c2e3e6b0ce75499db2f6f02dcc57d59f3b7a1ad3ba60c7bf867821f3af7a34"
+    },
+    {
+      "id": "bund/BGG/art_19",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Präsidenten oder Präsidentinnen der Abteilungen werden jeweils für zwei Jahre gewählt."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Verhinderungsfall werden sie durch den Richter oder die Richterin mit dem höchsten Dienstalter vertreten; bei gleichem Dienstalter ist das höhere Lebensalter massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Abteilungsvorsitz darf nicht länger als sechs Jahre ausgeübt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_19",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6aa7e0926b404d2a51a9f0b733b43bb95064cb48be0b68e6a814066c0b358913"
+    },
+    {
+      "id": "bund/BGG/art_20",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilungen entscheiden in der Regel in der Besetzung mit drei Richtern oder Richterinnen (Spruchkörper)."
+        },
+        {
+          "absatz": "2",
+          "text": "Über Rechtsfragen von grundsätzlicher Bedeutung oder auf Antrag eines Richters oder einer Richterin entscheiden sie in Fünferbesetzung. Ausgenommen sind Beschwerden gegen Entscheide der kantonalen Aufsichtsbehörden in Schuldbetreibungs- und Konkurssachen."
+        },
+        {
+          "absatz": "3",
+          "text": "In Fünferbesetzung entscheiden sie ferner über Beschwerden gegen referendumspflichtige kantonale Erlasse und gegen kantonale Entscheide über die Zulässigkeit einer Initiative oder das Erfordernis eines Referendums. Ausgenommen sind Beschwerden, die eine Angelegenheit einer Gemeinde oder einer anderen Körperschaft des kantonalen Rechts betreffen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_20",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2701c4faf56e66e67b80f78a509b73b6f98336be1674659bf35c9d3b4fc09185"
+    },
+    {
+      "id": "bund/BGG/art_21",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesamtgericht, die Präsidentenkonferenz, die Verwaltungskommission und die Abteilungen treffen die Entscheide, Beschlüsse und Wahlen, wenn das Gesetz nichts anderes bestimmt, mit der absoluten Mehrheit der Stimmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Stimmengleichheit ist die Stimme des Präsidenten beziehungsweise der Präsidentin ausschlaggebend; bei Wahlen entscheidet das Los."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Entscheiden, die in einem Verfahren nach den Artikeln 72–129 getroffen werden, ist Stimmenthaltung nicht zulässig."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_21",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "1dae45aff53d8e64920434808551f77cfa24d60d2bff7c1e1fe72df643c6f12a"
+    },
+    {
+      "id": "bund/BGG/art_22",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesgericht regelt die Verteilung der Geschäfte auf die Abteilungen nach Rechtsgebieten, die Bildung der Spruchkörper sowie den Einsatz der nebenamtlichen Richter und Richterinnen durch Reglement."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_22",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "657f19535e15c9d4b983e0e2dc3878defc729d015135c1c5a92e083b14463d2a"
+    },
+    {
+      "id": "bund/BGG/art_23",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Abteilung kann eine Rechtsfrage nur dann abweichend von einem früheren Entscheid einer oder mehrerer anderer Abteilungen entscheiden, wenn die Vereinigung der betroffenen Abteilungen zustimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat eine Abteilung eine Rechtsfrage zu entscheiden, die mehrere Abteilungen betrifft, so holt sie die Zustimmung der Vereinigung aller betroffenen Abteilungen ein, sofern sie dies für die Rechtsfortbildung oder die Einheit der Rechtsprechung für angezeigt hält."
+        },
+        {
+          "absatz": "3",
+          "text": "Beschlüsse der Vereinigung der betroffenen Abteilungen sind gültig, wenn an der Sitzung oder am Zirkulationsverfahren mindestens zwei Drittel der ordentlichen Richter und Richterinnen jeder betroffenen Abteilung teilnehmen. Der Beschluss wird ohne Parteiverhandlung und öffentliche Beratung gefasst; er ist für die Antrag stellende Abteilung bei der Beurteilung des Streitfalles verbindlich."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_23",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "857bdeb94acea9636f9dde3b7fc326c061cbcfc18f168bef07838fc69299ec50"
+    },
+    {
+      "id": "bund/BGG/art_24",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsschreiber und Gerichtsschreiberinnen wirken bei der Instruktion der Fälle und bei der Entscheidfindung mit. Sie haben beratende Stimme."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erarbeiten unter der Verantwortung eines Richters oder einer Richterin Referate und redigieren die Entscheide des Bundesgerichts."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erfüllen weitere Aufgaben, die ihnen das Reglement überträgt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_24",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "872cc93b045e059bcdefbc246a32a8c4812a6bb58a5eca560a91cb0e1ce85081"
+    },
+    {
+      "id": "bund/BGG/art_25",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht verwaltet sich selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Es richtet seine Dienste ein und stellt das nötige Personal an."
+        },
+        {
+          "absatz": "3",
+          "text": "Es führt eine eigene Rechnung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_25",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "7822d372db6a658712d98bdd0d9a181ce80b1be0e3c2b373db44814cdfe8bb6b"
+    },
+    {
+      "id": "bund/BGG/art_25_a",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Bereitstellung, die Bewirtschaftung und den Unterhalt der vom Bundesgericht benutzten Gebäude ist das Eidgenössische Finanzdepartement zuständig. Dieses hat die Bedürfnisse des Bundesgerichts angemessen zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesgericht deckt seinen Bedarf an Gütern und Dienstleistungen im Bereich der Logistik selbständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesgericht und der Bundesrat regeln die Einzelheiten der Zusammenarbeit zwischen dem Bundesgericht und dem Eidgenössischen Finanzdepartement in einer Vereinbarung. Darin kann die Zuweisung der Zuständigkeiten gemäss den vorherigen Absätzen in einzelnen Punkten anders geregelt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_25_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "1e846767562d47333238d1d816efddfa37f1f32acb5c69746889ce3fea5bea40"
+    },
+    {
+      "id": "bund/BGG/art_25_b",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "25_b",
+      "artikelLabel": "Art. 25b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Benutzung der elektronischen Infrastruktur des Bundesgerichts finden im Rahmen seiner Verwaltungstätigkeit die Artikel 57 i –57 q des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 sinngemäss Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesgericht erlässt die Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_25_b",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "4afb23d7db927b439e1deef2f940c97c4ea6b3778e2b088392f9ee4dacc09b73"
+    },
+    {
+      "id": "bund/BGG/art_26",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Generalsekretär oder die Generalsekretärin steht der Gerichtsverwaltung einschliesslich der wissenschaftlichen Dienste vor. Er oder sie führt das Sekretariat des Gesamtgerichts, der Präsidentenkonferenz und der Verwaltungskommission."
+        },
+        {
+          "absatz": "2",
+          "text": "Er oder sie und der Stellvertreter oder die Stellvertreterin werden auf Amtsdauer gewählt. Die Amtsdauer entspricht derjenigen der Richter und Richterinnen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_26",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "fc0bfcdaf7c90169baf554dac4f997343acdb22b11aee51ba1e49a427084bf1e"
+    },
+    {
+      "id": "bund/BGG/art_27",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht informiert die Öffentlichkeit über seine Rechtsprechung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Veröffentlichung der Entscheide hat grundsätzlich in anonymisierter Form zu erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesgericht regelt die Grundsätze der Information in einem Reglement."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Gerichtsberichterstattung kann das Bundesgericht eine Akkreditierung vorsehen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_27",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "53a661d0b159233c4425ca6e3fe0150ee4534f70a1cbf97c781939e47787f15c"
+    },
+    {
+      "id": "bund/BGG/art_28",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Öffentlichkeitsgesetz vom 17. Dezember 2004 gilt sinngemäss für das Bundesgericht, soweit dieses administrative Aufgaben oder Aufgaben im Zusammenhang mit der Aufsicht über das Bundesverwaltungsgericht und das Bundesstrafgericht erfüllt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesgericht bezeichnet ein Beschwerdeorgan, das über Beschwerden gegen seine Verfügungen betreffend den Zugang zu amtlichen Dokumenten entscheidet. Es kann vorsehen, dass kein Schlichtungsverfahren durchgeführt wird; in diesem Fall erlässt es die Stellungnahme zu einem Gesuch um Zugang zu amtlichen Dokumenten in Form einer beschwerdefähigen Verfügung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_28",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "318e164aa132d90072d4fef5ed1edcc0cfbfa782d1f18c156e9f321cd5893980"
+    },
+    {
+      "id": "bund/BGG/art_29",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht prüft seine Zuständigkeit von Amtes wegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen Zweifel, ob das Bundesgericht oder eine andere Behörde zuständig ist, so führt das Gericht mit dieser Behörde einen Meinungsaustausch."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_29",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "da6f4dd460d9ec368ba710ec9979636d5b19c6e9e5fdd8c6cd72c87b38b55fa0"
+    },
+    {
+      "id": "bund/BGG/art_30",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erachtet sich das Bundesgericht als nicht zuständig, so tritt es auf die Sache nicht ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat sich in einem Meinungsaustausch die Zuständigkeit einer anderen Behörde ergeben oder erscheint die Zuständigkeit einer anderen Bundesbehörde als wahrscheinlich, so überweist das Bundesgericht die Sache der betreffenden Behörde."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_30",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "29ff90d2202c8b89dafe2e90add36f6c9f5b913f740c397c1dd48135b34840e3"
+    },
+    {
+      "id": "bund/BGG/art_31",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist das Bundesgericht in der Hauptsache zuständig, so befindet es auch über die Vorfragen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_31",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "69ab90e0a557ac001848484feefea88ed177207bb3c46c798caed281e128e453"
+    },
+    {
+      "id": "bund/BGG/art_32",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident oder die Präsidentin der Abteilung leitet als Instruktionsrichter beziehungsweise Instruktionsrichterin das Verfahren bis zum Entscheid; er oder sie kann einen anderen Richter oder eine andere Richterin mit dieser Aufgabe betrauen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin entscheidet als Einzelrichter beziehungsweise Einzelrichterin über die Abschreibung von Verfahren zufolge Gegenstandslosigkeit, Rückzugs oder Vergleichs."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verfügungen des Instruktionsrichters oder der Instruktionsrichterin sind nicht anfechtbar."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_32",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "0662f9ffc1eeae7420643b92ab3bd38d8272a6575ff0db8714b349fbfb5ac15d"
+    },
+    {
+      "id": "bund/BGG/art_33",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer im Verfahren vor dem Bundesgericht den Anstand verletzt oder den Geschäftsgang stört, wird mit einem Verweis oder einer Ordnungsbusse bis zu 1000 Franken bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Falle böswilliger oder mutwilliger Prozessführung können die Partei und ihr Vertreter oder ihre Vertreterin mit einer Ordnungsbusse bis zu 2000 Franken und bei Wiederholung bis zu 5000 Franken bestraft werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der oder die Vorsitzende einer Verhandlung kann Personen, die seine oder ihre Anweisungen nicht befolgen, aus dem Sitzungssaal wegweisen und mit einer Ordnungsbusse bis zu 1000 Franken bestrafen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_33",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "dc5396dd7b248007f0d9a25d18e381852aa945928d71f63538469982ac29b52f"
+    },
+    {
+      "id": "bund/BGG/art_34",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Richter, Richterinnen, Gerichtsschreiber und Gerichtsschreiberinnen (Gerichtspersonen) treten in Ausstand, wenn sie:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitwirkung in einem früheren Verfahren des Bundesgerichts bildet für sich allein keinen Ausstandsgrund."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_34",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "01f980418b5ca80d9cd7adbd4e1bca0c5bd941c6445111db936b0e62d7c91585"
+    },
+    {
+      "id": "bund/BGG/art_35",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Trifft bei einer Gerichtsperson ein Ausstandsgrund zu, so hat sie dies rechtzeitig dem Abteilungspräsidenten oder der Abteilungspräsidentin mitzuteilen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_35",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "dc6d142c0d16c96fbcc47f3cb839dc92aaee069ace060919625b37bdb7b71a99"
+    },
+    {
+      "id": "bund/BGG/art_36",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Will eine Partei den Ausstand einer Gerichtsperson verlangen, so hat sie dem Gericht ein schriftliches Begehren einzureichen, sobald sie vom Ausstandsgrund Kenntnis erhalten hat. Die den Ausstand begründenden Tatsachen sind glaubhaft zu machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die betroffene Gerichtsperson hat sich über die vorgebrachten Ausstandsgründe zu äussern."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_36",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "5804ea68f07c01a6b2f018029dca9999ea16846fbee12a6db9a05689b48c6b65"
+    },
+    {
+      "id": "bund/BGG/art_37",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bestreitet die Gerichtsperson, deren Ausstand verlangt wird, oder ein Richter beziehungsweise eine Richterin der Abteilung den Ausstandsgrund, so entscheidet die Abteilung unter Ausschluss der betroffenen Gerichtsperson über den Ausstand."
+        },
+        {
+          "absatz": "2",
+          "text": "Über die Ausstandsfrage kann ohne Anhörung der Gegenpartei entschieden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Sollte der Ausstand von so vielen Richtern und Richterinnen verlangt werden, dass keine gültige Verhandlung stattfinden kann, so bezeichnet der Präsident beziehungsweise die Präsidentin des Bundesgerichts durch das Los aus der Zahl der Obergerichtspräsidenten und -präsidentinnen der in der Sache nicht beteiligten Kantone so viele ausserordentliche nebenamtliche Richter und Richterinnen, als erforderlich sind, um die Ausstandsfrage und nötigenfalls die Hauptsache selbst beurteilen zu können."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_37",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "4e1398f9087314378396806dd0ca5a19a657a1f290a3a7e4b880a5ca4bd7d906"
+    },
+    {
+      "id": "bund/BGG/art_38",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Amtshandlungen, an denen eine zum Ausstand verpflichtete Person mitgewirkt hat, sind aufzuheben, sofern dies eine Partei innert fünf Tagen verlangt, nachdem sie vom Ausstandsgrund Kenntnis erhalten hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht wiederholbare Beweismassnahmen dürfen von der entscheidenden Instanz berücksichtigt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird der Ausstandsgrund erst nach Abschluss des Verfahrens entdeckt, so gelten die Bestimmungen über die Revision."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_38",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "793b27bafc2eeae5c6735a202f9f6adb85534498cecdab58615f8759ffec91f9"
+    },
+    {
+      "id": "bund/BGG/art_39",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien haben dem Bundesgericht ihren Wohnsitz oder Sitz anzugeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können überdies eine elektronische Zustelladresse angeben und ihr Einverständnis mit der elektronischen Eröffnung erklären."
+        },
+        {
+          "absatz": "3",
+          "text": "Parteien, die im Ausland wohnen, haben in der Schweiz ein Zustellungsdomizil zu bezeichnen. Mitteilungen an Parteien, die dieser Auflage nicht Folge leisten, können unterbleiben oder in einem amtlichen Blatt eröffnet werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_39",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "a80595fb207342060ef2d4d5c727f263b09ba8a63073616a238a19f2cfb54a7c"
+    },
+    {
+      "id": "bund/BGG/art_40",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Zivil- und Strafsachen können Parteien vor Bundesgericht nur von Anwälten und Anwältinnen vertreten werden, die nach dem Anwaltsgesetz vom 23. Juni 2000 oder nach einem Staatsvertrag berechtigt sind, Parteien vor schweizerischen Gerichtsbehörden zu vertreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Parteivertreter und -vertreterinnen haben sich durch eine Vollmacht auszuweisen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_40",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "a40edc6494bd8f5929217a9a4b1e1e33ffb2decd77eff1fcb3bbb02c38cf8aee"
+    },
+    {
+      "id": "bund/BGG/art_41",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist eine Partei offensichtlich nicht imstande, ihre Sache selber zu führen, so kann das Bundesgericht sie auffordern, einen Vertreter oder eine Vertreterin beizuziehen. Leistet sie innert der angesetzten Frist keine Folge, so bestellt ihr das Gericht einen Anwalt oder eine Anwältin."
+        },
+        {
+          "absatz": "2",
+          "text": "Die vom Bundesgericht bezeichnete Vertretung hat Anspruch auf eine angemessene Entschädigung aus der Gerichtskasse, soweit sie ihren Aufwand nicht aus einer zugesprochenen Parteientschädigung decken kann und die Partei selbst zahlungsunfähig ist. Die Partei hat der Gerichtskasse Ersatz zu leisten, wenn sie später dazu in der Lage ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_41",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "71a4e74ea3fdcc650f8315d1340041d279339a0202e4f52e9754d0cab8c1ed34"
+    },
+    {
+      "id": "bund/BGG/art_42",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechtsschriften sind in einer Amtssprache abzufassen und haben die Begehren, deren Begründung mit Angabe der Beweismittel und die Unterschrift zu enthalten."
+        },
+        {
+          "absatz": null,
+          "text": "1bis Wurde in einer Zivilsache das Verfahren vor der Vorinstanz in englischer Sprache geführt, so können Rechtsschriften in dieser Sprache abgefasst werden."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Begründung ist in gedrängter Form darzulegen, inwiefern der angefochtene Akt Recht verletzt. Ist eine Beschwerde nur unter der Voraussetzung zulässig, dass sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt oder aus anderen Gründen ein besonders bedeutender Fall vorliegt, so ist auszuführen, warum die jeweilige Voraussetzung erfüllt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Urkunden, auf die sich die Partei als Beweismittel beruft, sind beizulegen, soweit die Partei sie in Händen hat; richtet sich die Rechtsschrift gegen einen Entscheid, so ist auch dieser beizulegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei elektronischer Einreichung muss die Rechtsschrift von der Partei oder ihrem Vertreter beziehungsweise ihrer Vertreterin mit einer qualifizierten elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur versehen werden. Das Bundesgericht bestimmt in einem Reglement:"
+        },
+        {
+          "absatz": "5",
+          "text": "Fehlen die Unterschrift der Partei oder ihrer Vertretung, deren Vollmacht oder die vorgeschriebenen Beilagen oder ist die Vertretung nicht zugelassen, so wird eine angemessene Frist zur Behebung des Mangels angesetzt mit der Androhung, dass die Rechtsschrift sonst unbeachtet bleibt."
+        },
+        {
+          "absatz": "6",
+          "text": "Unleserliche, ungebührliche, unverständliche, übermässig weitschweifige oder nicht in einer Amtssprache verfasste Rechtsschriften können in gleicher Weise zur Änderung zurückgewiesen werden."
+        },
+        {
+          "absatz": "7",
+          "text": "Rechtsschriften, die auf querulatorischer oder rechtsmissbräuchlicher Prozessführung beruhen, sind unzulässig."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_42",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "7d5a7b1b65ae8294c0f16c5a5328b67fd72232b640674fd2a15f36a0314a4cff"
+    },
+    {
+      "id": "bund/BGG/art_43",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesgericht räumt den beschwerdeführenden Parteien auf Antrag eine angemessene Frist zur Ergänzung der Beschwerdebegründung ein, wenn:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_43",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "fa64e48379699724dc8b0586d1f577df802427f2d588c92012d75135ccccf6c8"
+    },
+    {
+      "id": "bund/BGG/art_44",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fristen, die durch eine Mitteilung oder den Eintritt eines Ereignisses ausgelöst werden, beginnen am folgenden Tag zu laufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Mitteilung, die nur gegen Unterschrift des Adressaten oder der Adressatin oder einer anderen berechtigten Person überbracht wird, gilt spätestens am siebenten Tag nach dem ersten erfolglosen Zustellungsversuch als erfolgt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_44",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b2c929f5bfaaf6ff52a8933fcdfac672d0c6aab7b94e10321b1b7e6d0c7744ff"
+    },
+    {
       "id": "bund/BGG/art_45",
       "ebene": "bund",
       "quelle": "BGG",
@@ -46,6 +1204,691 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
       "sha": "a42c58c3bd2e0e01e111d8e0518df4854bce8acaefb2a678834b7a182db5ea32"
+    },
+    {
+      "id": "bund/BGG/art_47",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesetzlich bestimmte Fristen können nicht erstreckt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Richterlich bestimmte Fristen können aus zureichenden Gründen erstreckt werden, wenn das Gesuch vor Ablauf der Frist gestellt worden ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_47",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "c1edc2bf90b965b13fd22433387b139a22bc11d0516018c4562b9e13b58290f5"
+    },
+    {
+      "id": "bund/BGG/art_48",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eingaben müssen spätestens am letzten Tag der Frist beim Bundesgericht eingereicht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Falle der elektronischen Einreichung ist für die Wahrung einer Frist der Zeitpunkt massgebend, in dem die Quittung ausgestellt wird, die bestätigt, dass alle Schritte abgeschlossen sind, die auf der Seite der Partei für die Übermittlung notwendig sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Frist gilt auch als gewahrt, wenn die Eingabe rechtzeitig bei der Vorinstanz oder bei einer unzuständigen eidgenössischen oder kantonalen Behörde eingereicht worden ist. Die Eingabe ist unverzüglich dem Bundesgericht zu übermitteln."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Frist für die Zahlung eines Vorschusses oder für eine Sicherstellung ist gewahrt, wenn der Betrag rechtzeitig zu Gunsten des Bundesgerichts der Schweizerischen Post übergeben oder einem Post- oder Bankkonto in der Schweiz belastet worden ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_48",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b79ce355fea9809dac16a6486c373fe55a610b56055b04adc92cd1eb0551053d"
+    },
+    {
+      "id": "bund/BGG/art_49",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aus mangelhafter Eröffnung, insbesondere wegen unrichtiger oder unvollständiger Rechtsmittelbelehrung oder wegen Fehlens einer vorgeschriebenen Rechtsmittelbelehrung, dürfen den Parteien keine Nachteile erwachsen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_49",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "826e7123e20950a42c9f3c052ad13b2f87a7accc11f4b285da1cfe648c95ed8f"
+    },
+    {
+      "id": "bund/BGG/art_50",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist eine Partei oder ihr Vertreter beziehungsweise ihre Vertreterin durch einen anderen Grund als die mangelhafte Eröffnung unverschuldeterweise abgehalten worden, fristgerecht zu handeln, so wird die Frist wiederhergestellt, sofern die Partei unter Angabe des Grundes innert 30 Tagen nach Wegfall des Hindernisses darum ersucht und die versäumte Rechtshandlung nachholt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wiederherstellung kann auch nach Eröffnung des Urteils bewilligt werden; wird sie bewilligt, so wird das Urteil aufgehoben."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_50",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "5c431fd0123abeaecae5ff88d2ab80abf18bf182eadb92543c7bf9b402355376"
+    },
+    {
+      "id": "bund/BGG/art_51",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Streitwert bestimmt sich:"
+        },
+        {
+          "absatz": "2",
+          "text": "Lautet ein Begehren nicht auf Bezahlung einer bestimmten Geldsumme, so setzt das Bundesgericht den Streitwert nach Ermessen fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Zinsen, Früchte, Gerichtskosten und Parteientschädigungen, die als Nebenrechte geltend gemacht werden, sowie Vorbehalte und die Kosten der Urteilsveröffentlichung fallen bei der Bestimmung des Streitwerts nicht in Betracht."
+        },
+        {
+          "absatz": "4",
+          "text": "Als Wert wiederkehrender Nutzungen oder Leistungen gilt der Kapitalwert. Bei ungewisser oder unbeschränkter Dauer gilt als Kapitalwert der zwanzigfache Betrag der einjährigen Nutzung oder Leistung, bei Leibrenten jedoch der Barwert."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_51",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3fcccd5524bddafa9f286866a586edca394b3190f616a412f876d3ea461c39de"
+    },
+    {
+      "id": "bund/BGG/art_52",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mehrere in einer vermögensrechtlichen Sache von der gleichen Partei oder von Streitgenossen und Streitgenossinnen geltend gemachte Begehren werden zusammengerechnet, sofern sie sich nicht gegenseitig ausschliessen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_52",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6a4209776403ac1bcad78015bbe8f917864dd7b3dea60ca8b0cca70e9b24e8bd"
+    },
+    {
+      "id": "bund/BGG/art_53",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag einer Widerklage wird nicht mit demjenigen der Hauptklage zusammengerechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Schliessen die in Hauptklage und Widerklage geltend gemachten Ansprüche einander aus und erreicht eine der beiden Klagen die Streitwertgrenze nicht, so gilt die Streitwertgrenze auch für diese Klage als erreicht, wenn sich die Beschwerde auf beide Klagen bezieht."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_53",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "96bce0b79c14569c5857ed0e5bd97f2ccd064ff0c4b644dc6d9a758e2c85b590"
+    },
+    {
+      "id": "bund/BGG/art_54",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren wird in einer der Amtssprachen (Deutsch, Französisch, Italienisch, Rumantsch Grischun) geführt, in der Regel in der Sprache des angefochtenen Entscheids. Verwenden die Parteien eine andere Amtssprache, so kann das Verfahren in dieser Sprache geführt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Klageverfahren wird auf die Sprache der Parteien Rücksicht genommen, sofern es sich um eine Amtssprache handelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Reicht eine Partei Urkunden ein, die nicht in einer Amtssprache verfasst sind, so kann das Bundesgericht mit dem Einverständnis der anderen Parteien darauf verzichten, eine Übersetzung zu verlangen."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Übrigen ordnet das Bundesgericht eine Übersetzung an, wo dies nötig ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_54",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d7f570ec1c04694cb50e703ecf921db0b39d6e4091c085254b0e9859a7dde2b1"
+    },
+    {
+      "id": "bund/BGG/art_55",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Beweisverfahren richtet sich nach den Artikeln 36, 37 und 39–65 des Bundesgesetzes vom 4. Dezember 1947 über den Bundeszivilprozess (BZP)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin kann die notwendigen Beweismassnahmen selbst vornehmen oder der zuständigen eidgenössischen oder kantonalen Behörde übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Zu Zeugeneinvernahmen, Augenschein und Parteiverhör zieht er oder sie einen zweiten Richter oder eine zweite Richterin bei."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_55",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "59782c83f3195741a3b1be953a2789cbde0738acf64538c2e74937aedffeff3b"
+    },
+    {
+      "id": "bund/BGG/art_56",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien sind berechtigt, der Beweiserhebung beizuwohnen und in die vorgelegten Urkunden Einsicht zu nehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wo es zur Wahrung überwiegender öffentlicher oder privater Interessen notwendig ist, nimmt das Gericht von einem Beweismittel unter Ausschluss der Parteien oder der Gegenparteien Kenntnis."
+        },
+        {
+          "absatz": "3",
+          "text": "Will das Gericht in diesem Fall auf das Beweismittel zum Nachteil einer Partei abstellen, so muss es ihr den für die Sache wesentlichen Inhalt desselben mitteilen und ihr ausserdem Gelegenheit geben, sich zu äussern und Gegenbeweismittel zu bezeichnen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_56",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "353fbda2468f4b3ac065eafa9d9558eaf8d6bb9155019b2450eca5f66dd3fbc7"
+    },
+    {
+      "id": "bund/BGG/art_57",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Abteilungspräsident oder die Abteilungspräsidentin kann eine mündliche Parteiverhandlung anordnen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_57",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b36a74559c94f20ab6a78186d4d5d5067945e5250a51c446b30e0ef4ccc5247c"
+    },
+    {
+      "id": "bund/BGG/art_58",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht berät den Entscheid mündlich:"
+        },
+        {
+          "absatz": "2",
+          "text": "In den übrigen Fällen entscheidet das Bundesgericht auf dem Weg der Aktenzirkulation."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_58",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d16022e0769dac71329dcf4e77709f50a56ae7d69300c6aa63774415e167128d"
+    },
+    {
+      "id": "bund/BGG/art_59",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Parteiverhandlungen wie auch die mündlichen Beratungen und die darauf folgenden Abstimmungen sind öffentlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn eine Gefährdung der Sicherheit, der öffentlichen Ordnung oder der Sittlichkeit zu befürchten ist oder das Interesse einer beteiligten Person es rechtfertigt, kann das Bundesgericht die Öffentlichkeit ganz oder teilweise ausschliessen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesgericht legt das Dispositiv von Entscheiden, die nicht öffentlich beraten worden sind, nach dessen Eröffnung während 30 Tagen öffentlich auf."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_59",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "f33b89eb581e3140a395f563eac617dcad5a7d06f93d02e9bb1b5c2255631302"
+    },
+    {
+      "id": "bund/BGG/art_60",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vollständige Ausfertigung des Entscheids wird, unter Angabe der mitwirkenden Gerichtspersonen, den Parteien, der Vorinstanz und allfälligen anderen Beteiligten eröffnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat das Bundesgericht den Entscheid in einer mündlichen Beratung getroffen, so teilt es den Beteiligten ohne Verzug das Dispositiv mit."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit dem Einverständnis der Partei können Entscheide elektronisch eröffnet werden. Sie sind mit einer elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur zu versehen. Das Bundesgericht regelt in einem Reglement:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_60",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b4b9b59b1fc8a9d214b947072b694de38ae87c7fcfc3a7afb6ad715d76081b10"
+    },
+    {
+      "id": "bund/BGG/art_61",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entscheide des Bundesgerichts erwachsen am Tag ihrer Ausfällung in Rechtskraft."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_61",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8ab6baec8d6fab1b0b1b47c61b15dc2baa1caa4817339a177644c2fcae659287"
+    },
+    {
+      "id": "bund/BGG/art_62",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Partei, die das Bundesgericht anruft, hat einen Kostenvorschuss in der Höhe der mutmasslichen Gerichtskosten zu leisten. Wenn besondere Gründe vorliegen, kann auf die Erhebung des Kostenvorschusses ganz oder teilweise verzichtet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Partei in der Schweiz keinen festen Wohnsitz hat oder nachweislich zahlungsunfähig ist, kann sie auf Begehren der Gegenpartei zur Sicherstellung einer allfälligen Parteientschädigung verpflichtet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin setzt zur Leistung des Kostenvorschusses oder der Sicherstellung eine angemessene Frist. Läuft diese unbenutzt ab, so setzt der Instruktionsrichter oder die Instruktionsrichterin der Partei eine Nachfrist. Wird der Kostenvorschuss oder die Sicherheit auch innert der Nachfrist nicht geleistet, so tritt das Bundesgericht auf die Eingabe nicht ein."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_62",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "758587db81228340558f3cbfdd047b2b1ccde4fda4e46191a88d3b2d3c10773f"
+    },
+    {
+      "id": "bund/BGG/art_63",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Partei hat die Barauslagen vorzuschiessen, die im Laufe des Verfahrens infolge ihrer Anträge entstehen, und anteilsmässig die Barauslagen, die durch gemeinschaftliche Anträge der Parteien oder durch das Bundesgericht von Amtes wegen veranlasst werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin setzt zur Leistung des Vorschusses eine angemessene Frist. Läuft diese unbenutzt ab, so setzt der Instruktionsrichter oder die Instruktionsrichterin der Partei eine Nachfrist. Wird der Vorschuss auch innert der Nachfrist nicht geleistet, so unterbleibt die Handlung, deren Kosten zu decken sind."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_63",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "a1134c954f4796a3cf7c5b4d1bf89d77ad0337f62d5a0205cd22113d7c1b24b3"
+    },
+    {
+      "id": "bund/BGG/art_64",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht befreit eine Partei, die nicht über die erforderlichen Mittel verfügt, auf Antrag von der Bezahlung der Gerichtskosten und von der Sicherstellung der Parteientschädigung, sofern ihr Rechtsbegehren nicht aussichtslos erscheint."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn es zur Wahrung ihrer Rechte notwendig ist, bestellt das Bundesgericht der Partei einen Anwalt oder eine Anwältin. Der Anwalt oder die Anwältin hat Anspruch auf eine angemessene Entschädigung aus der Gerichtskasse, soweit der Aufwand für die Vertretung nicht aus einer zugesprochenen Parteientschädigung gedeckt werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Über das Gesuch um unentgeltliche Rechtspflege entscheidet die Abteilung in der Besetzung mit drei Richtern oder Richterinnen. Vorbehalten bleiben Fälle, die im vereinfachten Verfahren nach Artikel 108 behandelt werden. Der Instruktionsrichter oder die Instruktionsrichterin kann die unentgeltliche Rechtspflege selbst gewähren, wenn keine Zweifel bestehen, dass die Voraussetzungen erfüllt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Partei hat der Gerichtskasse Ersatz zu leisten, wenn sie später dazu in der Lage ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_64",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8a4c468151742f4a5b4ea04714776239bb18d6e21abf715b3b58abe8efe09d37"
+    },
+    {
+      "id": "bund/BGG/art_65",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtskosten bestehen in der Gerichtsgebühr, der Gebühr für das Kopieren von Rechtsschriften, den Auslagen für Übersetzungen, ausgenommen solche zwischen Amtssprachen, und den Entschädigungen für Sachverständige sowie für Zeugen und Zeuginnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichtsgebühr richtet sich nach Streitwert, Umfang und Schwierigkeit der Sache, Art der Prozessführung und finanzieller Lage der Parteien."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie beträgt in der Regel:"
+        },
+        {
+          "absatz": "4",
+          "text": "Sie beträgt 200–1000 Franken und wird nicht nach dem Streitwert bemessen in Streitigkeiten:"
+        },
+        {
+          "absatz": "5",
+          "text": "Wenn besondere Gründe es rechtfertigen, kann das Bundesgericht bei der Bestimmung der Gerichtsgebühr über die Höchstbeträge hinausgehen, jedoch höchstens bis zum doppelten Betrag in den Fällen von Absatz 3 und bis zu 10 000 Franken in den Fällen von Absatz 4."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_65",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3a5dad4eae7fde671c6c03cd129db40e6cbac46fb1b68c1b39d8b96a801604d4"
+    },
+    {
+      "id": "bund/BGG/art_66",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtskosten werden in der Regel der unterliegenden Partei auferlegt. Wenn die Umstände es rechtfertigen, kann das Bundesgericht die Kosten anders verteilen oder darauf verzichten, Kosten zu erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Fall durch Abstandserklärung oder Vergleich erledigt, so kann auf die Erhebung von Gerichtskosten ganz oder teilweise verzichtet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Unnötige Kosten hat zu bezahlen, wer sie verursacht."
+        },
+        {
+          "absatz": "4",
+          "text": "Dem Bund, den Kantonen und den Gemeinden sowie mit öffentlich-rechtlichen Aufgaben betrauten Organisationen dürfen in der Regel keine Gerichtskosten auferlegt werden, wenn sie in ihrem amtlichen Wirkungskreis, ohne dass es sich um ihr Vermögensinteresse handelt, das Bundesgericht in Anspruch nehmen oder wenn gegen ihre Entscheide in solchen Angelegenheiten Beschwerde geführt worden ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Mehrere Personen haben die ihnen gemeinsam auferlegten Gerichtskosten, wenn nichts anderes bestimmt ist, zu gleichen Teilen und unter solidarischer Haftung zu tragen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_66",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6572de556cb17fbbb40569378544e6cd996ef8673bbceb86aa2884ff6784ed5b"
+    },
+    {
+      "id": "bund/BGG/art_67",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird der angefochtene Entscheid geändert, so kann das Bundesgericht die Kosten des vorangegangenen Verfahrens anders verteilen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_67",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d67d08e17eec4b428084e510a0fd3f09003b23f3798131eb4272f7757094b936"
+    },
+    {
+      "id": "bund/BGG/art_68",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht bestimmt im Urteil, ob und in welchem Mass die Kosten der obsiegenden Partei von der unterliegenden zu ersetzen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die unterliegende Partei wird in der Regel verpflichtet, der obsiegenden Partei nach Massgabe des Tarifs des Bundesgerichts alle durch den Rechtsstreit verursachten notwendigen Kosten zu ersetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bund, Kantonen und Gemeinden sowie mit öffentlich-rechtlichen Aufgaben betrauten Organisationen wird in der Regel keine Parteientschädigung zugesprochen, wenn sie in ihrem amtlichen Wirkungskreis obsiegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Artikel 66 Absätze 3 und 5 ist sinngemäss anwendbar."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Entscheid der Vorinstanz über die Parteientschädigung wird vom Bundesgericht je nach Ausgang des Verfahrens bestätigt, aufgehoben oder geändert. Dabei kann das Gericht die Entschädigung nach Massgabe des anwendbaren eidgenössischen oder kantonalen Tarifs selbst festsetzen oder die Festsetzung der Vorinstanz übertragen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_68",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "848fc98b8e237f9066e938074b1236047703d95b8d030c0be082f366de43ffa8"
+    },
+    {
+      "id": "bund/BGG/art_69",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entscheide, die zur Zahlung einer Geldsumme oder zur Sicherheitsleistung in Geld verpflichten, werden nach dem Bundesgesetz vom 11. April 1889 über Schuldbetreibung und Konkurs vollstreckt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_69",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "033d1b820a1f9d32edc3e105a5464f69468d037acea5346faac63c323cdd9760"
+    },
+    {
+      "id": "bund/BGG/art_70",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheide des Bundesgerichts, die nicht zur Zahlung einer Geldsumme oder zur Sicherheitsleistung in Geld verpflichten, sind von den Kantonen in gleicher Weise zu vollstrecken wie die rechtskräftigen Urteile ihrer Gerichte."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind hingegen nach folgenden Bestimmungen zu vollstrecken:"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Im Falle mangelhafter Vollstreckung kann beim Bundesrat Beschwerde geführt werden. Dieser trifft die erforderlichen Massnahmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_70",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "454125d325f361c229aaa05d1153335bb8a3b352f6db807bc01ed8bb28e16133"
+    },
+    {
+      "id": "bund/BGG/art_71",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wo dieses Gesetz keine besonderen Bestimmungen über das Verfahren enthält, sind die Vorschriften des BZP sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_71",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2accbb4239865af2cdae74394be6e046a9d9cd8cb5bccccb03b387729f9e8059"
+    },
+    {
+      "id": "bund/BGG/art_72",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht beurteilt Beschwerden gegen Entscheide in Zivilsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Beschwerde in Zivilsachen unterliegen auch:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_72",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "138eeb28de83d96b9a732fc6e90d08ed167487af1788c3b5b15207d7c53cb628"
+    },
+    {
+      "id": "bund/BGG/art_73",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde ist unzulässig gegen Entscheide, die im Rahmen des Widerspruchsverfahrens gegen eine Marke getroffen worden sind."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_73",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b677d0caff9b18e4c99f4b77720165da760b2faa6051e0cc4beec0759ce7cf0f"
     },
     {
       "id": "bund/BGG/art_74",
@@ -94,6 +1937,416 @@
       "sha": "1ee268107d7dc0b60b2804b5425411d89414e06aa1d8b2d8239f89a5bfb23608"
     },
     {
+      "id": "bund/BGG/art_76",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beschwerde in Zivilsachen ist berechtigt, wer:"
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen Entscheide nach Artikel 72 Absatz 2 steht das Beschwerderecht auch der Bundeskanzlei, den Departementen des Bundes oder, soweit das Bundesrecht es vorsieht, den ihnen unterstellten Dienststellen zu, wenn der angefochtene Entscheid die Bundesgesetzgebung in ihrem Aufgabenbereich verletzen kann."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_76",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "bd309397bcd9da51a542897c4ee153307ae850db6fdb199930e31acc969e71c2"
+    },
+    {
+      "id": "bund/BGG/art_77",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde in Zivilsachen ist ungeachtet des Streitwerts zulässig gegen Entscheide von Schiedsgerichten:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Artikel 48 Absatz 3, 90–98, 103 Absatz 2, 105 Absatz 2, 106 Absatz 1 sowie 107 Absatz 2, soweit dieser dem Bundesgericht erlaubt, in der Sache selbst zu entscheiden, sind in diesen Fällen nicht anwendbar."
+        },
+        {
+          "absatz": null,
+          "text": "2bis Rechtsschriften können in englischer Sprache abgefasst werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesgericht prüft nur Rügen, die in der Beschwerde vorgebracht und begründet worden sind."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_77",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2caaca7e3a924fe19b0619d34a4a3d610c5eacb84fe153efc711b5ab068860c0"
+    },
+    {
+      "id": "bund/BGG/art_78",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht beurteilt Beschwerden gegen Entscheide in Strafsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Beschwerde in Strafsachen unterliegen auch Entscheide über:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_78",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "fec184ffd8059dbf63e738719dd3b83fa590cfbcdf8d0ce87eebb194ce1a7572"
+    },
+    {
+      "id": "bund/BGG/art_79",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde ist unzulässig gegen Entscheide der Beschwerdekammer des Bundesstrafgerichts, soweit es sich nicht um Entscheide über Zwangsmassnahmen handelt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_79",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "ac87dff6c2129a7453c27c2ee18d2498dac70ce1f87eb1b52fd9b41b1dbddf34"
+    },
+    {
+      "id": "bund/BGG/art_80",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde ist zulässig gegen Entscheide letzter kantonaler Instanzen und gegen Entscheide der Beschwerdekammer und der Berufungskammer des Bundesstrafgerichts."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone setzen als letzte kantonale Instanzen obere Gerichte ein. Diese entscheiden als Rechtsmittelinstanzen. Ausgenommen sind die Fälle, in denen nach der Strafprozessordnung (StPO) ein oberes Gericht oder ein Zwangsmassnahmengericht als einzige kantonale Instanz entscheidet."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_80",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "998ebb81a72d09017d94b346d792b228d1a207c8310749c3e71bf006723b379a"
+    },
+    {
+      "id": "bund/BGG/art_81",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beschwerde in Strafsachen ist berechtigt, wer:"
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Bundesbehörde ist zur Beschwerde berechtigt, wenn das Bundesrecht vorsieht, dass ihr der Entscheid mitzuteilen ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegen Entscheide nach Artikel 78 Absatz 2 Buchstabe b steht das Beschwerderecht auch der Bundeskanzlei, den Departementen des Bundes oder, soweit das Bundesrecht es vorsieht, den ihnen unterstellten Dienststellen zu, wenn der angefochtene Entscheid die Bundesgesetzgebung in ihrem Aufgabenbereich verletzen kann."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_81",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "92d8ecaff09251e8cbeac9e523961c9a5234a739b885d6b34bddf0d3b8747f9b"
+    },
+    {
+      "id": "bund/BGG/art_82",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesgericht beurteilt Beschwerden:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_82",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "63a638c5247ccbfed9b39618c5ae976645df659802a46475790e9ef28420a724"
+    },
+    {
+      "id": "bund/BGG/art_83",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde ist unzulässig gegen:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_83",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "0026d49b136648ff14149f1c60dbabdd58fff697f4a761bdbafcb95f656c5abc"
+    },
+    {
+      "id": "bund/BGG/art_84",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen einen Entscheid auf dem Gebiet der internationalen Rechtshilfe in Strafsachen ist die Beschwerde nur zulässig, wenn er eine Auslieferung, eine Beschlagnahme, eine Herausgabe von Gegenständen oder Vermögenswerten oder eine Übermittlung von Informationen aus dem Geheimbereich betrifft und es sich um einen besonders bedeutenden Fall handelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein besonders bedeutender Fall liegt insbesondere vor, wenn Gründe für die Annahme bestehen, dass elementare Verfahrensgrundsätze verletzt worden sind oder das Verfahren im Ausland schwere Mängel aufweist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_84",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "9b03268c67db2a16016fb63235d5252b86b50863a103d141d22ba654db6f47cc"
+    },
+    {
+      "id": "bund/BGG/art_84_a",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "84_a",
+      "artikelLabel": "Art. 84a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gegen einen Entscheid auf dem Gebiet der internationalen Amtshilfe in Steuersachen ist die Beschwerde nur zulässig, wenn sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt oder wenn es sich aus anderen Gründen um einen besonders bedeutenden Fall im Sinne von Artikel 84 Absatz 2 handelt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_84_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "13b6c3a0f726d8667ff8fffecbe5d720c8f2f08ff6d9159eb44f7545f9b33335"
+    },
+    {
+      "id": "bund/BGG/art_85",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In vermögensrechtlichen Angelegenheiten ist die Beschwerde unzulässig:"
+        },
+        {
+          "absatz": "2",
+          "text": "Erreicht der Streitwert den massgebenden Betrag nach Absatz 1 nicht, so ist die Beschwerde dennoch zulässig, wenn sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_85",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "ba348132333dc05acad03fd043965cb9e3c240c93f6ef2510f8b83b06cd015be"
+    },
+    {
+      "id": "bund/BGG/art_86",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde ist zulässig gegen Entscheide:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone setzen als unmittelbare Vorinstanzen des Bundesgerichts obere Gerichte ein, soweit nicht nach einem anderen Bundesgesetz Entscheide anderer richterlicher Behörden der Beschwerde an das Bundesgericht unterliegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Entscheide mit vorwiegend politischem Charakter können die Kantone anstelle eines Gerichts eine andere Behörde als unmittelbare Vorinstanz des Bundesgerichts einsetzen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_86",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "474c3a6c08917871be24b01de2dd1d08c77da292398e8ec100802896929095cd"
+    },
+    {
+      "id": "bund/BGG/art_87",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen kantonale Erlasse ist unmittelbar die Beschwerde zulässig, sofern kein kantonales Rechtsmittel ergriffen werden kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit das kantonale Recht ein Rechtsmittel gegen Erlasse vorsieht, findet Artikel 86 Anwendung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_87",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8a41f2a11d885789421e7297ba242c959fb61f301ae1f2e2da55096e1faceff5"
+    },
+    {
+      "id": "bund/BGG/art_88",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beschwerden betreffend die politische Stimmberechtigung der Bürger und Bürgerinnen sowie betreffend Volkswahlen und ‑abstimmungen sind zulässig:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone sehen gegen behördliche Akte, welche die politischen Rechte der Stimmberechtigten in kantonalen Angelegenheiten verletzen können, ein Rechtsmittel vor. Diese Pflicht erstreckt sich nicht auf Akte des Parlaments und der Regierung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_88",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2355e6a998db7e30f51b952e9ea2f80baf8549a501b5b5a4f1f49f9d85b99c21"
+    },
+    {
+      "id": "bund/BGG/art_89",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beschwerde in öffentlich-rechtlichen Angelegenheiten ist berechtigt, wer:"
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Beschwerde sind ferner berechtigt:"
+        },
+        {
+          "absatz": "3",
+          "text": "In Stimmrechtssachen (Art. 82 Bst. c) steht das Beschwerderecht ausserdem jeder Person zu, die in der betreffenden Angelegenheit stimmberechtigt ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_89",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "230a3ec3ecb3287046a8e4b526028d5dedc8e479e25ce204d7f09d3b89a6697d"
+    },
+    {
+      "id": "bund/BGG/art_90",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde ist zulässig gegen Entscheide, die das Verfahren abschliessen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_90",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b5e7714d0b45dcf3b3d682a2dd710d296fc19b025af06c48a9126cc5dcf559d9"
+    },
+    {
+      "id": "bund/BGG/art_91",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde ist zulässig gegen einen Entscheid, der:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_91",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "801b22a32f159982fa94e02b6897571dd98c78855dd6c0c783b2081a74a0c72c"
+    },
+    {
+      "id": "bund/BGG/art_92",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen selbständig eröffnete Vor- und Zwischenentscheide über die Zuständigkeit und über Ausstandsbegehren ist die Beschwerde zulässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Entscheide können später nicht mehr angefochten werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_92",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "bd9d6e9da50ea2e7b936e4d9ff0601815a460540d475bac7ff28511581eb3972"
+    },
+    {
       "id": "bund/BGG/art_93",
       "ebene": "bund",
       "quelle": "BGG",
@@ -121,6 +2374,86 @@
       "sha": "fb4d388770aecabc5a42d0b7306106fa61c7c9a8521751399a1c0ebd51130a98"
     },
     {
+      "id": "bund/BGG/art_94",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gegen das unrechtmässige Verweigern oder Verzögern eines anfechtbaren Entscheids kann Beschwerde geführt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_94",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "56f776e9b739fa1f9d9fbd41bcda278f0f8fad56abb8893ccf58d500334362b7"
+    },
+    {
+      "id": "bund/BGG/art_95",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit der Beschwerde kann die Verletzung gerügt werden von:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_95",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "12bfa6e3f0194aba53b7d5b33a1092df128c26e261f970e8d64bcfbe9b67d9a5"
+    },
+    {
+      "id": "bund/BGG/art_96",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit der Beschwerde kann gerügt werden:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_96",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "55fdf43a256e5a4364377124e4d250a46a8fc51fd5df31dfab0be487745752cf"
+    },
+    {
+      "id": "bund/BGG/art_97",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "97",
+      "artikelLabel": "Art. 97",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Feststellung des Sachverhalts kann nur gerügt werden, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Artikel 95 beruht und wenn die Behebung des Mangels für den Ausgang des Verfahrens entscheidend sein kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Richtet sich die Beschwerde gegen einen Entscheid über die Zusprechung oder Verweigerung von Geldleistungen der Militär- oder Unfallversicherung, so kann jede unrichtige oder unvollständige Feststellung des rechtserheblichen Sachverhalts gerügt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_97",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3e9177c9a82214fe7e3db21e19c103349b04deb086f903930a37f714400c3e5e"
+    },
+    {
       "id": "bund/BGG/art_98",
       "ebene": "bund",
       "quelle": "BGG",
@@ -138,6 +2471,29 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
       "sha": "f670c7f3aef27e91c132f421d81775f08b71255079ce52a7d36a5b082f3f4fc9"
+    },
+    {
+      "id": "bund/BGG/art_99",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "99",
+      "artikelLabel": "Art. 99",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neue Tatsachen und Beweismittel dürfen nur so weit vorgebracht werden, als erst der Entscheid der Vorinstanz dazu Anlass gibt."
+        },
+        {
+          "absatz": "2",
+          "text": "Neue Begehren sind unzulässig."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_99",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "97dd784d3ae3b01e0445a8c1e88a997f2e9b2dabdc09a39e34259a9b9a2dbe0a"
     },
     {
       "id": "bund/BGG/art_100",
@@ -183,6 +2539,310 @@
       "sha": "63fd8ed120533e735c98d4dcdc468cb2901e41dbca5fea99bef77886d3a5be7d"
     },
     {
+      "id": "bund/BGG/art_101",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "101",
+      "artikelLabel": "Art. 101",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Beschwerde gegen einen Erlass ist innert 30 Tagen nach der nach dem kantonalen Recht massgebenden Veröffentlichung des Erlasses beim Bundesgericht einzureichen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_101",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "009f214c567d9025d91a71a3d7815a4a03919928a31f6d591db16ce345870d24"
+    },
+    {
+      "id": "bund/BGG/art_102",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "102",
+      "artikelLabel": "Art. 102",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit erforderlich stellt das Bundesgericht die Beschwerde der Vorinstanz sowie den allfälligen anderen Parteien, Beteiligten oder zur Beschwerde berechtigten Behörden zu und setzt ihnen Frist zur Einreichung einer Vernehmlassung an."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vorinstanz hat innert dieser Frist die Vorakten einzusenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein weiterer Schriftenwechsel findet in der Regel nicht statt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_102",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d7b8125cfdd669bae4556c587e9a2abfe7f7844132d33b5269f953d4bbc430a0"
+    },
+    {
+      "id": "bund/BGG/art_103",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "103",
+      "artikelLabel": "Art. 103",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde hat in der Regel keine aufschiebende Wirkung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beschwerde hat im Umfang der Begehren aufschiebende Wirkung:"
+        },
+        {
+          "absatz": "3",
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin kann über die aufschiebende Wirkung von Amtes wegen oder auf Antrag einer Partei eine andere Anordnung treffen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_103",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6491db6a9fa8ca33a34730c43dfad4d2873c587b2522936787472d521dd1eab6"
+    },
+    {
+      "id": "bund/BGG/art_104",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "104",
+      "artikelLabel": "Art. 104",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Instruktionsrichter oder die Instruktionsrichterin kann von Amtes wegen oder auf Antrag einer Partei vorsorgliche Massnahmen treffen, um den bestehenden Zustand zu erhalten oder bedrohte Interessen einstweilen sicherzustellen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_104",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2d7543c9e43d629e90923c314d9307c2c9616a47141830f653a13298f96d845a"
+    },
+    {
+      "id": "bund/BGG/art_105",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "105",
+      "artikelLabel": "Art. 105",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann die Sachverhaltsfeststellung der Vorinstanz von Amtes wegen berichtigen oder ergänzen, wenn sie offensichtlich unrichtig ist oder auf einer Rechtsverletzung im Sinne von Artikel 95 beruht."
+        },
+        {
+          "absatz": "3",
+          "text": "Richtet sich die Beschwerde gegen einen Entscheid über die Zusprechung oder Verweigerung von Geldleistungen der Militär- oder Unfallversicherung, so ist das Bundesgericht nicht an die Sachverhaltsfeststellung der Vorinstanz gebunden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_105",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "6daf622f599f6197b6708436ef54907aea9102c2075d807b98968ca3659e544b"
+    },
+    {
+      "id": "bund/BGG/art_106",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "106",
+      "artikelLabel": "Art. 106",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht wendet das Recht von Amtes wegen an."
+        },
+        {
+          "absatz": "2",
+          "text": "Es prüft die Verletzung von Grundrechten und von kantonalem und interkantonalem Recht nur insofern, als eine solche Rüge in der Beschwerde vorgebracht und begründet worden ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_106",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "66d2756e5cfc0a62fd1a44f6893ddac5c1b826a297aea5ee67869a58008a2081"
+    },
+    {
+      "id": "bund/BGG/art_107",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "107",
+      "artikelLabel": "Art. 107",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht darf nicht über die Begehren der Parteien hinausgehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Heisst das Bundesgericht die Beschwerde gut, so entscheidet es in der Sache selbst oder weist diese zu neuer Beurteilung an die Vorinstanz zurück. Es kann die Sache auch an die Behörde zurückweisen, die als erste Instanz entschieden hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Erachtet das Bundesgericht eine Beschwerde auf dem Gebiet der internationalen Rechtshilfe in Strafsachen oder der internationalen Amtshilfe in Steuersachen als unzulässig, so fällt es den Nichteintretensentscheid innert 15 Tagen seit Abschluss eines allfälligen Schriftenwechsels. Auf dem Gebiet der internationalen Rechtshilfe in Strafsachen ist es nicht an diese Frist gebunden, wenn das Auslieferungsverfahren eine Person betrifft, gegen deren Asylgesuch noch kein rechtskräftiger Endentscheid vorliegt."
+        },
+        {
+          "absatz": "4",
+          "text": "Über Beschwerden gegen Entscheide des Bundespatentgerichts über die Erteilung einer Lizenz nach Artikel 40 d des Patentgesetzes vom 25. Juni 1954 entscheidet das Bundesgericht innerhalb eines Monats nach Anhebung der Beschwerde."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_107",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "9e98ff00418b756a64fc7af5ac38ba08a98997f15a18ddceca27d739d9f9ebe8"
+    },
+    {
+      "id": "bund/BGG/art_108",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "108",
+      "artikelLabel": "Art. 108",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident oder die Präsidentin der Abteilung entscheidet im vereinfachten Verfahren über:"
+        },
+        {
+          "absatz": "2",
+          "text": "Er oder sie kann einen anderen Richter oder eine andere Richterin damit betrauen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Begründung des Entscheids beschränkt sich auf eine kurze Angabe des Unzulässigkeitsgrundes."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_108",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "5b96560f8d5a317620d6083ce6e24207c0978864850fc56659bc976b628f3e02"
+    },
+    {
+      "id": "bund/BGG/art_109",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "109",
+      "artikelLabel": "Art. 109",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilungen entscheiden in Dreierbesetzung über Nichteintreten auf Beschwerden, bei denen sich keine Rechtsfrage von grundsätzlicher Bedeutung stellt oder kein besonders bedeutender Fall vorliegt, wenn die Beschwerde nur unter einer dieser Bedingungen zulässig ist (Art. 74 und 83–85). Artikel 58 Absatz 1 Buchstabe b findet keine Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie entscheiden ebenfalls in Dreierbesetzung bei Einstimmigkeit über:"
+        },
+        {
+          "absatz": "3",
+          "text": "Der Entscheid wird summarisch begründet. Es kann ganz oder teilweise auf den angefochtenen Entscheid verwiesen werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_109",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3aa82bc5f550befe3238d84f5e7d448cf0e9b5b17bb6ea2b7695090a2b6c27dd"
+    },
+    {
+      "id": "bund/BGG/art_110",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "110",
+      "artikelLabel": "Art. 110",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Soweit die Kantone nach diesem Gesetz als letzte kantonale Instanz ein Gericht einzusetzen haben, gewährleisten sie, dass dieses selbst oder eine vorgängig zuständige andere richterliche Behörde den Sachverhalt frei prüft und das massgebende Recht von Amtes wegen anwendet."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_110",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8c73f409e2b05b5e5a44510d3dd82cf83999746f767e7923c137118e8c196f09"
+    },
+    {
+      "id": "bund/BGG/art_111",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "111",
+      "artikelLabel": "Art. 111",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer zur Beschwerde an das Bundesgericht berechtigt ist, muss sich am Verfahren vor allen kantonalen Vorinstanzen als Partei beteiligen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Bundesbehörden, die zur Beschwerde an das Bundesgericht berechtigt sind, können die Rechtsmittel des kantonalen Rechts ergreifen und sich vor jeder kantonalen Instanz am Verfahren beteiligen, wenn sie dies beantragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die unmittelbare Vorinstanz des Bundesgerichts muss mindestens die Rügen nach den Artikeln 95–98 prüfen können. …"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_111",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "72d950c5fbc5ca933665ca5fc644d501a5c6df86a35483d5fc2bf2b3fa2645e1"
+    },
+    {
+      "id": "bund/BGG/art_112",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "112",
+      "artikelLabel": "Art. 112",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheide, die der Beschwerde an das Bundesgericht unterliegen, sind den Parteien schriftlich zu eröffnen. Sie müssen enthalten:"
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern es das Bundesrecht oder das kantonale Recht vorsieht, eröffnet die Behörde ihren Entscheid in der Regel zeitnah und ohne Begründung. Die Parteien können in diesem Fall innert 30 Tagen eine vollständige Ausfertigung verlangen. Der Entscheid ist nicht vollstreckbar, solange nicht entweder diese Frist unbenützt abgelaufen oder die vollständige Ausfertigung eröffnet worden ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesgericht kann einen Entscheid, der den Anforderungen von Absatz 1 nicht genügt, an die kantonale Behörde zur Verbesserung zurückweisen oder aufheben."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Gebiete, in denen Bundesbehörden zur Beschwerde berechtigt sind, bestimmt der Bundesrat, welche Entscheide ihnen die kantonalen Behörden zu eröffnen haben."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_112",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "d2895eebba9ebacc54890d94449eaffc3e0860507a82b8a95317e739c8b7509d"
+    },
+    {
       "id": "bund/BGG/art_113",
       "ebene": "bund",
       "quelle": "BGG",
@@ -200,6 +2860,543 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
       "sha": "7e39ae1ac93da11def33d5915657f11e103bf21467bb9489a055332f2cc09678"
+    },
+    {
+      "id": "bund/BGG/art_114",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "114",
+      "artikelLabel": "Art. 114",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vorschriften des dritten Kapitels über die kantonalen Vorinstanzen (Art. 75 bzw. 86) gelten sinngemäss."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_114",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "43ea21c761fe89bd118fcbcd4fac6322122bc1275bb1ba98cb150a3f2d0aa32c"
+    },
+    {
+      "id": "bund/BGG/art_115",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "115",
+      "artikelLabel": "Art. 115",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zur Verfassungsbeschwerde ist berechtigt, wer:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_115",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "7b00806b2f13bc4cc222e9eb9d3295f2953a5e89411df5ee4024226b4b136027"
+    },
+    {
+      "id": "bund/BGG/art_116",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "116",
+      "artikelLabel": "Art. 116",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit der Verfassungsbeschwerde kann die Verletzung von verfassungsmässigen Rechten gerügt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_116",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2df946ed9579b1e89ec7f98f34f4153be99e5d51b8cac93001092b29134f96b2"
+    },
+    {
+      "id": "bund/BGG/art_117",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "117",
+      "artikelLabel": "Art. 117",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren der Verfassungsbeschwerde gelten die Artikel 90–94, 99, 100, 102, 103 Absätze 1 und 3, 104, 106 Absatz 2 sowie 107–112 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Beschwerden von Organisationen nach den Artikeln 55 des Umweltschutzgesetzes vom 7. Oktober 1983 und 12 des Bundesgesetzes vom 1. Juli 1966 über den Natur- und Heimatschutz gegen Nutzungspläne, Bewilligungs- und Konzessionsentscheide betreffend Wasserkraftwerke nach Artikel 9 a Absatz 3 und Anhang 2 in der Fassung vom 29. September 2023 des Stromversorgungsgesetzes vom 23. März 2007 haben keine aufschiebende Wirkung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_117",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8a0b31e0730277124bce2f397983a1abe9ab42c059b492bbf0b8a72aa10a04c9"
+    },
+    {
+      "id": "bund/BGG/art_118",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "118",
+      "artikelLabel": "Art. 118",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht legt seinem Urteil den Sachverhalt zugrunde, den die Vorinstanz festgestellt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann die Sachverhaltsfeststellung der Vorinstanz von Amtes wegen berichtigen oder ergänzen, wenn sie auf einer Rechtsverletzung im Sinne von Artikel 116 beruht."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_118",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "1eaeb4a12da228e126a85cac0e22e325a277b191fc61222d7dc410dc96becfb4"
+    },
+    {
+      "id": "bund/BGG/art_119",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "119",
+      "artikelLabel": "Art. 119",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Führt eine Partei gegen einen Entscheid sowohl ordentliche Beschwerde als auch Verfassungsbeschwerde, so hat sie beide Rechtsmittel in der gleichen Rechtsschrift einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesgericht behandelt beide Beschwerden im gleichen Verfahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Es prüft die vorgebrachten Rügen nach den Vorschriften über die entsprechende Beschwerdeart."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_119",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "b0fccc4b06103688bf9c3ffb988f825f22047613c02da8b6fd659597536e1708"
+    },
+    {
+      "id": "bund/BGG/art_119_a",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "119_a",
+      "artikelLabel": "Art. 119a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht beurteilt Revisionsgesuche gegen Entscheide von Schiedsgerichten in der internationalen Schiedsgerichtsbarkeit unter den Voraussetzungen von Artikel 190a des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht."
+        },
+        {
+          "absatz": "2",
+          "text": "Für das Revisionsverfahren gelten die Artikel 77 Absatz 2bis und 126. Soweit das Bundesgericht das Revisionsgesuch nicht als offensichtlich unzulässig oder unbegründet befindet, stellt es dieses der Gegenpartei und dem Schiedsgericht zur Stellungnahme zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Heisst das Bundesgericht das Revisionsgesuch gut, so hebt es den Schiedsentscheid auf und weist die Sache zur Neubeurteilung an das Schiedsgericht zurück oder trifft die notwendigen Feststellungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist das Schiedsgericht nicht mehr vollständig, so ist Artikel 179 des Bundesgesetzes über das Internationale Privatrecht anwendbar."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_119_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "2f4acc155f4bb4bf85b3f535b7b9732bf0c0d1c6cdd99ec6b428ec6406fffdb3"
+    },
+    {
+      "id": "bund/BGG/art_120",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "120",
+      "artikelLabel": "Art. 120",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgericht beurteilt auf Klage als einzige Instanz:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Klage ist unzulässig, wenn ein anderes Bundesgesetz eine Behörde zum Erlass einer Verfügung über solche Streitigkeiten ermächtigt. Gegen die Verfügung ist letztinstanzlich die Beschwerde an das Bundesgericht zulässig."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Klageverfahren richtet sich nach dem BZP."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_120",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "0f7d6862acaf6b9ff1bd4b220864f5ffa31355bd7ba95106587007bd66a2624f"
+    },
+    {
+      "id": "bund/BGG/art_121",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "121",
+      "artikelLabel": "Art. 121",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Revision eines Entscheids des Bundesgerichts kann verlangt werden, wenn:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_121",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "efdd4a0225a1d5aec93af92a3c8907569d23ebb82ae97cdbf57d5410752de506"
+    },
+    {
+      "id": "bund/BGG/art_122",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "122",
+      "artikelLabel": "Art. 122",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Revision wegen Verletzung der Konvention zum Schutz der Menschenrechte und Grundfreiheiten vom 4. November 1950 (EMRK) kann verlangt werden, wenn:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_122",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "134797592343338ebea7c70c93945cc452ae99b8b031725dab5d8ddbd2a8d077"
+    },
+    {
+      "id": "bund/BGG/art_123",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "123",
+      "artikelLabel": "Art. 123",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Revision kann verlangt werden, wenn ein Strafverfahren ergeben hat, dass durch ein Verbrechen oder Vergehen zum Nachteil der Partei auf den Entscheid eingewirkt wurde; die Verurteilung durch das Strafgericht ist nicht erforderlich. Ist das Strafverfahren nicht durchführbar, so kann der Beweis auf andere Weise erbracht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Revision kann zudem verlangt werden:"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_123",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "13a27a5697dd3c5d08977c4110fb59835e39b54179807f91e00b4079f0ce2fb2"
+    },
+    {
+      "id": "bund/BGG/art_124",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "124",
+      "artikelLabel": "Art. 124",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Revisionsgesuch ist beim Bundesgericht einzureichen:"
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Ablauf von zehn Jahren nach der Ausfällung des Entscheids kann die Revision nicht mehr verlangt werden, ausser:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die besonderen Fristen nach Artikel 5 Absatz 5 Kernenergiehaftpflichtgesetz vom 13. Juni 2008 bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_124",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "dc01ca8670aba2fa02bdc8e2d4f29a190d2ae25239679f763c0347feec703718"
+    },
+    {
+      "id": "bund/BGG/art_125",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "125",
+      "artikelLabel": "Art. 125",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Revision eines Entscheids, der den Entscheid der Vorinstanz bestätigt, kann nicht aus einem Grund verlangt werden, der schon vor der Ausfällung des bundesgerichtlichen Entscheids entdeckt worden ist und mit einem Revisionsgesuch bei der Vorinstanz hätte geltend gemacht werden können."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_125",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "afe978b918002d951039ef8783df73c789007d6b1125fc153e8535bead48571d"
+    },
+    {
+      "id": "bund/BGG/art_126",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "126",
+      "artikelLabel": "Art. 126",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach Eingang des Revisionsgesuchs kann der Instruktionsrichter oder die Instruktionsrichterin von Amtes wegen oder auf Antrag einer Partei den Vollzug des angefochtenen Entscheids aufschieben oder andere vorsorgliche Massnahmen treffen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_126",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "3bf1569d0df3059fa55f9e8360620f7aafa66db9c508e996c5daf9d51dbb43d6"
+    },
+    {
+      "id": "bund/BGG/art_127",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "127",
+      "artikelLabel": "Art. 127",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Soweit das Bundesgericht das Revisionsgesuch nicht als unzulässig oder unbegründet befindet, stellt es dieses der Vorinstanz sowie den allfälligen anderen Parteien, Beteiligten oder zur Beschwerde berechtigten Behörden zu; gleichzeitig setzt es ihnen eine Frist zur Einreichung einer Vernehmlassung an."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_127",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "561f99fb797e023267bbf6799218cdfecc83ef9087d0bc9d088cb5b61733f52c"
+    },
+    {
+      "id": "bund/BGG/art_128",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "128",
+      "artikelLabel": "Art. 128",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Findet das Bundesgericht, dass der Revisionsgrund zutrifft, so hebt es den früheren Entscheid auf und entscheidet neu."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn das Gericht einen Rückweisungsentscheid aufhebt, bestimmt es gleichzeitig die Wirkung dieser Aufhebung auf einen neuen Entscheid der Vorinstanz, falls in der Zwischenzeit ein solcher ergangen ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Entscheidet das Bundesgericht in einer Strafsache neu, so ist Artikel 415 StPO sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_128",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "8c319bc67f18444ea7bf4a20b295a0619acd604ed425a5b44e0391d89f418641"
+    },
+    {
+      "id": "bund/BGG/art_129",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "129",
+      "artikelLabel": "Art. 129",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist das Dispositiv eines bundesgerichtlichen Entscheids unklar, unvollständig oder zweideutig, stehen seine Bestimmungen untereinander oder mit der Begründung im Widerspruch oder enthält es Redaktions- oder Rechnungsfehler, so nimmt das Bundesgericht auf schriftliches Gesuch einer Partei oder von Amtes wegen die Erläuterung oder Berichtigung vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erläuterung eines Rückweisungsentscheids ist nur zulässig, solange die Vorinstanz nicht den neuen Entscheid getroffen hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 126 und 127 sind sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_129",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "733db1db7a29121020d5aa8c26864b230b45e20e8f8dfbe8be85594d37e6305e"
+    },
+    {
+      "id": "bund/BGG/art_130",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "130",
+      "artikelLabel": "Art. 130",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone erlassen auf den Zeitpunkt des Inkrafttretens einer schweizerischen Strafprozessordnung Ausführungsbestimmungen über die Zuständigkeit, die Organisation und das Verfahren der Vorinstanzen in Strafsachen im Sinne der Artikel 80 Absatz 2 und 111 Absatz 3, einschliesslich der Bestimmungen, die zur Gewährleistung der Rechtsweggarantie nach Artikel 29 a der Bundesverfassung erforderlich sind. Ist sechs Jahre nach Inkrafttreten dieses Gesetzes noch keine schweizerische Strafprozessordnung in Kraft, so legt der Bundesrat die Frist zum Erlass der Ausführungsbestimmungen nach Anhörung der Kantone fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone erlassen auf den Zeitpunkt des Inkrafttretens einer schweizerischen Zivilprozessordnung Ausführungsbestimmungen über die Zuständigkeit, die Organisation und das Verfahren der Vorinstanzen in Zivilsachen im Sinne der Artikel 75 Absatz 2 und 111 Absatz 3, einschliesslich der Bestimmungen, die zur Gewährleistung der Rechtsweggarantie nach Artikel 29 a der Bundesverfassung erforderlich sind. Ist sechs Jahre nach Inkrafttreten dieses Gesetzes noch keine schweizerische Zivilprozessordnung in Kraft, so legt der Bundesrat die Frist zum Erlass der Ausführungsbestimmungen nach Anhörung der Kantone fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Innert zwei Jahren nach Inkrafttreten dieses Gesetzes erlassen die Kantone Ausführungsbestimmungen über die Zuständigkeit, die Organisation und das Verfahren der Vorinstanzen im Sinne der Artikel 86 Absätze 2 und 3 und 88 Absatz 2, einschliesslich der Bestimmungen, die zur Gewährleistung der Rechtsweggarantie nach Artikel 29 a der Bundesverfassung erforderlich sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Bis zum Erlass der Ausführungsgesetzgebung können die Kantone die Ausführungsbestimmungen in die Form nicht referendumspflichtiger Erlasse kleiden, soweit dies zur Einhaltung der Fristen nach den Absätzen 1–3 notwendig ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_130",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "902e5d6ceee46dcaf201aeb4f69b9e195e96428db9dcdccbaee68df57615c222"
+    },
+    {
+      "id": "bund/BGG/art_131",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "131",
+      "artikelLabel": "Art. 131",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesgesetz vom 16. Dezember 1943 über die Organisation der Bundesrechtspflege wird aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Änderung bisherigen Rechts wird im Anhang geregelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bundesversammlung kann diesem Gesetz widersprechende, aber formell nicht geänderte Bestimmungen in Bundesgesetzen durch eine Verordnung anpassen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_131",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "05ee25297ab197f5f25833d46befd5b4139097da5a680e08c4987b589e0cf102"
+    },
+    {
+      "id": "bund/BGG/art_132",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "132",
+      "artikelLabel": "Art. 132",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz ist auf die nach seinem Inkrafttreten eingeleiteten Verfahren des Bundesgerichts anwendbar, auf ein Beschwerdeverfahren jedoch nur dann, wenn auch der angefochtene Entscheid nach dem Inkrafttreten dieses Gesetzes ergangen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Amtsdauer der ordentlichen und nebenamtlichen Bundesrichter und Bundesrichterinnen, die gestützt auf das Bundesrechtspflegegesetz vom 16. Dezember 1943 oder den Bundesbeschluss vom 23. März 1984 über die Erhöhung der Zahl der nebenamtlichen Richter des Bundesgerichts gewählt worden sind oder die in den Jahren 2007 und 2008 gewählt werden, endet am 31. Dezember 2008."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zahlenmässige Begrenzung der nebenamtlichen Bundesrichter und Bundesrichterinnen gemäss Artikel 1 Absatz 4 gilt erst ab 2009."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_132",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "980e365c0d1730bc0067ef197a264995bfd7dc691e780aab64c699bc659ad61d"
+    },
+    {
+      "id": "bund/BGG/art_132_a",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "132_a",
+      "artikelLabel": "Art. 132a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Beschwerdeverfahren gegen Entscheide, die vor dem Inkrafttreten der Änderung vom 20. Juni 2014 dieses Gesetzes ergangen sind, richtet sich nach dem bisherigen Recht."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_132_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "5f60ba0b311d8762fb5d229ee57b7463896e3cd67208a1de28fc79789625a1e1"
+    },
+    {
+      "id": "bund/BGG/art_132_b",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "132_b",
+      "artikelLabel": "Art. 132b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 83 Buchstabe z ter und 117 Absatz 2 sind auf Beschwerden von beschwerdeberechtigten Organisationen, die bei Behörden oder Gerichten zum Zeitpunkt des Inkrafttretens der Änderung vom 26. September 2025 hängig sind, unmittelbar anwendbar. Beschwerden, die zum Zeitpunkt des Inkrafttretens dieser Änderung vor Bundesgericht hängig sind, werden nach bisherigem Recht zu Ende geführt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_132_b",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "996f8ee604bd084a9e0cedb4c59d15fdb558d49ed1acea5ef746fcdc986021bc"
+    },
+    {
+      "id": "bund/BGG/art_133",
+      "ebene": "bund",
+      "quelle": "BGG",
+      "erlass": "BGG",
+      "artikel": "133",
+      "artikelLabel": "Art. 133",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_133",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260401",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
     }
   ]
 }
