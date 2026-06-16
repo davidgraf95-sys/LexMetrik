@@ -131,7 +131,53 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Versicherungsunternehmen muss den Versicherungsnehmer vor Abschluss des Versicherungsvertrags verständlich und in einer Form, die den Nachweis durch Text ermöglicht, über seine Identität und den wesentlichen Inhalt des Versicherungsvertrags informieren. Es muss informieren über:"
+          "text": "Das Versicherungsunternehmen muss den Versicherungsnehmer vor Abschluss des Versicherungsvertrags verständlich und in einer Form, die den Nachweis durch Text ermöglicht, über seine Identität und den wesentlichen Inhalt des Versicherungsvertrags informieren. Es muss informieren über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die versicherten Risiken;"
+            },
+            {
+              "marke": "b",
+              "text": "den Umfang des Versicherungsschutzes und darüber, ob es sich um eine Summen- oder um eine Schadenversicherung handelt;"
+            },
+            {
+              "marke": "c",
+              "text": "die geschuldeten Prämien und weitere Pflichten des Versicherungsnehmers;"
+            },
+            {
+              "marke": "d",
+              "text": "Laufzeit und Beendigung des Versicherungsvertrages;"
+            },
+            {
+              "marke": "e",
+              "text": "die für die Überschussermittlung und die Überschussbeteiligung geltenden Berechnungsgrundlagen und Verteilungsgrundsätze und -methoden;"
+            },
+            {
+              "marke": "f",
+              "text": "die Rückkaufs- und Umwandlungswerte sowie die mit einer rückkaufsfähigen Lebensversicherung im Falle des Rückkaufs verbundenen wesentlichen Kostenarten;"
+            },
+            {
+              "marke": "g",
+              "text": "die Bearbeitung der Personendaten einschliesslich Zweck und Art der Datenbank sowie Empfänger und Aufbewahrung der Daten;"
+            },
+            {
+              "marke": "h",
+              "text": "das Widerrufsrecht nach Artikel 2 a sowie über Form und Frist des Widerrufs;"
+            },
+            {
+              "marke": "i",
+              "text": "eine Frist für das Einreichen der Schadenanzeige nach Artikel 38 Absatz 1;"
+            },
+            {
+              "marke": "j",
+              "text": "die zeitliche Geltung des Versicherungsschutzes insbesondere in den Fällen, in denen das befürchtete Ereignis während der Laufzeit des Vertrags, der daraus entstehende Schaden aber erst nach Beendigung des Vertrags eintritt;"
+            },
+            {
+              "marke": "k",
+              "text": "die Qualifikation einer Lebensversicherung als qualifizierte Lebensversicherung gemäss Artikel 39 a des Versicherungsaufsichtsgesetzes vom 17. Dezember 2004 (VAG)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -146,7 +192,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_3",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "7cb5f18377b533e38270884b3f0097742d95b7072715b78acfacdbfc535820d2"
+      "sha": "d9fe26201461cf04f1e321eeafdbe9428eccb08353316befa525e87bdf922484"
     },
     {
       "id": "bund/VVG/art_3_a",
@@ -281,14 +327,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Trotz der Anzeigepflichtverletzung (Art. 6) kann das Versicherungsunternehmen den Vertrag nicht kündigen:"
+          "text": "Trotz der Anzeigepflichtverletzung (Art. 6) kann das Versicherungsunternehmen den Vertrag nicht kündigen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die verschwiegene oder unrichtig angezeigte Tatsache vor Eintritt des befürchteten Ereignisses weggefallen ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn das Versicherungsunternehmen die Verschweigung oder unrichtige Angabe veranlasst hat;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn das Versicherungsunternehmen die verschwiegene Tatsache gekannt hat oder gekannt haben muss;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn das Versicherungsunternehmen die unrichtig angezeigte Tatsache richtig gekannt hat oder gekannt haben muss;"
+            },
+            {
+              "marke": "5",
+              "text": "wenn das Versicherungsunternehmen auf das Kündigungsrecht verzichtet hat;"
+            },
+            {
+              "marke": "6",
+              "text": "wenn der Anzeigepflichtige auf eine ihm vorgelegte Frage eine Antwort nicht erteilt, und das Versicherungsunternehmen den Vertrag gleichwohl abgeschlossen hat. Diese Bestimmung findet keine Anwendung, wenn die Frage, auf Grund der übrigen Mitteilungen des Anzeigepflichtigen, als in einem bestimmten Sinne beantwortet angesehen werden muss und wenn diese Antwort sich als Verschweigen oder unrichtige Mitteilung einer erheblichen Gefahrstatsache darstellt, die der Anzeigepflichtige kannte oder kennen musste."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_8",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "6596b90b9c5a51e1000f5fb5a527b8c33628755c65c81db2e20a70bb26496682"
+      "sha": "612a7b39f06cd1d33686c52806482c08b66feccc4034dc0ad3439c79e70a125c"
     },
     {
       "id": "bund/VVG/art_9",
@@ -776,14 +848,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die an die Gefahrserhöhung geknüpften Rechtsfolgen treten nicht ein:"
+          "text": "Die an die Gefahrserhöhung geknüpften Rechtsfolgen treten nicht ein:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Gefahrserhöhung auf den Eintritt des befürchteten Ereignisses und auf den Umfang der dem Versicherungsunternehmen obliegenden Leistung keinen Einfluss ausgeübt hat;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Gefahrserhöhung in der Absicht, das Interesse des Versicherungsunternehmens zu wahren, vorgenommen worden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn die Gefahrserhöhung durch ein Gebot der Menschlichkeit veranlasst worden ist."
+            },
+            {
+              "marke": "4",
+              "text": "wenn das Versicherungsunternehmen ausdrücklich oder stillschweigend auf den Rücktritt verzichtet hat, insbesondere wenn es, nachdem ihm die Gefahrserhöhung durch schriftliche Anzeige des Versicherungsnehmers zur Kenntnis gebracht worden ist, nicht binnen 14 Tagen dem Versicherungsnehmer den Rücktritt vom Vertrage angezeigt hat."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_32",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "e70210a9a05b458dc2a05ae9c08d9c05bae832a591b8d249eda842ef6677cb53"
+      "sha": "b3fe545a80d9e21008a7190ce9f753d38cb24a6e9f041d112aa29f8533d0bf0d"
     },
     {
       "id": "bund/VVG/art_33",
@@ -887,14 +977,24 @@
         },
         {
           "absatz": "2",
-          "text": "Als wichtiger Grund gilt namentlich:"
+          "text": "Als wichtiger Grund gilt namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine nicht voraussehbare Änderung der rechtlichen Vorgaben, welche die Erfüllung des Vertrags verunmöglicht;"
+            },
+            {
+              "marke": "b",
+              "text": "jeder Umstand, bei dessen Vorhandensein der kündigenden Person nach Treu und Glauben die Fortsetzung des Vertrags nicht mehr zumutbar ist."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_35_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "f5fbfdd406d51380659096a87d01377b29d0ecf51ef78b357857dcc672090636"
+      "sha": "4104d0418b7c4a55aad0875cfdc3b28d5e0aa2eb47d0b70e04a6032fb2793723"
     },
     {
       "id": "bund/VVG/art_35_c",
@@ -1091,14 +1191,24 @@
         },
         {
           "absatz": "2",
-          "text": "Der Vertrag kann verfügen:"
+          "text": "Der Vertrag kann verfügen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "dass der Anspruchsberechtigte bestimmte Belege, deren Beschaffung ihm ohne erhebliche Kosten möglich ist, insbesondere auch ärztliche Bescheinigungen, beizubringen hat;"
+            },
+            {
+              "marke": "2",
+              "text": "dass die in Absatz 1 und Absatz 2 Ziffer 1 dieses Artikels vorgesehenen Mitteilungen, bei Verlust des Versicherungsanspruches, binnen bestimmter, angemessener Frist gemacht werden müssen. Die Frist läuft von dem Tage an, an dem das Versicherungsunternehmen den Anspruchsberechtigten, unter Androhung der Säumnisfolgen, schriftlich aufgefordert hat, diese Mitteilungen zu machen."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_39",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "420daff6f202b025bca0024500d4cbb41c42110cf0a144ffb762f411896fa587"
+      "sha": "6e0797df7a7136d3289a650cf669773616a82389a0acfa51499b2b3feeb8fcbc"
     },
     {
       "id": "bund/VVG/art_39_a",
@@ -1137,7 +1247,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Sofern kein überwiegendes Privatinteresse entgegensteht, dürfen im Rahmen der interinstitutionellen Zusammenarbeit nach Artikel 68 bis IVG Daten bekannt gegeben werden an:"
+          "text": "Sofern kein überwiegendes Privatinteresse entgegensteht, dürfen im Rahmen der interinstitutionellen Zusammenarbeit nach Artikel 68 bis IVG Daten bekannt gegeben werden an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die IV-Stellen;"
+            },
+            {
+              "marke": "b",
+              "text": "die privaten Versicherungseinrichtungen nach Artikel 68 bis Absatz 1 Buchstabe b IVG;"
+            },
+            {
+              "marke": "c",
+              "text": "die Einrichtungen der beruflichen Vorsorge nach Artikel 68 bis Absatz 1 Buchstabe c IVG."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1152,7 +1276,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_39_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "7688187ab01a9ec24d912dd356d5daccc2b5270dde30be59f2f960d460fdce6d"
+      "sha": "02878c05ed7e9c0bec0b3fe341acfd7d337735c7d5ab825d36fa19ee5e127ce4"
     },
     {
       "id": "bund/VVG/art_40",
@@ -1306,7 +1430,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist vereinbart worden, dass der Versicherungsnehmer oder der Anspruchsberechtigte wegen Verletzung einer Obliegenheit von einem Rechtsnachteil betroffen wird, so tritt dieser Nachteil nicht ein, wenn:"
+          "text": "Ist vereinbart worden, dass der Versicherungsnehmer oder der Anspruchsberechtigte wegen Verletzung einer Obliegenheit von einem Rechtsnachteil betroffen wird, so tritt dieser Nachteil nicht ein, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verletzung den Umständen nach als eine unverschuldete anzusehen ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Versicherungsnehmer nachweist, dass die Verletzung keinen Einfluss auf den Eintritt des befürchteten Ereignisses und auf den Umfang der vom Versicherungsunternehmen geschuldeten Leistungen gehabt hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1321,7 +1455,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_45",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "4da44f30faff1a911c145ea35380adb3946608c5301273ea27bba88d71cb1db5"
+      "sha": "dec3e66fd79cfcb9209c0650decb2733b0b5ac600ed00a6ed9ab9e85efc7c723"
     },
     {
       "id": "bund/VVG/art_46",
@@ -1460,14 +1594,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Dem VAG unterstehende private Versicherungsunternehmen sind nur berechtigt, die AHV-Nummer nach den Bestimmungen des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung für die Durchführung der privaten Zusatzversicherungen im Rahmen der Krankenversicherung oder der Unfallversicherung systematisch zu verwenden, wenn sie:"
+          "text": "Dem VAG unterstehende private Versicherungsunternehmen sind nur berechtigt, die AHV-Nummer nach den Bestimmungen des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung für die Durchführung der privaten Zusatzversicherungen im Rahmen der Krankenversicherung oder der Unfallversicherung systematisch zu verwenden, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die in Artikel 12 Absatz 2 des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung (KVG) vorgesehenen Zusatzversicherungen zur sozialen Krankenversicherung anbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "nach Artikel 68 Absatz 2 des Bundesgesetzes vom 20. März 1981 über die Unfallversicherung (UVG) im Register der UVG-Versicherer eingetragen sind und die Zusatzversicherungen zum UVG anbieten."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_47_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "7adafd48a4b8aba1f55d7754b322ac126804b7d1a78fda89fa2431b6c07a1493"
+      "sha": "c177787fcccd5ea2cf4efe6016be5f622dd8171d45b7152abdda4cdf56f26166"
     },
     {
       "id": "bund/VVG/art_48_49",
@@ -2380,14 +2524,28 @@
         },
         {
           "absatz": "3",
-          "text": "Absatz 2 findet keine Anwendung, wenn der Schaden durch eine Person, die in einer engen Beziehung zum Versicherten steht, leichtfahrlässig herbeigeführt worden ist. In einer engen Beziehung stehen namentlich Personen, die:"
+          "text": "Absatz 2 findet keine Anwendung, wenn der Schaden durch eine Person, die in einer engen Beziehung zum Versicherten steht, leichtfahrlässig herbeigeführt worden ist. In einer engen Beziehung stehen namentlich Personen, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in einer häuslichen Gemeinschaft leben;"
+            },
+            {
+              "marke": "b",
+              "text": "in einem Arbeitsverhältnis mit dem Versicherten stehen;"
+            },
+            {
+              "marke": "c",
+              "text": "e rmächtigt sind, die versicherte Sache zu nutzen."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_95_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "04ea7a3dc2f5e374c31b998ca23d24b4fc24f7060ae54e108e2a9de34fa32288"
+      "sha": "7ac7bf0c8fac45cf18fca91a6fb1cc25af74a87bdb7076a20501fe775eb60f40"
     },
     {
       "id": "bund/VVG/art_96",
@@ -2456,11 +2614,59 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Artikel 97 und 98 gelten nicht bei:"
+          "text": "Die Artikel 97 und 98 gelten nicht bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kredit- oder Kautionsversicherungen, soweit es sich um Versicherungen von beruflichen oder gewerblichen Risiken handelt, und bei Transportversicherungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Versicherungen mit professionellen Versicherungsnehmern."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Als professionelle Versicherungsnehmer gelten:"
+          "text": "Als professionelle Versicherungsnehmer gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorsorgeeinrichtungen und Einrichtungen, die der beruflichen Vorsorge dienen;"
+            },
+            {
+              "marke": "b",
+              "text": "Finanzintermediäre nach dem Bankengesetz vom 8. November 1934 und dem Kollektivanlagengesetz vom 23. Juni 2006;"
+            },
+            {
+              "marke": "c",
+              "text": "Versicherungsunternehmen nach dem VAG;"
+            },
+            {
+              "marke": "d",
+              "text": "ausländische Versicherungsnehmer, die einer gleichwertigen prudenziellen Aufsicht unterstehen wie die Personen nach den Buchstaben a–c;"
+            },
+            {
+              "marke": "e",
+              "text": "öffe ntlich-rechtliche Körperschaften, öffentlich-rechtliche Anstalten und öffentlich-rechtliche Stiftungen mit professionellem Risikoma nagement;"
+            },
+            {
+              "marke": "f",
+              "text": "Unternehmen mit professionellem Risikomanagement;"
+            },
+            {
+              "marke": "g",
+              "text": "Unternehmen, die zwei der drei folgenden Grössen überschreiten: 1. Bilanzsumme: 20 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "Nettoumsatz: 40 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "Eigenkapital: 2 Millionen Franken."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2475,7 +2681,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_98_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "6cbdcf5d2b958533a403068dd51075706b27247e1bb2b9da2de7370669ab8956"
+      "sha": "721ec852b26e938cb39d2894dca4814c9ad7faadbaea39ab08ac53457a29d58f"
     },
     {
       "id": "bund/VVG/art_99",
@@ -2529,7 +2735,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Dieses Gesetz findet keine Anwendung:"
+          "text": "Dieses Gesetz findet keine Anwendung:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "auf Rückversicherungsverträge;"
+            },
+            {
+              "marke": "2",
+              "text": "auf die privaten Rechtsverhältnisse zwischen den der Versicherungsaufsicht nicht unterstellten Versicherungsunternehmen (Art. 2 Abs. 2 VAG) und ihren Versicherten, mit Ausnahme der Rechtsverhältnisse, für deren Durchführung diese Versicherungsunternehmen der Versicherungsaufsicht unterstellt sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2540,7 +2756,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_101",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "1abd84a259c1c9ede2871bec746564ff5d74906fb58c74057855366e4d084da7"
+      "sha": "b0b16c672f5585594fde975b001394d0a263aa1112cf2458b1454dcb21a7b9b8"
     },
     {
       "id": "bund/VVG/art_101_a_101_c",
@@ -2613,14 +2829,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Für Verträge, die vor dem Inkrafttreten der Änderung vom 19. Juni 2020 abgeschlossen worden sind, gelten folgende Bestimmungen des neuen Rechts:"
+          "text": "Für Verträge, die vor dem Inkrafttreten der Änderung vom 19. Juni 2020 abgeschlossen worden sind, gelten folgende Bestimmungen des neuen Rechts:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Formvorschriften;"
+            },
+            {
+              "marke": "b",
+              "text": "das Kündigungsrecht nach den Artikeln 35 a und 35 b ."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de#art_103_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "902ab1410005940984a515b7497275c21502cbbd88326d046996f397a5247a6c"
+      "sha": "eea5d2b40c33c789927a63afb93cbfc2d5ccfbcd39f505ccf662ec702ebc3764"
     },
     {
       "id": "bund/VVG/art_104",

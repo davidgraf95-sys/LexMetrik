@@ -15,14 +15,36 @@
         },
         {
           "absatz": "2",
-          "text": "Sie finden keine Anwendung in folgenden Bereichen:"
+          "text": "Sie finden keine Anwendung in folgenden Bereichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zulassung und Ausschluss von Leistungserbringern (Art. 35–40 und 59);"
+            },
+            {
+              "marke": "b",
+              "text": "Tarife, Preise und Globalbudget (Art. 43–55);"
+            },
+            {
+              "marke": "c",
+              "text": "Ausrichtung der Prämienverbilligung nach den Artikeln 65, 65 a und 66 a sowie Beiträge des Bundes an die Kantone nach Artikel 66;"
+            },
+            {
+              "marke": "d",
+              "text": "Streitigkeiten der Versicherer unter sich (Art. 87);"
+            },
+            {
+              "marke": "e",
+              "text": "Verfahren vor dem kantonalen Schiedsgericht (Art. 89)."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "2ed11cf2b9bda5914265f3ec8fe5dc7f07ca9de151533c489b6211776e3b5c23"
+      "sha": "4d7df10e82710dcc3db49941e7837f994f25bf81c597434c9bf289e200ac0df3"
     },
     {
       "id": "bund/KVG/art_1_a",
@@ -38,14 +60,28 @@
         },
         {
           "absatz": "2",
-          "text": "Die soziale Krankenversicherung gewährt Leistungen bei:"
+          "text": "Die soziale Krankenversicherung gewährt Leistungen bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Krankheit (Art. 3 ATSG);"
+            },
+            {
+              "marke": "b",
+              "text": "Unfall (Art. 4 ATSG), soweit dafür keine Unfallversicherung aufkommt;"
+            },
+            {
+              "marke": "c",
+              "text": "Mutterschaft (Art. 5 ATSG)."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_1_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4566983b85e5c3cb3ad0a01a20528e71693ea327e5b6be29fe68e4956bc6557f"
+      "sha": "195cb2a70dafca5517b3b6827386c3a8e3f4f8959c036fc7857c9817dab3d291"
     },
     {
       "id": "bund/KVG/art_2",
@@ -84,7 +120,17 @@
         },
         {
           "absatz": "3",
-          "text": "Er kann die Versicherungspflicht auf Personen ohne Wohnsitz in der Schweiz ausdehnen, insbesondere auf solche, die:"
+          "text": "Er kann die Versicherungspflicht auf Personen ohne Wohnsitz in der Schweiz ausdehnen, insbesondere auf solche, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Schweiz tätig sind oder dort ihren gewöhnlichen Aufenthalt (Art. 13 Abs. 2 ATSG) haben;"
+            },
+            {
+              "marke": "b",
+              "text": "im Ausland von einem Arbeitgeber mit einem Sitz in der Schweiz beschäftigt werden."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -95,7 +141,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_3",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "04650158119bd921830ed8daba5cf8e8dcfa0b49c6ff341853197d151c1c63fc"
+      "sha": "3f5fcd2d1a64983af10c949f441c13526b2e94fd613e27d85f3e79b623b50875"
     },
     {
       "id": "bund/KVG/art_4",
@@ -126,14 +172,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Es sind beim selben Versicherer versichert:"
+          "text": "Es sind beim selben Versicherer versichert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die auf Grund der Erwerbstätigkeit in der Schweiz versicherungspflichtigen Personen und deren versicherungspflichtigen Familienangehörigen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen;"
+            },
+            {
+              "marke": "b",
+              "text": "die auf Grund des Bezugs einer schweizerischen Rente versicherungspflichtigen Personen und deren versicherungspflichtigen Familienangehörigen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen;"
+            },
+            {
+              "marke": "c",
+              "text": "die auf Grund des Bezugs einer Leistung der schweizerischen Arbeitslosenversicherung versicherungspflichtigen Personen und deren versicherungspflichtigen Familienangehörigen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_4_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d17545d1a635cbcb7d66883fefacbb061812a156203fc05418082d4399daeebc"
+      "sha": "97b34bad8fd76558668011a4ea355be6f24deadbe717e02edcd2e4df3ff2e383"
     },
     {
       "id": "bund/KVG/art_5",
@@ -199,7 +259,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kantone informieren über die Versicherungspflicht:"
+          "text": "Die Kantone informieren über die Versicherungspflicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die auf Grund einer Erwerbstätigkeit in der Schweiz versicherungspflichtigen Personen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen;"
+            },
+            {
+              "marke": "b",
+              "text": "die auf Grund des Bezugs einer Leistung der schweizerischen Arbeitslosenversicherung versicherungspflichtigen Personen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen;"
+            },
+            {
+              "marke": "c",
+              "text": "die auf Grund des Bezugs einer schweizerischen Rente versicherungspflichtigen Personen, die ihren Wohnort von der Schweiz in einen Mitgliedstaat der Europäischen Union, nach Island, nach Norwegen oder ins Vereinigte Königreich verlegen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -218,7 +292,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_6_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3aebea8e8456a5b186f7f4a089cbd50ec15574d4f9cf26258166cea9d0927b31"
+      "sha": "aa438310674f5555e53da7c017cff7994202222e2aec0fd124797fe91e74f2b8"
     },
     {
       "id": "bund/KVG/art_7",
@@ -466,14 +540,28 @@
         },
         {
           "absatz": "3",
-          "text": "Der Bundesrat regelt:"
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erhebung von Verzugszinsen und die Ausrichtung von Vergütungszinsen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Leistung von Schadenersatz;"
+            },
+            {
+              "marke": "c",
+              "text": "die Frist, nach deren Ablauf die gemeinsame Einrichtung eine Neuberechnung des Risikoausgleichs ablehnen darf."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_17_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5a933094018f13f0590bd2b287fed3d5f44f68d582873ea4424604732285f3ef"
+      "sha": "17cad4b37ed344f03a08df310fb02b94aaa315cab8bc7ff92750ba664a378e4e"
     },
     {
       "id": "bund/KVG/art_18",
@@ -618,7 +706,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die Daten sind aggregiert weiterzugeben. Der Bundesrat kann vorsehen, dass die Daten zudem pro versicherte Person weiterzugeben sind, sofern aggregierte Daten nicht zur Erfüllung der folgenden Aufgaben genügen und die Daten pro versicherte Person anderweitig nicht zu beschaffen sind:"
+          "text": "Die Daten sind aggregiert weiterzugeben. Der Bundesrat kann vorsehen, dass die Daten zudem pro versicherte Person weiterzugeben sind, sofern aggregierte Daten nicht zur Erfüllung der folgenden Aufgaben genügen und die Daten pro versicherte Person anderweitig nicht zu beschaffen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Überwachung der Kostenentwicklung nach Leistungsart und nach Leistungserbringer sowie zur Erarbeitung von Entscheidgrundlagen für Massnahmen zur Eindämmung der Kostenentwicklung;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Analyse der Wirkung des Gesetzes und des Gesetzesvollzugs und zur Erarbeitung von Entscheidgrundlagen im Hinblick auf Gesetzes- und Gesetzesvollzugsänderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Evaluation des Risikoausgleichs."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -633,7 +735,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_21",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "dc90b92ee668e43364550f8a3fbb8020fbe571871c83664555a910d5912a87cb"
+      "sha": "7af06334d67517b35572a5fcb22e523dacbd3292bf2450b3a5ce9be41bfff81a"
     },
     {
       "id": "bund/KVG/art_21_a",
@@ -756,14 +858,32 @@
         },
         {
           "absatz": "2",
-          "text": "Diese Leistungen umfassen:"
+          "text": "Diese Leistungen umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Untersuchungen und Behandlungen, die ambulant, stationär oder in einem Pflegeheim sowie die Pflegeleistungen, die im Rahmen einer stationären Behandlung erbracht werden von: 1. Ärzten oder Ärztinnen,"
+            },
+            {
+              "marke": "2",
+              "text": "Chiropraktoren oder Chiropraktorinnen,"
+            },
+            {
+              "marke": "2",
+              "text": "Pflegefachpersonen,"
+            },
+            {
+              "marke": "3",
+              "text": "Personen, die auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin beziehungsweise eines Chiropraktors oder einer Chiropraktorin Leistungen erbringen;"
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_25",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3c97080bf102c2a638a6487dcc20d680f874cf0090b1f103c73e652b46f8330e"
+      "sha": "1012466f90c6351ae273038dc349584072da9bd7100eb3a93308cfd692559f4c"
     },
     {
       "id": "bund/KVG/art_25_a",
@@ -775,7 +895,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die obligatorische Krankenpflegeversicherung leistet einen Beitrag an die Pflegeleistungen, die aufgrund eines ausgewiesenen Pflegebedarfs ambulant, auch in Tages- oder Nachtstrukturen, oder im Pflegeheim:"
+          "text": "Die obligatorische Krankenpflegeversicherung leistet einen Beitrag an die Pflegeleistungen, die aufgrund eines ausgewiesenen Pflegebedarfs ambulant, auch in Tages- oder Nachtstrukturen, oder im Pflegeheim:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von einer Pflegefachperson erbracht werden;"
+            },
+            {
+              "marke": "b",
+              "text": "in Organisationen, die Pflegefachpersonen beschäftigen, erbracht werden; oder"
+            },
+            {
+              "marke": "c",
+              "text": "auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbracht werden."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -814,7 +948,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_25_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4c5df20055012d53f9b4856e403e2d19bf736894255dbd987d2cb182b30ab1b9"
+      "sha": "e07bf9259f03f2305d58a4628953ff765bbf2d56444a5e4ee31d4f09fd8d204b"
     },
     {
       "id": "bund/KVG/art_26",
@@ -887,14 +1021,32 @@
         },
         {
           "absatz": "2",
-          "text": "Diese Leistungen umfassen:"
+          "text": "Diese Leistungen umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die von Ärzten und Ärztinnen oder von Hebammen durchgeführten oder ärztlich angeordneten Kontrolluntersuchungen während und nach der Schwangerschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "die Entbindung zu Hause, in einem Spital oder einem Geburtshaus sowie die Geburtshilfe durch Ärzte und Ärztinnen oder Hebammen;"
+            },
+            {
+              "marke": "c",
+              "text": "die notwendige Stillberatung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Pflege und den Aufenthalt des gesunden Neugeborenen, solange es sich mit der Mutter im Spital aufhält."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_29",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "cc77d5611d07aeac7270c317f9386ed3fcb999531dc33bc9da1e62ca79e0ca7d"
+      "sha": "a1ed6b8277526a5cc4007dc992a11bf6402bd010beaaf02eb5552141c4f9a2ff"
     },
     {
       "id": "bund/KVG/art_30",
@@ -925,7 +1077,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die obligatorische Krankenpflegeversicherung übernimmt die Kosten der zahnärztlichen Behandlung, wenn diese:"
+          "text": "Die obligatorische Krankenpflegeversicherung übernimmt die Kosten der zahnärztlichen Behandlung, wenn diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch eine schwere, nicht vermeidbare Erkrankung des Kausystems bedingt ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch eine schwere Allgemeinerkrankung oder ihre Folgen bedingt ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "zur Behandlung einer schweren Allgemeinerkrankung oder ihrer Folgen notwendig ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -936,7 +1102,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_31",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "0d2c39f486741782532e024aea67f663b727e59267c485d88fc455b3eada2643"
+      "sha": "afd981938e76ef81ed7304a7ef42ee4c51ca09d97d4836653d9143cb8436d2cb"
     },
     {
       "id": "bund/KVG/art_32",
@@ -1010,7 +1176,17 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat kann vorsehen, dass die obligatorische Krankenpflegeversicherung folgende Kosten übernimmt:"
+          "text": "Der Bundesrat kann vorsehen, dass die obligatorische Krankenpflegeversicherung folgende Kosten übernimmt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kosten von Leistungen nach den Artikeln 25 Absatz 2 und 29, die aus medizinischen Gründen oder im Rahmen der grenzüberschreitenden Zusammenarbeit für in der Schweiz wohnhafte Versicherte im Ausland erbracht werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kosten von Entbindungen, die aus andern als medizinischen Gründen im Ausland erfolgen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1021,7 +1197,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_34",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "632f2fb1ccfc68837cd03ff15cff6599cf0228187d2c33338d21c279755796dd"
+      "sha": "c48a82c452a420cc602b113e4157b670ceb553fb82dda1a976f51b179e2cc77c"
     },
     {
       "id": "bund/KVG/art_35",
@@ -1037,14 +1213,72 @@
         },
         {
           "absatz": "2",
-          "text": "Leistungserbringer sind:"
+          "text": "Leistungserbringer sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ärzte und Ärztinnen;"
+            },
+            {
+              "marke": "b",
+              "text": "Apotheker und Apothekerinnen;"
+            },
+            {
+              "marke": "c",
+              "text": "Chiropraktoren und Chiropraktorinnen;"
+            },
+            {
+              "marke": "d",
+              "text": "Hebammen;"
+            },
+            {
+              "marke": "d",
+              "text": "Pflegefachpersonen und Organisationen, die Pflegefachpersonen beschäftigen;"
+            },
+            {
+              "marke": "e",
+              "text": "Personen, die auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin Leistungen erbringen, und Organisationen, die solche Personen beschäftigen;"
+            },
+            {
+              "marke": "f",
+              "text": "Laboratorien;"
+            },
+            {
+              "marke": "g",
+              "text": "Abgabestellen für Mittel und Gegenstände, die der Untersuchung oder Behandlung dienen;"
+            },
+            {
+              "marke": "h",
+              "text": "Spitäler;"
+            },
+            {
+              "marke": "i",
+              "text": "Geburtshäuser;"
+            },
+            {
+              "marke": "k",
+              "text": "Pflegeheime;"
+            },
+            {
+              "marke": "l",
+              "text": "Heilbäder;"
+            },
+            {
+              "marke": "m",
+              "text": "Transport- und Rettungsunternehmen;"
+            },
+            {
+              "marke": "n",
+              "text": "Einrichtungen, die der ambulanten Krankenpflege durch Ärzte und Ärztinnen dienen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_35",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ddd60db09be07534e5eada710667f3d133ef690362aabdd70d1f6094c90472f6"
+      "sha": "712c57ccfe575fdd15cd337f23337f1488a6b86ffbf7ddca29a9701844eae0d3"
     },
     {
       "id": "bund/KVG/art_36",
@@ -1102,11 +1336,43 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a müssen mindestens drei Jahre im beantragten Fachgebiet an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet haben. Sie weisen die in ihrer Tätigkeitsregion notwendige Sprachkompetenz mittels einer in der Schweiz abgelegten Sprachprüfung nach. Die Nachweispflicht entfällt für Ärzte und Ärztinnen, welche über einen der folgenden Abschlüsse verfügen:"
+          "text": "Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a müssen mindestens drei Jahre im beantragten Fachgebiet an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet haben. Sie weisen die in ihrer Tätigkeitsregion notwendige Sprachkompetenz mittels einer in der Schweiz abgelegten Sprachprüfung nach. Die Nachweispflicht entfällt für Ärzte und Ärztinnen, welche über einen der folgenden Abschlüsse verfügen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine schweizerische gymnasiale Maturität, bei der die Amtssprache der Tätigkeitsregion Grundlagenfach war;"
+            },
+            {
+              "marke": "b",
+              "text": "ein in der Amtssprache der Tätigkeitsregion erworbenes eidgenössisches Diplom für Ärzte und Ärztinnen;"
+            },
+            {
+              "marke": "c",
+              "text": "ein in der Amtssprache der Tätigkeitsregion erworbenes und nach Artikel 15 des Medizinalberufegesetzes vom 23. Juni 2006 anerkanntes ausländisches Diplom."
+            }
+          ]
         },
         {
           "absatz": null,
-          "text": "1bis Die Kantone können Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a, die über einen der folgenden eidgenössischen Weiterbildungstitel oder einen als gleichwertig anerkannten ausländischen Weiterbildungstitel (Art. 21 des Medizinalberufegesetzes vom 23. Juni 2006) verfügen, von der Anforderung, während mindestens drei Jahren an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet zu haben, ausnehmen, wenn auf dem Kantonsgebiet in den betroffenen Bereichen eine Unterversorgung besteht:"
+          "text": "1bis Die Kantone können Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a, die über einen der folgenden eidgenössischen Weiterbildungstitel oder einen als gleichwertig anerkannten ausländischen Weiterbildungstitel (Art. 21 des Medizinalberufegesetzes vom 23. Juni 2006) verfügen, von der Anforderung, während mindestens drei Jahren an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet zu haben, ausnehmen, wenn auf dem Kantonsgebiet in den betroffenen Bereichen eine Unterversorgung besteht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Allgemeine Innere Medizin als einziger Weiterbildungstitel;"
+            },
+            {
+              "marke": "b",
+              "text": "Praktischer Arzt oder Praktische Ärztin als einziger Weiterbildungstitel;"
+            },
+            {
+              "marke": "c",
+              "text": "Kinder- und Jugendmedizin;"
+            },
+            {
+              "marke": "d",
+              "text": "Kinder- und Jugendpsychiatrie und -psychotherapie."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1121,7 +1387,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_37",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "97d4e5eb2f1f1ed76ad89af32016689ebb9c1c287ab53c2efc69e235f061de1a"
+      "sha": "63bad60f9e2d9a6a3c014eb43b9ebb74f081bd846045b4477329f67befec461a"
     },
     {
       "id": "bund/KVG/art_38",
@@ -1137,7 +1403,25 @@
         },
         {
           "absatz": "2",
-          "text": "Die Aufsichtsbehörde trifft die Massnahmen, die für die Einhaltung der Zulassungsvoraussetzungen nach den Artikeln 36 a und 37 nötig sind. Bei Nichteinhaltung der Zulassungsvoraussetzungen kann sie folgende Massnahmen anordnen:"
+          "text": "Die Aufsichtsbehörde trifft die Massnahmen, die für die Einhaltung der Zulassungsvoraussetzungen nach den Artikeln 36 a und 37 nötig sind. Bei Nichteinhaltung der Zulassungsvoraussetzungen kann sie folgende Massnahmen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Busse bis zu 20 000 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "den Entzug der Zulassung zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung für das ganze oder einen Teil des Tätigkeitsspektrums für längstens ein Jahr (befristeter Entzug);"
+            },
+            {
+              "marke": "d",
+              "text": "den definitiven Entzug der Zulassung zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung für das ganze oder einen Teil des Tätigkeitsspektrums."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1148,7 +1432,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_38",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1e485674c255cce86e3ac5108511c7f63e72e3f944e1e8d7e2bd2aea584fae10"
+      "sha": "8c92838236e7775c35f131852ebf1e714bf7dccab0a72c76943fc50fa41f34f1"
     },
     {
       "id": "bund/KVG/art_39",
@@ -1160,7 +1444,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Anstalten oder deren Abteilungen, die der stationären Behandlung akuter Krankheiten oder der stationären Durchführung von Massnahmen der medizinischen Rehabilitation dienen (Spitäler), sind zugelassen, wenn sie:"
+          "text": "Anstalten oder deren Abteilungen, die der stationären Behandlung akuter Krankheiten oder der stationären Durchführung von Massnahmen der medizinischen Rehabilitation dienen (Spitäler), sind zugelassen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausreichende ärztliche Betreuung gewährleisten;"
+            },
+            {
+              "marke": "b",
+              "text": "über das erforderliche Fachpersonal verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "über zweckentsprechende medizinische Einrichtungen verfügen und eine zweckentsprechende pharmazeutische Versorgung gewährleisten;"
+            },
+            {
+              "marke": "d",
+              "text": "der von einem oder mehreren Kantonen gemeinsam aufgestellten Planung für eine bedarfsgerechte Spitalversorgung entsprechen, wobei private Trägerschaften angemessen in die Planung einzubeziehen sind;"
+            },
+            {
+              "marke": "e",
+              "text": "auf der nach Leistungsaufträgen in Kategorien gegliederten Spitalliste des Kantons aufgeführt sind;"
+            },
+            {
+              "marke": "f",
+              "text": "sich einer zertifizierten Gemeinschaft oder Stammgemeinschaft nach Artikel 11 Buchstabe a EPDG anschliessen."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1187,7 +1497,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_39",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c7ebf93219b407cc4e9b75975c26810d81261b501ef37653b0a82e242f3fbb44"
+      "sha": "57961456150b1ecebb0dad4ce935bab46ba33466d4c79748527431213c749448"
     },
     {
       "id": "bund/KVG/art_40",
@@ -1238,7 +1548,21 @@
         },
         {
           "absatz": null,
-          "text": "2bis Bei folgenden Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, übernehmen der Versicherer und der Kanton, an den die Versicherten einen Anknüpfungspunkt haben, bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif, der in einem Listenspital dieses Kantons für die betreffende Behandlung gilt:"
+          "text": "2bis Bei folgenden Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, übernehmen der Versicherer und der Kanton, an den die Versicherten einen Anknüpfungspunkt haben, bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif, der in einem Listenspital dieses Kantons für die betreffende Behandlung gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige;"
+            },
+            {
+              "marke": "b",
+              "text": "Familienangehörige von Niedergelassenen, von Aufenthaltern und Aufenthalterinnen und von Kurzaufenthaltern und Kurzaufenthalterinnen;"
+            },
+            {
+              "marke": "c",
+              "text": "Bezüger und Bezügerinnen einer Leistung der schweizerischen Arbeitslosenversicherung sowie deren Familienangehörige."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1250,7 +1574,17 @@
         },
         {
           "absatz": null,
-          "text": "3bis Medizinische Gründe nach den Absätzen 2 und 3 liegen bei einem Notfall vor oder wenn die erforderlichen Leistungen nicht angeboten werden:"
+          "text": "3bis Medizinische Gründe nach den Absätzen 2 und 3 liegen bei einem Notfall vor oder wenn die erforderlichen Leistungen nicht angeboten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei ambulanter Behandlung am Wohn- oder Arbeitsort der versicherten Person oder in deren Umgebung;"
+            },
+            {
+              "marke": "b",
+              "text": "bei stationärer Behandlung in einem Spital, das auf der Spitalliste des Wohnkantons aufgeführt ist."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1261,7 +1595,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_41",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f1f64589accd758f42eb8309291cdf72fbddb754e76e9ad0522e4db5c30a972b"
+      "sha": "dd22fbaafbc1c92fed860449c2f47126222ec69a68e7848477b5f4a42956f9cd"
     },
     {
       "id": "bund/KVG/art_41_a",
@@ -1382,7 +1716,25 @@
         },
         {
           "absatz": "2",
-          "text": "Der Tarif ist eine Grundlage für die Berechnung der Vergütung; er kann namentlich:"
+          "text": "Der Tarif ist eine Grundlage für die Berechnung der Vergütung; er kann namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf den benötigten Zeitaufwand abstellen (Zeittarif);"
+            },
+            {
+              "marke": "b",
+              "text": "für die einzelnen Leistungen Taxpunkte festlegen und den Taxpunktwert bestimmen (Einzelleistungstarif);"
+            },
+            {
+              "marke": "c",
+              "text": "pauschale Vergütungen vorsehen (Pauschaltarif);"
+            },
+            {
+              "marke": "d",
+              "text": "zur Sicherung der Qualität die Vergütung bestimmter Leistungen ausnahmsweise von Bedingungen abhängig machen, welche über die Voraussetzungen nach den Artikeln 36–40 hinausgehen, wie namentlich vom Vorliegen der notwendigen Infrastruktur und der notwendigen Aus‑, Weiter- oder Fortbildung eines Leistungserbringers (Tarifausschluss)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1425,7 +1777,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_43",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9649bc0239716622f46d2ce5b7d17d0aa1135c98d3a84d185b82fb738628dd1f"
+      "sha": "165e34f1046328826b73ec56e765ce49db68e3198e935fd93c42a7d21cdc65eb"
     },
     {
       "id": "bund/KVG/art_44",
@@ -1491,7 +1843,25 @@
         },
         {
           "absatz": "3",
-          "text": "Nicht zulässig und damit ungültig sind insbesondere folgende Massnahmen, ohne Rücksicht darauf, ob sie in einem Tarifvertrag oder in getrennten Vereinbarungen oder Regelungen enthalten sind:"
+          "text": "Nicht zulässig und damit ungültig sind insbesondere folgende Massnahmen, ohne Rücksicht darauf, ob sie in einem Tarifvertrag oder in getrennten Vereinbarungen oder Regelungen enthalten sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sondervertragsverbote zu Lasten von Verbandsmitgliedern;"
+            },
+            {
+              "marke": "b",
+              "text": "Verpflichtung von Verbandsmitgliedern auf bestehende Verbandsverträge;"
+            },
+            {
+              "marke": "c",
+              "text": "Konkurrenzverbote zu Lasten von Verbandsmitgliedern;"
+            },
+            {
+              "marke": "d",
+              "text": "Exklusivitäts- und Meistbegünstigungsklauseln."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1506,7 +1876,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_46",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1a19d1e29a7899bf4e6779751c3bb56ecc8cc0a3c93d88a95b4dec8bbd4b3560"
+      "sha": "8a3cfab9d05e497f1b79edd54bc30eeb0a1e015131d08cd0fe88421a8a0bf71d"
     },
     {
       "id": "bund/KVG/art_47",
@@ -1565,7 +1935,17 @@
         },
         {
           "absatz": "6",
-          "text": "Bei einem Verstoss gegen die Pflicht zur Datenbekanntgabe nach Absatz 5 kann das EDI auf Antrag der Organisation gegen die betroffenen Leistungserbringer Sanktionen ergreifen. Diese umfassen:"
+          "text": "Bei einem Verstoss gegen die Pflicht zur Datenbekanntgabe nach Absatz 5 kann das EDI auf Antrag der Organisation gegen die betroffenen Leistungserbringer Sanktionen ergreifen. Diese umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Busse bis zu 20 000 Franken."
+            }
+          ]
         },
         {
           "absatz": "7",
@@ -1576,7 +1956,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "7365ad5d6aa27d4c8da61055035d5fb4329334256123ad2d9e04e472f37eda6d"
+      "sha": "17d6086631c75b56b8b3f429a3635f35147f883b4b140273fb3332fc245bc7c6"
     },
     {
       "id": "bund/KVG/art_47_b",
@@ -1592,14 +1972,24 @@
         },
         {
           "absatz": "2",
-          "text": "Bei einem Verstoss gegen die Pflicht zur Datenbekanntgabe nach Absatz 1 kann das EDI oder die zuständige Kantonsregierung gegen die Verbände der Leistungserbringer und diejenigen der Versicherer, gegen die Organisation nach Artikel 47 a und gegen die betroffenen Leistungserbringer und Versicherer Sanktionen ergreifen. Diese umfassen:"
+          "text": "Bei einem Verstoss gegen die Pflicht zur Datenbekanntgabe nach Absatz 1 kann das EDI oder die zuständige Kantonsregierung gegen die Verbände der Leistungserbringer und diejenigen der Versicherer, gegen die Organisation nach Artikel 47 a und gegen die betroffenen Leistungserbringer und Versicherer Sanktionen ergreifen. Diese umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Busse bis zu 20 000 Franken."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f54d81c552cabd30ef01b62f2dc17e01f50abc72a13852542726aee700b446c2"
+      "sha": "3e27ee35392d7704921e76c37c2b7312da38a9cf9b853a863c5270efb8398ecb"
     },
     {
       "id": "bund/KVG/art_47_c",
@@ -1615,7 +2005,17 @@
         },
         {
           "absatz": "2",
-          "text": "Die Massnahmen nach Absatz 1 sind:"
+          "text": "Die Massnahmen nach Absatz 1 sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in kantonal geltende Tarifverträge zu integrieren; oder"
+            },
+            {
+              "marke": "b",
+              "text": "in gesamtschweizerisch geltende Tarifverträge zu integrieren; betreffen die Massnahmen gesamtschweizerisch einheitliche Tarifstrukturen, so müssen sie in gesamtschweizerisch geltenden Verträgen festgelegt werden."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1623,7 +2023,17 @@
         },
         {
           "absatz": "4",
-          "text": "Die Massnahmen nach Absatz 1 müssen pro Bereich, der für die jeweilige Art von Leistungserbringer relevant ist, mindestens vorsehen:"
+          "text": "Die Massnahmen nach Absatz 1 müssen pro Bereich, der für die jeweilige Art von Leistungserbringer relevant ist, mindestens vorsehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Überwachung der mengenmässigen Entwicklung der verschiedenen Positionen, die für die Leistungen vorgesehen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Überwachung der Entwicklung der abgerechneten Kosten oder Volumen."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1638,7 +2048,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a202271fc956f91b70da19c1a06bbe109ccfb2c3d0c5969fd8db02d6ee2e53eb"
+      "sha": "62c052273886890cb3181ad79e6f9a497db584c1e0e3a409e490191698b2ef64"
     },
     {
       "id": "bund/KVG/art_48",
@@ -1689,7 +2099,17 @@
         },
         {
           "absatz": "3",
-          "text": "Die Vergütungen nach Absatz 1 dürfen keine Kostenanteile für gemeinwirtschaftliche Leistungen enthalten. Dazu gehören insbesondere:"
+          "text": "Die Vergütungen nach Absatz 1 dürfen keine Kostenanteile für gemeinwirtschaftliche Leistungen enthalten. Dazu gehören insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufrechterhaltung von Spitalkapazitäten aus regionalpolitischen Gründen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Forschung und universitäre Lehre."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1716,7 +2136,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_49",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ca5dce9db5cd618750b5c3b788ecc05accf8803e3e118bc6bd9eca626e219f6b"
+      "sha": "8adcff57136e193c98879e59882546c7942269e39698f5966f55d24e6fdef813"
     },
     {
       "id": "bund/KVG/art_49_a",
@@ -1732,7 +2152,25 @@
         },
         {
           "absatz": "2",
-          "text": "Die Kantone übernehmen den kantonalen Anteil für folgende Personen:"
+          "text": "Die Kantone übernehmen den kantonalen Anteil für folgende Personen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Versicherte, die im Kanton wohnen;"
+            },
+            {
+              "marke": "b",
+              "text": "folgende Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, bei stationärer Behandlung in der Schweiz: 1. Grenzgänger und Grenzgängerinnen sowie deren Familienangehörige,"
+            },
+            {
+              "marke": "2",
+              "text": "Familienangehörige von Niedergelassenen, von Aufenthaltern und Aufenthalterinnen und von Kurzaufenthaltern und Kurzaufenthalterinnen,"
+            },
+            {
+              "marke": "3",
+              "text": "Bezüger und Bezügerinnen einer Leistung der schweizerischen Arbeitslosenversicherung sowie deren Familienangehörige."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1759,7 +2197,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_49_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "2b49de715e6a450a736164cec4e86d22f499698586d3f898f02e16e58ca78466"
+      "sha": "e3f071819e213b7ecf8bf14fe427b6ca2de8036ab7f162c93765122eb47e70bf"
     },
     {
       "id": "bund/KVG/art_50",
@@ -1813,7 +2251,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Nach Anhören der zuständigen Kommissionen und unter Berücksichtigung der Grundsätze nach den Artikeln 32 Absatz 1 und 43 Absatz 6:"
+          "text": "Nach Anhören der zuständigen Kommissionen und unter Berücksichtigung der Grundsätze nach den Artikeln 32 Absatz 1 und 43 Absatz 6:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erlässt das EDI: 1. eine Liste der Analysen mit Tarif,"
+            },
+            {
+              "marke": "2",
+              "text": "eine Liste der in der Rezeptur verwendeten Präparate, Wirk- und Hilfsstoffe mit Tarif; dieser umfasst auch die Leistungen des Apothekers oder der Apothekerin,"
+            },
+            {
+              "marke": "3",
+              "text": "Bestimmungen über die Leistungspflicht und den Umfang der Vergütung von der Untersuchung oder Behandlung dienenden Mitteln und Gegenständen, die nach den Artikeln 25 Absatz 2 Buchstabe b und 25 a Absätze 1 bis und 2 verwendet werden;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1828,7 +2280,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_52",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e80df445f0c238c8cff77ac79d07cbc83010b32251b907d5673c9788a3929721"
+      "sha": "e580c942bcdb67c96e9d80393378de69c3af66d0ff82f67a35f2a86caef6fd9a"
     },
     {
       "id": "bund/KVG/art_52_a",
@@ -1875,14 +2327,36 @@
         },
         {
           "absatz": "2",
-          "text": "Das Beschwerdeverfahren richtet sich nach dem Verwaltungsgerichtsgesetz vom 17. Juni 2005 und dem Bundesgesetz vom 20. Dezember 1968 über das Verwaltungsverfahren (VwVG). Vorbehalten bleiben folgende Ausnahmen:"
+          "text": "Das Beschwerdeverfahren richtet sich nach dem Verwaltungsgerichtsgesetz vom 17. Juni 2005 und dem Bundesgesetz vom 20. Dezember 1968 über das Verwaltungsverfahren (VwVG). Vorbehalten bleiben folgende Ausnahmen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Neue Tatsachen und Beweismittel dürfen nur so weit vorgebracht werden, als erst der angefochtene Beschluss dazu Anlass gibt. Neue Begehren sind unzulässig."
+            },
+            {
+              "marke": "b",
+              "text": "Die Artikel 22 a und 53 VwVG sind nicht anwendbar."
+            },
+            {
+              "marke": "c",
+              "text": "Zur Einreichung einer Vernehmlassung setzt das Bundesverwaltungsgericht eine Frist von höchstens 30 Tagen. Diese kann nicht erstreckt werden."
+            },
+            {
+              "marke": "d",
+              "text": "Ein weiterer Schriftenwechsel nach Artikel 57 Absatz 2 VwVG findet in der Regel nicht statt."
+            },
+            {
+              "marke": "e",
+              "text": "In Beschwerdeverfahren gegen Beschlüsse nach Artikel 39 ist die Rüge der Unangemessenheit unzulässig."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_53",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b2a4a9979ae5504a135e9ab5a00d376b475087079d88e6e9ec8e43df0dec4222"
+      "sha": "9dc1f9c9b31618c779f79b8be3201fa1ae919c6b76bd7f5abf94ec2e39a2fa1d"
     },
     {
       "id": "bund/KVG/art_54",
@@ -1921,14 +2395,28 @@
         },
         {
           "absatz": "2",
-          "text": "Zuständig ist:"
+          "text": "Zuständig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Bundesrat bezüglich der von ihm genehmigten Tarifverträge nach Artikel 46 Absatz 4;"
+            },
+            {
+              "marke": "b",
+              "text": "das EDI bezüglich der Tarife oder Preise nach Artikel 52 Absatz 1 Buchstabe a Ziffern 1 und 2 sowie Buchstabe b;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kantonsregierung bezüglich der von ihr genehmigten Tarifverträge nach Artikel 46 Absatz 4."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3034162de3bbbfdd514ae9745bb5343cdabd2725ccde12b13a2e99e746a30cca"
+      "sha": "c3f40d1b5728ee39cfbef2a69d559b99ae4208e7b6b345f1b06b6ceacb007737"
     },
     {
       "id": "bund/KVG/art_55_a",
@@ -1940,7 +2428,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kantone beschränken in einem oder mehreren medizinischen Fachgebieten oder in bestimmten Regionen die Anzahl der Ärzte und Ärztinnen, die im ambulanten Bereich zulasten der obligatorischen Krankenpflegeversicherung Leistungen erbringen. Wenn ein Kanton die Anzahl Ärzte und Ärztinnen beschränkt, dann sieht er vor:"
+          "text": "Die Kantone beschränken in einem oder mehreren medizinischen Fachgebieten oder in bestimmten Regionen die Anzahl der Ärzte und Ärztinnen, die im ambulanten Bereich zulasten der obligatorischen Krankenpflegeversicherung Leistungen erbringen. Wenn ein Kanton die Anzahl Ärzte und Ärztinnen beschränkt, dann sieht er vor:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dass Ärzte und Ärztinnen nur zugelassen werden, solange die entsprechende Höchstzahl nicht erreicht ist;"
+            },
+            {
+              "marke": "b",
+              "text": "dass die Anzahl folgender Ärzte und Ärztinnen auf die entsprechende Höchstzahl beschränkt ist: 1. Ärzte und Ärztinnen, die ihre Tätigkeit im ambulanten Bereich eines Spitals ausüben,"
+            },
+            {
+              "marke": "2",
+              "text": "Ärzte und Ärztinnen, die ihre Tätigkeit in einer Einrichtung nach Artikel 35 Absatz 2 Buchstabe n ausüben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1956,7 +2458,17 @@
         },
         {
           "absatz": "5",
-          "text": "Werden in einem Kanton die Zulassungen beschränkt, so können folgende Ärzte und Ärztinnen weiterhin tätig sein:"
+          "text": "Werden in einem Kanton die Zulassungen beschränkt, so können folgende Ärzte und Ärztinnen weiterhin tätig sein:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ärzte und Ärztinnen, die vor Inkrafttreten der Höchstzahlen zugelassen wurden und im ambulanten Bereich Leistungen zulasten der obligatorischen Krankenpflegeversicherung erbracht haben;"
+            },
+            {
+              "marke": "b",
+              "text": "Ärzte und Ärztinnen, die ihre Tätigkeit im ambulanten Bereich eines Spitals oder in einer Einrichtung nach Artikel 35 Absatz 2 Buchstabe n vor Inkrafttreten der Höchstzahlen ausgeübt haben, sofern sie ihre Tätigkeit im ambulanten Bereich des gleichen Spitals oder in der gleichen Einrichtung weiter ausüben."
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -1967,7 +2479,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "12789ee22d59f2f5f2ac02e0b6bb9b7a73b72f554ac149ba1c5abd62e788168f"
+      "sha": "968a75ce3030bb73c3141390f3206b2e8a3ae4f31949e4127bb89e1cbe3a94ef"
     },
     {
       "id": "bund/KVG/art_55_b",
@@ -2002,11 +2514,31 @@
         },
         {
           "absatz": "2",
-          "text": "Für Leistungen, die über dieses Mass hinausgehen, kann die Vergütung verweigert werden. Eine nach diesem Gesetz dem Leistungserbringer zu Unrecht bezahlte Vergütung kann zurückgefordert werden. Rückforderungsberechtigt ist:"
+          "text": "Für Leistungen, die über dieses Mass hinausgehen, kann die Vergütung verweigert werden. Eine nach diesem Gesetz dem Leistungserbringer zu Unrecht bezahlte Vergütung kann zurückgefordert werden. Rückforderungsberechtigt ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im System des Tiers garant (Art. 42 Abs. 1) die versicherte Person oder nach Artikel 89 Absatz 3 der Versicherer;"
+            },
+            {
+              "marke": "b",
+              "text": "im System des Tiers payant (Art. 42 Abs. 2) der Versicherer."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Der Leistungserbringer muss dem Schuldner der Vergütung die direkten oder indirekten Vergünstigungen weitergeben, die ihm:"
+          "text": "Der Leistungserbringer muss dem Schuldner der Vergütung die direkten oder indirekten Vergünstigungen weitergeben, die ihm:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein anderer in seinem Auftrag tätiger Leistungserbringer gewährt;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen oder Einrichtungen gewähren, welche Arzneimittel oder der Untersuchung oder Behandlung dienende Mittel oder Gegenstände liefern."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -2029,7 +2561,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_56",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ea8c58cb450bb64fde6645ce566867f15fe4762499f3fc40694531fbd67cccae"
+      "sha": "33b9336f877eda665618ef56416654ed1f3e48b0f0b282ed4e6583680fc3cddf"
     },
     {
       "id": "bund/KVG/art_57",
@@ -2111,7 +2643,37 @@
         },
         {
           "absatz": "2",
-          "text": "Die Qualitätsverträge regeln mindestens Folgendes:"
+          "text": "Die Qualitätsverträge regeln mindestens Folgendes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Qualitätsmessungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahmen zur Qualitätsentwicklung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zusammenarbeit der Vertragspartner bei der Festlegung von Verbesserungsmassnahmen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Überprüfung der Einhaltung der Verbesserungsmassnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Veröffentlichung der Qualitätsmessungen und der Verbesserungsmassnahmen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Sanktionen bei Verletzungen des Vertrags;"
+            },
+            {
+              "marke": "g",
+              "text": "das Vorlegen eines Jahresberichts über den Stand der Qualitätsentwicklung gegenüber der Eidgenössischen Qualitätskommission und dem Bundesrat."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2138,7 +2700,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "362cfebf416ecd37fa2717d0e78bc5b6c63cad9f1e3fa868391950629a7aa414"
+      "sha": "c2c3f7aba3537005104fb5395e15ace039285876920cf13c9d1924f80384a0ba"
     },
     {
       "id": "bund/KVG/art_58_b",
@@ -2185,7 +2747,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Eidgenössische Qualitätskommission hat folgende Aufgaben und Kompetenzen:"
+          "text": "Die Eidgenössische Qualitätskommission hat folgende Aufgaben und Kompetenzen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie berät den Bundesrat, die Kantone, die Leistungserbringer und die Versicherer hinsichtlich der Koordination der Massnahmen zur Qualitätsentwicklung."
+            },
+            {
+              "marke": "b",
+              "text": "Sie beauftragt Dritte, neue Qualitätsindikatoren zu entwickeln und die bestehenden weiterzuentwickeln; sie gibt gegenüber den Behörden Empfehlungen ab, welche Indikatoren zu verwenden sind."
+            },
+            {
+              "marke": "c",
+              "text": "Sie prüft die Berichte der Verbände der Leistungserbringer und der Versicherer nach Artikel 58 a Absatz 2 Buchstabe g und unterbreitet diesen Verbänden Empfehlungen zur Qualitätsentwicklung."
+            },
+            {
+              "marke": "d",
+              "text": "Sie berät den Bundesrat bei der Festlegung von Massnahmen, die der Bundesrat gestützt auf die Artikel 58 a und 58 h vorsieht."
+            },
+            {
+              "marke": "e",
+              "text": "Sie beauftragt Dritte, systematische Studien und Überprüfungen durchzuführen."
+            },
+            {
+              "marke": "f",
+              "text": "Sie beauftragt Dritte, nationale Programme zur Qualitätsentwicklung durchzuführen, die Identifikation und Analyse von Patientensicherheitsrisiken zu gewährleisten, Massnahmen zu deren Reduktion zu ergreifen und die Weiterentwicklung von Methoden zur Förderung der Patientensicherheit sicherzustellen; dabei berücksichtigt sie insbesondere Organisationen, die über eine entsprechende Erfahrung in der Durchführung derartiger Aktivitäten und in der Implementierung des Wissens mit den zuständigen Fachpersonen verfügen."
+            },
+            {
+              "marke": "g",
+              "text": "Sie kann nationale oder regionale Projekte zur Qualitätsentwicklung unterstützen."
+            },
+            {
+              "marke": "h",
+              "text": "Sie unterbreitet den zuständigen Behörden und den Verbänden der Leistungserbringer und der Versicherer Empfehlungen über Qualitätsmessungen und allgemeine Qualitätsvorgaben, namentlich zur Indikationsqualität, sowie über Massnahmen in Einzelfällen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2208,7 +2804,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "48cf4c98d57fa2b2bf4c962645726dbd193b03e9bfa95b3d0a7da9cd438b5b6f"
+      "sha": "a6c87b54af6e37efc111f85f2719aa894aca91092c1b76ddfaf91e7c878568fd"
     },
     {
       "id": "bund/KVG/art_58_d",
@@ -2340,7 +2936,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Bundesrat legt Massnahmen zur Qualitätsentwicklung und zur Sicherung und Wiederherstellung des zweckmässigen Einsatzes der Leistungen fest. Er kann insbesondere vorsehen, dass:"
+          "text": "Der Bundesrat legt Massnahmen zur Qualitätsentwicklung und zur Sicherung und Wiederherstellung des zweckmässigen Einsatzes der Leistungen fest. Er kann insbesondere vorsehen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor der Durchführung bestimmter, namentlich besonders kostspieliger Diagnose- und Behandlungsverfahren die Zustimmung des Vertrauensarztes oder der Vertrauensärztin eingeholt werden muss;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kosten besonders kostspieliger oder schwieriger Untersuchungen oder Behandlungen von der obligatorischen Krankenpflegeversicherung nur übernommen werden, wenn sie von dafür qualifizierten Leistungserbringern durchgeführt werden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2351,7 +2957,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_h",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "eb1ada33410d57caf4638f647e0ccea44bf487ba89685ad7215a1aa5e96933f3"
+      "sha": "e567fc86b5b870fa33d5f4320168bb185315ace506afd1ace9a5b25b51a21d2d"
     },
     {
       "id": "bund/KVG/art_59",
@@ -2363,7 +2969,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gegen Leistungserbringer, die gegen die im Gesetz vorgesehenen Wirtschaftlichkeits- und Qualitätsanforderungen (Art. 56, 58 a und 58 h ) oder gegen vertragliche Abmachungen sowie gegen die Bestimmungen über die Rechnungsstellung (Art. 42) verstossen, werden Sanktionen ergriffen. Diese umfassen neben den in den Qualitätsverträgen vorgesehenen Sanktionen:"
+          "text": "Gegen Leistungserbringer, die gegen die im Gesetz vorgesehenen Wirtschaftlichkeits- und Qualitätsanforderungen (Art. 56, 58 a und 58 h ) oder gegen vertragliche Abmachungen sowie gegen die Bestimmungen über die Rechnungsstellung (Art. 42) verstossen, werden Sanktionen ergriffen. Diese umfassen neben den in den Qualitätsverträgen vorgesehenen Sanktionen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "die gänzliche oder teilweise Rückerstattung der Honorare, welche für nicht angemessene Leistungen bezogen wurden;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Busse bis zu 20 000 Franken; oder"
+            },
+            {
+              "marke": "d",
+              "text": "im Wiederholungsfall den vorübergehenden oder definitiven Ausschluss von der Tätigkeit zu Lasten der obligatorischen Krankenpflegeversicherung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2371,7 +2995,41 @@
         },
         {
           "absatz": "3",
-          "text": "Verstösse gegen gesetzliche Anforderungen oder vertragliche Abmachungen nach Absatz 1 sind insbesondere:"
+          "text": "Verstösse gegen gesetzliche Anforderungen oder vertragliche Abmachungen nach Absatz 1 sind insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Nichtbeachtung des Wirtschaftlichkeitsgebotes nach Artikel 56 Absatz 1;"
+            },
+            {
+              "marke": "b",
+              "text": "die nicht erfolgte oder die mangelhafte Erfüllung der Informationspflicht nach Artikel 57 Absatz 6;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nichteinhaltung der Massnahmen nach den Artikeln 58 a und 58 h ;"
+            },
+            {
+              "marke": "d",
+              "text": "die Nichtbeachtung des Tarifschutzes nach Artikel 44;"
+            },
+            {
+              "marke": "e",
+              "text": "die unterlassene Weitergabe von Vergünstigungen nach Artikel 56 Absatz 3;"
+            },
+            {
+              "marke": "f",
+              "text": "die betrügerische Manipulation von Abrechnungen oder die Ausstellung von unwahren Bestätigungen;"
+            },
+            {
+              "marke": "g",
+              "text": "die unterlassene Übermittlung der Rechnungskopien zuhanden der versicherten Personen im System des Tiers payant nach Artikel 42;"
+            },
+            {
+              "marke": "h",
+              "text": "die wiederholt unvollständige oder unkorrekte Rechnungsstellung."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -2382,7 +3040,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ef791ebe9ebe1aac7a79909bca86f55310ae4a071e4124e37fefcec3cebceee8"
+      "sha": "3c5fd2841c5da59fbbee624f1ec5f3ef2560e020618c712396dab2ad9c637fcc"
     },
     {
       "id": "bund/KVG/art_59_a",
@@ -2394,7 +3052,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Leistungserbringer sind verpflichtet, den zuständigen Bundesbehörden die Daten bekannt zu geben, die benötigt werden, um die Anwendung der Bestimmungen dieses Gesetzes über die Wirtschaftlichkeit und Qualität der Leistungen zu überwachen. Namentlich sind folgende Angaben zu machen:"
+          "text": "Die Leistungserbringer sind verpflichtet, den zuständigen Bundesbehörden die Daten bekannt zu geben, die benötigt werden, um die Anwendung der Bestimmungen dieses Gesetzes über die Wirtschaftlichkeit und Qualität der Leistungen zu überwachen. Namentlich sind folgende Angaben zu machen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art der ausgeübten Tätigkeit, Einrichtung und Ausstattung sowie Rechtsform;"
+            },
+            {
+              "marke": "b",
+              "text": "Anzahl und Struktur der Beschäftigten und der Ausbildungsplätze;"
+            },
+            {
+              "marke": "c",
+              "text": "Anzahl und Struktur der Patientinnen und Patienten in anonymisierter Form;"
+            },
+            {
+              "marke": "d",
+              "text": "Art, Umfang und Kosten der erbrachten Leistungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Aufwand, Ertrag und finanzielles Betriebsergebnis;"
+            },
+            {
+              "marke": "f",
+              "text": "medizinische Qualitätsindikatoren."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2413,7 +3097,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "7384d1cfa7d2429624abd5ee69050729007b7832a4b3085eba49f38f7253745d"
+      "sha": "b2162ecd99f61a832106145393f1053051ea6355cb81e2049626ef47c1840aee"
     },
     {
       "id": "bund/KVG/art_59_a_bis",
@@ -2425,14 +3109,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die folgenden Behörden können auf die Abfragedienste nach Artikel 14 Absatz 1 EPDG zugreifen, soweit dies für die Kontrolle der Einhaltung der Pflicht der jeweiligen Leistungserbringer zum Anschluss an eine zertifizierte Gemeinschaft oder Stammgemeinschaft nach Artikel 11 Buchstabe a EPDG notwendig ist:"
+          "text": "Die folgenden Behörden können auf die Abfragedienste nach Artikel 14 Absatz 1 EPDG zugreifen, soweit dies für die Kontrolle der Einhaltung der Pflicht der jeweiligen Leistungserbringer zum Anschluss an eine zertifizierte Gemeinschaft oder Stammgemeinschaft nach Artikel 11 Buchstabe a EPDG notwendig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufsichtsbehörde nach Artikel 38 Absatz 1;"
+            },
+            {
+              "marke": "b",
+              "text": "die für die Aufsicht über die Leistungserbringer nach Artikel 35 Absatz 2 Buchstaben h−k zuständige kantonale Behörde."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_a_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e6cfef0c15a39741f4fe03072484588506f78fd67e6d77dd40de156f3478d47f"
+      "sha": "ebb11eb067cf7ab5afd950789cd4e3a0fd64cccee0c00b77a902f4bb4cdfa620"
     },
     {
       "id": "bund/KVG/art_59_b",
@@ -2448,7 +3142,37 @@
         },
         {
           "absatz": "2",
-          "text": "Pilotprojekte, die einen der folgenden Bereiche betreffen, dürfen von Bestimmungen dieses Gesetzes, mit Ausnahme von Artikel 1, abweichen:"
+          "text": "Pilotprojekte, die einen der folgenden Bereiche betreffen, dürfen von Bestimmungen dieses Gesetzes, mit Ausnahme von Artikel 1, abweichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leistungserbringung im Auftrag der obligatorischen Krankenpflegeversicherung (Naturalleistungsprinzip) anstelle der Vergütung der Leistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Übernahme von Leistungen im Ausland ausserhalb der grenzüberschreitenden Zusammenarbeit nach Artikel 34 Absatz 2;"
+            },
+            {
+              "marke": "c",
+              "text": "Einschränkung der Wahl des Leistungserbringers;"
+            },
+            {
+              "marke": "d",
+              "text": "einheitliche Finanzierung von ambulanten und stationären Leistungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Förderung der koordinierten und der integrierten Gesundheitsversorgung;"
+            },
+            {
+              "marke": "f",
+              "text": "Stärkung der Anforderungen an die Qualität;"
+            },
+            {
+              "marke": "g",
+              "text": "Förderung der Digitalisierung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2475,7 +3199,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c3120df2f526f1a309188d003bf19d842646cff47159ffea7107f947b61fa9d0"
+      "sha": "55ccd947e0a3a385b1dcf15070fffced94cd769591f72a524f1ccce54e7a819b"
     },
     {
       "id": "bund/KVG/art_60",
@@ -2557,14 +3281,24 @@
         },
         {
           "absatz": "3",
-          "text": "Der eine Elternteil schuldet die Prämien allein, wenn der andere Elternteil nachweist, dass er:"
+          "text": "Der eine Elternteil schuldet die Prämien allein, wenn der andere Elternteil nachweist, dass er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gemäss einem Unterhaltsvertrag oder einem gerichtlichen Entscheid verpflichtet ist, Unterhaltsbeiträge für das Kind zu bezahlen, welche die Prämien enthalten; und"
+            },
+            {
+              "marke": "b",
+              "text": "diese Unterhaltsbeiträge bezahlt hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_61_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6a44a819b09851e29dc8008f95c2d556a1d21938d6fd55fc588508f629b9eb05"
+      "sha": "63d35c85412d5054b4ece7752b508cbdd40a75c35127b03b9ed2af204d8df260"
     },
     {
       "id": "bund/KVG/art_61_b",
@@ -2599,7 +3333,17 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat kann weitere Versicherungsformen zulassen, namentlich solche, bei denen:"
+          "text": "Der Bundesrat kann weitere Versicherungsformen zulassen, namentlich solche, bei denen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Versicherten die Möglichkeit erhalten, sich gegen eine Prämienermässigung stärker als nach Artikel 64 an den Kosten zu beteiligen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Höhe der Prämie der Versicherten sich danach richtet, ob sie während einer bestimmten Zeit Leistungen in Anspruch genommen haben oder nicht."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -2614,7 +3358,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_62",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "334d4237283fa003711b6aead8d36593778791645ed8b6920bec7b79132c0660"
+      "sha": "9f4713c0aaa05c3ba01f8e2623fc54eb31777cb014a6bbf055be4a814976ad97"
     },
     {
       "id": "bund/KVG/art_63",
@@ -2657,7 +3401,17 @@
         },
         {
           "absatz": "2",
-          "text": "Diese Kostenbeteiligung besteht aus:"
+          "text": "Diese Kostenbeteiligung besteht aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem festen Jahresbetrag (Franchise); und"
+            },
+            {
+              "marke": "b",
+              "text": "10 Prozent der die Franchise übersteigenden Kosten (Selbstbehalt)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2673,11 +3427,39 @@
         },
         {
           "absatz": "6",
-          "text": "Der Bundesrat kann:"
+          "text": "Der Bundesrat kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für bestimmte Leistungen eine höhere Kostenbeteiligung vorsehen;"
+            },
+            {
+              "marke": "b",
+              "text": "für Dauerbehandlungen sowie für Behandlungen schwerer Krankheiten die Kostenbeteiligung herabsetzen oder aufheben;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kostenbeteiligung bei einer Versicherung mit eingeschränkter Wahl des Leistungserbringers nach Artikel 41 Absatz 4 aufheben, wenn sie sich als nicht zweckmässig erweist;"
+            },
+            {
+              "marke": "d",
+              "text": "einzelne Leistungen der medizinischen Prävention von der Franchise ausnehmen. Dabei handelt es sich um Leistungen, die im Rahmen von national oder kantonal organisierten Präventionsprogrammen durchgeführt werden."
+            }
+          ]
         },
         {
           "absatz": "7",
-          "text": "Für folgende Leistungen darf der Versicherer keine Kostenbeteiligung erheben:"
+          "text": "Für folgende Leistungen darf der Versicherer keine Kostenbeteiligung erheben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leistungen nach Artikel 29 Absatz 2;"
+            },
+            {
+              "marke": "b",
+              "text": "Leistungen nach den Artikeln 25 und 25 a , die ab der 13. Schwangerschaftswoche, während der Niederkunft und bis acht Wochen nach der Niederkunft erbracht werden."
+            }
+          ]
         },
         {
           "absatz": "8",
@@ -2688,7 +3470,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_64",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c7ce05e99b7b0ffd2c692e1fea5a16fb2d76f7ca823bc38157da43efc417a5f6"
+      "sha": "720695dc704945569ca5e3eb9fd2d9bca6446ae60059445bd48e634ef8572b42"
     },
     {
       "id": "bund/KVG/art_64_a",
@@ -2783,11 +3565,35 @@
         },
         {
           "absatz": null,
-          "text": "1quinquies Der Mindestanteil wird nach demjenigen Anteil berechnet, den die Prämien am Einkommen der 40 Prozent einkommensschwächsten Versicherten mit Wohnort im Kanton durchschnittlich ausmachen; dabei gilt Folgendes:"
+          "text": "1quinquies Der Mindestanteil wird nach demjenigen Anteil berechnet, den die Prämien am Einkommen der 40 Prozent einkommensschwächsten Versicherten mit Wohnort im Kanton durchschnittlich ausmachen; dabei gilt Folgendes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Machen die Prämien weniger als 11 Prozent des Einkommens aus, so beträgt der Mindestanteil 3,5 Prozent der Bruttokosten."
+            },
+            {
+              "marke": "b",
+              "text": "Machen die Prämien 18,5 Prozent des Einkommens oder mehr aus, so beträgt der Mindestanteil 7,5 Prozent der Bruttokosten."
+            },
+            {
+              "marke": "c",
+              "text": "Zwischen den Eckwerten nach den Buchstaben a und b erhöht sich der Mindestanteil linear."
+            }
+          ]
         },
         {
           "absatz": null,
-          "text": "1sexies Die Berechnung des Mindestanteils stützt sich auf:"
+          "text": "1sexies Die Berechnung des Mindestanteils stützt sich auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das steuerbare Einkommen nach dem Bundesgesetz vom 14. Dezember 1990 über die direkte Bundessteuer;"
+            },
+            {
+              "marke": "b",
+              "text": "die von den Versicherten tatsächlich bezahlten Prämien sämtlicher Versicherungsformen (mittlere Prämie)."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -2826,7 +3632,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_65",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d805e5fbc6a546e61fd6e965a4c98a4173ad4f75fa7924d0e04f182042e6dc2d"
+      "sha": "8a36a35cd1faa51047d3c8b9da76fa9708dddd4af15662c8d0a12c105556cef9"
     },
     {
       "id": "bund/KVG/art_65_a",
@@ -2838,14 +3644,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Kantone gewähren folgenden Versicherten in bescheidenen wirtschaftlichen Verhältnissen, in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, Prämienverbilligungen:"
+          "text": "Die Kantone gewähren folgenden Versicherten in bescheidenen wirtschaftlichen Verhältnissen, in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, Prämienverbilligungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Grenzgängern und Grenzgängerinnen sowie deren Familienangehörigen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Familienangehörigen von Kurzaufenthaltern und ‑aufenthalterinnen, von Aufenthaltern und Aufenthalterinnen und von Niedergelassenen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Bezügern und Bezügerinnen einer Leistung der schweizerischen Arbeitslosenversicherung sowie deren Familienangehörigen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_65_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "09a9b4d3f6291945de7e5282dd0b5a239de8672ac6e3deaffa13cb0a8e1a3b14"
+      "sha": "a277c3d2423e4b049e043d2c2cfa322ae71fc286d78ce09818f59112f0038c8f"
     },
     {
       "id": "bund/KVG/art_66",
@@ -2919,14 +3739,28 @@
         },
         {
           "absatz": "3",
-          "text": "Die Taggeldversicherung kann als Kollektivversicherung abgeschlossen werden. Kollektivversicherungen können abgeschlossen werden von:"
+          "text": "Die Taggeldversicherung kann als Kollektivversicherung abgeschlossen werden. Kollektivversicherungen können abgeschlossen werden von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Arbeitgebern für sich und ihre Arbeitnehmer und Arbeitnehmerinnen;"
+            },
+            {
+              "marke": "b",
+              "text": "Arbeitgeberorganisationen und Berufsverbänden für ihre Mitglieder und die Arbeitnehmer und Arbeitnehmerinnen ihrer Mitglieder;"
+            },
+            {
+              "marke": "c",
+              "text": "Arbeitnehmerorganisationen für ihre Mitglieder."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_67",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f74b032fdca5300eea4a6e4c33cf4007ab815d848eecae8014115a8414a8ab89"
+      "sha": "6724d08601967e1e1353928ff1d8d606a54210c3279bd2da6d8d8fd4d36d060e"
     },
     {
       "id": "bund/KVG/art_68",
@@ -2988,7 +3822,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der neue Versicherer darf keine neuen Vorbehalte anbringen, wenn die versicherte Person den Versicherer wechselt, weil:"
+          "text": "Der neue Versicherer darf keine neuen Vorbehalte anbringen, wenn die versicherte Person den Versicherer wechselt, weil:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufnahme oder die Beendigung ihres Arbeitsverhältnisses dies verlangt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "sie aus dem Tätigkeitsbereich des bisherigen Versicherers ausscheidet; oder"
+            },
+            {
+              "marke": "c",
+              "text": "der bisherige Versicherer die soziale Krankenversicherung nicht mehr durchführt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3007,7 +3855,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_70",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "35eda671c1b58f73a4e868b3ffac5c5109eff7bdca68cdb40a3c8cf2d963297b"
+      "sha": "991041e86a935e8b0df49cf753027432c43d665f0f78bd3cb533c6e39e1e699c"
     },
     {
       "id": "bund/KVG/art_71",
@@ -3261,7 +4109,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Rückgriffsrecht nach Artikel 72 ATSG gilt sinngemäss:"
+          "text": "Das Rückgriffsrecht nach Artikel 72 ATSG gilt sinngemäss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für den Wohnkanton für die Beiträge, die er nach den Artikeln 25 a , 41 und 49 a geleistet hat;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Kantone für die Beiträge, die sie nach Artikel 49 a Absatz 3 bis in Verbindung mit Artikel 41 gemeinsam geleistet haben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3272,7 +4130,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_79_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e07fd09254959c352fbd000e0f5328488346770591d2d44c62e60078391181e9"
+      "sha": "65cb3e024363ce88546f3687959001fbe1cef6427e19894ba66173dea49bc91d"
     },
     {
       "id": "bund/KVG/art_80",
@@ -3330,14 +4188,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "In Abweichung von Artikel 33 ATSG geben die Versicherer den zuständigen Behörden auf Anfrage kostenlos die notwendigen Auskünfte und Unterlagen für:"
+          "text": "In Abweichung von Artikel 33 ATSG geben die Versicherer den zuständigen Behörden auf Anfrage kostenlos die notwendigen Auskünfte und Unterlagen für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausübung des Rückgriffsrechts nach Artikel 79 a ;"
+            },
+            {
+              "marke": "b",
+              "text": "die Festsetzung der Prämienverbilligung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_82",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3dcdac4c3f9532785c9d4dac4fad15fbf3cd5e1d7a7197c032b5931361fb1882"
+      "sha": "7ba0aa5b6ecf0cfefaf33f9a1739cfa5e48649dc166aa813e7bd42adfb79990f"
     },
     {
       "id": "bund/KVG/art_82_a",
@@ -3387,7 +4255,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die mit der Durchführung oder mit der Kontrolle oder Beaufsichtigung der Durchführung dieses Gesetzes oder des KVAG betrauten Organe sind befugt, die Personendaten, einschliesslich besonders schützenswerter Personendaten, zu bearbeiten oder bearbeiten zu lassen, die sie benötigen, um die ihnen nach diesem Gesetz oder nach dem KVAG übertragenen Aufgaben zu erfüllen, namentlich um:"
+          "text": "Die mit der Durchführung oder mit der Kontrolle oder Beaufsichtigung der Durchführung dieses Gesetzes oder des KVAG betrauten Organe sind befugt, die Personendaten, einschliesslich besonders schützenswerter Personendaten, zu bearbeiten oder bearbeiten zu lassen, die sie benötigen, um die ihnen nach diesem Gesetz oder nach dem KVAG übertragenen Aufgaben zu erfüllen, namentlich um:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Einhaltung der Versicherungspflicht zu sorgen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Prämien zu berechnen und zu erheben;"
+            },
+            {
+              "marke": "c",
+              "text": "Leistungsansprüche zu beurteilen sowie Leistungen zu berechnen, zu gewähren und mit Leistungen anderer Sozialversicherungen zu koordinieren;"
+            },
+            {
+              "marke": "d",
+              "text": "den Anspruch auf Prämienverbilligungen nach Artikel 65 zu beurteilen sowie die Verbilligungen zu berechnen und zu gewähren;"
+            },
+            {
+              "marke": "e",
+              "text": "ein Rückgriffsrecht gegenüber einem haftpflichtigen Dritten geltend zu machen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Aufsicht über die Durchführung dieses Gesetzes auszuüben;"
+            },
+            {
+              "marke": "g",
+              "text": "Statistiken zu führen;"
+            },
+            {
+              "marke": "h",
+              "text": "die AHV-Nummer zuzuweisen oder zu verifizieren;"
+            },
+            {
+              "marke": "i",
+              "text": "den Risikoausgleich zu berechnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3398,7 +4304,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e3c315b9bbc80d025beb882e5c35749471c9874cd7340ee959602231f8026532"
+      "sha": "e1918f96bbff0d88516db87aa7d9f512272dc6dc8bbae2a63072a4abe03afefe"
     },
     {
       "id": "bund/KVG/art_84_a",
@@ -3410,7 +4316,69 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Sofern kein überwiegendes Privatinteresse entgegensteht, dürfen Organe, die mit der Durchführung, der Kontrolle oder der Beaufsichtigung der Durchführung dieses Gesetzes oder des KVAG betraut sind, Daten in Abweichung von Artikel 33 ATSG bekannt geben:"
+          "text": "Sofern kein überwiegendes Privatinteresse entgegensteht, dürfen Organe, die mit der Durchführung, der Kontrolle oder der Beaufsichtigung der Durchführung dieses Gesetzes oder des KVAG betraut sind, Daten in Abweichung von Artikel 33 ATSG bekannt geben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "anderen mit der Durchführung sowie der Kontrolle oder der Beaufsichtigung der Durchführung dieses Gesetzes oder des KVAG betrauten Organen, wenn die Daten für die Erfüllung der ihnen nach diesem Gesetz oder dem KVAG übertragenen Aufgaben erforderlich sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Organen einer anderen Sozialversicherung, wenn sich in Abweichung von Artikel 32 Absatz 2 ATSG eine Pflicht zur Bekanntgabe aus einem Bundesgesetz ergibt;"
+            },
+            {
+              "marke": "b",
+              "text": "Organen einer anderen Sozialversicherung für die Zuweisung oder Verifizierung der AHV-Nummer;"
+            },
+            {
+              "marke": "c",
+              "text": "den für die Quellensteuer zuständigen Behörden, nach den Artikeln 88 und 100 des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer sowie den entsprechenden kantonalen Bestimmungen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Organen der Bundesstatistik, nach dem Bundesstatistikgesetz vom 9. Oktober 1992;"
+            },
+            {
+              "marke": "e",
+              "text": "Stellen, die mit der Führung von Statistiken zur Durchführung dieses Gesetzes betraut sind, wenn die Daten für die Erfüllung dieser Aufgabe erforderlich sind und die Anonymität der Versicherten gewahrt bleibt;"
+            },
+            {
+              "marke": "f",
+              "text": "den zuständigen kantonalen Behörden, wenn es sich um Daten nach Artikel 22 a handelt und diese für die Planung der Spitäler und Pflegeheime sowie für die Beurteilung der Tarife erforderlich sind;"
+            },
+            {
+              "marke": "g",
+              "text": "den Strafuntersuchungsbehörden, wenn die Anzeige oder die Abwendung eines Verbrechens die Datenbekanntgabe erfordert;"
+            },
+            {
+              "marke": "g",
+              "text": "dem Nachrichtendienst des Bundes (NDB) oder den Sicherheitsorganen der Kantone zuhanden des NDB, wenn eine konkrete Bedrohung der inneren oder äusseren Sicherheit nach Artikel 19 Absatz 2 des Nachrichtendienstgesetzes vom 25. September 2015 gegeben ist;"
+            },
+            {
+              "marke": "h",
+              "text": "im Einzelfall und auf schriftlich begründetes Gesuch hin: 1. Sozialhilfebehörden, wenn die Daten für die Festsetzung, Änderung oder Rückforderung von Leistungen beziehungsweise für die Verhinderung ungerechtfertigter Bezüge erforderlich sind,"
+            },
+            {
+              "marke": "2",
+              "text": "Zivilgerichten, wenn die Daten für die Beurteilung eines familien- oder erbrechtlichen Streitfalles erforderlich sind,"
+            },
+            {
+              "marke": "3",
+              "text": "Strafgerichten und Strafuntersuchungsbehörden, wenn die Daten für die Abklärung eines Verbrechens oder eines Vergehens erforderlich sind,"
+            },
+            {
+              "marke": "4",
+              "text": "Betreibungsämtern, nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs,"
+            },
+            {
+              "marke": "5",
+              "text": "den Kindes- und Erwachsenenschutzbehörden nach Artikel 448 Absatz 4 ZGB,"
+            },
+            {
+              "marke": "6",
+              "text": "…"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3426,7 +4394,17 @@
         },
         {
           "absatz": "5",
-          "text": "In den übrigen Fällen dürfen Daten in Abweichung von Artikel 33 ATSG an Dritte wie folgt bekannt gegeben werden:"
+          "text": "In den übrigen Fällen dürfen Daten in Abweichung von Artikel 33 ATSG an Dritte wie folgt bekannt gegeben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht personenbezogene Daten, sofern die Bekanntgabe einem überwiegenden Interesse entspricht;"
+            },
+            {
+              "marke": "b",
+              "text": "Personendaten, sofern die betroffene Person im Einzelfall schriftlich eingewilligt hat oder, wenn das Einholen der Einwilligung nicht möglich ist, diese nach den Umständen als im Interesse der versicherten Person vorausgesetzt werden darf."
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -3445,7 +4423,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "97f6dff94f2a5dcf20ab8b74c435eb0b065eb6586aad03d9dd5e6a8cea67d7d7"
+      "sha": "041e472e0a0992a4dcd0d46d02be5c1435478b192fe1555a8ac9f3aeb9a7629b"
     },
     {
       "id": "bund/KVG/art_84_b",
@@ -3652,7 +4630,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Geldstrafe bis zu 180 Tagessätzen, sofern nicht ein mit einer höheren Strafe bedrohtes Verbrechen oder Vergehen des Strafgesetzbuches vorliegt, wird bestraft wer:"
+          "text": "Mit Geldstrafe bis zu 180 Tagessätzen, sofern nicht ein mit einer höheren Strafe bedrohtes Verbrechen oder Vergehen des Strafgesetzbuches vorliegt, wird bestraft wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich durch unwahre oder unvollständige Angaben oder in anderer Weise der Versicherungspflicht ganz oder teilweise entzieht;"
+            },
+            {
+              "marke": "b",
+              "text": "durch unwahre oder unvollständige Angaben oder in anderer Weise für sich oder andere Leistungen nach diesem Gesetz, die ihm nicht zukommen, erwirkt;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "Vergünstigungen nach Artikel 56 Absatz 3 nicht weitergibt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3663,7 +4659,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_92",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b4657c8856f8bfe2c2be6a4677d192fefab7de5ab382813f94808de2c4af6f21"
+      "sha": "2520087c674cc45718118b2c1240885b236f38f00f23003316941b9ea84690cc"
     },
     {
       "id": "bund/KVG/art_93",
@@ -3751,11 +4747,47 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz oder eines oder mehrerer EU-Mitgliedstaaten gelten oder galten und die Staatsangehörige der Schweiz oder eines EU-Mitgliedstaates sind, auf Flüchtlinge oder Staatenlose mit Wohnort in der Schweiz oder einem EU-Mitgliedstaat sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anhang II, Abschnitt A, des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen) anwendbar:"
+          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz oder eines oder mehrerer EU-Mitgliedstaaten gelten oder galten und die Staatsangehörige der Schweiz oder eines EU-Mitgliedstaates sind, auf Flüchtlinge oder Staatenlose mit Wohnort in der Schweiz oder einem EU-Mitgliedstaat sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anhang II, Abschnitt A, des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen) anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung (EG) Nr. 883/2004;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung (EG) Nr. 987/2009;"
+            },
+            {
+              "marke": "c",
+              "text": "Verordnung (EWG) Nr. 1408/71;"
+            },
+            {
+              "marke": "d",
+              "text": "Verordnung (EWG) Nr. 574/72."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz, Islands, Norwegens oder Liechtensteins gelten oder galten, und die Staatsangehörige der Schweiz, Islands, Norwegens oder Liechtensteins sind oder die als Flüchtlinge oder Staatenlose Wohnort in der Schweiz oder auf dem Gebiet Islands, Norwegens oder Liechtensteins haben, sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anlage 2 Anhang K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA-Übereinkommen) anwendbar:"
+          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz, Islands, Norwegens oder Liechtensteins gelten oder galten, und die Staatsangehörige der Schweiz, Islands, Norwegens oder Liechtensteins sind oder die als Flüchtlinge oder Staatenlose Wohnort in der Schweiz oder auf dem Gebiet Islands, Norwegens oder Liechtensteins haben, sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anlage 2 Anhang K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA-Übereinkommen) anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung (EG) Nr. 883/2004;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung (EG) Nr. 987/2009;"
+            },
+            {
+              "marke": "c",
+              "text": "Verordnung (EWG) Nr. 1408/71;"
+            },
+            {
+              "marke": "d",
+              "text": "Verordnung (EWG) Nr. 574/72."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3770,7 +4802,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_95_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4dbd75617d911a863da4e1a706d32bcd7fd547b87c6be72645640bc73ca62e8a"
+      "sha": "29635ba8da82b4eab36969958f34ca2832694cfa91371413477f356d65509319"
     },
     {
       "id": "bund/KVG/art_96",

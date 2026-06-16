@@ -11,7 +11,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In Verfahren mit einem Streitwert betragen die Entscheidgebühren des Kantonsgerichts: 1. bis Fr. 5'000.–: Fr. 200.– bis Fr. 1'500.– 2. über Fr. 5'000.– bis Fr. 10'000.–: Fr. 600.– bis Fr. 2'400.– 3. über Fr. 10'000.– bis Fr. 30'000.–: Fr. 1'000.– bis Fr. 3'200.– 4. über Fr. 30'000.– bis Fr. 60'000.–: Fr. 1'500.– bis Fr. 4'000.– 5. über Fr. 60'000.– bis Fr. 150'000.–: Fr. 2'500.– bis Fr. 6'000.– 6. über Fr. 150'000.– bis Fr. 300'000.–: Fr. 3'000.– bis Fr. 9'000.– 7. über Fr. 300'000.–: 2 bis 3.5 Prozent des Streitwertes."
+          "text": "In Verfahren mit einem Streitwert betragen die Entscheidgebühren des Kantonsgerichts:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bis Fr. 5'000.–: Fr. 200.– bis Fr. 1'500.–"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 5'000.– bis Fr. 10'000.–: Fr. 600.– bis Fr. 2'400.–"
+            },
+            {
+              "marke": "3",
+              "text": "über Fr. 10'000.– bis Fr. 30'000.–: Fr. 1'000.– bis Fr. 3'200.–"
+            },
+            {
+              "marke": "4",
+              "text": "über Fr. 30'000.– bis Fr. 60'000.–: Fr. 1'500.– bis Fr. 4'000.–"
+            },
+            {
+              "marke": "5",
+              "text": "über Fr. 60'000.– bis Fr. 150'000.–: Fr. 2'500.– bis Fr. 6'000.–"
+            },
+            {
+              "marke": "6",
+              "text": "über Fr. 150'000.– bis Fr. 300'000.–: Fr. 3'000.– bis Fr. 9'000.–"
+            },
+            {
+              "marke": "7",
+              "text": "über Fr. 300'000.–: 2 bis 3.5 Prozent des Streitwertes."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -19,7 +49,29 @@
         },
         {
           "absatz": "3",
-          "text": "Die Entscheidgebühren betragen: 1. in Prozessen betreffend Ehescheidung, Ehetrennung und Auflösung einer eingetragenen Partnerschaft Fr. 800.– bis Fr. 4'000.–; bei der Geltendmachung güterrechtlicher Ansprüche über Fr. 60'000.– sind die Ansätze gemäss Absatz 1 anwendbar; 2. in Prozessen betreffend Abänderung von Entscheiden betreffend Ehescheidung, Ehetrennung und Auflösung einer eingetragenen Partnerschaft Fr. 400.– bis Fr. 3'500.–; 3. in Ehelichkeitsanfechtungs-, Vaterschafts-, Unterhalts- und Verwandtenunterstützungsprozessen, ohne Rücksicht auf geltend gemachte Ansprüche, Fr. 400.– bis Fr. 3'500.–; 4. in Eheschutzverfahren Fr. 400.– bis Fr. 3'500.–; 5. in anderen familienrechtlichen Streitigkeiten sowie anderen Streitigkeiten betreffend eingetragener Partnerschaften Fr. 400.– bis Fr. 2'000.–."
+          "text": "Die Entscheidgebühren betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in Prozessen betreffend Ehescheidung, Ehetrennung und Auflösung einer eingetragenen Partnerschaft Fr. 800.– bis Fr. 4'000.–; bei der Geltendmachung güterrechtlicher Ansprüche über Fr. 60'000.– sind die Ansätze gemäss Absatz 1 anwendbar;"
+            },
+            {
+              "marke": "2",
+              "text": "in Prozessen betreffend Abänderung von Entscheiden betreffend Ehescheidung, Ehetrennung und Auflösung einer eingetragenen Partnerschaft Fr. 400.– bis Fr. 3'500.–;"
+            },
+            {
+              "marke": "3",
+              "text": "in Ehelichkeitsanfechtungs-, Vaterschafts-, Unterhalts- und Verwandtenunterstützungsprozessen, ohne Rücksicht auf geltend gemachte Ansprüche, Fr. 400.– bis Fr. 3'500.–;"
+            },
+            {
+              "marke": "4",
+              "text": "in Eheschutzverfahren Fr. 400.– bis Fr. 3'500.–;"
+            },
+            {
+              "marke": "5",
+              "text": "in anderen familienrechtlichen Streitigkeiten sowie anderen Streitigkeiten betreffend eingetragener Partnerschaften Fr. 400.– bis Fr. 2'000.–."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -34,7 +86,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/261.2",
       "abgerufen": "2026-06-16",
       "fassungsToken": "7ec766b8c105186e2cd713f4955c5a99",
-      "sha": "5470e8c25928911a58589f4b56d62da371fabd3e4961f2a586d95ac76f50c506"
+      "sha": "f1b08932380895163c312f2d75d8360f406c219cb48b7c300f961cc7409599e3"
     },
     {
       "id": "kanton/NW/261.2/art_6",
@@ -46,7 +98,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In Verfahren mit einem Streitwert betragen die Pauschalen der Schlichtungsbehörde: 1. bis Fr. 5'000.–: Fr. 100.– bis Fr. 300.– 2. über Fr. 5'000.– bis Fr. 30'000.–: Fr. 200.– bis Fr. 500.– 3. über Fr. 30'000.–: Fr. 300.– bis Fr. 700.–"
+          "text": "In Verfahren mit einem Streitwert betragen die Pauschalen der Schlichtungsbehörde:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bis Fr. 5'000.–: Fr. 100.– bis Fr. 300.–"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 5'000.– bis Fr. 30'000.–: Fr. 200.– bis Fr. 500.–"
+            },
+            {
+              "marke": "3",
+              "text": "über Fr. 30'000.–: Fr. 300.– bis Fr. 700.–"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -61,7 +127,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/261.2",
       "abgerufen": "2026-06-16",
       "fassungsToken": "7ec766b8c105186e2cd713f4955c5a99",
-      "sha": "0ba7b3e3ebd863c4dce4b16b1c49c9fbcb414145fea1c500b3b9f46372ccbae1"
+      "sha": "e8415a269f55f8f5686cf64e819e4b2222581469997d88a933406c4824228d74"
     },
     {
       "id": "kanton/NW/261.2/art_42",
@@ -73,7 +139,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Zivilprozess vor erster oder einziger Instanz beträgt das ordentliche Honorar bei einem Streitwert: 1. bis Fr. 2'000.–: Fr. 200.– bis Fr. 1'300.– 2. über Fr. 2'000.– bis Fr. 5'000.–: Fr. 800.– bis Fr. 2'600.– 3. über Fr. 5'000.– bis Fr. 10'000.–: Fr. 1'300.– bis Fr. 4'000.– 4. über Fr. 10'000.– bis Fr. 40'000.–: Fr. 2'000.– bis Fr. 8'000.– 5. über Fr. 40'000.– bis Fr. 100'000.–: Fr. 4'000.– bis Fr. 13'000.– 6. über Fr. 100'000.– bis Fr. 200'000.–: Fr. 6'500.– bis Fr. 21'000.– 7. über Fr. 200'000.– bis Fr. 500'000.–: Fr. 10'000.– bis Fr. 40'000.– 8. über Fr. 500'000.– bis Fr. 1'500'000.–: Fr. 15'000.– bis Fr. 60'000.– 9. über Fr. 1'500'000.–: 2 bis 4 Prozent des Streitwertes."
+          "text": "Im Zivilprozess vor erster oder einziger Instanz beträgt das ordentliche Honorar bei einem Streitwert:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bis Fr. 2'000.–: Fr. 200.– bis Fr. 1'300.–"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 2'000.– bis Fr. 5'000.–: Fr. 800.– bis Fr. 2'600.–"
+            },
+            {
+              "marke": "3",
+              "text": "über Fr. 5'000.– bis Fr. 10'000.–: Fr. 1'300.– bis Fr. 4'000.–"
+            },
+            {
+              "marke": "4",
+              "text": "über Fr. 10'000.– bis Fr. 40'000.–: Fr. 2'000.– bis Fr. 8'000.–"
+            },
+            {
+              "marke": "5",
+              "text": "über Fr. 40'000.– bis Fr. 100'000.–: Fr. 4'000.– bis Fr. 13'000.–"
+            },
+            {
+              "marke": "6",
+              "text": "über Fr. 100'000.– bis Fr. 200'000.–: Fr. 6'500.– bis Fr. 21'000.–"
+            },
+            {
+              "marke": "7",
+              "text": "über Fr. 200'000.– bis Fr. 500'000.–: Fr. 10'000.– bis Fr. 40'000.–"
+            },
+            {
+              "marke": "8",
+              "text": "über Fr. 500'000.– bis Fr. 1'500'000.–: Fr. 15'000.– bis Fr. 60'000.–"
+            },
+            {
+              "marke": "9",
+              "text": "über Fr. 1'500'000.–: 2 bis 4 Prozent des Streitwertes."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -100,7 +204,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/261.2",
       "abgerufen": "2026-06-16",
       "fassungsToken": "7ec766b8c105186e2cd713f4955c5a99",
-      "sha": "9c70a2dbc35f49c36e1012dcae176ca483a591cc9033789c8d2e71d9ddb02a74"
+      "sha": "6535761e4e53effdbf8b01def588752d6d0c4755ca6e0c12cd1f165755d22e29"
     }
   ]
 }

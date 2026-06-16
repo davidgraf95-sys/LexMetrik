@@ -11,14 +11,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Dieses Gesetz regelt das Verfahren vor den kantonalen Instanzen für:"
+          "text": "Dieses Gesetz regelt das Verfahren vor den kantonalen Instanzen für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "streitige Zivilsachen;"
+            },
+            {
+              "marke": "b",
+              "text": "gerichtliche Anordnungen der freiwilligen Gerichtsbarkeit;"
+            },
+            {
+              "marke": "c",
+              "text": "gerichtliche Angelegenheiten des Schuldbetreibungs- und Konkursrechts;"
+            },
+            {
+              "marke": "d",
+              "text": "die Schiedsgerichtsbarkeit."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "066bc4576fb9c06104609d66b550f0a0609ebe637b84453a71e56e277bd057cf"
+      "sha": "28d9aeeb13ec46a01ab08c769bd638bd050ab2ca82e6c6a41e1c7308984d9508"
     },
     {
       "id": "bund/ZPO/art_2",
@@ -91,7 +109,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das kantonale Recht bezeichnet das Gericht, welches als einzige kantonale Instanz zuständig ist für:"
+          "text": "Das kantonale Recht bezeichnet das Gericht, welches als einzige kantonale Instanz zuständig ist für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitigkeiten im Zusammenhang mit geistigem Eigentum einschliesslich der Streitigkeiten betreffend Nichtigkeit, Inhaberschaft, Lizenzierung, Übertragung und Verletzung solcher Rechte;"
+            },
+            {
+              "marke": "b",
+              "text": "kartellrechtliche Streitigkeiten;"
+            },
+            {
+              "marke": "c",
+              "text": "Streitigkeiten über den Gebrauch einer Firma;"
+            },
+            {
+              "marke": "d",
+              "text": "Streitigkeiten nach dem Bundesgesetz vom 19. Dezember 1986 gegen den unlauteren Wettbewerb, sofern der Streitwert mehr als 30 000 Franken beträgt oder sofern der Bund sein Klagerecht ausübt;"
+            },
+            {
+              "marke": "e",
+              "text": "Streitigkeiten nach dem Kernenergiehaftpflichtgesetz vom 13. Juni 2008;"
+            },
+            {
+              "marke": "f",
+              "text": "Klagen gegen den Bund, sofern der Streitwert mehr als 30 000 Franken beträgt;"
+            },
+            {
+              "marke": "g",
+              "text": "Streitigkeiten über die Einleitung und Durchführung einer Sonderuntersuchung nach den Artikeln 697 c– 697 h bis des Obligationenrechts (OR);"
+            },
+            {
+              "marke": "h",
+              "text": "Streitigkeiten nach dem Kollektivanlagengesetz vom 23. Juni 2006, nach dem Finanzmarktinfrastrukturgesetz vom 19. Juni 2015 und nach dem Finanzinstitutsgesetz vom 15. Juni 2018;"
+            },
+            {
+              "marke": "i",
+              "text": "Streitigkeiten nach dem Wappenschutzgesetz vom 21. Juni 2013, dem Bundesgesetz vom 25. März 1954 betreffend den Schutz des Zeichens und des Namens des Roten Kreuzes und dem Bundesgesetz vom 15. Dezember 1961 zum Schutz von Namen und Zeichen der Organisation der Vereinten Nationen und anderer zwischenstaatlicher Organisationen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -102,7 +158,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_5",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "5f3a796482021200f483cdebbdb00fe99154222fc04f671369ddd198c57cef0c"
+      "sha": "1f78426e9603c4c7fde5ec9d3b9cd452946efe6a2d5012bb83288b95447d734c"
     },
     {
       "id": "bund/ZPO/art_6",
@@ -118,7 +174,25 @@
         },
         {
           "absatz": "2",
-          "text": "Eine Streitigkeit gilt als handelsrechtlich, wenn:"
+          "text": "Eine Streitigkeit gilt als handelsrechtlich, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die geschäftliche Tätigkeit mindestens einer Partei betroffen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Streitwert mehr als 30 000 Franken beträgt oder es sich um eine nicht vermögensrechtliche Streitigkeit handelt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Parteien als Rechtseinheiten im schweizerischen Handelsregister oder in einem vergleichbaren ausländischen Register eingetragen sind; und"
+            },
+            {
+              "marke": "d",
+              "text": "es sich nicht um eine Streitigkeit aus dem Arbeitsverhältnis, nach dem Arbeitsvermittlungsgesetz vom 6. Oktober 1989, nach dem Gleichstellungsgesetz vom 24. März 1995, aus Miete und Pacht von Wohn- und Geschäftsräumen oder aus landwirtschaftlicher Pacht handelt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -126,7 +200,33 @@
         },
         {
           "absatz": "4",
-          "text": "Die Kantone können das Handelsgericht ausserdem zuständig erklären für:"
+          "text": "Die Kantone können das Handelsgericht ausserdem zuständig erklären für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitigkeiten nach Artikel 5 Absatz 1;"
+            },
+            {
+              "marke": "b",
+              "text": "Streitigkeiten aus dem Recht der Handelsgesellschaften und Genossenschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "Streitigkeiten, bei denen die folgenden Bedingungen erfüllt sind: 1. Die Streitigkeit betrifft die geschäftliche Tätigkeit mindestens einer Partei."
+            },
+            {
+              "marke": "2",
+              "text": "Der Streitwert beträgt mindestens 100 000 Franken."
+            },
+            {
+              "marke": "3",
+              "text": "Die Parteien stimmen der Zuständigkeit des Handelsgerichts zu."
+            },
+            {
+              "marke": "4",
+              "text": "Im Zeitpunkt dieser Zustimmung hat mindestens eine Partei ihren Wohnsitz, ihren gewöhnlichen Aufenthaltsort oder ihren Sitz im Ausland."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -141,7 +241,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_6",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e7f68e5bf3bada11c3706453d241c7c0ca4492c4a47de7d1f8dd25ccd7e0baf8"
+      "sha": "33272de0afb5ac03bc0133e8141ea697bd5944e08d954f47eaf6a106b7b1e624"
     },
     {
       "id": "bund/ZPO/art_7",
@@ -218,7 +318,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Sieht dieses Gesetz nichts anderes vor, so ist zuständig:"
+          "text": "Sieht dieses Gesetz nichts anderes vor, so ist zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Klagen gegen eine natürliche Person: das Gericht an deren Wohnsitz;"
+            },
+            {
+              "marke": "b",
+              "text": "für Klagen gegen eine juristische Person und gegen öffentlich-rechtliche Anstalten und Körperschaften sowie gegen Kollektiv- und Kommanditgesellschaften: das Gericht an deren Sitz;"
+            },
+            {
+              "marke": "c",
+              "text": "für Klagen gegen den Bund: das Gericht in der Stadt Bern oder das Gericht am Wohnsitz, Sitz oder gewöhnlichen Aufenthaltsort der klagenden Partei;"
+            },
+            {
+              "marke": "d",
+              "text": "für Klagen gegen einen Kanton: ein Gericht am Kantonshauptort."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -229,7 +347,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_10",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c91cb445563c905076875bc3429324fe3abbce106bcfd13ac0de0b08edefb8f8"
+      "sha": "d987aa85f5fdc136a11dffbd6acdf35a7df25cbe9e0be8dbe03f592f51dac7d6"
     },
     {
       "id": "bund/ZPO/art_11",
@@ -287,14 +405,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Soweit das Gesetz nichts anderes bestimmt, ist für die Anordnung vorsorglicher Massnahmen zwingend zuständig das Gericht am Ort, an dem:"
+          "text": "Soweit das Gesetz nichts anderes bestimmt, ist für die Anordnung vorsorglicher Massnahmen zwingend zuständig das Gericht am Ort, an dem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuständigkeit für die Hauptsache gegeben ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahme vollstreckt werden soll."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_13",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "cd02f5d472ef3ea0848f9ca2117a0303e4c7d7c6bd5222be0b73b8b1c4942e89"
+      "sha": "76e9fdc379d442ee607a8d5154db0b2d7249ca5e392668997c9fe07fa5ae421e"
     },
     {
       "id": "bund/ZPO/art_14",
@@ -432,14 +560,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Für die folgenden Klagen und Begehren ist das Gericht am Wohnsitz oder Sitz einer der Parteien zuständig:"
+          "text": "Für die folgenden Klagen und Begehren ist das Gericht am Wohnsitz oder Sitz einer der Parteien zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Klagen aus Persönlichkeitsverletzung;"
+            },
+            {
+              "marke": "b",
+              "text": "Begehren um Gegendarstellung;"
+            },
+            {
+              "marke": "c",
+              "text": "Klagen auf Namensschutz und auf Anfechtung einer Namensänderung;"
+            },
+            {
+              "marke": "d",
+              "text": "Klagen und Begehren nach dem Datenschutzgesetz vom 25. September 2020 (DSG)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_20",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "77291900e6860a82b4f159afa39183a5902f3c425c3fb12239330c75391df0a3"
+      "sha": "b3b793f88292ff8001eadb5e883ee3c263236e43fbb29695faf99b000ee8cc3c"
     },
     {
       "id": "bund/ZPO/art_21",
@@ -615,7 +761,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die folgenden Klagen ist das Gericht am Ort, an dem das Grundstück im Grundbuch aufgenommen ist oder aufzunehmen wäre, zuständig:"
+          "text": "Für die folgenden Klagen ist das Gericht am Ort, an dem das Grundstück im Grundbuch aufgenommen ist oder aufzunehmen wäre, zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dingliche Klagen;"
+            },
+            {
+              "marke": "b",
+              "text": "Klagen gegen die Gemeinschaft der Stockwerkeigentümerinnen und Stockwerkeigentümer;"
+            },
+            {
+              "marke": "c",
+              "text": "Klagen auf Errichtung gesetzlicher Pfandrechte."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -634,7 +794,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_29",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "048484bc371d0e0217bd3607cd66aa8597f531105e370687dafa45ce0d1a2b59"
+      "sha": "fe9a0b5258755f4711aa7fae1e7faea41b031e13ffa86ffcad5d300b8f26c21a"
     },
     {
       "id": "bund/ZPO/art_30",
@@ -688,7 +848,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei Streitigkeiten aus Konsumentenverträgen ist zuständig:"
+          "text": "Bei Streitigkeiten aus Konsumentenverträgen ist zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Klagen der Konsumentin oder des Konsumenten: das Gericht am Wohnsitz oder Sitz einer der Parteien;"
+            },
+            {
+              "marke": "b",
+              "text": "für Klagen der Anbieterin oder des Anbieters: das Gericht am Wohnsitz der beklagten Partei."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -699,7 +869,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_32",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f6ac209464d57e844790d1a826bb47145a4a236b4d14f6e6a8807bb675cb9dc3"
+      "sha": "38c4033603b6e8eafb0ecc52a776f30219a00400538f5a09bf0bad3e181ec11a"
     },
     {
       "id": "bund/ZPO/art_33",
@@ -753,7 +923,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Auf die Gerichtsstände nach den Artikeln 32–34 können nicht zum Voraus oder durch Einlassung verzichten:"
+          "text": "Auf die Gerichtsstände nach den Artikeln 32–34 können nicht zum Voraus oder durch Einlassung verzichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Konsumentin oder der Konsument;"
+            },
+            {
+              "marke": "b",
+              "text": "die Partei, die Wohn- oder Geschäftsräume gemietet oder gepachtet hat;"
+            },
+            {
+              "marke": "c",
+              "text": "bei landwirtschaftlichen Pachtverhältnissen: die pachtende Partei;"
+            },
+            {
+              "marke": "d",
+              "text": "die stellensuchende oder arbeitnehmende Partei."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -764,7 +952,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_35",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "b5fd6dab93d60939e2103d2fe91fdb6fc02e92a20cdfd5590170bccf14e0ecae"
+      "sha": "8085e4fbf118d36c7a24a58e024bade1a8cb223575b561a64fa492b8ee73ba65"
     },
     {
       "id": "bund/ZPO/art_36",
@@ -1032,18 +1220,66 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Gerichtsperson tritt in den Ausstand, wenn sie:"
+          "text": "Eine Gerichtsperson tritt in den Ausstand, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Sache ein persönliches Interesse hat;"
+            },
+            {
+              "marke": "b",
+              "text": "in einer anderen Stellung, insbesondere als Mitglied einer Behörde, als Rechtsbeiständin oder Rechtsbeistand, als Sachverständige oder Sachverständiger, als Zeugin oder Zeuge, als Mediatorin oder Mediator in der gleichen Sache tätig war;"
+            },
+            {
+              "marke": "c",
+              "text": "mit einer Partei, ihrer Vertreterin oder ihrem Vertreter oder einer Person, die in der gleichen Sache als Mitglied der Vorinstanz tätig war, verheiratet ist oder war, in eingetragener Partnerschaft lebt oder lebte oder eine faktische Lebensgemeinschaft führt;"
+            },
+            {
+              "marke": "d",
+              "text": "mit einer Partei in gerader Linie oder in der Seitenlinie bis und mit dem dritten Grad verwandt oder verschwägert ist;"
+            },
+            {
+              "marke": "e",
+              "text": "mit der Vertreterin oder dem Vertreter einer Partei oder mit einer Person, die in der gleichen Sache als Mitglied der Vorinstanz tätig war, in gerader Linie oder im zweiten Grad der Seitenlinie verwandt oder verschwägert ist;"
+            },
+            {
+              "marke": "f",
+              "text": "aus anderen Gründen, insbesondere wegen Freundschaft oder Feindschaft mit einer Partei oder ihrer Vertretung, befangen sein könnte."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Kein Ausstandsgrund für sich allein ist insbesondere die Mitwirkung:"
+          "text": "Kein Ausstandsgrund für sich allein ist insbesondere die Mitwirkung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beim Entscheid über die unentgeltliche Rechtspflege;"
+            },
+            {
+              "marke": "b",
+              "text": "beim Schlichtungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "bei der Rechtsöffnung nach den Artikeln 80–84 SchKG;"
+            },
+            {
+              "marke": "d",
+              "text": "bei der Anordnung vorsorglicher Massnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "beim Eheschutzverfahren."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_47",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a5a69bbc41538b5b0bdf626b024314faa8cceddd8deae6c274488cf18739f35e"
+      "sha": "78398c6bbbeb7e33da0649cbe1412566e15432f83abe8dc83e324b411e5ddb04"
     },
     {
       "id": "bund/ZPO/art_48",
@@ -1316,14 +1552,40 @@
         },
         {
           "absatz": "2",
-          "text": "Prozessvoraussetzungen sind insbesondere:"
+          "text": "Prozessvoraussetzungen sind insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die klagende oder gesuchstellende Partei hat ein schutzwürdiges Interesse;"
+            },
+            {
+              "marke": "b",
+              "text": "das Gericht ist sachlich und örtlich zuständig;"
+            },
+            {
+              "marke": "c",
+              "text": "die Parteien sind partei- und prozessfähig;"
+            },
+            {
+              "marke": "d",
+              "text": "die Sache ist nicht anderweitig rechtshängig;"
+            },
+            {
+              "marke": "e",
+              "text": "die Sache ist noch nicht rechtskräftig entschieden;"
+            },
+            {
+              "marke": "f",
+              "text": "der Vorschuss und die Sicherheit für die Prozesskosten sind geleistet worden."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_59",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c874275db661e905b250d66d5d829c71590bfba0d52345d376df55a8d2007e68"
+      "sha": "785361b2ebb7ca90fea47e01a2b8e4ef69ab4ab013c15fc86ad3d4f3b87cdf5e"
     },
     {
       "id": "bund/ZPO/art_60",
@@ -1354,14 +1616,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Haben die Parteien über eine schiedsfähige Streitsache eine Schiedsvereinbarung getroffen, so lehnt das angerufene staatliche Gericht seine Zuständigkeit ab, es sei denn:"
+          "text": "Haben die Parteien über eine schiedsfähige Streitsache eine Schiedsvereinbarung getroffen, so lehnt das angerufene staatliche Gericht seine Zuständigkeit ab, es sei denn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die beklagte Partei habe sich vorbehaltlos auf das Verfahren eingelassen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Gericht stelle fest, dass die Schiedsvereinbarung offensichtlich ungültig oder nicht erfüllbar sei; oder"
+            },
+            {
+              "marke": "c",
+              "text": "das Schiedsgericht könne nicht bestellt werden aus Gründen, für welche die im Schiedsverfahren beklagte Partei offensichtlich einzustehen hat."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_61",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "2be859c1cd9e87ffd847d7d5904683247e04a81c106dbea58faf047ffc750829"
+      "sha": "067b5599664cf6a74dc0784e9ad27798896aea3de52b9c554cb76ff775164d8a"
     },
     {
       "id": "bund/ZPO/art_62",
@@ -1423,7 +1699,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Rechtshängigkeit hat insbesondere folgende Wirkungen:"
+          "text": "Die Rechtshängigkeit hat insbesondere folgende Wirkungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Streitgegenstand kann zwischen den gleichen Parteien nicht anderweitig rechtshängig gemacht werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die örtliche Zuständigkeit bleibt erhalten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1434,7 +1720,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_64",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8a731727f74f7fc065c5b18ed4d4c7d2e8b779ce566b8f5e39fdd6e7241d515e"
+      "sha": "0049d42feac9ed5b0ee6c4e0d130873e0e302a95a92b1b0cd1c01abcbe7b8c2e"
     },
     {
       "id": "bund/ZPO/art_65",
@@ -1492,14 +1778,24 @@
         },
         {
           "absatz": "3",
-          "text": "Soweit eine handlungsunfähige Person urteilsfähig ist, kann sie:"
+          "text": "Soweit eine handlungsunfähige Person urteilsfähig ist, kann sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "selbstständig Rechte ausüben, die ihr um ihrer Persönlichkeit willen zustehen;"
+            },
+            {
+              "marke": "b",
+              "text": "vorläufig selbst das Nötige vorkehren, wenn Gefahr in Verzug ist."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_67",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "9761d503c156355c13b1204695bd821615014db50b98f6bfc66711e1a59f0a2e"
+      "sha": "f0230ab7b780a36d4513833edacb6c37c0c0e8041ade29879a5eaaa68c63112c"
     },
     {
       "id": "bund/ZPO/art_68",
@@ -1515,7 +1811,25 @@
         },
         {
           "absatz": "2",
-          "text": "Zur berufsmässigen Vertretung sind befugt:"
+          "text": "Zur berufsmässigen Vertretung sind befugt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in allen Verfahren: Anwältinnen und Anwälte, die nach dem Anwaltsgesetz vom 23. Juni 2000 berechtigt sind, Parteien vor schweizerischen Gerichten zu vertreten;"
+            },
+            {
+              "marke": "b",
+              "text": "vor der Schlichtungsbehörde, in vermögensrechtlichen Streitigkeiten des vereinfachten Verfahrens sowie in den Angelegenheiten des summarischen Verfahrens: patentierte Sachwalterinnen und Sachwalter sowie Rechtsagentinnen und Rechtsagenten, soweit das kantonale Recht es vorsieht;"
+            },
+            {
+              "marke": "c",
+              "text": "in den Angelegenheiten des summarischen Verfahrens nach Artikel 251 dieses Gesetzes: gewerbsmässige Vertreterinnen und Vertreter nach Artikel 27 SchKG;"
+            },
+            {
+              "marke": "d",
+              "text": "vor den Miet- und Arbeitsgerichten beruflich qualifizierte Vertreterinnen und Vertreter, soweit das kantonale Recht es vorsieht."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1530,7 +1844,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_68",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a8cbcf79dcf028b3d3770839d773718fbe7c67f3f6ff66ffd1f7aa1638846226"
+      "sha": "a1511954562fa4b64736db59f693fd63bafde236086e16efc18879d0de46637b"
     },
     {
       "id": "bund/ZPO/art_69",
@@ -1588,7 +1902,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mehrere Personen können gemeinsam klagen oder beklagt werden, sofern:"
+          "text": "Mehrere Personen können gemeinsam klagen oder beklagt werden, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Rechte und Pflichten beurteilt werden sollen, die auf gleichartigen Tatsachen oder Rechtsgründen beruhen;"
+            },
+            {
+              "marke": "b",
+              "text": "für die einzelnen Klagen die gleiche Verfahrensart anwendbar ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "das gleiche Gericht sachlich zuständig ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1599,7 +1927,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_71",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "3e629c81d1e70705509cabfa0bc0a3874b00b58f3696cc8abafb3a9d085aef23"
+      "sha": "650a8fabc98f6dfc510001c66a55251a5f35f27fcb7528d33045b03b9c1e6deb"
     },
     {
       "id": "bund/ZPO/art_72",
@@ -1718,14 +2046,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ein für die Hauptpartei ungünstiges Ergebnis des Prozesses wirkt auch gegen die intervenierende Person, es sei denn:"
+          "text": "Ein für die Hauptpartei ungünstiges Ergebnis des Prozesses wirkt auch gegen die intervenierende Person, es sei denn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie sei durch die Lage des Prozesses zur Zeit ihres Eintritts oder durch Handlungen oder Unterlassungen der Hauptpartei verhindert gewesen, Angriffs- und Verteidigungsmittel geltend zu machen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ihr unbekannte Angriffs- oder Verteidigungsmittel seien von der Hauptpartei absichtlich oder grobfahrlässig nicht geltend gemacht worden."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_77",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "7ea3b0dfbe369606099876ccc3b12f622c9f55cfa446dc0027e316f6cc0fa6fb"
+      "sha": "07852b883a9cc0043ff4c048475e0dfaf2401b70aa76d06df37b55bc28004b69"
     },
     {
       "id": "bund/ZPO/art_78",
@@ -1760,7 +2098,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die streitberufene Person kann:"
+          "text": "Die streitberufene Person kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zugunsten der Partei, die ihr den Streit verkündet hat, ohne weitere Voraussetzungen intervenieren; oder"
+            },
+            {
+              "marke": "b",
+              "text": "anstelle der Partei, die ihr den Streit verkündet hat, mit deren Einverständnis den Prozess führen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1771,7 +2119,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_79",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1ca972cf45a113cab337d812aabf83660e33a2de012368ffa260c8c0e3f43bcc"
+      "sha": "037ea580ecdb35e2696d76a92f2cd8171b1095efddde72f3aa1e1d35b43e4b24"
     },
     {
       "id": "bund/ZPO/art_80",
@@ -1802,7 +2150,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die streitverkündende Partei kann Ansprüche, die sie im Falle des Unterliegens gegenüber der streitberufenen Person zu haben glaubt oder die sie von Seiten der streitberufenen Person befürchtet, beim Gericht, das mit der Hauptklage befasst ist, geltend machen, sofern:"
+          "text": "Die streitverkündende Partei kann Ansprüche, die sie im Falle des Unterliegens gegenüber der streitberufenen Person zu haben glaubt oder die sie von Seiten der streitberufenen Person befürchtet, beim Gericht, das mit der Hauptklage befasst ist, geltend machen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ansprüche in einem sachlichen Zusammenhang mit der Hauptklage stehen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Gericht dafür sachlich zuständig ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Hauptklage und die Ansprüche im ordentlichen Verfahren zu beurteilen sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1817,7 +2179,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_81",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "2ab17c7f2a87bb6f97c9ef0a4de60c0f39b94c13b1c403dfb59fb8d5514cc3ef"
+      "sha": "271e22b6740a9b1651a7a7f0d77789b08d94c5b49787b23be0dfcec99e6c2a20"
     },
     {
       "id": "bund/ZPO/art_82",
@@ -1998,7 +2360,21 @@
         },
         {
           "absatz": "2",
-          "text": "Mit der Verbandsklage kann beantragt werden:"
+          "text": "Mit der Verbandsklage kann beantragt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine drohende Verletzung zu verbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "eine bestehende Verletzung zu beseitigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Widerrechtlichkeit einer Verletzung festzustellen, wenn sich diese weiterhin störend auswirkt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2009,7 +2385,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_89",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "9c0b41d3649342933a6dbe9ffb573544a1616ebef98b8b4cf1a5137ce98679aa"
+      "sha": "ba7df9433703fde398cf1140e70cbbd2d3bedea58a7030bae5e138cd58e8350b"
     },
     {
       "id": "bund/ZPO/art_90",
@@ -2021,7 +2397,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die klagende Partei kann mehrere Ansprüche gegen dieselbe Partei in einer Klage vereinen, sofern:"
+          "text": "Die klagende Partei kann mehrere Ansprüche gegen dieselbe Partei in einer Klage vereinen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das gleiche Gericht dafür sachlich zuständig ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "die gleiche Verfahrensart anwendbar ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2032,7 +2418,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_90",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d39c17beb582599fd4493ee113d7f9ca0100e8a682325c2fadb66d24d8747cd1"
+      "sha": "e862ef00848eb414eed75049d17a5e2ff1fc64f8ca9c643a017374fcbf284392"
     },
     {
       "id": "bund/ZPO/art_91",
@@ -2159,22 +2545,68 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Prozesskosten sind:"
+          "text": "Prozesskosten sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gerichtskosten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Parteientschädigung."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Gerichtskosten sind:"
+          "text": "Gerichtskosten sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Pauschalen für das Schlichtungsverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "die Pauschalen für den Entscheid (Entscheidgebühr);"
+            },
+            {
+              "marke": "c",
+              "text": "die Kosten der Beweisführung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Kosten für die Übersetzung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Kosten für die Vertretung des Kindes (Art. 299 und 300)."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Als Parteientschädigung gilt:"
+          "text": "Als Parteientschädigung gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Ersatz notwendiger Auslagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kosten einer berufsmässigen Vertretung;"
+            },
+            {
+              "marke": "c",
+              "text": "in begründeten Fällen: eine angemessene Umtriebsentschädigung, wenn eine Partei nicht berufsmässig vertreten ist."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_95",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "bd5fadd374bebfe7ca6fa8b90a5cea212fdffd2d428b065573d1e052d35e9c95"
+      "sha": "be305b8fcd83122d2080446ae3a8df38ed5ba64ec661752f436e1eddec39a66f"
     },
     {
       "id": "bund/ZPO/art_96",
@@ -2232,14 +2664,32 @@
         },
         {
           "absatz": "2",
-          "text": "Sie können einen Vorschuss bis zur Höhe der gesamten mutmasslichen Gerichtskosten verlangen in:"
+          "text": "Sie können einen Vorschuss bis zur Höhe der gesamten mutmasslichen Gerichtskosten verlangen in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verfahren nach Artikel 6 Absatz 4 Buchstabe c und nach Artikel 8;"
+            },
+            {
+              "marke": "b",
+              "text": "Schlichtungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "summarischen Verfahren mit Ausnahme der vorsorglichen Massnahmen nach Artikel 248 Buchstabe d und der familienrechtlichen Streitigkeiten nach den Artikeln 271, 276, 302 und 305;"
+            },
+            {
+              "marke": "d",
+              "text": "Rechtsmittelverfahren."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_98",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d17dbe2025bb62872ad4c46f181245509ff8933217d148dad22ea5bba431ba29"
+      "sha": "ecc24110733d4260ced83e96763845128c66ccc3a6eb8cda94891a1ea66015e7"
     },
     {
       "id": "bund/ZPO/art_99",
@@ -2251,7 +2701,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die klagende Partei hat auf Antrag der beklagten Partei für deren Parteientschädigung Sicherheit zu leisten, wenn sie:"
+          "text": "Die klagende Partei hat auf Antrag der beklagten Partei für deren Parteientschädigung Sicherheit zu leisten, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keinen Wohnsitz oder Sitz in der Schweiz hat;"
+            },
+            {
+              "marke": "b",
+              "text": "zahlungsunfähig erscheint, namentlich wenn gegen sie der Konkurs eröffnet oder ein Nachlassverfahren im Gang ist oder Verlustscheine bestehen;"
+            },
+            {
+              "marke": "c",
+              "text": "Prozesskosten aus früheren Verfahren schuldet; oder"
+            },
+            {
+              "marke": "d",
+              "text": "wenn andere Gründe für eine erhebliche Gefährdung der Parteientschädigung bestehen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2259,14 +2727,32 @@
         },
         {
           "absatz": "3",
-          "text": "Keine Sicherheit ist zu leisten:"
+          "text": "Keine Sicherheit ist zu leisten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im vereinfachten Verfahren mit Ausnahme der vermögensrechtlichen Streitigkeiten nach Artikel 243 Absatz 1;"
+            },
+            {
+              "marke": "b",
+              "text": "im Scheidungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "im summarischen Verfahren mit Ausnahme des Rechtsschutzes in klaren Fällen (Art. 257);"
+            },
+            {
+              "marke": "d",
+              "text": "im Verfahren wegen einer Streitigkeit nach dem DSG."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_99",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8797fad11a6f0c887d8c35d350d6b10b54ee23e6aa82c7f44893c61176ca5f9a"
+      "sha": "ded83b661c9fdcb18ca157bdf82f4f985ffa800b6f7fbc2bc711af6b197beb73"
     },
     {
       "id": "bund/ZPO/art_100",
@@ -2455,7 +2941,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht kann von den Verteilungsgrundsätzen abweichen und die Prozesskosten nach Ermessen verteilen:"
+          "text": "Das Gericht kann von den Verteilungsgrundsätzen abweichen und die Prozesskosten nach Ermessen verteilen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn die Klage zwar grundsätzlich, aber nicht in der Höhe der Forderung gutgeheissen wurde und diese Höhe vom gerichtlichen Ermessen abhängig oder die Bezifferung des Anspruchs schwierig war;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn eine Partei in guten Treuen zur Prozessführung veranlasst war;"
+            },
+            {
+              "marke": "c",
+              "text": "in familienrechtlichen Verfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "in Verfahren bei eingetragener Partnerschaft;"
+            },
+            {
+              "marke": "e",
+              "text": "wenn das Verfahren als gegenstandslos abgeschrieben wird und das Gesetz nichts anderes vorsieht;"
+            },
+            {
+              "marke": "f",
+              "text": "wenn andere besondere Umstände vorliegen, die eine Verteilung nach dem Ausgang des Verfahrens als unbillig erscheinen lassen."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -2470,7 +2982,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_107",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "6a43a937c0013906ffc034af6507634c38d1abadb6beb0478af788c4eee4c6b6"
+      "sha": "5ec32eb6d78ed32c1d9ff39437c8e23fd31853be28af14bf7a07da076bb5ad4f"
     },
     {
       "id": "bund/ZPO/art_108",
@@ -2505,14 +3017,24 @@
         },
         {
           "absatz": "2",
-          "text": "Die Kosten werden nach den Artikeln 106–108 verteilt, wenn:"
+          "text": "Die Kosten werden nach den Artikeln 106–108 verteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Vergleich keine Regelung enthält; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die getroffene Regelung einseitig zulasten einer Partei geht, welcher die unentgeltliche Rechtspflege bewilligt worden ist."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_109",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "ec41d76eae7008bc9c88c9c13ddf88d20c7088f6c0e6ffdaef3111efb2d17907"
+      "sha": "2bc987ea7fe94cfd59c23403025dd9c0eb9b0477aa3a9408939db01a44425489"
     },
     {
       "id": "bund/ZPO/art_110",
@@ -2601,14 +3123,44 @@
         },
         {
           "absatz": "2",
-          "text": "Keine Gerichtskosten werden gesprochen in Streitigkeiten:"
+          "text": "Keine Gerichtskosten werden gesprochen in Streitigkeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach dem Gleichstellungsgesetz vom 24. März 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "nach dem Behindertengleichstellungsgesetz vom 13. Dezember 2002;"
+            },
+            {
+              "marke": "c",
+              "text": "aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht;"
+            },
+            {
+              "marke": "d",
+              "text": "aus dem Arbeitsverhältnis sowie nach dem Arbeitsvermittlungsgesetz vom 6. Oktober 1989 bis zu einem Streitwert von 30 000 Franken;"
+            },
+            {
+              "marke": "e",
+              "text": "nach dem Mitwirkungsgesetz vom 17. Dezember 1993;"
+            },
+            {
+              "marke": "f",
+              "text": "aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung;"
+            },
+            {
+              "marke": "g",
+              "text": "nach dem DSG."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_113",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e405f31772012e6ae15fa5bc3ce0082d337caba298135b0cf6fcea94fc29b9a7"
+      "sha": "33a2a177b53ab37838e6a36ce25938ea0cd9d4600ca74fa5fc548ed69d41a538"
     },
     {
       "id": "bund/ZPO/art_114",
@@ -2620,14 +3172,44 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Im Entscheidverfahren werden keine Gerichtskosten gesprochen bei Streitigkeiten:"
+          "text": "Im Entscheidverfahren werden keine Gerichtskosten gesprochen bei Streitigkeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach dem Gleichstellungsgesetz vom 24. März 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "nach dem Behindertengleichstellungsgesetz vom 13. Dezember 2002;"
+            },
+            {
+              "marke": "c",
+              "text": "aus dem Arbeitsverhältnis sowie nach dem Arbeitsvermittlungsgesetz vom 6. Oktober 1989 bis zu einem Streitwert von 30 000 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "nach dem Mitwirkungsgesetz vom 17. Dezember 1993;"
+            },
+            {
+              "marke": "e",
+              "text": "aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung;"
+            },
+            {
+              "marke": "f",
+              "text": "wegen Gewalt, Drohungen oder Nachstellungen nach Artikel 28 b ZGB oder betreffend die elektronische Überwachung nach Artikel 28 c ZGB;"
+            },
+            {
+              "marke": "g",
+              "text": "nach dem DSG."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_114",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d8781a26a7d340584d74f4ba8eccb5b2fc17834590868f54299bfd3557442f66"
+      "sha": "e763fc164dcf5a20c367dd2817b8c0d7e1b4feda2e60faedb3ba1a67436afd6f"
     },
     {
       "id": "bund/ZPO/art_115",
@@ -2685,14 +3267,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Eine Person hat Anspruch auf unentgeltliche Rechtspflege, wenn:"
+          "text": "Eine Person hat Anspruch auf unentgeltliche Rechtspflege, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nicht über die erforderlichen Mittel verfügt; und"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Rechtsbegehren nicht aussichtslos erscheint."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_117",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "6a91e7c5ada0cd10e0cc0cfbf40975fedb469aa78ff3c3f24e29033a5ff9aa50"
+      "sha": "4cced543085a6a5a7408d71c756f83d7f2d7cf9618807780dff11946320d4bea"
     },
     {
       "id": "bund/ZPO/art_118",
@@ -2704,7 +3296,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die unentgeltliche Rechtspflege umfasst:"
+          "text": "Die unentgeltliche Rechtspflege umfasst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Befreiung von Vorschuss- und Sicherheitsleistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Befreiung von den Gerichtskosten;"
+            },
+            {
+              "marke": "c",
+              "text": "die gerichtliche Bestellung einer Rechtsbeiständin oder eines Rechtsbeistandes, wenn dies zur Wahrung der Rechte notwendig ist, insbesondere wenn die Gegenpartei anwaltlich vertreten ist; die Rechtsbeiständin oder der Rechtsbeistand kann bereits zur Vorbereitung des Prozesses bestellt werden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2719,7 +3325,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_118",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f7cc3c4dc522a17f028b36d903f7d8cdaea1848df0bb99c555d30df8c7a1a7c6"
+      "sha": "98cf6195135008ec373568ff76d1d506ed1bf3b866a32ce48a96363d0d0eb61d"
     },
     {
       "id": "bund/ZPO/art_119",
@@ -2808,7 +3414,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Unterliegt die unentgeltlich prozessführende Partei, so werden die Prozesskosten wie folgt liquidiert:"
+          "text": "Unterliegt die unentgeltlich prozessführende Partei, so werden die Prozesskosten wie folgt liquidiert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die unentgeltliche Rechtsbeiständin oder der unentgeltliche Rechtsbeistand wird vom Kanton angemessen entschädigt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Gerichtskosten gehen zulasten des Kantons;"
+            },
+            {
+              "marke": "c",
+              "text": "der Gegenpartei werden die Vorschüsse, die sie geleistet hat, zurückerstattet;"
+            },
+            {
+              "marke": "d",
+              "text": "die unentgeltlich prozessführende Partei hat der Gegenpartei die Parteientschädigung zu bezahlen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2819,7 +3443,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_122",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "473e72a13aa7648784d6bdd32035fa2793dea544ed7c5c4c71778ef2bb345c8e"
+      "sha": "555ec57aa821d94a1d1578fa9ffcaa45dc04c604b08b8a948a28de53e64c4837"
     },
     {
       "id": "bund/ZPO/art_123",
@@ -2881,14 +3505,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zur Vereinfachung des Prozesses kann das Gericht insbesondere:"
+          "text": "Zur Vereinfachung des Prozesses kann das Gericht insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Verfahren auf einzelne Fragen oder auf einzelne Rechtsbegehren beschränken;"
+            },
+            {
+              "marke": "b",
+              "text": "gemeinsam eingereichte Klagen trennen;"
+            },
+            {
+              "marke": "c",
+              "text": "selbstständig eingereichte Klagen vereinigen;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Widerklage vom Hauptverfahren trennen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_125",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "0e5bd0ad8419a2d60cd5d225b3a9b26493e7b73b6810d8c65d01e2d95180d9fd"
+      "sha": "0947bc48afbb8c9f3a7705eda6474efa35ac71f1fe0d076c21012a1803529b04"
     },
     {
       "id": "bund/ZPO/art_126",
@@ -2981,14 +3623,24 @@
         },
         {
           "absatz": "2",
-          "text": "Das kantonale Recht kann vorsehen, dass auf Antrag sämtlicher Parteien folgende Sprachen benutzt werden:"
+          "text": "Das kantonale Recht kann vorsehen, dass auf Antrag sämtlicher Parteien folgende Sprachen benutzt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine andere Landessprache, wobei keine Partei auf die Verfahrenssprache nach Absatz 1 zum Voraus verzichten kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die englische Sprache in internationalen handelsrechtlichen Streitigkeiten nach Artikel 6 Absatz 4 Buchstabe c vor dem Handelsgericht oder dem ordentlichen Gericht."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_129",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e8da495858b148e4db14edfc230d559bdac2ffe0d6e1cca8215be58f39338768"
+      "sha": "31545b55b07b82e181661e56b403509d1901fcd0335302b45eba26df694cdd12"
     },
     {
       "id": "bund/ZPO/art_130",
@@ -3004,14 +3656,28 @@
         },
         {
           "absatz": "2",
-          "text": "Bei elektronischer Einreichung muss die Eingabe mit einer qualifizierten elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur versehen werden. Der Bundesrat regelt:"
+          "text": "Bei elektronischer Einreichung muss die Eingabe mit einer qualifizierten elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur versehen werden. Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Format der Eingabe und ihrer Beilagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen, unter denen bei technischen Problemen die Nachreichung von Dokumenten auf Papier verlangt werden kann."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_130",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d007fa96ac2c4bcc811a4d0919d507f5b50ff6be2a54d0064da77a0181e7b9a5"
+      "sha": "18566599e5c252d8eedf09aec372565c5c5de760a7a58d80b55e641c9228958d"
     },
     {
       "id": "bund/ZPO/art_131",
@@ -3069,14 +3735,44 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Vorladung enthält:"
+          "text": "Die Vorladung enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Adresse der vorgeladenen Person;"
+            },
+            {
+              "marke": "b",
+              "text": "die Prozesssache und die Parteien;"
+            },
+            {
+              "marke": "c",
+              "text": "die Eigenschaft, in welcher die Person vorgeladen wird;"
+            },
+            {
+              "marke": "d",
+              "text": "Ort, Datum und Zeit des geforderten Erscheinens oder der geforderten Verfügbarkeit beim Einsatz elektronischer Mittel zur Ton- und Bildübertragung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Prozesshandlung, zu der vorgeladen wird;"
+            },
+            {
+              "marke": "f",
+              "text": "die Säumnisfolgen;"
+            },
+            {
+              "marke": "g",
+              "text": "das Datum der Vorladung und die Unterschrift des Gerichts."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_133",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "6466922ec82dcf2110bfccd899b30a345e198b5933795180e2dfac590cb41ac6"
+      "sha": "1cc929bb6745bd7d545d95532bdb2b25085a13411551c1e66ef739e82ebac813"
     },
     {
       "id": "bund/ZPO/art_134",
@@ -3107,14 +3803,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht kann einen Erscheinungstermin aus zureichenden Gründen verschieben:"
+          "text": "Das Gericht kann einen Erscheinungstermin aus zureichenden Gründen verschieben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von Amtes wegen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn es vor dem Termin darum ersucht wird."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_135",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "74d1fd34175210580783e511ef40f699ceb59b26eabf81762feee9a339a492f6"
+      "sha": "6e294c098bfb36940684dfd7d8868371a8226ddaeaa8b1001a9bbdcdfa946074"
     },
     {
       "id": "bund/ZPO/art_136",
@@ -3126,14 +3832,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht stellt den betroffenen Personen insbesondere zu:"
+          "text": "Das Gericht stellt den betroffenen Personen insbesondere zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorladungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Verfügungen und Entscheide;"
+            },
+            {
+              "marke": "c",
+              "text": "Eingaben der Gegenpartei."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_136",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8f64de82104c372706ae5ecac9e79571676c52c44bee3f5f93ee9dd7976b13ab"
+      "sha": "fb6cf9cf189d768da6439fd1a1b7d521b151998ee68312f834f4f41615a8ac98"
     },
     {
       "id": "bund/ZPO/art_137",
@@ -3172,7 +3892,17 @@
         },
         {
           "absatz": "3",
-          "text": "Sie gilt zudem als erfolgt:"
+          "text": "Sie gilt zudem als erfolgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einer eingeschriebenen Postsendung, die nicht abgeholt worden ist: am siebten Tag nach dem erfolglosen Zustellungsversuch, sofern die Person mit einer Zustellung rechnen musste;"
+            },
+            {
+              "marke": "b",
+              "text": "bei persönlicher Zustellung, wenn die Adressatin oder der Adressat die Annahme verweigert und dies von der überbringenden Person festgehalten wird: am Tag der Weigerung."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -3183,7 +3913,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_138",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "2a7015ff08ff12d15b5d7a69de2442a1279e3407d0b93d79e2777112e706bf2d"
+      "sha": "675695ec88d738eb4e7bdd4b89717620ce740b67b31f7a8c950648734871a725"
     },
     {
       "id": "bund/ZPO/art_139",
@@ -3199,14 +3929,32 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat regelt:"
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zu verwendende Signatur;"
+            },
+            {
+              "marke": "b",
+              "text": "das Format der Vorladungen, Verfügungen und Entscheide sowie ihrer Beilagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Zeitpunkt, zu dem die Vorladung, die Verfügung oder der Entscheid als zugestellt gilt."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_139",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "65fcbfa365a8f11b212398dc95af56332e1880a9492b41e20a5e7b040b1cc650"
+      "sha": "e793bc168c2b364c8039617529a545f793c0f6ebb68f8eb0f79041e1da1fa8aa"
     },
     {
       "id": "bund/ZPO/art_140",
@@ -3237,7 +3985,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Zustellung erfolgt durch Publikation im kantonalen Amtsblatt oder im Schweizerischen Handelsamtsblatt, wenn:"
+          "text": "Die Zustellung erfolgt durch Publikation im kantonalen Amtsblatt oder im Schweizerischen Handelsamtsblatt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Aufenthaltsort der Adressatin oder des Adressaten unbekannt ist und trotz zumutbarer Nachforschungen nicht ermittelt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Zustellung unmöglich ist oder mit ausserordentlichen Umtrieben verbunden wäre;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Partei mit Wohnsitz oder Sitz im Ausland entgegen der Anweisung des Gerichts kein Zustellungsdomizil in der Schweiz bezeichnet hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3248,7 +4010,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_141",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "3d01825a797ffea37ebfbc0aeff61376407d1991536f4481bffad805f0d82db9"
+      "sha": "6f46f552e594a53b9cdf961f8f525505c0b6712c4b615935777afb77e44ba8f2"
     },
     {
       "id": "bund/ZPO/art_141_a",
@@ -3287,7 +4049,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für den Einsatz elektronischer Mittel zur Ton- und Bildübertragung müssen folgende Voraussetzungen erfüllt sein:"
+          "text": "Für den Einsatz elektronischer Mittel zur Ton- und Bildübertragung müssen folgende Voraussetzungen erfüllt sein:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Übertragung von Ton und Bild zwischen sämtlichen an der Prozesshandlung beteiligten Personen erfolgt zeitgleich."
+            },
+            {
+              "marke": "b",
+              "text": "Bei Zeugeneinvernahmen, Parteibefragungen, Beweisaussagen und persönlichen Anhörungen erfolgt eine Aufzeichnung; bei den übrigen Verhandlungen kann ausnahmsweise auf Antrag oder von Amtes wegen eine Aufzeichnung erfolgen, soweit eine Verhandlung nicht ausschliesslich der freien Erörterung des Streitgegenstandes oder dem Versuch der Einigung dient."
+            },
+            {
+              "marke": "c",
+              "text": "Der Datenschutz und die Datensicherheit sind gewährleistet."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3302,7 +4078,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_141_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "0d2bf4ba9f9d6eb153983ed84393d79d815f24fdc7f0e2cea748b8588ba5b8f5"
+      "sha": "f1569f32cd098213201e85691bd61d616fed8067a8e30d28701949193bd0d634"
     },
     {
       "id": "bund/ZPO/art_142",
@@ -3399,11 +4175,35 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gesetzliche und gerichtliche Fristen stehen still:"
+          "text": "Gesetzliche und gerichtliche Fristen stehen still:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vom siebten Tag vor Ostern bis und mit dem siebten Tag nach Ostern;"
+            },
+            {
+              "marke": "b",
+              "text": "vom 15. Juli bis und mit dem 15. August;"
+            },
+            {
+              "marke": "c",
+              "text": "vom 18. Dezember bis und mit dem 2. Januar."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Dieser Fristenstillstand gilt nicht für:"
+          "text": "Dieser Fristenstillstand gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Schlichtungsverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "das summarische Verfahren."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3418,7 +4218,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_145",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "b845d476ae4c05c8f6960268ea82794796e04d42e92e5b911043bb736c5ebf14"
+      "sha": "7c67d104f88e1baa860911dca7f1a9f091c786b6edb31ce989fc85f30cd5ef96"
     },
     {
       "id": "bund/ZPO/art_146",
@@ -3698,7 +4498,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht nimmt jederzeit Beweis ab, wenn:"
+          "text": "Das Gericht nimmt jederzeit Beweis ab, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gesetz einen entsprechenden Anspruch gewährt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die gesuchstellende Partei eine Gefährdung der Beweismittel oder ein schutzwürdiges Interesse glaubhaft macht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3709,7 +4519,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_158",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "5a3f9e9e04c2c0fa7654b9d0c346b14478fe2052ea77a5996abc4d97cc144021"
+      "sha": "081b435165cb21cb0c1fa0b7017e863f039bfae3dc892a9aef6c01f41dd32364"
     },
     {
       "id": "bund/ZPO/art_159",
@@ -3740,7 +4550,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Parteien und Dritte sind zur Mitwirkung bei der Beweiserhebung verpflichtet. Insbesondere haben sie:"
+          "text": "Die Parteien und Dritte sind zur Mitwirkung bei der Beweiserhebung verpflichtet. Insbesondere haben sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Partei, als Zeugin oder als Zeuge wahrheitsgemäss auszusagen;"
+            },
+            {
+              "marke": "b",
+              "text": "Urkunden herauszugeben; ausgenommen sind Unterlagen aus dem Verkehr einer Partei oder einer Drittperson mit einer Anwältin oder einem Anwalt, die oder der zur berufsmässigen Vertretung berechtigt ist, oder mit einer Patentanwältin oder einem Patentanwalt im Sinne von Artikel 2 des Patent anwaltsgesetzes vom 20. März 2009 ;"
+            },
+            {
+              "marke": "c",
+              "text": "einen Augenschein an Person oder Eigentum durch Sachverständige zu dulden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3755,7 +4579,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_160",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "ae625b7f9f32fc759d6bbb01e61f111d6e03f2784cc8490d5df8097dad58cb4e"
+      "sha": "3438a2a16e34fc54b59737fb3323a1ff04676b661eacb0d713667df93c0df655"
     },
     {
       "id": "bund/ZPO/art_161",
@@ -3809,7 +4633,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Partei kann die Mitwirkung verweigern, wenn sie:"
+          "text": "Eine Partei kann die Mitwirkung verweigern, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine ihr im Sinne von Artikel 165 nahestehende Person der Gefahr strafrechtlicher Verfolgung oder zivilrechtlicher Verantwortlichkeit aussetzen würde;"
+            },
+            {
+              "marke": "b",
+              "text": "sich wegen Verletzung eines Geheimnisses nach Artikel 321 des Strafgesetzbuchs (StGB) strafbar machen würde; ausgenommen sind die Revisorinnen und Revisoren; Artikel 166 Absatz 1 Buchstabe b dritter Teilsatz gilt sinngemäss."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3820,7 +4654,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_163",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "4b9d8694b145ed89694bb00d37dc917c0a1301d6a93266e6d63ea16185a5d5d6"
+      "sha": "525fb1f6806a7c6ff34cc37899e3c1f966dd47e83ab85b1624027614cd0bb814"
     },
     {
       "id": "bund/ZPO/art_164",
@@ -3851,7 +4685,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Jede Mitwirkung können verweigern:"
+          "text": "Jede Mitwirkung können verweigern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wer mit einer Partei verheiratet ist oder war oder eine faktische Lebensgemeinschaft führt;"
+            },
+            {
+              "marke": "b",
+              "text": "wer mit einer Partei gemeinsame Kinder hat;"
+            },
+            {
+              "marke": "c",
+              "text": "wer mit einer Partei in gerader Linie oder in der Seitenlinie bis und mit dem dritten Grad verwandt oder verschwägert ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die Pflegeeltern, die Pflegekinder und die Pflegegeschwister einer Partei;"
+            },
+            {
+              "marke": "e",
+              "text": "die für eine Partei zur Vormundschaft oder zur Beistandschaft eingesetzte Person."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3866,7 +4722,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_165",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "144f8568664706269480e2d31b6216f3704340845b9d81078eb46d4de935b25e"
+      "sha": "332e9da934508398664922969b6c748c0be991768e5a70679b1ce9824f51c43c"
     },
     {
       "id": "bund/ZPO/art_166",
@@ -3878,7 +4734,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine dritte Person kann die Mitwirkung verweigern:"
+          "text": "Eine dritte Person kann die Mitwirkung verweigern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Feststellung von Tatsachen, die sie oder eine ihr im Sinne von Artikel 165 nahestehende Person der Gefahr strafrechtlicher Verfolgung oder zivilrechtlicher Verantwortlichkeit aussetzen würde;"
+            },
+            {
+              "marke": "b",
+              "text": "soweit sie sich wegen Verletzung eines Geheimnisses nach Artikel 321 StGB strafbar machen würde; ausgenommen sind die Revisorinnen und Revisoren; mit Ausnahme der Anwältinnen und Anwälte sowie der Geistlichen haben Dritte jedoch mitzuwirken, wenn sie einer Anzeigepflicht unterliegen oder wenn sie von der Geheimhaltungspflicht entbunden worden sind, es sei denn, sie machen glaubhaft, dass das Geheimhaltungsinteresse das Interesse an der Wahrheitsfindung überwiegt;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Feststellung von Tatsachen, die ihr als Beamtin oder Beamter im Sinne von Artikel 110 Absatz 3 StGB oder als Behördenmitglied in ihrer amtlichen Eigenschaft anvertraut worden sind oder die sie bei Ausübung ihres Amtes oder bei Ausübung ihrer Hilfstätigkeit für eine Beamtin oder einen Beamten oder eine Behörde wahrgenommen hat; sie hat auszusagen, wenn sie einer Anzeigepflicht unterliegt oder wenn sie von ihrer vorgesetzten Behörde zur Aussage ermächtigt worden ist;"
+            },
+            {
+              "marke": "d",
+              "text": "wenn sie als Ombudsperson, Ehe- oder Familienberaterin oder -berater, Mediatorin oder Mediator über Tatsachen aussagen müsste, die sie im Rahmen der betreffenden Tätigkeit wahrgenommen hat;"
+            },
+            {
+              "marke": "e",
+              "text": "über die Identität der Autorin oder des Autors oder über Inhalt und Quellen ihrer Informationen, wenn sie sich beruflich oder als Hilfsperson mit der Veröffentlichung von Informationen im redaktionellen Teil eines periodisch erscheinenden Mediums befasst."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3893,7 +4771,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_166",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c8c94508e8806d544e3a5c6b6b354df913341cfdfebf0029232cf5cf46dae664"
+      "sha": "b97ace3694d37b98c5653dfe96311bc6fc3d0bf4c53106dc277521db4c055bb7"
     },
     {
       "id": "bund/ZPO/art_167",
@@ -3905,7 +4783,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Verweigert die dritte Person die Mitwirkung unberechtigterweise, so kann das Gericht:"
+          "text": "Verweigert die dritte Person die Mitwirkung unberechtigterweise, so kann das Gericht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Ordnungsbusse bis zu 1000 Franken anordnen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Strafdrohung nach Artikel 292 StGB aussprechen;"
+            },
+            {
+              "marke": "c",
+              "text": "die zwangsweise Durchsetzung anordnen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Prozesskosten auferlegen, die durch die Verweigerung verursacht worden sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3920,7 +4816,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_167",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f54ea3b3cbf20d18408d54c80cd861f7f458e0eb0fc5a713a0e640173a50e60a"
+      "sha": "1cee597de3621d53557c7b0b7be0b90217e8b946587e16f43b94df01bb7e1274"
     },
     {
       "id": "bund/ZPO/art_167_a",
@@ -3932,7 +4828,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Partei kann die Mitwirkung und die Herausgabe von Unterlagen im Zusammenhang mit der Tätigkeit ihres unternehmensinternen Rechtsdienstes verweigern, wenn:"
+          "text": "Eine Partei kann die Mitwirkung und die Herausgabe von Unterlagen im Zusammenhang mit der Tätigkeit ihres unternehmensinternen Rechtsdienstes verweigern, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie als Rechtseinheit im schweizerischen Handelsregister oder in einem vergleichbaren ausländischen Register eingetragen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Rechtsdienst von einer Person geleitet wird, die über ein kantonales Anwaltspatent verfügt oder in ihrem Herkunftsstaat die fachlichen Voraussetzungen für die Ausübung des Anwaltsberufs erfüllt; und"
+            },
+            {
+              "marke": "c",
+              "text": "die betreffende Tätigkeit bei einer Anwältin oder einem Anwalt als berufsspezifisch gelten würde."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3951,7 +4861,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_167_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "680d7f156ec5444fd95b480453987fb2c82092f087c9579af51f4c9d0ffefba3"
+      "sha": "fdeb0042441c479b980fadbeb547461ff9bb31ded1f7d6a1c54fbdb8ba295d19"
     },
     {
       "id": "bund/ZPO/art_168",
@@ -3963,7 +4873,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Als Beweismittel sind zulässig:"
+          "text": "Als Beweismittel sind zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zeugnis;"
+            },
+            {
+              "marke": "b",
+              "text": "Urkunde;"
+            },
+            {
+              "marke": "c",
+              "text": "Augenschein;"
+            },
+            {
+              "marke": "d",
+              "text": "Gutachten;"
+            },
+            {
+              "marke": "e",
+              "text": "schriftliche Auskunft;"
+            },
+            {
+              "marke": "f",
+              "text": "Parteibefragung und Beweisaussage."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3974,7 +4910,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_168",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c7e672ef15b02a587dab8aa79c2b68849241e0bdde37cefd599f53a9c573aeff"
+      "sha": "97fecedaad8e9b6e799465e857db50c6399cee112c85280c1a3fe35ecc6d29d5"
     },
     {
       "id": "bund/ZPO/art_169",
@@ -4082,14 +5018,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht befragt die Zeuginnen und Zeugen über:"
+          "text": "Das Gericht befragt die Zeuginnen und Zeugen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihre Personalien;"
+            },
+            {
+              "marke": "b",
+              "text": "ihre persönlichen Beziehungen zu den Parteien sowie über andere Umstände, die für die Glaubwürdigkeit der Aussage von Bedeutung sein können;"
+            },
+            {
+              "marke": "c",
+              "text": "ihre Wahrnehmungen zur Sache."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_172",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "567161a18cccc3a227545db4b9735fd954fa156b181c1a88f810c75654648ebb"
+      "sha": "9c52102dbfa4f6c18a1f45ebfe40d38e962612d75c4990293652ea1f3c8f52d2"
     },
     {
       "id": "bund/ZPO/art_173",
@@ -4185,14 +5135,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Werden die Aussagen während einer Verhandlung mit technischen Hilfsmitteln aufgezeichnet, so gelten für die Protokollierung folgende Abweichungen:"
+          "text": "Werden die Aussagen während einer Verhandlung mit technischen Hilfsmitteln aufgezeichnet, so gelten für die Protokollierung folgende Abweichungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Protokoll kann nachträglich gestützt auf die Aufzeichnung erstellt werden."
+            },
+            {
+              "marke": "b",
+              "text": "Das Gericht oder das einvernehmende Gerichtsmitglied kann darauf verzichten, der Zeugin oder dem Zeugen das Protokoll vorzulesen oder zum Lesen vorzulegen und es von ihr oder ihm unterzeichnen zu lassen."
+            },
+            {
+              "marke": "c",
+              "text": "Die Aufzeichnung wird zu den Akten genommen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_176_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1bb0abc3bdc052f618eff038ba64ee4498526f1042b93e98b70deda2e9ff7757"
+      "sha": "ed717ae9d05050b5820e770487f0c3149bb9bf1f326ede203853a08b52b1a1e3"
     },
     {
       "id": "bund/ZPO/art_177",
@@ -4496,14 +5460,28 @@
         },
         {
           "absatz": "3",
-          "text": "Das Schiedsgutachten bindet das Gericht hinsichtlich der darin festgestellten Tatsachen, wenn:"
+          "text": "Das Schiedsgutachten bindet das Gericht hinsichtlich der darin festgestellten Tatsachen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Parteien über das Rechtsverhältnis frei verfügen können;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen die beauftragte Person kein Ausstandsgrund vorlag; und"
+            },
+            {
+              "marke": "c",
+              "text": "das Schiedsgutachten ohne Bevorzugung einer Partei erstellt wurde und nicht offensichtlich unrichtig ist."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_189",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "b7a17a3439b4448312eeff1b44b721c242acbd0a04af77699c3cd5a0452d5d0c"
+      "sha": "a132c24507ab790b511aa928e3896ac05c5be0e869cfaa0eeaa19ff632d1e76c"
     },
     {
       "id": "bund/ZPO/art_190",
@@ -4691,14 +5669,72 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Schlichtungsverfahren entfällt:"
+          "text": "Das Schlichtungsverfahren entfällt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im summarischen Verfahren;"
+            },
+            {
+              "marke": "a",
+              "text": "bei Klagen wegen Gewalt, Drohungen oder Nachstellungen nach Artikel 28 b ZGB oder betreffend eine elektronische Überwachung nach Artikel 28 c ZGB;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Klagen über den Personenstand;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Klagen über den Unterhalt von minder- und volljährigen Kindern und weitere Kinderbelange;"
+            },
+            {
+              "marke": "c",
+              "text": "im Scheidungsverfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "im Verfahren zur Auflösung und zur Ungültigerklärung der eingetragenen Partnerschaft;"
+            },
+            {
+              "marke": "e",
+              "text": "bei folgenden Klagen aus dem SchKG: 1. Aberkennungsklage (Art. 83 Abs. 2 SchKG),"
+            },
+            {
+              "marke": "2",
+              "text": "Feststellungsklage (Art. 85 a SchKG),"
+            },
+            {
+              "marke": "3",
+              "text": "Widerspruchsklage (Art. 106–109 SchKG),"
+            },
+            {
+              "marke": "4",
+              "text": "Anschlussklage (Art. 111 SchKG),"
+            },
+            {
+              "marke": "5",
+              "text": "Aussonderungs- und Admassierungsklage (Art. 242 SchKG),"
+            },
+            {
+              "marke": "6",
+              "text": "Kollokationsklage (Art. 148 und 250 SchKG),"
+            },
+            {
+              "marke": "7",
+              "text": "Klage auf Feststellung neuen Vermögens (Art. 265 a SchKG),"
+            },
+            {
+              "marke": "8",
+              "text": "Klage auf Rückschaffung von Retentionsgegenständen (Art. 284 SchKG);"
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_198",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8f0a2648c7676ae6ed98ae77863afa49fcff5ef215d0fafaf2220f63aa081be4"
+      "sha": "0cdadacb7207e55a535aff45ef1591e47af7bf173db429e9a385f65c26f3a060"
     },
     {
       "id": "bund/ZPO/art_199",
@@ -4714,7 +5750,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die klagende Partei kann einseitig auf das Schlichtungsverfahren verzichten, wenn:"
+          "text": "Die klagende Partei kann einseitig auf das Schlichtungsverfahren verzichten, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die beklagte Partei Sitz oder Wohnsitz im Ausland hat;"
+            },
+            {
+              "marke": "b",
+              "text": "der Aufenthaltsort der beklagten Partei unbekannt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "in Streitigkeiten nach dem Gleichstellungsgesetz vom 24. März 1995."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4725,7 +5775,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_199",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "b8cbd8878a37944c5807f35925b7c46480d1196767d7d003b66216e8685e007e"
+      "sha": "f0f09c397cfe3ed998d689654130cafbac7f60924c14c61a990b933d77c1c8a2"
     },
     {
       "id": "bund/ZPO/art_200",
@@ -4853,7 +5903,25 @@
         },
         {
           "absatz": "3",
-          "text": "Nicht persönlich erscheinen muss und sich vertreten lassen kann, wer:"
+          "text": "Nicht persönlich erscheinen muss und sich vertreten lassen kann, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausserkantonalen oder ausländischen Wohnsitz oder Sitz hat;"
+            },
+            {
+              "marke": "b",
+              "text": "wegen Krankheit, Alter oder anderen wichtigen Gründen verhindert ist;"
+            },
+            {
+              "marke": "c",
+              "text": "in Streitigkeiten nach Artikel 243 als Arbeitgeber beziehungsweise als Versicherer eine angestellte Person oder als Vermieter die Liegenschaftsverwaltung delegiert, sofern diese zum Abschluss eines Vergleichs schriftlich ermächtigt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "eine von mehreren klagenden oder beklagten Parteien ist, sofern eine der Parteien anwesend und befugt ist, die anderen klagenden oder beklagten Parteien zu vertreten und einen Vergleich in deren Namen abzuschliessen."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -4864,7 +5932,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_204",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8b2aecfca6d6ca5c3b62e69df7c959902dd7945b1d06f86da50b0e77a7e99663"
+      "sha": "3e4ec66208d3843cd4285e0e858bc517f60ca5b45f08d483eea43dbc4ca93412"
     },
     {
       "id": "bund/ZPO/art_205",
@@ -4930,7 +5998,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kosten des Schlichtungsverfahrens werden der klagenden Partei auferlegt:"
+          "text": "Die Kosten des Schlichtungsverfahrens werden der klagenden Partei auferlegt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sie das Schlichtungsgesuch zurückzieht;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn das Verfahren wegen Säumnis abgeschrieben wird;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Erteilung der Klagebewilligung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4941,7 +6023,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_207",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "46ea763a18302fd65add52569c27cd87d7917832a18a13864c92eb2454d23e06"
+      "sha": "840a51c2e428018ba6063c77f53692a1895f0ce4ed95e322f4e481ec8439b85d"
     },
     {
       "id": "bund/ZPO/art_208",
@@ -4976,11 +6058,47 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Kommt es zu keiner Einigung, so hält die Schlichtungsbehörde dies im Protokoll fest und erteilt die Klagebewilligung:"
+          "text": "Kommt es zu keiner Einigung, so hält die Schlichtungsbehörde dies im Protokoll fest und erteilt die Klagebewilligung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Anfechtung von Miet- und Pachtzinserhöhungen: dem Vermieter oder Verpächter;"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Fällen: der klagenden Partei."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Klagebewilligung enthält:"
+          "text": "Die Klagebewilligung enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Namen und Adressen der Parteien und allfälliger Vertretungen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Rechtsbegehren der klagenden Partei mit Streitgegenstand und eine allfällige Widerklage;"
+            },
+            {
+              "marke": "c",
+              "text": "das Datum der Einleitung des Schlichtungsverfahrens;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verfügung über die Kosten des Schlichtungsverfahrens;"
+            },
+            {
+              "marke": "e",
+              "text": "das Datum der Klagebewilligung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Unterschrift der Schlichtungsbehörde."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4995,7 +6113,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_209",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "569bfbd8f4e2f4e46cdd5e89956dd29fe4dd2d657635438852704e6dbe61c0ba"
+      "sha": "350b13eb541e719e6e3c81ff787a7d2d069c5d6e7485f67ab7bcb5b5cb9c7e90"
     },
     {
       "id": "bund/ZPO/art_210",
@@ -5007,7 +6125,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Schlichtungsbehörde kann den Parteien einen Entscheidvorschlag unterbreiten in:"
+          "text": "Die Schlichtungsbehörde kann den Parteien einen Entscheidvorschlag unterbreiten in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitigkeiten nach dem Gleichstellungsgesetz vom 24. März 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "Streitigkeiten aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht, sofern die Hinterlegung von Miet- und Pachtzinsen, der Schutz vor missbräuchlichen Miet- und Pachtzinsen, der Kündigungsschutz oder die Erstreckung des Miet- und Pachtverhältnisses betroffen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "den übrigen vermögensrechtlichen Streitigkeiten bis zu einem Streitwert von 10 000 Franken."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5018,7 +6150,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_210",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e7b30b20d09b1eb03eb2d8ae86baf07e52e35b226d3177437bf468c390ded372"
+      "sha": "fb0e49d0a5b2ce076d3b234826a09b85b98631d38cb97de08fa040f1e8c80c15"
     },
     {
       "id": "bund/ZPO/art_211",
@@ -5034,7 +6166,17 @@
         },
         {
           "absatz": "2",
-          "text": "Nach Eingang der Ablehnung stellt die Schlichtungsbehörde die Klagebewilligung zu:"
+          "text": "Nach Eingang der Ablehnung stellt die Schlichtungsbehörde die Klagebewilligung zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den Angelegenheiten nach Artikel 210 Absatz 1 Buchstabe b: der ablehnenden Partei;"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Fällen: der klagenden Partei."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -5049,7 +6191,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_211",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "9697ba618b91b849e47b401962e449a0a01d24df967eef9b69a7d2f8089e9c58"
+      "sha": "ea8bbcaa397702651b610e3337376435d938c4c041dff675d0b9c268bf1e4c18"
     },
     {
       "id": "bund/ZPO/art_212",
@@ -5207,7 +6349,17 @@
         },
         {
           "absatz": "2",
-          "text": "In kindesrechtlichen Angelegenheiten haben die Parteien Anspruch auf eine unentgeltliche Mediation, wenn:"
+          "text": "In kindesrechtlichen Angelegenheiten haben die Parteien Anspruch auf eine unentgeltliche Mediation, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihnen die erforderlichen Mittel fehlen; und"
+            },
+            {
+              "marke": "b",
+              "text": "das Gericht die Durchführung einer Mediation empfiehlt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -5218,7 +6370,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_218",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8ebfff6e9c7c019dfcba5c91ede1350aec89a28147f9ebc067aa701f711ac7b9"
+      "sha": "341e59c8d5c093499343ca0a21b49ac7e1a33341799dea1131d4e2900e19dd19"
     },
     {
       "id": "bund/ZPO/art_219",
@@ -5268,11 +6420,55 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Klage enthält:"
+          "text": "Die Klage enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung der Parteien und allfälliger Vertreterinnen und Vertreter;"
+            },
+            {
+              "marke": "b",
+              "text": "das Rechtsbegehren;"
+            },
+            {
+              "marke": "c",
+              "text": "die Angabe des Streitwerts;"
+            },
+            {
+              "marke": "d",
+              "text": "die Tatsachenbehauptungen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Bezeichnung der einzelnen Beweismittel zu den behaupteten Tatsachen;"
+            },
+            {
+              "marke": "f",
+              "text": "das Datum und die Unterschrift."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Mit der Klage sind folgende Beilagen einzureichen:"
+          "text": "Mit der Klage sind folgende Beilagen einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Vollmacht bei Vertretung;"
+            },
+            {
+              "marke": "b",
+              "text": "gegebenenfalls die Klagebewilligung oder die Erklärung, dass auf das Schlichtungsverfahren verzichtet werde;"
+            },
+            {
+              "marke": "c",
+              "text": "die verfügbaren Urkunden, welche als Beweismittel dienen sollen;"
+            },
+            {
+              "marke": "d",
+              "text": "ein Verzeichnis der Beweismittel."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -5283,7 +6479,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_221",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c3d5ab59e7fff472c542604091acf856e9ec465e0f58a59d5458436f68d362f7"
+      "sha": "2505729dde471e3de62726c80e4312d99d9aef770ab9aaf54e14638bf53b416d"
     },
     {
       "id": "bund/ZPO/art_222",
@@ -5353,7 +6549,17 @@
         },
         {
           "absatz": null,
-          "text": "1bis Die Widerklage ist auch zulässig und zusammen mit der Hauptklage im ordentlichen Verfahren zu beurteilen, wenn:"
+          "text": "1bis Die Widerklage ist auch zulässig und zusammen mit der Hauptklage im ordentlichen Verfahren zu beurteilen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der geltend gemachte Anspruch lediglich aufgrund des Streitwerts im vereinfachten Verfahren, die Hauptklage aber im ordentlichen Verfahren zu beurteilen ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "mit der Widerklage auf Feststellung des Nichtbestehens eines Rechts oder Rechtsverhältnisses geklagt wird, nachdem mit der Hauptklage nur ein Teil eines Anspruchs aus diesem Recht oder Rechtsverhältnis eingeklagt wurde und deshalb lediglich aufgrund des Streitwerts das vereinfachte Verfahren Anwendung findet."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5368,7 +6574,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_224",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "44ff900e8d6edfacf056fd861ab9771b6f2f0812fd1cd856eb39ad74c363e826"
+      "sha": "64af079190f4c31b8528d0ff8e42c0b257b464c2c8249648ff7d6265e004cbaf"
     },
     {
       "id": "bund/ZPO/art_225",
@@ -5426,7 +6632,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Klageänderung ist zulässig, wenn der geänderte oder neue Anspruch nach der gleichen Verfahrensart zu beurteilen ist und:"
+          "text": "Eine Klageänderung ist zulässig, wenn der geänderte oder neue Anspruch nach der gleichen Verfahrensart zu beurteilen ist und:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit dem bisherigen Anspruch in einem sachlichen Zusammenhang steht; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Gegenpartei zustimmt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5441,7 +6657,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_227",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e5a44056f1a57d95265a7c79850495940cbcda3e13a6a6e211fc543f7132e8e1"
+      "sha": "083e50ff841254b9f3b1a35a8135af7419c4445cc803a0125f479dbefa4027f5"
     },
     {
       "id": "bund/ZPO/art_228",
@@ -5480,7 +6696,17 @@
         },
         {
           "absatz": "2",
-          "text": "In den anderen Fällen können neue Tatsachen und Beweismittel innerhalb einer vom Gericht festgelegten Frist oder, bei Fehlen einer solchen Frist, spätestens bis zum ersten Parteivortrag in der Hauptverhandlung nach Artikel 228 Absatz 1 vorgebracht werden, wenn sie:"
+          "text": "In den anderen Fällen können neue Tatsachen und Beweismittel innerhalb einer vom Gericht festgelegten Frist oder, bei Fehlen einer solchen Frist, spätestens bis zum ersten Parteivortrag in der Hauptverhandlung nach Artikel 228 Absatz 1 vorgebracht werden, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erst nach Abschluss des Schriftenwechsels oder nach der letzten Instruktionsverhandlung entstanden sind (echte Noven); oder"
+            },
+            {
+              "marke": "b",
+              "text": "bereits vor Abschluss des Schriftenwechsels oder vor der letzten Instruktionsverhandlung vorhanden waren, aber trotz zumutbarer Sorgfalt nicht vorher vorgebracht werden konnten (unechte Noven)."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -5495,7 +6721,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_229",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "22ba2b00e32fad202e57d8494c23e264c0d979e8f301e3569a20947c4d721bb1"
+      "sha": "df80c326fd54f60a510820780502798290bcfbec420ced9a050d327034a17915"
     },
     {
       "id": "bund/ZPO/art_230",
@@ -5507,7 +6733,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Klageänderung ist in der Hauptverhandlung nur noch zulässig, wenn:"
+          "text": "Eine Klageänderung ist in der Hauptverhandlung nur noch zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Voraussetzungen nach Artikel 227 Absatz 1 gegeben sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "sie auf neuen Tatsachen oder Beweismitteln beruht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5518,7 +6754,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_230",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "84cad96a2d2a51c7d4b0b5e66b25fa696affa59cddbf125f3da0a6eea3a7944c"
+      "sha": "270f9307bb105c4fb8c1ffd55354cb62362bfd3dee73c54387a84d6fd6e551d4"
     },
     {
       "id": "bund/ZPO/art_231",
@@ -5614,7 +6850,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht führt über jede Verhandlung Protokoll. Dieses enthält insbesondere:"
+          "text": "Das Gericht führt über jede Verhandlung Protokoll. Dieses enthält insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Ort und die Zeit der Verhandlung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zusammensetzung des Gerichts;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anwesenheit der Parteien und ihrer Vertretungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Rechtsbegehren, Anträge und Prozesserklärungen der Parteien;"
+            },
+            {
+              "marke": "e",
+              "text": "die Verfügungen des Gerichts;"
+            },
+            {
+              "marke": "f",
+              "text": "die Unterschrift der protokollführenden Person."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5629,7 +6891,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_235",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "8762d9ea3a59fce07d0acf366df56e4358243e9ab2f7a596090a41c84c516ca1"
+      "sha": "08560fd4591365482dd0f9ffafcf10ff364d30bc2be2c274357a1c9c31e10106"
     },
     {
       "id": "bund/ZPO/art_236",
@@ -5691,14 +6953,48 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ein Entscheid enthält:"
+          "text": "Ein Entscheid enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung und die Zusammensetzung des Gerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "den Ort und das Datum des Entscheids;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bezeichnung der Parteien und ihrer Vertretung;"
+            },
+            {
+              "marke": "d",
+              "text": "das Dispositiv (Urteilsformel);"
+            },
+            {
+              "marke": "e",
+              "text": "die Angabe der Personen und Behörden, denen der Entscheid mitzuteilen ist;"
+            },
+            {
+              "marke": "f",
+              "text": "eine Rechtsmittelbelehrung, sofern die Parteien auf die Rechtsmittel nicht verzichtet haben;"
+            },
+            {
+              "marke": "g",
+              "text": "gegebenenfalls die wesentlichen Entscheidgründe tatsächlicher und rechtlicher Art;"
+            },
+            {
+              "marke": "h",
+              "text": "die Unterschrift des Gerichts."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_238",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "ac213417ce59b9db5863852354e782183d2cdf8e02feaca1c6eee463e3c7e476"
+      "sha": "a44c98336d3d45b20a12ee31187847fc7dd5d8d90b7bdcc5b0b7850ded987208"
     },
     {
       "id": "bund/ZPO/art_239",
@@ -5710,7 +7006,13 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht eröffnet seinen Entscheid in der Regel ohne schriftliche Begründung:"
+          "text": "Das Gericht eröffnet seinen Entscheid in der Regel ohne schriftliche Begründung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Hauptverhandlung durch Übergabe des schriftlichen Dispositivs an die Parteien mit kurzer mündlicher Begründung;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5725,7 +7027,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_239",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "db877118c8dd830b16d6573783177be15ddfe55a6b4934823f15bd7389372256"
+      "sha": "58095e254349926fe7800f035b18a1fa2be364cba653be6980781f6998ab95fe"
     },
     {
       "id": "bund/ZPO/art_240",
@@ -5806,7 +7108,33 @@
         },
         {
           "absatz": "2",
-          "text": "Es gilt ohne Rücksicht auf den Streitwert bei Streitigkeiten:"
+          "text": "Es gilt ohne Rücksicht auf den Streitwert bei Streitigkeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach dem Gleichstellungsgesetz vom 24. März 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "wegen Gewalt, Drohungen oder Nachstellungen nach Artikel 28 b ZGB oder betreffend eine elektronische Überwachung nach Artikel 28 c ZGB;"
+            },
+            {
+              "marke": "c",
+              "text": "aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht, sofern die Hinterlegung von Miet- und Pachtzinsen, der Schutz vor missbräuchlichen Miet- und Pachtzinsen, der Kündigungsschutz oder die Erstreckung des Miet- oder Pachtverhältnisses betroffen ist;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Durchsetzung des Auskunftsrechts nach Artikel 25 DSG;"
+            },
+            {
+              "marke": "e",
+              "text": "nach dem Mitwirkungsgesetz vom 17. Dezember 1993;"
+            },
+            {
+              "marke": "f",
+              "text": "aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -5817,7 +7145,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_243",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1d57c339a39bba54af8cd56ecfa76ed961f7fed4379062706c2194b7a77d9683"
+      "sha": "d088d906ead501996a9eab1781089b7f7ab5fb269b5a7fb5e97a0edaa2b55993"
     },
     {
       "id": "bund/ZPO/art_244",
@@ -5829,7 +7157,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Klage kann in den Formen nach Artikel 130 eingereicht oder mündlich bei Gericht zu Protokoll gegeben werden. Sie enthält:"
+          "text": "Die Klage kann in den Formen nach Artikel 130 eingereicht oder mündlich bei Gericht zu Protokoll gegeben werden. Sie enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung der Parteien;"
+            },
+            {
+              "marke": "b",
+              "text": "das Rechtsbegehren;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bezeichnung des Streitgegenstandes;"
+            },
+            {
+              "marke": "d",
+              "text": "wenn nötig die Angabe des Streitwertes;"
+            },
+            {
+              "marke": "e",
+              "text": "das Datum und die Unterschrift."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5837,14 +7187,28 @@
         },
         {
           "absatz": "3",
-          "text": "Als Beilagen sind einzureichen:"
+          "text": "Als Beilagen sind einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Vollmacht bei Vertretung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Klagebewilligung oder die Erklärung, dass auf das Schlichtungsverfahren verzichtet werde;"
+            },
+            {
+              "marke": "c",
+              "text": "die verfügbaren Urkunden, welche als Beweismittel dienen sollen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_244",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a09629e3401353de88ed08671d7c44d7f007bcf0d5204895d1f5533e6c843af6"
+      "sha": "c03893ea9f950f3df02add54e5330f1d5de8e56f0a134e844158e5a884222c33"
     },
     {
       "id": "bund/ZPO/art_245",
@@ -5906,14 +7270,28 @@
         },
         {
           "absatz": "2",
-          "text": "Das Gericht stellt den Sachverhalt von Amtes wegen fest:"
+          "text": "Das Gericht stellt den Sachverhalt von Amtes wegen fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den Angelegenheiten nach Artikel 243 Absatz 2;"
+            },
+            {
+              "marke": "b",
+              "text": "bis zu einem Streitwert von 30 000 Franken: 1. in den übrigen Streitigkeiten aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht,"
+            },
+            {
+              "marke": "2",
+              "text": "in den übrigen arbeitsrechtlichen Streitigkeiten."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_247",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f0e328b532d4b67d809d0edc44033405d9a49e368ba0fd8fb87f63f1202c7347"
+      "sha": "1417ba22d27a6e3ec5979ca96106d1d7bc8071da2c5d71380d2e8ca9c437fcb7"
     },
     {
       "id": "bund/ZPO/art_248",
@@ -5925,14 +7303,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren ist anwendbar:"
+          "text": "Das summarische Verfahren ist anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den vom Gesetz bestimmten Fällen;"
+            },
+            {
+              "marke": "b",
+              "text": "für den Rechtsschutz in klaren Fällen;"
+            },
+            {
+              "marke": "c",
+              "text": "für das gerichtliche Verbot;"
+            },
+            {
+              "marke": "d",
+              "text": "für die vorsorglichen Massnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "für die Angelegenheiten der freiwilligen Gerichtsbarkeit."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_248",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "191301930516d714bdc7d22f497fc082776371a73923343c15fc9df00e3d4601"
+      "sha": "580c7aec26482addd1136be5985d8a16968e771605a8d055f99dfcf03913c602"
     },
     {
       "id": "bund/ZPO/art_249",
@@ -5944,14 +7344,60 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:"
+          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Massnahmen zur Erhaltung des Wertes und der Gebrauchsfähigkeit der Sache bei Miteigentum (Art. 647 Abs. 2 Ziff. 1 ZGB),"
+            },
+            {
+              "marke": "2",
+              "text": "Eintragung dinglicher Rechte an Grundstücken bei ausserordentlicher Ersitzung (Art. 662 ZGB),"
+            },
+            {
+              "marke": "3",
+              "text": "Aufhebung der Einsprache gegen die Verfügungen über ein Stockwerk (Art. 712 c Abs. 3 ZGB),"
+            },
+            {
+              "marke": "4",
+              "text": "Ernennung und Abberufung des Verwalters bei Stockwerkeigentum (Art. 712 q und 712 r ZGB),"
+            },
+            {
+              "marke": "5",
+              "text": "vorläufige Eintragung gesetzlicher Grundpfandrechte (Art. 712 i , 779 d , 779 k und 837–839 ZGB),"
+            },
+            {
+              "marke": "6",
+              "text": "Fristansetzung zur Sicherstellung bei Nutzniessung und Entzug des Besitzes (Art. 760 und 762 ZGB),"
+            },
+            {
+              "marke": "7",
+              "text": "Anordnung der Schuldenliquidation des Nutzniessungsvermögens (Art. 766 ZGB),"
+            },
+            {
+              "marke": "8",
+              "text": "Massnahmen zu Gunsten des Pfandgläubigers zur Sicherung des Grundpfands (Art. 808 Abs. 1 und 2 sowie Art. 809–811 ZGB),"
+            },
+            {
+              "marke": "9",
+              "text": "Anordnung über die Stellvertretung bei Schuldbrief (Art. 850 Abs. 3 ZGB),"
+            },
+            {
+              "marke": "10",
+              "text": "Kraftloserklärung von Schuldbrief (Art. 856 und 865 ZGB),"
+            },
+            {
+              "marke": "11",
+              "text": "Vormerkung von Verfügungsbeschränkungen und vorläufigen Eintragungen im Streitfall (Art. 960 Abs. 1 Ziff. 1, 961 Abs. 1 Ziff. 1 und 966 Abs. 2 ZGB)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_249",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "daf94899329cb951dbd7bd7a8cdb21417070102f3b0ed9a3dba18b7896bcb74f"
+      "sha": "236f650535038dbff4ae68052cbecece14ac78e3231436ca68433069c40879a4"
     },
     {
       "id": "bund/ZPO/art_250",
@@ -5963,14 +7409,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:"
+          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Kraftloserklärung von Wertpapieren (Art. 981 OR),"
+            },
+            {
+              "marke": "2",
+              "text": "Verbot der Bezahlung eines Wechsels und Hinterlegung des Wechselbetrages (Art. 1072 OR),"
+            },
+            {
+              "marke": "3",
+              "text": "Erlöschen einer Vollmacht, welche die Gläubigerversammlung bei Anleihensobligationen einer Vertretung erteilt hat (Art. 1162 Abs. 4 OR),"
+            },
+            {
+              "marke": "4",
+              "text": "Einberufung einer Gläubigerversammlung auf Gesuch der Anleihensgläubiger (Art. 1165 Abs. 3 und 4 OR)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_250",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "daf94899329cb951dbd7bd7a8cdb21417070102f3b0ed9a3dba18b7896bcb74f"
+      "sha": "e13e3cdf69353ec5d8f011b62d38f956bf2e745d9184d2dba10bdc94670f3291"
     },
     {
       "id": "bund/ZPO/art_251",
@@ -5982,14 +7446,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:"
+          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheide, die vom Rechtsöffnungs-, Konkurs-, Arrest- und Nachlassgericht getroffen werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Bewilligung des nachträglichen Rechtsvorschlages (Art. 77 Abs. 3 SchKG) und des Rechtsvorschlages in der Wechselbetreibung (Art. 181 SchKG);"
+            },
+            {
+              "marke": "c",
+              "text": "Aufhebung oder Einstellung der Betreibung (Art. 85 SchKG);"
+            },
+            {
+              "marke": "d",
+              "text": "Entscheid über das Vorliegen neuen Vermögens (Art. 265 a Abs. 1–3 SchKG);"
+            },
+            {
+              "marke": "e",
+              "text": "Anordnung der Gütertrennung (Art. 68 b SchKG)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_251",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "daf94899329cb951dbd7bd7a8cdb21417070102f3b0ed9a3dba18b7896bcb74f"
+      "sha": "a89c2266d3bca0bd4cdb40202d0eb0a8af91751e5688ca90c12547ed53ac4ee8"
     },
     {
       "id": "bund/ZPO/art_251_a",
@@ -6001,7 +7487,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:"
+          "text": "Das summarische Verfahren gilt für folgende Angelegenheiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ernennung und Ersetzung von Mitgliedern des Schiedsgerichts (Art. 179 Abs. 2–5 IPRG);"
+            },
+            {
+              "marke": "b",
+              "text": "Ablehnung und Abberufung eines Mitglieds des Schiedsgerichts (Art. 180 a Abs. 2 und Art. 180 b Abs. 2 IPRG);"
+            },
+            {
+              "marke": "c",
+              "text": "Mitwirkung des staatlichen Gerichts bei der Umsetzung vorsorglicher Massnahmen (Art. 183 Abs. 2 IPRG) und bei der Beweisabnahme (Art. 184 Abs. 2 IPRG);"
+            },
+            {
+              "marke": "d",
+              "text": "sonstige Mitwirkung des staatlichen Gerichts im Schiedsverfahren (Art. 185 IPRG);"
+            },
+            {
+              "marke": "e",
+              "text": "Mitwirkung des staatlichen Gerichts bei ausländischen Schiedsverfahren (Art. 185 a IPRG);"
+            },
+            {
+              "marke": "f",
+              "text": "Hinterlegung des Schiedsentscheids und Ausstellung einer Vollstreckbarkeitsbescheinigung (Art. 193 IPRG);"
+            },
+            {
+              "marke": "g",
+              "text": "Anerkennung und Vollstreckung ausländischer Schiedsentscheide (Art. 194 IPRG)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6012,7 +7528,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_251_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "dd0c5b4b5d874fb894567db94efdabb5e299f91c3102923f45b2715cebc8041b"
+      "sha": "07974ed30b1f67ba1dd623b287ff128d8bb319dde8526e79873ab97ed6435164"
     },
     {
       "id": "bund/ZPO/art_252",
@@ -6070,14 +7586,28 @@
         },
         {
           "absatz": "2",
-          "text": "Andere Beweismittel sind nur zulässig, wenn:"
+          "text": "Andere Beweismittel sind nur zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie das Verfahren nicht wesentlich verzögern;"
+            },
+            {
+              "marke": "b",
+              "text": "es der Verfahrenszweck erfordert; oder"
+            },
+            {
+              "marke": "c",
+              "text": "das Gericht den Sachverhalt von Amtes wegen festzustellen hat."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_254",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "01fac705eecc2db2b189390ad880e000ccdac6d280dc838e7191de75740b981c"
+      "sha": "7596ac3f2f01293cecd68fdf4351a00bdd8dc2901d79ef1d237b67e5a4d2ce2e"
     },
     {
       "id": "bund/ZPO/art_255",
@@ -6089,14 +7619,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht stellt den Sachverhalt von Amtes wegen fest:"
+          "text": "Das Gericht stellt den Sachverhalt von Amtes wegen fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn es als Konkurs- oder Nachlassgericht zu entscheiden hat;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Anordnungen der freiwilligen Gerichtsbarkeit."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_255",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "ca6cc9e298760593b202d0503279eb2508784003a5103dc576ac07cbf8c80006"
+      "sha": "3d4156d10fcd7a634363dac4d9cd8aad91a57c19fbe011a4c13f323a2008ace1"
     },
     {
       "id": "bund/ZPO/art_256",
@@ -6131,7 +7671,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht gewährt Rechtsschutz im summarischen Verfahren, wenn:"
+          "text": "Das Gericht gewährt Rechtsschutz im summarischen Verfahren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Sachverhalt unbestritten oder sofort beweisbar ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Rechtslage klar ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6146,7 +7696,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_257",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "54d83b565b7c7d07b227e8d388ea9f24edf92c8314464d78cc89d3053685725c"
+      "sha": "8f0e50b1ad2f968620f2cc6706a61aebf670224b2fc05610d091df7efc85ef82"
     },
     {
       "id": "bund/ZPO/art_258",
@@ -6223,7 +7773,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht trifft die notwendigen vorsorglichen Massnahmen, wenn die gesuchstellende Partei glaubhaft macht, dass:"
+          "text": "Das Gericht trifft die notwendigen vorsorglichen Massnahmen, wenn die gesuchstellende Partei glaubhaft macht, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein ihr zustehender Anspruch verletzt ist oder eine Verletzung zu befürchten ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "ihr aus der Verletzung ein nicht leicht wieder gutzumachender Nachteil droht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6234,7 +7794,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_261",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "ee2d3ffdc8024fe2cbf22d476dd9b11c34c2bd681fd8b20d7d61c42b6dcab6e3"
+      "sha": "a3a2c3c33d112c07256d4694ad4699e8efec9c4739fda590c4f59226c6f0c839"
     },
     {
       "id": "bund/ZPO/art_262",
@@ -6246,14 +7806,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Eine vorsorgliche Massnahme kann jede gerichtliche Anordnung sein, die geeignet ist, den drohenden Nachteil abzuwenden, insbesondere:"
+          "text": "Eine vorsorgliche Massnahme kann jede gerichtliche Anordnung sein, die geeignet ist, den drohenden Nachteil abzuwenden, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Verbot;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Anordnung zur Beseitigung eines rechtswidrigen Zustands;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Anweisung an eine Registerbehörde oder eine dritte Person;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Sachleistung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Leistung einer Geldzahlung in den vom Gesetz bestimmten Fällen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_262",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "9e4b299de12043a01688fc64546341411f47f7f80b274a6d76e515e7255a56dc"
+      "sha": "fd4341ae00c19aacb27dfaa8eb7b4c088ebf77db7aaf61d1b3e8aacb70ff2cb0"
     },
     {
       "id": "bund/ZPO/art_263",
@@ -6338,14 +7920,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Gegen periodisch erscheinende Medien darf das Gericht eine vorsorgliche Massnahme nur anordnen, wenn:"
+          "text": "Gegen periodisch erscheinende Medien darf das Gericht eine vorsorgliche Massnahme nur anordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die bestehende oder drohende Rechtsverletzung der gesuchstellenden Partei einen schweren Nachteil verursacht oder verursachen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "offensichtlich kein Rechtfertigungsgrund vorliegt; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Massnahme nicht unverhältnismässig erscheint."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_266",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e18baeb27cc1cbb1094eff0601a90258877b010d598a9b6954f27216084cd201"
+      "sha": "6ee015d862586f5f29728ab5477ce982528530988acbf20c0b693a24817c3896"
     },
     {
       "id": "bund/ZPO/art_267",
@@ -6399,14 +7995,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Vorbehalten bleiben die Bestimmungen:"
+          "text": "Vorbehalten bleiben die Bestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des SchKG über sichernde Massnahmen bei der Vollstreckung von Geldforderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "des ZGB über die erbrechtlichen Sicherungsmassregeln;"
+            },
+            {
+              "marke": "c",
+              "text": "des Patentgesetzes vom 25. Juni 1954 über die Klage auf Lizenzerteilung."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_269",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d13109c2b0a6b75f71915778b3bbf6ce2eaacd99fed14e563ed1991db1677670"
+      "sha": "cbf561a7dafed08494ee63bc232fe9d3f08b4d3719f45576a8cd03182d8035d0"
     },
     {
       "id": "bund/ZPO/art_270",
@@ -6445,14 +8055,52 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren ist unter Vorbehalt der Artikel 272 und 273 anwendbar für Massnahmen zum Schutz der ehelichen Gemeinschaft, insbesondere für:"
+          "text": "Das summarische Verfahren ist unter Vorbehalt der Artikel 272 und 273 anwendbar für Massnahmen zum Schutz der ehelichen Gemeinschaft, insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Massnahmen nach den Artikeln 172–179 ZGB;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ausdehnung der Vertretungsbefugnis eines Ehegatten für die eheliche Gemeinschaft (Art. 166 Abs. 2 Ziff. 1 ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "die Ermächtigung eines Ehegatten zur Verfügung über die Wohnung der Familie (Art. 169 Abs. 2 ZGB);"
+            },
+            {
+              "marke": "d",
+              "text": "die Auskunftspflicht der Ehegatten über Einkommen, Vermögen und Schulden (Art. 170 Abs. 2 ZGB);"
+            },
+            {
+              "marke": "e",
+              "text": "die Anordnung der Gütertrennung und Wiederherstellung des früheren Güterstands (Art. 185, 187 Abs. 2, 189 und 191 ZGB);"
+            },
+            {
+              "marke": "f",
+              "text": "die Verpflichtung eines Ehegatten zur Mitwirkung bei der Aufnahme eines Inventars (Art. 195 a ZGB);"
+            },
+            {
+              "marke": "g",
+              "text": "die Festsetzung von Zahlungsfristen und Sicherheitsleistungen zwischen Ehegatten ausserhalb eines Prozesses über die güterrechtliche Auseinandersetzung (Art. 203 Abs. 2, 218, 235 Abs. 2 und 250 Abs. 2 ZGB);"
+            },
+            {
+              "marke": "h",
+              "text": "die Zustimmung eines Ehegatten zur Ausschlagung oder zur Annahme einer Erbschaft (Art. 230 Abs. 2 ZGB);"
+            },
+            {
+              "marke": "i",
+              "text": "die Anweisung an die Schuldner und die Sicherstellung nachehelichen Unterhalts ausserhalb eines Prozesses über den nachehelichen Unterhalt (Art. 132 ZGB)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_271",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1ded77ef4a09f9b68039267791d4d63da40de90895d01b51c8f6f1cc635fd5e7"
+      "sha": "9d2e26457445ae0bae42f118ceb361e9d323d9a80c125468c18955dddb2c0de8"
     },
     {
       "id": "bund/ZPO/art_272",
@@ -6644,7 +8292,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht genehmigt eine Vereinbarung über den Ausgleich der Ansprüche aus der beruflichen Vorsorge, wenn:"
+          "text": "Das Gericht genehmigt eine Vereinbarung über den Ausgleich der Ansprüche aus der beruflichen Vorsorge, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ehegatten sich über den Ausgleich und dessen Durchführung geeinigt haben;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ehegatten eine Bestätigung der beteiligten Einrichtungen der beruflichen Vorsorge über die Durchführbarkeit der getroffenen Regelung und die Höhe der Guthaben oder der Renten vorlegen; und"
+            },
+            {
+              "marke": "c",
+              "text": "das Gericht sich davon überzeugt hat, dass die Vereinbarung dem Gesetz entspricht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6659,7 +8321,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_280",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e16bce324239dd6cf1b33c0e3561ba2e662e9b1475f22fe42e1b9a77120e4b99"
+      "sha": "8d0a0951e5c44114ad65586aa5237253d580dbdbc9160068efa0de781d34163d"
     },
     {
       "id": "bund/ZPO/art_281",
@@ -6679,14 +8341,32 @@
         },
         {
           "absatz": "3",
-          "text": "In den übrigen Fällen, in denen keine Vereinbarung zustande kommt, überweist das Gericht bei Rechtskraft des Entscheides über das Teilungsverhältnis die Streitsache von Amtes wegen dem nach dem FZG zuständigen Gericht und teilt diesem insbesondere mit:"
+          "text": "In den übrigen Fällen, in denen keine Vereinbarung zustande kommt, überweist das Gericht bei Rechtskraft des Entscheides über das Teilungsverhältnis die Streitsache von Amtes wegen dem nach dem FZG zuständigen Gericht und teilt diesem insbesondere mit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Entscheid über das Teilungsverhältnis;"
+            },
+            {
+              "marke": "b",
+              "text": "das Datum der Eheschliessung und das Datum der Ehescheidung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Einrichtungen der beruflichen Vorsorge, bei denen den Ehegatten voraussichtlich Guthaben zustehen, und die Höhe dieser Guthaben;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einrichtungen der beruflichen Vorsorge, die den Ehegatten Renten ausrichten, die Höhe dieser Renten und die zugesprochenen Rentenanteile."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_281",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "6b51f4fc53ffe7bb80d6c4d278c682e052acab2f27e1d00e01738491efe3320d"
+      "sha": "9318117e727fe5bc6020398fba406c0867e57bd6202612608669e57ca11f7f73"
     },
     {
       "id": "bund/ZPO/art_282",
@@ -6698,7 +8378,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Werden durch Vereinbarung oder Entscheid Unterhaltsbeiträge festgelegt, so ist anzugeben:"
+          "text": "Werden durch Vereinbarung oder Entscheid Unterhaltsbeiträge festgelegt, so ist anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von welchem Einkommen und Vermögen jedes Ehegatten ausgegangen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "wie viel für den Ehegatten und wie viel für jedes Kind bestimmt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "welcher Betrag zur Deckung des gebührenden Unterhalts des berechtigten Ehegatten fehlt, wenn eine nachträgliche Erhöhung der Rente vorbehalten wird;"
+            },
+            {
+              "marke": "d",
+              "text": "ob und in welchem Ausmass die Rente den Veränderungen der Lebenskosten angepasst wird."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6709,7 +8407,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_282",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "08d687121dd1e7e928ef81149f17bab42429c03731b7147018a3c3d6ce99bfbe"
+      "sha": "5f974d9b1defaaafa8c68cac1683393f42542dd46041929bf7312bf1fff72641"
     },
     {
       "id": "bund/ZPO/art_283",
@@ -6775,14 +8473,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die gemeinsame Eingabe der Ehegatten enthält:"
+          "text": "Die gemeinsame Eingabe der Ehegatten enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Namen und Adressen der Ehegatten sowie die Bezeichnung allfälliger Vertreterinnen und Vertreter;"
+            },
+            {
+              "marke": "b",
+              "text": "das gemeinsame Scheidungsbegehren;"
+            },
+            {
+              "marke": "c",
+              "text": "die vollständige Vereinbarung über die Scheidungsfolgen;"
+            },
+            {
+              "marke": "d",
+              "text": "die gemeinsamen Anträge hinsichtlich der Kinder;"
+            },
+            {
+              "marke": "e",
+              "text": "die erforderlichen Belege;"
+            },
+            {
+              "marke": "f",
+              "text": "das Datum und die Unterschriften."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_285",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "81ec552a347e66a15ae6f12fceb4383633f5baf673ec28686766917d44f85896"
+      "sha": "e727bdc3bf9cd9593f312fe3aaa809a56ff35f656e42952b8807487bfd22feeb"
     },
     {
       "id": "bund/ZPO/art_286",
@@ -6886,14 +8610,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Scheidungsklage kann ohne schriftliche Begründung eingereicht werden. Sie enthält:"
+          "text": "Die Scheidungsklage kann ohne schriftliche Begründung eingereicht werden. Sie enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Namen und Adressen der Ehegatten sowie die Bezeichnung allfälliger Vertreterinnen und Vertreter;"
+            },
+            {
+              "marke": "b",
+              "text": "das Rechtsbegehren, die Ehe sei zu scheiden sowie die Bezeichnung des Scheidungsgrunds (Art. 114 oder 115 ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "die Rechtsbegehren hinsichtlich der vermögensrechtlichen Scheidungsfolgen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Rechtsbegehren hinsichtlich der Kinder;"
+            },
+            {
+              "marke": "e",
+              "text": "die erforderlichen Belege;"
+            },
+            {
+              "marke": "f",
+              "text": "das Datum und die Unterschriften."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_290",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "650205c309545cdbf1c28e7fb0170a7819d76b864310b247cd41732d4e8b27bc"
+      "sha": "62be165ab628f65e19f9c3e18876e89af7baea9b11a4a34c8d1bc6f09336a015"
     },
     {
       "id": "bund/ZPO/art_291",
@@ -6932,7 +8682,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Verfahren wird nach den Vorschriften über die Scheidung auf gemeinsames Begehren fortgesetzt, wenn die Ehegatten:"
+          "text": "Das Verfahren wird nach den Vorschriften über die Scheidung auf gemeinsames Begehren fortgesetzt, wenn die Ehegatten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Eintritt der Rechtshängigkeit noch nicht seit mindestens zwei Jahren getrennt gelebt haben; und"
+            },
+            {
+              "marke": "b",
+              "text": "mit der Scheidung einverstanden sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6943,7 +8703,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_292",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c0b4a543a2f283f2dab5edb455338590169e842067f5528bbd701a51aff15664"
+      "sha": "b2e290933d79223b8cd1a3dde40765464dfa4d17cf704c2e8126cba0b6a89dfa"
     },
     {
       "id": "bund/ZPO/art_293",
@@ -7101,7 +8861,17 @@
         },
         {
           "absatz": "2",
-          "text": "Es prüft die Anordnung der Vertretung insbesondere, wenn:"
+          "text": "Es prüft die Anordnung der Vertretung insbesondere, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "erhebliche Zweifel an der Angemessenheit der gemeinsamen Anträge der Eltern bezüglich der Fragen nach Buchstabe a hat, oder"
+            },
+            {
+              "marke": "2",
+              "text": "den Erlass von Kindesschutzmassnahmen erwägt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -7112,7 +8882,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_299",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "2729ac9207ab761b097866da76905d66bc1bd561ccf5164648812b834896e523"
+      "sha": "679a115a05c3d42da633b46511ad187f18b1853e11bac757bf244cf5fd079058"
     },
     {
       "id": "bund/ZPO/art_300",
@@ -7124,14 +8894,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Vertretung des Kindes kann Anträge stellen und Rechtsmittel einlegen, soweit es um folgende Angelegenheiten geht:"
+          "text": "Die Vertretung des Kindes kann Anträge stellen und Rechtsmittel einlegen, soweit es um folgende Angelegenheiten geht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuteilung der elterlichen Sorge;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zuteilung der Obhut;"
+            },
+            {
+              "marke": "c",
+              "text": "wichtige Fragen des persönlichen Verkehrs;"
+            },
+            {
+              "marke": "d",
+              "text": "die Aufteilung der Betreuung;"
+            },
+            {
+              "marke": "e",
+              "text": "den Unterhaltsbeitrag;"
+            },
+            {
+              "marke": "f",
+              "text": "die Kindesschutzmassnahmen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_300",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "2c7f0da75469e251fb76a7ed51a0d7f218bb4283f08bd85fecaab7a0824234fb"
+      "sha": "e6225bcf7a2a6a5ef963fba6a3a79452dbb57b3267eb5a8685429eaeae2bcb8d"
     },
     {
       "id": "bund/ZPO/art_301",
@@ -7143,14 +8939,48 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ein Entscheid wird eröffnet:"
+          "text": "Ein Entscheid wird eröffnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Eltern;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Kind, welches das 14. Altersjahr vollendet hat;"
+            },
+            {
+              "marke": "c",
+              "text": "gegebenenfalls der Beiständin oder dem Beistand, soweit es um eine der folgenden Fragen geht: 1. die Zuteilung der elterlichen Sorge,"
+            },
+            {
+              "marke": "2",
+              "text": "die Zuteilung der Obhut,"
+            },
+            {
+              "marke": "3",
+              "text": "wichtige Fragen des persönlichen Verkehrs,"
+            },
+            {
+              "marke": "4",
+              "text": "die Aufteilung der Betreuung,"
+            },
+            {
+              "marke": "5",
+              "text": "den Unterhaltsbeitrag,"
+            },
+            {
+              "marke": "6",
+              "text": "die Kindesschutzmassnahmen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_301",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1125cd455ddc150f79622b1ef8c0d1321a28e08c9acd3542a150963cf6a93f1b"
+      "sha": "82a3be6caaffac6c0cf20662f1c7307a37eef60cb44702c31395a5ec5e16f665"
     },
     {
       "id": "bund/ZPO/art_301_a",
@@ -7162,14 +8992,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Werden im Unterhaltsvertrag oder im Entscheid Unterhaltsbeiträge festgelegt, so ist darin anzugeben:"
+          "text": "Werden im Unterhaltsvertrag oder im Entscheid Unterhaltsbeiträge festgelegt, so ist darin anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von welchem Einkommen und Vermögen jedes Elternteils und jedes Kindes ausgegangen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "welcher Betrag für jedes Kind bestimmt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "welcher Betrag zur Deckung des gebührenden Unterhalts jedes Kindes fehlt;"
+            },
+            {
+              "marke": "d",
+              "text": "ob und in welchem Ausmass die Unterhaltsbeiträge den Veränderungen der Lebenskosten angepasst werden."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_301_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "9489a0e44b7f92fae4267262969a3c1b68308e9c0677d790c84413460d33a19f"
+      "sha": "b732a82ba3b265e1a6b936f1e97aaf00adc18014c8b7aede266851ee7de2f538"
     },
     {
       "id": "bund/ZPO/art_302",
@@ -7181,7 +9029,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das summarische Verfahren ist insbesondere anwendbar für:"
+          "text": "Das summarische Verfahren ist insbesondere anwendbar für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheide nach dem Haager Übereinkommen vom 25. Oktober 1980 über die zivilrechtlichen Aspekte internationaler Kindesentführung und nach dem Europäischen Übereinkommen vom 20. Mai 1980 über die Anerkennung und Vollstreckung von Entscheidungen über das Sorgerecht für Kinder und die Wiederherstellung des Sorgerechts;"
+            },
+            {
+              "marke": "b",
+              "text": "die Leistung eines besonderen Beitrags bei nicht vorgesehenen ausserordentlichen Bedürfnissen des Kindes (Art. 286 Abs. 3 ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "die Anweisung an die Schuldner und die Sicherstellung des Kinderunterhalts ausserhalb eines Prozesses über die Unterhaltspflicht der Eltern (Art. 291 und 292 ZGB)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7192,7 +9054,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_302",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "fe482bb8631609ff5973ab0ab290f2b220b9afb4a70aafeb57cb519213110a1a"
+      "sha": "de4e9d6f73f0ff43808a7f451fad235e81af1e99e38301f95651e6b903c42735"
     },
     {
       "id": "bund/ZPO/art_303",
@@ -7208,14 +9070,24 @@
         },
         {
           "absatz": "2",
-          "text": "Ist die Unterhaltsklage zusammen mit der Vaterschaftsklage eingereicht worden, so hat der Beklagte auf Gesuch der klagenden Partei:"
+          "text": "Ist die Unterhaltsklage zusammen mit der Vaterschaftsklage eingereicht worden, so hat der Beklagte auf Gesuch der klagenden Partei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Entbindungskosten und angemessene Beiträge an den Unterhalt von Mutter und Kind zu hinterlegen, wenn die Vaterschaft glaubhaft gemacht ist;"
+            },
+            {
+              "marke": "b",
+              "text": "angemessene Beiträge an den Unterhalt des Kindes zu zahlen, wenn die Vaterschaft zu vermuten ist und die Vermutung durch die sofort verfügbaren Beweismittel nicht umgestossen wird."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_303",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "decdbc68bf0a06af04be600c382783ae396b652a082fdde87f4674d59ae1a03c"
+      "sha": "7446bca32feefce46bba72d387f48df06175c92bfe86da4d4f250cc6d85a363d"
     },
     {
       "id": "bund/ZPO/art_304",
@@ -7250,14 +9122,48 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das summarische Verfahren ist anwendbar für:"
+          "text": "Das summarische Verfahren ist anwendbar für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Festsetzung von Geldbeiträgen an den Unterhalt und Anweisung an die Schuldnerin oder den Schuldner (Art. 13 Abs. 2 und 3 des Partnerschaftsgesetzes vom 18. Juni 2004, PartG);"
+            },
+            {
+              "marke": "b",
+              "text": "die Ermächtigung einer Partnerin oder eines Partners zur Verfügung über die gemeinsame Wohnung (Art. 14 Abs. 2 PartG);"
+            },
+            {
+              "marke": "c",
+              "text": "die Ausdehnung oder den Entzug der Vertretungsbefugnis einer Partnerin oder eines Partners für die Gemeinschaft (Art. 15 Abs. 2 Bst. a und 4 PartG);"
+            },
+            {
+              "marke": "d",
+              "text": "die Auskunftspflicht der Partnerin oder des Partners über Einkommen, Vermögen und Schulden (Art. 16 Abs. 2 PartG);"
+            },
+            {
+              "marke": "e",
+              "text": "die Festlegung, Anpassung oder Aufhebung der Geldbeiträge und die Regelung der Benützung der Wohnung und des Hausrats (Art. 17 Abs. 2 und 4 PartG);"
+            },
+            {
+              "marke": "f",
+              "text": "die Verpflichtung einer Partnerin oder eines Partners zur Mitwirkung bei der Aufnahme eines Inventars (Art. 20 Abs. 1 PartG);"
+            },
+            {
+              "marke": "g",
+              "text": "die Beschränkung der Verfügungsbefugnis einer Partnerin oder eines Partners über bestimmte Vermögenswerte (Art. 22 Abs. 1 PartG);"
+            },
+            {
+              "marke": "h",
+              "text": "die Einräumung von Fristen zur Begleichung von Schulden zwischen den Partnerinnen oder Partnern (Art. 23 Abs. 1 PartG)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_305",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "17c3632c39ca45954d5c824278c891c295c1b0f95288687cfa8ae77f5fabc8ae"
+      "sha": "c096429fe092f9a395c26df85ebff83fe88d7ca8e163dbd439a2486552474c84"
     },
     {
       "id": "bund/ZPO/art_306",
@@ -7326,7 +9232,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Berufung sind anfechtbar:"
+          "text": "Mit Berufung sind anfechtbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erstinstanzliche End- und Zwischenentscheide;"
+            },
+            {
+              "marke": "b",
+              "text": "erstinstanzliche Entscheide über vorsorgliche Massnahmen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7337,7 +9253,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_308",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "217aea7557a3f9d18f24c2c6734c6a6b33139d3bfbf50bf2fba9161dfcf7fb0d"
+      "sha": "86a17a3a76465d59090e6192e0e1b3d632846fa5fe783605de097fb762bbdf08"
     },
     {
       "id": "bund/ZPO/art_309",
@@ -7349,14 +9265,48 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Berufung ist unzulässig:"
+          "text": "Die Berufung ist unzulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen Entscheide des Vollstreckungsgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "in den folgenden Angelegenheiten des SchKG: 1. Aufhebung des Rechtsstillstandes (Art. 57 d SchKG),"
+            },
+            {
+              "marke": "2",
+              "text": "Bewilligung des nachträglichen Rechtsvorschlages (Art. 77 SchKG),"
+            },
+            {
+              "marke": "3",
+              "text": "Rechtsöffnung (Art. 80–84 SchKG),"
+            },
+            {
+              "marke": "4",
+              "text": "Aufhebung oder Einstellung der Betreibung (Art. 85 SchKG),"
+            },
+            {
+              "marke": "5",
+              "text": "Bewilligung des Rechtsvorschlages in der Wechselbetreibung (Art. 185 SchKG),"
+            },
+            {
+              "marke": "6",
+              "text": "Arrest (Art. 272 und 278 SchKG),"
+            },
+            {
+              "marke": "7",
+              "text": "Entscheide, die nach SchKG in die Zuständigkeit des Konkurs- oder des Nachlassgerichts fallen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_309",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d3c88cf21a355b3d95411c8064922009d0d7016438b14f036f890057118b0f31"
+      "sha": "acf288e305d1862d6ada30a3867abba798bdfc263f948693766637fcdcc1156f"
     },
     {
       "id": "bund/ZPO/art_310",
@@ -7368,14 +9318,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Berufung kann geltend gemacht werden:"
+          "text": "Mit Berufung kann geltend gemacht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unrichtige Rechtsanwendung;"
+            },
+            {
+              "marke": "b",
+              "text": "unrichtige Feststellung des Sachverhaltes."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_310",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a4b54a77c2e33bdc29c5dc3f77c546e50452498af887d3993fe8ed3bf0a8c3c8"
+      "sha": "b793a836d40879a3aab5baa05383752cd5b5be9f996f7a20a278433554aaa9de"
     },
     {
       "id": "bund/ZPO/art_311",
@@ -7437,14 +9397,28 @@
         },
         {
           "absatz": "2",
-          "text": "Die Anschlussberufung fällt dahin, wenn:"
+          "text": "Die Anschlussberufung fällt dahin, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Rechtsmittelinstanz nicht auf die Berufung eintritt;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "die Berufung vor Beginn der Urteilsberatung zurückgezogen wird."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_313",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "945ddb5f0566a0232a54f3f547ff5543d67681c36c0e1a60044f433c7e97fdee"
+      "sha": "a438bcbbdedae536b05c60ee5cefeb18251cd452d03489e828516a6a44c576d8"
     },
     {
       "id": "bund/ZPO/art_314",
@@ -7483,7 +9457,25 @@
         },
         {
           "absatz": "2",
-          "text": "Keine aufschiebende Wirkung hat die Berufung gegen Entscheide über:"
+          "text": "Keine aufschiebende Wirkung hat die Berufung gegen Entscheide über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gegendarstellungsrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "vorsorgliche Massnahmen;"
+            },
+            {
+              "marke": "c",
+              "text": "Anweisungen an die Schuldner;"
+            },
+            {
+              "marke": "d",
+              "text": "die Sicherstellung des Unterhalts."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -7491,7 +9483,17 @@
         },
         {
           "absatz": "4",
-          "text": "Wenn der betroffenen Partei ein nicht leicht wiedergutzumachender Nachteil droht, kann die Rechtsmittelinstanz auf Gesuch:"
+          "text": "Wenn der betroffenen Partei ein nicht leicht wiedergutzumachender Nachteil droht, kann die Rechtsmittelinstanz auf Gesuch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vorzeitige Vollstreckbarkeit bewilligen und nötigenfalls sichernde Massnahmen oder die Leistung einer Sicherheit anordnen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "in den Fällen nach Absatz 2 die Vollstreckbarkeit ausnahmsweise aufschieben."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -7502,7 +9504,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_315",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "0aae90eeb26c582b3a50a04cca133e60bfe6942a33a339035bc5014b22531baf"
+      "sha": "04e0962e85a51e669d06fbfe9854205028fc489938f749a2b1f97144d3664b7a"
     },
     {
       "id": "bund/ZPO/art_316",
@@ -7541,7 +9543,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Neue Tatsachen und Beweismittel werden nur noch berücksichtigt, wenn sie:"
+          "text": "Neue Tatsachen und Beweismittel werden nur noch berücksichtigt, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ohne Verzug vorgebracht werden; und"
+            },
+            {
+              "marke": "b",
+              "text": "trotz zumutbarer Sorgfalt nicht schon vor erster Instanz vorgebracht werden konnten."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -7549,14 +9561,24 @@
         },
         {
           "absatz": "2",
-          "text": "Eine Klageänderung ist nur noch zulässig, wenn:"
+          "text": "Eine Klageänderung ist nur noch zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Voraussetzungen nach Artikel 227 Absatz 1 gegeben sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "sie auf neuen Tatsachen oder Beweismitteln beruht."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_317",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a7bf3b6f3f0465c4c5c3a9deef8188e088ffea108457ff153192ad7e164be572"
+      "sha": "40d916473df27b3f4c6885aa0a087463aa14be7a778be282592bde8c037a11af"
     },
     {
       "id": "bund/ZPO/art_318",
@@ -7568,7 +9590,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Rechtsmittelinstanz kann:"
+          "text": "Die Rechtsmittelinstanz kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den angefochtenen Entscheid bestätigen;"
+            },
+            {
+              "marke": "b",
+              "text": "neu entscheiden; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Sache an die erste Instanz zurückweisen, wenn: 1. ein wesentlicher Teil der Klage nicht beurteilt wurde, oder"
+            },
+            {
+              "marke": "2",
+              "text": "der Sachverhalt in wesentlichen Teilen zu vervollständigen ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7583,7 +9623,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_318",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c39e797f60babfb07f3fd35117d9bf98a52fc67f48bad51908921504dd03715f"
+      "sha": "3c196f90301163cd02cc8101acc1ef1950b6fc8701a85291fe1c529e43981d39"
     },
     {
       "id": "bund/ZPO/art_319",
@@ -7595,14 +9635,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Beschwerde sind anfechtbar:"
+          "text": "Mit Beschwerde sind anfechtbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht berufungsfähige erstinstanzliche Endentscheide, Zwischenentscheide und Entscheide über vorsorgliche Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "andere erstinstanzliche Entscheide und prozessleitende Verfügungen: 1. in den vom Gesetz bestimmten Fällen,"
+            },
+            {
+              "marke": "2",
+              "text": "wenn durch sie ein nicht leicht wiedergutzumachender Nachteil droht;"
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_319",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "cd2e846998261dd959b8a7bf201d33b6f76140ebea3d5c870f15ca08130a9f29"
+      "sha": "dbb924134c5797dcae549919e39cdb75e3c4028dcbde23df864ba6da81135864"
     },
     {
       "id": "bund/ZPO/art_320",
@@ -7614,14 +9668,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit der Beschwerde kann geltend gemacht werden:"
+          "text": "Mit der Beschwerde kann geltend gemacht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unrichtige Rechtsanwendung;"
+            },
+            {
+              "marke": "b",
+              "text": "offensichtlich unrichtige Feststellung des Sachverhaltes."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_320",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "780e9d093ff94c838c9dbc09058c69fc16858b070b6f4f03087499418f464dd4"
+      "sha": "d6cdd1be17bfdc242de19c2d569fc911ed34ff7e24ab9c05727e019385a55b99"
     },
     {
       "id": "bund/ZPO/art_321",
@@ -7779,7 +9843,17 @@
         },
         {
           "absatz": "3",
-          "text": "Soweit sie die Beschwerde gutheisst:"
+          "text": "Soweit sie die Beschwerde gutheisst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "hebt sie den Entscheid oder die prozessleitende Verfügung auf und weist die Sache an die Vorinstanz zurück; oder"
+            },
+            {
+              "marke": "b",
+              "text": "entscheidet sie neu, wenn die Sache spruchreif ist."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -7794,7 +9868,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_327",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "c11c798b9776e2d6ea81816f9495ac3794a83b6a0ac833682bf454f40820f489"
+      "sha": "270bf02bba349fbbc0e7581baa9c1a599dea3a9f02a3084a484c66967045d3d5"
     },
     {
       "id": "bund/ZPO/art_327_a",
@@ -7833,18 +9907,50 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Partei kann beim Gericht, welches als letzte Instanz in der Sache entschieden hat, die Revision des rechtskräftigen Entscheids verlangen, wenn:"
+          "text": "Eine Partei kann beim Gericht, welches als letzte Instanz in der Sache entschieden hat, die Revision des rechtskräftigen Entscheids verlangen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nachträglich erhebliche Tatsachen erfährt oder entscheidende Beweismittel findet, die sie im früheren Verfahren trotz gehöriger Aufmerksamkeit nicht beibringen konnte; ausgeschlossen sind Tatsachen und Beweismittel, die erst nach dem Entscheid entstanden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Strafverfahren ergeben hat, dass durch ein Verbrechen oder ein Vergehen zum Nachteil der betreffenden Partei auf den Entscheid eingewirkt wurde; eine Verurteilung durch das Strafgericht ist nicht erforderlich; ist das Strafverfahren nicht durchführbar, so kann der Beweis auf andere Weise erbracht werden;"
+            },
+            {
+              "marke": "c",
+              "text": "geltend gemacht wird, dass die Klageanerkennung, der Klagerückzug oder der gerichtliche Vergleich wegen formeller oder materieller Mängel unwirksam ist;"
+            },
+            {
+              "marke": "d",
+              "text": "sie einen Ausstandsgrund erst nach Abschluss des Verfahrens entdeckt und kein anderes Rechtsmittel zur Verfügung steht."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Revision wegen Verletzung der Europäischen Menschenrechtskonvention vom 4. November 1950 (EMRK) kann verlangt werden, wenn:"
+          "text": "Die Revision wegen Verletzung der Europäischen Menschenrechtskonvention vom 4. November 1950 (EMRK) kann verlangt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Europäische Gerichtshof für Menschenrechte in einem endgültigen Urteil (Art. 44 EMRK) festgestellt hat, dass die EMRK oder die Protokolle dazu verletzt worden sind, oder den Fall durch eine gütliche Einigung (Art. 39 EMRK) abgeschlossen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Entschädigung nicht geeignet ist, die Folgen der Verletzung auszugleichen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Revision notwendig ist, um die Verletzung zu beseitigen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_328",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "097fa43c9d3f425f9bd8c9dd07efba79e671b520288b1830e5f82a1d40904cd5"
+      "sha": "ba91e3a099f070c027a65a7e78e43f01d52dfde686da9869fdad2d45d18edbaa"
     },
     {
       "id": "bund/ZPO/art_329",
@@ -8025,7 +10131,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ein Entscheid ist vollstreckbar, wenn er:"
+          "text": "Ein Entscheid ist vollstreckbar, wenn er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "rechtskräftig ist und das Gericht die Vollstreckbarkeit nicht aufgeschoben hat (Art. 315 Abs. 4, 325 Abs. 2 und 331 Abs. 2); oder"
+            },
+            {
+              "marke": "b",
+              "text": "noch nicht rechtskräftig ist, jedoch die vorzeitige Vollstreckbarkeit bewilligt worden ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8040,7 +10156,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_336",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "15a35f6b7e8b5c97cb2c7b9f61566a70c5f20fc64a8413147cd50c8f570eb15d"
+      "sha": "b5347c180050caba4aadb2eae1a6d4d054c83befb2ea9c83fb7c5cb8cb875a30"
     },
     {
       "id": "bund/ZPO/art_337",
@@ -8098,7 +10214,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zwingend zuständig für die Anordnung von Vollstreckungsmassnahmen und die Einstellung der Vollstreckung ist das Gericht:"
+          "text": "Zwingend zuständig für die Anordnung von Vollstreckungsmassnahmen und die Einstellung der Vollstreckung ist das Gericht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "am Wohnsitz oder Sitz der unterlegenen Partei;"
+            },
+            {
+              "marke": "b",
+              "text": "am Ort, wo die Massnahmen zu treffen sind; oder"
+            },
+            {
+              "marke": "c",
+              "text": "am Ort, wo der zu vollstreckende Entscheid gefällt worden ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8109,7 +10239,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_339",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "31afdaf44a5e22c1e7c738e7e95fdd348e22fc926f9315d1f70f9c581a75a829"
+      "sha": "0e6eef919275b749163a0b57b949dd9fca256e5e19fbc19487d272d7c24a3cd1"
     },
     {
       "id": "bund/ZPO/art_340",
@@ -8186,7 +10316,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Lautet der Entscheid auf eine Verpflichtung zu einem Tun, Unterlassen oder Dulden, so kann das Vollstreckungsgericht anordnen:"
+          "text": "Lautet der Entscheid auf eine Verpflichtung zu einem Tun, Unterlassen oder Dulden, so kann das Vollstreckungsgericht anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Strafdrohung nach Artikel 292 StGB;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Ordnungsbusse bis zu 5000 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Ordnungsbusse bis zu 1000 Franken für jeden Tag der Nichterfüllung;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Zwangsmassnahme wie Wegnahme einer beweglichen Sache oder Räumung eines Grundstückes; oder"
+            },
+            {
+              "marke": "e",
+              "text": "eine Ersatzvornahme."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -8205,7 +10357,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_343",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "d64a0d253f5944fdbda7a4138646e78f018d228dd941e6f742750162dbfd75dc"
+      "sha": "c04aed4de58b42af27995c57f6c50fa9c65f482cc9e4b09f66f1ee30ab268ce1"
     },
     {
       "id": "bund/ZPO/art_344",
@@ -8240,7 +10392,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die obsiegende Partei kann verlangen:"
+          "text": "Die obsiegende Partei kann verlangen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schadenersatz, wenn die unterlegene Partei den gerichtlichen Anordnungen nicht nachkommt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Umwandlung der geschuldeten Leistung in eine Geldleistung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8251,7 +10413,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_345",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "5a9e5ae9daa480efb89e5e572d2e764134e7a0dac05c4d3c2f1877b8b4482322"
+      "sha": "a3cd0ddc817f8924c1636de31e487151e8129273d9a87076e18b78b88d578abb"
     },
     {
       "id": "bund/ZPO/art_346",
@@ -8282,14 +10444,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Öffentliche Urkunden über Leistungen jeder Art können wie Entscheide vollstreckt werden, wenn:"
+          "text": "Öffentliche Urkunden über Leistungen jeder Art können wie Entscheide vollstreckt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die verpflichtete Partei in der Urkunde ausdrücklich erklärt hat, dass sie die direkte Vollstreckung anerkennt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Rechtsgrund der geschuldeten Leistung in der Urkunde erwähnt ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "die geschuldete Leistung: 1. in der Urkunde genügend bestimmt ist,"
+            },
+            {
+              "marke": "2",
+              "text": "in der Urkunde von der verpflichteten Partei anerkannt ist, und"
+            },
+            {
+              "marke": "3",
+              "text": "fällig ist."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_347",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "afdd24731a1ef793eb7f21a04d34261c67f7340d052120e1becaf4f654b3c833"
+      "sha": "a616d4e479418114450c7a9267e5a55c838f354a42602383f66c31e84ac24246"
     },
     {
       "id": "bund/ZPO/art_348",
@@ -8301,14 +10485,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Nicht direkt vollstreckbar sind Urkunden über Leistungen:"
+          "text": "Nicht direkt vollstreckbar sind Urkunden über Leistungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach dem Gleichstellungsgesetz vom 24. März 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "aus Miete und Pacht von Wohn- und Geschäftsräumen sowie aus landwirtschaftlicher Pacht;"
+            },
+            {
+              "marke": "c",
+              "text": "nach dem Mitwirkungsgesetz vom 17. Dezember 1993;"
+            },
+            {
+              "marke": "d",
+              "text": "aus dem Arbeitsverhältnis und nach dem Arbeitsvermittlungsgesetz vom 6. Oktober 1989;"
+            },
+            {
+              "marke": "e",
+              "text": "aus Konsumentenverträgen (Art. 32)."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_348",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "cf05970cd93a2dcd2a8f3de86a4120cea5149842ce908354eebca99bc1d521bc"
+      "sha": "391baac2c54b1fc42d86629a65730e116bc258b110bdde93a7b097cb401cc0c7"
     },
     {
       "id": "bund/ZPO/art_349",
@@ -8477,11 +10683,35 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Kanton, in dem sich der Sitz des Schiedsgerichts befindet, bezeichnet ein oberes Gericht, das zuständig ist für:"
+          "text": "Der Kanton, in dem sich der Sitz des Schiedsgerichts befindet, bezeichnet ein oberes Gericht, das zuständig ist für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschwerden und Revisionsgesuche;"
+            },
+            {
+              "marke": "b",
+              "text": "die Entgegennahme des Schiedsspruchs zur Hinterlegung und die Bescheinigung der Vollstreckbarkeit."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Ein vom Sitzkanton bezeichnetes anderes oder anders zusammengesetztes Gericht ist als einzige Instanz zuständig für:"
+          "text": "Ein vom Sitzkanton bezeichnetes anderes oder anders zusammengesetztes Gericht ist als einzige Instanz zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ernennung, Ablehnung, Abberufung und Ersetzung der Schiedsrichterinnen und Schiedsrichter;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verlängerung der Amtsdauer des Schiedsgerichts;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterstützung des Schiedsgerichts bei den Verfahrenshandlungen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8492,7 +10722,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_356",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f3b9e0fa0c43fb41cd8f28d6cd94bd3c473a551f476b8cdcd67bf4804fdd2d88"
+      "sha": "02bdf2c3757e5d8155b25ed01dba07ec14d00ab87410674e919210b8938e77f2"
     },
     {
       "id": "bund/ZPO/art_357",
@@ -8627,7 +10857,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Sieht die Schiedsvereinbarung keine andere Stelle für die Ernennung vor oder ernennt diese die Mitglieder nicht innert angemessener Frist, so nimmt das nach Artikel 356 Absatz 2 zuständige staatliche Gericht auf Antrag einer Partei die Ernennung vor, wenn:"
+          "text": "Sieht die Schiedsvereinbarung keine andere Stelle für die Ernennung vor oder ernennt diese die Mitglieder nicht innert angemessener Frist, so nimmt das nach Artikel 356 Absatz 2 zuständige staatliche Gericht auf Antrag einer Partei die Ernennung vor, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Parteien sich über die Ernennung der Einzelschiedsrichterin, des Einzelschiedsrichters, der Präsidentin oder des Präsidenten nicht einigen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Partei die von ihr zu bezeichnenden Mitglieder nicht innert 30 Tagen seit Aufforderung ernennt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Schiedsrichterinnen und Schiedsrichter sich nicht innert 30 Tagen seit ihrer Ernennung über die Wahl der Präsidentin oder des Präsidenten einigen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8642,7 +10886,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_362",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "aa7f5b64e48e72fa6aab25945e7edd2a6d037ad6a26aca9f08dcb79869d8c2d2"
+      "sha": "733c88e486b1dcb26a50e8f872218dacc62ff06e63c2f853ead2b2a4e3345f3a"
     },
     {
       "id": "bund/ZPO/art_363",
@@ -8727,14 +10971,24 @@
         },
         {
           "absatz": "2",
-          "text": "Die Amtsdauer, innert der das Schiedsgericht den Schiedsspruch zu fällen hat, kann verlängert werden:"
+          "text": "Die Amtsdauer, innert der das Schiedsgericht den Schiedsspruch zu fällen hat, kann verlängert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch Vereinbarung der Parteien;"
+            },
+            {
+              "marke": "b",
+              "text": "auf Antrag einer Partei oder des Schiedsgerichts durch Entscheid des nach Artikel 356 Absatz 2 zuständigen staatlichen Gerichts."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_366",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "a1db959c445878745f584b8729b59284aadbac0457d4e5f5b570053d38d7c152"
+      "sha": "41fc05634a50a0c813ea003bf849bcc8722da5e7186b3d0601fa157b78a7dfcd"
     },
     {
       "id": "bund/ZPO/art_367",
@@ -8746,7 +11000,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ein Mitglied des Schiedsgerichts kann abgelehnt werden, wenn:"
+          "text": "Ein Mitglied des Schiedsgerichts kann abgelehnt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es nicht den von den Parteien vereinbarten Anforderungen entspricht;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Ablehnungsgrund vorliegt, der in der von den Parteien vereinbarten Verfahrensordnung vorgesehen ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "berechtigte Zweifel an seiner Unabhängigkeit oder Unparteilichkeit bestehen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8757,7 +11025,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_367",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "b5e0a5deabf9f8156737d64946979e766f6728ffa5ba0e5dc6b9b1fd802b6fc7"
+      "sha": "ced0deaa11861a24263c6b4fcf38b94a944fe436f60e1c8ff814a2c8b8500a2f"
     },
     {
       "id": "bund/ZPO/art_368",
@@ -8889,7 +11157,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Schiedsverfahren ist rechtshängig:"
+          "text": "Das Schiedsverfahren ist rechtshängig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sobald eine Partei das in der Schiedsvereinbarung bezeichnete Schiedsgericht anruft; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Vereinbarung kein Schiedsgericht bezeichnet: sobald eine Partei das Verfahren zur Bestellung des Schiedsgerichts oder das von den Parteien vereinbarte vorausgehende Schlichtungsverfahren einleitet."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8900,7 +11178,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_372",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "f392619958be464d93bc98af5cbbacff992a3bdba4dbe892136fa85c4cb22670"
+      "sha": "dbceca69414674be25fcfc60e4e10720b01e9e62e5172b45c96270ac3a3e8fc7"
     },
     {
       "id": "bund/ZPO/art_373",
@@ -8912,7 +11190,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Parteien können das Schiedsverfahren:"
+          "text": "Die Parteien können das Schiedsverfahren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "selber regeln;"
+            },
+            {
+              "marke": "b",
+              "text": "durch Verweis auf eine schiedsgerichtliche Verfahrensordnung regeln;"
+            },
+            {
+              "marke": "c",
+              "text": "einem Verfahrensrecht ihrer Wahl unterstellen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8939,7 +11231,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_373",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "71ebc0b8b8f77464123b50feecb7e8bd5c2a907301398cc57737f04288d2279d"
+      "sha": "a835b8cd3e1fcee86da1fa9fca1f7a3b7ee1ae16e1c2ab1c5b9c04525f682e47"
     },
     {
       "id": "bund/ZPO/art_374",
@@ -9013,7 +11305,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ein Schiedsverfahren kann von oder gegen Streitgenossen geführt werden, wenn:"
+          "text": "Ein Schiedsverfahren kann von oder gegen Streitgenossen geführt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Parteien unter sich durch eine oder mehrere übereinstimmende Schiedsvereinbarungen verbunden sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "die geltend gemachten Ansprüche identisch sind oder in einem sachlichen Zusammenhang stehen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9028,7 +11330,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_376",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "79df3b5df90e987059c7bfe78914581886aacd9c9911f23c30b2e413b4e5af2a"
+      "sha": "e697babb3c5b74268eb3744e625671be919b176959400dc07d8e3a99c7a616af"
     },
     {
       "id": "bund/ZPO/art_377",
@@ -9124,7 +11426,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Schiedsgericht entscheidet:"
+          "text": "Das Schiedsgericht entscheidet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach den Rechtsregeln, welche die Parteien gewählt haben; oder"
+            },
+            {
+              "marke": "b",
+              "text": "nach Billigkeit, wenn es von den Parteien dazu ermächtigt worden ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9135,7 +11447,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_381",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "e7f4403643e4443f7e3e4cc3988e4940601427a6a52b7f4de7d9811f8f0b6bce"
+      "sha": "328cfc98ffeb6ccba980304c02b51faa46866b6a38c32adf2d4344dedafcca8b"
     },
     {
       "id": "bund/ZPO/art_382",
@@ -9197,7 +11509,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Schiedsspruch enthält:"
+          "text": "Der Schiedsspruch enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zusammensetzung des Schiedsgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "die Angabe des Sitzes des Schiedsgerichts;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bezeichnung der Parteien und ihrer Vertretung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Rechtsbegehren der Parteien oder, bei Fehlen von Anträgen, eine Umschreibung der Streitfrage;"
+            },
+            {
+              "marke": "e",
+              "text": "sofern die Parteien nicht darauf verzichtet haben: die Darstellung des Sachverhaltes, die rechtlichen Entscheidungsgründe und gegebenenfalls die Billigkeitserwägungen;"
+            },
+            {
+              "marke": "f",
+              "text": "das Dispositiv in der Sache sowie die Höhe und die Verteilung der Verfahrenskosten und der Parteientschädigung;"
+            },
+            {
+              "marke": "g",
+              "text": "das Datum des Schiedsspruches."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9208,7 +11550,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_384",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "cd82b5b0c0568f443da3509761e2c3070476b78f5be53897e234c18d6689fe6c"
+      "sha": "145df500e5290a5f3dde5e8038296eaca80141aacf27936138620750d3ebe83b"
     },
     {
       "id": "bund/ZPO/art_385",
@@ -9285,7 +11627,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Jede Partei kann beim Schiedsgericht beantragen, dass dieses:"
+          "text": "Jede Partei kann beim Schiedsgericht beantragen, dass dieses:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Redaktions- und Rechnungsfehler im Schiedsspruch berichtigt;"
+            },
+            {
+              "marke": "b",
+              "text": "bestimmte Teile des Schiedsspruchs erläutert;"
+            },
+            {
+              "marke": "c",
+              "text": "einen ergänzenden Schiedsspruch über Ansprüche fällt, die im Schiedsverfahren zwar geltend gemacht, im Schiedsspruch aber nicht behandelt worden sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9300,7 +11656,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_388",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "0a6c36b52a11a03bec5a1c1694328baad78ab87ca6ef0c3dcaa5ce939b1a77a2"
+      "sha": "fd3d959c05bb51e96dc6a17e1a806a8995bfc23c278200053f67a3f0bbb40e6c"
     },
     {
       "id": "bund/ZPO/art_389",
@@ -9377,14 +11733,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Anfechtbar ist:"
+          "text": "Anfechtbar ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "jeder Teil- oder Endschiedsspruch;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Zwischenschiedsspruch aus den in Artikel 393 Buchstaben a und b genannten Gründen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_392",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "1896e74995ba1dbbab065ca7a5bedd55151a5614a99122d5a43c9f1d7687184d"
+      "sha": "52fc34b639d20bc6bb331669eb5d507e65402ffec100e1cad81e78cc9211d196"
     },
     {
       "id": "bund/ZPO/art_393",
@@ -9396,14 +11762,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ein Schiedsspruch kann nur angefochten werden, wenn:"
+          "text": "Ein Schiedsspruch kann nur angefochten werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Einzelschiedsrichterin oder der Einzelschiedsrichter vorschriftswidrig ernannt oder das Schiedsgericht vorschriftswidrig zusammengesetzt worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "sich das Schiedsgericht zu Unrecht für zuständig oder für unzuständig erklärt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "das Schiedsgericht über Streitpunkte entschieden hat, die ihm nicht unterbreitet wurden, oder wenn es Rechtsbegehren unbeurteilt gelassen hat;"
+            },
+            {
+              "marke": "d",
+              "text": "der Grundsatz der Gleichbehandlung der Parteien oder der Grundsatz des rechtlichen Gehörs verletzt wurde;"
+            },
+            {
+              "marke": "e",
+              "text": "er im Ergebnis willkürlich ist, weil er auf offensichtlich aktenwidrigen tatsächlichen Feststellungen oder auf einer offensichtlichen Verletzung des Rechts oder der Billigkeit beruht;"
+            },
+            {
+              "marke": "f",
+              "text": "die vom Schiedsgericht festgesetzten Entschädigungen und Auslagen der Mitglieder des Schiedsgerichts offensichtlich zu hoch sind."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_393",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "3a79bca92c4dda8f642de4b960babac442d090dc01f1d499d9eadac37b8e221c"
+      "sha": "524894180c699f46a8b9c01b4dc94803f6b29fbbe69490b23e4275fa68f15573"
     },
     {
       "id": "bund/ZPO/art_394",
@@ -9465,18 +11857,50 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Partei kann beim nach Artikel 356 Absatz 1 zuständigen staatlichen Gericht die Revision eines Schiedsspruchs verlangen, wenn:"
+          "text": "Eine Partei kann beim nach Artikel 356 Absatz 1 zuständigen staatlichen Gericht die Revision eines Schiedsspruchs verlangen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nachträglich erhebliche Tatsachen erfährt oder entscheidende Beweismittel findet, die sie im früheren Verfahren trotz gehöriger Aufmerksamkeit nicht beibringen konnte; ausgeschlossen sind Tatsachen und Beweismittel, die erst nach dem Schiedsspruch entstanden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn ein Strafverfahren ergeben hat, dass durch ein Verbrechen oder ein Vergehen zum Nachteil der betreffenden Partei auf den Schiedsspruch eingewirkt wurde; eine Verurteilung durch das Strafgericht ist nicht erforderlich; ist das Strafverfahren nicht durchführbar, so kann der Beweis auf andere Weise erbracht werden;"
+            },
+            {
+              "marke": "c",
+              "text": "geltend gemacht wird, dass die Klageanerkennung, der Klagerückzug oder der schiedsgerichtliche Vergleich unwirksam ist;"
+            },
+            {
+              "marke": "d",
+              "text": "ein Ablehnungsgrund gemäss Artikel 367 Absatz 1 Buchstabe c trotz gehöriger Aufmerksamkeit erst nach Abschluss des Schiedsverfahrens entdeckt wurde und kein anderes Rechtsmittel zur Verfügung steht."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Revision wegen Verletzung der EMRK kann verlangt werden, wenn:"
+          "text": "Die Revision wegen Verletzung der EMRK kann verlangt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Europäische Gerichtshof für Menschenrechte in einem endgültigen Urteil (Art. 44 EMRK) festgestellt hat, dass die EMRK oder die Protokolle dazu verletzt worden sind, oder den Fall durch eine gütliche Einigung (Art. 39 EMRK) abgeschlossen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Entschädigung nicht geeignet ist, die Folgen der Verletzung auszugleichen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Revision notwendig ist, um die Verletzung zu beseitigen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_396",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20250101",
-      "sha": "16d02cb168ae473eb8495c736471cba843653b0cfa50027ad4089a58c70cb8c5"
+      "sha": "a79e3d6bbc68f7ef2e9c381f700b3ac32e028b25044845d68a76089c38b2c0a6"
     },
     {
       "id": "bund/ZPO/art_397",

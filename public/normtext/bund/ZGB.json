@@ -711,7 +711,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Kläger kann dem Gericht beantragen:"
+          "text": "Der Kläger kann dem Gericht beantragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "eine drohende Verletzung zu verbieten;"
+            },
+            {
+              "marke": "2",
+              "text": "eine bestehende Verletzung zu beseitigen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Widerrechtlichkeit einer Verletzung festzustellen, wenn sich diese weiterhin störend auswirkt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -726,7 +740,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_28_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c04694b308b27dd979a0f021c09727fd2f04410b5ac61b7344463e9b5f323778"
+      "sha": "11bfc3631db39a1a0b3cd36462cc11d8e5f35e24cee4786ca9341396e80d383f"
     },
     {
       "id": "bund/ZGB/art_28_b",
@@ -738,7 +752,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zum Schutz gegen Gewalt, Drohungen oder Nachstellungen kann die klagende Person dem Gericht beantragen, der verletzenden Person insbesondere zu verbieten:"
+          "text": "Zum Schutz gegen Gewalt, Drohungen oder Nachstellungen kann die klagende Person dem Gericht beantragen, der verletzenden Person insbesondere zu verbieten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "sich ihr anzunähern oder sich in einem bestimmten Umkreis ihrer Wohnung aufzuhalten;"
+            },
+            {
+              "marke": "2",
+              "text": "sich an bestimmten Orten, namentlich bestimmten Strassen, Plätzen oder Quartieren, aufzuhalten;"
+            },
+            {
+              "marke": "3",
+              "text": "mit ihr Kontakt aufzunehmen, namentlich auf telefonischem, schriftlichem oder elektronischem Weg, oder sie in anderer Weise zu belästigen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -746,7 +774,17 @@
         },
         {
           "absatz": "3",
-          "text": "Das Gericht kann, sofern dies nach den gesamten Umständen als gerechtfertigt erscheint, der klagenden Person:"
+          "text": "Das Gericht kann, sofern dies nach den gesamten Umständen als gerechtfertigt erscheint, der klagenden Person:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für die ausschliessliche Benützung der Wohnung eine angemessene Entschädigung der verletzenden Person auferlegen; oder"
+            },
+            {
+              "marke": "2",
+              "text": "mit Zustimmung des Vermieters die Rechte und Pflichten aus einem Mietvertrag allein übertragen."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -761,7 +799,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_28_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "abc8e2ac3f8b00a88f9b8efa757372d1cb52e2e79deb2d2a740b4a8012f16076"
+      "sha": "8f195402e080d27370d3fa653eee65063f15ba5cf1459a38aeeb9a63b330d330"
     },
     {
       "id": "bund/ZGB/art_28_c",
@@ -1027,14 +1065,28 @@
         },
         {
           "absatz": "4",
-          "text": "Die Zustimmung des gesetzlichen Vertreters ist erforderlich, wenn:"
+          "text": "Die Zustimmung des gesetzlichen Vertreters ist erforderlich, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die erklärende Person das 16. Altersjahr noch nicht vollendet hat;"
+            },
+            {
+              "marke": "2",
+              "text": "die erklärende Person unter umfassender Beistandschaft steht; oder"
+            },
+            {
+              "marke": "3",
+              "text": "die Erwachsenenschutzbehörde dies angeordnet hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_30_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e2d9050b7481dc8bd013cf3e00d1f55394702db4485527ded03cc32ebc40d2b8"
+      "sha": "dd9d7cf177b931d8da4477510483b9693b571446baaa0a2adafb81b65c0fa254"
     },
     {
       "id": "bund/ZGB/art_31",
@@ -1234,14 +1286,36 @@
         },
         {
           "absatz": "2",
-          "text": "Zum Personenstand gehören insbesondere:"
+          "text": "Zum Personenstand gehören insbesondere:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Zivilstandstatsachen wie die Geburt, die Heirat, die Beurkundung einer eingetragenen Partnerschaft, der Tod;"
+            },
+            {
+              "marke": "2",
+              "text": "die personen- und familienrechtliche Stellung wie die Volljährigkeit, die Abstammung, die Ehe, die eingetragene Partnerschaft;"
+            },
+            {
+              "marke": "3",
+              "text": "die Namen;"
+            },
+            {
+              "marke": "4",
+              "text": "die Kantons- und Gemeindebürgerrechte;"
+            },
+            {
+              "marke": "5",
+              "text": "die Staatsangehörigkeit."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_39",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "32d0a6fc62db71f29b030337b9e86adb7fe2a95beea626d11a0eb28a0eac8577"
+      "sha": "7ab52b51f479bb7aa5c956d0444313f658713b1d49804aa879020221d0058dad"
     },
     {
       "id": "bund/ZGB/art_40",
@@ -1361,7 +1435,41 @@
         },
         {
           "absatz": "4",
-          "text": "Auf Daten, die für die Überprüfung der Identität einer Person notwendig sind, haben im Abrufverfahren Zugriff:"
+          "text": "Auf Daten, die für die Überprüfung der Identität einer Person notwendig sind, haben im Abrufverfahren Zugriff:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die ausstellenden Behörden nach dem Bundesgesetz vom 22. Juni 2001 über die Ausweise für Schweizer Staatsangehörige;"
+            },
+            {
+              "marke": "2",
+              "text": "die für die Führung des automatisierten Polizeifahndungssystem nach Artikel 15 des Bundesgesetzes vom 13. Juni 2008 über die polizeilichen Informationssysteme des Bundes zuständige Stelle des Bundes und die Filtrierstellen der im Fahndungssystem ausschreibenden kantonalen und städtischen Polizeikorps;"
+            },
+            {
+              "marke": "3",
+              "text": "die für die Führung des Strafregister-Informationssystems VOSTRA nach Art. 3 des Strafregistergesetzes vom 17. Juni 2016 zuständige Stelle des Bundes;"
+            },
+            {
+              "marke": "4",
+              "text": "die für die Nachforschungen nach vermissten Personen zuständige Stelle des Bundes;"
+            },
+            {
+              "marke": "5",
+              "text": "der Nachrichtendienst des Bundes für das frühzeitige Erkennen und Verhindern von Bedrohungen für die innere oder äussere Sicherheit nach Artikel 6 Absatz 1 Buchstabe a des Nachrichtendienstgesetzes vom 25. September 2015;"
+            },
+            {
+              "marke": "6",
+              "text": "die für die Führung der kantonalen und kommunalen Einwohnerregister nach dem Registerharmonisierungsgesetz vom 23. Juni 2006 zuständigen Behörden;"
+            },
+            {
+              "marke": "7",
+              "text": "die für die Führung des zentralen Versichertenregisters nach Artikel 71 Absatz 4 Buchstabe a des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung zuständige Stelle des Bundes;"
+            },
+            {
+              "marke": "8",
+              "text": "die für die Führung des Auslandschweizerregisters nach Artikel 4 Absatz 1 des Bundesgesetzes vom 24. März 2000 über die Bearbeitung von Personendaten im Eidgenössischen Departement für auswärtige Angelegenheiten zuständigen Stellen des Bundes."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1372,7 +1480,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_43_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d19f9a233cbab5e0eb092918e19eddfd5f0cdf424ff62dc12656dc256acf07b8"
+      "sha": "836d1537192af957b786d9555522715198987968c5bda63bc2b25c18428b38d1"
     },
     {
       "id": "bund/ZGB/art_44",
@@ -1384,7 +1492,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Zivilstandsbeamtinnen und Zivilstandsbeamten erfüllen insbesondere folgende Aufgaben:"
+          "text": "Die Zivilstandsbeamtinnen und Zivilstandsbeamten erfüllen insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Sie führen die Register."
+            },
+            {
+              "marke": "2",
+              "text": "Sie erstellen die Mitteilungen und Auszüge."
+            },
+            {
+              "marke": "3",
+              "text": "Sie führen das Vorbereitungsverfahren der Eheschliessung durch und vollziehen die Trauung."
+            },
+            {
+              "marke": "4",
+              "text": "Sie nehmen Erklärungen zum Personenstand entgegen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1395,7 +1521,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_44",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f2465c8676ebefb5ae338212ff0696742d37bef34528c0e239ac2b48b3469dbe"
+      "sha": "41ed4ef72f3143a5d3d2f5ca4b5a1e6caed6233b2c9a6f8e7d21629126f598ee"
     },
     {
       "id": "bund/ZGB/art_45",
@@ -1411,7 +1537,29 @@
         },
         {
           "absatz": "2",
-          "text": "Diese Behörde erfüllt insbesondere folgende Aufgaben:"
+          "text": "Diese Behörde erfüllt insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Sie beaufsichtigt die Zivilstandsämter."
+            },
+            {
+              "marke": "2",
+              "text": "Sie unterstützt und berät die Zivilstandsämter."
+            },
+            {
+              "marke": "3",
+              "text": "Sie wirkt bei der Registerführung und beim Vorbereitungsverfahren der Eheschliessung mit."
+            },
+            {
+              "marke": "4",
+              "text": "Sie erlässt Verfügungen über die Anerkennung und die Eintragung im Ausland eingetretener Zivilstandstatsachen sowie ausländischer Entscheidungen, die den Personenstand betreffen."
+            },
+            {
+              "marke": "5",
+              "text": "Sie sorgt für die Aus- und Weiterbildung der im Zivilstandswesen tätigen Personen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1422,7 +1570,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_45",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "820fffc1009ff1f62c7e4ec65d55b45af159ba51201eb7f493dfd604f3cd9242"
+      "sha": "26803089a868300f660c9182890b02ffb128253912e03b71e15f51e4ec37360b"
     },
     {
       "id": "bund/ZGB/art_45_a",
@@ -1450,7 +1598,33 @@
         },
         {
           "absatz": "5",
-          "text": "Der Bundesrat regelt unter Mitwirkung der Kantone:"
+          "text": "Der Bundesrat regelt unter Mitwirkung der Kantone:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Einzelheiten des Einbezuges der Kantone in die Entwicklung des Systems;"
+            },
+            {
+              "marke": "2",
+              "text": "die Höhe der Gebühr der Kantone für die Anwendung;"
+            },
+            {
+              "marke": "3",
+              "text": "die Zugriffsrechte der Zivilstandsbehörden und der weiteren Stellen, die Zugriff haben;"
+            },
+            {
+              "marke": "4",
+              "text": "die betriebliche Zusammenarbeit zwischen Bund und Kantonen;"
+            },
+            {
+              "marke": "5",
+              "text": "die zur Sicherstellung des Datenschutzes und der Datensicherheit erforderlichen organisatorischen und technischen Massnahmen sowie die Aufsicht über die Einhaltung der Datenschutzvorschriften;"
+            },
+            {
+              "marke": "6",
+              "text": "die Archivierung der Daten."
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -1461,7 +1635,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_45_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6c2263364676002a94b088135fb5006e07db42666535cbb367cad0e45d4502e0"
+      "sha": "34605e66d13e6c27727ec825f9810916abffbd1b0f5215c8df069626b9609a3a"
     },
     {
       "id": "bund/ZGB/art_46",
@@ -1531,7 +1705,25 @@
         },
         {
           "absatz": "2",
-          "text": "Er regelt namentlich:"
+          "text": "Er regelt namentlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die zu führenden Register und die einzutragenden Angaben;"
+            },
+            {
+              "marke": "2",
+              "text": "die Verwendung der AHV-Nummer nach Artikel 50 c des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung zum Zweck des elektronischen Datenaustauschs zwischen amtlichen Personenregistern;"
+            },
+            {
+              "marke": "3",
+              "text": "die Registerführung;"
+            },
+            {
+              "marke": "4",
+              "text": "die Aufsicht."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1543,14 +1735,28 @@
         },
         {
           "absatz": "5",
-          "text": "Er bestimmt, unter welchen Voraussetzungen es zulässig ist, auf elektronischem Weg:"
+          "text": "Er bestimmt, unter welchen Voraussetzungen es zulässig ist, auf elektronischem Weg:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Zivilstandsfälle zu melden;"
+            },
+            {
+              "marke": "2",
+              "text": "Erklärungen zum Personenstand abzugeben;"
+            },
+            {
+              "marke": "3",
+              "text": "Mitteilungen und Registerauszüge zuzustellen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_48",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "54f152f441f223a7328d5a68f0e690ecd06eba433d3be0045b98ea40649b8374"
+      "sha": "f431c2571dc3d442cb1ff072fe137246e40b1a29b98ace7f7164e64486ce9252"
     },
     {
       "id": "bund/ZGB/art_49",
@@ -1819,7 +2025,21 @@
         },
         {
           "absatz": "2",
-          "text": "Der Verein ist zur Eintragung verpflichtet, wenn er:"
+          "text": "Der Verein ist zur Eintragung verpflichtet, wenn er:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für seinen Zweck ein nach kaufmännischer Art geführtes Gewerbe betreibt;"
+            },
+            {
+              "marke": "2",
+              "text": "revisionspflichtig ist;"
+            },
+            {
+              "marke": "3",
+              "text": "hauptsächlich Vermögenswerte im Ausland direkt oder indirekt sammelt oder verteilt, die für karitative, religiöse, kulturelle, erzieherische oder soziale Zwecke bestimmt sind."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1838,7 +2058,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_61",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "88836f6590d57dc883366224b55f3644269e2903f451cfed99a4238ef3ba031e"
+      "sha": "4010dcbd789a6ca8f12cd7fe2ccb413843f424e102ce889a09406844fc33b03f"
     },
     {
       "id": "bund/ZGB/art_61_a",
@@ -2084,7 +2304,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Verein muss seine Buchführung durch eine Revisionsstelle ordentlich prüfen lassen, wenn zwei der nachstehenden Grössen in zwei aufeinander folgenden Geschäftsjahren überschritten werden:"
+          "text": "Der Verein muss seine Buchführung durch eine Revisionsstelle ordentlich prüfen lassen, wenn zwei der nachstehenden Grössen in zwei aufeinander folgenden Geschäftsjahren überschritten werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Bilanzsumme von 10 Millionen Franken;"
+            },
+            {
+              "marke": "2",
+              "text": "Umsatzerlös von 20 Millionen Franken;"
+            },
+            {
+              "marke": "3",
+              "text": "50 Vollzeitstellen im Jahresdurchschnitt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2103,7 +2337,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_69_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d1386f7eb775a4177302911f04807ae949589c4a00d5086c979fbdcdcc1f0015"
+      "sha": "9fbff63580b1771b99268bdcd151fec9e4308d60a9c6a8a28e44b64649e5050e"
     },
     {
       "id": "bund/ZGB/art_69_c",
@@ -2547,7 +2781,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist die vorgesehene Organisation nicht genügend, fehlt der Stiftung eines der vorgeschriebenen Organe oder ist eines dieser Organe nicht rechtmässig zusammengesetzt oder verfügt die Stiftung über kein Rechtsdomizil an ihrem Sitz mehr, so muss die Aufsichtsbehörde die erforderlichen Massnahmen ergreifen. Sie kann insbesondere:"
+          "text": "Ist die vorgesehene Organisation nicht genügend, fehlt der Stiftung eines der vorgeschriebenen Organe oder ist eines dieser Organe nicht rechtmässig zusammengesetzt oder verfügt die Stiftung über kein Rechtsdomizil an ihrem Sitz mehr, so muss die Aufsichtsbehörde die erforderlichen Massnahmen ergreifen. Sie kann insbesondere:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Stiftung eine Frist ansetzen, binnen derer der rechtmässige Zustand wieder herzustellen ist; oder"
+            },
+            {
+              "marke": "2",
+              "text": "das fehlende Organ oder einen Sachwalter ernennen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2566,7 +2810,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_83_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "fbdc75b6ed69455a2d5446b3348d5418de6447d4f261b8a788a7e528ee50f613"
+      "sha": "b91ccc47b4bde99f56cc0c9cf12f740c1ecbf03ceb7c3274339be62cf8fdeef4"
     },
     {
       "id": "bund/ZGB/art_84",
@@ -2801,7 +3045,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die zuständige Bundes- oder Kantonsbehörde hebt die Stiftung auf Antrag oder von Amtes wegen auf, wenn:"
+          "text": "Die zuständige Bundes- oder Kantonsbehörde hebt die Stiftung auf Antrag oder von Amtes wegen auf, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "deren Zweck unerreichbar geworden ist und die Stiftung durch eine Änderung der Stiftungsurkunde nicht aufrechterhalten werden kann; oder"
+            },
+            {
+              "marke": "2",
+              "text": "deren Zweck widerrechtlich oder unsittlich geworden ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2812,7 +3066,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_88",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9363614dbe368fa67a5980f37c43096400cd6081b67e1152cac571f84a7d5395"
+      "sha": "db149db3588d12453e8cdbca23b9c5519ab52c6cb9d2134c91787778ee9a7931"
     },
     {
       "id": "bund/ZGB/art_89",
@@ -2867,22 +3121,204 @@
         },
         {
           "absatz": "6",
-          "text": "Für Personalfürsorgestiftungen, die auf dem Gebiet der Alters-, Hinterlassenen- und Invalidenvorsorge tätig sind und die dem Freizügigkeitsgesetz vom 17. Dezember 1993 (FZG) unterstellt sind, gelten überdies die folgenden Bestimmungen des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) über:"
+          "text": "Für Personalfürsorgestiftungen, die auf dem Gebiet der Alters-, Hinterlassenen- und Invalidenvorsorge tätig sind und die dem Freizügigkeitsgesetz vom 17. Dezember 1993 (FZG) unterstellt sind, gelten überdies die folgenden Bestimmungen des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) über:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Definition und Grundsätze der beruflichen Vorsorge sowie des versicherbaren Lohnes oder des versicherbaren Einkommens (Art. 1, 33 a und 33 b );"
+            },
+            {
+              "marke": "2",
+              "text": "die Unterstellung der Personen unter die AHV (Art. 5 Abs. 1);"
+            },
+            {
+              "marke": "2",
+              "text": "den Bezug der Altersleistung (Art. 13 Abs. 2, Art. 13 a und 13 b ),"
+            },
+            {
+              "marke": "3",
+              "text": "die Begünstigten bei Hinterlassenenleistungen (Art. 20 a );"
+            },
+            {
+              "marke": "3",
+              "text": "die Anpassung der Invalidenrente nach dem Vorsorgeausgleich (Art. 24 Abs. 5);"
+            },
+            {
+              "marke": "3",
+              "text": "die provisorische Weiterversicherung und Aufrechterhaltung des Leistungsanspruchs bei Herabsetzung oder Aufhebung der Rente der Invalidenversicherung (Art. 26 a );"
+            },
+            {
+              "marke": "4",
+              "text": "die Anpassung der reglementarischen Leistungen an die Preisentwicklung (Art. 36 Abs. 2–4);"
+            },
+            {
+              "marke": "4",
+              "text": "die Zustimmung bei Kapitalabfindung (Art. 37 a );"
+            },
+            {
+              "marke": "4",
+              "text": "die Massnahmen bei Vernachlässigung der Unterhaltspflicht (Art. 40);"
+            },
+            {
+              "marke": "5",
+              "text": "die Verjährung von Ansprüchen und die Aufbewahrung von Vorsorgeunterlagen (Art. 41);"
+            },
+            {
+              "marke": "5",
+              "text": "die Verwendung, Bearbeitung und Bekanntgabe der AHV-Nummer (Art. 48 Abs. 4, Art. 85 a Bst. f und Art. 86 a Abs. 2 Bst. b bis );"
+            },
+            {
+              "marke": "6",
+              "text": "die Verantwortlichkeit (Art. 52);"
+            },
+            {
+              "marke": "7",
+              "text": "die Zulassung und die Aufgaben der Kontrollorgane (Art. 52 a –52 e );"
+            },
+            {
+              "marke": "8",
+              "text": "die Integrität und Loyalität der Verantwortlichen, die Rechtsgeschäfte mit Nahestehenden und die Interessenkonflikte (Art. 51 b , 51 c und 53 a );"
+            },
+            {
+              "marke": "9",
+              "text": "die Teil- oder Gesamtliquidation (Art. 53 b –53 d );"
+            },
+            {
+              "marke": "10",
+              "text": "die Auflösung von Verträgen (Art. 53 e –53 f );"
+            },
+            {
+              "marke": "11",
+              "text": "den Sicherheitsfonds (Art. 56 Abs. 1 Bst. c und i und Abs. 2–5, 56 a , 57 und 59);"
+            },
+            {
+              "marke": "12",
+              "text": "die Aufsicht und die Oberaufsicht (Art. 61–62 a und 64–64 c );"
+            },
+            {
+              "marke": "13",
+              "text": "…"
+            },
+            {
+              "marke": "14",
+              "text": "die finanzielle Sicherheit (Art. 65 Abs. 1, 3 und 4, Art. 66 Abs. 4, Art. 67 und Art. 72 a –72 g );"
+            },
+            {
+              "marke": "15",
+              "text": "die Transparenz (Art. 65 a );"
+            },
+            {
+              "marke": "16",
+              "text": "die Rückstellungen und die Wertschwankungsreserven (Art. 65 b );"
+            },
+            {
+              "marke": "17",
+              "text": "die Versicherungsverträge zwischen Vorsorgeeinrichtungen und Versicherungseinrichtungen (Art. 68 Abs. 3 und 4);"
+            },
+            {
+              "marke": "18",
+              "text": "die Vermögensverwaltung (Art. 71) und die Stimmpflicht als Aktionärin (Art. 71 a und 71 b );"
+            },
+            {
+              "marke": "19",
+              "text": "die Rechtspflege (Art. 73 und 74);"
+            },
+            {
+              "marke": "20",
+              "text": "die Strafbestimmungen (Art. 75–79);"
+            },
+            {
+              "marke": "21",
+              "text": "den Einkauf (Art. 79 b );"
+            },
+            {
+              "marke": "22",
+              "text": "den versicherbaren Lohn und das versicherbare Einkommen (Art. 79 c );"
+            },
+            {
+              "marke": "23",
+              "text": "die Information der Versicherten (Art. 86 b )."
+            }
+          ]
         },
         {
           "absatz": "7",
-          "text": "Für Personalfürsorgestiftungen, die auf dem Gebiet der Alters-, Hinterlassenen- und Invalidenvorsorge tätig sind, aber nicht dem FZG unterstellt sind, wie sogenannte patronale Wohlfahrtsfonds mit Ermessensleistungen sowie Finanzierungsstiftungen, gelten von den Bestimmungen des BVG nur die folgenden:"
+          "text": "Für Personalfürsorgestiftungen, die auf dem Gebiet der Alters-, Hinterlassenen- und Invalidenvorsorge tätig sind, aber nicht dem FZG unterstellt sind, wie sogenannte patronale Wohlfahrtsfonds mit Ermessensleistungen sowie Finanzierungsstiftungen, gelten von den Bestimmungen des BVG nur die folgenden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Unterstellung der Personen unter die AHV (Art. 5 Abs. 1);"
+            },
+            {
+              "marke": "2",
+              "text": "die Verwendung, Bearbeitung und Bekanntgabe der AHV-Nummer (Art. 48 Abs. 4, 85 a Bst. f und 86 a Abs. 2 Bst. b bis );"
+            },
+            {
+              "marke": "3",
+              "text": "die Verantwortlichkeit (Art. 52);"
+            },
+            {
+              "marke": "4",
+              "text": "die Zulassung und die Aufgaben der Revisionsstelle (Art. 52 a , 52 b und 52 c Abs. 1 Bst. a–d und g, 2 und 3);"
+            },
+            {
+              "marke": "5",
+              "text": "die Integrität und Loyalität der Verantwortlichen, die Rechtsgeschäfte mit Nahestehenden und die Interessenkonflikte (Art. 51 b , 51 c und 53 a );"
+            },
+            {
+              "marke": "6",
+              "text": "die Gesamtliquidation (Art. 53 c );"
+            },
+            {
+              "marke": "7",
+              "text": "die Aufsicht und die Oberaufsicht (Art. 61–62 a und 64–64 b );"
+            },
+            {
+              "marke": "8",
+              "text": "die Rechtspflege (Art. 73 und 74);"
+            },
+            {
+              "marke": "9",
+              "text": "die Strafbestimmungen (Art. 75–79);"
+            },
+            {
+              "marke": "10",
+              "text": "die steuerliche Behandlung (Art. 80, 81 Abs. 1 und 83)."
+            }
+          ]
         },
         {
           "absatz": "8",
-          "text": "Für Personalfürsorgestiftungen nach Absatz 7 gelten zudem die folgenden Bestimmungen:"
+          "text": "Für Personalfürsorgestiftungen nach Absatz 7 gelten zudem die folgenden Bestimmungen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Sie verwalten ihr Vermögen so, dass Sicherheit, genügender Ertrag auf den Anlagen und die für ihre Aufgaben benötigten flüssigen Mittel gewährleistet sind."
+            },
+            {
+              "marke": "2",
+              "text": "Über Teilliquidationssachverhalte von patronalen Wohlfahrtsfonds mit Ermessensleistungen verfügt die Aufsichtsbehörde auf Antrag des Stiftungsrats."
+            },
+            {
+              "marke": "3",
+              "text": "Sie beachten die Grundsätze der Gleichbehandlung und der Angemessenheit sinngemäss."
+            },
+            {
+              "marke": "4",
+              "text": "Sie können: – zur Finanzierung anderer Personalfürsorgeeinrichtungen beitragen;"
+            },
+            {
+              "marke": "–",
+              "text": "Leistungen in Notlagen, bei Krankheit, Unfall, Invalidität oder Arbeitslosigkeit, für Massnahmen zur Aus- und Weiterbildung, zur Vereinbarkeit von Familie und Beruf sowie zur Gesundheitsförderung und Prävention ausrichten; in diesen Fällen sind auch die Artikel 80, 81 Absatz 1 und 83 BVG anwendbar."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_89_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5200477d3450ae7e8d2620aa15774ae3cb07d6890e84cc8f3c215b8dddddb4f3"
+      "sha": "a4f6dcab77114e4aab7b99e1133c892ac18e59b258b691e95c6399dc535daea2"
     },
     {
       "id": "bund/ZGB/art_89_b",
@@ -3174,7 +3610,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Zivilstandsamt prüft, ob:"
+          "text": "Das Zivilstandsamt prüft, ob:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Gesuch ordnungsgemäss eingereicht worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "die Identität der Verlobten feststeht; und"
+            },
+            {
+              "marke": "3",
+              "text": "die Ehevoraussetzungen erfüllt sind, insbesondere ob keine Umstände vorliegen, die erkennen lassen, dass das Gesuch offensichtlich nicht dem freien Willen der Verlobten entspricht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3193,7 +3643,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_99",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "755428c1022463e96a203182cae5f140e75239c91f23978964825181015e5202"
+      "sha": "75e1fe0ebd170eca46d65e72345dceb8b2f86167db9f3d0edb25bc411a4ad418"
     },
     {
       "id": "bund/ZGB/art_100",
@@ -3316,14 +3766,40 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Ehe wird für ungültig erklärt, wenn:"
+          "text": "Die Ehe wird für ungültig erklärt, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "zur Zeit der Eheschliessung einer der Ehegatten bereits verheiratet ist oder in eingetragener Partnerschaft mit einer Drittperson lebt und die frühere Ehe oder die eingetragene Partnerschaft nicht aufgelöst worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "zur Zeit der Eheschliessung einer der Ehegatten nicht urteilsfähig ist und seither nicht wieder urteilsfähig geworden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "die Eheschliessung infolge Verwandtschaft unter den Ehegatten verboten ist;"
+            },
+            {
+              "marke": "4",
+              "text": "einer der Ehegatten nicht eine Lebensgemeinschaft begründen, sondern die Bestimmungen über Zulassung und Aufenthalt von Ausländerinnen und Ausländern umgehen will;"
+            },
+            {
+              "marke": "5",
+              "text": "ein Ehegatte die Ehe nicht aus freiem Willen geschlossen hat;"
+            },
+            {
+              "marke": "6",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_105",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b335169b0568f837a8f248539edfae2b252166a83e9ab32c022ae80204c5c3fc"
+      "sha": "806e776263d125674011918b4cda2c6ec5f9c54bc0c98fbe147ad82f58eb833a"
     },
     {
       "id": "bund/ZGB/art_105_a",
@@ -3339,14 +3815,24 @@
         },
         {
           "absatz": "2",
-          "text": "Die Ehe bleibt jedoch gültig, wenn der betreffende Ehegatte:"
+          "text": "Die Ehe bleibt jedoch gültig, wenn der betreffende Ehegatte:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "noch minderjährig ist und das Gericht ausnahmsweise zum Schluss kommt, dass die Weiterführung der Ehe seinen überwiegenden Interessen und seinem freien Willen entspricht; oder"
+            },
+            {
+              "marke": "2",
+              "text": "volljährig geworden ist und das Gericht zum Schluss kommt, dass er aus freiem Willen erklärt, an der Ehe festhalten zu wollen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_105_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d057230b410ca595ad682aa6edcf88894156f556f78e23fcbca45c03867399c2"
+      "sha": "6fd79cbdb465c3e51204a6238dd7abe5fdb8563c8cf61e8f416b8043636cc22b"
     },
     {
       "id": "bund/ZGB/art_106",
@@ -3385,14 +3871,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ein Ehegatte kann verlangen, dass die Ehe für ungültig erklärt wird, wenn er:"
+          "text": "Ein Ehegatte kann verlangen, dass die Ehe für ungültig erklärt wird, wenn er:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bei der Trauung aus einem vorübergehenden Grund nicht urteilsfähig war;"
+            },
+            {
+              "marke": "2",
+              "text": "sich aus Irrtum hat trauen lassen, sei es, dass er die Ehe selbst oder die Trauung mit der betreffenden Person nicht gewollt hat;"
+            },
+            {
+              "marke": "3",
+              "text": "die Ehe geschlossen hat, weil er über wesentliche persönliche Eigenschaften des anderen absichtlich getäuscht worden ist;"
+            },
+            {
+              "marke": "4",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_107",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6ed85ab7b146e84f63206a94174e6c51ee57e6c6cb3ce5b1863276f46828506e"
+      "sha": "4f480bb3999953953e2c6dc4ad7cf8ac03a4daaa5428de82e46553eab40883e1"
     },
     {
       "id": "bund/ZGB/art_108",
@@ -3676,14 +4180,24 @@
         },
         {
           "absatz": "3",
-          "text": "Unter Vorbehalt einer abweichenden Anordnung können Ehegatten keine Ansprüche aus Verfügungen von Todes wegen erheben:"
+          "text": "Unter Vorbehalt einer abweichenden Anordnung können Ehegatten keine Ansprüche aus Verfügungen von Todes wegen erheben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "nach der Scheidung;"
+            },
+            {
+              "marke": "2",
+              "text": "nach dem Tod eines Ehegatten während eines Scheidungsverfahrens, das den Verlust des Pflichtteilsanspruchs des überlebenden Ehegatten bewirkt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_120",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3fe97c3507bff55621eb2e97d659726c7d53b6b21d4da207e4c2c2a539c3007b"
+      "sha": "dc81a2a0c7472d7954871d084340d92ecc49048c5ad258f9876a70633f8df4a4"
     },
     {
       "id": "bund/ZGB/art_121",
@@ -3803,14 +4317,24 @@
         },
         {
           "absatz": "3",
-          "text": "Der Bundesrat regelt:"
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die versicherungstechnische Umrechnung des Rentenanteils in eine lebenslange Rente;"
+            },
+            {
+              "marke": "2",
+              "text": "das Vorgehen in Fällen, in denen die Altersleistung aufgeschoben oder die Invalidenrente wegen Überentschädigung gekürzt ist."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_124_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6188616d63a62d0f0351899647a111e30e3b1450878ca175dd0008617bad0467"
+      "sha": "82d0e0e52be00565c24f60e63f7887a1f73bf8cdd433b6c3f05b71cfceeb25e1"
     },
     {
       "id": "bund/ZGB/art_124_b",
@@ -3826,7 +4350,17 @@
         },
         {
           "absatz": "2",
-          "text": "Das Gericht spricht dem berechtigten Ehegatten weniger als die Hälfte der Austrittsleistung zu oder verweigert die Teilung ganz, wenn wichtige Gründe vorliegen. Ein wichtiger Grund liegt insbesondere vor, wenn die hälftige Teilung unbillig wäre:"
+          "text": "Das Gericht spricht dem berechtigten Ehegatten weniger als die Hälfte der Austrittsleistung zu oder verweigert die Teilung ganz, wenn wichtige Gründe vorliegen. Ein wichtiger Grund liegt insbesondere vor, wenn die hälftige Teilung unbillig wäre:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "aufgrund der güterrechtlichen Auseinandersetzung oder der wirtschaftlichen Verhältnisse nach der Scheidung;"
+            },
+            {
+              "marke": "2",
+              "text": "aufgrund der Vorsorgebedürfnisse, insbesondere unter Berücksichtigung des Altersunterschiedes zwischen den Ehegatten."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3837,7 +4371,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_124_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e81c5c2cc1716692df667b00c3844d60e39955d9f2835717d9b0f2cdad8e6af1"
+      "sha": "da769634a85e2bb5e6e9c290dc5437e10631fc28d9569b9afa01239b9a836446"
     },
     {
       "id": "bund/ZGB/art_124_c",
@@ -3918,18 +4452,66 @@
         },
         {
           "absatz": "2",
-          "text": "Beim Entscheid, ob ein Beitrag zu leisten sei und gegebenenfalls in welcher Höhe und wie lange, sind insbesondere zu berücksichtigen:"
+          "text": "Beim Entscheid, ob ein Beitrag zu leisten sei und gegebenenfalls in welcher Höhe und wie lange, sind insbesondere zu berücksichtigen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Aufgabenteilung während der Ehe;"
+            },
+            {
+              "marke": "2",
+              "text": "die Dauer der Ehe;"
+            },
+            {
+              "marke": "3",
+              "text": "die Lebensstellung während der Ehe;"
+            },
+            {
+              "marke": "4",
+              "text": "das Alter und die Gesundheit der Ehegatten;"
+            },
+            {
+              "marke": "5",
+              "text": "Einkommen und Vermögen der Ehegatten;"
+            },
+            {
+              "marke": "6",
+              "text": "der Umfang und die Dauer der von den Ehegatten noch zu leistenden Betreuung der Kinder;"
+            },
+            {
+              "marke": "7",
+              "text": "die berufliche Ausbildung und die Erwerbsaussichten der Ehegatten sowie der mutmassliche Aufwand für die berufliche Eingliederung der anspruchsberechtigten Person;"
+            },
+            {
+              "marke": "8",
+              "text": "die Anwartschaften aus der eidgenössischen Alters- und Hinterlassenenversicherung und aus der beruflichen oder einer anderen privaten oder staatlichen Vorsorge einschliesslich des voraussichtlichen Ergebnisses der Teilung der Austrittsleistungen."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Ein Beitrag kann ausnahmsweise versagt oder gekürzt werden, wenn er offensichtlich unbillig wäre, insbesondere weil die berechtigte Person:"
+          "text": "Ein Beitrag kann ausnahmsweise versagt oder gekürzt werden, wenn er offensichtlich unbillig wäre, insbesondere weil die berechtigte Person:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "ihre Pflicht, zum Unterhalt der Familie beizutragen, grob verletzt hat;"
+            },
+            {
+              "marke": "2",
+              "text": "ihre Bedürftigkeit mutwillig herbeigeführt hat;"
+            },
+            {
+              "marke": "3",
+              "text": "gegen die verpflichtete Person oder eine dieser nahe verbundenen Person eine schwere Straftat begangen hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_125",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "92a1415bfa5347d7c63c292244019c24e8df4e1a6a830d5c65d97be15b4bfaa0"
+      "sha": "fb1fa145e2135348f9886732a2e3cab06d386585b6aef3efbd6ec17edc03ed3e"
     },
     {
       "id": "bund/ZGB/art_126",
@@ -4125,7 +4707,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht regelt die Elternrechte und -pflichten nach den Bestimmungen über die Wirkungen des Kindesverhältnisses. Insbesondere regelt es:"
+          "text": "Das Gericht regelt die Elternrechte und -pflichten nach den Bestimmungen über die Wirkungen des Kindesverhältnisses. Insbesondere regelt es:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die elterliche Sorge;"
+            },
+            {
+              "marke": "2",
+              "text": "die Obhut;"
+            },
+            {
+              "marke": "3",
+              "text": "den persönlichen Verkehr (Art. 273) oder die Betreuungsanteile; und"
+            },
+            {
+              "marke": "4",
+              "text": "den Unterhaltsbeitrag."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4140,7 +4740,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_133",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "42fbd066106b834cce76a0d37dd2ab5c24341b6f50fab05f406ada8f8cb4126d"
+      "sha": "838426972972e0def038d777d44a947e2ad4cdf34a9d70165a73776e8a826a18"
     },
     {
       "id": "bund/ZGB/art_134",
@@ -4394,7 +4994,17 @@
         },
         {
           "absatz": "2",
-          "text": "Für die übrigen Bedürfnisse der Familie kann ein Ehegatte die eheliche Gemeinschaft nur vertreten:"
+          "text": "Für die übrigen Bedürfnisse der Familie kann ein Ehegatte die eheliche Gemeinschaft nur vertreten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn er vom andern oder vom Gericht dazu ermächtigt worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn das Interesse der ehelichen Gemeinschaft keinen Aufschub des Geschäftes duldet und der andere Ehegatte wegen Krankheit, Abwesenheit oder ähnlichen Gründen nicht zustimmen kann."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4405,7 +5015,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_166",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8d23f75831a24dac183ca0267e188534f032db1950cc62d7801fb4dd50753c86"
+      "sha": "afc1c5b82c2e3c9161d663d5cc938600824f0324e5ee147fdbd10d823e40031f"
     },
     {
       "id": "bund/ZGB/art_167",
@@ -4624,7 +5234,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist die Aufhebung des gemeinsamen Haushaltes begründet, so muss das Gericht auf Begehren eines Ehegatten:"
+          "text": "Ist die Aufhebung des gemeinsamen Haushaltes begründet, so muss das Gericht auf Begehren eines Ehegatten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Unterhaltsbeiträge an die Kinder und den Unterhaltsbeitrag an den Ehegatten festlegen;"
+            },
+            {
+              "marke": "2",
+              "text": "die Benützung der Wohnung und des Hausrates regeln;"
+            },
+            {
+              "marke": "3",
+              "text": "die Gütertrennung anordnen, wenn es die Umstände rechtfertigen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4639,7 +5263,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_176",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "03b4f330bf8b83d01d2b45be399b1a78dd404196c0afd604c2f3ea464e539e14"
+      "sha": "38ce5beedd45634684b5640706eec194f65cadefafa7b855b464aaa41ec1dd1a"
     },
     {
       "id": "bund/ZGB/art_176_a",
@@ -4846,7 +5470,29 @@
         },
         {
           "absatz": "2",
-          "text": "Ein wichtiger Grund liegt namentlich vor:"
+          "text": "Ein wichtiger Grund liegt namentlich vor:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn der andere Ehegatte überschuldet ist oder sein Anteil am Gesamtgut gepfändet wird;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn der andere Ehegatte die Interessen des Gesuchstellers oder der Gemeinschaft gefährdet;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der andere Ehegatte in ungerechtfertigter Weise die erforderliche Zustimmung zu einer Verfügung über das Gesamtgut verweigert;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn der andere Ehegatte dem Gesuchsteller die Auskunft über sein Einkommen, sein Vermögen und seine Schulden oder über das Gesamtgut verweigert;"
+            },
+            {
+              "marke": "5",
+              "text": "wenn der andere Ehegatte dauernd urteilsunfähig ist."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4857,7 +5503,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_185",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "2d2c2a7b6237517617e34eed4cb8c8bd7cf578dfea1bc2563742b7f91f3dc2cf"
+      "sha": "f2040c978a195f2c9d392c55bbb51e5dc6079119c19f71be1a31b317e471e54e"
     },
     {
       "id": "bund/ZGB/art_186",
@@ -5125,14 +5771,36 @@
         },
         {
           "absatz": "2",
-          "text": "Die Errungenschaft eines Ehegatten umfasst insbesondere:"
+          "text": "Die Errungenschaft eines Ehegatten umfasst insbesondere:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "seinen Arbeitserwerb;"
+            },
+            {
+              "marke": "2",
+              "text": "die Leistungen von Personalfürsorgeeinrichtungen, Sozialversicherungen und Sozialfürsorgeeinrichtungen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Entschädigungen wegen Arbeitsunfähigkeit;"
+            },
+            {
+              "marke": "4",
+              "text": "die Erträge seines Eigengutes;"
+            },
+            {
+              "marke": "5",
+              "text": "Ersatzanschaffungen für Errungenschaft."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_197",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "07045bd79fade871895ad08ff95619f085ac586d3db1f4adf85bcdf43c4ca723"
+      "sha": "046b577ea9733faecf43f2ed9f068d53ecf70636347c545f5bdbdc1a6008e749"
     },
     {
       "id": "bund/ZGB/art_198",
@@ -5144,14 +5812,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Eigengut sind von Gesetzes wegen:"
+          "text": "Eigengut sind von Gesetzes wegen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Gegenstände, die einem Ehegatten ausschliesslich zum persönlichen Gebrauch dienen;"
+            },
+            {
+              "marke": "2",
+              "text": "die Vermögenswerte, die einem Ehegatten zu Beginn des Güterstandes gehören oder ihm später durch Erbgang oder sonstwie unentgeltlich zufallen;"
+            },
+            {
+              "marke": "3",
+              "text": "Genugtuungsansprüche;"
+            },
+            {
+              "marke": "4",
+              "text": "Ersatzanschaffungen für Eigengut."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_198",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "694ea84b8c1022797c91b66c9db98455339d7d2bbe9250261e9008f5029a9b4e"
+      "sha": "f7077f49944dec7afc2218c4d5a19911f9ab5e557981fe26e5300b018143d2e4"
     },
     {
       "id": "bund/ZGB/art_199",
@@ -5378,7 +6064,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zur Errungenschaft hinzugerechnet werden:"
+          "text": "Zur Errungenschaft hinzugerechnet werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "unentgeltliche Zuwendungen, die ein Ehegatte während der letzten fünf Jahre vor Auflösung des Güterstandes ohne Zustimmung des andern Ehegatten gemacht hat, ausgenommen die üblichen Gelegenheitsgeschenke;"
+            },
+            {
+              "marke": "2",
+              "text": "Vermögensentäusserungen, die ein Ehegatte während der Dauer des Güterstandes vorgenommen hat, um den Beteiligungsanspruch des andern zu schmälern."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5389,7 +6085,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_208",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3b049715d7d1bcb1fad44c50e3e161e4b282e96900803e87a6af6c4c4dc9af27"
+      "sha": "5d4fba8eca9add0bdd8e9e805260b6ffdb18f9a7086bc46e3e65b2820b4edfb0"
     },
     {
       "id": "bund/ZGB/art_209",
@@ -5973,14 +6669,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Jeder Ehegatte haftet mit seinem Eigengut und dem Gesamtgut:"
+          "text": "Jeder Ehegatte haftet mit seinem Eigengut und dem Gesamtgut:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für Schulden, die er in Ausübung seiner Befugnisse zur Vertretung der ehelichen Gemeinschaft oder zur Verwaltung des Gesamtgutes eingeht;"
+            },
+            {
+              "marke": "2",
+              "text": "für Schulden, die er in Ausübung eines Berufes oder Gewerbes eingeht, sofern für diese Mittel des Gesamtgutes verwendet werden oder deren Erträge ins Gesamtgut fallen;"
+            },
+            {
+              "marke": "3",
+              "text": "für Schulden, für die auch der andere Ehegatte persönlich einzustehen hat;"
+            },
+            {
+              "marke": "4",
+              "text": "für Schulden, bei welchen die Ehegatten mit dem Dritten vereinbart haben, dass das Gesamtgut neben dem Eigengut des Schuldners haftet."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_233",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "06ab599fa94221c315e726c66dfe29baf13e1e7fa2ad9f9c5ac872d8e2552624"
+      "sha": "ec1e01f0b43ccbcb3cba24e4c03dcd3e38716ddc7ae87d8b772178f81f798b62"
     },
     {
       "id": "bund/ZGB/art_234",
@@ -6505,7 +7219,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Vermutung der Vaterschaft kann beim Gericht angefochten werden:"
+          "text": "Die Vermutung der Vaterschaft kann beim Gericht angefochten werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "vom Ehemann;"
+            },
+            {
+              "marke": "2",
+              "text": "vom Kind, wenn während seiner Minderjährigkeit der gemeinsame Haushalt der Ehegatten aufgehört hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6520,7 +7244,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_256",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8d1e18a4e1be28d1b1e8da7ce0d257145357035413de56dfea3509ef86749a0a"
+      "sha": "ad264e8b90cdc7a7e915687d80214dfcc38742deced9a7296214b976a3919fba"
     },
     {
       "id": "bund/ZGB/art_256_a",
@@ -6659,7 +7383,25 @@
         },
         {
           "absatz": "2",
-          "text": "Die Anerkennung kann angefochten werden:"
+          "text": "Die Anerkennung kann angefochten werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "von der Mutter;"
+            },
+            {
+              "marke": "2",
+              "text": "vom Kind, oder nach seinem Tode von den Nachkommen, wenn während seiner Minderjährigkeit der gemeinsame Haushalt der Ehegatten aufgehört hat oder die Anerkennung erst nach Vollendung seines zwölften Altersjahres ausgesprochen worden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "von der Heimat- oder Wohnsitzgemeinde des Ehemannes;"
+            },
+            {
+              "marke": "4",
+              "text": "vom Ehemann."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -6670,7 +7412,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_259",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "65848d21b634c196d7295ea9c57e0225ba2a26ba624c8ca20071a6ee9588e52b"
+      "sha": "4aef4cc22cd97336505513122a8282a6fcde18b6dd136b4791be3aa33e2987b6"
     },
     {
       "id": "bund/ZGB/art_260",
@@ -6840,7 +7582,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Klage kann vor oder nach der Niederkunft angebracht werden, ist aber einzureichen:"
+          "text": "Die Klage kann vor oder nach der Niederkunft angebracht werden, ist aber einzureichen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "von der Mutter vor Ablauf eines Jahres seit der Geburt;"
+            },
+            {
+              "marke": "2",
+              "text": "vom Kind vor Ablauf eines Jahres nach Erreichen der Volljährigkeit."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6855,7 +7607,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_263",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "059cae3bc136a2803b4ad37c0a0b154c028001d9cba8854730bd2004b0c37a98"
+      "sha": "0efccaf2f52369f8d6ff17cf1a3c2ed237ab422ef5770e695ee28e853115a573"
     },
     {
       "id": "bund/ZGB/art_264",
@@ -6944,7 +7696,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Person darf das Kind adoptieren, mit dessen Mutter oder Vater sie:"
+          "text": "Eine Person darf das Kind adoptieren, mit dessen Mutter oder Vater sie:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "verheiratet ist;"
+            },
+            {
+              "marke": "2",
+              "text": "in eingetragener Partnerschaft lebt;"
+            },
+            {
+              "marke": "3",
+              "text": "eine faktische Lebensgemeinschaft führt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6959,7 +7725,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_264_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3241f343f807b934446e9fa9b1dc98fad141ef8accfd7217fafe75ed6e234141"
+      "sha": "f2923bde7307f8f41140430f8dd22c74adf674032485fafa57b0535fcd3a2d82"
     },
     {
       "id": "bund/ZGB/art_264_d",
@@ -7117,7 +7883,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine volljährige Person darf adoptiert werden, wenn:"
+          "text": "Eine volljährige Person darf adoptiert werden, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "sie aus körperlichen, geistigen oder psychischen Gründen dauernd hilfsbedürftig ist und die adoptionswilligen Personen ihr während mindestens eines Jahres Pflege erwiesen haben;"
+            },
+            {
+              "marke": "2",
+              "text": "die adoptionswilligen Personen ihr während ihrer Minderjährigkeit mindestens ein Jahr lang Pflege und Erziehung erwiesen haben; oder"
+            },
+            {
+              "marke": "3",
+              "text": "andere wichtige Gründe vorliegen und sie während mindestens eines Jahres mit den adoptionswilligen Personen im gleichen Haushalt gelebt hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7128,7 +7908,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_266",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "cc2646b5b591b237c64843dff01c64702388a60884f47999a016650d1aba8a61"
+      "sha": "9ea76682390a734c29ad043678b48ab8ff5837963454c7ea57f6c398ff271b8f"
     },
     {
       "id": "bund/ZGB/art_267",
@@ -7148,14 +7928,28 @@
         },
         {
           "absatz": "3",
-          "text": "Das Kindesverhältnis erlischt nicht zum Elternteil, der mit der adoptierenden Person:"
+          "text": "Das Kindesverhältnis erlischt nicht zum Elternteil, der mit der adoptierenden Person:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "verheiratet ist;"
+            },
+            {
+              "marke": "2",
+              "text": "in eingetragener Partnerschaft lebt;"
+            },
+            {
+              "marke": "3",
+              "text": "eine faktische Lebensgemeinschaft führt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_267",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "16413430b21494805657c3761c76d8b39bc54d374929e333f48cd88a913f963f"
+      "sha": "d81eb3c2a856ee816d76feb62c6cf489c3c851d989fd6c286cb280b0b125bc07"
     },
     {
       "id": "bund/ZGB/art_267_a",
@@ -7337,7 +8131,21 @@
         },
         {
           "absatz": "2",
-          "text": "Vor der Adoption einer volljährigen Person zusätzlich zu würdigen ist die Einstellung:"
+          "text": "Vor der Adoption einer volljährigen Person zusätzlich zu würdigen ist die Einstellung:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "des Ehegatten oder der eingetragenen Partnerin oder des eingetragenen Partners der zu adoptierenden Person;"
+            },
+            {
+              "marke": "2",
+              "text": "der leiblichen Eltern der zu adoptierenden Person; und"
+            },
+            {
+              "marke": "3",
+              "text": "der Nachkommen der zu adoptierenden Person, sofern nicht ihr Alter oder andere wichtige Gründe dagegen sprechen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -7348,7 +8156,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_268_a_quater",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "661e1b1567851201625d23f7086562dfd1d5ec5f816f61e2dfa19f5509012dca"
+      "sha": "581753ff6db89699f8da91941bd02a52f31a46c9fcbda6f56f1ef4d7324ed772"
     },
     {
       "id": "bund/ZGB/art_268_b",
@@ -8091,14 +8899,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Werden im Unterhaltsvertrag Unterhaltsbeiträge festgelegt, so ist darin anzugeben:"
+          "text": "Werden im Unterhaltsvertrag Unterhaltsbeiträge festgelegt, so ist darin anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von welchem Einkommen und Vermögen jedes Elternteils und jedes Kindes ausgegangen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "welcher Betrag für jedes Kind bestimmt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "welcher Betrag zur Deckung des gebührenden Unterhalts jedes Kindes fehlt;"
+            },
+            {
+              "marke": "d",
+              "text": "ob und in welchem Ausmass die Unterhaltsbeiträge den Veränderungen der Lebenskosten angepasst werden."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_287_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e7ed216aee416b74c13e249ceef47a6696c37abb1299299c69b201a6f61a2bc2"
+      "sha": "58cfd1cdf4ecf313d79f548a7a4d29c4381585d49ab5359c196bd4a6777a52b9"
     },
     {
       "id": "bund/ZGB/art_288",
@@ -8114,14 +8940,24 @@
         },
         {
           "absatz": "2",
-          "text": "Die Vereinbarung wird für das Kind erst verbindlich:"
+          "text": "Die Vereinbarung wird für das Kind erst verbindlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Kindesschutzbehörde, oder bei Abschluss in einem gerichtlichen Verfahren, das Gericht die Genehmigung erteilt hat, und"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Abfindungssumme an die dabei bezeichnete Stelle entrichtet worden ist."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_288",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "fc7bf99dfb8f7826bebd883958d8333f2b6a230434398d378908a0c795546e97"
+      "sha": "fb1404efd61512ef17055141b369079553bb3a2ec2ed44e572dd9256e2bf83a3"
     },
     {
       "id": "bund/ZGB/art_289",
@@ -8263,7 +9099,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Mutter kann spätestens bis ein Jahr nach der Geburt gegen den Vater oder dessen Erben auf Ersatz klagen:"
+          "text": "Die Mutter kann spätestens bis ein Jahr nach der Geburt gegen den Vater oder dessen Erben auf Ersatz klagen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für die Entbindungskosten;"
+            },
+            {
+              "marke": "2",
+              "text": "für die Kosten des Unterhaltes während mindestens vier Wochen vor und mindestens acht Wochen nach der Geburt;"
+            },
+            {
+              "marke": "3",
+              "text": "für andere infolge der Schwangerschaft oder der Entbindung notwendig gewordene Auslagen unter Einschluss der ersten Ausstattung des Kindes."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8278,7 +9128,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_295",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4c74b295c489765eef0738e678d9f980feed1aa5ae0a66ae1457edd99251abb8"
+      "sha": "3d2490e939a372c30c2dd5fbc61df34ca57b05afd6e8347eb5db1932b3e184ab"
     },
     {
       "id": "bund/ZGB/art_296",
@@ -8379,7 +9229,17 @@
         },
         {
           "absatz": "2",
-          "text": "In der Erklärung bestätigen die Eltern, dass sie:"
+          "text": "In der Erklärung bestätigen die Eltern, dass sie:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bereit sind, gemeinsam die Verantwortung für das Kind zu übernehmen; und"
+            },
+            {
+              "marke": "2",
+              "text": "sich über die Obhut und den persönlichen Verkehr oder die Betreuungsanteile sowie über den Unterhaltsbeitrag für das Kind verständigt haben."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8398,7 +9258,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_298_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "54bfea6d95b4a7ce421e5c365e5065e29fea06b82b09aebcad5ea1360340cf8a"
+      "sha": "39db0e741f9d5d48199fa0df23642ec10da1ac911ba2dbdb3f0eb83e881af1c2"
     },
     {
       "id": "bund/ZGB/art_298_b",
@@ -8560,7 +9420,17 @@
         },
         {
           "absatz": null,
-          "text": "1bis Der Elternteil, der das Kind betreut, kann allein entscheiden, wenn:"
+          "text": "1bis Der Elternteil, der das Kind betreut, kann allein entscheiden, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Angelegenheit alltäglich oder dringlich ist;"
+            },
+            {
+              "marke": "2",
+              "text": "der andere Elternteil nicht mit vernünftigem Aufwand zu erreichen ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8579,7 +9449,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_301",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "cf77cc9b9eaf5e7d3c086bf1556ff0adc7205e441d5b6246b5f6b615678b512f"
+      "sha": "05455d8b671d7e57ced9a914cdd0aef0008e89cd7bf455dcd6755ac85e04e15e"
     },
     {
       "id": "bund/ZGB/art_301_a",
@@ -8595,7 +9465,17 @@
         },
         {
           "absatz": "2",
-          "text": "Üben die Eltern die elterliche Sorge gemeinsam aus und will ein Elternteil den Aufenthaltsort des Kindes wechseln, so bedarf dies der Zustimmung des andern Elternteils oder der Entscheidung des Gerichts oder der Kindesschutzbehörde, wenn:"
+          "text": "Üben die Eltern die elterliche Sorge gemeinsam aus und will ein Elternteil den Aufenthaltsort des Kindes wechseln, so bedarf dies der Zustimmung des andern Elternteils oder der Entscheidung des Gerichts oder der Kindesschutzbehörde, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der neue Aufenthaltsort im Ausland liegt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Wechsel des Aufenthaltsortes erhebliche Auswirkungen auf die Ausübung der elterlichen Sorge und den persönlichen Verkehr durch den andern Elternteil hat."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8614,7 +9494,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_301_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "467415ce0bd166068e24828041752ad998a4858420bed9369d2f4493d66b9689"
+      "sha": "cd819ae1bc6bd6f32535b8a07e098ea2531675ee66a7d9db85ffd2fc8d289e37"
     },
     {
       "id": "bund/ZGB/art_302",
@@ -8857,7 +9737,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Sind andere Kindesschutzmassnahmen erfolglos geblieben oder erscheinen sie von vornherein als ungenügend, so entzieht die Kindesschutzbehörde die elterliche Sorge:"
+          "text": "Sind andere Kindesschutzmassnahmen erfolglos geblieben oder erscheinen sie von vornherein als ungenügend, so entzieht die Kindesschutzbehörde die elterliche Sorge:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Eltern wegen Unerfahrenheit, Krankheit, Gebrechen, Abwesenheit, Gewalttätigkeit oder ähnlichen Gründen ausserstande sind, die elterliche Sorge pflichtgemäss auszuüben;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Eltern sich um das Kind nicht ernstlich gekümmert oder ihre Pflichten gegenüber dem Kinde gröblich verletzt haben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8872,7 +9762,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_311",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e3ed081de05c35c851a983af15c26279b84eff4fea26386bfdebe14d905b4546"
+      "sha": "32573f51b2d26755ea47eb80be75d470bc9f0186dbf880187be4189f0dbfe212"
     },
     {
       "id": "bund/ZGB/art_312",
@@ -8884,14 +9774,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Kindesschutzbehörde entzieht die elterliche Sorge:"
+          "text": "Die Kindesschutzbehörde entzieht die elterliche Sorge:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Eltern aus wichtigen Gründen darum nachsuchen;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn sie in eine künftige Adoption des Kindes durch ungenannte Dritte eingewilligt haben."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_312",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1ebe4e4cc50279ec0b319ff1ad700560af9a8c88f846994eff3675f26ddec730"
+      "sha": "7efaf21623c893c383b0687c6f76f906027b2be82bd7638d8f28d0be5f9ca94a"
     },
     {
       "id": "bund/ZGB/art_313",
@@ -8984,7 +9884,17 @@
         },
         {
           "absatz": "2",
-          "text": "Die Kindesschutzbehörde prüft die Anordnung der Vertretung insbesondere, wenn:"
+          "text": "Die Kindesschutzbehörde prüft die Anordnung der Vertretung insbesondere, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Unterbringung des Kindes Gegenstand des Verfahrens ist;"
+            },
+            {
+              "marke": "2",
+              "text": "die Beteiligten bezüglich der Regelung der elterlichen Sorge oder bezüglich wichtiger Fragen des persönlichen Verkehrs unterschiedliche Anträge stellen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8995,7 +9905,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_314_a_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d6cbce67671979b5acb0802ccedf2850072b998ede86ea602a005610bad15026"
+      "sha": "78f2e4dafd47fcf486b7614a61090a09747644c393130657633c3d6398cd00a0"
     },
     {
       "id": "bund/ZGB/art_314_b",
@@ -9053,7 +9963,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Personen, soweit sie nicht dem Berufsgeheimnis nach dem Strafgesetzbuch unterstehen, sind zur Meldung verpflichtet, wenn konkrete Hinweise dafür bestehen, dass die körperliche, psychische oder sexuelle Integrität eines Kindes gefährdet ist und sie der Gefährdung nicht im Rahmen ihrer Tätigkeit Abhilfe schaffen können:"
+          "text": "Folgende Personen, soweit sie nicht dem Berufsgeheimnis nach dem Strafgesetzbuch unterstehen, sind zur Meldung verpflichtet, wenn konkrete Hinweise dafür bestehen, dass die körperliche, psychische oder sexuelle Integrität eines Kindes gefährdet ist und sie der Gefährdung nicht im Rahmen ihrer Tätigkeit Abhilfe schaffen können:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Fachpersonen aus den Bereichen Medizin, Psychologie, Pflege, Betreuung, Erziehung, Bildung, Sozialberatung, Religion und Sport, die beruflich regelmässig Kontakt zu Kindern haben;"
+            },
+            {
+              "marke": "2",
+              "text": "wer in amtlicher Tätigkeit von einem solchen Fall erfährt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9068,7 +9988,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_314_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a606794402a3818fd0540fe0f5e6cd3e2d6199c31ad6b01e52e300f0a406cfbc"
+      "sha": "17545215096d69203a79ba69d1f4bd490fb75793ad77e6c920d2cfda46199ddc"
     },
     {
       "id": "bund/ZGB/art_314_e",
@@ -9146,14 +10066,24 @@
         },
         {
           "absatz": "3",
-          "text": "Die Kindesschutzbehörde bleibt jedoch befugt:"
+          "text": "Die Kindesschutzbehörde bleibt jedoch befugt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "ein vor dem gerichtlichen Verfahren eingeleitetes Kindesschutzverfahren weiterzuführen;"
+            },
+            {
+              "marke": "2",
+              "text": "die zum Schutz des Kindes sofort notwendigen Massnahmen anzuordnen, wenn sie das Gericht voraussichtlich nicht rechtzeitig treffen kann."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_315_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6f42d8ad1ef772461d622b82f35ccdf92c357da79fc992b67fda7b2db3c53862"
+      "sha": "a0e9cef7c86f2fd9c6cbe577803c842537832d21dfeeb5a0e0b8c1f3e728e80a"
     },
     {
       "id": "bund/ZGB/art_315_b",
@@ -9165,7 +10095,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zur Abänderung gerichtlicher Anordnungen über die Kindeszuteilung und den Kindesschutz ist das Gericht zuständig:"
+          "text": "Zur Abänderung gerichtlicher Anordnungen über die Kindeszuteilung und den Kindesschutz ist das Gericht zuständig:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "während des Scheidungsverfahrens;"
+            },
+            {
+              "marke": "2",
+              "text": "im Verfahren zur Abänderung des Scheidungsurteils gemäss den Vorschriften über die Ehescheidung;"
+            },
+            {
+              "marke": "3",
+              "text": "im Verfahren zur Änderung von Eheschutzmassnahmen; die Vorschriften über die Ehescheidung sind sinngemäss anwendbar."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9176,7 +10120,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_315_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f2958e7e5b997d2f905dd5e666dd146a479e04ed1594b5d3d628fffd77522f08"
+      "sha": "fea2ba18a445b9f76a00bd964861aa0f0785503474d98dd4e445ddd045555654"
     },
     {
       "id": "bund/ZGB/art_316",
@@ -9937,14 +10881,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Aufhebung der Gemeinderschaft erfolgt:"
+          "text": "Die Aufhebung der Gemeinderschaft erfolgt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "nach Vereinbarung oder Kündigung;"
+            },
+            {
+              "marke": "2",
+              "text": "mit Ablauf der Zeit, für die eine Gemeinderschaft begründet worden ist, insofern sie nicht stillschweigend fortgesetzt wird;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der gepfändete Anteil eines Gemeinders am Gemeinschaftsgute zur Verwertung gelangt ist;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn ein Gemeinder in Konkurs geraten ist;"
+            },
+            {
+              "marke": "5",
+              "text": "auf Verlangen eines Gemeinders aus wichtigen Gründen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_343",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d4325290f981fd9f53cf28bcf8ddbffdbda565d6316df46d7d48615acfc1b483"
+      "sha": "17ae4a76166292a420cfff89524de67bd13353ade68f34568e89b1dd28b1d65f"
     },
     {
       "id": "bund/ZGB/art_344",
@@ -10198,7 +11164,25 @@
         },
         {
           "absatz": "2",
-          "text": "Liegt ein Vorsorgeauftrag vor, so prüft die Erwachsenenschutzbehörde, ob:"
+          "text": "Liegt ein Vorsorgeauftrag vor, so prüft die Erwachsenenschutzbehörde, ob:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "dieser gültig errichtet worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "die Voraussetzungen für seine Wirksamkeit eingetreten sind;"
+            },
+            {
+              "marke": "3",
+              "text": "die beauftragte Person für ihre Aufgaben geeignet ist; und"
+            },
+            {
+              "marke": "4",
+              "text": "weitere Massnahmen des Erwachsenenschutzes erforderlich sind."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -10209,7 +11193,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_363",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "12e2526c4caa2c61807f3836a2e090d48c16936b92b90fa50c25c11a0f47c33b"
+      "sha": "1aeaf8d06307f2ce68135bd47fef46e57450ff651c06fa6e19030fa3b31392b9"
     },
     {
       "id": "bund/ZGB/art_364",
@@ -10444,7 +11428,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Jede der Patientin oder dem Patienten nahestehende Person kann schriftlich die Erwachsenenschutzbehörde anrufen und geltend machen, dass:"
+          "text": "Jede der Patientin oder dem Patienten nahestehende Person kann schriftlich die Erwachsenenschutzbehörde anrufen und geltend machen, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Patientenverfügung nicht entsprochen wird;"
+            },
+            {
+              "marke": "2",
+              "text": "die Interessen der urteilsunfähigen Person gefährdet oder nicht mehr gewahrt sind;"
+            },
+            {
+              "marke": "3",
+              "text": "die Patientenverfügung nicht auf freiem Willen beruht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10455,7 +11453,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_373",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f3dd2fa0b4e9609a7d71c673a82cdc9ec3b396e96ef13b7f53b8f961bf7e015e"
+      "sha": "605c421038849a0e3ee9c032439a6c756c588e68cf131f85b575917a69fd7a68"
     },
     {
       "id": "bund/ZGB/art_374",
@@ -10471,7 +11469,21 @@
         },
         {
           "absatz": "2",
-          "text": "Das Vertretungsrecht umfasst:"
+          "text": "Das Vertretungsrecht umfasst:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "alle Rechtshandlungen, die zur Deckung des Unterhaltsbedarfs üblicherweise erforderlich sind;"
+            },
+            {
+              "marke": "2",
+              "text": "die ordentliche Verwaltung des Einkommens und der übrigen Vermögenswerte; und"
+            },
+            {
+              "marke": "3",
+              "text": "nötigenfalls die Befugnis, die Post zu öffnen und zu erledigen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -10482,7 +11494,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_374",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "41480324f2648b50d56a80d17e675de3f24ca602c584d3fa2c16f87019cc52c3"
+      "sha": "63e124344332e8f28dd6d8dfa9668b9ad7e5caf1dab5ba19bfb787805cc7ac1d"
     },
     {
       "id": "bund/ZGB/art_375",
@@ -10567,7 +11579,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die folgenden Personen sind der Reihe nach berechtigt, die urteilsunfähige Person zu vertreten und den vorgesehenen ambulanten oder stationären Massnahmen die Zustimmung zu erteilen oder zu verweigern:"
+          "text": "Die folgenden Personen sind der Reihe nach berechtigt, die urteilsunfähige Person zu vertreten und den vorgesehenen ambulanten oder stationären Massnahmen die Zustimmung zu erteilen oder zu verweigern:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die in einer Patientenverfügung oder in einem Vorsorgeauftrag bezeichnete Person;"
+            },
+            {
+              "marke": "2",
+              "text": "der Beistand oder die Beiständin mit einem Vertretungsrecht bei medizinischen Massnahmen;"
+            },
+            {
+              "marke": "3",
+              "text": "wer als Ehegatte, eingetragene Partnerin oder eingetragener Partner einen gemeinsamen Haushalt mit der urteilsunfähigen Person führt oder ihr regelmässig und persönlich Beistand leistet;"
+            },
+            {
+              "marke": "4",
+              "text": "die Person, die mit der urteilsunfähigen Person einen gemeinsamen Haushalt führt und ihr regelmässig und persönlich Beistand leistet;"
+            },
+            {
+              "marke": "5",
+              "text": "die Nachkommen, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten;"
+            },
+            {
+              "marke": "6",
+              "text": "die Eltern, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten;"
+            },
+            {
+              "marke": "7",
+              "text": "die Geschwister, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10582,7 +11624,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_378",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "85ce7f0f5198678712b14e616ffee6c90e6fec1921629f059c6e4d9583d794b0"
+      "sha": "91541944d12e66368b62dc28ff908538881f184c3bd4558902ab2c750588490c"
     },
     {
       "id": "bund/ZGB/art_379",
@@ -10636,7 +11678,21 @@
         },
         {
           "absatz": "2",
-          "text": "Sie bestimmt die vertretungsberechtigte Person oder errichtet eine Vertretungsbeistandschaft, wenn:"
+          "text": "Sie bestimmt die vertretungsberechtigte Person oder errichtet eine Vertretungsbeistandschaft, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "unklar ist, wer vertretungsberechtigt ist;"
+            },
+            {
+              "marke": "2",
+              "text": "die vertretungsberechtigten Personen unterschiedliche Auffassungen haben; oder"
+            },
+            {
+              "marke": "3",
+              "text": "die Interessen der urteilsunfähigen Person gefährdet oder nicht mehr gewahrt sind."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -10647,7 +11703,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_381",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "00a948c333532c1e4fd0c5d0ca330fc8acff758ffcd9b3e73b2f7b89c3f205e9"
+      "sha": "2266760edac052b1912f20d87dbdaae80e10d428549f61b71bddf32a13d1b09a"
     },
     {
       "id": "bund/ZGB/art_382",
@@ -10686,7 +11742,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Wohn- oder Pflegeeinrichtung darf die Bewegungsfreiheit der urteilsunfähigen Person nur einschränken, wenn weniger einschneidende Massnahmen nicht ausreichen oder von vornherein als ungenügend erscheinen und die Massnahme dazu dient:"
+          "text": "Die Wohn- oder Pflegeeinrichtung darf die Bewegungsfreiheit der urteilsunfähigen Person nur einschränken, wenn weniger einschneidende Massnahmen nicht ausreichen oder von vornherein als ungenügend erscheinen und die Massnahme dazu dient:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "eine ernsthafte Gefahr für das Leben oder die körperliche Integrität der betroffenen Person oder Dritter abzuwenden; oder"
+            },
+            {
+              "marke": "2",
+              "text": "eine schwerwiegende Störung des Gemeinschaftslebens zu beseitigen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10701,7 +11767,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_383",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9bf65ecbf14449b7b276fb6a3cec6dbfb806cf4216cd156dd25549f27e7f67ea"
+      "sha": "878f6ae22db6e678cb018fcd31203dce17d8efd80b0da41c2309308d34d022b1"
     },
     {
       "id": "bund/ZGB/art_384",
@@ -10836,7 +11902,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erwachsenenschutzbehörde ordnet eine Massnahme an, wenn:"
+          "text": "Die Erwachsenenschutzbehörde ordnet eine Massnahme an, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Unterstützung der hilfsbedürftigen Person durch die Familie, andere nahestehende Personen oder private oder öffentliche Dienste nicht ausreicht oder von vornherein als ungenügend erscheint;"
+            },
+            {
+              "marke": "2",
+              "text": "bei Urteilsunfähigkeit der hilfsbedürftigen Person keine oder keine ausreichende eigene Vorsorge getroffen worden ist und die Massnahmen von Gesetzes wegen nicht genügen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10847,7 +11923,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_389",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4b1551732759b158ab757f90bff8cfc7f3b1e4183bbe3019b419d3e42ac489f9"
+      "sha": "c92d394980abb252f7ccf3ef98d8e91838df074339e52f61135a9c7f02873013"
     },
     {
       "id": "bund/ZGB/art_390",
@@ -10859,7 +11935,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erwachsenenschutzbehörde errichtet eine Beistandschaft, wenn eine volljährige Person:"
+          "text": "Die Erwachsenenschutzbehörde errichtet eine Beistandschaft, wenn eine volljährige Person:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wegen einer geistigen Behinderung, einer psychischen Störung oder eines ähnlichen in der Person liegenden Schwächezustands ihre Angelegenheiten nur teilweise oder gar nicht besorgen kann;"
+            },
+            {
+              "marke": "2",
+              "text": "wegen vorübergehender Urteilsunfähigkeit oder Abwesenheit in Angelegenheiten, die erledigt werden müssen, weder selber handeln kann noch eine zur Stellvertretung berechtigte Person bezeichnet hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10874,7 +11960,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_390",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "efa87b3571ea2193371d4603ba3e794ddfbde59c0ef4129dbca50993f9b1d82e"
+      "sha": "e043612b1bf09553ba0a0f6ddda7352a7d08afbcf74e3a6dda85803abfabad11"
     },
     {
       "id": "bund/ZGB/art_391",
@@ -10913,14 +11999,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Erscheint die Errichtung einer Beistandschaft wegen des Umfangs der Aufgaben als offensichtlich unverhältnismässig, so kann die Erwachsenenschutzbehörde:"
+          "text": "Erscheint die Errichtung einer Beistandschaft wegen des Umfangs der Aufgaben als offensichtlich unverhältnismässig, so kann die Erwachsenenschutzbehörde:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "von sich aus das Erforderliche vorkehren, namentlich die Zustimmung zu einem Rechtsgeschäft erteilen;"
+            },
+            {
+              "marke": "2",
+              "text": "einer Drittperson für einzelne Aufgaben einen Auftrag erteilen; oder"
+            },
+            {
+              "marke": "3",
+              "text": "eine geeignete Person oder Stelle bezeichnen, der für bestimmte Bereiche Einblick und Auskunft zu geben sind."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_392",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "255abad9f11fbc35076802512b46e275479ebdf27d3fc5516807ffcfc1b3edf7"
+      "sha": "bbf7cb0310a6f6489f6cbd356e7b9fd52e67dcdfede350531516dad6efcaa702"
     },
     {
       "id": "bund/ZGB/art_393",
@@ -11309,7 +12409,21 @@
         },
         {
           "absatz": "2",
-          "text": "Insbesondere kann der Beistand oder die Beiständin:"
+          "text": "Insbesondere kann der Beistand oder die Beiständin:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "mit befreiender Wirkung die von Dritten geschuldete Leistung für die betroffene Person entgegennehmen;"
+            },
+            {
+              "marke": "2",
+              "text": "soweit angezeigt Schulden bezahlen;"
+            },
+            {
+              "marke": "3",
+              "text": "die betroffene Person nötigenfalls für die laufenden Bedürfnisse vertreten."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11320,7 +12434,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_408",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "bc23972a9489682a6f5a9099fc52d40b3c5760d79dde6cc22ed191144580f310"
+      "sha": "77828f2464728cc507554d235003c52ea945bf8a37857561c7511b664dd16021"
     },
     {
       "id": "bund/ZGB/art_409",
@@ -11493,7 +12607,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für folgende Geschäfte, die der Beistand oder die Beiständin in Vertretung der betroffenen Person vornimmt, ist die Zustimmung der Erwachsenenschutzbehörde erforderlich:"
+          "text": "Für folgende Geschäfte, die der Beistand oder die Beiständin in Vertretung der betroffenen Person vornimmt, ist die Zustimmung der Erwachsenenschutzbehörde erforderlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Liquidation des Haushalts, Kündigung des Vertrags über Räumlichkeiten, in denen die betroffene Person wohnt;"
+            },
+            {
+              "marke": "2",
+              "text": "Dauerverträge über die Unterbringung der betroffenen Person;"
+            },
+            {
+              "marke": "3",
+              "text": "Annahme oder Ausschlagung einer Erbschaft, wenn dafür eine ausdrückliche Erklärung erforderlich ist, sowie Erbverträge und Erbteilungsverträge;"
+            },
+            {
+              "marke": "4",
+              "text": "Erwerb, Veräusserung, Verpfändung und andere dingliche Belastung von Grundstücken sowie Erstellen von Bauten, das über ordentliche Verwaltungshandlungen hinausgeht;"
+            },
+            {
+              "marke": "5",
+              "text": "Erwerb, Veräusserung und Verpfändung anderer Vermögenswerte sowie Errichtung einer Nutzniessung daran, wenn diese Geschäfte nicht unter die Führung der ordentlichen Verwaltung und Bewirtschaftung fallen;"
+            },
+            {
+              "marke": "6",
+              "text": "Aufnahme und Gewährung von erheblichen Darlehen, Eingehung von wechselrechtlichen Verbindlichkeiten;"
+            },
+            {
+              "marke": "7",
+              "text": "Leibrenten- und Verpfründungsverträge sowie Lebensversicherungen, soweit diese nicht im Rahmen der beruflichen Vorsorge mit einem Arbeitsvertrag zusammenhängen;"
+            },
+            {
+              "marke": "8",
+              "text": "Übernahme oder Liquidation eines Geschäfts, Eintritt in eine Gesellschaft mit persönlicher Haftung oder erheblicher Kapitalbeteiligung;"
+            },
+            {
+              "marke": "9",
+              "text": "Erklärung der Zahlungsunfähigkeit, Prozessführung, Abschluss eines Vergleichs, eines Schiedsvertrags oder eines Nachlassvertrags, unter Vorbehalt vorläufiger Massnahmen des Beistands oder der Beiständin in dringenden Fällen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11508,7 +12660,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_416",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e65f4ff4de1ff685b44f16dc5b57a0b94629dc3fc88b203ff1891c13a096deb0"
+      "sha": "ed4b11d53986c536727fe4dca91ce722a4fd35947a11edfd241b5a6343dca256"
     },
     {
       "id": "bund/ZGB/art_417",
@@ -11596,14 +12748,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Amt des Beistands oder der Beiständin endet von Gesetzes wegen:"
+          "text": "Das Amt des Beistands oder der Beiständin endet von Gesetzes wegen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "mit Ablauf einer von der Erwachsenenschutzbehörde festgelegten Amtsdauer, sofern keine Bestätigung im Amt erfolgt;"
+            },
+            {
+              "marke": "2",
+              "text": "mit dem Ende der Beistandschaft;"
+            },
+            {
+              "marke": "3",
+              "text": "mit dem Ende des Arbeitsverhältnisses als Berufsbeistand oder Berufsbeiständin;"
+            },
+            {
+              "marke": "4",
+              "text": "im Zeitpunkt, in dem der Beistand oder die Beiständin verbeiständet oder urteilsunfähig wird oder stirbt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_421",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8b9317735b89a281a2ad62764a563ecd52571ce3c1f6818ab20952c3e0c29bed"
+      "sha": "089ef9ac366933adbecef3053503117bf12aff8d445556d37792f32af86bbeec"
     },
     {
       "id": "bund/ZGB/art_422",
@@ -11638,7 +12808,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erwachsenenschutzbehörde entlässt den Beistand oder die Beiständin, wenn:"
+          "text": "Die Erwachsenenschutzbehörde entlässt den Beistand oder die Beiständin, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Eignung für die Aufgaben nicht mehr besteht;"
+            },
+            {
+              "marke": "2",
+              "text": "ein anderer wichtiger Grund für die Entlassung vorliegt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11649,7 +12829,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_423",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8c78753e392bc9cc7e3ed6a8275d788fbdf029dcc5650ccbbff827cd8ce9991e"
+      "sha": "329b0061f2df409def4363f19cbac41731c3e5efe288373fbf3fb037f307ae4c"
     },
     {
       "id": "bund/ZGB/art_424",
@@ -11742,7 +12922,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Will eine Person, die an einer psychischen Störung leidet und freiwillig in eine Einrichtung eingetreten ist, diese wieder verlassen, so kann sie von der ärztlichen Leitung der Einrichtung für höchstens drei Tage zurückbehalten werden, wenn sie:"
+          "text": "Will eine Person, die an einer psychischen Störung leidet und freiwillig in eine Einrichtung eingetreten ist, diese wieder verlassen, so kann sie von der ärztlichen Leitung der Einrichtung für höchstens drei Tage zurückbehalten werden, wenn sie:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "sich selbst an Leib und Leben gefährdet; oder"
+            },
+            {
+              "marke": "2",
+              "text": "das Leben oder die körperliche Integrität Dritter ernsthaft gefährdet."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11757,7 +12947,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_427",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6d426d60d8ddc6e503113b5b56eeb6c05318644b893666781fff845f420c85a2"
+      "sha": "33fb3e773d4bc301f4da4102106e5e930c8a568d300bc94eccc099cf102e6d37"
     },
     {
       "id": "bund/ZGB/art_428",
@@ -11823,7 +13013,25 @@
         },
         {
           "absatz": "2",
-          "text": "Der Unterbringungsentscheid enthält mindestens folgende Angaben:"
+          "text": "Der Unterbringungsentscheid enthält mindestens folgende Angaben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Ort und Datum der Untersuchung;"
+            },
+            {
+              "marke": "2",
+              "text": "Name der Ärztin oder des Arztes;"
+            },
+            {
+              "marke": "3",
+              "text": "Befund, Gründe und Zweck der Unterbringung;"
+            },
+            {
+              "marke": "4",
+              "text": "die Rechtsmittelbelehrung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11842,7 +13050,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_430",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "18d2cde49d97eb671e04cb10dafa050e0f70d843a931594d0598e22e92556d77"
+      "sha": "d16b6db5a870cc7adce7974909f13b28f28ee298c2ff2a2c9250bfa9ee07373a"
     },
     {
       "id": "bund/ZGB/art_431",
@@ -11927,7 +13135,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Fehlt die Zustimmung der betroffenen Person, so kann die Chefärztin oder der Chefarzt der Abteilung die im Behandlungsplan vorgesehenen medizinischen Massnahmen schriftlich anordnen, wenn:"
+          "text": "Fehlt die Zustimmung der betroffenen Person, so kann die Chefärztin oder der Chefarzt der Abteilung die im Behandlungsplan vorgesehenen medizinischen Massnahmen schriftlich anordnen, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "ohne Behandlung der betroffenen Person ein ernsthafter gesundheitlicher Schaden droht oder das Leben oder die körperliche Integrität Dritter ernsthaft gefährdet ist;"
+            },
+            {
+              "marke": "2",
+              "text": "die betroffene Person bezüglich ihrer Behandlungsbedürftigkeit urteilsunfähig ist; und"
+            },
+            {
+              "marke": "3",
+              "text": "keine angemessene Massnahme zur Verfügung steht, die weniger einschneidend ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11938,7 +13160,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_434",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9c1dd066708a150d96d6f3fab00138ab8f325434cdd9cb5b9838e14c77aa5155"
+      "sha": "34f9703897abf8c3acaebafc3c38c0f98590c436905413c4aba060e82ca8e650"
     },
     {
       "id": "bund/ZGB/art_435",
@@ -12038,7 +13260,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die betroffene oder eine ihr nahestehende Person kann in folgenden Fällen schriftlich das zuständige Gericht anrufen:"
+          "text": "Die betroffene oder eine ihr nahestehende Person kann in folgenden Fällen schriftlich das zuständige Gericht anrufen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bei ärztlich angeordneter Unterbringung;"
+            },
+            {
+              "marke": "2",
+              "text": "bei Zurückbehaltung durch die Einrichtung;"
+            },
+            {
+              "marke": "3",
+              "text": "bei Abweisung eines Entlassungsgesuchs durch die Einrichtung;"
+            },
+            {
+              "marke": "4",
+              "text": "bei Behandlung einer psychischen Störung ohne Zustimmung;"
+            },
+            {
+              "marke": "5",
+              "text": "bei Massnahmen zur Einschränkung der Bewegungsfreiheit."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -12057,7 +13301,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_439",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d28dc4776d85b0e57c8c6b89133f65cb4c4457b90ee450b63e4dc9f8c77da144"
+      "sha": "b9c1b05bbb720ff8c874735ff877f5d2c5cafb386840598d73d4cc4d083e4f7c"
     },
     {
       "id": "bund/ZGB/art_440",
@@ -12389,7 +13633,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erwachsenenschutzbehörde teilt unverzüglich folgenden Behörden ihre Entscheide betreffend die Anordnung, Änderung oder Aufhebung von Massnahmen mit, sobald diese vollstreckbar geworden sind:"
+          "text": "Die Erwachsenenschutzbehörde teilt unverzüglich folgenden Behörden ihre Entscheide betreffend die Anordnung, Änderung oder Aufhebung von Massnahmen mit, sobald diese vollstreckbar geworden sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für eine minderjährige Person eine Vormundschaft errichtet hat oder die elterliche Sorge in Bezug auf den Antrag auf Ausstellung eines Ausweises eingeschränkt hat, oder"
+            },
+            {
+              "marke": "b",
+              "text": "für eine volljährige Person eine Beistandschaft errichtet hat, welche die Handlungsfähigkeit in Bezug auf den Antrag auf Ausstellung eines Ausweises einschränkt;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -12400,7 +13654,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_449_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "bd9439dcd26d62c7dd94fad1e535a5e71dabed26f4de848b5caf5110afe58e6a"
+      "sha": "e5936b1e4f7907c707ecdb01d313ffdfdcc4c09f10a7d8f551f9eb861943aa34"
     },
     {
       "id": "bund/ZGB/art_450",
@@ -12416,7 +13670,21 @@
         },
         {
           "absatz": "2",
-          "text": "Zur Beschwerde befugt sind:"
+          "text": "Zur Beschwerde befugt sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die am Verfahren beteiligten Personen;"
+            },
+            {
+              "marke": "2",
+              "text": "die der betroffenen Person nahestehenden Personen;"
+            },
+            {
+              "marke": "3",
+              "text": "Personen, die ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung des angefochtenen Entscheids haben."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -12427,7 +13695,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_450",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c2d007f2b6509a51785a9f0655033de44222c5adadadd715593411e366ed6ae1"
+      "sha": "4809e9fbf0f52ca8e7bd8c39c217e3f17e368d40ee8435f0156bdc84f0437051"
     },
     {
       "id": "bund/ZGB/art_450_a",
@@ -12439,7 +13707,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit der Beschwerde kann gerügt werden:"
+          "text": "Mit der Beschwerde kann gerügt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Rechtsverletzung;"
+            },
+            {
+              "marke": "2",
+              "text": "unrichtige oder unvollständige Feststellung des rechtserheblichen Sachverhalts;"
+            },
+            {
+              "marke": "3",
+              "text": "Unangemessenheit."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -12450,7 +13732,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_450_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "de601dba9bb2a50d87a30231d9712ba3593b2144d8dc61ca20477823d0cb0847"
+      "sha": "4abd85ca4f5c22156efbc324c98a6af6b0a2065452251622b7f7322b1ad27ecb"
     },
     {
       "id": "bund/ZGB/art_450_b",
@@ -12893,14 +14175,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Überlebende Ehegatten und überlebende eingetragene Partnerinnen oder Partner erhalten:"
+          "text": "Überlebende Ehegatten und überlebende eingetragene Partnerinnen oder Partner erhalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn sie mit Nachkommen zu teilen haben, die Hälfte der Erbschaft;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn sie mit Erben des elterlichen Stammes zu teilen haben, drei Viertel der Erbschaft;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn auch keine Erben des elterlichen Stammes vorhanden sind, die ganze Erbschaft."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_462",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "77e7f328d4eda1657dc589a16274a888ccae32cd4d86c6e44f7ec6e9b45bcfde"
+      "sha": "7b08af3b4cb4115883baadf6105f03a091b3e137691e953b53388faa2648906f"
     },
     {
       "id": "bund/ZGB/art_463_464",
@@ -13080,7 +14376,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist beim Tod des Erblassers ein Scheidungsverfahren hängig, so verliert der überlebende Ehegatte seinen Pflichtteilsanspruch, wenn:"
+          "text": "Ist beim Tod des Erblassers ein Scheidungsverfahren hängig, so verliert der überlebende Ehegatte seinen Pflichtteilsanspruch, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Verfahren auf gemeinsames Begehren eingeleitet oder nach den Vorschriften über die Scheidung auf gemeinsames Begehren fortgesetzt wurde; oder"
+            },
+            {
+              "marke": "2",
+              "text": "die Ehegatten mindestens zwei Jahre getrennt gelebt haben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -13095,7 +14401,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_472",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6ccfc9f2097f1b845b3f1aaa300e876248fc83784c4a0f60353a8e371fc791d8"
+      "sha": "ce2b7447a3e105f101fc5479540b5aca08c2379c15bd832e08abc6af8d3e26ba"
     },
     {
       "id": "bund/ZGB/art_473",
@@ -13199,14 +14505,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der Erblasser ist befugt, durch Verfügung von Todes wegen einem Erben den Pflichtteil zu entziehen:"
+          "text": "Der Erblasser ist befugt, durch Verfügung von Todes wegen einem Erben den Pflichtteil zu entziehen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn der Erbe gegen den Erblasser oder gegen eine diesem nahe verbundene Person eine schwere Straftat begangen hat;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn er gegenüber dem Erblasser oder einem von dessen Angehörigen die ihm obliegenden familienrechtlichen Pflichten schwer verletzt hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_477",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "921086e3edead0652522eae2b64754ad1e481c0156d90b6b03f26e6cb261deee"
+      "sha": "36669fc73f59b8a9cf17021f14dbae885c8e759d11d8d3b0a4a86eaf5976c69e"
     },
     {
       "id": "bund/ZGB/art_478",
@@ -13653,14 +14969,24 @@
         },
         {
           "absatz": "3",
-          "text": "Verfügungen von Todes wegen und Zuwendungen unter Lebenden, mit Ausnahme der üblichen Gelegenheitsgeschenke, unterliegen jedoch der Anfechtung, soweit sie:"
+          "text": "Verfügungen von Todes wegen und Zuwendungen unter Lebenden, mit Ausnahme der üblichen Gelegenheitsgeschenke, unterliegen jedoch der Anfechtung, soweit sie:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "mit den Verpflichtungen aus dem Erbvertrag nicht vereinbar sind, namentlich wenn sie die erbvertraglichen Begünstigungen schmälern; und"
+            },
+            {
+              "marke": "2",
+              "text": "im Erbvertrag nicht vorbehalten worden sind."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_494",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "974c605e6cde50e46cc63098f9fff5524e99d6cd8e4f00cfc1e10339e56d8cc2"
+      "sha": "1a284d4cc698edb9d6f85423369daf57b0f658d530fa1ff18a6f88229136d2c0"
     },
     {
       "id": "bund/ZGB/art_495",
@@ -14228,7 +15554,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Verfügung von Todes wegen wird auf erhobene Klage für ungültig erklärt:"
+          "text": "Eine Verfügung von Todes wegen wird auf erhobene Klage für ungültig erklärt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn sie vom Erblasser zu einer Zeit errichtet worden ist, da er nicht verfügungsfähig war;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn sie aus mangelhaftem Willen hervorgegangen ist;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn ihr Inhalt oder eine ihr angefügte Bedingung unsittlich oder rechtswidrig ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -14239,7 +15579,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_519",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "66edfcad1a5cd2648fa034857fdaf7f895e7c042d46337ead0ac9088ac35ab19"
+      "sha": "d1716fd56af6e2274c9b66b3a9680562af0525345eeea57e589fc98c25a06f1e"
     },
     {
       "id": "bund/ZGB/art_520",
@@ -14324,7 +15664,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erben, die dem Werte nach weniger als ihren Pflichtteil erhalten, können die Herabsetzung der folgenden Erwerbungen und Zuwendungen verlangen, bis der Pflichtteil hergestellt ist:"
+          "text": "Die Erben, die dem Werte nach weniger als ihren Pflichtteil erhalten, können die Herabsetzung der folgenden Erwerbungen und Zuwendungen verlangen, bis der Pflichtteil hergestellt ist:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Erwerbungen gemäss der gesetzlichen Erbfolge;"
+            },
+            {
+              "marke": "2",
+              "text": "der Zuwendungen von Todes wegen;"
+            },
+            {
+              "marke": "3",
+              "text": "der Zuwendungen unter Lebenden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -14335,7 +15689,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_522",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "dcd3a8f4a7685d5f110a4713f3051cc00e6e26cf9217b209636b094f989f054f"
+      "sha": "5e3fdde9a964e4ad2e0fcee44ddcaec94f04b8f328f087ea4ad52c014ae9ea06"
     },
     {
       "id": "bund/ZGB/art_523",
@@ -14431,14 +15785,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der Herabsetzung unterliegen wie die Verfügungen von Todes wegen:"
+          "text": "Der Herabsetzung unterliegen wie die Verfügungen von Todes wegen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Zuwendungen auf Anrechnung an den Erbteil, als Heiratsgut, Ausstattung oder Vermögensabtretung, wenn sie nicht der Ausgleichung unterworfen sind;"
+            },
+            {
+              "marke": "2",
+              "text": "die Erbabfindungen und Auskaufsbeträge;"
+            },
+            {
+              "marke": "3",
+              "text": "die Schenkungen, die der Erblasser frei widerrufen konnte, oder die er während der letzten fünf Jahre vor seinem Tode ausgerichtet hat, mit Ausnahme der üblichen Gelegenheitsgeschenke;"
+            },
+            {
+              "marke": "4",
+              "text": "die Entäusserung von Vermögenswerten, die der Erblasser offenbar zum Zwecke der Umgehung der Verfügungsbeschränkung vorgenommen hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_527",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e9d13339c67dad27b6ad1775bee92450f19ff222d4c339f378beff3eb9727a9b"
+      "sha": "a89a83a89125313478dbda2f7cade436d387d394fa81bf722cf5d4041ce63458"
     },
     {
       "id": "bund/ZGB/art_528",
@@ -14534,18 +15906,46 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Herabsetzung unterliegen wie folgt der Reihe nach, bis der Pflichtteil hergestellt ist:"
+          "text": "Der Herabsetzung unterliegen wie folgt der Reihe nach, bis der Pflichtteil hergestellt ist:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Erwerbungen gemäss der gesetzlichen Erbfolge;"
+            },
+            {
+              "marke": "2",
+              "text": "die Zuwendungen von Todes wegen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Zuwendungen unter Lebenden."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Zuwendungen unter Lebenden werden wie folgt der Reihe nach herabgesetzt:"
+          "text": "Die Zuwendungen unter Lebenden werden wie folgt der Reihe nach herabgesetzt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die der Hinzurechnung unterliegenden Zuwendungen aus Ehevertrag oder Vermögensvertrag;"
+            },
+            {
+              "marke": "2",
+              "text": "die frei widerruflichen Zuwendungen und die Leistungen aus der gebundenen Selbstvorsorge, im gleichen Verhältnis;"
+            },
+            {
+              "marke": "3",
+              "text": "die weiteren Zuwendungen, und zwar die späteren vor den früheren."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_532",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e4e27eb1bb27bd67cdb6d23299af60b345baea7872ab38f5dd4ff15855e57fc3"
+      "sha": "fff975fe45eff26ab5231c66c880b28cd729a390cfd44869be2fdcc8896cb8d9"
     },
     {
       "id": "bund/ZGB/art_533",
@@ -14726,7 +16126,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Unwürdig, Erbe zu sein oder aus einer Verfügung von Todes wegen irgendetwas zu erwerben, ist:"
+          "text": "Unwürdig, Erbe zu sein oder aus einer Verfügung von Todes wegen irgendetwas zu erwerben, ist:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wer vorsätzlich und rechtswidrig den Tod des Erblassers herbeigeführt oder herbeizuführen versucht hat;"
+            },
+            {
+              "marke": "2",
+              "text": "wer den Erblasser vorsätzlich und rechtswidrig in einen Zustand bleibender Verfügungsunfähigkeit gebracht hat;"
+            },
+            {
+              "marke": "3",
+              "text": "wer den Erblasser durch Arglist, Zwang oder Drohung dazu gebracht oder daran verhindert hat, eine Verfügung von Todes wegen zu errichten oder zu widerrufen;"
+            },
+            {
+              "marke": "4",
+              "text": "wer eine Verfügung von Todes wegen vorsätzlich und rechtswidrig unter Umständen, die dem Erblasser deren Erneuerung nicht mehr ermöglichten, beseitigt oder ungültig gemacht hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -14737,7 +16155,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_540",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "74ce0643f50bac94d1aef4c06a86a86fc4274b990af248abaf7b9ace826bd5e0"
+      "sha": "6351bd8ebe619f650eeca7aa11d3ecf1b411a687432b5ce5b10a5b5c4ed2e20c"
     },
     {
       "id": "bund/ZGB/art_541",
@@ -15041,7 +16459,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Aufnahme eines Inventars wird angeordnet, wenn:"
+          "text": "Die Aufnahme eines Inventars wird angeordnet, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "ein minderjähriger Erbe unter Vormundschaft steht oder zu stellen ist;"
+            },
+            {
+              "marke": "2",
+              "text": "ein Erbe dauernd und ohne Vertretung abwesend ist;"
+            },
+            {
+              "marke": "3",
+              "text": "einer der Erben oder die Erwachsenenschutzbehörde es verlangt;"
+            },
+            {
+              "marke": "4",
+              "text": "ein volljähriger Erbe unter umfassender Beistandschaft steht oder unter sie zu stellen ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -15056,7 +16492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_553",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ec150d5840d7b25d2f28fc0e3b04372bfe7062e5a37e39e7932f29f57f114840"
+      "sha": "0f06a158baf91df8dfab18f39299143e119cddcfc180b87f2599579cce3d2851"
     },
     {
       "id": "bund/ZGB/art_554",
@@ -15068,7 +16504,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erbschaftsverwaltung wird angeordnet:"
+          "text": "Die Erbschaftsverwaltung wird angeordnet:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn ein Erbe dauernd und ohne Vertretung abwesend ist, sofern es seine Interessen erfordern;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn keiner der Ansprecher sein Erbrecht genügend nachzuweisen vermag oder das Vorhandensein eines Erben ungewiss ist;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn nicht alle Erben des Erblassers bekannt sind;"
+            },
+            {
+              "marke": "4",
+              "text": "wo das Gesetz sie für besondere Fälle vorsieht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -15083,7 +16537,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_554",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "371fe344df9388849ebf458028411ff5c78e700e52102d0c791b45c69ebc0d72"
+      "sha": "b91876e80c8afdcf7362abd855fff6fd2baf557df50962647d139da9983b0c54"
     },
     {
       "id": "bund/ZGB/art_555",
@@ -17217,14 +18671,24 @@
         },
         {
           "absatz": "2",
-          "text": "Nicht aufheben oder beschränken können sie die jedem Miteigentümer zustehenden Befugnisse:"
+          "text": "Nicht aufheben oder beschränken können sie die jedem Miteigentümer zustehenden Befugnisse:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "zu verlangen, dass die für die Erhaltung des Wertes und der Gebrauchsfähigkeit der Sache notwendigen Verwaltungshandlungen durchgeführt und nötigenfalls vom Gericht angeordnet werden;"
+            },
+            {
+              "marke": "2",
+              "text": "von sich aus auf Kosten aller Miteigentümer die Massnahmen zu ergreifen, die sofort getroffen werden müssen, um die Sache vor drohendem oder wachsendem Schaden zu bewahren."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_647",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "347d462610e7e716385a71569db54000a898799e3bd8100673844aa93600955c"
+      "sha": "274377c0c7d86a9b9cf274904a5371ce159cf7b69a745b1e7279789608a8b005"
     },
     {
       "id": "bund/ZGB/art_647_a",
@@ -17643,18 +19107,46 @@
         },
         {
           "absatz": "2",
-          "text": "Grundstücke im Sinne dieses Gesetzes sind:"
+          "text": "Grundstücke im Sinne dieses Gesetzes sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Liegenschaften;"
+            },
+            {
+              "marke": "2",
+              "text": "die in das Grundbuch aufgenommenen selbständigen und dauernden Rechte;"
+            },
+            {
+              "marke": "3",
+              "text": "die Bergwerke;"
+            },
+            {
+              "marke": "4",
+              "text": "die Miteigentumsanteile an Grundstücken."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Als selbstständiges und dauerndes Recht kann eine Dienstbarkeit an einem Grundstück in das Grundbuch aufgenommen werden, wenn sie:"
+          "text": "Als selbstständiges und dauerndes Recht kann eine Dienstbarkeit an einem Grundstück in das Grundbuch aufgenommen werden, wenn sie:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "weder zugunsten eines berechtigten Grundstücks noch ausschliesslich zugunsten einer bestimmten Person errichtet ist; und"
+            },
+            {
+              "marke": "2",
+              "text": "auf wenigstens 30 Jahre oder auf unbestimmte Zeit begründet ist."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_655",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c9e6facdd5ad23240cb02f128b0b88afe7c92df1f095f387482789185612b600"
+      "sha": "b85243e9950139381cd366cc7f296d39a65a4bd979158cd537a6e722d1ce8421"
     },
     {
       "id": "bund/ZGB/art_655_a",
@@ -18008,7 +19500,17 @@
         },
         {
           "absatz": "3",
-          "text": "Antrag auf Anordnung von Massnahmen stellen kann:"
+          "text": "Antrag auf Anordnung von Massnahmen stellen kann:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "jede Person, die ein schutzwürdiges Interesse hat;"
+            },
+            {
+              "marke": "2",
+              "text": "das Grundbuchamt am Ort des Grundstücks."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -18019,7 +19521,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_666_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a90557073d4242dbe1d069445e2735f5a64a52d846eb4055a07a202de3b26c21"
+      "sha": "9db1a29381d1e7d2f040671a565febe3fee2ded09282427c6a066985736bf176"
     },
     {
       "id": "bund/ZGB/art_666_b",
@@ -19259,7 +20761,21 @@
         },
         {
           "absatz": "2",
-          "text": "Dem Stockwerkeigentümer können nicht zu Sonderrecht zugeschieden werden:"
+          "text": "Dem Stockwerkeigentümer können nicht zu Sonderrecht zugeschieden werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Boden der Liegenschaft und das Baurecht, kraft dessen gegebenenfalls das Gebäude erstellt wird;"
+            },
+            {
+              "marke": "2",
+              "text": "die Bauteile, die für den Bestand, die konstruktive Gliederung und Festigkeit des Gebäudes oder der Räume anderer Stockwerkeigentümer von Bedeutung sind oder die äussere Gestalt und das Aussehen des Gebäudes bestimmen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Anlagen und Einrichtungen, die auch den andern Stockwerkeigentümern für die Benutzung ihrer Räume dienen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -19270,7 +20786,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_712_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9a07074b36294e38b4a8c5c5ad4fb42e786ea6511e3400523c5f712eb0130243"
+      "sha": "0847cf65c2a1da0e2a39687d829885430b8422238ebd3ae161a3ac5c49e40927"
     },
     {
       "id": "bund/ZGB/art_712_c",
@@ -19313,7 +20829,17 @@
         },
         {
           "absatz": "2",
-          "text": "Die Eintragung kann verlangt werden:"
+          "text": "Die Eintragung kann verlangt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "auf Grund eines Vertrages der Miteigentümer über die Ausgestaltung ihrer Anteile zu Stockwerkeigentum;"
+            },
+            {
+              "marke": "2",
+              "text": "auf Grund einer Erklärung des Eigentümers der Liegenschaft oder des Inhabers eines selbständigen und dauernden Baurechtes über die Bildung von Miteigentumsanteilen und deren Ausgestaltung zu Stockwerkeigentum."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -19324,7 +20850,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_712_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "449a9cbc65138d21d1cb3b9ae9c868123ea648dadf687f697ca7fad10a7924fd"
+      "sha": "406e23aa0f63a0f263f00c18fcd1ca43a3b3fe5bffb563bd68fec74ca6b7a095"
     },
     {
       "id": "bund/ZGB/art_712_e",
@@ -19367,7 +20893,17 @@
         },
         {
           "absatz": "3",
-          "text": "Die Aufhebung kann von jedem Stockwerkeigentümer verlangt werden, wenn das Gebäude:"
+          "text": "Die Aufhebung kann von jedem Stockwerkeigentümer verlangt werden, wenn das Gebäude:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "zu mehr als der Hälfte des Wertes zerstört und der Wiederaufbau nicht ohne eine für ihn schwer tragbare Belastung möglich ist; oder"
+            },
+            {
+              "marke": "2",
+              "text": "seit mehr als 50 Jahren in Stockwerkeigentum aufgeteilt ist und wegen des schlechten baulichen Zustandes nicht mehr bestimmungsgemäss genutzt werden kann."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -19378,7 +20914,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_712_f",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "46e53bfb9b105aa518d4c2052cc99f0bee5d58f70845ccc395d025cea9841715"
+      "sha": "d85c72c8b282003f4abf30624b3bcae1080bc77ab5b73dd54a77cfa40ccddb5c"
     },
     {
       "id": "bund/ZGB/art_712_g",
@@ -19425,7 +20961,25 @@
         },
         {
           "absatz": "2",
-          "text": "Solche Lasten und Kosten sind namentlich:"
+          "text": "Solche Lasten und Kosten sind namentlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Auslagen für den laufenden Unterhalt, für Reparaturen und Erneuerungen der gemeinschaftlichen Teile des Grundstückes und Gebäudes sowie der gemeinschaftlichen Anlagen und Einrichtungen;"
+            },
+            {
+              "marke": "2",
+              "text": "die Kosten der Verwaltungstätigkeit einschliesslich der Entschädigung des Verwalters;"
+            },
+            {
+              "marke": "3",
+              "text": "die den Stockwerkeigentümern insgesamt auferlegten öffentlich-rechtlichen Beiträge und Steuern;"
+            },
+            {
+              "marke": "4",
+              "text": "die Zins- und Amortisationszahlungen an Pfandgläubiger, denen die Liegenschaft haftet oder denen sich die Stockwerkeigentümer solidarisch verpflichtet haben."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -19436,7 +20990,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_712_h",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1f60b19ecd93e6207013188bad1f1e3c67206427e99848f60b1cd3d03f19d84a"
+      "sha": "0bf75ca5409fd035156a8dcd7c76dbceb3ff09089ff8933eaf82c3194307c9cf"
     },
     {
       "id": "bund/ZGB/art_712_i",
@@ -19517,7 +21071,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ausser den in andern Bestimmungen genannten hat die Versammlung der Stockwerkeigentümer insbesondere die folgenden Befugnisse:"
+          "text": "Ausser den in andern Bestimmungen genannten hat die Versammlung der Stockwerkeigentümer insbesondere die folgenden Befugnisse:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in allen Verwaltungsangelegenheiten, die nicht dem Verwalter zustehen, zu entscheiden;"
+            },
+            {
+              "marke": "2",
+              "text": "den Verwalter zu bestellen und die Aufsicht über dessen Tätigkeit zu führen;"
+            },
+            {
+              "marke": "3",
+              "text": "einen Ausschuss oder einen Abgeordneten zu wählen, dem sie Verwaltungsangelegenheiten übertragen kann, wie namentlich die Aufgabe, dem Verwalter beratend zur Seite zu stehen, dessen Geschäftsführung zu prüfen und der Versammlung darüber Bericht zu erstatten und Antrag zu stellen;"
+            },
+            {
+              "marke": "4",
+              "text": "jährlich den Kostenvoranschlag, die Rechnung und die Verteilung der Kosten unter den Eigentümern zu genehmigen;"
+            },
+            {
+              "marke": "5",
+              "text": "über die Schaffung eines Erneuerungsfonds für Unterhalts- und Erneuerungsarbeiten zu befinden;"
+            },
+            {
+              "marke": "6",
+              "text": "das Gebäude gegen Feuer und andere Gefahren zu versichern und die üblichen Haftpflichtversicherungen abzuschliessen, ferner den Stockwerkeigentümer, der seine Räume mit ausserordentlichen Aufwendungen baulich ausgestaltet hat, zur Leistung eines zusätzlichen Prämienanteils zu verpflichten, wenn er nicht eine Zusatzversicherung auf eigene Rechnung abschliesst."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -19528,7 +21108,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_712_m",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a83b2f0ace8f9be27d703f3e071541962909b78d02a39986da19ba831cec9ffc"
+      "sha": "1bf7cadbdf83fa19e89dc1240718bbcf26540975e5869b116bd125df789c4626"
     },
     {
       "id": "bund/ZGB/art_712_n",
@@ -21805,7 +23385,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Gläubiger kann die Ablösung der Grundlast verlangen nach Abrede und ferner:"
+          "text": "Der Gläubiger kann die Ablösung der Grundlast verlangen nach Abrede und ferner:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn das belastete Grundstück geteilt wird und er die Verlegung der Schuld auf die Teilstücke nicht akzeptiert;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn der Eigentümer den Wert des Grundstückes vermindert und zum Ersatz dafür keine andern Sicherheiten bietet;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der Schuldner mit drei Jahresleistungen im Rückstand ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -21816,7 +23410,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_787",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "fd052c62cb379f21ade6b3e0ab90dbcf215c2bc1b7f20a47c735b68327d6b362"
+      "sha": "eff9316307c6a1d409aee874876b172c3e7b3ea61b056c05c48295de0a4d25e4"
     },
     {
       "id": "bund/ZGB/art_788",
@@ -21828,7 +23422,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Schuldner kann die Ablösung verlangen nach Abrede und ferner:"
+          "text": "Der Schuldner kann die Ablösung verlangen nach Abrede und ferner:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn der Vertrag, auf dem die Grundlast beruht, vom Berechtigten nicht innegehalten wird;"
+            },
+            {
+              "marke": "2",
+              "text": "nach dreissigjährigem Bestande der Grundlast, und zwar auch dann, wenn eine längere Dauer oder die Unablösbarkeit verabredet worden ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -21843,7 +23447,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_788",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "54b541b531861954416fa39fd3fd457193b730996ac9651183acf5b81b138b94"
+      "sha": "e69223d485a4fbfe381d6b86e7b3a0b663c5e406b8118370f62f2c364eb2cd59"
     },
     {
       "id": "bund/ZGB/art_789",
@@ -22561,7 +24165,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Grundpfandrecht bietet dem Gläubiger Sicherheit:"
+          "text": "Das Grundpfandrecht bietet dem Gläubiger Sicherheit:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für die Kapitalforderung;"
+            },
+            {
+              "marke": "2",
+              "text": "für die Kosten der Betreibung und die Verzugszinse;"
+            },
+            {
+              "marke": "3",
+              "text": "für drei zur Zeit der Konkurseröffnung oder des Pfandverwertungsbegehrens verfallene Jahreszinse und den seit dem letzten Zinstag laufenden Zins; beim Schuldbrief sind nur die tatsächlich geschuldeten Zinsen pfandgesichert."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22572,7 +24190,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_818",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1a85f03a09a91984694fc73e17752a4f774b119dbb2f47605bfe54d28a999993"
+      "sha": "6de508d518d14390ac646e950fc0b052397a50a833b5b2435d1ab17afdd4adea"
     },
     {
       "id": "bund/ZGB/art_819",
@@ -23002,7 +24620,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Anspruch auf Errichtung eines gesetzlichen Grundpfandrechtes besteht:"
+          "text": "Der Anspruch auf Errichtung eines gesetzlichen Grundpfandrechtes besteht:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für die Forderung des Verkäufers an dem verkauften Grundstück;"
+            },
+            {
+              "marke": "2",
+              "text": "für die Forderung der Miterben und Gemeinder aus Teilung an den Grundstücken, die der Gemeinschaft gehörten;"
+            },
+            {
+              "marke": "3",
+              "text": "für die Forderungen der Handwerker oder Unternehmer, die auf einem Grundstück zu Bauten oder anderen Werken, zu Abbrucharbeiten, zum Gerüstbau, zur Baugrubensicherung oder dergleichen Material und Arbeit oder Arbeit allein geliefert haben, an diesem Grundstück, sei es, dass sie den Grundeigentümer, einen Handwerker oder Unternehmer, einen Mieter, einen Pächter oder eine andere am Grundstück berechtigte Person zum Schuldner haben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -23017,7 +24649,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_837",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4d6eb6f788c0263b4c9b71e2dfab9787612d7b800066b3d1d35dd427d92edb24"
+      "sha": "39a30d77fd1219f4b5f0da884b9d11f7c828ef9a34a2a29563deb457bf219324"
     },
     {
       "id": "bund/ZGB/art_838",
@@ -23386,14 +25018,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ist die Schuldbriefforderung getilgt, so kann der Schuldner vom Gläubiger verlangen, dass dieser:"
+          "text": "Ist die Schuldbriefforderung getilgt, so kann der Schuldner vom Gläubiger verlangen, dass dieser:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Übertragung des Register-Schuldbriefs auf den Namen des Schuldners zustimmt; oder"
+            },
+            {
+              "marke": "2",
+              "text": "den Pfandtitel des Papier-Schuldbriefs unentkräftet herausgibt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_853",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f29897d233237c932b0a815804de94419920fc01b1ff19d16298ea842409495b"
+      "sha": "a7e9ef0afc59ba13bdd56ecad5555b057e1b1b862048446b80c5e650d750c6f0"
     },
     {
       "id": "bund/ZGB/art_854",
@@ -23451,14 +25093,24 @@
         },
         {
           "absatz": "2",
-          "text": "Meldet sich der Gläubiger nicht innert dieser Frist und ergibt die Untersuchung mit hoher Wahrscheinlichkeit, dass die Forderung nicht mehr zu Recht besteht, so wird auf Anordnung des Gerichts:"
+          "text": "Meldet sich der Gläubiger nicht innert dieser Frist und ergibt die Untersuchung mit hoher Wahrscheinlichkeit, dass die Forderung nicht mehr zu Recht besteht, so wird auf Anordnung des Gerichts:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "beim Register-Schuldbrief das Pfandrecht im Grundbuch gelöscht; oder"
+            },
+            {
+              "marke": "2",
+              "text": "der Papier-Schuldbrief für kraftlos erklärt und das Pfandrecht im Grundbuch gelöscht."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_856",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a5eca3d47bfd1f949fd72b2129fd4c9348bdd63ba925f1c3274719bcf919bd1a"
+      "sha": "a5525ea2d327049a4dedeb190710d644bb32c132ba8f356bf08a3183f8565405"
     },
     {
       "id": "bund/ZGB/art_857",
@@ -23716,14 +25368,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Anleihensobligationen, die auf den Namen der Gläubiger oder auf den Inhaber lauten, können mit einem Grundpfand sichergestellt werden:"
+          "text": "Anleihensobligationen, die auf den Namen der Gläubiger oder auf den Inhaber lauten, können mit einem Grundpfand sichergestellt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "durch Errichtung einer Grundpfandverschreibung oder eines Schuldbriefes für das ganze Anleihen und die Bezeichnung eines Stellvertreters für die Gläubiger und den Schuldner;"
+            },
+            {
+              "marke": "2",
+              "text": "durch die Errichtung eines Grundpfandrechtes für das ganze Anleihen zugunsten der Ausgabestelle und Bestellung eines Pfandrechtes an dieser Grundpfandforderung für die Obligationsgläubiger."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_875",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e32065bfba34044fe1ebab476b523514514b0737164c26623a1c7962ea1bfcce"
+      "sha": "ed5331b1564955ab70f12a163030c0899d0cc56b31cb97062201f06ef34f33c8"
     },
     {
       "id": "bund/ZGB/art_876_883",
@@ -25089,7 +26751,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Als Grundstücke werden in das Grundbuch aufgenommen:"
+          "text": "Als Grundstücke werden in das Grundbuch aufgenommen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Liegenschaften;"
+            },
+            {
+              "marke": "2",
+              "text": "die selbständigen und dauernden Rechte an Grundstücken;"
+            },
+            {
+              "marke": "3",
+              "text": "die Bergwerke;"
+            },
+            {
+              "marke": "4",
+              "text": "die Miteigentumsanteile an Grundstücken."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -25100,7 +26780,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_943",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "11ba050e21ffc5a2c3a06813db4667120976857063a5a431c3a190b62b4014f6"
+      "sha": "508ee011ad25f533eb601a6b18fe091fbd1d0f7ea5b60c876d24e17d4ac5d9a4"
     },
     {
       "id": "bund/ZGB/art_944",
@@ -25162,7 +26842,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Auf jedem Blatt werden in besondern Abteilungen eingetragen:"
+          "text": "Auf jedem Blatt werden in besondern Abteilungen eingetragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Eigentum;"
+            },
+            {
+              "marke": "2",
+              "text": "die Dienstbarkeiten und Grundlasten, die mit dem Grundstück verbunden sind, oder die darauf ruhen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Pfandrechte, mit denen es belastet ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -25173,7 +26867,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_946",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "46eeedf0829f3194dd97f3773b4e24fa9eac17d96e0f874f8ab0672ebc1f8f9c"
+      "sha": "43ec0530e9b3f89156f3de385dddd8837bc135831ed9319e9dfb58c2351ab869"
     },
     {
       "id": "bund/ZGB/art_947",
@@ -25266,7 +26960,37 @@
         },
         {
           "absatz": "2",
-          "text": "Der Bundesrat regelt:"
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Ermächtigungsverfahren;"
+            },
+            {
+              "marke": "2",
+              "text": "den Umfang und die technischen Einzelheiten der Grundbuchführung mittels Informatik, insbesondere den Vorgang, durch welchen die Eintragungen rechtswirksam werden;"
+            },
+            {
+              "marke": "3",
+              "text": "ob und unter welchen Voraussetzungen der Geschäftsverkehr mit dem Grundbuchamt auf elektronischem Weg zulässig ist;"
+            },
+            {
+              "marke": "4",
+              "text": "ob und unter welchen Voraussetzungen die ohne Interessennachweis einsehbaren Daten des Hauptbuches der Öffentlichkeit zur Verfügung gestellt werden;"
+            },
+            {
+              "marke": "5",
+              "text": "den Zugriff auf die Daten, die Aufzeichnung der Abfragen sowie die Voraussetzungen für den Entzug der Zugriffsberechtigung bei missbräuchlicher Anwendung;"
+            },
+            {
+              "marke": "6",
+              "text": "den Datenschutz;"
+            },
+            {
+              "marke": "7",
+              "text": "die langfristige Sicherung und die Archivierung von Daten."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -25277,7 +27001,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_949_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b7749cd1ca835e6f4a5307bd583caeaf6701cf42fa8b4c49830874749c8ab19f"
+      "sha": "5710230c017ff556ff017883e9587d62777d46d70b05b0aa71957d0a62546d34"
     },
     {
       "id": "bund/ZGB/art_949_b",
@@ -25331,7 +27055,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kantone, die das Grundbuch mittels Informatik führen, können private Aufgabenträger einsetzen, um:"
+          "text": "Die Kantone, die das Grundbuch mittels Informatik führen, können private Aufgabenträger einsetzen, um:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "den Zugriff auf die Daten des Grundbuchs im Abrufverfahren zu gewährleisten;"
+            },
+            {
+              "marke": "2",
+              "text": "den öffentlichen Zugang zu den ohne Interessennachweis einsehbaren Daten des Hauptbuchs zu gewährleisten;"
+            },
+            {
+              "marke": "3",
+              "text": "den elektronischen Geschäftsverkehr mit dem Grundbuchamt abzuwickeln."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -25342,7 +27080,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_949_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f7c778f5599d426ed5e4fd157a3994a835f41434ed3d50af24c21eabcd481bc8"
+      "sha": "ee93a63206ebdc5ab9db13e22ceaeb37896d1ea3209da9320ee32f317168dde6"
     },
     {
       "id": "bund/ZGB/art_950",
@@ -25527,7 +27265,21 @@
         },
         {
           "absatz": "2",
-          "text": "Zur Beschwerde berechtigt sind:"
+          "text": "Zur Beschwerde berechtigt sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "jede Person, die von einer Verfügung des Grundbuchamts besonders berührt ist und ein schutzwürdiges Interesse an deren Aufhebung oder Änderung hat;"
+            },
+            {
+              "marke": "2",
+              "text": "die kantonale administrative Aufsichtsbehörde, sofern ihr das kantonale Recht die Beschwerdebefugnis einräumt;"
+            },
+            {
+              "marke": "3",
+              "text": "die Oberaufsichtsbehörde des Bundes."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -25538,7 +27290,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_956_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "fb26a3475a84e5a46a51194059f4aa421ad7f708c9fe26ad5ccb07a1b673fbbc"
+      "sha": "5026030ca84f63a74a2e93943ee1bf07654171f7a97453a2b66c3a258499a358"
     },
     {
       "id": "bund/ZGB/art_956_b",
@@ -25592,14 +27344,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "In das Grundbuch werden folgende Rechte an Grundstücken eingetragen:"
+          "text": "In das Grundbuch werden folgende Rechte an Grundstücken eingetragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Eigentum;"
+            },
+            {
+              "marke": "2",
+              "text": "die Dienstbarkeiten und Grundlasten;"
+            },
+            {
+              "marke": "3",
+              "text": "die Pfandrechte."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_958",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3e747762defc2d7ed1a75efe3797da82e20048bd431916b3f328b2e0652fcf4e"
+      "sha": "6ad078cb59a0afcd8188b03b940d96ff952fb9403457a02985350b5bea1768e0"
     },
     {
       "id": "bund/ZGB/art_959",
@@ -25634,7 +27400,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Verfügungsbeschränkungen können für einzelne Grundstücke vorgemerkt werden:"
+          "text": "Verfügungsbeschränkungen können für einzelne Grundstücke vorgemerkt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "auf Grund einer amtlichen Anordnung zur Sicherung streitiger oder vollziehbarer Ansprüche;"
+            },
+            {
+              "marke": "2",
+              "text": "auf Grund einer Pfändung;"
+            },
+            {
+              "marke": "3",
+              "text": "auf Grund eines Rechtsgeschäftes, für das diese Vormerkung im Gesetz vorgesehen ist, wie für die Anwartschaft des Nacherben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -25645,7 +27425,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_960",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4bceed152b23ed30d5a99153552b59bed273c14db357ef1937954d76643327c3"
+      "sha": "8cde27f524996a0c511dfe4cfbcf096c83ddd4bf0527399b10ed960fa308de55"
     },
     {
       "id": "bund/ZGB/art_961",
@@ -25657,7 +27437,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Vorläufige Eintragungen können vorgemerkt werden:"
+          "text": "Vorläufige Eintragungen können vorgemerkt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "zur Sicherung behaupteter dinglicher Rechte;"
+            },
+            {
+              "marke": "2",
+              "text": "im Falle der vom Gesetze zugelassenen Ergänzung des Ausweises."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -25672,7 +27462,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_961",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "602fb992d602812d08c417f286f78469a2e1ca33d5165f9bfab17c20d0ffa7e9"
+      "sha": "597d31685a4561c7acee5532b345f7833452907483a17ac15679948b4e846599"
     },
     {
       "id": "bund/ZGB/art_961_a",
@@ -25730,14 +27520,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Im Grundbuch können angemerkt werden:"
+          "text": "Im Grundbuch können angemerkt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der gesetzliche Vertreter auf sein Begehren oder auf Begehren der zuständigen Behörde;"
+            },
+            {
+              "marke": "2",
+              "text": "der Erbschaftsverwalter, der Erbenvertreter, der amtliche Liquidator und der Willensvollstrecker auf ihr Begehren oder auf Begehren eines Erben oder der zuständigen Behörde;"
+            },
+            {
+              "marke": "3",
+              "text": "der Vertreter eines unauffindbaren Eigentümers, Grundpfandgläubigers oder Dienstbarkeitsberechtigten auf sein Begehren oder auf Begehren des Gerichts;"
+            },
+            {
+              "marke": "4",
+              "text": "der Vertreter einer juristischen Person oder anderen Rechtsträgerin bei Fehlen der vorgeschriebenen Organe auf sein Begehren oder auf Begehren des Gerichts;"
+            },
+            {
+              "marke": "5",
+              "text": "der Verwalter der Stockwerkeigentümergemeinschaft auf sein Begehren oder auf Begehren der Stockwerkeigentümerversammlung oder des Gerichts."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_962_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3601f0b5e1e4908ee78a9a7fb15829ea2edd6805425c700adde1cd5a2ef8339b"
+      "sha": "acbaf6bfe40b08038b85600bd72f70e282b7527c8f2bdc2666f7bf9c5b1f5692"
     },
     {
       "id": "bund/ZGB/art_963",
@@ -25922,7 +27734,21 @@
         },
         {
           "absatz": "2",
-          "text": "Ohne ein solches Interesse ist jede Person berechtigt, Auskunft über folgende Daten des Hauptbuches zu erhalten:"
+          "text": "Ohne ein solches Interesse ist jede Person berechtigt, Auskunft über folgende Daten des Hauptbuches zu erhalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Bezeichnung des Grundstücks und die Grundstücksbeschreibung;"
+            },
+            {
+              "marke": "2",
+              "text": "den Namen und die Identifikation des Eigentümers;"
+            },
+            {
+              "marke": "3",
+              "text": "die Eigentumsform und das Erwerbsdatum."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -25937,7 +27763,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_970",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c721fa95ac2505292a201234abbc4e25cb72df02d8d2a6e3389bf3a4fb8b7bbd"
+      "sha": "a70484911cc21546a74afb113fbd9ad2d08acddbe7ff8d1fe5cccaf88fc3366a"
     },
     {
       "id": "bund/ZGB/art_970_a",
@@ -26153,14 +27979,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Grundbuchamt kann einen Eintrag von Amtes wegen löschen, wenn dieser:"
+          "text": "Das Grundbuchamt kann einen Eintrag von Amtes wegen löschen, wenn dieser:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "befristet ist und infolge Ablaufs der Frist seine rechtliche Bedeutung verloren hat;"
+            },
+            {
+              "marke": "2",
+              "text": "ein unübertragbares oder unvererbliches Recht einer verstorbenen Person betrifft;"
+            },
+            {
+              "marke": "3",
+              "text": "das Grundstück wegen der örtlichen Lage nicht betreffen kann;"
+            },
+            {
+              "marke": "4",
+              "text": "ein untergegangenes Grundstück betrifft."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de#art_976",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e49ba35f3f61dda0b52336d81abf7c5ff647c11f0ec9434d88885751fe09bad4"
+      "sha": "df166cf3bfbf60e7b074e2d4f9940b8c1bd740f9ffea139d1b65320309d751a6"
     },
     {
       "id": "bund/ZGB/art_976_a",

@@ -11,22 +11,116 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühren der Zivilkreisgerichte betragen: a. für die vorsorglichen Massnahmen: CHF 100–5'000.–. b. für den Rechtsschutz in klaren Fällen: CHF 100–5'000.–. c. für die Entgegennahme von Schutzschriften: CHF 100–1'000.–. d. für das gerichtliche Verbot: CHF 100–1'000.–. e. für das Schlichtungsverfahren: CHF 100–500.–. f. für Endentscheide mit einem Streitwert: 1. bis CHF 10'000: CHF 200–1'500.–. 2. bis CHF 30'000: CHF 500–3'000.–. 3. bis CHF 100'000: CHF 1'500–10'000.–. 4. ab CHF 100'001: CHF 2'000–30'000.–. g. für Endentscheide mit unbestimmtem Streitwert: CHF 200–30'000.–. h. für Eheschutzmassnahmen und Schutzmassnahmen bei eingetragenen Partnerschaften: CHF 200–3'000.–. i. für Ehescheidungen, Eheungültigkeitsverfahren, Ehetrennungen und Auflösungen eingetragener Partnerschaften: CHF 200–15'000.–."
+          "text": "Die Gebühren der Zivilkreisgerichte betragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die vorsorglichen Massnahmen: CHF 100–5'000.–."
+            },
+            {
+              "marke": "b",
+              "text": "für den Rechtsschutz in klaren Fällen: CHF 100–5'000.–."
+            },
+            {
+              "marke": "c",
+              "text": "für die Entgegennahme von Schutzschriften: CHF 100–1'000.–."
+            },
+            {
+              "marke": "d",
+              "text": "für das gerichtliche Verbot: CHF 100–1'000.–."
+            },
+            {
+              "marke": "e",
+              "text": "für das Schlichtungsverfahren: CHF 100–500.–."
+            },
+            {
+              "marke": "f",
+              "text": "für Endentscheide mit einem Streitwert:"
+            },
+            {
+              "marke": "g",
+              "text": "für Endentscheide mit unbestimmtem Streitwert: CHF 200–30'000.–."
+            },
+            {
+              "marke": "h",
+              "text": "für Eheschutzmassnahmen und Schutzmassnahmen bei eingetragenen Partnerschaften: CHF 200–3'000.–."
+            },
+            {
+              "marke": "i",
+              "text": "für Ehescheidungen, Eheungültigkeitsverfahren, Ehetrennungen und Auflösungen eingetragener Partnerschaften: CHF 200–15'000.–."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Ferner werden die folgenden Gebühren erhoben: a. für die vorsorgliche Beweisführung: CHF 100–5'000.–. b. für die Abweisung eines Erläuterungs- und Berichtigungsgesuches: CHF 100–1'000.–. c. für Verfügungen, Massnahmen und Beschlüsse in Betreibungs- und Konkurssachen, soweit die Festsetzung der Gebühren den Kantonen überlassen ist: CHF 100–1'000.–. d. für Entscheide über Wiederherstellungsgesuche: CHF 100–1'000.–. e. für Kraftloserklärungen: CHF 100–3'000.–. f. für Verschollenheitsverfahren: CHF 100–1'000.–. g. für die Erledigung von Rechtshilfegesuchen: CHF 100–1'000.–. h. für die Abweisung eines Revisionsbegehrens: CHF 100–2'000.–. i. für den Entscheid über die Vollstreckung von Gerichtsentscheiden und öffentlichen Urkunden: CHF 100–1'000.–."
+          "text": "Ferner werden die folgenden Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die vorsorgliche Beweisführung: CHF 100–5'000.–."
+            },
+            {
+              "marke": "b",
+              "text": "für die Abweisung eines Erläuterungs- und Berichtigungsgesuches: CHF 100–1'000.–."
+            },
+            {
+              "marke": "c",
+              "text": "für Verfügungen, Massnahmen und Beschlüsse in Betreibungs- und Konkurssachen, soweit die Festsetzung der Gebühren den Kantonen überlassen ist: CHF 100–1'000.–."
+            },
+            {
+              "marke": "d",
+              "text": "für Entscheide über Wiederherstellungsgesuche: CHF 100–1'000.–."
+            },
+            {
+              "marke": "e",
+              "text": "für Kraftloserklärungen: CHF 100–3'000.–."
+            },
+            {
+              "marke": "f",
+              "text": "für Verschollenheitsverfahren: CHF 100–1'000.–."
+            },
+            {
+              "marke": "g",
+              "text": "für die Erledigung von Rechtshilfegesuchen: CHF 100–1'000.–."
+            },
+            {
+              "marke": "h",
+              "text": "für die Abweisung eines Revisionsbegehrens: CHF 100–2'000.–."
+            },
+            {
+              "marke": "i",
+              "text": "für den Entscheid über die Vollstreckung von Gerichtsentscheiden und öffentlichen Urkunden: CHF 100–1'000.–."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Eine Gebühr bis zur Hälfte der Gebühr des Endentscheids wird erhoben: a. für Zwischenentscheide; b. für die Verschiebung einer angeordneten Verhandlung auf Begehren einer Partei, ohne dass ein anderer Fall am betreffenden Sitzungstermin anberaumt werden konnte; c. für den Entscheid über die Aufhebung oder Bestätigung eines Versäumnisurteils; d. für die Erledigung des Verfahrens ohne Sachentscheid."
+          "text": "Eine Gebühr bis zur Hälfte der Gebühr des Endentscheids wird erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Zwischenentscheide;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Verschiebung einer angeordneten Verhandlung auf Begehren einer Partei, ohne dass ein anderer Fall am betreffenden Sitzungstermin anberaumt werden konnte;"
+            },
+            {
+              "marke": "c",
+              "text": "für den Entscheid über die Aufhebung oder Bestätigung eines Versäumnisurteils;"
+            },
+            {
+              "marke": "d",
+              "text": "für die Erledigung des Verfahrens ohne Sachentscheid."
+            }
+          ]
         }
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
       "abgerufen": "2026-06-16",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
-      "sha": "3e67afcc510edcaccacb12647efd22e1def347408a0a1bdfcf5a5e4c7cefa78e"
+      "sha": "38333bd01f2f33142ee1475b1785f7f96fdac5bf3b8caa401455f50f42ad915e"
     },
     {
       "id": "kanton/BL/170.31/art_7",
@@ -38,7 +132,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von den Friedensrichterinnen und Friedensrichtern werden folgende Gebühren erhoben: a. für die Abschreibung eines Verfahrens zufolge Klagrückzugs, Klaganerkennung oder aus anderen Gründen sowie für das Ausstellen einer Klagebewilligung, sofern in diesen Fällen keine Verhandlung durchgeführt wurde: CHF 50–300.–. b. in allen übrigen Fällen, namentlich für einen Entscheid, einen Urteilsvorschlag, sowie für das Ausstellen einer Klagebewilligung oder bei Abschreibung eines Verfahrens zufolge Vergleichs, Klagrückzugs bzw. Klaganerkennung, wenn zuvor eine Verhandlung durchgeführt wurde: CHF 100–500.–."
+          "text": "Von den Friedensrichterinnen und Friedensrichtern werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Abschreibung eines Verfahrens zufolge Klagrückzugs, Klaganerkennung oder aus anderen Gründen sowie für das Ausstellen einer Klagebewilligung, sofern in diesen Fällen keine Verhandlung durchgeführt wurde: CHF 50–300.–."
+            },
+            {
+              "marke": "b",
+              "text": "in allen übrigen Fällen, namentlich für einen Entscheid, einen Urteilsvorschlag, sowie für das Ausstellen einer Klagebewilligung oder bei Abschreibung eines Verfahrens zufolge Vergleichs, Klagrückzugs bzw. Klaganerkennung, wenn zuvor eine Verhandlung durchgeführt wurde: CHF 100–500.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -49,7 +153,7 @@
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
       "abgerufen": "2026-06-16",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
-      "sha": "caef04c4ab8b8c6295c0c16543949d74b62bf7e938d392773758912568cec20c"
+      "sha": "9bbe446df7dfb2cd9cc6ed5153b7a039ffd48c7df64e430125a1b6014be94244"
     }
   ]
 }

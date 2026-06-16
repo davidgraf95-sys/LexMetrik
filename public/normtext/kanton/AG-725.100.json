@@ -57,14 +57,36 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die Eintragung von Grundpfändern werden von der jeweiligen Pfandsumme folgende Abgaben, mindestens jedoch Fr. 100.–, erhoben: a) vertragliche Grundpfandrechte: 1,5 ‰; b) gesetzliche Grundpfandrechte 1. zu Gunsten des Verkäufers, der Miterben, des Kantons, der Gemeinde, des Pfrundnehmers oder des Bauhandwerkers: ½ ‰, 2. bei gleichzeitiger Abtretung an Dritte oder bei Ausstellung eines Schuldbriefes: 1½ ‰; c) leere Pfandstelle: ½ ‰; d) Aufteilung oder Zusammenlegung von Pfandstellen: ½ ‰; e) …"
+          "text": "Für die Eintragung von Grundpfändern werden von der jeweiligen Pfandsumme folgende Abgaben, mindestens jedoch Fr. 100.–, erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vertragliche Grundpfandrechte: 1,5 ‰;"
+            },
+            {
+              "marke": "b",
+              "text": "gesetzliche Grundpfandrechte"
+            },
+            {
+              "marke": "c",
+              "text": "leere Pfandstelle: ½ ‰;"
+            },
+            {
+              "marke": "d",
+              "text": "Aufteilung oder Zusammenlegung von Pfandstellen: ½ ‰;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2020-01-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/725.100",
       "abgerufen": "2026-06-16",
       "fassungsToken": "1c8fd03927f498fe939c30dd5e6ea7d0",
-      "sha": "750f2b493b1372484ae1f9d9517399893ae5ca6a3a5f5d7d2ed60e4509b5147a"
+      "sha": "6296f39756ef797e2e8d722b79c8ea2e80edccf1270f9717c23e413eca1048f4"
     },
     {
       "id": "kanton/AG/725.100/art_29",

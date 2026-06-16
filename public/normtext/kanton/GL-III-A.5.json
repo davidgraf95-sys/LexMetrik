@@ -11,7 +11,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Gerichtsverfahren beträgt die Pauschalgebühr vor jeder Instanz: a. Streitwert bis 30'000 Franken 200 bis 5000 Franken; b. Streitwert bis 100'000 Franken 500 bis 10'000 Franken; c. Streitwert bis 500'000 Franken 1000 bis 25'000 Franken; d. Streitwert bis 1'000'000 Franken 2000 bis 40'000 Franken; e. Streitwert über 1'000'000 Franken 4000 bis 4% des Streitwertes."
+          "text": "Im Gerichtsverfahren beträgt die Pauschalgebühr vor jeder Instanz:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitwert bis 30'000 Franken 200 bis 5000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "Streitwert bis 100'000 Franken 500 bis 10'000 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "Streitwert bis 500'000 Franken 1000 bis 25'000 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "Streitwert bis 1'000'000 Franken 2000 bis 40'000 Franken;"
+            },
+            {
+              "marke": "e",
+              "text": "Streitwert über 1'000'000 Franken 4000 bis 4% des Streitwertes."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -34,7 +56,7 @@
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
       "abgerufen": "2026-06-16",
       "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
-      "sha": "9b9ea018e7e3f778ad2031f392ad7a0277930d30e7b02108d66558b929fa9e58"
+      "sha": "0d36defec2a6c907ffdcbe40b8ffa15143ae303f802d68d63d0aa3c20eaebb0a"
     },
     {
       "id": "kanton/GL/III-A.5/art_2",

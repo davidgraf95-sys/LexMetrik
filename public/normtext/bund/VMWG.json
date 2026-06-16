@@ -103,7 +103,45 @@
         },
         {
           "absatz": "2",
-          "text": "Darunter fallen insbesondere die Aufwendungen für:"
+          "text": "Darunter fallen insbesondere die Aufwendungen für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Brennstoffe und die Energie, die verbraucht wurden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Elektrizität zum Betrieb von Brennern und Pumpen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Betriebskosten für Alternativenergien;"
+            },
+            {
+              "marke": "d",
+              "text": "die Reinigung der Heizungsanlage und des Kamins, das Auskratzen, Ausbrennen und Einölen der Heizkessel sowie die Abfall- und Schlackenbeseitigung;"
+            },
+            {
+              "marke": "e",
+              "text": "die periodische Revision der Heizungsanlage einschliesslich des Öltanks sowie das Entkalken der Warmwasseranlage, der Boiler und des Leitungsnetzes;"
+            },
+            {
+              "marke": "f",
+              "text": "die Verbrauchserfassung und den Abrechnungsservice für die verbrauchsabhängige Heizkostenabrechnung sowie den Unterhalt der nötigen Apparate;"
+            },
+            {
+              "marke": "g",
+              "text": "die Wartung;"
+            },
+            {
+              "marke": "h",
+              "text": "die Versicherungsprämien, soweit sie sich ausschliesslich auf die Heizungsanlage beziehen;"
+            },
+            {
+              "marke": "i",
+              "text": "die Verwaltungsarbeit, die mit dem Betrieb der Heizungsanlage zusammenhängt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -114,7 +152,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_5",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "524775e2d9f1fb006d01448e3ff6a9114cd9ca0b9f2eb340d0e82b0fe8a471ce"
+      "sha": "46af282df7b3eaa83e5c37698c25406b7ce82d4be390097972a8e545365188a5"
     },
     {
       "id": "bund/VMWG/art_6",
@@ -126,14 +164,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Nicht als Heizungs- und Warmwasseraufbereitungskosten anrechenbar sind die Aufwendungen für:"
+          "text": "Nicht als Heizungs- und Warmwasseraufbereitungskosten anrechenbar sind die Aufwendungen für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Reparatur und Erneuerung der Anlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verzinsung und Abschreibung der Anlagen."
+            }
+          ]
         }
       ],
       "stand": "2025-10-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "87eeaab1facb983201668fa14820ffe700f2441f671915589e60714c83e2a3fa"
+      "sha": "26c8f1fe6e83f20dbde34071e21927e94aaec721b27b5b1b12e26cef4263a57b"
     },
     {
       "id": "bund/VMWG/art_6_a",
@@ -187,7 +235,25 @@
         },
         {
           "absatz": "2",
-          "text": "Als Energiesparmassnahmen nach Absatz 1 gelten insbesondere:"
+          "text": "Als Energiesparmassnahmen nach Absatz 1 gelten insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Optimierung des Betriebs von Heizungs-, Lüftungs- und Klimaanlagen und der Gebäudeautomation;"
+            },
+            {
+              "marke": "b",
+              "text": "die Instruktion und die Beratung der Bewohnerschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "der Ersatz von Anlagen, Installationen und Leuchtmitteln;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verbesserung der Gebäudehülle."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -210,7 +276,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_6_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "6f68434d499735f2c6f056cb1976ea04e146f7e0154ff8f0795d64d37bc8a7cb"
+      "sha": "5d20ac67866a294517be5d3b07b66ad88e0ee622eb122f7c75d45affe309966e"
     },
     {
       "id": "bund/VMWG/art_7",
@@ -226,14 +292,28 @@
         },
         {
           "absatz": "2",
-          "text": "Sind keine Geräte zur Erfassung des Wärmeverbrauchs der einzelnen Verbraucher installiert und wurden nicht vermietete Wohn- und Geschäftsräume nachweisbar nur soweit geheizt, als dies zur Verhinderung von Frostschäden notwendig ist, muss der Vermieter nur einen Teil der Heizungskosten übernehmen, die nach dem normalen Verteilungsschlüssel auf Wohn- und Geschäftsräume entfallen. Dieser Teil beträgt in der Regel:"
+          "text": "Sind keine Geräte zur Erfassung des Wärmeverbrauchs der einzelnen Verbraucher installiert und wurden nicht vermietete Wohn- und Geschäftsräume nachweisbar nur soweit geheizt, als dies zur Verhinderung von Frostschäden notwendig ist, muss der Vermieter nur einen Teil der Heizungskosten übernehmen, die nach dem normalen Verteilungsschlüssel auf Wohn- und Geschäftsräume entfallen. Dieser Teil beträgt in der Regel:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Drittel für Zwei- bis Dreifamilienhäuser;"
+            },
+            {
+              "marke": "b",
+              "text": "die Hälfte für Vier- bis Achtfamilienhäuser;"
+            },
+            {
+              "marke": "c",
+              "text": "zwei Drittel für grössere Gebäude sowie für Büro- und Geschäftshäuser."
+            }
+          ]
         }
       ],
       "stand": "2025-10-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_7",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "48a5715d879da05795f53ae831197f94640135c86cd3ad8d30bb6ccd2bf00b15"
+      "sha": "b44a264f22276fdd238ce1fc04a45ac6ffdb2c45ab91145ea931a88363b387e7"
     },
     {
       "id": "bund/VMWG/art_8",
@@ -268,7 +348,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Formular für die Mitteilung der Kündigung im Sinne von Artikel 266 l Absatz 2 OR muss enthalten:"
+          "text": "Das Formular für die Mitteilung der Kündigung im Sinne von Artikel 266 l Absatz 2 OR muss enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung des Mietgegenstandes, auf welchen sich die Kündigung bezieht;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zeitpunkt, auf den die Kündigung wirksam wird;"
+            },
+            {
+              "marke": "c",
+              "text": "den Hinweis, dass der Vermieter die Kündigung auf Verlangen des Mieters begründen muss;"
+            },
+            {
+              "marke": "d",
+              "text": "die gesetzlichen Voraussetzungen der Anfechtung der Kündigung und der Erstreckung des Mietverhältnisses (Art. 271–273 OR);"
+            },
+            {
+              "marke": "e",
+              "text": "das Verzeichnis der Schlichtungsbehörden und ihre örtliche Zuständigkeit."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -279,7 +381,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_9",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "79fa1ebc170765dd289ea1b0ebb984e3065875c70b73605812d25489372b27b6"
+      "sha": "70b1e446cf15018c913e3547f37be4623e43539b4928adb5b72696cb4e10019b"
     },
     {
       "id": "bund/VMWG/art_10",
@@ -395,7 +497,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Hypothekarzinserhöhung von einem Viertel Prozent berechtigt in der Regel zu einer Mietzinserhöhung von höchstens:"
+          "text": "Eine Hypothekarzinserhöhung von einem Viertel Prozent berechtigt in der Regel zu einer Mietzinserhöhung von höchstens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 Prozent bei Hypothekarzinssätzen von mehr als 6 Prozent;"
+            },
+            {
+              "marke": "b",
+              "text": "2,5 Prozent bei Hypothekarzinssätzen zwischen 5 und 6 Prozent;"
+            },
+            {
+              "marke": "c",
+              "text": "3 Prozent bei Hypothekarzinssätzen von weniger als 5 Prozent."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -418,7 +534,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_13",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "e57828415d53c5caf7cd0d761b822b488f35114a382aab381f7beb7852c0bfa7"
+      "sha": "958879421a46dda804aeee5c57e7afdd6f206cc098c14fecebcce8147ffc7d32"
     },
     {
       "id": "bund/VMWG/art_14",
@@ -434,7 +550,29 @@
         },
         {
           "absatz": "2",
-          "text": "Als Mehrleistungen gelten auch die folgenden energetischen Verbesserungen:"
+          "text": "Als Mehrleistungen gelten auch die folgenden energetischen Verbesserungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Massnahmen zur Verminderung der Energieverluste der Gebäudehülle;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen zur rationelleren Energienutzung;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen zur Verminderung der Emissionen bei haustechnischen Anlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "Massnahmen zum Einsatz erneuerbarer Energien;"
+            },
+            {
+              "marke": "e",
+              "text": "der Ersatz von Haushaltgeräten mit grossem Energieverbrauch durch Geräte mit geringerem Verbrauch."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -457,7 +595,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_14",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "6451ad88ecae148330e423b71914f8ff051b6b850f9898aba3c7fbf2568931e2"
+      "sha": "1d4b470130b3c294ac786dd01b62e3e6bf024d25513cb81bff0fde83ccc28349"
     },
     {
       "id": "bund/VMWG/art_15",
@@ -561,7 +699,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Formular für die Mitteilung von Mietzinserhöhungen und anderen einseitigen Vertragsänderungen im Sinne von Artikel 269 d OR muss enthalten:"
+          "text": "Das Formular für die Mitteilung von Mietzinserhöhungen und anderen einseitigen Vertragsänderungen im Sinne von Artikel 269 d OR muss enthalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die gesetzlichen Voraussetzungen der Anfechtung;"
+            },
+            {
+              "marke": "2",
+              "text": "das Verzeichnis der Schlichtungsbehörden und ihre örtliche Zuständigkeit."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -573,7 +721,17 @@
         },
         {
           "absatz": "3",
-          "text": "Die Absätze 1 und 1 bis sind sinngemäss anzuwenden, wenn die Kantone im Sinne von Artikel 270 Absatz 2 OR die Verwendung des Formulars beim Abschluss eines neuen Mietvertrags für obligatorisch erklären. Zusätzlich muss dieses Formular enthalten:"
+          "text": "Die Absätze 1 und 1 bis sind sinngemäss anzuwenden, wenn die Kantone im Sinne von Artikel 270 Absatz 2 OR die Verwendung des Formulars beim Abschluss eines neuen Mietvertrags für obligatorisch erklären. Zusätzlich muss dieses Formular enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den für den bisherigen Mietzins geltenden Stand des Referenzzinssatzes;"
+            },
+            {
+              "marke": "b",
+              "text": "den für den bisherigen Mietzins geltenden Stand des Landesindexes der Konsumentenpreise."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -584,7 +742,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de#art_19",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20251001",
-      "sha": "46a4e0e2c1e5dacb67d48dd7b814d9e37e92e8f3e8699c38d1d95d79668f449e"
+      "sha": "78b79ce58393d8f9e4351d616f6cb03776d29feec102afed70f67d1d29ab7d16"
     },
     {
       "id": "bund/VMWG/art_19_a",

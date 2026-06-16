@@ -30,14 +30,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Verzicht auf Gebührenerhebung 1 Die Handelsregisterbehörde erhebt keine Gebühr für: a. Eintragungen, die ein Gericht oder eine Verwaltungsbehörde in einem Urteil oder in einer Verfügung anordnet; b. Mitteilungen und Auskünfte an andere Behörden. 2 Auf die Gebührenerhebung kann verzichtet werden: a. wenn ein überwiegendes öffentliches Interesse an der Verfügung oder Dienstleistung besteht; b. wenn es sich um Verfügungen oder Dienstleistungen mit geringem Aufwand, insbesondere um einfache Auskünfte, handelt; c. soweit die Gebühr voraussichtlich uneinbringlich ist, namentlich weil die gebührenpflichtige Person nachweislich mittellos, ohne bekannte Adresse oder im Ausland ist."
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn ein überwiegendes öffentliches Interesse an der Verfügung oder Dienstleistung besteht;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn es sich um Verfügungen oder Dienstleistungen mit geringem Aufwand, insbesondere um einfache Auskünfte, handelt;"
+            },
+            {
+              "marke": "c",
+              "text": "soweit die Gebühr voraussichtlich uneinbringlich ist, namentlich weil die gebührenpflichtige Person nachweislich mittellos, ohne bekannte Adresse oder im Ausland ist."
+            }
+          ]
         }
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_2",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20210101",
-      "sha": "2ce09a4e7d3621ede805bb38444e4381e673cdf7f9d689c309696b757939b64d"
+      "sha": "288006e9373e4494fc29aa013953d24780a467d0ad7893231c9216e128e52885"
     },
     {
       "id": "bund/GEBV_HREG/art_3",
@@ -68,14 +82,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Auslagen 1 Auslagen sind Bestandteil der Gebühr und werden gesondert berechnet. 2 Als Auslagen gelten Kosten, die im Zusammenhang mit einer Verfügung oder Dienstleistung zusätzlich anfallen, insbesondere: a. Übermittlungs- und Kommunikationskosten; b. Kosten für die Beschaffung der notwendigen Informationen, insbesondere von Unterlagen; c. Übersetzungskosten."
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Übermittlungs- und Kommunikationskosten;"
+            },
+            {
+              "marke": "b",
+              "text": "Kosten für die Beschaffung der notwendigen Informationen, insbesondere von Unterlagen;"
+            },
+            {
+              "marke": "c",
+              "text": "Übersetzungskosten."
+            }
+          ]
         }
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2020/180/de#art_4",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20210101",
-      "sha": "7e93ca3009d4aa01d3088d3f2f4f08c2a1be8713fbfc1397677868faed41b01b"
+      "sha": "d9315361bab1177891cc866e7390e25570b3defadd294df6f987882316b07e5a"
     },
     {
       "id": "bund/GEBV_HREG/art_5",

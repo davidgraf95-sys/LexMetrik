@@ -11,7 +11,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Grundentschädigung für die Vertretung und Verbeiständung einer Partei im ordentlichen und im vereinfachten Verfahren sowie im Scheidungsverfahren einschliesslich die Beratung und Vertretung im Schlichtungsverfahren beträgt: a) in vermögensrechtlichen Streitsachen: 1. Streitwert bis Fr. 6'160.– Fr. 1'110.– + 22,0 % des Strw. 2. Streitwert über 6'160.– bis 12'300.– Fr. 1'230.– + 20,0 % des Strw. 3. Streitwert über 12'300.– bis 24'600.– Fr. 1'850.– + 15,0 % des Strw. 4. Streitwert über 24'600.– bis 49'300.– Fr. 2'590.– + 12,0 % des Strw. 5. Streitwert über 49'300.– bis 98'600.– Fr. 4'070.– + 9,0 % des Strw. 6. Streitwert über 98'600.– bis 184'800.– Fr. 6'530.– + 6,4 % des Strw. 7. Streitwert über 184'800.– bis 369'600.– Fr. 10'230.– + 4,4 % des Strw. 8. Streitwert über 369'600.– bis 739'200.– Fr. 14'300.– + 3,3 % des Strw. 9. Streitwert über 739'200.– bis 1'478'400.– Fr. 20'240.– + 2,5 % des Strw. 10. Streitwert über 1'478'400.– bis 3'080'000.– Fr. 29'040.– + 1,9 % des Strw. 11. Streitwert über 3'080'000.– bis 6'160'000.– Fr. 44'440.– + 1,4 % des Strw. 12. über 6'160'000.– Fr. 69'080.– + 1,0 % des Strw. b) in Verfahren, die das Vermögen der Parteien weder direkt noch indirekt beeinflussen: nach dem mutmasslichen Aufwand des Anwaltes, nach der Bedeutung und der Schwierigkeit des Falles Fr. 1'210.– bis Fr. 14'740.–. c) Sind im gleichen Verfahren vermögensrechtliche und nicht vermögensrechtliche Ansprüche zu beurteilen, ist die höhere Grundentschädigung massgebend. d) Die Festsetzung familienrechtlicher Unterhalts- und Unterstützungsbeiträge sowie partnerschaftsrechtlicher Unterhaltsbeiträge und der Vorsorgeausgleich bei Scheidung und bei Auflösung der eingetragenen Partnerschaft gelten als nicht vermögensrechtliche Streitsachen. Für güterrechtliche Ansprüche gelten dagegen die Litera a und c."
+          "text": "Die Grundentschädigung für die Vertretung und Verbeiständung einer Partei im ordentlichen und im vereinfachten Verfahren sowie im Scheidungsverfahren einschliesslich die Beratung und Vertretung im Schlichtungsverfahren beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in vermögensrechtlichen Streitsachen:"
+            },
+            {
+              "marke": "b",
+              "text": "in Verfahren, die das Vermögen der Parteien weder direkt noch indirekt beeinflussen: nach dem mutmasslichen Aufwand des Anwaltes, nach der Bedeutung und der Schwierigkeit des Falles Fr. 1'210.– bis Fr. 14'740.–."
+            },
+            {
+              "marke": "c",
+              "text": "Sind im gleichen Verfahren vermögensrechtliche und nicht vermögensrechtliche Ansprüche zu beurteilen, ist die höhere Grundentschädigung massgebend."
+            },
+            {
+              "marke": "d",
+              "text": "Die Festsetzung familienrechtlicher Unterhalts- und Unterstützungsbeiträge sowie partnerschaftsrechtlicher Unterhaltsbeiträge und der Vorsorgeausgleich bei Scheidung und bei Auflösung der eingetragenen Partnerschaft gelten als nicht vermögensrechtliche Streitsachen. Für güterrechtliche Ansprüche gelten dagegen die Litera a und c."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22,7 +40,7 @@
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/291.150",
       "abgerufen": "2026-06-16",
       "fassungsToken": "b52f0d7238db10fd6dce0741a33e34a3",
-      "sha": "3e3716634391398f2eecea3d39d229bdab7e4a5684d83cd487455ebf5cf17cd4"
+      "sha": "1079ad4955691e9123c927ca587bdd81ca23001203c2b1f7a9a9058a0cb5a81c"
     },
     {
       "id": "kanton/AG/291.150/art_9",

@@ -38,7 +38,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Bedeutung des Geschäfts wird durch Multiplikation der Gebühr gemäss § 13 mit folgenden Faktoren Rechnung getragen: a) mit Faktor 4 bei Eigentumsübergängen an Grundstücken bis zu einer Grenze von Fr. 6000.–; b) mit Faktor 4 bei Grundstücksteilungen und -vereinigungen bis zu einer Grenze von Fr. 17 000.–; c) mit Faktor 4 bei Stockwerkeigentumsbegründungen bis zu einer Grenze von Fr. 13 500.–; d) mit Faktor 4 bei Begründung selbständiger und dauernder Baurechte bis zu einer Grenze von Fr. 7200.–; e) mit Faktor 3 bei Pfanderrichtungen und Pfanderhöhungen bis zu einer Grenze von Fr. 4500.–; f) mit Faktor 3 bei Vormerkung eines Kaufs-, Vorkaufs- oder Rückkaufsrechts bis zu einer Grenze von Fr. 2700.–; g) mit Faktor 2 bei Begründung einer Dienstbarkeit oder Grundlast bis zu einer Grenze von Fr. 3000.–."
+          "text": "Der Bedeutung des Geschäfts wird durch Multiplikation der Gebühr gemäss § 13 mit folgenden Faktoren Rechnung getragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit Faktor 4 bei Eigentumsübergängen an Grundstücken bis zu einer Grenze von Fr. 6000.–;"
+            },
+            {
+              "marke": "b",
+              "text": "mit Faktor 4 bei Grundstücksteilungen und -vereinigungen bis zu einer Grenze von Fr. 17 000.–;"
+            },
+            {
+              "marke": "c",
+              "text": "mit Faktor 4 bei Stockwerkeigentumsbegründungen bis zu einer Grenze von Fr. 13 500.–;"
+            },
+            {
+              "marke": "d",
+              "text": "mit Faktor 4 bei Begründung selbständiger und dauernder Baurechte bis zu einer Grenze von Fr. 7200.–;"
+            },
+            {
+              "marke": "e",
+              "text": "mit Faktor 3 bei Pfanderrichtungen und Pfanderhöhungen bis zu einer Grenze von Fr. 4500.–;"
+            },
+            {
+              "marke": "f",
+              "text": "mit Faktor 3 bei Vormerkung eines Kaufs-, Vorkaufs- oder Rückkaufsrechts bis zu einer Grenze von Fr. 2700.–;"
+            },
+            {
+              "marke": "g",
+              "text": "mit Faktor 2 bei Begründung einer Dienstbarkeit oder Grundlast bis zu einer Grenze von Fr. 3000.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -61,7 +91,7 @@
       "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/215.35",
       "abgerufen": "2026-06-16",
       "fassungsToken": "92e7cc11396ba0c33528a88118ae7d50",
-      "sha": "0b26ac9b6f1436ca3d598f1d65d43d115c837d88a42f121e40d44d9773706e3c"
+      "sha": "e6d7093f407f80f61dbd894fdbe56cc65a4f81e40d133da4b8d7ca70c37aa554"
     }
   ]
 }

@@ -11,26 +11,158 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühren für Beurkundungen des Eherechts, des Partnerschaftsgesetzes, des Erwachsenenschutzrechts, des Erbrechts sowie für vorbereitende Verrichtungen betragen: 1. Abschluss, Änderung und Aufhebung von Eheverträgen (Art. 184 ZGB) und Vermögensverträgen (Art. 25 PartnG) 250.-- bis 2'000.-- 2. Vorsorgeauftrag (Art. 361 ZGB) 200.-- bis 2'000.-- 3. öffentliche letztwillige Verfügung (Art. 499 ZGB) 250.-- bis 2'000.-- 4. Entwurf für letztwillige Verfügung 200.-- bis 2'000.-- 5. Erbvertrag (Art. 512 ZGB) 350.-- bis 3'000.-- 6. Zuschlag für öffentliche Beurkundungen ausser Haus 200.-- bis 1'000.--"
+          "text": "Die Gebühren für Beurkundungen des Eherechts, des Partnerschaftsgesetzes, des Erwachsenenschutzrechts, des Erbrechts sowie für vorbereitende Verrichtungen betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Abschluss, Änderung und Aufhebung von Eheverträgen (Art. 184 ZGB) und Vermögensverträgen (Art. 25 PartnG) 250.-- bis 2'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "Vorsorgeauftrag (Art. 361 ZGB) 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "öffentliche letztwillige Verfügung (Art. 499 ZGB) 250.-- bis 2'000.--"
+            },
+            {
+              "marke": "4",
+              "text": "Entwurf für letztwillige Verfügung 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "5",
+              "text": "Erbvertrag (Art. 512 ZGB) 350.-- bis 3'000.--"
+            },
+            {
+              "marke": "6",
+              "text": "Zuschlag für öffentliche Beurkundungen ausser Haus 200.-- bis 1'000.--"
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Gebühren für sachenrechtliche Beurkundungen betragen: 1. Handänderungsvertrag und Vorvertrag dazu: je 1‰ des Handänderungswerts, mindestens 60.--; 2. … 3. Errichtung von Grundpfandrechten: 1‰ der Pfandsumme (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte: 1‰ der Differenz zwischen der bisherigen und der neuen Belastung), mindestens 50.--, höchstens 2'000.--; 4. Erhöhung der Pfandsumme je Grundpfandrecht: 1‰ der Differenz der Pfandsummen, mindestens 50.--, höchstens 2'000.--; 5. Pfandvermehrung: je Grundpfandrecht 20.-- 6. … 7. Umwandlung: je Grundpfandrecht 50.-- 8. Dienstbarkeiten und Grundlasten und Vorverträge dazu 8.1 selbständige und dauernde Rechte: je Recht 200.-- bis 2'000.-- 8.2 übrige Dienstbarkeiten und Grundlasten: je Recht 100.-- bis 1'000.-- 9. Kaufs-, Rückkaufs- und Vorkaufsrechte: je Recht 100.-- bis 1'000.-- 10. alle übrigen Vormerkungen 60.-- bis 300.-- 11. … 12. Begründung oder Abänderung von Mit- oder Stockwerkeigentum 100.-- bis 5'000.-- 13. Verträge, die auf Verlangen der Parteien öffentlich beurkundet werden 100.-- bis 1'000.-- 14. Teilung, Vereinigung oder Grenzänderung von Grundstücken 200.-- bis 2'000.--"
+          "text": "Die Gebühren für sachenrechtliche Beurkundungen betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Handänderungsvertrag und Vorvertrag dazu: je 1‰ des Handänderungswerts, mindestens 60.--;"
+            },
+            {
+              "marke": "2",
+              "text": "…"
+            },
+            {
+              "marke": "3",
+              "text": "Errichtung von Grundpfandrechten: 1‰ der Pfandsumme (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte: 1‰ der Differenz zwischen der bisherigen und der neuen Belastung), mindestens 50.--, höchstens 2'000.--;"
+            },
+            {
+              "marke": "4",
+              "text": "Erhöhung der Pfandsumme je Grundpfandrecht: 1‰ der Differenz der Pfandsummen, mindestens 50.--, höchstens 2'000.--;"
+            },
+            {
+              "marke": "5",
+              "text": "Pfandvermehrung: je Grundpfandrecht 20.--"
+            },
+            {
+              "marke": "6",
+              "text": "…"
+            },
+            {
+              "marke": "7",
+              "text": "Umwandlung: je Grundpfandrecht 50.--"
+            },
+            {
+              "marke": "8",
+              "text": "Dienstbarkeiten und Grundlasten und Vorverträge dazu"
+            },
+            {
+              "marke": "9",
+              "text": "Kaufs-, Rückkaufs- und Vorkaufsrechte: je Recht 100.-- bis 1'000.--"
+            },
+            {
+              "marke": "10",
+              "text": "alle übrigen Vormerkungen 60.-- bis 300.--"
+            },
+            {
+              "marke": "11",
+              "text": "…"
+            },
+            {
+              "marke": "12",
+              "text": "Begründung oder Abänderung von Mit- oder Stockwerkeigentum 100.-- bis 5'000.--"
+            },
+            {
+              "marke": "13",
+              "text": "Verträge, die auf Verlangen der Parteien öffentlich beurkundet werden 100.-- bis 1'000.--"
+            },
+            {
+              "marke": "14",
+              "text": "Teilung, Vereinigung oder Grenzänderung von Grundstücken 200.-- bis 2'000.--"
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Die Gebühren für handelsregisterrechtliche Beurkundungen betragen: 1. Gründung 400.-- bis 4'000.-- 2. Kapitalerhöhung 2.1 Beschluss der Generalversammlung 300.-- bis 2'000.-- 2.2 Beschluss des Verwaltungsrats 500.-- bis 4'000.-- 3. Statutenänderung ohne Kapitalveränderung 200.-- bis 1'000.-- 4. Übertragung von Stammanteilen 100.-- bis 500.-- 5. Beurkundungen gemäss Fusionsgesetz 400.-- bis 4'000.-- 6. Auflösungsbeschluss 200.-- bis 2'000.-- 7. Errichtung einer Stiftung (Art. 81 ZGB) 400.-- bis 4'000.--"
+          "text": "Die Gebühren für handelsregisterrechtliche Beurkundungen betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Gründung 400.-- bis 4'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "Kapitalerhöhung"
+            },
+            {
+              "marke": "3",
+              "text": "Statutenänderung ohne Kapitalveränderung 200.-- bis 1'000.--"
+            },
+            {
+              "marke": "4",
+              "text": "Übertragung von Stammanteilen 100.-- bis 500.--"
+            },
+            {
+              "marke": "5",
+              "text": "Beurkundungen gemäss Fusionsgesetz 400.-- bis 4'000.--"
+            },
+            {
+              "marke": "6",
+              "text": "Auflösungsbeschluss 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "7",
+              "text": "Errichtung einer Stiftung (Art. 81 ZGB) 400.-- bis 4'000.--"
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "Die Gebühren für weitere Beurkundungen betragen: 1. Beurkundung des Ersatzes der Unterschrift (Art. 15 OR) 60.-- 2. Bürgschaften (Art. 493 OR): 2.1 1‰ des Haftungsbetrags 2.2 für jede Unterschrift des zustimmenden Ehegatten oder der eingetragenen Partnerin oder des eingetragenen Partners zusätzlich 10.-- 3. Verpfründungsverträge (Art. 522 OR) 40.-- bis 150.-- 4. Beurkundung von in diesem Erlass nicht erwähnten Willensäusserungen 20.-- bis 200.--"
+          "text": "Die Gebühren für weitere Beurkundungen betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Beurkundung des Ersatzes der Unterschrift (Art. 15 OR) 60.--"
+            },
+            {
+              "marke": "2",
+              "text": "Bürgschaften (Art. 493 OR):"
+            },
+            {
+              "marke": "3",
+              "text": "Verpfründungsverträge (Art. 522 OR) 40.-- bis 150.--"
+            },
+            {
+              "marke": "4",
+              "text": "Beurkundung von in diesem Erlass nicht erwähnten Willensäusserungen 20.-- bis 200.--"
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
       "abgerufen": "2026-06-16",
       "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
-      "sha": "955783b5c76281e732b37f164fb90fc9c93886294c4830e771742445fc959e43"
+      "sha": "a172741c55fb30e4121da299293f101db29cdb9196f154550f92fe240121d601"
     },
     {
       "id": "kanton/AI/172.513/art_11",
@@ -42,7 +174,101 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für Eintragungen in das Grundbuch betragen die Gebühren: 1. Handänderung infolge Kauf, Tausch, Schenkung, freiwilliger Versteigerung, Urteil oder einer anderen Erwerbsart (ausgenommen Ersitzung und erbrechtliche Übernahme) 1.1 öffentlich beurkundete Handänderungen: vom Handänderungswert 1‰, mind. 100.-- 1.2 nicht öffentlich beurkundete Handänderungen: vom Handänderungswert 2‰, mind. 200.-- 2. Handänderung infolge Erbgang oder Ersitzung 100.-- 3. Handänderung infolge Erbteilung: vom Handänderungswert 2‰, mind. 200.-- 4. Berichtigung einer Eintragung zufolge Ein- und Austritts von Mitgliedern einer Gesellschaft oder einer Gemeinschaft zur gesamten Hand oder wegen Änderungen der Gesellschaftsform oder des Firmennamens oder in anderen Fällen der Gesamtnachfolge 100.-- bis 500.-- 5. Eigentumsübertragungen aufgrund des Fusionsgesetzes: vom Handänderungswert 2‰, mind. 200.-- 6. Errichtung von Grundpfandrechten (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte ist die Gebühr auf die Differenz zwischen der bisherigen und der neuen Belastung zu erheben; sie beträgt jedoch mind. 50.--, sofern eine öffentliche Beurkundung erforderlich oder mind. 100.-- sofern keine öffentliche Beurkundung erforderlich ist): 6.1 öffentlich beurkundete Errichtung: von der Pfandsumme 1‰, mind. 50.--, höchst. 2'000.-- 6.2 nicht öffentliche beurkundete Errichtung: von der Pfandsumme 2‰, mind. 100.--, höchst. 4'000.-- 7. … 8. Erhöhung der Pfandsumme, je Grundpfandrecht: von der Differenz der Pfandsummen 1‰ , mind. 50.--, höchst. 2'000.-- 9. Herabsetzung der Pfandsumme, je Grundpfandrecht 40.-- 10. Rang- und Vorgangsänderung, je Grundpfandrecht 20.-- 11. Pfandvermehrungen oder Pfandentlassungen 11.1 je altrechtliches Grundpfandrecht 5.--- 11.2 je neurechtliches Grundpfandrecht 20.--- 12. Umwandlung, je Grundpfandrecht 150.-- 13. Gläubigerregistereintrag 10.-- 14. Löschungen von Grundpfandrechten 14.1 je altrechtliches Grundpfandrecht gebührenfrei 14.2 je neurechtliches Grundpfandrecht 10.-- 14.3 Löschungen im Interesse einer Reduktion der Stückzahl der Pfandtitel können nach Ermessen des Grundbuchverwalters gebührenfrei erfolgen. 14.4 Zustimmungserklärung für Rangrücktritte 20.-- 15. Dienstbarkeiten und Grundlasten, je Recht 100.-- bis 1000.-- 16. Textliche Änderungen bestehender Dienstbarkeiten oder Nachträge zu solchen, je Dienstbarkeit 100.-- bis 400.-- 17. Prüfung und Bereinigung eingetragener Rechtsverhältnisse bei Grenzmutationen 10.-- 18. Löschung, je Dienstbarkeit oder Grundlast 10.-- 19. Vormerkungen 19.1 Kaufs-, Rückkaufs- und Vorkaufsrechte 100.-- bis 1000.-- 19.2 … 19.3 … 19.4 Pacht- und Mietverträge 100.-- bis 500.-- 19.5 Verfügungsbeschränkungen nach SchKG 60.-- 19.6 Vorläufige Eintragungen 60.-- bis 300.-- 19.7 Alle übrigen Vormerkungen 60.-- bis 300.-- 19.8 Löschungen je Vormerkung 10.-- 20. Anmerkungen 20.1 Öffentlich-rechtliche Eigentumsbeschränkungen sowie Verfügungsbeschränkungen (sofern nicht nach übergeordnetem Recht gebührenfrei) 60.-- bis 100.-- 20.2 … 20.3 Übrige Anmerkungen 60.-- bis 400.-- 20.4 Löschungen je Anmerkung (sofern nicht nach übergeordnetem Recht gebührenfrei) 10.-- 21. Miteintragungen 21.1 Eintragung des Eigentumsübergangs 100.-- 21.2 Grundpfandrechte 60.-- bis 200.-- 21.3 Dienstbarkeiten, Grundlasten, Vor- und Anmerkungen 60.-- 22. Mit- und Stockwerkeigentum 22.1 Begründung von Mit- und Stockwerkeigentum 500.-- bis 5'000.-- 22.2 Anpassungen und Nachträge zu Mit- und Stockwerkeigentum 100.-- bis 1'000.-- 23. Übrige Verrichtungen:' 23.1 Teilung, Vereinigung oder Grenzänderung von Grundstücken 200.-- bis 2'000.-- 23.2 Grundbuchauszüge 30.-- bis 600.-- 23.3 Bescheinigungen und Vollmachten 20.-- bis 200.-- 23.4 Eröffnung und Schliessung von Grundbuchblättern 20.-- 23.5 Schuldübernahmeanzeigen 10.-- 23.6 Vermessungsauftrag an den Grundbuchgeometer 10.-- 23.7 Anzeigen an Amtsstellen 10.-- 23.8 Namensänderungen und Sitzverlegungen juristischer Personen 20.-- bis 200.-- 23.9 Namensänderung natürlicher Personen infolge Änderungen des Zivilstands gebührenfrei 23.10 … 23.11 Nachführung von Geometerdaten, pro Grundstück 25.-- 23.12 Durchführung von Vorkaufsrechtsverfahren 50.-- bis 300.--"
+          "text": "Für Eintragungen in das Grundbuch betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Handänderung infolge Kauf, Tausch, Schenkung, freiwilliger Versteigerung, Urteil oder einer anderen Erwerbsart (ausgenommen Ersitzung und erbrechtliche Übernahme)"
+            },
+            {
+              "marke": "2",
+              "text": "Handänderung infolge Erbgang oder Ersitzung 100.--"
+            },
+            {
+              "marke": "3",
+              "text": "Handänderung infolge Erbteilung: vom Handänderungswert 2‰, mind. 200.--"
+            },
+            {
+              "marke": "4",
+              "text": "Berichtigung einer Eintragung zufolge Ein- und Austritts von Mitgliedern einer Gesellschaft oder einer Gemeinschaft zur gesamten Hand oder wegen Änderungen der Gesellschaftsform oder des Firmennamens oder in anderen Fällen der Gesamtnachfolge 100.-- bis 500.--"
+            },
+            {
+              "marke": "5",
+              "text": "Eigentumsübertragungen aufgrund des Fusionsgesetzes: vom Handänderungswert 2‰, mind. 200.--"
+            },
+            {
+              "marke": "6",
+              "text": "Errichtung von Grundpfandrechten (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte ist die Gebühr auf die Differenz zwischen der bisherigen und der neuen Belastung zu erheben; sie beträgt jedoch mind. 50.--, sofern eine öffentliche Beurkundung erforderlich oder mind. 100.-- sofern keine öffentliche Beurkundung erforderlich ist):"
+            },
+            {
+              "marke": "7",
+              "text": "…"
+            },
+            {
+              "marke": "8",
+              "text": "Erhöhung der Pfandsumme, je Grundpfandrecht: von der Differenz der Pfandsummen 1‰ , mind. 50.--, höchst. 2'000.--"
+            },
+            {
+              "marke": "9",
+              "text": "Herabsetzung der Pfandsumme, je Grundpfandrecht 40.--"
+            },
+            {
+              "marke": "10",
+              "text": "Rang- und Vorgangsänderung, je Grundpfandrecht 20.--"
+            },
+            {
+              "marke": "11",
+              "text": "Pfandvermehrungen oder Pfandentlassungen"
+            },
+            {
+              "marke": "12",
+              "text": "Umwandlung, je Grundpfandrecht 150.--"
+            },
+            {
+              "marke": "13",
+              "text": "Gläubigerregistereintrag 10.--"
+            },
+            {
+              "marke": "14",
+              "text": "Löschungen von Grundpfandrechten"
+            },
+            {
+              "marke": "15",
+              "text": "Dienstbarkeiten und Grundlasten, je Recht 100.-- bis 1000.--"
+            },
+            {
+              "marke": "16",
+              "text": "Textliche Änderungen bestehender Dienstbarkeiten oder Nachträge zu solchen, je Dienstbarkeit 100.-- bis 400.--"
+            },
+            {
+              "marke": "17",
+              "text": "Prüfung und Bereinigung eingetragener Rechtsverhältnisse bei Grenzmutationen 10.--"
+            },
+            {
+              "marke": "18",
+              "text": "Löschung, je Dienstbarkeit oder Grundlast 10.--"
+            },
+            {
+              "marke": "19",
+              "text": "Vormerkungen"
+            },
+            {
+              "marke": "20",
+              "text": "Anmerkungen"
+            },
+            {
+              "marke": "21",
+              "text": "Miteintragungen"
+            },
+            {
+              "marke": "22",
+              "text": "Mit- und Stockwerkeigentum"
+            },
+            {
+              "marke": "23",
+              "text": "Übrige Verrichtungen:'"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -57,7 +283,7 @@
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
       "abgerufen": "2026-06-16",
       "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
-      "sha": "8714ebfb71382ffe732a07e023eeba2692858a8f2c40f57f61435ee327200173"
+      "sha": "1547e0427f1df8d783aed69f2926a25a6f815ec82e37d31fe004c2bd5e480f6d"
     }
   ]
 }

@@ -11,14 +11,48 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das mittlere Honorar im Zivilprozess beträgt für einen Streitwert von: a) bis Fr. 10'000.–: Fr. 800.– + 26 Prozent des Streitwerts b) über Fr. 10'000.– bis 30'000.–: Fr. 2'000.– + 14 Prozent des Streitwerts c) über Fr. 30'000.– bis Fr. 100'000.–: Fr. 3'500.– + 9 Prozent des Streitwerts d) über Fr. 100'000.– bis Fr. 500'000.–: Fr. 9'200.– + 3,3 Prozent des Streitwerts e) über Fr. 500'000.– bis Fr. 1'000'000.–: Fr. 12'700.– + 2,6 Prozent des Streitwerts f) über Fr. 1'000'000.– bis Fr. 2'000'000.–: Fr. 15'700.– + 2,3 Prozent des Streitwerts g) über Fr. 2'000'000.–: Fr. 41'700.– + 1 Prozent des Streitwerts h) …"
+          "text": "Das mittlere Honorar im Zivilprozess beträgt für einen Streitwert von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis Fr. 10'000.–: Fr. 800.– + 26 Prozent des Streitwerts"
+            },
+            {
+              "marke": "b",
+              "text": "über Fr. 10'000.– bis 30'000.–: Fr. 2'000.– + 14 Prozent des Streitwerts"
+            },
+            {
+              "marke": "c",
+              "text": "über Fr. 30'000.– bis Fr. 100'000.–: Fr. 3'500.– + 9 Prozent des Streitwerts"
+            },
+            {
+              "marke": "d",
+              "text": "über Fr. 100'000.– bis Fr. 500'000.–: Fr. 9'200.– + 3,3 Prozent des Streitwerts"
+            },
+            {
+              "marke": "e",
+              "text": "über Fr. 500'000.– bis Fr. 1'000'000.–: Fr. 12'700.– + 2,6 Prozent des Streitwerts"
+            },
+            {
+              "marke": "f",
+              "text": "über Fr. 1'000'000.– bis Fr. 2'000'000.–: Fr. 15'700.– + 2,3 Prozent des Streitwerts"
+            },
+            {
+              "marke": "g",
+              "text": "über Fr. 2'000'000.–: Fr. 41'700.– + 1 Prozent des Streitwerts"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "1994-07-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/963.75",
       "abgerufen": "2026-06-16",
       "fassungsToken": "1b9abd98547c104158dcbc96c29da418",
-      "sha": "cce860fdc40c164f08160c145517370e17d797d8c4d96f72c66f07cf7f8dfa81"
+      "sha": "80bafb34b2ca45e26332151409a9d475d6ec70f429be31d14c79513559ef168e"
     },
     {
       "id": "kanton/SG/963.75/art_24",

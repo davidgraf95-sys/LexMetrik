@@ -11,7 +11,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im ordentlichen Verfahren beträgt die Gebühr in vermögensrechtlichen Streitigkeiten bei einem Streitwert von a 30'000 bis 100'000 Franken: 1'000 bis 20'000 Taxpunkte b 100'000 bis 500'000 Franken: 4'000 bis 36'000 Taxpunkte c 500'000 bis eine Million Franken: 8'000 bis 60'000 Taxpunkte d eine Million bis zwei Millionen Franken: 12'000 bis 120'000 Taxpunkte e zwei Millionen Franken und mehr: 0,5 bis 7 Prozent des Streitwerts f bei einem nicht schätzbaren Streitwert: 1'000 bis 40'000 Taxpunkte"
+          "text": "Im ordentlichen Verfahren beträgt die Gebühr in vermögensrechtlichen Streitigkeiten bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "30'000 bis 100'000 Franken: 1'000 bis 20'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "100'000 bis 500'000 Franken: 4'000 bis 36'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "500'000 bis eine Million Franken: 8'000 bis 60'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "eine Million bis zwei Millionen Franken: 12'000 bis 120'000 Taxpunkte"
+            },
+            {
+              "marke": "e",
+              "text": "zwei Millionen Franken und mehr: 0,5 bis 7 Prozent des Streitwerts"
+            },
+            {
+              "marke": "f",
+              "text": "bei einem nicht schätzbaren Streitwert: 1'000 bis 40'000 Taxpunkte"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22,7 +48,7 @@
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "9564625753e0643aee776c1979bffd63",
-      "sha": "81e30e6004268c82207e69c482ae1ae9906bf50a3ef0fbe2863850c7b11c23cd"
+      "sha": "b34ab98bfb69a0a5a666db3759455f4779ffb9280d7952f46b1a0dc75ea8f2cf"
     },
     {
       "id": "kanton/BE/161.12/art_35",

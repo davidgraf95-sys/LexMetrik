@@ -42,14 +42,28 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Pauschale für das Schlichtungsverfahren vor der Friedensrichterin oder dem Friedensrichter beträgt a) bei Erledigung der Streitsache durch Klageanerkennung, Vergleich oder Klagerückzug Fr. 50.– bis Fr. 300.– b) für die Ausstellung einer Klagebewilligung Fr. 50.– bis Fr. 300.– c) für ein Urteil oder einen Urteilsvorschlag Fr. 100.– bis Fr. 500.–"
+          "text": "Die Pauschale für das Schlichtungsverfahren vor der Friedensrichterin oder dem Friedensrichter beträgt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung der Streitsache durch Klageanerkennung, Vergleich oder Klagerückzug Fr. 50.– bis Fr. 300.–"
+            },
+            {
+              "marke": "b",
+              "text": "für die Ausstellung einer Klagebewilligung Fr. 50.– bis Fr. 300.–"
+            },
+            {
+              "marke": "c",
+              "text": "für ein Urteil oder einen Urteilsvorschlag Fr. 100.– bis Fr. 500.–"
+            }
+          ]
         }
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
       "abgerufen": "2026-06-16",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
-      "sha": "eb9acdc8f178b2538f85e421a83dc7ed61cd65379c07a52d15a0abdad97ec25a"
+      "sha": "7a39274c07742fa32d40c4cddb4879ac6907200154f13191069d69733bdb5759"
     }
   ]
 }

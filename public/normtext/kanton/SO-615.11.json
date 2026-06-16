@@ -11,7 +11,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Entscheidgebühr beträgt bei einem Streitwert von a) bis 30'000 Franken 200-4'000 b) 30'001-50'000 Franken 600-5'500 c) 50'001-100'000 Franken 800-8'000 d) 100'001-200'000 Franken 1'200-13'000 e) 200'001-500'000 Franken 1'800-25'000 f) 500'001-1'000'000 Franken 2'500-50'000"
+          "text": "Die Entscheidgebühr beträgt bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis 30'000 Franken 200-4'000"
+            },
+            {
+              "marke": "b",
+              "text": "30'001-50'000 Franken 600-5'500"
+            },
+            {
+              "marke": "c",
+              "text": "50'001-100'000 Franken 800-8'000"
+            },
+            {
+              "marke": "d",
+              "text": "100'001-200'000 Franken 1'200-13'000"
+            },
+            {
+              "marke": "e",
+              "text": "200'001-500'000 Franken 1'800-25'000"
+            },
+            {
+              "marke": "f",
+              "text": "500'001-1'000'000 Franken 2'500-50'000"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -30,7 +56,7 @@
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/615.11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "0a1d469935a59317fd8ce1a93a7f4e22",
-      "sha": "49f920924502fce77e01cde0fbbbddcb085b33b002de35eaeac0e65d7cc84456"
+      "sha": "0ebf52805279bf01074f37db49e06de12a482873fcbb38c11880c45b4deead56"
     },
     {
       "id": "kanton/SO/615.11/art_144",
@@ -96,14 +122,68 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Gebühren sind für Dienstleistungen im Sachenrecht geschuldet: a) Kauf-, Tausch- und Schenkungsvertrag 100-10'000 b) Aufhebung von Mit- und Gesamteigentum, sofern keine Gebühr nach § 24 Absatz 1 Buchstaben h und i geschuldet ist 200-1'000 c) Übertragung eines selbständigen und dauernden Rechtes 200-10'000 d) Begründung von Stockwerkeigentum 1'000-15'000 e) Ausübung eines Vorkaufsrechtes 100-1'000 f) Ausübung eines Kaufs- oder Rückkaufsrechtes 300-10'000 g) Begründung eines selbständigen und dauernden Rechtes 200-10'000 h) Begründung einer andern Dienstbarkeit, einer Grundlast oder eines vormerkbaren Rechtes 100-10'000 i) Kontrolle, Prüfung oder Errichtung eines Eintragungsausweises für Grundbuchanmeldungen 80-1'500 j) Arbeiten im Zusammenhang mit Baulandumlegungen 1'000-35'000 k) Parzellierung und Vereinigung 100-10'000 l) Vorvertrag 100-10'000 m) in separater Urkunde begründete Errichtung oder Abänderung eines Grundpfandrechtes 20-10'000"
+          "text": "Folgende Gebühren sind für Dienstleistungen im Sachenrecht geschuldet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kauf-, Tausch- und Schenkungsvertrag 100-10'000"
+            },
+            {
+              "marke": "b",
+              "text": "Aufhebung von Mit- und Gesamteigentum, sofern keine Gebühr nach § 24 Absatz 1 Buchstaben h und i geschuldet ist 200-1'000"
+            },
+            {
+              "marke": "c",
+              "text": "Übertragung eines selbständigen und dauernden Rechtes 200-10'000"
+            },
+            {
+              "marke": "d",
+              "text": "Begründung von Stockwerkeigentum 1'000-15'000"
+            },
+            {
+              "marke": "e",
+              "text": "Ausübung eines Vorkaufsrechtes 100-1'000"
+            },
+            {
+              "marke": "f",
+              "text": "Ausübung eines Kaufs- oder Rückkaufsrechtes 300-10'000"
+            },
+            {
+              "marke": "g",
+              "text": "Begründung eines selbständigen und dauernden Rechtes 200-10'000"
+            },
+            {
+              "marke": "h",
+              "text": "Begründung einer andern Dienstbarkeit, einer Grundlast oder eines vormerkbaren Rechtes 100-10'000"
+            },
+            {
+              "marke": "i",
+              "text": "Kontrolle, Prüfung oder Errichtung eines Eintragungsausweises für Grundbuchanmeldungen 80-1'500"
+            },
+            {
+              "marke": "j",
+              "text": "Arbeiten im Zusammenhang mit Baulandumlegungen 1'000-35'000"
+            },
+            {
+              "marke": "k",
+              "text": "Parzellierung und Vereinigung 100-10'000"
+            },
+            {
+              "marke": "l",
+              "text": "Vorvertrag 100-10'000"
+            },
+            {
+              "marke": "m",
+              "text": "in separater Urkunde begründete Errichtung oder Abänderung eines Grundpfandrechtes 20-10'000"
+            }
+          ]
         }
       ],
       "stand": "2026-03-01",
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/615.11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "0a1d469935a59317fd8ce1a93a7f4e22",
-      "sha": "09ddc3268c0ba6623018aeaa3a1b9ad96641580df3ac6a52d6b6db20088d36c5"
+      "sha": "d2123c9a4c0774adb2ec58383bd75c982643cf684995ee299e2fdf8fa0a5952e"
     },
     {
       "id": "kanton/SO/615.11/art_24",
@@ -115,14 +195,56 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Gebühren sind für Dienstleistungen im Erbrecht geschuldet: a) Errichtung oder Änderung einer öffentlichen letztwilligen Verfügung oder eines Erbvertrages 200-6'000 b) Ausarbeitung eines Entwurfes für eine eigenhändige letztwillige Verfügung (einschliesslich Beratung) 50-3'000 c) Aufhebung einer öffentlichen letztwilligen Verfügung oder eines Erbvertrages 100-400 d) Bewilligung eines öffentlichen Inventars oder einer amtlichen Liquidation 150 e) Eröffnung einer Verfügung von Todes wegen ausserhalb eines Erbschaftsinventars 100-2'000 f) Errichtung eines Erbschaftsinventars 300-10'000 g) Geschäfte, die nicht zur Feststellung des Nachlasses dienen (Begründung einer Dienstbarkeit, einer Grundlast, eines Grundpfandrechtes, eines vormerkbaren Rechtes usw.) entsprechend dem Zeitaufwand 300-10'000 h) Erbteilung mit Liquidation des Nachlasses 100-10'000 i) Durchführung einer amtlichen Liquidation, zusätzlich zur Gebühr für die Errichtung eines Erbschaftsinventars 100-10'000 j) Erbenbescheinigung 50-1'000"
+          "text": "Folgende Gebühren sind für Dienstleistungen im Erbrecht geschuldet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Errichtung oder Änderung einer öffentlichen letztwilligen Verfügung oder eines Erbvertrages 200-6'000"
+            },
+            {
+              "marke": "b",
+              "text": "Ausarbeitung eines Entwurfes für eine eigenhändige letztwillige Verfügung (einschliesslich Beratung) 50-3'000"
+            },
+            {
+              "marke": "c",
+              "text": "Aufhebung einer öffentlichen letztwilligen Verfügung oder eines Erbvertrages 100-400"
+            },
+            {
+              "marke": "d",
+              "text": "Bewilligung eines öffentlichen Inventars oder einer amtlichen Liquidation 150"
+            },
+            {
+              "marke": "e",
+              "text": "Eröffnung einer Verfügung von Todes wegen ausserhalb eines Erbschaftsinventars 100-2'000"
+            },
+            {
+              "marke": "f",
+              "text": "Errichtung eines Erbschaftsinventars 300-10'000"
+            },
+            {
+              "marke": "g",
+              "text": "Geschäfte, die nicht zur Feststellung des Nachlasses dienen (Begründung einer Dienstbarkeit, einer Grundlast, eines Grundpfandrechtes, eines vormerkbaren Rechtes usw.) entsprechend dem Zeitaufwand 300-10'000"
+            },
+            {
+              "marke": "h",
+              "text": "Erbteilung mit Liquidation des Nachlasses 100-10'000"
+            },
+            {
+              "marke": "i",
+              "text": "Durchführung einer amtlichen Liquidation, zusätzlich zur Gebühr für die Errichtung eines Erbschaftsinventars 100-10'000"
+            },
+            {
+              "marke": "j",
+              "text": "Erbenbescheinigung 50-1'000"
+            }
+          ]
         }
       ],
       "stand": "2026-03-01",
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/615.11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "0a1d469935a59317fd8ce1a93a7f4e22",
-      "sha": "beab9353d36daab7a00fdb593ef9d23025607dc43541d79f58a8476e0eeeb50d"
+      "sha": "fbd268f080249dcc41f87824d0c185da86015a1d3059cdbb1c809a7666993f32"
     },
     {
       "id": "kanton/SO/615.11/art_23",
@@ -134,14 +256,32 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Gebühren sind für Dienstleistungen im Familienrecht geschuldet: a) Güterausscheidung in einer besonderen Urkunde 300-3'000 b) Errichtung oder Änderung eines Ehevertrages 300-3'000 c) Aufhebung eines Ehevertrages 100-400 d) Errichtung anderer Urkunden nach Familienrecht 300-3'000"
+          "text": "Folgende Gebühren sind für Dienstleistungen im Familienrecht geschuldet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Güterausscheidung in einer besonderen Urkunde 300-3'000"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung oder Änderung eines Ehevertrages 300-3'000"
+            },
+            {
+              "marke": "c",
+              "text": "Aufhebung eines Ehevertrages 100-400"
+            },
+            {
+              "marke": "d",
+              "text": "Errichtung anderer Urkunden nach Familienrecht 300-3'000"
+            }
+          ]
         }
       ],
       "stand": "2026-03-01",
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/615.11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "0a1d469935a59317fd8ce1a93a7f4e22",
-      "sha": "5f6c370c50c43ebb4b76d21d2f51ee35c86279cdadd5ff12e53a23d623c19a20"
+      "sha": "f1c58e5370eae3c3291060f0ec8f477e61066891b7b221446545184161111413"
     },
     {
       "id": "kanton/SO/615.11/art_26",
@@ -153,14 +293,40 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Gebühren sind für Dienstleistungen im Obligationenrecht geschuldet: a) Beurkundung einer Bürgschaftserklärung 100-1'000 b) Errichtung oder Änderung eines Leibrenten- oder Verpfründungsvertrages 100-10'000 c) Beurkundung nach Gesellschaftsrecht 500-10'000 d) Beurkundung nach Wechsel- und Checkrecht 100-1'000 e) freiwillige Versteigerung 200-10'000 f) Bewilligung einer freiwilligen Versteigerung, sofern sie nicht vom Amtschreiber oder von der Amtschreiberin durchgeführt wird 200"
+          "text": "Folgende Gebühren sind für Dienstleistungen im Obligationenrecht geschuldet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beurkundung einer Bürgschaftserklärung 100-1'000"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung oder Änderung eines Leibrenten- oder Verpfründungsvertrages 100-10'000"
+            },
+            {
+              "marke": "c",
+              "text": "Beurkundung nach Gesellschaftsrecht 500-10'000"
+            },
+            {
+              "marke": "d",
+              "text": "Beurkundung nach Wechsel- und Checkrecht 100-1'000"
+            },
+            {
+              "marke": "e",
+              "text": "freiwillige Versteigerung 200-10'000"
+            },
+            {
+              "marke": "f",
+              "text": "Bewilligung einer freiwilligen Versteigerung, sofern sie nicht vom Amtschreiber oder von der Amtschreiberin durchgeführt wird 200"
+            }
+          ]
         }
       ],
       "stand": "2026-03-01",
       "quelleUrl": "https://bgs.so.ch/app/de/texts_of_law/615.11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "0a1d469935a59317fd8ce1a93a7f4e22",
-      "sha": "f605d043293f6325e1de5e83766ee2ad050129f21e3a85edcd8590936fa6310e"
+      "sha": "b576baab4fa125ff47fefa53ea9bf7852f9ff44ef99ca64c4687e3965d742cdd"
     },
     {
       "id": "kanton/SO/615.11/art_22",

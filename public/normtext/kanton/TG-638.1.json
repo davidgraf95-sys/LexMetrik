@@ -11,14 +11,32 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Bezirksgerichte erheben folgende Gebühren: 1. Endentscheide in Zivilsachen mit bestimmbarem Streitwert: 1.1. von Fr. 30'000 bis Fr. 100'000 Fr. 1'000 bis Fr. 4'000 1.2. über Fr. 100'000 bis Fr. 500'000 Fr. 2'000 bis Fr. 8'000 1.3. über Fr. 500'000 bis Fr. 1'000'000 Fr. 7'000 bis Fr. 15'000 1.4. über Fr. 1'000'000 1 bis 3 % des Streitwertes 2. Endentscheid in Zivilsachen ohne bestimmbaren Streitwert, soweit nicht nach den streitigen vermögensrechtlichen Ansprüchen die Ansätze von Ziff. 1 anwendbar sind Fr. 300 bis Fr. 20'000 3. Endentscheid in Strafsachen für jeden Beschuldigten Fr. 200 bis Fr. 25'000 4. andere Entscheide Fr. 100 bis Fr. 10'000"
+          "text": "Die Bezirksgerichte erheben folgende Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Endentscheide in Zivilsachen mit bestimmbarem Streitwert:"
+            },
+            {
+              "marke": "2",
+              "text": "Endentscheid in Zivilsachen ohne bestimmbaren Streitwert, soweit nicht nach den streitigen vermögensrechtlichen Ansprüchen die Ansätze von Ziff. 1 anwendbar sind Fr. 300 bis Fr. 20'000"
+            },
+            {
+              "marke": "3",
+              "text": "Endentscheid in Strafsachen für jeden Beschuldigten Fr. 200 bis Fr. 25'000"
+            },
+            {
+              "marke": "4",
+              "text": "andere Entscheide Fr. 100 bis Fr. 10'000"
+            }
+          ]
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "1b18c4c7341b594c74158ea12499bc187e9713a63ac8d611503e78723abd9133"
+      "sha": "2949a664e665cc6ab3164757090a5bef77754541afddb22b081aa6511903c3b1"
     },
     {
       "id": "kanton/TG/638.1/art_7",
@@ -30,14 +48,32 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Friedensrichter erheben folgende Gebühren: 1. Schlichtungsverhandlung bei einem Streitwert 1.1. bis Fr. 2'000 Fr. 100 bis Fr. 150 1.2. über Fr. 2'000 bis Fr. 8'000 Fr. 120 bis Fr. 200 1.3. über Fr. 8'000 bis Fr. 30'000 Fr. 160 bis Fr. 300 1.4. über Fr. 30'000 bis Fr. 100'000 Fr. 240 bis Fr. 400 1.5. über Fr. 100'000 Fr. 320 bis Fr. 500 2. Schlichtungsverhandlung ohne bestimmten Streitwert Fr. 100 bis Fr. 500 3. Klageabschreibung nach Vorladung zur Schlichtungsverhandlung Fr. 100 4. Entscheidvorschlag oder Endentscheid als Einzelrichter Fr. 100 bis Fr. 500"
+          "text": "Die Friedensrichter erheben folgende Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Schlichtungsverhandlung bei einem Streitwert"
+            },
+            {
+              "marke": "2",
+              "text": "Schlichtungsverhandlung ohne bestimmten Streitwert Fr. 100 bis Fr. 500"
+            },
+            {
+              "marke": "3",
+              "text": "Klageabschreibung nach Vorladung zur Schlichtungsverhandlung Fr. 100"
+            },
+            {
+              "marke": "4",
+              "text": "Entscheidvorschlag oder Endentscheid als Einzelrichter Fr. 100 bis Fr. 500"
+            }
+          ]
         }
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "e0139a311d692b00707ccbf84c557cd225eff324894f616c491236a7dd40347b"
+      "sha": "88db8f03bcde1349b18296a997ac385ae1c72327f731af2a0a6f0511458f9892"
     }
   ]
 }

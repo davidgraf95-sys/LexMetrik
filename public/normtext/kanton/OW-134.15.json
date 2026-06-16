@@ -30,7 +30,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Zivilprozess vor erster oder einziger Instanz beträgt die ordentliche Anwaltsgebühr bei einem Streitwert von (Beträge in Fr.): 1. bis 30 000.– 500.– bis 7 000.– 2. über 30 000.– bis 50 000.– 1 000.– bis 9 000.– 3. über 50 000.– bis 100 000.– 3 000.– bis 11 000.– 4. über 100 000.– bis 200 000.– 5 000.– bis 13 500.– 5. über 200 000.– bis 500 000.– 6 000.– bis 17 500.– 6. über 500 000.– 10 000.– bis 3,5 % des Streitwerts"
+          "text": "Im Zivilprozess vor erster oder einziger Instanz beträgt die ordentliche Anwaltsgebühr bei einem Streitwert von (Beträge in Fr.):",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bis 30 000.– 500.– bis 7 000.–"
+            },
+            {
+              "marke": "2",
+              "text": "über 30 000.– bis 50 000.– 1 000.– bis 9 000.–"
+            },
+            {
+              "marke": "3",
+              "text": "über 50 000.– bis 100 000.– 3 000.– bis 11 000.–"
+            },
+            {
+              "marke": "4",
+              "text": "über 100 000.– bis 200 000.– 5 000.– bis 13 500.–"
+            },
+            {
+              "marke": "5",
+              "text": "über 200 000.– bis 500 000.– 6 000.– bis 17 500.–"
+            },
+            {
+              "marke": "6",
+              "text": "über 500 000.– 10 000.– bis 3,5 % des Streitwerts"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -45,7 +71,7 @@
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/134.15",
       "abgerufen": "2026-06-16",
       "fassungsToken": "4ad430f16d7a642be719285a40930816",
-      "sha": "3e5ccdab08467b33682fb19b6051f397e2af45021ddbd7a8e88b9a66fdec08f0"
+      "sha": "d13bd0daad0ac20a4113a140f3e24d10e90356c9544f0ae73633696050a02505"
     },
     {
       "id": "kanton/OW/134.15/art_12",
@@ -57,7 +83,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Verfahren vor dem Kantonsgericht (Art. 35 GOG) beträgt die Gerichtsgebühr (Beträge in Fr.): 1. über 30 000.– bis 50 000.– 1 500.– bis 5 000.– 2. über 50 000.– bis 100 000.– 2 000.– bis 6 000.– 3. über 100 000.– bis 350 000.– 2 500.– bis 10 500.– 4. über 350 000.– 3 000.– bis 3 % des Streitwerts"
+          "text": "Im Verfahren vor dem Kantonsgericht (Art. 35 GOG) beträgt die Gerichtsgebühr (Beträge in Fr.): bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "1",
+              "text": "über 30 000.– bis 50 000.– 1 500.– bis 5 000.–"
+            },
+            {
+              "marke": "2",
+              "text": "über 50 000.– bis 100 000.– 2 000.– bis 6 000.–"
+            },
+            {
+              "marke": "3",
+              "text": "über 100 000.– bis 350 000.– 2 500.– bis 10 500.–"
+            },
+            {
+              "marke": "4",
+              "text": "über 350 000.– 3 000.– bis 3 % des Streitwerts"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -68,7 +112,7 @@
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/134.15",
       "abgerufen": "2026-06-16",
       "fassungsToken": "4ad430f16d7a642be719285a40930816",
-      "sha": "3c4d005327494b3a305fec937de7835a1fb926e27f0c8a194af243d78e3cdfec"
+      "sha": "95fc239b2416a865994931547d9990a537044a95af370e1fa4dd70e4622c1659"
     }
   ]
 }

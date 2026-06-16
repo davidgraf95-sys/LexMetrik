@@ -11,14 +11,28 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Kantonsgericht erhebt folgende Gebühren: a) Beschluss: Fr. 100.– bis Fr. 3 000.– b) Urteil oder Vorentscheid: Fr. 100.– bis Fr. 5 000.– c) Augenschein, Experteninstruktion, Einvernahme, Vorbereitungsverhandlung: Fr. 20.– bis Fr. 150.– pro Std."
+          "text": "Das Kantonsgericht erhebt folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschluss: Fr. 100.– bis Fr. 3 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "Urteil oder Vorentscheid: Fr. 100.– bis Fr. 5 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "Augenschein, Experteninstruktion, Einvernahme, Vorbereitungsverhandlung: Fr. 20.– bis Fr. 150.– pro Std."
+            }
+          ]
         }
       ],
       "stand": "2017-12-01",
       "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/233.3",
       "abgerufen": "2026-06-16",
       "fassungsToken": "1c7272548e4f37a8d233866eafeb503a",
-      "sha": "0b50d7c4f32104de606d170ada46055127fb8a44f0783be967607182aa591a1e"
+      "sha": "900ff8cf54d89ea288d138a025c130e6ad3b88b3f68dc272c19e90296daacd00"
     },
     {
       "id": "kanton/AR/233.3/art_13",

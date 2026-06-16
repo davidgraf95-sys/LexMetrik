@@ -246,7 +246,25 @@
         },
         {
           "absatz": "3",
-          "text": "Die Ämter geben Dritten von einer Betreibung keine Kenntnis, wenn:"
+          "text": "Die Ämter geben Dritten von einer Betreibung keine Kenntnis, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Betreibung nichtig ist oder aufgrund einer Beschwerde oder eines gerichtlichen Entscheids aufgehoben worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Schuldner mit einer Rückforderungsklage obsiegt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "der Gläubiger die Betreibung zurückgezogen hat;"
+            },
+            {
+              "marke": "d",
+              "text": "der Schuldner Rechtsvorschlag erhoben und nach Ablauf einer Frist von drei Monaten seit der Zustellung des Zahlungsbefehls und vor Erlöschen des Einsichtsrechts Dritter ein entsprechendes Gesuch gestellt hat, sofern der Gläubiger nach Ablauf einer vom Betreibungsamt angesetzten Frist von 20 Tagen den Nachweis nicht erbringt, dass rechtzeitig ein Verfahren zur Beseitigung des Rechtsvorschlags (Art. 79–84) eingeleitet wurde; wird dieser Nachweis nachträglich erbracht oder wird die Betreibung fortgesetzt, so wird sie Dritten wieder zur Kenntnis gebracht, es sei denn, der Schuldner weist nach, dass ein Begehren des Gläubigers um Beseitigung des Rechtsvorschlags definitiv nicht gutgeheissen wurde."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -257,7 +275,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_8_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "114b0cb0b94c5d307b9e82ec17ec9bcd76a37d14c413644dcad258af1880afc0"
+      "sha": "57d778cda192981e3ad4c40273f4339a6aad083994ea63f33b0aba75699fe36f"
     },
     {
       "id": "bund/SCHKG/art_9",
@@ -288,7 +306,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Beamten und Angestellten der Betreibungs- und der Konkursämter sowie die Mitglieder der Aufsichtsbehörden dürfen keine Amtshandlungen vornehmen:"
+          "text": "Die Beamten und Angestellten der Betreibungs- und der Konkursämter sowie die Mitglieder der Aufsichtsbehörden dürfen keine Amtshandlungen vornehmen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in eigener Sache;"
+            },
+            {
+              "marke": "2",
+              "text": "in Sachen ihrer Ehegatten, eingetragenen Partnerinnen oder Partner oder von Personen, mit denen sie eine faktische Lebensgemeinschaft führen;"
+            },
+            {
+              "marke": "2",
+              "text": "in Sachen von Verwandten und Verschwägerten in gerader Linie oder bis zum dritten Grade in der Seitenlinie;"
+            },
+            {
+              "marke": "3",
+              "text": "in Sachen einer Person, deren gesetzliche Vertreter, Bevollmächtigte oder Angestellte sie sind;"
+            },
+            {
+              "marke": "4",
+              "text": "in Sachen, in denen sie aus anderen Gründen befangen sein könnten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -299,7 +339,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_10",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "13042d145bd07006e474727cf05ade5162b68ce84213194203784adcec4f941f"
+      "sha": "e4a0fd39d04b25cb007af119ebdda525f220e17936878b9ab0db16220bfefe99"
     },
     {
       "id": "bund/SCHKG/art_11",
@@ -388,14 +428,32 @@
         },
         {
           "absatz": "2",
-          "text": "Gegen einen Beamten oder Angestellten können folgende Disziplinarmassnahmen getroffen werden:"
+          "text": "Gegen einen Beamten oder Angestellten können folgende Disziplinarmassnahmen getroffen werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Rüge;"
+            },
+            {
+              "marke": "2",
+              "text": "Geldbusse bis zu 1000 Franken;"
+            },
+            {
+              "marke": "3",
+              "text": "Amtseinstellung für die Dauer von höchstens sechs Monaten;"
+            },
+            {
+              "marke": "4",
+              "text": "Amtsentsetzung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_14",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5880bd92171d86a3951b5fd02e43654ca43ab00041cfd87cada8aa2c263f15fc"
+      "sha": "f6db3c86aa15dc5649ff9ece7b12169e3a3cb64dbbd2a3fe029bd9e8aa26af61"
     },
     {
       "id": "bund/SCHKG/art_15",
@@ -561,7 +619,29 @@
         },
         {
           "absatz": "2",
-          "text": "Für das Verfahren vor den kantonalen Aufsichtsbehörden gelten die folgenden Bestimmungen:"
+          "text": "Für das Verfahren vor den kantonalen Aufsichtsbehörden gelten die folgenden Bestimmungen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Die Aufsichtsbehörden haben sich in allen Fällen, in denen sie in dieser Eigenschaft handeln, als solche und gegebenenfalls als obere oder untere Aufsichtsbehörde zu bezeichnen."
+            },
+            {
+              "marke": "2",
+              "text": "Die Aufsichtsbehörde stellt den Sachverhalt von Amtes wegen fest. Sie kann die Parteien zur Mitwirkung anhalten und braucht auf deren Begehren nicht einzutreten, wenn sie die notwendige und zumutbare Mitwirkung verweigern."
+            },
+            {
+              "marke": "3",
+              "text": "Die Aufsichtsbehörde würdigt die Beweise frei; unter Vorbehalt von Artikel 22 darf sie nicht über die Anträge der Parteien hinausgehen."
+            },
+            {
+              "marke": "4",
+              "text": "Der Beschwerdeentscheid wird begründet, mit einer Rechtsmittelbelehrung versehen und den Parteien, dem betroffenen Amt und allfälligen weiteren Beteiligten schriftlich eröffnet."
+            },
+            {
+              "marke": "5",
+              "text": "Die Verfahren sind kostenlos. Bei böswilliger oder mutwilliger Prozessführung können einer Partei oder ihrem Vertreter Bussen bis zu 1500 Franken sowie Gebühren und Auslagen auferlegt werden."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -572,7 +652,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_20_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "c97d949debb3b7c7fd5dab07d9660f635c458606ba9f8d89a7f7e3337c2fd068"
+      "sha": "398628b863888b40e91ce58f27608f4169288158cbdeb980ec824a1427bbb6a7"
     },
     {
       "id": "bund/SCHKG/art_21",
@@ -910,14 +990,28 @@
         },
         {
           "absatz": "4",
-          "text": "Der Bundesrat regelt:"
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Format der Eingabe und ihrer Beilagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen, unter denen bei technischen Problemen die Nachreichung von Dokumenten auf Papier verlangt werden kann."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_33_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "016d88022840c50ac21912390aa2ee507b7601c710a0cdc6764d379447aa169d"
+      "sha": "90ae84b56c86416a3b644957f777dfe5e6f662eec106497d27b0440f598a7629"
     },
     {
       "id": "bund/SCHKG/art_34",
@@ -933,14 +1027,32 @@
         },
         {
           "absatz": "2",
-          "text": "Mit dem Einverständnis der betroffenen Person können Mitteilungen, Verfügungen und Entscheide elektronisch zugestellt werden. Sie sind mit einer elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur zu versehen. Der Bundesrat regelt:"
+          "text": "Mit dem Einverständnis der betroffenen Person können Mitteilungen, Verfügungen und Entscheide elektronisch zugestellt werden. Sie sind mit einer elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur zu versehen. Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zu verwendende Signatur;"
+            },
+            {
+              "marke": "b",
+              "text": "das Format der Mitteilungen, Verfügungen und Entscheide sowie ihrer Beilagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Zeitpunkt, zu dem die Mitteilung, die Verfügung oder der Entscheid als zugestellt gilt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_34",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5cd25d6f997e5f1920ca95b83d35d1847ddedb20defe0306f9cf0060e60b7742"
+      "sha": "3ccdd70adde98b52e66c9ff9b7dfad2a8a32481290607638aba3dec526288d61"
     },
     {
       "id": "bund/SCHKG/art_35",
@@ -1048,7 +1160,65 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Betreibung wird auf dem Weg des Konkurses, und zwar als «Ordentliche Konkursbetreibung» (Art. 159–176) oder als «Wechselbetreibung» (Art. 177–189), fortgesetzt, wenn der Schuldner in einer der folgenden Eigenschaften im Handelsregister eingetragen ist:"
+          "text": "Die Betreibung wird auf dem Weg des Konkurses, und zwar als «Ordentliche Konkursbetreibung» (Art. 159–176) oder als «Wechselbetreibung» (Art. 177–189), fortgesetzt, wenn der Schuldner in einer der folgenden Eigenschaften im Handelsregister eingetragen ist:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "als Inhaber einer Einzelfirma (Art. 934 und 935 OR);"
+            },
+            {
+              "marke": "2",
+              "text": "als Mitglied einer Kollektivgesellschaft (Art. 554 OR);"
+            },
+            {
+              "marke": "3",
+              "text": "als unbeschränkt haftendes Mitglied einer Kommanditgesellschaft (Art. 596 OR);"
+            },
+            {
+              "marke": "4",
+              "text": "als Mitglied der Verwaltung einer Kommanditaktiengesellschaft (Art. 765 OR);"
+            },
+            {
+              "marke": "5",
+              "text": "…"
+            },
+            {
+              "marke": "6",
+              "text": "als Kollektivgesellschaft (Art. 552 OR);"
+            },
+            {
+              "marke": "7",
+              "text": "als Kommanditgesellschaft (Art. 594 OR);"
+            },
+            {
+              "marke": "8",
+              "text": "als Aktien- oder Kommanditaktiengesellschaft (Art. 620 und 764 OR);"
+            },
+            {
+              "marke": "9",
+              "text": "als Gesellschaft mit beschränkter Haftung (Art. 772 OR);"
+            },
+            {
+              "marke": "10",
+              "text": "als Genossenschaft (Art. 828 OR);"
+            },
+            {
+              "marke": "11",
+              "text": "als Verein (Art. 60 ZGB);"
+            },
+            {
+              "marke": "12",
+              "text": "als Stiftung (Art. 80 ZGB);"
+            },
+            {
+              "marke": "13",
+              "text": "Investmentgesellschaft mit variablem Kapital (Art. 36 Kollektivanlagengesetz vom 23. Juni 2006, KAG);"
+            },
+            {
+              "marke": "14",
+              "text": "Kommanditgesellschaft für kollektive Kapitalanlagen (Art. 98 KAG)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1063,7 +1233,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_39",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ff9ba60de518840bb7ee64394d661d7b19accd2b8ae06c63c6bd321cab3eda2a"
+      "sha": "4033b1c474e9abb68e554755621e46c6bb88c74901a9c0545eb4cd4b7d1ef3ee"
     },
     {
       "id": "bund/SCHKG/art_40",
@@ -1148,14 +1318,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Konkursbetreibung ist in jedem Fall ausgeschlossen für:"
+          "text": "Die Konkursbetreibung ist in jedem Fall ausgeschlossen für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "…"
+            },
+            {
+              "marke": "1",
+              "text": "…"
+            },
+            {
+              "marke": "2",
+              "text": "periodische familienrechtliche Unterhalts- und Unterstützungsbeiträge sowie Unterhaltsbeiträge nach dem Partnerschaftsgesetz vom 18. Juni 2004;"
+            },
+            {
+              "marke": "3",
+              "text": "Ansprüche auf Sicherheitsleistung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_43",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4c990bf560690ee6659907531390a5072ae8d8c75fdecebff0b22bf6047000ad"
+      "sha": "7421d38b1e3cbc4c42339d04aea4058182715acca7d37a3148607557cf99fb28"
     },
     {
       "id": "bund/SCHKG/art_44",
@@ -1415,7 +1603,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ausser im Arrestverfahren oder wenn es sich um unaufschiebbare Massnahmen zur Erhaltung von Vermögensgegenständen handelt, dürfen Betreibungshandlungen nicht vorgenommen werden:"
+          "text": "Ausser im Arrestverfahren oder wenn es sich um unaufschiebbare Massnahmen zur Erhaltung von Vermögensgegenständen handelt, dürfen Betreibungshandlungen nicht vorgenommen werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in den geschlossenen Zeiten, nämlich zwischen 20 Uhr und 7 Uhr sowie an Sonntagen und staatlich anerkannten Feiertagen;"
+            },
+            {
+              "marke": "2",
+              "text": "während der Betreibungsferien, nämlich sieben Tage vor und sieben Tage nach Ostern und Weihnachten sowie vom 15. Juli bis zum 31. Juli; in der Wechselbetreibung gibt es keine Betreibungsferien;"
+            },
+            {
+              "marke": "3",
+              "text": "gegen einen Schuldner, dem der Rechtsstillstand (Art. 57–62) gewährt ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1426,7 +1628,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_56",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "56569e233df9f2acc55262c07eea76a9411351c5055231fbc146d3532cb42049"
+      "sha": "4b0f94216a6264d3f30440985e90cd0084a83acaef525447be29b84cc16fc476"
     },
     {
       "id": "bund/SCHKG/art_57",
@@ -1546,14 +1748,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der Rechtsstillstand wegen Militär- oder Schutzdienstes kann vom Rechtsöffnungsrichter auf Antrag eines Gläubigers allgemein oder für einzelne Forderungen mit sofortiger Wirkung aufgehoben werden, wenn der Gläubiger glaubhaft macht, dass:"
+          "text": "Der Rechtsstillstand wegen Militär- oder Schutzdienstes kann vom Rechtsöffnungsrichter auf Antrag eines Gläubigers allgemein oder für einzelne Forderungen mit sofortiger Wirkung aufgehoben werden, wenn der Gläubiger glaubhaft macht, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "dass der Schuldner Vermögenswerte dem Zugriff der Gläubiger entzogen hat oder dass er Anstalten trifft, die auf eine Begünstigung einzelner Gläubiger zum Nachteil anderer oder auf eine allgemeine Benachteiligung der Gläubiger hinzielen, oder"
+            },
+            {
+              "marke": "2",
+              "text": "der Schuldner, sofern er freiwillig Militär- oder Schutzdienst leistet, zur Erhaltung seiner wirtschaftlichen Existenz des Rechtsstillstandes nicht bedarf, oder"
+            },
+            {
+              "marke": "3",
+              "text": "der Schuldner freiwillig Militär- oder Schutzdienst leistet, um sich seinen Verpflichtungen zu entziehen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_57_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d1eae7c5264ea5891984fd90dd08237eb158ed4e85d74ac0174d29b6c34d9f9a"
+      "sha": "ac4be5301c2560de432f12cd954901b1a19850c7232ac9af75619c2f53ddd1a9"
     },
     {
       "id": "bund/SCHKG/art_57_e",
@@ -1729,7 +1945,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist die Betreibung gegen eine juristische Person oder eine Gesellschaft gerichtet, so erfolgt die Zustellung an den Vertreter derselben. Als solcher gilt:"
+          "text": "Ist die Betreibung gegen eine juristische Person oder eine Gesellschaft gerichtet, so erfolgt die Zustellung an den Vertreter derselben. Als solcher gilt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für eine Gemeinde, einen Kanton oder die Eidgenossenschaft der Präsident der vollziehenden Behörde oder die von der vollziehenden Behörde bezeichnete Dienststelle;"
+            },
+            {
+              "marke": "2",
+              "text": "für eine Aktiengesellschaft, eine Kommanditaktiengesellschaft, eine Gesellschaft mit beschränkter Haftung, eine Genossenschaft oder einen im Handelsregister eingetragenen Verein jedes Mitglied der Verwaltung oder des Vorstandes sowie jeder Direktor oder Prokurist;"
+            },
+            {
+              "marke": "3",
+              "text": "für eine anderweitige juristische Person der Präsident der Verwaltung oder der Verwalter;"
+            },
+            {
+              "marke": "4",
+              "text": "für eine Kollektivgesellschaft oder Kommanditgesellschaft jeder zur Vertretung der Gesellschaft befugte Gesellschafter und jeder Prokurist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1744,7 +1978,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_65",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ea9333f03d28a5b8ac2feac9d896db58d190ce0a4ae152be309d38e1cd162870"
+      "sha": "30f588d621908592e23ea31b35ddc22dd498200cdd2367cd0d493d28efbf4016"
     },
     {
       "id": "bund/SCHKG/art_66",
@@ -1768,7 +2002,21 @@
         },
         {
           "absatz": "4",
-          "text": "Die Zustellung wird durch öffentliche Bekanntmachung ersetzt, wenn:"
+          "text": "Die Zustellung wird durch öffentliche Bekanntmachung ersetzt, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Wohnort des Schuldners unbekannt ist;"
+            },
+            {
+              "marke": "2",
+              "text": "der Schuldner sich beharrlich der Zustellung entzieht;"
+            },
+            {
+              "marke": "3",
+              "text": "der Schuldner im Ausland wohnt und die Zustellung nach Absatz 3 nicht innert angemessener Frist möglich ist."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1779,7 +2027,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_66",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f1b5f7c8707580d416b37291f08ada3afc8819f524cf1d99246b9cd50bcfc9cc"
+      "sha": "895592ca1e85c82ede3bdde4ab1324eab4b7a270f6a94907914fde8804bf73bd"
     },
     {
       "id": "bund/SCHKG/art_67",
@@ -1791,7 +2039,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Betreibungsbegehren ist schriftlich oder mündlich an das Betreibungsamt zu richten. Dabei sind anzugeben:"
+          "text": "Das Betreibungsbegehren ist schriftlich oder mündlich an das Betreibungsamt zu richten. Dabei sind anzugeben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Name und Wohnort des Gläubigers und seines allfälligen Bevollmächtigten sowie, wenn der Gläubiger im Auslande wohnt, das von demselben in der Schweiz gewählte Domizil. Im Falle mangelnder Bezeichnung wird angenommen, dieses Domizil befinde sich im Lokal des Betreibungsamtes;"
+            },
+            {
+              "marke": "2",
+              "text": "der Name und Wohnort des Schuldners und gegebenenfalls seines gesetzlichen Vertreters; bei Betreibungsbegehren gegen eine Erbschaft ist anzugeben, an welche Erben die Zustellung zu erfolgen hat;"
+            },
+            {
+              "marke": "3",
+              "text": "die Forderungssumme oder die Summe, für welche Sicherheit verlangt wird, in gesetzlicher Schweizerwährung; bei verzinslichen Forderungen der Zinsfuss und der Tag, seit welchem der Zins gefordert wird;"
+            },
+            {
+              "marke": "4",
+              "text": "die Forderungsurkunde und deren Datum; in Ermangelung einer solchen der Grund der Forderung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1806,7 +2072,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_67",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "cb861a84be4215e1ded9f2d3d5ee5c30abbdf40dd765eae4b4d5d1c54e47e46c"
+      "sha": "e0cab681141ec70e2e766d4cfecc2192e094d7a72ff1e430e9da765bb8500dd6"
     },
     {
       "id": "bund/SCHKG/art_68",
@@ -1972,14 +2238,32 @@
         },
         {
           "absatz": "2",
-          "text": "Der Zahlungsbefehl enthält:"
+          "text": "Der Zahlungsbefehl enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Angaben des Betreibungsbegehrens;"
+            },
+            {
+              "marke": "2",
+              "text": "die Aufforderung, binnen 20 Tagen den Gläubiger für die Forderung samt Betreibungskosten zu befriedigen oder, falls die Betreibung auf Sicherheitsleistung geht, sicherzustellen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Mitteilung, dass der Schuldner, welcher die Forderung oder einen Teil derselben oder das Recht, sie auf dem Betreibungswege geltend zu machen, bestreiten will, innerhalb zehn Tagen nach Zustellung des Zahlungsbefehls dem Betreibungsamte dies zu erklären (Rechtsvorschlag zu erheben) hat;"
+            },
+            {
+              "marke": "4",
+              "text": "die Androhung, dass, wenn der Schuldner weder dem Zahlungsbefehl nachkommt, noch Rechtsvorschlag erhebt, die Betreibung ihren Fortgang nehmen werde."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_69",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "0409cb24fbcf551c16cb92a0276467738940414f3a476a9ddc50b68b16110ad0"
+      "sha": "d082d4bf529d6e4044976d83fed8bfe1628c8a77f2326a01c6b2959f3bd197bf"
     },
     {
       "id": "bund/SCHKG/art_70",
@@ -2245,14 +2529,40 @@
         },
         {
           "absatz": "2",
-          "text": "Gerichtlichen Entscheiden gleichgestellt sind:"
+          "text": "Gerichtlichen Entscheiden gleichgestellt sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "gerichtliche Vergleiche und gerichtliche Schuldanerkennungen;"
+            },
+            {
+              "marke": "1",
+              "text": "vollstreckbare öffentliche Urkunden nach den Artikeln 347–352 ZPO;"
+            },
+            {
+              "marke": "2",
+              "text": "Verfügungen schweizerischer Verwaltungsbehörden;"
+            },
+            {
+              "marke": "3",
+              "text": "…"
+            },
+            {
+              "marke": "4",
+              "text": "die endgültigen Entscheide der Kontrollorgane, die in Anwendung von Artikel 16 Absatz 1 des Bundesgesetzes vom 17. Juni 2005 gegen die Schwarzarbeit getroffen werden und die Kontrollkosten zum Inhalt haben;"
+            },
+            {
+              "marke": "5",
+              "text": "im Bereich der Mehrwertsteuer: Steuerabrechnungen und Einschätzungsmitteilungen, die durch Eintritt der Festsetzungsverjährung rechtskräftig wurden, sowie Einschätzungsmitteilungen, die durch schriftliche Anerkennung der steuerpflichtigen Person rechtskräftig wurden."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_80",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "0a6b8c4268a200a5cf6ffe4601aaa83b17b82cb18de745d5ec79bc477b063ac7"
+      "sha": "0160b842f7220df8cd9b3c20eea8431f641ef8b8da3531e2766b36df8b2adc47"
     },
     {
       "id": "bund/SCHKG/art_81",
@@ -2391,7 +2701,17 @@
         },
         {
           "absatz": "2",
-          "text": "Nach Eingang der Klage hört das Gericht die Parteien an und würdigt die Beweismittel; erscheint ihm die Klage als sehr wahrscheinlich begründet, so stellt es die Betreibung vorläufig ein:"
+          "text": "Nach Eingang der Klage hört das Gericht die Parteien an und würdigt die Beweismittel; erscheint ihm die Klage als sehr wahrscheinlich begründet, so stellt es die Betreibung vorläufig ein:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in der Betreibung auf Pfändung oder auf Pfandverwertung vor der Verwertung oder, wenn diese bereits stattgefunden hat, vor der Verteilung;"
+            },
+            {
+              "marke": "2",
+              "text": "in der Betreibung auf Konkurs nach der Zustellung der Konkursandrohung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2406,7 +2726,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_85_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "832a0aeb4937aec84a607500c32e6d5fd3434800690cdd9d063577b3f4b156e5"
+      "sha": "444bb751651df1c00febd526fa6cf075b02a660db9a7e5c2ee540210ff6f50b5"
     },
     {
       "id": "bund/SCHKG/art_86",
@@ -2533,7 +2853,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Schuldner ist bei Straffolge verpflichtet:"
+          "text": "Der Schuldner ist bei Straffolge verpflichtet:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Pfändung beizuwohnen oder sich dabei vertreten zu lassen (Art. 323 Ziff. 1 StGB);"
+            },
+            {
+              "marke": "2",
+              "text": "seine Vermögensgegenstände, einschliesslich derjenigen, welche sich nicht in seinem Gewahrsam befinden, sowie seine Forderungen und Rechte gegenüber Dritten anzugeben, soweit dies zu einer genügenden Pfändung nötig ist (Art. 163 Ziff. 1 und 323 Ziff. 2 StGB)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2560,7 +2890,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_91",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9b3bfa0f2c81ec242f875cb7edc4905a005c1c5e7db6d7323bb7579a58dabdf5"
+      "sha": "a1f5662ffbbd920935ec96ffbcdcaa0456f141da232b7c0239aecae667644658"
     },
     {
       "id": "bund/SCHKG/art_92",
@@ -2572,7 +2902,61 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Unpfändbar sind:"
+          "text": "Unpfändbar sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die dem Schuldner und seiner Familie zum persönlichen Gebrauch dienenden Gegenstände wie Kleider, Effekten, Hausgeräte, Möbel oder andere bewegliche Sachen, soweit sie unentbehrlich sind;"
+            },
+            {
+              "marke": "1",
+              "text": "Tiere, die im häuslichen Bereich und nicht zu Vermögens- oder Erwerbszwecken gehalten werden;"
+            },
+            {
+              "marke": "2",
+              "text": "die religiösen Erbauungsbücher und Kultusgegenstände;"
+            },
+            {
+              "marke": "3",
+              "text": "die Werkzeuge, Gerätschaften, Instrumente und Bücher, soweit sie für den Schuldner und seine Familie zur Ausübung des Berufs notwendig sind;"
+            },
+            {
+              "marke": "4",
+              "text": "nach der Wahl des Schuldners entweder zwei Milchkühe oder Rinder, oder vier Ziegen oder Schafe, sowie Kleintiere nebst dem zum Unterhalt und zur Streu auf vier Monate erforderlichen Futter und Stroh, soweit die Tiere für die Ernährung des Schuldners und seiner Familie oder zur Aufrechterhaltung seines Betriebes unentbehrlich sind;"
+            },
+            {
+              "marke": "5",
+              "text": "die dem Schuldner und seiner Familie für die zwei auf die Pfändung folgenden Monate notwendigen Nahrungs- und Feuerungsmittel oder die zu ihrer Anschaffung erforderlichen Barmittel oder Forderungen;"
+            },
+            {
+              "marke": "6",
+              "text": "die Bekleidungs-, Ausrüstungs- und Bewaffnungsgegenstände, das Dienstpferd und der Sold eines Angehörigen der Armee, das Taschengeld einer zivildienstleistenden Person sowie die Bekleidungs- und Ausrüstungsgegenstände und die Entschädigung eines Schutzdienstpflichtigen;"
+            },
+            {
+              "marke": "7",
+              "text": "das Stammrecht der nach den Artikeln 516–520 OR bestellten Leibrenten;"
+            },
+            {
+              "marke": "8",
+              "text": "Fürsorgeleistungen und die Unterstützungen von Seiten der Hilfs-, Kranken- und Fürsorgekassen, Sterbefallvereine und ähnlicher Anstalten;"
+            },
+            {
+              "marke": "9",
+              "text": "Renten, Kapitalabfindung und andere Leistungen, die dem Opfer oder seinen Angehörigen für Körperverletzung, Gesundheitsstörung oder Tötung eines Menschen ausgerichtet werden, soweit solche Leistungen Genugtuung, Ersatz für Heilungskosten oder für die Anschaffung von Hilfsmitteln darstellen;"
+            },
+            {
+              "marke": "9",
+              "text": "die Renten gemäss Artikel 20 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung oder gemäss Artikel 50 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung, die Leistungen gemäss Artikel 12 des Bundesgesetzes vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung sowie die Leistungen der Familienausgleichskassen;"
+            },
+            {
+              "marke": "10",
+              "text": "Ansprüche auf Vorsorge- und Freizügigkeitsleistungen gegen eine Einrichtung der beruflichen Vorsorge vor Eintritt der Fälligkeit;"
+            },
+            {
+              "marke": "11",
+              "text": "Vermögenswerte eines ausländischen Staates oder einer ausländischen Zentralbank, die hoheitlichen Zwecken dienen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2591,7 +2975,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_92",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6a6c669ca32e8ba07b59483369f723a902f67a1118c90dc0e97f790c055ba1e4"
+      "sha": "80dbc34ca69cc626e3ba47359a6dba195aa53862f20dd3c8adf6b594a5fcbe4e"
     },
     {
       "id": "bund/SCHKG/art_93",
@@ -2634,7 +3018,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Hängende und stehende Früchte können nicht gepfändet werden:"
+          "text": "Hängende und stehende Früchte können nicht gepfändet werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "auf den Wiesen vor dem 1. April;"
+            },
+            {
+              "marke": "2",
+              "text": "auf den Feldern vor dem 1. Juni;"
+            },
+            {
+              "marke": "3",
+              "text": "in den Rebgeländen vor dem 20. August."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2649,7 +3047,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_94",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d503e0f6e731b8f12c3d000a82d5eb4ebf7d504dd203de5ea1097def8f6cb8d2"
+      "sha": "9a377f126b038157c01a72f6106fb278469e82550f9b5c7b3a6b1c10cca5ec7e"
     },
     {
       "id": "bund/SCHKG/art_95",
@@ -2972,7 +3370,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Schuldner und Gläubiger können den Anspruch des Dritten beim Betreibungsamt bestreiten, wenn sich der Anspruch bezieht auf:"
+          "text": "Schuldner und Gläubiger können den Anspruch des Dritten beim Betreibungsamt bestreiten, wenn sich der Anspruch bezieht auf:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "eine bewegliche Sache im ausschliesslichen Gewahrsam des Schuldners;"
+            },
+            {
+              "marke": "2",
+              "text": "eine Forderung oder ein anderes Recht, sofern die Berechtigung des Schuldners wahrscheinlicher ist als die des Dritten;"
+            },
+            {
+              "marke": "3",
+              "text": "ein Grundstück, sofern er sich nicht aus dem Grundbuch ergibt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2995,7 +3407,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_107",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3a45b1ff1256702f85b426f53cf6427ff5b2c5e584204070b8ae8516e89eef2d"
+      "sha": "c96502026808f72a132cfb14c4391ac0cc9691a9703401879143114189f850fe"
     },
     {
       "id": "bund/SCHKG/art_108",
@@ -3007,7 +3419,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gläubiger und Schuldner können gegen den Dritten auf Aberkennung seines Anspruchs klagen, wenn sich der Anspruch bezieht auf:"
+          "text": "Gläubiger und Schuldner können gegen den Dritten auf Aberkennung seines Anspruchs klagen, wenn sich der Anspruch bezieht auf:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "eine bewegliche Sache im Gewahrsam oder Mitgewahrsam des Dritten;"
+            },
+            {
+              "marke": "2",
+              "text": "eine Forderung oder ein anderes Recht, sofern die Berechtigung des Dritten wahrscheinlicher ist als diejenige des Schuldners;"
+            },
+            {
+              "marke": "3",
+              "text": "ein Grundstück, sofern er sich aus dem Grundbuch ergibt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3026,7 +3452,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_108",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "6026309ad5600382aba4829c413c7c04cd52bcac54bb465716b28c15207778a9"
+      "sha": "f7e0f6cc89a08dd582f044217fcbc5bf4003e823017b07962ada671b95c1622e"
     },
     {
       "id": "bund/SCHKG/art_109",
@@ -3038,7 +3464,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Beim Gericht des Betreibungsortes sind einzureichen:"
+          "text": "Beim Gericht des Betreibungsortes sind einzureichen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Klagen nach Artikel 107 Absatz 5;"
+            },
+            {
+              "marke": "2",
+              "text": "Klagen nach Artikel 108 Absatz 1, sofern der Beklagte Wohnsitz im Ausland hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3061,7 +3497,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_109",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d7ae5bffe2aaf459cb5bde5f293baf4ca993fb0a83ba7790653d5c92fc3eb7b1"
+      "sha": "2fc37383538ad38c2ddc5d18c9196fd2d6f50e3a1a3c1af173255f2d249aa0ba"
     },
     {
       "id": "bund/SCHKG/art_110",
@@ -3100,7 +3536,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "An der Pfändung können ohne vorgängige Betreibung innert 40 Tagen nach ihrem Vollzug teilnehmen:"
+          "text": "An der Pfändung können ohne vorgängige Betreibung innert 40 Tagen nach ihrem Vollzug teilnehmen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Ehegatte, die eingetragene Partnerin oder der eingetragene Partner des Schuldners;"
+            },
+            {
+              "marke": "2",
+              "text": "die Kinder des Schuldners für Forderungen aus dem elterlichen Verhältnis und volljährige Personen für Forderungen aus einem Vorsorgeauftrag (Art. 360–369 ZGB);"
+            },
+            {
+              "marke": "3",
+              "text": "die volljährigen Kinder und die Grosskinder des Schuldners für die Forderungen aus den Artikeln 334 und 334 bis ZGB;"
+            },
+            {
+              "marke": "4",
+              "text": "der Pfründer des Schuldners für seine Ersatzforderung nach Artikel 529 OR."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3123,7 +3577,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_111",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ae7e4f724ab83c75903abbb954aacd722e3f529b8ffaa19b05bdd93489612149"
+      "sha": "da878437cfc5bea5ac170ab3d66c315b45c16b103987a4de95106f386926502b"
     },
     {
       "id": "bund/SCHKG/art_112",
@@ -3557,14 +4011,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "An die Stelle der Versteigerung kann der freihändige Verkauf treten:"
+          "text": "An die Stelle der Versteigerung kann der freihändige Verkauf treten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn alle Beteiligten ausdrücklich damit einverstanden sind;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn Wertpapiere oder andere Gegenstände, die einen Markt- oder Börsenpreis haben, zu verwerten sind und der angebotene Preis dem Tageskurse gleichkommt;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn bei Gegenständen aus Edelmetall, für die bei der Versteigerung die Angebote den Metallwert nicht erreichten, dieser Preis angeboten wird;"
+            },
+            {
+              "marke": "4",
+              "text": "im Falle des Artikels 124 Absatz 2."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_130",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a91973c87c8300c0cca7e3326745fa10c40c45b7344ef282a8a4e8b28292db99"
+      "sha": "67f64bc881ffcd0dafa36faa6a844b7a4edf299d1e10377d9525d57c36b00e6c"
     },
     {
       "id": "bund/SCHKG/art_131",
@@ -3768,7 +4240,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die Bekanntmachung enthält:"
+          "text": "Die Bekanntmachung enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Ort, Tag und Stunde der Steigerung;"
+            },
+            {
+              "marke": "2",
+              "text": "die Angabe des Tages, von welchem an die Steigerungsbedingungen aufliegen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Aufforderung an die Pfandgläubiger und alle übrigen Beteiligten, dem Betreibungsamt innert 20 Tagen ihre Ansprüche am Grundstück, insbesondere für Zinsen und Kosten, einzugeben. In dieser Aufforderung ist anzukündigen, dass sie bei Nichteinhalten dieser Frist am Ergebnis der Verwertung nur teilhaben, soweit ihre Rechte im Grundbuch eingetragen sind."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3779,7 +4265,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_138",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5273545fa5f92e721e27d2aadde3dc9d975f6b3c1fc7e92197e5da8902423066"
+      "sha": "152ed7a5ac055b0c0a83d58cfae897763d8d5ee2f658dc337fe400c493cf6fe2"
     },
     {
       "id": "bund/SCHKG/art_139",
@@ -4195,7 +4681,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wer für eine durch Pfand (Art. 37) gesicherte Forderung Betreibung einleitet, hat im Betreibungsbegehren zusätzlich zu den in Artikel 67 aufgezählten Angaben den Pfandgegenstand zu bezeichnen. Ferner sind im Begehren gegebenenfalls anzugeben:"
+          "text": "Wer für eine durch Pfand (Art. 37) gesicherte Forderung Betreibung einleitet, hat im Betreibungsbegehren zusätzlich zu den in Artikel 67 aufgezählten Angaben den Pfandgegenstand zu bezeichnen. Ferner sind im Begehren gegebenenfalls anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Name des Dritten, der das Pfand bestellt oder den Pfandgegenstand zu Eigentum erworben hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verwendung des verpfändeten Grundstücks als Familienwohnung (Art. 169 ZGB) oder als gemeinsame Wohnung (Art. 14 des Partnerschaftsgesetzes vom 18. Juni 2004) des Schuldners oder des Dritten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4206,7 +4702,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_151",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b3f1f303ac79329cee4fcb725c703789925ed31a3d2c2e41354f6680f9260f22"
+      "sha": "3f30ed15208f9423c1ad296032e84b217dbf35c69d1d989f62f73a2cb5870ddb"
     },
     {
       "id": "bund/SCHKG/art_152",
@@ -4218,7 +4714,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Nach Empfang des Betreibungsbegehrens erlässt das Betreibungsamt einen Zahlungsbefehl nach Artikel 69, jedoch mit folgenden Besonderheiten:"
+          "text": "Nach Empfang des Betreibungsbegehrens erlässt das Betreibungsamt einen Zahlungsbefehl nach Artikel 69, jedoch mit folgenden Besonderheiten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Die dem Schuldner anzusetzende Zahlungsfrist beträgt einen Monat, wenn es sich um ein Faustpfand, sechs Monate, wenn es sich um ein Grundpfand handelt."
+            },
+            {
+              "marke": "2",
+              "text": "Die Androhung lautet dahin, dass, wenn der Schuldner weder dem Zahlungsbefehle nachkommt, noch Rechtsvorschlag erhebt, das Pfand verwertet werde."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4229,7 +4735,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_152",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e9eabaa482acc22129df768445c9f4c51b69f86425d5bbe40554b30b42836d79"
+      "sha": "2d51eb7e58fd631613e0e1cb48d106682b9bf4194b551f6f365895ecfcbfaed6"
     },
     {
       "id": "bund/SCHKG/art_153",
@@ -4245,7 +4751,17 @@
         },
         {
           "absatz": "2",
-          "text": "Das Betreibungsamt stellt auch folgenden Personen einen Zahlungsbefehl zu:"
+          "text": "Das Betreibungsamt stellt auch folgenden Personen einen Zahlungsbefehl zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Dritten, der das Pfand bestellt oder den Pfandgegenstand zu Eigentum erworben hat;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Ehegatten, der eingetragenen Partnerin oder dem eingetragenen Partner des Schuldners oder des Dritten, falls das verpfändete Grundstück als Familienwohnung (Art. 169 ZGB) oder als gemeinsame Wohnung (Art. 14 des Partnerschaftsgesetzes vom 18. Juni 2004) dient."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -4268,7 +4784,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_153",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4bb7650a8a085fcae88afb8b7247b9798dd89e6c2d10a43fa7d79a2a006775a3"
+      "sha": "d4f9a9136614af7dae086d9550f4b371767dd5b2163d34cf626aa36628a10455"
     },
     {
       "id": "bund/SCHKG/art_153_a",
@@ -4453,7 +4969,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Konkursandrohung enthält:"
+          "text": "Die Konkursandrohung enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Angaben des Betreibungsbegehrens;"
+            },
+            {
+              "marke": "2",
+              "text": "das Datum des Zahlungsbefehls;"
+            },
+            {
+              "marke": "3",
+              "text": "die Anzeige, dass der Gläubiger nach Ablauf von 20 Tagen das Konkursbegehren stellen kann;"
+            },
+            {
+              "marke": "4",
+              "text": "die Mitteilung, dass der Schuldner, welcher die Zulässigkeit der Konkursbetreibung bestreiten will, innert zehn Tagen bei der Aufsichtsbehörde Beschwerde zu führen hat (Art. 17)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4464,7 +4998,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_160",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ecb4f79ddc2c908ee1bd1af2db10ba3cfdd27b66965f6963b03303e049c92af4"
+      "sha": "a72023e37705e74e6881f7a84f69d1686afb82268f053ee53f9eb12abb7ffd0a"
     },
     {
       "id": "bund/SCHKG/art_161",
@@ -4713,14 +5247,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht weist das Konkursbegehren ab:"
+          "text": "Das Gericht weist das Konkursbegehren ab:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Konkursandrohung von der Aufsichtsbehörde aufgehoben ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn dem Schuldner die Wiederherstellung einer Frist (Art. 33 Abs. 4) oder ein nachträglicher Rechtsvorschlag (Art. 77) bewilligt worden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der Schuldner durch Urkunden beweist, dass die Schuld, Zinsen und Kosten inbegriffen, getilgt ist oder dass der Gläubiger ihm Stundung gewährt hat."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_172",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "91db8dffb8c232df187b8ee530c241872381104081f4ff1b39c1d70a70b6933a"
+      "sha": "25cc3e2205d1e8d87a73c5e783d755589cc81ac6ffef1e347065ce8b1997fb8b"
     },
     {
       "id": "bund/SCHKG/art_173",
@@ -4813,7 +5361,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die Rechtsmittelinstanz kann die Konkurseröffnung aufheben, wenn der Schuldner seine Zahlungsfähigkeit glaubhaft macht und durch Urkunden beweist, dass inzwischen:"
+          "text": "Die Rechtsmittelinstanz kann die Konkurseröffnung aufheben, wenn der Schuldner seine Zahlungsfähigkeit glaubhaft macht und durch Urkunden beweist, dass inzwischen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Schuld, einschliesslich der Zinsen und Kosten, getilgt ist;"
+            },
+            {
+              "marke": "2",
+              "text": "der geschuldete Betrag beim oberen Gericht zuhanden des Gläubigers hinterlegt ist; oder"
+            },
+            {
+              "marke": "3",
+              "text": "der Gläubiger auf die Durchführung des Konkurses verzichtet."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4824,7 +5386,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_174",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "89028b5f48d229d12a3fc8ddb6d6493e1d66b4b3388ecada38eb2264f1607a0e"
+      "sha": "a465a4d159aec1f7d555752c8e94ff75c614c795e28d590a03f995e3868f9dc1"
     },
     {
       "id": "bund/SCHKG/art_175",
@@ -4859,7 +5421,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht teilt dem Betreibungs-, dem Konkurs-, dem Handelsregister- und dem Grundbuchamt unverzüglich mit:"
+          "text": "Das Gericht teilt dem Betreibungs-, dem Konkurs-, dem Handelsregister- und dem Grundbuchamt unverzüglich mit:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Konkurseröffnung;"
+            },
+            {
+              "marke": "2",
+              "text": "den Widerruf des Konkurses;"
+            },
+            {
+              "marke": "3",
+              "text": "den Schluss des Konkurses;"
+            },
+            {
+              "marke": "4",
+              "text": "Verfügungen, in denen es einem Rechtsmittel aufschiebende Wirkung erteilt;"
+            },
+            {
+              "marke": "5",
+              "text": "vorsorgliche Anordnungen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -4870,7 +5454,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_176",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "7bd075511db0aa3c4f70d3810c57129f454ec57223b7caf19d98a049d49a75cd"
+      "sha": "3d25ca24a795ad0218556209c7796581eda752d08c22242b3fc723b9588ce908"
     },
     {
       "id": "bund/SCHKG/art_177",
@@ -4909,7 +5493,25 @@
         },
         {
           "absatz": "2",
-          "text": "Der Zahlungsbefehl enthält:"
+          "text": "Der Zahlungsbefehl enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Angaben des Betreibungsbegehrens;"
+            },
+            {
+              "marke": "2",
+              "text": "die Aufforderung, den Gläubiger binnen fünf Tagen für die Forderung samt Betreibungskosten zu befriedigen;"
+            },
+            {
+              "marke": "3",
+              "text": "die Mitteilung, dass der Schuldner Rechtsvorschlag erheben (Art. 179) oder bei der Aufsichtsbehörde Beschwerde wegen Missachtung des Gesetzes führen kann (Art. 17 und 20);"
+            },
+            {
+              "marke": "4",
+              "text": "den Hinweis, dass der Gläubiger das Konkursbegehren stellen kann, wenn der Schuldner dem Zahlungsbefehl nicht nachkommt, obwohl er keinen Rechtsvorschlag erhoben hat oder sein Rechtsvorschlag beseitigt worden ist (Art. 188)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4920,7 +5522,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_178",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "74a02fa74ed0a2ba89030b687c421d7e60daeef32c2d2e14e84e2fbebc892bdc"
+      "sha": "66ce9e2ecf32cb1c1f5b7444d3cb3efe982c6961da7642eaf2f358c572a129ce"
     },
     {
       "id": "bund/SCHKG/art_179",
@@ -5001,14 +5603,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht bewilligt den Rechtsvorschlag:"
+          "text": "Das Gericht bewilligt den Rechtsvorschlag:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn durch Urkunden bewiesen wird, dass die Schuld an den Inhaber des Wechsels oder Checks bezahlt oder durch denselben nachgelassen oder gestundet ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn Fälschung des Titels glaubhaft gemacht wird;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn eine aus dem Wechselrechte hervorgehende Einrede begründet erscheint;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn eine andere nach Artikel 1007 OR zulässige Einrede geltend gemacht wird, die glaubhaft erscheint; in diesem Falle muss jedoch die Forderungssumme in Geld oder Wertschriften hinterlegt oder eine gleichwertige Sicherheit geleistet werden."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_182",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d498b1f7a95d0a29ffa1e6960f8f9376782b39607f8dd2330ab5068f8773a53f"
+      "sha": "5ac7483c9062844f53184276f3bc9d44ac08698f487fe11b72bfa6a267969937"
     },
     {
       "id": "bund/SCHKG/art_183",
@@ -5169,7 +5789,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ein Gläubiger kann ohne vorgängige Betreibung beim Gerichte die Konkurseröffnung verlangen:"
+          "text": "Ein Gläubiger kann ohne vorgängige Betreibung beim Gerichte die Konkurseröffnung verlangen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "gegen jeden Schuldner, dessen Aufenthaltsort unbekannt ist oder der die Flucht ergriffen hat, um sich seinen Verbindlichkeiten zu entziehen, oder der betrügerische Handlungen zum Nachteile der Gläubiger begangen oder zu begehen versucht oder bei einer Betreibung auf Pfändung Bestandteile seines Vermögens verheimlicht hat;"
+            },
+            {
+              "marke": "2",
+              "text": "gegen einen der Konkursbetreibung unterliegenden Schuldner, der seine Zahlungen eingestellt hat;"
+            },
+            {
+              "marke": "3",
+              "text": "…"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5180,7 +5814,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_190",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "79a67d705e73b0dd60706d83d4d91334b78559f5bc81271e0d2e57f571a61932"
+      "sha": "19c2f89877992f42d0abf6d8231cd03230088d332bfbc4f02d31eb693c9de0e7"
     },
     {
       "id": "bund/SCHKG/art_191",
@@ -5234,7 +5868,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die zuständige Behörde benachrichtigt das Konkursgericht, wenn:"
+          "text": "Die zuständige Behörde benachrichtigt das Konkursgericht, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "alle Erben die Erbschaft ausgeschlagen haben oder die Ausschlagung zu vermuten ist (Art. 566 ff. und 573 ZGB);"
+            },
+            {
+              "marke": "2",
+              "text": "eine Erbschaft, für welche die amtliche Liquidation verlangt oder angeordnet worden ist, sich als überschuldet erweist (Art. 597 ZGB)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5249,7 +5893,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_193",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1150c5b476d3d408970b29e5979cc1a828a92f71a50fc8a4d9e88c61003a3762"
+      "sha": "b889a882b4102872b059f2f38836eb94eef354d2c8cb3d0439d6796442b51302"
     },
     {
       "id": "bund/SCHKG/art_194",
@@ -5284,7 +5928,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Konkursgericht widerruft den Konkurs und gibt dem Schuldner das Verfügungsrecht über sein Vermögen zurück, wenn:"
+          "text": "Das Konkursgericht widerruft den Konkurs und gibt dem Schuldner das Verfügungsrecht über sein Vermögen zurück, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "er nachweist, dass sämtliche Forderungen getilgt sind;"
+            },
+            {
+              "marke": "2",
+              "text": "er von jedem Gläubiger eine schriftliche Erklärung vorlegt, dass dieser seine Konkurseingabe zurückzieht; oder"
+            },
+            {
+              "marke": "3",
+              "text": "ein Nachlassvertrag zustandegekommen ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5299,7 +5957,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_195",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3013ddc78e71ead73fb79d7c69dbf5347c855b68d66bea4d562e1ca9fe13fdec"
+      "sha": "d265f10e44c67441c44ca19c7e762dc797256c51063d8c14dc9181ab24da7802"
     },
     {
       "id": "bund/SCHKG/art_196",
@@ -5729,7 +6387,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die Verrechnung ist jedoch ausgeschlossen:"
+          "text": "Die Verrechnung ist jedoch ausgeschlossen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn ein Schuldner des Konkursiten erst nach der Konkurseröffnung dessen Gläubiger wird, es sei denn, er habe eine vorher eingegangene Verpflichtung erfüllt oder eine für die Schuld des Schuldners als Pfand haftende Sache eingelöst, an der ihm das Eigentum oder ein beschränktes dingliches Recht zusteht (Art. 110 Ziff. 1 OR);"
+            },
+            {
+              "marke": "2",
+              "text": "wenn ein Gläubiger des Schuldners erst nach der Konkurseröffnung Schuldner desselben oder der Konkursmasse wird."
+            },
+            {
+              "marke": "3",
+              "text": "…"
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -5744,7 +6416,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_213",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "de8cb6687e4f0ff56deebd38013a88c6f9f4014cf3581f7c695094231c8cdfb3"
+      "sha": "d6723c99c30ab767be819f15c43ea1d40e24c1d725f94eb1d8de4d4f7ceec500"
     },
     {
       "id": "bund/SCHKG/art_214",
@@ -5891,7 +6563,33 @@
         },
         {
           "absatz": "4",
-          "text": "Die nicht pfandgesicherten Forderungen sowie der ungedeckte Betrag der pfandgesicherten Forderungen werden in folgender Rangordnung aus dem Erlös der ganzen übrigen Konkursmasse gedeckt:"
+          "text": "Die nicht pfandgesicherten Forderungen sowie der ungedeckte Betrag der pfandgesicherten Forderungen werden in folgender Rangordnung aus dem Erlös der ganzen übrigen Konkursmasse gedeckt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Forderungen von Personen, deren Vermögen kraft elterlicher Gewalt dem Schuldner anvertraut war, für alles, was derselbe ihnen in dieser Eigenschaft schuldig geworden ist. Dieses Vorzugsrecht gilt nur dann, wenn der Konkurs während der elterlichen Verwaltung oder innert einem Jahr nach ihrem Ende veröffentlicht worden ist."
+            },
+            {
+              "marke": "b",
+              "text": "Die Beitragsforderungen nach dem Bundesgesetz vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung, dem Bundesgesetz vom 19. Juni 1959 über die Invalidenversicherung, dem Bundesgesetz vom 20. März 1981 über die Unfallversicherung, dem Erwerbsersatzgesetz vom 25. September 1952 und dem Arbeitslosenversicherungsgesetz vom 25. Juni 1982."
+            },
+            {
+              "marke": "c",
+              "text": "Die Prämien- und Kostenbeteiligungsforderungen der sozialen Krankenversicherung."
+            },
+            {
+              "marke": "d",
+              "text": "Die Beiträge an die Familienausgleichskasse."
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "Die Einlagen nach Artikel 37 a des Bankengesetzes vom 8. November 1934."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -5899,14 +6597,28 @@
         },
         {
           "absatz": "5",
-          "text": "Bei den in der ersten und zweiten Klasse gesetzten Fristen werden nicht mitberechnet:"
+          "text": "Bei den in der ersten und zweiten Klasse gesetzten Fristen werden nicht mitberechnet:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Dauer eines vorausgegangenen Nachlassverfahrens;"
+            },
+            {
+              "marke": "2",
+              "text": "die Dauer eines Prozesses über die Forderung;"
+            },
+            {
+              "marke": "3",
+              "text": "bei der konkursamtlichen Liquidation einer Erbschaft die Zeit zwischen dem Todestag und der Anordnung der Liquidation."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_219",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ccb42b0a9b08e75fca7eb597991f3226ed4f4ca94ee778744f3daf5a143f6e32"
+      "sha": "dcee1b74b060bb021f2c64d8db4251768e020f01bce80f6c63c5120f42159ba0"
     },
     {
       "id": "bund/SCHKG/art_220",
@@ -6249,7 +6961,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Konkursamt beantragt dem Konkursgericht das summarische Verfahren, wenn es feststellt, dass:"
+          "text": "Das Konkursamt beantragt dem Konkursgericht das summarische Verfahren, wenn es feststellt, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "aus dem Erlös der inventarisierten Vermögenswerte die Kosten des ordentlichen Konkursverfahrens voraussichtlich nicht gedeckt werden können; oder"
+            },
+            {
+              "marke": "2",
+              "text": "die Verhältnisse einfach sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6257,14 +6979,32 @@
         },
         {
           "absatz": "3",
-          "text": "Das summarische Konkursverfahren wird nach den Vorschriften über das ordentliche Verfahren durchgeführt, vorbehältlich folgender Ausnahmen:"
+          "text": "Das summarische Konkursverfahren wird nach den Vorschriften über das ordentliche Verfahren durchgeführt, vorbehältlich folgender Ausnahmen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Gläubigerversammlungen werden in der Regel nicht einberufen. Erscheint jedoch aufgrund besonderer Umstände eine Anhörung der Gläubiger als wünschenswert, so kann das Konkursamt diese zu einer Versammlung einladen oder einen Gläubigerbeschluss auf dem Zirkularweg herbeiführen."
+            },
+            {
+              "marke": "2",
+              "text": "Nach Ablauf der Eingabefrist (Art. 232 Abs. 2 Ziff. 2) führt das Konkursamt die Verwertung durch; es berücksichtigt dabei Artikel 256 Absätze 2–4 und wahrt die Interessen der Gläubiger bestmöglich. Grundstücke darf es erst verwerten, wenn das Lastenverzeichnis erstellt ist."
+            },
+            {
+              "marke": "3",
+              "text": "Das Konkursamt bezeichnet die Kompetenzstücke im Inventar und legt dieses zusammen mit dem Kollokationsplan auf."
+            },
+            {
+              "marke": "4",
+              "text": "Die Verteilungsliste braucht nicht aufgelegt zu werden."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_231",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f348aaf7844675d77cf5af0bd78216bbe3d6c8d5084c4b760c1adbb2f03b6c8b"
+      "sha": "692700c031d5f14ed809dd016c77ec82d7790aa9d1ba2d96e324ad92833d5613"
     },
     {
       "id": "bund/SCHKG/art_232",
@@ -6280,14 +7020,40 @@
         },
         {
           "absatz": "2",
-          "text": "Die Bekanntmachung enthält:"
+          "text": "Die Bekanntmachung enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Bezeichnung des Schuldners und seines Wohnortes sowie des Zeitpunktes der Konkurseröffnung;"
+            },
+            {
+              "marke": "2",
+              "text": "die Aufforderung an die Gläubiger des Schuldners und an alle, die Ansprüche auf die in seinem Besitz befindlichen Vermögensstücke haben, ihre Forderungen oder Ansprüche samt Beweismitteln (Schuldscheine, Buchauszüge usw.) innert einem Monat nach der Bekanntmachung dem Konkursamt einzugeben;"
+            },
+            {
+              "marke": "3",
+              "text": "die Aufforderung an die Schuldner des Konkursiten, sich innert der gleichen Frist beim Konkursamt zu melden, sowie den Hinweis auf die Straffolge bei Unterlassung (Art. 324 Ziff. 2 StGB);"
+            },
+            {
+              "marke": "4",
+              "text": "die Aufforderung an Personen, die Sachen des Schuldners als Pfandgläubiger oder aus anderen Gründen besitzen, diese Sachen innert der gleichen Frist dem Konkursamt zur Verfügung zu stellen, sowie den Hinweis auf die Straffolge bei Unterlassung (Art. 324 Ziff. 3 StGB) und darauf, dass das Vorzugsrecht erlischt, wenn die Meldung ungerechtfertigt unterbleibt;"
+            },
+            {
+              "marke": "5",
+              "text": "die Einladung zu einer ersten Gläubigerversammlung, die spätestens 20 Tage nach der öffentlichen Bekanntmachung stattfinden muss und der auch Mitschuldner und Bürgen des Schuldners sowie Gewährspflichtige beiwohnen können;"
+            },
+            {
+              "marke": "6",
+              "text": "den Hinweis, dass für Beteiligte, die im Ausland wohnen, das Konkursamt als Zustellungsort gilt, solange sie nicht einen anderen Zustellungsort in der Schweiz bezeichnen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_232",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "346533964f75308922fa8713f7b84a1b9fb329ef35623cb6b49f9a4230533b5e"
+      "sha": "bc1ea45b315f217c91842d3ad6d4b14357f75ea2bfdd22299bdcb345378d3cdd"
     },
     {
       "id": "bund/SCHKG/art_233",
@@ -6395,14 +7161,36 @@
         },
         {
           "absatz": "3",
-          "text": "Im einen wie im andern Fall kann die Versammlung aus ihrer Mitte einen Gläubigerausschuss wählen; dieser hat, sofern die Versammlung nichts anderes beschliesst, folgende Aufgaben:"
+          "text": "Im einen wie im andern Fall kann die Versammlung aus ihrer Mitte einen Gläubigerausschuss wählen; dieser hat, sofern die Versammlung nichts anderes beschliesst, folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Beaufsichtigung der Geschäftsführung der Konkursverwaltung, Begutachtung der von dieser vorgelegten Fragen, Einspruch gegen jede den Interessen der Gläubiger zuwiderlaufende Massregel;"
+            },
+            {
+              "marke": "2",
+              "text": "Ermächtigung zur Fortsetzung des vom Gemeinschuldner betriebenen Handels oder Gewerbes mit Festsetzung der Bedingungen;"
+            },
+            {
+              "marke": "3",
+              "text": "Genehmigung von Rechnungen, Ermächtigung zur Führung von Prozessen sowie zum Abschluss von Vergleichen und Schiedsverträgen;"
+            },
+            {
+              "marke": "4",
+              "text": "Erhebung von Widerspruch gegen Konkursforderungen, welche die Verwaltung zugelassen hat;"
+            },
+            {
+              "marke": "5",
+              "text": "Anordnung von Abschlagsverteilungen an die Konkursgläubiger im Laufe des Konkursverfahrens."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_237",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "51bf5439b11fff805dc4668a274a0af268f5c89af7d73dd44fa87688d2ff3ded"
+      "sha": "02a704bea73f6f891c709ce112fea62ee8dd229a2ecd47fe77df94d5255548d3"
     },
     {
       "id": "bund/SCHKG/art_238",
@@ -6529,7 +7317,17 @@
         },
         {
           "absatz": "2",
-          "text": "Der Anspruch ist begründet, wenn der Gemeinschuldner sich verpflichtet hat, die kryptobasierten Vermögenswerte für den Dritten jederzeit bereitzuhalten und diese:"
+          "text": "Der Anspruch ist begründet, wenn der Gemeinschuldner sich verpflichtet hat, die kryptobasierten Vermögenswerte für den Dritten jederzeit bereitzuhalten und diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Dritten individuell zugeordnet sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "einer Gemeinschaft zugeordnet sind und ersichtlich ist, welcher Anteil am Gemeinschaftsvermögen dem Dritten zusteht."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -6544,7 +7342,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_242_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "03387af4c1e0a2d8236d4b8fc52879ea94ba2058de196f450942df1e8ee2f7f0"
+      "sha": "46b6e9806ba32cc1b6a4e9c65cd13c83dcf6a5f798b69205469cf304f7142a33"
     },
     {
       "id": "bund/SCHKG/art_242_b",
@@ -7340,7 +8138,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Gläubiger kann für eine fällige Forderung, soweit diese nicht durch ein Pfand gedeckt ist, Vermögensstücke des Schuldners, die sich in der Schweiz befinden, mit Arrest belegen lassen:"
+          "text": "Der Gläubiger kann für eine fällige Forderung, soweit diese nicht durch ein Pfand gedeckt ist, Vermögensstücke des Schuldners, die sich in der Schweiz befinden, mit Arrest belegen lassen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn der Schuldner keinen festen Wohnsitz hat;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn der Schuldner in der Absicht, sich der Erfüllung seiner Verbindlichkeiten zu entziehen, Vermögensgegenstände beiseite schafft, sich flüchtig macht oder Anstalten zur Flucht trifft;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn der Schuldner auf der Durchreise begriffen ist oder zu den Personen gehört, welche Messen und Märkte besuchen, für Forderungen, die ihrer Natur nach sofort zu erfüllen sind;"
+            },
+            {
+              "marke": "4",
+              "text": "wenn der Schuldner nicht in der Schweiz wohnt, kein anderer Arrestgrund gegeben ist, die Forderung aber einen genügenden Bezug zur Schweiz aufweist oder auf einer Schuldanerkennung im Sinne von Artikel 82 Absatz 1 beruht;"
+            },
+            {
+              "marke": "5",
+              "text": "wenn der Gläubiger gegen den Schuldner einen provisorischen oder einen definitiven Verlustschein besitzt;"
+            },
+            {
+              "marke": "6",
+              "text": "wenn der Gläubiger gegen den Schuldner einen definitiven Rechtsöffnungstitel besitzt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7355,7 +8179,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_271",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "5ca702fe66f43426245d05e7da15fda979ae4e8be1008a543e125b1e4a9c6c71"
+      "sha": "358e32efcd505dc417a38fd4ca8ad86087cd1fc9177ac84d4c1b2b80a07a9a69"
     },
     {
       "id": "bund/SCHKG/art_272",
@@ -7367,7 +8191,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Arrest wird vom Gericht am Betreibungsort oder am Ort, wo die Vermögensgegenstände sich befinden, bewilligt, wenn der Gläubiger glaubhaft macht, dass:"
+          "text": "Der Arrest wird vom Gericht am Betreibungsort oder am Ort, wo die Vermögensgegenstände sich befinden, bewilligt, wenn der Gläubiger glaubhaft macht, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "seine Forderung besteht;"
+            },
+            {
+              "marke": "2",
+              "text": "ein Arrestgrund vorliegt;"
+            },
+            {
+              "marke": "3",
+              "text": "Vermögensgegenstände vorhanden sind, die dem Schuldner gehören."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7378,7 +8216,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_272",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e9ce41b58976c41c630a5be746002fea6232722a0b709af0cdc83f802cba07d5"
+      "sha": "ff3616af1625e12f943b11307920ad719a83fe895d5c7eb8fe4b19d20a5a05b4"
     },
     {
       "id": "bund/SCHKG/art_273",
@@ -7417,14 +8255,36 @@
         },
         {
           "absatz": "2",
-          "text": "Der Arrestbefehl enthält:"
+          "text": "Der Arrestbefehl enthält:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "den Namen und den Wohnort des Gläubigers und seines allfälligen Bevollmächtigten und des Schuldners;"
+            },
+            {
+              "marke": "2",
+              "text": "die Angabe der Forderung, für welche der Arrest gelegt wird;"
+            },
+            {
+              "marke": "3",
+              "text": "die Angabe des Arrestgrundes;"
+            },
+            {
+              "marke": "4",
+              "text": "die Angabe der mit Arrest zu belegenden Gegenstände;"
+            },
+            {
+              "marke": "5",
+              "text": "den Hinweis auf die Schadenersatzpflicht des Gläubigers und, gegebenen Falles, auf die ihm auferlegte Sicherheitsleistung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_274",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "1d82ee704d63e8d9f04c0823c5a924ecd445a7bfd7217aa3026d09785fa0011c"
+      "sha": "fa19a3ef3e1a4b94c374acbb51e16c8a92a6b2355756f03294d2ca3b5d16b470"
     },
     {
       "id": "bund/SCHKG/art_275",
@@ -7544,14 +8404,24 @@
         },
         {
           "absatz": "5",
-          "text": "Die Fristen dieses Artikels laufen nicht:"
+          "text": "Die Fristen dieses Artikels laufen nicht:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "während des Einspracheverfahrens und bei Weiterziehung des Einsprachenentscheides;"
+            },
+            {
+              "marke": "2",
+              "text": "während des Verfahrens auf Vollstreckbarerklärung nach dem Übereinkommen vom 30. Oktober 2007 über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen und bei Weiterziehung des Entscheides über die Vollstreckbarerklärung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_279",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8bdd014455873ace3efb8c8faa704cd71df5d9b96aa796c6a5b59ee2e5693216"
+      "sha": "df1d5e7821036fae3e0c6494c315a687236cbff99d166af830282f94588c6f7e"
     },
     {
       "id": "bund/SCHKG/art_280",
@@ -7563,14 +8433,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der Arrest fällt dahin, wenn der Gläubiger:"
+          "text": "Der Arrest fällt dahin, wenn der Gläubiger:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Fristen nach Artikel 279 nicht einhält;"
+            },
+            {
+              "marke": "2",
+              "text": "die Klage oder die Betreibung zurückzieht oder erlöschen lässt; oder"
+            },
+            {
+              "marke": "3",
+              "text": "mit seiner Klage vom Gericht endgültig abgewiesen wird."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_280",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b4a002908aa48fee5275ebd653fb3eb25cbc7ea96301a76221077ca9053f6697"
+      "sha": "08e4a1a8e9d30a7f331f0637b979a84b106603974b04f76c2c9ad5d1ec547802"
     },
     {
       "id": "bund/SCHKG/art_281",
@@ -7724,7 +8608,17 @@
         },
         {
           "absatz": "2",
-          "text": "Zur Anfechtung sind berechtigt:"
+          "text": "Zur Anfechtung sind berechtigt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "jeder Gläubiger, der einen provisorischen oder definitiven Pfändungsverlustschein erhalten hat;"
+            },
+            {
+              "marke": "2",
+              "text": "die Konkursverwaltung oder, nach Massgabe der Artikel 260 und 269 Absatz 3, jeder einzelne Konkursgläubiger."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -7739,7 +8633,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_285",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a0e686cea26fc7ac58d14d8b9dc8a0d0abe0d8b545b6256fea0ba6d18ddd7665"
+      "sha": "ecdc8ac4bbf95c6b4e76f07eca1e0f4e9cbbfa3bada39bca4ac4c2e2b2ab6007"
     },
     {
       "id": "bund/SCHKG/art_286",
@@ -7755,7 +8649,17 @@
         },
         {
           "absatz": "2",
-          "text": "Den Schenkungen sind gleichgestellt:"
+          "text": "Den Schenkungen sind gleichgestellt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Rechtsgeschäfte, bei denen der Schuldner eine Gegenleistung angenommen hat, die zu seiner eigenen Leistung in einem Missverhältnisse steht;"
+            },
+            {
+              "marke": "2",
+              "text": "Rechtsgeschäfte, durch die der Schuldner für sich oder für einen Dritten eine Leibrente, eine Pfrund, eine Nutzniessung oder ein Wohnrecht erworben hat."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -7766,7 +8670,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_286",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "a44acbbb659061cc957b5b7d4ee8a2f3a443f9c7ccb08f7b158e71c14af5a10c"
+      "sha": "82f60ef97204a08d0c2378e414d104f9d2d55fa2d11bded24e81430057cdb8a1"
     },
     {
       "id": "bund/SCHKG/art_287",
@@ -7778,7 +8682,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die folgenden Rechtshandlungen sind anfechtbar, wenn der Schuldner sie innerhalb des letzten Jahres vor der Pfändung oder Konkurseröffnung vorgenommen hat und im Zeitpunkt der Vornahme bereits überschuldet war:"
+          "text": "Die folgenden Rechtshandlungen sind anfechtbar, wenn der Schuldner sie innerhalb des letzten Jahres vor der Pfändung oder Konkurseröffnung vorgenommen hat und im Zeitpunkt der Vornahme bereits überschuldet war:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Bestellung von Sicherheiten für bereits bestehende Verbindlichkeiten, zu deren Sicherstellung der Schuldner nicht schon früher verpflichtet war;"
+            },
+            {
+              "marke": "2",
+              "text": "Tilgung einer Geldschuld auf andere Weise als durch Barschaft oder durch anderweitige übliche Zahlungsmittel;"
+            },
+            {
+              "marke": "3",
+              "text": "Zahlung einer nicht verfallenen Schuld."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7786,14 +8704,24 @@
         },
         {
           "absatz": "3",
-          "text": "Die Anfechtung ist insbesondere ausgeschlossen, wenn Effekten, Bucheffekten oder andere an einem repräsentativen Markt gehandelte Finanzinstrumente als Sicherheit bestellt wurden und der Schuldner sich bereits früher:"
+          "text": "Die Anfechtung ist insbesondere ausgeschlossen, wenn Effekten, Bucheffekten oder andere an einem repräsentativen Markt gehandelte Finanzinstrumente als Sicherheit bestellt wurden und der Schuldner sich bereits früher:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "verpflichtet hat, die Sicherheit bei Änderungen im Wert der Sicherheit oder im Betrag der gesicherten Verbindlichkeit aufzustocken; oder"
+            },
+            {
+              "marke": "2",
+              "text": "das Recht einräumen liess, eine Sicherheit durch eine Sicherheit gleichen Werts zu ersetzen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_287",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "844892df5aa0c2da900b9e911537709ad4e6f94e39328e39efc108749f122958"
+      "sha": "f70f2ba11804e8f9097a290a5cc977e6ccba3a5a51a38598efc6bb3b2c212f7b"
     },
     {
       "id": "bund/SCHKG/art_288",
@@ -7828,14 +8756,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Bei den Fristen der Artikel 286–288 werden nicht mitberechnet:"
+          "text": "Bei den Fristen der Artikel 286–288 werden nicht mitberechnet:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Dauer einer vorausgegangenen Nachlassstundung;"
+            },
+            {
+              "marke": "2",
+              "text": "bei der konkursamtlichen Liquidation einer Erbschaft die Zeit zwischen dem Todestag und der Anordnung der Liquidation;"
+            },
+            {
+              "marke": "3",
+              "text": "die Dauer der vorausgegangenen Betreibung."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_288_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "3c054730dc8a5a4c8306c41b0c46935a63af7529316c415d519bfc7e21f92f20"
+      "sha": "d30646fe96174a9d86da57b4c32b291f94aef2b6f1573b4730cff723ade5ed65"
     },
     {
       "id": "bund/SCHKG/art_289",
@@ -7912,7 +8854,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Anfechtungsrecht verjährt:"
+          "text": "Das Anfechtungsrecht verjährt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "nach Ablauf von drei Jahren seit Zustellung des Pfändungsverlustscheins (Art. 285 Abs. 2 Ziff. 1);"
+            },
+            {
+              "marke": "2",
+              "text": "nach Ablauf von drei Jahren seit der Konkurseröffnung (Art. 285 Abs. 2 Ziff. 2);"
+            },
+            {
+              "marke": "3",
+              "text": "nach Ablauf von drei Jahren seit Bestätigung des Nachlassvertrages mit Vermögensabtretung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7923,7 +8879,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_292",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d40b2f77cc85b771b1fabe460b1efe1f3835c2b2db0567b279f25535cb591616"
+      "sha": "0c1f52f986b0f62efc074c19adffb4f42b2fa62ebfb75f7d0769b5dd17cf9bb6"
     },
     {
       "id": "bund/SCHKG/art_293",
@@ -7935,14 +8891,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Nachlassverfahren wird eingeleitet durch:"
+          "text": "Das Nachlassverfahren wird eingeleitet durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Gesuch des Schuldners mit folgenden Beilagen: eine aktuelle Bilanz, eine Erfolgsrechnung und eine Liquiditätsplanung oder entsprechende Unterlagen, aus denen die derzeitige und künftige Vermögens-, Ertrags- oder Einkommenslage des Schuldners ersichtlich ist, sowie ein provisorischer Sanierungsplan;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Gesuch eines Gläubigers, der berechtigt wäre, ein Konkursbegehren zu stellen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Überweisung der Akten nach Artikel 173 a Absatz 2."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_293",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "0d8a39d17f8036408ff3336c9fec408cf92713028b935dd9b7817de60ca24098"
+      "sha": "047a097045d7786d2228d5a61bb484aeb71fe2ca0af39a67051297fe78c01296"
     },
     {
       "id": "bund/SCHKG/art_293_a",
@@ -8008,14 +8978,32 @@
         },
         {
           "absatz": "2",
-          "text": "In begründeten Fällen kann auf die öffentliche Bekanntmachung bis zur Beendigung der provisorischen Stundung verzichtet werden, sofern der Schutz Dritter gewährleistet ist und ein entsprechender Antrag vorliegt. In einem solchen Fall:"
+          "text": "In begründeten Fällen kann auf die öffentliche Bekanntmachung bis zur Beendigung der provisorischen Stundung verzichtet werden, sofern der Schutz Dritter gewährleistet ist und ein entsprechender Antrag vorliegt. In einem solchen Fall:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unterbleibt die Mitteilung an die Ämter;"
+            },
+            {
+              "marke": "b",
+              "text": "kann gegen den Schuldner eine Betreibung eingeleitet, nicht aber fortgesetzt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "tritt die Rechtsfolge von Artikel 297 Absatz 4 nur und erst dann ein, wenn die provisorische Stundung dem Zessionar mitgeteilt wird;"
+            },
+            {
+              "marke": "d",
+              "text": "ist ein provisorischer Sachwalter einzusetzen."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_293_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "19ccaa173f531d96a36c488c2f67b39ec6e4455389f1d267ca2e0ced538a2d77"
+      "sha": "7611db01f5c979f006ea4804d8a8e36f5bb600bf4d046cb614e2bacd02018717"
     },
     {
       "id": "bund/SCHKG/art_293_d",
@@ -8077,7 +9065,25 @@
         },
         {
           "absatz": "2",
-          "text": "Dem Sachwalter stehen insbesondere folgende Aufgaben zu:"
+          "text": "Dem Sachwalter stehen insbesondere folgende Aufgaben zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "er entwirft den Nachlassvertrag, sofern dies erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "er überwacht die Handlungen des Schuldners;"
+            },
+            {
+              "marke": "c",
+              "text": "er erfüllt die in den Artikeln 298–302 und 304 bezeichneten Aufgaben;"
+            },
+            {
+              "marke": "d",
+              "text": "er erstattet auf Anordnung des Nachlassgerichts Zwischenberichte und orientiert die Gläubiger über den Verlauf der Stundung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8092,7 +9098,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_295",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ecffee4a1a54479fc0832c3b055c1704dde950c783624afb20d23d8b82e6529f"
+      "sha": "79469237be2dfff616aedae2300290519790649fd3f7d2ce2ac137eb2b8e9077"
     },
     {
       "id": "bund/SCHKG/art_295_a",
@@ -8227,14 +9233,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Vor Ablauf der Stundung wird der Konkurs von Amtes wegen eröffnet, wenn:"
+          "text": "Vor Ablauf der Stundung wird der Konkurs von Amtes wegen eröffnet, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies zur Erhaltung des schuldnerischen Vermögens erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "offensichtlich keine Aussicht mehr auf Sanierung oder Bestätigung eines Nachlassvertrages besteht; oder"
+            },
+            {
+              "marke": "c",
+              "text": "der Schuldner Artikel 298 oder den Weisungen des Sachwalters zuwiderhandelt."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_296_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "00a3484ccd32de66e7e139551679c870142b287a80b651db9cb2773f3276384f"
+      "sha": "1d6549d9de84890bbd46c03bf42eade101dbd4501fc1bdd287277edeb12bf9d8"
     },
     {
       "id": "bund/SCHKG/art_297",
@@ -8524,7 +9544,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Nachlassvertrag ist angenommen, wenn ihm bis zum Bestätigungsentscheid zugestimmt hat:"
+          "text": "Der Nachlassvertrag ist angenommen, wenn ihm bis zum Bestätigungsentscheid zugestimmt hat:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Mehrheit der Gläubiger, die zugleich mindestens zwei Drittel des Gesamtbetrages der Forderungen vertreten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein Viertel der Gläubiger, die mindestens drei Viertel des Gesamtbetrages der Forderungen vertreten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8539,7 +9569,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_305",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "f0634130b67cb78366a458d9c1c0a5476212d1fc1bbf5dd5b2a56bcb10780e99"
+      "sha": "e53e8f7e6619462b72e1387a77fb078f45a433dee016fc8a233129faade3bb4e"
     },
     {
       "id": "bund/SCHKG/art_306",
@@ -8551,7 +9581,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Bestätigung des Nachlassvertrages wird an folgende Voraussetzungen geknüpft:"
+          "text": "Die Bestätigung des Nachlassvertrages wird an folgende Voraussetzungen geknüpft:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Der Wert der angebotenen Leistungen muss im richtigen Verhältnis zu den Möglichkeiten des Schuldners stehen; bei deren Beurteilung kann das Nachlassgericht auch Anwartschaften des Schuldners berücksichtigen."
+            },
+            {
+              "marke": "2",
+              "text": "Die vollständige Befriedigung der angemeldeten privilegierten Gläubiger sowie die Erfüllung der während der Stundung mit Zustimmung des Sachwalters eingegangenen Verbindlichkeiten müssen hinlänglich sichergestellt sein, soweit nicht einzelne Gläubiger ausdrücklich auf die Sicherstellung ihrer Forderung verzichten; Artikel 305 Absatz 3 gilt sinngemäss."
+            },
+            {
+              "marke": "3",
+              "text": "Bei einem ordentlichen Nachlassvertrag (Art. 314 Abs. 1) müssen die Anteilsinhaber einen angemessenen Sanierungsbeitrag leisten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8562,7 +9606,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_306",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "061fc4a89a687d787e4327455a9e043db4d60ebd175d56394a1b91b2fd8d0f67"
+      "sha": "8510811dc6beb92fdea04af7d97448dd323c783592a7727c538d1a3ceed3365c"
     },
     {
       "id": "bund/SCHKG/art_306_a",
@@ -8586,14 +9630,28 @@
         },
         {
           "absatz": "4",
-          "text": "Das Nachlassgericht widerruft die Einstellung der Verwertung auf Antrag eines betroffenen Gläubigers und nach Anhörung des Schuldners, wenn der Gläubiger glaubhaft macht, dass:"
+          "text": "Das Nachlassgericht widerruft die Einstellung der Verwertung auf Antrag eines betroffenen Gläubigers und nach Anhörung des Schuldners, wenn der Gläubiger glaubhaft macht, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Schuldner sie durch unwahre Angaben gegenüber dem Nachlassgericht erwirkt hat; oder"
+            },
+            {
+              "marke": "2",
+              "text": "der Schuldner zu neuem Vermögen oder Einkommen gelangt ist, woraus er die Schuld, für die er betrieben ist, ohne Gefährdung seiner wirtschaftlichen Existenz bezahlen kann; oder"
+            },
+            {
+              "marke": "3",
+              "text": "durch die Verwertung des Grundpfandes die wirtschaftliche Existenz des Schuldners nicht mehr gefährdet wird."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_306_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9e9391b504be6b828d873696dc15e7833ec92d95c0ef87cab8efb7bc2a094c44"
+      "sha": "b08b45340ca54b98f308fb6c504c42199fa9e5854b6bdc1cda052537dadba580"
     },
     {
       "id": "bund/SCHKG/art_307",
@@ -8628,7 +9686,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Entscheid über den Nachlassvertrag wird, sobald er vollstreckbar ist:"
+          "text": "Der Entscheid über den Nachlassvertrag wird, sobald er vollstreckbar ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unverzüglich dem Betreibungs-, dem Konkurs- und dem Grundbuchamt und, sofern der Schuldner im Handelsregister eingetragen ist, unverzüglich auch dem Handelsregisteramt mitgeteilt;"
+            },
+            {
+              "marke": "b",
+              "text": "öffentlich bekanntgemacht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8639,7 +9707,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_308",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "486733a8e990fb11aed8265b75a12c6cc44a1154398009e9ad60e34ec2879247"
+      "sha": "3479e4cea06960a2351deece64dc9e76e9e52812f0434ca142473cdbc4156ad4"
     },
     {
       "id": "bund/SCHKG/art_309",
@@ -8850,7 +9918,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Nachlassvertrag enthält Bestimmungen über:"
+          "text": "Der Nachlassvertrag enthält Bestimmungen über:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "den Verzicht der Gläubiger auf den bei der Liquidation oder durch den Erlös aus der Abtretung des Vermögens nicht gedeckten Forderungsbetrag oder die genaue Ordnung eines Nachforderungsrechts;"
+            },
+            {
+              "marke": "2",
+              "text": "die Bezeichnung der Liquidatoren und die Anzahl der Mitglieder des Gläubigerausschusses sowie die Abgrenzung der Befugnisse derselben;"
+            },
+            {
+              "marke": "3",
+              "text": "die Art und Weise der Liquidation, soweit sie nicht im Gesetz geordnet ist, sowie die Art und die Sicherstellung der Durchführung dieser Abtretung, sofern das Vermögen an einen Dritten abgetreten wird;"
+            },
+            {
+              "marke": "4",
+              "text": "die neben den amtlichen Blättern für die Gläubiger bestimmten Publikationsorgane."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -8865,7 +9951,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_318",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "b555632183c5f41d578c87ce56d2e88738d2feb1bbfe4bcfefb53fc4cd1e46c9"
+      "sha": "3d5921dc67f188d581a5d577f9ac129daf624fd933203232ac036eb780e619b1"
     },
     {
       "id": "bund/SCHKG/art_319",
@@ -9580,7 +10666,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Stundung ist auf Antrag eines Gläubigers oder des Sachwalters vom Nachlassgericht zu widerrufen:"
+          "text": "Die Stundung ist auf Antrag eines Gläubigers oder des Sachwalters vom Nachlassgericht zu widerrufen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn der Schuldner die ihm auferlegten Abschlagszahlungen nicht pünktlich leistet;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn er den Weisungen des Sachwalters zuwiderhandelt oder die berechtigten Interessen der Gläubiger beeinträchtigt oder einzelne Gläubiger zum Nachteil anderer begünstigt;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn ein Gläubiger den Nachweis erbringt, dass die vom Schuldner dem Nachlassgericht gemachten Angaben falsch sind, oder dass er imstande ist, alle seine Verbindlichkeiten zu erfüllen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -9595,7 +10695,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de#art_348",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e30083907fe148c61f7de4d13a49a65c4a9037301e9964c065e1eaa1ab47416b"
+      "sha": "df4dfe69b8d228a12ea70d55524ca6892ba7a9b1cffe5f15d9ed43d2eccd8a93"
     },
     {
       "id": "bund/SCHKG/art_349",

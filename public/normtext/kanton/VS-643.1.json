@@ -11,7 +11,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "L’impôt proportionnel est, pour les cas mentionnés à l’article 6 alinéa 1, de: a) 20 francs pour des valeurs de 1'001 francs jusqu'à 50'000 francs; b) 1 pour cent pour une valeur de 50'001 francs jusqu'à 500'000 francs; c) 1.3 pour cent pour une valeur de 500'001 francs jusqu'à 1'000'000 de francs; d) 1.5 pour cent pour une valeur à partir de 1'000'001 francs."
+          "text": "L’impôt proportionnel est, pour les cas mentionnés à l’article 6 alinéa 1, de:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 francs pour des valeurs de 1'001 francs jusqu'à 50'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "1 pour cent pour une valeur de 50'001 francs jusqu'à 500'000 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "1.3 pour cent pour une valeur de 500'001 francs jusqu'à 1'000'000 de francs;"
+            },
+            {
+              "marke": "d",
+              "text": "1.5 pour cent pour une valeur à partir de 1'000'001 francs."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22,7 +40,7 @@
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
-      "sha": "376077dc2e9b9dba7a0c578514522319d1a7ceb4f18f1963f6f326dd0b29a94f"
+      "sha": "14b38f2e7a6d96e0540819e58385474e35d3f85afe5bc67871b37e0a33fd226b"
     }
   ]
 }

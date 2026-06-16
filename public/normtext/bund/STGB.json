@@ -61,7 +61,17 @@
         },
         {
           "absatz": "3",
-          "text": "Ist ein Täter auf Ersuchen der schweizerischen Behörde im Ausland verfolgt worden, so wird er, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der Konvention vom 4. November 1950 zum Schutze der Menschenrechte und Grundfreiheiten (EMRK), in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:"
+          "text": "Ist ein Täter auf Ersuchen der schweizerischen Behörde im Ausland verfolgt worden, so wird er, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der Konvention vom 4. November 1950 zum Schutze der Menschenrechte und Grundfreiheiten (EMRK), in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das ausländische Gericht ihn endgültig freigesprochen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sanktion, zu der er im Ausland verurteilt wurde, vollzogen, erlassen oder verjährt ist."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -72,7 +82,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_3",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ad88ce33a7a3b705083d4468f0a59203f6b652cc38f342f9a419b7b43f65bca4"
+      "sha": "66b7c5fa79a9aca8754506d3c27fa62af942524315e40e421a649a4ef596d75d"
     },
     {
       "id": "bund/STGB/art_4",
@@ -107,11 +117,39 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Diesem Gesetz ist ausserdem unterworfen, wer sich in der Schweiz befindet, nicht ausgeliefert wird und im Ausland eine der folgenden Taten begangen hat:"
+          "text": "Diesem Gesetz ist ausserdem unterworfen, wer sich in der Schweiz befindet, nicht ausgeliefert wird und im Ausland eine der folgenden Taten begangen hat:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Menschenhandel (Art. 182), sexuelle Nötigung (Art. 189 Abs. 2 und 3), Vergewaltigung (Art. 190 Abs. 2 und 3), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191) oder Förderung der Prostitution (Art. 195), wenn das Opfer weniger als 18 Jahre alt war;"
+            },
+            {
+              "marke": "a",
+              "text": "sexuelle Handlungen mit Abhängigen (Art. 188) und sexuelle Handlungen mit Minderjährigen gegen Entgelt (Art. 196);"
+            },
+            {
+              "marke": "b",
+              "text": "sexuelle Handlungen mit Kindern (Art. 187), wenn das Opfer weniger als 14 Jahre alt war;"
+            },
+            {
+              "marke": "c",
+              "text": "qualifizierte Pornografie (Art. 197 Abs. 3 und 4), wenn die Gegenstände oder Vorführungen sexuelle Handlungen mit Minderjährigen zum Inhalt hatten."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:"
+          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein ausländisches Gericht ihn endgültig freigesprochen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sanktion, zu der er im Ausland verurteilt wurde, vollzogen, erlassen oder verjährt ist."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -122,7 +160,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_5",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a5b1be2c30c6af410d0f6e2f39680cd84188c845269603d8581af44e7e5090dc"
+      "sha": "149b1c7308e2a6131a80af1a8c4823faa126af8bc876dec67d1e14509ad4a502"
     },
     {
       "id": "bund/STGB/art_6",
@@ -134,7 +172,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wer im Ausland ein Verbrechen oder Vergehen begeht, zu dessen Verfolgung sich die Schweiz durch ein internationales Übereinkommen verpflichtet hat, ist diesem Gesetz unterworfen, wenn:"
+          "text": "Wer im Ausland ein Verbrechen oder Vergehen begeht, zu dessen Verfolgung sich die Schweiz durch ein internationales Übereinkommen verpflichtet hat, ist diesem Gesetz unterworfen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Tat auch am Begehungsort strafbar ist oder der Begehungsort keiner Strafgewalt unterliegt; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter sich in der Schweiz befindet und nicht an das Ausland ausgeliefert wird."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -142,7 +190,17 @@
         },
         {
           "absatz": "3",
-          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:"
+          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein ausländisches Gericht ihn endgültig freigesprochen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sanktion, zu der er im Ausland verurteilt wurde, vollzogen, erlassen oder verjährt ist."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -153,7 +211,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_6",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "4b51738cb3fb91e3d1a87e9c188d785269f3c2a09cfe06c4c7dd9f9202e4f954"
+      "sha": "654ceda7a5d7973fc85f2f21d4834d18953922b17bf8e8ca1806736e2a330a1b"
     },
     {
       "id": "bund/STGB/art_7",
@@ -165,11 +223,35 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wer im Ausland ein Verbrechen oder Vergehen begeht, ohne dass die Voraussetzungen der Artikel 4, 5 oder 6 erfüllt sind, ist diesem Gesetz unterworfen, wenn:"
+          "text": "Wer im Ausland ein Verbrechen oder Vergehen begeht, ohne dass die Voraussetzungen der Artikel 4, 5 oder 6 erfüllt sind, ist diesem Gesetz unterworfen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Tat auch am Begehungsort strafbar ist oder der Begehungsort keiner Strafgewalt unterliegt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter sich in der Schweiz befindet oder ihr wegen dieser Tat ausgeliefert wird; und"
+            },
+            {
+              "marke": "c",
+              "text": "nach schweizerischem Recht die Tat die Auslieferung zulässt, der Täter jedoch nicht ausgeliefert wird."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Ist der Täter nicht Schweizer und wurde das Verbrechen oder Vergehen nicht gegen einen Schweizer begangen, so ist Absatz 1 nur anwendbar, wenn:"
+          "text": "Ist der Täter nicht Schweizer und wurde das Verbrechen oder Vergehen nicht gegen einen Schweizer begangen, so ist Absatz 1 nur anwendbar, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Auslieferungsbegehren aus einem Grund abgewiesen wurde, der nicht die Art der Tat betrifft; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter ein besonders schweres Verbrechen begangen hat, das von der internationalen Rechtsgemeinschaft geächtet wird."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -177,7 +259,17 @@
         },
         {
           "absatz": "4",
-          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:"
+          "text": "Der Täter wird, unter Vorbehalt eines krassen Verstosses gegen die Grundsätze der Bundesverfassung und der EMRK, in der Schweiz wegen der Tat nicht mehr verfolgt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein ausländisches Gericht ihn endgültig freigesprochen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sanktion, zu der er im Ausland verurteilt wurde, vollzogen, erlassen oder verjährt ist."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -188,7 +280,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_7",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a1a192fbcfd6c8b1dcb3b4010a49dd82e969cc077c511715fbb501692e2454fb"
+      "sha": "7455a52f4ae889942f5eb6dd007a171812b470903698df4365c6a77e6c1573fb"
     },
     {
       "id": "bund/STGB/art_8",
@@ -277,7 +369,25 @@
         },
         {
           "absatz": "2",
-          "text": "Pflichtwidrig untätig bleibt, wer die Gefährdung oder Verletzung eines strafrechtlich geschützten Rechtsgutes nicht verhindert, obwohl er aufgrund seiner Rechtstellung dazu verpflichtet ist, namentlich auf Grund:"
+          "text": "Pflichtwidrig untätig bleibt, wer die Gefährdung oder Verletzung eines strafrechtlich geschützten Rechtsgutes nicht verhindert, obwohl er aufgrund seiner Rechtstellung dazu verpflichtet ist, namentlich auf Grund:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Gesetzes;"
+            },
+            {
+              "marke": "b",
+              "text": "eines Vertrages;"
+            },
+            {
+              "marke": "c",
+              "text": "einer freiwillig eingegangenen Gefahrengemeinschaft; oder"
+            },
+            {
+              "marke": "d",
+              "text": "der Schaffung einer Gefahr."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -292,7 +402,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "afa566fffe4ec322833e8e5bbc6d1dae2a16b6407f80de202dccafbd960fb650"
+      "sha": "e2ccc4e6c0dcf269b27ac36b1431878f129dd445998f2378eb74517a7d72fe27"
     },
     {
       "id": "bund/STGB/art_12",
@@ -695,14 +805,24 @@
         },
         {
           "absatz": "2",
-          "text": "Absatz 1 gilt nicht, wenn das Gericht feststellt, dass:"
+          "text": "Absatz 1 gilt nicht, wenn das Gericht feststellt, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Zeugnis erforderlich ist, um eine Person aus einer unmittelbaren Gefahr für Leib und Leben zu retten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ohne das Zeugnis ein Tötungsdelikt im Sinne der Artikel 111–113 oder ein anderes Verbrechen, das mit einer Mindeststrafe von drei Jahren Freiheitsstrafe bedroht ist, oder eine Straftat nach den Artikeln 187, 189–191, 197 Absatz 4, 260 ter , 260 quinquies , 260 sexies , 305 bis , 305 ter und 322 ter –322 septies des vorliegenden Gesetzes oder nach Artikel 19 Absatz 2 des Betäubungsmittelgesetzes vom 3. Oktober 1951 nicht aufgeklärt werden oder der einer solchen Tat Beschuldigte nicht ergriffen werden kann."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_28_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "0d4d4d6ac9f01a4708e3da3164fd7f6a54668bbc927f346a64321eb79baf23c8"
+      "sha": "4dc5e1e11006b4681343d081d74385621e91425d148317540b037931f0280909"
     },
     {
       "id": "bund/STGB/art_29",
@@ -714,14 +834,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Eine besondere Pflicht, deren Verletzung die Strafbarkeit begründet oder erhöht, und die nur der juristischen Person, der Gesellschaft oder der Einzelfirma obliegt, wird einer natürlichen Person zugerechnet, wenn diese handelt:"
+          "text": "Eine besondere Pflicht, deren Verletzung die Strafbarkeit begründet oder erhöht, und die nur der juristischen Person, der Gesellschaft oder der Einzelfirma obliegt, wird einer natürlichen Person zugerechnet, wenn diese handelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Organ oder als Mitglied eines Organs einer juristischen Person;"
+            },
+            {
+              "marke": "b",
+              "text": "als Gesellschafter;"
+            },
+            {
+              "marke": "c",
+              "text": "als Mitarbeiter mit selbständigen Entscheidungsbefugnissen in seinem Tätigkeitsbereich einer juristischen Person, einer Gesellschaft oder einer Einzelfirma; oder"
+            },
+            {
+              "marke": "d",
+              "text": "ohne Organ, Mitglied eines Organs, Gesellschafter oder Mitarbeiter zu sein, als tatsächlicher Leiter."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_29",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a481d88d1afa6d956439deafffeea79a6183a914726037859331ae481b2ae693"
+      "sha": "bd67de04b7d37b3a77f0e663735499460a7c2929670f6cfd41818a8843a5d103"
     },
     {
       "id": "bund/STGB/art_30",
@@ -964,7 +1102,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht kann statt auf eine Geldstrafe auf eine Freiheitsstrafe erkennen, wenn:"
+          "text": "Das Gericht kann statt auf eine Geldstrafe auf eine Freiheitsstrafe erkennen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine solche geboten erscheint, um den Täter von der Begehung weiterer Verbrechen oder Vergehen abzuhalten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "eine Geldstrafe voraussichtlich nicht vollzogen werden kann."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -979,7 +1127,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_41",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "43a42c7248067297997ef07ce3d950b92ddbdc8367e3357e76d3b4209be3963e"
+      "sha": "dbb6ec1d9659c83d8ab5608c2457ca80580fd536bfa40f7be277c22dd9867853"
     },
     {
       "id": "bund/STGB/art_42",
@@ -1157,14 +1305,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Gericht mildert die Strafe, wenn:"
+          "text": "Das Gericht mildert die Strafe, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Täter gehandelt hat: 1. aus achtenswerten Beweggründen,"
+            },
+            {
+              "marke": "2",
+              "text": "in schwerer Bedrängnis,"
+            },
+            {
+              "marke": "3",
+              "text": "unter dem Eindruck einer schweren Drohung,"
+            },
+            {
+              "marke": "4",
+              "text": "auf Veranlassung einer Person, der er Gehorsam schuldet oder von der er abhängig ist;"
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_48",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "6ee2ce5f296a28deadcc97c52f850ba57f96e14800edf2727609ab65ac64843e"
+      "sha": "2c44b0eb8e9c0d5f0d15bd269377c5380862acf2f5ce938ef5d87be070764fd8"
     },
     {
       "id": "bund/STGB/art_48_a",
@@ -1283,14 +1449,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Hat der Täter den Schaden gedeckt oder alle zumutbaren Anstrengungen unternommen, um das von ihm bewirkte Unrecht auszugleichen, so sieht die zuständige Behörde von einer Strafverfolgung, einer Überweisung an das Gericht oder einer Bestrafung ab, wenn:"
+          "text": "Hat der Täter den Schaden gedeckt oder alle zumutbaren Anstrengungen unternommen, um das von ihm bewirkte Unrecht auszugleichen, so sieht die zuständige Behörde von einer Strafverfolgung, einer Überweisung an das Gericht oder einer Bestrafung ab, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Strafe eine bedingte Freiheitsstrafe bis zu einem Jahr, eine bedingte Geldstrafe oder eine Busse in Betracht kommt;"
+            },
+            {
+              "marke": "b",
+              "text": "das Interesse der Öffentlichkeit und des Geschädigten an der Strafverfolgung gering sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "der Täter den Sachverhalt eingestanden hat."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_53",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "771704501ace2f964423bf5faad52d7d6e6a9460b5ddb5e20aabd3d95c903156"
+      "sha": "4b35a04a436566384245096927824bd7c4b1fe1ca81500b76917af0227f2c804"
     },
     {
       "id": "bund/STGB/art_54",
@@ -1344,7 +1524,21 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "1 Bei einfacher Körperverletzung (Art. 123 Ziff. 2 Abs. 3–5), wiederholten Tätlichkeiten (Art. 126 Abs. 2 Bst. b, b bis und c), Drohung (Art. 180 Abs. 2) und Nötigung (Art. 181) kann die Staatsanwaltschaft oder das Gericht das Verfahren sistieren, wenn:"
+          "text": "1 Bei einfacher Körperverletzung (Art. 123 Ziff. 2 Abs. 3–5), wiederholten Tätlichkeiten (Art. 126 Abs. 2 Bst. b, b bis und c), Drohung (Art. 180 Abs. 2) und Nötigung (Art. 181) kann die Staatsanwaltschaft oder das Gericht das Verfahren sistieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Opfer: 1. der Ehegatte des Täters ist und die Tat während der Ehe oder innerhalb eines Jahres nach deren Scheidung begangen wurde, oder"
+            },
+            {
+              "marke": "2",
+              "text": "die eingetragene Partnerin oder der eingetragene Partner des Täters ist und die Tat während der Dauer der eingetragenen Partnerschaft oder innerhalb eines Jahres nach deren Auflösung begangen wurde, oder"
+            },
+            {
+              "marke": "3",
+              "text": "der hetero- oder homosexuelle Lebenspartner beziehungsweise der noch nicht ein Jahr getrennt lebende Ex-Lebenspartner des Täters ist; und"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1352,7 +1546,21 @@
         },
         {
           "absatz": "3",
-          "text": "Die Sistierung ist nicht zulässig, wenn:"
+          "text": "Die Sistierung ist nicht zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die beschuldigte Person wegen eines Verbrechens oder Vergehens gegen Leib und Leben, gegen die Freiheit oder gegen die sexuelle Integrität verurteilt wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen sie eine Strafe verhängt oder eine Massnahme angeordnet wurde; und"
+            },
+            {
+              "marke": "c",
+              "text": "sich die strafbare Handlung gegen ein Opfer nach Absatz 1 Buchstabe a richtete."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1367,7 +1575,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_55_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "4d969c4deda13b51c11aaf9354831494ae1f43c10113fed3156b4f5351e13aa9"
+      "sha": "9fe2373ca5799197859bd55335775ee68071dc00711ef299fdb599f43692fd2e"
     },
     {
       "id": "bund/STGB/art_56",
@@ -1379,7 +1587,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Massnahme ist anzuordnen, wenn:"
+          "text": "Eine Massnahme ist anzuordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Strafe allein nicht geeignet ist, der Gefahr weiterer Straftaten des Täters zu begegnen;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Behandlungsbedürfnis des Täters besteht oder die öffentliche Sicherheit dies erfordert; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen der Artikel 59–61, 63 oder 64 erfüllt sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1387,7 +1609,21 @@
         },
         {
           "absatz": "3",
-          "text": "Das Gericht stützt sich beim Entscheid über die Anordnung einer Massnahme nach den Artikeln 59–61, 63 und 64 sowie bei der Änderung der Sanktion nach Artikel 65 auf eine sachverständige Begutachtung. Diese äussert sich über:"
+          "text": "Das Gericht stützt sich beim Entscheid über die Anordnung einer Massnahme nach den Artikeln 59–61, 63 und 64 sowie bei der Änderung der Sanktion nach Artikel 65 auf eine sachverständige Begutachtung. Diese äussert sich über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Notwendigkeit und die Erfolgsaussichten einer Behandlung des Täters;"
+            },
+            {
+              "marke": "b",
+              "text": "die Art und die Wahrscheinlichkeit weiterer möglicher Straftaten; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Möglichkeiten des Vollzugs der Massnahme."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1410,7 +1646,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_56",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "c5a6a087edc8da6bc42bb53c1019425f57825dea53d73d7efeeb472dddcce28d"
+      "sha": "d0acfb29299fea83decfc1ac6aeec49cc7dbe8d20868b606546f34a110de859a"
     },
     {
       "id": "bund/STGB/art_56_a",
@@ -1495,7 +1731,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist der Täter psychisch schwer gestört, so kann das Gericht eine stationäre Behandlung anordnen, wenn:"
+          "text": "Ist der Täter psychisch schwer gestört, so kann das Gericht eine stationäre Behandlung anordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Täter ein Verbrechen oder Vergehen begangen hat, das mit seiner psychischen Störung in Zusammenhang steht; und"
+            },
+            {
+              "marke": "b",
+              "text": "zu erwarten ist, dadurch lasse sich der Gefahr weiterer mit seiner psychischen Störung in Zusammenhang stehender Taten begegnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1514,7 +1760,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_59",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "bdda3a71e84dbb179552805de0a20adea8be2ecbeadc8ad98a5a93ca7c6c31f6"
+      "sha": "488db223caef8b4d4a3797cde29bfc42092280ae1cb7f31b492bf32434b543c3"
     },
     {
       "id": "bund/STGB/art_60",
@@ -1526,7 +1772,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist der Täter von Suchtstoffen oder in anderer Weise abhängig, so kann das Gericht eine stationäre Behandlung anordnen, wenn:"
+          "text": "Ist der Täter von Suchtstoffen oder in anderer Weise abhängig, so kann das Gericht eine stationäre Behandlung anordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Täter ein Verbrechen oder Vergehen begangen hat, das mit seiner Abhängigkeit in Zusammenhang steht; und"
+            },
+            {
+              "marke": "b",
+              "text": "zu erwarten ist, dadurch lasse sich der Gefahr weiterer mit der Abhängigkeit in Zusammenhang stehender Taten begegnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1545,7 +1801,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_60",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "04293f16a4c968de897acebaefa92feeb7048ad69c3963067a2345d16b945f10"
+      "sha": "3d2739a6aa027bf410a5168c5db69e5c57765d1ee518854106968508d48fef3a"
     },
     {
       "id": "bund/STGB/art_61",
@@ -1557,7 +1813,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "War der Täter zur Zeit der Tat noch nicht 25 Jahre alt und ist er in seiner Persönlichkeitsentwicklung erheblich gestört, so kann ihn das Gericht in eine Einrichtung für junge Erwachsene einweisen, wenn:"
+          "text": "War der Täter zur Zeit der Tat noch nicht 25 Jahre alt und ist er in seiner Persönlichkeitsentwicklung erheblich gestört, so kann ihn das Gericht in eine Einrichtung für junge Erwachsene einweisen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Täter ein Verbrechen oder Vergehen begangen hat, das mit der Störung seiner Persönlichkeitsentwicklung in Zusammenhang steht; und"
+            },
+            {
+              "marke": "b",
+              "text": "zu erwarten ist, dadurch lasse sich der Gefahr weiterer mit der Störung seiner Persönlichkeitsentwicklung in Zusammenhang stehender Taten begegnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1580,7 +1846,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_61",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "7f9324a03b816de985e8d9f779500bf22ecf186b330607f781bff8b04fa22d25"
+      "sha": "82b37215ce6a1581cdee513da4b0f4e8c58881d320a1ed3021b8bb1d2f468718"
     },
     {
       "id": "bund/STGB/art_62",
@@ -1604,7 +1870,17 @@
         },
         {
           "absatz": "4",
-          "text": "Erscheint bei Ablauf der Probezeit eine Fortführung der ambulanten Behandlung, der Bewährungshilfe oder der Weisungen notwendig, um der Gefahr weiterer mit dem Zustand des bedingt Entlassenen in Zusammenhang stehender Verbrechen und Vergehen zu begegnen, so kann das Gericht auf Antrag der Vollzugsbehörde die Probezeit wie folgt verlängern:"
+          "text": "Erscheint bei Ablauf der Probezeit eine Fortführung der ambulanten Behandlung, der Bewährungshilfe oder der Weisungen notwendig, um der Gefahr weiterer mit dem Zustand des bedingt Entlassenen in Zusammenhang stehender Verbrechen und Vergehen zu begegnen, so kann das Gericht auf Antrag der Vollzugsbehörde die Probezeit wie folgt verlängern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der bedingten Entlassung aus einer Massnahme nach Artikel 59 jeweils um ein bis fünf Jahre;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der bedingten Entlassung aus einer Massnahme nach den Artikeln 60 und 61 um ein bis drei Jahre."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1619,7 +1895,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_62",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "64e04e1e6734147cac768ecd2de23ad9f8226af7580f3d6a27d63f068dc199d1"
+      "sha": "04b3345711e2b0ae1728c01312170a230f23260d60316ebf820d4a544185eee4"
     },
     {
       "id": "bund/STGB/art_62_a",
@@ -1631,7 +1907,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Begeht der bedingt Entlassene während der Probezeit eine Straftat und zeigt er damit, dass die Gefahr, der die Massnahme begegnen soll, fortbesteht, so kann das für die Beurteilung der neuen Tat zuständige Gericht nach Anhörung der Vollzugsbehörde:"
+          "text": "Begeht der bedingt Entlassene während der Probezeit eine Straftat und zeigt er damit, dass die Gefahr, der die Massnahme begegnen soll, fortbesteht, so kann das für die Beurteilung der neuen Tat zuständige Gericht nach Anhörung der Vollzugsbehörde:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Rückversetzung anordnen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahme aufheben und, sofern die Voraussetzungen dazu erfüllt sind, eine neue Massnahme anordnen; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Massnahme aufheben und, sofern die Voraussetzungen dazu erfüllt sind, den Vollzug einer Freiheitsstrafe anordnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1647,7 +1937,25 @@
         },
         {
           "absatz": "5",
-          "text": "Sieht das Gericht von einer Rückversetzung oder einer neuen Massnahme ab, so kann es:"
+          "text": "Sieht das Gericht von einer Rückversetzung oder einer neuen Massnahme ab, so kann es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den bedingt Entlassenen verwarnen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine ambulante Behandlung oder Bewährungshilfe anordnen;"
+            },
+            {
+              "marke": "c",
+              "text": "dem bedingt Entlassenen Weisungen erteilen; und"
+            },
+            {
+              "marke": "d",
+              "text": "die Probezeit bei einer Massnahme nach Artikel 59 um ein bis fünf Jahre, bei einer Massnahme nach den Artikeln 60 und 61 um ein bis drei Jahre verlängern."
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -1658,7 +1966,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_62_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "56fcee442c2c644d22ae77ef07fed3a115974e67cf9387d1dc78233c27239128"
+      "sha": "fb506da7ed83b5eb3fc33745e29a65f09742b9e754c6e316dbdbbc6ae4ac7104"
     },
     {
       "id": "bund/STGB/art_62_b",
@@ -1697,7 +2005,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Massnahme wird aufgehoben, wenn:"
+          "text": "Die Massnahme wird aufgehoben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren Durch- oder Fortführung als aussichtslos erscheint;"
+            },
+            {
+              "marke": "b",
+              "text": "die Höchstdauer nach den Artikeln 60 und 61 erreicht wurde und die Voraussetzungen für die bedingte Entlassung nicht eingetreten sind; oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine geeignete Einrichtung nicht oder nicht mehr existiert."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1724,7 +2046,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_62_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "deb894dcd84e7620f201a0feb6120d030bcc458ed6edaffe2602f4f7ef1e8990"
+      "sha": "f67c65c19fef96f208f54a795a70afa34486df5a62ad74ed077a8710ab55cd1e"
     },
     {
       "id": "bund/STGB/art_62_d",
@@ -1759,7 +2081,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist der Täter psychisch schwer gestört, ist er von Suchtstoffen oder in anderer Weise abhängig, so kann das Gericht anordnen, dass er nicht stationär, sondern ambulant behandelt wird, wenn:"
+          "text": "Ist der Täter psychisch schwer gestört, ist er von Suchtstoffen oder in anderer Weise abhängig, so kann das Gericht anordnen, dass er nicht stationär, sondern ambulant behandelt wird, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Täter eine mit Strafe bedrohte Tat verübt, die mit seinem Zustand in Zusammenhang steht; und"
+            },
+            {
+              "marke": "b",
+              "text": "zu erwarten ist, dadurch lasse sich der Gefahr weiterer mit dem Zustand des Täters in Zusammenhang stehender Taten begegnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1778,7 +2110,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_63",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "dd5363b3fd49fd5379f6eeb611dc4324df554f7b8a74830a8886822386a305e8"
+      "sha": "1004d0589686abc18fb55e3b5e1d1185892133ab0b9781827fe9f89ffe12c8b8"
     },
     {
       "id": "bund/STGB/art_63_a",
@@ -1794,7 +2126,21 @@
         },
         {
           "absatz": "2",
-          "text": "Die ambulante Behandlung wird durch die zuständige Behörde aufgehoben, wenn:"
+          "text": "Die ambulante Behandlung wird durch die zuständige Behörde aufgehoben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie erfolgreich abgeschlossen wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "deren Fortführung als aussichtslos erscheint; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die gesetzliche Höchstdauer für die Behandlung von Alkohol‑, Betäubungsmittel- oder Arzneimittelabhängigen erreicht ist."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1809,7 +2155,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_63_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "b9d4754bc8716a5c399f9172799a0572bcdb62ca7555e413b6da1e2c29d1cba7"
+      "sha": "6fe12378398500f31d70cb2b505c602f66e8d37523478cbe59f8493656ec31ef"
     },
     {
       "id": "bund/STGB/art_63_b",
@@ -1856,11 +2202,35 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht ordnet die Verwahrung an, wenn der Täter einen Mord, eine vorsätzliche Tötung, eine schwere Körperverletzung, eine Vergewaltigung, einen Raub, eine Geiselnahme, eine Brandstiftung, eine Gefährdung des Lebens oder eine andere mit einer Höchststrafe von fünf oder mehr Jahren bedrohte Tat begangen hat, durch die er die physische, psychische oder sexuelle Integrität einer andern Person schwer beeinträchtigt hat oder beeinträchtigen wollte, und wenn:"
+          "text": "Das Gericht ordnet die Verwahrung an, wenn der Täter einen Mord, eine vorsätzliche Tötung, eine schwere Körperverletzung, eine Vergewaltigung, einen Raub, eine Geiselnahme, eine Brandstiftung, eine Gefährdung des Lebens oder eine andere mit einer Höchststrafe von fünf oder mehr Jahren bedrohte Tat begangen hat, durch die er die physische, psychische oder sexuelle Integrität einer andern Person schwer beeinträchtigt hat oder beeinträchtigen wollte, und wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf Grund der Persönlichkeitsmerkmale des Täters, der Tatumstände und seiner gesamten Lebensumstände ernsthaft zu erwarten ist, dass er weitere Taten dieser Art begeht; oder"
+            },
+            {
+              "marke": "b",
+              "text": "auf Grund einer anhaltenden oder langdauernden psychischen Störung von erheblicher Schwere, mit der die Tat in Zusammenhang stand, ernsthaft zu erwarten ist, dass der Täter weitere Taten dieser Art begeht und die Anordnung einer Massnahme nach Artikel 59 keinen Erfolg verspricht."
+            }
+          ]
         },
         {
           "absatz": null,
-          "text": "1bis Das Gericht ordnet die lebenslängliche Verwahrung an, wenn der Täter einen Mord, eine vorsätzliche Tötung, eine schwere Körperverletzung, einen Raub, eine Vergewaltigung, eine sexuelle Nötigung, eine Freiheitsberaubung oder Entführung, eine Geiselnahme, ein Verschwindenlassen, Menschenhandel, Völkermord, ein Verbrechen gegen die Menschlichkeit oder ein Kriegsverbrechen (Zwölfter Titel ter ) begangen hat und wenn die folgenden Voraussetzungen erfüllt sind:"
+          "text": "1bis Das Gericht ordnet die lebenslängliche Verwahrung an, wenn der Täter einen Mord, eine vorsätzliche Tötung, eine schwere Körperverletzung, einen Raub, eine Vergewaltigung, eine sexuelle Nötigung, eine Freiheitsberaubung oder Entführung, eine Geiselnahme, ein Verschwindenlassen, Menschenhandel, Völkermord, ein Verbrechen gegen die Menschlichkeit oder ein Kriegsverbrechen (Zwölfter Titel ter ) begangen hat und wenn die folgenden Voraussetzungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Der Täter hat mit dem Verbrechen die physische, psychische oder sexuelle Integrität einer anderen Person besonders schwer beeinträchtigt oder beeinträchtigen wollen."
+            },
+            {
+              "marke": "b",
+              "text": "Beim Täter besteht eine sehr hohe Wahrscheinlichkeit, dass er erneut eines dieser Verbrechen begeht."
+            },
+            {
+              "marke": "c",
+              "text": "Der Täter wird als dauerhaft nicht therapierbar eingestuft, weil die Behandlung langfristig keinen Erfolg verspricht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1879,7 +2249,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_64",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "7590a10ba8ca8f0ade2032eec44efce56ddff234a2f04eccc176d6233440b203"
+      "sha": "4fcd2bca164adfa2441212de9cfbb07effe2b2e1226969e98573cb0aa3295402"
     },
     {
       "id": "bund/STGB/art_64_a",
@@ -1926,18 +2296,46 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die zuständige Behörde prüft auf Gesuch hin oder von Amtes wegen:"
+          "text": "Die zuständige Behörde prüft auf Gesuch hin oder von Amtes wegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mindestens einmal jährlich, und erstmals nach Ablauf von zwei Jahren, ob und wann der Täter aus der Verwahrung bedingt entlassen werden kann (Art. 64 a Abs. 1);"
+            },
+            {
+              "marke": "b",
+              "text": "mindestens alle zwei Jahre, und erstmals vor Antritt der Verwahrung, ob die Voraussetzungen für eine stationäre therapeutische Behandlung gegeben sind und beim zuständigen Gericht entsprechend Antrag gestellt werden soll (Art. 65 Abs. 1)."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die zuständige Behörde trifft die Entscheide nach Absatz 1 gestützt auf:"
+          "text": "Die zuständige Behörde trifft die Entscheide nach Absatz 1 gestützt auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Bericht der Anstaltsleitung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine unabhängige sachverständige Begutachtung im Sinne von Artikel 56 Absatz 4;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anhörung einer Kommission nach Artikel 62 d Absatz 2;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anhörung des Täters."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_64_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "27cb80761a16bf108fffa3371dec6fd0899ec8e9fcec864e16bf9f13eb8c222c"
+      "sha": "e11605a62add58853b4bf453171826ae9dd46a109712bc9f436b8f6b7fa25929"
     },
     {
       "id": "bund/STGB/art_64_c",
@@ -2038,7 +2436,73 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gericht verweist den Ausländer, der wegen einer der folgenden strafbaren Handlungen verurteilt wird, unabhängig von der Höhe der Strafe für 5–15 Jahre aus der Schweiz:"
+          "text": "Das Gericht verweist den Ausländer, der wegen einer der folgenden strafbaren Handlungen verurteilt wird, unabhängig von der Höhe der Strafe für 5–15 Jahre aus der Schweiz:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vorsätzliche Tötung (Art. 111), Mord (Art. 112), Totschlag (Art. 113), Verleitung und Beihilfe zum Selbstmord (Art. 115), strafbarer Schwangerschaftsabbruch (Art. 118 Abs. 1 und 2);"
+            },
+            {
+              "marke": "b",
+              "text": "schwere Körperverletzung (Art. 122), Verstümmelung weiblicher Genitalien (Art. 124 Abs. 1), Aussetzung (Art. 127), Gefährdung des Lebens (Art. 129), Angriff (Art. 134), Gewaltdarstellungen (Art. 135 Abs. 1 zweiter Satz);"
+            },
+            {
+              "marke": "c",
+              "text": "qualifizierte Veruntreuung (Art. 138 Ziff. 2), qualifizierter Diebstahl (Art. 139 Ziff. 3), Raub (Art. 140), gewerbsmässiger Betrug (Art. 146 Abs. 2), gewerbsmässiger betrügerischer Missbrauch einer Datenverarbeitungsanlage (Art. 147 Abs. 2), gewerbsmässiger Check- und Kreditkartenmissbrauch (Art. 148 Abs. 2), qualifizierte Erpressung (Art. 156 Ziff. 2–4), gewerbsmässiger Wucher (Art. 157 Ziff. 2), gewerbsmässige Hehlerei (Art. 160 Ziff. 2);"
+            },
+            {
+              "marke": "d",
+              "text": "Diebstahl (Art. 139) in Verbindung mit Hausfriedensbruch (Art. 186);"
+            },
+            {
+              "marke": "e",
+              "text": "Betrug (Art. 146 Abs. 1) im Bereich einer Sozialversicherung oder der Sozialhilfe, unrechtmässiger Bezug von Leistungen einer Sozialversicherung oder der Sozialhilfe (Art. 148 a Abs. 1);"
+            },
+            {
+              "marke": "f",
+              "text": "Betrug (Art. 146 Abs. 1), Leistungs- und Abgabebetrug (Art. 14 Abs. 1–3 des BG vom 22. März 1974 über das Verwaltungsstrafrecht) oder Steuerbetrug, Veruntreuung von Quellensteuern oder eine andere Straftat im Bereich der öffentlich-rechtlichen Abgaben, die mit einer Höchststrafe von einem Jahr Freiheitsstrafe oder mehr bedroht ist;"
+            },
+            {
+              "marke": "g",
+              "text": "Zwangsheirat, erzwungene eingetragene Partnerschaft (Art. 181 a ), Menschenhandel (Art. 182), Freiheitsberaubung und Entführung (Art. 183), qualifizierte Freiheitsberaubung und Entführung (Art. 184), Geiselnahme (Art. 185);"
+            },
+            {
+              "marke": "h",
+              "text": "sexuelle Handlungen mit Kindern (Art. 187 Ziff. 1 und 1 bis ), sexuelle Handlungen mit Abhängigen (Art. 188), sexuelle Nötigung (Art. 189 Abs. 2 und 3), Vergewaltigung (Art. 190), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191), Ausnützung einer Notlage oder Abhängigkeit (Art. 193), Täuschung über den sexuellen Charakter einer Handlung (Art. 193 a ), Förderung der Prostitution (Art. 195), Pornografie (Art. 197 Abs. 4 zweiter Satz);"
+            },
+            {
+              "marke": "i",
+              "text": "Brandstiftung (Art. 221 Abs. 1 und 2), vorsätzliche Verursachung einer Explosion (Art. 223 Ziff. 1 Abs. 1), Gefährdung durch Sprengstoffe und giftige Gase in verbrecherischer Absicht (Art. 224 Abs. 1), vorsätzliche Gefährdung ohne verbrecherische Absicht (Art. 225 Abs. 1), Herstellen, Verbergen, Weiterschaffen von Sprengstoffen und giftigen Gasen (Art. 226), Gefährdung durch Kernenergie, Radioaktivität und ionisierende Strahlen (Art. 226 bis ), strafbare Vorbereitungshandlungen (Art. 226 ter ), vorsätzliches Verursachen einer Überschwemmung oder eines Einsturzes (Art. 227 Ziff. 1 Abs. 1), vorsätzliche Beschädigung von elektrischen Anlagen, Wasserbauten und Schutzvorrichtungen (Art. 228 Ziff. 1 Abs. 1), Gefährdung durch Verletzung der Regeln der Baukunde (Art. 229 Abs. 1), Beseitigung oder Nichtanbringung von Sicherheitsvorrichtungen (Art. 230 Ziff. 1);"
+            },
+            {
+              "marke": "j",
+              "text": "vorsätzliche Gefährdung durch gentechnisch veränderte oder pathogene Organismen (Art. 230 bis Abs. 1), Verbreiten menschlicher Krankheiten (Art. 231), vorsätzliche Trinkwasserverunreinigung (Art. 234 Abs. 1);"
+            },
+            {
+              "marke": "k",
+              "text": "Störung des öffentlichen Verkehrs (Art. 237 Ziff. 1);"
+            },
+            {
+              "marke": "l",
+              "text": "strafbare Vorbereitungshandlungen (Art. 260 bis Abs. 1 und 3), Beteiligung an oder Unterstützung einer kriminellen oder terroristischen Organisation (Art. 260 ter ), Gefährdung der öffentlichen Sicherheit mit Waffen (Art. 260 quater ), Finanzierung des Terrorismus (Art. 260 quinquies ), Anwerbung, Ausbildung und Reisen im Hinblick auf eine terroristische Straftat (Art. 260 sexies );"
+            },
+            {
+              "marke": "m",
+              "text": "Völkermord (Art. 264), Verbrechen gegen die Menschlichkeit (Art. 264 a ), schwere Verletzungen der Genfer Konventionen vom 12. August 1949 (Art. 264 c ), andere Kriegsverbrechen (Art. 264 d –264 h );"
+            },
+            {
+              "marke": "n",
+              "text": "vorsätzliche Widerhandlung gegen Artikel 116 Absatz 3 oder Artikel 118 Absatz 3 des Ausländergesetzes vom 16. Dezember 2005;"
+            },
+            {
+              "marke": "o",
+              "text": "Widerhandlung gegen Artikel 19 Absatz 2 oder 20 Absatz 2 des Betäubungsmittelgesetzes vom 3. Oktober 1951 (BetmG);"
+            },
+            {
+              "marke": "p",
+              "text": "Widerhandlung nach Artikel 74 Absatz 4 des Nachrichtendienstgesetzes vom 25. September 2015 (NDG)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2053,7 +2517,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_66_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "48379da90d1f62f6ed59823a4500c20fc065e501276fc43d54a6970571eaafeb"
+      "sha": "e6188e3b94f85b28e59c0feceb2a1aa5ff1274566368276730cdf17b29f48907"
     },
     {
       "id": "bund/STGB/art_66_a_bis",
@@ -2142,7 +2606,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Vollzug der obligatorischen Landesverweisung nach Artikel 66 a kann nur aufgeschoben werden, wenn :"
+          "text": "Der Vollzug der obligatorischen Landesverweisung nach Artikel 66 a kann nur aufgeschoben werden, wenn :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Betroffene ein von der Schweiz anerkannter Flüchtling ist und durch die Landesverweisung sein Leben oder seine Freiheit wegen seiner Rasse, Religion, Nationalität, Zugehörigkeit zu einer bestimmten sozialen Gruppe oder seiner politischen Anschauungen gefährdet wäre; davon ausgenommen ist der Flüchtling, der sich gemäss Artikel 5 Absatz 2 des Asylgesetzes vom 26. Juni 1998 nicht auf das Rückschiebungsverbot berufen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "andere zwingende Bestimmungen des Völkerrechts entgegenstehen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2153,7 +2627,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_66_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "18008f0f3655e4b2971f5b26099029a63684d1486828c387b464fb4870f33988"
+      "sha": "5fdd69834a0fa8c2dfd4f501d9bdc337e9b8fb5f4af0f5fd96e0e0bd750a3f34"
     },
     {
       "id": "bund/STGB/art_67",
@@ -2177,15 +2651,57 @@
         },
         {
           "absatz": "3",
-          "text": "Wird jemand wegen einer der nachfolgenden Straftaten zu einer Strafe verurteilt oder wird deswegen gegen ihn eine Massnahme nach den Artikeln 59 – 61, 63 oder 64 angeordnet, so verbietet ihm das Gericht lebenslänglich jede berufliche und jede organisierte ausserberufliche Tätigkeit, die einen regelmässigen Kontakt zu Minderjährigen umfasst:"
+          "text": "Wird jemand wegen einer der nachfolgenden Straftaten zu einer Strafe verurteilt oder wird deswegen gegen ihn eine Massnahme nach den Artikeln 59 – 61, 63 oder 64 angeordnet, so verbietet ihm das Gericht lebenslänglich jede berufliche und jede organisierte ausserberufliche Tätigkeit, die einen regelmässigen Kontakt zu Minderjährigen umfasst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Menschenhandel (Art. 182), sofern er die Straftat zum Zwecke der sexuellen Ausbeutung an einem minderjährigen Opfer begangen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "sexuelle Handlungen mit Kindern (Art. 187), sexuelle Handlungen mit Abhängigen (Art. 188) oder sexuelle Handlungen mit Minderjährigen gegen Entgelt (Art. 196);"
+            },
+            {
+              "marke": "c",
+              "text": "sexueller Übergriff und sexuelle Nötigung (Art. 189), Vergewaltigung (Art. 190), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191), Ausnützung einer Notlage oder Abhängigkeit (Art. 193), Täuschung über den sexuellen Charakter einer Handlung (Art. 193 a ), Exhibitionismus (Art. 194), Förderung der Prostitution (Art. 195), unbefugtes Weiterleiten von nicht öffentlichen sexuellen Inhalten (Art. 197 a ) oder sexuelle Belästigungen (Art. 198), sofern er die Straftat an oder vor einem minderjährigen Opfer begangen hat;"
+            },
+            {
+              "marke": "d",
+              "text": "Pornografie (Art. 197): 1. nach Artikel 197 Absatz 1 oder 3,"
+            },
+            {
+              "marke": "2",
+              "text": "nach Artikel 197 Absatz 4 oder 5, sofern die Gegenstände oder Vorführungen sexuelle Handlungen mit Minderjährigen zum Inhalt hatten."
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "Wird jemand wegen einer der nachfolgenden Straftaten zu einer Strafe verurteilt oder wird deswegen gegen ihn eine Massnahme nach den Artikeln 59 – 61, 63 oder 64 angeordnet, so verbietet ihm das Gericht lebenslänglich jede berufliche und jede organisierte ausserberufliche Tätigkeit, die einen regelmässigen Kontakt zu volljährigen, besonders schutzbedürftigen Personen umfasst, sowie jede berufliche oder jede organisierte ausserberufliche Tätigkeit im Gesundheitsbereich mit direktem Patientenkontakt:"
+          "text": "Wird jemand wegen einer der nachfolgenden Straftaten zu einer Strafe verurteilt oder wird deswegen gegen ihn eine Massnahme nach den Artikeln 59 – 61, 63 oder 64 angeordnet, so verbietet ihm das Gericht lebenslänglich jede berufliche und jede organisierte ausserberufliche Tätigkeit, die einen regelmässigen Kontakt zu volljährigen, besonders schutzbedürftigen Personen umfasst, sowie jede berufliche oder jede organisierte ausserberufliche Tätigkeit im Gesundheitsbereich mit direktem Patientenkontakt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "sexuelle Handlungen mit volljährigen, besonders schutzbedürftigen Opfern, oder"
+            },
+            {
+              "marke": "2",
+              "text": "sexuelle Handlungen mit volljährigen, nicht besonders schutzbedürftigen Opfern, die zum Widerstand unfähig oder urteilsunfähig waren oder sich aufgrund einer körperlichen oder psychischen Abhängigkeit nicht zur Wehr setzen konnten."
+            }
+          ]
         },
         {
           "absatz": null,
-          "text": "4bis Das Gericht kann in besonders leichten Fällen ausnahmsweise von der Anordnung eines Tätigkeitsverbotes nach Absatz 3 oder 4 absehen, wenn ein solches Verbot nicht notwendig erscheint, um den Täter von der Begehung weiterer Straftaten abzuhalten, wie sie Anlass für das Verbot sind. Von der Anordnung eines Tätigkeitsverbotes darf jedoch nicht abgesehen werden, wenn der Täter:"
+          "text": "4bis Das Gericht kann in besonders leichten Fällen ausnahmsweise von der Anordnung eines Tätigkeitsverbotes nach Absatz 3 oder 4 absehen, wenn ein solches Verbot nicht notwendig erscheint, um den Täter von der Begehung weiterer Straftaten abzuhalten, wie sie Anlass für das Verbot sind. Von der Anordnung eines Tätigkeitsverbotes darf jedoch nicht abgesehen werden, wenn der Täter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "verurteilt worden ist wegen Menschenhandel (Art. 182), sexueller Nötigung (Art. 189 Abs. 2 und 3), Vergewaltigung (Art. 190 Abs. 2 und 3), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191) oder Förderung der Prostitution (Art. 195); oder"
+            },
+            {
+              "marke": "b",
+              "text": "gemäss den international anerkannten Klassifikationskriterien pädophil ist."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -2204,7 +2720,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "516142b30d446cdb18cec6632aebda57c29ec51d1738381415ea60a20b4fb13e"
+      "sha": "50dc1ad3bfd8e7d2e4ec15707d50fc31f7acbceab9efe32abd7b20466b461ccc"
     },
     {
       "id": "bund/STGB/art_67_a",
@@ -2232,7 +2748,45 @@
         },
         {
           "absatz": "5",
-          "text": "Als Tätigkeiten mit regelmässigem Kontakt zu Minderjährigen oder zu anderen besonders schutzbedürftigen Personen gelten:"
+          "text": "Als Tätigkeiten mit regelmässigem Kontakt zu Minderjährigen oder zu anderen besonders schutzbedürftigen Personen gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Tätigkeiten, die direkt und spezifisch gegenüber Minderjährigen oder anderen besonders schutzbedürftigen Personen ausgeübt werden, namentlich: 1. Lehren oder Unterrichten,"
+            },
+            {
+              "marke": "2",
+              "text": "Erziehung oder Beratung,"
+            },
+            {
+              "marke": "3",
+              "text": "Betreuung oder Aufsicht,"
+            },
+            {
+              "marke": "4",
+              "text": "Pflege,"
+            },
+            {
+              "marke": "5",
+              "text": "körperliche Untersuchung oder Behandlung,"
+            },
+            {
+              "marke": "6",
+              "text": "psychologische Untersuchung oder Behandlung,"
+            },
+            {
+              "marke": "7",
+              "text": "Verpflegung,"
+            },
+            {
+              "marke": "8",
+              "text": "Transport,"
+            },
+            {
+              "marke": "9",
+              "text": "direkter Verkauf oder Verleih oder direkte Vermittlung von spezifisch für die Bedürfnisse von Minderjährigen oder anderen besonders schutzbedürftigen Personen bestimmten Objekten, sofern dies die Haupttätigkeit der betreffenden Person darstellt;"
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -2243,7 +2797,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8b43d3e1a9e9a02532e205266167e19bfa9fa45ebeaba188952033e77f57c445"
+      "sha": "9c86791a0d3cd9edd127fd92ab97c8e26523d2bfdbe921feefb9e8e71d373f70"
     },
     {
       "id": "bund/STGB/art_67_b",
@@ -2259,7 +2813,21 @@
         },
         {
           "absatz": "2",
-          "text": "Mit dem Kontakt- und Rayonverbot kann das Gericht dem Täter verbieten:"
+          "text": "Mit dem Kontakt- und Rayonverbot kann das Gericht dem Täter verbieten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit einer oder mehreren bestimmten Personen oder mit Personen einer bestimmten Gruppe direkt oder über Drittpersonen Kontakt aufzunehmen, namentlich auf telefonischem, schriftlichem oder elektronischem Weg, sie zu beschäftigen, zu beherbergen, auszubilden, zu beaufsichtigen, zu pflegen oder in anderer Weise mit ihnen zu verkehren;"
+            },
+            {
+              "marke": "b",
+              "text": "sich einer bestimmten Person zu nähern oder sich in einem bestimmten Umkreis ihrer Wohnung aufzuhalten;"
+            },
+            {
+              "marke": "c",
+              "text": "sich an bestimmten Orten, namentlich bestimmten Strassen, Plätzen oder Quartieren, aufzuhalten."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2278,7 +2846,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "4b3f7fde7ab32f278b4e9b43b7226791dc8f919470a1aabbbbf83de179ccb165"
+      "sha": "0919cbb75de0525d1dbcc5187885d663fde8942d0abbcdd014fdc6c81879f7b7"
     },
     {
       "id": "bund/STGB/art_67_c",
@@ -2306,7 +2874,25 @@
         },
         {
           "absatz": "5",
-          "text": "Der Täter kann bei der zuständigen Behörde um eine inhaltliche oder zeitliche Einschränkung oder um die Aufhebung des Verbots ersuchen:"
+          "text": "Der Täter kann bei der zuständigen Behörde um eine inhaltliche oder zeitliche Einschränkung oder um die Aufhebung des Verbots ersuchen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einem Verbot nach Artikel 67 Absatz 1 oder nach Artikel 67 b : nach zwei Jahren des Vollzugs;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einem befristeten Verbot nach Artikel 67 Absatz 2: nach der Hälfte der Verbotsdauer, jedoch frühestens nach drei Jahren des Vollzugs;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "bei einem lebenslänglichen Verbot nach Artikel 67 Absatz 2 bis : nach zehn Jahren des Vollzugs."
+            }
+          ]
         },
         {
           "absatz": "6",
@@ -2337,7 +2923,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_67_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "5639053868f2e8afcae4dd93266299e14e95b2c333bbcf1e50958cbe6bdc8381"
+      "sha": "1588a5b909f11df30ec74ca189741bb090203fee848464076ca8a3e5c5c36996"
     },
     {
       "id": "bund/STGB/art_67_d",
@@ -2545,7 +3131,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Erleidet jemand durch ein Verbrechen oder ein Vergehen einen Schaden, der nicht durch eine Versicherung gedeckt ist, und ist anzunehmen, dass der Täter den Schaden nicht ersetzen oder eine Genugtuung nicht leisten wird, so spricht das Gericht dem Geschädigten auf dessen Verlangen bis zur Höhe des Schadenersatzes beziehungsweise der Genugtuung, die gerichtlich oder durch Vergleich festgesetzt worden sind, zu:"
+          "text": "Erleidet jemand durch ein Verbrechen oder ein Vergehen einen Schaden, der nicht durch eine Versicherung gedeckt ist, und ist anzunehmen, dass der Täter den Schaden nicht ersetzen oder eine Genugtuung nicht leisten wird, so spricht das Gericht dem Geschädigten auf dessen Verlangen bis zur Höhe des Schadenersatzes beziehungsweise der Genugtuung, die gerichtlich oder durch Vergleich festgesetzt worden sind, zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vom Verurteilten bezahlte Geldstrafe oder Busse;"
+            },
+            {
+              "marke": "b",
+              "text": "eingezogene Gegenstände und Vermögenswerte oder deren Verwertungserlös unter Abzug der Verwertungskosten;"
+            },
+            {
+              "marke": "c",
+              "text": "Ersatzforderungen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Betrag der Friedensbürgschaft."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2560,7 +3164,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_73",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "6e5409ef95ccaa4aa4c5f314b50cb2e62175e5887b84ddebf9e6d0457ae27f32"
+      "sha": "c3b5282e5c79b3fb9cc15e891f3e26fc1078247b7da9ba433105e499f99dcb61"
     },
     {
       "id": "bund/STGB/art_74",
@@ -2611,14 +3215,28 @@
         },
         {
           "absatz": "6",
-          "text": "Wird der Gefangene bedingt oder endgültig entlassen und erweist sich nachträglich, dass bei der Entlassung gegen ihn ein weiteres, auf Freiheitsstrafe lautendes und vollziehbares Urteil vorlag, so ist vom Vollzug der Freiheitsstrafe abzusehen, wenn:"
+          "text": "Wird der Gefangene bedingt oder endgültig entlassen und erweist sich nachträglich, dass bei der Entlassung gegen ihn ein weiteres, auf Freiheitsstrafe lautendes und vollziehbares Urteil vorlag, so ist vom Vollzug der Freiheitsstrafe abzusehen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie aus einem von den Vollzugsbehörden zu vertretenden Grund nicht zusammen mit der andern Freiheitsstrafe vollzogen wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "der Gefangene in guten Treuen davon ausgehen konnte, dass bei seiner Entlassung kein weiteres auf Freiheitsstrafe lautendes und vollziehbares Urteil gegen ihn vorlag; und"
+            },
+            {
+              "marke": "c",
+              "text": "damit die Wiedereingliederung des Gefangenen in Frage gestellt würde."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_75",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "dca7a927153b054a3e3f6948cc2aae9cb22763fed06ee5647a7319c39b635d52"
+      "sha": "f3e83c7b930cb0f40088c293c1686bc48590fc44eeacc2fc29d9d5c7cc91e002"
     },
     {
       "id": "bund/STGB/art_75_a",
@@ -2630,7 +3248,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Kommission nach Artikel 62 d Absatz 2 beurteilt im Hinblick auf die Einweisung in eine offene Strafanstalt und die Bewilligung von Vollzugsöffnungen die Gemeingefährlichkeit des Täters, wenn:"
+          "text": "Die Kommission nach Artikel 62 d Absatz 2 beurteilt im Hinblick auf die Einweisung in eine offene Strafanstalt und die Bewilligung von Vollzugsöffnungen die Gemeingefährlichkeit des Täters, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dieser ein Verbrechen nach Artikel 64 Absatz 1 begangen hat; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Vollzugsbehörde die Frage der Gemeingefährlichkeit des Gefangenen nicht eindeutig beantworten kann."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2645,7 +3273,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_75_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "4dc0615afbcada258f535c482a2137645331dff87ea10192f2df44639c693b0f"
+      "sha": "2627ae56d5372f93565318788d1c37953e77d838847b04f349719b2b593257de"
     },
     {
       "id": "bund/STGB/art_76",
@@ -2726,7 +3354,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Auf Gesuch des Verurteilten hin kann eine Freiheitsstrafe von nicht mehr als 12 Monaten oder eine nach Anrechnung der Untersuchungshaft verbleibende Reststrafe von nicht mehr als sechs Monaten in der Form der Halbgefangenschaft vollzogen werden, wenn:"
+          "text": "Auf Gesuch des Verurteilten hin kann eine Freiheitsstrafe von nicht mehr als 12 Monaten oder eine nach Anrechnung der Untersuchungshaft verbleibende Reststrafe von nicht mehr als sechs Monaten in der Form der Halbgefangenschaft vollzogen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht zu erwarten ist, dass der Verurteilte flieht oder weitere Straftaten begeht; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Verurteilte einer geregelten Arbeit, Ausbildung oder Beschäftigung von mindestens 20 Stunden pro Woche nachgeht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2745,7 +3383,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_77_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "6b4a9dc4ca3c6af894908f11e45f487fe870b320e9dc49ecd18f7f489f2f5555"
+      "sha": "efdd54926b1e799a42a3b7335a59bf8c6253fffa3f171c46bfba3cdb89406653"
     },
     {
       "id": "bund/STGB/art_78",
@@ -2757,14 +3395,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Einzelhaft als ununterbrochene Trennung von den anderen Gefangenen darf nur angeordnet werden:"
+          "text": "Einzelhaft als ununterbrochene Trennung von den anderen Gefangenen darf nur angeordnet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Antritt der Strafe und zur Einleitung des Vollzugs für die Dauer von höchstens einer Woche;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Schutz des Gefangenen oder Dritter;"
+            },
+            {
+              "marke": "c",
+              "text": "als Disziplinarsanktion;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Verhinderung der Beeinflussung von Mitgefangenen durch Gedankengut, das die Ausübung von terroristischen Aktivitäten begünstigen kann, sofern konkrete Anhaltspunkte auf eine solche Beeinflussung vorliegen."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_78",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "44179e53637b692cfae07f35543eea3589610cc1688e12869749c436a495de6e"
+      "sha": "786f6f3b24771bd6f818664baf77215216c0b74b24270bc73f2791903494ce81"
     },
     {
       "id": "bund/STGB/art_79",
@@ -2795,7 +3451,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist nicht zu erwarten, dass der Verurteilte flieht oder weitere Straftaten begeht, so kann auf sein Gesuch hin in der Form von gemeinnütziger Arbeit vollzogen werden:"
+          "text": "Ist nicht zu erwarten, dass der Verurteilte flieht oder weitere Straftaten begeht, so kann auf sein Gesuch hin in der Form von gemeinnütziger Arbeit vollzogen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Freiheitsstrafe von nicht mehr als sechs Monaten;"
+            },
+            {
+              "marke": "b",
+              "text": "eine nach Anrechnung der Untersuchungshaft verbleibende Reststrafe von nicht mehr als sechs Monaten; oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine Geldstrafe oder eine Busse."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2822,7 +3492,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_79_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "cb8424c411e0b37e6ce70fec3019a4288a3fd3ecd7399af6ac671248e6d31073"
+      "sha": "4f31e6718155f999db14c7aab7d9bb16e8e4d4f999f0f177fd9b91841958c821"
     },
     {
       "id": "bund/STGB/art_79_b",
@@ -2834,11 +3504,43 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Vollzugsbehörde kann auf Gesuch des Verurteilten hin den Einsatz elektronischer Geräte und deren feste Verbindung mit dem Körper des Verurteilten (elektronische Überwachung) anordnen:"
+          "text": "Die Vollzugsbehörde kann auf Gesuch des Verurteilten hin den Einsatz elektronischer Geräte und deren feste Verbindung mit dem Körper des Verurteilten (elektronische Überwachung) anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für den Vollzug einer Freiheitsstrafe oder einer Ersatzfreiheitsstrafe von 20 Tagen bis zu 12 Monaten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "anstelle des Arbeitsexternates oder des Arbeits- und Wohnexternates für die Dauer von 3 bis 12 Monaten."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Sie kann die elektronische Überwachung nur anordnen, wenn:"
+          "text": "Sie kann die elektronische Überwachung nur anordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht zu erwarten ist, dass der Verurteilte flieht oder weitere Straftaten begeht;"
+            },
+            {
+              "marke": "b",
+              "text": "der Verurteilte über eine dauerhafte Unterkunft verfügt;"
+            },
+            {
+              "marke": "c",
+              "text": "der Verurteilte einer geregelten Arbeit, Ausbildung oder Beschäftigung von mindestens 20 Stunden pro Woche nachgeht oder ihm eine solche zugewiesen werden kann;"
+            },
+            {
+              "marke": "d",
+              "text": "die mit dem Verurteilten in derselben Wohnung lebenden erwachsenen Personen zustimmen; und"
+            },
+            {
+              "marke": "e",
+              "text": "der Verurteilte einem für ihn ausgearbeiteten Vollzugsplan zustimmt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2849,7 +3551,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_79_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a6ee9d7570a892dc5ecd7b26340742fe70e4f672b1f8a9f0b7dedecd8617b2fb"
+      "sha": "5f8cff8a9aaf22beda1dff517029c5368678c07db73c2e9bce89949986b81211"
     },
     {
       "id": "bund/STGB/art_80",
@@ -2861,7 +3563,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von den für den Vollzug geltenden Regeln darf zu Gunsten des Gefangenen abgewichen werden:"
+          "text": "Von den für den Vollzug geltenden Regeln darf zu Gunsten des Gefangenen abgewichen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn der Gesundheitszustand des Gefangenen dies erfordert;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Schwangerschaft, Geburt und für die Zeit unmittelbar nach der Geburt;"
+            },
+            {
+              "marke": "c",
+              "text": "zur gemeinsamen Unterbringung von Mutter und Kleinkind, sofern dies auch im Interesse des Kindes liegt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2872,7 +3588,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_80",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "0a511557abf0d3c666f9642dda259fdc813e4a8300b0d0cba4813e60befd9866"
+      "sha": "5216efb1f73e065395f98c5ee86ffc11c510ab57cc30de430b5cbf6406cbd7e6"
     },
     {
       "id": "bund/STGB/art_81",
@@ -3147,7 +3863,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Eine Person, die sich im Vollzug einer Massnahme nach den Artikeln 59–61 befindet, darf nur dann ununterbrochen von den andern Eingewiesenen getrennt untergebracht werden, wenn dies unerlässlich ist:"
+          "text": "Eine Person, die sich im Vollzug einer Massnahme nach den Artikeln 59–61 befindet, darf nur dann ununterbrochen von den andern Eingewiesenen getrennt untergebracht werden, wenn dies unerlässlich ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als vorübergehende therapeutische Massnahme;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Schutz des Eingewiesenen oder Dritter;"
+            },
+            {
+              "marke": "c",
+              "text": "als Disziplinarsanktion;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Verhinderung der Beeinflussung von anderen Eingewiesenen durch Gedankengut, das die Ausübung von terroristischen Aktivitäten begünstigen kann, sofern konkrete Anhaltspunkte auf eine solche Beeinflussung vorliegen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3182,7 +3916,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_90",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8b0644836607d7841da0a977c9d21f8c5ca55c3a8cdd47edbc65e78c20738142"
+      "sha": "a16c8a4e52070bd93a09798aa202d51ddc107d8f64896c3bfaaf54f619b10ace"
     },
     {
       "id": "bund/STGB/art_91",
@@ -3198,7 +3932,25 @@
         },
         {
           "absatz": "2",
-          "text": "Disziplinarsanktionen sind:"
+          "text": "Disziplinarsanktionen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Verweis;"
+            },
+            {
+              "marke": "b",
+              "text": "der zeitweise Entzug oder die Beschränkung der Verfügung über Geldmittel, der Freizeitbeschäftigung oder der Aussenkontakte;"
+            },
+            {
+              "marke": "c",
+              "text": "die Busse; sowie"
+            },
+            {
+              "marke": "d",
+              "text": "der Arrest als eine zusätzliche Freiheitsbeschränkung."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3209,7 +3961,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_91",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "c65dd24628cf49c5ee4d815ccc6a2b4804d27f6b2701a2e9f2d0fb3231e54aec"
+      "sha": "84d82054b9884de99fdb6bfbed3f86f5c48f16f3a9f1a3e8a3d62f5867f4e4df"
     },
     {
       "id": "bund/STGB/art_92",
@@ -3240,7 +3992,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Opfer und Angehörige des Opfers im Sinne von Artikel 1 Absätze 1 und 2 des Opferhilfegesetzes vom 23. März 2007 (OHG) sowie Dritte, soweit diese über ein schutzwürdiges Interesse verfügen, können mit schriftlichem Gesuch verlangen, dass sie von der Vollzugsbehörde über Folgendes informiert werden:"
+          "text": "Opfer und Angehörige des Opfers im Sinne von Artikel 1 Absätze 1 und 2 des Opferhilfegesetzes vom 23. März 2007 (OHG) sowie Dritte, soweit diese über ein schutzwürdiges Interesse verfügen, können mit schriftlichem Gesuch verlangen, dass sie von der Vollzugsbehörde über Folgendes informiert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über den Zeitpunkt des Straf- oder Massnahmenantritts des Verurteilten, die Vollzugseinrichtung, die Vollzugsform, sofern sie vom Normalvollzug abweicht, Vollzugsunterbrechungen, Vollzugsöffnungen (Art. 75 a Abs. 2), die bedingte oder definitive Entlassung sowie die Rückversetzung in den Straf- oder Massnahmenvollzug;"
+            },
+            {
+              "marke": "b",
+              "text": "umgehend über eine Flucht des Verurteilten und deren Beendigung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3259,7 +4021,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_92_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "1ae54fef5ce180bd850a9bb04db40f44851671009fdef7b57ca29404a953b9f6"
+      "sha": "52041b3f8c9e90188632214bc33c26afa015fa33dd0bcc6e342456f6dfc08715"
     },
     {
       "id": "bund/STGB/art_93",
@@ -3333,7 +4095,21 @@
         },
         {
           "absatz": "4",
-          "text": "Das Gericht oder die Strafvollzugsbehörde kann in den Fällen nach Absatz 3:"
+          "text": "Das Gericht oder die Strafvollzugsbehörde kann in den Fällen nach Absatz 3:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Probezeit um die Hälfte verlängern;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bewährungshilfe aufheben oder neu anordnen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Weisungen ändern, aufheben oder neue Weisungen erteilen."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -3344,7 +4120,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_95",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "cc593ec89184bcf4def7f3a3ddf4dc2bb07405e453cdb7209af9550a5b4a1b1b"
+      "sha": "c0350aecdab4275209918937de70fc4337dc3b631c78be93fcfbfc789e927a6d"
     },
     {
       "id": "bund/STGB/art_96",
@@ -3375,7 +4151,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Strafverfolgung verjährt, wenn die für die Tat angedrohte Höchststrafe:"
+          "text": "Die Strafverfolgung verjährt, wenn die für die Tat angedrohte Höchststrafe:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "lebenslängliche Freiheitsstrafe ist: in 30 Jahren;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Freiheitsstrafe von mehr als drei Jahren ist: in 15 Jahren;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Freiheitsstrafe von drei Jahren ist: in 10 Jahren;"
+            },
+            {
+              "marke": "d",
+              "text": "eine andere Strafe ist: in 7 Jahren."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3394,7 +4188,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_97",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "6296129a0fdc3a0cd1d390caff21ba7ca2f76f96d7769da95df67f0f5552dfe4"
+      "sha": "4cea9910dbae36057fd6dad29f095c0c36a81424581a7a7991059c584702578c"
     },
     {
       "id": "bund/STGB/art_98",
@@ -3406,14 +4200,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Verjährung beginnt:"
+          "text": "Die Verjährung beginnt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit dem Tag, an dem der Täter die strafbare Tätigkeit ausführt;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn der Täter die strafbare Tätigkeit zu verschiedenen Zeiten ausführt, mit dem Tag, an dem er die letzte Tätigkeit ausführt;"
+            },
+            {
+              "marke": "c",
+              "text": "wenn das strafbare Verhalten dauert, mit dem Tag, an dem dieses Verhalten aufhört."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_98",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8b9348169bfadb1f1981edb980512ec73a23b65de3fdf518825f2cd493078531"
+      "sha": "3a53e30cb4710be492d9eb3a9bd5e3fdf903ac6634dd648805e233829d8ed44b"
     },
     {
       "id": "bund/STGB/art_99",
@@ -3425,18 +4233,50 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Strafen verjähren in:"
+          "text": "Die Strafen verjähren in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "30 Jahren, wenn eine lebenslängliche Freiheitsstrafe ausgesprochen wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "25 Jahren, wenn eine Freiheitsstrafe von zehn oder mehr Jahren ausgesprochen wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "20 Jahren, wenn eine Freiheitsstrafe von mindestens fünf und weniger als zehn Jahren ausgesprochen wurde;"
+            },
+            {
+              "marke": "d",
+              "text": "15 Jahren, wenn eine Freiheitsstrafe von mehr als einem und weniger als fünf Jahren ausgesprochen wurde;"
+            },
+            {
+              "marke": "e",
+              "text": "fünf Jahren, wenn eine andere Strafe ausgesprochen wurde."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Die Verjährungsfrist einer Freiheitsstrafe verlängert sich:"
+          "text": "Die Verjährungsfrist einer Freiheitsstrafe verlängert sich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "um die Zeit, während der sich der Täter im ununterbrochenen Vollzug dieser oder einer anderen Freiheitsstrafe oder Massnahme, die unmittelbar vorausgehend vollzogen wird, befindet;"
+            },
+            {
+              "marke": "b",
+              "text": "um die Dauer der Probezeit bei bedingter Entlassung."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_99",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a22d65897f6b33638afea516a762b87edc2521d9b1044e520eb1f6c88ffab27c"
+      "sha": "f83ba8d262f3ae0f5a8e3b3f6eb57ae336f17bf4bc43588af80c51d299b6f54d"
     },
     {
       "id": "bund/STGB/art_100",
@@ -3467,7 +4307,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Keine Verjährung tritt ein für:"
+          "text": "Keine Verjährung tritt ein für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Völkermord (Art. 264);"
+            },
+            {
+              "marke": "b",
+              "text": "Verbrechen gegen die Menschlichkeit (Art. 264 a Abs. 1 und 2);"
+            },
+            {
+              "marke": "c",
+              "text": "Kriegsverbrechen (Art. 264 c Abs. 1–3, 264 d Abs. 1 und 2, 264 e Abs. 1 und 2, 264 f , 264 g Abs. 1 und 2 und 264 h );"
+            },
+            {
+              "marke": "d",
+              "text": "Verbrechen, die als Mittel zu Erpressung oder Nötigung Leib und Leben vieler Menschen in Gefahr brachten oder zu bringen drohten, namentlich unter Verwendung von Massenvernichtungsmitteln, durch Auslösen von Katastrophen oder durch Geiselnahme;"
+            },
+            {
+              "marke": "e",
+              "text": "sexuelle Handlungen mit Kindern (Art. 187 Ziff. 1 und 1 bis ), sexueller Übergriff und sexuelle Nötigung (Art. 189), Vergewaltigung (Art. 190), Missbrauch einer urteilsunfähigen oder zum Widerstand unfähigen Person (Art. 191), Ausnützung einer Notlage oder Abhängigkeit (Art. 193) und Täuschung über den sexuellen Charakter einer Handlung (Art. 193 a ), wenn sie an Kindern unter 12 Jahren begangen wurden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3482,7 +4344,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_101",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "102ea69908ca0c17d5efd583a1471c4edfb429abe3074b41647710d81e863315"
+      "sha": "2ccc5b50f00fea76b7bf204b5a2e546aed1077000cad03bcb073a3491f891790"
     },
     {
       "id": "bund/STGB/art_102",
@@ -3506,14 +4368,32 @@
         },
         {
           "absatz": "4",
-          "text": "Als Unternehmen im Sinne dieses Titels gelten:"
+          "text": "Als Unternehmen im Sinne dieses Titels gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "juristische Personen des Privatrechts;"
+            },
+            {
+              "marke": "b",
+              "text": "juristische Personen des öffentlichen Rechts mit Ausnahme der Gebietskörperschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "Gesellschaften;"
+            },
+            {
+              "marke": "d",
+              "text": "Einzelfirmen."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_102",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "bae8b11e07317301b43829061d4e213655b2ce1b1bebff6de342e54c7128832e"
+      "sha": "110030515b767fe3c6a8e4d0e99a74710b72faeed050782cb2a1a81869b839cf"
     },
     {
       "id": "bund/STGB/art_102_a",
@@ -3947,7 +4827,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Busse wird die Ärztin oder der Arzt bestraft, die oder der eine Schwangerschaft in Anwendung von Artikel 119 Absatz 2 abbricht und es unterlässt, vor dem Eingriff:"
+          "text": "Mit Busse wird die Ärztin oder der Arzt bestraft, die oder der eine Schwangerschaft in Anwendung von Artikel 119 Absatz 2 abbricht und es unterlässt, vor dem Eingriff:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von der schwangeren Frau ein schriftliches Gesuch zu verlangen;"
+            },
+            {
+              "marke": "b",
+              "text": "persönlich mit der schwangeren Frau ein eingehendes Gespräch zu führen und sie zu beraten, sie über die gesundheitlichen Risiken des Eingriffs zu informieren und ihr gegen Unterschrift einen Leitfaden auszuhändigen, welcher enthält: 1. ein Verzeichnis der kostenlos zur Verfügung stehenden Beratungsstellen,"
+            },
+            {
+              "marke": "2",
+              "text": "ein Verzeichnis von Vereinen und Stellen, welche moralische und materielle Hilfe anbieten, und"
+            },
+            {
+              "marke": "3",
+              "text": "Auskunft über die Möglichkeit, das geborene Kind zur Adoption freizugeben;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3958,7 +4856,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_120",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "38de1c043452626711c1c8ca29ede7ea6277020c0e40cc88cb40711a24816327"
+      "sha": "6d2d6e3e526923c3e7f9ab34bad3d26142e001ba249a497f38d68c06b7b598f8"
     },
     {
       "id": "bund/STGB/art_121",
@@ -3989,14 +4887,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Freiheitsstrafe von einem Jahr bis zu zehn Jahren wird bestraft, wer vorsätzlich:"
+          "text": "Mit Freiheitsstrafe von einem Jahr bis zu zehn Jahren wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Menschen lebensgefährlich verletzt;"
+            },
+            {
+              "marke": "b",
+              "text": "den Körper, ein wichtiges Organ oder Glied eines Menschen verstümmelt oder ein wichtiges Organ oder Glied unbrauchbar macht, einen Menschen bleibend arbeitsunfähig, gebrechlich oder geisteskrank macht, das Gesicht eines Menschen arg und bleibend entstellt;"
+            },
+            {
+              "marke": "c",
+              "text": "eine andere schwere Schädigung des Körpers oder der körperlichen oder geistigen Gesundheit eines Menschen verursacht."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_122",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "add43fdf075bef6f9c512d5e296a504c785641aec6c57c142c5c9597dfe34cd0"
+      "sha": "a8e012c216e7fd420bf1261f01bec5aa8d9bc55618d90c67772fe154a39a5430"
     },
     {
       "id": "bund/STGB/art_123",
@@ -4105,14 +5017,32 @@
         },
         {
           "absatz": "2",
-          "text": "Der Täter wird von Amtes wegen verfolgt, wenn er die Tat wiederholt begeht:"
+          "text": "Der Täter wird von Amtes wegen verfolgt, wenn er die Tat wiederholt begeht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "an einer Person, die unter seiner Obhut steht oder für die er zu sorgen hat, namentlich an einem Kind;"
+            },
+            {
+              "marke": "b",
+              "text": "an seinem Ehegatten während der Ehe oder bis zu einem Jahr nach der Scheidung; oder"
+            },
+            {
+              "marke": "b",
+              "text": "an seiner eingetragenen Partnerin oder seinem eingetragenen Partner während der Dauer der eingetragenen Partnerschaft oder bis zu einem Jahr nach deren Auflösung; oder"
+            },
+            {
+              "marke": "c",
+              "text": "an seinem hetero- oder homosexuellen Lebenspartner, sofern sie auf unbestimmte Zeit einen gemeinsamen Haushalt führen und die Tat während dieser Zeit oder bis zu einem Jahr nach der Trennung begangen wurde."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_126",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "41c504add2c30abffe0beec144b86fcdf3208c899c676804aac2c5621fd38a10"
+      "sha": "7b5a19b7bf082a8f9ebec2716fca8c629a160eac3b6b2ba064477f13a54c4dd7"
     },
     {
       "id": "bund/STGB/art_127",
@@ -4393,7 +5323,25 @@
         },
         {
           "absatz": null,
-          "text": "3. Der Dieb wird mit Freiheitsstrafe von sechs Monaten bis zu zehn Jahren bestraft, wenn er:"
+          "text": "3. Der Dieb wird mit Freiheitsstrafe von sechs Monaten bis zu zehn Jahren bestraft, wenn er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gewerbsmässig stiehlt;"
+            },
+            {
+              "marke": "b",
+              "text": "den Diebstahl als Mitglied einer Bande ausführt, die sich zur fortgesetzten Verübung von Raub oder Diebstahl zusammengefunden hat;"
+            },
+            {
+              "marke": "c",
+              "text": "zum Zweck des Diebstahls eine Schusswaffe oder eine andere gefährliche Waffe mit sich führt oder eine Explosion verursacht; oder"
+            },
+            {
+              "marke": "d",
+              "text": "sonst wie durch die Art, wie er den Diebstahl begeht, seine besondere Gefährlichkeit offenbart."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -4404,7 +5352,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_139",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ea2137127acddbc2709414d21db4dcdcddd1a7ada03b3f708d6ab7f161818b83"
+      "sha": "4f1b1ac9046031c93139036f75ebd7719d7435f892990df06c265e43f0a6fa1d"
     },
     {
       "id": "bund/STGB/art_140",
@@ -4889,7 +5837,33 @@
         },
         {
           "absatz": "2",
-          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer als Mitglied des Verwaltungsrats einer Gesellschaft, deren Aktien an einer Börse kotiert sind:"
+          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer als Mitglied des Verwaltungsrats einer Gesellschaft, deren Aktien an einer Börse kotiert sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geschäftsführung entgegen Artikel 716 b Absatz 2 erster Satz OR ganz oder zum Teil einer juristischen Person überträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Organ- oder Depotstimmrechtsvertretung einsetzt (Art. 689 b Abs. 2 OR);"
+            },
+            {
+              "marke": "c",
+              "text": "verhindert, dass: 1. die Statuten die Bestimmungen nach Artikel 626 Absatz 2 Ziffern 1 und 2 OR enthalten,"
+            },
+            {
+              "marke": "2",
+              "text": "die Generalversammlung jährlich und einzeln die Mitglieder und den Präsidenten des Verwaltungsrats, die Mitglieder des Vergütungsausschusses sowie den unabhängigen Stimmrechtsvertreter wählen kann (Art. 698 Abs. 2 Ziff. 2 und Abs. 3 Ziff. 1–3 OR),"
+            },
+            {
+              "marke": "3",
+              "text": "die Generalversammlung über die Vergütungen, die der Verwaltungsrat für sich selbst, die Geschäftsleitung und den Beirat festgelegt hat, abstimmen kann (Art. 698 Abs. 3 Ziff. 4 OR),"
+            },
+            {
+              "marke": "4",
+              "text": "die Aktionäre oder ihre Vertreter ihre Rechte auf elektronischem Weg ausüben können (Art. 689 c Abs. 6 OR)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -4904,7 +5878,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_154",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "2a1fa663e831d0146502d8ab51289a141dd10c85287c41a87fa9d8cdd3677bf0"
+      "sha": "ca576bffd3e0374a752465f8a72f9d2e7682faa62770cf5784a71bb30168fc4f"
     },
     {
       "id": "bund/STGB/art_155",
@@ -5322,14 +6296,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer:"
+          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Gläubiger oder dessen Vertreter besondere Vorteile zuwendet oder zusichert, um dessen Stimme in der Gläubigerversammlung oder im Gläubigerausschuss zu erlangen oder um dessen Zustimmung zu einem gerichtlichen Nachlassvertrag oder dessen Ablehnung eines solchen Vertrages zu bewirken;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Konkursverwalter, einem Mitglied der Konkursverwaltung, dem Sachwalter oder dem Liquidator besondere Vorteile zuwendet oder zusichert, um dessen Entscheidungen zu beeinflussen;"
+            },
+            {
+              "marke": "c",
+              "text": "sich Vorteile nach Buchstabe a oder b zuwenden oder zusichern lässt."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_168",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "d349c2b779701e5b78714b08f0f4d99756e2755630d68a1c0d65a8b910412544"
+      "sha": "62121fa003565eb63db5399b5e57dd7991daea50bfbf45f0dd94adc2424764f4"
     },
     {
       "id": "bund/STGB/art_169",
@@ -5796,7 +6784,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Weder nach Artikel 179 bis Absatz 1 noch nach Artikel 179 ter Absatz 1 macht sich strafbar, wer als Gesprächsteilnehmer oder Abonnent eines beteiligten Anschlusses Fernmeldegespräche:"
+          "text": "Weder nach Artikel 179 bis Absatz 1 noch nach Artikel 179 ter Absatz 1 macht sich strafbar, wer als Gesprächsteilnehmer oder Abonnent eines beteiligten Anschlusses Fernmeldegespräche:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit Hilfs-, Rettungs- und Sicherheitsdiensten aufnimmt;"
+            },
+            {
+              "marke": "b",
+              "text": "im Geschäftsverkehr aufnimmt, welche Bestellungen, Aufträge, Reservationen und ähnliche Geschäftsvorfälle zum Inhalt haben."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -5807,7 +6805,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_179_quinquies",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "bfec062c19e0a7df1a20eec1662ed771839f3ca07dfcbdc7a2119f3f8ac835dc"
+      "sha": "62840c87d625e19955727dd2c07bf4eea87a5ab9400baa0b96086650c1090d13"
     },
     {
       "id": "bund/STGB/art_179_sexies",
@@ -5934,14 +6932,28 @@
         },
         {
           "absatz": "2",
-          "text": "Der Täter wird von Amtes wegen verfolgt, wenn er:"
+          "text": "Der Täter wird von Amtes wegen verfolgt, wenn er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Ehegatte des Opfers ist und die Drohung während der Ehe oder bis zu einem Jahr nach der Scheidung begangen wurde; oder"
+            },
+            {
+              "marke": "a",
+              "text": "die eingetragene Partnerin oder der eingetragene Partner des Opfers ist und die Drohung während der eingetragenen Partnerschaft oder bis zu einem Jahr nach deren Auflösung begangen wurde; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der hetero- oder homosexuelle Lebenspartner des Opfers ist, sofern sie auf unbestimmte Zeit einen gemeinsamen Haushalt führen und die Drohung während dieser Zeit oder bis zu einem Jahr nach der Trennung begangen wurde."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_180",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "826b274e1ce76815b934e0f9b5590ef73a1f34cf0e6e88a83d591c72c16211ed"
+      "sha": "8cdb844446f0a945335db4525e6abee465038ecaad5cce7dd6161b0b45032b33"
     },
     {
       "id": "bund/STGB/art_181",
@@ -6154,7 +7166,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter einem Jahr wird bestraft, wer in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen:"
+          "text": "Mit Freiheitsstrafe nicht unter einem Jahr wird bestraft, wer in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird; oder"
+            },
+            {
+              "marke": "b",
+              "text": "im Auftrag eines Staates oder einer politischen Organisation oder entgegen einer Rechtspflicht die Auskunft über das Schicksal oder den Verbleib dieser Person verweigert."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -6165,7 +7187,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_185_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "db051143c7d6cdf2deded7a4cecb545e8f2b23e6826be41852560ab1c48e9917"
+      "sha": "0dd2770a8275dd9f64db9c5c1c9229e358a3660dd04a2ee6c9dca218d9a7dfdb"
     },
     {
       "id": "bund/STGB/art_186",
@@ -6435,14 +7457,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Freiheitsstrafe bis zu zehn Jahren oder Geldstrafe wird bestraft, wer:"
+          "text": "Mit Freiheitsstrafe bis zu zehn Jahren oder Geldstrafe wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine minderjährige Person der Prostitution zuführt oder in der Absicht, daraus Vermögensvorteile zu erlangen, ihre Prostitution fördert;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Person unter Ausnützung ihrer Abhängigkeit oder wegen eines Vermögensvorteils der Prostitution zuführt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Handlungsfreiheit einer Person, die Prostitution betreibt, dadurch beeinträchtigt, dass er sie bei dieser Tätigkeit überwacht oder Ort, Zeit, Ausmass oder andere Umstände der Prostitution bestimmt;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Person in der Prostitution festhält."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_195",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "09f676738cc704c9a6c10b47033ad833a938c0258652480732d5b981a9e314eb"
+      "sha": "dd51ee1d60e53f42cdc8f3380dabc490eb10182f5e81aa161e939e5ec42c0593"
     },
     {
       "id": "bund/STGB/art_196",
@@ -6509,7 +7549,21 @@
         },
         {
           "absatz": "8",
-          "text": "Wer von einer minderjährigen Person Gegenstände oder Vorführungen im Sinne von Absatz 1 herstellt, diese besitzt, konsumiert oder der dargestellten Person zugänglich macht, bleibt straflos, wenn:"
+          "text": "Wer von einer minderjährigen Person Gegenstände oder Vorführungen im Sinne von Absatz 1 herstellt, diese besitzt, konsumiert oder der dargestellten Person zugänglich macht, bleibt straflos, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die minderjährige Person eingewilligt hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die herstellende Person dafür kein Entgelt leistet oder verspricht; und"
+            },
+            {
+              "marke": "c",
+              "text": "der Altersunterschied zwischen den Beteiligten nicht mehr als drei Jahre beträgt."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -6517,7 +7571,21 @@
         },
         {
           "absatz": null,
-          "text": "Die Person, der diese Gegenstände oder Vorführungen zugänglich gemacht werden, bleibt für Besitz und Konsum straflos, wenn:"
+          "text": "Die Person, der diese Gegenstände oder Vorführungen zugänglich gemacht werden, bleibt für Besitz und Konsum straflos, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie dafür kein Entgelt leistet oder verspricht;"
+            },
+            {
+              "marke": "b",
+              "text": "die Beteiligten sich persönlich kennen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Beteiligten volljährig sind oder, sofern mindestens eine Person minderjährig ist, einen Altersunterschied von nicht mehr als drei Jahren aufweisen."
+            }
+          ]
         },
         {
           "absatz": "9",
@@ -6528,7 +7596,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_197",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "67a9b3a47773213774e86a9a89fcbe379208acf588992ba8193c8e490cdfc8ba"
+      "sha": "7b6abe3ebfad7cbf4ef7ba1f618cdb1ee7adf564672adc54860e0fb9a3360117"
     },
     {
       "id": "bund/STGB/art_197_a",
@@ -7143,7 +8211,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wer vorsätzlich gentechnisch veränderte oder pathogene Organismen freisetzt oder den Betrieb einer Anlage zu ihrer Erforschung, Aufbewahrung oder Produktion oder ihren Transport stört, wird mit Freiheitsstrafe von einem bis zu zehn Jahren bestraft, wenn er weiss oder wissen muss, dass er durch diese Handlungen:"
+          "text": "Wer vorsätzlich gentechnisch veränderte oder pathogene Organismen freisetzt oder den Betrieb einer Anlage zu ihrer Erforschung, Aufbewahrung oder Produktion oder ihren Transport stört, wird mit Freiheitsstrafe von einem bis zu zehn Jahren bestraft, wenn er weiss oder wissen muss, dass er durch diese Handlungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leib und Leben von Menschen gefährdet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die natürliche Zusammensetzung der Lebensgemeinschaften von Tieren und Pflanzen oder deren Lebensräume schwer gefährdet."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7154,7 +8232,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_230_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "2c01151894d072e4e01f0becac24e440abd86119f858e76cae3a56d7ba61bfdf"
+      "sha": "54afd33599ffa9812b528f09c26c55f8a3f905205cf0cec11cfabf86039db27e"
     },
     {
       "id": "bund/STGB/art_231",
@@ -7944,7 +9022,57 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe wird bestraft, wer planmässig konkrete technische oder organisatorische Vorkehrungen trifft, deren Art und Umfang zeigen, dass er sich anschickt, eine der folgenden strafbaren Handlungen auszuführen:"
+          "text": "Mit Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe wird bestraft, wer planmässig konkrete technische oder organisatorische Vorkehrungen trifft, deren Art und Umfang zeigen, dass er sich anschickt, eine der folgenden strafbaren Handlungen auszuführen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorsätzliche Tötung (Art. 111);"
+            },
+            {
+              "marke": "b",
+              "text": "Mord (Art. 112);"
+            },
+            {
+              "marke": "c",
+              "text": "Schwere Körperverletzung (Art. 122);"
+            },
+            {
+              "marke": "c",
+              "text": "Verstümmelung weiblicher Genitalien (Art. 124);"
+            },
+            {
+              "marke": "d",
+              "text": "Raub (Art. 140);"
+            },
+            {
+              "marke": "e",
+              "text": "Freiheitsberaubung und Entführung (Art. 183);"
+            },
+            {
+              "marke": "f",
+              "text": "Geiselnahme (Art. 185);"
+            },
+            {
+              "marke": "f",
+              "text": "Verschwindenlassen (Art. 185 bis );"
+            },
+            {
+              "marke": "g",
+              "text": "Brandstiftung (Art. 221);"
+            },
+            {
+              "marke": "h",
+              "text": "Völkermord (Art. 264);"
+            },
+            {
+              "marke": "i",
+              "text": "Verbrechen gegen die Menschlichkeit (Art. 264 a );"
+            },
+            {
+              "marke": "j",
+              "text": "Kriegsverbrechen (Art. 264 c –264 h ) ."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7959,7 +9087,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_260_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a9f65deecaea93b683eda4b9e3eac67266c1f55208237839e8d47394b39c4702"
+      "sha": "407fd5e054d344cb2b5fb5b08f0386d0efd3627548274c5412bd3bb23f015b92"
     },
     {
       "id": "bund/STGB/art_260_ter",
@@ -7971,7 +9099,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe bis zu zehn Jahren oder Geldstrafe wird bestraft, wer:"
+          "text": "Mit Freiheitsstrafe bis zu zehn Jahren oder Geldstrafe wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich an einer Organisation beteiligt, die den Zweck verfolgt: 1. Gewaltverbrechen zu begehen oder sich mit verbrecherischen Mitteln zu bereichern, oder"
+            },
+            {
+              "marke": "2",
+              "text": "Gewaltverbrechen zu begehen, mit denen die Bevölkerung eingeschüchtert oder ein Staat oder eine internationale Organisation zu einem Tun oder Unterlassen genötigt werden soll; oder"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -7994,7 +9132,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_260_ter",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "2d1b8240a31951f9ae151145947bd92705d39c1c29a107367adcf6a4282f0cfc"
+      "sha": "21b22590dc3429fa79fe3f2e937ea5a74adceb188ab3d4633939b64754264f81"
     },
     {
       "id": "bund/STGB/art_260_quater",
@@ -8056,7 +9194,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe wird bestraft, wer im Hinblick auf die Verübung eines Gewaltverbrechens, mit dem die Bevölkerung eingeschüchtert oder ein Staat oder eine internationale Organisation zu einem Tun oder Unterlassen genötigt werden soll:"
+          "text": "Mit Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe wird bestraft, wer im Hinblick auf die Verübung eines Gewaltverbrechens, mit dem die Bevölkerung eingeschüchtert oder ein Staat oder eine internationale Organisation zu einem Tun oder Unterlassen genötigt werden soll:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "jemanden für die Begehung einer solchen Straftat oder die Teilnahme daran anwirbt;"
+            },
+            {
+              "marke": "b",
+              "text": "sich für die Begehung einer solchen Straftat oder die Teilnahme daran anleiten lässt zum Herstellen oder Gebrauch von Waffen, Sprengstoffen, radioaktiven Materialien, giftigen Gasen oder anderen Vorrichtungen oder gefährlichen Stoffen oder jemanden hierzu anleitet; oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine grenzüberschreitende Reise unternimmt in der Absicht, eine solche Straftat zu begehen, sich daran zu beteiligen oder sich dafür ausbilden zu lassen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8071,7 +9223,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_260_sexies",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "92f45ba4dde333b4f1b6a4b621bf934e99adad73186860859156427cc4344ff9"
+      "sha": "36512356315964c2c3b260ad2402d29b207236369831abd94cbfa0fb275bf336"
     },
     {
       "id": "bund/STGB/art_261",
@@ -8211,14 +9363,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit lebenslänglicher Freiheitsstrafe oder mit Freiheitsstrafe nicht unter zehn Jahren wird bestraft, wer, in der Absicht, eine durch ihre Staatsangehörigkeit, Rasse, Religion oder ethnische, soziale oder politische Zugehörigkeit gekennzeichnete Gruppe als solche ganz oder teilweise zu vernichten:"
+          "text": "Mit lebenslänglicher Freiheitsstrafe oder mit Freiheitsstrafe nicht unter zehn Jahren wird bestraft, wer, in der Absicht, eine durch ihre Staatsangehörigkeit, Rasse, Religion oder ethnische, soziale oder politische Zugehörigkeit gekennzeichnete Gruppe als solche ganz oder teilweise zu vernichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mitglieder dieser Gruppe tötet oder auf schwerwiegende Weise in ihrer körperlichen oder geistigen Unversehrtheit schädigt;"
+            },
+            {
+              "marke": "b",
+              "text": "Mitglieder der Gruppe Lebensbedingungen unterwirft, die geeignet sind, die Gruppe ganz oder teilweise zu vernichten;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen anordnet oder trifft, die auf die Geburtenverhinderung innerhalb der Gruppe gerichtet sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Kinder der Gruppe gewaltsam in eine andere Gruppe überführt oder überführen lässt."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "b44e388c65537327a737f303daa81ffc63e057814cf64ce4754915c1be205110"
+      "sha": "f5cd4aa3be1bbe96f23cd649f488b61f5396fe487c96118a9cc4bb55cdb1e42f"
     },
     {
       "id": "bund/STGB/art_264_a",
@@ -8230,7 +9400,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter fünf Jahren wird bestraft, wer im Rahmen eines ausgedehnten oder systematischen Angriffs gegen die Zivilbevölkerung:"
+          "text": "Mit Freiheitsstrafe nicht unter fünf Jahren wird bestraft, wer im Rahmen eines ausgedehnten oder systematischen Angriffs gegen die Zivilbevölkerung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Menschen vorsätzlich tötet;"
+            },
+            {
+              "marke": "b",
+              "text": "viele Menschen vorsätzlich tötet oder der Bevölkerung in der Absicht, sie ganz oder teilweise zu vernichten, Lebensbedingungen auferlegt, die geeignet sind, deren Vernichtung herbeizuführen;"
+            },
+            {
+              "marke": "c",
+              "text": "sich ein Eigentumsrecht über einen Menschen anmasst und über ihn verfügt, namentlich in Form von Menschenhandel, sexueller Ausbeutung oder Zwangsarbeit;"
+            },
+            {
+              "marke": "d",
+              "text": "einem Menschen unter Verstoss gegen die Grundregeln des Völkerrechts in schwerwiegender Weise die Freiheit entzieht;"
+            },
+            {
+              "marke": "e",
+              "text": "in der Absicht, eine Person für längere Zeit dem Schutz des Gesetzes zu entziehen: 1. im Auftrag oder mit Billigung eines Staates oder einer politischen Organisation der Person die Freiheit entzieht, wobei in der Folge die Auskunft über ihr Schicksal oder ihren Verbleib verweigert wird, oder"
+            },
+            {
+              "marke": "2",
+              "text": "im Auftrag eines Staates oder einer politischen Organisation oder entgegen einer Rechtspflicht die Auskunft über das Schicksal oder den Verbleib dieser Person verweigert;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8245,7 +9441,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "133fcd74972c2f0329de0dbc39f6acb7114a87ac2f14e3d3d3ece7ab045971c4"
+      "sha": "f682f8a93ec6e878e7f10693d855c57db9c39bd0fd7651c69a8900d82e4dc8d1"
     },
     {
       "id": "bund/STGB/art_264_b",
@@ -8276,7 +9472,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter fünf Jahren wird bestraft, wer im Zusammenhang mit einem internationalen bewaffneten Konflikt eine schwere Verletzung der Genfer Konventionen vom 12. August 1949 durch eine der folgenden Handlungen gegen die nach diesen Konventionen geschützten Personen oder Güter begeht:"
+          "text": "Mit Freiheitsstrafe nicht unter fünf Jahren wird bestraft, wer im Zusammenhang mit einem internationalen bewaffneten Konflikt eine schwere Verletzung der Genfer Konventionen vom 12. August 1949 durch eine der folgenden Handlungen gegen die nach diesen Konventionen geschützten Personen oder Güter begeht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vorsätzliche Tötung;"
+            },
+            {
+              "marke": "b",
+              "text": "Geiselnahme;"
+            },
+            {
+              "marke": "c",
+              "text": "Verursachung grosser Leiden oder schwere Schädigung des Körpers oder der physischen oder psychischen Gesundheit, namentlich durch Folter, unmenschliche Behandlung oder biologische Versuche;"
+            },
+            {
+              "marke": "d",
+              "text": "durch militärische Erfordernisse nicht gerechtfertigte Zerstörung oder Aneignung von Gut in grossem Ausmass;"
+            },
+            {
+              "marke": "e",
+              "text": "Nötigung zur Dienstleistung in den Streitkräften einer feindlichen Macht;"
+            },
+            {
+              "marke": "f",
+              "text": "rechtswidrige Vertreibung, Überführung oder Gefangenhaltung;"
+            },
+            {
+              "marke": "g",
+              "text": "Verweigerung des Rechts auf ein unparteiisches ordentliches Gerichtsverfahren vor Verhängung oder Vollstreckung einer schweren Strafe."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8295,7 +9521,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "21d952ad6686a5080e93e4f246ac8edeb22a4e94e68f43e6ba667a69f6d7c2ad"
+      "sha": "1c3e8493d991f811d43359bc57562543404b6a5f1f004650aa41193a1b4562a8"
     },
     {
       "id": "bund/STGB/art_264_d",
@@ -8307,7 +9533,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt einen Angriff richtet:"
+          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt einen Angriff richtet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen die Zivilbevölkerung als solche oder gegen Zivilpersonen, die an den Feindseligkeiten nicht unmittelbar teilnehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen Personen, Einrichtungen, Material oder Fahrzeuge, die Teil einer humanitären Hilfsmission oder einer friedenserhaltenden Mission in Übereinstimmung mit der Charta der Vereinten Nationen vom 26. Juni 1945 sind, solange sie vom humanitären Völkerrecht geschützt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "gegen zivile Objekte, unverteidigte Siedlungen oder Gebäude oder gegen entmilitarisierte Zonen, die kein militärisches Ziel darstellen;"
+            },
+            {
+              "marke": "d",
+              "text": "gegen Sanitätseinheiten, Gebäude, Material oder Fahrzeuge, die ein Schutzzeichen des humanitären Völkerrechts verwenden oder deren geschützter Charakter auch ohne Schutzzeichen erkennbar ist, Krankenhäuser oder Sammelplätze für Kranke und Verwundete;"
+            },
+            {
+              "marke": "e",
+              "text": "gegen Kulturgut oder mit seinem Schutz betraute Personen oder seinem Transport dienende Fahrzeuge, gegen Gebäude, die religiösen Handlungen, der Kunst, Erziehung, Wissenschaft oder Wohltätigkeit dienen, solange sie vom humanitären Völkerrecht geschützt sind."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8322,7 +9570,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "325d070ff3cfb6e262c1bfa3de0fcb80089673b4c1731a6c4fa7c7450d30f20d"
+      "sha": "02b92971684e3e7a234784fc50dc5b81dd7fac6df9d03a6150c2c06df8c6a0a7"
     },
     {
       "id": "bund/STGB/art_264_e",
@@ -8334,7 +9582,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:"
+          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine vom humanitären Völkerrecht geschützte Person körperlich schwer schädigt oder in ihrer physischen oder psychischen Gesundheit schwer verletzt oder gefährdet, indem er sie einem medizinischen Verfahren unterzieht, das nicht durch ihren Gesundheitszustand geboten ist und das nicht mit allgemein anerkannten medizinischen Grundsätzen im Einklang steht;"
+            },
+            {
+              "marke": "b",
+              "text": "an einer vom humanitären Völkerrecht geschützten Person eine Vergewaltigung nach Artikel 190 Absatz 2 oder 3 oder eine sexuelle Nötigung nach Artikel 189 Absatz 2 oder 3 von vergleichbarer Schwere begeht, sie zu einer sexuellen Handlung von vergleichbarer Schwere missbraucht, sie zur Prostitution nötigt oder sie zwangsweise sterilisiert oder, nachdem sie gegen ihren Willen geschwängert wurde, gefangen hält in der Absicht, die ethnische Zusammensetzung einer Bevölkerung zu beeinflussen;"
+            },
+            {
+              "marke": "c",
+              "text": "eine vom humanitären Völkerrecht geschützte Person in schwerwiegender Weise entwürdigend oder erniedrigend behandelt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8349,7 +9611,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_e",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "f3e940f14320530b822a5849e50b91b4f4e730a532240f053ed14b79d8fc2ae0"
+      "sha": "132e4cff7ad201052df95e08dadeb7b382c07aa14184390f5b7900cdd4b345d0"
     },
     {
       "id": "bund/STGB/art_264_f",
@@ -8388,7 +9650,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:"
+          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Angriff führt, obwohl er weiss oder annehmen muss, dass dieser den Tod oder die Verwundung von Zivilpersonen, die Beschädigung ziviler Objekte oder die weitreichende, langfristige und schwere Schädigung der natürlichen Umwelt verursachen wird, die in keinem Verhältnis zum erwarteten konkreten und unmittelbaren militärischen Vorteil stehen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine vom humanitären Völkerrecht geschützte Person als Schild benutzt, um Kampfhandlungen zu beeinflussen;"
+            },
+            {
+              "marke": "c",
+              "text": "als Methode der Kriegführung plündert, sich auf andere Weise unrechtmässig Gut aneignet oder in einem durch die Erfordernisse des Krieges nicht zwingend gebotenen Ausmass feindliches Gut zerstört oder beschlagnahmt, Zivilpersonen lebensnotwendige Güter vorenthält oder Hilfslieferungen behindert;"
+            },
+            {
+              "marke": "d",
+              "text": "einen gegnerischen Kombattanten auf heimtückische Weise, oder nachdem dieser sich ausser Gefecht befindet, tötet oder verwundet;"
+            },
+            {
+              "marke": "e",
+              "text": "einen toten gegnerischen Kombattanten verstümmelt;"
+            },
+            {
+              "marke": "f",
+              "text": "als Befehlshaber anordnet oder dem Gegner androht, niemanden am Leben zu lassen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Parlamentärflagge, die Flagge, Uniform oder militärische Abzeichen des Feindes, der Vereinten Nationen oder Schutzzeichen des humanitären Völkerrechts missbraucht;"
+            },
+            {
+              "marke": "h",
+              "text": "als Angehöriger einer Besatzungsmacht einen Teil ihrer Zivilbevölkerung in das von ihr besetzte Gebiet überführt oder die Bevölkerung des besetzten Gebietes ganz oder teilweise innerhalb oder ausserhalb desselben umsiedelt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8403,7 +9699,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_g",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "f3e940f14320530b822a5849e50b91b4f4e730a532240f053ed14b79d8fc2ae0"
+      "sha": "9fe8600e43d02bba7d89580b0367f12110585ce8af9bc550e37ffdc567b72974"
     },
     {
       "id": "bund/STGB/art_264_h",
@@ -8415,7 +9711,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:"
+          "text": "Mit Freiheitsstrafe nicht unter drei Jahren wird bestraft, wer im Zusammenhang mit einem bewaffneten Konflikt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gift oder vergiftete Waffen verwendet;"
+            },
+            {
+              "marke": "b",
+              "text": "biologische oder chemische Waffen, einschliesslich giftiger oder erstickender Gase, Stoffe und Flüssigkeiten, verwendet;"
+            },
+            {
+              "marke": "c",
+              "text": "Geschosse verwendet, die sich im Körper des Menschen leicht ausdehnen oder flachdrücken oder im Körper des Menschen explodieren;"
+            },
+            {
+              "marke": "d",
+              "text": "Waffen verwendet, welche als Hauptwirkung Verletzungen durch Splitter hervorrufen, die mittels Röntgenstrahlen nicht entdeckt werden können;"
+            },
+            {
+              "marke": "e",
+              "text": "Laserwaffen verwendet, die als Hauptwirkung die dauerhafte Erblindung von Menschen herbeiführen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -8426,7 +9744,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_h",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "71c34d11f81d090bbb40e663496ae9b4383fa722c43b9396a6e2b6e88e88b234"
+      "sha": "fcce67b7b5061fbc2a73a8d7d680d636405da6e8e2659b90c32267da250f2c8c"
     },
     {
       "id": "bund/STGB/art_264_i",
@@ -8438,14 +9756,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer:"
+          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kampfhandlungen fortsetzt, nachdem er amtlich oder dienstlich Kenntnis vom Abschluss eines Waffenstillstandes oder des Friedens erhalten hat, oder die Bedingungen des Waffenstillstandes auf andere Weise verletzt;"
+            },
+            {
+              "marke": "b",
+              "text": "einen gegnerischen Parlamentär oder eine seiner Begleitpersonen misshandelt, beschimpft oder ohne Grund zurückhält;"
+            },
+            {
+              "marke": "c",
+              "text": "die Heimschaffung von Kriegsgefangenen nach Beendigung der Kampfhandlungen ungerechtfertigt verzögert."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_i",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "d349c2b779701e5b78714b08f0f4d99756e2755630d68a1c0d65a8b910412544"
+      "sha": "7cba917dfed7b937a29bacbcfd7214b003d554f6f358b0e30a568fc002df0d81"
     },
     {
       "id": "bund/STGB/art_264_j",
@@ -8522,7 +9854,17 @@
         },
         {
           "absatz": "2",
-          "text": "Wurde die Auslandtat nicht gegen einen Schweizer begangen und ist der Täter nicht Schweizer, so kann, unter Vorbehalt von Massnahmen zur Sicherung von Beweisen, die Strafverfolgung eingestellt oder von einer solchen abgesehen werden, wenn:"
+          "text": "Wurde die Auslandtat nicht gegen einen Schweizer begangen und ist der Täter nicht Schweizer, so kann, unter Vorbehalt von Massnahmen zur Sicherung von Beweisen, die Strafverfolgung eingestellt oder von einer solchen abgesehen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine ausländische Behörde oder ein internationales Strafgericht, dessen Zuständigkeit die Schweiz anerkennt, die Straftat verfolgt und der Täter ausgeliefert oder überstellt wird; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Täter sich nicht mehr in der Schweiz befindet und seine Rückkehr nicht zu erwarten ist."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -8533,7 +9875,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_m",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "3eaf7b1a44e3be1f68da214c86f847cb0ea706a6051be3a3d4b5a93a114bf618"
+      "sha": "223f40783b6a72046ddec8f35670d34c842d8a5697ae9d51e3bf3f2a68876a4c"
     },
     {
       "id": "bund/STGB/art_264_n",
@@ -8545,14 +9887,48 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Verfolgung von Taten nach dem zwölften Titel bis , dem zwölften Titel ter und nach Artikel 264 k bedarf keiner Ermächtigung nach einer der folgenden Bestimmungen:"
+          "text": "Die Verfolgung von Taten nach dem zwölften Titel bis , dem zwölften Titel ter und nach Artikel 264 k bedarf keiner Ermächtigung nach einer der folgenden Bestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Artikel 7 Absatz 2 Buchstabe b der Strafprozessordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "Artikel 14 und 15 des Verantwortlichkeitsgesetzes vom 14. März 1958;"
+            },
+            {
+              "marke": "c",
+              "text": "Artikel 17 des Parlamentsgesetzes vom 13. Dezember 2002;"
+            },
+            {
+              "marke": "d",
+              "text": "Artikel 61 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997;"
+            },
+            {
+              "marke": "e",
+              "text": "Artikel 11 des Bundesgerichtsgesetzes vom 17. Juni 2005;"
+            },
+            {
+              "marke": "f",
+              "text": "Artikel 12 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005;"
+            },
+            {
+              "marke": "g",
+              "text": "Artikel 16 des Patentgerichtsgesetzes vom 20. März 2009;"
+            },
+            {
+              "marke": "h",
+              "text": "Artikel 50 des Strafbehördenorganisationsgesetzes vom 19. März 2010."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_264_n",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "fc312e10b5ccf5c098819a3efd02a123e2d06c23f7c761bdcb03159fe54df87d"
+      "sha": "e4f9ef382fe584ac7a335a2edcf4321fc63ea54bca2bc0840bf36c93dacc9f27"
     },
     {
       "id": "bund/STGB/art_265",
@@ -9704,7 +11080,21 @@
         },
         {
           "absatz": null,
-          "text": "Ein schwerer Fall liegt insbesondere vor, wenn der Täter:"
+          "text": "Ein schwerer Fall liegt insbesondere vor, wenn der Täter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Mitglied einer kriminellen oder terroristischen Organisation (Art. 260 ter ) handelt;"
+            },
+            {
+              "marke": "b",
+              "text": "als Mitglied einer Bande handelt, die sich zur fortgesetzten Ausübung der Geldwäscherei zusammengefunden hat;"
+            },
+            {
+              "marke": "c",
+              "text": "durch gewerbsmässige Geldwäscherei einen grossen Umsatz oder einen erheblichen Gewinn erzielt."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -9715,7 +11105,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_305_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "2842a95c5e784379fbd700f8bcfb98f9312953d6751651219a81f4bbf97d2d8d"
+      "sha": "5be608f7f16c07bd314b1ea78c6fab4818fbe6248a640b9226cf034a2fedaffc"
     },
     {
       "id": "bund/STGB/art_305_ter",
@@ -9808,14 +11198,24 @@
         },
         {
           "absatz": "2",
-          "text": "Der Täter bleibt straflos, wenn er eine falsche Äusserung getan hat (Art. 306 und 307), weil er:"
+          "text": "Der Täter bleibt straflos, wenn er eine falsche Äusserung getan hat (Art. 306 und 307), weil er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich durch die wahre Äusserung der Gefahr strafrechtlicher Verfolgung aussetzen würde; oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch die wahre Äusserung seine Angehörigen oder jemand anderen, zu dem er in so nahen persönlichen Beziehungen steht, dass sein Verhalten entschuldbar ist, der Gefahr strafrechtlicher Verfolgung aussetzen würde."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_308",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "359c8ceaa78b389da00c271accd8dd1da44ebc96660ce6557c61a05800e57d52"
+      "sha": "9ee7b63edf029f9f4a785a9f53436d7ef0e13bc21ffdde39788f44987e7fd407"
     },
     {
       "id": "bund/STGB/art_309",
@@ -9827,14 +11227,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Artikel 306–308 finden auch Anwendung auf:"
+          "text": "Die Artikel 306–308 finden auch Anwendung auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Verwaltungsgerichtsverfahren, das Schiedsgerichtsverfahren und das Verfahren vor Behörden und Beamten der Verwaltung, denen das Recht der Zeugenabhörung zusteht;"
+            },
+            {
+              "marke": "b",
+              "text": "das Verfahren vor internationalen Gerichten, deren Zuständigkeit die Schweiz als verbindlich anerkennt."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_309",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "4e8b55fa2d4010f464c67eea8edc59e75a837203d96c3b18dd5025e578427f7c"
+      "sha": "928d3a939c5bdf268fe5eb44f07478ef403914a27bde73634bbc3a6e3f9999b8"
     },
     {
       "id": "bund/STGB/art_310",
@@ -10423,7 +11833,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Keine nicht gebührenden Vorteile sind:"
+          "text": "Keine nicht gebührenden Vorteile sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dienstrechtlich erlaubte oder vertraglich vom Dritten genehmigte Vorteile;"
+            },
+            {
+              "marke": "b",
+              "text": "geringfügige, sozial übliche Vorteile."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10434,7 +11854,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_322_decies",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "68a33168d1bb91835ae0e3ac6db2cd52f6cc8fcf71c8067693ae526cc7fa2bb7"
+      "sha": "7d1ace223dc1d60a7ff1cad81c8114612c247f525116952d5dd3d00129c47f35"
     },
     {
       "id": "bund/STGB/art_323",
@@ -10551,14 +11971,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Busse wird bestraft, wer vorsätzlich:"
+          "text": "Mit Busse wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Bericht über Zahlungen an staatliche Stellen gemäss Artikel 964 d OR falsche Angaben macht oder die Berichterstattung ganz oder teilweise unterlässt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Pflicht zur Führung und Aufbewahrung der Berichte über Zahlungen an staatliche Stellen gemäss Artikel 964 h OR nicht nachkommt."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_325_bis",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "a80ef024aeba4a372da14d03c42866d2c3f622d196a5917a180f923573ff9652"
+      "sha": "29469599eea1271fd6efaa896628f5447f49280f471e3f95156f9f8af962af02"
     },
     {
       "id": "bund/STGB/art_325_ter",
@@ -10570,7 +12000,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit Busse bis zu 100 000 Franken wird bestraft, wer vorsätzlich:"
+          "text": "Mit Busse bis zu 100 000 Franken wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den Berichten gemäss den Artikeln 964 a , 964 b und 964 l OR falsche Angaben macht oder die Berichterstattung unterlässt;"
+            },
+            {
+              "marke": "b",
+              "text": "der gesetzlichen Pflicht zur Aufbewahrung und Dokumentation der Berichte gemäss den Artikeln 964 c und 964 l OR nicht nachkommt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -10581,7 +12021,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_325_ter",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "3066ef518c179231ff1721623c5565bdbd4976d1cdd53a0d90d1c4f9366e2414"
+      "sha": "8164be6a198112952b8151a81aa3f5a264c16caccea06a21830972c9053e18a4"
     },
     {
       "id": "bund/STGB/art_325_quater",
@@ -10739,14 +12179,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit Busse wird bestraft, wer vorsätzlich eines der folgenden Verzeichnisse nicht vorschriftsgemäss führt oder die damit verbundenen gesellschaftsrechtlichen Pflichten verletzt:"
+          "text": "Mit Busse wird bestraft, wer vorsätzlich eines der folgenden Verzeichnisse nicht vorschriftsgemäss führt oder die damit verbundenen gesellschaftsrechtlichen Pflichten verletzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einer Aktiengesellschaft: das Aktienbuch nach Artikel 686 Absätze 1–3 und 5 OR oder das Verzeichnis über die an Aktien wirtschaftlich berechtigten Personen nach Artikel 697 l OR;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Gesellschaft mit beschränkter Haftung: das Anteilbuch nach Artikel 790 Absätze 1–3 und 5 OR oder das Verzeichnis der an Stammanteilen wirtschaftlich berechtigten Personen nach Artikel 790 a Absatz 5 OR in Verbindung mit Artikel 697 l OR;"
+            },
+            {
+              "marke": "c",
+              "text": "bei einer Genossenschaft: das Verzeichnis der Genossenschafter nach Artikel 837 Absätze 1 und 2 OR;"
+            },
+            {
+              "marke": "d",
+              "text": "bei einer Investmentgesellschaft mit variablem Kapital (Art. 36 des Kollektivanlagengesetzes vom 23. Juni 2006): das Aktienbuch über die Unternehmeraktionärinnen und Unternehmeraktionäre oder das Verzeichnis der Personen, die an den Aktien der Unternehmeraktionärinnen und -aktionäre wirtschaftlich berechtigt sind, nach Artikel 46 Absatz 3 des Kollektivanlagengesetzes vom 23. Juni 2006."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_327_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ba3564cd2d7dae85b327f672902479e89013c9ba1664dcc689cc10158c7a061c"
+      "sha": "007e8338e1de3c29f99d66abb935f7881f93d57f0747a1cf234b2b047e4f80af"
     },
     {
       "id": "bund/STGB/art_327_b",
@@ -10892,7 +12350,21 @@
         },
         {
           "absatz": "2",
-          "text": "In den anderen Bundesgesetzen werden ersetzt:"
+          "text": "In den anderen Bundesgesetzen werden ersetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zuchthaus durch Freiheitsstrafe von mehr als einem Jahr;"
+            },
+            {
+              "marke": "b",
+              "text": "Gefängnis durch Freiheitsstrafe bis zu drei Jahren oder Geldstrafe;"
+            },
+            {
+              "marke": "c",
+              "text": "Gefängnis unter sechs Monaten durch Geldstrafe, wobei einem Monat Freiheitsstrafe 30 Tagessätze Geldstrafe zu höchstens 3000 Franken entsprechen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -10923,7 +12395,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_333",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "41a83019f4470e67ea30d135d4a01a73a5130ab5b2912d6e4efbf72185eeecc6"
+      "sha": "ada89c12729a2b944f8a3f204b3fd801c81a9887cdafbae237deb0d5e346ec26"
     },
     {
       "id": "bund/STGB/art_334",
@@ -11034,14 +12506,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die zuständigen Bundesbehörden dürfen Personendaten nur bekannt geben, wenn dafür eine Rechtsgrundlage im Sinne von Artikel 36 Absatz 1 des Datenschutzgesetzes vom 25. September 2020 (DSG) besteht oder wenn:"
+          "text": "Die zuständigen Bundesbehörden dürfen Personendaten nur bekannt geben, wenn dafür eine Rechtsgrundlage im Sinne von Artikel 36 Absatz 1 des Datenschutzgesetzes vom 25. September 2020 (DSG) besteht oder wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bekanntgabe von Personendaten notwendig ist, um das Leben oder die körperliche Unversehrtheit der betroffenen Person oder eines Dritten zu schützen;"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person ihre Personendaten allgemein zugänglich gemacht und die Bekanntgabe nicht ausdrücklich untersagt hat."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "0d5d15af9d98dfb44a370a5d7ac7b47dd8a6d4b5d63867482063499b094e8deb"
+      "sha": "f1311c4cd874e1e3970c5fa0149fe1d8acfca6a4247132baae10682c6a99e36e"
     },
     {
       "id": "bund/STGB/art_349_b",
@@ -11080,7 +12562,21 @@
         },
         {
           "absatz": "2",
-          "text": "Ein angemessener Schutz wird gewährleistet durch:"
+          "text": "Ein angemessener Schutz wird gewährleistet durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gesetzgebung des Drittstaates, sofern die Europäische Union dies in einem Beschluss festgehalten hat;"
+            },
+            {
+              "marke": "b",
+              "text": "einen völkerrechtlichen Vertrag;"
+            },
+            {
+              "marke": "c",
+              "text": "spezifische Garantien."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11088,7 +12584,25 @@
         },
         {
           "absatz": "4",
-          "text": "In Abweichung von Absatz 1 können Personendaten der zuständigen Behörde eines Drittstaates oder einem internationalen Organ bekannt gegeben werden, wenn die Bekanntgabe im Einzelfall notwendig ist:"
+          "text": "In Abweichung von Absatz 1 können Personendaten der zuständigen Behörde eines Drittstaates oder einem internationalen Organ bekannt gegeben werden, wenn die Bekanntgabe im Einzelfall notwendig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zum Schutz des Lebens oder der körperlichen Unversehrtheit der betroffenen Person oder eines Dritten;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Abwehr einer unmittelbar drohenden ernsthaften Gefahr für die öffentliche Sicherheit eines Schengen-Staates oder eines Drittstaates;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Verhütung, Feststellung oder Verfolgung einer Straftat, sofern der Bekanntgabe keine überwiegenden schutzwürdigen Interessen der betroffenen Person entgegenstehen;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Ausübung oder Durchsetzung von Rechtsansprüchen gegenüber einer für die Verhütung, Feststellung oder Verfolgung einer Straftat zuständigen Behörde, sofern der Bekanntgabe keine überwiegenden schutzwürdigen Interessen der betroffenen Person entgegenstehen."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -11099,7 +12613,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_c",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "d529099709d5f4480120b2392b4115386fe96a726d38f3d4a79ed74aac5e523d"
+      "sha": "331e0b8ddc26f02415ef7ca11ab44635efac6e80eee5c517ffd423ea7d7f8cf0"
     },
     {
       "id": "bund/STGB/art_349_d",
@@ -11111,11 +12625,35 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Personendaten, die von einem Schengen-Staat übermittelt oder zur Verfügung gestellt wurden, können der zuständigen Behörde eines Drittstaates oder einem internationalen Organ nur bekannt gegeben werden, wenn:"
+          "text": "Personendaten, die von einem Schengen-Staat übermittelt oder zur Verfügung gestellt wurden, können der zuständigen Behörde eines Drittstaates oder einem internationalen Organ nur bekannt gegeben werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bekanntgabe zur Verhütung, Feststellung oder Verfolgung einer Straftat erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "der Schengen-Staat, der die Personendaten übermittelt oder zur Verfügung gestellt hat, der Bekanntgabe vorgängig zugestimmt hat; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen nach Artikel 349 c erfüllt sind."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Abweichend von Absatz 1 Buchstabe b dürfen Personendaten im Einzelfall bekannt gegeben werden, wenn:"
+          "text": "Abweichend von Absatz 1 Buchstabe b dürfen Personendaten im Einzelfall bekannt gegeben werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vorgängige Zustimmung des Schengen-Staates nicht rechtzeitig eingeholt werden kann; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Bekanntgabe zur Abwehr einer unmittelbar drohenden ernsthaften Gefahr für die öffentliche Sicherheit eines Schengen-Staates oder eines Drittstaates oder zur Wahrung der wesentlichen Interessen eines Schengen-Staates unerlässlich ist."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11126,7 +12664,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_d",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "059ec037eb6a1eeeb8c05936330f031d7709c1c7dbda661091b82c738084d993"
+      "sha": "c459f76db1671d421b489287951b183535cf4758ad00cad72c5c29b7a5ebf24e"
     },
     {
       "id": "bund/STGB/art_349_e",
@@ -11138,7 +12676,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Ist es, namentlich in Notfällen, nicht möglich, der zuständigen Behörde eines Drittstaates Personendaten auf dem üblichen Weg der polizeilichen Zusammenarbeit bekannt zu geben, so kann die zuständige Behörde sie ausnahmsweise einem in diesem Staat niedergelassenen Empfänger bekannt geben, sofern die folgenden Voraussetzungen erfüllt sind:"
+          "text": "Ist es, namentlich in Notfällen, nicht möglich, der zuständigen Behörde eines Drittstaates Personendaten auf dem üblichen Weg der polizeilichen Zusammenarbeit bekannt zu geben, so kann die zuständige Behörde sie ausnahmsweise einem in diesem Staat niedergelassenen Empfänger bekannt geben, sofern die folgenden Voraussetzungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Bekanntgabe ist unentbehrlich zur Erfüllung einer gesetzlichen Aufgabe der Behörde, welche die Daten bekannt gibt."
+            },
+            {
+              "marke": "b",
+              "text": "Der Bekanntgabe stehen keine überwiegenden schutzwürdigen Interessen der betroffenen Person entgegen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11161,7 +12709,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_e",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "1e16823477d292298a5f765a55398f69ca69a1e53a44850e8dc1521edab448c0"
+      "sha": "2b1b00131882b2cabbb35d6733c79ebb73e7a9668de1c31f1f61e301d9d1a28c"
     },
     {
       "id": "bund/STGB/art_349_f",
@@ -11185,7 +12733,17 @@
         },
         {
           "absatz": "4",
-          "text": "Sie gibt dem Empfänger ausserdem alle weiteren Informationen bekannt, anhand deren so weit wie möglich unterschieden werden kann:"
+          "text": "Sie gibt dem Empfänger ausserdem alle weiteren Informationen bekannt, anhand deren so weit wie möglich unterschieden werden kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zwischen den verschiedenen Kategorien betroffener Personen;"
+            },
+            {
+              "marke": "b",
+              "text": "zwischen auf Tatsachen und auf persönlichen Einschätzungen beruhenden Personendaten."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -11196,7 +12754,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_f",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ef1a05cb28845eebd759a4af397b9546876f8df0465ecc7c492e9fdfb085d2cf"
+      "sha": "02bde275f1655b6d8b4740914dd690e55129650c51cfa4b238956e79b656493e"
     },
     {
       "id": "bund/STGB/art_349_g",
@@ -11208,7 +12766,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die betroffene Person kann vom EDÖB verlangen, dass er prüft, ob allfällige Daten über sie rechtmässig bearbeitet werden, wenn:"
+          "text": "Die betroffene Person kann vom EDÖB verlangen, dass er prüft, ob allfällige Daten über sie rechtmässig bearbeitet werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihr Recht auf Information über den Austausch von Daten über sie eingeschränkt oder aufgeschoben wird (Art. 19 und 20 DSG);"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Auskunftsrecht verweigert, eingeschränkt oder aufgeschoben wird (Art. 25 und 26 DSG); oder"
+            },
+            {
+              "marke": "c",
+              "text": "ihr Recht, die Berichtigung, die Vernichtung oder die Löschung von Daten über sie zu verlangen, teilweise oder ganz verweigert wird (Art. 41 Abs. 2 Bst. a DSG)."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -11231,7 +12803,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_349_g",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ee526fcb74a03ca6dfeb68af7738d6e2b7b99584f6a2e5ef8a5664e931a335fa"
+      "sha": "2fafb025b1be5ed4019f04bffc6fd2a6c38938214ba49c2c75129e5ddf744290"
     },
     {
       "id": "bund/STGB/art_349_h",
@@ -11378,7 +12950,41 @@
         },
         {
           "absatz": "2",
-          "text": "Folgende Behörden können Daten nach Absatz 1 vergleichen und bearbeiten:"
+          "text": "Folgende Behörden können Daten nach Absatz 1 vergleichen und bearbeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Bundesamt für Polizei;"
+            },
+            {
+              "marke": "b",
+              "text": "das Staatssekretariat für Migration (SEM);"
+            },
+            {
+              "marke": "c",
+              "text": "das Bundesamt für Justiz;"
+            },
+            {
+              "marke": "d",
+              "text": "das Bundesamt für Zoll und Grenzsicherheit;"
+            },
+            {
+              "marke": "e",
+              "text": "die für die Erteilung von Visa zuständigen schweizerischen Vertretungen im Ausland;"
+            },
+            {
+              "marke": "f",
+              "text": "der Nachrichtendienst des Bundes;"
+            },
+            {
+              "marke": "g",
+              "text": "die Polizeibehörden der Kantone;"
+            },
+            {
+              "marke": "h",
+              "text": "die kantonalen Migrationsbehörden."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11386,7 +12992,17 @@
         },
         {
           "absatz": "4",
-          "text": "Die Daten dürfen verwendet werden:"
+          "text": "Die Daten dürfen verwendet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis zum Ablauf der Fristen für die Löschung von DNA-Profilen nach den Artikeln 16–19 des DNA-Profil-Gesetzes vom 20. Juni 2003; oder"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Verurteilung wegen einer Übertretung: für eine Dauer von fünf Jahren ab dem Datum des Urteils, sofern dieses in Rechtskraft erwachsen ist."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -11401,7 +13017,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_354",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8e8c1b47aef354ae44fe637aea7450a6d5474772f9bcd11423d03c1743341e60"
+      "sha": "5a3d64e7fc14b6165910784f28e5d2ee63b36296be7a3370b95406ca15c03766"
     },
     {
       "id": "bund/STGB/art_355",
@@ -11593,11 +13209,47 @@
         },
         {
           "absatz": "2",
-          "text": "Als Kontaktstelle nimmt fedpol namentlich folgende Aufgaben wahr:"
+          "text": "Als Kontaktstelle nimmt fedpol namentlich folgende Aufgaben wahr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Es nimmt den Abgleich mit den daktyloskopischen Daten vor, die im Informationssystem anderer teilnehmender Staaten enthalten sind."
+            },
+            {
+              "marke": "b",
+              "text": "Es überprüft Treffer, die aufgrund eines Abgleichs der Schweiz im Informationssystem für Fingerabdrücke eines teilnehmenden Staates erzielt worden sind."
+            },
+            {
+              "marke": "c",
+              "text": "Es übermittelt dem abfragenden teilnehmenden Staat auf Ersuchen die personenbezogenen Daten und, soweit dies nach schweizerischem Recht vorgesehen ist, weitere verfügbare Angaben gemäss Artikel 10 des Beschlusses 2008/615/JI."
+            },
+            {
+              "marke": "d",
+              "text": "Es übermittelt auf Ersuchen oder von sich aus personenbezogene und nicht personenbezogene Daten gemäss den Artikeln 13 und 14 (Grossveranstaltungen) sowie 16 (Verhinderung terroristischer Straftaten) des Beschlusses 2008/615/JI."
+            },
+            {
+              "marke": "e",
+              "text": "Es legt maximale Abrufkapazitäten für daktyloskopische Daten fest."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Die folgenden Behörden können im Rahmen ihrer gesetzlichen Aufgaben einen Abgleich gemäss Absatz 2 beantragen:"
+          "text": "Die folgenden Behörden können im Rahmen ihrer gesetzlichen Aufgaben einen Abgleich gemäss Absatz 2 beantragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "fedpol;"
+            },
+            {
+              "marke": "b",
+              "text": "Bundesanwaltschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "die kantonalen Polizei- und Strafverfolgungsbehörden."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -11612,7 +13264,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_357",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8e21ff1fe382bb5f665bafbec33b39db016149ad4e0f8b579421059e8111c8c6"
+      "sha": "c3a8ee55b6c00195d441d4b12edef58ea6e1350d285e329ee7fc9c11d69e03e6"
     },
     {
       "id": "bund/STGB/art_358_361",
@@ -11907,7 +13559,25 @@
         },
         {
           "absatz": "2",
-          "text": "Sie können ferner Abteilungen für besondere Gefangenengruppen führen, insbesondere für:"
+          "text": "Sie können ferner Abteilungen für besondere Gefangenengruppen führen, insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Frauen;"
+            },
+            {
+              "marke": "b",
+              "text": "Gefangene bestimmter Altersgruppen;"
+            },
+            {
+              "marke": "c",
+              "text": "Gefangene mit sehr langen oder sehr kurzen Strafen;"
+            },
+            {
+              "marke": "d",
+              "text": "Gefangene, die intensiv betreut oder behandelt werden müssen oder eine Aus- oder Weiterbildung erhalten."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11926,7 +13596,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_377",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "ae61d089c336e0ac46fc7e421df7530b2be1b49bf7f1853e554d249edc240920"
+      "sha": "68ee9546d008afdf70a2604a427a4b9564e9b3777034a3e6d23d722703511d8c"
     },
     {
       "id": "bund/STGB/art_378",
@@ -11988,7 +13658,21 @@
         },
         {
           "absatz": "2",
-          "text": "Der Verurteilte wird in angemessener Weise an den Kosten des Vollzugs beteiligt:"
+          "text": "Der Verurteilte wird in angemessener Weise an den Kosten des Vollzugs beteiligt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch deren Verrechnung mit seiner Arbeitsleistung im Straf- oder Massnahmenvollzug;"
+            },
+            {
+              "marke": "b",
+              "text": "nach Massgabe seines Einkommens und Vermögens, wenn er eine ihm zugewiesene Arbeit verweigert, obwohl sie den Vorgaben der Artikel 81 oder 90 Absatz 3 genügt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "durch Abzug eines Teils des Einkommens, das er auf Grund einer Tätigkeit im Rahmen der Halbgefangenschaft, des Vollzugs durch elektronische Überwachung, des Arbeitsexternats oder des Wohn- und Arbeitsexternats erzielt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -11999,7 +13683,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_380",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "8e7e72071ab9e8cd6250e5e0926ae0b7b3330e2360577ab154eb9029d7afed71"
+      "sha": "cf0e3a47d281791a908ad8744ecb087183e6e13349ec4655f068804fcc631d53"
     },
     {
       "id": "bund/STGB/art_380_a",
@@ -12038,14 +13722,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Recht der Begnadigung mit Bezug auf Urteile, die auf Grund dieses oder eines andern Bundesgesetzes ergangen sind, wird ausgeübt:"
+          "text": "Das Recht der Begnadigung mit Bezug auf Urteile, die auf Grund dieses oder eines andern Bundesgesetzes ergangen sind, wird ausgeübt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den Fällen, in denen die Straf- oder Berufungskammer des Bundesstrafgerichts oder eine Verwaltungsbehörde des Bundes geurteilt hat, durch die Bundesversammlung;"
+            },
+            {
+              "marke": "b",
+              "text": "in den Fällen, in denen eine kantonale Behörde geurteilt hat, durch die Begnadigungsbehörde des Kantons."
+            }
+          ]
         }
       ],
       "stand": "2026-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_381",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "788312749a385b4ccf67e87455fb74671c1f7424d71b9060f6b63b2d144a0119"
+      "sha": "c5fb9f1b06b964337db57c29914285b83eb263ae89f0b753a7adee122ea48e7d"
     },
     {
       "id": "bund/STGB/art_382",
@@ -12180,7 +13874,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Bundesrat ist befugt, nach Anhörung der Kantone Bestimmungen zu erlassen über:"
+          "text": "Der Bundesrat ist befugt, nach Anhörung der Kantone Bestimmungen zu erlassen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Vollzug von Gesamtstrafen, Zusatzstrafen und mehreren gleichzeitig vollziehbaren Einzelstrafen und Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Übernahme des Vollzugs von Strafen und Massnahmen durch einen anderen Kanton;"
+            },
+            {
+              "marke": "c",
+              "text": "den Vollzug von Strafen und Massnahmen an kranken, gebrechlichen und betagten Personen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Vollzug von Strafen und Massnahmen an Frauen nach Artikel 80;"
+            },
+            {
+              "marke": "e",
+              "text": "das Arbeitsentgelt des Gefangenen nach Artikel 83."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -12196,7 +13912,17 @@
         },
         {
           "absatz": "4",
-          "text": "Der Bundesrat kann versuchsweise und für beschränkte Zeit:"
+          "text": "Der Bundesrat kann versuchsweise und für beschränkte Zeit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "neue Strafen und Massnahmen sowie neue Vollzugsformen einführen oder gestatten und den Anwendungsbereich bestehender Sanktionen und Vollzugsformen ändern;"
+            },
+            {
+              "marke": "b",
+              "text": "einführen oder gestatten, dass der Vollzug von Freiheitsstrafen an privat geführte Anstalten, die den Anforderungen dieses Gesetzes betreffend den Vollzug der Strafen (Art. 74–85, 91 und 92) genügen, übertragen wird. Diese Anstalten unterstehen der Aufsicht der Kantone."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -12207,7 +13933,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_387",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260612",
-      "sha": "f7a92b84c852dace1035e42bbb3921ea390829f2bef56376a18e4233cb9b4841"
+      "sha": "a13e757d7ac5500e6ee2c5c448d1b3877cb4953e4a343624d4134db9fec731c5"
     },
     {
       "id": "bund/STGB/art_388",

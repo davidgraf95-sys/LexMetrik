@@ -11,14 +11,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a) Endentscheid und Zwischenentscheid: 500.-- bis 6'000.-- b) Prozessleitende Verfügung (Kollegialgericht): 300.-- bis 3'000.-- c) Prozessleitende Verfügung, vorsorgliche Massnahmen (Verfahrensleitung): 200.-- bis 2'000.--"
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid und Zwischenentscheid: 500.-- bis 6'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Prozessleitende Verfügung (Kollegialgericht): 300.-- bis 3'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Prozessleitende Verfügung, vorsorgliche Massnahmen (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
       "abgerufen": "2026-06-16",
       "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
-      "sha": "69edcb34de3cae4fccd6309ca39217a6767faeccc4fe4bae4fa045c3d21b39f3"
+      "sha": "e241e6104ca00761a35c16cfedff29c5feb3daa34777b1c48544a0e15c52abdf"
     },
     {
       "id": "kanton/AI/173.810/art_7",
@@ -30,14 +44,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a) … b) Erteilung einer Klagebewilligung: 200.-- bis 1'000.-- c) Urteilsvorschlag oder Entscheid: 300.-- bis 1'000.-- d) Kosten bei Einigung, Rückzug oder Säumnis: 100.-- bis 600.--"
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "Erteilung einer Klagebewilligung: 200.-- bis 1'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Urteilsvorschlag oder Entscheid: 300.-- bis 1'000.--"
+            },
+            {
+              "marke": "d",
+              "text": "Kosten bei Einigung, Rückzug oder Säumnis: 100.-- bis 600.--"
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
       "abgerufen": "2026-06-16",
       "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
-      "sha": "08cb68878d1e8efe701f5711ce7001cabbc655db435864d6bbc65e41c6e40b2e"
+      "sha": "2c695bade8551b4e8514a6ed62848a00b5f0cf8650b20a78cdc7d099525c908a"
     }
   ]
 }

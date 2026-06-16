@@ -11,46 +11,198 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "1. Allgemeines a) Minimal- und Maximalgebühr bei Promilleansätzen: Die Gebühr wird mindestens vom Steuerwert berechnet, wenn sie sich nach dem Wert oder Preis bestimmt. Die Minimalgebühr beträgt CHF 200. Die Gebühr für die Vornahme einer Eintragung oder einer Änderung beträgt höchstens CHF 50’000. b) Aufrundung: Der Wert bzw. Preis eines Grundstückes oder einer Pfandsumme wird für die Gebührenberechnung auf volle Tausend aufgerundet. c) Gesamthandsverhältnisse: Bei Gesamthandsverhältnissen ist der Wert der internen Beteiligung massgebend. d) Zuschlag: Wenn eine Eintragung, Änderung oder Löschung auf mehr als einem Grundstück vorgenommen wird, so ist für jedes weitere Grundstück ein Zuschlag von mind. CHF 20 zu berechnen; der Zuschlag beträgt höchstens CHF 200. Keine Zuschläge werden erhoben bei Promillegebühren. e) Besonderer Arbeitsaufwand: Für in der Gebührenordnung nicht besonders aufgeführte Verrichtungen wird für jede aufgewendete Stunde eine Gebühr von CHF 100 bis CHF 200 zuzüglich allfälliger Sachkosten erhoben. Nach dem Zeitaufwand können auch Verrichtungen berechnet werden, welche besonders arbeitsaufwändig und daher in keinem angemessenen Verhältnis zur ordentlichen Gebühr stehen. f) Anlegung oder Löschung eines Grundstücks: Anlegung einer Parzelle oder Eintragung eines Parzellenindexes: CHF 100. Löschung einer Parzelle: CHF 50."
+          "text": "",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Allgemeines"
+            },
+            {
+              "marke": "a",
+              "text": "Minimal- und Maximalgebühr bei Promilleansätzen: Die Gebühr wird mindestens vom Steuerwert berechnet, wenn sie sich nach dem Wert oder Preis bestimmt. Die Minimalgebühr beträgt CHF 200. Die Gebühr für die Vornahme einer Eintragung oder einer Änderung beträgt höchstens CHF 50’000."
+            },
+            {
+              "marke": "b",
+              "text": "Aufrundung: Der Wert bzw. Preis eines Grundstückes oder einer Pfandsumme wird für die Gebührenberechnung auf volle Tausend aufgerundet."
+            },
+            {
+              "marke": "c",
+              "text": "Gesamthandsverhältnisse: Bei Gesamthandsverhältnissen ist der Wert der internen Beteiligung massgebend."
+            },
+            {
+              "marke": "d",
+              "text": "Zuschlag: Wenn eine Eintragung, Änderung oder Löschung auf mehr als einem Grundstück vorgenommen wird, so ist für jedes weitere Grundstück ein Zuschlag von mind. CHF 20 zu berechnen; der Zuschlag beträgt höchstens CHF 200. Keine Zuschläge werden erhoben bei Promillegebühren."
+            },
+            {
+              "marke": "e",
+              "text": "Besonderer Arbeitsaufwand: Für in der Gebührenordnung nicht besonders aufgeführte Verrichtungen wird für jede aufgewendete Stunde eine Gebühr von CHF 100 bis CHF 200 zuzüglich allfälliger Sachkosten erhoben. Nach dem Zeitaufwand können auch Verrichtungen berechnet werden, welche besonders arbeitsaufwändig und daher in keinem angemessenen Verhältnis zur ordentlichen Gebühr stehen."
+            },
+            {
+              "marke": "f",
+              "text": "Anlegung oder Löschung eines Grundstücks: Anlegung einer Parzelle oder Eintragung eines Parzellenindexes: CHF 100. Löschung einer Parzelle: CHF 50."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "2. Eigentum a) Handänderung: Handänderungen an Grundstücken: 1‰ des Wertes bzw. Preises. Bei Übergang durch Universalsukzession (z.B. bei Erbgang, Fusion) sowie bei Erbteilung, Vermächtnis und Kauf durch einen Erben an einer erbschaftsamtlichen Gant: ½‰ des Wertes bzw. Preises. Handänderungen kraft Gütergemeinschaft sind bis zu deren gesetzlichen Höhe gebührenfrei. Für Änderungen am Grundeigentum, welche keine wirtschaftliche Handänderung beinhalten und ausschliesslich natürliche Personen betreffen, wird die Minimalgebühr erhoben. b) Stockwerkeigentum: Begründung von Stockwerkeigentum: ¼‰ des Grundstückwertes einschliesslich des Wertes des zu errichtenden oder fertigzustellenden Gebäudes. Erfolgt die Begründung anlässlich einer Erbteilung, so ist letztere ebenfalls zu berechnen. Änderung von Stockwerkeigentum: Quotenänderung: ¼‰ des gemäss vorstehendem Absatz zu ermittelnden Wertes der betroffenen Stockwerkeigentumsparzellen. Änderung des Stockwerkeigentums infolge Begründung oder Löschung eines selbstständigen und dauernden Rechtes: ¼‰, maximal CHF 200. Sonderrechtsänderung: CHF 100. c) Personen im Ausland: Für die Behandlung von Geschäften gemäss Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland ist eine Gebühr bis CHF 500 zu entrichten."
+          "text": "",
+          "items": [
+            {
+              "marke": "2",
+              "text": "Eigentum"
+            },
+            {
+              "marke": "a",
+              "text": "Handänderung: Handänderungen an Grundstücken: 1‰ des Wertes bzw. Preises. Bei Übergang durch Universalsukzession (z.B. bei Erbgang, Fusion) sowie bei Erbteilung, Vermächtnis und Kauf durch einen Erben an einer erbschaftsamtlichen Gant: ½‰ des Wertes bzw. Preises. Handänderungen kraft Gütergemeinschaft sind bis zu deren gesetzlichen Höhe gebührenfrei. Für Änderungen am Grundeigentum, welche keine wirtschaftliche Handänderung beinhalten und ausschliesslich natürliche Personen betreffen, wird die Minimalgebühr erhoben."
+            },
+            {
+              "marke": "b",
+              "text": "Stockwerkeigentum: Begründung von Stockwerkeigentum: ¼‰ des Grundstückwertes einschliesslich des Wertes des zu errichtenden oder fertigzustellenden Gebäudes. Erfolgt die Begründung anlässlich einer Erbteilung, so ist letztere ebenfalls zu berechnen. Änderung von Stockwerkeigentum: Quotenänderung: ¼‰ des gemäss vorstehendem Absatz zu ermittelnden Wertes der betroffenen Stockwerkeigentumsparzellen. Änderung des Stockwerkeigentums infolge Begründung oder Löschung eines selbstständigen und dauernden Rechtes: ¼‰, maximal CHF 200. Sonderrechtsänderung: CHF 100."
+            },
+            {
+              "marke": "c",
+              "text": "Personen im Ausland: Für die Behandlung von Geschäften gemäss Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland ist eine Gebühr bis CHF 500 zu entrichten."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "3. Wasserrecht"
+          "text": "",
+          "items": [
+            {
+              "marke": "3",
+              "text": "Wasserrecht Verleihung: CHF 100."
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "4. Dienstbarkeiten a) Selbständige und dauernde Rechte sowie unselbständige Baurechte: Begründung und flächenmässige Ausdehnung: ¼‰ vom Wert des belastenden Landes. Bei Baurechten wird zusätzlich eine Gebühr vom Wert bzw. Preis eines allfällig bestehenden Gebäudes erhoben; für diese Gebühr ist Ziff. 2 lit. a letzter Satz anwendbar. Übertragung: Es gelten die Bestimmungen betreffend Handänderung (Ziff. 2 lit. a). Änderung des Inhalts: CHF 100. b) Andere Dienstbarkeiten: Eintragung und Änderung des Inhalts: CHF 100."
+          "text": "",
+          "items": [
+            {
+              "marke": "4",
+              "text": "Dienstbarkeiten"
+            },
+            {
+              "marke": "a",
+              "text": "Selbständige und dauernde Rechte sowie unselbständige Baurechte: Begründung und flächenmässige Ausdehnung: ¼‰ vom Wert des belastenden Landes. Bei Baurechten wird zusätzlich eine Gebühr vom Wert bzw. Preis eines allfällig bestehenden Gebäudes erhoben; für diese Gebühr ist Ziff. 2 lit. a letzter Satz anwendbar. Übertragung: Es gelten die Bestimmungen betreffend Handänderung (Ziff. 2 lit. a). Änderung des Inhalts: CHF 100."
+            },
+            {
+              "marke": "b",
+              "text": "Andere Dienstbarkeiten: Eintragung und Änderung des Inhalts: CHF 100."
+            }
+          ]
         },
         {
           "absatz": "5",
-          "text": "Anmerkungen und Vormerkungen"
+          "text": "Anmerkungen und Vormerkungen Eintragung und Änderung: CHF 100."
         },
         {
           "absatz": "6",
-          "text": "Pfandrechte und Grundlasten a) Eintragung und Erhöhung der Pfand- oder Grundlastsumme: 1‰ der Summe bzw. des Erhöhungsbetrages. b) Änderung des Schuld- oder Verpflichtungsgrundes: ¼‰ der eingetragenen Pfand- oder Grundlastsumme. c) Eintragung einer vorbehaltenen leeren Pfandstelle: CHF 100. d) Eintragung oder Änderung eines Grundpfandgläubigers oder Forderungspfandgläubigers, einer Nutzniessung an einem Pfandrecht, eines Bevollmächtigten gemäss Art. 860 ZGB: je CHF 100. e) Alle übrigen Änderungen: CHF 100."
+          "text": "Pfandrechte und Grundlasten",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Eintragung und Erhöhung der Pfand- oder Grundlastsumme: 1‰ der Summe bzw. des Erhöhungsbetrages."
+            },
+            {
+              "marke": "b",
+              "text": "Änderung des Schuld- oder Verpflichtungsgrundes: ¼‰ der eingetragenen Pfand- oder Grundlastsumme."
+            },
+            {
+              "marke": "c",
+              "text": "Eintragung einer vorbehaltenen leeren Pfandstelle: CHF 100."
+            },
+            {
+              "marke": "d",
+              "text": "Eintragung oder Änderung eines Grundpfandgläubigers oder Forderungspfandgläubigers, einer Nutzniessung an einem Pfandrecht, eines Bevollmächtigten gemäss Art. 860 ZGB: je CHF 100."
+            },
+            {
+              "marke": "e",
+              "text": "Alle übrigen Änderungen: CHF 100."
+            }
+          ]
         },
         {
           "absatz": "7",
-          "text": "Verschiedenes a) Beglaubigung: CHF 20. b) Schriftliche Bescheinigung: eines Grundbucheintrages pro Grundstück CHF 20. c) Visum: CHF 20. d) Ausstellung eines Schuldbriefes: CHF 100. e) Grundbuchauszüge: CHF 30 pro Parzelle. Auszüge zusätzlich erforderlicher Parzellen sind gebührenfrei. f) .... g) Fotokopien: CHF 10 Grundgebühr; bis 10 Seiten CHF 1 pro Seite, darüber CHF 0.50 pro Seite. h) Abgabe von Adressen der Eigentümerinnen und Eigentümer: √Anzahl x CHF 10 zuzüglich einer Grundgebühr von CHF 20. i) Die Kosten für Porti, Verpackung und andere Auslagen sind hinzuzurechnen."
+          "text": "Verschiedenes",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beglaubigung: CHF 20."
+            },
+            {
+              "marke": "b",
+              "text": "Schriftliche Bescheinigung: eines Grundbucheintrages pro Grundstück CHF 20."
+            },
+            {
+              "marke": "c",
+              "text": "Visum: CHF 20."
+            },
+            {
+              "marke": "d",
+              "text": "Ausstellung eines Schuldbriefes: CHF 100."
+            },
+            {
+              "marke": "e",
+              "text": "Grundbuchauszüge: CHF 30 pro Parzelle. Auszüge zusätzlich erforderlicher Parzellen sind gebührenfrei."
+            },
+            {
+              "marke": "f",
+              "text": "...."
+            },
+            {
+              "marke": "g",
+              "text": "Fotokopien: CHF 10 Grundgebühr; bis 10 Seiten CHF 1 pro Seite, darüber CHF 0.50 pro Seite."
+            },
+            {
+              "marke": "h",
+              "text": "Abgabe von Adressen der Eigentümerinnen und Eigentümer: √Anzahl x CHF 10 zuzüglich einer Grundgebühr von CHF 20."
+            },
+            {
+              "marke": "i",
+              "text": "Die Kosten für Porti, Verpackung und andere Auslagen sind hinzuzurechnen."
+            }
+          ]
         },
         {
           "absatz": "8",
-          "text": "8. Gebührenermässigung und Gebührenerlass"
+          "text": "",
+          "items": [
+            {
+              "marke": "8",
+              "text": "Gebührenermässigung und Gebührenerlass Eine Gebühr kann vom Grundbuch- und Vermessungsamt aus wichtigen Gründen ganz oder teilweise erlassen werden."
+            }
+          ]
         },
         {
           "absatz": "9",
-          "text": "9. Gebührenerhebung und Zahlungsfristen a) erste Mahnung gratis b) Mahngebühren ab zweiter Mahnung je CHF 40 c) Umtriebsgebühr für Inkassomassnahmen CHF 50"
+          "text": "",
+          "items": [
+            {
+              "marke": "9",
+              "text": "Gebührenerhebung und Zahlungsfristen Die Zahlungsfrist von Gebühren beträgt 30 Tage. Nach Ablauf der Zahlungsfrist kann ein Verzugszins von 5% erhoben werden. Für nicht rechtzeitig bezahlte Gebühren können Mahngebühren und Umtriebsgebühren für Inkassomassnahmen erhoben werden. Diese betragen:"
+            },
+            {
+              "marke": "a",
+              "text": "erste Mahnung gratis"
+            },
+            {
+              "marke": "b",
+              "text": "Mahngebühren ab zweiter Mahnung je CHF 40"
+            },
+            {
+              "marke": "c",
+              "text": "Umtriebsgebühr für Inkassomassnahmen CHF 50"
+            }
+          ]
         }
       ],
       "stand": "2025-05-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
       "abgerufen": "2026-06-16",
       "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
-      "sha": "1fd693c82c37a8f9f520c2679927c1af46cdc092d1f4758dbd30b482e9a58a19"
+      "sha": "22851f7d5838f7fb813a832d473a040767915aeb8945c0c9e8a391d92337d1e8"
     }
   ]
 }

@@ -15,14 +15,28 @@
         },
         {
           "absatz": "2",
-          "text": "Sie geht vom Betrag aus, welcher der entschädigungsberechtigten Partei für die anwaltliche Vertretung in Rechnung gestellt wird, soweit 1. der vereinbarte Stundenansatz zuzüglich allfällig vereinbartem Interessenwertzuschlag üblich ist und keine Erfolgszuschläge enthält; 2. der geltend gemachte Aufwand angemessen und für die Prozessführung erforderlich ist; 3. die geforderte Entschädigung nicht eine von der Sache beziehungsweise von den legitimen Rechtsschutzbedürfnissen her nicht gerechtfertigte Belastung der unterliegenden Partei zur Folge hat."
+          "text": "Sie geht vom Betrag aus, welcher der entschädigungsberechtigten Partei für die anwaltliche Vertretung in Rechnung gestellt wird, soweit",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der vereinbarte Stundenansatz zuzüglich allfällig vereinbartem Interessenwertzuschlag üblich ist und keine Erfolgszuschläge enthält;"
+            },
+            {
+              "marke": "2",
+              "text": "der geltend gemachte Aufwand angemessen und für die Prozessführung erforderlich ist;"
+            },
+            {
+              "marke": "3",
+              "text": "die geforderte Entschädigung nicht eine von der Sache beziehungsweise von den legitimen Rechtsschutzbedürfnissen her nicht gerechtfertigte Belastung der unterliegenden Partei zur Folge hat."
+            }
+          ]
         }
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
       "abgerufen": "2026-06-16",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
-      "sha": "241f75d3badaddafc35768a14772c776d2f11c2fca52d9c85b2595b84058cb62"
+      "sha": "4823d57f0e63eda087145ac35f41cb147087111a3dac0b99556be7d5ecc58c5f"
     },
     {
       "id": "kanton/GR/310.250/art_3",
@@ -46,14 +60,24 @@
         },
         {
           "absatz": "4",
-          "text": "Kein beziehungsweise ein reduzierter Interessenwertzuschlag ist üblich: 1. in Verfahren zur Auflösung von Ehen und eingetragenen Partnerschaften, soweit sich die Klage nicht auf Leistungen bezieht, welche die Ehegatten beziehungsweise die Partner persönlich gegeneinander geltend machen; 2. wenn das Verfahren durch Vergleich, Rückzug oder Anerkennung erledigt wird."
+          "text": "Kein beziehungsweise ein reduzierter Interessenwertzuschlag ist üblich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "in Verfahren zur Auflösung von Ehen und eingetragenen Partnerschaften, soweit sich die Klage nicht auf Leistungen bezieht, welche die Ehegatten beziehungsweise die Partner persönlich gegeneinander geltend machen;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn das Verfahren durch Vergleich, Rückzug oder Anerkennung erledigt wird."
+            }
+          ]
         }
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
       "abgerufen": "2026-06-16",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
-      "sha": "8b4103767b8efe51e142e9f825fec06e90a5c4d310f8860f81102bcc101b8471"
+      "sha": "035619a67c37d748241d88415a67a7ac5ec4007fd40d444b8e8cf0d797b63ebf"
     }
   ]
 }

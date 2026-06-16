@@ -11,7 +11,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im gerichtlichen Verfahren wird die Pauschalgebühr in jeder Instanz in folgendem Rahmen festgesetzt, wenn das Verfahren nicht kostenlos ist: a) Streitwert bis Fr. 2'000.00: Fr. 100.00–Fr. 1'000.00 b) Streitwert bis Fr. 30'000.00: Fr. 200.00–Fr. 10'000.00 c) Streitwert bis Fr. 100'000.00: Fr. 500.00–Fr. 25'000.00 d) Streitwert bis Fr. 500'000.00: Fr. 1'000.00–Fr. 50'000.00 e) Streitwert bis Fr. 2'000'000.00: Fr. 2'000.00–Fr. 100'000.00 f) Streitwert über Fr. 2'000'000.00: Fr. 10'000.00 bis 5% des Streitwerts"
+          "text": "Im gerichtlichen Verfahren wird die Pauschalgebühr in jeder Instanz in folgendem Rahmen festgesetzt, wenn das Verfahren nicht kostenlos ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitwert bis Fr. 2'000.00: Fr. 100.00–Fr. 1'000.00"
+            },
+            {
+              "marke": "b",
+              "text": "Streitwert bis Fr. 30'000.00: Fr. 200.00–Fr. 10'000.00"
+            },
+            {
+              "marke": "c",
+              "text": "Streitwert bis Fr. 100'000.00: Fr. 500.00–Fr. 25'000.00"
+            },
+            {
+              "marke": "d",
+              "text": "Streitwert bis Fr. 500'000.00: Fr. 1'000.00–Fr. 50'000.00"
+            },
+            {
+              "marke": "e",
+              "text": "Streitwert bis Fr. 2'000'000.00: Fr. 2'000.00–Fr. 100'000.00"
+            },
+            {
+              "marke": "f",
+              "text": "Streitwert über Fr. 2'000'000.00: Fr. 10'000.00 bis 5% des Streitwerts"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -30,7 +56,7 @@
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
       "abgerufen": "2026-06-16",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
-      "sha": "3df9342873e956c5d3e0593e91d4347f1c5f09ddb26453677ce9d9a24cf0ae68"
+      "sha": "65401dcb377cb153373d469ebff6a7ef548fa99c87f3a7f4a677d3ea5251fd4b"
     },
     {
       "id": "kanton/SH/173.200/art_86",
@@ -46,7 +72,25 @@
         },
         {
           "absatz": "2",
-          "text": "Es geht dabei vom Betrag aus, welcher der entschädigungsberechtigten Partei für die anwaltliche Vertretung in Rechnung gestellt wird, soweit: a) der vereinbarte Ansatz üblich ist und keine Erfolgszuschläge enthält b) der geltend gemachte Aufwand angemessen und für die Prozessführung erforderlich ist c) der Rechnungsbetrag in einem angemessenen Verhältnis zur Bedeutung der Sache steht d) die geforderte Entschädigung nicht eine von der Sache bzw. von den legitimen Rechtsschutzbedürfnissen her nicht gerechtfertigte Belastung der unterliegenden Partei zur Folge hat"
+          "text": "Es geht dabei vom Betrag aus, welcher der entschädigungsberechtigten Partei für die anwaltliche Vertretung in Rechnung gestellt wird, soweit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der vereinbarte Ansatz üblich ist und keine Erfolgszuschläge enthält"
+            },
+            {
+              "marke": "b",
+              "text": "der geltend gemachte Aufwand angemessen und für die Prozessführung erforderlich ist"
+            },
+            {
+              "marke": "c",
+              "text": "der Rechnungsbetrag in einem angemessenen Verhältnis zur Bedeutung der Sache steht"
+            },
+            {
+              "marke": "d",
+              "text": "die geforderte Entschädigung nicht eine von der Sache bzw. von den legitimen Rechtsschutzbedürfnissen her nicht gerechtfertigte Belastung der unterliegenden Partei zur Folge hat"
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -65,7 +109,7 @@
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
       "abgerufen": "2026-06-16",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
-      "sha": "a24549ff96b2880603e122236fa4f1d28a19313035d82b3b0496e7a96382ac3d"
+      "sha": "5cfbd431beb3871428a72733ddb72670908800c941a6a2cafe349e96cb33c969"
     },
     {
       "id": "kanton/SH/173.200/art_81",

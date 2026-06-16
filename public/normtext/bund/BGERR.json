@@ -11,14 +11,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Der Präsident oder die Präsidentin des Bundesgerichts:"
+          "text": "Der Präsident oder die Präsidentin des Bundesgerichts:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nimmt die Aufgaben gemäss Artikel 10 Absatz 2 und Artikel 14 Absatz 3 BGG wahr;"
+            },
+            {
+              "marke": "b",
+              "text": "beruft das Gesamtgericht und die Verwaltungskommission ein;"
+            },
+            {
+              "marke": "c",
+              "text": "entscheidet über die Anwendung des Zirkulationsverfahrens für Beschlüsse des Gesamtgerichts; Artikel 7 Absatz 2 dieses Reglements bleibt vorbehalten."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "e2d8e9c223f909d419e2899bbe23a5f8a5d4ba3476793271d8bb94fdc8d72e80"
+      "sha": "98c5d59b4ee6bbe91b3bed3b47dcc03b284b39bee66d7dc0d7e56c1793a3d566"
     },
     {
       "id": "bund/BGERR/art_2",
@@ -142,7 +156,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Einberufung des Gesamtgerichts können verlangen:"
+          "text": "Die Einberufung des Gesamtgerichts können verlangen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwaltungskommission;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Abteilung;"
+            },
+            {
+              "marke": "c",
+              "text": "mindestens fünf Mitglieder des Gesamtgerichts."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -161,7 +189,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_6",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "68e964ebd4a4944be181c38fbbba215fdc032dd149dcfdbccc09bdb30b41e140"
+      "sha": "17e7802cd152c34a87a4c952a30d84368fb1c19b3de22541f1e998e117a44821"
     },
     {
       "id": "bund/BGERR/art_7",
@@ -265,7 +293,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Verwaltungskommission setzt sich zusammen aus:"
+          "text": "Die Verwaltungskommission setzt sich zusammen aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Präsidenten oder der Präsidentin des Bundesgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Vizepräsidenten oder der Vizepräsidentin des Bundesgerichts;"
+            },
+            {
+              "marke": "c",
+              "text": "einem weiteren ordentlichen Richter oder einer weiteren ordentlichen Richterin."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -276,7 +318,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "e353d5fdd3fd4c0236d50f207b398cc539c4868d6f9612d14711a1cce688dded"
+      "sha": "778508fd7e5552f16c3816a1a3987d85b5b9462518c4ebd0c2492a1b42ebbc5b"
     },
     {
       "id": "bund/BGERR/art_12",
@@ -288,7 +330,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Verwaltungskommission nimmt die Aufgaben gemäss den Artikeln 15 Absatz 1 Buchstaben d und f sowie 17 Absatz 4 BGG wahr. Sie ist zuständig für vorübergehende Entlastungsmassnahmen, insbesondere für:"
+          "text": "Die Verwaltungskommission nimmt die Aufgaben gemäss den Artikeln 15 Absatz 1 Buchstaben d und f sowie 17 Absatz 4 BGG wahr. Sie ist zuständig für vorübergehende Entlastungsmassnahmen, insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anordnung des über den Einzelfall hinausgehenden Einsatzes eines Richters oder einer Richterin in einer anderen Abteilung (Art. 18 Abs. 3 BGG);"
+            },
+            {
+              "marke": "b",
+              "text": "die Zuteilung von nebenamtlichen Richtern und Richterinnen sowie von Gerichtsschreibern und Gerichtsschreiberinnen auf eine andere Abteilung auch ausserhalb der ordentlichen zweijährigen Organisationsperiode;"
+            },
+            {
+              "marke": "c",
+              "text": "die Umteilung von Sachgebieten oder von Gruppen von Geschäften zur Ausgleichung der Geschäftslast zwischen den Abteilungen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -303,7 +359,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "c4a6720c3919e10eacea6dc3705f6e31e5ec6282857b06e4ec4c04374e68465d"
+      "sha": "8959a15e78593a31cfe8f92e92442916a5ceee4acee864384f9b3fc9fab253c9"
     },
     {
       "id": "bund/BGERR/art_13",
@@ -465,7 +521,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Folgende Nebenbeschäftigungen können bewilligt werden:"
+          "text": "Folgende Nebenbeschäftigungen können bewilligt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mitwirkung in Schiedsgerichten, Rechtsprechungsorganen und Expertenkommissionen sowie Mandate für Mediationen und Gutachten, soweit ein öffentliches Interesse besteht;"
+            },
+            {
+              "marke": "b",
+              "text": "punktuelle Lehraufträge, Herausgabe von Kommentaren, Publikationsreihen und Fachzeitschriften;"
+            },
+            {
+              "marke": "c",
+              "text": "Mitwirkung in Organen von Vereinigungen, Stiftungen oder anderen nicht wirtschaftlichen Organisationen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -476,7 +546,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_19",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "01b26fdc013c979c50c1f0fd0bbd6567ea369f86e51944c0418388408b91b75a"
+      "sha": "4a57024e63f25d622e83d8e33c7a97d4fb9eaa6c7e77cd482d32503eaf865710"
     },
     {
       "id": "bund/BGERR/art_20",
@@ -630,7 +700,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Bundesgericht besteht aus folgenden acht Abteilungen:"
+          "text": "Das Bundesgericht besteht aus folgenden acht Abteilungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vier öffentlich-rechtlichen Abteilungen;"
+            },
+            {
+              "marke": "b",
+              "text": "zwei zivilrechtlichen Abteilungen;"
+            },
+            {
+              "marke": "c",
+              "text": "zwei strafrechtlichen Abteilungen;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -657,7 +745,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_26",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "5265aa5a3518a6ef526fc64426ba6b73ebd2ecb0787ec363886738761c4dc5f3"
+      "sha": "a9d9f837e2cf32d6f986e0bf87706bc45d3407e6fe6dab0c5eceabf5359e43f4"
     },
     {
       "id": "bund/BGERR/art_27",
@@ -719,11 +807,71 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erste öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:"
+          "text": "Die Erste öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Enteignungen;"
+            },
+            {
+              "marke": "b",
+              "text": "raumbezogene Materien, namentlich: 1. Raumplanung und Baurecht,"
+            },
+            {
+              "marke": "2",
+              "text": "Umweltschutz, Gewässerschutz, Wald, Natur- und Heimatschutz,"
+            },
+            {
+              "marke": "3",
+              "text": "öffentliche Werke,"
+            },
+            {
+              "marke": "4",
+              "text": "Meliorationen,"
+            },
+            {
+              "marke": "5",
+              "text": "mit Raumplanung verbundene Bauförderung,"
+            },
+            {
+              "marke": "6",
+              "text": "Wanderwege;"
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Sofern die Streitsache keinem anderen Rechtsgebiet zugeordnet werden kann, behandelt die Erste öffentlich-rechtliche Abteilung die Beschwerden in öffentlich-rechtlichen Angelegenheiten und subsidiären Verfassungsbeschwerden, die folgende Grundrechte betreffen:"
+          "text": "Sofern die Streitsache keinem anderen Rechtsgebiet zugeordnet werden kann, behandelt die Erste öffentlich-rechtliche Abteilung die Beschwerden in öffentlich-rechtlichen Angelegenheiten und subsidiären Verfassungsbeschwerden, die folgende Grundrechte betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Rechtsgleichheit (Art. 8 der Bundesverfassung, BV);"
+            },
+            {
+              "marke": "b",
+              "text": "Schutz vor Willkür und Wahrung von Treu und Glauben (Art. 9 BV);"
+            },
+            {
+              "marke": "c",
+              "text": "Recht auf Leben und persönliche Freiheit (Art. 10 BV);"
+            },
+            {
+              "marke": "d",
+              "text": "Schutz der Privatsphäre, Recht auf Ehe und Familie, Meinungs- und Informationsfreiheit, Medienfreiheit (Art. 13, 14, 16 und 17 BV);"
+            },
+            {
+              "marke": "e",
+              "text": "Kunstfreiheit, Versammlungsfreiheit, Vereinigungsfreiheit (Art. 21–23 BV);"
+            },
+            {
+              "marke": "f",
+              "text": "die Eigentumsgarantie (Art. 26 BV);"
+            },
+            {
+              "marke": "g",
+              "text": "Allgemeine Verfahrensgarantien, Rechtsweggarantie, gerichtliche Verfahren, Freiheitsentzug (Art. 29–31 BV)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -738,7 +886,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_29",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "1b2365aeb17efedab06c37b39903e5a4e87cd45cb66b9725f0871f5421d50f37"
+      "sha": "d49d65e8299e2cf6b98ca60f3cbc3d37d295a11ba196fa0a4e7169cb13a7faba"
     },
     {
       "id": "bund/BGERR/art_30",
@@ -750,11 +898,139 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Zweite öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:"
+          "text": "Die Zweite öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ausländerrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "internationale Amtshilfe in Steuersachen;"
+            },
+            {
+              "marke": "c",
+              "text": "öffentliches Wirtschaftsrecht und sonstiges Verwaltungsrecht, soweit es nicht einer anderen Abteilung zugewiesen ist, namentlich: 1. Staatshaftung (ohne medizinische Tätigkeit und ohne Ansprüche nach strafprozessualen Normen über Entschädigungen),"
+            },
+            {
+              "marke": "2",
+              "text": "Bildungsrecht,"
+            },
+            {
+              "marke": "3",
+              "text": "Erwerb von Grundstücken durch Personen im Ausland,"
+            },
+            {
+              "marke": "4",
+              "text": "Filmwesen,"
+            },
+            {
+              "marke": "5",
+              "text": "Tierschutz,"
+            },
+            {
+              "marke": "6",
+              "text": "Subventionen,"
+            },
+            {
+              "marke": "7",
+              "text": "Konzessionen und Monopole,"
+            },
+            {
+              "marke": "8",
+              "text": "öffentliches Beschaffungswesen,"
+            },
+            {
+              "marke": "9",
+              "text": "Energie (Lieferung von Wasser und Elektrizität),"
+            },
+            {
+              "marke": "10",
+              "text": "Verkehrsbetriebsbewilligungen,"
+            },
+            {
+              "marke": "11",
+              "text": "Transport: Strassen, Eisenbahn, Luftverkehr, Schifffahrt (alle ausgenommen Planung, Enteignung oder Bau von Anlagen)"
+            },
+            {
+              "marke": "12",
+              "text": "Post,"
+            },
+            {
+              "marke": "13",
+              "text": "Radio und Fernsehen,"
+            },
+            {
+              "marke": "14",
+              "text": "Gesundheit und Lebensmittelpolizei,"
+            },
+            {
+              "marke": "15",
+              "text": "öffentliches Arbeitsrecht,"
+            },
+            {
+              "marke": "16",
+              "text": "Landwirtschaft,"
+            },
+            {
+              "marke": "17",
+              "text": "Jagd und Fischerei,"
+            },
+            {
+              "marke": "18",
+              "text": "Lotterie und Glücksspiele,"
+            },
+            {
+              "marke": "19",
+              "text": "Aufsicht über Banken, Versicherungen, Börsen, Kartelle und Preisüberwachung,"
+            },
+            {
+              "marke": "20",
+              "text": "Aussenhandel,"
+            },
+            {
+              "marke": "21",
+              "text": "freie Berufe."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Sofern die Streitsache keinem anderen Rechtsgebiet zugeordnet werden kann, behandelt die Zweite öffentlich-rechtliche Abteilung die Beschwerden in öffentlich-rechtlichen Angelegenheiten und subsidiären Verfassungsbeschwerden, die folgende Grundrechte betreffen:"
+          "text": "Sofern die Streitsache keinem anderen Rechtsgebiet zugeordnet werden kann, behandelt die Zweite öffentlich-rechtliche Abteilung die Beschwerden in öffentlich-rechtlichen Angelegenheiten und subsidiären Verfassungsbeschwerden, die folgende Grundrechte betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schutz der Kinder und Jugendlichen (Art. 11 BV);"
+            },
+            {
+              "marke": "b",
+              "text": "Glaubens- und Gewissensfreiheit (Art. 15 BV);"
+            },
+            {
+              "marke": "c",
+              "text": "Sprachenfreiheit (Art. 18 BV);"
+            },
+            {
+              "marke": "d",
+              "text": "Anspruch auf Grundschulunterricht (Art. 19 BV);"
+            },
+            {
+              "marke": "e",
+              "text": "Wissenschaftsfreiheit (Art. 20 BV);"
+            },
+            {
+              "marke": "f",
+              "text": "Niederlassungsfreiheit (Art. 24 BV);"
+            },
+            {
+              "marke": "g",
+              "text": "Wirtschaftsfreiheit (Art. 27 BV);"
+            },
+            {
+              "marke": "h",
+              "text": "Koalitionsfreiheit (Art. 28 BV)."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -765,7 +1041,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_30",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "4c96ff2f1ef485eba13981166be543995e23ff55d2b47a9577e9c8fbb4378daf"
+      "sha": "884e02f03a9b2a5f8e7924d9eae3e63874ff17ec1493b977fef8ea2b60b3d5d8"
     },
     {
       "id": "bund/BGERR/art_31",
@@ -777,14 +1053,44 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Dritte öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:"
+          "text": "Die Dritte öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Steuern und Abgaben;"
+            },
+            {
+              "marke": "b",
+              "text": "Alters- und Hinterlassenenversicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "Invalidenversicherung;"
+            },
+            {
+              "marke": "d",
+              "text": "Erwerbsersatzordnung, einschliesslich Mutterschaft;"
+            },
+            {
+              "marke": "e",
+              "text": "Krankenversicherung;"
+            },
+            {
+              "marke": "f",
+              "text": "berufliche Vorsorge (Art. 73 und 74 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge);"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_31",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "7556e0a26dac961c563abd198c48067ae43f4484cbf1ce2f113503434fdd98d9"
+      "sha": "3fe9f3cd02538e3a0c4226e9285a7a376e51f41ab74a1dda7c9fa8bcc13c3662"
     },
     {
       "id": "bund/BGERR/art_32",
@@ -796,14 +1102,56 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Vierte öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:"
+          "text": "Die Vierte öffentlich-rechtliche Abteilung behandelt die Beschwerden in öffentlich-rechtlichen Angelegenheiten und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Invalidenversicherung;"
+            },
+            {
+              "marke": "b",
+              "text": "Unfallversicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "Arbeitslosenversicherung;"
+            },
+            {
+              "marke": "d",
+              "text": "kantonale Sozialversicherung;"
+            },
+            {
+              "marke": "e",
+              "text": "Familienzulagen;"
+            },
+            {
+              "marke": "f",
+              "text": "Sozialhilfe und Hilfe in Notlagen gemäss Art. 12 BV;"
+            },
+            {
+              "marke": "g",
+              "text": "Militärversicherung;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "Ergänzungsleistungen;"
+            },
+            {
+              "marke": "j",
+              "text": "Überbrückungsleistungen für ältere Arbeitslose."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_32",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "dc4b6686edc468fc469bd513f94b7a4267039e79ec141031cb0199a5f97e0a92"
+      "sha": "4cd193fe2d76e372dbbb56d46218e9d6f5372ed516a5c052f4c941c54a9fb3e1"
     },
     {
       "id": "bund/BGERR/art_33",
@@ -815,7 +1163,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Erste zivilrechtliche Abteilung behandelt die Beschwerden in Zivilsachen und die subsidiären Verfassungsbeschwerden, welche folgende Rechtsgebiete betreffen:"
+          "text": "Die Erste zivilrechtliche Abteilung behandelt die Beschwerden in Zivilsachen und die subsidiären Verfassungsbeschwerden, welche folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schuldrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "Versicherungsvertrag;"
+            },
+            {
+              "marke": "c",
+              "text": "ausservertragliches Haftpflichtrecht (auch nach Spezialgesetzen);"
+            },
+            {
+              "marke": "d",
+              "text": "medizinische Staatshaftung;"
+            },
+            {
+              "marke": "e",
+              "text": "privates Wettbewerbsrecht;"
+            },
+            {
+              "marke": "f",
+              "text": "Immaterialgüterrecht;"
+            },
+            {
+              "marke": "g",
+              "text": "nationale und internationale Schiedsgerichtsbarkeit;"
+            },
+            {
+              "marke": "h",
+              "text": "Registersachen und Entscheide über die Anerkennung und Vollstreckung von Entscheiden sowie über die Rechtshilfe in Zivilsachen gemäss Artikel 72 Absatz 2 Buchstabe b Ziffern 1 und 2 BGG in den Rechtsgebieten nach den Buchstaben a–g;"
+            },
+            {
+              "marke": "i",
+              "text": "provisorische und definitive Rechtsöffnungen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -826,7 +1212,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_33",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "be2f4e38220dbcbe340d1ff0009a22b443f85aed7cf743ae525f384c42504dac"
+      "sha": "72ce7bd3b1041bf3e4e53b99c08303f277e4248181eba2bfa49e315dc38d816a"
     },
     {
       "id": "bund/BGERR/art_34",
@@ -838,7 +1224,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Zweite zivilrechtliche Abteilung behandelt die Beschwerden in Zivilsachen und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:"
+          "text": "Die Zweite zivilrechtliche Abteilung behandelt die Beschwerden in Zivilsachen und die subsidiären Verfassungsbeschwerden, die folgende Rechtsgebiete betreffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zivilgesetzbuch: 1. Personenrecht,"
+            },
+            {
+              "marke": "2",
+              "text": "Familienrecht,"
+            },
+            {
+              "marke": "3",
+              "text": "Erbrecht,"
+            },
+            {
+              "marke": "4",
+              "text": "Sachenrecht;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -849,7 +1253,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_34",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "5c36f98cc9f17fb3df44afe4caf484013dda096d804e222a74a8e91a75326e8e"
+      "sha": "92466a674ffee7a95a7dc1c70e566b0c7a8abf38193884180d07e6d1cfc7fd3c"
     },
     {
       "id": "bund/BGERR/art_35",
@@ -880,14 +1284,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Zweite strafrechtliche Abteilung behandelt die Beschwerden betreffend:"
+          "text": "Die Zweite strafrechtliche Abteilung behandelt die Beschwerden betreffend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "strafprozessuale Zwischenentscheide;"
+            },
+            {
+              "marke": "b",
+              "text": "strafprozessuale Endentscheide (einschliesslich Nichtanhandnahme-verfügungen und Verfahrenseinstellungen);"
+            },
+            {
+              "marke": "c",
+              "text": "Entscheide über den Vollzug von Strafen und Massnahmen;"
+            },
+            {
+              "marke": "d",
+              "text": "selbstständige nachträgliche Entscheide des Gerichts, Entscheide über eine Friedensbürgschaft in einem selbstständigen Verfahren und Entscheide im selbstständigen Einziehungsverfahren, sowie betreffende Revisionsgesuche."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_35_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "6c972daf4485671b5887e2b62b51fff0876070a008f5fd6b4a7c7ad67c795cdc"
+      "sha": "9d03b4947b383bea4f48d66f12510f2e46e05fd779e56a4d665f55ffcb9b32db"
     },
     {
       "id": "bund/BGERR/art_36",
@@ -973,7 +1395,45 @@
         },
         {
           "absatz": "3",
-          "text": "Sie nehmen folgende Aufgaben wahr:"
+          "text": "Sie nehmen folgende Aufgaben wahr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie wirken mit bei der Instruktion der Fälle."
+            },
+            {
+              "marke": "b",
+              "text": "Sie erarbeiten Referate unter der Verantwortung eines Richters oder einer Richterin."
+            },
+            {
+              "marke": "c",
+              "text": "Sie führen das Protokoll an Verhandlungen und Beratungen."
+            },
+            {
+              "marke": "d",
+              "text": "Sie redigieren die Urteile, Beschlüsse und gerichtlichen Verfügungen."
+            },
+            {
+              "marke": "e",
+              "text": "Sie teilen das Urteilsdispositiv schriftlich mit, wenn der Entscheid in einer mündlichen Beratung getroffen worden ist (Art. 60 Abs. 2 BGG) oder wenn das Urteil nach der Fällung nicht sofort mitgeteilt werden kann."
+            },
+            {
+              "marke": "f",
+              "text": "Sie beaufsichtigen die Kanzlei bei der Erledigung der Urteile, Beschlüsse, Protokolle und gerichtlichen Verfügungen, die sie redigiert haben, und unterzeichnen diese, soweit dies vorgesehen ist."
+            },
+            {
+              "marke": "g",
+              "text": "Sie bearbeiten und anonymisieren die zur Veröffentlichung bestimmten oder an Dritte abzugebenden Urteile."
+            },
+            {
+              "marke": "h",
+              "text": "Sie vertreten sich gegenseitig und helfen einander aus."
+            },
+            {
+              "marke": "i",
+              "text": "Sie erfüllen weitere Aufgaben für die Abteilungen oder das Bundesgericht."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -984,7 +1444,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_38",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "12ae2c554204539df1e774917f01ff2967bc2dcb52d5c47544ec1c9b874f8d08"
+      "sha": "ff376afd56f31812069207954293b1b0a326ac6d0f8de20818554927d311880e"
     },
     {
       "id": "bund/BGERR/art_39",
@@ -996,14 +1456,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Gerichtsschreiber und Gerichtsschreiberinnen können ihre beratende Stimme ausüben:"
+          "text": "Die Gerichtsschreiber und Gerichtsschreiberinnen können ihre beratende Stimme ausüben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der mündlichen Beratung nach der ersten Meinungsäusserung der Richter und Richterinnen;"
+            },
+            {
+              "marke": "b",
+              "text": "im Verfahren auf dem Wege der Aktenzirkulation mit Bemerkungen bei der Erarbeitung des Referates oder, wenn sie daran nicht mitgewirkt haben, nach der Zirkulation bei den Richtern und Richterinnen."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_39",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "7450369bb12e539394de3ead37c2d050254070f1a39cb992586bdb879a520c29"
+      "sha": "f50c45cf3103b8f0e0735f051df54fae7d8ba85f00f14cc7b32a292601f6c3bf"
     },
     {
       "id": "bund/BGERR/art_40",
@@ -1019,7 +1489,33 @@
         },
         {
           "absatz": "2",
-          "text": "Bei der Bezeichnung der Mitglieder des Spruchkörpers berücksichtigt der Abteilungspräsident oder die Abteilungspräsidentin oder das präsidierende Mitglied neben den zwingenden Bestimmungen namentlich folgende Kriterien und Umstände:"
+          "text": "Bei der Bezeichnung der Mitglieder des Spruchkörpers berücksichtigt der Abteilungspräsident oder die Abteilungspräsidentin oder das präsidierende Mitglied neben den zwingenden Bestimmungen namentlich folgende Kriterien und Umstände:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ausgewogenheit der Belastung der Richter und Richterinnen; dabei ist den funktionsbedingten Zusatzbelastungen, zum Beispiel Bundesgerichtspräsidium, Rechnung zu tragen;"
+            },
+            {
+              "marke": "b",
+              "text": "Sprache; dabei soll soweit möglich die Muttersprache des Referenten oder der Referentin der Verfahrenssprache entsprechen;"
+            },
+            {
+              "marke": "c",
+              "text": "Mitwirkung von Mitgliedern beiderlei Geschlechts in Fällen, in denen es die Natur der Streitsache als angezeigt erscheinen lässt;"
+            },
+            {
+              "marke": "d",
+              "text": "spezifische Fachkenntnisse in einem bestimmten Bereich;"
+            },
+            {
+              "marke": "e",
+              "text": "Mitwirkung an früheren Entscheiden im gleichen Sachgebiet;"
+            },
+            {
+              "marke": "f",
+              "text": "Abwesenheiten, insbesondere Krankheit, Ferien usw."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1050,7 +1546,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_40",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "beeee8eb2388f8845669649ccc22472db8bd23ecf4ebe7af182224cad329ad3a"
+      "sha": "97684921d6c6e4fc371189960185d1445497e8cfec1e01cadacb457b43d4234e"
     },
     {
       "id": "bund/BGERR/art_41",
@@ -1212,7 +1708,17 @@
         },
         {
           "absatz": "2",
-          "text": "Urteile werden unterschrieben:"
+          "text": "Urteile werden unterschrieben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vom Präsidenten oder von der Präsidentin der Abteilung beziehungsweise dem oder der Vorsitzenden des Spruchkörpers; und"
+            },
+            {
+              "marke": "b",
+              "text": "vom Gerichtsschreiber oder von der Gerichtsschreiberin."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1239,7 +1745,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_47",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "1a958fd67bf364629e57bf6be6fe602391bf1466343c5c1f2ffabbce12cf9b78"
+      "sha": "3c1bb863b00b4963131cd8859686808276ce1100e4e725c414c3fb2559b80ae2"
     },
     {
       "id": "bund/BGERR/art_48",
@@ -1274,7 +1780,45 @@
         },
         {
           "absatz": "2",
-          "text": "Er oder sie ist namentlich zuständig für:"
+          "text": "Er oder sie ist namentlich zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vorbereitung des Voranschlags, des Finanzplans und der Rechnung zuhanden der Verwaltungskommission sowie für die Kontrolle des Finanzwesens;"
+            },
+            {
+              "marke": "b",
+              "text": "die Koordination und Kontrolle der wissenschaftlichen und administrativen Dienste;"
+            },
+            {
+              "marke": "c",
+              "text": "die Gebäude (Unterhalt, Benützung, Bauten, Miete) in Zusammenarbeit mit den zuständigen Stellen der Bundesverwaltung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Sicherheit;"
+            },
+            {
+              "marke": "e",
+              "text": "den Erlass von Weisungen und einheitlichen Regeln für die Anlage und Ablage der Akten;"
+            },
+            {
+              "marke": "f",
+              "text": "das Publikationswesen, die Information und die Öffentlichkeitsarbeit gemäss dem Informationsreglement sowie gesellschaftliche Anlässe;"
+            },
+            {
+              "marke": "g",
+              "text": "die Personalentscheidungen gemäss der Personalverordnung des Bundesgerichts vom 27. August 2001 sowie für die Vorbereitung der in die Kompetenz der Verwaltungskommission fallenden Personalentscheidungen;"
+            },
+            {
+              "marke": "h",
+              "text": "die Beglaubigung von Unterschriften, Urteilen und Kopien sowie von Auszügen aus Protokollen und Akten;"
+            },
+            {
+              "marke": "i",
+              "text": "sämtliche weiteren Geschäfte, die ihm oder ihr durch Verordnung oder Reglement oder von den Leitungsorganen zugewiesen werden."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1285,7 +1829,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_49",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "4513f796fd1ce7c1d94bf2cd12e48bd873ed1604a59054391f8e1a85543339df"
+      "sha": "67f07908c07f3e06c98c5f19b013935c57030fe76a8e0bedcc8e75ca58bcd355"
     },
     {
       "id": "bund/BGERR/art_50",
@@ -1408,14 +1952,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Rekurskommission beurteilt Streitigkeiten nach folgenden Bestimmungen:"
+          "text": "Die Rekurskommission beurteilt Streitigkeiten nach folgenden Bestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Artikel 10 Absatz 2 zweiter Satz des Reglements vom 31. März 2006 über die Verwaltungsgebühren des Bundesgerichts; sie beurteilt auch Streitigkeiten betreffend andere Verfügungen des Generalsekretariats über den Kosteneinzug;"
+            },
+            {
+              "marke": "b",
+              "text": "Artikel 28 BGG und Artikel 64 dieses Reglements betreffend das Öffentlichkeitsprinzip in der Verwaltung;"
+            },
+            {
+              "marke": "c",
+              "text": "Artikel 16 der Verordnung des Bundesgerichts vom 27. September 1997 zum Archivierungsgesetz;"
+            },
+            {
+              "marke": "d",
+              "text": "Artikel 15 der Richtlinien vom 6. November 2006 betreffend die Gerichtsberichterstattung am Bundesgericht;"
+            },
+            {
+              "marke": "e",
+              "text": "Art. 52 Abs. 4 des Bundesgesetzes vom 21. Juni 2019 über das öffentliche Beschaffungswesen."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_55",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "a62925f5a193b9298c8be0301729f3e5b05623f1646d9128a41ace9b2a75ccc8"
+      "sha": "7616035f522f41069dc136050365e709414533dd6716417f81274530fa56bb82"
     },
     {
       "id": "bund/BGERR/art_56",
@@ -1446,7 +2012,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Bundesgericht informiert die Öffentlichkeit über seine Rechtsprechung mit folgenden Mitteln:"
+          "text": "Das Bundesgericht informiert die Öffentlichkeit über seine Rechtsprechung mit folgenden Mitteln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Amtliche Sammlung der Entscheidungen des Schweizerischen Bundesgerichts (Amtliche Sammlung, BGE);"
+            },
+            {
+              "marke": "b",
+              "text": "Internet;"
+            },
+            {
+              "marke": "c",
+              "text": "öffentliche Auflage der Urteile;"
+            },
+            {
+              "marke": "d",
+              "text": "Mitteilungen an die Medien."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1457,7 +2041,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_57",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "0e6280d2fc0006c79e0becc664b9d6e0db2500a201fc59abdc4bf5bed607bd3a"
+      "sha": "12402965fd3b9d7649731e3e929cb1e3d18b9becdb490fd4c95da304d6d011a3"
     },
     {
       "id": "bund/BGERR/art_58",
@@ -1496,7 +2080,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Internet werden veröffentlicht:"
+          "text": "Im Internet werden veröffentlicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Entscheide der Amtlichen Sammlung;"
+            },
+            {
+              "marke": "b",
+              "text": "alle End- und Teilentscheide sowie die vom Abteilungspräsidium bezeichneten Vor- und Zwischenentscheide."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1507,7 +2101,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_59",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "1d5a62911d1d2cbafca5bae2025e3a046dbd4f4d7446498144d43c7bc088a930"
+      "sha": "2737d7a30f71ea1f5d65b6d14fe45718c037d080c68b20063a1381513a607f36"
     },
     {
       "id": "bund/BGERR/art_60",
@@ -1693,14 +2287,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Folgende Reglemente werden aufgehoben:"
+          "text": "Folgende Reglemente werden aufgehoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Reglement vom 14. Dezember 1978 für das Schweizerische Bundesgericht;"
+            },
+            {
+              "marke": "2",
+              "text": "Reglement vom 16. November 1999 für das Eidgenössische Versicherungsgericht;"
+            },
+            {
+              "marke": "3",
+              "text": "Reglement vom 22. Februar 1993 über die Nebenbeschäftigungen der Mitglieder des Bundesgerichts;"
+            },
+            {
+              "marke": "4",
+              "text": "Reglement vom 16. März 1993 über die Nebenbeschäftigungen der Mitglieder des Eidgenössischen Versicherungsgerichts."
+            }
+          ]
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/834/de#art_65",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260201",
-      "sha": "fdc6ab385eb6edcaa66972a08cc780c5266ef6b1e7b71f252b39d3975fd31e67"
+      "sha": "1cb38083c50a07737e9b84260d8f076a4cd4535f6e49825540da7672846d5eca"
     },
     {
       "id": "bund/BGERR/art_66",

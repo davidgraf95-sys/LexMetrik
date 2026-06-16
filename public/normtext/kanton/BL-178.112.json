@@ -11,7 +11,49 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Grundhonorar berechnet sich für das Verfahren vor 1. Instanz nach folgenden Ansätzen, in welchen eine Hauptverhandlung und zusätzlich entweder im mündlichen Verfahren eine Einleitungsverhandlung oder im schriftlichen Verfahren eine Rechtsschrift inbegriffen sind: a. Streitwert bis CHF 2'000.–: min. CHF 350.–, max. CHF 750.–; b. Streitwert CHF 2'000–5'000.–: min. CHF 675.–, max. CHF 1'500.–; c. Streitwert CHF 5'000–10'000.–: min. CHF 1'500.–, max. CHF 2'400.–; d. Streitwert CHF 10'000–20'000: min. CHF 2'250.–, max. CHF 3'600.–; e. Streitwert CHF 20'000–50'000.–: min. CHF 3'300.–, max. CHF 6'450.–; f. Streitwert CHF 50'000–100'000.–: min. CHF 6'000.–, max. CHF 10'500.–; g. Streitwert CHF 100'000–200'000.–: min. CHF 9'750.–, max. CHF 17'250.–; h. Streitwert CHF 200'000–500'000.–: min. CHF 16'500.–, max. CHF 34'500.–; i. Streitwert CHF 500'000–1'000'000.–: min. CHF 33'000.–, max. CHF 55'500.–; j. Streitwert CHF 1'000'000–2'000'000.–: min. CHF 52'500.–, max. CHF 82'500.–."
+          "text": "Das Grundhonorar berechnet sich für das Verfahren vor 1. Instanz nach folgenden Ansätzen, in welchen eine Hauptverhandlung und zusätzlich entweder im mündlichen Verfahren eine Einleitungsverhandlung oder im schriftlichen Verfahren eine Rechtsschrift inbegriffen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Streitwert bis CHF 2'000.–: min. CHF 350.–, max. CHF 750.–;"
+            },
+            {
+              "marke": "b",
+              "text": "Streitwert CHF 2'000–5'000.–: min. CHF 675.–, max. CHF 1'500.–;"
+            },
+            {
+              "marke": "c",
+              "text": "Streitwert CHF 5'000–10'000.–: min. CHF 1'500.–, max. CHF 2'400.–;"
+            },
+            {
+              "marke": "d",
+              "text": "Streitwert CHF 10'000–20'000: min. CHF 2'250.–, max. CHF 3'600.–;"
+            },
+            {
+              "marke": "e",
+              "text": "Streitwert CHF 20'000–50'000.–: min. CHF 3'300.–, max. CHF 6'450.–;"
+            },
+            {
+              "marke": "f",
+              "text": "Streitwert CHF 50'000–100'000.–: min. CHF 6'000.–, max. CHF 10'500.–;"
+            },
+            {
+              "marke": "g",
+              "text": "Streitwert CHF 100'000–200'000.–: min. CHF 9'750.–, max. CHF 17'250.–;"
+            },
+            {
+              "marke": "h",
+              "text": "Streitwert CHF 200'000–500'000.–: min. CHF 16'500.–, max. CHF 34'500.–;"
+            },
+            {
+              "marke": "i",
+              "text": "Streitwert CHF 500'000–1'000'000.–: min. CHF 33'000.–, max. CHF 55'500.–;"
+            },
+            {
+              "marke": "j",
+              "text": "Streitwert CHF 1'000'000–2'000'000.–: min. CHF 52'500.–, max. CHF 82'500.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22,7 +64,7 @@
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/178.112",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3e4216315c1c9c09714af97fa7f77fa9",
-      "sha": "e9816f6ed0a5d63ed1b3c29759e6a7d69fe3ed7388fbc82d2929992bad5a295b"
+      "sha": "1b46ce473df7dddbf1db1dedc4bf94247ffd7653db254d54be99a8b868c3971b"
     },
     {
       "id": "kanton/BL/178.112/art_2",

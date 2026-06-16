@@ -11,7 +11,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Bund erhebt Stempelabgaben:"
+          "text": "Der Bund erhebt Stempelabgaben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Obligationen,"
+            },
+            {
+              "marke": "2",
+              "text": "Aktien,"
+            },
+            {
+              "marke": "3",
+              "text": "Stammanteile von Gesellschaften mit beschränkter Haftung und Anteilscheine von Genossenschaften,"
+            },
+            {
+              "marke": "3",
+              "text": "Partizipationsscheine und Beteiligungsscheine von Genossenschaftsbanken,"
+            },
+            {
+              "marke": "4",
+              "text": "Genussscheine,"
+            },
+            {
+              "marke": "5",
+              "text": "Anteile an kollektiven Kapitalanlagen gemäss Kollektivanlagengesetz vom 23. Juni 2006 (KAG),"
+            },
+            {
+              "marke": "6",
+              "text": "Papiere, die dieses Gesetz den Urkunden nach den Ziffern 1–5 gleichstellt;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -22,7 +52,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_1",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "a7d7377d5c175a937a29ddaacaa79a03dabb87d68aaf7af37989a6b739e818b9"
+      "sha": "8ca4bc007754ccd15fc3872d0cff4c4db3f6b439a2f8e448b0e803a3c62c6c86"
     },
     {
       "id": "bund/STG/art_2",
@@ -88,7 +118,21 @@
         },
         {
           "absatz": "4",
-          "text": "Den Obligationen gleichgestellt sind:"
+          "text": "Den Obligationen gleichgestellt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in einer Mehrzahl ausgegebene Wechsel, wechselähnliche Schuldverschreibungen und andere Diskontpapiere, sofern sie zur Unterbringung im Publikum bestimmt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausweise über Unterbeteiligungen an Darlehensforderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "in einer Mehrzahl ausgegebene, der kollektiven Kapitalbeschaffung dienende Buchforderungen."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -99,7 +143,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_4",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "edc10f950c7423e7bcd1fe62ef87b1dbae9587801a7bf109fcac351687bf8f6a"
+      "sha": "1008de2bbed504a791103a8d9f1dba91155de6fb36acbcc77a53bcc0d5b802d4"
     },
     {
       "id": "bund/STG/art_5",
@@ -111,18 +155,58 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gegenstand der Abgabe sind:"
+          "text": "Gegenstand der Abgabe sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die entgeltliche oder unentgeltliche Begründung und Erhöhung des Nennwertes von Beteiligungsrechten in Form von: – Aktien inländischer Aktiengesellschaften und Kommanditaktiengesellschaften;"
+            },
+            {
+              "marke": "–",
+              "text": "Stammanteilen inländischer Gesellschaften mit beschränkter Haftung;"
+            },
+            {
+              "marke": "–",
+              "text": "Genossenschaftsanteilen inländischer Genossenschaften;"
+            },
+            {
+              "marke": "–",
+              "text": "Genussscheinen inländischer Gesellschaften oder Genossenschaften. Als Genussscheine gelten Urkunden über Ansprüche auf einen Anteil am Reingewinn oder am Liquidationsergebnis;"
+            },
+            {
+              "marke": "–",
+              "text": "Partizipationsscheinen inländischer Gesellschaften, Genossenschaften oder gewerblicher Unternehmen des öffentlichen Rechts;"
+            },
+            {
+              "marke": "–",
+              "text": "Beteiligungsscheinen von Genossenschaftsbanken."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Der Begründung von Beteiligungsrechten im Sinne von Absatz 1 Buchstabe a sind gleichgestellt:"
+          "text": "Der Begründung von Beteiligungsrechten im Sinne von Absatz 1 Buchstabe a sind gleichgestellt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuschüsse, die die Gesellschafter oder Genossenschafter ohne entsprechende Gegenleistung an die Gesellschaft oder Genossenschaft erbringen, ohne dass das im Handelsregister eingetragene Gesellschaftskapital oder der einbezahlte Betrag der Genossenschaftsanteile erhöht wird;"
+            },
+            {
+              "marke": "b",
+              "text": "der Handwechsel der Mehrheit der Aktien, Stammanteilen oder Genossenschaftsanteile an einer inländischen Gesellschaft oder Genossenschaft, die wirtschaftlich liquidiert oder in liquide Form gebracht worden ist;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "2e920c7e34d66151bbf2707b3e4adcddf86c500e3785a60073db93c91c8cf52d"
+      "sha": "d5209c1943e1569b7676484084533caff0ee9b19efb4ec0289e4613ada22f5bf"
     },
     {
       "id": "bund/STG/art_5_a",
@@ -153,7 +237,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von der Abgabe sind ausgenommen:"
+          "text": "Von der Abgabe sind ausgenommen:",
+          "items": [
+            {
+              "marke": "–",
+              "text": "bestehende Verluste beseitigt werden, und"
+            },
+            {
+              "marke": "–",
+              "text": "die Leistungen der Gesellschafter oder Genossenschafter gesamthaft 10 Millionen Franken nicht übersteigen;"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -164,7 +258,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_6",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "69efdf117e1d0d387b77228cebfdef2e0fcd47ad33715c0999d1430f47bafe1c"
+      "sha": "e19568b8296ac55144c625aaf0c50d452e33088a8d83c22faae7be683fddd2eb"
     },
     {
       "id": "bund/STG/art_7",
@@ -176,7 +270,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Abgabeforderung entsteht:"
+          "text": "Die Abgabeforderung entsteht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Aktien, Partizipationsscheinen, Stammanteilen von Gesellschaften mit beschränkter Haftung und bei Beteiligungsscheinen von Genossenschaftsbanken: im Zeitpunkt der Eintragung der Begründung oder der Erhöhung der Beteiligungsrechte ins Handelsregister;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "bei Genossenschaftsanteilen: im Zeitpunkt ihrer Begründung oder Erhöhung;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Genussscheinen: im Zeitpunkt ihrer Ausgabe oder Erhöhung;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Zuschüssen und bei einem Handwechsel der Mehrheit von Beteiligungsrechten: im Zeitpunkt des Zuschusses oder des Handwechsels;"
+            },
+            {
+              "marke": "f",
+              "text": "bei Beteiligungsrechten, die im Rahmen eines Kapitalbands nach den Artikeln 653 s ff. des Obligationenrechts ausgegeben werden, am Ende des Kapitalbands."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -187,7 +307,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_7",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "2cbaaf3654ad480185780cfe0ffea2813d16d4656aee447e30d49417d50c07c0"
+      "sha": "90328fd9af6dfd16e06a284fed35c521009891efe72bd2ac29dc71fc8a3fce94"
     },
     {
       "id": "bund/STG/art_8",
@@ -199,7 +319,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Abgabe auf Beteiligungsrechten beträgt 1 Prozent und wird berechnet:"
+          "text": "Die Abgabe auf Beteiligungsrechten beträgt 1 Prozent und wird berechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Begründung und Erhöhung von Beteiligungsrechten: vom Betrag, der der Gesellschaft oder Genossenschaft als Gegenleistung für die Beteiligungsrechte zufliesst, mindestens aber vom Nennwert;"
+            },
+            {
+              "marke": "b",
+              "text": "auf Zuschüssen: vom Betrag des Zuschusses;"
+            },
+            {
+              "marke": "c",
+              "text": "beim Handwechsel der Mehrheit von Beteiligungsrechten: vom Reinvermögen, das sich im Zeitpunkt des Handwechsels in der Gesellschaft oder Genossenschaft befindet, mindestens aber vom Nennwert aller bestehenden Beteiligungsrechte."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -214,7 +348,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_8",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "3a2e96826062e25caacf58cec8376e0343da2606854401db791f4fbec1cf41ae"
+      "sha": "72911666fe8def0c4be4422379f9ac3c53ca07960848023ade87e093b7bd4f21"
     },
     {
       "id": "bund/STG/art_9",
@@ -226,7 +360,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Abgabe beträgt:"
+          "text": "Die Abgabe beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "auf unentgeltlich ausgegebenen Genussscheinen: 3 Franken je Genussschein;"
+            },
+            {
+              "marke": "e",
+              "text": "auf Beteiligungsrechten, die in Durchführung von Beschlüssen über die Fusion, Spaltung oder Umwandlung von Einzelunternehmen, Handelsgesellschaften ohne juristische Persönlichkeit, Vereinen, Stiftungen oder Unternehmen des öffentlichen Rechts begründet oder erhöht werden, sofern der bisherige Rechtsträger während mindestens fünf Jahren bestand: 1 Prozent des Nennwerts, vorbehältlich der Ausnahmen in Artikel 6 Absatz 1 Buchstabe h. Über den Mehrwert wird nachträglich abgerechnet, soweit während den der Umstrukturierung nachfolgenden fünf Jahren die Beteiligungsrechte veräussert werden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -241,7 +397,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_9",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "768a74f2780db6bd2067301342748482964b3c2ca988b4a402813db43ee4e4bd"
+      "sha": "1f6a713af86901731639951631217c85e5b920428a74a3a09ad7d930853b6bd2"
     },
     {
       "id": "bund/STG/art_9_a",
@@ -299,14 +455,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Abgabe wird fällig:"
+          "text": "Die Abgabe wird fällig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf Genossenschaftsanteilen: 30 Tage nach Geschäftsabschluss;"
+            },
+            {
+              "marke": "b",
+              "text": "auf Beteiligungsrechten: 30 Tage nach Ablauf des Vierteljahres, in dem die Abgabeforderung entstanden ist (Art. 7);"
+            },
+            {
+              "marke": "c",
+              "text": "in allen andern Fällen: 30 Tage nach Entstehung der Abgabeforderung (Art. 7)."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_11",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "4f905f3c970c04c0be4f766414c2247fdccf1e5ef5019e60fe9dbefe4946859b"
+      "sha": "e2fa5e0a8b9081fcdd98d0b4bf879f5469149680d2a68b5966d2150ed36dc795"
     },
     {
       "id": "bund/STG/art_12",
@@ -341,15 +511,61 @@
         },
         {
           "absatz": "2",
-          "text": "Steuerbare Urkunden sind:"
+          "text": "Steuerbare Urkunden sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die von einem Inländer ausgegebenen: 1. Obligationen (Art. 4 Abs. 3 und 4),"
+            },
+            {
+              "marke": "2",
+              "text": "Aktien, Stammanteile von Gesellschaften mit beschränkter Haftung, Anteilscheine und Beteiligungsscheine von Genossenschaften, Partizipationsscheine, Genussscheine,"
+            },
+            {
+              "marke": "3",
+              "text": "Anteile an kollektiven Kapitalanlagen gemäss KAG;"
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Effektenhändler sind:"
+          "text": "Effektenhändler sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Banken, die bankähnlichen Finanzgesellschaften im Sinne des Bankengesetzes vom 8. November 1934, die Schweizerische Nationalbank sowie die zentralen Gegenparteien im Sinne des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015;"
+            },
+            {
+              "marke": "b",
+              "text": "die nicht unter Buchstabe a fallenden inländischen natürlichen und juristischen Personen und Personengesellschaften, inländischen Anstalten und Zweigniederlassungen ausländischer Unternehmen, deren Tätigkeit ausschliesslich oder zu einem wesentlichen Teil darin besteht, 1. für Dritte den Handel mit steuerbaren Urkunden zu betreiben (Händler), oder"
+            },
+            {
+              "marke": "2",
+              "text": "als Anlageberater oder Vermögensverwalter Kauf und Verkauf von steuerbaren Urkunden zu vermitteln (Vermittler);"
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "Als inländische Einrichtungen der beruflichen Vorsorge und der gebundenen Vorsorge nach Absatz 3 Buchstabe d gelten:"
+          "text": "Als inländische Einrichtungen der beruflichen Vorsorge und der gebundenen Vorsorge nach Absatz 3 Buchstabe d gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Einrichtungen nach Artikel 48 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) und nach Artikel 331 des Obligationenrechts, der Sicherheitsfonds sowie die Auffangeinrichtung nach den Artikeln 56 und 60 BVG;"
+            },
+            {
+              "marke": "b",
+              "text": "Freizügigkeitsstiftungen nach den Artikeln 10 Absatz 3 und 19 der Verordnung vom 3. Oktober 1994 über die Freizügigkeit in der beruflichen Alters‑, Hinterlassenen- und Invalidenvorsorge;"
+            },
+            {
+              "marke": "c",
+              "text": "die Träger der in Artikel 1 Absatz 1 Buchstabe b der Verordnung vom 13. November 1985 über die steuerliche Abzugsberechtigung für Beiträge an anerkannte Vorsorgeformen erwähnten gebundenen Vorsorgeversicherungen und Vorsorgevereinbarungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Anlagestiftungen, die sich der Anlage und der Verwaltung von Vermögen von Vorsorgeeinrichtungen nach den Buchstaben a–c widmen und unter der Stiftungsaufsicht des Bundes oder der Kantone stehen."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -360,7 +576,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_13",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "25ae71e1aede191cc744f84f66d623aba6e7722958a005db113e32c79b93df3b"
+      "sha": "dcc9a3996da942df2fed45623f29c869a57d976c44ed205180de2d0f701d8b13"
     },
     {
       "id": "bund/STG/art_14",
@@ -372,7 +588,49 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von der Abgabe sind ausgenommen:"
+          "text": "Von der Abgabe sind ausgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausgabe inländischer Aktien, Stammanteile von Gesellschaften mit beschränkter Haftung und von Genossenschaften, Beteiligungsscheine von Genossenschaftsbanken, Partizipationsscheine, Genussscheine, Anteile an kollektiven Kapitalanlagen nach KAG, Obligationen und Geldmarktpapiere, einschliesslich der Festübernahme durch eine Bank oder Beteiligungsgesellschaft und der Zuteilung bei einer nachfolgenden Emission;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sacheinlage von Urkunden zur Liberierung in- oder ausländischer Aktien, Stammanteile von Gesellschaften mit beschränkter Haftung, Genossenschaftsanteile, Beteiligungsscheine von Genossenschaftsbanken, Partizipationsscheine und Anteile von kollektiven Kapitalanlagen nach KAG;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "der Handel mit Bezugsrechten;"
+            },
+            {
+              "marke": "e",
+              "text": "die Rückgabe von Urkunden zur Tilgung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Ausgabe von Obligationen ausländischer Schuldner, die auf eine fremde Währung lauten (Euroobligationen), sowie von Beteiligungsrechten an ausländischen Gesellschaften. Als Euroobligationen gelten ausschliesslich Titel, bei denen sowohl die Vergütung des Zinses als auch die Rückzahlung des Kapitals in einer fremden Währung erfolgen;"
+            },
+            {
+              "marke": "g",
+              "text": "der Handel mit in- und ausländischen Geldmarktpapieren;"
+            },
+            {
+              "marke": "h",
+              "text": "die Vermittlung oder der Kauf und Verkauf von ausländischen Obligationen, soweit der Käufer oder der Verkäufer eine ausländische Vertragspartei ist;"
+            },
+            {
+              "marke": "i",
+              "text": "die mit einer Umstrukturierung, insbesondere einer Fusion, Spaltung oder Umwandlung verbundene Übertragung steuerbarer Urkunden von der übernommenen, spaltenden oder umwandelnden Unternehmung auf die aufnehmende oder umgewandelte Unternehmung;"
+            },
+            {
+              "marke": "j",
+              "text": "der Erwerb oder die Veräusserung von steuerbaren Urkunden im Rahmen von Umstrukturierungen nach den Artikeln 61 Absatz 3 und 64 Absatz 1 bis des Bundesgesetzes vom 14. Dezember 1990 über die direkte Bundessteuer sowie bei der Übertragung von Beteiligungen von mindestens 20 Prozent am Grund- oder Stammkapital anderer Gesellschaften auf eine in- oder ausländische Konzerngesellschaft."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -387,7 +645,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_14",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "b08c56a342470327ab9ba65f51df2cd562e158c04a063dce9c7febe1e9da0167"
+      "sha": "8c5050bee7335b87cacd46e4eac1097ea55f46084fc93dd3abedf376175fbb42"
     },
     {
       "id": "bund/STG/art_15",
@@ -422,7 +680,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Abgabe wird auf dem Entgelt berechnet und beträgt:"
+          "text": "Die Abgabe wird auf dem Entgelt berechnet und beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "1,5 Promille für von einem Inländer ausgegebene Urkunden;"
+            },
+            {
+              "marke": "b",
+              "text": "3 Promille für von einem Ausländer ausgegebene Urkunden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -433,7 +701,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_16",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "40a5da5ffa90f4abbeae8ccd7b99972b3b8467ae98fd098408b65b51914bc4af"
+      "sha": "52ecd1174469c3f1138e442d872aafc5486b7e0b79994df5859c63d260b8ff05"
     },
     {
       "id": "bund/STG/art_17",
@@ -449,11 +717,35 @@
         },
         {
           "absatz": "2",
-          "text": "Er schuldet eine halbe Abgabe:"
+          "text": "Er schuldet eine halbe Abgabe:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn er vermittelt: für jede Vertragspartei, die sich weder als registrierter Effektenhändler noch als von der Abgabe befreiter Anleger ausweist;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn er Vertragspartei ist: für sich selbst und die Gegenpartei, die sich weder als registrierter Effektenhändler noch als von der Abgabe befreiter Anleger ausweist."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Der Effektenhändler gilt als Vermittler, wenn er"
+          "text": "Der Effektenhändler gilt als Vermittler, wenn er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit seinem Auftraggeber zu den Originalbedingungen des mit der Gegenpartei abgeschlossenen Geschäftes abrechnet;"
+            },
+            {
+              "marke": "b",
+              "text": "lediglich Gelegenheit zum Geschäftsabschluss nachweist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Urkunden am Tage ihres Erwerbs weiterveräussert."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -464,7 +756,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "e6d12f760495943daaa4f31d582f31e8f425f16aedd5701666be8729caf7b928"
+      "sha": "078165498673957e9205d78b50637f1d1fdd1869e5ff15334f63d6195dcea81a"
     },
     {
       "id": "bund/STG/art_17_a",
@@ -476,7 +768,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von der Abgabe nach Artikel 17 Absatz 2 befreit sind:"
+          "text": "Von der Abgabe nach Artikel 17 Absatz 2 befreit sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausländische Staaten und Zentralbanken;"
+            },
+            {
+              "marke": "b",
+              "text": "inländische kollektive Kapitalanlagen nach Artikel 7 KAG;"
+            },
+            {
+              "marke": "c",
+              "text": "ausländische kollektive Kapitalanlagen nach Artikel 119 KAG;"
+            },
+            {
+              "marke": "d",
+              "text": "ausländische Einrichtungen der Sozialversicherung;"
+            },
+            {
+              "marke": "e",
+              "text": "ausländische Einrichtungen der beruflichen Vorsorge;"
+            },
+            {
+              "marke": "f",
+              "text": "ausländische Lebensversicherer, die einer der Bundesaufsicht vergleichbaren ausländischen Regulierung unterstehen;"
+            },
+            {
+              "marke": "g",
+              "text": "ausländische Gesellschaften, deren Aktien an einer anerkannten Börse kotiert sind, sowie ihre ausländischen konsolidierten Konzerngesellschaften."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -484,14 +806,28 @@
         },
         {
           "absatz": "3",
-          "text": "Als ausländische Einrichtungen der beruflichen Vorsorge gelten Einrichtungen:"
+          "text": "Als ausländische Einrichtungen der beruflichen Vorsorge gelten Einrichtungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die der Alters‑, Hinterlassenen- und Invalidenvorsorge dienen;"
+            },
+            {
+              "marke": "b",
+              "text": "deren Mittel dauernd und ausschliesslich für die berufliche Vorsorge bestimmt sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "die einer der Bundesaufsicht vergleichbaren Aufsicht unterstellt sind."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17_a",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "17a2144efa263f5a7618531e1c2121649496a9fbd94372c5b8575a239c419802"
+      "sha": "7179271e616992eb147f5a6ee0992394880c2b69c6595e872de24c9e6041ca6f"
     },
     {
       "id": "bund/STG/art_18",
@@ -591,14 +927,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Gegenstand der Abgabe sind die Prämienzahlungen für Versicherungen,"
+          "text": "Gegenstand der Abgabe sind die Prämienzahlungen für Versicherungen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zum inländischen Bestand eines der Aufsicht des Bundes unterstellten oder eines inländischen öffentlich-rechtlichen Versicherers gehören;"
+            },
+            {
+              "marke": "b",
+              "text": "die ein inländischer Versicherungsnehmer mit einem nicht der Bundesaufsicht unterstellten ausländischen Versicherer abgeschlossen hat."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_21",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "cea04f2eda8a682590408cf456631a350fdfd0e0e07effc4535604ce36ddcf28"
+      "sha": "d34683afc83c14e460a6c665ec0f536b948e13c64e37f4f9d85e664dec93c14c"
     },
     {
       "id": "bund/STG/art_22",
@@ -610,14 +956,60 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Von der Abgabe ausgenommen sind die Prämienzahlungen für die"
+          "text": "Von der Abgabe ausgenommen sind die Prämienzahlungen für die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nichtrückkaufsfähige Lebensversicherung sowie die rückkaufsfähige Lebensversicherung mit periodischer Prämienzahlung; der Bundesrat legt in einer Verordnung die notwendigen Abgrenzungen fest;"
+            },
+            {
+              "marke": "b",
+              "text": "Kranken- und Invaliditätsversicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "Unfallversicherung;"
+            },
+            {
+              "marke": "d",
+              "text": "Transportversicherung für Güter;"
+            },
+            {
+              "marke": "e",
+              "text": "Versicherung für Elementarschäden an Kulturland und Kulturen;"
+            },
+            {
+              "marke": "f",
+              "text": "Arbeitslosenversicherung;"
+            },
+            {
+              "marke": "g",
+              "text": "Hagelversicherung;"
+            },
+            {
+              "marke": "h",
+              "text": "Viehversicherung;"
+            },
+            {
+              "marke": "i",
+              "text": "Rückversicherung;"
+            },
+            {
+              "marke": "k",
+              "text": "Kaskoversicherung für die in der Verordnung zu umschreibenden Luftfahrzeuge und Schiffe, die im Wesentlichen im Ausland der gewerbsmässigen Beförderung von Personen und Gütern dienen;"
+            },
+            {
+              "marke": "l",
+              "text": "Feuer‑, Diebstahl‑, Glas‑, Wasserschaden‑, Kredit‑, Maschinen- und Schmuckversicherung, sofern der Abgabepflichtige nachweist, dass sich die versicherte Sache im Ausland befindet."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_22",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "f94819fecf13256404a6ce28b9b13c71a7b2c37019692e9550f52375713bb981"
+      "sha": "6ef6485db300c3d83ab3f4b329938b419cfc44ce51e431df8f89aa34c175c88d"
     },
     {
       "id": "bund/STG/art_23",
@@ -894,14 +1286,24 @@
         },
         {
           "absatz": "2",
-          "text": "Keine Geheimhaltungspflicht besteht:"
+          "text": "Keine Geheimhaltungspflicht besteht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Leistung von Amtshilfe nach Artikel 32 Absatz 1 und bei Erfüllung einer Pflicht zur Anzeige strafbarer Handlungen;"
+            },
+            {
+              "marke": "b",
+              "text": "gegenüber Organen der Rechtspflege und der Verwaltung, die vom Bundesrat allgemein oder vom Eidgenössischen Finanzdepartement im Einzelfalle zur Einholung amtlicher Auskünfte bei den mit dem Vollzug dieses Gesetzes betrauten Behörden ermächtigt worden sind."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_33",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "a41f1e7c162d17ace1fed8438cd46ecb1d5a197614ccdaf93cf00c796d899111"
+      "sha": "39f2006bd31ce04db15385a59fe77d90ae8838400d12661ee35960bbf8458202"
     },
     {
       "id": "bund/STG/art_34",
@@ -940,7 +1342,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Abgabepflichtige hat der ESTV über alle Tatsachen, die für die Abgabepflicht oder für die Abgabebemessung von Bedeutung sein können, nach bestem Wissen und Gewissen Auskunft zu erteilen; er hat insbesondere:"
+          "text": "Der Abgabepflichtige hat der ESTV über alle Tatsachen, die für die Abgabepflicht oder für die Abgabebemessung von Bedeutung sein können, nach bestem Wissen und Gewissen Auskunft zu erteilen; er hat insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Steuerabrechnungen, Steuererklärungen und Fragebogen vollständig und genau auszufüllen;"
+            },
+            {
+              "marke": "b",
+              "text": "seine Geschäftsbücher ordnungsgemäss zu führen und sie, die Belege und andere Urkunden auf Verlangen beizubringen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -955,7 +1367,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_35",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "7e55144d558a7fa1a30094a6eeed5c5707fe08bcf9a2ff3a3417120b0be26bfe"
+      "sha": "f6717c06accc3e6c5d6dbdb6b3310ffd55003b6fcfdf56467490644e3ddbcd1b"
     },
     {
       "id": "bund/STG/art_36",
@@ -1025,14 +1437,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die ESTV trifft alle Verfügungen und Entscheide, welche die Abgabeerhebung notwendig macht; sie trifft einen Entscheid insbesondere dann, wenn"
+          "text": "Die ESTV trifft alle Verfügungen und Entscheide, welche die Abgabeerhebung notwendig macht; sie trifft einen Entscheid insbesondere dann, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Abgabeforderung oder die Mithaftung bestritten wird;"
+            },
+            {
+              "marke": "b",
+              "text": "für einen bestimmten Fall vorsorglich die amtliche Feststellung der Abgabepflicht, der Grundlagen der Abgabebemessung oder der Mithaftung beantragt wird;"
+            },
+            {
+              "marke": "c",
+              "text": "der Abgabepflichtige oder Mithaftende die gemäss Abrechnung geschuldete Abgabe nicht entrichtet."
+            }
+          ]
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_38",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "506a4c98b957772e0c662ccbccef95956c8d9909b756e27bbec70ac0d0dd43db"
+      "sha": "ce35265811119baf31582b494c00eb2326458fe2bd8c104a909938962159975e"
     },
     {
       "id": "bund/STG/art_39",
@@ -1190,7 +1616,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die ESTV kann Abgaben, Zinsen und Kosten, auch wenn sie weder rechtskräftig festgesetzt noch fällig sind, sicherstellen lassen, wenn"
+          "text": "Die ESTV kann Abgaben, Zinsen und Kosten, auch wenn sie weder rechtskräftig festgesetzt noch fällig sind, sicherstellen lassen, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Bezug als gefährdet erscheint;"
+            },
+            {
+              "marke": "b",
+              "text": "der Zahlungspflichtige keinen Wohnsitz in der Schweiz hat oder Anstalten trifft, den Wohnsitz in der Schweiz aufzugeben oder sich im Handelsregister löschen zu lassen;"
+            },
+            {
+              "marke": "c",
+              "text": "der Zahlungspflichtige mit der Zahlung der Abgabe in Verzug ist oder wiederholt in Verzug war."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1213,7 +1653,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_43",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "7cc42054af58bda19ee75dab17f62cd553883829fe5bd067912824c9baff18ff"
+      "sha": "7f899742e9efdfe1645d379e30470884a2e3d100391531b68988cf9f4a4a742f"
     },
     {
       "id": "bund/STG/art_44",
@@ -1271,7 +1711,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wer die gesetzmässige Erhebung der Stempelabgaben gefährdet, indem er vorsätzlich oder fahrlässig"
+          "text": "Wer die gesetzmässige Erhebung der Stempelabgaben gefährdet, indem er vorsätzlich oder fahrlässig",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Pflicht zur Anmeldung als Abgabepflichtiger, zur Einreichung von Steuererklärungen, Aufstellungen und Abrechnungen, zur Erteilung von Auskünften und zur Vorlage von Geschäftsbüchern, Registern und Belegen nicht nachkommt;"
+            },
+            {
+              "marke": "b",
+              "text": "in einer Steuererklärung, Aufstellung oder Abrechnung, in einem Antrag auf Befreiung, Rückerstattung, Stundung oder Erlass von Abgaben unwahre Angaben macht oder erhebliche Tatsachen verschweigt oder dabei unwahre Belege über erhebliche Tatsachen vorlegt;"
+            },
+            {
+              "marke": "c",
+              "text": "als Abgabepflichtiger oder auskunftspflichtiger Dritter unrichtige Auskünfte erteilt;"
+            },
+            {
+              "marke": "d",
+              "text": "der Pflicht zur ordnungsgemässen Führung und Aufbewahrung der Geschäftsbücher, Register und Belege zuwiderhandelt;"
+            },
+            {
+              "marke": "e",
+              "text": "die ordnungsgemässe Durchführung einer Buchprüfung oder andern amtlichen Kontrolle erschwert, behindert oder verunmöglicht oder"
+            },
+            {
+              "marke": "f",
+              "text": "wahrheitswidrig erklärt, Effektenhändler zu sein oder nach Streichung im Register der Effektenhändler die abgegebenen Erklärungen nicht widerruft,"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -1286,7 +1752,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_46",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "b434fffc9de88b6ce436b344eb87594c00cae7c50a7c42ba5a25192c662ad29b"
+      "sha": "45ed5d28d745247dfdef54bc6974adf87c61309879d9be5c4d6362662a6f751b"
     },
     {
       "id": "bund/STG/art_47",
@@ -1409,7 +1875,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Mit dem Inkrafttreten dieses Gesetzes werden aufgehoben:"
+          "text": "Mit dem Inkrafttreten dieses Gesetzes werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Bundesgesetz vom 4. Oktober 1917 über die Stempelabgaben;"
+            },
+            {
+              "marke": "b",
+              "text": "das Bundesgesetz vom 15. Februar 1921 betreffend Erlass und Stundung von Stempelabgaben;"
+            },
+            {
+              "marke": "c",
+              "text": "das Bundesgesetz vom 24. Juni 1937 über Ergänzung und Abänderung der eidgenössischen Stempelgesetzgebung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1420,7 +1900,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_53",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20240101",
-      "sha": "de1e936af665af53dbb9e8ff5cfc1f4305048ef1e59848b667a8345205be91db"
+      "sha": "0d004c9f50370176d179303d75561863fc4f6314127beb35c9d0d74161bf83dc"
     },
     {
       "id": "bund/STG/art_54",

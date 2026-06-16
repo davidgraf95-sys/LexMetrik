@@ -15,7 +15,41 @@
         },
         {
           "absatz": "2",
-          "text": "Es beträgt für einen Streitwert von a) bis Fr. 5 000.– Fr. 500.– + 30,0% b) über Fr. 5 000.– bis Fr. 20 000.– Fr. 1 230.– + 15,4% c) über Fr. 20 000.– bis Fr. 50 000.– Fr. 1 850.– + 12,3% d) über Fr. 50 000.– bis Fr. 100 000.– Fr. 3 600.– + 8,8% e) über Fr. 100 000.– bis Fr. 500 000.– Fr. 9 100.– + 3,3% f) über Fr. 500 000.– bis Fr. 1 000 000.– Fr. 12 600.– + 2,6% g) über Fr. 1 000 000.– bis Fr. 2 000 000.– Fr. 15 600.– + 2,3% h) über Fr. 2 000 000.– Fr. 37 600.– + 1,2%"
+          "text": "Es beträgt für einen Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis Fr. 5 000.– Fr. 500.– + 30,0%"
+            },
+            {
+              "marke": "b",
+              "text": "über Fr. 5 000.– bis Fr. 20 000.– Fr. 1 230.– + 15,4%"
+            },
+            {
+              "marke": "c",
+              "text": "über Fr. 20 000.– bis Fr. 50 000.– Fr. 1 850.– + 12,3%"
+            },
+            {
+              "marke": "d",
+              "text": "über Fr. 50 000.– bis Fr. 100 000.– Fr. 3 600.– + 8,8%"
+            },
+            {
+              "marke": "e",
+              "text": "über Fr. 100 000.– bis Fr. 500 000.– Fr. 9 100.– + 3,3%"
+            },
+            {
+              "marke": "f",
+              "text": "über Fr. 500 000.– bis Fr. 1 000 000.– Fr. 12 600.– + 2,6%"
+            },
+            {
+              "marke": "g",
+              "text": "über Fr. 1 000 000.– bis Fr. 2 000 000.– Fr. 15 600.– + 2,3%"
+            },
+            {
+              "marke": "h",
+              "text": "über Fr. 2 000 000.– Fr. 37 600.– + 1,2%"
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -26,7 +60,7 @@
       "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.53",
       "abgerufen": "2026-06-16",
       "fassungsToken": "c7266b58e1bbaddf2e46b966ec9855b0",
-      "sha": "5baf0f7ee876e17ef3ce66872a4a69f3407126f8dc0b3d0223c1707dfb635a28"
+      "sha": "73ed965441404c3a8b50027d647f97d73a32b9bbf6282cad4aecfc4037fa759d"
     },
     {
       "id": "kanton/AR/145.53/art_4",

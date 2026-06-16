@@ -42,7 +42,37 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bemisst sich das Honorar nach dem notwendigen Zeitaufwand, gelten folgende Stundenansätze: 1. anwaltliche Vertretung Fr. 250 2. anwaltliche Vertretung im Rahmen der unentgeltlichen Rechtspflege Fr. 200 3. amtliche Verteidigung Fr. 200 4. in den Fällen von Art. 122 Abs. 2 ZPO und Art. 138 Abs. 2 der Schweizerischen Strafprozessordnung (StPO)[4] Fr. 200 5. anwaltliche Vertretung des Kindes im Sinn von Art. 299 und Art. 300 ZPO Fr. 250 6. anwaltliche Vertretung des Kindes im Sinn von Art. 299 und Art. 300 ZPO, wenn mindestens einem Elternteil die unentgeltliche Rechtspflege gewährt wurde Fr. 200 7. Vertretung durch eine Rechtspraktikantin oder einen Rechtspraktikanten Fr. 125"
+          "text": "Bemisst sich das Honorar nach dem notwendigen Zeitaufwand, gelten folgende Stundenansätze:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "anwaltliche Vertretung Fr. 250"
+            },
+            {
+              "marke": "2",
+              "text": "anwaltliche Vertretung im Rahmen der unentgeltlichen Rechtspflege Fr. 200"
+            },
+            {
+              "marke": "3",
+              "text": "amtliche Verteidigung Fr. 200"
+            },
+            {
+              "marke": "4",
+              "text": "in den Fällen von Art. 122 Abs. 2 ZPO und Art. 138 Abs. 2 der Schweizerischen Strafprozessordnung (StPO)[4] Fr. 200"
+            },
+            {
+              "marke": "5",
+              "text": "anwaltliche Vertretung des Kindes im Sinn von Art. 299 und Art. 300 ZPO Fr. 250"
+            },
+            {
+              "marke": "6",
+              "text": "anwaltliche Vertretung des Kindes im Sinn von Art. 299 und Art. 300 ZPO, wenn mindestens einem Elternteil die unentgeltliche Rechtspflege gewährt wurde Fr. 200"
+            },
+            {
+              "marke": "7",
+              "text": "Vertretung durch eine Rechtspraktikantin oder einen Rechtspraktikanten Fr. 125"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -57,7 +87,7 @@
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
       "abgerufen": "2026-06-16",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
-      "sha": "70091382b8324c6ddd81fc5802520fdd6cce45e2c5e9e95f50c50629e6af7c37"
+      "sha": "77919196ed660645b75bced2005b6c479e5283e6be7cc79a3c5539ea3364497f"
     }
   ]
 }

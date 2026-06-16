@@ -38,7 +38,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Es wird eine Gebühr erhoben von: a) 50 bis 100 Franken für die Vorladung zur Versöhnungssitzung je nach Anzahl Beklagter; b) 120 bis 250 Franken für die Versöhnungssitzung."
+          "text": "Es wird eine Gebühr erhoben von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "50 bis 100 Franken für die Vorladung zur Versöhnungssitzung je nach Anzahl Beklagter;"
+            },
+            {
+              "marke": "b",
+              "text": "120 bis 250 Franken für die Versöhnungssitzung."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -49,7 +59,7 @@
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
       "abgerufen": "2026-06-16",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "8b6a23d749ec3ca5b8eabf9b71cb41ab07a5a4e2a68ad2a9d0a2435e2941da30"
+      "sha": "131e338658b42bf00b2abcc0fa408a16c7d561d026c640382fdca1d229361915"
     },
     {
       "id": "kanton/VS/173.8-de/art_17",

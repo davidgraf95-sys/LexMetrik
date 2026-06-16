@@ -179,7 +179,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für die Erstellung eines nicht besonders tarifierten Schriftstücks beträgt:"
+          "text": "Die Gebühr für die Erstellung eines nicht besonders tarifierten Schriftstücks beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "8 Franken je Seite bis zu einer Anzahl von 20 Ausfertigungen;"
+            },
+            {
+              "marke": "b",
+              "text": "4 Franken je Seite für jede weitere Ausfertigung."
+            }
+          ]
         },
         {
           "absatz": "1",
@@ -202,7 +212,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_9",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8bd3846e8446e0dc2ec41874514ffab95d221731a8a8c5f7dfab94af606ef6eb"
+      "sha": "e359e2dd0d1f3eea79555316731a93481dbb0391f4f9f4068c598ceb9fb5fed2"
     },
     {
       "id": "bund/GEBV_SCHKG/art_10",
@@ -360,7 +370,29 @@
         },
         {
           "absatz": "3",
-          "text": "Keinen Anspruch auf Ersatz begründen:"
+          "text": "Keinen Anspruch auf Ersatz begründen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kosten des Materials und der Vervielfältigung gebührenpflichtiger Schriftstücke;"
+            },
+            {
+              "marke": "b",
+              "text": "die allgemeinen Telekommunikationsgebühren;"
+            },
+            {
+              "marke": "c",
+              "text": "Postkontotaxen, unter Vorbehalt von Artikel 19 Absatz 3;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "die Gebühr für die Nutzung des eSchKG-Verbundes gemäss Artikel 15 a ."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -371,7 +403,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_13",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ec3250a40b2662c711e1c0faef816c03fe2ac5416c350fa4e0918a13ead79680"
+      "sha": "eb6399fa6f8f53f3042852bbc13369176610f8747bedbef33444dc454dfd4f0a"
     },
     {
       "id": "bund/GEBV_SCHKG/art_14",
@@ -472,7 +504,17 @@
         },
         {
           "absatz": "2",
-          "text": "Ab dem zweiten Kalenderjahr werden für die Erneuerung des Zugangs zum Verbund die folgenden jährlichen Gebühren erhoben:"
+          "text": "Ab dem zweiten Kalenderjahr werden für die Erneuerung des Zugangs zum Verbund die folgenden jährlichen Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für einen logischen Teilnehmer: 140 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "für einen physischen Teilnehmer: 380 Franken."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -491,7 +533,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_15_b",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "9178ff7ce007bb0be08fec4f6e952dcd20aad58122b6815eeae65832e3f6f570"
+      "sha": "fbdc00e736f1c9c819fbc6a4258b4518bbe2ba3bb435ebfed5d7eb7a9168cf7a"
     },
     {
       "id": "bund/GEBV_SCHKG/art_16",
@@ -853,7 +895,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für die Vorbereitung und Durchführung einer Versteigerung, eines Freihandverkaufs oder eines Ausverkaufs, einschliesslich Abfassung des Protokolls, bemisst sich:"
+          "text": "Die Gebühr für die Vorbereitung und Durchführung einer Versteigerung, eines Freihandverkaufs oder eines Ausverkaufs, einschliesslich Abfassung des Protokolls, bemisst sich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Versteigerung nach dem gesamten Zuschlagspreis;"
+            },
+            {
+              "marke": "b",
+              "text": "beim Freihandverkauf nach dem gesamten Kaufpreis;"
+            },
+            {
+              "marke": "c",
+              "text": "beim Ausverkauf nach dem gesamten Erlös."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -884,7 +940,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_30",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "4f4cc72b2673a7e12db715c539b1713a37f81b34449f8eea0923db9ae2b74a27"
+      "sha": "7ac40e7b4525feb827290ac49e86d4fd8b32fede1f7fd0e5256abdf334314a45"
     },
     {
       "id": "bund/GEBV_SCHKG/art_31",
@@ -953,7 +1009,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für die Erstellung eines Kollokations- und Verteilungsplanes beträgt:"
+          "text": "Die Gebühr für die Erstellung eines Kollokations- und Verteilungsplanes beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "25 Franken für die erste Seite bei beweglichen Sachen und Forderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "70 Franken für die erste Seite bei Grundstücken allein oder zusammen mit beweglichen Sachen oder Forderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "8 Franken für jede weitere Seite."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -964,7 +1034,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_34",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e78f882c18d27b87e469aa072b03d8ad7041b153f3d5df87bda863104c51edbf"
+      "sha": "883d3a1a936521ebbedb40951f9128bb8623160b358b7f6bd7b3a7c48a0db62c"
     },
     {
       "id": "bund/GEBV_SCHKG/art_35",
@@ -1163,14 +1233,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Gebühr beträgt 50 Franken je halbe Stunde für die:"
+          "text": "Die Gebühr beträgt 50 Franken je halbe Stunde für die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schliessung und Versiegelung sowie andere sichernde Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "Einvernahme des Konkursiten oder anderer Personen;"
+            },
+            {
+              "marke": "c",
+              "text": "Aufnahme und Bewertung der Aktiven;"
+            },
+            {
+              "marke": "d",
+              "text": "Reinschrift des Inventars;"
+            },
+            {
+              "marke": "e",
+              "text": "Aufstellung eines vorläufigen Gläubigerverzeichnisses."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_44",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "8bc395ded6c0b9422f5ca80f7622ef162cd4ea855434dfbab59c1c34328379d2"
+      "sha": "ada8a3000d779a27a07ae1d47d9e64db396053d1f5170a089cd1f0aee61c9b6a"
     },
     {
       "id": "bund/GEBV_SCHKG/art_45",
@@ -1201,15 +1293,61 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr beträgt:"
+          "text": "Die Gebühr beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 Franken für die Einschreibung und Prüfung jeder Konkursforderung, einschliesslich der Abfassung, Reinschrift und Auflegung des Kollokationsplanes;"
+            },
+            {
+              "marke": "b",
+              "text": "20 Franken für eine Verfügung über einen Eigentumsanspruch;"
+            },
+            {
+              "marke": "c",
+              "text": "je 200 Franken für die Schlussrechnung, den Verteilungsplan und den Schlussbericht an das Konkursgericht; dauert die Verrichtung länger als eine Stunde, so erhöht sich die Gebühr um 50 Franken je weitere halbe Stunde;"
+            },
+            {
+              "marke": "d",
+              "text": "20 Franken für eine Abtretung von Rechtsansprüchen auf Verlangen eines Gläubigers."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Im übrigen bestimmen sich die Gebühren sinngemäss nach:"
+          "text": "Im übrigen bestimmen sich die Gebühren sinngemäss nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Artikeln 26 und 27 für die Verwahrung und Verwaltung von Gegenständen des Massevermögens;"
+            },
+            {
+              "marke": "b",
+              "text": "Artikel 19 für den Einzug von Forderungen und für die Begleichung von Masseschulden;"
+            },
+            {
+              "marke": "c",
+              "text": "den Artikeln 29, 30, 32 und 36 für die Verwertung des Massevermögens;"
+            },
+            {
+              "marke": "d",
+              "text": "Artikel 33 für die Verteilung des Erlöses."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Die Entschädigung je halbe Sitzungsstunde beträgt:"
+          "text": "Die Entschädigung je halbe Sitzungsstunde beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "60 Franken für den Präsidenten des Gläubigerausschusses und den Protokollführer;"
+            },
+            {
+              "marke": "b",
+              "text": "50 Franken für die übrigen Mitglieder des Gläubigerausschusses und den Konkursverwalter, der nicht als Protokollführer mitwirkt."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -1220,7 +1358,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_46",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "e2bf5358cf7763ac9b2b3cd9c4ae3624a0d8eadd691e068c6c3a1a4068894c10"
+      "sha": "32b8f9b831c2986761582a99214429980c09d66bf4ab66aa817e0f9a0e82988f"
     },
     {
       "id": "bund/GEBV_SCHKG/art_47",
@@ -1320,14 +1458,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Gebühr für den Entscheid über die Konkurseröffnung beträgt:"
+          "text": "Die Gebühr für den Entscheid über die Konkurseröffnung beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in nicht streitigen Fällen 40–200 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "in streitigen Fällen 50–500 Franken."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_52",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "58b0b3aa5ab5751cc8f8abf7d60b33631465efa997bab03d2d25a7deb596a5ba"
+      "sha": "882777d09f9ce6296eb6bee1cfaa59dca0c4adb53780041e210aecf39d902663"
     },
     {
       "id": "bund/GEBV_SCHKG/art_53",
@@ -1339,14 +1487,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Gebühr beträgt 40–200 Franken für:"
+          "text": "Die Gebühr beträgt 40–200 Franken für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vorsorgliche Anordnungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Einstellung des Konkurses;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anordnung des summarischen Verfahrens;"
+            },
+            {
+              "marke": "d",
+              "text": "den Widerruf des Konkurses;"
+            },
+            {
+              "marke": "e",
+              "text": "das Schlussdekret."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_53",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "d13aef945d4360b9e0f094ba89a0f6df0ce726b9a0c158beebfef5456504c88c"
+      "sha": "e504ca0c7dc15e0915201a1e9570c3d6394a8127f90b7226712b21b8b875bf34"
     },
     {
       "id": "bund/GEBV_SCHKG/art_54",
@@ -1469,14 +1639,24 @@
         },
         {
           "absatz": "2",
-          "text": "Unentgeltlich sind:"
+          "text": "Unentgeltlich sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Beschwerdeverfahren und die Weiterziehung eines Beschwerdeentscheides (Art. 17–19 SchKG);"
+            },
+            {
+              "marke": "b",
+              "text": "im Stundungs‑, Konkurs- und Nachlassverfahren der Banken das Beschwerdeverfahren vor dem Stundungsgericht, dem Konkursgericht und der Nachlassbehörde."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_61",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260101",
-      "sha": "ef471bf1c8480e4ea203076d02407a82ac0c33f77b881ac7c640095ff53bd60b"
+      "sha": "c72381643eed19e2df144f70cf5a892bd08af5e9ce46655224177b8ce2646fe9"
     },
     {
       "id": "bund/GEBV_SCHKG/art_62",

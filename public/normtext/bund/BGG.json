@@ -192,7 +192,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Dem Bundesgericht dürfen nicht gleichzeitig als Richter oder Richterinnen angehören:"
+          "text": "Dem Bundesgericht dürfen nicht gleichzeitig als Richter oder Richterinnen angehören:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ehegatten, eingetragene Partnerinnen oder Partner und Personen, die in dauernder Lebensgemeinschaft leben;"
+            },
+            {
+              "marke": "b",
+              "text": "Ehegatten oder eingetragene Partnerinnen oder Partner von Geschwistern und Personen, die mit Geschwistern in dauernder Lebensgemeinschaft leben;"
+            },
+            {
+              "marke": "c",
+              "text": "Verwandte in gerader Linie sowie bis und mit dem dritten Grad in der Seitenlinie;"
+            },
+            {
+              "marke": "d",
+              "text": "Verschwägerte in gerader Linie sowie bis und mit dem dritten Grad in der Seitenlinie."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -203,7 +221,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_8",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "7f82d4e584b02618420deb40f3b38db00bcc90720df87646cd89d929bb552565"
+      "sha": "b3ffefb9e09fda8fbc1eda9dc5524d460a8437f00a239db2e0f373e040258871"
     },
     {
       "id": "bund/BGG/art_9",
@@ -326,7 +344,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Bundesversammlung wählt aus den ordentlichen Richtern und Richterinnen:"
+          "text": "Die Bundesversammlung wählt aus den ordentlichen Richtern und Richterinnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Präsidenten oder die Präsidentin des Bundesgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "den Vizepräsidenten oder die Vizepräsidentin."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -345,7 +373,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_14",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "4b2b429fffbd56d8f825c17495854f8e717d3a7d06989e259c03e103c0de071f"
+      "sha": "b69882a74b1310033a55a19efd06c9adf484937096d6fbbaa2a699194a7b73b1"
     },
     {
       "id": "bund/BGG/art_15",
@@ -357,7 +385,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Gesamtgericht besteht aus den ordentlichen Richtern und Richterinnen. Es ist zuständig für:"
+          "text": "Das Gesamtgericht besteht aus den ordentlichen Richtern und Richterinnen. Es ist zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Erlass von Reglementen über die Organisation und Verwaltung des Gerichts, die Geschäftsverteilung, die Durchführung der Aufsicht über das Bundesstrafgericht und das Bundesverwaltungsgericht, die Schlichtung von Streitigkeiten zwischen Richtern und Richterinnen, die Information, die Gerichtsgebühren sowie die Entschädigungen an Parteien, amtliche Vertreter und Vertreterinnen, Sachverständige sowie Zeugen und Zeuginnen;"
+            },
+            {
+              "marke": "b",
+              "text": "Wahlen, soweit diese nicht durch Reglement einem anderen Organ des Gerichts zugewiesen werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verabschiedung des Geschäftsberichts;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bestellung der Abteilungen und die Wahl ihrer Präsidenten und Präsidentinnen auf Antrag der Verwaltungskommission;"
+            },
+            {
+              "marke": "e",
+              "text": "den Vorschlag an die Bundesversammlung für die Wahl des Präsidenten oder der Präsidentin und des Vizepräsidenten oder der Vizepräsidentin;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anstellung des Generalsekretärs oder der Generalsekretärin und des Stellvertreters oder der Stellvertreterin auf Antrag der Verwaltungskommission;"
+            },
+            {
+              "marke": "g",
+              "text": "Beschlüsse betreffend den Beitritt zu internationalen Vereinigungen;"
+            },
+            {
+              "marke": "h",
+              "text": "andere Aufgaben, die ihm durch Gesetz zugewiesen werden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -368,7 +430,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_15",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "3686cccd4b30a3d937af4b399f1519e0e10932f05be4a2b0c12016643a83d3a5"
+      "sha": "b962d91929175c79db61c8586225393a2fe8feeece37db8637340fb608283599"
     },
     {
       "id": "bund/BGG/art_16",
@@ -384,14 +446,28 @@
         },
         {
           "absatz": "2",
-          "text": "Die Präsidentenkonferenz ist zuständig für:"
+          "text": "Die Präsidentenkonferenz ist zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Erlass von Weisungen und einheitlichen Regeln für die Gestaltung der Urteile;"
+            },
+            {
+              "marke": "b",
+              "text": "die Koordination der Rechtsprechung unter den Abteilungen; vorbehalten bleibt Artikel 23;"
+            },
+            {
+              "marke": "c",
+              "text": "die Vernehmlassung zu Erlassentwürfen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_16",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "b46bae303e305c1e72ace8f16da4d6e2ad343d2d310a9e674e4152801d1c826f"
+      "sha": "69ed22de8fec4d24214665e21a0b426c193abae698e11adb686441b1594b561c"
     },
     {
       "id": "bund/BGG/art_17",
@@ -403,7 +479,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Verwaltungskommission setzt sich zusammen aus:"
+          "text": "Die Verwaltungskommission setzt sich zusammen aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Präsidenten oder der Präsidentin des Bundesgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Vizepräsidenten oder der Vizepräsidentin;"
+            },
+            {
+              "marke": "c",
+              "text": "höchstens drei weiteren Richtern und Richterinnen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -415,14 +505,48 @@
         },
         {
           "absatz": "4",
-          "text": "Die Verwaltungskommission trägt die Verantwortung für die Gerichtsverwaltung. Sie ist zuständig für:"
+          "text": "Die Verwaltungskommission trägt die Verantwortung für die Gerichtsverwaltung. Sie ist zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuteilung der nebenamtlichen Bundesrichter und Bundesrichterinnen an die Abteilungen auf Antrag der Präsidentenkonferenz;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verabschiedung des Voranschlags und der Rechnung zuhanden der Bundesversammlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anstellung der Gerichtsschreiber und Gerichtsschreiberinnen und deren Zuteilung an die Abteilungen auf Antrag der Abteilungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bereitstellung genügender wissenschaftlicher und administrativer Dienstleistungen;"
+            },
+            {
+              "marke": "e",
+              "text": "eine angemessene Weiterbildung des Personals;"
+            },
+            {
+              "marke": "f",
+              "text": "die Bewilligung von Nebenbeschäftigungen der ordentlichen Richter und Richterinnen nach Anhörung der Präsidentenkonferenz;"
+            },
+            {
+              "marke": "g",
+              "text": "die Wahrnehmung der Aufsicht über das Bundesstrafgericht und das Bundesverwaltungsgericht;"
+            },
+            {
+              "marke": "h",
+              "text": "sämtliche weiteren Verwaltungsgeschäfte, die nicht in die Zuständigkeit des Gesamtgerichts oder der Präsidentenkonferenz fallen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_17",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "d1f935de00beab58473e8b0e81ea8e50db2168077b7ece9e490ea16b6ef940c2"
+      "sha": "53994e92db671c4d58a74540f984bfe8c8b65e93168f27ca3d0f6e92ac449350"
     },
     {
       "id": "bund/BGG/art_18",
@@ -888,7 +1012,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Richter, Richterinnen, Gerichtsschreiber und Gerichtsschreiberinnen (Gerichtspersonen) treten in Ausstand, wenn sie:"
+          "text": "Richter, Richterinnen, Gerichtsschreiber und Gerichtsschreiberinnen (Gerichtspersonen) treten in Ausstand, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Sache ein persönliches Interesse haben;"
+            },
+            {
+              "marke": "b",
+              "text": "in einer anderen Stellung, insbesondere als Mitglied einer Behörde, als Rechtsberater oder Rechtsberaterin einer Partei, als sachverständige Person oder als Zeuge beziehungsweise Zeugin, in der gleichen Sache tätig waren;"
+            },
+            {
+              "marke": "c",
+              "text": "mit einer Partei, ihrem Vertreter beziehungsweise ihrer Vertreterin oder einer Person, die in der gleichen Sache als Mitglied der Vorinstanz tätig war, verheiratet sind oder in eingetragener Partnerschaft oder dauernder Lebensgemeinschaft leben;"
+            },
+            {
+              "marke": "d",
+              "text": "mit einer Partei, ihrem Vertreter beziehungsweise ihrer Vertreterin oder einer Person, die in der gleichen Sache als Mitglied der Vorinstanz tätig war, in gerader Linie oder in der Seitenlinie bis und mit dem dritten Grad verwandt oder verschwägert sind;"
+            },
+            {
+              "marke": "e",
+              "text": "aus anderen Gründen, insbesondere wegen besonderer Freundschaft oder persönlicher Feindschaft mit einer Partei oder ihrem Vertreter beziehungsweise ihrer Vertreterin, befangen sein könnten."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -899,7 +1045,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_34",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "01f980418b5ca80d9cd7adbd4e1bca0c5bd941c6445111db936b0e62d7c91585"
+      "sha": "da45d2155c6d282951ebffb51590d0d9aef2a9be3fe82d173ad08267860783e6"
     },
     {
       "id": "bund/BGG/art_35",
@@ -1096,7 +1242,21 @@
         },
         {
           "absatz": "4",
-          "text": "Bei elektronischer Einreichung muss die Rechtsschrift von der Partei oder ihrem Vertreter beziehungsweise ihrer Vertreterin mit einer qualifizierten elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur versehen werden. Das Bundesgericht bestimmt in einem Reglement:"
+          "text": "Bei elektronischer Einreichung muss die Rechtsschrift von der Partei oder ihrem Vertreter beziehungsweise ihrer Vertreterin mit einer qualifizierten elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur versehen werden. Das Bundesgericht bestimmt in einem Reglement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Format der Rechtsschrift und ihrer Beilagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen, unter denen bei technischen Problemen die Nachreichung von Dokumenten auf Papier verlangt werden kann."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1115,7 +1275,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_42",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "7d5a7b1b65ae8294c0f16c5a5328b67fd72232b640674fd2a15f36a0314a4cff"
+      "sha": "54344cbb45314c4093dd3d03d1d2fc6f5585f7d5e868e49857ed1a4274310afc"
     },
     {
       "id": "bund/BGG/art_43",
@@ -1127,14 +1287,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Bundesgericht räumt den beschwerdeführenden Parteien auf Antrag eine angemessene Frist zur Ergänzung der Beschwerdebegründung ein, wenn:"
+          "text": "Das Bundesgericht räumt den beschwerdeführenden Parteien auf Antrag eine angemessene Frist zur Ergänzung der Beschwerdebegründung ein, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es eine Beschwerde auf dem Gebiet der internationalen Rechtshilfe in Strafsachen als zulässig erachtet; und"
+            },
+            {
+              "marke": "b",
+              "text": "der aussergewöhnliche Umfang oder die besondere Schwierigkeit der Beschwerdesache eine Ergänzung erfordert."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_43",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "fa64e48379699724dc8b0586d1f577df802427f2d588c92012d75135ccccf6c8"
+      "sha": "9cd65adefff07b78a72e9d71d1dcd35b45e7a0d2ca3929c2a3c80c44eede9af2"
     },
     {
       "id": "bund/BGG/art_44",
@@ -1192,18 +1362,54 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gesetzlich oder richterlich nach Tagen bestimmte Fristen stehen still:"
+          "text": "Gesetzlich oder richterlich nach Tagen bestimmte Fristen stehen still:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vom siebenten Tag vor Ostern bis und mit dem siebenten Tag nach Ostern;"
+            },
+            {
+              "marke": "b",
+              "text": "vom 15. Juli bis und mit dem 15. August;"
+            },
+            {
+              "marke": "c",
+              "text": "vom 18. Dezember bis und mit dem 2. Januar."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Absatz 1 gilt nicht in Verfahren betreffend:"
+          "text": "Absatz 1 gilt nicht in Verfahren betreffend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die aufschiebende Wirkung und andere vorsorgliche Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Wechselbetreibung;"
+            },
+            {
+              "marke": "c",
+              "text": "Stimmrechtssachen (Art. 82 Bst. c);"
+            },
+            {
+              "marke": "d",
+              "text": "die internationale Rechtshilfe in Strafsachen und die internationale Amtshilfe in Steuersachen;"
+            },
+            {
+              "marke": "e",
+              "text": "die öffentlichen Beschaffungen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_46",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "a42c58c3bd2e0e01e111d8e0518df4854bce8acaefb2a678834b7a182db5ea32"
+      "sha": "094637a1cb05ae40dec25efd141855e31b7c25e05cbc17b1428dfe2a5bf360cc"
     },
     {
       "id": "bund/BGG/art_47",
@@ -1311,7 +1517,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Streitwert bestimmt sich:"
+          "text": "Der Streitwert bestimmt sich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Beschwerden gegen Endentscheide nach den Begehren, die vor der Vorinstanz streitig geblieben waren;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Beschwerden gegen Teilentscheide nach den gesamten Begehren, die vor der Instanz streitig waren, welche den Teilentscheid getroffen hat;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Beschwerden gegen Vor- und Zwischenentscheide nach den Begehren, die vor der Instanz streitig sind, wo die Hauptsache hängig ist;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Klagen nach den Begehren des Klägers oder der Klägerin."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1330,7 +1554,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_51",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "3fcccd5524bddafa9f286866a586edca394b3190f616a412f876d3ea461c39de"
+      "sha": "43bc620b5ce66df96f123d4d7f1795f227393053d47106bb3f489e3d2657b289"
     },
     {
       "id": "bund/BGG/art_52",
@@ -1488,7 +1712,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Bundesgericht berät den Entscheid mündlich:"
+          "text": "Das Bundesgericht berät den Entscheid mündlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn der Abteilungspräsident beziehungsweise die Abteilungspräsidentin dies anordnet oder ein Richter beziehungsweise eine Richterin es verlangt;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn sich keine Einstimmigkeit ergibt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1499,7 +1733,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_58",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "d16022e0769dac71329dcf4e77709f50a56ae7d69300c6aa63774415e167128d"
+      "sha": "89633664d2375cd88076b296edccdad66b3ce2273fee5cc5ff1657a351eeeb96"
     },
     {
       "id": "bund/BGG/art_59",
@@ -1546,14 +1780,32 @@
         },
         {
           "absatz": "3",
-          "text": "Mit dem Einverständnis der Partei können Entscheide elektronisch eröffnet werden. Sie sind mit einer elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur zu versehen. Das Bundesgericht regelt in einem Reglement:"
+          "text": "Mit dem Einverständnis der Partei können Entscheide elektronisch eröffnet werden. Sie sind mit einer elektronischen Signatur gemäss Bundesgesetz vom 18. März 2016 über die elektronische Signatur zu versehen. Das Bundesgericht regelt in einem Reglement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zu verwendende Signatur;"
+            },
+            {
+              "marke": "b",
+              "text": "das Format des Entscheids und seiner Beilagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Art und Weise der Übermittlung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Zeitpunkt, zu dem der Entscheid als eröffnet gilt."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_60",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "b4b9b59b1fc8a9d214b947072b694de38ae87c7fcfc3a7afb6ad715d76081b10"
+      "sha": "e5eeb4ab5a2989e5050f953f1784bf39fdf00c3078477a200d93d80d6fe971e9"
     },
     {
       "id": "bund/BGG/art_61",
@@ -1673,11 +1925,39 @@
         },
         {
           "absatz": "3",
-          "text": "Sie beträgt in der Regel:"
+          "text": "Sie beträgt in der Regel:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Streitigkeiten ohne Vermögensinteresse 200–5000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Streitigkeiten 200–100 000 Franken."
+            }
+          ]
         },
         {
           "absatz": "4",
-          "text": "Sie beträgt 200–1000 Franken und wird nicht nach dem Streitwert bemessen in Streitigkeiten:"
+          "text": "Sie beträgt 200–1000 Franken und wird nicht nach dem Streitwert bemessen in Streitigkeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über Sozialversicherungsleistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "über Diskriminierungen auf Grund des Geschlechts;"
+            },
+            {
+              "marke": "c",
+              "text": "aus einem Arbeitsverhältnis mit einem Streitwert bis zu 30 000 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "nach den Artikeln 7 und 8 des Behindertengleichstellungsgesetzes vom 13. Dezember 2002."
+            }
+          ]
         },
         {
           "absatz": "5",
@@ -1688,7 +1968,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_65",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "3a5dad4eae7fde671c6c03cd129db40e6cbac46fb1b68c1b39d8b96a801604d4"
+      "sha": "0f708634e1f1c26c3ad25c3a2b0be0222928a3df073f26e72f24197c198cbf39"
     },
     {
       "id": "bund/BGG/art_66",
@@ -1812,7 +2092,21 @@
         },
         {
           "absatz": "2",
-          "text": "Sie sind hingegen nach folgenden Bestimmungen zu vollstrecken:"
+          "text": "Sie sind hingegen nach folgenden Bestimmungen zu vollstrecken:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach den Artikeln 41–43 des Bundesgesetzes vom 20. Dezember 1968 über das Verwaltungsverfahren: wenn das Bundesgericht in einer Sache entschieden hat, die erstinstanzlich in die Zuständigkeit einer Bundesverwaltungsbehörde fällt;"
+            },
+            {
+              "marke": "b",
+              "text": "nach den Artikeln 74–78 BZP: wenn das Bundesgericht auf Klage hin entschieden hat;"
+            },
+            {
+              "marke": "c",
+              "text": "nach den Artikeln 74 und 75 des Strafbehördenorganisationsgesetzes vom 19. März 2010: wenn das Bundesgericht in Strafsachen entschieden hat, die der Bundesgerichtsbarkeit unterstehen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -1827,7 +2121,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_70",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "454125d325f361c229aaa05d1153335bb8a3b352f6db807bc01ed8bb28e16133"
+      "sha": "d375ab83f81cd698105e3ec7732baadc954b90880af67d134868fdc0e6e78ef6"
     },
     {
       "id": "bund/BGG/art_71",
@@ -1862,14 +2156,48 @@
         },
         {
           "absatz": "2",
-          "text": "Der Beschwerde in Zivilsachen unterliegen auch:"
+          "text": "Der Beschwerde in Zivilsachen unterliegen auch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheide in Schuldbetreibungs- und Konkurssachen;"
+            },
+            {
+              "marke": "b",
+              "text": "öffentlich-rechtliche Entscheide, die in unmittelbarem Zusammenhang mit Zivilrecht stehen, insbesondere Entscheide: 1. über die Anerkennung und Vollstreckung von Entscheiden und über die Rechtshilfe in Zivilsachen,"
+            },
+            {
+              "marke": "2",
+              "text": "über die Führung des Grundbuchs, des Zivilstands- und des Handelsregisters sowie der Register für Marken, Muster und Modelle, Erfindungspatente, Pflanzensorten und Topografien,"
+            },
+            {
+              "marke": "3",
+              "text": "über die Bewilligung zur Namensänderung,"
+            },
+            {
+              "marke": "4",
+              "text": "auf dem Gebiet der Aufsicht über die Stiftungen mit Ausnahme der Vorsorge- und Freizügigkeitseinrichtungen,"
+            },
+            {
+              "marke": "5",
+              "text": "auf dem Gebiet der Aufsicht über die Willensvollstrecker und ‑vollstreckerinnen und andere erbrechtliche Vertreter und Vertreterinnen,"
+            },
+            {
+              "marke": "6",
+              "text": "auf dem Gebiet des Kindes- und Erwachsenenschutzes,"
+            },
+            {
+              "marke": "7",
+              "text": "…"
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_72",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "138eeb28de83d96b9a732fc6e90d08ed167487af1788c3b5b15207d7c53cb628"
+      "sha": "1a49370b31eec94a0efd0a5400dd373c7cc189d1dae6bd9ad6ece959ef057e5e"
     },
     {
       "id": "bund/BGG/art_73",
@@ -1900,18 +2228,50 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In vermögensrechtlichen Angelegenheiten ist die Beschwerde nur zulässig, wenn der Streitwert mindestens beträgt:"
+          "text": "In vermögensrechtlichen Angelegenheiten ist die Beschwerde nur zulässig, wenn der Streitwert mindestens beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "15 000 Franken in arbeits- und mietrechtlichen Fällen;"
+            },
+            {
+              "marke": "b",
+              "text": "30 000 Franken in allen übrigen Fällen."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Erreicht der Streitwert den massgebenden Betrag nach Absatz 1 nicht, so ist die Beschwerde dennoch zulässig:"
+          "text": "Erreicht der Streitwert den massgebenden Betrag nach Absatz 1 nicht, so ist die Beschwerde dennoch zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sich eine Rechtsfrage von grundsätzlicher Bedeutung stellt;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn ein Bundesgesetz eine einzige kantonale Instanz vorsieht;"
+            },
+            {
+              "marke": "c",
+              "text": "gegen Entscheide der kantonalen Aufsichtsbehörden in Schuldbetreibungs- und Konkurssachen;"
+            },
+            {
+              "marke": "d",
+              "text": "gegen Entscheide des Konkurs- und Nachlassrichters oder der Konkurs- und Nachlassrichterin;"
+            },
+            {
+              "marke": "e",
+              "text": "gegen Entscheide des Bundespatentgerichts."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_74",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "b5b82339dc32e25b7ce6d508153cbfba7498d6d194e05dd35b3fb2686dfeff26"
+      "sha": "93be8a2288549a5c62af9b232865e623919347409ff30eeb31c657074db0e39d"
     },
     {
       "id": "bund/BGG/art_75",
@@ -1927,14 +2287,28 @@
         },
         {
           "absatz": "2",
-          "text": "Die Kantone setzen als letzte kantonale Instanzen obere Gerichte ein. Diese entscheiden als Rechtsmittelinstanzen; ausgenommen sind die Fälle, in denen:"
+          "text": "Die Kantone setzen als letzte kantonale Instanzen obere Gerichte ein. Diese entscheiden als Rechtsmittelinstanzen; ausgenommen sind die Fälle, in denen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Bundesgesetz eine einzige kantonale Instanz vorsieht;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Fachgericht für handelsrechtliche Streitigkeiten als einzige kantonale Instanz entscheidet;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Klage mit einem Streitwert von mindestens 100 000 Franken mit Zustimmung aller Parteien direkt beim oberen Gericht eingereicht wurde."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_75",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "1ee268107d7dc0b60b2804b5425411d89414e06aa1d8b2d8239f89a5bfb23608"
+      "sha": "ddccb3baea4642158b4c68b0f7e1a7be0fadc3650c29e53dcf6cd7d858a18f92"
     },
     {
       "id": "bund/BGG/art_76",
@@ -1946,7 +2320,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zur Beschwerde in Zivilsachen ist berechtigt, wer:"
+          "text": "Zur Beschwerde in Zivilsachen ist berechtigt, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor der Vorinstanz am Verfahren teilgenommen hat oder keine Möglichkeit zur Teilnahme erhalten hat; und"
+            },
+            {
+              "marke": "b",
+              "text": "durch den angefochtenen Entscheid besonders berührt ist und ein schutzwürdiges Interesse an dessen Aufhebung oder Änderung hat."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1957,7 +2341,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_76",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "bd309397bcd9da51a542897c4ee153307ae850db6fdb199930e31acc969e71c2"
+      "sha": "64e7afbba1bcf4055fa0cf06903025a7d3b273db1be5018a7cb857845e6491fd"
     },
     {
       "id": "bund/BGG/art_77",
@@ -1969,7 +2353,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Beschwerde in Zivilsachen ist ungeachtet des Streitwerts zulässig gegen Entscheide von Schiedsgerichten:"
+          "text": "Die Beschwerde in Zivilsachen ist ungeachtet des Streitwerts zulässig gegen Entscheide von Schiedsgerichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der internationalen Schiedsgerichtsbarkeit unter den Voraussetzungen der Artikel 190–192 des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "in der nationalen Schiedsgerichtsbarkeit unter den Voraussetzungen der Artikel 389–395 der Zivilprozessordnung vom 19. Dezember 2008."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -1988,7 +2382,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_77",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "2caaca7e3a924fe19b0619d34a4a3d610c5eacb84fe153efc711b5ab068860c0"
+      "sha": "9bd6ffcf9eb514d2b992d993c7b0be1fb9f6c7f553568a3676d8c1312ce129c0"
     },
     {
       "id": "bund/BGG/art_78",
@@ -2004,14 +2398,24 @@
         },
         {
           "absatz": "2",
-          "text": "Der Beschwerde in Strafsachen unterliegen auch Entscheide über:"
+          "text": "Der Beschwerde in Strafsachen unterliegen auch Entscheide über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zivilansprüche, wenn diese zusammen mit der Strafsache zu behandeln sind;"
+            },
+            {
+              "marke": "b",
+              "text": "den Vollzug von Strafen und Massnahmen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_78",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "fec184ffd8059dbf63e738719dd3b83fa590cfbcdf8d0ce87eebb194ce1a7572"
+      "sha": "5b49da5ff7034164f4884e9d8ac5f5b3e0f7a3251d170d0839727d5603803db2"
     },
     {
       "id": "bund/BGG/art_79",
@@ -2065,7 +2469,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zur Beschwerde in Strafsachen ist berechtigt, wer:"
+          "text": "Zur Beschwerde in Strafsachen ist berechtigt, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor der Vorinstanz am Verfahren teilgenommen hat oder keine Möglichkeit zur Teilnahme erhalten hat; und"
+            },
+            {
+              "marke": "b",
+              "text": "ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung des angefochtenen Entscheids hat, insbesondere: 1. die beschuldigte Person,"
+            },
+            {
+              "marke": "2",
+              "text": "ihr gesetzlicher Vertreter oder ihre gesetzliche Vertreterin,"
+            },
+            {
+              "marke": "3",
+              "text": "die Staatsanwaltschaft, ausser bei Entscheiden über die Anordnung, die Verlängerung und die Aufhebung der Untersuchungs- und Sicherheitshaft,"
+            },
+            {
+              "marke": "4",
+              "text": "…"
+            },
+            {
+              "marke": "5",
+              "text": "die Privatklägerschaft, wenn der angefochtene Entscheid sich auf die Beurteilung ihrer Zivilansprüche auswirken kann,"
+            },
+            {
+              "marke": "6",
+              "text": "die Person, die den Strafantrag stellt, soweit es um das Strafantragsrecht als solches geht,"
+            },
+            {
+              "marke": "7",
+              "text": "die Staatsanwaltschaft des Bundes und die beteiligte Verwaltung in Verwaltungsstrafsachen nach dem Bundesgesetz vom 22. März 1974 über das Verwaltungsstrafrecht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2080,7 +2518,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_81",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "92d8ecaff09251e8cbeac9e523961c9a5234a739b885d6b34bddf0d3b8747f9b"
+      "sha": "0eb737d48601aca70e0372f85df25c63062ea60f3679f55c14830ee449931003"
     },
     {
       "id": "bund/BGG/art_82",
@@ -2092,14 +2530,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Das Bundesgericht beurteilt Beschwerden:"
+          "text": "Das Bundesgericht beurteilt Beschwerden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen Entscheide in Angelegenheiten des öffentlichen Rechts;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen kantonale Erlasse;"
+            },
+            {
+              "marke": "c",
+              "text": "betreffend die politische Stimmberechtigung der Bürger und Bürgerinnen sowie betreffend Volkswahlen und -abstimmungen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_82",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "63a638c5247ccbfed9b39618c5ae976645df659802a46475790e9ef28420a724"
+      "sha": "f94433e1991f50319c3c475afefa2e6bbeba96375aa5cd1d1c1282951ad31c40"
     },
     {
       "id": "bund/BGG/art_83",
@@ -2111,14 +2563,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Beschwerde ist unzulässig gegen:"
+          "text": "Die Beschwerde ist unzulässig gegen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "…"
+            },
+            {
+              "marke": "2",
+              "text": "die Abgrenzung der Zonen im Rahmen des Produktionskatasters;"
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_83",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "0026d49b136648ff14149f1c60dbabdd58fff697f4a761bdbafcb95f656c5abc"
+      "sha": "f7a7b33a1066751a15ef071801deb90f56eca16df7d0043f7c98cc6b3c8f77f8"
     },
     {
       "id": "bund/BGG/art_84",
@@ -2172,7 +2634,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In vermögensrechtlichen Angelegenheiten ist die Beschwerde unzulässig:"
+          "text": "In vermögensrechtlichen Angelegenheiten ist die Beschwerde unzulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf dem Gebiet der Staatshaftung, wenn der Streitwert weniger als 30 000 Franken beträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "auf dem Gebiet der öffentlich-rechtlichen Arbeitsverhältnisse, wenn der Streitwert weniger als 15 000 Franken beträgt."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2183,7 +2655,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_85",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "ba348132333dc05acad03fd043965cb9e3c240c93f6ef2510f8b83b06cd015be"
+      "sha": "01c02c50b9b2c85ff88ea73f4248bc365a072932e3485f3227e16dd1faad5d18"
     },
     {
       "id": "bund/BGG/art_86",
@@ -2195,7 +2667,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Beschwerde ist zulässig gegen Entscheide:"
+          "text": "Die Beschwerde ist zulässig gegen Entscheide:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Bundesverwaltungsgerichts;"
+            },
+            {
+              "marke": "b",
+              "text": "des Bundesstrafgerichts;"
+            },
+            {
+              "marke": "c",
+              "text": "der unabhängigen Beschwerdeinstanz für Radio und Fernsehen;"
+            },
+            {
+              "marke": "d",
+              "text": "letzter kantonaler Instanzen, sofern nicht die Beschwerde an das Bundesverwaltungsgericht zulässig ist."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2210,7 +2700,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_86",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "474c3a6c08917871be24b01de2dd1d08c77da292398e8ec100802896929095cd"
+      "sha": "2fd23185fba681b5264801649c5ad5e7dcaef155f24bd756c7305c63c70f08aa"
     },
     {
       "id": "bund/BGG/art_87",
@@ -2245,7 +2735,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Beschwerden betreffend die politische Stimmberechtigung der Bürger und Bürgerinnen sowie betreffend Volkswahlen und ‑abstimmungen sind zulässig:"
+          "text": "Beschwerden betreffend die politische Stimmberechtigung der Bürger und Bürgerinnen sowie betreffend Volkswahlen und ‑abstimmungen sind zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in kantonalen Angelegenheiten gegen Akte letzter kantonaler Instanzen;"
+            },
+            {
+              "marke": "b",
+              "text": "in eidgenössischen Angelegenheiten gegen Verfügungen der Bundeskanzlei und Entscheide der Kantonsregierungen."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2256,7 +2756,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_88",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "2355e6a998db7e30f51b952e9ea2f80baf8549a501b5b5a4f1f49f9d85b99c21"
+      "sha": "10042b16eafbe5877f3a7b3b19fd95ed75cf1957310be06429b7b0667e82e8f4"
     },
     {
       "id": "bund/BGG/art_89",
@@ -2268,11 +2768,43 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zur Beschwerde in öffentlich-rechtlichen Angelegenheiten ist berechtigt, wer:"
+          "text": "Zur Beschwerde in öffentlich-rechtlichen Angelegenheiten ist berechtigt, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor der Vorinstanz am Verfahren teilgenommen hat oder keine Möglichkeit zur Teilnahme erhalten hat;"
+            },
+            {
+              "marke": "b",
+              "text": "durch den angefochtenen Entscheid oder Erlass besonders berührt ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "ein schutzwürdiges Interesse an dessen Aufhebung oder Änderung hat."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Zur Beschwerde sind ferner berechtigt:"
+          "text": "Zur Beschwerde sind ferner berechtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bundeskanzlei, die Departemente des Bundes oder, soweit das Bundesrecht es vorsieht, die ihnen unterstellten Dienststellen, wenn der angefochtene Akt die Bundesgesetzgebung in ihrem Aufgabenbereich verletzen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "das zuständige Organ der Bundesversammlung auf dem Gebiet des Arbeitsverhältnisses des Bundespersonals;"
+            },
+            {
+              "marke": "c",
+              "text": "Gemeinden und andere öffentlich-rechtliche Körperschaften, wenn sie die Verletzung von Garantien rügen, die ihnen die Kantons- oder Bundesverfassung gewährt;"
+            },
+            {
+              "marke": "d",
+              "text": "Personen, Organisationen und Behörden, denen ein anderes Bundesgesetz dieses Recht einräumt."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2283,7 +2815,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_89",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "230a3ec3ecb3287046a8e4b526028d5dedc8e479e25ce204d7f09d3b89a6697d"
+      "sha": "09b307ae52d0a4687e7ae0c644d8988006b77dad8249b1001e3cacaf5d80186c"
     },
     {
       "id": "bund/BGG/art_90",
@@ -2314,14 +2846,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Beschwerde ist zulässig gegen einen Entscheid, der:"
+          "text": "Die Beschwerde ist zulässig gegen einen Entscheid, der:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nur einen Teil der gestellten Begehren behandelt, wenn diese Begehren unabhängig von den anderen beurteilt werden können;"
+            },
+            {
+              "marke": "b",
+              "text": "das Verfahren nur für einen Teil der Streitgenossen und Streitgenossinnen abschliesst."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_91",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "801b22a32f159982fa94e02b6897571dd98c78855dd6c0c783b2081a74a0c72c"
+      "sha": "bc4fb680a802f05ab9b5815c4b13fe343fe4e65bb916e443d53054cbf0187fdc"
     },
     {
       "id": "bund/BGG/art_92",
@@ -2356,7 +2898,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gegen andere selbständig eröffnete Vor- und Zwischenentscheide ist die Beschwerde zulässig:"
+          "text": "Gegen andere selbständig eröffnete Vor- und Zwischenentscheide ist die Beschwerde zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sie einen nicht wieder gutzumachenden Nachteil bewirken können; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Gutheissung der Beschwerde sofort einen Endentscheid herbeiführen und damit einen bedeutenden Aufwand an Zeit oder Kosten für ein weitläufiges Beweisverfahren ersparen würde."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2371,7 +2923,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_93",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "fb4d388770aecabc5a42d0b7306106fa61c7c9a8521751399a1c0ebd51130a98"
+      "sha": "10ddcba4b2d7f8dd8a0ce8474fd98db52b4ddd9c8f781ee48298f411dfa9cea0"
     },
     {
       "id": "bund/BGG/art_94",
@@ -2402,14 +2954,36 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit der Beschwerde kann die Verletzung gerügt werden von:"
+          "text": "Mit der Beschwerde kann die Verletzung gerügt werden von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bundesrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "Völkerrecht;"
+            },
+            {
+              "marke": "c",
+              "text": "kantonalen verfassungsmässigen Rechten;"
+            },
+            {
+              "marke": "d",
+              "text": "kantonalen Bestimmungen über die politische Stimmberechtigung der Bürger und Bürgerinnen und über Volkswahlen und ‑abstimmungen;"
+            },
+            {
+              "marke": "e",
+              "text": "interkantonalem Recht."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_95",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "12bfa6e3f0194aba53b7d5b33a1092df128c26e261f970e8d64bcfbe9b67d9a5"
+      "sha": "70df10648fc642b42040532636f5a236d0757883b88c8bb83ff37ba4941d9d45"
     },
     {
       "id": "bund/BGG/art_96",
@@ -2421,14 +2995,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Mit der Beschwerde kann gerügt werden:"
+          "text": "Mit der Beschwerde kann gerügt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ausländisches Recht sei nicht angewendet worden, wie es das schweizerische internationale Privatrecht vorschreibt;"
+            },
+            {
+              "marke": "b",
+              "text": "das nach dem schweizerischen internationalen Privatrecht massgebende ausländische Recht sei nicht richtig angewendet worden, sofern der Entscheid keine vermögensrechtliche Sache betrifft."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_96",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "55fdf43a256e5a4364377124e4d250a46a8fc51fd5df31dfab0be487745752cf"
+      "sha": "90cd92da65d6c558491f8cc0581f408a4e8494e23364b1d0ef94080fcd7deecb"
     },
     {
       "id": "bund/BGG/art_97",
@@ -2509,11 +3093,39 @@
         },
         {
           "absatz": "2",
-          "text": "Die Beschwerdefrist beträgt zehn Tage:"
+          "text": "Die Beschwerdefrist beträgt zehn Tage:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Entscheiden der kantonalen Aufsichtsbehörden in Schuldbetreibungs- und Konkurssachen;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Entscheiden auf den Gebieten der internationalen Rechtshilfe in Strafsachen und der internationalen Amtshilfe in Steuersachen;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Entscheiden über die Rückgabe eines Kindes nach dem Europäischen Übereinkommen vom 20. Mai 1980 über die Anerkennung und Vollstreckung von Entscheidungen über das Sorgerecht für Kinder und die Wiederherstellung des Sorgerechts oder nach dem Übereinkommen vom 25. Oktober 1980 über die zivilrechtlichen Aspekte internationaler Kindesentführung;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Entscheiden des Bundespatentgerichts über die Erteilung einer Lizenz nach Artikel 40 d des Patentgesetzes vom 25. Juni 1954."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Die Beschwerdefrist beträgt fünf Tage:"
+          "text": "Die Beschwerdefrist beträgt fünf Tage:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Entscheiden der kantonalen Aufsichtsbehörden in Schuldbetreibungs- und Konkurssachen im Rahmen der Wechselbetreibung;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Entscheiden der Kantonsregierungen über Beschwerden gegen eidgenössische Abstimmungen."
+            }
+          ]
         },
         {
           "absatz": "4",
@@ -2536,7 +3148,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_100",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "63fd8ed120533e735c98d4dcdc468cb2901e41dbca5fea99bef77886d3a5be7d"
+      "sha": "a6ee206c7bf1de93548a61170fca84a4a366c5b86ec5fb25a5140c022095a4f4"
     },
     {
       "id": "bund/BGG/art_101",
@@ -2598,7 +3210,25 @@
         },
         {
           "absatz": "2",
-          "text": "Die Beschwerde hat im Umfang der Begehren aufschiebende Wirkung:"
+          "text": "Die Beschwerde hat im Umfang der Begehren aufschiebende Wirkung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Zivilsachen, wenn sie sich gegen ein Gestaltungsurteil richtet;"
+            },
+            {
+              "marke": "b",
+              "text": "in Strafsachen, wenn sie sich gegen einen Entscheid richtet, der eine unbedingte Freiheitsstrafe oder eine freiheitsentziehende Massnahme ausspricht; die aufschiebende Wirkung erstreckt sich nicht auf den Entscheid über Zivilansprüche;"
+            },
+            {
+              "marke": "c",
+              "text": "in Verfahren auf dem Gebiet der internationalen Rechtshilfe in Strafsachen, wenn sie sich gegen eine Schlussverfügung oder gegen jede andere Verfügung richtet, welche die Übermittlung von Auskünften aus dem Geheimbereich oder die Herausgabe von Gegenständen oder Vermögenswerten bewilligt;"
+            },
+            {
+              "marke": "d",
+              "text": "in Verfahren auf dem Gebiet der internationalen Amtshilfe in Steuersachen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2609,7 +3239,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_103",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "6491db6a9fa8ca33a34730c43dfad4d2873c587b2522936787472d521dd1eab6"
+      "sha": "0f6567316556e3d146fbcb7e67d1c83461e21b267dcc27925463f8f95ed09439"
     },
     {
       "id": "bund/BGG/art_104",
@@ -2721,7 +3351,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Präsident oder die Präsidentin der Abteilung entscheidet im vereinfachten Verfahren über:"
+          "text": "Der Präsident oder die Präsidentin der Abteilung entscheidet im vereinfachten Verfahren über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Nichteintreten auf offensichtlich unzulässige Beschwerden;"
+            },
+            {
+              "marke": "b",
+              "text": "Nichteintreten auf Beschwerden, die offensichtlich keine hinreichende Begründung (Art. 42 Abs. 2) enthalten;"
+            },
+            {
+              "marke": "c",
+              "text": "Nichteintreten auf querulatorische oder rechtsmissbräuchliche Beschwerden."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2736,7 +3380,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_108",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "5b96560f8d5a317620d6083ce6e24207c0978864850fc56659bc976b628f3e02"
+      "sha": "2275e9a4c09928413b22fb43427f3cdfd65592bb371da355886641eb81b05739"
     },
     {
       "id": "bund/BGG/art_109",
@@ -2752,7 +3396,17 @@
         },
         {
           "absatz": "2",
-          "text": "Sie entscheiden ebenfalls in Dreierbesetzung bei Einstimmigkeit über:"
+          "text": "Sie entscheiden ebenfalls in Dreierbesetzung bei Einstimmigkeit über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Abweisung offensichtlich unbegründeter Beschwerden;"
+            },
+            {
+              "marke": "b",
+              "text": "Gutheissung offensichtlich begründeter Beschwerden, insbesondere wenn der angefochtene Akt von der Rechtsprechung des Bundesgerichts abweicht und kein Anlass besteht, diese zu überprüfen."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -2763,7 +3417,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_109",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "3aa82bc5f550befe3238d84f5e7d448cf0e9b5b17bb6ea2b7695090a2b6c27dd"
+      "sha": "30f09372c5a8345e2a2a1cce3f8fabf7399438063d153d6649cfa724115780b2"
     },
     {
       "id": "bund/BGG/art_110",
@@ -2821,7 +3475,25 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Entscheide, die der Beschwerde an das Bundesgericht unterliegen, sind den Parteien schriftlich zu eröffnen. Sie müssen enthalten:"
+          "text": "Entscheide, die der Beschwerde an das Bundesgericht unterliegen, sind den Parteien schriftlich zu eröffnen. Sie müssen enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Begehren, die Begründung, die Beweisvorbringen und Prozesserklärungen der Parteien, soweit sie nicht aus den Akten hervorgehen;"
+            },
+            {
+              "marke": "b",
+              "text": "die massgebenden Gründe tatsächlicher und rechtlicher Art, insbesondere die Angabe der angewendeten Gesetzesbestimmungen;"
+            },
+            {
+              "marke": "c",
+              "text": "das Dispositiv;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Rechtsmittelbelehrung einschliesslich Angabe des Streitwerts, soweit dieses Gesetz eine Streitwertgrenze vorsieht."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -2840,7 +3512,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_112",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "d2895eebba9ebacc54890d94449eaffc3e0860507a82b8a95317e739c8b7509d"
+      "sha": "b4c3042ea8a02d39e09abcfbd8df86fbc2c74a3b0b238b407a52c7b47a6e00a6"
     },
     {
       "id": "bund/BGG/art_113",
@@ -2890,14 +3562,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zur Verfassungsbeschwerde ist berechtigt, wer:"
+          "text": "Zur Verfassungsbeschwerde ist berechtigt, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor der Vorinstanz am Verfahren teilgenommen hat oder keine Möglichkeit zur Teilnahme erhalten hat; und"
+            },
+            {
+              "marke": "b",
+              "text": "ein rechtlich geschütztes Interesse an der Aufhebung oder Änderung des angefochtenen Entscheids hat."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_115",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "7b00806b2f13bc4cc222e9eb9d3295f2953a5e89411df5ee4024226b4b136027"
+      "sha": "ea4ec74383d6baf3501330339f52a254d8876830ee276d626f628aa00267ae2f"
     },
     {
       "id": "bund/BGG/art_116",
@@ -3032,7 +3714,21 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Bundesgericht beurteilt auf Klage als einzige Instanz:"
+          "text": "Das Bundesgericht beurteilt auf Klage als einzige Instanz:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kompetenzkonflikte zwischen Bundesbehörden und kantonalen Behörden;"
+            },
+            {
+              "marke": "b",
+              "text": "zivilrechtliche und öffentlich-rechtliche Streitigkeiten zwischen Bund und Kantonen oder zwischen Kantonen;"
+            },
+            {
+              "marke": "c",
+              "text": "Ansprüche auf Schadenersatz und Genugtuung aus der Amtstätigkeit von Personen im Sinne von Artikel 1 Absatz 1 Buchstaben a–c bis des Verantwortlichkeitsgesetzes vom 14. März 1958."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -3047,7 +3743,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_120",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "0f7d6862acaf6b9ff1bd4b220864f5ffa31355bd7ba95106587007bd66a2624f"
+      "sha": "d6f8df521dbc923c2a80854af6a3bb5883131003e347144ad14f9f03b9a77789"
     },
     {
       "id": "bund/BGG/art_121",
@@ -3059,14 +3755,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Revision eines Entscheids des Bundesgerichts kann verlangt werden, wenn:"
+          "text": "Die Revision eines Entscheids des Bundesgerichts kann verlangt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vorschriften über die Besetzung des Gerichts oder über den Ausstand verletzt worden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "das Gericht einer Partei mehr oder, ohne dass das Gesetz es erlaubt, anderes zugesprochen hat, als sie selbst verlangt hat, oder weniger als die Gegenpartei anerkannt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "einzelne Anträge unbeurteilt geblieben sind;"
+            },
+            {
+              "marke": "d",
+              "text": "das Gericht in den Akten liegende erhebliche Tatsachen aus Versehen nicht berücksichtigt hat."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_121",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "efdd4a0225a1d5aec93af92a3c8907569d23ebb82ae97cdbf57d5410752de506"
+      "sha": "820e70edd9792a293c1674cf6611311c1cc3632c53246b80b33eec30e7bcce1d"
     },
     {
       "id": "bund/BGG/art_122",
@@ -3078,14 +3792,28 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Die Revision wegen Verletzung der Konvention zum Schutz der Menschenrechte und Grundfreiheiten vom 4. November 1950 (EMRK) kann verlangt werden, wenn:"
+          "text": "Die Revision wegen Verletzung der Konvention zum Schutz der Menschenrechte und Grundfreiheiten vom 4. November 1950 (EMRK) kann verlangt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Europäische Gerichtshof für Menschenrechte in einem endgültigen Urteil (Art. 44 EMRK) festgestellt hat, dass die EMRK oder die Protokolle dazu verletzt worden sind, oder den Fall durch eine gütliche Einigung (Art. 39 EMRK) abgeschlossen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Entschädigung nicht geeignet ist, die Folgen der Verletzung auszugleichen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Revision notwendig ist, um die Verletzung zu beseitigen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_122",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "134797592343338ebea7c70c93945cc452ae99b8b031725dab5d8ddbd2a8d077"
+      "sha": "4a3d370986460bc212c7345e56350fa10aa93a4a4c076612e243e99fa9a8459e"
     },
     {
       "id": "bund/BGG/art_123",
@@ -3101,14 +3829,28 @@
         },
         {
           "absatz": "2",
-          "text": "Die Revision kann zudem verlangt werden:"
+          "text": "Die Revision kann zudem verlangt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Zivilsachen und öffentlich-rechtlichen Angelegenheiten, wenn die ersuchende Partei nachträglich erhebliche Tatsachen erfährt oder entscheidende Beweismittel auffindet, die sie im früheren Verfahren trotz gehöriger Aufmerksamkeit nicht beibringen konnte, unter Ausschluss der Tatsachen und Beweismittel, die erst nach dem Entscheid entstanden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "in Strafsachen, wenn die Voraussetzungen von Artikel 410 Absätze 1 Buchstaben a und b sowie 2 StPO erfüllt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "in Sachen, die Ansprüche auf Ersatz von nuklearem Schaden betreffen, aus den in Artikel 5 Absatz 5 Kernenergiehaftpflichtgesetz vom 13. Juni 2008 genannten Gründen."
+            }
+          ]
         }
       ],
       "stand": "2026-04-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_123",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "13a27a5697dd3c5d08977c4110fb59835e39b54179807f91e00b4079f0ce2fb2"
+      "sha": "2cc7c3e9d8992132b0e16d4e5c5864ed00d041436a91b99bfe75edf01a53079f"
     },
     {
       "id": "bund/BGG/art_124",
@@ -3120,11 +3862,39 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Revisionsgesuch ist beim Bundesgericht einzureichen:"
+          "text": "Das Revisionsgesuch ist beim Bundesgericht einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wegen Verletzung der Ausstandsvorschriften: innert 30 Tagen nach der Entdeckung des Ausstandsgrundes;"
+            },
+            {
+              "marke": "b",
+              "text": "wegen Verletzung anderer Verfahrensvorschriften: innert 30 Tagen nach der Eröffnung der vollständigen Ausfertigung des Entscheids;"
+            },
+            {
+              "marke": "c",
+              "text": "wegen Verletzung der EMRK: innert 90 Tagen, nachdem das Urteil des Europäischen Gerichtshofs für Menschenrechte nach Artikel 44 EMRK endgültig geworden ist;"
+            },
+            {
+              "marke": "d",
+              "text": "aus anderen Gründen: innert 90 Tagen nach deren Entdeckung, frühestens jedoch nach der Eröffnung der vollständigen Ausfertigung des Entscheids oder nach dem Abschluss des Strafverfahrens."
+            }
+          ]
         },
         {
           "absatz": "2",
-          "text": "Nach Ablauf von zehn Jahren nach der Ausfällung des Entscheids kann die Revision nicht mehr verlangt werden, ausser:"
+          "text": "Nach Ablauf von zehn Jahren nach der Ausfällung des Entscheids kann die Revision nicht mehr verlangt werden, ausser:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Strafsachen aus den Gründen nach Artikel 123 Absatz 1 und 2 Buchstabe b;"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Fällen aus dem Grund nach Artikel 123 Absatz 1."
+            }
+          ]
         },
         {
           "absatz": "3",
@@ -3135,7 +3905,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/218/de#art_124",
       "abgerufen": "2026-06-16",
       "fassungsToken": "20260401",
-      "sha": "dc01ca8670aba2fa02bdc8e2d4f29a190d2ae25239679f763c0347feec703718"
+      "sha": "a4ad33ded0fa98fd59716f1336348fabf82045353e43eb4a40bd5e6dc9b646a3"
     },
     {
       "id": "bund/BGG/art_125",

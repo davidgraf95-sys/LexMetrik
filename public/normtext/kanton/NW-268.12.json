@@ -11,7 +11,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Errichtung eines Vertrages auf Übertragung von Grundeigentum nach Art. 657 Abs. 1 ZGB[16] (Kauf, Tausch, Schenkung) beträgt die Gebühr: 1. 2.5‰ der Vertragssumme bis Fr. 200'000.– 2. plus 2‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.– 3. plus 1.5‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.– 4. plus 1‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.– 5. plus 0.5‰ vom Mehrbetrag über Fr. 5'000'000.–; 6. die Mindestgebühr beträgt Fr. 300.–."
+          "text": "Bei der Errichtung eines Vertrages auf Übertragung von Grundeigentum nach Art. 657 Abs. 1 ZGB[16] (Kauf, Tausch, Schenkung) beträgt die Gebühr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "2.5‰ der Vertragssumme bis Fr. 200'000.–"
+            },
+            {
+              "marke": "2",
+              "text": "plus 2‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.–"
+            },
+            {
+              "marke": "3",
+              "text": "plus 1.5‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.–"
+            },
+            {
+              "marke": "4",
+              "text": "plus 1‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.–"
+            },
+            {
+              "marke": "5",
+              "text": "plus 0.5‰ vom Mehrbetrag über Fr. 5'000'000.–;"
+            },
+            {
+              "marke": "6",
+              "text": "die Mindestgebühr beträgt Fr. 300.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -26,7 +52,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/268.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3a2ce17eb52aacc46c08bf9c05932b54",
-      "sha": "041b3ed24eac6c4d6d1ed5bbf55d2df4eb01e90d686b20cb4d4629b7e064f15c"
+      "sha": "55e412d6f632d04c85c8780e061dfa042efea5e9c480a40f4f2f5a22f96e1eb4"
     },
     {
       "id": "kanton/NW/268.12/art_26",
@@ -38,7 +64,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Begründung eines Baurechtes nach Art. 779a ZGB[24] ist die Gebühr gemäss § 20 zu berechnen. Als Vertragssumme gilt die Leistung des Bauberechtigten."
+          "text": "Bei der Begründung eines Baurechtes nach Art. 779a ZGB[24] ist die Gebühr gemäss § 20 zu berechnen. Als Vertragssumme gilt die Leistung des Bauberechtigten. Ist der Bauberechtigte zu periodischen Leistungen verpflichtet, gilt als Vertragssumme der mutmassliche Verkehrswert des Bodens und, soweit sie Gegenstand der Leistung des Baurechtgebers sind, der Gebäude."
         },
         {
           "absatz": "2",
@@ -49,7 +75,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/268.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3a2ce17eb52aacc46c08bf9c05932b54",
-      "sha": "2e2a92c754d1662daace2af83e90656b3374dad6159542fe50ebb64ff6ebbdad"
+      "sha": "3e97331c21ce0b740f160ad2be28c485c033ae52628352128ec5422e9789bd97"
     },
     {
       "id": "kanton/NW/268.12/art_31",
@@ -103,7 +129,33 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Errichtung eines Grundpfandes (Art. 799 ZGB[26]) beträgt die Gebühr: 1. 1.5‰ von der Pfandsumme bis Fr. 200'000.– 2. plus 1.25‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.– 3. plus 1‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.– 4. plus 0.5‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.– 5. plus 0.2‰ vom Mehrbetrag über Fr. 5'000'000.–; 6. die Mindestgebühr beträgt Fr. 200.–."
+          "text": "Bei der Errichtung eines Grundpfandes (Art. 799 ZGB[26]) beträgt die Gebühr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "1.5‰ von der Pfandsumme bis Fr. 200'000.–"
+            },
+            {
+              "marke": "2",
+              "text": "plus 1.25‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.–"
+            },
+            {
+              "marke": "3",
+              "text": "plus 1‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.–"
+            },
+            {
+              "marke": "4",
+              "text": "plus 0.5‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.–"
+            },
+            {
+              "marke": "5",
+              "text": "plus 0.2‰ vom Mehrbetrag über Fr. 5'000'000.–;"
+            },
+            {
+              "marke": "6",
+              "text": "die Mindestgebühr beträgt Fr. 200.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -126,7 +178,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/268.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3a2ce17eb52aacc46c08bf9c05932b54",
-      "sha": "e2fcf08eb7c2179223593f92f35265657693f85f79478529dca7afb14ae3f564"
+      "sha": "9345817ea0c4953f9acec4103af51ea31ce7f271b56a1dcf85fcfdc02ebf3dba"
     },
     {
       "id": "kanton/NW/268.12/art_18",
@@ -138,7 +190,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der öffentlichen letztwilligen Verfügung (Art. 499 ZGB[13]) beträgt die Gebühr: 1. für die Errichtung a) 3‰ bis zu einem Verfügungswert von Fr. 200'000.– b) plus 2.5‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.– c) plus 1.5‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.– d) plus 1‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.– e) plus 0.5‰ vom Mehrbetrag über Fr. 5'000'000.–; f) die Mindestgebühr beträgt Fr. 400.–; g) wenn der Verfügungswert nicht bekannt ist, Fr. 400.– bis Fr. 4'000.–; 2. für die Abänderung oder die Aufhebung Fr. 250.– bis Fr. 2'000.–."
+          "text": "Bei der öffentlichen letztwilligen Verfügung (Art. 499 ZGB[13]) beträgt die Gebühr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für die Errichtung"
+            },
+            {
+              "marke": "2",
+              "text": "für die Abänderung oder die Aufhebung Fr. 250.– bis Fr. 2'000.–."
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -153,7 +215,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/268.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3a2ce17eb52aacc46c08bf9c05932b54",
-      "sha": "f5f67f7960d46fe8f8b06fd3c136ff1606369360aad2ba8953a6aed9858f5ee5"
+      "sha": "cda3d14395fc4f2067fd3e29012ad298853fed5a206dcb58315b4ff7a1b5cefe"
     },
     {
       "id": "kanton/NW/268.12/art_15",
@@ -226,14 +288,36 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Gründung einer Aktiengesellschaft (Art. 629 OR[35]) oder einer Kommanditaktiengesellschaft (Art. 764 Abs. 2 OR) beträgt die Gebühr: 1. Fr. 1'000.– bis zu einem Aktienkapital von Fr. 200'000.– 2. plus 3‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.– 3. plus 2‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.– 4. plus 1.0‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.– 5. plus 0.5‰ vom Mehrbetrag über Fr. 5'000'000.–."
+          "text": "Bei der Gründung einer Aktiengesellschaft (Art. 629 OR[35]) oder einer Kommanditaktiengesellschaft (Art. 764 Abs. 2 OR) beträgt die Gebühr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Fr. 1'000.– bis zu einem Aktienkapital von Fr. 200'000.–"
+            },
+            {
+              "marke": "2",
+              "text": "plus 3‰ vom Mehrbetrag über Fr. 200'000.– bis Fr. 500'000.–"
+            },
+            {
+              "marke": "3",
+              "text": "plus 2‰ vom Mehrbetrag über Fr. 500'000.– bis Fr. 1'000'000.–"
+            },
+            {
+              "marke": "4",
+              "text": "plus 1.0‰ vom Mehrbetrag über Fr. 1'000'000.– bis Fr. 5'000'000.–"
+            },
+            {
+              "marke": "5",
+              "text": "plus 0.5‰ vom Mehrbetrag über Fr. 5'000'000.–."
+            }
+          ]
         }
       ],
       "stand": "2016-01-01",
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/268.12",
       "abgerufen": "2026-06-16",
       "fassungsToken": "3a2ce17eb52aacc46c08bf9c05932b54",
-      "sha": "fd4cd652df4c44cecf2b4d202cf63fb5ac9da17549a0a16c84f8ba832a4393f4"
+      "sha": "78808d4d1f51f775cf68d7f551b8ef99c2cab70642f7e1e26a9cd559225c7c9d"
     },
     {
       "id": "kanton/NW/268.12/art_41",

@@ -11,7 +11,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei der Errichtung eines Vertrages auf Übertragung von Grundeigentum nach Artikel 657 Absatz 1 ZGB (Kauf, Schenkung, Tausch) beträgt die Gebühr a. 3 ‰ der Vertragssumme bis Fr. 500 000.– b. plus 2,5 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 000 000.– c. plus 2 ‰ vom Mehrbetrag über Fr. 1 000 000.– bis Fr. 5 000 000.– d. plus 1 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.– e. von der 10 Mio. Fr. übersteigenden Vertragssumme wird keine Gebühr erhoben"
+          "text": "Bei der Errichtung eines Vertrages auf Übertragung von Grundeigentum nach Artikel 657 Absatz 1 ZGB (Kauf, Schenkung, Tausch) beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "3 ‰ der Vertragssumme bis Fr. 500 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 2,5 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 000 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 2 ‰ vom Mehrbetrag über Fr. 1 000 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 1 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "von der 10 Mio. Fr. übersteigenden Vertragssumme wird keine Gebühr erhoben"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -30,7 +52,7 @@
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
       "abgerufen": "2026-06-16",
       "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
-      "sha": "bd19fef5a87814cd3b0961777b90632230945932533b46c6e183b8dda9a0ea47"
+      "sha": "0a92ef0beac2ff7f9977ed610d5f0f22b5ffa5b57bed6df40e955dbfb70d035b"
     }
   ]
 }
