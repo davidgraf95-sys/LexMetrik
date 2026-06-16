@@ -293,15 +293,29 @@ export function inKraftSeit(
   enactment: string | undefined,
 ): string {
   if (versionDatesStr) {
-    // Suche explizit nach «in Kraft seit» gefolgt von DD.MM.YYYY. Der Doppelpunkt
-    // ist OPTIONAL: zweisprachige/FR-Erlasse (FR 130.11) liefern «… in Kraft seit
-    // 01.12.2025 …» OHNE «:», deutschsprachige meist «in Kraft seit: 01.01.2026».
-    // Ohne diese Toleranz fiele der Stand fälschlich auf enactment (2011) zurück.
-    const m = versionDatesStr.match(
+    // Deutsches Muster: «in Kraft seit:» / «in Kraft seit» (Doppelpunkt optional).
+    // Zweisprachige/FR-Erlasse liefern das deutsche Muster ohne «:» im de-Teil.
+    const mDe = versionDatesStr.match(
       /[Ii]n\s+[Kk]raft\s+seit\s*:?\s*(\d{2})\.(\d{2})\.(\d{4})/,
     );
-    if (m) {
-      return `${m[3]}-${m[2]}-${m[1]}`;
+    if (mDe) {
+      return `${mDe[3]}-${mDe[2]}-${mDe[1]}`;
+    }
+
+    // Französisches Muster: «en vigueur depuis le DD.MM.YYYY» /
+    // «en vigueur dès le DD.MM.YYYY» / «en vigueur depuis DD.MM.YYYY».
+    // FR-API (bdlf.fr.ch, lex.vs.ch) liefert für fr-Erlasse ausschliesslich
+    // den französischen version_dates_str — ohne dieses Muster fiel der Stand
+    // auf enactment (Erlass-Datum, oft 2011) zurück (BUG A4, 16.6.2026).
+    const mFr = versionDatesStr.match(
+      /[Ee]n\s+vigueur\s+(?:depuis|dès)\s+le\s+(\d{2})\.(\d{2})\.(\d{4})|[Ee]n\s+vigueur\s+depuis\s+(\d{2})\.(\d{2})\.(\d{4})/,
+    );
+    if (mFr) {
+      // Gruppe 1-3 für «depuis/dès le», Gruppe 4-6 für «depuis» ohne «le»
+      const j = mFr[3] ?? mFr[6];
+      const mo = mFr[2] ?? mFr[5];
+      const t = mFr[1] ?? mFr[4];
+      return `${j}-${mo}-${t}`;
     }
   }
   // Fallback: enactment (bereits ISO), sofern gültig

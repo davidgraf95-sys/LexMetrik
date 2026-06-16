@@ -59,6 +59,36 @@ describe('inKraftSeit — reines Parsing ohne Netz', () => {
       ),
     ).toBe('2025-12-01');
   });
+
+  // BUG A4 (Ergänzung): FR-fr und VS-fr APIs liefern ausschliesslich französischen
+  // version_dates_str «en vigueur depuis le DD.MM.YYYY» — ohne das fr-Muster
+  // fiel inKraftSeit auf enactment zurück (bdlf.fr.ch / lex.vs.ch, 16.6.2026).
+  it('verarbeitet «en vigueur depuis le DD.MM.YYYY» (FR-130.11-fr)', () => {
+    expect(
+      inKraftSeit(
+        'Version actuelle en vigueur depuis le 01.12.2025 (décision: 10.11.2025)',
+        '2011-01-01',
+      ),
+    ).toBe('2025-12-01');
+  });
+
+  it('verarbeitet «en vigueur dès le DD.MM.YYYY» (alternative fr-Form)', () => {
+    expect(
+      inKraftSeit(
+        'Version actuelle en vigueur dès le 15.03.2024',
+        '2010-01-01',
+      ),
+    ).toBe('2024-03-15');
+  });
+
+  it('verarbeitet «en vigueur depuis DD.MM.YYYY» OHNE «le» (fr-Minimalform)', () => {
+    expect(
+      inKraftSeit(
+        'en vigueur depuis 01.01.2023',
+        '2010-01-01',
+      ),
+    ).toBe('2023-01-01');
+  });
 });
 
 describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
