@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import { textFragment } from '../lib/normtext/passus';
 import { istSchliessTaste } from '../lib/normtext/tasten';
@@ -35,6 +35,9 @@ export function NormPopover({ snapshot, passus, onClose }: {
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const schliessRef = useRef<HTMLButtonElement>(null);
+  // Ref auf die markierte Stelle (Item oder Block) — für Scroll-ins-Sichtfeld.
+  // Nur gesetzt, wenn ein Treffer vorhanden ist; sonst null → kein Scrollen.
+  const passusRef = useRef<HTMLElement>(null);
 
   // Esc schliesst; Fokus beim Öffnen auf den Schliess-Button (A11y). Beides nur
   // im Browser — useEffect läuft im SSR/Prerender nicht, window-Zugriff bleibt
@@ -45,6 +48,14 @@ export function NormPopover({ snapshot, passus, onClose }: {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
+
+  // Markierte Stelle ins Sichtfeld scrollen (block:'center', sofort/auto).
+  // Läuft unabhängig vom Fokus-Effekt; scrollIntoView ohne focus() — Fokus
+  // bleibt auf dem Schliess-Button. Kein Scrollen, wenn kein Treffer gesetzt.
+  // SSR-sicher: useEffect läuft im Prerender nicht, Markup bleibt unverändert.
+  useEffect(() => {
+    passusRef.current?.scrollIntoView({ block: 'center', behavior: 'auto' });
+  }, []);
 
   // Präzise lit/Ziff-Markierung: ist ein lit/ziff zitiert, wird GENAU das Item
   // markiert; das umschliessende Absatz wird dezent gekennzeichnet. Sonst (nur
@@ -144,6 +155,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
           return (
             <div
               key={i}
+              ref={blockStark ? (passusRef as React.Ref<HTMLDivElement>) : undefined}
               data-passus={blockStark ? 'true' : 'false'}
               className={`text-body-s leading-relaxed ${
                 blockStark
@@ -179,6 +191,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
                     return (
                       <li
                         key={j}
+                        ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                         {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                         className={`flex gap-2 rounded-md px-2 py-1 ${
                           istItemZitiert
