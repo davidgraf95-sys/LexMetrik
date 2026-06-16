@@ -12,8 +12,18 @@ export interface NormSnapshot {
   artikel: string;
   /** Menschliche Artikel-Bezeichnung ('Art. 335c', '§ 4'). */
   artikelLabel: string;
-  /** Absatz-/Marginalie-Blöcke in Reihenfolge; absatz: '1','2','a','bis' … */
-  bloecke: Array<{ absatz: string | null; text: string }>;
+  /**
+   * Absatz-/Marginalie-Blöcke in Reihenfolge; absatz: '1','2','a','bis' …
+   * - text: Einleitungstext des Absatzes OHNE die Listenpunkte.
+   * - items (optional): lit./Ziff.-Aufzählungspunkte des Absatzes. marke ist
+   *   die nackte Marke ('a','b','17','5a','20a') ohne Punkt/Klammer; text der
+   *   Punkttext. Fehlt items, hat der Absatz keine Aufzählung (rückwärtskompat.).
+   */
+  bloecke: Array<{
+    absatz: string | null;
+    text: string;
+    items?: Array<{ marke: string; text: string }>;
+  }>;
   /** Konsolidierungs-/Fassungsdatum der Quelle (ISO 'YYYY-MM-DD'). */
   stand: string;
   /** Amtliche Live-URL (mit Anker, wenn vorhanden). */
