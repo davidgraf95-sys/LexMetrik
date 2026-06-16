@@ -91,6 +91,15 @@ widersprechen: dann **abweichend umsetzen und die Abweichung offenlegen**.
 `verified: true` und der Status «geprüft» setzen die fachliche Abnahme durch
 David (fachkundige Person) voraus — nie automatisch setzen.
 
+**Zitat-Ausnahme (Norm-Snapshot, Entscheid David 16.6.2026):** Gespeicherter
+Gesetzestext (Norm-Snapshot für die Volltext-Vorschau) ist zulässig, wenn er
+trägt: (a) **Stand** (Konsolidierungs-/Abrufdatum), (b) **amtliche Quelle-URL**,
+(c) im UI **sichtbaren Live-Link** zur geltenden Fassung, (d) **automatische
+Drift-Erkennung** gegen die Quelle (kein stilles Veralten). Fehlt eines davon,
+ist der Snapshot kein Zitat, sondern eine zweite Wahrheit (§5) — dann nicht
+speichern. Der Snapshot ist nie die massgebliche Fassung; das ist die amtliche
+Quelle (in der UI offengelegt, §8).
+
 ## §8 Ehrlichkeit gegenüber Nutzern
 
 Das Status-Modell (entwurf / geprüft / geplant) zeigt den echten
