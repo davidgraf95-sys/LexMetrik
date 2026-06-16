@@ -25,7 +25,6 @@ import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE } from './normtext/adapter-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
-import { artikelLabelKurz } from '../src/lib/normtext/passus.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
@@ -74,6 +73,20 @@ function konsZuIso(kons: string): string {
 // ── Artikel-Label: token → 'Art. 335c' ───────────────────────────────────────
 function artikelLabel(token: string): string {
   return 'Art. ' + token.replace(/_/g, '');
+}
+
+// ── Token-Sortierung: numerisch nach Artikel-Nr., dann Suffix ─────────────────
+// '2' < '10' < '27' < '27_a' < '335' < '335_bis'. Deterministische, diff-stabile
+// Reihenfolge der Snapshot-Einträge je Datei.
+function sortiereTokens(tokens: string[]): string[] {
+  const num = (t: string): number => {
+    const m = t.match(/^(\d+)/);
+    return m ? parseInt(m[1], 10) : Number.MAX_SAFE_INTEGER;
+  };
+  return [...tokens].sort((a, b) => {
+    const d = num(a) - num(b);
+    return d !== 0 ? d : a.localeCompare(b);
+  });
 }
 
 // ── SHA256 des Block-Texts INKL. Aufzählungs-Items ───────────────────────────
@@ -180,10 +193,9 @@ async function erzeugeKantonsSnapshots(
     mehrsprachig(g) ? `${lawIdSafe(g.lawId)}-${g.lang}` : lawIdSafe(g.lawId);
 
   for (const g of inventar) {
-    const tokens = g.artikel.map((a) => a.token);
     let ergebnis;
     try {
-      ergebnis = await holeLexWork(g.host, g.lang, g.lawId, tokens);
+      ergebnis = await holeLexWork(g.host, g.lang, g.lawId);
     } catch (e) {
       // §8: Netzfehler pro Gruppe abfangen, nicht crashen, weiter zur nächsten.
       const fehler = e instanceof Error ? e.message : String(e);
@@ -204,25 +216,21 @@ async function erzeugeKantonsSnapshots(
     const snapshotListe: NormSnapshot[] = [];
     const schluessel = lawSchluessel(g); // filesafe, mit '-de'/'-fr' nur wenn zweisprachig
 
-    for (const art of g.artikel) {
-      const treffer = ergebnis.artikel[art.token];
-      if (!treffer || treffer.bloecke.length === 0) {
-        cov.tokenFehlt.push({
-          kanton: g.kanton,
-          lawId: g.lawId,
-          token: art.token,
-          label: art.label,
-        });
-        continue;
-      }
-      const id = `kanton/${g.kanton}/${schluessel}/art_${art.token}`;
+    // Vollabdeckung (§7, Auftrag David 16.6.2026): ALLE Artikel des Erlasses
+    // speichern, nicht nur die zitierten Tokens. artikelLabel einheitlich aus dem
+    // Quell-Designator (ergebnis.labels: «§ N»/«Art. N»), NICHT aus dem rohen
+    // Tarif-Zitat. Token-Reihenfolge stabil sortiert (Artikel-Nr.).
+    for (const token of sortiereTokens(Object.keys(ergebnis.artikel))) {
+      const treffer = ergebnis.artikel[token];
+      if (!treffer || treffer.bloecke.length === 0) continue;
+      const id = `kanton/${g.kanton}/${schluessel}/art_${token}`;
       const snapshot: NormSnapshot = {
         id,
         ebene: 'kanton',
         quelle: g.kanton,
         erlass,
-        artikel: art.token,
-        artikelLabel: artikelLabelKurz(art.label),
+        artikel: token,
+        artikelLabel: ergebnis.labels[token] ?? artikelLabel(token),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         // LexWork hat keinen Artikel-Anker → Gesetzes-Seite (originale /app/-URL).
@@ -233,6 +241,19 @@ async function erzeugeKantonsSnapshots(
       };
       snapshotListe.push(snapshot);
       goldenIndex[id] = snapshot.sha;
+    }
+
+    // §8-Sichtbarkeit: zitierte Tokens, die im extrahierten Erlass FEHLEN
+    // (echte Lücke — der zitierte Artikel wurde nicht gefunden), weiterhin melden.
+    for (const art of g.artikel) {
+      if (!(art.token in ergebnis.artikel)) {
+        cov.tokenFehlt.push({
+          kanton: g.kanton,
+          lawId: g.lawId,
+          token: art.token,
+          label: art.label,
+        });
+      }
     }
 
     // Gruppe ohne einen einzigen extrahierten Artikel (alle Tokens nicht im
@@ -264,7 +285,11 @@ async function erzeugeKantonsSnapshots(
 // ── lawIdSafe für HTM-Quellen: letzter Pfadteil ohne .htm ────────────────────
 // 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm' → 'rsg_e1_05p10'
 // 'https://rsn.ne.ch/DATA/.../htm/164.1.htm'          → '164.1'
+// 'https://m3.ti.ch/.../pdfatto/atto/137'             → 'ti-137' (eindeutiger,
+//   nicht-numerischer Dateiname; kongruent zum früheren TI-PDF-Schema)
 function htmLawIdSafe(url: string): string {
+  const ti = url.match(/\/pdfatto\/atto\/(\d+)$/i);
+  if (ti) return `ti-${ti[1]}`;
   const letzter = url.split('/').pop() ?? url;
   return letzter.replace(/\.html?$/i, '');
 }
@@ -294,11 +319,10 @@ async function erzeugeHtmSnapshots(
   };
 
   for (const g of inventar) {
-    const tokens = g.artikel.map((a) => a.token);
     const safe = htmLawIdSafe(g.quelleUrl);
     let ergebnis;
     try {
-      ergebnis = await holeHtm(g.quelleUrl, g.profil, tokens);
+      ergebnis = await holeHtm(g.quelleUrl, g.profil);
     } catch (e) {
       const fehler = e instanceof Error ? e.message : String(e);
       cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
@@ -308,28 +332,23 @@ async function erzeugeHtmSnapshots(
     const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
 
-    for (const art of g.artikel) {
-      const treffer = ergebnis.artikel[art.token];
-      if (!treffer || treffer.bloecke.length === 0) {
-        cov.tokenFehlt.push({
-          kanton: g.kanton,
-          lawIdSafe: safe,
-          token: art.token,
-          label: art.label,
-        });
-        continue;
-      }
-      const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+    // Vollabdeckung (§7): ALLE Artikel des Erlasses speichern; Label einheitlich
+    // aus dem Adapter (ergebnis.labels: «Art. N» für NE/GE/TI).
+    for (const token of sortiereTokens(Object.keys(ergebnis.artikel))) {
+      const treffer = ergebnis.artikel[token];
+      if (!treffer || treffer.bloecke.length === 0) continue;
+      const id = `kanton/${g.kanton}/${safe}/art_${token}`;
       const snapshot: NormSnapshot = {
         id,
         ebene: 'kanton',
         quelle: g.kanton,
         erlass,
-        artikel: art.token,
-        artikelLabel: artikelLabelKurz(art.label),
+        artikel: token,
+        artikelLabel: ergebnis.labels[token] ?? artikelLabel(token),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
-        // HTM-Quelle: die exakte .htm-URL (= Manifest-Key, wie im Tarif-Eintrag).
+        // HTM-Quelle: die exakte Quell-URL (= Manifest-Key, wie im Tarif-Eintrag;
+        // TI: die pdfatto/atto-URL — die HTML-Seite wird im Adapter abgeleitet).
         quelleUrl: g.quelleUrl,
         abgerufen,
         // Drift-Token (§7 d): kein version_uid → quelleHash des Volltexts.
@@ -338,6 +357,18 @@ async function erzeugeHtmSnapshots(
       };
       snapshotListe.push(snapshot);
       goldenIndex[id] = snapshot.sha;
+    }
+
+    // §8-Sichtbarkeit: zitierte Tokens, die im Erlass nicht gefunden wurden.
+    for (const art of g.artikel) {
+      if (!(art.token in ergebnis.artikel)) {
+        cov.tokenFehlt.push({
+          kanton: g.kanton,
+          lawIdSafe: safe,
+          token: art.token,
+          label: art.label,
+        });
+      }
     }
 
     if (snapshotListe.length === 0) {
@@ -381,11 +412,10 @@ async function erzeugeZhPdfSnapshots(
   const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
 
   for (const g of inventar) {
-    const tokens = g.artikel.map((a) => a.token);
     const safe = zhLawIdSafe(g.quelleUrl);
     let ergebnis;
     try {
-      ergebnis = await holeZhPdf(g.quelleUrl, tokens);
+      ergebnis = await holeZhPdf(g.quelleUrl);
     } catch (e) {
       const fehler = e instanceof Error ? e.message : String(e);
       cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
@@ -395,20 +425,18 @@ async function erzeugeZhPdfSnapshots(
     const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
 
-    for (const art of g.artikel) {
-      const treffer = ergebnis.artikel[art.token];
-      if (!treffer || treffer.bloecke.length === 0) {
-        cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
-        continue;
-      }
-      const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+    // Vollabdeckung (§7): ALLE Artikel; Label einheitlich «§ N» (ergebnis.labels).
+    for (const token of sortiereTokens(Object.keys(ergebnis.artikel))) {
+      const treffer = ergebnis.artikel[token];
+      if (!treffer || treffer.bloecke.length === 0) continue;
+      const id = `kanton/${g.kanton}/${safe}/art_${token}`;
       const snapshot: NormSnapshot = {
         id,
         ebene: 'kanton',
         quelle: g.kanton,
         erlass,
-        artikel: art.token,
-        artikelLabel: artikelLabelKurz(art.label),
+        artikel: token,
+        artikelLabel: ergebnis.labels[token] ?? artikelLabel(token),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         quelleUrl: g.quelleUrl,
@@ -418,6 +446,13 @@ async function erzeugeZhPdfSnapshots(
       };
       snapshotListe.push(snapshot);
       goldenIndex[id] = snapshot.sha;
+    }
+
+    // §8-Sichtbarkeit: zitierte Tokens, die im Erlass nicht gefunden wurden.
+    for (const art of g.artikel) {
+      if (!(art.token in ergebnis.artikel)) {
+        cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
+      }
     }
 
     if (snapshotListe.length === 0) {
@@ -506,36 +541,33 @@ async function erzeugePdfSnapshots(
     const gesehenTokens = new Set<string>();
 
     for (const g of gruppen) {
-      const tokens = g.artikel.map((a) => a.token);
       let ergebnis;
       try {
-        ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil], tokens);
+        ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]);
       } catch (e) {
         const fehler = e instanceof Error ? e.message : String(e);
         cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
         continue;
       }
       const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
-      for (const art of g.artikel) {
-        const treffer = ergebnis.artikel[art.token];
-        if (!treffer || treffer.bloecke.length === 0) {
-          cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
-          continue;
-        }
-        // Pro (Datei, token, quelleUrl) genau ein Eintrag. Verschiedene quelleUrls
-        // zum selben token (Download-Variante) erzeugen je einen Manifest-fähigen
-        // Eintrag; identische (quelleUrl, token) werden entdoppelt.
-        const dedupeKey = `${g.quelleUrl} ${art.token}`;
+      // Vollabdeckung: ALLE Artikel der Quelle; Label einheitlich aus dem Profil-
+      // Marker (ergebnis.labels). Pro (Datei, token, quelleUrl) genau ein Eintrag:
+      // verschiedene quelleUrls zum selben token (JU-Download-Variante) erzeugen je
+      // einen Manifest-fähigen Eintrag; identische werden entdoppelt.
+      for (const token of sortiereTokens(Object.keys(ergebnis.artikel))) {
+        const treffer = ergebnis.artikel[token];
+        if (!treffer || treffer.bloecke.length === 0) continue;
+        const dedupeKey = `${g.quelleUrl} ${token}`;
         if (gesehenTokens.has(dedupeKey)) continue;
         gesehenTokens.add(dedupeKey);
-        const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+        const id = `kanton/${g.kanton}/${safe}/art_${token}`;
         const snapshot: NormSnapshot = {
           id,
           ebene: 'kanton',
           quelle: g.kanton,
           erlass,
-          artikel: art.token,
-          artikelLabel: artikelLabelKurz(art.label),
+          artikel: token,
+          artikelLabel: ergebnis.labels[token] ?? artikelLabel(token),
           bloecke: treffer.bloecke,
           stand: ergebnis.meta.stand,
           quelleUrl: g.quelleUrl,
@@ -545,6 +577,13 @@ async function erzeugePdfSnapshots(
         };
         snapshotListe.push(snapshot);
         goldenIndex[id] = snapshot.sha;
+      }
+
+      // Sichtbarkeit: zitierte Tokens, die im Erlass nicht gefunden wurden.
+      for (const art of g.artikel) {
+        if (!(art.token in ergebnis.artikel)) {
+          cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
+        }
       }
     }
 

@@ -87,6 +87,9 @@ export interface PdfErgebnis {
     quelleHash: string;
   };
   artikel: Record<string, PdfArtikel>; // token → Artikel
+  /** Einheitliches Label je token, abgeleitet aus dem Profil-Marker:
+   *  «§ N» (SZ) bzw. «Art. N» (TI/VD/JU). */
+  labels: Record<string, string>;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -776,7 +779,6 @@ const UA = 'Mozilla/5.0 (LexMetrik Normtext-Snapshot)';
 export async function holePdf(
   quelleUrl: string,
   profil: PdfProfil,
-  tokens: string[],
 ): Promise<PdfErgebnis> {
   const pdfUrl = profil.pdfUrlAusQuelle(quelleUrl);
   const res = await fetch(pdfUrl, { headers: { 'User-Agent': UA } });
@@ -802,9 +804,11 @@ export async function holePdf(
     '';
   const quelleHash = berechnePdfQuelleHash(artikel);
 
-  const gefiltert: Record<string, PdfArtikel> = {};
-  for (const t of tokens) {
-    if (t in artikel) gefiltert[t] = artikel[t];
+  // Vollabdeckung (§7): ALLE Artikel zurückgeben; Label einheitlich aus dem
+  // Profil-Marker («§ N» SZ / «Art. N» VD/JU).
+  const labels: Record<string, string> = {};
+  for (const token of Object.keys(artikel)) {
+    labels[token] = `${profil.marker} ${token.replace(/_/g, '')}`;
   }
-  return { meta: { titel, stand, quelleHash }, artikel: gefiltert };
+  return { meta: { titel, stand, quelleHash }, artikel, labels };
 }

@@ -49,6 +49,10 @@ export interface LexWorkErgebnis {
     nurPdf: boolean;
   };
   artikel: Record<string, LexArtikel>; // token → Artikel
+  /** Einheitliches Artikel-Label je token, abgeleitet aus dem Quell-Designator
+   *  (article_symbol «§»/«Art.») + Nummer — «§ N» bzw. «Art. N». Konsistent mit
+   *  Bund, unabhängig vom rohen Tarif-Zitat (Auftrag David 16.6.2026). */
+  labels: Record<string, string>;
 }
 
 /** Strippt HTML-Tags, dekodiert die in LexWork vorkommenden Entities und
@@ -80,6 +84,58 @@ function leseArtikelNummer(segment: string): string | null {
   const num = numBlock[1].match(/<span\s+class='number'>([\s\S]*?)<\/span>/i);
   if (!num) return null;
   return bereinige(num[1]);
+}
+
+/** Liest das article_symbol («§»/«Art.») aus einem .article_number-Block.
+ *  Default «Art.» wenn kein Symbol erkennbar (defensiv; LexWork liefert es). */
+function leseArtikelSymbol(segment: string): string {
+  const numBlock = segment.match(
+    /<div\s+class='article_number'>([\s\S]*?)<\/div>/i,
+  );
+  if (!numBlock) return 'Art.';
+  const sym = numBlock[1].match(
+    /<span\s+class='article_symbol'>([\s\S]*?)<\/span>/i,
+  );
+  if (!sym) return 'Art.';
+  const roh = bereinige(sym[1]);
+  // «§» bleibt «§»; alles andere («Art.», «art.») → kanonisch «Art.».
+  return roh.startsWith('§') ? '§' : 'Art.';
+}
+
+/**
+ * Extrahiert ALLE Artikel des Erlasses (token → Artikel) plus ein einheitliches
+ * Label je token (Designator + Nummer, «§ N»/«Art. N»). Vollabdeckung (§7, Build-
+ * Regel Norm-Snapshots): nicht nur die zitierten Tokens, sondern jeder
+ * <div class='article'> im xhtml_tol. Das Label folgt dem Quell-Designator
+ * (article_symbol), nicht dem rohen Tarif-Zitat → tier-/artikelübergreifend
+ * konsistent mit Bund.
+ */
+export function extrahiereAlleLexWorkArtikel(xhtml: string): {
+  artikel: Record<string, LexArtikel>;
+  labels: Record<string, string>;
+} {
+  const artikel: Record<string, LexArtikel> = {};
+  const labels: Record<string, string> = {};
+  const teile = xhtml.split(/(?=<div\s+class='article'>)/i);
+  for (const segment of teile) {
+    if (!/^\s*<div\s+class='article'>/i.test(segment)) continue;
+    const nummer = leseArtikelNummer(segment);
+    if (nummer === null) continue;
+    // Token kongruent zum Inventar/Fedlex-Anker: «1a» → «1_a», «335bis» → «335_bis».
+    const token = nummer
+      .toLowerCase()
+      .replace(/^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/i, (_, n, b, suf) =>
+        [n, b, suf].filter(Boolean).join('_'),
+      );
+    if (token in artikel) continue; // erster Treffer gewinnt (stabil)
+    const parsed = parseSegment(segment);
+    if (parsed.bloecke.length === 0) continue;
+    artikel[token] = parsed;
+    // Label aus Designator + roher Nummer (ohne Unterstrich-Normalisierung):
+    // «§ 1a», «Art. 335bis» — wie die Quelle die Nummer schreibt.
+    labels[token] = `${leseArtikelSymbol(segment)} ${nummer.replace(/\s+/g, '')}`;
+  }
+  return { artikel, labels };
 }
 
 /**
@@ -340,7 +396,6 @@ export async function holeLexWork(
   host: string,
   lang: 'de' | 'fr',
   lawId: string,
-  tokens: string[],
 ): Promise<LexWorkErgebnis> {
   const url = `https://${host}/api/${lang}/texts_of_law/${lawId}`;
   const res = await fetch(url);
@@ -395,13 +450,15 @@ export async function holeLexWork(
     nurPdf,
   };
 
-  const artikel: Record<string, LexArtikel> = {};
+  // Vollabdeckung (§7): ALLE Artikel des Erlasses speichern, nicht nur die
+  // zitierten Tokens. Das Label folgt dem Quell-Designator (einheitlich).
+  let artikel: Record<string, LexArtikel> = {};
+  let labels: Record<string, string> = {};
   if (!nurPdf && xhtml) {
-    for (const token of tokens) {
-      const a = extrahiereLexWorkArtikel(xhtml, token);
-      if (a) artikel[token] = a;
-    }
+    const alle = extrahiereAlleLexWorkArtikel(xhtml);
+    artikel = alle.artikel;
+    labels = alle.labels;
   }
 
-  return { meta, artikel };
+  return { meta, artikel, labels };
 }

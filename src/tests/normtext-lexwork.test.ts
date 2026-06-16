@@ -268,7 +268,7 @@ describe('holeLexWork — mit gemocktem fetch', () => {
     });
     vi.stubGlobal('fetch', fetchMock);
 
-    const r = await holeLexWork('bgs.zg.ch', 'de', '161.7', ['1', '2']);
+    const r = await holeLexWork('bgs.zg.ch', 'de', '161.7');
     expect(fetchMock).toHaveBeenCalledOnce();
     expect(r.meta).toEqual({
       titel: 'Kostenverordnung',
@@ -278,8 +278,13 @@ describe('holeLexWork — mit gemocktem fetch', () => {
       pdfUrl: 'https://bgs.zg.ch/api/de/versions/2963/pdf_file',
       nurPdf: false,
     });
-    expect(Object.keys(r.artikel)).toEqual(['1', '2']);
+    // Vollabdeckung (§7): ALLE Artikel des Erlasses, nicht nur die zitierten.
+    // Die Beispiel-Fixture enthält § 1, § 2, § 3 → alle drei.
+    expect(Object.keys(r.artikel).sort()).toEqual(['1', '2', '3']);
     expect(r.artikel['1'].bloecke[0].text).toContain('amtlichen Kosten');
+    // Einheitliches Label aus dem Quell-Designator (article_symbol «§»): «§ N».
+    expect(r.labels['1']).toBe('§ 1');
+    expect(r.labels['2']).toBe('§ 2');
   });
 
   it('erkennt Alt-Erlass ohne xhtml_tol als nurPdf (kein Crash)', async () => {
@@ -303,7 +308,7 @@ describe('holeLexWork — mit gemocktem fetch', () => {
     } as unknown as Response));
     vi.stubGlobal('fetch', fetchMock);
 
-    const r = await holeLexWork('x', 'de', '1.1', ['1']);
+    const r = await holeLexWork('x', 'de', '1.1');
     expect(r.meta.nurPdf).toBe(true);
     expect(r.meta.pdfUrl).toBe('https://x/api/de/versions/1/pdf_file');
     expect(r.artikel).toEqual({});
@@ -314,6 +319,6 @@ describe('holeLexWork — mit gemocktem fetch', () => {
       'fetch',
       vi.fn(async () => ({ ok: false, status: 404 }) as unknown as Response),
     );
-    await expect(holeLexWork('x', 'de', '1.1', ['1'])).rejects.toThrow('HTTP 404');
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow('HTTP 404');
   });
 });

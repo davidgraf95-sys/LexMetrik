@@ -68,6 +68,8 @@ export interface ZhErgebnis {
     quelleHash: string;
   };
   artikel: Record<string, ZhArtikel>; // token → Artikel
+  /** Einheitliches Label je token: «§ N» (ZH ist ein «§»-Erlass). */
+  labels: Record<string, string>;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -520,7 +522,6 @@ export function loeseRedirect(redirectHtml: string, basisUrl: string): string | 
  */
 export async function holeZhPdf(
   registryUrl: string,
-  tokens: string[],
 ): Promise<ZhErgebnis> {
   // 1. Registry-HTML.
   const regRes = await fetch(registryUrl, { headers: { 'User-Agent': UA } });
@@ -568,10 +569,10 @@ export async function holeZhPdf(
 
   const quelleHash = berechneZhQuelleHash(artikel);
 
-  // Nur zitierte Tokens zurückgeben (kleinere Snapshots); quelleHash über alles.
-  const gefiltert: Record<string, ZhArtikel> = {};
-  for (const t of tokens) {
-    if (t in artikel) gefiltert[t] = artikel[t];
+  // Vollabdeckung (§7): ALLE Artikel zurückgeben; Label einheitlich «§ N».
+  const labels: Record<string, string> = {};
+  for (const token of Object.keys(artikel)) {
+    labels[token] = `§ ${token.replace(/_/g, '')}`;
   }
-  return { meta: { titel, stand, quelleHash }, artikel: gefiltert };
+  return { meta: { titel, stand, quelleHash }, artikel, labels };
 }
