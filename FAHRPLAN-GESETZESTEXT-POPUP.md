@@ -422,29 +422,33 @@ Erst jetzt UI — gegen vorhandene Bund-Snapshots. Liefert sofort sichtbaren Wer
 
 ## PHASE 3 — Kantone: ein LexWork-Adapter (18 Kt.) + Spezialfälle
 
-### Task 3.1: SPIKE — LexWork-Backend-Vertrag pinnen (Keystone, §7 doppelt)
+### Task 3.1: SPIKE — LexWork-Backend-Vertrag ✅ ERLEDIGT (16.6.2026)
 
-**Files:** keine (Verifikation; Ergebnis = Adapter-Vertrag in 3.2)
+**Ergebnis (empirisch verifiziert über 5 Subdomains: BE belex, BL clex, SG
+gesetzessammlung, AR clex, ZG bgs):**
 
-LexWork ist eine SPA → der sichtbare HTML ist eine Shell; der Volltext kommt aus
-einem JSON-Backend. **Dieser Spike pinnt das echte Endpoint-Schema**, bevor Code
-entsteht (sonst rät der Adapter).
-
-- [ ] **Schritt 1:** An einem Kanton (BE, `…/app/de/texts_of_law/161.12`) die
-  Netzwerk-Requests inspizieren (DevTools/`curl` der vermuteten API-Pfade, z. B.
-  `/api/.../texts_of_law/161.12` oder `…/versions/{id}`). Echte JSON-Antwort sichern.
-- [ ] **Schritt 2:** Klären: (a) Wird Volltext je Artikel oder als ein Dokument
-  geliefert? (b) Wie sind Artikel/§ ausgezeichnet (Feld, Anker, Nummerierung)?
-  (c) Wie heisst die Fassungs-/Versions-ID (`versions/{id}`) → `fassungsToken`?
-  (d) Stabil über die clex-Instanzen (BE/LU/OW/NW/GL/ZG/FR/SO/BS/BL/SH/AR/AI/SG/GR/AG/TG/VS)?
-- [ ] **Schritt 3:** Stichprobe an 3 Instanzen unterschiedlicher Subdomains
-  (`belex`, `bl.clex.ch`, `gesetzessammlung.sg.ch`) → Vertrag bestätigen oder
-  Sub-Varianten dokumentieren.
-- [ ] **Schritt 4:** Vertrag in `scripts/normtext/adapter-lexwork.ts` als Kommentar-
-  Header + Fixture (`src/tests/fixtures/lexwork-be-161.12.json`) festschreiben.
-  **Falls kein offenes JSON-Backend existiert** → Fallback-Entscheid: HTML der
-  gerenderten Version parsen oder Kanton in den ehrlichen Fallback (Task 3.4)
-  verschieben. Ergebnis dokumentieren (§11, `bibliothek/`-Eintrag).
+- **Endpunkt:** `GET https://<host>/api/{de|fr}/texts_of_law/{erlassId}` → HTTP 200,
+  `application/json`, ohne Auth/Header-Tricks. (`/app/` = SPA-Shell; `/api/` = Daten.)
+  Version-gepinnt: `…/texts_of_law/{erlassId}/versions/{versionId}`. **Achtung:**
+  `/api/de/versions/{id}` ohne `texts_of_law`-Präfix ist **404** — immer den vollen Pfad.
+- **JSON-Form:** Top-Level `{ "text_of_law": { … } }`. Volltext als **EIN HTML-Blob**
+  in `text_of_law.selected_version.xhtml_tol` (nicht artikelweise). Meta: `systematic_number`,
+  `title`, `abbreviation`, `enactment`, `version_uid`, `current_version.{id, version_dates_str}`,
+  `old_versions[]`, `future_versions[]`.
+- **XHTML-Markup (stabile CSS-Klassen, einheitlich über Kantone):**
+  - Artikel: `div.article` → `.article_number > .number` (Nummer) + `.article_title .title_text`
+  - Absatz: `div.paragraph` → `.number` (Absatznr.) + `.text_content` (Text)
+  - Buchstaben-Listen: `table.enumeration_item` → `td.number` (`a.`) + Text-Zelle
+  - Gliederung: `div.level_N.title`; Fussnoten: `a.footnote`. Entities HTML-encodiert.
+- **Drift-Token:** `version_uid` (MD5-artig, ändert je Fassung) → ideal für `fassungsToken`.
+  `current_version.id` (monoton) + `version_dates_str` als Zusatz. `future_versions[]`
+  erlaubt proaktive Warnung vor Inkrafttreten.
+- **PDF-Only-Sonderfall:** `xhtml_tol` ist `null` **genau dann**, wenn
+  `text_of_law.structured_document_id == null` (Alt-Erlass nur als PDF-Scan). Adapter
+  MUSS das behandeln → ehrlicher Fallback (Task 3.4), `pdf_link_tol` als Live-Link.
+  Anteil unbekannt → beim Bulk-Lauf zählen.
+- **Urteil:** „Adapter machbar via JSON-API" — ein browserloser Build-time-Adapter
+  deckt alle 18 Instanzen. (Dossier-Eintrag → Task Q.4.)
 
 ### Task 3.2: LexWork-Adapter (TDD gegen Fixture aus 3.1)
 
