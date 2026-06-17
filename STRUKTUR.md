@@ -22,7 +22,17 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ f19ef9a)
+## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ b9d35e6)
+
+**➡️ NÄCHSTER AGENT — offene Hauptaufgabe:** «Volltext bei ALLEN Kantonen im
+Popup» (pro Ziffer genau, alles bauen → EIN Deploy). Es ist ein **atomarer Build**
+(parsePassus-Anhang + alle Quell-Adapter + Voll-Regenerierung Kanton + Verifikation
+GEMEINSAM, sonst Tor rot). Validierte Engine liegt bereit (Commit `800f577`, inert):
+generischer Ziffer-Segmentierer + ZH-PDF-Integration (ZH NotGebV 118 Ziffern
+bewiesen); lexfind `/tolv/<id>` = uniformer PDF-Zugang. **Vollständige
+Schritt-für-Schritt-Anweisung + Fallstricke: `FAHRPLAN-GESETZESTEXT-POPUP.md`,
+Abschnitt «HANDOVER (17.6.2026) — ATOMARER ANHANG-/PDF-VOLLTEXT-BUILD».** Prod ist
+stabil @ `b9d35e6`; Engine ungepusht/nicht-deployt — keine Regression.
 
 **PROD-DEPLOY 17.6.2026 (David-Ja), 3 Stände:**
 - @ 474b10a: Linker (Phase 1/3) + Snapshot-Ausbau 27 Bundesgesetze.

@@ -672,3 +672,73 @@ Ergebnis-/Gates-Warnungen), sind reiner Text. Kartierung (Explore 17.6.2026):
 4. **Phase 2 (später):** kantonaler Inline-Resolver — die Tarif-`quelle` kennt den
    Kanton/Erlass bereits; «§ N» im zugehörigen Hinweis könnte über den Erlass der
    Quelle aufgelöst werden (Kanton-Kontext an den Hinweis-Renderer übergeben).
+
+---
+
+## HANDOVER (17.6.2026, Ende Session) — ATOMARER ANHANG-/PDF-VOLLTEXT-BUILD
+
+**Auftrag David:** «Volltext bei ALLEN Kantonen im Popup», effizient, **pro Ziffer
+genau**, **alles bauen dann (einmal) deployen**.
+
+### Stand
+- **Produktion:** `lexmetrik.vercel.app @ b9d35e6` — Inline-Linker (Phase 1/3),
+  27 Bundesgesetze-Snapshots, Phase 2 (kantonale «§ N»), Polish-Fixes
+  (föderale Posten→BGG-Snapshot, «Anhang Ziff.» klickbar, Tarif-Staffel
+  zeilenweise) sind LIVE. **Nichts davon anfassen — nur erweitern.**
+- **Validierte Engine (committet `800f577`, ungepusht/nicht-deployt, INERT):**
+  `scripts/normtext/anhang-segmenter.ts` (generischer N.N.N-Segmentierer) +
+  Integration in `holeZhPdf` (`adapter-zh-pdf.ts`). Bewiesen: ZH NotGebV liefert
+  118 Anhang-Ziffern + 18 § (1.1.1 / 1.4.1.1 / 2.5.1 verifiziert).
+
+### Befund: es ist ein ATOMARER Build (nicht inkrementell!)
+Sobald `parsePassus` «Anhang Ziff. N» auflöst, verlangt `check:vollstaendigkeit`
+(zu Recht, §6) diese Tokens in den Snapshots. Also müssen GEMEINSAM landen:
+parsePassus-Anhang + alle Quell-Adapter verdrahtet + Voll-Regenerierung Kanton +
+Verifikation. Solange unvollständig → Gate ROT. Darum wurde parsePassus-Anhang
+am Sessionende zurückgenommen (Tor grün).
+
+### Schritte (in dieser Reihenfolge, am Ende EIN Commit/Deploy)
+1. **parsePassus-Anhang wieder einbauen** (`src/lib/normtext/passus.ts`), war
+   verifiziert 10/10:
+   ```ts
+   const ANHANG_ZIFFER = /(?:Anhang|Ziff\.|Ziffer|Tarif-?Nr\.?|\bNr\.)\s*(?:Art\.\s*[\w-]+\s*(?:Ziff\.|Ziffer)?\s*)?(\d+(?:\.\d+)+)/i;
+   // in parsePassus, wenn ART nicht matcht:
+   const anh = zitat.match(ANHANG_ZIFFER);
+   return anh ? { artikelToken: anh[1].toLowerCase(), absatz: null } : null;
+   ```
+2. **Segmentierer in die übrigen Adapter verdrahten** (gleiches Muster wie
+   holeZhPdf: nach Artikel-Extraktion `segmentiereAnhangZiffern(text)` mergen,
+   Label `Anhang Ziff. N` für Tokens mit Punkt): `adapter-lexwork.ts`,
+   `adapter-htm.ts`, `adapter-pdf.ts`. ACHTUNG §1: nur bei echten Ziffer-Anhängen
+   (MIN_ZIFFERN-Schwelle schützt; bei LexWork ggf. zusätzlich pro-Erlass gaten,
+   damit normale nummerierte Listen keine Falsch-Einträge geben).
+3. **PDF-only-Kantone** (kein strukturierter Snapshot): AR `153.2`, OW `210.32`,
+   SG `941.12`, TI/VD (`lexfind/tolv/125101|125201|199638|82040|94116`), SZ-PDF,
+   UR-Download. **lexfind = uniformer Zugang:** `https://www.lexfind.ch/tolv/<id>/<lang>`
+   liefert IMMER das PDF (HTTP 200 application/pdf) → generischer PDF-Adapter +
+   Segmentierer, ein Profil je Layout/Sprache (de/fr/it).
+4. **Voll-Regenerierung:** `bash scripts/fedlex-cache.sh` (Bund) +
+   `npm run normtext -- --datum=$(date +%F)` (Kanton, Netz). TIPP: ggf. einen
+   `--nur=kanton`-Filter wie der bestehende `--nur=bund` ergänzen, um iterativ
+   nur Kanton zu generieren (Golden gemischt, Bund-Einträge bewahren).
+5. **Verifikation je Quelle (§1!):** jede neue Ziffer/jeder Artikel gegen den
+   amtlichen Text (Stützstellen-Stichproben + `check:vollstaendigkeit` grün).
+6. **Inventory** `inventar-kanton.ts`: «Anhang Ziff.» raus aus `sammleFallback()`
+   (Zeile ~309), bekannte-Lücken-Liste nachführen.
+7. **Gate voll grün** (golden byte-gleich) → mit Davids Ja deployen (deploy-check
+   Skill, sauberer /tmp-Worktree).
+
+### Fallstricke (gelernt)
+- **JS-`\b` matcht NICHT vor Umlauten** (ä/ö/ü sind kein `\w`): `/\büber/` matcht
+  nie. Wort-Abgrenzung über das folgende ` \d` lösen, nicht über `\b`.
+- **PDF-Spalten verschmelzen** (Querverweis-Nummern kleben im Text, z. B.
+  «Begrün-2.2.1»). Akzeptiert (§7: Live-Link ist massgeblich); der Tarif-Staffel-
+  Formatter in `NormPopover` (staffelZeilen) verbessert die Lesbarkeit.
+- **MIN_ZIFFERN** im Segmentierer verhindert Falsch-Anhänge bei Erlassen ohne
+  Ziffer-Tarif.
+- Verifikations-Muster: `holeZhPdf(url)` direkt via vite-node aufrufen und
+  `r.artikel`/`r.labels` prüfen (kein voller Regen nötig zum Testen der Extraktion).
+
+### Umfang (Mess-Stand 17.6.): 219/253 Tarif-Quellen zeigen schon Volltext.
+Lücke = 11 Anhang-/Ziffer-Quellen (nicht parsbar) + 11 Erlasse ohne Snapshot
+(PDF-only) + 1 Token-miss. Ziel: alle.
