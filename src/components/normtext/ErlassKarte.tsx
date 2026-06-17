@@ -10,7 +10,7 @@ function StandChip({ stand }: { stand: string }) {
   if (!stand) return null;
   const m = stand.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   const anzeige = m ? `${m[3]}.${m[2]}.${m[1]}` : stand;
-  return <span className="lc-chip whitespace-nowrap">Stand <span className="num">{anzeige}</span></span>;
+  return <span className="lc-chip whitespace-nowrap">Stand <span className="num ml-1">{anzeige}</span></span>;
 }
 
 function KarteInhalt({ e }: { e: BrowseErlass }) {

@@ -112,9 +112,13 @@ export function bandFuerToken(baender: Band[], token: string): number {
 }
 
 // ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──
+export interface FnLink { label: string; url: string }
+export interface Fussnote { nr: string; text: string; links: FnLink[] }
 export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;
   marginalie: string[];
+  /** Amtliche Fussnoten (Änderungs-/AS/BBl-Historie), falls vorhanden. */
+  fussnoten?: Fussnote[];
 }
 export type StrukturMap = Record<string, ArtikelStruktur>;
 

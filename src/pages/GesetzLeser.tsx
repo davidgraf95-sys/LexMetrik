@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
-  baueGliederungsbaum, type Sektion, type StrukturMap,
+  baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
 } from '../lib/normtext/browse';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import type { BrowseErlass, BrowseManifest } from '../lib/normtext/browse-typen';
@@ -36,10 +36,23 @@ function pfadZu(sektionen: Sektion[], treffer: (s: Sektion) => boolean): string[
   return null;
 }
 
-// Ein Artikel im Lesefluss (Richtung A): Kopf «Art. X — Sachüberschrift» klar vom
-// Serif-Bestimmungstext abgetrennt; übergeordnete Randtitel in der Marginalspalte.
-function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
-  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[];
+// Fussnoten-Text mit klickbaren AS/BBl-Verweisen (die Label-Vorkommen werden
+// durch Anker ersetzt). Reine Darstellung.
+function escRe(s: string): string { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function fnTextMitLinks(fn: Fussnote): ReactNode {
+  if (!fn.links.length) return fn.text;
+  const map = new Map(fn.links.map((l) => [l.label, l.url]));
+  const re = new RegExp(`(${[...map.keys()].sort((a, b) => b.length - a.length).map(escRe).join('|')})`, 'g');
+  return fn.text.split(re).map((t, i) => map.has(t)
+    ? <a key={i} href={map.get(t)} target="_blank" rel="noopener noreferrer" className="text-brass-700/90 hover:text-brass-700 hover:underline">{t}</a>
+    : t);
+}
+
+// Ein Artikel im Lesefluss (Richtung A): ruhige Artikelnummer links (auf Grundlinie
+// des 1. Absatzes), Serif-Bestimmungstext, NEUE Randtitel in der Marge (entdoppelt),
+// amtliche Fussnoten (Änderungs-/AS/BBl-Historie) am Fuss.
+function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
+  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[]; fussnoten?: Fussnote[];
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const zitat = `${e.artikelLabel} ${erlass.kuerzel}`;
@@ -51,7 +64,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
     });
   };
   return (
-    <article id={`art-${e.artikel}`} className="group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md lg:hover:scale-[1.035] lg:grid lg:grid-cols-[2.75rem_minmax(0,36rem)_10rem] lg:gap-x-4 lg:items-baseline">
+    <article id={`art-${e.artikel}`} className="group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md lg:hover:scale-[1.035] lg:grid lg:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] lg:gap-x-4 lg:items-baseline">
       {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
       <div className="order-1 flex items-baseline gap-2 lg:block lg:text-right">
         <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline whitespace-nowrap">{e.artikelLabel}</a>
@@ -64,11 +77,22 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: e.artikelLabel, kuerzel: erlass.kuerzel }}
           className="space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
+        {/* Amtliche Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar) */}
+        {fussnoten && fussnoten.length > 0 && (
+          <div className="mt-2.5 border-t border-line/50 pt-1.5 space-y-1">
+            {fussnoten.map((fn, i) => (
+              <p key={i} className="text-micro leading-snug text-ink-400">
+                {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
+                {fnTextMitLinks(fn)}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
       {marginalie.length > 0 && (
         <aside className="order-2 lg:order-3 mb-1 lg:mb-0">
-          <p className="text-xs leading-snug text-ink-400">
-            {marginalie.map((m, i) => <span key={i} className={i === marginalie.length - 1 ? 'text-ink-500' : ''}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
+          <p className="text-xs leading-snug text-ink-500">
+            {marginalie.map((m, i) => <span key={i}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
           </p>
         </aside>
       )}
@@ -183,6 +207,21 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return () => obs.disconnect();
   }, [sektionen, offen, sekPfadMap]);
 
+  // Marginalien entdoppeln (Print-Konvention): je Artikel nur die NEUEN Randtitel
+  // gegenüber dem vorigen Artikel (gemeinsamer Präfix wird weggelassen).
+  const margAnzeige = useMemo(() => {
+    const map = new Map<string, string[]>();
+    let prev: string[] = [];
+    for (const e of eintraege ?? []) {
+      const m = struktur?.[e.artikel]?.marginalie ?? [];
+      let i = 0;
+      while (i < m.length && i < prev.length && m[i] === prev[i]) i++;
+      map.set(e.artikel, m.slice(i));
+      prev = m;
+    }
+    return map;
+  }, [eintraege, struktur]);
+
   const sucheTrim = suche.trim().toLowerCase();
   const treffer = useMemo(
     () => (eintraege && sucheTrim ? eintraege.filter((e) => passtAufSuche(e, sucheTrim)) : null),
@@ -216,7 +255,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const regRef = (id: string) => (el: HTMLElement | null) => {
     if (el) sekRefs.current.set(id, el); else sekRefs.current.delete(id);
   };
-  const marg = (tok: string) => struktur?.[tok]?.marginalie ?? [];
+  const marg = (tok: string) => margAnzeige.get(tok) ?? [];
+  const fn = (tok: string) => struktur?.[tok]?.fussnoten;
 
   // Jede Sektionsstufe ist klappbar (Fedlex-analog); Inhalt rendert nur offen.
   const renderSektion = (s: Sektion, defOpen: boolean): ReactNode => {
@@ -227,7 +267,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         {auf && (
           <div className="space-y-5 lg:pl-5">
             {s.kinder.map((k, i) => renderSektion(k, defOpen && i === 0))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
           </div>
         )}
       </section>
@@ -288,14 +328,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {treffer ? (
             <div className="space-y-4 max-w-[40rem]">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s, i) => renderSektion(s, i === 0))}
