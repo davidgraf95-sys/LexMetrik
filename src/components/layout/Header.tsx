@@ -11,6 +11,7 @@ import { OBERKATEGORIEN } from '../../lib/oberkategorien';
 // zwei Vertrauensseiten Methodik & Über.
 const KATEGORIE_NAV = OBERKATEGORIEN.map((k) => ({ id: k.id, to: `/?kategorie=${k.id}`, label: k.titel }));
 const SEKUNDAER_NAV = [
+  { to: '/gesetze', label: 'Gesetze' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über' },
 ];

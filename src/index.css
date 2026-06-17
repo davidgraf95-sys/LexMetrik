@@ -303,6 +303,11 @@
   details > summary::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
   details[open] > summary::after { content: '  ▾'; }
 
+  /* Sprung-Hervorhebung: Ziel-Artikel kurz mit Messing-Fläche markieren
+     (Hash-Sprung aus dem Popover / TOC, Rubrik V «Gesetze»). */
+  @keyframes lc-ziel-blink { 0% { background: var(--brass-100); } 100% { background: transparent; } }
+  .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: .375rem; }
+
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
   .lc-live::before {
     content: ''; width: .5rem; height: .5rem; border-radius: 9999px;

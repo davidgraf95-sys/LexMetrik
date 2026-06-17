@@ -22,6 +22,12 @@ const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
 const Kontakt = lazy(() => import('./pages/Kontakt').then((m) => ({ default: m.Kontakt })));
 const Datenschutz = lazy(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
+// Rubrik V «Gesetze» (browsbare Rechtssammlung) — eigenständige Nav-Sektion,
+// KEINE Katalog-Oberkategorie (oberkategorien.ts unberührt). Übersicht /gesetze
+// wird prerendert (seo.ts), die Lesesicht /gesetze/:ebene/:key ist client-lazy
+// (SPA-Fallback via vercel.json-Rewrite) — die Routenzahl bleibt stabil bei +1.
+const Gesetze = lazy(() => import('./pages/Gesetze').then((m) => ({ default: m.Gesetze })));
+const GesetzLeser = lazy(() => import('./pages/GesetzLeser').then((m) => ({ default: m.GesetzLeser })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
@@ -80,6 +86,9 @@ export default function App() {
         <Route path="/rechner/fristenspiegel" element={<FristenspiegelRedirect />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
+        {/* Rubrik V «Gesetze»: Übersicht (prerendert) + Lesesicht (SPA-Fallback) */}
+        <Route path="/gesetze" element={<Gesetze />} />
+        <Route path="/gesetze/:ebene/:key" element={<GesetzLeser />} />
         <Route path="/methodik" element={<Methodik />} />
         <Route path="/ueber" element={<Ueber />} />
         <Route path="/kontakt" element={<Kontakt />} />
