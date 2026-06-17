@@ -125,6 +125,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
         // starke Markierung.
         const blockStark = istAbsatzZitiert && passusMarke == null;
         const blockDezent = istAbsatzZitiert && passusMarke != null;
+        // Hover-Zoom (Lesesicht) verzerrt hohe Blöcke (z. B. ein Tarif-Absatz mit
+        // ~20 Ziffern) — darum nur für kurze Blöcke skalieren (≈90 Z./Zeile).
+        const blockZeilen = Math.max(1, Math.ceil((b.text?.length ?? 0) / 90))
+          + (b.items?.reduce((m, it) => m + Math.max(1, Math.ceil((it.text?.length ?? 0) / 90)), 0) ?? 0);
+        const langerBlock = blockZeilen > 10;
         return (
           <div
             key={i}
@@ -136,7 +141,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' rounded px-2 -mx-2 relative z-0 hover:z-10 origin-left transition-[transform,background-color] duration-150 hover:bg-brass-100/40 lg:hover:scale-[1.025]' : ''}`}
+            }${zitierKontext ? ' rounded px-2 -mx-2 relative z-0 hover:z-10 origin-left transition-[transform,background-color] duration-150 hover:bg-brass-100/40' + (langerBlock ? '' : ' lg:hover:scale-[1.025]') : ''}`}
           >
             <p>
               {b.absatz != null && (

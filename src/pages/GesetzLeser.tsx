@@ -57,6 +57,14 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const zitat = `${e.artikelLabel} ${erlass.kuerzel}`;
+  // Geschätzte Zeilenzahl (≈90 Z./Zeile). Der Hover-Zoom (scale) auf den GANZEN
+  // Artikel verzerrt lange Bestimmungen (z. B. § 11 Notariatstarif BS, ~20 Tarif-
+  // ziffern) — er wächst dann hunderte px. Darum: Zoom nur für kurze Artikel; lange
+  // bekommen nur die (nicht skalierende) Hintergrund-/Schatten-Hervorhebung.
+  const zeilen = e.bloecke.reduce((n, b) =>
+    n + Math.max(1, Math.ceil((b.text?.length ?? 0) / 90))
+      + (b.items?.reduce((m, it) => m + Math.max(1, Math.ceil((it.text?.length ?? 0) / 90)), 0) ?? 0), 0);
+  const langeBestimmung = zeilen > 10;
   const kopiere = (was: 'zitat' | 'link') => {
     const text = was === 'zitat' ? zitat
       : `${typeof window !== 'undefined' ? window.location.origin : ''}${basisPfad}#art-${e.artikel}`;
@@ -65,7 +73,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
     });
   };
   return (
-    <article id={`art-${e.artikel}`} className="group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md lg:hover:scale-[1.035] lg:grid lg:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] lg:gap-x-4 lg:items-baseline">
+    <article id={`art-${e.artikel}`} className={`group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md ${langeBestimmung ? '' : 'lg:hover:scale-[1.035]'} lg:grid lg:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] lg:gap-x-4 lg:items-baseline`}>
       {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
       <div className="order-1 flex items-baseline gap-2 lg:block lg:text-right">
         <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline leading-snug break-words">{e.artikelLabel}</a>
