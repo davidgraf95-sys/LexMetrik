@@ -46,7 +46,9 @@
  */
 
 import { createHash } from 'node:crypto';
-import { segmentiereAnhangZiffern } from './anhang-segmenter.ts';
+// (segmentiereAnhangZiffern wird für ZH NICHT mehr genutzt — der Anhang wird
+//  spaltenbewusst über extrahiereZhAnhangSpalten gelesen; generischer
+//  Segmentierer bleibt für SG/LU im adapter-pdf.)
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Typen
@@ -521,6 +523,124 @@ export function loeseRedirect(redirectHtml: string, basisUrl: string): string | 
  * titel/stand/quelleHash; `tokens` filtert die Rückgabe (nur zitierte Artikel),
  * der quelleHash deckt aber den GANZEN extrahierten Volltext ab.
  */
+/**
+ * Spaltenbewusste Extraktion des ZH-NotGebV-Anhang-Tarifs (Auftrag David 17.6.2026).
+ *
+ * Der Anhang ist eine 4-Spalten-Tabelle: Ziffer (linkeste Spalte) | Beschreibung
+ * | Ansatz/Betrag | Verweis-Ziffern (rechteste Spalte). Der generische
+ * Zeilen-Serialisierer liest y-zeilenweise und verschränkt dabei die Verweis-
+ * Spalte mitten in die (über mehrere Zeilen umbrochene, silbengetrennte)
+ * Beschreibung («Begrün-2.2.1, 2.2.2, dung»). Hier lesen wir je Ziffer-Zeile
+ * SPALTENWEISE: Beschreibung+Ansatz (links) zusammen, Verweise (rechts, am
+ * Ziffer-Muster erkannt) separat als «(vgl. Ziff. …)» ans Ende; Silbentrennung an
+ * Zeilengrenzen wird zusammengefügt (ausser vor Konjunktionen wie «oder/und», die
+ * echte Hängestrich-Komposita sind). §3: reine Darstellung, der WORTLAUT bleibt
+ * unverändert (kein Zeichen geändert/entfernt — nur Spalten getrennt, Trennstriche
+ * gefügt). Die Spalten-x-Geometrie variiert je Seite (Bundsteg) → Schwellen werden
+ * RELATIV zur Beschreibungsspalte bestimmt; die Token-Spalte je Seite als linkester
+ * Ziffer-Cluster.
+ */
+async function extrahiereZhAnhangSpalten(
+  bytes: Uint8Array,
+): Promise<Record<string, ZhArtikel>> {
+  const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
+  const doc = await pdfjs.getDocument({ data: bytes, useSystemFonts: true }).promise;
+
+  type S = { x: number; y: number; h: number; s: string; p: number };
+  const alle: S[] = [];
+  for (let p = 1; p <= doc.numPages; p++) {
+    const inhalt = await (await doc.getPage(p)).getTextContent();
+    for (const it of inhalt.items) {
+      const item = it as { str: string; transform: number[]; height?: number };
+      if (!item.str || !item.str.replace(/\s/g, '')) continue;
+      const y = item.transform[5];
+      if (y < 60 || y > 530) continue; // Kopf-/Fussband
+      const h = item.height ?? 9;
+      if (h >= 11) continue; // Erlasstitel
+      alle.push({ x: item.transform[4], y, h, s: item.str, p });
+    }
+  }
+
+  // Ziffer-Kopf: Stück, dessen Text mit «N(.N)+» BEGINNT (Token allein ODER mit
+  // angeklebter Beschreibung «1.4.1.1 Begründung …»). Verweis-Ziffern matchen das
+  // Muster auch, liegen aber rechts → über die Token-Spalte (linkester Cluster je
+  // Seite) ausgeschlossen.
+  const TOKP = /^(\d+(?:\.\d+)+)(?:\s+(.*))?$/;
+  const REF = /^\d+\.\d+[\d.,\s]*$/;
+  const pageTokX = new Map<number, number>();
+  for (const s of alle) {
+    if (s.h >= 8.7 && TOKP.test(s.s.trim())) {
+      const c = pageTokX.get(s.p);
+      if (c === undefined || s.x < c) pageTokX.set(s.p, s.x);
+    }
+  }
+  const koepfe = alle
+    .filter((s) => s.h >= 8.7 && TOKP.test(s.s.trim()) && s.x <= pageTokX.get(s.p)! + 15)
+    .sort((a, b) => a.p - b.p || b.y - a.y);
+
+  const KONJ = /^(oder|und|bzw|sowie|beziehungsweise)\b/i;
+  const eintraege: Record<string, ZhArtikel> = {};
+
+  for (let i = 0; i < koepfe.length; i++) {
+    const k = koepfe[i];
+    const nx = koepfe[i + 1];
+    const m = k.s.trim().match(TOKP)!;
+    const token = m[1];
+    const restKopf = m[2] ?? '';
+    if (token in eintraege) continue; // erster Treffer gewinnt
+
+    const inRegion = (s: S): boolean =>
+      (s.p > k.p || (s.p === k.p && s.y <= k.y + 2)) &&
+      (!nx || s.p < nx.p || (s.p === nx.p && s.y > nx.y + 2));
+    const region = alle.filter((s) => inRegion(s) && s.x > k.x + 10 && s.h >= 7.0);
+    const descX = region.length ? Math.min(...region.map((s) => s.x)) : k.x + 28;
+
+    // nach (Seite,y) gruppieren = Tabellenzeile
+    const byY = new Map<string, S[]>();
+    for (const s of region) {
+      const key = `${s.p}_${Math.round(s.y)}`;
+      let l = byY.get(key);
+      if (!l) {
+        l = [];
+        byY.set(key, l);
+      }
+      l.push(s);
+    }
+    const zeilenSort = [...byY.entries()].sort((a, b) => {
+      const [pa, ya] = a[0].split('_').map(Number);
+      const [pb, yb] = b[0].split('_').map(Number);
+      return pa - pb || yb - ya;
+    });
+
+    const mainLines: string[] = [];
+    const refLines: string[] = [];
+    if (restKopf) mainLines.push(restKopf);
+    for (const [, ss] of zeilenSort) {
+      const istRef = (s: S): boolean => REF.test(s.s.trim()) && s.x >= descX + 100;
+      const main = ss.filter((s) => !istRef(s)).sort((a, b) => a.x - b.x).map((s) => s.s).join(' ').replace(/\s+/g, ' ').trim();
+      const ref = ss.filter(istRef).sort((a, b) => a.x - b.x).map((s) => s.s).join(' ').replace(/\s+/g, ' ').trim();
+      if (main) mainLines.push(main);
+      if (ref) refLines.push(ref);
+    }
+
+    // Silbentrennung an Zeilengrenzen fügen (nicht vor Konjunktionen).
+    let desc = '';
+    for (const ln of mainLines) {
+      if (/\p{L}-$/u.test(desc) && /^\p{Ll}/u.test(ln) && !KONJ.test(ln)) {
+        desc = desc.slice(0, -1) + ln;
+      } else {
+        desc = desc ? `${desc} ${ln}` : ln;
+      }
+    }
+    desc = desc.replace(/\s+/g, ' ').trim();
+    const refs = refLines.join(' ').replace(/[,\s]+$/, '').replace(/\s+/g, ' ').trim();
+    const text = desc + (refs ? ` (vgl. Ziff. ${refs})` : '');
+    if (text) eintraege[token] = { bloecke: [{ absatz: null, text }] };
+  }
+
+  return eintraege;
+}
+
 export async function holeZhPdf(
   registryUrl: string,
 ): Promise<ZhErgebnis> {
@@ -552,16 +672,19 @@ export async function holeZhPdf(
     throw new Error(`ZH-PDF ${pdfUrl}: keine PDF-Antwort (content-type ${ct})`);
   }
 
-  // 4. Extraktion + Parsing.
-  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes);
+  // 4. Extraktion + Parsing. bytes für JEDEN pdfjs-Lauf kopieren (getDocument
+  // detacht den Puffer → zweiter Lauf auf demselben Array würfe DataCloneError).
+  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes.slice());
   const textbasis = serialisiereZhZeilen(zeilen);
   const artikel = extrahiereAlleZhParagraphen(textbasis);
 
-  // Anhang-Tarif (hierarchische Ziffer-Nummerierung, z. B. NotGebV «1.1.1»)
-  // zusätzlich erfassen — der §/Art.-Extraktor lässt den Anhang sonst fallen.
-  // Konservativ: der Segmentierer liefert nur bei einem echten Ziffer-Anhang
-  // Einträge (≥ Schwelle), sonst leer (Erlasse ohne Anhang bleiben unberührt).
-  const anhang = segmentiereAnhangZiffern(textbasis);
+  // Anhang-Tarif SPALTENBEWUSST erfassen (Auftrag David 17.6.2026): der ZH-
+  // NotGebV-Anhang ist eine 4-Spalten-Tabelle (Ziffer | Beschreibung | Ansatz |
+  // Verweise). Der generische Zeilen-Serialisierer verschränkt die Verweis-Spalte
+  // in die Beschreibung («Begrün-2.2.1, 2.2.2, dung») — spaltenbewusst getrennt
+  // bleibt der Wortlaut intakt + lesbar. Nur für ZH (eigene Spalten-x-Geometrie);
+  // SG/LU-Anhänge nutzen weiter den generischen Segmentierer.
+  const anhang = await extrahiereZhAnhangSpalten(bytes.slice());
   for (const [ziff, e] of Object.entries(anhang)) {
     if (!(ziff in artikel)) artikel[ziff] = e;
   }

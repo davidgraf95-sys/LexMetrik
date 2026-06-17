@@ -46,7 +46,7 @@ export function HrAmtHinweis({ kanton }: { kanton: string }) {
       </p>
       {a.hinweis && <p className="text-xs text-ink-500"><NormText text={a.hinweis} /></p>}
       <p className="text-xs text-ink-500">
-        {`Massgeblich ist der SITZ-Kanton der Gesellschaft (Art. 927 OR). Stand ${HR_AEMTER_STAND} (amtliche Kantonsseiten; zefix-Abgleich offen) – Erstrecherche, vor Einreichung kurz gegenprüfen.`}
+        {`Massgeblich ist der SITZ-Kanton der Gesellschaft (Art. 927 OR). Stand ${HR_AEMTER_STAND} (amtliche Kantonsseiten; zefix-Abgleich offen) – vor Einreichung kurz gegenprüfen.`}
       </p>
     </div>
   );

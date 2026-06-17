@@ -98,9 +98,12 @@ const ZH_PDF_QUELLE = /^https:\/\/www\.zh\.ch\/.*\/zhlex-ls\/erlass-[^/]*\.html$
  *  Eine Gruppe = eine PDF-quelleUrl (= ein Erlass; Manifest-Key). Der generische
  *  PDF-Adapter (adapter-pdf.ts) löst die quelleUrl je Profil zur PDF auf und
  *  extrahiert den Volltext. */
+/** Profil-Namen des generischen PDF-Adapters (Spiegel von PdfProfilName). */
+type PdfProfilName = 'sz' | 'ti' | 'vd' | 'ju' | 'olexAt' | 'olexPar';
+
 export interface PdfInventarGruppe {
-  kanton: string; // 'SZ' | 'TI' | 'VD' | 'JU'
-  profil: 'sz' | 'ti' | 'vd' | 'ju';
+  kanton: string; // 'SZ' | 'TI' | 'VD' | 'JU' | 'AR' | 'GR' | 'LU' | 'SG' | 'FR' | 'VS'
+  profil: PdfProfilName;
   quelleUrl: string; // die exakte Tarif-quelleUrl (Manifest-Key)
   erlassName: string;
   erlassNr: string;
@@ -114,7 +117,7 @@ export interface PdfInventarGruppe {
  * lexfind-Quellen bleiben Fallback, §8). SZ via sz.ch, TI via m3.ti.ch, JU via
  * rsju.jura.ch. So aktiviert kein fremder Kanton versehentlich ein Profil.
  */
-function pdfProfil(kanton: string, url: string): 'sz' | 'ti' | 'vd' | 'ju' | null {
+function pdfProfil(kanton: string, url: string): PdfProfilName | null {
   if (kanton === 'SZ' && /^https:\/\/www\.sz\.ch\/.*\.pdf$/i.test(url)) return 'sz';
   // TI: NICHT mehr über den PDF-Adapter — TI wird jetzt über den HTM/TI-Profil
   // (m3.ti.ch …/legge/num) als strukturiertes HTML erschlossen (Auftrag David
@@ -122,6 +125,30 @@ function pdfProfil(kanton: string, url: string): 'sz' | 'ti' | 'vd' | 'ju' | nul
   // abgeleitet; Manifest-Key bleibt die exakte Tarif-quelleUrl.
   if (kanton === 'VD' && /^https:\/\/www\.lexfind\.ch\/tolv\/\d+\/[a-z]{2}$/i.test(url)) return 'vd';
   if (kanton === 'JU' && /^https:\/\/rsju\.jura\.ch\/.*viewdocument\.html\?/i.test(url)) return 'ju';
+
+  // ── Generische OrdoLex/gr-lex-Familie-PDFs (Konsolidierungs-PDF mit «(Stand …)»/
+  // «(état …)»-Kopf). Kanton + Host EXAKT gescoped (§1-Lektion: kein Fremdkanton
+  // aktiviert ein Profil). Marker: Art. (AR/GR/SG/FR/VS/VD-VS) bzw. § (LU/SZ).
+  // quelleUrl = die /api/<lang>/versions/N/pdf_file[_with_annexes]-PDF (= identity).
+  // Empirisch verifiziert extrahierbar (17.6.2026). Nicht-extrahierbare
+  // Geschwister (GE-lexfind 199638, TI-lexfind 125201) bleiben Fallback (§8).
+  const olexHosts: Array<{ kanton: string; muster: RegExp; profil: PdfProfilName }> = [
+    { kanton: 'AR', muster: /^https:\/\/ar\.clex\.ch\/api\/de\/versions\/\d+\/pdf_file/i, profil: 'olexAt' },
+    { kanton: 'GR', muster: /^https:\/\/www\.gr-lex\.gr\.ch\/api\/de\/versions\/\d+\/pdf_file/i, profil: 'olexAt' },
+    { kanton: 'SG', muster: /^https:\/\/www\.gesetzessammlung\.sg\.ch\/api\/de\/versions\/\d+\/pdf_file/i, profil: 'olexAt' },
+    { kanton: 'LU', muster: /^https:\/\/srl\.lu\.ch\/api\/de\/versions\/\d+\/pdf_file/i, profil: 'olexPar' },
+    { kanton: 'FR', muster: /^https:\/\/bdlf\.fr\.ch\/api\/fr\/versions\/\d+\/pdf_file/i, profil: 'olexAt' },
+    { kanton: 'VS', muster: /^https:\/\/lex\.vs\.ch\/api\/fr\/versions\/\d+\/pdf_file/i, profil: 'olexAt' },
+    { kanton: 'TI', muster: /^https:\/\/www\.lexfind\.ch\/tolv\/125101\/it$/i, profil: 'ti' },
+    // SZ Handänderungssteuergesetz: das lexfind-PDF trägt den «SRSZ D.M.YYYY»-
+    // Konsolidierungsmarker als Seiten-Fusszeile im Body (Stand-Body-Fallback in
+    // holePdf greift) → sz-Profil (§, leseSzStand).
+    { kanton: 'SZ', muster: /^https:\/\/www\.lexfind\.ch\/tolv\/82040\/de$/i, profil: 'sz' },
+    // NICHT erschlossen (bleibt Fallback, §8): VS lexfind/tolv/94116/fr —
+    // kein Stand im PDF UND das Tarif-Zitat «OcRF Art. 96 ch. I.1» liegt nicht in
+    // der 42-Artikel-OcRF (anderer Erlass) → erst Fachklärung der Quelle nötig.
+  ];
+  for (const h of olexHosts) if (kanton === h.kanton && h.muster.test(url)) return h.profil;
   return null;
 }
 
@@ -305,8 +332,10 @@ export function sammleHtmInventar(): HtmInventarGruppe[] {
 /**
  * Gruppiert die ZH-zhlex-PDF-Tarifquellen nach quelleUrl (= eine zhlex-Registry-
  * Seite = ein Erlass) und merged die §-Tokens (dedupe). Nur Einträge mit einer
- * ZH_PDF_QUELLE-URL und einem parsebaren §-Token werden aufgenommen; Einträge mit
- * «Anhang Ziff.»-Referenzen (NotGebV) bleiben in sammleFallback().
+ * ZH_PDF_QUELLE-URL und einem parsebaren Token werden aufgenommen. Seit 17.6.2026
+ * löst parsePassus auch «Anhang Ziff. N.N.N» (NotGebV) auf einen gepunkteten Token
+ * auf → diese Einträge sind jetzt HIER (nicht mehr Fallback) und werden über den
+ * zhlex-PDF-Anhang-Segmentierer (segmentiereAnhangZiffern) als Volltext erschlossen.
  */
 export function sammleZhPdfInventar(): ZhPdfInventarGruppe[] {
   const eintraege = alleTarifEintraege();

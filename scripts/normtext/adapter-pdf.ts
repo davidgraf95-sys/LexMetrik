@@ -63,12 +63,18 @@
  */
 
 import { createHash } from 'node:crypto';
+import { segmentiereAnhangZiffern } from './anhang-segmenter.ts';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Typen
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type PdfProfilName = 'sz' | 'ti' | 'vd' | 'ju';
+// 'olexAt'/'olexPar' = generisches OrdoLex/gr-lex-Familie-PDF (Art. bzw. §): die
+// kantonalen Konsolidierungs-PDFs (ar.clex.ch, gr-lex.gr.ch, srl.lu.ch,
+// gesetzessammlung.sg.ch, bdlf.fr.ch, lex.vs.ch sowie lexfind/tolv) tragen den
+// Stand uniform im Kopf — «(Stand 1. Januar 2024)» (de) bzw. «(état 01.01.2011)»
+// (fr). EIN Profil statt Einzel-Hacks; Marker bestimmt nur die Kopf-Erkennung.
+export type PdfProfilName = 'sz' | 'ti' | 'vd' | 'ju' | 'olexAt' | 'olexPar';
 
 export interface PdfBlock {
   absatz: string | null;
@@ -172,6 +178,45 @@ export function leseJuStand(text: string): string {
   return `${m[3]}-${mon}-${m[1].padStart(2, '0')}`;
 }
 
+/** Deutsche Monatsnamen → MM. */
+const DE_MONATE: Record<string, string> = {
+  januar: '01', februar: '02', märz: '03', maerz: '03', april: '04', mai: '05',
+  juni: '06', juli: '07', august: '08', september: '09', oktober: '10',
+  november: '11', dezember: '12',
+};
+/**
+ * OrdoLex/gr-lex-Familie-Stand aus dem Kopf:
+ *   de  «(Stand 1. Januar 2024)»  → 2024-01-01
+ *   fr  «(état 01.01.2011)»        → 2011-01-01
+ *   fr  «(état au 1er janvier 2020)» → 2020-01-01 (Langform)
+ * Der «Stand»/«état» ist das KONSOLIDIERUNGS-Datum (geltende Fassung, §7) — nicht
+ * das Erlassdatum («vom …»/«du …»), das davor steht.
+ */
+export function leseOrdolexStand(text: string): string {
+  // Der Konsolidierungskopf ist IMMER geklammert — «(Stand …)» / «(état …)» /
+  // «(version entrée en vigueur le …)». Die Klammer-Bindung ist wichtig, weil der
+  // Stand-Leser auch über den ungefilterten Body (textbasis/rohText) läuft: ohne
+  // sie würde ein freier Körper-Satz («per Stand 15. März 2020») fälschlich als
+  // Stand gegriffen, falls der echte Kopf fehlt (Bug-Check-Befund 17.6.2026).
+  const de = text.match(/\(\s*Stand\s+(\d{1,2})\.\s*([A-Za-zäöü]+)\s+(\d{4})/i);
+  if (de) {
+    const mon = DE_MONATE[de[2].toLowerCase()];
+    if (mon) return `${de[3]}-${mon}-${de[1].padStart(2, '0')}`;
+  }
+  const frNum = text.match(/\(\s*état\s+(?:au\s+)?(\d{1,2})\.(\d{1,2})\.(\d{4})/i);
+  if (frNum) return `${frNum[3]}-${frNum[2].padStart(2, '0')}-${frNum[1].padStart(2, '0')}`;
+  // FR-Konsolidierung: «(version entrée en vigueur le 01.07.2016)» — das
+  // In-Kraft-Datum der geltenden Fassung ist der Stand (§7). «le» oder «dès le».
+  const frVig = text.match(/\(\s*version\s+entrée en vigueur\s+(?:dès\s+)?le\s+(\d{1,2})\.(\d{1,2})\.(\d{4})/i);
+  if (frVig) return `${frVig[3]}-${frVig[2].padStart(2, '0')}-${frVig[1].padStart(2, '0')}`;
+  const frLang = text.match(/\(\s*état\s+au\s+(\d{1,2})(?:er)?\s+([a-zàâçéèêëîïôûù]+)\s+(\d{4})/i);
+  if (frLang) {
+    const mon = FR_MONATE[frLang[2].toLowerCase()];
+    if (mon) return `${frLang[3]}-${mon}-${frLang[1].padStart(2, '0')}`;
+  }
+  return '';
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Profil-Registry
 // ─────────────────────────────────────────────────────────────────────────────
@@ -181,6 +226,17 @@ export const PDF_PROFILE: Record<PdfProfilName, PdfProfil> = {
   ti: { name: 'ti', pdfUrlAusQuelle: tiPdfUrl, standLeser: leseTiStand, marker: 'Art.' },
   vd: { name: 'vd', pdfUrlAusQuelle: (u) => u, standLeser: leseVdStand, marker: 'Art.' },
   ju: { name: 'ju', pdfUrlAusQuelle: juPdfUrl, standLeser: leseJuStand, marker: 'Art.' },
+  // Generische OrdoLex-Familie: quelleUrl IST die PDF (identity); Stand aus dem
+  // «(Stand …)»/«(état …)»-Kopf. olexAt = Art.-Erlasse (AR/GR/SG/FR/VS/VD-VS/TI),
+  // olexPar = §-Erlasse (LU/SZ). TI-«(del …)» wird über das bestehende ti-Profil
+  // geroutet (leseTiStand); olexAt nutzt zusätzlich leseTiStand als Fallback.
+  olexAt: {
+    name: 'olexAt',
+    pdfUrlAusQuelle: (u) => u,
+    standLeser: (t) => leseOrdolexStand(t) || leseTiStand(t),
+    marker: 'Art.',
+  },
+  olexPar: { name: 'olexPar', pdfUrlAusQuelle: (u) => u, standLeser: leseOrdolexStand, marker: '§' },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -210,6 +266,10 @@ export interface PdfExtrakt {
   /** Roh-Text aus Kopf-/Fussbändern + (verworfener) Marginalie (für die Stand-
    *  Erkennung; der Kopf «(del …)»/«du …»/«Entrée …» steht im obersten Band). */
   randText: string;
+  /** UNGEFILTERTER Volltext aller pdfjs-Items (jede Seite). Letzter Stand-Fallback,
+   *  wenn der Marker weder im Band noch im Body liegt — z. B. der «SRSZ D.M.YYYY»-
+   *  Konsolidierungsstempel mitten auf der SZ-Titelseite (als Marginalie verworfen). */
+  rohText: string;
   titel: string;
 }
 
@@ -233,6 +293,7 @@ export async function extrahierePdfZeilen(
 
   const zeilen: PdfTextZeile[] = [];
   const randStuecke: string[] = [];
+  const rohStuecke: string[] = [];
   let titel = '';
 
   for (let p = 1; p <= doc.numPages; p++) {
@@ -250,6 +311,7 @@ export async function extrahierePdfZeilen(
         width?: number;
       };
       if (!item.str || !item.str.replace(/\s/g, '')) continue;
+      rohStuecke.push(item.str);
       alle.push({
         x: item.transform[4],
         y: item.transform[5],
@@ -391,7 +453,7 @@ export async function extrahierePdfZeilen(
     }
   }
 
-  return { zeilen, randText: randStuecke.join(' '), titel };
+  return { zeilen, randText: randStuecke.join(' '), rohText: rohStuecke.join(' '), titel };
 }
 
 /** Häufigster gerundeter Wert einer Liste (Modus). */
@@ -789,9 +851,19 @@ export async function holePdf(
     throw new Error(`PDF ${pdfUrl}: keine PDF-Antwort (content-type ${ct})`);
   }
 
-  const { zeilen, randText, titel } = await extrahierePdfZeilen(bytes, profil.marker);
+  const { zeilen, randText, rohText, titel } = await extrahierePdfZeilen(bytes, profil.marker);
   const textbasis = serialisierePdfZeilen(zeilen);
   const artikel = extrahiereAllePdfArtikel(textbasis, profil.marker);
+
+  // Anhang-Tarif (hierarchische Ziffer-Nummerierung «1.1.1», z. B. SG/LU
+  // «…pdf_file_with_annexes») zusätzlich erfassen — der Art./§-Extraktor lässt
+  // den Anhang sonst fallen. Konservativ: der Segmentierer liefert nur bei einem
+  // echten Ziffer-Anhang (≥ Schwelle) Einträge, sonst leer (reine Artikel-Erlasse
+  // bleiben unberührt). §7: Live-Link bleibt massgeblich.
+  const anhang = segmentiereAnhangZiffern(textbasis);
+  for (const [ziff, e] of Object.entries(anhang)) {
+    if (!(ziff in artikel)) artikel[ziff] = e;
+  }
 
   // Stand: zuerst Kopf-/Fussband, dann Titel, dann die Präambel (TI: «(del 30
   // novembre 2010)» / JU: «du 24 mars 2010» stehen NICHT im Kopfband, sondern in
@@ -801,6 +873,12 @@ export async function holePdf(
     profil.standLeser(randText) ||
     profil.standLeser(titel) ||
     profil.standLeser(praeambel) ||
+    // Body als Fallback, dann der UNGEFILTERTE Roh-Volltext: der SZ-«SRSZ
+    // D.M.YYYY»-Stempel steht als Marginalie mitten auf der Titelseite (weder Band
+    // noch Body). standLeser ist je Profil ein enges Datums-Muster → first match
+    // = Konsolidierungsdatum; Fehlgriff praktisch ausgeschlossen.
+    profil.standLeser(textbasis) ||
+    profil.standLeser(rohText) ||
     '';
   const quelleHash = berechnePdfQuelleHash(artikel);
 
@@ -808,7 +886,9 @@ export async function holePdf(
   // Profil-Marker («§ N» SZ / «Art. N» VD/JU).
   const labels: Record<string, string> = {};
   for (const token of Object.keys(artikel)) {
-    labels[token] = `${profil.marker} ${token.replace(/_/g, '')}`;
+    labels[token] = token.includes('.')
+      ? `Anhang Ziff. ${token}`
+      : `${profil.marker} ${token.replace(/_/g, '')}`;
   }
   return { meta: { titel, stand, quelleHash }, artikel, labels };
 }

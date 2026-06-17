@@ -73,7 +73,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'UR', erlassName: 'Gerichtsgebührenreglement (GGebR)', erlassNr: 'RB 2.3232',
     artikel: 'Art. 30 (i.V.m. Art. 31 ff.)', stand: '1.10.2023', verifiziert: 'doppelt',
     quelleUrl: 'https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232',
-    hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts.',
+    hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts. PRÜFEN (Audit 17.6.): zitierter Art. 30 GGebR betrifft die Strafverfahrens-Entschädigung; Zivil-Staffel-Anker in fachlicher Klärung.',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 5000, minChf: 500, maxChf: 2500 },
       { grenzeChf: 20000, minChf: 1000, maxChf: 6000 },
@@ -141,7 +141,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'ZG', erlassName: 'V. über die Anwaltskosten', erlassNr: 'BGS 163.4',
     artikel: '§ 3', stand: '1.1.2026', verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.zg.ch/app/de/texts_of_law/163.4',
-    hinweis: 'Grundhonorar (ZH-Skala); § 3 Abs. 3 ±⅓.',
+    hinweis: 'Grundhonorar nach der autonomen Zuger Tabelle (§ 3); Abs. 3 ±⅓.',
     regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA.map((b, i) => i === 0 ? { ...b, minChf: 200 } : b) },
   },
   FR: {
@@ -311,7 +311,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'VD', erlassName: 'Tarif des dépens en matière civile (TDC)', erlassNr: 'BLV 270.11.6',
     artikel: 'Art. 3 ff.', stand: '1.5.2019', verifiziert: 'doppelt',
     quelleUrl: 'https://www.lexfind.ch/tolv/135783/fr',
-    hinweis: 'Rahmen je Band; >5 Mio: oberer Rahmen nach Tarif. Art. 2 Abs. 2: keine dépens in der Schlichtung. Mietsachen (LJB) max CHF 1500.',
+    hinweis: 'Rahmen je Band; >5 Mio: oberer Rahmen nach Tarif. Art. 2 Abs. 2: keine dépens in der Schlichtung. Mietsachen (LJB) max CHF 1500. PRÜFEN (Audit 17.6.): Staffel steht in Art. 4 (nicht 3); Tranche 2–5 Mio lt. Normtext 20\'000–100\'000.',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 30000, minChf: 1000, maxChf: 9000 },
       { grenzeChf: 100000, minChf: 3000, maxChf: 15000 },
@@ -365,12 +365,12 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais (RTFMC, défraiement)', erlassNr: 'rsGE E 1 05.10',
     artikel: 'Art. 84/85', stand: '1.7.2025', verifiziert: 'doppelt',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
-    hinweis: 'Défraiement nach ZH-Skala; Art. 85 ±10 %. Nicht bestimmbar: CHF 600–18 000 (Art. 86).',
+    hinweis: 'Défraiement nach ZH-Skala; Art. 85 ±10 %. Nicht bestimmbar: CHF 600–18 000 (Art. 86). PRÜFEN (Audit 17.6.): Art. 85 RTFMC ist eine autonome GE-Prozentstaffel ohne Verweis auf die ZH-Skala.',
     regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA },
   },
   JU: {
     kanton: 'JU', erlassName: 'Décret fixant le tarif des dépens', erlassNr: 'RSJU 188.61',
-    artikel: 'Art. 7', stand: '1.9.2015', verifiziert: 'doppelt',
+    artikel: 'Art. 7 i.V.m. Art. 13', stand: '1.9.2015', verifiziert: 'doppelt',
     quelleUrl: 'https://rsju.jura.ch/fr/viewdocument.html?idn=20028&id=27021&download=1',
     hinweis: 'Rahmen je Band; >2 Mio: bis 3,8 % des Streitwerts. Zuschlag bis 75 % bei ausserordentlichem Aufwand (Art. 13).',
     regel: { typ: 'staffel_rahmen', baender: [

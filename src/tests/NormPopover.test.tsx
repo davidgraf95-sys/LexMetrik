@@ -94,11 +94,13 @@ describe('NormPopover — Render', () => {
     expect((href.match(/#/g) ?? []).length).toBe(1);
   });
 
-  it('«In Kraft seit»-Text sichtbar (David 16.6.2026: Label statt «Stand»)', () => {
+  it('Bund: «Fassung vom»-Label + Datum DD.MM.YYYY (David 17.6.2026)', () => {
     const out = html({ absatz: '1' });
-    expect(out).toContain('In Kraft seit:');
-    expect(out).toContain('2026-01-01');
-    // bewusste Umbenennung: das alte nackte «Stand:»-Label gibt es nicht mehr
+    // Bund-Snapshot (ebene='bund') → «Fassung vom:»; Kanton → «In Kraft seit:».
+    expect(out).toContain('Fassung vom:');
+    // Datum IMMER DD.MM.YYYY (nicht ISO): Stand 2026-01-01 → 01.01.2026.
+    expect(out).toContain('01.01.2026');
+    expect(out).not.toContain('2026-01-01');
     expect(out).not.toContain('>Stand: ');
   });
 

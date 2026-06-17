@@ -11,6 +11,15 @@ const ABS = /Abs\.?\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)/i;
 const LIT = /(?:lit\.|Bst\.|\blit\b|\bBst\b)\s*([a-z](?:bis|ter)?)\b/i;
 const ZIFF = /(?:Ziff\.|Ziffer|\bZiff\b)\s*(\d+[a-z]?)/i;
 const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/;
+// Anhang-/Tarif-Ziffer ohne Art./§ («Anhang Ziff. 1.1.1», «Tarif-Nr. 2.5»,
+// «Ziffer 4.4.3.1»). NUR als Fallback, wenn ART (Art./§) NICHT matcht — sonst
+// gewinnt immer der Artikel-Designator. Verlangt eine MEHRSTUFIGE Ziffer
+// (\d+(?:\.\d+)+ → mind. «N.N»), damit einfache «Ziff. 17» nicht fälschlich als
+// Anhang-Token gelten (die bleiben echte lit./Ziff. eines Artikels). Token = die
+// gepunktete Ziffer, kongruent zum Anhang-Segmentierer (segmentiereAnhangZiffern)
+// und zum Snapshot-`artikel`.
+const ANHANG_ZIFFER =
+  /(?:Anhang|Ziff\.|Ziffer|Tarif-?Nr\.?|\bNr\.)\s*(?:Art\.\s*[\w-]+\s*(?:Ziff\.|Ziffer)?\s*)?(\d+(?:\.\d+)+)/i;
 
 /**
  * Zerlegtes Zitat. lit/ziff sind nur gesetzt, wenn das Zitat sie nennt
@@ -26,7 +35,11 @@ export interface Passus {
 
 export function parsePassus(zitat: string): Passus | null {
   const a = zitat.match(ART);
-  if (!a) return null;
+  if (!a) {
+    // Kein Art./§ → evtl. eine Anhang-/Tarif-Ziffer («Anhang Ziff. 1.1.1»).
+    const anh = zitat.match(ANHANG_ZIFFER);
+    return anh ? { artikelToken: anh[1].toLowerCase(), absatz: null } : null;
+  }
   const artikelToken = a[1].toLowerCase()
     .replace(SUFFIX, (_, n, b, suf) => [n, b, suf].filter(Boolean).join('_'));
   const abs = zitat.match(ABS);

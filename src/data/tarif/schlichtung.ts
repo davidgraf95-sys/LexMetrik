@@ -151,7 +151,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'AI', erlassName: 'Verordnung über die Gebühren der Gerichte (GGV)', erlassNr: 'GS 173.810',
     artikel: 'Art. 7', stand: '1.1.2024', verifiziert: 'doppelt',
     quelleUrl: 'https://ai.clex.ch/app/de/texts_of_law/173.810',
-    hinweis: 'Vorstand CHF 50–300; Urteilsvorschlag/Entscheid 50–500; Einigung/Rückzug/Säumnis 50–200.',
+    hinweis: 'Vorstand CHF 50–300; Urteilsvorschlag/Entscheid 50–500; Einigung/Rückzug/Säumnis 50–200. PRÜFEN (Audit 17.6.): Art. 7 nennt bandabhängig 200–1000 / 300–1000 / 100–600.',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   SG: {
@@ -220,7 +220,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'VS', erlassName: 'Loi fixant le tarif des frais et dépens (LTar)', erlassNr: 'SGS/VS 173.8',
     artikel: 'Art. 15', stand: '1.1.2018', verifiziert: 'doppelt',
     quelleUrl: 'https://lex.vs.ch/app/de/texts_of_law/173.8',
-    hinweis: 'Citation CHF 50 + séance 60–120; bei Streitwert bis 2000 und Urteilsvorschlägen CHF 60–500.',
+    hinweis: 'Citation CHF 50 + séance 60–120; bei Streitwert bis 2000 und Urteilsvorschlägen CHF 60–500. PRÜFEN (Audit 17.6.): Sitzungsgebühr lt. Art. 15 Abs. 1b = 120–250.',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   NE: {
@@ -242,8 +242,8 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais en matière civile (RTFMC)', erlassNr: 'rsGE E 1 05.10',
     artikel: 'Art. 15', stand: '1.1.2011', verifiziert: 'doppelt',
-    quelleUrl: 'https://www.lexfind.ch/tolv/199638/fr',
-    hinweis: 'Causes pécuniaires CHF 100–200; bei mehreren Parteien +20 %.',
+    quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
+    hinweis: 'Causes pécuniaires CHF 100–200; bei mehreren Parteien +20 %. PRÜFEN (Audit 17.6.): der «+20 %»-Zuschlag ist in Art. 15 nicht ausgewiesen (Rahmen 100–200 stimmt).',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 200 },
   },
   JU: {

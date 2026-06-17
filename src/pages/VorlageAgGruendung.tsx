@@ -1255,7 +1255,7 @@ export function VorlageAgGruendung() {
                   {e.typ === 'offen' && 'nicht amtlich erhebbar'}
                 </span>{' '}
                 — <a href={tarif.erlassUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">{tarif.erlassLabel}</a> (Stand {tarif.stand}); Tarifwert ohne MWST (8,1 %) und Auslagen.
-                {tarif.hinweise.map((h) => ` ${h}`).join('')} Erstrecherche — fachliche Abnahme ausstehend.
+                {tarif.hinweise.map((h) => ` ${h}`).join('')} — fachliche Abnahme ausstehend.
                 {' '}Bank-Sperrkonto je nach Institut (Praxisbeispiel ZKB: 0,5 ‰, mind. CHF 250).
               </li>
             );

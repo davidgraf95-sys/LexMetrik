@@ -25,7 +25,7 @@ import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
 const DISCLAIMER =
   'Erwerbs-Nebenkosten beim Grundstückkauf: Beurkundungsgebühr (Notariat) + Grundbucheintrag, optional Grundpfand (Schuldbrief) und Handänderungssteuer. ' +
   'Kantonale Tarife nach Kaufpreis bzw. Pfandsumme; aufwand-/bandbreitenbasierte Tarife (freies Notariat) erscheinen als Spanne oder «nach Vereinbarung», nie als erfundener Punktwert. ' +
-  'Die Handänderungssteuer ist eine kantonale/kommunale STEUER (keine Gebühr); Befreiungen sind einzelfallabhängig und nicht berücksichtigt. Auslagen und MwSt. (freies Notariat) sind nicht enthalten. Erstrecherche, nicht abgenommen. Keine Rechtsberatung.';
+  'Die Handänderungssteuer ist eine kantonale/kommunale STEUER (keine Gebühr); Befreiungen sind einzelfallabhängig und nicht berücksichtigt. Auslagen und MwSt. (freies Notariat) sind nicht enthalten. Nicht abgenommen. Keine Rechtsberatung.';
 
 const NG_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   kanton: { p: 'kt', typ: 'str', gueltig: einerVon(...KANTONE) },
@@ -66,7 +66,7 @@ function PostenKarte({ titel, posten, akzent }: { titel: string; posten: NgPoste
       {!entfaellt && (
         <p className="mt-2 text-xs text-ink-500">
           {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
-          {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+          {q.verifiziert === 'recherche' ? ' · nicht abgenommen' : ''}
           {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
         </p>
       )}

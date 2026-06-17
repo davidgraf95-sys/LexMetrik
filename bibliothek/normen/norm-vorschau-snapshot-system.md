@@ -128,3 +128,36 @@ Ende jede (Kanton, Erlass)-Kombination, die ohne Snapshot blieb, als Klartext.
   Parsing, lit/Ziff-Wortgrenze, Vollständigkeits-Check auf Laufzeit-Auflösung.
 - **Pflege:** Rechtsänderung → Drift-Check rot → `npm run normtext` neu; Pins in
   `fedlex-cache.sh` + `register/quellen-register.md` nachführen.
+
+## Darstellungs-Regeln Norm-Popover (`NormPopover.tsx`, Stand 17.6.2026)
+
+Verbindliche, EINHEITLICHE Darstellung über ALLE Quelltypen (Bund-fedlex,
+LexWork, HTM, PDF, Anhang-Tarif). Grundsatz (Freigabe David 17.6.2026): die
+**Darstellung darf normalisiert werden, der WORTLAUT bleibt unangetastet** — es
+wird nie ein Zeichen geändert/entfernt/umgestellt, nur PDF-bedingt fehlende
+Trenn-Leerzeichen ergänzt bzw. Layout (Zeilen/Hervorhebung) gesetzt.
+
+1. **Titel:** `artikelLabel` («Art. 335c» / «§ 4» / «Anhang Ziff. 2.2.1») + Erlass.
+2. **Absätze:** in Quell-Reihenfolge, hochgestellte Absatznummer (¹²³…).
+3. **Aufzählungen** (lit. Bund / Ziff. Kanton): eingerückte Liste mit Marke —
+   einheitliches Markup, nur die Marke unterscheidet sich (§3/§5).
+4. **Aufgehobene Stellen** (Snapshot trägt faithful nur «…»): gedämpftes
+   «aufgehoben» (Absatz UND Item).
+5. **Tarif-Staffeln** (PDF-Spalten verschmelzen zu einem Blob): zeilenweise je
+   Band — (a) «über N …»-Staffeln, (b) «–<Wort>»-Anhang-Bänder. Eng getriggert
+   (Fee-Marker + ≥2 Bänder), damit normale Absätze nie zerschnitten werden.
+6. **Tarif-/Anhang-Text-Normalisierung** (`normalisiereTarifText`): NUR im
+   Tarif-Kontext (gepunkteter Ziffer-Token ODER erkannte Staffel) werden vom PDF
+   verschluckte Trenn-Leerzeichen ergänzt — Buchstabe↔Ziffer («Allgemeinen1.1.1»
+   → «Allgemeinen 1.1.1») und ‰↔Ziffer («1‰4.1» → «1‰ 4.1»). Reguläre Artikel
+   (Bund/LexWork, sauber extrahiert) werden NIE normalisiert.
+7. **Datum IMMER `DD.MM.YYYY`** (`formatiereDatum`). Label nach Ebene:
+   **Bund → «Fassung vom:»**, **Kanton → «In Kraft seit:»**.
+8. **Hervorhebung:** die zitierte Stelle (Absatz, sonst genau das lit/Ziff-Item)
+   wird markiert und ins Sichtfeld gescrollt.
+9. **Fuss:** Live-Link «↗ geltende Fassung» (mit Text-Fragment auf die zitierte
+   Stelle) + Disclaimer «massgeblich ist die amtliche Fassung».
+10. **Bekannte Grenze:** PDF-Spalten-Verschränkung MIT Silbentrennung
+    («Begrün-2.2.1, 2.2.2, dung») bleibt — eine Display-Regel kann das nicht von
+    echten Hängestrich-Komposita («Kaufs-, Rückkaufs- und …») unterscheiden;
+    vollständige Auflösung nur über spaltenbewusste Extraktion (offen, ZH-Anhang).

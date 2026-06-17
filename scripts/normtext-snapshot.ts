@@ -23,7 +23,7 @@ import {
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
-import { holePdf, PDF_PROFILE } from './normtext/adapter-pdf.ts';
+import { holePdf, PDF_PROFILE, type PdfProfilName } from './normtext/adapter-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
@@ -486,18 +486,31 @@ async function erzeugeZhPdfSnapshots(
 //   TI  …/pdfatto/atto/137                → «ti-137»
 //   VD  …/tolv/105539/fr                  → «vd-105539»
 //   JU  …viewdocument.html?idn=20021&id=34172… → «ju-20021-34172»
-function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
+function pdfLawIdSafe(profil: PdfProfilName, url: string): string {
   if (profil === 'sz') {
     const m = url.match(/\/(\d+_\d+)\.pdf$/i);
     if (m) return m[1].replace(/_/g, '.');
+    const t = url.match(/\/tolv\/(\d+)\//i); // SZ-lexfind (82040/de)
+    if (t) return t[1];
   }
   if (profil === 'ti') {
-    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
-    if (m) return `ti-${m[1]}`;
+    const a = url.match(/\/pdfatto\/atto\/(\d+)/i);
+    if (a) return `ti-${a[1]}`;
+    const t = url.match(/\/tolv\/(\d+)\//i); // TI-lexfind (125101/it)
+    if (t) return `ti-${t[1]}`;
   }
   if (profil === 'vd') {
     const m = url.match(/\/tolv\/(\d+)\//i);
     if (m) return `vd-${m[1]}`;
+  }
+  // Generische OrdoLex-Familie: /api/<lang>/versions/<N>/pdf_file → «<N>»
+  // (kanton-präfix wird vom Aufrufer angehängt → eindeutig je Kanton);
+  // lexfind /tolv/<id>/<lang> → «<id>».
+  if (profil === 'olexAt' || profil === 'olexPar') {
+    const v = url.match(/\/versions\/(\d+)\/pdf_file/i);
+    if (v) return v[1];
+    const t = url.match(/\/tolv\/(\d+)\//i);
+    if (t) return t[1];
   }
   if (profil === 'ju') {
     const idn = url.match(/[?&]idn=(\d+)/i);

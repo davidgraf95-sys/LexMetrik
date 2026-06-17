@@ -47,15 +47,49 @@ function istAufgehoben(text: string): boolean {
 // Umlaute zählen in JS-Regex nicht als \w, «\büber» würde nie matchen. Die erste
 // Zeile (Kopf + erstes Band) wird vor «bis <Zahl>» getrennt.
 function staffelZeilen(text: string): string[] | null {
-  const istStaffel = /zuzügl\.|Grundgebühr|betragen/.test(text)
-    && (text.match(/über \d/g) ?? []).length >= 2;
-  if (!istStaffel) return null;
-  const zeilen = text
-    .split(/(?=über \d)/)
-    .flatMap((s, i) => (i === 0 ? s.split(/(?=bis \d)/) : [s]))
-    .map((s) => s.trim())
-    .filter(Boolean);
-  return zeilen.length >= 3 ? zeilen : null;
+  // (1) Gerichtsgebühren-Staffel «über N …» (ZH GebV OG § 4-Stil).
+  if (/zuzügl\.|Grundgebühr|betragen/.test(text) && (text.match(/über \d/g) ?? []).length >= 2) {
+    const zeilen = text
+      .split(/(?=über \d)/)
+      .flatMap((s, i) => (i === 0 ? s.split(/(?=bis \d)/) : [s]))
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (zeilen.length >= 3) return zeilen;
+  }
+  // (2) Anhang-Tarif-Staffel mit «–»-Bändern (ZH NotGebV-Anhang-Stil:
+  //     «… –höchstens 1 Jahr im Rahmen von 100–1000 –mehr als 1 Jahr …»). Mehrere
+  //     « –<Wort>»-Bänder mit Gebühren-Marke (‰ / «im Rahmen von» / Fr.). Jedes
+  //     Band auf eine eigene Zeile; der Teil vor dem ersten «–» bleibt Kopf.
+  //     ENG getriggert (≥2 Bänder + Marke), damit normale Absätze nie zerschnitten
+  //     werden. Rein Darstellung (§3) — der Text bleibt unverändert.
+  const baender = text.match(/ –\p{L}/gu) ?? [];
+  if (baender.length >= 2 && /‰|im Rahmen von|Fr\./.test(text)) {
+    const zeilen = text.split(/(?= –\p{L})/u).map((s) => s.trim()).filter(Boolean);
+    if (zeilen.length >= 3) return zeilen;
+  }
+  return null;
+}
+
+// Tarif-/Anhang-Text aus PDF-Spalten verschmilzt Wort und Zahl ohne das Trenn-
+// Leerzeichen («Allgemeinen1.1.1», «Verkehrswert1‰», «mindestens100», «1‰4.1»).
+// Rein für die DARSTELLUNG (§3): das vom PDF verschluckte Leerzeichen zwischen
+// Buchstabe↔Ziffer bzw. ‰↔Ziffer wieder einfügen. Der WORTLAUT bleibt unangetastet
+// — es wird NUR ein fehlendes Trenn-Leerzeichen ergänzt, kein Zeichen geändert,
+// entfernt oder umgestellt (Freigabe David 17.6.2026: Darstellung darf normalisiert
+// werden, solange der Wortlaut nicht angefasst wird).
+function normalisiereTarifText(text: string): string {
+  return text
+    .replace(/(\p{L})(\d)/gu, '$1 $2')
+    .replace(/(‰)(\d)/gu, '$1 $2')
+    .replace(/ {2,}/g, ' ')
+    .trim();
+}
+
+// Datum IMMER als DD.MM.YYYY anzeigen (Design-Regel David 17.6.2026). Snapshots
+// speichern ISO 'YYYY-MM-DD'; nicht-ISO-Werte (Altbestand) unverändert lassen.
+function formatiereDatum(iso: string): string {
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
 }
 
 export function NormPopover({ snapshot, passus, onClose }: {
@@ -199,17 +233,22 @@ export function NormPopover({ snapshot, passus, onClose }: {
                 {b.absatz != null && (
                   <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
                 )}
-                {/* Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur das
-                    Auslassungszeichen «…». Statt des nackten «…» zeigen wir
-                    «aufgehoben» (rein Darstellung, §3 — Daten unverändert). Die
-                    Absatznummer-<sup> bleibt davor → liest sich «² aufgehoben». */}
-                {istAufgehoben(b.text)
-                  ? <span className="italic text-ink-400">aufgehoben</span>
-                  : (staffelZeilen(b.text)
-                    ? staffelZeilen(b.text)!.map((z, j) => (
+                {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
+                    Tarif-/Anhang-Kontext (gepunkteter Ziffer-Token ODER Staffel)
+                    werden vom PDF verschluckte Trenn-Leerzeichen ergänzt. Reguläre
+                    Artikel (Bund/LexWork, sauber extrahiert) bleiben unberührt.
+                    Aufgehobene Absätze («…») → gedämpftes «aufgehoben». */}
+                {(() => {
+                  const tarifKontext = snapshot.artikel.includes('.') || staffelZeilen(b.text) != null;
+                  const anzeige = tarifKontext ? normalisiereTarifText(b.text) : b.text;
+                  if (istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
+                  const zeilen = staffelZeilen(anzeige);
+                  return zeilen
+                    ? zeilen.map((z, j) => (
                         <span key={j} className={j === 0 ? 'block' : 'block pl-4 -indent-4'}>{z}</span>
                       ))
-                    : b.text)}
+                    : anzeige;
+                })()}
               </p>
               {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
                   identisches Markup/Styling, nur die Marke unterscheidet sich
@@ -252,7 +291,10 @@ export function NormPopover({ snapshot, passus, onClose }: {
       {/* Fuss: In Kraft seit · Live-Link zur geltenden Fassung · Disclaimer (§8). */}
       <div className="border-t border-line px-5 py-3 space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs text-ink-500">In Kraft seit: <span className="num">{snapshot.stand}</span></span>
+          <span className="text-xs text-ink-500">
+            {snapshot.ebene === 'bund' ? 'Fassung vom: ' : 'In Kraft seit: '}
+            <span className="num">{formatiereDatum(snapshot.stand)}</span>
+          </span>
           <a
             href={liveUrl}
             target="_blank"

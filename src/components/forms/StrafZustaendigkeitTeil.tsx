@@ -214,7 +214,7 @@ export function StrafZustaendigkeitTeil() {
               </div>
             )}
             <p className="text-xs text-ink-500 pt-2 border-t border-line">
-              Quelle: Strafgerichts-Dossier (Erstrecherche {gerichte.stand}) — Doppelcheck und fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+              Quelle: Strafgerichts-Dossier (Stand {gerichte.stand}) — Doppelcheck und fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
             </p>
           </div>
         )}
@@ -491,7 +491,7 @@ function StrafRechtsmittelTeil() {
             <GerichtBlock titel={adresse.titel} g={adresse.g} />
             {adresse.hinweis && <p className="text-xs text-ink-500"><NormText text={adresse.hinweis} /></p>}
             <p className="text-xs text-ink-500 pt-2 border-t border-line">
-              Quelle: Strafgerichts-Dossier bzw. Strafbehörden-Dossier (Erstrecherche) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+              Quelle: Strafgerichts-Dossier bzw. Strafbehörden-Dossier — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
             </p>
           </div>
         )}

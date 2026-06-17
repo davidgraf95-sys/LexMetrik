@@ -296,7 +296,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   VD: {
     kanton: 'VD', erlassName: 'Tarif des frais judiciaires civils (TFJC)', erlassNr: 'BLV 270.11.5',
-    artikel: 'Art. 17', stand: '1.9.2019', verifiziert: 'doppelt',
+    artikel: 'Art. 18 (i.V.m. Art. 17)', stand: '1.9.2019', verifiziert: 'doppelt',
     quelleUrl: 'https://www.lexfind.ch/tolv/105539/fr',
     hinweis: 'Feste Beträge je Streitwert-Stufe; über CHF 500 000: CHF 15 500 + 1,5 % des Überschusses (max CHF 300 000).',
     regel: { typ: 'staffel_sockel_prozent', baender: [

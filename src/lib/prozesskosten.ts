@@ -616,7 +616,7 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
       : p.schlichtungspauschale ? 'Schlichtungspauschale (separater kantonaler Tarif, hier nicht beziffert)'
       : `${postenText(p)}${detail}`;
     return {
-      beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
+      beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — nicht abgenommen' : ''}`,
       zwischenergebnis: zwischen,
       normen: [norm('Art. 95 ZPO'), norm(`${p.quelle.artikel} (${p.quelle.erlassNr})`, p.quelle.erlassName, p.quelle.quelleUrl)],
     };

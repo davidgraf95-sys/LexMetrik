@@ -13,6 +13,7 @@ import {
   sammleFallback,
   sammlePdfInventar,
   sammleHtmInventar,
+  sammleZhPdfInventar,
 } from '../../scripts/normtext/inventar-kanton';
 
 describe('sammleKantonInventar', () => {
@@ -82,11 +83,21 @@ describe('sammleFallback', () => {
     expect(szPdf).toBeDefined();
   });
 
-  it('enthält ZH (zhlex-html, kein LexWork)', () => {
-    const zh = fallback.find(
-      (f) => f.kanton === 'ZH' && /zhlex/i.test(f.quelleUrl),
+  // Fachliche Änderung (17.6.2026, Auftrag David «Volltext bei allen Kantonen»):
+  // parsePassus löst jetzt «Anhang Ziff. N.N.N» (ZH NotGebV) auf einen gepunkteten
+  // Token auf → die zhlex-Erlass-Quelle ist NICHT mehr Fallback, sondern wird über
+  // den ZH-PDF-Anhang-Segmentierer als Volltext erschlossen (sammleZhPdfInventar).
+  it('ZH NotGebV (zhlex-Anhang) ist erschlossen, nicht mehr Fallback', () => {
+    const zhFallback = fallback.find(
+      (f) => f.kanton === 'ZH' && /zhlex-ls\/erlass/i.test(f.quelleUrl),
     );
-    expect(zh).toBeDefined();
+    expect(zhFallback).toBeUndefined();
+    const zhInv = sammleZhPdfInventar().find(
+      (g) => g.kanton === 'ZH' && /erlass-243/i.test(g.quelleUrl),
+    );
+    expect(zhInv).toBeDefined();
+    // der Anhang-Token (gepunktet) ist im Inventar enthalten
+    expect(zhInv!.artikel.some((a) => a.token.includes('.'))).toBe(true);
   });
 
   it('keine Fallback-Quelle ist eine LexWork-/app/-URL', () => {
@@ -112,33 +123,46 @@ describe('sammleFallback', () => {
   });
 });
 
-// Fachliche Änderung (16.6.2026, Auftrag David): TI ist NICHT mehr ein PDF-
-// Profil, sondern wird als strukturiertes HTML (m3.ti.ch …/legge/num) über den
-// HTM/TI-Profil erschlossen. Die PDF-Kantone sind jetzt SZ/VD/JU.
-describe('sammlePdfInventar (SZ/VD/JU)', () => {
+// Fachliche Änderung (17.6.2026, Auftrag David «Volltext bei allen Kantonen»):
+// Neben SZ/VD/JU (m3-TI bleibt HTML) erschliesst der generische PDF-Adapter jetzt
+// die OrdoLex/gr-lex-Familie über ein «(Stand …)»/«(état …)»-Stand-Profil:
+// AR/GR/SG/FR/VS (olexAt) + LU (olexPar) via /api/versions/N/pdf_file, sowie
+// TI-lexfind (125101/it, ti-Profil). NICHT erschlossen (kein Stand im PDF →
+// Fallback): GE-lexfind, SZ-/VS-lexfind, TI-125201.
+describe('sammlePdfInventar (PDF-Volltext-Quellen)', () => {
   const pdf = sammlePdfInventar();
 
-  it('erfasst genau die drei PDF-Kantone mit dem richtigen Profil (TI nicht mehr)', () => {
+  it('erfasst die erwarteten PDF-Kantone mit dem richtigen Profil', () => {
     const kantone = new Set(pdf.map((g) => g.kanton));
-    expect([...kantone].sort()).toEqual(['JU', 'SZ', 'VD']);
-    expect(kantone.has('TI')).toBe(false);
+    expect([...kantone].sort()).toEqual(['AR', 'FR', 'GR', 'JU', 'LU', 'SG', 'SZ', 'TI', 'VD', 'VS']);
+    const profilVon: Record<string, string> = {
+      SZ: 'sz', VD: 'vd', JU: 'ju', TI: 'ti',
+      AR: 'olexAt', GR: 'olexAt', SG: 'olexAt', FR: 'olexAt', VS: 'olexAt', LU: 'olexPar',
+    };
     for (const g of pdf) {
-      const erwartet = { SZ: 'sz', VD: 'vd', JU: 'ju' }[g.kanton];
-      expect(g.profil).toBe(erwartet);
+      // SZ kann sowohl sz.ch-PDF (sz) tragen; alle anderen genau ein Profil.
+      const erwartet = profilVon[g.kanton];
+      if (g.kanton !== 'SZ') expect(g.profil).toBe(erwartet);
       expect(g.artikel.length).toBeGreaterThan(0);
     }
   });
 
-  it('lexfind nur für VD (GE/TI/VS-lexfind bleiben Fallback)', () => {
-    const lexfindNichtVd = pdf.find(
-      (g) => /lexfind\.ch/i.test(g.quelleUrl) && g.kanton !== 'VD',
+  // lexfind ist erschlossen für: VD (vd-Profil, mehrere tolv), TI-125101 (ti-Profil,
+  // LTG it) und SZ-82040 (sz-Profil, HSt — Stand «SRSZ» via rohText-Fallback).
+  // GE-199638/TI-125201/VS-94116-lexfind bleiben Fallback (Extraktion scheitert
+  // bzw. kein Stand). 17.6.2026.
+  it('lexfind erschlossen nur für VD, TI-125101, SZ-82040', () => {
+    const lexfindFremd = pdf.find(
+      (g) => /lexfind\.ch/i.test(g.quelleUrl) && g.kanton !== 'VD'
+        && !/\/tolv\/(125101|82040)\//.test(g.quelleUrl),
     );
-    expect(lexfindNichtVd).toBeUndefined();
+    expect(lexfindFremd).toBeUndefined();
   });
 
   it('jede Gruppe trägt eine quelleUrl, die zum Profil-Host passt', () => {
     for (const g of pdf) {
-      if (g.profil === 'sz') expect(g.quelleUrl).toMatch(/www\.sz\.ch/);
+      // sz-Profil: sz.ch-Asset-PDF ODER das SZ-HSt-lexfind-PDF (82040).
+      if (g.profil === 'sz') expect(g.quelleUrl).toMatch(/www\.sz\.ch|lexfind\.ch\/tolv\/82040/);
       if (g.profil === 'vd') expect(g.quelleUrl).toMatch(/lexfind\.ch\/tolv/);
       if (g.profil === 'ju') expect(g.quelleUrl).toMatch(/rsju\.jura\.ch/);
     }

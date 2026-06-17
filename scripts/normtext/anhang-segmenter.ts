@@ -39,7 +39,13 @@ export function segmentiereAnhangZiffern(text: string): Record<string, AnhangEin
   let aktivText = '';
   const speichere = (): void => {
     if (aktivToken === null) return;
-    const t = aktivText.trim();
+    // «¶N»-Marker sind die interne Absatz-Kodierung der PDF-Serialisierung
+    // (serialisierePdfZeilen/serialisiereZhZeilen). Im Anhang-Tarif sind das
+    // KEINE echten Absätze, sondern verirrte hochgestellte Ziffern/Fussnoten-
+    // Verweise aus dem zweispaltigen Layout («gemäss ¶8 Art. 727» → «gemäss
+    // Art. 727»). Für die faithful-Speicherung (§7) entfernt, damit kein «¶8»
+    // im Snapshot-Text steht.
+    const t = aktivText.replace(/¶\d+(?:bis|ter)?\s*/g, ' ').replace(/\s+/g, ' ').trim();
     if (t && !(aktivToken in eintraege)) {
       eintraege[aktivToken] = { bloecke: [{ absatz: null, text: t }] };
     }

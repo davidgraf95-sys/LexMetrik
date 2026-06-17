@@ -70,7 +70,7 @@ function PostenAnzeige({ ergebnis }: { ergebnis: BeurkundungErgebnis }) {
         <p className="text-body-l font-semibold text-ink-700">In Recherche</p>
         <p className="mt-1 text-body-s text-ink-600">
           Der kantonale Beurkundungstarif für diese Geschäftsart ist noch nicht abschliessend verifiziert hinterlegt.
-          Es wird bewusst kein Betrag geschätzt (Erstrecherche läuft).
+          Es wird bewusst kein Betrag geschätzt (noch nicht abgenommen).
         </p>
       </div>
     );
@@ -84,7 +84,7 @@ function PostenAnzeige({ ergebnis }: { ergebnis: BeurkundungErgebnis }) {
       {!p.ergebnis.deterministisch && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
       <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
-        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+        {q.verifiziert === 'recherche' ? ' · nicht abgenommen' : ''}
         {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
       </p>
     </div>
@@ -251,7 +251,7 @@ const DISCLAIMER =
   'Beurkundungskosten (Notariatsgebühr) für öffentlich beurkundbare Rechtsgeschäfte nach kantonalem Tarif. ' +
   'In den meisten Kantonen gilt ein wertbasierter Tarif auf den Geschäftswert; einzelne Geschäfte tragen Sondersätze (Testament, Erbvertrag) oder feste Gebühren (Vollmacht, Vorsorgeauftrag). ' +
   'Aufwand-/Rahmentarife (freies Notariat) erscheinen als Spanne oder «nach Vereinbarung», nie als erfundener Punktwert; wo der kantonale Tarif noch nicht verifiziert vorliegt, wird das offen ausgewiesen. ' +
-  'Grundbuch-/Handelsregistergebühren, Auslagen und allfällige MwSt. sind nicht enthalten. Erstrecherche, nicht abgenommen. Keine Rechtsberatung.';
+  'Grundbuch-/Handelsregistergebühren, Auslagen und allfällige MwSt. sind nicht enthalten. Nicht abgenommen. Keine Rechtsberatung.';
 
 type Bereich = 'kauf' | 'beurkundung' | 'grundbuch';
 const BEREICHE: { id: Bereich; label: string; hint: string }[] = [

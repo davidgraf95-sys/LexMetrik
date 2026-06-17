@@ -39,6 +39,7 @@ import type {
   BekannteLuecke,
   SnapshotEintrag,
 } from './vollstaendigkeit-logik.ts';
+import type { PdfProfilName } from './adapter-pdf.ts';
 
 // ─── Bekannte Kanton-Lücken (dokumentiert mit Grund) ─────────────────────────
 //
@@ -137,6 +138,37 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
     grund: 'nicht-LexWork',
     notiz: 'NW-265.51 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
+
+  // ── Anhang-/Tarif-Ziffern (N.N.N) in LexWork-Erlassen: NICHT als Snapshot ──
+  // parsePassus löst seit 17.6.2026 «Anhang Ziff. N.N.N» / «Nr. 60.xx» auf einen
+  // gepunkteten Token auf. In diesen LexWork-Erlassen steht der Tarif-Anhang aber
+  // NICHT als strukturierter <div class='article'>, sondern nur als Querverweis im
+  // Artikeltext (empirisch BE 154.21: «Gebühren gemäss Anhang VII, Ziffern 3.1.1 …»).
+  // Ein Segmentierer würde die Verweiszeile statt des Tarifs greifen → §1: lieber
+  // ehrliche Lücke (Live-Link bleibt) als verstümmelter Gesetzestext. (Der ZH-NotGebV-
+  // Anhang, 21 Ziffern, IST abgedeckt — er kommt über das zhlex-PDF, nicht LexWork.)
+  // Stand 17.6.2026, empirisch je Erlass geprüft.
+  { snapshotId: 'kanton/BE/154.21/art_1.6', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Tarif-Anhang 4B Ziff. 1.6 nur als Querverweis im Artikeltext, nicht strukturiert. Live-Link massgeblich.' },
+  { snapshotId: 'kanton/BE/154.21/art_2.1', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 2.1 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/BE/154.21/art_3.1.1', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 3.1.1 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/BE/154.21/art_3.2', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 3.2 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/BE/154.21/art_3.3.1', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 3.3.1 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/BE/154.21/art_3.4', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 3.4 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/BE/154.21/art_3.5', grund: 'token-nicht-im-Erlass', notiz: 'BE GebV 154.21: Anhang 4B Ziff. 3.5 nicht strukturiert (nur Querverweis).' },
+  { snapshotId: 'kanton/SG/914.5/art_10.01', grund: 'token-nicht-im-Erlass', notiz: 'SG GebT 914.5: Tarif-Nr. 10.01 im Anhang, nicht über LexWork strukturiert.' },
+  { snapshotId: 'kanton/SG/914.5/art_11.01', grund: 'token-nicht-im-Erlass', notiz: 'SG GebT 914.5: Tarif-Nr. 11.01 im Anhang, nicht über LexWork strukturiert.' },
+  { snapshotId: 'kanton/SG/914.5/art_60.01.01', grund: 'token-nicht-im-Erlass', notiz: 'SG GebT 914.5: Tarif-Nr. 60.01.01 im Anhang, nicht über LexWork strukturiert.' },
+  { snapshotId: 'kanton/GL/III%20B%2F3%2F2/art_1.1', grund: 'token-nicht-im-Erlass', notiz: 'GL Gebührengesetz: Anhang-Ziff. 1.1 nicht über LexWork strukturiert.' },
+  { snapshotId: 'kanton/GL/III%20B%2F3%2F2/art_8.1', grund: 'token-nicht-im-Erlass', notiz: 'GL Gebührengesetz: Anhang-Ziff. 8.1 nicht über LexWork strukturiert.' },
+  { snapshotId: 'kanton/NW/265.51/art_2.6.1.1', grund: 'token-nicht-im-Erlass', notiz: 'NW 265.51: Tarif-Nr. 2.6.1.1 im Anhang, nicht strukturiert.' },
+
+  // ── SH/221.101: verkettetes Zitat auf den ergänzenden Erlass 211.433 ────────
+  // Der SH-Beurkundungs-Eintrag zitiert «211.433 § 13 Abs. 1 Ziff. 4» (Grundbuch-
+  // gebührenverordnung SHR 211.433) UNTER der quelleUrl der Notariatsgebühren-
+  // verordnung 221.101. § 13 gehört zum anderen Erlass → nicht im 221.101-Snapshot.
+  // Der 221.101-Erlass selbst ist über /app/ voll erschlossen (7 Snapshots, § 1
+  // abgedeckt). Stand 17.6.2026, /app/-quelleUrl korrigiert (Onboarding TG/AG/SH).
+  { snapshotId: 'kanton/SH/221.101/art_13', grund: 'token-nicht-im-Erlass', notiz: 'SH: «211.433 § 13» (Grundbuchgebührenverordnung) ist ein anderer Erlass als 221.101.' },
 ];
 // Entfernt (16.6.2026): FR/130.11 (art_18/20/64), VS/173.8 (art_15/16/17/32/34),
 // GL/III%20B/7/1 (art_13) — diese Snapshots existieren unter ihren quelleUrls und
@@ -201,6 +233,30 @@ const BEKANNTE_LUECKEN_HTMZH: BekannteLuecke[] = [
   // Gouvernement fixe l'entrée en vigueur»). Das Zitat «Art. 13» verweist auf
   // einen nicht vorhandenen Artikel (Mis-/Fremdzitat) → token-nicht-im-Erlass.
   { snapshotId: 'kanton/JU/ju-20021-37773-dl/art_13', grund: 'token-nicht-im-Erlass', notiz: 'JU Décret 37773 hat nur Art. 1–12; Art. 13 nicht vorhanden. Stand 16.6.2026.' },
+
+  // ── SG GebT (sGS 821.5) «Nr. 60.xx/70.01»: NICHT im GB-GebV-PDF (2935) ──────
+  // Diese Tarif-Einträge zitieren GebT-Nummern (sGS 821.5), tragen aber die
+  // quelleUrl des GB-GebV-Konsolidierungs-PDF (gesetzessammlung.sg.ch …/versions/
+  // 2935/…). Der GebT ist ein ANDERER Erlass → die «60.xx»-Nummern stehen nicht im
+  // 2935-PDF (token-nicht-im-Erlass). Der GB-GebV selbst ist über dasselbe PDF voll
+  // erschlossen (83 Snapshots). Daten-Hinweis (§8): die quelleUrl dieser GebT-Zitate
+  // sollte auf den GebT 821.5 zeigen — eigene fachliche Datenkorrektur. Stand 17.6.2026.
+  { snapshotId: 'kanton/SG/2935/art_60.01', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.01 — nicht im GB-GebV-PDF (2935); quelleUrl zeigt auf anderen Erlass.' },
+  { snapshotId: 'kanton/SG/2935/art_60.02.01', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.02.01 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.02.03', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.02.03 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.05.01', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.05.01 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.06', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.06 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.07', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.07 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.11', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.11 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.12', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.12 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.13', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.13 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.14', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.14 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_60.15', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 60.15 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_70.01', grund: 'token-nicht-im-Erlass', notiz: 'GebT sGS 821.5 Nr. 70.01 — nicht im GB-GebV-PDF (2935).' },
+  { snapshotId: 'kanton/SG/2935/art_772', grund: 'token-nicht-im-Erlass', notiz: 'Verkettetes Zitat «Nr. 60.13 … Art. 772 ff. OR»: Art. 772 ist OR-Bund, nicht im SG-PDF.' },
+
+  // ── VS Notariatstarif (1413): «art. 493 al. 2» ist ein OR-Querverweis ───────
+  { snapshotId: 'kanton/VS/1413/art_493', grund: 'token-nicht-im-Erlass', notiz: 'VS Tarif notaires 1413: «art. 493 al. 2» verweist auf OR Art. 493 (Bürgschaft), kein Artikel des VS-Tarifs.' },
 ];
 
 // ─── HTM/ZH-lawIdSafe (kongruent zum Orchestrator) ───────────────────────────
@@ -212,18 +268,28 @@ function zhLawIdSafe(url: string): string {
   const m = url.match(/\/erlass-([^-]+)-/);
   return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
 }
-function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
+function pdfLawIdSafe(profil: PdfProfilName, url: string): string {
   if (profil === 'sz') {
     const m = url.match(/\/(\d+_\d+)\.pdf$/i);
     if (m) return m[1].replace(/_/g, '.');
+    const t = url.match(/\/tolv\/(\d+)\//i);
+    if (t) return t[1];
   }
   if (profil === 'ti') {
-    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
-    if (m) return `ti-${m[1]}`;
+    const a = url.match(/\/pdfatto\/atto\/(\d+)/i);
+    if (a) return `ti-${a[1]}`;
+    const t = url.match(/\/tolv\/(\d+)\//i);
+    if (t) return `ti-${t[1]}`;
   }
   if (profil === 'vd') {
     const m = url.match(/\/tolv\/(\d+)\//i);
     if (m) return `vd-${m[1]}`;
+  }
+  if (profil === 'olexAt' || profil === 'olexPar') {
+    const v = url.match(/\/versions\/(\d+)\/pdf_file/i);
+    if (v) return v[1];
+    const t = url.match(/\/tolv\/(\d+)\//i);
+    if (t) return t[1];
   }
   if (profil === 'ju') {
     const idn = url.match(/[?&]idn=(\d+)/i);

@@ -82,7 +82,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
             : null}
       <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
-        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+        {q.verifiziert === 'recherche' ? ' · nicht abgenommen' : ''}
         {' · '}
         <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
       </p>

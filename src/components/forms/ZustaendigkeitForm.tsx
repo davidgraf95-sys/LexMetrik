@@ -914,7 +914,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     </p>
                     {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1"><NormText text={obereInstanz!.hinweis} />.</p>}
                     {obereInstanz!.quelleSpruchkoerper && (
-                      <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
+                      <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — fachliche Abnahme ausstehend.</p>
                     )}
                     {!obereInstanz!.kammerBerufung && (
                       <p className="text-xs text-ink-500 mt-1">
