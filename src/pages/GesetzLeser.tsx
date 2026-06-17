@@ -95,12 +95,15 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     const token = decodeURIComponent(m[1]);
     const bi = bandFuerToken(baender, token);
     if (bi < 0) return;
+    // Band öffnen, dann nach dem Render des Artikels scrollen + markieren.
     window.requestAnimationFrame(() => {
       setOffen((o) => ({ ...o, [baender[bi].id]: true }));
-      const el = document.getElementById(`art-${token}`);
-      el?.scrollIntoView({ block: 'center', behavior: 'auto' });
-      el?.classList.add('lc-ziel-blink');
-      window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
+      window.setTimeout(() => {
+        const el = document.getElementById(`art-${token}`);
+        el?.scrollIntoView({ block: 'center', behavior: 'auto' });
+        el?.classList.add('lc-ziel-blink');
+        window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
+      }, 80);
     });
   }, [eintraege, baender]);
 
@@ -155,7 +158,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     );
   }
 
-  const alleOffen = baender.every((b) => offen[b.id] ?? true);
+  // Default: nur das erste Band offen — grosse Gesetze (OR 1603 Art.) rendern
+  // sonst alle Artikel inkl. Autolink auf einmal (zu schwer). Geschlossene
+  // Bänder rendern nur die Kopfzeile; Artikel erst beim Aufklappen.
+  const istBandOffen = (id: string, idx: number) => offen[id] ?? (idx === 0);
+  const alleOffen = baender.every((b, idx) => istBandOffen(b.id, idx));
 
   return (
     <div className="space-y-5">
@@ -234,32 +241,39 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             </div>
           ) : (
             <div className="space-y-3">
-              {baender.map((b) => (
-                <section
-                  key={b.id}
-                  data-band={b.id}
-                  ref={(el) => { if (el) bandRefs.current.set(b.id, el); else bandRefs.current.delete(b.id); }}
-                >
-                  {baender.length > 1 ? (
-                    <details
-                      open={offen[b.id] ?? true}
-                      onToggle={(ev) => setOffen((o) => ({ ...o, [b.id]: (ev.target as HTMLDetailsElement).open }))}
-                    >
-                      <summary className="cursor-pointer select-none flex items-center gap-2 py-2 text-body-s font-medium text-ink-700 hover:text-ink-900">
-                        <span className="num">{b.label}</span>
-                        <span className="text-xs text-ink-400">· {b.eintraege.length} Artikel</span>
-                      </summary>
-                      <div className="space-y-3 pt-1">
+              {baender.map((b, i) => {
+                const auf = istBandOffen(b.id, i);
+                return (
+                  <section
+                    key={b.id}
+                    data-band={b.id}
+                    ref={(el) => { if (el) bandRefs.current.set(b.id, el); else bandRefs.current.delete(b.id); }}
+                  >
+                    {baender.length > 1 ? (
+                      <details
+                        open={auf}
+                        onToggle={(ev) => setOffen((o) => ({ ...o, [b.id]: (ev.target as HTMLDetailsElement).open }))}
+                      >
+                        <summary className="cursor-pointer select-none flex items-center gap-2 py-2 text-body-s font-medium text-ink-700 hover:text-ink-900">
+                          <span className="num">{b.label}</span>
+                          <span className="text-xs text-ink-400">· {b.eintraege.length} Artikel</span>
+                        </summary>
+                        {/* Artikel nur rendern, wenn das Band offen ist (Perf bei
+                            grossen Gesetzen). */}
+                        {auf && (
+                          <div className="space-y-3 pt-1">
+                            {b.eintraege.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} />)}
+                          </div>
+                        )}
+                      </details>
+                    ) : (
+                      <div className="space-y-3">
                         {b.eintraege.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} />)}
                       </div>
-                    </details>
-                  ) : (
-                    <div className="space-y-3">
-                      {b.eintraege.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} />)}
-                    </div>
-                  )}
-                </section>
-              ))}
+                    )}
+                  </section>
+                );
+              })}
             </div>
           )}
 
