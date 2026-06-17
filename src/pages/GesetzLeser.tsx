@@ -20,8 +20,24 @@ function passtAufSuche(e: NormSnapshot, s: string): boolean {
     b.text.toLowerCase().includes(s) || (b.items ?? []).some((it) => it.text.toLowerCase().includes(s)));
 }
 
-// Ein Artikel im Lesefluss (Richtung A): Serif-Lesespalte + Randtitel in echter
-// Marginalspalte rechts (auf < lg über dem Artikel). Querverweise klickbar.
+// «Erster Titel: Die Entstehung …» → {pre:'Erster Titel', rest:'Die Entstehung …'}
+function romanFrei(label: string): { pre: string; rest: string } {
+  const m = label.match(/^([^:]+):\s*(.+)$/);
+  return m ? { pre: m[1].trim(), rest: m[2].trim() } : { pre: '', rest: label };
+}
+
+// Pfad (Sektions-ids Wurzel→Treffer) zur ersten Sektion, die das Prädikat erfüllt.
+function pfadZu(sektionen: Sektion[], treffer: (s: Sektion) => boolean): string[] | null {
+  for (const s of sektionen) {
+    if (treffer(s)) return [s.id];
+    const sub = pfadZu(s.kinder, treffer);
+    if (sub) return [s.id, ...sub];
+  }
+  return null;
+}
+
+// Ein Artikel im Lesefluss (Richtung A): Kopf «Art. X — Sachüberschrift» klar vom
+// Serif-Bestimmungstext abgetrennt; übergeordnete Randtitel in der Marginalspalte.
 function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[];
 }) {
@@ -34,31 +50,28 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
   };
+  // Sachüberschrift = unterster Randtitel; übergeordnete Stufen in die Marge.
+  const sachtitel = marginalie.length ? marginalie[marginalie.length - 1] : '';
+  const oberMarg = marginalie.slice(0, -1);
   return (
-    <article id={`art-${e.artikel}`} className="group scroll-mt-28 lg:grid lg:grid-cols-[minmax(0,40rem)_12rem] lg:gap-x-6">
+    <article id={`art-${e.artikel}`} className="group scroll-mt-28 border-t border-line/60 pt-5 first:border-t-0 first:pt-0 lg:grid lg:grid-cols-[minmax(0,40rem)_12rem] lg:gap-x-6">
       <div className="order-2 lg:order-1">
-        <div className="flex items-baseline gap-2">
-          <h3 className="lc-overline text-brass-700">{e.artikelLabel}</h3>
-          <span className="flex gap-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-            <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>
-              {kopiert === 'zitat' ? '✓' : 'Zitat'}
-            </button>
-            <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">
-              {kopiert === 'link' ? '✓' : 'Link'}
-            </button>
+        {/* Artikel-Kopf — Nummer + Sachüberschrift, abgetrennt von den Bestimmungen */}
+        <div className="flex items-baseline gap-x-2 gap-y-0.5 flex-wrap">
+          <span className="lc-overline text-brass-700 shrink-0">{e.artikelLabel}</span>
+          {sachtitel && <span className="text-body-s font-semibold text-ink-900">{sachtitel}</span>}
+          <span className="ml-auto flex gap-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+            <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
+            <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
           </span>
         </div>
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-          className="mt-1 space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
+          className="mt-2 space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
       </div>
-      {/* Randtitel (Marginalie): sans, gedämpft, in der rechten Marge; auf Mobil
-          als feine Zeile über dem Artikel. */}
-      {marginalie.length > 0 && (
-        <aside className="order-1 lg:order-2 mb-1 lg:mb-0 lg:pt-1">
+      {oberMarg.length > 0 && (
+        <aside className="order-1 lg:order-2 mb-1 lg:mb-0 lg:pt-0.5">
           <p className="text-xs leading-snug text-ink-400">
-            {marginalie.map((m, i) => (
-              <span key={i} className={i === marginalie.length - 1 ? 'text-ink-500' : ''}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>
-            ))}
+            {oberMarg.map((m, i) => <span key={i}>{m}{i < oberMarg.length - 1 ? <br /> : null}</span>)}
           </p>
         </aside>
       )}
@@ -66,35 +79,27 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
   );
 }
 
-// Überschrift einer Gliederungsstufe — ruhig, nach Ebene abgestuft (Légifrance-
-// Lehre: nicht überladen). Ebene 1 trägt den stärksten Akzent.
-function SektionKopf({ s, refCb, onToggle, offen, klappbar }: {
-  s: Sektion; refCb: (el: HTMLElement | null) => void; onToggle?: () => void; offen?: boolean; klappbar?: boolean;
+// Gliederungs-Überschrift im Fliesstext: klappbar (Fedlex-analog), volle
+// Bezeichnung, nach Ebene abgestuft.
+function SektionKopf({ s, refCb, offen, onToggle }: {
+  s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void;
 }) {
-  const inner = (
-    <>
-      {s.ebene <= 1 && <span className="lc-overline text-brass-700 block">{romanFrei(s.label).pre}</span>}
-      <span className={s.ebene <= 1 ? 'font-display text-h3 text-ink-900' : s.ebene === 2 ? 'font-display text-body-l text-ink-900' : 'font-medium text-body-s text-ink-700'}>
-        {s.ebene <= 1 ? romanFrei(s.label).rest : s.label}
-      </span>
-    </>
-  );
+  const { pre, rest } = romanFrei(s.label);
+  const groesse = s.ebene <= 1 ? 'text-h3 font-display text-ink-900'
+    : s.ebene === 2 ? 'text-body-l font-display text-ink-900'
+    : 'text-body-s font-semibold text-ink-700';
   return (
     <div ref={refCb} data-sek={s.id} className={`scroll-mt-28 ${s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : 'mt-4'}`}>
-      {klappbar ? (
-        <button type="button" onClick={onToggle} aria-expanded={offen} className="w-full text-left flex items-baseline justify-between gap-2 group">
-          <span>{inner}</span>
-          <span className="text-ink-400 text-xs shrink-0">{offen ? '▾' : '▸'}</span>
-        </button>
-      ) : <div>{inner}</div>}
+      <button type="button" onClick={onToggle} aria-expanded={offen}
+        className="w-full text-left flex items-baseline gap-2 group/sek">
+        <span className="text-ink-300 text-xs shrink-0 mt-1 w-3">{offen ? '▾' : '▸'}</span>
+        <span className="flex-1">
+          {pre && <span className="lc-overline text-brass-700 block">{pre}</span>}
+          <span className={groesse}>{pre ? rest : s.label}</span>
+        </span>
+      </button>
     </div>
   );
-}
-
-// «Erster Titel: Die Entstehung …» → {pre:'Erster Titel', rest:'Die Entstehung …'}
-function romanFrei(label: string): { pre: string; rest: string } {
-  const m = label.match(/^([^:]+):\s*(.+)$/);
-  return m ? { pre: m[1], rest: m[2] } : { pre: '', rest: label };
 }
 
 function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: string }) {
@@ -131,46 +136,49 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     [eintraege, struktur],
   );
 
-  // Pfad-Lookups je Sektion (für Breadcrumb-Scrollspy).
   const sekPfadMap = useMemo(() => {
     const map = new Map<string, string[]>();
     const gehe = (liste: Sektion[], pfad: string[]) => {
       for (const s of liste) {
         const p = [...pfad, romanFrei(s.label).pre || s.label];
-        map.set(s.id, p);
-        gehe(s.kinder, p);
+        map.set(s.id, p); gehe(s.kinder, p);
       }
     };
     gehe(sektionen, []);
     return map;
   }, [sektionen]);
 
-  const istTopOffen = (id: string, idx: number) => offen[id] ?? (idx === 0);
+  // Offen-Zustand (TOC + Fliesstext geteilt). Default: erster Pfad aufgeklappt,
+  // alles andere zu (Perf + Fedlex-Gefühl). Toggle an jeder Stufe.
+  const istOffen = (id: string, defOpen: boolean) => offen[id] ?? defOpen;
+  const toggle = (id: string, defOpen: boolean) => setOffen((o) => ({ ...o, [id]: !(o[id] ?? defOpen) }));
+  const oeffnePfad = (ids: string[]) => setOffen((o) => {
+    const n = { ...o }; for (const id of ids) n[id] = true; return n;
+  });
 
-  // Hash-Sprung: Top-Sektion des Ziel-Artikels öffnen + scrollen.
+  // Hash-Sprung: alle Vorfahren des Ziel-Artikels öffnen + scrollen.
   useEffect(() => {
     if (!eintraege || !sektionen.length || typeof window === 'undefined') return;
     const m = window.location.hash.match(/^#art-(.+)$/);
     if (!m) return;
     const token = decodeURIComponent(m[1]);
-    const top = sektionen.find((s) => enthaeltToken(s, token));
+    const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     window.requestAnimationFrame(() => {
-      if (top) setOffen((o) => ({ ...o, [top.id]: true }));
+      if (ids.length) oeffnePfad(ids);
       window.setTimeout(() => {
         const el = document.getElementById(`art-${token}`);
         el?.scrollIntoView({ block: 'center', behavior: 'auto' });
         el?.classList.add('lc-ziel-blink');
         window.setTimeout(() => el?.classList.remove('lc-ziel-blink'), 2400);
-      }, 90);
+      }, 110);
     });
   }, [eintraege, sektionen]);
 
-  // Scrollspy: aktiver Pfad = oberste sichtbare Sektion (für Breadcrumb + TOC).
+  // Scrollspy: aktiver Pfad = oberste sichtbare Sektion.
   useEffect(() => {
     if (!sektionen.length || typeof IntersectionObserver === 'undefined') return;
     const obs = new IntersectionObserver((eintr) => {
-      const sicht = eintr.filter((x) => x.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      const sicht = eintr.filter((x) => x.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
       const id = sicht[0]?.target.getAttribute('data-sek');
       if (id) setAktivPfad(sekPfadMap.get(id) ?? []);
     }, { rootMargin: '-110px 0px -75% 0px' });
@@ -213,18 +221,15 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   };
   const marg = (tok: string) => struktur?.[tok]?.marginalie ?? [];
 
-  // Rekursives Rendern: Top-Sektionen sind klappbar (Perf + David «zuklappen»);
-  // tiefere Sektionen fliessen innerhalb der offenen Top-Sektion durch.
-  const renderSektion = (s: Sektion, tiefe: number, topIdx: number): ReactNode => {
-    const top = tiefe === 0;
-    const auf = top ? istTopOffen(s.id, topIdx) : true;
+  // Jede Sektionsstufe ist klappbar (Fedlex-analog); Inhalt rendert nur offen.
+  const renderSektion = (s: Sektion, defOpen: boolean): ReactNode => {
+    const auf = istOffen(s.id, defOpen);
     return (
       <section key={s.id} className="space-y-3">
-        <SektionKopf s={s} refCb={regRef(s.id)} klappbar={top} offen={auf}
-          onToggle={top ? () => setOffen((o) => ({ ...o, [s.id]: !(o[s.id] ?? topIdx === 0) })) : undefined} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} />
         {auf && (
-          <div className="space-y-5">
-            {s.kinder.map((k) => renderSektion(k, tiefe + 1, topIdx))}
+          <div className="space-y-5 lg:pl-5">
+            {s.kinder.map((k, i) => renderSektion(k, defOpen && i === 0))}
             {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} />)}
           </div>
         )}
@@ -234,22 +239,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
   return (
     <div className="space-y-5">
-      {/* Sticky Breadcrumb: Pfad + aktuelle Position beim Scrollen */}
+      {/* Sticky Breadcrumb mit aktueller Position */}
       <div className="sticky top-0 z-10 -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line bg-paper/90 backdrop-blur text-xs text-ink-500">
         <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
         <span className="mx-1.5 text-ink-300">›</span>
         {erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
         <span className="mx-1.5 text-ink-300">›</span>
         <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
-        {aktivPfad.length > 0 && (
-          <span className="hidden sm:inline">
-            <span className="mx-1.5 text-ink-300">·</span>
-            {aktivPfad.join(' › ')}
-          </span>
-        )}
+        {aktivPfad.length > 0 && <span className="hidden sm:inline"><span className="mx-1.5 text-ink-300">·</span>{aktivPfad.join(' › ')}</span>}
       </div>
 
-      {/* Kopf */}
       <header className="space-y-2 border-b border-line pb-5">
         <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`} · {GEBIET_LABEL[erlass.rechtsgebiet]}</p>
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
@@ -259,9 +258,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
           <span><span className="num">{eintraege.length}</span> Artikel</span>
           {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
-          {erlass.quelleUrl && (
-            <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>
-          )}
+          {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
         </div>
         <p className="text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung (Live-Link).</p>
       </header>
@@ -270,20 +267,21 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
         className="lc-input h-9 py-0 text-body-s w-full max-w-md" />
 
-      <div className="lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-8">
-        {/* TOC: Gliederungsbaum */}
+      <div className="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8">
         {!treffer && sektionen.length > 0 && (
           <aside className="mb-4 lg:mb-0">
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
-            <div className={`${tocAuf ? 'block' : 'hidden'} lg:block lg:sticky lg:top-12 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto`}>
+            <div className={`${tocAuf ? 'block' : 'hidden'} lg:block lg:sticky lg:top-12 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto pr-1`}>
               <p className="lc-overline mb-2">Gliederung</p>
-              <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivPfad}
+              <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivPfad} offen={offen}
+                onToggle={toggle}
                 onSprung={(id) => {
-                  setOffen((o) => ({ ...o, [topOf(sektionen, id)]: true }));
-                  window.requestAnimationFrame(() =>
-                    window.setTimeout(() => sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 60));
+                  const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
+                  oeffnePfad(ids);
+                  window.requestAnimationFrame(() => window.setTimeout(() =>
+                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 80));
                 }} />
             </div>
           </aside>
@@ -303,7 +301,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                   {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} />)}
                 </div>
               )}
-              {sektionen.map((s, i) => renderSektion(s, 0, i))}
+              {sektionen.map((s, i) => renderSektion(s, i === 0))}
             </div>
           )}
 
@@ -318,36 +316,33 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   );
 }
 
-function enthaeltToken(s: Sektion, token: string): boolean {
-  return s.artikel.some((e) => e.artikel === token) || s.kinder.some((k) => enthaeltToken(k, token));
-}
-function topOf(sektionen: Sektion[], id: string): string {
-  for (const s of sektionen) { if (findeId(s, id)) return s.id; }
-  return id;
-}
-function findeId(s: Sektion, id: string): boolean {
-  return s.id === id || s.kinder.some((k) => findeId(k, id));
-}
-
-// TOC-Baum der Gliederung — kompakt, aktiver Pfad hervorgehoben.
-function SektionBaumTOC({ sektionen, aktivPfad, onSprung }: {
-  sektionen: Sektion[]; aktivPfad: string[]; onSprung: (id: string) => void;
+// TOC-Gliederungsbaum: jede Stufe einklappbar (geteilter Zustand mit dem
+// Fliesstext); Dreieck klappt, Label springt.
+function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
+  sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>;
+  onToggle: (id: string, defOpen: boolean) => void; onSprung: (id: string) => void;
 }) {
-  const zeile = (s: Sektion, tiefe: number): ReactNode => {
-    const label = romanFrei(s.label);
-    const aktiv = aktivPfad.includes(label.pre || s.label);
+  const zeile = (s: Sektion, tiefe: number, defOpen: boolean): ReactNode => {
+    const auf = offen[s.id] ?? defOpen;
+    const { pre, rest } = romanFrei(s.label);
+    const aktiv = aktivPfad.includes(pre || s.label);
+    const hatKinder = s.kinder.length > 0;
     return (
       <li key={s.id}>
-        <button type="button" onClick={() => onSprung(s.id)}
-          className={`block w-full text-left rounded px-2 py-0.5 text-body-s transition-colors ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}
-          style={{ paddingLeft: `${0.5 + tiefe * 0.75}rem` }}>
-          {label.pre || s.label}
-        </button>
-        {s.kinder.length > 0 && <ul>{s.kinder.map((k) => zeile(k, tiefe + 1))}</ul>}
+        <div className="flex items-start" style={{ paddingLeft: `${tiefe * 0.6}rem` }}>
+          {hatKinder
+            ? <button type="button" onClick={() => onToggle(s.id, defOpen)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-[0.6rem] w-4">{auf ? '▾' : '▸'}</button>
+            : <span className="shrink-0 w-4" aria-hidden />}
+          <button type="button" onClick={() => onSprung(s.id)}
+            className={`flex-1 text-left rounded px-1.5 py-0.5 leading-snug ${tiefe === 0 ? 'text-body-s' : 'text-xs'} ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}>
+            {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
+          </button>
+        </div>
+        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k, i) => zeile(k, tiefe + 1, defOpen && i === 0))}</ul>}
       </li>
     );
   };
-  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0))}</ul>;
+  return <ul className="space-y-0.5">{sektionen.map((s, i) => zeile(s, 0, i === 0))}</ul>;
 }
 
 export function GesetzLeser() {
