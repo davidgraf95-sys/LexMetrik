@@ -15,6 +15,17 @@ Ideen».**
 
 ---
 
+## STAND 17.6.2026 — P0–P3.5 GEBAUT, gate-grün, browser-verifiziert (Branch `feat/rechtssammlung`, ungepusht)
+
+- **P0** ✓ `ArtikelBody` + `bestimmePassusZiel` aus `NormPopover` extrahiert (verhaltensneutral, golden byte-gleich) — Commit `39ccac6`.
+- **P1** ✓ `ERLASS_REGISTER` (27 Bund) + `browse-manifest.ts` → `register.json` (140 Erlasse: 27 Bund + 113 Kanton/26 Kt.) + 7 Konsistenz-Tore — Commit `02d7da9`.
+- **P2+P3** ✓ Übersicht `/gesetze` (Tabs Bund/Kantone, Rechtsgebiet-Gruppen, Kantonsraster, lokale Suche) + Lesesicht `/gesetze/:ebene/:key` (Sticky-TOC+Scrollspy, **zuklappbare Bänder**, In-Gesetz-Suche, Artikel-Anker, Zitat/Permalink, Vor/Zurück/Verwandt); Nav-Sektion V, `ERWARTETE_ROUTEN` 52, 52 Routen prerendert; 0 Konsolenfehler — Commit `2ffb1bd`.
+- **P3.5 + P3.3** ✓ Querverweis-Autolink im Reader (`NormText`/`RechtsprechungText`, opt-in, Popover byte-gleich) + Popover-Brücke «Im Gesetz öffnen ›» — Commit `a29d62b`.
+- **Doku** ✓ Bibliotheks-Dossier `bibliothek/normen/gesetzessammlung-rubrik-v.md` (§11).
+- **OFFEN:** Deploy (nur auf Davids Ja, §9) · **P4** Globale FlexSearch-Suche + Norm↔Werkzeug (neue Abhängigkeit → Davids Entscheid) · **P5** echte amtliche Gliederung (Titel statt Nummern-Bänder) · **P6** Breitenausbau · kantonale Rechtsgebiet-Verfeinerung.
+
+---
+
 ## Ziel (Auftrag David 17.6.2026)
 
 Eine neue UI-Rubrik **als Nummer 5 / «V.»** mit **Gesetzen**. Alle bisher
