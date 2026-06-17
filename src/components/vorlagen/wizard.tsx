@@ -6,6 +6,7 @@ import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
 import { AUSGABE_LABEL, MUSTER } from '../../lib/vorlagen/formatvorlagen';
+import { VORSCHAU, rolleLabel } from './vorschauStil';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
 
 // ─── Generischer Vorlagen-Wizard-Rahmen ─────────────────────────────────────
@@ -185,22 +186,23 @@ function VorschauZeile({ zeile, dicht, striche }: { zeile: string; dicht?: boole
     // role="img": aria-label ist auf einem rollenlosen span unzulässig
     // (axe aria-prohibited-attr, 10.6.2026); als benanntes Grafik-Element
     // bleibt die Linie für Screenreader «Unterschriftslinie».
-    return <span role="img" className="block w-52 max-w-full border-b border-ink-600 mt-4 mb-1" aria-label="Unterschriftslinie" />;
+    return <span role="img" style={VORSCHAU.sigLinie} aria-label="Unterschriftslinie" />;
   }
   const num = zeile.match(MUSTER.NUMMER);
   if (num) {
+    // Nummerierte Klausel/Begehren: scanbarer hängender Einzug (SSoT vorschauStil).
     return (
-      <span className="flex gap-0">
-        <span className="w-7 shrink-0">{num[1]}.</span>
-        <span className="flex-1">{zeile.slice(num[0].length)}</span>
+      <span style={VORSCHAU.pos}>
+        <span style={VORSCHAU.posNr}>{num[1]}.</span>
+        <span>{zeile.slice(num[0].length)}</span>
       </span>
     );
   }
   if (MUSTER.SUB.test(zeile)) {
     return (
-      <span className="flex gap-0 pl-7">
-        <span className="w-5 shrink-0">–</span>
-        <span className="flex-1">{zeile.slice(2)}</span>
+      <span style={VORSCHAU.sub}>
+        <span style={VORSCHAU.subDash}>–</span>
+        <span>{zeile.slice(2)}</span>
       </span>
     );
   }
@@ -211,56 +213,58 @@ function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze']
   const zeilen = abs.text.split('\n');
   const striche = !!abs.stricheErlaubt; // Engine-Boolean (/simplify 7.6.2026)
 
+  // Alle Masse/Stile aus der SSoT (vorschauStil.ts) – keine hartkodierten
+  // Tailwind-Abstände mehr; Variante A «Dokument-Handwerk».
   switch (abs.rolle) {
     case 'absender':
     case 'adressat':
       return (
-        <div className={abs.rolle === 'adressat' ? 'mb-5' : 'mb-4'}>
+        <div style={abs.rolle === 'adressat' ? VORSCHAU.adressat : VORSCHAU.absender}>
           {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} dicht striche={striche} />)}
         </div>
       );
     case 'datumzeile':
-      return <p className="text-right mt-2 mb-5">{abs.text}</p>;
+      return <p style={VORSCHAU.datum}>{abs.text}</p>;
     case 'betreff':
       return (
-        <div className="mb-5">
-          <p className="font-bold text-[1.1em] leading-snug">{abs.text}</p>
-          <span className="block mt-1.5 border-t border-line" aria-hidden />
+        <div>
+          <p style={{ ...VORSCHAU.betreff, lineHeight: 1.3 }}>{abs.text}</p>
+          <span style={VORSCHAU.betreffLinie} aria-hidden />
         </div>
       );
     case 'rubrum':
       return (
-        <div className="mb-5 space-y-0.5">
+        <div style={VORSCHAU.rubrum}>
           {zeilen.map((z, i) => {
             const t = z.trim();
-            if (MUSTER.RUBRUM_ROLLE.test(t)) return <p key={i} className="text-center">{t}</p>;
-            if (t === 'gegen') return <p key={i} className="text-center font-bold py-1">gegen</p>;
-            if (z === 'in Sachen') return <p key={i} className="pb-1">{z}</p>;
-            if (z.startsWith('betreffend ')) return <p key={i} className="pt-1">{z}</p>;
-            return <VorschauZeile key={i} zeile={z} dicht={t !== ''} striche={striche} />;
+            if (MUSTER.RUBRUM_ROLLE.test(t)) return <p key={i} style={VORSCHAU.rubrumRolle}>{rolleLabel(t)}</p>;
+            if (t === 'gegen') return <p key={i} style={VORSCHAU.rubrumGegen}>gegen</p>;
+            if (z === 'in Sachen') return <p key={i} style={VORSCHAU.insachen}>{z}</p>;
+            if (z.startsWith('betreffend ')) return <p key={i} style={VORSCHAU.betreffend}>{z}</p>;
+            return <p key={i} style={VORSCHAU.rubrumZeile}><VorschauZeile zeile={z} dicht={t !== ''} striche={striche} /></p>;
           })}
         </div>
       );
     case 'parteien':
       return (
-        <div className="text-center mb-5 space-y-0.5">
+        <div style={VORSCHAU.parteien}>
           {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
     case 'anrede':
-      return <div className="mt-1 mb-4">{zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}</div>;
+      return <div style={VORSCHAU.anrede}>{zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}</div>;
     case 'schlussformel':
-      return <p className="mt-5 mb-1">{abs.text}</p>;
+      return <p style={VORSCHAU.schlussformel}>{abs.text}</p>;
     case 'unterschrift':
       return (
-        <div className="mt-4">
+        <div style={VORSCHAU.unterschrift}>
           {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
     default:
       return (
-        <div className="mb-2.5">
-          {abs.ueberschrift && <p className="font-bold mt-4 mb-1.5">{abs.ueberschrift}</p>}
+        <div style={VORSCHAU.block}>
+          {abs.ueberschrift && <p style={VORSCHAU.blockTitel}>{abs.ueberschrift}</p>}
           {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
@@ -351,13 +355,13 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, dire
             <span className="ml-2 lc-chip normal-case tracking-normal">{AUSGABE_LABEL[ergebnis.dokument.ausgabeArt]}</span>
           )}
         </p>
-        <div className="font-sans text-ink-900" style={kompakt ? { fontSize: '0.88rem', lineHeight: 1.5 } : { fontSize: '0.92rem', lineHeight: 1.55 }}>
+        <div className="font-sans text-ink-900" style={{ ...VORSCHAU.papier, ...(kompakt ? { fontSize: '0.88rem', lineHeight: 1.55 } : { fontSize: '0.92rem', lineHeight: 1.6 }) }}>
           {/* Eingaben tragen ihren Titel im fetten Betreff – kein Dokumenttitel;
               Verfügung/Vertrag: zentrierter Titel MIT Haarlinie (wie PDF/DOCX) */}
           {ergebnis.dokument.format !== 'eingabe' && (
-            <div className="mb-5">
-              <p className={`text-center font-bold ${kompakt ? 'text-[1.15rem]' : 'text-[1.25rem]'}`}>{ergebnis.dokument.titel}</p>
-              <span className="block mt-2 border-t border-line" aria-hidden />
+            <div>
+              <p style={VORSCHAU.titel}>{ergebnis.dokument.titel}</p>
+              <span style={VORSCHAU.titelLinie} aria-hidden />
             </div>
           )}
           {ergebnis.dokument.absaetze.map((abs) => (
