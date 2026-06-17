@@ -78,6 +78,7 @@ const fehler: string[] = [];
 for (const [sr, kuerzel, gebiet] of LISTE) {
   const r = await frage(sr);
   if (!r || !r.titel) { fehler.push(`${kuerzel} (SR ${sr})`); continue; }
+  if (!r.stand) console.log(`  ⚠ ${kuerzel}: keine Konsolidierung ≤ heute gefunden — Stand=${heute} (prüfen)`);
   const key = kuerzel.toUpperCase().replace(/[^A-Z0-9]/g, '_');
   const esc = (s: string) => s.replace(/'/g, "\\'");
   eintraege.push(`  { key: '${key}', ebene: 'bund', kuerzel: '${esc(kuerzel)}', titel: '${esc(r.titel)}', sr: '${sr}', rechtsgebiet: '${gebiet}', sprache: 'de', rang: 90, status: 'nur-live-link', quelleUrl: '${r.eli}', stand: '${r.stand || heute}' },`);
