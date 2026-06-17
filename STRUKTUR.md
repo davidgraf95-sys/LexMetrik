@@ -22,12 +22,20 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ 474b10a)
+## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ f19ef9a)
 
-**PROD-DEPLOY 17.6.2026 (David-Ja):** `feat/normtext-popup` gepusht (origin),
-Prod via sauberem /tmp-Worktree deployt → **lexmetrik.vercel.app** (dpl_5w7fxrh6…,
-Stand 474b10a). Nachkontrolle: Kernrouten HTTP 200, neue Bund-Snapshots live
-(BEWG/MWSTG.json 200). **Fachliche Abnahme weiterhin durch David selbst.**
+**PROD-DEPLOY 17.6.2026 (David-Ja), 2 Stände:**
+- @ 474b10a: Linker (Phase 1/3) + Snapshot-Ausbau 27 Bundesgesetze.
+- @ f19ef9a: + Phase 2 (kantonale «§ N» inline) NACH fundiertem Bug-Check.
+Prod via sauberem /tmp-Worktree → **lexmetrik.vercel.app**. Nachkontrolle live:
+Kernrouten HTTP 200, Bund- (BBG) + Kanton-Snapshot (LU-265) 200, ZH §4/§9-Popover
+mit Volltext, 0 tote Links, 0 Console-Fehler.
+**Bug-Check Phase 2 (2 Review-Agents + empirisch):** HIGH-Bug gefunden+behoben —
+KantonNormText verlinkte bare «Art. N» eines FÖDERALEN Posten (BGer, fedlex-URL)
+kantonal → toter Popover; Fix: nur «§» + nur Nicht-fedlex-Quelle (Commit f19ef9a,
+2 Regressionstests). Pre-existing (NICHT Phase 2): KantonArtikelTrigger rendert
+föderale Posten-Artikel («Art. 65 BGG») über den Kanton-Loader → Fallback-Popover
+statt BGG-Snapshot — offener Verbesserungspunkt. **Fachliche Abnahme durch David.**
 
 **Auftrag David:** «kannst du an der Gesetzesverlinkung weiterarbeiten» → «jede Norm die
 genannt wird soll verlinkt sein» → «weiterarbeiten bis Ziel erreicht» → «verifizieren und
