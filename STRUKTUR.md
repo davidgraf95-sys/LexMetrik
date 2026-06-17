@@ -24,18 +24,23 @@ der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 
 ## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ f19ef9a)
 
-**PROD-DEPLOY 17.6.2026 (David-Ja), 2 Stände:**
+**PROD-DEPLOY 17.6.2026 (David-Ja), 3 Stände:**
 - @ 474b10a: Linker (Phase 1/3) + Snapshot-Ausbau 27 Bundesgesetze.
 - @ f19ef9a: + Phase 2 (kantonale «§ N» inline) NACH fundiertem Bug-Check.
+- @ b9d35e6: + 3 Polish-Fixes (s. u.) NACH fundiertem Bug-Check.
 Prod via sauberem /tmp-Worktree → **lexmetrik.vercel.app**. Nachkontrolle live:
-Kernrouten HTTP 200, Bund- (BBG) + Kanton-Snapshot (LU-265) 200, ZH §4/§9-Popover
-mit Volltext, 0 tote Links, 0 Console-Fehler.
+Kernrouten HTTP 200, Bund- (BBG) + Kanton-Snapshot (LU-265) 200, ZH §4-Popover
+als 9 Zeilen, 0 tote Links, 0 Console-Fehler.
 **Bug-Check Phase 2 (2 Review-Agents + empirisch):** HIGH-Bug gefunden+behoben —
 KantonNormText verlinkte bare «Art. N» eines FÖDERALEN Posten (BGer, fedlex-URL)
-kantonal → toter Popover; Fix: nur «§» + nur Nicht-fedlex-Quelle (Commit f19ef9a,
-2 Regressionstests). Pre-existing (NICHT Phase 2): KantonArtikelTrigger rendert
-föderale Posten-Artikel («Art. 65 BGG») über den Kanton-Loader → Fallback-Popover
-statt BGG-Snapshot — offener Verbesserungspunkt. **Fachliche Abnahme durch David.**
+kantonal → toter Popover; Fix: nur «§» + nur Nicht-fedlex-Quelle (Commit f19ef9a).
+**3 Polish-Fixes (b9d35e6, Befunde David):** (1) föderaler Posten → KantonArtikel-
+Trigger routet fedlex-Quellen über NormText→NormChip (BGG-Volltext statt Fallback)
+— behebt zugleich den oben genannten pre-existing Punkt; (2) «Anhang Ziff. 1.1.1»
+& andere nicht parsbare Artikel sind jetzt klickbar (Link zur amtlichen Quelle);
+(3) Tarif-Staffel-Tabellen (ZH GebV OG §4, ZH AnwGebV §4, BS GGR §5) im Popover
+zeilenweise statt als Blob (Korpus-Scan: nur diese 3, 0 Fehlauslösungen).
+**Fachliche Abnahme durch David.**
 
 **Auftrag David:** «kannst du an der Gesetzesverlinkung weiterarbeiten» → «jede Norm die
 genannt wird soll verlinkt sein» → «weiterarbeiten bis Ziel erreicht» → «verifizieren und
