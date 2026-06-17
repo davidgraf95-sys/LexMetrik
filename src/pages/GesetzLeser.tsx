@@ -68,7 +68,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
     <article id={`art-${e.artikel}`} className="group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md lg:hover:scale-[1.035] lg:grid lg:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] lg:gap-x-4 lg:items-baseline">
       {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
       <div className="order-1 flex items-baseline gap-2 lg:block lg:text-right">
-        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline whitespace-nowrap">{e.artikelLabel}</a>
+        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline leading-snug break-words">{e.artikelLabel}</a>
         <span className="lg:mt-1 flex gap-2 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
           <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
           <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
@@ -369,7 +369,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
         className="lc-input h-9 py-0 text-body-s w-full max-w-md" />
 
-      <div className="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8">
+      {/* 2-Spalten (TOC + Inhalt) NUR wenn es eine Gliederung gibt. Sonst (flacher
+          Fallback ohne Struktur / Suchtreffer) volle Breite — sonst landet der einzige
+          Grid-Inhalt in der 16rem-Spalte und die Lesespalte kollabiert. */}
+      <div className={!treffer && sektionen.length > 0 ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
         {!treffer && sektionen.length > 0 && (
           <aside className="mb-4 lg:mb-0">
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">

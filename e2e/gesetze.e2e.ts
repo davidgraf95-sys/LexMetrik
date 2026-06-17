@@ -60,4 +60,21 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
     await expect(page.getByText(/Treffer für/)).toBeVisible()
     expect(fehler).toEqual([])
   })
+
+  // Regression: flacher Fallback (Erlass OHNE Gliederung/Struktur) darf die Lese-
+  // spalte NICHT kollabieren. Vorher landete der einzige Grid-Inhalt in der 16rem-
+  // TOC-Spalte → Body ~0 → ein Wort pro Zeile («alles verzogen»).
+  test('flacher Reader (ohne TOC) behält volle Lesebreite', async ({ page }) => {
+    const fehler = fehlerSammeln(page)
+    await page.setViewportSize({ width: 1280, height: 1000 })
+    await page.goto('/gesetze/kanton/ZH-243')
+    const ersterAbsatz = page.locator('article p').first()
+    await expect(ersterAbsatz).toBeVisible()
+    const breite = (await ersterAbsatz.boundingBox())?.width ?? 0
+    // Kollabiert wären ~115px; gesund ist die Lesespalte deutlich breiter.
+    expect(breite).toBeGreaterThan(360)
+    // Kein TOC bei fehlender Gliederung.
+    await expect(page.getByText('Gliederung', { exact: true })).toHaveCount(0)
+    expect(fehler).toEqual([])
+  })
 })
