@@ -25,6 +25,7 @@ import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { holePdf, PDF_PROFILE, type PdfProfilName } from './normtext/adapter-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
+import { baueBrowseManifest } from './normtext/browse-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
@@ -831,6 +832,17 @@ async function main(): Promise<void> {
   );
   console.log(
     `\nKanton-Manifest: public/normtext/kanton/index.json (${Object.keys(kantonManifestSortiert).length} Einträge)`,
+  );
+
+  // ── Browse-Manifest (Rubrik V «Gesetze»): Register × Snapshots ───────────
+  const browse = baueBrowseManifest(abgerufen);
+  writeFileSync(
+    'public/normtext/register.json',
+    JSON.stringify(browse, null, 2) + '\n',
+    'utf8',
+  );
+  console.log(
+    `\nBrowse-Manifest: public/normtext/register.json (${browse.erlasse.length} Erlasse)`,
   );
 
   // Golden-Index schreiben (sortiert)
