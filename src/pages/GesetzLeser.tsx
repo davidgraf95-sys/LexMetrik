@@ -152,6 +152,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return () => { lebt = false; };
   }, [ebene, schluessel]);
 
+  // Browser-Tab zeigt den Erlass: «OR (Obligationenrecht) — LexMetrik». Kurztitel
+  // = Klammer-Inhalt am Ende des Volltitels (LEGES-Konvention), sonst der Titel.
+  useEffect(() => {
+    if (!erlass || typeof document === 'undefined') return;
+    const kurz = erlass.titel.match(/\(([^)]+)\)\s*$/)?.[1] ?? erlass.titel;
+    document.title = `${erlass.kuerzel} (${kurz}) — LexMetrik`;
+  }, [erlass]);
+
   const { sektionen, ohneGliederung } = useMemo(
     () => (eintraege ? baueGliederungsbaum(eintraege, struktur) : { sektionen: [], ohneGliederung: [] }),
     [eintraege, struktur],

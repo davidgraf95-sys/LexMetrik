@@ -32,7 +32,8 @@
     "gate:schnell": "bash scripts/gate.sh schnell",
     "normtext": "vite-node scripts/normtext-snapshot.ts --",
     "normtext:register": "vite-node scripts/normtext/browse-manifest-run.ts --",
-    "normtext:struktur": "vite-node scripts/normtext/struktur-run.ts --"
+    "normtext:struktur": "vite-node scripts/normtext/struktur-run.ts --",
+    "normtext:struktur-kanton": "vite-node scripts/normtext/struktur-kanton-run.ts --"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
