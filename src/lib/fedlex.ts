@@ -93,6 +93,14 @@ export const FEDLEX = {
   DSG: 'https://www.fedlex.admin.ch/eli/cc/2022/491/de',
   // BBG SR 412.10 — eli cc/2003/674, Konsolidierung 20250301 (76).
   BBG: 'https://www.fedlex.admin.ch/eli/cc/2003/674/de',
+  // GBV (Grundbuchverordnung) SR 211.432.1 — eli cc/2011/667. Neuste mit
+  // Filestore-HTML verfügbare Konsolidierung 20240101 (186 Anker); spätere
+  // (2026-04-15) sind bei Fedlex nur als SPA-Shell vorhanden — Live-Link bleibt
+  // massgeblich (§7/§8), Muster wie VMWG.
+  GBV: 'https://www.fedlex.admin.ch/eli/cc/2011/667/de',
+  // JStPO (Jugendstrafprozessordnung) SR 312.1 — eli cc/2010/226,
+  // Konsolidierung 20250701 (54 Anker); kollisionsfrei zu StPO (endet auf «JStPO»).
+  JStPO: 'https://www.fedlex.admin.ch/eli/cc/2010/226/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

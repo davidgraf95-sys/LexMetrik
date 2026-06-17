@@ -41,6 +41,8 @@ const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
   SVG: 'SVG',
   DSG: 'DSG',
   BBG: 'BBG',
+  GBV: 'GBV',
+  JStPO: 'JSTPO',
 };
 
 export function bundSnapshotRef(

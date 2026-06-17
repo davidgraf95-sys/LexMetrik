@@ -100,6 +100,10 @@ EINTRAEGE=(
   "svg|cc/1959/679_705_685|20250401|0|art_65"
   "dsg|cc/2022/491|20250707|0|art_25"
   "bbg|cc/2003/674|20250301|0|art_14"
+  # GBV/JStPO ergänzt 17.6.2026. GBV: neuste Konsolidierung MIT Filestore-HTML
+  # ist 20240101 (spätere nur SPA-Shell, Live-Link massgeblich, Muster VMWG).
+  "gbv|cc/2011/667|20240101|0|art_86"
+  "jstpo|cc/2010/226|20250701|0|art_10"
 )
 
 fehler=0

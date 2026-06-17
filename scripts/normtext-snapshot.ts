@@ -71,6 +71,8 @@ const ERLASS_MAP: Record<string, string> = {
   svg: 'SVG',
   dsg: 'DSG',
   bbg: 'BBG',
+  gbv: 'GBV',
+  jstpo: 'JStPO',
 };
 
 // ── Konsolidierungsdatum YYYYMMDD → ISO YYYY-MM-DD ───────────────────────────
