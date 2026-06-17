@@ -121,6 +121,11 @@ künftige Build/jede neue Norm-Quelle folgt zwingend diesem Muster:
    verdrahtet. Neue Quellen ergänzen einen browserlosen Adapter (Fetch +
    strukturierte Extraktion + Drift-Token), kein Headless-Browser, kein
    Scraping pro Kanton. Detail-Referenz: `FAHRPLAN-GESETZESTEXT-POPUP.md`.
+   **Kantonales Gesetz nur als PDF** (Quellen-Priorität LexWork → HTM → HTML →
+   PDF → Live-Link-Fallback): verbindliche Extraktions-/Speicher-Regel (Profil
+   im `adapter-pdf.ts`, pdfjs Build-Zeit, Body-Spalten-x, Stand/Drift-Token,
+   Qualitäts-Tor → sonst ehrlicher Fallback) in
+   `bibliothek/normen/norm-vorschau-snapshot-system.md` (§11).
 
 ## §8 Ehrlichkeit gegenüber Nutzern
 

@@ -73,6 +73,48 @@ Konsolidierung; Kanton: `current_version`/`version_uid`); (4) Provenienz je Eint
 browserloser Adapter (Fetch + strukturierte Extraktion + Drift-Token), kein
 Headless-Browser, kein Pro-Kanton-Scraping.
 
+## Regel: Kantonales Gesetz nur als PDF (Auftrag David 17.6.2026)
+
+«Wenn es ein kantonales Gesetz im PDF ist, dann erstelle Regel, wie du das
+extrahierst und sinnvoll abspeicherst.» Verbindliches Vorgehen — eingereiht in
+die Quellen-Priorität, NIE Hand-Editieren des Snapshots, NIE Headless-Browser:
+
+**Quellen-Priorität je (Kanton, Erlass)** — die erste verfügbare gewinnt:
+1. **LexWork-JSON** (`structured_document_id` vorhanden) → `adapter-lexwork.ts`.
+2. **Word-Export-HTM** (NE/GE/TI-Variante) → `adapter-htm.ts`.
+3. **Strukturiertes HTML** (z. B. TI m3.ti.ch `legge/num`) → eigener HTML-Pfad.
+4. **PDF** (nur wenn 1–3 fehlen) → `adapter-pdf.ts` per **Profil** (siehe unten).
+5. **Sonst** → ehrlicher Live-Link-Fallback (§8), KEIN geschätzter Text.
+
+**PDF extrahieren (browserlos, Build-Zeit) — `adapter-pdf.ts`:**
+- **Ein `PdfProfil` je Layout-Familie** (nicht je Erlass, wenn das Layout gleich
+  ist): definiert URL-Ableitung (lawId → amtliche PDF-URL), die **Body-Spalten-x**
+  (Marginalie/Sachtitel/Randnummer liegen LINKS davon und werden verworfen),
+  Kopf-/Fusszeilen-Marker und den **Stand-Leser** (In-Kraft-/Fassungsdatum aus
+  Kopf/Fuss). Vorhandene Profile: `sz | ti | vd | ju` — neues Layout = neues Profil.
+- **pdfjs-Textitems** mit x/y/Höhe lesen; nach Body-Spalte filtern; Zeilen über
+  y gruppieren; **Artikel** an `Art. N`/`§ N` segmentieren (§≡Art., `parsePassus`);
+  **Absatz** = hochgestellte Ziffer (kleine Höhe) am Zeilenanfang; **Aufzählung**
+  (`a. …` / `1. …`) als `items: {marke,text}[]`. Nichts abschneiden (Vollabdeckung).
+- **Qualitäts-Tor:** Liefert das Profil für einen Erlass keine plausiblen Artikel
+  (0 Treffer, zerrissene Spalten), wird NICHT gespeichert → Fallback (4→5). Lieber
+  ehrlicher Link als falscher Volltext (§1/§8).
+
+**Sinnvoll abspeichern** (identisch zu Bund/LexWork, ein `NormSnapshot` je Artikel):
+- `bloecke` (Absätze + items), `artikelLabel` einheitlich (`§ N` / `Art. N`),
+  aufgehobene Artikel als «aufgehoben»-Block (Konvention «…»).
+- **Provenienz (§7-Zitat-Ausnahme):** `stand` (aus dem Profil-Stand-Leser),
+  `quelleUrl` (amtliche PDF/Seite, im Popover als Live-Link sichtbar),
+  `fassungsToken` + `sha` (über Text+items) als **Drift-Token**.
+- Datei unter `public/normtext/kanton/`, Eintrag im Manifest `index.json`
+  (quelleUrl → Datei) — automatisch durch den Generator, nie von Hand.
+
+**Drift/Pflege:** `check:normtext-netz` re-fetcht das PDF und vergleicht den
+Token; ändert der Kanton das PDF, wird der Check rot → `npm run normtext` neu.
+Das Snapshot ist NIE die massgebliche Fassung — das ist die amtliche Quelle
+(Live-Link, §8). **Abdeckungs-Log (kein stilles Cap):** der Generator listet am
+Ende jede (Kanton, Erlass)-Kombination, die ohne Snapshot blieb, als Klartext.
+
 ## Verifikation & Pflege
 
 - **Drift/In-Kraft:** `check:fedlex-versionen` (Bund-Konsolidierungen) +

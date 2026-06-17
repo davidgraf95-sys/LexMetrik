@@ -52,9 +52,23 @@ Bug-Check» → «alles doppelt verifizieren von Anfang an». Detail: `FAHRPLAN-
   Text-Knoten; Entity-Knoten/mehrzeilig/Choice-Labels/Placeholder bewusst aus. Gate grün
   (golden byte-gleich), Browser-Smoke 0 nested `<a>`/0 Console-Fehler. Commits a5a00a4
   (Phase 1), ff71685 (3a), 385bbf6 (3b).
-- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» über Quelle-Kontext); Rest-Prosa (3 Entity-
-  Knoten &gt;/&amp;, mehrzeilige Text-Knoten, prop-geroutete Choice-Labels). **Push/Deploy +
-  fachliche Abnahme offen (§9 / David selbst).**
+- **Snapshot-Ausbau «jedes verwendete Gesetz in seiner Gesamtheit» + «§≡Art» (Auftrag David):**
+  9 weitere Bundesgesetze als Volltext-Snapshot → **Bund 27 Gesetze / 6664 Artikel**
+  (MWSTG·URG·BewG·EOG·SVG·DSG·BBG·GBV·JStPO). ELI+Konsolidierung via Fedlex-SPARQL ermittelt,
+  SR-Nr.+Anker am Filestore empirisch verifiziert (§7); Linker (NORM_IM_TEXT/FEDLEX) erkennt
+  sie automatisch, Popover lädt den Volltext (Kette end-to-end verifiziert). Generator: neuer
+  `--nur=bund`-Modus (Bund nachführen ohne kantonale Quellen neu zu ziehen, Golden gemischt);
+  Extractor: leerer Artikel-Körper (z. B. SVG art_107 aufgehoben) faithful als «aufgehoben».
+  ATSG/IPRG bewusst NICHT (nur Kommentar/Test). Commits 5294edd, a00fdcb.
+- **Regel «kantonales Gesetz nur als PDF» (Auftrag David 17.6.):** Quellen-Priorität
+  LexWork→HTM→HTML→PDF→Live-Link; PDF browserlos via `adapter-pdf.ts`-Profil (pdfjs Build-Zeit,
+  Body-Spalten-x, Stand/Drift-Token, Qualitäts-Tor → sonst ehrlicher Fallback §8); Speicherung
+  wie Bund/LexWork inkl. Provenienz (§7). Dokumentiert: CLAUDE.md §7 +
+  `bibliothek/normen/norm-vorschau-snapshot-system.md` (§11).
+- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» inline über Quelle-Kontext); Rest-Prosa (Entity-
+  Knoten &gt;/&amp;, mehrzeilige Text-Knoten, prop-geroutete Choice-Labels); GBV: neuere
+  Konsolidierung (2026) ist Fedlex-SPA-only, daher 20240101 gepinnt (Live-Link massgeblich).
+  **Push/Deploy + fachliche Abnahme offen (§9 / David selbst).**
 
 ## Session 16./17.6.2026 — NORM-VORSCHAU-POPOVER (Volltext Bund+Kantone) GEBAUT (Branch feat/normtext-popup, ungepusht)
 
