@@ -50,17 +50,12 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
       setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
     });
   };
-  // Sachüberschrift = unterster Randtitel; übergeordnete Stufen in die Marge.
-  const sachtitel = marginalie.length ? marginalie[marginalie.length - 1] : '';
-  const oberMarg = marginalie.slice(0, -1);
   return (
     <article id={`art-${e.artikel}`} className="group scroll-mt-28 border-t border-line/60 pt-5 first:border-t-0 first:pt-0 lg:grid lg:grid-cols-[minmax(0,40rem)_12rem] lg:gap-x-6">
       <div className="order-2 lg:order-1">
-        {/* Artikel-Kopf — Nummer + Sachüberschrift, abgetrennt von den Bestimmungen */}
-        <div className="flex items-baseline gap-x-2 gap-y-0.5 flex-wrap">
-          <span className="lc-overline text-brass-700 shrink-0">{e.artikelLabel}</span>
-          {sachtitel && <span className="text-body-s font-semibold text-ink-900">{sachtitel}</span>}
-          <span className="ml-auto flex gap-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+        <div className="flex items-baseline gap-2">
+          <span className="lc-overline text-brass-700">{e.artikelLabel}</span>
+          <span className="flex gap-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
             <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
             <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
           </span>
@@ -68,10 +63,10 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           className="mt-2 space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
       </div>
-      {oberMarg.length > 0 && (
+      {marginalie.length > 0 && (
         <aside className="order-1 lg:order-2 mb-1 lg:mb-0 lg:pt-0.5">
           <p className="text-xs leading-snug text-ink-400">
-            {oberMarg.map((m, i) => <span key={i}>{m}{i < oberMarg.length - 1 ? <br /> : null}</span>)}
+            {marginalie.map((m, i) => <span key={i} className={i === marginalie.length - 1 ? 'text-ink-500' : ''}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
           </p>
         </aside>
       )}
