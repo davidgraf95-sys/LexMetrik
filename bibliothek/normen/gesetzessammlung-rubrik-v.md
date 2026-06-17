@@ -118,12 +118,44 @@ Artikel zum passenden Rechner — einzigartig, Backlog) und **D3 einheitliche Bu
 Kantone-Lese-UX**. Bewusst NICHT im Scope: Versions-Historie/point-in-time (dorthin
 verlinken, §8). Daten-Upgrade-Backlog: Fedlex-SPARQL (LOD/ELI) statt HTML-Scraping.
 
-## Offene Punkte / Backlog
+## AUSBAU 17./18.6.2026 — Display «Richtung A» + Struktur/Fussnoten/Stubs/D1 (ERLEDIGT)
 
-- Echte amtliche Gliederung (Teil/Titel/Abschnitt) in die Snapshots + TOC (ersetzt
-  Nummern-Bänder; erfüllt «Titel zuklappen» voll).
-- Globale facettierte Volltextsuche (FlexSearch, clientseitig) über alle Erlasse —
-  neue Abhängigkeit, Entscheid David offen.
-- Kantonale Rechtsgebiet-Klassifikation verfeinern (derzeit Default `oeffentlich`).
-- D1 Norm↔Werkzeug-Brücke; kantonaler Inline-Resolver (NormText Phase 2).
-- Fahrplan: `FAHRPLAN-RECHTSSAMMLUNG.md` (Phasen P0–P6, Stand/Etappen).
+Grosse Iteration mit David (Display live durchgearbeitet). Stand: gate-grün, e2e 4/4,
+**adversarial bug-/logik-geprüft (7 Agenten) → solide** (1 echter Bug behoben). Ungepusht.
+
+**Reader = «Richtung A»** (David gewählt; Serif fürs Lesen, Sans für UI): Source-Serif-4-
+Lesespalte ~66 Z./Zeile · **amtliche Gliederung Teil/Titel/Abschnitt benannt, Fedlex-analog
+auf jeder Stufe einklappbar (TOC↔Fliesstext synchron, geteilter `offen`-Zustand)** · sticky
+Breadcrumb-Scrollspy · **Randtitel/Marginalien in echter rechter Marge, entdoppelt** (nur neue
+Stufen je Artikel) · **amtliche Fussnoten am Artikelfuss** (Eingefügt/Aufgehoben/Fassung gemäss,
+AS/BBl klickbar) · Artikelnummer ruhig links auf Grundlinie · **Absatz/lit./Ziff. = Ein-Klick-
+Zitate** · Artikel- UND Absatz-Hover-Zoom · Tab-Titel «Kürzel (Kurztitel)» · **«⬇ Herunterladen»**
+(ganzer Erlass als Textdatei, client-seitig) · globale Suche (Bund+Kantone, inkl. Stubs).
+
+**Daten-Pipeline (Sidecars, Snapshots/Golden UNBERÜHRT):**
+- `public/normtext/struktur/{bund,kanton}/<KEY>.json` = `{erzeugt, artikel:{token:{gliederung[],marginalie[],fussnoten?[]}}}`.
+- Extraktoren: `struktur-extrahiere.ts` (Fedlex-HTML, div/article-Nesting-Walker, nur div/article auf dem Stack) · `fussnoten-extrahiere.ts` (Fedlex, Marker #fn→Def, AS=eli/oc, BBl=eli/fga) · `struktur-lexwork.ts` (LexWork xhtml_tol, FLACH `div.title.level_N` + `div.article`).
+- Runner/Befehle: `npm run normtext:struktur -- --datum=…` (Bund, **offline** aus /tmp-Cache; braucht `bash scripts/fedlex-cache.sh`) · `npm run normtext:struktur-kanton -- --datum=…` (Kanton, **Netz** LexWork-API, Parallelität 6) · `npm run normtext:bund-stubs -- --datum=…` (Stubs via Fedlex-SPARQL) · danach `npm run normtext:register` (Manifest).
+
+**Kantone — Plattform-Adapter-Design (Davids «effizient/wartungsarm»):** NICHT 26 Regeln,
+sondern Adapter pro Plattform. **LexWork = EIN Adapter deckt 73/113 Erlasse** (volle Struktur).
+40 Nicht-LexWork (Romandie GE/NE/JU, TI, ZH-zhlex SPA-only, SZ, lexfind-PDF) → **ehrlicher
+flacher Fallback** (gleicher Reader ohne Baum, §8). LexFind 2.0 selbst kapituliert (nur PDF,
+LEGES 2020) — wir machen es besser via einheitliches Ziel-Modell.
+
+**Bund-Breite:** 27 Volltext + **30 verifizierte `nur-live-link`-Stubs** (`bund-stubs.generated.ts`,
+SPARQL-Titel bestätigt SR = Sanity-Check) = 57 Bund. Volltext zuerst (rang), Stubs (rang 90) danach.
+
+**D1 Norm↔Werkzeug-Brücke** (`werkzeuge.ts`): deklarierte Erlass→Katalog-Karten-Zuordnung,
+Karte liefert Titel+href zur Laufzeit (SSoT startseiteConfig), nicht-verfügbare/unbekannte IDs
+ausgeblendet (kein toter Link). Reader-Box «Passende Werkzeuge». **Einzigartig** (Rechner+Normtext
+unter einem Dach).
+
+## Offene Punkte / Backlog (nach Ausbau)
+
+- Nicht-LexWork-Kantonsstruktur bleibt flacher Fallback (Romandie/TI/ZH/SZ — niedrige Priorität;
+  keine strukturierte Quelle → kein fragiler Einzelparser).
+- Kantonale Fussnoten (LexWork-Markup; Marker-Zuordnung war fehlerhaft → zurückgenommen).
+- Artikel-Themen-Suche (über Marginalien) statt nur Erlass-Suche · kantonale Werkzeug-Brücke.
+- B3 (kosmetisch, 0/73 ausgelöst): LexWork-Sparse-Array bei Level-Sprung — bei Bedarf Level-Stack.
+- Deploy nur auf Davids frisches Ja (§9). Fahrplan: `FAHRPLAN-RECHTSSAMMLUNG.md`.
