@@ -99,7 +99,13 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   if (bloecke.length === 0) {
     const text = entferneTags(inner).replace(/^\s*Art\.\s*\S+\s*/, '').trim();
     if (text) return { bloecke: [{ absatz: null, text }] };
-    return { bloecke: [] };
+    // Leerer Artikel-Körper (Fedlex rendert aufgehobene, aber noch nummerierte
+    // Artikel als blosse Überschrift mit leerem <div class="collapseable">, z.B.
+    // SVG art_107): faithful als «aufgehoben»-Block darstellen (Konvention «…»,
+    // NormPopover zeigt «aufgehoben»). So bleibt der Artikel in der
+    // Vollständigkeit erfasst statt stumm zu fehlen (§8 Ehrlichkeit, kein
+    // Aufweichen des Vollständigkeitstests).
+    return { bloecke: [{ absatz: null, text: '…' }] };
   }
 
   return { bloecke };

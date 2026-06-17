@@ -63,6 +63,14 @@ const ERLASS_MAP: Record<string, string> = {
   stg: 'StG',
   kvg: 'KVG',
   kvv: 'KVV',
+  // Erweiterung 17.6.2026 (jedes zitierte Bundesgesetz mit Volltext-Snapshot).
+  mwstg: 'MWSTG',
+  urg: 'URG',
+  bewg: 'BewG',
+  eog: 'EOG',
+  svg: 'SVG',
+  dsg: 'DSG',
+  bbg: 'BBG',
 };
 
 // ── Konsolidierungsdatum YYYYMMDD → ISO YYYY-MM-DD ───────────────────────────
@@ -703,6 +711,42 @@ async function main(): Promise<void> {
     console.log(`\nTotal übersprungen: ${uebersprungen.length}`);
   } else {
     console.log('\nKeine Token übersprungen.');
+  }
+
+  // ── Nur-Bund-Modus (--nur=bund) ─────────────────────────────────────────────
+  // Erlaubt das Nachführen NUR der Bund-Snapshots, ohne die kantonalen Quellen
+  // (LexWork/ZH/HTM/PDF) erneut über das Netz zu ziehen — so können neue
+  // Bundesgesetze ergänzt werden, ohne verifizierte Kantons-Snapshots zu
+  // riskieren. Der Golden-Index wird GEMISCHT: die kantonalen Einträge des
+  // bestehenden golden/normtext-snapshot.json bleiben unangetastet, nur die
+  // bund/*-Schlüssel werden ersetzt. Kanton-Manifest bleibt unverändert.
+  if (process.argv.includes('--nur=bund')) {
+    const goldenPfad = 'golden/normtext-snapshot.json';
+    let bestand: Record<string, string>;
+    try {
+      bestand = JSON.parse(readFileSync(goldenPfad, 'utf8')) as Record<string, string>;
+    } catch {
+      throw new Error(
+        `--nur=bund: ${goldenPfad} fehlt — ein Voll-Lauf (npm run normtext) muss zuerst die kantonalen Einträge erzeugt haben.`,
+      );
+    }
+    const gemischt: Record<string, string> = {};
+    // kantonale (und sonstige Nicht-bund-) Einträge unverändert übernehmen
+    for (const k of Object.keys(bestand)) {
+      if (!k.startsWith('bund/')) gemischt[k] = bestand[k];
+    }
+    // frische bund/*-Einträge ergänzen
+    for (const k of Object.keys(goldenIndex)) gemischt[k] = goldenIndex[k];
+    const sortiert: Record<string, string> = {};
+    for (const k of Object.keys(gemischt).sort()) sortiert[k] = gemischt[k];
+    mkdirSync('golden', { recursive: true });
+    writeFileSync(goldenPfad, stabelesJson(sortiert), 'utf8');
+    const bundN = Object.keys(goldenIndex).length;
+    console.log(
+      `\n[--nur=bund] Kantons-/HTM-/ZH-/PDF-Phasen ÜBERSPRUNGEN. Golden gemischt: ` +
+        `${bundN} bund/* aktualisiert, ${Object.keys(sortiert).length - bundN} kantonale Einträge bewahrt.`,
+    );
+    return;
   }
 
   // ── Kantons-Phase (LexWork) ────────────────────────────────────────────────

@@ -74,6 +74,25 @@ export const FEDLEX = {
   // GebV-HReg SR 221.411.1 — Cache gepinnt (Konsolidierung 20210101); Anker
   // art_3/4/8 extrahiert (Handelsregister-Gebühren).
   GebVHReg: 'https://www.fedlex.admin.ch/eli/cc/2020/180/de',
+  // ── Erweiterung 17.6.2026 (Auftrag David «jedes verwendete Gesetz in seiner
+  // Gesamtheit abspeichern»): die übrigen im Produkt zitierten Bundesgesetze.
+  // ELI + geltende Konsolidierung via Fedlex-SPARQL (latest dateApplicability
+  // ≤ heute) ermittelt, Identität (SR-Nr.) + Pflicht-Anker am Filestore-HTML
+  // empirisch verifiziert (§7). Snapshots: scripts/fedlex-cache.sh + normtext.
+  // MWSTG SR 641.20 — eli cc/2009/615, Konsolidierung 20250331 (132 Anker).
+  MWSTG: 'https://www.fedlex.admin.ch/eli/cc/2009/615/de',
+  // URG SR 231.1 — eli cc/1993/1798_1798_1798, Konsolidierung 20250701 (113).
+  URG: 'https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de',
+  // BewG (Lex Koller) SR 211.412.41 — eli cc/1984/1148_1148_1148, 20230701 (41).
+  BewG: 'https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de',
+  // EOG SR 834.1 — eli cc/1952/1021_1046_1050, Konsolidierung 20260601 (66).
+  EOG: 'https://www.fedlex.admin.ch/eli/cc/1952/1021_1046_1050/de',
+  // SVG SR 741.01 — eli cc/1959/679_705_685, Konsolidierung 20250401 (159).
+  SVG: 'https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de',
+  // DSG (revDSG) SR 235.1 — eli cc/2022/491, Konsolidierung 20250707 (77).
+  DSG: 'https://www.fedlex.admin.ch/eli/cc/2022/491/de',
+  // BBG SR 412.10 — eli cc/2003/674, Konsolidierung 20250301 (76).
+  BBG: 'https://www.fedlex.admin.ch/eli/cc/2003/674/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

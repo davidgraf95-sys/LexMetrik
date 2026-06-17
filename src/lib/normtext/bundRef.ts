@@ -33,6 +33,14 @@ const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
   StGB: 'STGB',
   StG: 'STG',
   GebVHReg: 'GEBV_HREG',
+  // Erweiterung 17.6.2026 (jedes zitierte Bundesgesetz mit Volltext-Snapshot).
+  MWSTG: 'MWSTG',
+  URG: 'URG',
+  BewG: 'BEWG',
+  EOG: 'EOG',
+  SVG: 'SVG',
+  DSG: 'DSG',
+  BBG: 'BBG',
 };
 
 export function bundSnapshotRef(

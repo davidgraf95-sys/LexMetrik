@@ -90,6 +90,16 @@ EINTRAEGE=(
   # KVV: gepinnt 11.6.2026 (besondere Versicherungsformen: Art. 94 Abs. 2 /
   # Art. 100 Abs. 3 — Wechsel nur auf Jahresende, Fassung AS 2024 697).
   "kvv|cc/1995/3867_3867_3867|20260101|0|art_94,art_99,art_100"
+  # ── Erweiterung 17.6.2026 (jedes zitierte Bundesgesetz mit Volltext-Snapshot,
+  # Auftrag David). ELI + geltende Konsolidierung via Fedlex-SPARQL ermittelt,
+  # SR-Nr. + Pflicht-Anker am Filestore-HTML empirisch verifiziert (§7). Alle n=0.
+  "mwstg|cc/2009/615|20250331|0|art_22,art_26"
+  "urg|cc/1993/1798_1798_1798|20250701|0|art_17"
+  "bewg|cc/1984/1148_1148_1148|20230701|0|art_2,art_5,art_18"
+  "eog|cc/1952/1021_1046_1050|20260601|0|art_16_c"
+  "svg|cc/1959/679_705_685|20250401|0|art_65"
+  "dsg|cc/2022/491|20250707|0|art_25"
+  "bbg|cc/2003/674|20250301|0|art_14"
 )
 
 fehler=0
