@@ -31,11 +31,22 @@ describe('KantonNormText — kontextbezogene § / Bund-Auflösung', () => {
     expect(out).toContain('§ 6');
   });
 
-  it('«Art. N» (bundesfremd) nur bei Art.-Stil-Quelle kantonal verlinkt', () => {
-    const artStil = ssr(<KantonNormText text="Gemäss Art. 37 hier." quelle={{ quelleUrl: ZH_URL, artikel: 'Art. 37' }} />);
-    expect(artStil).toContain(`href="${ZH_URL}"`);
-    // §-Stil-Quelle: ein bundesfremdes «Art. 37» bleibt Text (kein Fehlbezug)
-    const parStil = ssr(<KantonNormText text="Gemäss Art. 37 hier." quelle={{ quelleUrl: ZH_URL, artikel: '§ 5' }} />);
-    expect(parStil).not.toContain('<a');
+  it('«Art. N» wird NIE kantonal verlinkt (nur § ist kantonal) — auch nicht bei Art.-Stil-Quelle', () => {
+    // Schützt vor dem Bug-Befund 17.6.: bare «Art. N» dürfen nicht als kantonaler
+    // Link auf die Quelle-URL zeigen (sonst toter Popover bei föderalen Posten).
+    const out = ssr(<KantonNormText text="Gemäss Art. 37 hier." quelle={{ quelleUrl: ZH_URL, artikel: 'Art. 37' }} />);
+    expect(out).not.toContain('<a');
+    expect(out).toContain('Art. 37');
+  });
+
+  it('fedlex-Quelle (föderaler Posten): «§»/«Art.» erzeugen KEINEN kantonalen Link (Bug-Regression BGer)', () => {
+    const fedUrl = 'https://www.fedlex.admin.ch/eli/cc/2006/218/de';
+    // BGer-Posten: artikel «Art. 65 BGG», hinweis mit bare «Art. 65 Abs. 5» + «§ 3».
+    const out = ssr(<KantonNormText text="Vorschuss nach Art. 65 Abs. 5 und § 3 hier." quelle={{ quelleUrl: fedUrl, artikel: 'Art. 65 BGG' }} />);
+    // KEIN Link auf die fedlex-Quelle als kantonaler Eintrag (Kanton-Loader käme nicht klar).
+    expect(out).not.toContain(`href="${fedUrl}"`);
+    expect(out).not.toContain('<a'); // weder kantonal noch (bare, gesetzlos) föderal
+    expect(out).toContain('Art. 65 Abs. 5');
+    expect(out).toContain('§ 3');
   });
 });

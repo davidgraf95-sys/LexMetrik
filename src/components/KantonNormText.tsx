@@ -16,11 +16,14 @@ import { RechtsprechungText } from './RechtsprechungLink';
 //  1. Bundesrechtliche «Art. N GESETZ» werden ZUERST über den Bund-Resolver
 //     erkannt (fedlexLinkFuerArtikel) und als Bund-Chip gerendert — sie werden
 //     NIE dem kantonalen Erlass zugeschrieben.
-//  2. «§ N» ist ein eindeutig KANTONALER Designator (der Bund nutzt nur «Art.»)
-//     und wird in einem erlass-gebundenen Hinweis immer auf den Kontext-Erlass
-//     aufgelöst. Bundesfremde «Art. N» werden NUR aufgelöst, wenn der Tarif-
-//     `artikel` selbst Art.-Stil nutzt (Romandie/TI/BE/UR …) — so wird ein lose
-//     stehendes föderales «Art. N» in einem §-Kanton nicht falsch zugeschrieben.
+//  2. NUR «§ N» wird kantonal aufgelöst (eindeutig kantonal — der Bund nutzt
+//     ausschliesslich «Art.»), und NUR wenn die Quelle eine echte kantonale
+//     (nicht-fedlex) URL trägt. «Art. N» wird hier NIE kantonal aufgelöst: ein
+//     bundesrechtlicher Posten (z. B. BGer, «Art. 65 BGG», fedlex-URL) hat
+//     bare «Art. N»-Fragmente, die der Bund-Pass mangels Gesetz nicht erfasst —
+//     sie kantonal auf die fedlex-URL zu zeigen ergäbe einen toten Popover.
+//     Kantone mit Art.-Designator (Romandie/TI/BE/UR) verlinken ihre Artikel
+//     weiterhin über den strukturierten KantonArtikelTrigger-Chip.
 //  3. Überlappt ein kantonaler Treffer einen Bund-Treffer, gewinnt der Bund.
 // Reste laufen durch RechtsprechungText (BGE/BGer). Reine Darstellung (§3),
 // progressive enhancement (SSR-Erstrender = <a>/Text, Popover erst im Browser).
@@ -28,11 +31,11 @@ import { RechtsprechungText } from './RechtsprechungLink';
 const INLINE_CLASS = 'underline decoration-dotted underline-offset-2 hover:text-brass-700';
 const KANTON_CLASS = 'underline decoration-dotted underline-offset-2 hover:text-ink-800 cursor-pointer';
 
-// Kantonaler Designator je Stil. Erfasst N[a-z]/bis… + optional Abs./lit./Ziff.
-// (für die präzise Markierung im Popover via parsePassus).
+// Kantonaler «§»-Designator + optional Abs./lit./Ziff. (für die präzise
+// Markierung im Popover via parsePassus). NUR «§» — siehe Sicherung (a) unten;
+// «Art.» wird bewusst nicht kantonal aufgelöst.
 const PASSUS_SUFFIX = '(?:\\s+Abs\\.\\s*\\d+[a-z]?(?:bis|ter)?)?(?:\\s+(?:lit\\.|Bst\\.)\\s*[a-z])?(?:\\s+Ziff\\.\\s*\\d+[a-z]?)?';
 const RE_PARAGRAF = new RegExp('§\\s*\\d+[a-z]?(?:bis|ter)?' + PASSUS_SUFFIX, 'g');
-const RE_ARTIKEL = new RegExp('Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies)?' + PASSUS_SUFFIX, 'g');
 
 interface Treffer { start: number; end: number; node: React.ReactNode; }
 
@@ -55,12 +58,19 @@ export function KantonNormText({ text, quelle }: {
     });
   }
 
-  // 2. Kantonale Treffer — nur mit Quelle-URL (sonst kein auflösbarer Link).
-  //    «§ N» immer (eindeutig kantonal); «Art. N» nur, wenn der Tarif-Artikel
-  //    selbst Art.-Stil nutzt.
+  // 2. Kantonale Treffer — NUR «§ N» und NUR bei einer echten kantonalen Quelle.
+  //    Zwei harte Sicherungen (Bug-Befund 17.6.2026):
+  //    (a) «§» ist der eindeutig KANTONALE Designator — der Bund nutzt nur «Art.».
+  //        «Art. N» wird hier bewusst NICHT kantonal aufgelöst: ein bundes-
+  //        rechtliches Tarif-Posten (z. B. BGer, quelle.artikel «Art. 65 BGG»)
+  //        trägt eine fedlex-URL; ein dort losstehendes «Art. N» (ohne Gesetz,
+  //        vom Bund-Pass nicht erfasst) würde sonst als kantonaler Link auf eine
+  //        fedlex-URL zeigen, die der Kanton-Loader nicht auflöst → toter Popover.
+  //    (b) Quelle muss eine NICHT-fedlex-URL sein — föderale Quellen bekommen nie
+  //        eine kantonale Behandlung. Reiner Sicherheitsgurt zu (a).
   const quelleUrl = quelle.quelleUrl;
-  const kantRegexe = quelleUrl ? [RE_PARAGRAF] : [];
-  if (quelleUrl && (quelle.artikel ?? '').trimStart().startsWith('Art.')) kantRegexe.push(RE_ARTIKEL);
+  const istKantonaleQuelle = !!quelleUrl && !quelleUrl.includes('fedlex.admin.ch');
+  const kantRegexe = istKantonaleQuelle ? [RE_PARAGRAF] : [];
   for (const re of kantRegexe) {
     for (const m of text.matchAll(re)) {
       const start = m.index, end = start + m[0].length;
