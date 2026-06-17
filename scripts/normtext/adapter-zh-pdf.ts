@@ -46,6 +46,7 @@
  */
 
 import { createHash } from 'node:crypto';
+import { segmentiereAnhangZiffern } from './anhang-segmenter.ts';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Typen
@@ -556,6 +557,15 @@ export async function holeZhPdf(
   const textbasis = serialisiereZhZeilen(zeilen);
   const artikel = extrahiereAlleZhParagraphen(textbasis);
 
+  // Anhang-Tarif (hierarchische Ziffer-Nummerierung, z. B. NotGebV «1.1.1»)
+  // zusätzlich erfassen — der §/Art.-Extraktor lässt den Anhang sonst fallen.
+  // Konservativ: der Segmentierer liefert nur bei einem echten Ziffer-Anhang
+  // Einträge (≥ Schwelle), sonst leer (Erlasse ohne Anhang bleiben unberührt).
+  const anhang = segmentiereAnhangZiffern(textbasis);
+  for (const [ziff, e] of Object.entries(anhang)) {
+    if (!(ziff in artikel)) artikel[ziff] = e;
+  }
+
   // Stand = In-Kraft-Datum aus dem Registry-URL-Slug (zweites Datum-Tripel, §7/§8).
   // Der PDF-Fussband-Marker «1. 1. 15 - 87» ist der Loseblatt-Nachtrag-Druckstand,
   // NICHT das Inkrafttreten → nur noch Fallback.
@@ -569,10 +579,12 @@ export async function holeZhPdf(
 
   const quelleHash = berechneZhQuelleHash(artikel);
 
-  // Vollabdeckung (§7): ALLE Artikel zurückgeben; Label einheitlich «§ N».
+  // Vollabdeckung (§7): ALLE Artikel zurückgeben. Label «§ N» für Paragraphen,
+  // «Anhang Ziff. N.N.N» für die gepunkteten Anhang-Ziffern (kongruent zu
+  // parsePassus, das «Anhang Ziff. …» auf genau diesen Token auflöst).
   const labels: Record<string, string> = {};
   for (const token of Object.keys(artikel)) {
-    labels[token] = `§ ${token.replace(/_/g, '')}`;
+    labels[token] = token.includes('.') ? `Anhang Ziff. ${token}` : `§ ${token.replace(/_/g, '')}`;
   }
   return { meta: { titel, stand, quelleHash }, artikel, labels };
 }
