@@ -22,7 +22,12 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» Phase 1 (Bund) GEBAUT + VERIFIZIERT (Branch feat/normtext-popup, ungepusht)
+## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ 474b10a)
+
+**PROD-DEPLOY 17.6.2026 (David-Ja):** `feat/normtext-popup` gepusht (origin),
+Prod via sauberem /tmp-Worktree deployt → **lexmetrik.vercel.app** (dpl_5w7fxrh6…,
+Stand 474b10a). Nachkontrolle: Kernrouten HTTP 200, neue Bund-Snapshots live
+(BEWG/MWSTG.json 200). **Fachliche Abnahme weiterhin durch David selbst.**
 
 **Auftrag David:** «kannst du an der Gesetzesverlinkung weiterarbeiten» → «jede Norm die
 genannt wird soll verlinkt sein» → «weiterarbeiten bis Ziel erreicht» → «verifizieren und
