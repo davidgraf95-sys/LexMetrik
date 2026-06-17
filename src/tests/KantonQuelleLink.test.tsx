@@ -92,11 +92,17 @@ describe('KantonArtikelTrigger — Artikel als Popover-Trigger', () => {
     expect(out).toContain(`href="${quelle.quelleUrl}"`);
   });
 
-  it('nicht parsebarer Artikel → unverlinkter Text (kein toter Trigger)', () => {
+  it('nicht parsebarer Artikel MIT Quelle → direkter Link zur amtlichen Quelle (David 17.6.2026)', () => {
+    // Geänderte Erwartung (deklarierte fachliche Änderung, §6 Ziff. 3): «das ist
+    // immer noch nicht direkt verlinkt». Auch ein nicht parsbarer Artikel (z. B.
+    // «Tarif nach Aufwand», «Anhang Ziff. 1.1.1») wird klickbar — ohne Volltext-
+    // Popover (parsePassus = null → kein preventDefault), aber als direkter Link
+    // auf die amtliche Quelle. Kein toter Trigger: der Link funktioniert.
     const out = renderToString(
       <KantonArtikelTrigger quelle={{ ...quelle, artikel: 'Tarif nach Aufwand' }} />,
     );
-    expect(out).not.toContain('<a');
+    expect(out).toContain('<a');
+    expect(out).toContain(`href="${quelle.quelleUrl}"`);
     expect(out).toContain('Tarif nach Aufwand');
   });
 

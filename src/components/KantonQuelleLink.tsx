@@ -4,6 +4,7 @@ import { ladeKantonSnapshotViaUrl } from '../lib/normtext/laden';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import { NormPopover } from './NormPopover';
 import { NormPopoverOverlay, NormPopoverHuelle } from './vorlagen/ui';
+import { NormText } from './NormText';
 
 // Kantonaler «amtliche Quelle ↗»-Link mit Volltext-Vorschau (§7-Zitat-Ausnahme,
 // Entscheid David 16.6.2026). Schwester von NormChip (Bund), aber für die
@@ -89,8 +90,19 @@ const ARTIKEL_TRIGGER_CLASS = 'underline decoration-dotted hover:text-ink-800 cu
 export function KantonArtikelTrigger({ quelle }: {
   quelle: { quelleUrl?: string; artikel: string; erlassName?: string; erlassNr?: string };
 }) {
-  const klickbar = quelle.quelleUrl && parsePassus(quelle.artikel) !== null;
-  if (!klickbar) return <>{quelle.artikel}</>;
+  // Föderaler Posten (fedlex-Quelle, z. B. BGer «Art. 65 BGG»): über den BUND-
+  // Linker rendern (NormText findet «Art. N GESETZ» und öffnet das Bund-Snapshot-
+  // Popover) statt über den Kanton-Loader, der eine fedlex-URL nicht auflöst und
+  // nur einen Fallback-Popover zeigte (Befund 17.6.2026).
+  if (quelle.quelleUrl?.includes('fedlex.admin.ch')) {
+    return <NormText text={quelle.artikel} />;
+  }
+  // Klickbar, sobald eine amtliche Quelle-URL existiert (David 17.6.2026: «das
+  // ist immer noch nicht direkt verlinkt»). KantonQuelleLink macht daraus
+  // progressive enhancement: ist der Artikel ein parsbarer Passus (Art./§ N),
+  // öffnet ein Klick das Volltext-Popover; sonst (z. B. «Anhang Ziff. 1.1.1»)
+  // öffnet der Link direkt die amtliche Quelle. So ist die Angabe IMMER verlinkt.
+  if (!quelle.quelleUrl) return <>{quelle.artikel}</>;
   return (
     <KantonQuelleLink
       quelle={quelle as { quelleUrl: string; artikel: string; erlassName?: string; erlassNr?: string }}

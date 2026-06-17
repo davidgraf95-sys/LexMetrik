@@ -338,3 +338,33 @@ describe('NormPopover — Schliess-Logik', () => {
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 });
+
+// Tarif-Staffel-Tabelle (z. B. ZH GebV OG § 4): aus dem PDF-Snapshot kommt der
+// Tarif als EIN Fliesstext-Blob; rein für die Darstellung (§3) in Zeilen je
+// Streitwert-Band zerlegt (David 17.6.2026 «schöner darstellen»).
+const STAFFEL: NormSnapshot = {
+  id: 'kanton/ZH/art_4', ebene: 'kanton', quelle: 'ZH', erlass: 'GebV OG',
+  artikel: '4', artikelLabel: '§ 4',
+  bloecke: [
+    { absatz: null, text: 'Die Gebühren betragen: Streitwert Grundgebühr bis 1000 25% des Streitwertes, mind. Fr. 150 über 1000 bis 5000 250 zuzügl. 20% des Fr. 1000 übersteigenden Streitwertes über 5000 bis 20000 1050 zuzügl. 14% des Fr. 5000 übersteigenden Streitwertes' },
+    { absatz: '2', text: 'Die Grundgebühr kann ermässigt werden.' },
+  ],
+  stand: '2024-01-01', quelleUrl: 'https://www.zh.ch/erlass-211_11.html',
+  abgerufen: '2026-06-17', fassungsToken: 'x', sha: 'y',
+};
+
+describe('NormPopover — Tarif-Staffel lesbar in Zeilen', () => {
+  it('zerlegt den Staffel-Blob in mehrere Band-Zeilen (span.block)', () => {
+    const out = renderToString(<NormPopover snapshot={STAFFEL} passus={{ absatz: null }} onClose={() => {}} />);
+    const zeilen = (out.match(/class="block[^"]*"/g) ?? []).length;
+    expect(zeilen).toBeGreaterThanOrEqual(3); // Kopf + ≥2 Bänder
+    expect(out).toContain('bis 1000 25%');
+    expect(out).toContain('über 5000 bis 20000');
+  });
+
+  it('normaler Absatz wird NICHT zerschnitten', () => {
+    const out = renderToString(<NormPopover snapshot={STAFFEL} passus={{ absatz: '2' }} onClose={() => {}} />);
+    // Der reine Absatz «Die Grundgebühr kann ermässigt werden.» bleibt am Stück.
+    expect(out).toContain('Die Grundgebühr kann ermässigt werden.');
+  });
+});

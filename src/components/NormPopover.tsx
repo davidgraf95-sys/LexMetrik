@@ -36,6 +36,28 @@ function istAufgehoben(text: string): boolean {
   return /^[….\s]*$/.test(text) && text.trim() !== '';
 }
 
+// Tarif-Staffel-Tabelle (z. B. ZH GebV OG § 4) landet aus dem PDF-Snapshot als
+// EIN Fliesstext-Block («… bis 1000 25 % … über 1000 bis 5000 250 …»), weil die
+// PDF-Spalten beim Extrahieren verschmelzen. Rein für die DARSTELLUNG (§3, Text
+// unverändert) zerlegen wir solche Staffeln in Zeilen je Streitwert-Band —
+// deutlich lesbarer als der eine Blob. Bewusst ENG getriggert (Fee-Table-Marker
+// + mindestens zwei «über N»-Bänder), damit normale Absätze nie zerschnitten
+// werden. Bandgrenze: «über <Zahl>» — das nachfolgende « <Ziffer>» grenzt sauber
+// gegen «übersteigenden» ab (dort folgt kein « Ziffer»). KEINE \b-Wortgrenze:
+// Umlaute zählen in JS-Regex nicht als \w, «\büber» würde nie matchen. Die erste
+// Zeile (Kopf + erstes Band) wird vor «bis <Zahl>» getrennt.
+function staffelZeilen(text: string): string[] | null {
+  const istStaffel = /zuzügl\.|Grundgebühr|betragen/.test(text)
+    && (text.match(/über \d/g) ?? []).length >= 2;
+  if (!istStaffel) return null;
+  const zeilen = text
+    .split(/(?=über \d)/)
+    .flatMap((s, i) => (i === 0 ? s.split(/(?=bis \d)/) : [s]))
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return zeilen.length >= 3 ? zeilen : null;
+}
+
 export function NormPopover({ snapshot, passus, onClose }: {
   snapshot: NormSnapshot;
   passus: { absatz: string | null; lit?: string; ziff?: string };
@@ -183,7 +205,11 @@ export function NormPopover({ snapshot, passus, onClose }: {
                     Absatznummer-<sup> bleibt davor → liest sich «² aufgehoben». */}
                 {istAufgehoben(b.text)
                   ? <span className="italic text-ink-400">aufgehoben</span>
-                  : b.text}
+                  : (staffelZeilen(b.text)
+                    ? staffelZeilen(b.text)!.map((z, j) => (
+                        <span key={j} className={j === 0 ? 'block' : 'block pl-4 -indent-4'}>{z}</span>
+                      ))
+                    : b.text)}
               </p>
               {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
                   identisches Markup/Styling, nur die Marke unterscheidet sich
