@@ -6,6 +6,7 @@ import {
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
 } from '../lib/normtext/browse';
 import { GEBIET_LABEL } from '../lib/normtext/register';
+import { werkzeugeFuer } from '../lib/normtext/werkzeuge';
 import type { BrowseErlass, BrowseManifest } from '../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
@@ -307,6 +308,23 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </div>
         <p className="text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung (Live-Link).</p>
       </header>
+
+      {/* Norm↔Werkzeug-Brücke (D1): passende Rechner/Vorlagen zu diesem Erlass */}
+      {(() => {
+        const wz = werkzeugeFuer(erlass.key);
+        return wz.length > 0 ? (
+          <div className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
+            <p className="lc-overline mb-2">Passende Werkzeuge</p>
+            <div className="flex flex-wrap gap-2">
+              {wz.map((w) => (
+                <Link key={w.id} to={w.href} className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
+                  <span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null;
+      })()}
 
       <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
         placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
