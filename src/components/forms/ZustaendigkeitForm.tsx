@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NormText } from '../NormText';
+import { KantonNormText } from '../KantonNormText';
 import {
   BeruehrtRahmen,
   Checkbox,
@@ -1465,7 +1466,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {f.kanton !== '' ? (
                           <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
                         ) : kosten.schlichtung.erlass})</span>
-                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ <NormText text={kosten.schlichtung.hinweis} /></span>}
+                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ <KantonNormText text={kosten.schlichtung.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].schlichtung : undefined, artikel: kosten.schlichtung.erlass, erlassName: kosten.schlichtung.erlass }} /></span>}
                     </p>
                   ) : (
                     <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
@@ -1481,7 +1482,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
                       ) : kosten.nichtVermoegensrechtlich.erlass})</span>
-                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.nichtVermoegensrechtlich.hinweis} /></span>}
+                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500"><KantonNormText text={kosten.nichtVermoegensrechtlich.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].gericht : undefined, artikel: kosten.nichtVermoegensrechtlich.erlass, erlassName: kosten.nichtVermoegensrechtlich.erlass }} /></span>}
                   </p>
                 ) : kosten && (
                   <p className="text-body-s text-ink-800">
@@ -1490,7 +1491,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
                       ) : kosten.gericht.erlass})</span>
-                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.gericht.hinweis} /></span>}
+                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500"><KantonNormText text={kosten.gericht.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].gericht : undefined, artikel: kosten.gericht.erlass, erlassName: kosten.gericht.erlass }} /></span>}
                   </p>
                 )}
                 {kosten && f.streitsache === 'scheidung' && kosten.familie && (

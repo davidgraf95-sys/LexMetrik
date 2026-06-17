@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
+import { KantonNormText } from '../KantonNormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
@@ -85,7 +86,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
         {' · '}
         <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
       </p>
-      {q.hinweis && <p className="mt-1 text-xs text-ink-500"><NormText text={q.hinweis} /></p>}
+      {q.hinweis && <p className="mt-1 text-xs text-ink-500"><KantonNormText text={q.hinweis} quelle={q} /></p>}
     </div>
   );
 }
