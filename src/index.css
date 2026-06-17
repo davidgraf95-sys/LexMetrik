@@ -67,6 +67,8 @@
     --font-display:'Geist Variable','Hanken Grotesk';
     --font-sans:'Geist Variable','Hanken Grotesk';
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
+    /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
+    --font-serif:'Source Serif 4 Variable','Charter','Georgia';
   }
 
   html { color-scheme: light; }

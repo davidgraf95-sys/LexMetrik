@@ -110,3 +110,74 @@ export function baueBaender(eintraege: NormSnapshot[], groesse = 40): Band[] {
 export function bandFuerToken(baender: Band[], token: string): number {
   return baender.findIndex((b) => b.eintraege.some((e) => e.artikel === token));
 }
+
+// ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──
+export interface ArtikelStruktur {
+  gliederung: Array<{ ebene: number; label: string }>;
+  marginalie: string[];
+}
+export type StrukturMap = Record<string, ArtikelStruktur>;
+
+const strukturCache = new Map<string, Promise<StrukturMap | null>>();
+
+/** Lädt die Struktur-Sidecar (Gliederung+Marginalien je Artikel-Token), lazy/gecacht. */
+export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | null> {
+  const url = `/normtext/struktur/${ebene}/${key}.json`;
+  let p = strukturCache.get(url);
+  if (!p) {
+    p = (async () => {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        const d = (await res.json()) as { artikel?: StrukturMap };
+        return d.artikel ?? null;
+      } catch {
+        return null;
+      }
+    })();
+    strukturCache.set(url, p);
+  }
+  return p;
+}
+
+/** Ein Knoten der amtlichen Gliederung (Teil → Titel → Abschnitt …). */
+export interface Sektion {
+  id: string;
+  ebene: number;
+  label: string;
+  kinder: Sektion[];
+  artikel: NormSnapshot[];
+}
+
+/**
+ * Baut aus den Artikeln + ihrer Gliederung einen Sektions-Baum. Artikel ohne
+ * Gliederung landen in `ohneGliederung` (flach). Reine Darstellungs-Vorstufe.
+ */
+export function baueGliederungsbaum(
+  eintraege: NormSnapshot[],
+  struktur: StrukturMap | null,
+): { sektionen: Sektion[]; ohneGliederung: NormSnapshot[] } {
+  const sektionen: Sektion[] = [];
+  const ohneGliederung: NormSnapshot[] = [];
+  let nr = 0;
+
+  for (const e of eintraege) {
+    const pfad = struktur?.[e.artikel]?.gliederung ?? [];
+    if (pfad.length === 0) { ohneGliederung.push(e); continue; }
+    let ebeneListe = sektionen;
+    let knoten: Sektion | null = null;
+    for (const stufe of pfad) {
+      let treffer = ebeneListe[ebeneListe.length - 1];
+      // Gleicher Knoten nur, wenn er der letzte auf dieser Ebene ist UND Label
+      // passt (Gliederung ist dokumentlinear, daher genügt der letzte).
+      if (!treffer || treffer.label !== stufe.label || treffer.ebene !== stufe.ebene) {
+        treffer = { id: `sek-${nr++}`, ebene: stufe.ebene, label: stufe.label, kinder: [], artikel: [] };
+        ebeneListe.push(treffer);
+      }
+      knoten = treffer;
+      ebeneListe = treffer.kinder;
+    }
+    knoten?.artikel.push(e);
+  }
+  return { sektionen, ohneGliederung };
+}

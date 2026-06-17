@@ -31,11 +31,13 @@
     "gate": "bash scripts/gate.sh voll",
     "gate:schnell": "bash scripts/gate.sh schnell",
     "normtext": "vite-node scripts/normtext-snapshot.ts --",
-    "normtext:register": "vite-node scripts/normtext/browse-manifest-run.ts --"
+    "normtext:register": "vite-node scripts/normtext/browse-manifest-run.ts --",
+    "normtext:struktur": "vite-node scripts/normtext/struktur-run.ts --"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
     "@fontsource-variable/geist-mono": "^5.2.8",
+    "@fontsource-variable/source-serif-4": "^5.2.9",
     "date-fns": "^4.4.0",
     "docx": "^9.7.1",
     "fflate": "^0.8.3",

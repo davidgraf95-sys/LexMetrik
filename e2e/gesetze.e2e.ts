@@ -50,8 +50,11 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR/)
     // Kopf + Inhaltsverzeichnis + Artikel 1 (erstes Band offen)
     await expect(page.getByRole('heading', { level: 1 })).toContainText('OR')
-    await expect(page.getByText('Inhalt', { exact: true })).toBeVisible()
+    await expect(page.getByText('Gliederung', { exact: true })).toBeVisible()
     await expect(page.locator('#art-1')).toContainText('Willensäusserung')
+    // Amtliche Gliederung + Randtitel (Marginalie) vorhanden
+    await expect(page.getByText('Die Entstehung der Obligationen', { exact: false }).first()).toBeVisible()
+    await expect(page.locator('#art-1')).toContainText('Abschluss des Vertrages')
     // In-Gesetz-Suche filtert
     await page.getByRole('searchbox', { name: 'Im Gesetz suchen' }).fill('Willensäusserung')
     await expect(page.getByText(/Treffer für/)).toBeVisible()
