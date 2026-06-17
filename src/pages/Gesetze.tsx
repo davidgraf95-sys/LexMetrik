@@ -92,18 +92,43 @@ export function Gesetze() {
       {erlasse && (
         <>
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <Segment aktiv={ebene} onWahl={(e) => { setEbene(e); setKanton(null); }} />
+            {!suche.trim() && <Segment aktiv={ebene} onWahl={(e) => { setEbene(e); setKanton(null); }} />}
             <input
               type="search"
               value={suche}
               onChange={(e) => setSuche(e.target.value)}
-              placeholder="Erlass suchen (Kürzel, Titel, SR-Nr.) …"
-              aria-label="Erlass suchen"
-              className="lc-input h-9 py-0 text-body-s w-full max-w-xs"
+              placeholder="Suchen — Bund & Kantone (Kürzel, Titel, SR-Nr.) …"
+              aria-label="Gesetze durchsuchen"
+              className="lc-input h-9 py-0 text-body-s w-full max-w-sm"
             />
           </div>
 
-          {ebene === 'bund' && (
+          {/* Globale Suche: über Bund UND Kantone gleichzeitig */}
+          {suche.trim() && (() => {
+            const treffer = filtern(erlasse, suche);
+            const bund = treffer.filter((e) => e.ebene === 'bund');
+            const kant = treffer.filter((e) => e.ebene === 'kanton');
+            return (
+              <div className="space-y-8">
+                <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
+                {bund.length > 0 && (
+                  <section className="space-y-3">
+                    <h2 className="lc-overline">Bund <span className="text-ink-400">· {bund.length}</span></h2>
+                    <Gitter erlasse={bund} />
+                  </section>
+                )}
+                {gruppiereNachKanton(kant).map((g) => (
+                  <section key={g.kanton} className="space-y-3">
+                    <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
+                    <Gitter erlasse={g.erlasse} />
+                  </section>
+                ))}
+                {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
+              </div>
+            );
+          })()}
+
+          {!suche.trim() && ebene === 'bund' && (
             <div className="space-y-8">
               {gruppiereNachGebiet(gefiltert).map((g) => (
                 <section key={g.gebiet} className="space-y-3">
@@ -115,7 +140,7 @@ export function Gesetze() {
             </div>
           )}
 
-          {ebene === 'kanton' && (
+          {!suche.trim() && ebene === 'kanton' && (
             <div className="space-y-6">
               {/* Kantons-Raster als Schnellfilter */}
               <div className="flex flex-wrap gap-1.5">

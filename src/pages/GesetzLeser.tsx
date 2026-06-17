@@ -267,6 +267,44 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const marg = (tok: string) => margAnzeige.get(tok) ?? [];
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
 
+  // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
+  const baueText = (): string => {
+    const L: string[] = [
+      `${erlass.kuerzel} — ${erlass.titel}`,
+      [erlass.sr ? `SR ${erlass.sr}` : '', erlass.stand ? `Stand ${formatiereDatum(erlass.stand)}` : ''].filter(Boolean).join(' · '),
+      `Quelle: ${erlass.quelleUrl}`,
+      'Heruntergeladen aus LexMetrik — massgeblich ist die amtliche Fassung (Live-Link).',
+      '',
+    ];
+    let prev: string[] = [];
+    for (const e of eintraege) {
+      const st = struktur?.[e.artikel];
+      const gl = st?.gliederung ?? [];
+      for (let i = 0; i < gl.length; i++) {
+        if (gl[i].label !== prev[i]) L.push('', `${'#'.repeat(Math.min(gl[i].ebene, 4))} ${gl[i].label}`);
+      }
+      prev = gl.map((g) => g.label);
+      const m = st?.marginalie ?? [];
+      L.push('', `${e.artikelLabel}${m.length ? `  [${m.join(' · ')}]` : ''}`);
+      for (const b of e.bloecke) {
+        L.push(`${b.absatz ? `${b.absatz} ` : ''}${b.text}`);
+        for (const it of b.items ?? []) L.push(`    ${it.marke}. ${it.text}`);
+      }
+      for (const f of st?.fussnoten ?? []) L.push(`  [${f.nr}] ${f.text}`);
+    }
+    return L.join('\n');
+  };
+  const herunterladen = () => {
+    if (typeof document === 'undefined') return;
+    const blob = new Blob([baueText()], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${erlass.kuerzel.replace(/[^\w.-]/g, '_')}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   // Jede Sektionsstufe ist klappbar (Fedlex-analog); Inhalt rendert nur offen.
   const renderSektion = (s: Sektion, defOpen: boolean): ReactNode => {
     const auf = istOffen(s.id, defOpen);
@@ -305,6 +343,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           <span><span className="num">{eintraege.length}</span> Artikel</span>
           {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
           {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
+          <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
         </div>
         <p className="text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung (Live-Link).</p>
       </header>
