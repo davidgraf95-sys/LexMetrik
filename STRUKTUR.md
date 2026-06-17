@@ -22,6 +22,42 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 18.6.2026 — OUTPUT-DESIGN-REGLEMENT + VORLAGEN-SCHRIFTBILD (Variante A) + STIL-UMSCHALTER (Branch feat/vorlagen-design, Worktree /tmp/lexmetrik-vorlagen-design, UNGEPUSHT)
+
+Auftrag David: «schön, nutzerfreundlich, state of the art» für die Dokument-
+Outputs der Vorlagen — Regeln **in Code erzwungen**; Schlichtungsgesuch als
+erste Umsetzung. Optik-Entscheid: Variante A «Dokument-Handwerk» (nüchtern-
+seriös), per Design-Skizze in claude.ai/design abgenommen. Nachschub David:
+«nüchtern UND modern als Stil bei der Ausgabe» → Umschalter gebaut.
+
+**Geliefert (3 Commits, Worktree, ungepusht):**
+- **Etappe 1** `b67a6c8`: Rollen-Abstände der Renderer als Tokens an EINER
+  Stelle (`ROLLEN_PDF` mm / `ROLLEN_DOCX` twips, `formatvorlagen.ts`). KEINE
+  mm→twips-Ableitung (Word-Masse eigenständig getunt). Byte-gleich bewiesen
+  (datums-/ID-bereinigter Render-Vergleich: PDF-Operatoren + DOCX document.xml
+  identisch, je Fall pro Format).
+- **Etappe 2** `c4d6886`: Live-Vorschau liest neu aus der SSoT
+  (`components/vorlagen/vorschauStil.ts`, dritte rem-Sicht — keine Projektion,
+  weil das «Papier» container-relativ ist). Schriftbild = Variante A:
+  tabellarische Ziffern (NICHT `.num`-Monospace), Parteirollen-Overlines,
+  scanbarer Begehrensblock. Format-agnostisch → jede Vorlage profitiert.
+- **Etappe 3** `ca825fd`: Ausgabe-Stil-Umschalter **nüchtern ⇄ modern**,
+  kohärent über Vorschau + PDF + DOCX. Differenzierer = Rubrum-Parteirolle
+  (`— klagende Partei —` ⇄ Versal-Label, `rolleLabel`). Geteilter Modul-Store
+  `ausgabeStil.ts` (localStorage, Default modern); `stil` als reiner Renderer-
+  Parameter (§3). UI: `StilUmschalter` im Vorschaukopf.
+- **Reglement-Notiz** `DESIGN-REGLEMENT-VORLAGEN.md` (Spiegel von …-RECHNER.md).
+
+Jede Etappe: `assemble` unberührt → golden byte-gleich; gate voll + build grün;
+Struktur-Test `vorlagen.test.ts` deklariert auf neues Schriftbild angepasst
+(§6 Ziff. 3). Design-Karten in claude.ai/design-Projekt (Gruppe «Dokument-
+Vorschau»): Vorher / Nachher A / Nachher B / IMPLEMENTIERT.
+
+**OFFEN für Davids Rückkehr:** (1) fachliche Abnahme der Optik durch
+Ausprobieren (Vorschau + PDF + DOCX, beide Stile) — PDF/DOCX-Modern-Label noch
+nicht visuell gegengeprüft; (2) Default-Stil bestätigen (aktuell `modern`);
+(3) Push/Deploy (§9, nur nach ausdrücklichem Ja).
+
 ## Session 17.6.2026 (abend) — KANTONALER VOLLTEXT-AUSBAU + POPOVER-POLITUR + RECHEN-AUDIT — GEPUSHT + PROD-DEPLOY (feat/normtext-popup @ 4b54f67, lexmetrik.vercel.app)
 
 **Volltext-Ausbau (echte Fallback-Quellen 23 → 3):** `parsePassus` löst jetzt
