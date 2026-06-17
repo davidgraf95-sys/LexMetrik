@@ -35,14 +35,18 @@ export const VORSCHAU = {
   betreffLinie: { display: 'block', borderTop: '1px solid var(--line)', marginBottom: r(1.6) } as CSSProperties,
 
   rubrum: { marginBottom: r(1.6) } as CSSProperties,
-  // Parteirolle als ruhige Overline (Variante A): «— klagende Partei —» wird
-  // zum kleinen, gesperrten Versal-Label (die Em-Striche entfällt die Anzeige).
+  // MODERN (Variante A): Parteirolle als ruhige Overline – «— klagende Partei —»
+  // wird zum kleinen, gesperrten Versal-Label (Em-Striche nur Anzeige-seitig weg).
   rubrumRolle: {
     textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: '0.72em',
     letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-500)',
     marginTop: r(0.55), marginBottom: r(0.2),
   } as CSSProperties,
   rubrumGegen: { textAlign: 'center', fontWeight: 600, color: 'var(--ink-700)', letterSpacing: '0.02em', marginTop: r(0.85), marginBottom: r(0.85) } as CSSProperties,
+  // NÜCHTERN: klassisch-gerichtstauglich – «— klagende Partei —» zentriert,
+  // fettes «gegen», Grundschrift.
+  rubrumRolleKlassisch: { textAlign: 'center', marginTop: r(0.4), marginBottom: r(0.1) } as CSSProperties,
+  rubrumGegenKlassisch: { textAlign: 'center', fontWeight: 700, marginTop: r(0.4), marginBottom: r(0.4) } as CSSProperties,
   rubrumZeile: { marginBottom: r(0.1) } as CSSProperties,
   insachen: { color: 'var(--ink-600)', marginBottom: r(0.5) } as CSSProperties,
   betreffend: { color: 'var(--ink-700)', marginTop: r(0.85) } as CSSProperties,
@@ -68,8 +72,3 @@ export const VORSCHAU = {
   titel: { textAlign: 'center', fontWeight: 700, fontSize: '1.2em', letterSpacing: '0.01em' } as CSSProperties,
   titelLinie: { display: 'block', borderTop: '1px solid var(--line)', marginTop: r(0.5), marginBottom: r(1.5) } as CSSProperties,
 } as const;
-
-/** «— klagende Partei —» → «klagende Partei» (Em-Striche nur in der Overline-
- *  Darstellung entfernt; der Assemble-Text bleibt unberührt, §3/§6). */
-export const rolleLabel = (zeile: string): string =>
-  zeile.trim().replace(/^—\s*/, '').replace(/\s*—$/, '');

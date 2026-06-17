@@ -9,7 +9,7 @@ import { winAnsiSicher, typografie } from '../pdf/winansi';
 export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
 const pdfText = vorlagenPdfText;
 import type { AssembleErgebnis, DokumentAbsatz } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_PDF } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_PDF, rolleLabel, type AusgabeStil } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── PDF-Renderer der Vorlagen – drei Formatvorlagen ────────────────────────
@@ -44,8 +44,9 @@ const { NUMMER, SUB, STRICHE } = MUSTER;
 
 // Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) – der Download ist
 // in vorlagenPdfErzeugen gekapselt.
-export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): jsPDF {
+export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner; stil?: AusgabeStil } = {}): jsPDF {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const stil = opts.stil ?? 'modern';
   const P = FORMAT_TYPOGRAFIE[e.dokument.format];
   const REGELN = AUSGABE_REGELN[e.dokument.ausgabeArt];
   const RAND = P.randLinks;
@@ -195,7 +196,17 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
         for (const zl of a.text.split('\n')) {
           if (MUSTER.RUBRUM_ROLLE.test(zl.trim())) {            // – klagende Partei —
             seitenumbruch(P.zeile + ROLLEN_PDF.rubrumRolleExtra);
-            doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
+            if (stil === 'modern') {
+              // Ruhiges, gesperrtes Versal-Label (Em-Striche entfallen).
+              doc.setFontSize(ROLLEN_PDF.rolleLabelGroesse);
+              doc.setTextColor(ROLLEN_PDF.rolleLabelGrau);
+              doc.text(pdfText(rolleLabel(zl).toUpperCase()), RAND + BREITE / 2, y,
+                { align: 'center', charSpace: ROLLEN_PDF.rolleLabelSperrung });
+              doc.setTextColor(26, 26, 23);
+              setzeBrot();
+            } else {
+              doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
+            }
             y += P.zeile + ROLLEN_PDF.rubrumRolleExtra;
           } else if (zl.trim() === 'gegen') {
             seitenumbruch(P.zeile + ROLLEN_PDF.rubrumRolleExtra);
@@ -286,6 +297,6 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   return doc;
 }
 
-export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string; stil?: AusgabeStil }) {
   vorlagenPdfDokument(e, opts).save(opts.dateiName);
 }

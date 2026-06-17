@@ -3,7 +3,7 @@ import {
   ShadingType, HeadingLevel, Footer, PageNumber,
 } from 'docx';
 import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_DOCX, ROLLEN_PDF } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_DOCX, ROLLEN_PDF, rolleLabel, type AusgabeStil } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── DOCX-Renderer der Vorlagen – Referenz-Layout ───────────────────────────
@@ -68,7 +68,7 @@ const linieAbsatz = (after = 160) => new Paragraph({
   border: HAARLINIE, spacing: { after }, children: [new TextRun({ text: '' })],
 });
 
-function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
+function alsParagraphe(a: DocxAbsatz, format: VorlageFormat, stil: AusgabeStil): Paragraph[] {
   switch (a.typ) {
     case 'banner-titel':
       return [new Paragraph({
@@ -110,7 +110,7 @@ function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
         children: [new TextRun({ text: a.text })],
       })];
     case 'absatz':
-      return [absatzParagraph(a, format)];
+      return [absatzParagraph(a, format, stil)];
     case 'disclaimer':
       return [new Paragraph({
         spacing: a.text.startsWith('Bausteine v') ? { before: 40, after: 0 } : { before: 360, after: 0 },
@@ -120,7 +120,7 @@ function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
   }
 }
 
-function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: VorlageFormat): Paragraph {
+function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: VorlageFormat, stil: AusgabeStil): Paragraph {
   const text = a.text === '' ? ' ' : a.text;
   const dicht = { after: 0, line: ROLLEN_DOCX.dichtLine, lineRule: 'auto' as const };
 
@@ -156,6 +156,18 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
       });
     case 'rubrum': {
       if (MUSTER.RUBRUM_ROLLE.test(a.text.trim())) {
+        if (stil === 'modern') {
+          // Ruhiges, gesperrtes Versal-Label (Em-Striche entfallen).
+          return new Paragraph({
+            alignment: AlignmentType.CENTER,
+            spacing: { before: ROLLEN_DOCX.rubrumRolleVor, after: ROLLEN_DOCX.rubrumRolleNach },
+            children: [new TextRun({
+              text: rolleLabel(a.text).toUpperCase(),
+              size: ROLLEN_DOCX.rolleLabelGroesse, color: ROLLEN_DOCX.rolleLabelGrau,
+              characterSpacing: ROLLEN_DOCX.rolleLabelSperrung,
+            })],
+          });
+        }
         return new Paragraph({
           alignment: AlignmentType.CENTER,
           spacing: { before: ROLLEN_DOCX.rubrumRolleVor, after: ROLLEN_DOCX.rubrumRolleNach },
@@ -227,7 +239,8 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
 /** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und gibt es als
  *  Blob zurück — Gegenstück zu vorlagenPdfDokument (Sammel-Downloads packen
  *  den Blob selbst, z. B. ins Gründungs-ZIP; Auftrag David 7.6.2026). */
-export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): Promise<Blob> {
+export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner; stil?: AusgabeStil } = {}): Promise<Blob> {
+  const stil = opts.stil ?? 'modern';
   // Form-Gate-Matrix hart kodiert: Eigenhändigkeits-Dokumente (abschrift)
   // erhalten NIE einen Word-Export – es entstünde ein unterschriftsreif
   // wirkendes Dokument für ein eigenhändigkeitspflichtiges Geschäft.
@@ -258,7 +271,7 @@ export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?:
           })],
         }),
       },
-      children: docxAbsaetze(e, opts.banner).flatMap((a) => alsParagraphe(a, e.dokument.format)),
+      children: docxAbsaetze(e, opts.banner).flatMap((a) => alsParagraphe(a, e.dokument.format, stil)),
     }],
   });
 
@@ -266,8 +279,8 @@ export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?:
 }
 
 /** Baut das Word-Dokument und lädt es herunter (Einzel-Export der Wizards). */
-export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
-  const blob = await vorlagenDocxDokument(e, { banner: opts.banner });
+export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string; stil?: AusgabeStil }) {
+  const blob = await vorlagenDocxDokument(e, { banner: opts.banner, stil: opts.stil });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

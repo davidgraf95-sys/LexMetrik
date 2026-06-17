@@ -1,5 +1,17 @@
 import type { VorlageFormat, AusgabeArt } from './engine';
 
+// Schriftbild-Variante der Ausgabe (Darstellung, nie Rechtsinhalt):
+//   · nuechtern – klassisch-gerichtstaugliches Rubrum «— klagende Partei —»
+//   · modern    – Variante A «Dokument-Handwerk»: Parteirolle als ruhiges,
+//                 gesperrtes Versal-Label (Em-Striche entfallen)
+export type AusgabeStil = 'nuechtern' | 'modern';
+
+/** «— klagende Partei —» → «klagende Partei» (nur Darstellung im modernen
+ *  Stil; der Assemble-Text bleibt unberührt – §3/§6). Geteilt von PDF, DOCX
+ *  und Vorschau, damit die drei Renderer kohärent bleiben (§5 SSoT). */
+export const rolleLabel = (zeile: string): string =>
+  zeile.trim().replace(/^—\s*/, '').replace(/\s*—$/, '');
+
 // ─── Formatvorlagen – deklarative SSoT für alle Vorlagen-Renderer ───────────
 //
 // Grundlage: drei Grundlagen-Berichte vom 5.6.2026 («Eingaben-Formatierungs-
@@ -95,6 +107,8 @@ export const ROLLEN_PDF = {
   schlussformelVor: 4, schlussformelNach: 2,
   parteienNach: 8,
   unterschriftVor: 5, unterschriftLinieBreite: 62,
+  // Modern-Stil: Parteirolle als gesperrtes Versal-Label (pt / mm-Sperrung / Grau)
+  rolleLabelGroesse: 8.5, rolleLabelSperrung: 0.35, rolleLabelGrau: 95,
 } as const;
 
 export const ROLLEN_DOCX = {
@@ -113,6 +127,8 @@ export const ROLLEN_DOCX = {
   subLinks: 1020, subHaengend: 340, subNach: 60,
   absatzNachEingabe: 120, absatzNachSonst: 140,
   dichtLine: 252,
+  // Modern-Stil: Parteirolle als gesperrtes Versal-Label (Half-Points / Sperrung-Twips / Grau)
+  rolleLabelGroesse: 17, rolleLabelSperrung: 14, rolleLabelGrau: '6E6E64',
 } as const;
 
 // ── Ausgabe-Regeln je AusgabeArt (Form-Gate-Matrix, hart kodiert) ───────────
