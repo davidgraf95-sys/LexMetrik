@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
 import { NormText } from '../NormText';
+
+/** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
+ *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert. */
+export interface ZitierKontext { artikelLabel: string; kuerzel: string }
+
+/** lit. (Buchstaben, Bund) vs. Ziff. (Zahlen, Kanton) anhand der Marke. */
+function litZiff(marke: string): string {
+  return /^\d/.test(marke.trim()) ? 'Ziff.' : 'lit.';
+}
+
+// Klickbare Zitat-Marke (Absatznummer oder lit./Ziff.). Kopiert die präzise
+// Fundstelle; kurzes ✓ als Rückmeldung. Nur in der Lesesicht (zitierKontext).
+function ZitierMarke({ zitat, sup, klasse, children }: {
+  zitat: string; sup?: boolean; klasse?: string; children: React.ReactNode;
+}) {
+  const [ok, setOk] = useState(false);
+  const kopiere = () => void navigator.clipboard?.writeText(zitat).then(() => {
+    setOk(true); window.setTimeout(() => setOk(false), 1200);
+  });
+  const knopf = (
+    <button type="button" onClick={kopiere} title={`${zitat} — kopieren`}
+      className={`num font-semibold cursor-pointer text-brass-700/55 hover:text-brass-700 hover:underline decoration-dotted underline-offset-2 ${klasse ?? ''}`}>
+      {ok ? '✓' : children}
+    </button>
+  );
+  return sup ? <sup className="mr-1">{knopf}</sup> : knopf;
+}
 
 // ArtikelBody: rendert die Absatz-/Item-Blöcke EINES Artikel-Snapshots im
 // Fedlex-Stil (hochgestellte Absatznummer, lit./Ziff.-Items, hervorgehobene
@@ -68,7 +95,7 @@ function normalisiereTarifText(text: string): string {
     .trim();
 }
 
-export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false }: {
+export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
@@ -80,10 +107,14 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   /** Querverweise/Rechtsprechung im Wortlaut verlinken (Lesesicht). Default
    *  AUS → das Popover bleibt zeichenidentisch (golden, §6). */
   autolink?: boolean;
+  /** Lesesicht: macht Absatz-/lit.-/Ziff.-Marken zu Zitat-Knöpfen. Default aus
+   *  → Popover byte-gleich (golden, §6). */
+  zitierKontext?: ZitierKontext;
 }) {
   const { passusMarke, zielItemKey } = bestimmePassusZiel(bloecke, passus);
   // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
   const verlinkt = (s: string) => (autolink ? <NormText text={s} /> : s);
+  const zk = zitierKontext;
 
   return (
     <div className={className ?? 'px-5 py-4 space-y-2.5'}>
@@ -109,7 +140,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
           >
             <p>
               {b.absatz != null && (
-                <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
+                zk
+                  ? <ZitierMarke sup zitat={`${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`}>{b.absatz}</ZitierMarke>
+                  : <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
                   Tarif-/Anhang-Kontext (gepunkteter Ziffer-Token ODER Staffel)
@@ -150,7 +183,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                           : 'text-ink-700'
                       }`}
                     >
-                      <span className="num shrink-0 font-semibold text-ink-500">{`${it.marke}.`}</span>
+                      {zk
+                        ? <ZitierMarke klasse="shrink-0" zitat={`${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${litZiff(it.marke)} ${it.marke} ${zk.kuerzel}`}>{`${it.marke}.`}</ZitierMarke>
+                        : <span className="num shrink-0 font-semibold text-ink-500">{`${it.marke}.`}</span>}
                       <span>
                         {istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>

@@ -51,20 +51,22 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie }: {
     });
   };
   return (
-    <article id={`art-${e.artikel}`} className="group scroll-mt-28 border-t border-line/60 pt-5 first:border-t-0 first:pt-0 lg:grid lg:grid-cols-[minmax(0,40rem)_12rem] lg:gap-x-6">
-      <div className="order-2 lg:order-1">
-        <div className="flex items-baseline gap-2">
-          <span className="lc-overline text-brass-700">{e.artikelLabel}</span>
-          <span className="flex gap-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-            <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
-            <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-          </span>
-        </div>
+    <article id={`art-${e.artikel}`} className="group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md lg:hover:scale-[1.035] lg:grid lg:grid-cols-[2.75rem_minmax(0,36rem)_10rem] lg:gap-x-4 lg:items-baseline">
+      {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
+      <div className="order-1 flex items-baseline gap-2 lg:block lg:text-right">
+        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline whitespace-nowrap">{e.artikelLabel}</a>
+        <span className="lg:mt-1 flex gap-2 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+          <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
+          <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+        </span>
+      </div>
+      <div className="order-3 lg:order-2">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-          className="mt-2 space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
+          zitierKontext={{ artikelLabel: e.artikelLabel, kuerzel: erlass.kuerzel }}
+          className="space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
       </div>
       {marginalie.length > 0 && (
-        <aside className="order-1 lg:order-2 mb-1 lg:mb-0 lg:pt-0.5">
+        <aside className="order-2 lg:order-3 mb-1 lg:mb-0">
           <p className="text-xs leading-snug text-ink-400">
             {marginalie.map((m, i) => <span key={i} className={i === marginalie.length - 1 ? 'text-ink-500' : ''}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
           </p>
