@@ -12,6 +12,7 @@
 // sondern wird vom Generator aus den Snapshots gezogen (sonst Drift).
 
 import { FEDLEX, type FedlexGesetz } from '../fedlex';
+import { BUND_STUBS } from './bund-stubs.generated';
 
 /** Kanzleirelevante Sach-Achsen. Bund deklariert je Erlass; Kanton-Default unten. */
 export type Rechtsgebiet =
@@ -99,6 +100,9 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('STG', 'StG', 'Bundesgesetz über die Stempelabgaben', '641.10', 'sozial-abgaben', 4, 'StG'),
   bund('EOG', 'EOG', 'Bundesgesetz über den Erwerbsersatz (Erwerbsersatzordnung)', '834.1', 'sozial-abgaben', 5),
   bund('ARG', 'ArG', 'Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)', '822.11', 'sozial-abgaben', 6, 'ArG'),
+  // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
+  //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
+  ...BUND_STUBS,
 ];
 
 // Bund-Eintrag mit Default-Sprache de + status 'snapshot'. fedlexKey default ==
