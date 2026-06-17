@@ -22,6 +22,42 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 17.6.2026 (abend) — KANTONALER VOLLTEXT-AUSBAU + POPOVER-POLITUR + RECHEN-AUDIT — GEPUSHT + PROD-DEPLOY (feat/normtext-popup @ 4b54f67, lexmetrik.vercel.app)
+
+**Volltext-Ausbau (echte Fallback-Quellen 23 → 3):** `parsePassus` löst jetzt
+Anhang-/Tarif-Ziffern auf (`anhang-segmenter`); generisches **OrdoLex-PDF-Profil**
+(`olexAt`/`olexPar`, Stand aus «(Stand …)»/«(état …)»/SRSZ via neuem rohText-Fallback
+in `adapter-pdf`). NEU mit Volltext: GR/AR/LU/SG/FR/VS/SZ/TI (PDF) + TG/AG/SH (über
+`/app/`-LexWork, Tarif-quelleUrl von `/api/` umgestellt) + ZH AnwGebV, GE RTFMC, VD
+TNo (tolv/210344) / TDC (tolv/135783 — Falschquelle 105540 korrigiert), TI ripetibili
+(m3/atto/141), SZ HSt (lexfind/82040 via sz-Profil), VS OcRF (lex.vs.ch/211.611).
+**ZH-NotGebV-Anhang spaltenbewusst** extrahiert (`extrahiereZhAnhangSpalten` in
+adapter-zh-pdf: Verweis-Spalte getrennt, Silbentrennung gefügt) — vorher unleserlich
+verschränkt («Begrün-2.2.1, 2.2.2, dung» → «Begründung … (vgl. Ziff. …)»). 118 Ziffern.
+Verbleibende 3 Fallback: UR-urilaw (privater Tarif), UR-Grundbuch-PDF (verstümmelt),
+SG GebT 821.5 / SG 941.12 / OW 210.32 (nurPdf-Onboarding offen, s. Audit-Doc).
+
+**Popover-Vereinheitlichung** (Darstellung, Wortlaut unverändert — Freigabe David):
+Datum IMMER `DD.MM.YYYY`; Bund «Fassung vom:» / Kanton «In Kraft seit:»; Tarif-Text-
+Normalisierung (verschluckte Trenn-Leerzeichen); Staffel zeilenweise. **Regeln
+dokumentiert:** `bibliothek/normen/norm-vorschau-snapshot-system.md` (§ Darstellungs-Regeln).
+«Erstrecherche» aus allen nutzerseitigen Strings entfernt.
+
+**Rechen-Audit** (4-Agenten-Fan-out, ~250 Tarif-Einträge, Regel↔Gesetzesartikel):
+Mehrheit OK. **A (Wert-/Norm-Abweichungen) mit PRÜFEN-Hinweis geflaggt — Fix später
+(Entscheid David)**: NW Testament/Erbvertrag §18-Rahmen vs §20-Staffel, UR PE Art.30
+(Strafnorm), VS/GE/AI Schlichtung, GE/VD PE, TG GK §11 (5000 vs 20'000). **B-Anker
+korrigiert:** VS Art.96→32/33, VD GK 17→18, JU PE 7→13, ZG PE. **C-Coverage gefixt:**
+VS-94116 / SZ-280.411 (4837→5862) / VD-105540-Falschquelle. **Vollständige Befundliste:
+`bibliothek/AUDIT-TARIF-2026-06-17.md`** (offen: A-Wertfragen, systematische AR-Anker-
+Verfeinerung, SG/OW-nurPdf-Onboarding).
+
+**Tor + Deploy:** gate voll grün · check:netz Drift 0 / 0 Warnungen · Bug-Check
+(Gate+Netz+ZH-No-Pollution+Stand-Fallback+Faithfulness+Browser-Render). Commit 4b54f67
+(50 Dateien, Pathspec; Fremd-WIP `FAHRPLAN-RECHTSSAMMLUNG.md` einer Parallel-Session
+unberührt). Deploy aus sauberem /tmp-Worktree → **lexmetrik.vercel.app READY**; Live-
+Nachkontrolle: Kernroute + neue Snapshots HTTP 200, ZH-2.2.1 lesbar.
+
 ## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ b9d35e6)
 
 **➡️ NÄCHSTER AGENT — offene Hauptaufgabe:** «Volltext bei ALLEN Kantonen im
