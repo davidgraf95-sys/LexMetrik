@@ -74,6 +74,13 @@ export function NormPopover({ snapshot, passus, onClose }: {
     : snapshot.quelleUrl + frag;
   const titel = `${snapshot.artikelLabel} ${snapshot.erlass}`;
 
+  // Brücke in die Lesesicht (Rubrik V): Reader-Schlüssel aus der Snapshot-id
+  // ableiten — bund/<quelle>/art_… → key '<quelle>'; kanton/<quelle>/<nr>/art_…
+  // → key '<quelle>-<nr>' (= Snapshot-Datei-Stamm, vgl. browse-manifest).
+  const idTeile = snapshot.id.split('/');
+  const readerKey = snapshot.ebene === 'bund' ? snapshot.quelle : `${snapshot.quelle}-${idTeile[2] ?? ''}`;
+  const readerLink = `/gesetze/${snapshot.ebene}/${encodeURIComponent(readerKey)}#art-${snapshot.artikel}`;
+
   return (
     <div
       ref={dialogRef}
@@ -128,6 +135,11 @@ export function NormPopover({ snapshot, passus, onClose }: {
             ↗ geltende Fassung
           </a>
         </div>
+        {/* Brücke in die Lesesicht (Rubrik V): voller Erlass im Gesetzes-Reader,
+            an der zitierten Stelle. Interner Pfad → normale Navigation. */}
+        <a href={readerLink} className="inline-block text-xs text-brass-700 hover:underline">
+          Im Gesetz öffnen ›
+        </a>
         <p className="text-micro text-ink-500">
           Snapshot — massgeblich ist die amtliche Fassung (Live-Link oben).
         </p>

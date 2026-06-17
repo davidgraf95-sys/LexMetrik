@@ -1,6 +1,7 @@
 import React from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
+import { NormText } from '../NormText';
 
 // ArtikelBody: rendert die Absatz-/Item-Blöcke EINES Artikel-Snapshots im
 // Fedlex-Stil (hochgestellte Absatznummer, lit./Ziff.-Items, hervorgehobene
@@ -67,7 +68,7 @@ function normalisiereTarifText(text: string): string {
     .trim();
 }
 
-export function ArtikelBody({ bloecke, artikel, passus, passusRef, className }: {
+export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
@@ -76,8 +77,13 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className }: 
   passusRef?: React.Ref<HTMLElement>;
   /** Container-Klassen; Default = Popover-Padding (Byte-Gleichheit). */
   className?: string;
+  /** Querverweise/Rechtsprechung im Wortlaut verlinken (Lesesicht). Default
+   *  AUS → das Popover bleibt zeichenidentisch (golden, §6). */
+  autolink?: boolean;
 }) {
   const { passusMarke, zielItemKey } = bestimmePassusZiel(bloecke, passus);
+  // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
+  const verlinkt = (s: string) => (autolink ? <NormText text={s} /> : s);
 
   return (
     <div className={className ?? 'px-5 py-4 space-y-2.5'}>
@@ -119,7 +125,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className }: 
                   ? zeilen.map((z, j) => (
                       <span key={j} className={j === 0 ? 'block' : 'block pl-4 -indent-4'}>{z}</span>
                     ))
-                  : anzeige;
+                  : verlinkt(anzeige);
               })()}
             </p>
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
@@ -148,7 +154,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className }: 
                       <span>
                         {istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>
-                          : it.text}
+                          : verlinkt(it.text)}
                       </span>
                     </li>
                   );

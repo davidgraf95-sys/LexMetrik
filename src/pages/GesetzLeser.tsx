@@ -48,7 +48,7 @@ function ArtikelLeser({ e, erlass, basisPfad }: { e: NormSnapshot; erlass: Brows
         </span>
       </div>
       <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }}
-        className="mt-1 space-y-2 text-ink-800" />
+        className="mt-1 space-y-2 text-ink-800" autolink />
     </article>
   );
 }

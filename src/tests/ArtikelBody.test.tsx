@@ -65,4 +65,14 @@ describe('ArtikelBody', () => {
     expect(out).toContain('aufgehoben');
     expect(out).not.toContain('>…<');
   });
+
+  it('autolink: verlinkt zitierte Normen im Wortlaut, aus = Klartext', () => {
+    const bl = [{ absatz: '1', text: 'Der Schuldner haftet nach Art. 41 OR für den Schaden.' }];
+    const mitLink = renderToString(<ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} autolink />);
+    expect(mitLink).toContain('decoration-dotted'); // NormText-Inline-Anker
+    expect(mitLink).toContain('Art. 41 OR');
+    const ohneLink = renderToString(<ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} />);
+    expect(ohneLink).not.toContain('decoration-dotted');
+    expect(ohneLink).toContain('Art. 41 OR');
+  });
 });
