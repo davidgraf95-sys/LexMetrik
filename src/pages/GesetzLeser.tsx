@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
+import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
@@ -56,7 +57,17 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[]; fussnoten?: Fussnote[];
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
-  const zitat = `${e.artikelLabel} ${erlass.kuerzel}`;
+  const label = labelMitBereich(e.artikelLabel, e.artikel);
+  const zitat = `${label} ${erlass.kuerzel}`;
+  // Fussnoten am Fuss: amtliche Sidecar-Fussnoten bevorzugen; fehlen sie, die
+  // aus dem Wortlaut-Block abgetrennte Änderungshistorie (Extraktions-Artefakt)
+  // hier zeigen — einheitlich EINE Quelle, keine Doppelung.
+  const fussAnzeige: Fussnote[] = fussnoten && fussnoten.length > 0
+    ? fussnoten
+    : e.bloecke
+        .map((b) => trenneAenderungshistorie(b.text).historie)
+        .filter((h): h is string => !!h)
+        .map((text): Fussnote => ({ nr: '', text, links: [] }));
   // Geschätzte Zeilenzahl (≈90 Z./Zeile). Der Hover-Zoom (scale) auf den GANZEN
   // Artikel verzerrt lange Bestimmungen (z. B. § 11 Notariatstarif BS, ~20 Tarif-
   // ziffern) — er wächst dann hunderte px. Darum: Zoom nur für kurze Artikel; lange
@@ -73,23 +84,27 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
     });
   };
   return (
-    <article id={`art-${e.artikel}`} className={`group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md ${langeBestimmung ? '' : 'lg:hover:scale-[1.035]'} lg:grid lg:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] lg:gap-x-4 lg:items-baseline`}>
+    <article id={`art-${e.artikel}`} className={`group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md ${langeBestimmung ? '' : 'xl:hover:scale-[1.035]'} xl:grid xl:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] xl:gap-x-4 xl:items-baseline`}>
       {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
-      <div className="order-1 flex items-baseline gap-2 lg:block lg:text-right">
-        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline leading-snug break-words">{e.artikelLabel}</a>
-        <span className="lg:mt-1 flex gap-2 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+      <div className="order-1 flex items-baseline gap-2 xl:block xl:text-right">
+        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline leading-snug break-words">{label}</a>
+        <span className="xl:mt-1 flex gap-2 xl:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
           <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
           <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
         </span>
       </div>
-      <div className="order-3 lg:order-2">
+      {/* Lesespalte: unter xl (gestapelt, ohne Marginalspalte) auf ~40rem
+          begrenzt — sonst werden die Zeilen bei mittlerer Breite zu lang. Ab xl
+          steuert die Grid-Spalte (minmax(0,35rem)) die Breite. */}
+      <div className="order-3 xl:order-2 max-w-reading xl:max-w-none">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: e.artikelLabel, kuerzel: erlass.kuerzel }}
           className="space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
-        {/* Amtliche Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar) */}
-        {fussnoten && fussnoten.length > 0 && (
+        {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): amtliche
+            Sidecar-Fussnoten oder die aus dem Wortlaut abgetrennte Historie. */}
+        {fussAnzeige.length > 0 && (
           <div className="mt-2.5 border-t border-line/50 pt-1.5 space-y-1">
-            {fussnoten.map((fn, i) => (
+            {fussAnzeige.map((fn, i) => (
               <p key={i} className="text-micro leading-snug text-ink-400">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                 {fnTextMitLinks(fn)}
@@ -99,7 +114,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
         )}
       </div>
       {marginalie.length > 0 && (
-        <aside className="order-2 lg:order-3 mb-1 lg:mb-0">
+        <aside className="order-2 xl:order-3 mb-1 xl:mb-0">
           <p className="text-xs leading-snug text-ink-500">
             {marginalie.map((m, i) => <span key={i}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
           </p>
@@ -293,10 +308,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       }
       prev = gl.map((g) => g.label);
       const m = st?.marginalie ?? [];
-      L.push('', `${e.artikelLabel}${m.length ? `  [${m.join(' · ')}]` : ''}`);
+      L.push('', `${labelMitBereich(e.artikelLabel, e.artikel)}${m.length ? `  [${m.join(' · ')}]` : ''}`);
       for (const b of e.bloecke) {
-        L.push(`${b.absatz ? `${b.absatz} ` : ''}${b.text}`);
+        // Eingemischte Änderungshistorie (verdoppelte Fussnoten-Nr) abtrennen.
+        const { wortlaut, historie } = trenneAenderungshistorie(b.text);
+        const txt = wortlaut.trim() ? wortlaut : historie ? '[aufgehoben]' : b.text;
+        L.push(`${b.absatz ? `${b.absatz} ` : ''}${txt}`);
         for (const it of b.items ?? []) L.push(`    ${it.marke}. ${it.text}`);
+        // Extrahierte Historie nur, wenn keine amtliche Sidecar-Fussnote da ist
+        // (sonst Doppelung mit der Fussnoten-Schleife unten).
+        if (historie && !(st?.fussnoten?.length)) L.push(`    — ${historie}`);
       }
       for (const f of st?.fussnoten ?? []) L.push(`  [${f.nr}] ${f.text}`);
     }

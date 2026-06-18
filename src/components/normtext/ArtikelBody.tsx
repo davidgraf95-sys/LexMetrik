@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
+import { trenneAenderungshistorie } from '../../lib/normtext/darstellung';
 import { NormText } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
@@ -141,7 +142,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' rounded px-2 -mx-2 relative z-0 hover:z-10 origin-left transition-[transform,background-color] duration-150 hover:bg-brass-100/40' + (langerBlock ? '' : ' lg:hover:scale-[1.025]') : ''}`}
+            }${zitierKontext ? ' rounded px-2 -mx-2 relative z-0 hover:z-10 origin-left transition-[transform,background-color] duration-150 hover:bg-brass-100/40' + (langerBlock ? '' : ' xl:hover:scale-[1.025]') : ''}`}
           >
             <p>
               {b.absatz != null && (
@@ -155,9 +156,15 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   Artikel (Bund/LexWork, sauber extrahiert) bleiben unberührt.
                   Aufgehobene Absätze («…») → gedämpftes «aufgehoben». */}
               {(() => {
-                const tarifKontext = artikel.includes('.') || staffelZeilen(b.text) != null;
-                const anzeige = tarifKontext ? normalisiereTarifText(b.text) : b.text;
-                if (istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
+                // Eingemischte Änderungshistorie (verdoppelte Fussnoten-Nr +
+                // geleakter Label-Rest) aus dem Wortlaut-Block entfernen. Die
+                // Historie selbst gehört an den Artikelfuss (Lesesicht zeigt sie
+                // dort als Fussnote) — hier bleibt nur der reine Wortlaut.
+                const { wortlaut } = trenneAenderungshistorie(b.text);
+                const tarifKontext = artikel.includes('.') || staffelZeilen(wortlaut) != null;
+                const anzeige = tarifKontext ? normalisiereTarifText(wortlaut) : wortlaut;
+                // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
+                if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
                 const zeilen = staffelZeilen(anzeige);
                 return zeilen
                   ? zeilen.map((z, j) => (
