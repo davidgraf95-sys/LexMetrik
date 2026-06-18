@@ -1,0 +1,902 @@
+{
+  "erzeugt": "2026-06-17",
+  "eintraege": [
+    {
+      "id": "kanton/TI/ti-137/art_1",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La presente legge stabilisce la tariffa delle spese processuali per l’amministrazione della giustizia civile e penale."
+        },
+        {
+          "absatz": "2",
+          "text": "Sono riservate le leggi speciali."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "c24c6f910922a27a16b7b045f53e3ef73717f38a57d0f929ebb627b93d978e56"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_2",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La tassa di giustizia è fissata in considerazione del valore, della natura e della complessità dell’atto o della causa."
+        },
+        {
+          "absatz": "2",
+          "text": "Nel caso di manifesta sproporzione tra il valore, la natura e la complessità della causa e la tariffa della presente legge, l’autorità competente può derogare ai limiti imposti dalla tariffa."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "c966d51715a65554a906f6000b323b5c3d21539f09a517fae64496129649bb69"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_3",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ogni autorità giudiziaria incassa da sé le spese processuali, le pene pecuniarie e le multe, riservato il cpv. 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Il Consiglio di Stato può istituire un servizio centrale di incasso per le autorità giudiziarie."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "294ec0931ccb60fb6923a25b9656d40ba05b60374609b7dedcdd311138917ce5"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_4",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le spese processuali spettano allo Stato."
+        },
+        {
+          "absatz": "2",
+          "text": "Le spese processuali per le procedure davanti al giudice di pace spettano a quest’ultimo."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO II"
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo primo"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "b8432c7d6e732d1e738cf060563f6512ed6971522c503017471dcb7dd96984ee"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_5",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nelle procedure di conciliazione, è fissata una tassa entro i limiti seguenti:",
+          "items": [
+            {
+              "marke": "Valore litigioso in franchi",
+              "text": "Tassa in franchi"
+            },
+            {
+              "marke": "fino a 2'000",
+              "text": "50 - 150"
+            },
+            {
+              "marke": "2'000 - 5'000",
+              "text": "100 - 300"
+            },
+            {
+              "marke": "5'000 - 30'000",
+              "text": "200 - 1'500"
+            },
+            {
+              "marke": "30'000 - 100'000",
+              "text": "500 - 3'000"
+            },
+            {
+              "marke": "100'000 - 1'000'000",
+              "text": "1'000 - 5'000"
+            },
+            {
+              "marke": "oltre 1'000'000",
+              "text": "3'000 - 0,5%"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nel caso in cui il valore litigioso non sia determinabile, la tassa è fissata tra 50 e 5000 franchi."
+        },
+        {
+          "absatz": "3",
+          "text": "L’autorità di conciliazione può rinunciare a prelevare la tassa nel caso di riuscita del tentativo di conciliazione."
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo secondo"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "46c21f5a09893dabe1431b9022e22768c9b429753d11c3b054d6fffd8c01b49d"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_6",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia delle decisioni del giudice di pace è fissata tra 50 e 300 franchi."
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo terzo"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "e035cc42628c81e4845786cfda3e7b5f5f01c0cb982b32ddcb1d187236f319f0"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_7",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La tassa di giustizia delle decisioni del pretore nella procedura ordinaria è fissata entro i limiti seguenti:",
+          "items": [
+            {
+              "marke": "Valore litigioso in franchi",
+              "text": "Tassa di giustizia in franchi"
+            },
+            {
+              "marke": "fino a 30’000",
+              "text": "500 - 4’000"
+            },
+            {
+              "marke": "30’000 - 50’000",
+              "text": "2’500 - 5’000"
+            },
+            {
+              "marke": "50’000 - 100’000",
+              "text": "3’000 - 8’000"
+            },
+            {
+              "marke": "100’000 - 200’000",
+              "text": "5’000 - 12’000"
+            },
+            {
+              "marke": "200’000 - 500’000",
+              "text": "8’000 - 20’000"
+            },
+            {
+              "marke": "500’000 - 1’000’000",
+              "text": "15’000 - 40’000"
+            },
+            {
+              "marke": "1’000’000 - 2’000’000",
+              "text": "25’000 - 60’000"
+            },
+            {
+              "marke": "2’000’000 - 5’000’000",
+              "text": "35’000 - 80’000"
+            },
+            {
+              "marke": "5’000’000 - 10’000’000",
+              "text": "55’000 - 100’000"
+            },
+            {
+              "marke": "oltre 10’000’000",
+              "text": "75’000 a 1% del valore"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nelle cause con un valore litigioso non determinabile e in quelle della procedura di divorzio, la tassa di giustizia è fissata tra 250 e 20'000 franchi."
+        },
+        {
+          "absatz": "3",
+          "text": "È inoltre applicabile il capoverso 1 nelle cause della procedura di divorzio che hanno per oggetto anche rapporti patrimoniali, salvo i contributi di mantenimento."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "6f1b9a84dc522170b0424ec6abfbeab32a6fda249e06cc211bec8da2635869e1"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_8",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La tariffa delle decisioni del pretore nella procedura semplificata è uguale a quella nella procedura ordinaria."
+        },
+        {
+          "absatz": "2",
+          "text": "Nelle controversie fino a un valore litigioso di 30'000 franchi in materia di locazione e affitto di abitazioni e di locali commerciali come pure di affitto agricolo, la tassa è fissata tra 100 e 200 franchi; in quelle controversie, senza riguardo al valore litigioso, il giudice può esentare la parte soccombente che agisce senza malafede o temerarietà processuali dalle spese dell’assunzione delle prove se queste hanno effetti finanziariamente gravosi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "7c6c1f8b5de77b427a210c382a1d012a93704411b788070c7fddd790c475f7d1"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_9",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La tariffa delle decisioni del pretore nella procedura sommaria è la metà di quella nella procedura ordinaria."
+        },
+        {
+          "absatz": "2",
+          "text": "Nelle cause con un valore litigioso non determinabile e in quelle nelle quali si domanda la tutela giurisdizionale nei casi manifesti la tassa di giustizia è fissata tra 100 e 20’000 franchi."
+        },
+        {
+          "absatz": "3",
+          "text": "Nelle controversie in materia di locazione e di affitto di abitazioni e di locali commerciali come pure di affitto agricolo, la tassa è fissata tra 100 e 200 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "64de41347fe27e1c68ed9b8bc917ea3c60cbd8f39100fe1c0f5f118287a0d28d"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_10",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia dei provvedimenti cautelari è fissata tra 100 e 20’000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "84c7a2865a6fba1709b80ccdadb9c860c0588ff47358897240db9714fb76d29f"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_11",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nelle altre procedure la tassa di giustizia è fissata tra 100 e 10'000 franchi."
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo quarto"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "d9345da8aa3fee0493a8d89baa529ba60eb54bd9d3684296bf4f4c8c13d31fb4"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_12",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tariffa delle decisioni in istanza cantonale unica del Tribunale di appello è il doppio di quella delle decisioni del pretore nella procedura ordinaria."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "0adb52d9d65532fcbc3c6fabeab84659e34bb37994f5d88b394ba8e7077da0a6"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_13",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tariffa delle decisioni su appello del Tribunale di appello è uguale a quella delle decisioni del pretore nella procedura originaria."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "686b47b84881abfddb078429f7967ab79217e73518da255a7481ba76874afdbd"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_14",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia delle decisioni su reclamo del Tribunale di appello è fissata tra 100 e 10'000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "c3eca51238ecf7d1a693c556f955a104a6d089e5162cf725f9a84059034187c9"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_15",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia delle decisioni su ricorso contro le decisioni di autorità amministrative è fissata tra 200 e 20'000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "6f94ad13cc42ec54239b79f305cc175fa466e2c329770d4a4ebf8778bfc4fceb"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_16",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia dei provvedimenti cautelari è fissata tra 100 e 20'000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "b328a5232e470dc26cd0416fed4bd820ae505d94ea7106e42e0af0b0334b7649"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_17",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nelle altre procedure la tassa di giustizia è fissata tra 100 e 20'000 franchi."
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo quinto"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "74c1b3ca3692cf9ec33c909230d54b9742e85a5fd6ab3f7dc27ec7e673ea5d6e"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_18",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia delle cause promosse davanti a un foro prorogato può essere aumentata fino al doppio di quanto stabilito nella tariffa."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "d04bf51bef60ec6e8cf6b436db551ed58b9729dacbb7a97afbf059ad5e45925b"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_19",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tariffa delle decisioni di revisione è la metà di quella nella procedura originaria."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "135deb104e4035e6e66be1cd2ab9d1992232fc9a2a404ab61a4e607e0cc3de24"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_20",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La tariffa delle decisioni di interpretazione è un quinto di quella nella procedura originaria."
+        },
+        {
+          "absatz": "2",
+          "text": "Il giudice può rinunciare a prelevare la tassa."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "36c8a3d4ab37a2cecf55795ef672e18adf10c34bcbdca9683edabd6fb3d875bf"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_21",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In caso di transazione, acquiescenza o desistenza o se la causa diviene priva d’oggetto per altri motivi, la tassa di giustizia è fissata sulla base della presente tariffa, in proporzione agli atti compiuti."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO III"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "2e50bda0ebe01e736e32e0b1ec07735fd7916d00b7c295d1c5198f2a07f716a2"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_22",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nei procedimenti penali, la tassa di giustizia è fissata entro i limiti seguenti:"
+        },
+        {
+          "absatz": null,
+          "text": "a.nei processi davanti alla pretura penale da 200 a 10'000 franchi;"
+        },
+        {
+          "absatz": null,
+          "text": "b.nei processi davanti alla Corte correzionale da 500 a 20'000 franchi;"
+        },
+        {
+          "absatz": null,
+          "text": "c.nei processi davanti alla Corte criminale da 1000 a 100'000 franchi;"
+        },
+        {
+          "absatz": null,
+          "text": "d.nei processi davanti alla Corte di appello e di revisione penale da 500 a 100'000 franchi."
+        },
+        {
+          "absatz": "2",
+          "text": "Nei procedimenti retti dalla legge federale del 22 marzo 1974 sul diritto penale amministrativo e dalla legge del 20 aprile 2010 di procedura per le contravvenzioni, la tassa è fissata tra 200 e 20'000 franchi."
+        },
+        {
+          "absatz": "3",
+          "text": "Nei procedimenti davanti alla Corte di appello e di revisione penale ai sensi dell’art. 398 cpv. 4 CPP, la tassa è fissata tra 200 e 10'000 franchi."
+        },
+        {
+          "absatz": "4",
+          "text": "Nel caso di processi davanti alle autorità giudiziarie penali, il giudice può anche fissare nella medesima sentenza una tassa di giustizia ridotta per il caso in cui non sia domandata la motivazione scritta; per tale caso, la tassa massima fissata in questo articolo è dimezzata."
+        },
+        {
+          "absatz": "5",
+          "text": "In caso di stralcio e irricevibilità la tassa di giustizia è fissata in proporzione agli atti compiuti e può essere inferiore al limite minimo previsto dalla presente tariffa."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "e77444070bca76259c27e13da51c2ea435007631a1cb4331178d16eb4badc49a"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_23",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per il decreto d’accusa, il decreto di non luogo a procedere e il decreto di abbandono, la tassa è fissata tra 100 e 10'000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "25041acad7ba24c6bb91a984f1ade64c72758e8d53de5776e66deb9e86d215b2"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_24",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Il giudice dei provvedimenti coercitivi può prelevare una tassa di giustizia fino a 5’000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "749819c5782fd949a90b9df61182874a062962cc3257e881693410229f3b47bf"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_25",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tassa di giustizia delle decisioni della Corte dei reclami penali è fissata tra 100 e 20'000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "31008bd1f06b2c04e48dd8319c4c76e52e31e4c8f644991b118a391d9c90a2c2"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_26",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nelle decisioni del giudice dell’applicazione della pena, ai sensi dell’art. 10 lett. a-c della legge del 20 aprile 2010 sull’esecuzione delle pene e delle misure per gli adulti, la tassa di giustizia è fissata tra 50 e 1000 franchi."
+        },
+        {
+          "absatz": "2",
+          "text": "Nelle altre decisioni, il giudice dell’applicazione della pena può prelevare una tassa di giustizia fino a 1000 franchi."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "a9a599b6f70c0eda792b9782afe7a6899a0d136ddd3c3aced1839ac889a2c13a"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_27",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La tariffa delle decisioni di revisione è la metà di quella nella procedura originaria."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "135deb104e4035e6e66be1cd2ab9d1992232fc9a2a404ab61a4e607e0cc3de24"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_27_a",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Il Consiglio di Stato può, se circostanze eccezionali lo giustificano, dilazionare, sospendere o condonare in tutto o in parte le tasse e le spese."
+        },
+        {
+          "absatz": "2",
+          "text": "Contro la decisione del Consiglio di Stato è dato ricorso al Tribunale cantonale amministrativo; è applicabile la legge sulla procedura amministrativa."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO IV"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "7a4c763fe478d7f7e3d5b750723ba530c0c584e29b443b2fbf80d90b5c49b4ec"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_28",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Al testimone è versata un’indennità di 50 franchi per mezza giornata e 100 franchi per giornata intera."
+        },
+        {
+          "absatz": "2",
+          "text": "Il giudice fissa un’indennità equa per la cooperazione dei terzi."
+        },
+        {
+          "absatz": "3",
+          "text": "Il giudice di pace e il testimone hanno diritto all’indennità di trasferta se ciò gli cagiona spese rilevanti; si applicano per analogia le disposizioni per i dipendenti dello Stato."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "0f2e3b409c79fa0be0dd8e072099fadab182b4823ad8d490b292e647b6a23617"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_29",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Al sindaco, al membro del municipio e al funzionario comunale con delega del municipio che intervengono in virtù del loro ruolo, sulla base di un obbligo di procedura, è versata un’indennità conformemente all’art. 28."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "40a7c40db768bb1db37935eaa9f0d621be58fd2f3952873d97dabde774b62833"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_30",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’indennità del perito, dell’interprete e del traduttore è fissata dal giudice secondo il suo libero apprezzamento, tenendo conto della natura e della difficoltà del lavoro."
+        },
+        {
+          "absatz": "2",
+          "text": "Se il parere è presentato per scritto, il perito deve presentare la nota d’onorario per scritto."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "eaa3c6ca96efd1bfee802e957a26128011ea1752f6eec47cc009a496a6adc996"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_31",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’autorità che pronuncia sulla colpevolezza dell’imputato include nella sentenza la decisione sulle spese di intervento e di inchiesta della polizia."
+        },
+        {
+          "absatz": "2",
+          "text": "Le autorità di perseguimento penale possono esporre separatamente in particolare:"
+        },
+        {
+          "absatz": null,
+          "text": "a)gli esborsi effettuati a fronte di prestazioni richieste a enti pubblici o privati ai fini dell’inchiesta, quando non rientrano nell’attività normale degli organi inquirenti;"
+        },
+        {
+          "absatz": null,
+          "text": "b)le prestazioni effettuate da propri servizi specialistici finanziari o scientifici in relazione al procedimento;"
+        },
+        {
+          "absatz": null,
+          "text": "c)le prestazioni che hanno comportato un impegno o una portata superiori alla media."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "3c7f93806e2494866102f849a0dccf8fcca13297ea1b95335d3e2c7aab916ce6"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_32",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Il Consiglio di Stato può emanare un regolamento sulle spese."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO V"
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "cd61ce67b7c431c42a0925295a3bd2d9d6a8bff27f06946a3449dc8826def02b"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_33",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nei procedimenti condotti secondo le norme di procedura civile e penale cantonali si applica la tariffa previgente."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "430c17785f320337aa46ba923b9b7b8874a046e7d2f97ec78c663cf4ba58a941"
+    },
+    {
+      "id": "kanton/TI/ti-137/art_34",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa giudiziaria (LTG) (RL 178.200)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Trascorsi i termini per l’esercizio del diritto di referendum, la presente legge è pubblicata nel Bollettino ufficiale delle leggi e degli atti esecutivi e entra in vigore il 1° gennaio 2011."
+        },
+        {
+          "absatz": null,
+          "text": "Pubblicata nel BU 2011, 38."
+        }
+      ],
+      "stand": "2015-02-10",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4f34df0b316445d9cea970e91db5868100d94a6823ee24bdd8e4514897d71300",
+      "sha": "de09e5c65fae0a3d702e80faa6a7643e6c06117f7702aa6238bdd6936e7990c4"
+    }
+  ]
+}

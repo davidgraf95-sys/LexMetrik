@@ -127,7 +127,7 @@ export function vergleichNotariatGrundbuch(
  *  Berechnungsergebnis ab, das die zentrale PDF-Schicht (lib/pdf) rendert (§3). */
 export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnungsergebnis {
   const schritt = (titel: string, p: NgPosten): Rechenschritt => ({
-    beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
+    beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — nicht abgenommen' : ''}`,
     zwischenergebnis: ngPostenText(p) + (p.quelle.hinweis ? ` — ${p.quelle.hinweis}` : ''),
     // Kantonaler Erlass mit amtlichem Direktlink (quelleUrl), damit der PDF-Verweis klickbar ist.
     normen: [{ artikel: `${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}`, url: p.quelle.quelleUrl || undefined }],

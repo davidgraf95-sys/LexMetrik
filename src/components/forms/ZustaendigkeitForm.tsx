@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NormText } from '../NormText';
+import { KantonNormText } from '../KantonNormText';
 import {
   BeruehrtRahmen,
   Checkbox,
@@ -8,6 +10,7 @@ import {
   Field,
   GruppenTitel,
   inputCls,
+  NormLink,
   Stepper,
 } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -787,19 +790,19 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               <Checkbox
                 checked={f.konsumentenvertrag}
                 onChange={(v) => set('konsumentenvertrag', v)}
-                label={<><span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span></>} />
+                label={<><span>Konsumentenvertrag <span className="text-ink-500"><NormText text={`(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)`} /></span></span></>} />
             )}
             {istGeld && !f.konsumentenvertrag && (
               <Checkbox
                 checked={f.ausVertrag}
                 onChange={(v) => set('ausVertrag', v)}
-                label={<><span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span></>} />
+                label={<><span>Forderung aus Vertrag <span className="text-ink-500"><NormText text={`(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)`} /></span></span></>} />
             )}
             {istArbeit && (
               <Checkbox
                 checked={f.avgVerleih}
                 onChange={(v) => set('avgVerleih', v)}
-                label={<><span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span></>} />
+                label={<><span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500"><NormText text={`(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)`} /></span></span></>} />
             )}
             <Checkbox
               checked={f.gerichtsstandsvereinbarung}
@@ -822,7 +825,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             <Checkbox
               checked={f.beklagteAuslandOderUnbekannt}
               onChange={(v) => set('beklagteAuslandOderUnbekannt', v)}
-              label={<><span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500">(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)</span></span></>} />
+              label={<><span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500"><NormText text={`(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)`} /></span></span></>} />
             <Checkbox
               checked={f.widerklageOderGerichtlicheFrist}
               onChange={(v) => set('widerklageOderGerichtlicheFrist', v)}
@@ -830,7 +833,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             {istGeld && (
               <details className="lc-card p-4">
                 <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-                  Handelsgerichts-Konstellation <span className="text-ink-500 font-normal">(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)</span>
+                  Handelsgerichts-Konstellation <span className="text-ink-500 font-normal"><NormText text={`(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)`} /></span>
                 </summary>
                 <div className="mt-3 space-y-2">
                   <Checkbox
@@ -909,9 +912,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     <p className="text-body-s text-ink-900 whitespace-pre-line">
                       {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
                     </p>
-                    {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
+                    {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1"><NormText text={obereInstanz!.hinweis} />.</p>}
                     {obereInstanz!.quelleSpruchkoerper && (
-                      <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
+                      <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — fachliche Abnahme ausstehend.</p>
                     )}
                     {!obereInstanz!.kammerBerufung && (
                       <p className="text-xs text-ink-500 mt-1">
@@ -1017,12 +1020,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
             {/* Offene Rechtsfragen-Weichen (§8: ehrlich ausweisen) */}
             {rechtsmittel.weichen.map((w, i) => (
-              <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+              <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
             ))}
 
             <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
             <div className="flex flex-wrap gap-1.5">
-              {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
+              {rechtsmittel.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} />)}
             </div>
 
             {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
@@ -1221,7 +1224,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               <div className="lc-card p-4 space-y-3">
                 <GruppenTitel>Zuständige Schlichtungsstelle ({f.kanton})</GruppenTitel>
                 {recherche.glgFallback && (
-                  <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
+                  <p className="text-xs text-ink-500"><NormText text={`Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.`} /></p>
                 )}
                 {recherche.aufloesung.modus === 'zentral' && (
                   <div>
@@ -1237,7 +1240,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
                     </p>
                     {recherche.aufloesung.stelle.hinweis && (
-                      <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
+                      <p className="text-xs text-warn-700 mt-1">⚠ <NormText text={recherche.aufloesung.stelle.hinweis} /></p>
                     )}
                   </div>
                 )}
@@ -1268,7 +1271,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         </ul>
                       </div>
                     )}
-                    {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
+                    {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500"><NormText text={recherche.aufloesung.hinweis} /> — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
                     {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
                         wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt
                         als Übersicht aller Stellen der Stufe stehen. */}
@@ -1295,7 +1298,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                           )}
                           {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
                           <br />{s.strasse}, {s.plzOrt}
-                          {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
+                          {s.hinweis && <span className="block text-xs text-warn-700">⚠ <NormText text={s.hinweis} /></span>}
                         </li>
                       ))}
                     </ul>
@@ -1463,7 +1466,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {f.kanton !== '' ? (
                           <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
                         ) : kosten.schlichtung.erlass})</span>
-                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ <KantonNormText text={kosten.schlichtung.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].schlichtung : undefined, artikel: kosten.schlichtung.erlass, erlassName: kosten.schlichtung.erlass }} /></span>}
                     </p>
                   ) : (
                     <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
@@ -1479,7 +1482,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
                       ) : kosten.nichtVermoegensrechtlich.erlass})</span>
-                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500">{kosten.nichtVermoegensrechtlich.hinweis}</span>}
+                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500"><KantonNormText text={kosten.nichtVermoegensrechtlich.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].gericht : undefined, artikel: kosten.nichtVermoegensrechtlich.erlass, erlassName: kosten.nichtVermoegensrechtlich.erlass }} /></span>}
                   </p>
                 ) : kosten && (
                   <p className="text-body-s text-ink-800">
@@ -1488,14 +1491,14 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
                       ) : kosten.gericht.erlass})</span>
-                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500"><KantonNormText text={kosten.gericht.hinweis} quelle={{ quelleUrl: f.kanton !== "" ? ERLASS_LINKS[f.kanton].gericht : undefined, artikel: kosten.gericht.erlass, erlassName: kosten.gericht.erlass }} /></span>}
                   </p>
                 )}
                 {kosten && f.streitsache === 'scheidung' && kosten.familie && (
                   <p className="text-body-s text-ink-800">
                     <span className="font-medium text-ink-900">Familien-/Scheidungsrahmen: {/^[A-Za-zÜü(0-9]/.test(kosten.familie.text) && !/^\d/.test(kosten.familie.text) ? '' : 'CHF '}{kosten.familie.text}.</span>{' '}
                     <span className="text-ink-500">({kosten.familie.erlass})</span>
-                    {kosten.familie.hinweis && <span className="block text-xs text-ink-500">{kosten.familie.hinweis}</span>}
+                    {kosten.familie.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.familie.hinweis} /></span>}
                   </p>
                 )}
                 <p className="text-xs text-ink-500">
@@ -1519,7 +1522,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
             {r.weichen.length > 0 && (
               <div className="space-y-1.5">
-                {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s">{w}</p>)}
+                {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s"><NormText text={w} /></p>)}
               </div>
             )}
 

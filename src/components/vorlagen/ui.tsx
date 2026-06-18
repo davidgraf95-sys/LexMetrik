@@ -1,6 +1,13 @@
-import { cloneElement, createContext, isValidElement, useContext, useId, useState } from 'react';
+import { cloneElement, createContext, isValidElement, useContext, useEffect, useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
+import { bundSnapshotRef } from '../../lib/normtext/bundRef';
+import { ladeSnapshot } from '../../lib/normtext/laden';
+import { naechsterFokus } from '../../lib/normtext/fokus';
+import type { NormSnapshot } from '../../lib/normtext/typen';
+import { NormPopover } from '../NormPopover';
+import { NormText } from '../NormText';
 
 // Geteilte UI-Bausteine der Vorlagen-Wizards (Testament, Patientenverfügung, …).
 
@@ -32,7 +39,7 @@ export function Field({ label, children, hint, optional }: {
         {label}{optional && <span className="text-ink-500 font-normal"> · optional</span>}
       </label>
       {control}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
+      {hint && <p className="text-xs text-ink-500"><NormText text={hint} /></p>}
     </div>
   );
 }
@@ -79,19 +86,224 @@ export function GruppenTitel({ children }: { children: React.ReactNode }) {
 // Geteilter Fedlex-Norm-Chip (Code-Review #6, 7.6.2026: Kopien dieses
 // Musters haben den Locale-Bug im Fristenspiegel erzeugt — neue Rechner
 // nutzen DIESE Komponente, keine lokalen NormPill-Varianten).
-export function NormLink({ artikel, title, bemerkung }: { artikel: string; title?: string; bemerkung?: string }) {
+//
+// Progressive Enhancement (16.6.2026): Der Chip bleibt der heutige
+// <a target=_blank> auf Fedlex (Fallback + SSR/Prerender/PDF-Pfad
+// UNVERÄNDERT — NULL Regression, §6). Existiert ein Bund-Snapshot-Bezug
+// (bundSnapshotRef), öffnet ein Klick im Browser stattdessen die Volltext-
+// Vorschau im Popover.
+//
+// onClick-Variante (kein Doppel-Öffnen, SSR-neutral):
+//  - Kein ref  → kein preventDefault → der Link öffnet wie heute (Fallback).
+//  - ref da    → preventDefault + Popover-Shell SOFORT öffnen, dann async
+//    laden. Async-preventDefault wäre zu spät (Default ist da schon gefeuert);
+//    darum synchron entscheiden. Liefert ladeSnapshot null, zeigt das Popover
+//    «Volltext nicht verfügbar» + den Live-Link statt zu navigieren — so wird
+//    nie doppelt geöffnet/navigiert.
+// SSR/Prerender: offen=false initial, kein Effekt läuft, der erste Render ist
+// byte-identisch zum heutigen <a> (Golden unverändert).
+// Default-Styling des Chip-Links — der heutige Pillen-Look. Als Default-Wert von
+// linkClass ausgelagert, damit alle Bestands-Aufrufe (ohne linkClass) SSR-byte-
+// identisch bleiben (§6) und nur der Inline-Auto-Linker (NormText) ein anderes,
+// fliesstext-taugliches Styling übergibt.
+const CHIP_LINK_CLASS = 'lc-chip no-underline hover:text-brass-700';
+
+export function NormChip({ artikel, anzeige, hrefOverride, title, linkClass = CHIP_LINK_CLASS }: {
+  /** Norm-Text für die Snapshot-Auflösung (bundSnapshotRef) + Fallback-URL. */
+  artikel: string;
+  /** Anzeigetext im Chip (Default: artikel). */
+  anzeige?: React.ReactNode;
+  /** Bereits aufgelöste/lokalisierte Fallback-URL; wenn gesetzt, exakt diese
+   *  nutzen (z. B. wenn die Strecke n.url aus den Schema-Daten kennt). */
+  hrefOverride?: string;
+  /** title-Attribut — NUR rendern, wenn gesetzt (SSR-Byte-Gleichheit der
+   *  title-losen Einbaustellen). */
+  title?: string;
+  /** className des Link-<a>. Default = Pillen-Chip; NormText übergibt einen
+   *  dezenten Inline-Stil (gleiche Popover-Logik, andere Darstellung). */
+  linkClass?: string;
+}) {
   const { locale } = useLocale();
-  const roh = fedlexLinkFuerArtikel(artikel);
-  const url = roh ? fedlexLokalisiert(roh, locale) : null;
-  const inhalt = (
+  const inhalt = anzeige ?? artikel;
+  // Fallback-URL: explizite Override hat Vorrang, sonst aus dem Artikel
+  // ableiten (wie das heutige NormLink).
+  const roh = hrefOverride ? null : fedlexLinkFuerArtikel(artikel);
+  const url = hrefOverride ?? (roh ? fedlexLokalisiert(roh, locale) : null);
+
+  const triggerRef = useRef<HTMLAnchorElement>(null);
+  const [offen, setOffen] = useState(false);
+  // 'laedt' | NormSnapshot (geladen) | null (Snapshot nicht verfügbar)
+  const [snapshot, setSnapshot] = useState<NormSnapshot | 'laedt' | null>('laedt');
+
+  // Keine Fallback-URL → exakt das heutige Verhalten (reiner span-Chip).
+  if (!url) return <span className="lc-chip" title={title}>{inhalt}</span>;
+
+  const ref = bundSnapshotRef(artikel);
+
+  const beimKlick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!ref) return; // kein Snapshot → normaler Link öffnet wie heute
+    e.preventDefault();
+    setSnapshot('laedt');
+    setOffen(true);
+    ladeSnapshot('bund', ref.quelle, ref.token).then((s) => setSnapshot(s));
+  };
+
+  const schliessen = () => {
+    setOffen(false);
+    triggerRef.current?.focus(); // Fokus zurück auf den Chip (A11y)
+  };
+
+  return (
     <>
-      {artikel}
-      {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
+      <a
+        ref={triggerRef}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...(title ? { title } : {})}
+        className={linkClass}
+        onClick={beimKlick}
+      >
+        {inhalt}
+      </a>
+      {offen && (
+        <NormPopoverOverlay onClose={schliessen}>
+          {snapshot && snapshot !== 'laedt'
+            ? <NormPopover snapshot={snapshot} passus={{ absatz: ref?.absatz ?? null, lit: ref?.lit, ziff: ref?.ziff }} onClose={schliessen} />
+            : <NormPopoverHuelle zustand={snapshot === 'laedt' ? 'laedt' : 'fehlt'} url={url} artikel={artikel} onClose={schliessen} />}
+        </NormPopoverOverlay>
+      )}
     </>
   );
-  return url
-    ? <a href={url} target="_blank" rel="noopener noreferrer" title={title ?? `${artikel} auf Fedlex öffnen`} className="lc-chip no-underline hover:text-brass-700">{inhalt}</a>
-    : <span className="lc-chip" title={title}>{inhalt}</span>;
+}
+
+/** Dünner Wrapper auf NormChip — bewahrt das heutige NormLink-Markup
+ *  byte-genau: der Default-title («… auf Fedlex öffnen») gilt nur, wenn der
+ *  Chip wirklich als Link rendert; im span-Fallback (unbekanntes Gesetz) bleibt
+ *  der title roh wie bisher (undefined → kein Attribut). */
+export function NormLink({ artikel, title, bemerkung }: { artikel: string; title?: string; bemerkung?: string }) {
+  const istLink = fedlexLinkFuerArtikel(artikel) !== null;
+  return (
+    <NormChip
+      artikel={artikel}
+      title={istLink ? (title ?? `${artikel} auf Fedlex öffnen`) : title}
+      anzeige={
+        <>
+          {artikel}
+          {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
+        </>
+      }
+    />
+  );
+}
+
+// Overlay/Backdrop + Zentrierung für die Norm-Vorschau. NormPopover liefert
+// bewusst nur den Dialog-Inhalt (lc-card), nicht das Overlay — beides stellt
+// dieser Rahmen: zentriert, Klick auf den Backdrop schliesst. Rein
+// clientseitig gerendert (nur wenn offen, also nie im SSR/Prerender).
+//
+// PORTAL an document.body: Der Auslöser (Norm-Chip / «amtliche Quelle»-Link)
+// steht teils in einem <p> (z. B. die Tarif-Quelle-Zeile). Würde das Overlay
+// inline gerendert, läge der Dialog-<div>/<p>/<h2> IM <p> → ungültiges HTML +
+// Hydration-Fehler. Der Portal hängt das Overlay ans body, ausserhalb des <p>.
+//
+// A11y (16.6.2026): Da der Dialog aria-modal="true" trägt, erwartet assistive
+// Technik eine Fokus-Falle UND einen ruhenden Hintergrund. Beides wird hier
+// verdrahtet — am gemeinsamen Overlay, das sowohl NormPopover als auch
+// NormPopoverHuelle umschliesst:
+//  (1) Fokus-Falle: Tab/Shift+Tab zyklisch zwischen erstem und letztem
+//      fokussierbaren Element des Dialogs (reine Index-Logik in
+//      lib/normtext/fokus.ts, hier nur die DOM-Verdrahtung).
+//  (2) Body-Scroll-Lock: document.body overflow:hidden, solange offen; beim
+//      Schliessen/Unmount exakt der vorherige Inline-Wert wiederhergestellt.
+// Beides nur im useEffect (window/document) → SSR/Prerender unberührt; der
+// Erst-Render bleibt byte-gleich (Overlay rendert ohnehin nur clientseitig).
+// Der Fokus-Rückgabe auf den Trigger bleibt beim Aufrufer (triggerRef).
+export function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+  const dialogContainerRef = useRef<HTMLDivElement>(null);
+
+  // Fokus-Falle: hält Tab/Shift+Tab innerhalb des Dialogs (zyklisch). Die reine
+  // Index-Berechnung liegt in naechsterFokus (testbar); hier nur DOM-Zugriff.
+  useEffect(() => {
+    const wurzel = dialogContainerRef.current;
+    if (wurzel == null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      // Bei jedem Tab frisch einsammeln (Inhalt kann nachladen: Hülle → Volltext).
+      const fokussierbar = Array.from(
+        wurzel.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => el.offsetParent !== null || el === document.activeElement);
+      if (fokussierbar.length === 0) return;
+      const aktiv = fokussierbar.indexOf(document.activeElement as HTMLElement);
+      const ziel = naechsterFokus(fokussierbar.length, aktiv, e.shiftKey);
+      if (ziel < 0) return;
+      e.preventDefault();
+      fokussierbar[ziel].focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // Body-Scroll-Lock: Hintergrund ruhig stellen, solange das Overlay offen ist.
+  // Der vorherige Inline-Wert wird gemerkt und beim Unmount exakt zurückgesetzt
+  // (mehrere Overlays gleichzeitig sind nicht möglich — eins pro Chip).
+  useEffect(() => {
+    const vorher = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = vorher; };
+  }, []);
+
+  if (typeof document === 'undefined') return null; // SSR/Prerender: kein Overlay
+  return createPortal(
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4"
+      onClick={onClose}
+    >
+      {/* Klicks im Dialog dürfen nicht zum Backdrop durchschlagen. */}
+      <div ref={dialogContainerRef} onClick={(e) => e.stopPropagation()} className="w-full max-w-xl">
+        {children}
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
+// Lade-/Fallback-Inhalt, wenn (noch) kein Snapshot vorliegt. Esc + Fokus wie im
+// NormPopover; bei 'fehlt' der sichtbare Live-Link (§8) statt Volltext.
+export function NormPopoverHuelle({ zustand, url, artikel, onClose }: {
+  zustand: 'laedt' | 'fehlt'; url: string; artikel: string; onClose: () => void;
+}) {
+  const schliessRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    schliessRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' || e.key === 'Esc') onClose(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+  return (
+    <div role="dialog" aria-modal="true" aria-label={`Norm-Vorschau ${artikel}`} tabIndex={-1}
+      className="lc-card w-full max-w-xl p-0 text-left">
+      <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
+        <div className="min-w-0">
+          <p className="lc-overline text-brass-700">Norm-Vorschau</p>
+          <h2 className="text-body-l font-semibold text-ink-900 truncate">{artikel}</h2>
+        </div>
+        <button ref={schliessRef} type="button" onClick={onClose} aria-label="Schliessen"
+          className="lc-btn-ghost lc-btn-sm shrink-0 px-2">✕</button>
+      </div>
+      <div className="px-5 py-4">
+        <p className="text-body-s text-ink-700">
+          {zustand === 'laedt' ? 'Volltext wird geladen …' : 'Volltext nicht verfügbar.'}
+        </p>
+      </div>
+      <div className="border-t border-line px-5 py-3">
+        <a href={url} target="_blank" rel="noopener noreferrer"
+          className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung auf Fedlex</a>
+      </div>
+    </div>
+  );
 }
 
 // Stepper-Leiste (klickbar bis zum erreichten Schritt)
@@ -181,7 +393,7 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
   return (
     <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
       <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-      {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
+      {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={f} /></p>)}
     </div>
   );
 }

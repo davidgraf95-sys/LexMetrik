@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
 import { sansAmp } from './typografie';
-import { RechtsprechungAnker, RechtsprechungText } from './RechtsprechungLink';
+import { RechtsprechungAnker } from './RechtsprechungLink';
+import { NormText } from './NormText';
 // FAHRPLAN-DESIGN 2.6: lokaler NormChip entfernt — NormLink (vorlagen/ui)
 // ist die EINE Fedlex-Chip-Komponente (deckt «bemerkung» jetzt mit ab).
 import { NormLink } from './vorlagen/ui';
@@ -100,8 +101,8 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             </button>
             {warnungenOffen && (
               <div className="bg-warn-bg px-4 pb-3 space-y-1">
-                {/* Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
-                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700"><RechtsprechungText text={w} /></p>)}
+                {/* Norm- UND Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
+                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700"><NormText text={w} /></p>)}
               </div>
             )}
           </div>
@@ -156,7 +157,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             {annahmenOffen && (
               <ul className="px-4 py-3 space-y-1">
                 {ergebnis.annahmen.map((a, i) => (
-                  <li key={i} className="text-body-s text-ink-600">• <RechtsprechungText text={a} /></li>
+                  <li key={i} className="text-body-s text-ink-600">• <NormText text={a} /></li>
                 ))}
               </ul>
             )}

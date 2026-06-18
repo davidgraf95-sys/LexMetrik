@@ -1,4 +1,5 @@
 import { useMemo, type ReactNode } from 'react';
+import { NormText } from '../components/NormText';
 import {
   LV_DEFAULTS, lvNormalisieren, lvZusammenstellen, pruefeLvGates, type LvAntworten,
 } from '../lib/vorlagen/lehrvertrag';
@@ -122,7 +123,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
             <Field label="Dauer (Jahre)" hint="koppelt die Lohnstaffel"><input type="number" min={1} max={5} className={inputCls + ' num w-28'} value={a.dauerJahre} onChange={(e) => setDauer(Number(e.target.value))} /></Field>
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Probezeit (Art. 344a Abs. 3 OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Probezeit (Art. 344a Abs. 3 OR)`} /></GruppenTitel>
             <Field label="Probezeit (Monate)" hint="ein bis drei Monate; ohne Abrede gilt von Gesetzes wegen drei Monate">
               <input type="number" min={1} max={6} className={inputCls + ' num w-28'} value={a.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} />
             </Field>
@@ -130,7 +131,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               <Checkbox
                 checked={a.probezeitBehoerde}
                 onChange={(v) => set('probezeitBehoerde', v)}
-                label={<><span>Die Verlängerung über drei Monate ist von der kantonalen Behörde bewilligt <span className="text-ink-500">(Art. 344a Abs. 4 OR – sonst höchstens drei Monate)</span></span></>} />
+                label={<><span>Die Verlängerung über drei Monate ist von der kantonalen Behörde bewilligt <span className="text-ink-500"><NormText text={`(Art. 344a Abs. 4 OR – sonst höchstens drei Monate)`} /></span></span></>} />
             )}
           </div>
         </div>
@@ -139,7 +140,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
       case 'lohn': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <GruppenTitel>Lohn je Lehrjahr (Art. 344a Abs. 2 OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Lohn je Lehrjahr (Art. 344a Abs. 2 OR)`} /></GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {a.lohnLehrjahre.map((l, i) => (
                 <Field key={l.jahr} label={`${l.jahr}. Lehrjahr (CHF / Monat)`}>
@@ -155,7 +156,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           <Field label="Berufsfachschule" optional><input className={inputCls} value={a.berufsfachschule} onChange={(e) => set('berufsfachschule', e.target.value)} placeholder="z. B. BFS Basel" /></Field>
           {a.detailgrad === 'experte' && (
             <div className="space-y-2 pt-1">
-              <GruppenTitel>Weitere Leistungen (Art. 344a Abs. 5 OR)</GruppenTitel>
+              <GruppenTitel><NormText text={`Weitere Leistungen (Art. 344a Abs. 5 OR)`} /></GruppenTitel>
               <Checkbox
                 checked={a.berufswerkzeuge}
                 onChange={(v) => set('berufswerkzeuge', v)}
@@ -178,11 +179,11 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           {gates.blocker.length > 0 && (
             <div className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
-              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
           )}
-          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s">{w}</div>)}
-          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s">{h}</div>)}
+          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
+          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>)}
 
           <Field label="Ort und Datum des Vertragsschlusses">
             <div className="grid grid-cols-[1fr_11rem] gap-3">
@@ -194,7 +195,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit der Lehrvertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Schriftform ist Gültigkeitsvoraussetzung</strong> (Art. 344a Abs. 1 OR): Lehrbetrieb, lernende Person und – bei Minderjährigkeit – die gesetzliche Vertretung unterzeichnen.</li>
+              <li><strong>Schriftform ist Gültigkeitsvoraussetzung</strong><NormText text={` (Art. 344a Abs. 1 OR): Lehrbetrieb, lernende Person und – bei Minderjährigkeit – die gesetzliche Vertretung unterzeichnen.`} /></li>
               <li><strong>Genehmigung der kantonalen Behörde</strong> vor Lehrbeginn (Art. 14 BBG); ohne sie darf die Bildung nicht beginnen.</li>
               <li><strong>Jugendarbeitsschutz</strong> (ArGV 5) und Bildungsverordnung des Berufs sind zwingend zu beachten.</li>
             </ul>

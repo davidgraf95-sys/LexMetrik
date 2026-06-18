@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from 'react';
+import { NormText } from '../NormText';
 import { Field, inputCls } from './ui';
 import { MappenAnsicht, MappenGates, NotariatsHinweis } from './Dokumentmappe';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
@@ -137,7 +138,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
 
       {/* Gründer */}
       <div className="space-y-2">
-        <p className="text-body-s font-medium text-ink-900">Gründer:innen und Zeichnung (Art. 777a OR)</p>
+        <p className="text-body-s font-medium text-ink-900"><NormText text={`Gründer:innen und Zeichnung (Art. 777a OR)`} /></p>
         {gruender.map((g) => (
           <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end">
             <Field label="Name">
@@ -164,7 +165,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
 
       {/* Geschäftsführung */}
       <div className="space-y-2">
-        <p className="text-body-s font-medium text-ink-900">Geschäftsführung (Art. 809 OR; nur natürliche Personen)</p>
+        <p className="text-body-s font-medium text-ink-900"><NormText text={`Geschäftsführung (Art. 809 OR; nur natürliche Personen)`} /></p>
         {gfs.map((g) => (
           <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto] gap-2 items-end">
             <Field label="Name">
@@ -207,7 +208,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
       {/* Weitere Vertretungsberechtigte (nur bei lit.-f-Weiche) */}
       {weichen.weitereVertretungsberechtigte && (
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Weitere Vertretungsberechtigte (Art. 71 Abs. 1 lit. f HRegV)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Weitere Vertretungsberechtigte (Art. 71 Abs. 1 lit. f HRegV)`} /></p>
           {vertretungen.map((v) => (
             <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end">
               <Field label="Name">

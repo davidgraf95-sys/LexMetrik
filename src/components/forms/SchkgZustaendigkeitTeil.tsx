@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -77,7 +78,7 @@ function AmtAdresse({ amt }: { amt: BetreibungsamtAdresse }) {
       <p className="text-body-s font-medium text-ink-900">{amt.name}</p>
       <p className="text-body-s text-ink-700">{amt.strasse}, {amt.plzOrt}</p>
       {amt.zustaendigFuer && <p className="text-xs text-ink-500 mt-0.5">zuständig für: {amt.zustaendigFuer}</p>}
-      {amt.hinweis && <p className="text-xs text-ink-500 mt-0.5">{amt.hinweis}</p>}
+      {amt.hinweis && <p className="text-xs text-ink-500 mt-0.5"><NormText text={amt.hinweis} /></p>}
       {amt.url && (
         <a href={amt.url} target="_blank" rel="noreferrer" className="text-brass-700 underline text-xs mt-1 inline-block">
           Amtliche Seite ↗
@@ -323,7 +324,7 @@ export function SchkgZustaendigkeitTeil() {
                 <AmtAdresse amt={kantonsAemter.aufloesung.amt} />
               ) : kantonsAemter.aufloesung.modus === 'kreise' ? (
                 <div className="space-y-2">
-                  {kantonsAemter.aufloesung.hinweis && <p className="text-body-s text-ink-600">{kantonsAemter.aufloesung.hinweis}</p>}
+                  {kantonsAemter.aufloesung.hinweis && <p className="text-body-s text-ink-600"><NormText text={kantonsAemter.aufloesung.hinweis} /></p>}
                   {amtTreffer?.art === 'amt' ? (
                     <AmtAdresse amt={amtTreffer.amt} />
                   ) : amtTreffer?.art === 'stadtkreise' ? (
@@ -460,11 +461,11 @@ export function SchkgZustaendigkeitTeil() {
             <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
           </div>
 
-          {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
-          {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
+          {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s"><NormText text={w} /></div>)}
+          {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
 
           <div className="flex flex-wrap gap-1.5">
-            {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+            {r.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} bemerkung={n.bemerkung} />)}
           </div>
 
           {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +

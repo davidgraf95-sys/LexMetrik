@@ -23,7 +23,7 @@ export const ERLASS_LINKS: Record<Kanton, ErlassLinks> = {
   SO: { schlichtung: 'https://bgs.so.ch/app/de/texts_of_law/615.11', gericht: 'https://bgs.so.ch/app/de/texts_of_law/615.11' },
   BS: { schlichtung: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810', gericht: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810' },
   BL: { schlichtung: 'https://bl.clex.ch/app/de/texts_of_law/170.31', gericht: 'https://bl.clex.ch/app/de/texts_of_law/170.31' },
-  SH: { schlichtung: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/273.100', gericht: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200' },
+  SH: { schlichtung: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200', gericht: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200' },
   AR: { schlichtung: 'https://ar.clex.ch/app/de/texts_of_law/233.3', gericht: 'https://ar.clex.ch/app/de/texts_of_law/233.3' },
   AI: { schlichtung: 'https://ai.clex.ch/app/de/texts_of_law/173.810', gericht: 'https://ai.clex.ch/app/de/texts_of_law/173.810' },
   SG: { schlichtung: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12', gericht: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12' },

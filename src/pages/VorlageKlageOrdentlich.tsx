@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KO_DEFAULTS, koZusammenstellen, koMaengel, koHinweise, koStreitwert, koPrefillLesen,
   type KoAnswers,
@@ -130,7 +131,7 @@ export function VorlageKlageOrdentlich() {
           <Checkbox
             checked={a.vermoegensrechtlich}
             onChange={(v) => set('vermoegensrechtlich', v)}
-            label={<><span>Vermögensrechtliche Streitigkeit <span className="text-ink-500">(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)</span></span></>} />
+            label={<><span>Vermögensrechtliche Streitigkeit <span className="text-ink-500"><NormText text={`(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)`} /></span></span></>} />
           {a.vermoegensrechtlich && (
             <Field label="Streitwert (CHF)" hint="nach Art. 91 ZPO – ohne Zinsen und Kosten; über CHF 30'000 (sonst gilt das vereinfachte Verfahren)">
               <BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls}
@@ -140,7 +141,7 @@ export function VorlageKlageOrdentlich() {
           <Checkbox
             checked={a.mietePacht}
             onChange={(v) => set('mietePacht', v)}
-            label={<><span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500">(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)</span></span></>} />
+            label={<><span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500"><NormText text={`(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)`} /></span></span></>} />
           <Checkbox
             checked={a.einzigeInstanz}
             onChange={(v) => set('einzigeInstanz', v)}
@@ -277,7 +278,7 @@ export function VorlageKlageOrdentlich() {
                 <textarea className={inputCls} rows={3} value={t.text} placeholder="Behauptete Tatsache, je Ziffer ein Lebenssachverhalt"
                   onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i ? { ...x, text: e.target.value } : x))} />
                 <div className="space-y-2 pl-2 border-l-2 border-line">
-                  <p className="text-xs text-ink-600">Beweismittel zu dieser Tatsache (Art. 221 Abs. 1 lit. e ZPO):</p>
+                  <p className="text-xs text-ink-600"><NormText text={`Beweismittel zu dieser Tatsache (Art. 221 Abs. 1 lit. e ZPO):`} /></p>
                   {t.beweise.map((b, bi) => (
                     <div key={bi} className="flex gap-2">
                       <input className={inputCls} value={b.bezeichnung} placeholder="z. B. Werkvertrag vom 1.2.2026 (Urkunde); Zeuge X; Parteibefragung"
@@ -298,7 +299,7 @@ export function VorlageKlageOrdentlich() {
               onClick={() => set('tatsachen', [...a.tatsachen, { text: '', beweise: [] }])}>+ Tatsachenbehauptung</button>
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Rechtliche Begründung <span className="normal-case text-ink-500">(fakultativ, Art. 221 Abs. 3 ZPO)</span></GruppenTitel>
+            <GruppenTitel>Rechtliche Begründung <span className="normal-case text-ink-500"><NormText text={`(fakultativ, Art. 221 Abs. 3 ZPO)`} /></span></GruppenTitel>
             {a.rechtlicheBegruendung.map((r, i) => (
               <div key={i} className="flex gap-2">
                 <textarea className={inputCls} rows={2} value={r.text}
@@ -323,7 +324,7 @@ export function VorlageKlageOrdentlich() {
           <Checkbox
             checked={a.klagebewilligungVorhanden}
             onChange={(v) => set('klagebewilligungVorhanden', v)}
-            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Art. 221 Abs. 2 lit. b ZPO)</span></span></>} />
+            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500"><NormText text={`(Art. 221 Abs. 2 lit. b ZPO)`} /></span></span></>} />
           {a.klagebewilligungVorhanden ? (
             <div className="space-y-2">
               <Field label="Datum der Klagebewilligung (Eröffnung/Zustellung)" hint="massgeblich für die Klagefrist (BGE 140 III 227)">
@@ -389,8 +390,8 @@ export function VorlageKlageOrdentlich() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form & Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Unterschreiben und im Doppel einreichen:</strong> ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).</li>
-              <li><strong>Klagebewilligung beilegen</strong> (bzw. Verzichts-/Ausnahme-Nachweis) und die verfügbaren Beweisurkunden (Art. 221 Abs. 2 ZPO).</li>
+              <li><strong>Unterschreiben und im Doppel einreichen:</strong><NormText text={` ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).`} /></li>
+              <li><strong>Klagebewilligung beilegen</strong><NormText text={` (bzw. Verzichts-/Ausnahme-Nachweis) und die verfügbaren Beweisurkunden (Art. 221 Abs. 2 ZPO).`} /></li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

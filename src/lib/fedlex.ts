@@ -60,6 +60,47 @@ export const FEDLEX = {
   // formen: Wechsel nur auf Jahresende, Art. 94 Abs. 2 / 100 Abs. 3 KVV,
   // Fassung AS 2024 697).
   KVV:   'https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de',
+  // StGB SR 311.0 — Cache gepinnt (fedlex-cache.sh, Konsolidierung 20260612);
+  // Anker art_30/97/98/101/109/333/389 (Antrag/Verjährung) extrahiert. Bisher
+  // unerreichbar: Snapshot STGB.json existierte (Vollabdeckung), aber StGB war
+  // nicht in FEDLEX → erkenneFedlexGesetz lieferte null. Kollisionsfrei zu StG:
+  // Regex `(^|\s)KEY$` matcht «Art. 97 StGB» nur auf StGB (StGB endet nicht auf
+  // « StG»). Reiner Screen-Pfad — der PDF-Erlasskatalog (pdf/normLinks.ts) ist
+  // unberührt (eigene ERLASSE-Liste), Golden bleibt byte-gleich.
+  StGB:  'https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de',
+  // StG SR 641.10 (Stempelabgaben) — Cache gepinnt (Konsolidierung 20240101);
+  // Anker art_5/6/8 extrahiert. «Art. 8 StG» → 'StG' (nicht 'StGB').
+  StG:   'https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de',
+  // GebV-HReg SR 221.411.1 — Cache gepinnt (Konsolidierung 20210101); Anker
+  // art_3/4/8 extrahiert (Handelsregister-Gebühren).
+  GebVHReg: 'https://www.fedlex.admin.ch/eli/cc/2020/180/de',
+  // ── Erweiterung 17.6.2026 (Auftrag David «jedes verwendete Gesetz in seiner
+  // Gesamtheit abspeichern»): die übrigen im Produkt zitierten Bundesgesetze.
+  // ELI + geltende Konsolidierung via Fedlex-SPARQL (latest dateApplicability
+  // ≤ heute) ermittelt, Identität (SR-Nr.) + Pflicht-Anker am Filestore-HTML
+  // empirisch verifiziert (§7). Snapshots: scripts/fedlex-cache.sh + normtext.
+  // MWSTG SR 641.20 — eli cc/2009/615, Konsolidierung 20250331 (132 Anker).
+  MWSTG: 'https://www.fedlex.admin.ch/eli/cc/2009/615/de',
+  // URG SR 231.1 — eli cc/1993/1798_1798_1798, Konsolidierung 20250701 (113).
+  URG: 'https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de',
+  // BewG (Lex Koller) SR 211.412.41 — eli cc/1984/1148_1148_1148, 20230701 (41).
+  BewG: 'https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de',
+  // EOG SR 834.1 — eli cc/1952/1021_1046_1050, Konsolidierung 20260601 (66).
+  EOG: 'https://www.fedlex.admin.ch/eli/cc/1952/1021_1046_1050/de',
+  // SVG SR 741.01 — eli cc/1959/679_705_685, Konsolidierung 20250401 (159).
+  SVG: 'https://www.fedlex.admin.ch/eli/cc/1959/679_705_685/de',
+  // DSG (revDSG) SR 235.1 — eli cc/2022/491, Konsolidierung 20250707 (77).
+  DSG: 'https://www.fedlex.admin.ch/eli/cc/2022/491/de',
+  // BBG SR 412.10 — eli cc/2003/674, Konsolidierung 20250301 (76).
+  BBG: 'https://www.fedlex.admin.ch/eli/cc/2003/674/de',
+  // GBV (Grundbuchverordnung) SR 211.432.1 — eli cc/2011/667. Neuste mit
+  // Filestore-HTML verfügbare Konsolidierung 20240101 (186 Anker); spätere
+  // (2026-04-15) sind bei Fedlex nur als SPA-Shell vorhanden — Live-Link bleibt
+  // massgeblich (§7/§8), Muster wie VMWG.
+  GBV: 'https://www.fedlex.admin.ch/eli/cc/2011/667/de',
+  // JStPO (Jugendstrafprozessordnung) SR 312.1 — eli cc/2010/226,
+  // Konsolidierung 20250701 (54 Anker); kollisionsfrei zu StPO (endet auf «JStPO»).
+  JStPO: 'https://www.fedlex.admin.ch/eli/cc/2010/226/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
@@ -88,6 +129,20 @@ const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
   ['GebV SchKG', 'GebVSchKG'],
 ];
 
+// Erkennt das Gesetz eines Normverweis-Texts ('Art. 16 GebV SchKG' → 'GebVSchKG').
+// Aliase werden VOR dem generischen Token-Match geprüft (Mehrwort-Namen, deren
+// letztes Token sonst ein anderes Gesetz träfe). Unbekanntes Gesetz → null.
+// Reiner Helfer (§5): einzige Quelle der Gesetz-Erkennung; von
+// fedlexLinkFuerArtikel UND vom Norm-Snapshot-Resolver (normtext/bundRef)
+// wiederverwendet — die Matching-Logik wird nicht dupliziert.
+export function erkenneFedlexGesetz(text: string): FedlexGesetz | null {
+  const bereinigt = text.trim();
+  const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
+  return alias?.[1]
+    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt))
+    ?? null;
+}
+
 // Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
 // OR-Basis + #art_335_c. Absatz-/Ziffer-Angaben ändern den Anker nicht;
 // massgeblich ist der führende Artikel.
@@ -97,10 +152,7 @@ const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
 //   Gesetzes-Seite ohne Anker.
 // - Unbekanntes Gesetz → null (kein Link).
 export function fedlexLinkFuerArtikel(text: string): string | null {
-  const bereinigt = text.trim();
-  const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
-  const gesetz = alias?.[1]
-    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt));
+  const gesetz = erkenneFedlexGesetz(text);
   if (!gesetz) return null;
   if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
   // Bug-Check 10.6.2026 (NIEDRIG): Buchstabe UND lat. Suffix kombinierbar
@@ -109,3 +161,32 @@ export function fedlexLinkFuerArtikel(text: string): string | null {
   const m = text.match(/^Art\.\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/);
   return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
 }
+
+// ─── Bund-Normverweise im Fliesstext finden (Inline-Auto-Linker) ───────────
+//
+// Globale Regex, die «Art. N[suffix] [Abs./lit./Ziff./Satz …] GESETZ»-Zitate in
+// einem Anzeigetext findet — Schwester von RECHTSPRECHUNG_IM_TEXT (bge.ts) für
+// Normen. Die Gesetzes-Namen kommen aus DIESER Datei (FEDLEX-Keys + Mehrwort-
+// Alias), damit die Gesetz-Erkennung nicht dupliziert wird (§5): genau die
+// Tokens, die erkenneFedlexGesetz am Zitat-Ende akzeptiert.
+//
+// Bewusst nur «Art.» (Bund), NICHT «§» — das kantonale «§ N» ist ohne Erlass-
+// Kontext mehrdeutig und trifft im Code zahllose Nicht-Normen (CLAUDE.md-§-
+// Prinzipien); kantonale Inline-Auflösung läuft über den Quelle-Kontext, nicht
+// über einen blinden §-Regex.
+//
+// Die Passus-Kette (Abs./lit./Bst./Ziff./Satz) zwischen Artikel und Gesetz ist
+// auf bekannte Zitat-Tokens beschränkt — so läuft der Match nie über einen
+// Satz oder ein zweites «Art.» hinaus. Jeder Treffer wird vor dem Verlinken
+// zusätzlich gegen fedlexLinkFuerArtikel validiert (kein toter Link).
+const NORM_NAMEN_ESC = (['GebV SchKG', ...Object.keys(FEDLEX)] as string[])
+  // Längste zuerst: «GebV SchKG» vor «SchKG», «StGB» vor «StG» (Suffix-Kollision).
+  .sort((a, b) => b.length - a.length)
+  .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+
+export const NORM_IM_TEXT = new RegExp(
+  'Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies)?' +
+    '(?:\\s+(?:Abs\\.|lit\\.|Bst\\.|Ziff\\.|Ziffer|Satz)\\s*(?:\\d+[a-z]?(?:bis|ter|quater|quinquies)?|[a-z]))*' +
+    '\\s+(?:' + NORM_NAMEN_ESC.join('|') + ')\\b',
+  'g',
+);

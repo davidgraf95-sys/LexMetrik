@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -58,6 +58,41 @@ describe('fedlexLinkFuerArtikel', () => {
     expect(fedlexLinkFuerArtikel('Art. 48 GebV SchKG')).toBe(`${FEDLEX.GebVSchKG}#art_48`);
     // Haupt-SchKG bleibt unberührt
     expect(fedlexLinkFuerArtikel('Art. 16 SchKG')).toBe(`${FEDLEX.SchKG}#art_16`);
+  });
+});
+
+describe('erkenneFedlexGesetz (wiederverwendbarer Helfer)', () => {
+  it('erkennt das Gesetz am letzten Token', () => {
+    expect(erkenneFedlexGesetz('Art. 335c Abs. 1 OR')).toBe('OR');
+    expect(erkenneFedlexGesetz('Art. 96 ZPO')).toBe('ZPO');
+  });
+  it('Mehrwort-Alias hat Vorrang vor dem Token-Match', () => {
+    expect(erkenneFedlexGesetz('Art. 16 GebV SchKG')).toBe('GebVSchKG');
+    expect(erkenneFedlexGesetz('Art. 16 SchKG')).toBe('SchKG');
+  });
+  it('unbekanntes Gesetz → null', () => {
+    expect(erkenneFedlexGesetz('Art. 8 ATSG')).toBeNull();
+    expect(erkenneFedlexGesetz('siehe oben')).toBeNull();
+  });
+  // StGB/StG erschlossen (16.6.2026): die Snapshots STGB.json/STG.json waren
+  // vorhanden, aber unerreichbar, weil die Gesetze nicht in FEDLEX standen.
+  // Kollisionscheck: «StGB» endet nicht auf « StG» (Regex `(^|\s)KEY$`), darum
+  // löst «Art. 97 StGB» auf 'StGB' und «Art. 8 StG» auf 'StG' auf.
+  it('StGB/StG kollisionsfrei (StGB ≠ StG trotz gemeinsamem Präfix)', () => {
+    expect(erkenneFedlexGesetz('Art. 97 StGB')).toBe('StGB');
+    expect(erkenneFedlexGesetz('Art. 30 StGB')).toBe('StGB');
+    expect(erkenneFedlexGesetz('Art. 8 StG')).toBe('StG');
+    expect(erkenneFedlexGesetz('Art. 8 GebVHReg')).toBe('GebVHReg');
+  });
+});
+
+describe('StGB/StG-Links (Screen-Pfad; PDF unberührt, eigene ERLASSE-Liste)', () => {
+  it('Art. 97 StGB → StGB-Basis + #art_97 (nicht StG)', () => {
+    expect(fedlexLinkFuerArtikel('Art. 97 StGB')).toBe(`${FEDLEX.StGB}#art_97`);
+    expect(fedlexLinkFuerArtikel('Art. 30 Abs. 1 StGB')).toBe(`${FEDLEX.StGB}#art_30`);
+  });
+  it('Art. 8 StG → StG-Basis (Stempelabgaben, nicht StGB)', () => {
+    expect(fedlexLinkFuerArtikel('Art. 8 StG')).toBe(`${FEDLEX.StG}#art_8`);
   });
 });
 

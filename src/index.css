@@ -67,6 +67,8 @@
     --font-display:'Geist Variable','Hanken Grotesk';
     --font-sans:'Geist Variable','Hanken Grotesk';
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
+    /* Lese-Serif NUR für den Gesetzes-Volltext (Rubrik V). */
+    --font-serif:'Source Serif 4 Variable','Charter','Georgia';
   }
 
   html { color-scheme: light; }
@@ -302,6 +304,11 @@
   details > summary::-webkit-details-marker { display: none; }
   details > summary::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
   details[open] > summary::after { content: '  ▾'; }
+
+  /* Sprung-Hervorhebung: Ziel-Artikel kurz mit Messing-Fläche markieren
+     (Hash-Sprung aus dem Popover / TOC, Rubrik V «Gesetze»). */
+  @keyframes lc-ziel-blink { 0% { background: var(--brass-100); } 100% { background: transparent; } }
+  .lc-ziel-blink { animation: lc-ziel-blink 2.4s var(--ease); border-radius: .375rem; }
 
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
   .lc-live::before {

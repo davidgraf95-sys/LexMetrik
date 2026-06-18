@@ -22,6 +22,182 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 17./18.6.2026 — RUBRIK V «GESETZE» (browsbare Rechtssammlung) — PROD-DEPLOY (feat/rechtssammlung @ 9d0fa25, lexmetrik.vercel.app)
+
+**Neue Nav-Rubrik V «Gesetze»** (`/gesetze` + Client-lazy `/gesetze/:ebene/:key`),
+4 Katalog-Tore unberührt. **Reader «Richtung A»** (Serif-Lesespalte): amtliche
+Gliederung benannt + Fedlex-analog einklappbar (TOC↔Text synchron), Randtitel in der
+Marge (entdoppelt), amtliche Fussnoten am Fuss (AS/BBl klickbar), Absatz/lit./Ziff. als
+Ein-Klick-Zitate, Querverweis-Autolink, Hover-Zoom, Tab-Titel, **Download** (ganzer
+Erlass), **globale Suche** (Bund+Kantone). **Daten = generierte Sidecars**
+`public/normtext/struktur/{bund,kanton}/<KEY>.json` (Snapshots/Golden UNBERÜHRT);
+Extraktoren `struktur-extrahiere`/`fussnoten-extrahiere` (Fedlex) + `struktur-lexwork`
+(Kanton). **Kantone = Plattform-Adapter:** EIN LexWork-Adapter deckt 73/113; 40 Nicht-
+LexWork → flacher Fallback. **Bund:** 27 Volltext + 30 SPARQL-verifizierte `nur-live-
+link`-Stubs. **D1 Norm↔Werkzeug-Brücke** (`werkzeuge.ts`, einzigartig). Adversarialer
+Bug-/Logik-Check (7 Agenten) → solide; 2 Display-Bugs aus Davids Review gefixt
+(flacher Reader kollabierte; Hover-Zoom verzerrte lange Artikel) + e2e-Regression.
+Gate voll grün, e2e 5/5. Dossier `bibliothek/normen/gesetzessammlung-rubrik-v.md`.
+**WICHTIG:** Branch `feat/rechtssammlung` (Basis db1a737 = feat/normtext-popup) ist
+**deployt, aber UNGEPUSHT und NICHT in main gemerged** — Code lebt nur im lokalen
+Worktree `/private/tmp/lexmetrik-rechtssammlung`. Push/Merge bei Bedarf separat (§9).
+
+## Session 17.6.2026 (abend) — KANTONALER VOLLTEXT-AUSBAU + POPOVER-POLITUR + RECHEN-AUDIT — GEPUSHT + PROD-DEPLOY (feat/normtext-popup @ 4b54f67, lexmetrik.vercel.app)
+
+**Volltext-Ausbau (echte Fallback-Quellen 23 → 3):** `parsePassus` löst jetzt
+Anhang-/Tarif-Ziffern auf (`anhang-segmenter`); generisches **OrdoLex-PDF-Profil**
+(`olexAt`/`olexPar`, Stand aus «(Stand …)»/«(état …)»/SRSZ via neuem rohText-Fallback
+in `adapter-pdf`). NEU mit Volltext: GR/AR/LU/SG/FR/VS/SZ/TI (PDF) + TG/AG/SH (über
+`/app/`-LexWork, Tarif-quelleUrl von `/api/` umgestellt) + ZH AnwGebV, GE RTFMC, VD
+TNo (tolv/210344) / TDC (tolv/135783 — Falschquelle 105540 korrigiert), TI ripetibili
+(m3/atto/141), SZ HSt (lexfind/82040 via sz-Profil), VS OcRF (lex.vs.ch/211.611).
+**ZH-NotGebV-Anhang spaltenbewusst** extrahiert (`extrahiereZhAnhangSpalten` in
+adapter-zh-pdf: Verweis-Spalte getrennt, Silbentrennung gefügt) — vorher unleserlich
+verschränkt («Begrün-2.2.1, 2.2.2, dung» → «Begründung … (vgl. Ziff. …)»). 118 Ziffern.
+Verbleibende 3 Fallback: UR-urilaw (privater Tarif), UR-Grundbuch-PDF (verstümmelt),
+SG GebT 821.5 / SG 941.12 / OW 210.32 (nurPdf-Onboarding offen, s. Audit-Doc).
+
+**Popover-Vereinheitlichung** (Darstellung, Wortlaut unverändert — Freigabe David):
+Datum IMMER `DD.MM.YYYY`; Bund «Fassung vom:» / Kanton «In Kraft seit:»; Tarif-Text-
+Normalisierung (verschluckte Trenn-Leerzeichen); Staffel zeilenweise. **Regeln
+dokumentiert:** `bibliothek/normen/norm-vorschau-snapshot-system.md` (§ Darstellungs-Regeln).
+«Erstrecherche» aus allen nutzerseitigen Strings entfernt.
+
+**Rechen-Audit** (4-Agenten-Fan-out, ~250 Tarif-Einträge, Regel↔Gesetzesartikel):
+Mehrheit OK. **A (Wert-/Norm-Abweichungen) mit PRÜFEN-Hinweis geflaggt — Fix später
+(Entscheid David)**: NW Testament/Erbvertrag §18-Rahmen vs §20-Staffel, UR PE Art.30
+(Strafnorm), VS/GE/AI Schlichtung, GE/VD PE, TG GK §11 (5000 vs 20'000). **B-Anker
+korrigiert:** VS Art.96→32/33, VD GK 17→18, JU PE 7→13, ZG PE. **C-Coverage gefixt:**
+VS-94116 / SZ-280.411 (4837→5862) / VD-105540-Falschquelle. **Vollständige Befundliste:
+`bibliothek/AUDIT-TARIF-2026-06-17.md`** (offen: A-Wertfragen, systematische AR-Anker-
+Verfeinerung, SG/OW-nurPdf-Onboarding).
+
+**Tor + Deploy:** gate voll grün · check:netz Drift 0 / 0 Warnungen · Bug-Check
+(Gate+Netz+ZH-No-Pollution+Stand-Fallback+Faithfulness+Browser-Render). Commit 4b54f67
+(50 Dateien, Pathspec; Fremd-WIP `FAHRPLAN-RECHTSSAMMLUNG.md` einer Parallel-Session
+unberührt). Deploy aus sauberem /tmp-Worktree → **lexmetrik.vercel.app READY**; Live-
+Nachkontrolle: Kernroute + neue Snapshots HTTP 200, ZH-2.2.1 lesbar.
+
+## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» + SNAPSHOT-AUSBAU (27 Bundesgesetze) + PHASE 2 (kantonal §) — GEPUSHT + PROD-DEPLOY (Branch feat/normtext-popup @ b9d35e6)
+
+**➡️ NÄCHSTER AGENT — offene Hauptaufgabe:** «Volltext bei ALLEN Kantonen im
+Popup» (pro Ziffer genau, alles bauen → EIN Deploy). Es ist ein **atomarer Build**
+(parsePassus-Anhang + alle Quell-Adapter + Voll-Regenerierung Kanton + Verifikation
+GEMEINSAM, sonst Tor rot). Validierte Engine liegt bereit (Commit `800f577`, inert):
+generischer Ziffer-Segmentierer + ZH-PDF-Integration (ZH NotGebV 118 Ziffern
+bewiesen); lexfind `/tolv/<id>` = uniformer PDF-Zugang. **Vollständige
+Schritt-für-Schritt-Anweisung + Fallstricke: `FAHRPLAN-GESETZESTEXT-POPUP.md`,
+Abschnitt «HANDOVER (17.6.2026) — ATOMARER ANHANG-/PDF-VOLLTEXT-BUILD».** Prod ist
+stabil @ `b9d35e6`; Engine ungepusht/nicht-deployt — keine Regression.
+
+**PROD-DEPLOY 17.6.2026 (David-Ja), 3 Stände:**
+- @ 474b10a: Linker (Phase 1/3) + Snapshot-Ausbau 27 Bundesgesetze.
+- @ f19ef9a: + Phase 2 (kantonale «§ N» inline) NACH fundiertem Bug-Check.
+- @ b9d35e6: + 3 Polish-Fixes (s. u.) NACH fundiertem Bug-Check.
+Prod via sauberem /tmp-Worktree → **lexmetrik.vercel.app**. Nachkontrolle live:
+Kernrouten HTTP 200, Bund- (BBG) + Kanton-Snapshot (LU-265) 200, ZH §4-Popover
+als 9 Zeilen, 0 tote Links, 0 Console-Fehler.
+**Bug-Check Phase 2 (2 Review-Agents + empirisch):** HIGH-Bug gefunden+behoben —
+KantonNormText verlinkte bare «Art. N» eines FÖDERALEN Posten (BGer, fedlex-URL)
+kantonal → toter Popover; Fix: nur «§» + nur Nicht-fedlex-Quelle (Commit f19ef9a).
+**3 Polish-Fixes (b9d35e6, Befunde David):** (1) föderaler Posten → KantonArtikel-
+Trigger routet fedlex-Quellen über NormText→NormChip (BGG-Volltext statt Fallback)
+— behebt zugleich den oben genannten pre-existing Punkt; (2) «Anhang Ziff. 1.1.1»
+& andere nicht parsbare Artikel sind jetzt klickbar (Link zur amtlichen Quelle);
+(3) Tarif-Staffel-Tabellen (ZH GebV OG §4, ZH AnwGebV §4, BS GGR §5) im Popover
+zeilenweise statt als Blob (Korpus-Scan: nur diese 3, 0 Fehlauslösungen).
+**Fachliche Abnahme durch David.**
+
+**Auftrag David:** «kannst du an der Gesetzesverlinkung weiterarbeiten» → «jede Norm die
+genannt wird soll verlinkt sein» → «weiterarbeiten bis Ziel erreicht» → «verifizieren und
+Bug-Check» → «alles doppelt verifizieren von Anfang an». Detail: `FAHRPLAN-GESETZESTEXT-POPUP.md`
+(ERLEDIGT-Abschnitt 17.6.).
+
+- **Was:** Im FLIESSTEXT genannte Bundes-Normen («Art. N … GESETZ») werden zum Popover-
+  Trigger (bisher nur an strukturierten Chip-Stellen). Neue Komponente `NormText` (universell:
+  Normen via `NormChip`-Popover UND Rechtsprechung via `RechtsprechungText`); `NORM_IM_TEXT`-
+  Regex in `fedlex.ts` (Gesetz-Namen aus FEDLEX-Keys + «GebV SchKG»-Alias, single source;
+  KEIN blinder `§`-Regex). `NormChip` um `linkClass` erweitert (Default = heutige Pillen-Klasse,
+  SSR byte-gleich). Nicht-auflösbare Nennungen bleiben Text (kein toter Link, §8).
+- **Eingebaut (~90 Stellen, screen-only):** `ErgebnisAnzeige` (Warnungen+Annahmen ALLER
+  Rechner — ersetzt das frühere `RechtsprechungText`), Wizard-Bausteinprotokoll,
+  `VorlagenSeite`-Gates, 11 Formulare, 18 Vorlagen-Seiten (warnungen/hinweise/blocker),
+  `Dokumentmappe`, `KvGerichtWahl`. Logikschicht unberührt (§3); Hinweis-Texte selbst
+  unverändert, nur Inline-Rendering.
+- **Verifikation (doppelt):** `npm run gate` voll grün (tsc/vitest/**golden byte-gleich**/lint/
+  check), 13 neue Tests; 2 unabhängige adversariale Reviews (Regex/Komponente + Integration)
+  ohne echten Bug (kein ReDoS, keine nested `<a>`, keine Key-Kollision, SSR effect-only);
+  Browser-Smoke (prozesskosten 9 Inline-Links + Popover «Art. 95 ZPO» öffnet, arbeitsvertrag 8,
+  vollmacht 2; 0 nested `<a>`, 0 Console-Fehler über 9 Seiten). Stale-`dist`-Fehlmessung
+  (alter preview-Prozess :4173) erkannt + nach Neubau widerlegt.
+- **Phase 3 (Bund-Prosa) ERLEDIGT 17.6.:** (3a) Field-hint + FehlerBox zentral durch NormText
+  (deckt alle Hinweise/Eingabefehler an EINER Stelle); (3b) 156 statische «Art. N GESETZ»-
+  Nennungen in JSX-Fliesstext (Vorlagen-/Rechner-Prosa) inline verlinkt — nur reine einzeilige
+  Text-Knoten; Entity-Knoten/mehrzeilig/Choice-Labels/Placeholder bewusst aus. Gate grün
+  (golden byte-gleich), Browser-Smoke 0 nested `<a>`/0 Console-Fehler. Commits a5a00a4
+  (Phase 1), ff71685 (3a), 385bbf6 (3b).
+- **Snapshot-Ausbau «jedes verwendete Gesetz in seiner Gesamtheit» + «§≡Art» (Auftrag David):**
+  9 weitere Bundesgesetze als Volltext-Snapshot → **Bund 27 Gesetze / 6664 Artikel**
+  (MWSTG·URG·BewG·EOG·SVG·DSG·BBG·GBV·JStPO). ELI+Konsolidierung via Fedlex-SPARQL ermittelt,
+  SR-Nr.+Anker am Filestore empirisch verifiziert (§7); Linker (NORM_IM_TEXT/FEDLEX) erkennt
+  sie automatisch, Popover lädt den Volltext (Kette end-to-end verifiziert). Generator: neuer
+  `--nur=bund`-Modus (Bund nachführen ohne kantonale Quellen neu zu ziehen, Golden gemischt);
+  Extractor: leerer Artikel-Körper (z. B. SVG art_107 aufgehoben) faithful als «aufgehoben».
+  ATSG/IPRG bewusst NICHT (nur Kommentar/Test). Commits 5294edd, a00fdcb.
+- **Regel «kantonales Gesetz nur als PDF» (Auftrag David 17.6.):** Quellen-Priorität
+  LexWork→HTM→HTML→PDF→Live-Link; PDF browserlos via `adapter-pdf.ts`-Profil (pdfjs Build-Zeit,
+  Body-Spalten-x, Stand/Drift-Token, Qualitäts-Tor → sonst ehrlicher Fallback §8); Speicherung
+  wie Bund/LexWork inkl. Provenienz (§7). Dokumentiert: CLAUDE.md §7 +
+  `bibliothek/normen/norm-vorschau-snapshot-system.md` (§11).
+- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» inline über Quelle-Kontext); Rest-Prosa (Entity-
+  Knoten &gt;/&amp;, mehrzeilige Text-Knoten, prop-geroutete Choice-Labels); GBV: neuere
+  Konsolidierung (2026) ist Fedlex-SPA-only, daher 20240101 gepinnt (Live-Link massgeblich).
+  **Push/Deploy + fachliche Abnahme offen (§9 / David selbst).**
+
+## Session 16./17.6.2026 — NORM-VORSCHAU-POPOVER (Volltext Bund+Kantone) GEBAUT (Branch feat/normtext-popup, ungepusht)
+
+**Auftrag David:** «Popup mit Gesetzestext statt Weiterleitung, insbesondere
+kantonal, relevante Stelle markiert» → iterativ stark ausgebaut («weiter»,
+«mach was du für richtig hältst», «du kennst das Endziel», «so wie Basel-Stadt
+ist super»). Fahrplan `FAHRPLAN-GESETZESTEXT-POPUP.md`; Build-Regel in **CLAUDE.md
+§7** (Zitat-Ausnahme + Snapshot-Build-Muster); Dossiers `bibliothek/normen/
+norm-vorschau-snapshot-system.md` + `kantonale-tarif-zitat-befunde.md`.
+
+- **Was:** Klick auf einen Norm-Verweis öffnet ein Popover mit dem Artikel-
+  **Volltext** (statt sofort extern); zitierte Stelle (Abs./lit./Ziff.) markiert
+  + eingescrollt; Fuss «In Kraft seit» + Live-Link; aufgehobene Stellen als
+  «aufgehoben». Progressive Enhancement: ohne Snapshot ehrlicher Link-Fallback,
+  PDF/Golden/Prerender unverändert. A11y (Fokus-Falle, Scroll-Lock, Esc).
+- **Architektur:** Build-time-Snapshots `public/normtext/{bund,kanton}/` (Generator
+  `npm run normtext`, NIE von Hand), Client-Loader lazy je Datei (Manifest
+  quelleUrl→Datei), ein `NormPopover` für alle Tiers. **Ganze Gesetze gespeichert**
+  (alle Artikel je Erlass, kantonal wie Bund; einheitliches Label § N / Art. N).
+- **Abdeckung:** Bund **5760 Art./18 Gesetze** (Fedlex-Cache, inkl. StGB/StG +
+  Zuständigkeits-Verweise klickbar). Kanton **~5700 Art./103 Erlasse** über
+  **vier Adapter-Tiers, beste Quelle je Kanton:** LexWork-JSON (19 Kt.) · Word-HTM
+  (NE/GE/**TI**) · ZH-PDF (zhlex→notes.zh.ch via JS-Redirect, pdfjs build-time) ·
+  generisches PDF (SZ/VD/JU). Aufzählungen vollständig, Tarif-Tabellen als gepaarte
+  Items, präzise lit/Ziff-Markierung. Ehrlicher Fallback nur wo nichts
+  Strukturiertes existiert (VD-HTML ist SPA/API-gated → begründet PDF).
+- **Korrektheit/Pflege:** «aktuell in Kraft»-Garantie über alle Tiers (Bund
+  Konsolidierung; LexWork version_uid; HTM/ZH/PDF quelleHash) — Drift-Tore
+  `check:normtext`(-netz) + Vollständigkeitstest `check:vollstaendigkeit`. Bei
+  Rechtsänderung: Drift rot → `npm run normtext` neu.
+- **Fachliche Tarif-Korrekturen (durch den Vollständigkeitstest ans Licht):**
+  **SH** Schlichtung totes ZPO-273.100 → JG 173.200 Art. 82 (Werte 50–300→100–1000,
+  David-Ja); **OW** GK Art. 7 aufgehoben → Art. 12 GebOR (selbst bestimmt am GOG);
+  **LU** quelleUrl 228→258; 5 NE/GE-Zitate (Art. 14 ch., LERF Art. 10, GE-Erlasse)
+  — alle live-verifiziert, Status `recherche` (Abnahme David offen).
+- **Verifikation:** 2 unabhängige Bug-Check-Runden + Einheitlichkeitscheck, alle
+  Befunde behoben (ZH-Stand=Inkraft, einheitl. Label, Tabellen-Kopplung, FR-
+  Markierung, Lückentor). Gate **voll grün**, golden byte-gleich, Drift 0, ~70
+  Commits. **Browser-Smoke aller 26 Kantone** durchgeführt (0 Console-Fehler).
+  **Push/Deploy + fachliche Abnahme offen (§9 / David selbst).**
+- **OFFEN nächste Session (David 17.6.):** «viele genannte Artikel im FLIESSTEXT
+  noch nicht verlinkt» (Hinweise/Begründungen/Tarif-`hinweis`) — Inline-Auto-Linker
+  `NormText` (~2093 Nennungen, ~40 % federal sofort auflösbar). Plan + Einbaupunkte
+  am Ende von `FAHRPLAN-GESETZESTEXT-POPUP.md`.
+
 ## Session 16.6.2026 — BEURKUNDUNGS-AUSBAU: 3-fach-Verifikation + Gesamtkosten + UI-Fix
 
 **Auftrag David:** «verifiziere das alles / führe nochmals Recherche durch» + «sind

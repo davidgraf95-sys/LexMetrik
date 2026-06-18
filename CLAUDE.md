@@ -91,6 +91,42 @@ widersprechen: dann **abweichend umsetzen und die Abweichung offenlegen**.
 `verified: true` und der Status «geprüft» setzen die fachliche Abnahme durch
 David (fachkundige Person) voraus — nie automatisch setzen.
 
+**Zitat-Ausnahme (Norm-Snapshot, Entscheid David 16.6.2026):** Gespeicherter
+Gesetzestext (Norm-Snapshot für die Volltext-Vorschau) ist zulässig, wenn er
+trägt: (a) **Stand** (Konsolidierungs-/Abrufdatum), (b) **amtliche Quelle-URL**,
+(c) im UI **sichtbaren Live-Link** zur geltenden Fassung, (d) **automatische
+Drift-Erkennung** gegen die Quelle (kein stilles Veralten). Fehlt eines davon,
+ist der Snapshot kein Zitat, sondern eine zweite Wahrheit (§5) — dann nicht
+speichern. Der Snapshot ist nie die massgebliche Fassung; das ist die amtliche
+Quelle (in der UI offengelegt, §8).
+
+**Build-Regel Norm-Snapshots (verbindlich, Auftrag David 16.6.2026):** Die
+Volltext-Snapshots (`public/normtext/`) werden AUSSCHLIESSLICH vom Generator
+`npm run normtext -- --datum=$(date +%F)` erzeugt, nie von Hand editiert. Jeder
+künftige Build/jede neue Norm-Quelle folgt zwingend diesem Muster:
+1. **Vollabdeckung** — ALLE Artikel je Erlass extrahieren (Bund: jedes
+   `<article id="art_*">` der gepinnten Fedlex-Konsolidierung; Kanton: jeder
+   Artikel des LexWork-Erlasses), nicht nur die zitierten.
+2. **Aufzählungen vollständig** — lit./Ziff. als `items` je Absatz; nichts
+   abschneiden (sonst wirkt die Bestimmung unvollständig).
+3. **Immer die GELTENDE Fassung** — Bund über die gepinnte, als aktuell
+   verifizierte Konsolidierung (`scripts/fedlex-cache.sh` +
+   `check:fedlex-versionen`); Kanton über `current_version` der LexWork-API
+   (`version_uid` als Drift-Token). Künftige, noch nicht in Kraft stehende
+   Fassungen werden NICHT verlinkt.
+4. **Provenienz je Eintrag** — `stand` = In-Kraft-Datum, `quelleUrl`,
+   `fassungsToken`, `sha` (über Text + items); §7-Zitat-Ausnahme (a)–(d).
+5. **Drift-Tor** — `check:normtext` (offline) + `check:normtext-netz` (live
+   version_uid/Konsolidierung) müssen grün sein; im `gate`/`check:netz`
+   verdrahtet. Neue Quellen ergänzen einen browserlosen Adapter (Fetch +
+   strukturierte Extraktion + Drift-Token), kein Headless-Browser, kein
+   Scraping pro Kanton. Detail-Referenz: `FAHRPLAN-GESETZESTEXT-POPUP.md`.
+   **Kantonales Gesetz nur als PDF** (Quellen-Priorität LexWork → HTM → HTML →
+   PDF → Live-Link-Fallback): verbindliche Extraktions-/Speicher-Regel (Profil
+   im `adapter-pdf.ts`, pdfjs Build-Zeit, Body-Spalten-x, Stand/Drift-Token,
+   Qualitäts-Tor → sonst ehrlicher Fallback) in
+   `bibliothek/normen/norm-vorschau-snapshot-system.md` (§11).
+
 ## §8 Ehrlichkeit gegenüber Nutzern
 
 Das Status-Modell (entwurf / geprüft / geplant) zeigt den echten

@@ -1,0 +1,961 @@
+{
+  "erzeugt": "2026-06-17",
+  "eintraege": [
+    {
+      "id": "kanton/BE/215.326.2/art_1",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Erwerb eines Grundstücks ist dem Kanton gemäss den nachfolgenden Bestimmungen eine Steuer zu entrichten."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "5a1c4ca03849ea2c076652ba047f875f0f06f94c8dbb03ffeaed8c04a4722064"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_2",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steuerpflichtig für die Handänderungssteuer sind die Rechtserwerberin oder der Rechtserwerber und im Falle von Artikel 5 Absatz 2 Buchstaben c und d die Abtreterin oder der Abtreter der Rechte."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "2c72f414ae4740d3f096a7bc2a71ab32bacb2b64547284dc9b441c807a764f5f"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_3",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer verjährt zehn Jahre nach Eintritt der Steuerpflicht."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "56b12b16e59a2d99164841a3ef9e8f6d153f1b5004fa3aedca6821c7ccdaf10c"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_4",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundstücke im Sinne dieses Gesetzes sind",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Liegenschaften und Wasserkräfte,"
+            },
+            {
+              "marke": "b",
+              "text": "im Grundbuch aufgenommene selbständige und dauernde Rechte wie Bau-, Quellen- und Ausbeutungsrechte und Wasserrechtsverleihungen,"
+            },
+            {
+              "marke": "c",
+              "text": "Kuhrechte,"
+            },
+            {
+              "marke": "d",
+              "text": "Bauwerke, die aus einem andern Grund einen besondern Eigentümer haben,"
+            },
+            {
+              "marke": "e",
+              "text": "Bergwerke,"
+            },
+            {
+              "marke": "f",
+              "text": "Miteigentumsanteile an Grundstücken."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "51ac82d681be9690603aaf59a54712c87d12565be4ebb9fb4a12ca1c02088924"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_5",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Handänderungen von Grundstücken im Sinne dieses Gesetzes sind",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der zivilrechtliche Eigentumsübergang,"
+            },
+            {
+              "marke": "b",
+              "text": "die Errichtung eines selbständigen und dauernden Rechtes zugunsten einer Drittperson,"
+            },
+            {
+              "marke": "c",
+              "text": "die Überlassung neuen Landes, die Ersitzung und Aneignung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dem zivilrechtlichen Eigentumsübergang werden gleichgestellt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Änderung im Personenbestand oder im Beteiligungsumfang einer Gemeinschaft zu gesamter Hand,"
+            },
+            {
+              "marke": "b",
+              "text": "der Erwerb von Anteilsrechten an einer Immobiliengesellschaft, sobald die Erwerberin oder der Erwerber die Mehrheitsbeteiligung erreicht,"
+            },
+            {
+              "marke": "c",
+              "text": "die Abtretung der Rechte aus einem Kaufvertrag,"
+            },
+            {
+              "marke": "d",
+              "text": "die Übertragung eines Kaufsrechtes."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Im übrigen stellt die Übertragung wirtschaftlicher Verfügungsmacht keine Handänderung dar; die Steuerumgehung bleibt vorbehalten."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "2a9aab30ad1b48bc243a69ac3385e536b5697bc232c013f20994e046cee7197c"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_6",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer wird auf Grund der Gegenleistung für den Grundstückerwerb bemessen. Diese besteht aus allen vermögensrechtlichen Leistungen, die die Erwerberin oder der Erwerber der Veräusserin oder dem Veräusserer oder Dritten für das Grundstück zu erbringen hat."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "005373330c7b691fb869e2b44b9fb0a53cc236f3359115e5d2feb30b5e0072a8"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_6_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Kaufverträgen über eine schlüsselfertige Baute oder Stockwerkeinheit und bei Kaufverträgen, die mit einem Werkvertrag so verbunden sind, dass eine schlüsselfertige Baute oder Stockwerkeinheit erworben wird, ist die Steuer auf dem Gesamtpreis (Landpreis und Werklohn) zu bemessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Verbindung von Kauf- und Werkvertrag im Sinne von Absatz 1 liegt vor, wenn beim Abschluss des Kaufvertrags eine vertragliche Bindung zwischen der Veräusserin oder dem Veräusserer oder einer dieser oder diesem nahestehenden Person und der Erwerberin oder dem Erwerber hinsichtlich eines aktuellen oder künftigen Werkvertrags besteht."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "3d60d7e5e216eaa90cbeb00a1ebaae93971cffb401c61d52a945210f2c49826c"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_7",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind zeitlich wiederkehrende Leistungen vereinbart, so gilt als Gegenleistung die Summe aller während der ersten 20 Vertragsjahre zu erbringenden Leistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde eine wiederkehrende Leistung bis zum Ableben der berechtigten Person vereinbart, so wird die Jahresleistung mit der Anzahl der Jahre der Lebenserwartung gemäss Rententabelle, höchstens aber mit 20, multipliziert."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "1958970dd3112cd3c276f9243b49e5233e4e07c9919195b2e9ebb0568d55f59f"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_8",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Tauschvertrag werden alle Leistungen oder Werte zusammengezählt. Werden die Tauschgegenstände ohne Angabe eines Betrages als gleichwertig bezeichnet, so wird der Tauschgegenstand mit dem höheren amtlichen Wert doppelt gerechnet. Er ist zu berichtigen, wenn vorher eingetretene Wertveränderungen noch nicht geschätzt worden sind."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "75e1a2a75b2d3c54d35c61374a640062ebc3df468fb88b35203dea3b32870d37"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_9",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfolgt die ganze oder teilweise Aufhebung von gemeinschaftlichem Grundeigentum durch Übertragung von Grundstücken der Gemeinschaft auf einzelne oder alle beteiligten Mitglieder der Gemeinschaft, wird die Handänderungssteuer nur auf den Ausgleichsleistungen erhoben. Änderungen der Beteiligungsquoten gelten nicht als Ausgleichsleistungen. Artikel 5 Absatz 2 Buchstabe a findet in diesem Fall keine Anwendung."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "ef12190efceb222f91acc7da2c73d687f8b47a84e7a119e5c2a8b3cf3c9d8e19"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_10",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesamteigentum wird zur Berechnung der Steuer wie Miteigentum behandelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Höhe der Anteile nicht bekannt, so wird vermutet, sie seien gleich gross."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "5934dac3aa671a91441296e302decf4e1bffd77ad5b0d36f7175bd8e92cf8545"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_11",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Handänderungssteuer beträgt 1,8 Prozent."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Steuern unter 100 Franken werden nicht erhoben."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "1ed4f909bd0eeefe21ace517a337d770931592c53700ee2b8ed14802a8f5d839"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_11_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erwerberin oder der Erwerber eines Grundstücks kann bei der Grundbuchanmeldung ein Gesuch um eine nachträgliche Steuerbefreiung stellen, wenn sie oder er das Grundstück als Hauptwohnsitz nutzen will."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Grundbuchamt weist das Gesuch ab, wenn dieses im Hinblick auf die Voraussetzungen gemäss Artikel 11b von vornherein aussichtslos erscheint."
+        },
+        {
+          "absatz": "3",
+          "text": "In den anderen Fällen stundet das Grundbuchamt die Handänderungssteuer auf den ersten 800 000 Franken der Gegenleistung für den Erwerb des Grundstücks."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird die Stundung gewährt und liegen die übrigen Voraussetzungen vor, nimmt das Grundbuchamt den Eintrag im Hauptbuch vor."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die gestundete Steuer besteht ein gesetzliches Grundpfandrecht gemäss Artikel 22 Absatz 2, das vom Grundbuchamt zusammen mit dem Erwerbsgeschäft im Hauptbuch eingetragen wird."
+        },
+        {
+          "absatz": "6",
+          "text": "Für das Verfahren gelten die Artikel 17 ff."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "febb39db992639e22634c858918658291c592940d3255676f420a00eae349743"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_11_b",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "11_b",
+      "artikelLabel": "Art. 11b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gestundete Steuer gemäss Artikel 11a Absatz 1 wird nicht erhoben, wenn das Grundstück der Erwerberin oder dem Erwerber als Hauptwohnsitz dient. Ein Hauptwohnsitz ist von der Erwerberin oder vom Erwerber während mindestens zweier Jahre ununterbrochen, persönlich und ausschliesslich zum Wohnzweck zu nutzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Hauptwohnsitz muss innert einem Jahr ab Grundstückserwerb in der entsprechenden Baute begründet werden, wenn diese bereits besteht. Muss die Baute noch erstellt werden, hat der Bezug innert zwei Jahren ab Grundstückserwerb zu erfolgen. In begründeten Ausnahmefällen können diese Fristen durch das Grundbuchamt erstreckt werden."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "30be8e66dafef6f9fff1d6235556581ed3128b0120e52f2dd259da7e6f8868c2"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_12",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keine Handänderungssteuer ist zu entrichten",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beim Erwerb durch die Eidgenossenschaft, den Kanton oder durch eine öffentlich-rechtliche Körperschaft mit eigener Rechtspersönlichkeit gemäss Gemeindegesetz vom 16. März 1998 (GG);"
+            },
+            {
+              "marke": "b",
+              "text": "beim Ausschluss der Erhebung durch Bundesrecht oder ein kantonales Gesetz;"
+            },
+            {
+              "marke": "c",
+              "text": "bei der Umwandlung von Gesamteigentum in Miteigentum und umgekehrt, ohne dass die Personen und der Umfang ihrer Beteiligung ändern;"
+            },
+            {
+              "marke": "d",
+              "text": "beim Erwerb durch den andern Ehegatten, die andere eingetragene Partnerin, den andern eingetragenen Partner, Nachkommen, Stiefkinder und Pflegekinder, sofern bei Pflegekindern das Pflegeverhältnis mindestens zwei Jahre gedauert hat; bei der Erbteilung ist das Verhältnis zwischen der Erwerberin oder dem Erwerber und der Erblasserin oder dem Erblasser massgebend;"
+            },
+            {
+              "marke": "e",
+              "text": "beim Erbgang, bei der güterrechtlichen Auseinandersetzung und bei der Schenkung;"
+            },
+            {
+              "marke": "f",
+              "text": "bei der gemischten Schenkung an Verwandte im Sinne von Artikel 457 ff. ZGB und beim Erbvorbezug, wenn die Leistung der übernehmenden Person ausschliesslich in der Übernahme von aufhaftenden Grundpfandforderungen zugunsten Dritter, in der Vereinbarung einer Verpfründung zugunsten der abtretenden Person oder in der Verpflichtung zu Ausgleichsleistungen an Miterbinnen und Miterben besteht;"
+            },
+            {
+              "marke": "g",
+              "text": "bei Handänderungen an juristische Personen, die öffentliche oder gemeinnützige Zwecke verfolgen, sofern das Grundstück ausschliesslich und unwiderruflich diesen Zwecken dient;"
+            },
+            {
+              "marke": "h",
+              "text": "bei Leistungen des Kantons an den Erwerb eines Grundstücks oder die damit zu erfüllende Aufgabe;"
+            },
+            {
+              "marke": "i",
+              "text": "bei Änderungen im Grundbuch, die durch eine Baulandumlegung bewirkt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "dd7ab31b7a90f02ca17849620ed18adc5da3274fafea0cc65bcbf86be1fd2ba5"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_16",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer wird vom Grundbuchamt veranlagt und schriftlich eröffnet."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "7446f3a2de07b8e57c024bff3d3a4b3582611cc2d934a846d3844f47de799ceb"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_16_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "16_a",
+      "artikelLabel": "Art. 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Erfüllung der sich aus diesem Gesetz ergebenden Aufgaben steht dem Grundbuchamt das Basisprofil gemäss Artikel 4 Absatz 1 Buchstabe d des Gesetzes vom 10. März 2020 über die zentralen Personendatensammlungen (Personendatensammlungsgesetz, PDSG) einschliesslich früherer Daten im Abrufverfahren zu Verfügung."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Beurteilung, ob die Voraussetzungen zur Gewährung der nachträglichen Steuerbefreiung gemäss Artikel 11a erfüllt sind, stehen dem Grundbuchamt zudem insbesondere die Angaben zum Zivilstand, zur Eltern-Kind-Beziehung sowie zum Haushalt einschliesslich früherer Daten im Abrufverfahren zur Verfügung."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "5be656a474503becfa302de0df349342ac353b5f565c303262ca8a31d9c0f847"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_17",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer wird aufgrund der Selbstdeklaration der steuerpflichtigen Person und der bei der Grundbuchanmeldung eingereichten Ausweise veranlagt. Das Grundbuchamt kann ergänzende Unterlagen verlangen. Abweichungen von der Selbstdeklaration sind zu begründen."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt die Erwerberin oder der Erwerber ein Gesuch um nachträgliche Steuerbefreiung gemäss Artikel 11a, veranlagt das Grundbuchamt die Steuer auf der gesamten Gegenleistung gemäss Artikel 6 ff. Das Grundbuchamt stundet den auf die ersten 800 000 Franken entfallenden Steuerbetrag für maximal vier Jahre ab Grundstückserwerb. Diese Frist verlängert sich um die Dauer einer allfälligen Erstreckung gemäss Artikel 11b Absatz 2."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "1e74db8c98f389e5794c90598bf80c0604d1a0ab57e3dab47d9de43e8ca50e08"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_17_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erwerberin oder der Erwerber hat gegenüber dem Grundbuchamt innert 30 Tagen nach Ablauf der Stundung gemäss Artikel 17 Absatz 2 unaufgefordert den Nachweis zu erbringen, dass alle Voraussetzungen zur nachträglichen Steuerbefreiung gemäss Artikel 11b erfüllt sind. Es sind sämtliche Beweismittel beizulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Voraussetzungen zur Steuerbefreiung erfüllt, heisst das Grundbuchamt das Gesuch um eine nachträgliche Steuerbefreiung gut, verfügt diese und löscht das gesetzliche Grundpfandrecht gemäss Artikel 11a Absatz 5."
+        },
+        {
+          "absatz": "3",
+          "text": "Kommt das Grundbuchamt zum Schluss, dass die Voraussetzungen zur nachträglichen Steuerbefreiung gemäss Artikel 11b nicht erfüllt sind, weist es das Gesuch ab und hebt die Stundung auf."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "bb64159b7c2b7557cdce98061c61c560024b0c31ab14b746adc0ee35417a379c"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_17_b",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "17_b",
+      "artikelLabel": "Art. 17b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegt eine rechtskräftige Verfügung gemäss Artikel 17a Absatz 3 vor, bezieht das Grundbuchamt die Steuer samt Zins ab dem Zeitpunkt des Grundstückserwerbs. Artikel 21 findet Anwendung."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "d55d9dea59dfbdde8b918776e7b0500a39999332fe30d3bf44096caccd9dc39d"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_18",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Fällen, in denen kein Grundbucheintrag erfolgt, hat die oder der Pflichtige innert 30 Tagen seit dem Erwerb demjenigen Grundbuchamt, in dessen Region der wertvollere Teil der Grundstücke liegt, den Steuertatbestand zu melden und die nötigen Ausweise vorzulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die verurkundende Notarin oder der verurkundende Notar und das Handelsregisteramt haben die Parteien auf die Steuer- und Meldepflicht hinzuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Handelsregisteramt hat dem Grundbuchamt von jeder Änderung, die eine Steuerpflicht begründet, Kenntnis zu geben. Die kantonale Steuerverwaltung meldet unverzüglich jede von ihr festgestellte neue Mehrheitsbeteiligung an einer Immobiliengesellschaft; sie hat dem Grundbuchamt die für die Veranlagung erforderlichen Auskünfte zu erteilen."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "1c7b6952f6544aabce7e33cfe00765c6ea668a50ead9b5329e3be4936dc1b7f1"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_18_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "18_a",
+      "artikelLabel": "Art. 18a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat die steuerpflichtige Person die verlangten Unterlagen trotz Mahnung nicht eingereicht und kann deswegen mangels zuverlässiger Angaben die Gegenleistung nicht einwandfrei ermittelt werden, so nimmt das Grundbuchamt die Veranlagung nach pflichtgemässem Ermessen vor."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "ee79c2a5ec33c71deb799a01a498238cbf63fcc6076e197e9576edb7c3eed88b"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_19",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ergibt sich aus Tatsachen oder Beweismitteln, die dem Grundbuchamt vorher auch bei pflichtgemässer Sorgfalt nicht bekannt sein konnten, dass eine Veranlagung unvollständig ist, so findet eine Nachveranlagung statt."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "ebe1efa0e5d04c4ff7af19c9d352cd6a4b590e5761c6e11d5c11e9d2ce800440"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_20",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer wird bei der Grundbuchanmeldung fällig und ist gleichzeitig aufgrund der Selbstdeklaration zu entrichten. Bei der Veranlagung ohne Grundbuchanmeldung wird die Steuer mit der Eröffnung der Veranlagungsverfügung fällig und ist innert 30 Tagen zu entrichten."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "7b04f099334c9bd7cfff471173a0ce1b245fcce2ec139aa771c12ca2ae920cbd"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_21",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu viel bezahlte Beträge werden mit Zins zurückerstattet. Zu wenig bezogene Beträge werden mit Zins nachgefordert."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei verspäteter Zahlung der Steuer ist ein Verzugszins zu entrichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Höhe des Verzugs- bzw. des Vergütungszinses gilt der Satz, welcher vom Regierungsrat für den Verzugs- und Vergütungszins bei der direkten Kantonssteuer festgesetzt wird."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "8debf41f900c148a825d6d0e12ee3f9c3f6ee3c516a44f857dcfebf001c17ceb"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_22",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor der Bezahlung der Steuer darf kein Eintrag ins Hauptbuch erfolgen; Artikel 25 Absatz 3 bleibt vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Steuer besteht ein gesetzliches Grundpfandrecht im Sinne von Artikel 109 Absatz 1 Buchstabe d des Gesetzes vom 28. Mai 1911 betreffend die Einführung des Schweizerischen Zivilgesetzbuches (EG ZGB)."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "a7ad4ef2823360dd240ba787b1d90881048ba4624dd8b2ba1cd786f28ed4f920"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_23",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Direktion für Inneres und Justiz erlässt oder stundet auf Gesuch hin die Steuer ganz oder teilweise, wenn deren Bezahlung für die betreffende Person eine offenbare Härte bedeutet oder sie in ihrer wirtschaftlichen Existenz gefährdet."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stundet die Steuer für die Dauer des Erlassverfahrens."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "4a43a68e769bdef8ae7cb6f13dfb73c0ca45ea30fe1ec1f1d777988b26272b72"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_24",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann auf Gesuch hin die Steuer ganz oder teilweise erlassen, wenn bedeutende Interessen der bernischen Volkswirtschaft, namentlich die Förderung der Wirtschaft, den Erlass rechtfertigen. Sein Beschluss ist kantonal letztinstanzlich."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "591ea743f715c113550c63979c29e914ca608e5dd03e6df337cd2f04460f8279"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_24_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erlassverfahren gemäss Artikel 24 stundet die Wirtschafts-, Energie- und Umweltdirektion die Steuer für die Dauer des Verfahrens."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "766b5eaaa64e138eb766c67c2a6d0d556a3f028a49ce31fc3f32c74005fee2b9"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_25",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erlass- oder Stundungsgesuch ist spätestens innert 30 Tagen seit Eintritt der Rechtskraft der Steuerveranlagung bzw. der Verfügung gemäss Artikel 17a Absatz 3 beim Grundbuchamt zuhanden der Stundungs- bzw. Erlassbehörde einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "An den Erlass oder die Stundung können Bedingungen geknüpft und im Grundbuch angemerkt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Aufgrund der Stundungsverfügung der Wirtschafts-, Energie- und Umweltdirektion oder der Direktion für Inneres und Justiz nimmt das Grundbuchamt den Eintrag im Hauptbuch vor."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "4cbaaa077bb8f48e556882ab6e45f28bd5b32ee61247beac68cc843b553567ad"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_26",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren richtet sich nach den Bestimmungen des Gesetzes vom 23. Mai 1989 über die Verwaltungsrechtspflege (VRPG), soweit dieses Gesetz nichts Abweichendes bestimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Steuerpflichtigen können sich vor den kantonalen Instanzen durch im Notariatsregister des Kantons Bern eingetragene Notarinnen und Notare vertreten lassen."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "0e18daa4e0e9909b5fb62d968e2798610ff17577cf4b468fe3998d1e8731c76a"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_27",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen die nach diesem Gesetz erlassenen Verfügungen des Grundbuchamts kann Einsprache erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen die Einspracheverfügung kann bei der Direktion für Inneres und Justiz Beschwerde erhoben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegen den Entscheid der Direktion für Inneres und Justiz kann beim Verwaltungsgericht Beschwerde geführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Gegen die Erlass- oder Stundungsverfügung gemäss Artikel 23 kann beim Verwaltungsgericht Beschwerde geführt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Einsprachen und Beschwerden gegen Pfandrechtsverfügungen kommt keine aufschiebende Wirkung zu."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "2750fa0f13fa8fdbc1b663ab91a35ea3d9a3a1c2c786f68fb9e4f420906c62c0"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_28",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestimmungen des Steuergesetzes vom 21. Mai 2000 (StG) über Widerhandlungen und Nachsteuer sind sinngemäss anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständige Behörde ist das Grundbuchamt."
+        },
+        {
+          "absatz": "3",
+          "text": "Zuständige Behörde im Sinne von Artikel 225 Absatz 2 StG ist die Direktion für Inneres und Justiz."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "086a7f467443aed91ad72333a74c7353b08ca8a188e7b0cdb3735a20ed200ba1"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_29",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die zum Vollzug dieses Gesetzes nötigen Vorschriften."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "175d5337602d2487ac4736d3f651b975b27b3be99c3d69fc5f1ecdeaf1f167b9"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_30",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Steuertatbestände, die vor dem Zeitpunkt der Inkraftsetzung dieses Gesetzes verwirklicht wurden, gelten die bisherigen Vorschriften. Das Verfahren richtet sich in jedem Fall nach den neuen Vorschriften."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "cda99dd170447fed3c3042c5e52e5d752e3ae0d0eaf2bb1821f0400cdc299c5d"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_31",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Erlasse werden geändert:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Dekret vom 12. Februar 1985 über die Umlegung von Baugebieten, die Grenzregulierung und die Ablösung oder Verlegung von Dienstbarkeiten (Baulandumlegungsdekret)"
+            },
+            {
+              "marke": "2",
+              "text": "Dekret vom 11. November 1980 über die Wohnbaulandsicherung"
+            }
+          ]
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "e69aecdcbf1dbd0cc9491b5ab40437fe3d30fd15f51d84573131e47139eae644"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_32",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz vom 15. November 1970 betreffend die Handänderungs- und Pfandrechtsabgaben wird aufgehoben."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "125577dd42c6b2e4a28a726b021d52d12f2bcaaa88c75341ded712c5c533db30"
+    },
+    {
+      "id": "kanton/BE/215.326.2/art_33",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt den Zeitpunkt des Inkrafttretens."
+        }
+      ],
+      "stand": "2023-04-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "fb452d4321a33ecf3f2bf707eaa1568a56323ef192950a9c6261614e09de9435"
+    }
+  ]
+}

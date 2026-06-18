@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase , finmaBegriffsTreffer } from '../lib/gruendungsunterlagen';
 import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { NormText } from '../components/NormText';
 import { VorlagenWizardRahmen, VorschauPanel } from '../components/vorlagen/wizard';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
@@ -534,7 +535,7 @@ export function VorlageAgGruendung() {
       {checkliste.blocker.map((b) => (
         <div key={b} className="lc-notice-warn">
           <p className="text-body-s font-medium">Eintragungshindernis</p>
-          <p className="text-body-s">{b}</p>
+          <p className="text-body-s"><NormText text={b} /></p>
         </div>
       ))}
     </div>
@@ -595,7 +596,7 @@ export function VorlageAgGruendung() {
       {/* Stufe 2 P2: Inhaberaktien-Voraussetzung (Art. 622 Abs. 1bis OR) */}
       {inhaberaktien && (
         <div className="rounded-md border border-line p-3 space-y-3">
-          <p className="text-body-s font-medium text-ink-900">Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)`} /></p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Voraussetzung">
               <select className={inputCls} value={inhaberKotiert ? 'kotiert' : 'bucheffekten'}
@@ -740,7 +741,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Sacheinlagen (Art. 634 OR) */}
       {(einlageArt === 'sacheinlage' || einlageArt === 'gemischt') && (
         <div className="space-y-3">
-          <p className="text-body-s font-medium text-ink-900">Sacheinlagen (Art. 634 OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Sacheinlagen (Art. 634 OR)`} /></p>
           <p className="text-body-s text-ink-500 max-w-reading">
             Deckungs-Voraussetzungen (Art. 634 Abs. 1 OR): als Aktiven bilanzierbar, übertragbar,
             nach dem Eintrag sofort frei verfügbar (bei Grundstücken: bedingungsloser
@@ -837,7 +838,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Verrechnungsliberierung (Art. 634a OR) */}
       {(einlageArt === 'verrechnung' || einlageArt === 'gemischt') && (
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Verrechnungsliberierung (Art. 634a OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Verrechnungsliberierung (Art. 634a OR)`} /></p>
           {verrechnungen.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
               <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end">
@@ -872,7 +873,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Besondere Vorteile (Art. 636 OR) */}
       {besondereVorteile && (
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Besondere Vorteile (Art. 636 OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Besondere Vorteile (Art. 636 OR)`} /></p>
           {vorteile.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
               <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_auto] gap-2 items-end">
@@ -1254,7 +1255,7 @@ export function VorlageAgGruendung() {
                   {e.typ === 'offen' && 'nicht amtlich erhebbar'}
                 </span>{' '}
                 — <a href={tarif.erlassUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">{tarif.erlassLabel}</a> (Stand {tarif.stand}); Tarifwert ohne MWST (8,1 %) und Auslagen.
-                {tarif.hinweise.map((h) => ` ${h}`).join('')} Erstrecherche — fachliche Abnahme ausstehend.
+                {tarif.hinweise.map((h) => ` ${h}`).join('')} — fachliche Abnahme ausstehend.
                 {' '}Bank-Sperrkonto je nach Institut (Praxisbeispiel ZKB: 0,5 ‰, mind. CHF 250).
               </li>
             );
@@ -1367,7 +1368,7 @@ export function VorlageAgGruendung() {
           Die Vorschau erscheint, sobald die Pflichtangaben vollständig sind:
         </p>
         <ul className="lc-list space-y-1 text-xs text-ink-600">
-          {mappe.gates.blocker.slice(0, 8).map((b) => <li key={b}>{b}</li>)}
+          {mappe.gates.blocker.slice(0, 8).map((b) => <li key={b}><NormText text={b} /></li>)}
         </ul>
       </div>
     );

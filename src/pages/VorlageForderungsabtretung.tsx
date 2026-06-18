@@ -1,6 +1,7 @@
 import {
   FA_DEFAULTS, faZusammenstellen, pruefeFaGates, type FaAntworten,
 } from '../lib/vorlagen/forderungsabtretung';
+import { NormText } from '../components/NormText';
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -74,15 +75,15 @@ function eingabeInhalt({ a, set }: SeiteCtx<FaAntworten>, schritt: number) {
         <Checkbox
           checked={a.zinsenAusdruecklich}
           onChange={(v) => set('zinsenAusdruecklich', v)}
-          label={<><span>Rückständige Zinsen <strong>ausdrücklich mitabtreten</strong> <span className="text-ink-500">(sonst nur gesetzliche Vermutung, Art. 170 Abs. 3 OR)</span></span></>} />
+          label={<><span>Rückständige Zinsen <strong>ausdrücklich mitabtreten</strong> <span className="text-ink-500"><NormText text={`(sonst nur gesetzliche Vermutung, Art. 170 Abs. 3 OR)`} /></span></span></>} />
         <Checkbox
           checked={a.urkundenUebergabe}
           onChange={(v) => set('urkundenUebergabe', v)}
-          label={<><span>Zusage der <strong>Urkunden-/Beweismittel-Übergabe</strong> aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 170 Abs. 2 OR)</span></span></>} />
+          label={<><span>Zusage der <strong>Urkunden-/Beweismittel-Übergabe</strong> aufnehmen <span className="text-ink-500"><NormText text={`(gesetzliche Pflicht, Art. 170 Abs. 2 OR)`} /></span></span></>} />
         <Checkbox
           checked={a.anzeigeAnkuendigen}
           onChange={(v) => set('anzeigeAnkuendigen', v)}
-          label={<><span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span></>} />
+          label={<><span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500"><NormText text={`(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)`} /></span></span></>} />
         <Checkbox
           checked={a.annahmeZeile}
           onChange={(v) => set('annahmeZeile', v)}
@@ -129,7 +130,7 @@ const CONFIG: VorlagenSeitenConfig<FaAntworten> = {
     <>
       <p className="lc-overline text-brass-700">Damit die Abtretung trägt</p>
       <ul className="lc-list space-y-2 text-body-s text-ink-700">
-        <li><strong>Schriftform ist zwingend</strong> (Art. 165 Abs. 1 OR) – drucken und von der Zedentin unterschreiben lassen.</li>
+        <li><strong>Schriftform ist zwingend</strong><NormText text={` (Art. 165 Abs. 1 OR) – drucken und von der Zedentin unterschreiben lassen.`} /></li>
         <li><strong>Schuldner-Anzeige nachweisbar zustellen</strong> – {KDG_ZUGANGS_HINWEIS}</li>
       </ul>
     </>

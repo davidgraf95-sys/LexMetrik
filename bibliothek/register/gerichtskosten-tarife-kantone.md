@@ -84,9 +84,9 @@ _(Tranche 1, Fortsetzung — übrige Deutschschweizer Kantone:)_
 - Quelle: https://rechtsbuch.ur.ch/api/de/versions/1050/pdf_file
 - Bänder: <10'000 → 300–2'500 · 10'000–30'000 → 1'000–5'000 · 30'000–100'000 → 2'000–12'000 · 100'000–500'000 → 4'000–30'000 · 500'000–1 Mio → 10'000–40'000 · **>1 Mio → 1–4 %, mind. 20'000** (%-Tail; Platzhalter maxChf bereinigen). Kostenlos: Art. 113/114 ZPO.
 
-### OW — Gebührenordnung (GDB 134.15) · Stand 1.1.2011 → `staffel_rahmen`  ⚠ Platzhalter maxChf
-- Quelle: https://gdb.ow.ch/app/de/texts_of_law/134.15
-- Bänder: bis 30'000 → 100–3'000 · 30'000–50'000 → 1'500–5'000 · 50'000–100'000 → 2'000–6'000 · 100'000–350'000 → 2'500–10'500 · **>350'000 → 3'000–? (%-Tail; Platzhalter 3e10 bereinigen)**. Kostenlos: Art. 113/114 ZPO.
+### OW — Gebührenordnung für die Rechtspflege (GebOR, GDB 134.15) · Stand **1.3.2015** → `staffel_rahmen`  ✅ behoben 16.6.2026
+- Quelle: https://gdb.ow.ch/app/de/texts_of_law/134.15 · `artikel`: **Art. 12** (Kantonsgericht, ordentl. Verfahren; bis 30'000 Art. 9 Kantonsgerichtspräsidium / vereinfachtes Verfahren). Früher fälschlich «Art. 7» (aufgehoben) · «Stand 1.1.2011». Details: `bibliothek/normen/kantonale-tarif-zitat-befunde.md` Befund 2.
+- Bänder: bis 30'000 → 100–3'000 (Art. 9 Ziff. 2 lit. a) · 30'000–50'000 → 1'500–5'000 · 50'000–100'000 → 2'000–6'000 · 100'000–350'000 → 2'500–10'500 · **>350'000 → 3'000 bis 3 % des Streitwerts** (Art. 12 Abs. 1 Ziff. 4 — Platzhalter `maxChf: null` ersetzt durch `maxProzent: 3`). Kostenlos: Art. 113/114 ZPO.
 
 ### NW — PKoG (NG 261.2), Art. 7 · Stand 1.1.2016 → `staffel_rahmen`  ⚠ Top-Band null
 - Quelle: https://gesetze.nw.ch/app/de/texts_of_law/261.2

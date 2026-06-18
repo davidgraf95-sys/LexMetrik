@@ -1,5 +1,8 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
+import { KantonArtikelTrigger } from '../KantonQuelleLink';
+import { KantonNormText } from '../KantonNormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
@@ -78,12 +81,12 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
             ? <p className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</p>
             : null}
       <p className="mt-2 text-xs text-ink-500">
-        {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
-        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+        {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
+        {q.verifiziert === 'recherche' ? ' · nicht abgenommen' : ''}
         {' · '}
         <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
       </p>
-      {q.hinweis && <p className="mt-1 text-xs text-ink-500">{q.hinweis}</p>}
+      {q.hinweis && <p className="mt-1 text-xs text-ink-500"><KantonNormText text={q.hinweis} quelle={q} /></p>}
     </div>
   );
 }
@@ -246,7 +249,7 @@ export function ProzesskostenForm() {
                   {vorschuss.spanne ? (vorschuss.faktor === 0.5 ? `bis ${spanneText(vorschuss.spanne)}` : spanneText(vorschuss.spanne)) : '—'}
                 </p>
               </div>
-              <p className="mt-1 text-xs text-ink-500">{vorschuss.hinweis}</p>
+              <p className="mt-1 text-xs text-ink-500"><NormText text={vorschuss.hinweis} /></p>
             </div>
           )}
 
@@ -266,19 +269,19 @@ export function ProzesskostenForm() {
                 </p>
               </div>
               {mwstAufschlag.betrag && <p className="mt-1 text-xs text-ink-500">MwSt-Anteil: {spanneText(mwstAufschlag.betrag)}.</p>}
-              <p className="mt-1 text-xs text-ink-500">{mwstAufschlag.hinweis}</p>
+              <p className="mt-1 text-xs text-ink-500"><NormText text={mwstAufschlag.hinweis} /></p>
             </div>
           )}
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+            {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
           {/* Weitere, nicht bezifferbare Kostenposten (Art. 95 II c–e / III a; UR Art. 117 ff.). */}
           <details className="mt-3 rounded-xl border border-line bg-surface p-3">
             <summary className="cursor-pointer text-body-s text-ink-700 hover:text-ink-900">Weitere Kostenposten (nicht beziffert)</summary>
             <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
-              {WEITERE_KOSTENPOSTEN.map((h, i) => <li key={i}>{h}</li>)}
+              {WEITERE_KOSTENPOSTEN.map((h, i) => <li key={i}><NormText text={h} /></li>)}
             </ul>
           </details>
 
@@ -327,7 +330,7 @@ export function ProzesskostenForm() {
                   <span className="num text-body-s font-semibold text-ink-900 w-12 text-right">{quote}%</span>
                 </div>
               )}
-              <p className="mt-2 text-xs text-ink-500">{ausgangInfo.hinweis} <span className="text-ink-400">({ausgangInfo.norm})</span></p>
+              <p className="mt-2 text-xs text-ink-500"><NormText text={ausgangInfo.hinweis} /> <span className="text-ink-400">({ausgangInfo.norm})</span></p>
               <label className="mt-2 flex items-start gap-2 text-body-s text-ink-700">
                 <input type="checkbox" checked={ur} onChange={(e) => setUr(e.target.checked)} className="mt-0.5" />
                 <span>Unentgeltliche Rechtspflege bewilligt (Art. 117 ff. ZPO) — befreit von Vorschuss/Gerichtskosten, aber nicht von der gegnerischen Parteientschädigung</span>
@@ -352,16 +355,16 @@ export function ProzesskostenForm() {
                     </div>
                   </div>
                   <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-                    {kostenrisiko.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+                    {kostenrisiko.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
                   </ul>
                 </>
               ) : (
-                <p className="mt-3 text-body-s text-ink-600">{kostenrisiko.hinweise[kostenrisiko.hinweise.length - 1]}</p>
+                <p className="mt-3 text-body-s text-ink-600"><NormText text={kostenrisiko.hinweise[kostenrisiko.hinweise.length - 1]} /></p>
               )}
               <details className="mt-3">
                 <summary className="cursor-pointer text-xs text-ink-600 hover:text-ink-800">Verteilungs-Sonderfälle (Art. 106 III / 107–109 ZPO)</summary>
                 <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
-                  {KOSTENVERTEILUNG_SONDERFAELLE.map((h, i) => <li key={i}>{h}</li>)}
+                  {KOSTENVERTEILUNG_SONDERFAELLE.map((h, i) => <li key={i}><NormText text={h} /></li>)}
                 </ul>
               </details>
             </div>
@@ -427,21 +430,21 @@ export function ProzesskostenForm() {
                 Gesamt: {spanneText(instanzenzug.gesamt ?? undefined)}{instanzenzug.unbeziffert ? ' (Untergrenze)' : ''}
               </p>
               <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
-                {instanzenzug.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+                {instanzenzug.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
               </ul>
             </div>
           )}
 
           {kaution && sicherheit && (
             <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-              <p className="lc-overline text-ink-500">Sicherheit für die Parteientschädigung (Art. 99 ZPO)</p>
+              <p className="lc-overline text-ink-500"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
               {sicherheit.moeglich ? (
                 <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>
               ) : (
                 <p className="mt-2 text-body-s text-ink-700">{sicherheit.ausschluss}</p>
               )}
               <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
-                {sicherheit.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+                {sicherheit.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
               </ul>
             </div>
           )}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Field, inputCls } from './ui';
+import { NormText } from '../NormText';
 import type { Kanton } from '../../types/legal';
 import { zivilgerichtErstinstanz } from '../../data/zivilgerichteErstinstanz';
 import type { KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
@@ -72,7 +73,7 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
         <p className="lc-notice-warn text-body-s">{eintrag.namensHinweis}.</p>
       )}
       {e.modus === 'zentral' && e.stelle.hinweis && (
-        <p className="text-xs text-ink-600">{e.stelle.hinweis}.</p>
+        <p className="text-xs text-ink-600"><NormText text={e.stelle.hinweis} />.</p>
       )}
       {e.modus === 'liste' && (
         <>
@@ -82,7 +83,7 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
               {e.gerichte.map((g, i) => <option key={g.name} value={i}>{g.name} — {g.plzOrt}{g.zustaendigFuer ? ` (${g.zustaendigFuer})` : ''}</option>)}
             </select>
           </Field>
-          {gewaehlt?.hinweis && <p className="text-xs text-ink-600">{gewaehlt.hinweis}.</p>}
+          {gewaehlt?.hinweis && <p className="text-xs text-ink-600"><NormText text={gewaehlt.hinweis} />.</p>}
         </>
       )}
       {e.modus === 'verzeichnis' && (

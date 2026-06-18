@@ -1,4 +1,5 @@
 import type { Sperrereignis, SperrereignisTyp } from '../../types/legal';
+import { NormText } from '../NormText';
 import { DatumsFeld } from '../DatumsFeld';
 import { inputCls } from '../vorlagen/ui';
 import { SPERREREIGNIS_TYPEN, MIT_NIEDERKUNFT, sperrereignisEntfernen } from './sperrereignisseShared';
@@ -82,7 +83,7 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
             </p>
           )}
           {e.typ === 'mutterschaftsurlaub_verlaengert' && (
-            <p className="text-xs text-brass-700">Hospitalisierung des Neugeborenen: Kündigungsschutz bis zum Ende des verlängerten Mutterschaftsurlaubs (Art. 336c Abs. 1 lit. cbis i.V.m. Art. 329f Abs. 2 OR). «Bis» = Ende des verlängerten Urlaubs.</p>
+            <p className="text-xs text-brass-700"><NormText text={`Hospitalisierung des Neugeborenen: Kündigungsschutz bis zum Ende des verlängerten Mutterschaftsurlaubs (Art. 336c Abs. 1 lit. cbis i.V.m. Art. 329f Abs. 2 OR). «Bis» = Ende des verlängerten Urlaubs.`} /></p>
           )}
           {e.typ === 'zusatzurlaub_tod_elternteil' && (
             <p className="text-xs text-brass-700">
@@ -92,7 +93,7 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
             </p>
           )}
           {e.typ === 'urlaub_tod_mutter' && (
-            <p className="text-xs text-brass-700">Urlaub des anderen Elternteils nach Tod der Mutter: 14 Wochen ab dem Tag nach dem Tod, an aufeinanderfolgenden Tagen (Art. 336c Abs. 1 lit. cquinquies i.V.m. Art. 329gbis OR).</p>
+            <p className="text-xs text-brass-700"><NormText text={`Urlaub des anderen Elternteils nach Tod der Mutter: 14 Wochen ab dem Tag nach dem Tod, an aufeinanderfolgenden Tagen (Art. 336c Abs. 1 lit. cquinquies i.V.m. Art. 329gbis OR).`} /></p>
           )}
           {e.typ === 'militaer_zivil' && (
             <p className="text-xs text-brass-700">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>

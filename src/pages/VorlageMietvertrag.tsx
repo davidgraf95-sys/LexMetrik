@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { NormText } from '../components/NormText';
 import { useLocation } from 'react-router-dom';
 import {
   MV_DEFAULTS, MV_FORMULARPFLICHT, MV_OFFENE_VERIFIKATIONEN, MV_PARAMETER,
@@ -325,7 +326,7 @@ export function VorlageMietvertrag() {
             )}
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Nebenkosten (Art. 257a OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Nebenkosten (Art. 257a OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -409,7 +410,7 @@ export function VorlageMietvertrag() {
           )}
           {a.detailgrad === 'experte' && (
             <div className="space-y-3 pt-1">
-              <GruppenTitel>Mietzinsvorbehalt (Art. 18 VMWG)</GruppenTitel>
+              <GruppenTitel><NormText text={`Mietzinsvorbehalt (Art. 18 VMWG)`} /></GruppenTitel>
               <Checkbox
                 checked={a.mietzinsvorbehalt ?? false}
                 onChange={(v) => set('mietzinsvorbehalt', v || undefined)}
@@ -434,14 +435,14 @@ export function VorlageMietvertrag() {
           {gates.blocker.length > 0 && (
             <div className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
-              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
           )}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum des Vertragsschlusses">
@@ -456,10 +457,10 @@ export function VorlageMietvertrag() {
             <p className="lc-overline text-brass-700">Form-Gate – damit der Vertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Beidseitig unterzeichnen</strong> – erfüllt die Schriftform von Index-/Staffelmiete.</li>
-              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
-              {wohnung && <li><strong>Formularpflicht prüfen:</strong> In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen – sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).</li>}
+              <li><strong>Elektronisch nur mit QES:</strong><NormText text={` Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.`} /></li>
+              {wohnung && <li><strong>Formularpflicht prüfen:</strong><NormText text={` In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen – sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).`} /></li>}
               <li><strong>Übergabeprotokoll</strong> bei Einzug gemeinsam erstellen (Beweissicherung).</li>
-              <li><strong>Kaution</strong> auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).</li>
+              <li><strong>Kaution</strong><NormText text={` auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).`} /></li>
               {!wohnung && <li><strong>MWST-Option:</strong> Rechnungsanforderungen (Art. 26 MWSTG) für den Vorsteuerabzug beachten.</li>}
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

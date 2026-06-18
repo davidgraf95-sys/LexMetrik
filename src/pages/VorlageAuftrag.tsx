@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   AF_DEFAULTS, afZusammenstellen, pruefeAfGates, type AfAntworten, type AfMandatstyp, type AfVerguetung,
 } from '../lib/vorlagen/auftrag';
@@ -142,26 +143,26 @@ export function VorlageAuftrag() {
           <Checkbox
             checked={a.auslagenErsatz}
             onChange={(v) => set('auslagenErsatz', v)}
-            label={<><span><strong>Auslagen- und Verwendungsersatz</strong> ausdrücklich aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 402 Abs. 1 OR)</span></span></>} />
+            label={<><span><strong>Auslagen- und Verwendungsersatz</strong> ausdrücklich aufnehmen <span className="text-ink-500"><NormText text={`(gesetzliche Pflicht, Art. 402 Abs. 1 OR)`} /></span></span></>} />
           <Checkbox
             checked={a.weisungsKlausel}
             onChange={(v) => set('weisungsKlausel', v)}
-            label={<><span><strong>Weisungsbindung</strong> aufnehmen <span className="text-ink-500">(Art. 397 Abs. 1 OR)</span></span></>} />
+            label={<><span><strong>Weisungsbindung</strong> aufnehmen <span className="text-ink-500"><NormText text={`(Art. 397 Abs. 1 OR)`} /></span></span></>} />
           <Checkbox
             checked={a.substitution}
             onChange={(v) => set('substitution', v)}
-            label={<><span>Beizug <strong>Dritter zur Ausführung</strong> zulassen <span className="text-ink-500">(sonst persönliche Besorgung, Art. 398 Abs. 3 OR)</span></span></>} />
+            label={<><span>Beizug <strong>Dritter zur Ausführung</strong> zulassen <span className="text-ink-500"><NormText text={`(sonst persönliche Besorgung, Art. 398 Abs. 3 OR)`} /></span></span></>} />
           <Checkbox
             checked={a.vollmachtErweitert}
             onChange={(v) => set('vollmachtErweitert', v)}
-            label={<><span><strong>Besondere Ermächtigung</strong> erteilen <span className="text-ink-500">(für Vergleich, Grundstücke usw. – Art. 396 Abs. 3 OR)</span></span></>} />
+            label={<><span><strong>Besondere Ermächtigung</strong> erteilen <span className="text-ink-500"><NormText text={`(für Vergleich, Grundstücke usw. – Art. 396 Abs. 3 OR)`} /></span></span></>} />
         </div>
       );
 
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum der Unterzeichnung">
@@ -174,7 +175,7 @@ export function VorlageAuftrag() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit der Auftrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Jederzeitiges Auflösungsrecht</strong> – beide Parteien können den Auftrag jederzeit beenden; ein Ausschluss wäre wirkungslos (Art. 404 OR).</li>
+              <li><strong>Jederzeitiges Auflösungsrecht</strong><NormText text={` – beide Parteien können den Auftrag jederzeit beenden; ein Ausschluss wäre wirkungslos (Art. 404 OR).`} /></li>
               <li><strong>Erfolg geschuldet?</strong> – ist ein bestimmtes Werk gewollt, ist der Werkvertrag (Art. 363 ff. OR) die richtige Grundlage.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

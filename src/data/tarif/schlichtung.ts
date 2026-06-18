@@ -128,11 +128,17 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   SH: {
-    kanton: 'SH', erlassName: 'Zivilprozessordnung für den Kanton Schaffhausen', erlassNr: 'SHR 273.100',
-    artikel: 'Art. 109', stand: '3.9.1951 (geltende Fassung)', verifiziert: 'doppelt',
-    quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/273.100',
-    hinweis: 'Friedensrichteramt: Vorstand CHF 50–100, je Vorladung +20, Weisung 50, Verfügungen 50–300.',
-    regel: { typ: 'rahmen', vonChf: 50, bisChf: 300 },
+    // Korrektur 16.6.2026 (§7, fachl. freigegeben David): bisher zitierte
+    // kantonale ZPO «SHR 273.100 Art. 109» (1951) wurde am 1.1.2011 mit der
+    // eidg. ZPO aufgehoben (totes Recht, LexWork-API 404). Geltend ist Art. 82
+    // Justizgesetz (JG): «Im Schlichtungsverfahren beträgt die Pauschalgebühr
+    // Fr. 100.00 bis Fr. 1'000.00, wenn das Verfahren nicht kostenlos ist.»
+    // Quelle: rechtsbuch.sh.ch JG 173.200, version_uid ce466f93…, i.K. 1.5.2026.
+    kanton: 'SH', erlassName: 'Justizgesetz (JG)', erlassNr: 'SHR 173.200',
+    artikel: 'Art. 82', stand: '1.5.2026', verifiziert: 'doppelt',
+    quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200',
+    hinweis: 'Pauschalgebühr Schlichtungsverfahren (Art. 82 JG); entfällt, wenn das Verfahren kostenlos ist (Art. 113 Abs. 2 ZPO).',
+    regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },
   AR: {
     kanton: 'AR', erlassName: 'Gebührenordnung (Rechtskosten Zivil-/Strafrechtspflege)', erlassNr: 'bGS 233.3',
@@ -145,7 +151,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'AI', erlassName: 'Verordnung über die Gebühren der Gerichte (GGV)', erlassNr: 'GS 173.810',
     artikel: 'Art. 7', stand: '1.1.2024', verifiziert: 'doppelt',
     quelleUrl: 'https://ai.clex.ch/app/de/texts_of_law/173.810',
-    hinweis: 'Vorstand CHF 50–300; Urteilsvorschlag/Entscheid 50–500; Einigung/Rückzug/Säumnis 50–200.',
+    hinweis: 'Vorstand CHF 50–300; Urteilsvorschlag/Entscheid 50–500; Einigung/Rückzug/Säumnis 50–200. PRÜFEN (Audit 17.6.): Art. 7 nennt bandabhängig 200–1000 / 300–1000 / 100–600.',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   SG: {
@@ -214,7 +220,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     kanton: 'VS', erlassName: 'Loi fixant le tarif des frais et dépens (LTar)', erlassNr: 'SGS/VS 173.8',
     artikel: 'Art. 15', stand: '1.1.2018', verifiziert: 'doppelt',
     quelleUrl: 'https://lex.vs.ch/app/de/texts_of_law/173.8',
-    hinweis: 'Citation CHF 50 + séance 60–120; bei Streitwert bis 2000 und Urteilsvorschlägen CHF 60–500.',
+    hinweis: 'Citation CHF 50 + séance 60–120; bei Streitwert bis 2000 und Urteilsvorschlägen CHF 60–500. PRÜFEN (Audit 17.6.): Sitzungsgebühr lt. Art. 15 Abs. 1b = 120–250.',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   NE: {
@@ -236,8 +242,8 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais en matière civile (RTFMC)', erlassNr: 'rsGE E 1 05.10',
     artikel: 'Art. 15', stand: '1.1.2011', verifiziert: 'doppelt',
-    quelleUrl: 'https://www.lexfind.ch/tolv/199638/fr',
-    hinweis: 'Causes pécuniaires CHF 100–200; bei mehreren Parteien +20 %.',
+    quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
+    hinweis: 'Causes pécuniaires CHF 100–200; bei mehreren Parteien +20 %. PRÜFEN (Audit 17.6.): der «+20 %»-Zuschlag ist in Art. 15 nicht ausgewiesen (Rahmen 100–200 stimmt).',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 200 },
   },
   JU: {

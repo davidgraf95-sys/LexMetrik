@@ -548,7 +548,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'notariat-grundbuch', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Immobilien & Beurkundung',
     rechtsbereich: 'privat',
     title: 'Notariats- & Grundbuchkosten',
-    description: 'Beurkundungs- und Grundbuchkosten aller 26 Kantone in drei Bereichen: Grundstückkauf (Beurkundung + Grundbuch + Grundpfand + Handänderungssteuer), Beurkundung (Notariat) je Geschäftsart (Testament, Erbvertrag, Ehevertrag, Schenkung, Vorsorgeauftrag, Vollmacht, Gründungen AG/GmbH, Stiftung, Bürgschaft, Dienstbarkeiten u. a.) und Grundbuch je Eintragungsart (Grundpfand, Dienstbarkeit, Vormerkung, Mutation u. a.) – kantonale Tarife mit amtlicher Quelle, interkantonaler Vergleich. Rahmen-/Aufwandtarife (freies Notariat) ehrlich als Spanne. Erstrecherche, doppelt verifiziert, nicht abgenommen.',
+    description: 'Beurkundungs- und Grundbuchkosten aller 26 Kantone in drei Bereichen: Grundstückkauf (Beurkundung + Grundbuch + Grundpfand + Handänderungssteuer), Beurkundung (Notariat) je Geschäftsart (Testament, Erbvertrag, Ehevertrag, Schenkung, Vorsorgeauftrag, Vollmacht, Gründungen AG/GmbH, Stiftung, Bürgschaft, Dienstbarkeiten u. a.) und Grundbuch je Eintragungsart (Grundpfand, Dienstbarkeit, Vormerkung, Mutation u. a.) – kantonale Tarife mit amtlicher Quelle, interkantonaler Vergleich. Rahmen-/Aufwandtarife (freies Notariat) ehrlich als Spanne. Doppelt verifiziert, nicht abgenommen.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 216 OR', url: fedlexUrl('OR', '216'), verified: false },

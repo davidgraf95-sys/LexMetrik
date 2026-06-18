@@ -58,7 +58,7 @@ export interface KantonStrafgerichte {
 
 const STAND = '6.6.2026';
 const QUELLE =
-  'Erstrecherche bibliothek/behoerden/strafgerichte-kantone.md (Abruf 6.6.2026) — Doppelcheck + fachliche Abnahme ausstehend';
+  'Quelle: bibliothek/behoerden/strafgerichte-kantone.md (Abruf 6.6.2026) — Doppelcheck + fachliche Abnahme ausstehend';
 
 /**
  * §5-Projektion: Berufungs-Adresse aus OBERE_INSTANZEN beziehen (Spread) und

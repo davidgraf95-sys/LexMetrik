@@ -137,7 +137,7 @@ export const ZUSTAENDIGKEIT_KOSTEN: Record<Kanton, KantonKosten> = {
   },
   SH: {
     stand: '5.6.2026',
-    schlichtung: { text: 'Vorstand CHF 50–100 (+ Nebengebühren)', erlass: 'ZPO SH Art. 109, SHR 273.100' },
+    schlichtung: { text: "Pauschalgebühr CHF 100–1'000 (wenn nicht kostenlos)", erlass: 'Art. 82 JG, SHR 173.200', hinweis: 'Korrektur 16.6.2026: bisher zitierte ZPO SH 273.100 (1951) am 1.1.2011 mit eidg. ZPO aufgehoben; geltend ist Art. 82 Justizgesetz (Fassung 1.5.2026)' },
     gericht: { text: "Streitwert bis 100'000: CHF 500–25'000 (Pauschale in jeder Instanz)", erlass: 'Art. 83 JG, SHR 173.200', hinweis: 'Tiefenerfassung 6.6.2026: Gebühren stehen im Justizgesetz (Fassung 1.5.2026) — die früher zitierte «Kostenverordnung 2003» war eine Fehlzuordnung (Luzern)' },
     nichtVermoegensrechtlich: { text: "kein eigener Bandrahmen — es wird vom tatsächlichen Streitinteresse ausgegangen, nach Ermessen bestimmt; die Vorschriften über den Streitwert gelten sinngemäss (Tarif Art. 83 sinngemäss)", erlass: 'Art. 81 Abs. 2 JG, SHR 173.200', hinweis: 'Fassung ab 1.5.2026; kein tariflicher Sonderrahmen' },
   },

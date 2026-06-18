@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   PV_DEFAULTS, PV_DEFAULT_MASSNAHMEN, PV_MASSNAHMEN, PV_SITUATIONEN,
   pvZusammenstellen, pruefePvGates, zielDefaults,
@@ -242,7 +243,7 @@ export function VorlagePatientenverfuegung() {
           <Checkbox
             checked={a.ersetztFruehere}
             onChange={(v) => set('ersetztFruehere', v)}
-            label={<><span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500">(empfohlen, Art. 371 Abs. 3 ZGB)</span></span></>} />
+            label={<><span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500"><NormText text={`(empfohlen, Art. 371 Abs. 3 ZGB)`} /></span></span></>} />
           <Field label="Ort (für die Schlusszeile)" optional>
             <input className={inputCls + ' sm:max-w-xs'} value={a.ort ?? ''} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Basel" />
           </Field>
@@ -254,25 +255,25 @@ export function VorlagePatientenverfuegung() {
           {gates.blocker.map((b, i) => (
             <div key={i} className="lc-notice-danger">
               <p className="lc-overline text-danger-700 mb-1">Nicht zulässig – vor der Ausgabe zu beheben</p>
-              <p className="text-body-s text-danger-700">{b}</p>
+              <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
           ))}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           {/* Form-Gate: nicht überspringbar */}
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihre Patientenverfügung gültig wird</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Ausdrucken genügt:</strong> Die Erstellung am Computer ist zulässig – anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.</li>
+              <li><strong>Ausdrucken genügt:</strong><NormText text={` Die Erstellung am Computer ist zulässig – anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.`} /></li>
               <li><strong>Handschriftlich datieren und unterschreiben:</strong> Erst mit von Hand eingesetztem Datum und eigenhändiger Unterschrift ist das Dokument errichtet.</li>
-              <li><strong>Auffindbarkeit:</strong> Kopien an Vertretungsperson und Hausarztpraxis; Hinterlegungsort auf der Versichertenkarte eintragen lassen (Art. 371 Abs. 2 ZGB; in der Praxis noch nicht überall zuverlässig); Hinweiskarte im Portemonnaie.</li>
+              <li><strong>Auffindbarkeit:</strong><NormText text={` Kopien an Vertretungsperson und Hausarztpraxis; Hinterlegungsort auf der Versichertenkarte eintragen lassen (Art. 371 Abs. 2 ZGB; in der Praxis noch nicht überall zuverlässig); Hinweiskarte im Portemonnaie.`} /></li>
               <li><strong>Aktualisierung:</strong> rechtlich unbefristet gültig; Erneuerung der Unterschrift etwa alle zwei Jahre wird empfohlen.</li>
-              <li><strong>Widerruf:</strong> jederzeit – durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).</li>
+              <li><strong>Widerruf:</strong><NormText text={` jederzeit – durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

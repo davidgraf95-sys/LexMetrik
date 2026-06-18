@@ -1,4 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
+import { NormText } from '../NormText';
 import { Checkbox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
@@ -257,7 +258,7 @@ export function GewaehrleistungForm() {
                 {ergebnis.ruege.zwingend && <span className="lc-badge lc-badge-warn shrink-0">zwingend</span>}
               </div>
               {ergebnis.ruege.art === 'entfaellt' ? (
-                <p className="text-body-l font-semibold text-ink-900">entfällt (Arglist, Art. 203 OR)</p>
+                <p className="text-body-l font-semibold text-ink-900"><NormText text={`entfällt (Arglist, Art. 203 OR)`} /></p>
               ) : ergebnis.ruege.art === 'sofort' ? (
                 <>
                   <p className="text-body-l font-semibold text-ink-900 num">«sofort» – Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
@@ -275,7 +276,7 @@ export function GewaehrleistungForm() {
 
             <div className="lc-tile space-y-1">
               <div className="flex items-start justify-between gap-2">
-                <p className="text-xs text-ink-500">Verjährung – Einrede (Art. 142 OR)</p>
+                <p className="text-xs text-ink-500"><NormText text={`Verjährung – Einrede (Art. 142 OR)`} /></p>
                 {ergebnis.verjaehrung.teilzwingend && <span className="lc-badge lc-badge-ok shrink-0">teilzwingend</span>}
               </div>
               <p className="text-body-l font-semibold text-ink-900 num">

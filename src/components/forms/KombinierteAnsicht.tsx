@@ -1,4 +1,5 @@
 import { inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useState } from 'react';
@@ -174,7 +175,7 @@ export function KombinierteAnsicht() {
       {/* Sperrereignisse */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-body-s font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
+          <h4 className="text-body-s font-semibold text-ink-700"><NormText text={`Sperrereignisse (Art. 336c OR)`} /></h4>
           <button type="button" onClick={addEreignis} className="lc-btn-outline lc-btn-sm">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (

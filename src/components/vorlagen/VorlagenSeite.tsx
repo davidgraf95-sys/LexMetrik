@@ -1,6 +1,7 @@
 import { useMemo, type ReactNode } from 'react';
 import { DatumsFeld } from '../DatumsFeld';
 import { Field, inputCls } from './ui';
+import { NormText } from '../NormText';
 import { useWizardState } from './useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from './wizard';
 import { karte } from '../../lib/startseiteConfig';
@@ -104,10 +105,10 @@ export function VorlagenSeite<T extends { ort: string; datum: string }>(
   const pruefenInhalt = (
     <div className="space-y-5">
       {config.zeigeWarnungen && gates.warnungen.map((w, i) => (
-        <div key={`w${i}`} className="lc-notice-warn text-body-s">{w}</div>
+        <div key={`w${i}`} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
       ))}
       {gates.hinweise.map((h, i) => (
-        <div key={i} className="lc-notice text-body-s">{h}</div>
+        <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
       ))}
 
       <Field label={config.ortDatumLabel}>

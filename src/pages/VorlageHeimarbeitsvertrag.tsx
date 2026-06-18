@@ -1,4 +1,5 @@
 import { useMemo, type ReactNode } from 'react';
+import { NormText } from '../components/NormText';
 import {
   HA_DEFAULTS, haZusammenstellen, pruefeHaGates, type HaAntworten,
 } from '../lib/vorlagen/heimarbeitsvertrag';
@@ -82,11 +83,11 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
             <Checkbox
               checked={a.materialVomArbeitgeber}
               onChange={(v) => set('materialVomArbeitgeber', v)}
-              label={<><span>Material/Geräte werden vom Arbeitgeber gestellt <span className="text-ink-500">(Sorgfalts-/Rückgabepflicht, Haftung höchstens Selbstkosten, Art. 352a OR)</span></span></>} />
+              label={<><span>Material/Geräte werden vom Arbeitgeber gestellt <span className="text-ink-500"><NormText text={`(Sorgfalts-/Rückgabepflicht, Haftung höchstens Selbstkosten, Art. 352a OR)`} /></span></span></>} />
             <Checkbox
               checked={a.materialBeschafftHeimarbeiter}
               onChange={(v) => set('materialBeschafftHeimarbeiter', v)}
-              label={<><span>Heimarbeitnehmer/in beschafft (auch) Material selbst <span className="text-ink-500">(Entschädigung schriftlich, Art. 351a OR)</span></span></>} />
+              label={<><span>Heimarbeitnehmer/in beschafft (auch) Material selbst <span className="text-ink-500"><NormText text={`(Entschädigung schriftlich, Art. 351a OR)`} /></span></span></>} />
             {a.materialBeschafftHeimarbeiter && (
               <Field label="Material-Entschädigung"><input className={inputCls} value={a.materialEntschaedigung} onChange={(e) => set('materialEntschaedigung', e.target.value)} placeholder="z. B. CHF 0.20 pro Stück" /></Field>
             )}
@@ -94,7 +95,7 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
           <Checkbox
             checked={a.probearbeit}
             onChange={(v) => set('probearbeit', v)}
-            label={<><span>Es wird zunächst eine <strong>Probearbeit</strong> übergeben <span className="text-ink-500">(Verhältnis auf bestimmte Zeit zur Probe, Art. 354 Abs. 1 OR)</span></span></>} />
+            label={<><span>Es wird zunächst eine <strong>Probearbeit</strong> übergeben <span className="text-ink-500"><NormText text={`(Verhältnis auf bestimmte Zeit zur Probe, Art. 354 Abs. 1 OR)`} /></span></span></>} />
         </div>
       );
 
@@ -121,8 +122,8 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
 
       case 'pruefen': return (
         <div className="space-y-5">
-          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s">{w}</div>)}
-          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s">{h}</div>)}
+          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
+          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>)}
 
           <Field label="Ort und Datum des Vertragsschlusses">
             <div className="grid grid-cols-[1fr_11rem] gap-3">
@@ -134,7 +135,7 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Lohn und Material-Entschädigung schriftlich</strong> vor der Arbeitsausgabe (Art. 351a OR).</li>
+              <li><strong>Lohn und Material-Entschädigung schriftlich</strong><NormText text={` vor der Arbeitsausgabe (Art. 351a OR).`} /></li>
               <li><strong>Beidseitig unterzeichnen.</strong> Vorbehalten bleibt das Heimarbeitsgesetz (SR 822.31).</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

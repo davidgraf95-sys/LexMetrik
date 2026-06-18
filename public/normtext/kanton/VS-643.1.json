@@ -1,0 +1,1273 @@
+{
+  "erzeugt": "2026-06-17",
+  "eintraege": [
+    {
+      "id": "kanton/VS/643.1/art_1",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’Etat perçoit sur la base de cette loi un impôt sur les mutations, les gages immobiliers et les enregistrements."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "cb7b3ade9a354dd8f9ba20f9e395b93b87873abdada142e3d3a7ac73528ec3dc"
+    },
+    {
+      "id": "kanton/VS/643.1/art_2",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les communes peuvent prélever un impôt additionnel sur les mutations des immeubles situés sur leur territoire et en fixer le taux. Cette décision est de la compétence de l’organe législatif."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque deux ou plusieurs communes sont concernées par une même opération, sans répartition de valeur entre les différents objets, l’assiette de l’impôt dans chaque commune correspond à la proportion de la valeur cadastrale."
+        },
+        {
+          "absatz": "3",
+          "text": "Les décisions relatives aux droits de mutations ont force obligatoire dans la même mesure pour l’impôt additionnel."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "fe54ff5fb42aefebb37aa9ded8847a99e648ad8885a1bec5bfcde7c3a7e9c9e8"
+    },
+    {
+      "id": "kanton/VS/643.1/art_3",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont assujettis à l’impôt tous les actes et les écrits spécifiés dans la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Sont exonérées de l’impôt les affaires qui en sont dispensées par le droit fédéral ou la législation cantonale."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "ae1d1d72f2a62810a7b7d80f99ede05cfe926a29d973afc94d589c7d80278336"
+    },
+    {
+      "id": "kanton/VS/643.1/art_4",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont assujettis à l’impôt les actes et les écrits passés dans le canton."
+        },
+        {
+          "absatz": "2",
+          "text": "Sont également soumis à l’impôt les actes et les écrits passés hors du canton s’ils sont destinés à produire leurs effets dans le canton."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "762d8f40211e069ca957ae1687291ae2995085403e56f969d3652555295adbe1"
+    },
+    {
+      "id": "kanton/VS/643.1/art_5",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt est calculé d’après la valeur indiquée dans l’acte ou l’écrit, sous réserve des dispositions particulières de la présente loi."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "781ecfadc33ad0d4bd651fd9d9db545fdd2ec1ac282e2c202b6670563374d1cb"
+    },
+    {
+      "id": "kanton/VS/643.1/art_6",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont soumis à l’impôt les actes et les écrits ayant pour effet de transférer juridiquement ou économiquement la propriété, notamment:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ventes et les adjudications;"
+            },
+            {
+              "marke": "b",
+              "text": "les échanges;"
+            },
+            {
+              "marke": "c",
+              "text": "les donations;"
+            },
+            {
+              "marke": "d",
+              "text": "les contrats d'entretien viager et de rente viagère;"
+            },
+            {
+              "marke": "e",
+              "text": "les avancements d'hoirie, les actes de dévolution et de partage successoral et les legs;"
+            },
+            {
+              "marke": "f",
+              "text": "tous les transferts de parts dans des sociétés immobilières, y compris les participations minoritaires sans pouvoir de disposition sur les immeubles de la société, qui sont imposés proportionnellement;"
+            },
+            {
+              "marke": "g",
+              "text": "les transferts de droits d'emption;"
+            },
+            {
+              "marke": "h",
+              "text": "la constitution de servitudes, de charges foncières ou d'autres droits réels et leur transfert;"
+            },
+            {
+              "marke": "i",
+              "text": "les concessions de forces hydrauliques et leur transfert;"
+            },
+            {
+              "marke": "j",
+              "text": "les concessions de mine et de carrière et leur transfert;"
+            },
+            {
+              "marke": "k",
+              "text": "les jugements."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Autres actes, notamment:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les baux annotés;"
+            },
+            {
+              "marke": "b",
+              "text": "la constitution de droits d'usufruit et d'habitation;"
+            },
+            {
+              "marke": "c",
+              "text": "la dissolution d'une copropriété et d'une propriété commune."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "En cas de simple inscription de l’hoirie sans transfert de propriété, l’impôt sur les mutations est différé."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "56589f9931e5c60e1828654d60cb25cf78df9e94db3a0c162142b3245ebbe993"
+    },
+    {
+      "id": "kanton/VS/643.1/art_7",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les sociétés immobilières au sens de l’article 6 alinéa 1 lettre f sont:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les sociétés dont le but ou l'activité effective consiste exclusivement ou principalement dans l'acquisition, la détention, l'exploitation, la gestion et la vente de biens immobiliers au sens de l'article 655 CC; les actifs doivent en général être constitués à raison de deux tiers de biens immobiliers et le bénéfice provenir à raison de deux tiers au moins de ces activités;"
+            },
+            {
+              "marke": "b",
+              "text": "les sociétés avec participation directe ou indirecte à des sociétés visées à la lettre a;"
+            },
+            {
+              "marke": "c",
+              "text": "les avoirs de trusts au sens des lettres a et b."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "1d4a44b886e5b7fde87ab61fb7491a158d5c17a95ba9832ad2386dae373f7a79"
+    },
+    {
+      "id": "kanton/VS/643.1/art_8",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont soumis à l’impôt notamment:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les actes de constitution, de transformation et d'augmentation d'un droit de gage immobilier ainsi que le remplacement de l'objet du gage;"
+            },
+            {
+              "marke": "b",
+              "text": "les actes de constitution d'une hypothèque légale du vendeur pour autant que le prix d'achat ne soit pas dû dans un délai d'une année à partir de la date de la signature de l'acte;"
+            },
+            {
+              "marke": "c",
+              "text": "les actes de constitution d'un cautionnement pour autant que l'objet garantissant le gage n'ait pas déjà été imposé."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "b7bb7f3c9fe59c394e81b242d9b9584fd3177ef411fdc7783f1f22735c318d07"
+    },
+    {
+      "id": "kanton/VS/643.1/art_9",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont également soumises à l’impôt les opérations mentionnées à l’article 17."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "a77d89cc21f9bba3fbbba1d15b437d40707b9d61c9798ad72698f53582981403"
+    },
+    {
+      "id": "kanton/VS/643.1/art_10",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le sujet de l’impôt est l’acquéreur ou le propriétaire de l’objet du gage."
+        },
+        {
+          "absatz": "2",
+          "text": "Les parties au contrat sont solidairement responsables du paiement de l’impôt."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "4a2b0078d677f8f0bd8964b60ec3300e2e9e36f16937111d2b5cce29e4010842"
+    },
+    {
+      "id": "kanton/VS/643.1/art_11",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt est calculé sur les bases suivantes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour les baux, l'impôt est calculé sur le montant du loyer pour la durée du contrat, mais au maximum pour une durée de cinq ans;"
+            },
+            {
+              "marke": "b",
+              "text": "pour les usufruits, les droits d'habitation et autres droits semblables:"
+            },
+            {
+              "marke": "c",
+              "text": "pour les droits de gage, l'impôt est calculé sur le montant du gage;"
+            },
+            {
+              "marke": "d",
+              "text": "pour les droits de gage avec des cautionnements, l'impôt est calculé sur le montant garanti le plus haut, sous réserve de l'article 17 alinéa 2 lettre p;"
+            },
+            {
+              "marke": "e",
+              "text": "pour la vente, l'impôt est calculé sur la contre-prestation de l'acquisition de l'immeuble. Celle-ci comprend toutes les prestations auxquelles l'acquéreur s'oblige à l'égard de l'aliénateur ou de tiers pour l'acquisition de l'immeuble, mais correspond, sauf justification contraire, au minimum à la valeur cadastrale des immeubles;"
+            },
+            {
+              "marke": "f",
+              "text": "pour l'échange, l'impôt est calculé sur la valeur effective des immeubles échangés, mais au minimum sur la valeur cadastrale des immeubles, sauf justification contraire. Si les immeubles échangés sans indication de montant ont été désignés comme étant de valeur égale, le double de la valeur la plus élevée sert de base de calcul. Pour un échange avec soulte et sans montant indiqué, le double de la valeur la moins élevée sert de base de calcul et la soulte est ajoutée;"
+            },
+            {
+              "marke": "g",
+              "text": "pour les contrats de vente d'une construction ou d'une unité de propriété par étages clés en main ou lors de contrats de vente, qui sont liés à un contrat d'entreprise de telle manière que l'opération est assimilable à l'acquisition d'une construction ou d'une unité de propriété par étages clés en main, l'impôt est calculé sur le prix global (prix du terrain et prix de l'ouvrage);"
+            },
+            {
+              "marke": "h",
+              "text": "pour les donations, les legs, les avances d'hoirie et les partages successoraux, l'impôt est calculé sur la valeur cadastrale des immeubles;"
+            },
+            {
+              "marke": "i",
+              "text": "pour les dévolutions au nom de l'hoirie, l'impôt est calculé sur la valeur cadastrale des immeubles;"
+            },
+            {
+              "marke": "j",
+              "text": "pour les servitudes et les charges foncières, l'impôt est calculé sur la valeur effective indiquée par les parties. En cas de prestations périodiques, l'impôt est calculé sur la somme des contre-prestations annuelles, mais au maximum sur les contre-prestations annuelles pour 20 ans;"
+            },
+            {
+              "marke": "k",
+              "text": "pour les contrats d'entretien viager et de rente viagère liés aux transferts immobiliers, l'impôt est calculé sur la valeur indiquée par les parties pour les immeubles, mais au minimum sur leur valeur cadastrale;"
+            },
+            {
+              "marke": "l",
+              "text": "pour les transferts de parts de sociétés immobilières, l'impôt est calculé sur la contre-prestation pour l'acquisition de l'immeuble, mais au minimum sur la valeur cadastrale;"
+            },
+            {
+              "marke": "m",
+              "text": "pour les concessions hydrauliques, l'impôt est calculé sur la capitalisation par un coefficient de 20 de la redevance annuelle attendue, sur la taxe de la concession initiale unique et sur d'autres prestations (énergie gratuite entre autres). Le calcul est effectué par le Service des registres fonciers et de la géomatique (ci-après: le service);"
+            },
+            {
+              "marke": "n",
+              "text": "pour les concessions de mine et de carrière, l'impôt est calculé sur la valeur réelle. Le calcul est effectué par le service;"
+            },
+            {
+              "marke": "o",
+              "text": "pour les apports en nature et les reprises de biens, l'impôt est calculé sur la contre-prestation pour l'acquisition de l'immeuble, mais au minimum sur la valeur cadastrale;"
+            },
+            {
+              "marke": "p",
+              "text": "pour les droits distincts et permanents, l'impôt est calculé sur 20 fois la contre-prestation annuelle en cas de prestation unique sur celle-ci;"
+            },
+            {
+              "marke": "q",
+              "text": "pour les réalisations forcées et les enchères, l'impôt est calculé sur la contre-prestation pour l'acquisition de l'immeuble."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "29679a9acb4236ff8b686e0f0d924cdf456ab88585e4fc2f5fbd9cdd1c817293"
+    },
+    {
+      "id": "kanton/VS/643.1/art_12",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lors d’enchères, l’impôt est calculé séparément pour chaque adjudication."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "e7b9d5e2b812873dd3dc8c2b059e7432dba2f2f9445c379de0c8128be6e95698"
+    },
+    {
+      "id": "kanton/VS/643.1/art_13",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas de partage successoral, le montant de l’impôt payé lors de l’inscription de l’hoirie est déduit."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "a2f5ea827b0549474c946e2b03274134bfd2cd0b0fd2eadc80387a8931946c90"
+    },
+    {
+      "id": "kanton/VS/643.1/art_14",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt proportionnel est, pour les cas mentionnés à l’article 6 alinéa 1, de:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 francs pour des valeurs de 1'001 francs jusqu'à 50'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "1 pour cent pour une valeur de 50'001 francs jusqu'à 500'000 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "1.3 pour cent pour une valeur de 500'001 francs jusqu'à 1'000'000 de francs;"
+            },
+            {
+              "marke": "d",
+              "text": "1.5 pour cent pour une valeur à partir de 1'000'001 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Chaque valeur est arrondie à la centaine de francs supérieure."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "14b38f2e7a6d96e0540819e58385474e35d3f85afe5bc67871b37e0a33fd226b"
+    },
+    {
+      "id": "kanton/VS/643.1/art_15",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le taux de l’impôt additionnel ne peut excéder 50 pour cent des droits de mutations cantonaux."
+        },
+        {
+          "absatz": "2",
+          "text": "Est applicable le taux communal en vigueur lors de l’enregistrement de l’acte."
+        },
+        {
+          "absatz": "3",
+          "text": "Chaque commune informe l’office du registre foncier de son arrondissement et le service du taux de son impôt additionnel ainsi que de chaque modification de ce taux."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "529f51ce2d86b3137344a84b785034711a5ae908e3f6b6e6770c23018d3497a8"
+    },
+    {
+      "id": "kanton/VS/643.1/art_16",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt proportionnel est, pour les cas mentionnés à l’article 6 alinéa 2 et à l’article 8, de:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 francs pour des valeurs de 1'001 francs jusqu'à 20'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "0.2 pour cent pour une valeur à partir de 20'001 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Chaque valeur est arrondie à la centaine de francs supérieure."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "2db5912f7a9a312bca222d512afff585955b481376ced01d7211f852d9b3eb2c"
+    },
+    {
+      "id": "kanton/VS/643.1/art_17",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont soumis à l’impôt fixe de 20 francs, notamment:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les inscriptions provisoires;"
+            },
+            {
+              "marke": "b",
+              "text": "les enregistrements provisoires;"
+            },
+            {
+              "marke": "c",
+              "text": "les immeubles acquis pour un but d'utilité publique par des communes municipales et bourgeoisiales ainsi que les gages constitués; les demandes doivent être adressées aux offices du registre foncier;"
+            },
+            {
+              "marke": "d",
+              "text": "les immeubles acquis dans un but d'intérêt public, général, de bienfaisance ou religieux et les gages constitués pour autant que ces immeubles soient affectés immédiatement et irrévocablement à ces buts; les demandes doivent être adressées au service."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sont soumis à l’impôt fixe de 50 francs, notamment:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "la création d'une fondation;"
+            },
+            {
+              "marke": "b",
+              "text": "les reprises de dettes;"
+            },
+            {
+              "marke": "c",
+              "text": "le droit de retour du donateur;"
+            },
+            {
+              "marke": "d",
+              "text": "les contrats de mariage;"
+            },
+            {
+              "marke": "e",
+              "text": "les contrats de sociétés et d'associations;"
+            },
+            {
+              "marke": "f",
+              "text": "l'annulation de contrats assujettis;"
+            },
+            {
+              "marke": "g",
+              "text": "les promesses de vente;"
+            },
+            {
+              "marke": "h",
+              "text": "les pactes d'emption, de préemption et de réméré;"
+            },
+            {
+              "marke": "i",
+              "text": "les contrats de rétrocession;"
+            },
+            {
+              "marke": "j",
+              "text": "les actes complémentaires et rectificatifs;"
+            },
+            {
+              "marke": "k",
+              "text": "les actes de constat;"
+            },
+            {
+              "marke": "l",
+              "text": "la modification de la propriété par étages;"
+            },
+            {
+              "marke": "m",
+              "text": "les droits de gage légaux;"
+            },
+            {
+              "marke": "n",
+              "text": "les crédits agricoles;"
+            },
+            {
+              "marke": "o",
+              "text": "les prêts pour la promotion économique;"
+            },
+            {
+              "marke": "p",
+              "text": "la constitution d'un cautionnement jusqu'à un montant maximal de 100'000 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Si des transferts de propriété ont lieu par ces actes, ceux-ci sont soumis en sus à l’impôt proportionnel."
+        },
+        {
+          "absatz": "4",
+          "text": "Le changement de créancier ainsi que les situations similaires sont soumis à un impôt fixe de 50 francs."
+        },
+        {
+          "absatz": "5",
+          "text": "La constitution de propriété par étages au sens de l’article 712d CC ainsi que les situations similaires sont soumises à l’impôt fixe de 200 francs."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "410c2b27c21a61164bc0782a1ce808313ffe62549e01dfd2b4a67dd9d80498a8"
+    },
+    {
+      "id": "kanton/VS/643.1/art_18",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont exemptés de l’impôt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les actes dont la valeur ne dépasse pas 1'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "les actes portant sur des transferts de propriété en ligne directe, entre époux ou entre partenaires enregistrés y compris en exécution de liquidation du régime matrimonial ou du partenariat enregistré."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "f609b8349745cbe01a44f40fd6b597b319db11811f9967ec4e4b7bdba176ce59"
+    },
+    {
+      "id": "kanton/VS/643.1/art_19",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’enregistrement consiste en l’inscription d’actes authentiques ou sous seing privé dans un registre spécial. Il leur donne une date certaine."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "cff861bf3d07113790bc2155742273754d726e45cb5ddf6d8374c63ac755dd43"
+    },
+    {
+      "id": "kanton/VS/643.1/art_20",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont soumis à enregistrement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les actes authentiques sauf les dispositions pour cause de mort;"
+            },
+            {
+              "marke": "b",
+              "text": "les écrits translatifs de propriété immobilière et la constitution des gages immobiliers;"
+            },
+            {
+              "marke": "c",
+              "text": "les transferts de parts de sociétés immobilières;"
+            },
+            {
+              "marke": "d",
+              "text": "les concessions hydrauliques, de mine et de carrière ainsi que leur transfert."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "90678688d60924663624aa3361d438ae2ba504cd730de12e7dc9f676adc694a2"
+    },
+    {
+      "id": "kanton/VS/643.1/art_21",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tous les autres écrits auxquels les parties veulent donner une date certaine peuvent être présentés à l’enregistrement."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "db0b6672ace75df08c98dbb2f32c58c33a5202085356e623f136a9aca4bd1c1e"
+    },
+    {
+      "id": "kanton/VS/643.1/art_22",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tous les écrits soumis à l’enregistrement doivent être présentés dans un délai ne dépassant pas 90 jours dès la passation de l’acte."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "8a202337326a1ed3c8a77538ca0beb4bdcfb7c91770ecf3b66aecc6685d007c1"
+    },
+    {
+      "id": "kanton/VS/643.1/art_23",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont soumis à l’obligation de présenter les écrits à l’enregistrement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour les actes authentiques: le notaire et le teneur de registre;"
+            },
+            {
+              "marke": "b",
+              "text": "pour les concessions hydrauliques, de mine et de carrière: le service compétent ou le notaire en charge de l'acte;"
+            },
+            {
+              "marke": "c",
+              "text": "pour les transferts de parts de sociétés immobilières: les parties au contrat."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "61603782dad6209c175af9f4886ce78e4ffc52f660a6db13c0340a127fbfd06b"
+    },
+    {
+      "id": "kanton/VS/643.1/art_24",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les offices du registre foncier sont les autorités de taxation et d’enregistrement."
+        },
+        {
+          "absatz": "2",
+          "text": "Lors de transferts de parts de sociétés immobilières, l’imposition est faite par le service."
+        },
+        {
+          "absatz": "3",
+          "text": "Lors de transferts de participations à des sociétés d’actionnaires-locataires, l’imposition est faite par les offices du registre foncier."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "e52c01b68c61098bb0d597c2f5e4256607580ad0ad2e83d45d68fdef24267193"
+    },
+    {
+      "id": "kanton/VS/643.1/art_25",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La taxation est faite sur la base de la déclaration de la personne imposable et des pièces justificatives jointes à la réquisition d’inscription. Les offices du registre foncier peuvent exiger des pièces complémentaires."
+        },
+        {
+          "absatz": "2",
+          "text": "Si la personne imposable n’a pas fourni les pièces demandées malgré un rappel et que la contre-prestation ne peut pas être calculée de manière sûre faute de données fiables, l’office du registre foncier procède à la taxation sur la base d’une appréciation consciencieuse."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "50bb5a53e99d79afbde6a73798326a06795a74f850e1bd7230f2db2c9e21f861"
+    },
+    {
+      "id": "kanton/VS/643.1/art_26",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lors de transferts de parts de sociétés immobilières, les conseils d’administration, les gérants d’immeubles, les fiduciaires, les trustees, les avocats et les notaires chargés de l’affaire ont l’obligation d’informer les parties de leurs obligations fiscales."
+        },
+        {
+          "absatz": "2",
+          "text": "Les parties au contrat annoncent au service dans les 30 jours suivant l’acquisition de parts de sociétés immobilières le cas d’assujettissement et présentent les pièces justificatives nécessaires."
+        },
+        {
+          "absatz": "3",
+          "text": "Le Service cantonal des contributions annonce au service toute modification de participation à des sociétés immobilières qu’il a constatée et communique les renseignements nécessaires à la taxation."
+        },
+        {
+          "absatz": "4",
+          "text": "Si la personne imposable n’a pas fourni les pièces demandées malgré un rappel et que pour cette raison la contre-prestation ne peut pas être calculée de manière sûre faute de données fiables, le service procède à la taxation sur la base d’une appréciation consciencieuse."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "e921b3dcefebb467d7a92d51da40702a0dee37728d3583a33731fc2b1e952bcc"
+    },
+    {
+      "id": "kanton/VS/643.1/art_27",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque des moyens de preuve ou des faits sont restés inconnus de l’office du registre foncier ou du Service malgré toute l'attention requise ou lorsqu'une taxation a été faite de manière incomplète, il est procédé à un rappel d’impôt."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "cf5d6d2d5cc6f0fc2715453755b742ba458e1a27959e77eefcd2edf6147f6d84"
+    },
+    {
+      "id": "kanton/VS/643.1/art_28",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans le cadre de la procédure de taxation et d’encaissement de l’autorité compétente, le contribuable est censé être représenté par le requérant."
+        },
+        {
+          "absatz": "2",
+          "text": "Le représentant peut exiger du contribuable une avance de frais."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "80c71a1e2cbf65104fb1e3ada2c9875a78b84f9c0ae0b6a3fc51bfb7611d7310"
+    },
+    {
+      "id": "kanton/VS/643.1/art_29",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt est exigible dès la notification de la décision de taxation et il doit être versé dans un délai de 30 jours."
+        },
+        {
+          "absatz": "2",
+          "text": "Le taux de commission d’encaissement de l’impôt additionnel communal est de deux pour cent de cet impôt."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "d99ebf47ef524088d816897c5203e8d006b7ffb832b73706c5df6b13e5e4e5f2"
+    },
+    {
+      "id": "kanton/VS/643.1/art_30",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les impôts non payés dans le délai, il est dû dès l’échéance un intérêt moratoire. Une sommation est adressée au contribuable à l’expiration du délai de paiement."
+        },
+        {
+          "absatz": "2",
+          "text": "Le taux de l’intérêt moratoire correspond à celui fixé par le Conseil d’Etat pour l’impôt cantonal."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "951e51377ee4c192a29f1057165228c4c0a4e51e54e31835777292f2073d6d04"
+    },
+    {
+      "id": "kanton/VS/643.1/art_31",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Avant le paiement de l’impôt, les documents fiscaux peuvent être retenus."
+        },
+        {
+          "absatz": "2",
+          "text": "En aucun cas, le conservateur du registre foncier n'est autorisé à rejeter la réquisition ou refuser l'inscription d'une réquisition au journal pour des motifs qui ne tiennent qu'à l'application de la présente loi."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "4ce88f55c7833dc8a5b1b3534da3bf3a056e343d14f85e5415f029a80df3193c"
+    },
+    {
+      "id": "kanton/VS/643.1/art_32",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L’impôt n’est pas remboursé si le motif juridique existait valablement au moment de l’enregistrement."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "39c0c12bcd2107bd174061bfb30e1399a8f17b42dbdbbfc771e18c6a9dbe26bd"
+    },
+    {
+      "id": "kanton/VS/643.1/art_33",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Toutes les demandes de remboursement d’impôts perçus à tort se périment dans les cinq ans après l’enregistrement. Les demandes doivent être adressées au service."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "9ae415c5f70a355ae850e74c4fa1526f42d9a2a3527b6f6d55b536fe58868a34"
+    },
+    {
+      "id": "kanton/VS/643.1/art_34",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le droit de taxer se prescrit par cinq ans à compter de l’enregistrement."
+        },
+        {
+          "absatz": "2",
+          "text": "La prescription absolue est de 15 ans dès la conclusion de l’affaire."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "726aeb0e7ef7e480dfe46d8088c84a7a3f6e58edcd3cd42b217c0ae18096b523"
+    },
+    {
+      "id": "kanton/VS/643.1/art_35",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les personnes tenues de fournir des renseignements au sens de l’article 26 alinéa 2 de la présente loi qui ne donnent pas suite à leur obligation d’annonce sont punies, après sommation, d’une amende d’au minimum 1'000 francs et, dans les cas graves ou de récidive, d’une amende jusqu’à 50'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "En outre, les dispositions pénales de la loi fiscale sont applicables."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "fc8f74a4e65a64a841f039fcf7e1932233b08865d141f8877f437fe14f33bdfa"
+    },
+    {
+      "id": "kanton/VS/643.1/art_36",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Contre les décisions des offices du registre foncier et du service, un recours peut être formé auprès du Conseil d’Etat dans les trente jours qui suivent la notification."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "b792c9d92f32821ba0fd2a19af995eb5935e6fa7f89799b5f36e4b260c4d718e"
+    },
+    {
+      "id": "kanton/VS/643.1/art_37",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les décisions passées en force peuvent être révisées pour des motifs et selon la procédure prévus par la loi sur la procédure et la juridiction administratives."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "7d80d50f4df501a172aee31bbd3d82bb5c49fc61dfe91d30138e26c5dd5312c1"
+    },
+    {
+      "id": "kanton/VS/643.1/art_38",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions antérieures restent applicables aux enregistrements effectués avant l’entrée en vigueur de la présente loi. Toutefois, la procédure est régie dans tous les cas par les nouvelles dispositions."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "7d644a0c627845c1720649713bcecf396f8baf9e9962c356ea1d17f857b27498"
+    },
+    {
+      "id": "kanton/VS/643.1/art_39",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jusqu’à la révision générale des estimations cadastrales, les valeurs cadastrales des immeubles agricoles correspondent aux valeurs fiscales (15% des taxes cadastrales)."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "eca0050cf04d2b182fdbdc8cd52cdc03b6f8ab8a15a4eb516e422d671192f66b"
+    },
+    {
+      "id": "kanton/VS/643.1/art_40",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lors de la transformation d’une hypothèque ou d’une obligation hypothécaire au porteur en une cédule, l’impôt est exonéré à concurrence du montant de l’inscription, pour autant que le créancier et l’objet de gage restent identiques."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour la modification d’une cédule hypothécaire sur papier en une cédule hypothécaire de registre, l’impôt minimal fixe est prélevé."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "2f9a6ad314f2724a3d4310f5ead38f4d84d905bc7a9b8077b0250519c9fb6651"
+    },
+    {
+      "id": "kanton/VS/643.1/art_41",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Conseil d’Etat édicte les dispositions d’exécution nécessaires."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "4f77549add780077ce56599e4b9613527f56b85410bad249f6c093d12ada1c22"
+    },
+    {
+      "id": "kanton/VS/643.1/art_42",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le service est responsable de l’exécution uniforme de la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Il donne les directives nécessaires aux organes administratifs chargés de l’application de la présente loi et effectue les contrôles."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "7538030c16feaca7f9c294b232aa7f10645d4b0a3e9a87e2a3ecaa56cfa57b18"
+    },
+    {
+      "id": "kanton/VS/643.1/art_43",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La loi sur le timbre du 14 novembre 1953 est abrogée."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "1266118a65fbdefe90b20033a87dccabe75a30ac855c5251441593a10ae10bfb"
+    },
+    {
+      "id": "kanton/VS/643.1/art_44",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LDM (RS 643.1)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La présente loi est soumise au référendum facultatif."
+        },
+        {
+          "absatz": "2",
+          "text": "Le Conseil d’Etat fixe la date de l’entrée en vigueur de la présente loi."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
+      "sha": "87449a996a12315c06ca91d2bbb01e40a0b23fbc99e38187a7972ee31e3f1e6f"
+    }
+  ]
+}

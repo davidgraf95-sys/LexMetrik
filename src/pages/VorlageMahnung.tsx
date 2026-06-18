@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { NormText } from '../components/NormText';
 import {
   MA_DEFAULTS, maZusammenstellen, pruefeMaGates, type MaAntworten, type MaVariante,
 } from '../lib/vorlagen/mahnung';
@@ -86,7 +87,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
         <Checkbox
           checked={a.verfalltagVereinbart}
           onChange={(v) => set('verfalltagVereinbart', v)}
-          label={<><span>Es war ein <strong>bestimmter Verfalltag</strong> vereinbart <span className="text-ink-500">(Verzug trat dann schon mit dessen Ablauf ein, Art. 102 Abs. 2 OR)</span></span></>} />
+          label={<><span>Es war ein <strong>bestimmter Verfalltag</strong> vereinbart <span className="text-ink-500"><NormText text={`(Verzug trat dann schon mit dessen Ablauf ein, Art. 102 Abs. 2 OR)`} /></span></span></>} />
         {a.verfalltagVereinbart && (
           <Field label="Vereinbarter Verfalltag">
             <DatumsFeld value={a.verfalltag} onChange={(v) => set('verfalltag', v)} className={inputCls} />
@@ -102,7 +103,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
         <Checkbox
           checked={a.zinsVertraglich}
           onChange={(v) => set('zinsVertraglich', v)}
-          label={<><span>Vertraglich ist ein <strong>höherer Verzugszins</strong> als 5 % vereinbart <span className="text-ink-500">(Art. 104 Abs. 2 OR)</span></span></>} />
+          label={<><span>Vertraglich ist ein <strong>höherer Verzugszins</strong> als 5 % vereinbart <span className="text-ink-500"><NormText text={`(Art. 104 Abs. 2 OR)`} /></span></span></>} />
         {a.zinsVertraglich && (
           <Field label="Vertraglicher Verzugszins (% pro Jahr)">
             <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="decimal" value={a.zinssatzProzent} onChange={(e) => set('zinssatzProzent', e.target.value)} placeholder="z. B. 8" />
@@ -205,7 +206,7 @@ const CONFIG: VorlagenSeitenConfig<MaAntworten> = {
       <p className="lc-overline text-brass-700">Damit die Mahnung trägt</p>
       <ul className="lc-list space-y-2 text-body-s text-ink-700">
         <li><strong>Unterschreiben und nachweisbar zustellen</strong> – eingeschrieben empfohlen; massgebend ist der Zugang.</li>
-        <li><strong>Fälligkeit prüfen:</strong> Die Mahnung wirkt nur bei fälliger Forderung (Art. 102 Abs. 1 OR).</li>
+        <li><strong>Fälligkeit prüfen:</strong><NormText text={` Die Mahnung wirkt nur bei fälliger Forderung (Art. 102 Abs. 1 OR).`} /></li>
       </ul>
     </>
   ),

@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KAN_DEFAULTS, kanZusammenstellen, pruefeKanGates, type KanAntworten, type KanProbezeit,
 } from '../lib/vorlagen/kuendigungArbeitnehmer';
@@ -130,7 +131,7 @@ export function VorlageKuendigungArbeitnehmer() {
           <Checkbox
             checked={a.kuendigungsterminMonatsende}
             onChange={(v) => set('kuendigungsterminMonatsende', v)}
-            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span></>} />
+            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500"><NormText text={`(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)`} /></span></span></>} />
           {engine?.beendigungsdatum && (
             <div className="lc-tile">
               <GruppenTitel>Beendigung des Arbeitsverhältnisses</GruppenTitel>
@@ -152,7 +153,7 @@ export function VorlageKuendigungArbeitnehmer() {
           <Checkbox
             checked={a.zeugnisVerlangen}
             onChange={(v) => set('zeugnisVerlangen', v)}
-            label={<><span>Qualifiziertes Arbeitszeugnis verlangen <span className="text-ink-500">(Anspruch nach Art. 330a OR)</span></span></>} />
+            label={<><span>Qualifiziertes Arbeitszeugnis verlangen <span className="text-ink-500"><NormText text={`(Anspruch nach Art. 330a OR)`} /></span></span></>} />
           <Checkbox
             checked={a.schlussabrechnungVerlangen}
             onChange={(v) => set('schlussabrechnungVerlangen', v)}
@@ -163,10 +164,10 @@ export function VorlageKuendigungArbeitnehmer() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum der Erklärung">

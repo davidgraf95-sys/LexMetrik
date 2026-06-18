@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Checkbox, Field, inputCls, NormLink } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { DatumsFeld } from '../DatumsFeld';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BetragsFeld } from '../BetragsFeld';
@@ -358,7 +359,7 @@ export function EreignisFristen({ ereignisse, zustellungVorgabe }: {
           {ergebnis.warnungen.length > 0 && (
             <div className="lc-notice-warn">
               <p className="lc-overline mb-1">Hinweise &amp; Weichen</p>
-              {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700">{w}</p>)}
+              {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700"><NormText text={w} /></p>)}
             </div>
           )}
           <div className="lc-notice">

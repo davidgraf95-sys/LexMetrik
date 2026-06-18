@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KV_DEFAULTS, KV_MATERIEN, kvZusammenstellen, kvMaengel, kvHinweise, kvRouting, kvStreitwert, kvKlagefrist,
   type KvAnswers, type KvMaterie, type KvAusnahme,
@@ -291,7 +292,7 @@ export function VorlageKlageVereinfacht() {
           <Checkbox
             checked={a.begruendungAktiv}
             onChange={(v) => set('begruendungAktiv', v)}
-            label={<><span>Schriftliche Begründung beifügen <span className="text-ink-500">(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)</span></span></>} />
+            label={<><span>Schriftliche Begründung beifügen <span className="text-ink-500"><NormText text={`(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)`} /></span></span></>} />
           {a.begruendungAktiv && (
             <>
               {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
@@ -338,7 +339,7 @@ export function VorlageKlageVereinfacht() {
                 ))}
                 <button type="button" className="lc-btn-outline lc-btn-sm"
                   onClick={() => set('beweismittel', [...a.beweismittel, { bezeichnung: '' }])}>+ Beweismittel</button>
-                <p className="text-xs text-ink-500">Verfügbare Urkunden sind beizulegen (Art. 244 Abs. 3 ZPO) — sie erscheinen automatisch im Beilagenverzeichnis.</p>
+                <p className="text-xs text-ink-500"><NormText text={`Verfügbare Urkunden sind beizulegen (Art. 244 Abs. 3 ZPO) — sie erscheinen automatisch im Beilagenverzeichnis.`} /></p>
               </div>
               </>)}
             </>
@@ -351,7 +352,7 @@ export function VorlageKlageVereinfacht() {
           <Checkbox
             checked={a.klagebewilligungVorhanden}
             onChange={(v) => set('klagebewilligungVorhanden', v)}
-            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Prozessvoraussetzung, Art. 209 ZPO)</span></span></>} />
+            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500"><NormText text={`(Prozessvoraussetzung, Art. 209 ZPO)`} /></span></span></>} />
           {a.klagebewilligungVorhanden ? (
             <div className="space-y-2">
               <Field label="Datum der Klagebewilligung (Eröffnung/Zustellung)" hint="massgeblich für die Klagefrist (BGE 140 III 227)">
@@ -417,8 +418,8 @@ export function VorlageKlageVereinfacht() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form & Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Unterschreiben und im Doppel einreichen:</strong> ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).</li>
-              <li><strong>Klagebewilligung beilegen</strong> (bzw. Ausnahme-Nachweis) — fehlt sie, setzt das Gericht Nachfrist (Art. 132 ZPO); die Klagefrist (Art. 209 Abs. 3/4 ZPO) läuft unabhängig davon.</li>
+              <li><strong>Unterschreiben und im Doppel einreichen:</strong><NormText text={` ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).`} /></li>
+              <li><strong>Klagebewilligung beilegen</strong><NormText text={` (bzw. Ausnahme-Nachweis) — fehlt sie, setzt das Gericht Nachfrist (Art. 132 ZPO); die Klagefrist (Art. 209 Abs. 3/4 ZPO) läuft unabhängig davon.`} /></li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

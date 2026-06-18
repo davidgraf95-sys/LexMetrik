@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KM_DEFAULTS, kmZusammenstellen, pruefeKmGates, type KmAntworten,
 } from '../lib/vorlagen/kuendigungMieter';
@@ -149,7 +150,7 @@ export function VorlageKuendigungMieter() {
             checked={a.familienwohnung}
             onChange={(v) => set('familienwohnung', v)}
             label={<><span>Die Mietsache dient als <strong>Wohnung der Familie</strong>
-                <span className="text-ink-500"> (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)</span></span></>} />
+                <span className="text-ink-500"><NormText text={` (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)`} /></span></span></>} />
           {a.familienwohnung && (
             <div className="space-y-3">
               <Checkbox
@@ -226,7 +227,7 @@ export function VorlageKuendigungMieter() {
             checked={a.ausserterminlich}
             onChange={(v) => set('ausserterminlich', v)}
             label={<><span>Ich gebe die Mietsache <strong>vorzeitig</strong> zurück und schlage eine:n Nachmieter:in vor
-                <span className="text-ink-500"> (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)</span></span></>} />
+                <span className="text-ink-500"><NormText text={` (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)`} /></span></span></>} />
           {a.ausserterminlich && (
             <div className="space-y-3">
               <Field label="Nachmieter:in (Name)">
@@ -253,14 +254,14 @@ export function VorlageKuendigungMieter() {
           {gates.blocker.length > 0 && (
             <div className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Export gesperrt</p>
-              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
           )}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
           {terminKachel}
 

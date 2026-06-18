@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
+import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { BetragsFeld } from '../BetragsFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
@@ -37,7 +39,7 @@ const DISCLAIMER =
   'Grundbuchgebühren (Eintragungsgebühr) je Eintragungsart nach kantonalem Tarif. ' +
   'Wertbasierte Eintragungen (Eigentum, Grundpfand) bemessen sich am Wert; Vormerkungen, Anmerkungen, Löschungen und Mutationen sind meist feste Gebühren. ' +
   'In einzelnen Kantonen ist die «Grundbuchgebühr» faktisch eine Wertabgabe/Gemengsteuer (z. B. AG, TI). Notariats-/Beurkundungsgebühr, Handänderungssteuer, Auslagen und MwSt. sind nicht enthalten. ' +
-  'Wo der kantonale Tarif noch nicht verifiziert vorliegt, wird das offen ausgewiesen. Erstrecherche, nicht abgenommen. Keine Rechtsberatung.';
+  'Wo der kantonale Tarif noch nicht verifiziert vorliegt, wird das offen ausgewiesen. Nicht abgenommen. Keine Rechtsberatung.';
 
 const ALLOWED: GbEintragsartId[] = GB_EINTRAGSART_IDS.filter((id) => id !== 'eigentum_kauf');
 
@@ -128,15 +130,15 @@ export function GrundbuchEintragForm() {
               <p key={ngPostenText(ergebnis.posten)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{ngPostenText(ergebnis.posten)}</p>
               {!ergebnis.posten.ergebnis.deterministisch && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
               <p className="mt-2 text-xs text-ink-500">
-                {ergebnis.posten.quelle.erlassName} ({ergebnis.posten.quelle.erlassNr}), {ergebnis.posten.quelle.artikel} · Stand {ergebnis.posten.quelle.stand}
-                {ergebnis.posten.quelle.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+                {ergebnis.posten.quelle.erlassName} ({ergebnis.posten.quelle.erlassNr}), <KantonArtikelTrigger quelle={ergebnis.posten.quelle} /> · Stand {ergebnis.posten.quelle.stand}
+                {ergebnis.posten.quelle.verifiziert === 'recherche' ? ' · nicht abgenommen' : ''}
                 {ergebnis.posten.quelle.quelleUrl ? <> · <a href={ergebnis.posten.quelle.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
               </p>
             </div>
           )}
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+            {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">

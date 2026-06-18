@@ -1,4 +1,5 @@
 import type { SperrfristenErgebnis } from '../lib/sperrfristen';
+import { NormText } from './NormText';
 
 // Sperrtage-Zähler (Art. 336c Abs. 1 OR): je Ereignis beanspruchte Tage;
 // bei Krankheit/Unfall zusätzlich Kontingent (30/90/180 je Dienstjahr) und
@@ -25,7 +26,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
       <div className="flex items-center gap-4">
         <h3 className="lc-overline text-ink-700">Sperrtage-Zähler</h3>
         <div className="flex-1 h-px bg-line" />
-        <span className="lc-overline text-ink-500">Art. 336c OR</span>
+        <span className="lc-overline text-ink-500"><NormText text={`Art. 336c OR`} /></span>
       </div>
 
       <ul className="space-y-3">

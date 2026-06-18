@@ -1,6 +1,7 @@
 import { useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
-import { FehlerBox, NormLink, Stepper } from './ui';
+import { FehlerBox, NormChip, NormLink, Stepper } from './ui';
+import { NormText } from '../NormText';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
@@ -81,7 +82,7 @@ export function VorlagenWizardRahmen({
         <p className="text-body-l text-ink-600 max-w-reading">{intro}</p>
         <div className="flex flex-wrap items-center gap-1.5">
           {norms.map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
           <span className="lc-badge lc-badge-warn">{badge}</span>
         </div>
@@ -380,8 +381,8 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, dire
         <ul className="mt-3 space-y-2.5">
           {ergebnis.protokoll.map((p) => (
             <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-              <p><span className="num text-ink-500">{p.bausteinId}</span> – {p.begruendung}</p>
-              {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
+              <p><span className="num text-ink-500">{p.bausteinId}</span> – <NormText text={p.begruendung} /></p>
+              {p.hinweis && <p className="text-xs text-warn-700">⚠ <NormText text={p.hinweis} /></p>}
               {p.norm && <p><NormLink artikel={p.norm} /></p>}
             </li>
           ))}
