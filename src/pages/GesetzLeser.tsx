@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, randtitelTeile } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
 } from '../lib/normtext/browse';
 import { GEBIET_LABEL } from '../lib/normtext/register';
+import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
+import { NormChip } from '../components/vorlagen/ui';
 import { werkzeugeFuer } from '../lib/normtext/werkzeuge';
 import type { BrowseErlass, BrowseManifest } from '../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../lib/normtext/typen';
@@ -68,14 +70,24 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
         .map((b) => trenneAenderungshistorie(b.text).historie)
         .filter((h): h is string => !!h)
         .map((text): Fussnote => ({ nr: '', text, links: [] }));
-  // Geschätzte Zeilenzahl (≈90 Z./Zeile). Der Hover-Zoom (scale) auf den GANZEN
-  // Artikel verzerrt lange Bestimmungen (z. B. § 11 Notariatstarif BS, ~20 Tarif-
-  // ziffern) — er wächst dann hunderte px. Darum: Zoom nur für kurze Artikel; lange
-  // bekommen nur die (nicht skalierende) Hintergrund-/Schatten-Hervorhebung.
-  const zeilen = e.bloecke.reduce((n, b) =>
-    n + Math.max(1, Math.ceil((b.text?.length ?? 0) / 90))
-      + (b.items?.reduce((m, it) => m + Math.max(1, Math.ceil((it.text?.length ?? 0) / 90)), 0) ?? 0), 0);
-  const langeBestimmung = zeilen > 10;
+  const { ober, titel } = randtitelTeile(marginalie);
+  // VERWEISE: im Artikel genannte, auflösbare (Bund-)Normverweise als Chips am
+  // Fuss sammeln (Davids Referenz). Dedupliziert; nur was fedlexLinkFuerArtikel
+  // wirklich auflöst (nie ein toter Link, §8). Inline-Links bleiben (17.6).
+  const verweise: string[] = (() => {
+    const seen = new Set<string>(); const out: string[] = [];
+    for (const b of e.bloecke) {
+      for (const t of [b.text, ...(b.items?.map((it) => it.text) ?? [])]) {
+        for (const m of t.matchAll(NORM_IM_TEXT)) {
+          const roh = m[0].trim();
+          if (fedlexLinkFuerArtikel(roh) == null) continue;
+          const key = roh.replace(/\s+/g, ' ');
+          if (!seen.has(key)) { seen.add(key); out.push(roh); }
+        }
+      }
+    }
+    return out;
+  })();
   const kopiere = (was: 'zitat' | 'link') => {
     const text = was === 'zitat' ? zitat
       : `${typeof window !== 'undefined' ? window.location.origin : ''}${basisPfad}#art-${e.artikel}`;
@@ -84,26 +96,42 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
     });
   };
   return (
-    <article id={`art-${e.artikel}`} className={`group relative z-0 hover:z-[5] rounded-md px-3 -mx-3 py-2 scroll-mt-28 mt-1 first:mt-0 origin-left transition-[transform,background-color,box-shadow] duration-200 hover:bg-brass-50/60 hover:shadow-md ${langeBestimmung ? '' : 'xl:hover:scale-[1.035]'} xl:grid xl:grid-cols-[3.75rem_minmax(0,35rem)_9.5rem] xl:gap-x-4 xl:items-baseline`}>
-      {/* Artikelnummer: ruhiger Marker links, auf Grundlinie des 1. Absatzes */}
-      <div className="order-1 flex items-baseline gap-2 xl:block xl:text-right">
-        <a href={`#art-${e.artikel}`} className="num text-xs font-medium text-brass-700/90 hover:text-brass-700 no-underline leading-snug break-words">{label}</a>
-        <span className="xl:mt-1 flex gap-2 xl:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-          <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓' : 'Zitat'}</button>
+    <article id={`art-${e.artikel}`}
+      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-hover/lese:opacity-50 hover:!opacity-100 hover:z-[5] hover:scale-[1.008] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
+      {/* Linke Meta-Spalte: Artikelnummer + Randtitel (Ober-Stufen in Versalien,
+          Sachtitel kursiv) — wie Davids Referenz. */}
+      <div className="order-1 mb-3 lg:mb-0">
+        <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>
+        {(ober.length > 0 || titel) && (
+          <div className="mt-2 space-y-1">
+            {ober.map((t, i) => (
+              <p key={i} className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] leading-tight text-ink-400">{t}</p>
+            ))}
+            {titel && <p className="font-serif italic text-[0.85rem] leading-snug text-ink-500">{titel}</p>}
+          </div>
+        )}
+        <span className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+          <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
           <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
         </span>
       </div>
-      {/* Lesespalte: unter xl (gestapelt, ohne Marginalspalte) auf ~40rem
-          begrenzt — sonst werden die Zeilen bei mittlerer Breite zu lang. Ab xl
-          steuert die Grid-Spalte (minmax(0,35rem)) die Breite. */}
-      <div className="order-3 xl:order-2 max-w-reading xl:max-w-none">
+      {/* Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
+          Unter lg (gestapelt) auf ~40rem begrenzt. */}
+      <div className="order-2 max-w-reading lg:max-w-none">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: e.artikelLabel, kuerzel: erlass.kuerzel }}
-          className="space-y-2 font-serif text-[1.0625rem] leading-[1.6] text-ink-800" />
+          className="space-y-3 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
+        {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
+        {verweise.length > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
+            {verweise.map((v) => <NormChip key={v} artikel={v} />)}
+          </div>
+        )}
         {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): amtliche
             Sidecar-Fussnoten oder die aus dem Wortlaut abgetrennte Historie. */}
         {fussAnzeige.length > 0 && (
-          <div className="mt-2.5 border-t border-line/50 pt-1.5 space-y-1">
+          <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
               <p key={i} className="text-micro leading-snug text-ink-400">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
@@ -113,13 +141,6 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
           </div>
         )}
       </div>
-      {marginalie.length > 0 && (
-        <aside className="order-2 xl:order-3 mb-1 xl:mb-0">
-          <p className="text-xs leading-snug text-ink-500">
-            {marginalie.map((m, i) => <span key={i}>{m}{i < marginalie.length - 1 ? <br /> : null}</span>)}
-          </p>
-        </aside>
-      )}
     </article>
   );
 }
@@ -421,7 +442,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </aside>
         )}
 
-        <div>
+        <div className="group/lese">
           {treffer ? (
             <div className="space-y-4 max-w-[40rem]">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>

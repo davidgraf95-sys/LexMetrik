@@ -30,6 +30,18 @@ export function trenneAenderungshistorie(text: string): { wortlaut: string; hist
   return { wortlaut: istWortlaut ? davor : '', historie };
 }
 
+// Randtitel/Marginalien («A. Abschluss des Vertrages», «I. Übereinstimmende
+// Willensäusserung», «1. Im Allgemeinen») für die Lesesicht aufbereiten: den
+// strukturellen Aufzähler (A./I./1.) strippen, die übergeordneten Stufen als
+// Oberzeilen (Versalien-Anzeige übernimmt das CSS), die unterste Stufe als
+// eigentlichen Sachtitel. Rein Darstellung (§3).
+export function randtitelTeile(marginalie: string[]): { ober: string[]; titel: string | null } {
+  const strip = (s: string) => s.replace(/^([A-Za-z]{1,4}|\d{1,3})\.\s+/, '').trim();
+  const clean = marginalie.map(strip).filter(Boolean);
+  if (clean.length === 0) return { ober: [], titel: null };
+  return { ober: clean.slice(0, -1), titel: clean[clean.length - 1] };
+}
+
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei
 // zusammengeklebte Artikelnummern ohne Halbgeviert. Aus der Artikel-id
 // (z. B. «226_a_226_d», «67_70») das Halbgeviert rekonstruieren. IDs mit nur

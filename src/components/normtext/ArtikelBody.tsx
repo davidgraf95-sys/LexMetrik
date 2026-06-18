@@ -118,7 +118,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   const zk = zitierKontext;
 
   return (
-    <div className={className ?? 'px-5 py-4 space-y-2.5'}>
+    <div className={`${className ?? 'px-5 py-4 space-y-2.5'}${zitierKontext ? ' group/art' : ''}`}>
       {bloecke.map((b, i) => {
         const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
         // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
@@ -126,28 +126,25 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
         // starke Markierung.
         const blockStark = istAbsatzZitiert && passusMarke == null;
         const blockDezent = istAbsatzZitiert && passusMarke != null;
-        // Hover-Zoom (Lesesicht) verzerrt hohe Blöcke (z. B. ein Tarif-Absatz mit
-        // ~20 Ziffern) — darum nur für kurze Blöcke skalieren (≈90 Z./Zeile).
-        const blockZeilen = Math.max(1, Math.ceil((b.text?.length ?? 0) / 90))
-          + (b.items?.reduce((m, it) => m + Math.max(1, Math.ceil((it.text?.length ?? 0) / 90)), 0) ?? 0);
-        const langerBlock = blockZeilen > 10;
         return (
           <div
             key={i}
             ref={blockStark ? (passusRef as React.Ref<HTMLDivElement>) : undefined}
             data-passus={blockStark ? 'true' : 'false'}
-            className={`text-body-s leading-relaxed ${
+            className={`${zitierKontext ? '' : 'text-body-s '}leading-relaxed ${
               blockStark
                 ? 'rounded-md border-l-4 border-brass-500 bg-brass-100 px-3 py-2 text-ink-900'
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' rounded px-2 -mx-2 relative z-0 hover:z-10 origin-left transition-[transform,background-color] duration-150 hover:bg-brass-100/40' + (langerBlock ? '' : ' xl:hover:scale-[1.025]') : ''}`}
+            }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-40 hover:!opacity-100 hover:z-10 hover:scale-[1.025] hover:bg-brass-50/60' : ''}`}
           >
-            <p>
+            {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
+                in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
+            <p className={zk && b.absatz != null ? 'pl-8 -indent-8' : undefined}>
               {b.absatz != null && (
                 zk
-                  ? <ZitierMarke sup zitat={`${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`}>{b.absatz}</ZitierMarke>
+                  ? <ZitierMarke klasse="mr-3 font-normal !text-brass-600/90" zitat={`${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`}>{b.absatz}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
@@ -177,7 +174,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 identisches Markup/Styling, nur die Marke unterscheidet sich
                 (Daten). Das zitierte Item wird stark hervorgehoben. */}
             {b.items != null && b.items.length > 0 && (
-              <ul className="mt-1.5 space-y-1 pl-1">
+              <ul className={`mt-1.5 space-y-1 ${zk ? 'pl-8' : 'pl-1'}`}>
                 {b.items.map((it, j) => {
                   // GENAU der eine global bestimmte (Block,Item)-Treffer (B1):
                   // bei gleicher Marke in mehreren Blöcken nur der erste.
