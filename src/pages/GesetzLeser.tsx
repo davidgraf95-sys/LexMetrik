@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, randtitelEintraege } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
@@ -70,8 +70,8 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
         .map((b) => trenneAenderungshistorie(b.text).historie)
         .filter((h): h is string => !!h)
         .map((text): Fussnote => ({ nr: '', text, links: [] }));
-  const { ober, titel } = randtitelTeile(marginalie);
   const randEintraege = randtitelEintraege(marginalie);
+  const [artOffen, setArtOffen] = useState(true); // einzelner Artikel ein-/ausklappbar
   // Fussnoten dem Absatz zuordnen, den sie betreffen: trägt der Absatz einen
   // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
   // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
@@ -139,18 +139,34 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
             ))}
           </div>
         )}
-        <a href={`#art-${e.artikel}`} className="num text-sm font-semibold text-ink-700 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+        <span className="flex items-baseline gap-1.5">
+          <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
+            aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+            className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+          <a href={`#art-${e.artikel}`} className="num text-sm font-semibold text-ink-700 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+        </span>
       </div>
       {/* BREIT (lg+): linke Meta-Spalte — Ober-Stufen in Versalien, Sachtitel
           kursiv (Davids Referenzbild). */}
       <div className="hidden lg:block order-1">
-        <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
-        {(ober.length > 0 || titel) && (
+        <span className="flex items-baseline gap-1.5">
+          <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
+            aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+            className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+          <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
+        </span>
+        {randEintraege.length > 0 && (
           <div className="mt-2 space-y-1 break-words hyphens-auto">
-            {ober.map((t, i) => (
-              <p key={i} className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] leading-tight text-ink-400">{t}</p>
-            ))}
-            {titel && <p className="font-serif italic text-[0.85rem] leading-snug text-ink-500">{titel}</p>}
+            {randEintraege.map((r, i) => {
+              const leaf = i === randEintraege.length - 1;
+              return (
+                <p key={i} className={leaf
+                  ? 'font-serif italic text-[0.85rem] leading-snug text-ink-500'
+                  : 'text-[0.72rem] font-semibold leading-snug text-ink-500'}>
+                  {r.mark && <span className="num mr-1 text-brass-700/70">{r.mark}</span>}{r.titel}
+                </p>
+              );
+            })}
           </div>
         )}
         <span className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
@@ -159,7 +175,8 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
         </span>
       </div>
       {/* Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
-          Unter lg (gestapelt) auf ~40rem begrenzt. */}
+          Unter lg (gestapelt) auf ~40rem begrenzt. Bei eingeklapptem Artikel ausgeblendet. */}
+      {artOffen && (
       <div className="order-2 max-w-reading lg:max-w-none">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
@@ -185,6 +202,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
           </div>
         )}
       </div>
+      )}
     </article>
   );
 }
@@ -424,8 +442,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
   return (
     <div className="space-y-5">
-      {/* Sticky Breadcrumb mit aktueller Position */}
-      <div className="sticky top-0 z-10 -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line bg-paper/90 backdrop-blur text-xs text-ink-500">
+      {/* Breadcrumb (scrollt weg; die Suchleiste ist die sticky Kopfzeile) */}
+      <div className="-mx-5 sm:-mx-6 px-5 sm:px-6 py-2 border-b border-line text-xs text-ink-500">
         <Link to="/gesetze" className="hover:text-brass-700">Gesetze</Link>
         <span className="mx-1.5 text-ink-300">›</span>
         {erlass.ebene === 'bund' ? 'Bund' : `Kanton ${erlass.kanton}`}
@@ -466,32 +484,41 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         ) : null;
       })()}
 
-      {/* Sticky Suchleiste — beim Gesetz immer eingeblendet, plus Fussnoten-Schalter. */}
-      <div className="sticky top-9 z-[9] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-line/60 flex items-center gap-3">
-        <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-          placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
-          className="lc-input h-9 py-0 text-body-s flex-1 min-w-0 max-w-md" />
-        <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-          className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
-          title="Fussnoten ein-/ausblenden">
-          {fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}
-        </button>
-      </div>
+      {/* Flaches Gesetz (keine Gliederung): Suchfeld als sticky Kopf über dem
+          Inhalt (unter dem 110px-Site-Header). */}
+      {sektionen.length === 0 && (
+        <div className="sticky top-[7rem] z-10 -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-line flex items-center gap-2">
+          <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+            placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
+            className="lc-input h-9 py-0 text-body-s flex-1 min-w-0 max-w-md" />
+          <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+            className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+            title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
+        </div>
+      )}
 
-      {/* 2-Spalten (TOC + Inhalt) NUR wenn es eine Gliederung gibt. Sonst (flacher
-          Fallback ohne Struktur / Suchtreffer) volle Breite — sonst landet der einzige
-          Grid-Inhalt in der 16rem-Spalte und die Lesespalte kollabiert. */}
-      <div className={!treffer && sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
-        {!treffer && sektionen.length > 0 && (
-          <aside className={`mb-4 lg:mb-0 ${tocOffen ? 'lg:block' : 'lg:hidden'}`}>
+      {/* 2-Spalten: links Suchfeld + Gliederung (sticky, unter dem Site-Header),
+          rechts Inhalt — wenn das Gesetz eine Gliederung hat. */}
+      <div className={sektionen.length > 0 ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
+        {sektionen.length > 0 && (
+          <aside className="mb-4 lg:mb-0 lg:sticky lg:top-[7rem] lg:max-h-[calc(100vh-7.5rem)] lg:flex lg:flex-col">
+            {/* Suchfeld + Fussnoten-Schalter — oberhalb der Gliederung, bleibt sichtbar */}
+            <div className="flex items-center gap-2 mb-2 shrink-0">
+              <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+                placeholder="Suchen …" aria-label="Im Gesetz suchen"
+                className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
+              <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+                className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+                title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fn' : 'Fn'}</button>
+            </div>
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
-            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} lg:block lg:sticky lg:top-[7.25rem] lg:max-h-[calc(100vh-8.25rem)] lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
-              <div className="mb-2 flex items-baseline justify-between">
-                <p className="lc-overline">Gliederung</p>
-                <button type="button" onClick={() => setTocOffen(false)} className="hidden lg:inline text-micro text-ink-400 hover:text-brass-700" title="Gliederung einklappen">‹ einklappen</button>
-              </div>
+            <div className="mb-2 hidden lg:flex items-baseline justify-between shrink-0">
+              <p className="lc-overline">Gliederung</p>
+              <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-400 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
+            </div>
+            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} ${tocOffen ? 'lg:block' : 'lg:hidden'} lg:flex-1 lg:min-h-0 lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
               <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivPfad} offen={offen}
                 onToggle={toggle}
                 onSprung={(id) => {
@@ -504,15 +531,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </aside>
         )}
 
-        {/* Ohne TOC-Spalte (Suche, flaches Gesetz, eingeklappte Gliederung) den
-            Lese-Inhalt zentrieren statt linksbündig kleben zu lassen. */}
-        <div className={`group/lese ${!treffer && sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[52rem]'}`}>
-          {!treffer && sektionen.length > 0 && !tocOffen && (
-            <button type="button" onClick={() => setTocOffen(true)}
-              className="hidden lg:inline-flex items-center gap-1 text-micro text-ink-400 hover:text-brass-700 mb-3" title="Gliederung einblenden">
-              ☰ Gliederung
-            </button>
-          )}
+        <div className={`group/lese ${sektionen.length > 0 ? '' : 'mx-auto w-full max-w-[52rem]'}`}>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
