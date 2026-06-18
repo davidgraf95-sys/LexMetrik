@@ -31,6 +31,21 @@ function ZitierMarke({ zitat, sup, klasse, children }: {
   return sup ? <sup className="mr-1">{knopf}</sup> : knopf;
 }
 
+// Expliziter «Zitat»-Knopf am Ende jedes Absatzes (Lesesicht): kopiert die
+// präzise Fundstelle des Absatzes («Art. X Abs. Y ERLASS»). Beim Hover des
+// Absatzes eingeblendet — so bekommt man direkt die richtige Zitierung.
+function BlockZitat({ zitat }: { zitat: string }) {
+  const [ok, setOk] = useState(false);
+  return (
+    <button type="button"
+      onClick={() => void navigator.clipboard?.writeText(zitat).then(() => { setOk(true); window.setTimeout(() => setOk(false), 1300); })}
+      title={`${zitat} kopieren`} aria-label={`${zitat} kopieren`}
+      className="ml-2 align-baseline whitespace-nowrap text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 group-hover/blk:opacity-100 focus:opacity-100">
+      {ok ? '✓ kopiert' : 'Zitat'}
+    </button>
+  );
+}
+
 // ArtikelBody: rendert die Absatz-/Item-Blöcke EINES Artikel-Snapshots im
 // Fedlex-Stil (hochgestellte Absatznummer, lit./Ziff.-Items, hervorgehobene
 // zitierte Stelle, aufgehobene Stellen gedämpft, Tarif-Staffeln zeilenweise).
@@ -96,10 +111,13 @@ function normalisiereTarifText(text: string): string {
     .trim();
 }
 
-export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext }: {
+export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
+  /** Lesesicht: Fussnoten-Nummern je Absatz (Schlüssel = Absatz oder '§' für
+   *  absatzlose Blöcke) → Marker am Absatzende, verlinkt zum Fuss-Eintrag. */
+  fnProAbsatz?: Record<string, string[]>;
   passus: PassusInfo;
   /** Ref auf die markierte Stelle (für Scroll-ins-Sichtfeld im Popover). */
   passusRef?: React.Ref<HTMLElement>;
@@ -118,7 +136,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   const zk = zitierKontext;
 
   return (
-    <div className={`${className ?? 'px-5 py-4 space-y-2.5'}${zitierKontext ? ' group/art' : ''}`}>
+    <div data-lese={zitierKontext ? '' : undefined}
+      className={`${className ?? 'px-5 py-4 space-y-2.5'}${zitierKontext ? ' group/art' : ''}`}>
       {bloecke.map((b, i) => {
         const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
         // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
@@ -137,7 +156,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-40 hover:!opacity-100 hover:z-10 hover:scale-[1.025] hover:bg-brass-50/60' : ''}`}
+            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-40 hover:!opacity-100 hover:z-10 hover:scale-[1.025] hover:bg-brass-50/60' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
@@ -169,6 +188,17 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                     ))
                   : verlinkt(anzeige);
               })()}
+              {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
+                  klar ist, worauf sich die Fussnote bezieht. */}
+              {zk && fnProAbsatz?.[b.absatz ?? '§']?.map((nr) => (
+                <a key={nr} href={`#fn-${artikel}-${nr}`}
+                  className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
+              ))}
+              {zk && (
+                <BlockZitat zitat={b.absatz != null
+                  ? `${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`
+                  : `${zk.artikelLabel} ${zk.kuerzel}`} />
+              )}
             </p>
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
                 identisches Markup/Styling, nur die Marke unterscheidet sich

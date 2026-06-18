@@ -42,6 +42,18 @@ export function randtitelTeile(marginalie: string[]): { ober: string[]; titel: s
   return { ober: clean.slice(0, -1), titel: clean[clean.length - 1] };
 }
 
+// Wie randtitelTeile, aber jede Stufe einzeln mit ihrem Aufzähler erhalten —
+// für die schmale (Fedlex-artige) Ansicht, die die Randtitel als gestufte
+// Überschriften MIT Aufzähler («A. Anwendung des Rechts») über dem Artikel zeigt.
+export function randtitelEintraege(marginalie: string[]): { mark: string; titel: string }[] {
+  return marginalie
+    .map((s) => {
+      const m = s.match(/^([A-Za-z]{1,4}|\d{1,3})\.\s+(.+)$/);
+      return m ? { mark: `${m[1]}.`, titel: m[2].trim() } : { mark: '', titel: s.trim() };
+    })
+    .filter((e) => e.titel);
+}
+
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei
 // zusammengeklebte Artikelnummern ohne Halbgeviert. Aus der Artikel-id
 // (z. B. «226_a_226_d», «67_70») das Halbgeviert rekonstruieren. IDs mit nur

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich, randtitelTeile } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
@@ -71,6 +71,37 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
         .filter((h): h is string => !!h)
         .map((text): Fussnote => ({ nr: '', text, links: [] }));
   const { ober, titel } = randtitelTeile(marginalie);
+  const randEintraege = randtitelEintraege(marginalie);
+  // Fussnoten dem Absatz zuordnen, den sie betreffen: trägt der Absatz einen
+  // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
+  // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
+  // Marker am Absatzende. Sonst (z. B. «Fassung gemäss …») an der Artikelnummer.
+  const eliBasis = (u?: string) => u?.match(/eli\/cc\/[^/]+\/[^/?#]+/)?.[0] ?? null;
+  const fnProAbsatz: Record<string, string[]> = {};
+  const fnArtikelEbene: string[] = [];
+  for (const f of fussAnzeige) {
+    if (!f.nr) continue;
+    const fnBase = eliBasis(f.links?.[0]?.url);
+    let key: string | null = null;
+    if (fnBase) {
+      for (const b of e.bloecke) {
+        const txt = [b.text, ...(b.items?.map((it) => it.text) ?? [])].join(' ');
+        let hit = false;
+        for (const m of txt.matchAll(NORM_IM_TEXT)) {
+          const u = fedlexLinkFuerArtikel(m[0].trim());
+          if (u && eliBasis(u) === fnBase) { hit = true; break; }
+        }
+        if (hit) { key = b.absatz ?? '§'; break; }
+      }
+    }
+    if (key) (fnProAbsatz[key] ??= []).push(f.nr);
+    else fnArtikelEbene.push(f.nr);
+  }
+  const fnMarker = fnArtikelEbene.length > 0
+    ? <sup className="ml-0.5 text-[0.62em] font-medium">{fnArtikelEbene.map((nr, i) => (
+        <span key={nr}>{i > 0 && ','}<a href={`#fn-${e.artikel}-${nr}`} className="num text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a></span>
+      ))}</sup>
+    : null;
   // VERWEISE: im Artikel genannte, auflösbare (Bund-)Normverweise als Chips am
   // Fuss sammeln (Davids Referenz). Dedupliziert; nur was fedlexLinkFuerArtikel
   // wirklich auflöst (nie ein toter Link, §8). Inline-Links bleiben (17.6).
@@ -97,11 +128,27 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-hover/lese:opacity-50 hover:!opacity-100 hover:z-[5] hover:scale-[1.008] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
-      {/* Linke Meta-Spalte: Artikelnummer + Randtitel (Ober-Stufen in Versalien,
-          Sachtitel kursiv) — wie Davids Referenz. */}
-      <div className="order-1 mb-3 lg:mb-0">
-        <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>
+      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-50 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.008] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
+      {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
+          Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
+      <div className="lg:hidden mb-2">
+        {randEintraege.length > 0 && (
+          <div className="mb-1.5 space-y-0.5">
+            {randEintraege.map((r, i) => (
+              <p key={i} className={
+                i === 0 ? 'font-display text-[1.05rem] leading-snug text-brass-700'
+                : i === 1 ? 'font-display text-[0.95rem] leading-snug text-brass-700/90'
+                : 'text-[0.85rem] font-semibold leading-snug text-ink-600'
+              }>{r.mark && <span className="num mr-1">{r.mark}</span>}{r.titel}</p>
+            ))}
+          </div>
+        )}
+        <a href={`#art-${e.artikel}`} className="num text-sm font-semibold text-ink-700 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+      </div>
+      {/* BREIT (lg+): linke Meta-Spalte — Ober-Stufen in Versalien, Sachtitel
+          kursiv (Davids Referenzbild). */}
+      <div className="hidden lg:block order-1">
+        <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
         {(ober.length > 0 || titel) && (
           <div className="mt-2 space-y-1">
             {ober.map((t, i) => (
@@ -119,7 +166,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
           Unter lg (gestapelt) auf ~40rem begrenzt. */}
       <div className="order-2 max-w-reading lg:max-w-none">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-          zitierKontext={{ artikelLabel: e.artikelLabel, kuerzel: erlass.kuerzel }}
+          zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }} fnProAbsatz={fnProAbsatz}
           className="space-y-3 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
         {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
         {verweise.length > 0 && (
@@ -133,7 +180,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
         {fussAnzeige.length > 0 && (
           <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
-              <p key={i} className="text-micro leading-snug text-ink-400">
+              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-28 text-micro leading-snug text-ink-400 target:bg-brass-50">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                 {fnTextMitLinks(fn)}
               </p>
@@ -178,7 +225,8 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [suche, setSuche] = useState('');
   const [offen, setOffen] = useState<Record<string, boolean>>({});
   const [aktivPfad, setAktivPfad] = useState<string[]>([]);
-  const [tocAuf, setTocAuf] = useState(false);
+  const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
+  const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
@@ -422,14 +470,17 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       {/* 2-Spalten (TOC + Inhalt) NUR wenn es eine Gliederung gibt. Sonst (flacher
           Fallback ohne Struktur / Suchtreffer) volle Breite — sonst landet der einzige
           Grid-Inhalt in der 16rem-Spalte und die Lesespalte kollabiert. */}
-      <div className={!treffer && sektionen.length > 0 ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
+      <div className={!treffer && sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
         {!treffer && sektionen.length > 0 && (
-          <aside className="mb-4 lg:mb-0">
+          <aside className={`mb-4 lg:mb-0 ${tocOffen ? 'lg:block' : 'lg:hidden'}`}>
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
-            <div className={`${tocAuf ? 'block' : 'hidden'} lg:block lg:sticky lg:top-12 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto pr-1`}>
-              <p className="lc-overline mb-2">Gliederung</p>
+            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} lg:block lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
+              <div className="mb-2 flex items-baseline justify-between">
+                <p className="lc-overline">Gliederung</p>
+                <button type="button" onClick={() => setTocOffen(false)} className="hidden lg:inline text-micro text-ink-400 hover:text-brass-700" title="Gliederung einklappen">‹ einklappen</button>
+              </div>
               <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivPfad} offen={offen}
                 onToggle={toggle}
                 onSprung={(id) => {
@@ -443,6 +494,12 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         )}
 
         <div className="group/lese">
+          {!treffer && sektionen.length > 0 && !tocOffen && (
+            <button type="button" onClick={() => setTocOffen(true)}
+              className="hidden lg:inline-flex items-center gap-1 text-micro text-ink-400 hover:text-brass-700 mb-3" title="Gliederung einblenden">
+              ☰ Gliederung
+            </button>
+          )}
           {treffer ? (
             <div className="space-y-4 max-w-[40rem]">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>

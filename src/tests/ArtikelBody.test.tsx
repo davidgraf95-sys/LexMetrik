@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich, randtitelTeile } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege } from '../lib/normtext/darstellung';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
 // ArtikelBody ist die aus NormPopover extrahierte Render-Komponente. Die
@@ -154,5 +154,15 @@ describe('randtitelTeile (Randtitel für die Meta-Spalte)', () => {
   });
   it('leere Marginalie → leer', () => {
     expect(randtitelTeile([])).toEqual({ ober: [], titel: null });
+  });
+});
+
+describe('randtitelEintraege (schmale Ansicht — Aufzähler erhalten)', () => {
+  it('trennt Mark und Titel je Stufe', () => {
+    expect(randtitelEintraege(['A. Abschluss des Vertrages', '1. Im Allgemeinen']))
+      .toEqual([{ mark: 'A.', titel: 'Abschluss des Vertrages' }, { mark: '1.', titel: 'Im Allgemeinen' }]);
+  });
+  it('ohne Aufzähler bleibt mark leer', () => {
+    expect(randtitelEintraege(['Schlussbestimmung'])).toEqual([{ mark: '', titel: 'Schlussbestimmung' }]);
   });
 });
