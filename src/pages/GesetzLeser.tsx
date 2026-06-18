@@ -556,10 +556,20 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                   setAktivPfad(sekPfadMap.get(id) ?? []);
                   setAktivIds(ids);
                   setTocBaum(Object.fromEntries(ids.map((x) => [x, true])));
+                  // Präzise unter Header + Suchleiste positionieren (sonst zeigt es
+                  // das vorige Element). Nach evtl. Layout-Shift einmal korrigieren.
+                  const scrolle = () => {
+                    const el = sekRefs.current.get(id);
+                    if (!el) return;
+                    const hdr = document.querySelector('header')?.getBoundingClientRect().height ?? 110;
+                    const bar = document.querySelector('[data-such-bar]')?.getBoundingClientRect().height ?? 52;
+                    const y = el.getBoundingClientRect().top + window.scrollY - hdr - bar - 10;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  };
                   window.requestAnimationFrame(() => window.setTimeout(() => {
-                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-                    window.setTimeout(() => { jumpLock.current = false; }, 800);
-                  }, 80));
+                    scrolle();
+                    window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 450);
+                  }, 60));
                 }} />
             </div>
           </aside>
@@ -567,7 +577,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
           {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
-          <div className="sticky top-[6.85rem] z-[15] mb-4 flex items-center gap-3 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
+          <div data-such-bar className="sticky top-[6.85rem] z-[15] mb-4 flex items-center gap-3 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
             {sektionen.length > 0 && !tocOffen && (
               <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
                 className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
