@@ -31,21 +31,6 @@ function ZitierMarke({ zitat, sup, klasse, children }: {
   return sup ? <sup className="mr-1">{knopf}</sup> : knopf;
 }
 
-// Expliziter «Zitat»-Knopf am Ende jedes Absatzes (Lesesicht): kopiert die
-// präzise Fundstelle des Absatzes («Art. X Abs. Y ERLASS»). Beim Hover des
-// Absatzes eingeblendet — so bekommt man direkt die richtige Zitierung.
-function BlockZitat({ zitat, reveal = 'group-hover/blk:opacity-100' }: { zitat: string; reveal?: string }) {
-  const [ok, setOk] = useState(false);
-  return (
-    <button type="button"
-      onClick={() => void navigator.clipboard?.writeText(zitat).then(() => { setOk(true); window.setTimeout(() => setOk(false), 1300); })}
-      title={`${zitat} kopieren`} aria-label={`${zitat} kopieren`}
-      className={`absolute bottom-0 right-0 z-10 rounded bg-paper/85 px-1 text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 focus:opacity-100 ${reveal}`}>
-      {ok ? '✓ kopiert' : 'Zitat'}
-    </button>
-  );
-}
-
 // ArtikelBody: rendert die Absatz-/Item-Blöcke EINES Artikel-Snapshots im
 // Fedlex-Stil (hochgestellte Absatznummer, lit./Ziff.-Items, hervorgehobene
 // zitierte Stelle, aufgehobene Stellen gedämpft, Tarif-Staffeln zeilenweise).
@@ -160,11 +145,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-50/60' : ''}`}
+            }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-50/60' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
-            <p className={zk && absMarke != null ? 'pl-9 -indent-9' : undefined}>
+            <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : 'pl-9') : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="mr-3 font-normal !text-brass-600/90" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
@@ -198,11 +183,6 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 <a key={nr} href={`#fn-${artikel}-${nr}`}
                   className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
               ))}
-              {zk && (
-                <BlockZitat zitat={absMarke != null
-                  ? `${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`
-                  : `${zk.artikelLabel} ${zk.kuerzel}`} />
-              )}
             </p>
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
                 identisches Markup/Styling, nur die Marke unterscheidet sich
@@ -255,7 +235,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                       style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
-                      className={`relative flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li transition-colors hover:bg-brass-100/40' : ''} ${
+                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors hover:bg-brass-100/40' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
@@ -275,7 +255,6 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                           <a key={nr} href={`#fn-${artikel}-${nr}`}
                             className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
                         ))}
-                        {zk && !istStrich && <BlockZitat zitat={itemZitat} reveal="group-hover/li:opacity-100" />}
                       </span>
                     </li>
                   );
