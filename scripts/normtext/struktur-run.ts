@@ -10,7 +10,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { extrahiereStruktur } from './struktur-extrahiere.ts';
-import { extrahiereFussnoten } from './fussnoten-extrahiere.ts';
+import { extrahiereFussnoten, fnDefinitionen, type Fussnote } from './fussnoten-extrahiere.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
@@ -36,10 +36,19 @@ for (const reg of bund) {
   if (anzahl === 0) { fehlend.push(`${reg.key}(0)`); continue; }
   // Fussnoten (Änderungs-/AS/BBl-Historie) je Artikel dazumischen.
   const fussnoten = extrahiereFussnoten(html);
+  const defs = fnDefinitionen(html);
   // Deterministisch sortierte Token-Schlüssel für diff-freundliches JSON.
   const sortiert: Record<string, unknown> = {};
   for (const tok of Object.keys(struktur).sort()) {
-    sortiert[tok] = fussnoten[tok] ? { ...struktur[tok], fussnoten: fussnoten[tok] } : struktur[tok];
+    const { randtitelFnIds, ...rest } = struktur[tok];
+    const perArt = fussnoten[tok] ?? [];
+    // Section-heading-Fussnoten auflösen (absatz/item null → am Artikel/Randtitel).
+    const rfn = (randtitelFnIds ?? [])
+      .map((idd) => defs.get(idd))
+      .filter((f): f is Fussnote => !!f && !perArt.some((p) => p.nr === f.nr))
+      .map((f) => ({ ...f, absatz: null, item: null }));
+    const alle = [...perArt, ...rfn];
+    sortiert[tok] = alle.length ? { ...rest, fussnoten: alle } : rest;
   }
   writeFileSync(`${ZIEL}/${reg.key}.json`, JSON.stringify({ erzeugt, artikel: sortiert }, null, 1) + '\n', 'utf8');
   geschrieben++;

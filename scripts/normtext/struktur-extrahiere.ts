@@ -21,6 +21,9 @@ export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;
   /** Marginalien-Kette (Randtitel) von aussen nach innen. */
   marginalie: string[];
+  /** Fussnoten-IDs, die an einer Überschrift/einem Randtitel über diesem Artikel
+   *  hängen (section-heading-footnote) — am ERSTEN Artikel unter der Überschrift. */
+  randtitelFnIds?: string[];
 }
 
 const TAG = /<(\/?)(div|article|h[1-6])\b([^>]*)>/gi;
@@ -46,7 +49,7 @@ function reinText(html: string): string {
 }
 
 interface Knoten { iscollaps: boolean; pushed: boolean }
-interface Ktx { kind: 'g' | 'm'; ebene: number; label: string }
+interface Ktx { kind: 'g' | 'm'; ebene: number; label: string; fnIds: string[]; attached: boolean }
 
 /** Extrahiert je Artikel-Token die Gliederung + Marginalie aus Fedlex-HTML. */
 export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur> {
@@ -72,9 +75,14 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
         if (tag === 'article') {
           const id = attrs.match(ID);
           if (id) {
+            // Section-heading-Fussnoten: am ERSTEN Artikel unter der Überschrift
+            // anhängen (Vorfahren mit noch nicht zugeordneten fnIds).
+            const rfn: string[] = [];
+            for (const c of context) { if (c.fnIds.length && !c.attached) { rfn.push(...c.fnIds); c.attached = true; } }
             result[id[1].slice(4)] = {
               gliederung: context.filter((c) => c.kind === 'g').map((c) => ({ ebene: c.ebene, label: c.label })),
               marginalie: context.filter((c) => c.kind === 'm').map((c) => c.label),
+              ...(rfn.length ? { randtitelFnIds: rfn } : {}),
             };
           }
         }
@@ -88,12 +96,15 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
 
     // Schliess-Tag
     if (cap && tag === cap.tag) {
-      const label = reinText(html.slice(cap.start, m.index));
+      const roh = html.slice(cap.start, m.index);
+      const label = reinText(roh);
+      // Fussnoten-Marker AN der Überschrift (vor dem Strippen) erfassen.
+      const fnIds = [...roh.matchAll(/href="#(fn-[^"]+)"/gi)].map((x) => x[1]);
       cap = null;
       const hm = /^h([1-6])$/.exec(tag);
       if (label && !/^(Art\.|§)\s/.test(label)) {
-        if (hm && Number(hm[1]) < 6) pending = { kind: 'g', ebene: Number(hm[1]), label };
-        else if (!hm) pending = { kind: 'm', ebene: 0, label };
+        if (hm && Number(hm[1]) < 6) pending = { kind: 'g', ebene: Number(hm[1]), label, fnIds, attached: false };
+        else if (!hm) pending = { kind: 'm', ebene: 0, label, fnIds, attached: false };
         else pending = null;
       } else {
         pending = null;

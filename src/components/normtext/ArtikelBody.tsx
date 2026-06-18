@@ -139,7 +139,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
 
   return (
     <div data-lese={zitierKontext ? '' : undefined}
-      className={`${className ?? 'px-5 py-4 space-y-2.5'}${zitierKontext ? ' group/art' : ''}`}>
+      className={className ?? 'px-5 py-4 space-y-2.5'}>
       {bloecke.map((b, i) => {
         const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
         // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
@@ -160,7 +160,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-70 hover:!opacity-100 hover:z-10 hover:scale-[1.012] hover:bg-brass-50/50' : ''}`}
+            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-50/60' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
@@ -234,17 +234,28 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   // Gedankenstrich: ohne Punkt («–» statt «–.»).
                   const istStrich = /^[–—-]$/.test(it.marke.trim());
                   const markeAnzeige = istStrich ? '–' : `${it.marke}.`;
-                  // Präzises Zitat dieses Items («Art. X Abs. Y lit./Ziff. z ERLASS»).
-                  const itemZitat = zk
-                    ? `${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${litZiff(it.marke)} ${it.marke} ${zk.kuerzel}`
-                    : '';
+                  // Präzises Zitat inkl. Verschachtelung: eine Ziff. unter einer
+                  // Bst. wird «… lit. X Ziff. Y …». Eltern-Kette über die Stufen
+                  // rückwärts aufbauen (nächster Vorfahre je flacherer Stufe).
+                  const itemZitat = zk ? (() => {
+                    const seg: string[] = [];
+                    let lvl = stufen[j];
+                    for (let k = j; k >= 0 && lvl >= 0; k--) {
+                      if (stufen[k] === lvl && !/^[–—-]$/.test(b.items![k].marke.trim())) {
+                        const m2 = b.items![k].marke;
+                        seg.unshift(`${litZiff(m2)} ${m2}`);
+                        lvl--;
+                      }
+                    }
+                    return `${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${seg.join(' ')} ${zk.kuerzel}`;
+                  })() : '';
                   return (
                     <li
                       key={j}
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                       style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
-                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li' : ''} ${
+                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li transition-colors hover:bg-brass-100/40' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'

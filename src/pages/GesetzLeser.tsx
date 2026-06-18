@@ -128,7 +128,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
       {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
           Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
       <div className="lg:hidden mb-2">
-        {randEintraege.length > 0 && (
+        {artOffen && randEintraege.length > 0 && (
           <div className="mb-1.5 space-y-0.5">
             {randEintraege.map((r, i) => (
               <p key={i} className={
@@ -155,7 +155,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
             className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
           <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
         </span>
-        {randEintraege.length > 0 && (
+        {artOffen && randEintraege.length > 0 && (
           <div className="mt-2 space-y-1 break-words hyphens-auto">
             {randEintraege.map((r, i) => {
               const leaf = i === randEintraege.length - 1;
@@ -169,10 +169,12 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
             })}
           </div>
         )}
-        <span className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-          <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-          <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-        </span>
+        {artOffen && (
+          <span className="mt-2 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+            <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
+            <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+          </span>
+        )}
       </div>
       {/* Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern.
           Unter lg (gestapelt) auf ~40rem begrenzt. Bei eingeklapptem Artikel ausgeblendet. */}

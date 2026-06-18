@@ -26,9 +26,9 @@ function clean(s: string): string {
     .trim();
 }
 
-/** Extrahiert je Artikel-Token die Fussnoten (in Erst-Vorkommens-Reihenfolge). */
-export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
-  // 1) Globale Definitionen: id → Fussnote
+/** Globale Fussnoten-Definitionen (id → {nr,text,links}) aus dem ganzen HTML —
+ *  inkl. der «section-heading-footnote»-Definitionen. */
+export function fnDefinitionen(html: string): Map<string, Fussnote> {
   const defs = new Map<string, Fussnote>();
   for (const m of html.matchAll(/<p[^>]*\bid="(fn-[^"]+)"[^>]*>([\s\S]*?)<\/p>/gi)) {
     const id = m[1];
@@ -44,6 +44,12 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
     const ohneBack = roh.replace(/<sup\b[^>]*>\s*<a[^>]*href="#fnbck-[^"]*"[\s\S]*?<\/sup>/i, '');
     defs.set(id, { nr, text: clean(ohneBack), links });
   }
+  return defs;
+}
+
+/** Extrahiert je Artikel-Token die Fussnoten (in Erst-Vorkommens-Reihenfolge). */
+export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
+  const defs = fnDefinitionen(html);
 
   // 2) Je Artikel: Inline-Marker (#fn-…) in Dokumentreihenfolge auflösen und
   //    dem Absatz zuordnen, in dem der Marker steht. Absatz-Container =
