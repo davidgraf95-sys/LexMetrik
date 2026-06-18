@@ -40,7 +40,7 @@ function BlockZitat({ zitat, reveal = 'group-hover/blk:opacity-100' }: { zitat: 
     <button type="button"
       onClick={() => void navigator.clipboard?.writeText(zitat).then(() => { setOk(true); window.setTimeout(() => setOk(false), 1300); })}
       title={`${zitat} kopieren`} aria-label={`${zitat} kopieren`}
-      className={`ml-2 align-baseline whitespace-nowrap text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 focus:opacity-100 ${reveal}`}>
+      className={`absolute bottom-0 right-0 z-10 rounded bg-paper/85 px-1 text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 focus:opacity-100 ${reveal}`}>
       {ok ? '✓ kopiert' : 'Zitat'}
     </button>
   );
@@ -255,7 +255,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                       style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
-                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li transition-colors hover:bg-brass-100/40' : ''} ${
+                      className={`relative flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li transition-colors hover:bg-brass-100/40' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
@@ -264,7 +264,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       {istStrich
                         ? <span className="shrink-0 select-none text-ink-400">{markeAnzeige}</span>
                         : zk
-                          ? <ZitierMarke klasse="shrink-0" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
+                          ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
                       <span>
                         {istAufgehoben(it.text)
