@@ -76,30 +76,16 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
   // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
   // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
   // Marker am Absatzende. Sonst (z. B. «Fassung gemäss …») an der Artikelnummer.
-  const eliBasis = (u?: string) => u?.match(/eli\/cc\/[^/]+\/[^/?#]+/)?.[0] ?? null;
-  // Pro Block die zitierten Erlass-Basen (eli/cc) sammeln.
-  const blockBasen = e.bloecke.map((b) => {
-    const txt = [b.text, ...(b.items?.map((it) => it.text) ?? [])].join(' ');
-    const set = new Set<string>();
-    for (const m of txt.matchAll(NORM_IM_TEXT)) {
-      const eb = eliBasis(fedlexLinkFuerArtikel(m[0].trim()) ?? undefined);
-      if (eb) set.add(eb);
-    }
-    return set;
-  });
-  // Fussnote → Block: ALLE Fussnoten-Links prüfen; nur bei GENAU EINEM
-  // zitierenden Block den Marker am Absatz setzen (Schlüssel = Block-Index,
-  // damit mehrere absatzlose Blöcke nicht kollidieren). Sonst (0 / mehrdeutig)
-  // am Artikel — keine vorgetäuschte Zuordnung.
+  // Fussnote → Block: die Absatznummer kommt direkt aus der Extraktion
+  // (fn.absatz = Absatz, in dem der Marker im Fedlex-HTML steht). Marker auf dem
+  // Artikelkopf/der Marginalie tragen absatz=null → Artikelebene. Schlüssel =
+  // Block-Index (mehrere absatzlose Blöcke kollidieren nicht).
   const fnProAbsatz: Record<number, string[]> = {};
   const fnArtikelEbene: string[] = [];
   for (const f of fussAnzeige) {
     if (!f.nr) continue;
-    const fnBasen = (f.links ?? []).map((l) => eliBasis(l.url)).filter((x): x is string => !!x);
-    const treffer = fnBasen.length
-      ? e.bloecke.map((_, i) => i).filter((i) => fnBasen.some((fb) => blockBasen[i].has(fb)))
-      : [];
-    if (treffer.length === 1) (fnProAbsatz[treffer[0]] ??= []).push(f.nr);
+    const idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
+    if (idx >= 0) (fnProAbsatz[idx] ??= []).push(f.nr);
     else fnArtikelEbene.push(f.nr);
   }
   const fnMarker = fnArtikelEbene.length > 0

@@ -14,7 +14,7 @@
  */
 
 export interface FnLink { label: string; url: string }
-export interface Fussnote { nr: string; text: string; links: FnLink[] }
+export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null }
 
 function clean(s: string): string {
   return s
@@ -45,11 +45,37 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
     defs.set(id, { nr, text: clean(ohneBack), links });
   }
 
-  // 2) Je Artikel: Inline-Marker (#fn-…) in Dokumentreihenfolge auflösen.
+  // 2) Je Artikel: Inline-Marker (#fn-…) in Dokumentreihenfolge auflösen und
+  //    dem Absatz zuordnen, in dem der Marker steht. Absatz-Container =
+  //    <p class="…absatz…">; dessen führendes <sup> ohne <a>-Kind und nur
+  //    Ziffern/[a-z] ist die Absatznummer (gleiche Regel wie der Snapshot-
+  //    Extraktor). Marker ausserhalb eines Absatz-<p> (Artikelkopf/Marginalie)
+  //    → absatz: null (Artikelebene).
   const perArtikel: Record<string, Fussnote[]> = {};
   for (const am of html.matchAll(/<article[^>]*\bid="art_([^"]+)"[^>]*>([\s\S]*?)<\/article>/gi)) {
     const token = am[1];
     const body = am[2];
+    // fn-id → Absatznummer (erstes Vorkommen). Absatz-<p> UND <dl>-Aufzählungen
+    // in DOKUMENTREIHENFOLGE durchgehen (gleiche Logik wie der Snapshot-Extraktor,
+    // der die <dl> dem vorausgehenden Absatz als items anhängt): Marker in einer
+    // <dl> gehören zum zuletzt gesehenen Absatz, nicht zur Artikelebene.
+    const fnAbsatz = new Map<string, string | null>();
+    let letzterAbsatz: string | null = null;
+    const blockRe = /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>|<dl[^>]*>([\s\S]*?)<\/dl>/gi;
+    for (const m of body.matchAll(blockRe)) {
+      let seg: string;
+      if (m[1] !== undefined) {
+        seg = m[1];
+        const supM = seg.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
+        letzterAbsatz = supM && !/<a[\s>]/i.test(supM[1]) && /^\d+[a-z]?$/.test(supM[1].trim())
+          ? supM[1].trim() : null;
+      } else {
+        seg = m[2]; // <dl> → dem letzten Absatz zuordnen
+      }
+      for (const fm of seg.matchAll(/\bhref="#(fn-[^"]+)"/gi)) {
+        if (!fnAbsatz.has(fm[1])) fnAbsatz.set(fm[1], letzterAbsatz);
+      }
+    }
     const gesehen = new Set<string>();
     const liste: Fussnote[] = [];
     for (const mm of body.matchAll(/\bhref="#(fn-[^"]+)"/gi)) {
@@ -57,7 +83,7 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
       if (gesehen.has(id)) continue;
       gesehen.add(id);
       const def = defs.get(id);
-      if (def) liste.push(def);
+      if (def) liste.push({ ...def, absatz: fnAbsatz.has(id) ? fnAbsatz.get(id)! : null });
     }
     if (liste.length) perArtikel[token] = liste;
   }

@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-06-17",
+ "erzeugt": "2026-06-18",
  "artikel": {
   "1": {
    "gliederung": [
@@ -30,7 +30,8 @@
        "label": "SR 210",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "7",
@@ -40,7 +41,8 @@
        "label": "AS 2007 5627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/773"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "8",
@@ -54,7 +56,8 @@
        "label": "SR 170.512",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "9",
@@ -64,7 +67,8 @@
        "label": "AS 2007 5627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/773"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "10",
@@ -74,7 +78,8 @@
        "label": "AS 2007 5627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/773"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "11",
@@ -84,7 +89,8 @@
        "label": "SR 142.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "12",
@@ -98,7 +104,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "13",
@@ -108,7 +115,8 @@
        "label": "SR 0.142.112.681",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "14",
@@ -122,7 +130,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "15",
@@ -132,7 +141,8 @@
        "label": "SR 0.632.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "16",
@@ -142,7 +152,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "17",
@@ -152,7 +163,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "18",
@@ -162,7 +174,8 @@
        "label": "AS 2004 5075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/784"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -195,12 +208,14 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "20",
      "text": "Siehe: nach Art. 1a Abs. 1 Bst. b Ziff. 1-6",
-     "links": []
+     "links": [],
+     "absatz": "1"
     },
     {
      "nr": "21",
@@ -210,7 +225,8 @@
        "label": "SR 833.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10252"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "22",
@@ -224,7 +240,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "23",
@@ -234,7 +251,8 @@
        "label": "SR 0.142.112.681",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "24",
@@ -244,7 +262,8 @@
        "label": "SR 0.632.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "25",
@@ -254,7 +273,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "26",
@@ -268,7 +288,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "27",
@@ -278,7 +299,8 @@
        "label": "SR 0.831.109.367.2",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3748"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "28",
@@ -292,7 +314,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "29",
@@ -302,7 +325,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "30",
@@ -312,7 +336,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "31",
@@ -322,7 +347,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "32",
@@ -332,7 +358,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "33",
@@ -346,7 +373,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "34",
@@ -360,7 +388,8 @@
        "label": "AS 2013 4523",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/800"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "35",
@@ -370,7 +399,8 @@
        "label": "AS 1996 3139",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3139_3139_3139"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "36",
@@ -384,7 +414,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": "6"
     },
     {
      "nr": "37",
@@ -398,7 +429,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "7"
     },
     {
      "nr": "38",
@@ -408,7 +440,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": "8"
     }
    ]
   },
@@ -441,7 +474,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -516,7 +550,8 @@
        "label": "AS 2007 6657",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/861"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "41",
@@ -526,7 +561,8 @@
        "label": "SR 192.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5676"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "42",
@@ -536,7 +572,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "43",
@@ -546,7 +583,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -579,7 +617,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "47",
@@ -589,7 +628,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "48",
@@ -599,7 +639,8 @@
        "label": "AS 2007 5627",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/773"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "49",
@@ -609,7 +650,8 @@
        "label": "AS 2004 5075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/784"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "50",
@@ -619,7 +661,8 @@
        "label": "AS 2004 5075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/784"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "51",
@@ -629,7 +672,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "52",
@@ -639,7 +683,8 @@
        "label": "SR 142.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "53",
@@ -649,7 +694,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "54",
@@ -659,7 +705,8 @@
        "label": "AS 2007 6657",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/861"
       }
-     ]
+     ],
+     "absatz": "6"
     },
     {
      "nr": "55",
@@ -669,7 +716,8 @@
        "label": "SR 832.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10161"
       }
-     ]
+     ],
+     "absatz": "7"
     },
     {
      "nr": "56",
@@ -679,7 +727,8 @@
        "label": "SR 0.142.112.681",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/211"
       }
-     ]
+     ],
+     "absatz": "8"
     },
     {
      "nr": "57",
@@ -689,7 +738,8 @@
        "label": "SR 0.632.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/2314"
       }
-     ]
+     ],
+     "absatz": "8"
     },
     {
      "nr": "58",
@@ -703,7 +753,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "8"
     }
    ]
   },
@@ -736,7 +787,8 @@
        "label": "AS 2005 5639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/771"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "63",
@@ -746,7 +798,8 @@
        "label": "AS 2005 5639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/771"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -779,7 +832,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "65",
@@ -789,7 +843,8 @@
        "label": "SR 832.112.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10154"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "66",
@@ -799,7 +854,8 @@
        "label": "AS 2020 3917",
        "url": "https://fedlex.data.admin.ch/eli/oc/2020/729"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -832,7 +888,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "68",
@@ -846,7 +903,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "69",
@@ -856,7 +914,8 @@
        "label": "AS 1996 3139",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3139_3139_3139"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "70",
@@ -866,7 +925,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -895,7 +955,8 @@
        "label": "AS 2001 138",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/31"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -924,7 +985,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "79",
@@ -934,7 +996,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "80",
@@ -944,7 +1007,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "81",
@@ -954,7 +1018,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "82",
@@ -964,7 +1029,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "83",
@@ -974,7 +1040,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -1003,7 +1070,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "88",
@@ -1013,7 +1081,8 @@
        "label": "SR 832.112.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10154"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "89",
@@ -1023,7 +1092,8 @@
        "label": "AS 2016 4059",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/674"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "90",
@@ -1033,7 +1103,8 @@
        "label": "SR 172.021",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5059"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "91",
@@ -1043,7 +1114,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "92",
@@ -1053,7 +1125,8 @@
        "label": "SR 832.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10161"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "93",
@@ -1063,7 +1136,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "94",
@@ -1077,7 +1151,8 @@
        "label": "AS 2016 4059",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/674"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "95",
@@ -1087,7 +1162,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "96",
@@ -1097,7 +1173,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -1126,7 +1203,8 @@
        "label": "SR 832.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10161"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "98",
@@ -1136,7 +1214,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "99",
@@ -1146,7 +1225,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -1179,7 +1259,8 @@
        "label": "AS 2006 4705",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/725"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1212,7 +1293,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "104",
@@ -1222,7 +1304,8 @@
        "label": "SR 832.112.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10154"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "105",
@@ -1232,7 +1315,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "106",
@@ -1242,7 +1326,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "9"
     }
    ]
   },
@@ -1275,7 +1360,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1308,7 +1394,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1341,7 +1428,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "127",
@@ -1351,7 +1439,8 @@
        "label": "SR 811.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9259"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -1401,7 +1490,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "130",
@@ -1415,7 +1505,8 @@
        "label": "6847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/836"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "131",
@@ -1429,7 +1520,8 @@
        "label": "6847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/836"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "132",
@@ -1443,7 +1535,8 @@
        "label": "6847",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/836"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1489,7 +1582,8 @@
        "label": "AS 2021 706",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/706"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1518,7 +1612,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "136",
@@ -1528,7 +1623,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": "5"
     }
    ]
   },
@@ -1557,7 +1653,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1590,7 +1687,8 @@
        "label": "SR 811.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9259"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -1644,7 +1742,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "165",
@@ -1654,7 +1753,8 @@
        "label": "SR 811.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9259"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -1687,7 +1787,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1720,7 +1821,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "169",
@@ -1730,7 +1832,8 @@
        "label": "SR 811.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9259"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1763,7 +1866,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1796,7 +1900,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "173",
@@ -1806,7 +1911,8 @@
        "label": "SR 811.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9259"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "174",
@@ -1816,7 +1922,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "175",
@@ -1826,7 +1933,8 @@
        "label": "AS 2007 4055",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/538"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "176",
@@ -1836,7 +1944,8 @@
        "label": "SR 814.501",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9534"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "177",
@@ -1846,7 +1955,8 @@
        "label": "AS 2017 4261",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/502"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -1879,7 +1989,8 @@
        "label": "SR 811.21",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9324"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1912,7 +2023,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1945,7 +2057,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "183",
@@ -1955,7 +2068,8 @@
        "label": "SR 811.21",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9324"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -1988,7 +2102,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "185",
@@ -1998,7 +2113,8 @@
        "label": "SR 811.21",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9324"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2031,7 +2147,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "187",
@@ -2041,7 +2158,8 @@
        "label": "SR 811.21",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9324"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "188",
@@ -2051,7 +2169,8 @@
        "label": "AS 2024 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/220"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -2084,7 +2203,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2117,7 +2237,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "203",
@@ -2127,7 +2248,8 @@
        "label": "AS 2024 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/220"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "204",
@@ -2137,7 +2259,8 @@
        "label": "AS 2024 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/220"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -2170,7 +2293,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2203,7 +2327,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "213",
@@ -2213,7 +2338,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "214",
@@ -2223,7 +2349,8 @@
        "label": "AS 2007 651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/132"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2256,7 +2383,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "216",
@@ -2266,7 +2394,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "217",
@@ -2276,7 +2405,8 @@
        "label": "AS 2013 4523",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/800"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "218",
@@ -2286,7 +2416,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "219",
@@ -2296,7 +2427,8 @@
        "label": "AS 2016 4927",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/792"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "220",
@@ -2306,7 +2438,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "221",
@@ -2316,7 +2449,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "5"
     }
    ]
   },
@@ -2349,7 +2483,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2382,7 +2517,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2453,7 +2589,8 @@
        "label": "AS 2012 4089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/474"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "236",
@@ -2463,7 +2600,8 @@
        "label": "SR 832.105",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10143"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "237",
@@ -2473,7 +2611,8 @@
        "label": "AS 2021 800",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/800"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "238",
@@ -2483,7 +2622,8 @@
        "label": "AS 2024 697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/697"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "239",
@@ -2493,7 +2633,8 @@
        "label": "AS 2024 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/220"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "240",
@@ -2503,7 +2644,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -2536,7 +2678,8 @@
        "label": "AS 2002 2129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/316"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2590,7 +2733,8 @@
        "label": "AS 2000 889",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/137"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "264",
@@ -2600,7 +2744,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -2654,7 +2799,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2687,7 +2833,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "275",
@@ -2697,7 +2844,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "276",
@@ -2707,7 +2855,8 @@
        "label": "SR 831.201",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10047"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "277",
@@ -2717,7 +2866,8 @@
        "label": "AS 2021 706",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/706"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "278",
@@ -2727,7 +2877,8 @@
        "label": "SR 812.212.5",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9370"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "279",
@@ -2737,7 +2888,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "280",
@@ -2747,7 +2899,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": "5"
     }
    ]
   },
@@ -2780,7 +2933,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2813,7 +2967,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "313",
@@ -2823,7 +2978,8 @@
        "label": "AS 2023 794",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/794"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -2856,7 +3012,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "319",
@@ -2870,7 +3027,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "320",
@@ -2884,7 +3042,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "321",
@@ -2898,7 +3057,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "322",
@@ -2912,7 +3072,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "323",
@@ -2922,7 +3083,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -2955,7 +3117,8 @@
        "label": "AS 2002 2129",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/316"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "326",
@@ -2965,7 +3128,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "327",
@@ -2979,7 +3143,8 @@
        "label": "SR 170.512",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4975"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "328",
@@ -2989,7 +3154,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -3022,7 +3188,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3059,7 +3226,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3092,7 +3260,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3167,7 +3336,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3213,7 +3383,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3242,7 +3413,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3271,7 +3443,8 @@
        "label": "AS 2011 3449",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/462"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3300,7 +3473,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3333,7 +3507,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3366,7 +3541,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3399,7 +3575,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "389",
@@ -3409,7 +3586,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "390",
@@ -3419,7 +3597,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "391",
@@ -3429,7 +3608,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -3462,7 +3642,8 @@
        "label": "AS 2025 581",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/581"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -3495,7 +3676,8 @@
        "label": "AS 2004 3437",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/454"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -3528,7 +3710,8 @@
        "label": "AS 2024 697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/697"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "410",
@@ -3538,7 +3721,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -3575,7 +3759,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "412",
@@ -3585,7 +3770,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "413",
@@ -3599,7 +3785,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "414",
@@ -3609,7 +3796,8 @@
        "label": "AS 2000 889",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/137"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -3663,7 +3851,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "416",
@@ -3673,7 +3862,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -3727,7 +3917,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "418",
@@ -3737,7 +3928,8 @@
        "label": "AS 1997 2272",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/2272_2272_2272"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -3770,7 +3962,8 @@
        "label": "AS 2024 697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/697"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "420",
@@ -3780,7 +3973,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "421",
@@ -3790,7 +3984,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -3861,7 +4056,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "424",
@@ -3871,7 +4067,8 @@
        "label": "AS 2003 3249",
        "url": "https://fedlex.data.admin.ch/eli/oc/2003/445"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "425",
@@ -3881,7 +4078,8 @@
        "label": "AS 2004 5075",
        "url": "https://fedlex.data.admin.ch/eli/oc/2004/784"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "426",
@@ -3895,7 +4093,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "6"
     },
     {
      "nr": "427",
@@ -3909,7 +4108,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": "7"
     }
    ]
   },
@@ -3938,7 +4138,8 @@
        "label": "AS 2010 6161",
        "url": "https://fedlex.data.admin.ch/eli/oc/2010/879"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "429",
@@ -3948,7 +4149,8 @@
        "label": "AS 2021 323",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/323"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "430",
@@ -3958,7 +4160,8 @@
        "label": "AS 2013 4523",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/800"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -3987,7 +4190,8 @@
        "label": "AS 2013 4523",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/800"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4020,7 +4224,8 @@
        "label": "AS 2002 1633",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/251"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4062,7 +4267,8 @@
        "label": "AS 2005 1251",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/187"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "478",
@@ -4072,7 +4278,8 @@
        "label": "SR 832.20",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10190"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "479",
@@ -4082,7 +4289,8 @@
        "label": "SR 834.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10262"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "480",
@@ -4092,7 +4300,8 @@
        "label": "SR 832.202",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10192"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4125,7 +4334,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4158,7 +4368,8 @@
        "label": "SR 832.20",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10190"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "483",
@@ -4168,7 +4379,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -4222,7 +4434,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4255,7 +4468,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4410,7 +4624,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4431,7 +4646,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4452,7 +4668,8 @@
        "label": "AS 2000 2911",
        "url": "https://fedlex.data.admin.ch/eli/oc/2000/510"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "493",
@@ -4462,7 +4679,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "494",
@@ -4472,7 +4690,8 @@
        "label": "SR 172.041.0",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5066"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -4497,7 +4716,8 @@
        "label": "AS 2007 4477",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/633"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4522,7 +4742,8 @@
        "label": "SR 221.229.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5912"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "497",
@@ -4536,7 +4757,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "498",
@@ -4546,7 +4768,8 @@
        "label": "AS 1996 3139",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3139_3139_3139"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -4571,7 +4794,8 @@
        "label": "AS 1997 1639",
        "url": "https://fedlex.data.admin.ch/eli/oc/1997/1639_1639_1639"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4596,7 +4820,8 @@
        "label": "AS 1996 3139",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3139_3139_3139"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "501",
@@ -4606,7 +4831,8 @@
        "label": "SR 810.122.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9233"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "502",
@@ -4616,7 +4842,8 @@
        "label": "AS 2007 651",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/132"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -4641,7 +4868,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4670,7 +4898,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4720,7 +4949,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4744,7 +4974,8 @@
     {
      "nr": "431",
      "text": "Ursprünglich: Art. 105.",
-     "links": []
+     "links": [],
+     "absatz": null
     },
     {
      "nr": "432",
@@ -4754,7 +4985,8 @@
        "label": "AS 2005 5639",
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/771"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "433",
@@ -4764,7 +4996,8 @@
        "label": "AS 2001 138",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/31"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "434",
@@ -4774,7 +5007,8 @@
        "label": "AS 2001 138",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/31"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -4820,7 +5054,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "438",
@@ -4830,7 +5065,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -4859,7 +5095,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4888,7 +5125,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4917,7 +5155,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "442",
@@ -4927,7 +5166,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "443",
@@ -4937,7 +5177,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -4970,7 +5211,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "445",
@@ -4980,7 +5222,8 @@
        "label": "SR 220",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
-     ]
+     ],
+     "absatz": "5"
     }
    ]
   },
@@ -5009,7 +5252,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5038,7 +5282,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "448",
@@ -5048,7 +5293,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "449",
@@ -5058,7 +5304,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "450",
@@ -5068,7 +5315,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5101,7 +5349,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5130,7 +5379,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5163,7 +5413,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "454",
@@ -5173,7 +5424,8 @@
        "label": "SR 221.229.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5912"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "455",
@@ -5183,7 +5435,8 @@
        "label": "SR 832.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10161"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -5216,7 +5469,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "457",
@@ -5226,7 +5480,8 @@
        "label": "SR 221.229.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5912"
       }
-     ]
+     ],
+     "absatz": "7"
     }
    ]
   },
@@ -5255,7 +5510,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "459",
@@ -5265,7 +5521,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "460",
@@ -5275,7 +5532,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -5304,7 +5562,8 @@
        "label": "AS 2011 3527",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/477"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "462",
@@ -5314,7 +5573,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "463",
@@ -5324,7 +5584,8 @@
        "label": "AS 2022 658",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/658"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -5357,7 +5618,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "468",
@@ -5367,7 +5629,8 @@
        "label": "AS 2012 955",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/162"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -5421,7 +5684,8 @@
        "label": "SR 832.121",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10162"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "471",
@@ -5431,7 +5695,8 @@
        "label": "AS 2024 697",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/697"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "472",
@@ -5441,7 +5706,8 @@
        "label": "SR 831.30",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10077"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "473",
@@ -5451,7 +5717,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "474",
@@ -5461,7 +5728,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5524,7 +5792,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5549,7 +5818,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5582,7 +5852,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "73",
@@ -5592,7 +5863,8 @@
        "label": "SR 833.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10252"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -5617,7 +5889,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5638,7 +5911,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5667,7 +5941,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5700,7 +5975,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5729,7 +6005,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5762,7 +6039,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5795,7 +6073,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5824,7 +6103,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5857,7 +6137,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5894,7 +6175,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5931,7 +6213,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -5964,7 +6247,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "110",
@@ -5974,7 +6258,8 @@
        "label": "SR 172.041.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
       }
-     ]
+     ],
+     "absatz": "6"
     }
    ]
   },
@@ -6007,7 +6292,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "114",
@@ -6017,7 +6303,8 @@
        "label": "AS 2025 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "115",
@@ -6027,7 +6314,8 @@
        "label": "SR 431.011",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6947"
       }
-     ]
+     ],
+     "absatz": "7"
     },
     {
      "nr": "116",
@@ -6037,7 +6325,8 @@
        "label": "AS 2025 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
-     ]
+     ],
+     "absatz": "7"
     }
    ]
   },
@@ -6070,7 +6359,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "118",
@@ -6080,7 +6370,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "119",
@@ -6090,7 +6381,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "120",
@@ -6100,7 +6392,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "121",
@@ -6110,7 +6403,8 @@
        "label": "AS 2024 220",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/220"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "122",
@@ -6120,7 +6414,8 @@
        "label": "SR 942.20",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11238"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6153,7 +6448,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "124",
@@ -6163,7 +6459,8 @@
        "label": "SR 235.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "125",
@@ -6173,7 +6470,8 @@
        "label": "AS 2022 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6206,7 +6504,8 @@
        "label": "AS 2016 2689",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/429"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6235,7 +6534,8 @@
        "label": "AS 2017 3687",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/420"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6268,7 +6568,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6297,7 +6598,8 @@
        "label": "AS 2017 6723",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/749"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6326,7 +6628,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6355,7 +6658,8 @@
        "label": "AS 2011 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6384,7 +6688,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6413,7 +6718,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "145",
@@ -6423,7 +6729,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "146",
@@ -6433,7 +6740,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "147",
@@ -6443,7 +6751,8 @@
        "label": "AS 2011 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -6472,7 +6781,8 @@
        "label": "SR 832.112.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10154"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "149",
@@ -6482,7 +6792,8 @@
        "label": "AS 2023 490",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/490"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "150",
@@ -6492,7 +6803,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "151",
@@ -6502,7 +6814,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "152",
@@ -6512,7 +6825,8 @@
        "label": "AS 2012 459",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/61"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "153",
@@ -6522,7 +6836,8 @@
        "label": "AS 2011 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -6551,7 +6866,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "155",
@@ -6561,7 +6877,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "156",
@@ -6571,7 +6888,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "157",
@@ -6581,7 +6899,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "158",
@@ -6591,7 +6910,8 @@
        "label": "AS 2021 346",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/346"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "159",
@@ -6601,7 +6921,8 @@
        "label": "AS 2011 5227",
        "url": "https://fedlex.data.admin.ch/eli/oc/2011/752"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -6630,7 +6951,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6663,7 +6985,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6721,7 +7044,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "191",
@@ -6731,7 +7055,8 @@
        "label": "SR 811.21",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9324"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6768,7 +7093,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "193",
@@ -6778,7 +7104,8 @@
        "label": "SR 935.81",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11126"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6815,7 +7142,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "195",
@@ -6825,7 +7153,8 @@
        "label": "SR 935.81",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11126"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "196",
@@ -6835,7 +7164,8 @@
        "label": "AS 2024 265",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/265"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "197",
@@ -6845,7 +7175,8 @@
        "label": "www.bag.admin.ch/ref",
        "url": "http://www.bag.admin.ch/ref"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "198",
@@ -6855,7 +7186,8 @@
        "label": "www.bag.admin.ch/ref",
        "url": "http://www.bag.admin.ch/ref"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "199",
@@ -6865,7 +7197,8 @@
        "label": "www.bag.admin.ch/ref",
        "url": "http://www.bag.admin.ch/ref"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6902,7 +7235,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "201",
@@ -6912,7 +7246,8 @@
        "label": "www.bag.admin.ch/ref",
        "url": "http://www.bag.admin.ch/ref"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6949,7 +7284,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -6986,7 +7322,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7023,7 +7360,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7056,7 +7394,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7093,7 +7432,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7130,7 +7470,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7163,7 +7504,8 @@
        "label": "AS 2016 4927",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/792"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "223",
@@ -7173,7 +7515,8 @@
        "label": "SR 172.041.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
       }
-     ]
+     ],
+     "absatz": "6"
     }
    ]
   },
@@ -7206,7 +7549,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7239,7 +7583,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -7272,7 +7617,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7326,7 +7672,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7359,7 +7706,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7392,7 +7740,8 @@
        "label": "AS 2021 439",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7446,7 +7795,8 @@
        "label": "AS 2012 4089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/474"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "242",
@@ -7456,7 +7806,8 @@
        "label": "SR 431.011",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6947"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "243",
@@ -7466,7 +7817,8 @@
        "label": "AS 2025 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "244",
@@ -7476,7 +7828,8 @@
        "label": "SR 235.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
-     ]
+     ],
+     "absatz": "6"
     },
     {
      "nr": "245",
@@ -7486,7 +7839,8 @@
        "label": "AS 2022 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
-     ]
+     ],
+     "absatz": "6"
     },
     {
      "nr": "246",
@@ -7496,7 +7850,8 @@
        "label": "AS 2022 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
-     ]
+     ],
+     "absatz": "7"
     }
    ]
   },
@@ -7529,7 +7884,8 @@
        "label": "AS 2021 838",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/838"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7558,7 +7914,8 @@
        "label": "AS 2012 4089",
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/474"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "249",
@@ -7568,7 +7925,8 @@
        "label": "SR 235.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5994"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "250",
@@ -7578,7 +7936,8 @@
        "label": "AS 2022 568",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/568"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -7615,7 +7974,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7648,7 +8008,8 @@
        "label": "AS 2007 3573",
        "url": "https://fedlex.data.admin.ch/eli/oc/2007/439"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7681,7 +8042,8 @@
        "label": "AS 2008 5097",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/708"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7714,7 +8076,8 @@
        "label": "AS 2008 5097",
        "url": "https://fedlex.data.admin.ch/eli/oc/2008/708"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7747,7 +8110,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7780,7 +8144,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7813,7 +8178,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7846,7 +8212,8 @@
        "label": "AS 2022 814",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/814"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -7879,7 +8246,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "269",
@@ -7889,7 +8257,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "270",
@@ -7899,7 +8268,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "271",
@@ -7909,7 +8279,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "272",
@@ -7919,7 +8290,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "273",
@@ -7929,7 +8301,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "6"
     }
    ]
   },
@@ -7966,7 +8339,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8003,7 +8377,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8036,7 +8411,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8069,7 +8445,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8102,7 +8479,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8139,7 +8517,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "287",
@@ -8149,7 +8528,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "288",
@@ -8159,7 +8539,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "289",
@@ -8169,7 +8550,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "290",
@@ -8179,7 +8561,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -8212,7 +8595,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8245,7 +8629,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8278,7 +8663,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8315,7 +8701,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "295",
@@ -8325,7 +8712,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "296",
@@ -8335,7 +8723,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "297",
@@ -8345,7 +8734,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -8378,7 +8768,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8411,7 +8802,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8444,7 +8836,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8481,7 +8874,8 @@
        "label": "AS 2023 794",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/794"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8518,7 +8912,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "303",
@@ -8528,7 +8923,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "304",
@@ -8538,7 +8934,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -8575,7 +8972,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "306",
@@ -8585,7 +8983,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "307",
@@ -8595,7 +8994,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -8628,7 +9028,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8665,7 +9066,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8702,7 +9104,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8735,7 +9138,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "315",
@@ -8745,7 +9149,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "316",
@@ -8755,7 +9160,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "317",
@@ -8765,7 +9171,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "3"
     }
    ]
   },
@@ -8798,7 +9205,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8835,7 +9243,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8868,7 +9277,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -8901,7 +9311,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "45",
@@ -8919,7 +9330,8 @@
        "label": "SR 832.12",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10161"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -8952,7 +9364,8 @@
        "label": "AS 2009 4245",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/520"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "333",
@@ -8962,7 +9375,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "334",
@@ -8972,7 +9386,8 @@
        "label": "AS 2015 1255",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/258"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9005,7 +9420,8 @@
        "label": "AS 2013 1353",
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/318"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "336",
@@ -9015,7 +9431,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "337",
@@ -9025,7 +9442,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "338",
@@ -9035,7 +9453,8 @@
        "label": "SR 172.041.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5068"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -9072,7 +9491,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9109,7 +9529,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9146,7 +9567,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9179,7 +9601,8 @@
        "label": "AS 2017 623",
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/106"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "345",
@@ -9189,7 +9612,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "346",
@@ -9199,7 +9623,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "4"
     },
     {
      "nr": "347",
@@ -9209,7 +9634,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "5"
     },
     {
      "nr": "348",
@@ -9219,7 +9645,8 @@
        "label": "AS 2023 570",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/570"
       }
-     ]
+     ],
+     "absatz": "6"
     }
    ]
   },
@@ -9260,7 +9687,8 @@
        "label": "2023 791",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/791"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9293,7 +9721,8 @@
        "label": "AS 2022 467",
        "url": "https://fedlex.data.admin.ch/eli/oc/2022/467"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9322,7 +9751,8 @@
        "label": "AS 2019 1395",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/273"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9351,7 +9781,8 @@
        "label": "AS 2019 1395",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/273"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9380,7 +9811,8 @@
        "label": "AS 2019 1395",
        "url": "https://fedlex.data.admin.ch/eli/oc/2019/273"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9409,7 +9841,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9438,7 +9871,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9467,7 +9901,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9496,7 +9931,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9525,7 +9961,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9554,7 +9991,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9583,7 +10021,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "366",
@@ -9593,7 +10032,8 @@
        "label": "AS 2025 318",
        "url": "https://fedlex.data.admin.ch/eli/oc/2025/318"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -9622,7 +10062,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9651,7 +10092,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9680,7 +10122,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9709,7 +10152,8 @@
        "label": "AS 2021 152",
        "url": "https://fedlex.data.admin.ch/eli/oc/2021/152"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9738,7 +10182,8 @@
        "label": "AS 2024 461",
        "url": "https://fedlex.data.admin.ch/eli/oc/2024/461"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "372",
@@ -9748,7 +10193,8 @@
        "label": "SR 816.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9641"
       }
-     ]
+     ],
+     "absatz": "1"
     }
    ]
   },
@@ -9872,7 +10318,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9909,7 +10356,8 @@
        "label": "AS 2023 751",
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/751"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "60",
@@ -9919,7 +10367,8 @@
        "label": "SR 221.229.1",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5912"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9952,7 +10401,8 @@
        "label": "AS 2002 915",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/161"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -9985,7 +10435,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10014,7 +10465,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10047,7 +10499,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10076,7 +10529,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10109,7 +10563,8 @@
        "label": "AS 2002 3908",
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/605"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "385",
@@ -10119,7 +10574,8 @@
        "label": "SR 830.11",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9994"
       }
-     ]
+     ],
+     "absatz": "2"
     }
    ]
   },
@@ -10156,7 +10612,8 @@
        "label": "AS 2009 3525",
        "url": "https://fedlex.data.admin.ch/eli/oc/2009/434"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10189,7 +10646,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10222,7 +10680,8 @@
        "label": "AS 1996 3139",
        "url": "https://fedlex.data.admin.ch/eli/oc/1996/3139_3139_3139"
       }
-     ]
+     ],
+     "absatz": null
     },
     {
      "nr": "393",
@@ -10232,7 +10691,8 @@
        "label": "AS 2001 138",
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/31"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "394",
@@ -10242,7 +10702,8 @@
        "label": "SR 832.20",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/10190"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "395",
@@ -10252,7 +10713,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "2"
     },
     {
      "nr": "396",
@@ -10262,7 +10724,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "3"
     },
     {
      "nr": "397",
@@ -10272,7 +10735,8 @@
        "label": "AS 2006 1717",
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/269"
       }
-     ]
+     ],
+     "absatz": "4"
     }
    ]
   },
@@ -10305,7 +10769,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10359,7 +10824,8 @@
        "label": "AS 2015 5165",
        "url": "https://fedlex.data.admin.ch/eli/oc/2015/840"
       }
-     ]
+     ],
+     "absatz": null
     }
    ]
   },
@@ -10392,7 +10858,8 @@
        "label": "SR 142.31",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
-     ]
+     ],
+     "absatz": "1"
     },
     {
      "nr": "406",
@@ -10402,7 +10869,8 @@
        "label": "AS 2016 4195",
        "url": "https://fedlex.data.admin.ch/eli/oc/2016/704"
       }
-     ]
+     ],
+     "absatz": "7"
     },
     {
      "nr": "407",
@@ -10412,7 +10880,8 @@
        "label": "SR 142.20",
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
-     ]
+     ],
+     "absatz": "7"
     }
    ]
   }
