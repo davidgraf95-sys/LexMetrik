@@ -535,7 +535,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
       {/* Eigene Suchleiste-ZEILE (volle Breite, sticky unter dem Site-Header) — vom
           Gesetzestext getrennt; enthält bei eingeklappter Gliederung den Einblenden-Knopf. */}
-      <div className="sticky top-[7rem] z-[15] -mx-5 sm:-mx-6 mb-4 flex items-center justify-center gap-3 border-y border-line bg-paper px-5 sm:px-6 py-2">
+      <div className="sticky top-[6.85rem] z-[15] -mx-5 sm:-mx-6 -mt-5 mb-4 flex items-center justify-center gap-3 border-b border-line bg-paper px-5 sm:px-6 py-2">
         {sektionen.length > 0 && !tocOffen && (
           <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
             className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
