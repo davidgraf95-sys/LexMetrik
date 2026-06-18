@@ -195,17 +195,22 @@ function SektionKopf({ s, refCb, offen, onToggle }: {
   s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void;
 }) {
   const { pre, rest } = romanFrei(s.label);
-  const groesse = s.ebene <= 1 ? 'text-h3 font-display text-ink-900'
+  // Nach Verschachtelungstiefe abgestuft (5 Stufen wie Fedlex), als EINE
+  // kohärente Zeile: Aufzähler («Erste Abteilung») in Messing, Sachtitel in der
+  // Stufen-Schrift — kein kleiner Overline + schwer-fetter Titel mehr.
+  const stil = s.ebene <= 1 ? 'text-h3 font-display text-ink-900'
     : s.ebene === 2 ? 'text-body-l font-display text-ink-900'
-    : 'text-body-s font-semibold text-ink-700';
+    : s.ebene === 3 ? 'text-base font-semibold text-ink-800'
+    : s.ebene === 4 ? 'text-body-s font-semibold text-ink-700'
+    : 'text-xs font-semibold uppercase tracking-[0.08em] text-ink-500';
+  const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-28 ${s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : 'mt-4'}`}>
+    <div ref={refCb} data-sek={s.id} className={`scroll-mt-28 ${mt}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen}
         className="w-full text-left flex items-baseline gap-2 group/sek">
-        <span className="text-ink-300 text-xs shrink-0 mt-1 w-3">{offen ? '▾' : '▸'}</span>
-        <span className="flex-1">
-          {pre && <span className="lc-overline text-brass-700 block">{pre}</span>}
-          <span className={groesse}>{pre ? rest : s.label}</span>
+        <span className="text-ink-300 text-xs shrink-0 w-3">{offen ? '▾' : '▸'}</span>
+        <span className={`flex-1 ${stil}`}>
+          {pre ? <><span className="text-brass-700/80">{pre}:</span> {rest}</> : s.label}
         </span>
       </button>
     </div>
