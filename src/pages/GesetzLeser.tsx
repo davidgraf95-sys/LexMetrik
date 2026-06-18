@@ -77,24 +77,29 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
   // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
   // Marker am Absatzende. Sonst (z. B. «Fassung gemäss …») an der Artikelnummer.
   const eliBasis = (u?: string) => u?.match(/eli\/cc\/[^/]+\/[^/?#]+/)?.[0] ?? null;
-  const fnProAbsatz: Record<string, string[]> = {};
+  // Pro Block die zitierten Erlass-Basen (eli/cc) sammeln.
+  const blockBasen = e.bloecke.map((b) => {
+    const txt = [b.text, ...(b.items?.map((it) => it.text) ?? [])].join(' ');
+    const set = new Set<string>();
+    for (const m of txt.matchAll(NORM_IM_TEXT)) {
+      const eb = eliBasis(fedlexLinkFuerArtikel(m[0].trim()) ?? undefined);
+      if (eb) set.add(eb);
+    }
+    return set;
+  });
+  // Fussnote → Block: ALLE Fussnoten-Links prüfen; nur bei GENAU EINEM
+  // zitierenden Block den Marker am Absatz setzen (Schlüssel = Block-Index,
+  // damit mehrere absatzlose Blöcke nicht kollidieren). Sonst (0 / mehrdeutig)
+  // am Artikel — keine vorgetäuschte Zuordnung.
+  const fnProAbsatz: Record<number, string[]> = {};
   const fnArtikelEbene: string[] = [];
   for (const f of fussAnzeige) {
     if (!f.nr) continue;
-    const fnBase = eliBasis(f.links?.[0]?.url);
-    let key: string | null = null;
-    if (fnBase) {
-      for (const b of e.bloecke) {
-        const txt = [b.text, ...(b.items?.map((it) => it.text) ?? [])].join(' ');
-        let hit = false;
-        for (const m of txt.matchAll(NORM_IM_TEXT)) {
-          const u = fedlexLinkFuerArtikel(m[0].trim());
-          if (u && eliBasis(u) === fnBase) { hit = true; break; }
-        }
-        if (hit) { key = b.absatz ?? '§'; break; }
-      }
-    }
-    if (key) (fnProAbsatz[key] ??= []).push(f.nr);
+    const fnBasen = (f.links ?? []).map((l) => eliBasis(l.url)).filter((x): x is string => !!x);
+    const treffer = fnBasen.length
+      ? e.bloecke.map((_, i) => i).filter((i) => fnBasen.some((fb) => blockBasen[i].has(fb)))
+      : [];
+    if (treffer.length === 1) (fnProAbsatz[treffer[0]] ??= []).push(f.nr);
     else fnArtikelEbene.push(f.nr);
   }
   const fnMarker = fnArtikelEbene.length > 0
@@ -411,7 +416,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} />
         {auf && (
           <div className="space-y-5 lg:pl-5">
-            {s.kinder.map((k, i) => renderSektion(k, defOpen && i === 0))}
+            {s.kinder.map((k) => renderSektion(k, true))}
             {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
           </div>
         )}
@@ -513,7 +518,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                   {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
                 </div>
               )}
-              {sektionen.map((s, i) => renderSektion(s, i === 0))}
+              {sektionen.map((s) => renderSektion(s, true))}
             </div>
           )}
 
@@ -550,11 +555,11 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
             {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
           </button>
         </div>
-        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k, i) => zeile(k, tiefe + 1, defOpen && i === 0))}</ul>}
+        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1, true))}</ul>}
       </li>
     );
   };
-  return <ul className="space-y-0.5">{sektionen.map((s, i) => zeile(s, 0, i === 0))}</ul>;
+  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0, true))}</ul>;
 }
 
 export function GesetzLeser() {

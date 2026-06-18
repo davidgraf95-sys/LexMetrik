@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
-import { trenneAenderungshistorie } from '../../lib/normtext/darstellung';
+import { trenneAenderungshistorie, absatzMarke } from '../../lib/normtext/darstellung';
 import { NormText } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
@@ -115,9 +115,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
-  /** Lesesicht: Fussnoten-Nummern je Absatz (Schlüssel = Absatz oder '§' für
-   *  absatzlose Blöcke) → Marker am Absatzende, verlinkt zum Fuss-Eintrag. */
-  fnProAbsatz?: Record<string, string[]>;
+  /** Lesesicht: Fussnoten-Nummern je Block (Schlüssel = Block-Index) → Marker
+   *  am Absatzende, verlinkt zum Fuss-Eintrag. */
+  fnProAbsatz?: Record<number, string[]>;
   passus: PassusInfo;
   /** Ref auf die markierte Stelle (für Scroll-ins-Sichtfeld im Popover). */
   passusRef?: React.Ref<HTMLElement>;
@@ -145,21 +145,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
         // starke Markierung.
         const blockStark = istAbsatzZitiert && passusMarke == null;
         const blockDezent = istAbsatzZitiert && passusMarke != null;
-        // Absatznummern mit lat. Suffix («1bis», «2ter») wurden bei der
-        // Extraktion teils NICHT ins absatz-Feld übernommen, sondern stehen am
-        // Textanfang («1bis Wurde …»), oder nur das Suffix leckte in den Text
-        // («absatz=1», Text «bis …»). Rein Darstellung (§3): die Marke
-        // rekonstruieren und wie eine normale Absatznummer hängend setzen.
-        let absMarke = b.absatz;
-        let rohtext = b.text;
-        const suffixE = '(?:bis|ter|quater|quinquies|sexies)';
-        if (absMarke == null) {
-          const m = rohtext.match(new RegExp(`^(\\d+${suffixE})\\s+`));
-          if (m) { absMarke = m[1]; rohtext = rohtext.slice(m[0].length); }
-        } else {
-          const m = rohtext.match(new RegExp(`^(${suffixE})\\s+`));
-          if (m) { absMarke = absMarke + m[1]; rohtext = rohtext.slice(m[0].length); }
-        }
+        // Absatznummern mit lat. Suffix («1bis», «2ter») hängend darstellen (§3).
+        const { marke: absMarke, rest: rohtext } = absatzMarke(b.absatz, b.text);
         return (
           <div
             key={i}
@@ -205,7 +192,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
                   klar ist, worauf sich die Fussnote bezieht. */}
-              {zk && fnProAbsatz?.[b.absatz ?? '§']?.map((nr) => (
+              {zk && fnProAbsatz?.[i]?.map((nr) => (
                 <a key={nr} href={`#fn-${artikel}-${nr}`}
                   className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
               ))}

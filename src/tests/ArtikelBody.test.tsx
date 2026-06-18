@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { ArtikelBody } from '../components/normtext/ArtikelBody';
-import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege } from '../lib/normtext/darstellung';
+import { trenneAenderungshistorie, labelMitBereich, randtitelTeile, randtitelEintraege, absatzMarke } from '../lib/normtext/darstellung';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
 // ArtikelBody ist die aus NormPopover extrahierte Render-Komponente. Die
@@ -164,5 +164,31 @@ describe('randtitelEintraege (schmale Ansicht — Aufzähler erhalten)', () => {
   });
   it('ohne Aufzähler bleibt mark leer', () => {
     expect(randtitelEintraege(['Schlussbestimmung'])).toEqual([{ mark: '', titel: 'Schlussbestimmung' }]);
+  });
+  it('aufgehobener Randtitel («C. …») erscheint NICHT als Heading', () => {
+    expect(randtitelTeile(['C. …'])).toEqual({ ober: [], titel: null });
+    expect(randtitelEintraege(['C. …'])).toEqual([]);
+  });
+  it('kombinierter Aufzähler mit Auslassung («II. und III. …») wird verworfen', () => {
+    expect(randtitelTeile(['II. und III. …'])).toEqual({ ober: [], titel: null });
+    expect(randtitelEintraege(['II. und III. …'])).toEqual([]);
+  });
+});
+
+describe('absatzMarke (bis/ter-Rekonstruktion, §3 — Wortlaut unangetastet)', () => {
+  it('null-Absatz mit «1bis …» am Textanfang → Marke 1bis, Rest ohne Marke', () => {
+    expect(absatzMarke(null, '1bis Wurde in einer Zivilsache …'))
+      .toEqual({ marke: '1bis', rest: 'Wurde in einer Zivilsache …' });
+  });
+  it('geleakter Suffix («absatz=1», Text «bis Erfordert …») → 1bis', () => {
+    expect(absatzMarke('1', 'bis Erfordert die Erstellung eines Schriftstücks …'))
+      .toEqual({ marke: '1bis', rest: 'Erfordert die Erstellung eines Schriftstücks …' });
+  });
+  it('echtes Wort «bis» am Satzanfang («bis zum Ablauf …») bleibt UNANGETASTET', () => {
+    expect(absatzMarke('1', 'bis zum Ablauf der Frist gilt das alte Recht.'))
+      .toEqual({ marke: '1', rest: 'bis zum Ablauf der Frist gilt das alte Recht.' });
+  });
+  it('normaler Absatz unverändert', () => {
+    expect(absatzMarke('2', 'Der Vertrag ist nichtig.')).toEqual({ marke: '2', rest: 'Der Vertrag ist nichtig.' });
   });
 });

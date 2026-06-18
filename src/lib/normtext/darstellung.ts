@@ -35,9 +35,18 @@ export function trenneAenderungshistorie(text: string): { wortlaut: string; hist
 // strukturellen Aufzähler (A./I./1.) strippen, die übergeordneten Stufen als
 // Oberzeilen (Versalien-Anzeige übernimmt das CSS), die unterste Stufe als
 // eigentlichen Sachtitel. Rein Darstellung (§3).
+// Aufzähler-Lauf am Anfang eines Randtitels: einzeln («A.», «1.») ODER
+// kombiniert («II. und III.», «I. bis III.») — plus der nachfolgende Titel.
+const ENUM = '(?:[A-Za-z]{1,4}|\\d{1,3})\\.';
+const ENUM_RUN = new RegExp(`^(${ENUM}(?:\\s*(?:und|bis|[–-])\\s*${ENUM})*)\\s+(.*)$`);
+// Aufgehobene Artikel tragen als «Titel» nur das Auslassungszeichen «…» — das
+// ist keine echte Sachüberschrift und darf NICHT als Heading erscheinen.
+const istLeererTitel = (t: string) => !t || /^[….]+$/.test(t.trim());
+
 export function randtitelTeile(marginalie: string[]): { ober: string[]; titel: string | null } {
-  const strip = (s: string) => s.replace(/^([A-Za-z]{1,4}|\d{1,3})\.\s+/, '').trim();
-  const clean = marginalie.map(strip).filter(Boolean);
+  const clean = marginalie
+    .map((s) => { const m = s.match(ENUM_RUN); return (m ? m[2] : s).trim(); })
+    .filter((t) => !istLeererTitel(t));
   if (clean.length === 0) return { ober: [], titel: null };
   return { ober: clean.slice(0, -1), titel: clean[clean.length - 1] };
 }
@@ -48,10 +57,26 @@ export function randtitelTeile(marginalie: string[]): { ober: string[]; titel: s
 export function randtitelEintraege(marginalie: string[]): { mark: string; titel: string }[] {
   return marginalie
     .map((s) => {
-      const m = s.match(/^([A-Za-z]{1,4}|\d{1,3})\.\s+(.+)$/);
-      return m ? { mark: `${m[1]}.`, titel: m[2].trim() } : { mark: '', titel: s.trim() };
+      const m = s.match(ENUM_RUN);
+      return m ? { mark: m[1], titel: m[2].trim() } : { mark: '', titel: s.trim() };
     })
-    .filter((e) => e.titel);
+    .filter((e) => !istLeererTitel(e.titel));
+}
+
+// Absatznummern mit lat. Suffix («1bis», «2ter») wurden bei der Extraktion teils
+// NICHT ins absatz-Feld übernommen, sondern stehen am Textanfang («1bis Wurde …»),
+// oder nur das Suffix leckte aus dem Feld («absatz=1», Text «bis Erfordert …»).
+// Rekonstruiert die Marke für die hängende Darstellung (§3) — OHNE je das echte
+// Wort «bis/ter» am Satzanfang («bis zum Ablauf …») zu strippen: der geleakte
+// Suffix wird vom Absatz-Beginn (Grossbuchstabe) gefolgt.
+const ABS_SUFFIX = '(?:bis|ter|quater|quinquies|sexies)';
+export function absatzMarke(absatz: string | null, text: string): { marke: string | null; rest: string } {
+  if (absatz == null) {
+    const m = text.match(new RegExp(`^(\\d+${ABS_SUFFIX})\\s+`));
+    return m ? { marke: m[1], rest: text.slice(m[0].length) } : { marke: null, rest: text };
+  }
+  const m = text.match(new RegExp(`^(${ABS_SUFFIX})\\s+(?=[A-ZÄÖÜ])`));
+  return m ? { marke: absatz + m[1], rest: text.slice(m[0].length) } : { marke: absatz, rest: text };
 }
 
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei
