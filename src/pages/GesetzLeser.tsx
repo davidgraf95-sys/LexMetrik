@@ -124,7 +124,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
+      className="group relative z-0 origin-left scroll-mt-[11.5rem] border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
       {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
           Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
       <div className="lg:hidden mb-2">
@@ -196,7 +196,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
         {fussnotenAuf && fussAnzeige.length > 0 && (
           <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
-              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-28 text-micro leading-snug text-ink-400 target:bg-brass-50">
+              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[11.5rem] text-micro leading-snug text-ink-400 target:bg-brass-50">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                 {fnTextMitLinks(fn)}
               </p>
@@ -225,7 +225,7 @@ function SektionKopf({ s, refCb, offen, onToggle }: {
     : 'text-xs font-semibold uppercase tracking-[0.08em] text-ink-500';
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-28 ${mt}`}>
+    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[11.5rem] ${mt}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen}
         className="w-full text-left flex items-baseline gap-2 group/sek">
         <span className="text-ink-300 text-xs shrink-0 w-3">{offen ? '▾' : '▸'}</span>
@@ -246,7 +246,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
   const [offen, setOffen] = useState<Record<string, boolean>>({});
-  const [aktivPfad, setAktivPfad] = useState<string[]>([]);
+  // Eigener Auf-/Zu-Zustand NUR für den TOC-Baum (entkoppelt vom Fliesstext, der
+  // immer offen bleibt) — beim Scrollen klappt die aktive Sektion auf, die übrige zu.
+  const [tocBaum, setTocBaum] = useState<Record<string, boolean>>({});
+  const aktivIdRef = useRef<string | null>(null);
+  // Während eines Klick-Sprungs den Scroll-Spy stilllegen, damit der Baum nicht
+  // durch die durchscrollten Zwischen-Sektionen flackert (auf/zu).
+  const jumpLock = useRef(false);
+  const tocToggle = (id: string) => setTocBaum((o) => ({ ...o, [id]: !o[id] }));
+  const [aktivPfad, setAktivPfad] = useState<string[]>([]); // Labels (Breadcrumb)
+  const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
   const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
   const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
@@ -319,17 +328,55 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     });
   }, [eintraege, sektionen]);
 
-  // Scrollspy: aktiver Pfad = oberste sichtbare Sektion.
+  // Scrollspy: aktiver Pfad = UNTERSTE Sektion, deren Überschrift bereits über die
+  // Schwelle (knapp unter dem Site-Header) gescrollt ist. Funktioniert auch tief in
+  // den Artikeln einer Sektion — nicht nur, wenn eine Überschrift gerade im Bild ist.
   useEffect(() => {
-    if (!sektionen.length || typeof IntersectionObserver === 'undefined') return;
-    const obs = new IntersectionObserver((eintr) => {
-      const sicht = eintr.filter((x) => x.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      const id = sicht[0]?.target.getAttribute('data-sek');
-      if (id) setAktivPfad(sekPfadMap.get(id) ?? []);
-    }, { rootMargin: '-110px 0px -75% 0px' });
-    sekRefs.current.forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
+    if (!sektionen.length || typeof window === 'undefined') return;
+    let raf = 0;
+    let accTimer = 0;
+    const mess = () => {
+      raf = 0;
+      if (jumpLock.current) return;
+      const schwelle = 150;
+      let beste: string | null = null;
+      let besteTop = -Infinity;
+      sekRefs.current.forEach((el, id) => {
+        const top = el.getBoundingClientRect().top;
+        if (top <= schwelle && top > besteTop) { besteTop = top; beste = id; }
+      });
+      if (beste && beste !== aktivIdRef.current) {
+        aktivIdRef.current = beste;
+        const ids = pfadZu(sektionen, (s) => s.id === beste) ?? [];
+        // Markierung SOFORT (nur Klassen, flüssig); das Auf-/Zuklappen (Akkordeon)
+        // erst nach kurzer Scroll-Pause — sonst flackert der Baum beim Durchscrollen.
+        setAktivPfad(sekPfadMap.get(beste) ?? []);
+        setAktivIds(ids);
+        if (accTimer) clearTimeout(accTimer);
+        accTimer = window.setTimeout(() => setTocBaum(Object.fromEntries(ids.map((id) => [id, true]))), 220);
+      }
+    };
+    const onScroll = () => { if (!raf) raf = window.requestAnimationFrame(mess); };
+    mess();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); if (accTimer) clearTimeout(accTimer); };
   }, [sektionen, offen, sekPfadMap]);
+
+  // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, erst
+  // nach dem Akkordeon-Settle (tocBaum), nie die Seite scrollen.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const cont = document.querySelector('[data-toc]') as HTMLElement | null;
+    if (!cont) return;
+    const aktive = cont.querySelectorAll('[data-toc-aktiv]');
+    const el = aktive[aktive.length - 1] as HTMLElement | undefined;
+    if (!el) return;
+    const cr = cont.getBoundingClientRect();
+    const er = el.getBoundingClientRect();
+    if (er.top < cr.top + 8 || er.bottom > cr.bottom - 8) {
+      cont.scrollTo({ top: cont.scrollTop + (er.top - cr.top) - cr.height / 2, behavior: 'smooth' });
+    }
+  }, [tocBaum]);
 
   // Marginalien entdoppeln (Print-Konvention): je Artikel nur die NEUEN Randtitel
   // gegenüber dem vorigen Artikel (gemeinsamer Präfix wird weggelassen).
@@ -486,33 +533,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         ) : null;
       })()}
 
-      {/* Flaches Gesetz (keine Gliederung): Suchfeld als sticky Kopf über dem
-          Inhalt (unter dem 110px-Site-Header). */}
-      {sektionen.length === 0 && (
-        <div className="sticky top-[7rem] z-10 -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-line flex items-center gap-2">
-          <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-            placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
-            className="lc-input h-9 py-0 text-body-s flex-1 min-w-0 max-w-md" />
-          <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-            className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
-            title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
-        </div>
-      )}
-
-      {/* 2-Spalten: links Suchfeld + Gliederung (sticky, unter dem Site-Header),
-          rechts Inhalt — wenn das Gesetz eine Gliederung hat. */}
-      <div className={sektionen.length > 0 ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
+      {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt mit Suchleiste auf
+          HÖHE DER ARTIKEL (in der Inhalts-Spalte, nicht über der Gliederung). */}
+      <div className={sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
         {sektionen.length > 0 && (
-          <aside className="mb-4 lg:mb-0 lg:sticky lg:top-[7rem] lg:max-h-[calc(100vh-7.5rem)] lg:flex lg:flex-col">
-            {/* Suchfeld + Fussnoten-Schalter — oberhalb der Gliederung, bleibt sichtbar */}
-            <div className="flex items-center gap-2 mb-2 shrink-0">
-              <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-                placeholder="Suchen …" aria-label="Im Gesetz suchen"
-                className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
-              <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-                className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
-                title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fn' : 'Fn'}</button>
-            </div>
+          <aside className={`mb-4 lg:mb-0 lg:sticky lg:top-[10.5rem] lg:max-h-[calc(100vh-11rem)] lg:flex-col ${tocOffen ? 'lg:flex' : 'lg:hidden'}`}>
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
@@ -521,19 +546,39 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
               <button type="button" onClick={() => setTocOffen((v) => !v)} className="text-micro text-ink-400 hover:text-brass-700" title="Gliederung ein-/ausklappen">{tocOffen ? '‹ einklappen' : 'ausklappen ›'}</button>
             </div>
             <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} ${tocOffen ? 'lg:block' : 'lg:hidden'} lg:flex-1 lg:min-h-0 lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
-              <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivPfad} offen={offen}
-                onToggle={toggle}
+              <SektionBaumTOC sektionen={sektionen} aktivPfad={aktivIds} offen={tocBaum}
+                onToggle={tocToggle}
                 onSprung={(id) => {
                   const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
-                  oeffnePfad(ids);
-                  window.requestAnimationFrame(() => window.setTimeout(() =>
-                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 80));
+                  // Ziel-Pfad direkt setzen + Spy stilllegen → kein Flackern beim Sprung.
+                  jumpLock.current = true;
+                  aktivIdRef.current = id;
+                  setAktivPfad(sekPfadMap.get(id) ?? []);
+                  setAktivIds(ids);
+                  setTocBaum(Object.fromEntries(ids.map((x) => [x, true])));
+                  window.requestAnimationFrame(() => window.setTimeout(() => {
+                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+                    window.setTimeout(() => { jumpLock.current = false; }, 800);
+                  }, 80));
                 }} />
             </div>
           </aside>
         )}
 
-        <div className={`group/lese ${sektionen.length > 0 ? '' : 'mx-auto w-full max-w-[52rem]'}`}>
+        <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
+          {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
+          <div className="sticky top-[6.85rem] z-[15] mb-4 flex items-center gap-3 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
+            {sektionen.length > 0 && !tocOffen && (
+              <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
+                className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
+            )}
+            <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+              placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
+              className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
+            <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+              className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+              title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
+          </div>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
@@ -565,38 +610,40 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 // TOC-Gliederungsbaum: jede Stufe einklappbar (geteilter Zustand mit dem
 // Fliesstext); Dreieck klappt, Label springt.
 function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
-  sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>;
-  onToggle: (id: string, defOpen: boolean) => void; onSprung: (id: string) => void;
+  sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>; // aktivPfad = Sektions-IDs
+  onToggle: (id: string) => void; onSprung: (id: string) => void;
 }) {
-  // Default: Gliederung nur «bis Abteilung» aufgeklappt — tiefere Stufen erst auf
-  // Klick. Offen ist ein Knoten nur, wenn er eine Abteilung UNTER sich hat (und
-  // selbst keine ist): so werden die Abteilungen sichtbar (eingeklappt), alles
-  // andere bleibt auf der obersten Stufe. Gesetze ohne Abteilung → alles zu.
-  const istAbteilung = (s: Sektion) => /abteilung/i.test(s.label);
-  const hatAbteilungTiefer = (s: Sektion): boolean =>
-    s.kinder.some((k) => istAbteilung(k) || hatAbteilungTiefer(k));
-  const tocDefault = (s: Sektion) => hatAbteilungTiefer(s) && !istAbteilung(s);
-  const zeile = (s: Sektion, tiefe: number, defOpen: boolean): ReactNode => {
-    const auf = offen[s.id] ?? defOpen;
+  // Akkordeon: Standard zu — offen ist nur, was der Scroll-Spy (aktiver Pfad) bzw.
+  // ein Klick aufklappt. Beim Weiterscrollen klappt die verlassene Sektion zu und
+  // die nächste auf.
+  const zeile = (s: Sektion, tiefe: number): ReactNode => {
+    const auf = offen[s.id] ?? false;
     const { pre, rest } = romanFrei(s.label);
-    const aktiv = aktivPfad.includes(pre || s.label);
+    const aktiv = aktivPfad.includes(s.id);
     const hatKinder = s.kinder.length > 0;
     return (
       <li key={s.id}>
         <div className="flex items-start" style={{ paddingLeft: `${tiefe * 0.6}rem` }}>
           {hatKinder
-            ? <button type="button" onClick={() => onToggle(s.id, defOpen)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-[0.6rem] w-4">{auf ? '▾' : '▸'}</button>
+            ? <button type="button" onClick={() => onToggle(s.id)} aria-label={auf ? 'Einklappen' : 'Aufklappen'} className="shrink-0 text-ink-300 hover:text-ink-600 px-1 mt-0.5 text-[0.6rem] w-4">{auf ? '▾' : '▸'}</button>
             : <span className="shrink-0 w-4" aria-hidden />}
-          <button type="button" onClick={() => onSprung(s.id)}
-            className={`flex-1 text-left rounded px-1.5 py-0.5 leading-snug ${tiefe === 0 ? 'text-body-s' : 'text-xs'} ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}>
+          <button type="button" onClick={() => onSprung(s.id)} data-toc-aktiv={aktiv ? '1' : undefined} aria-current={aktiv ? 'true' : undefined}
+            className={`flex-1 text-left rounded px-1.5 py-0.5 leading-snug transition-colors ${tiefe === 0 ? 'text-body-s' : 'text-xs'} ${aktiv ? 'text-ink-900 font-medium bg-brass-100/40' : 'text-ink-600 hover:text-ink-900 hover:bg-paper-sunken/60'}`}>
             {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
           </button>
         </div>
-        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1, tocDefault(k)))}</ul>}
+        {/* Sanftes Auf-/Zuklappen via grid-rows (0fr↔1fr) — Kinder bleiben gemountet. */}
+        {hatKinder && (
+          <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${auf ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+            <div className="overflow-hidden min-h-0">
+              <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1))}</ul>
+            </div>
+          </div>
+        )}
       </li>
     );
   };
-  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0, tocDefault(s)))}</ul>;
+  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0))}</ul>;
 }
 
 export function GesetzLeser() {
