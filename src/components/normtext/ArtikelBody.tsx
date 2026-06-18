@@ -34,13 +34,13 @@ function ZitierMarke({ zitat, sup, klasse, children }: {
 // Expliziter «Zitat»-Knopf am Ende jedes Absatzes (Lesesicht): kopiert die
 // präzise Fundstelle des Absatzes («Art. X Abs. Y ERLASS»). Beim Hover des
 // Absatzes eingeblendet — so bekommt man direkt die richtige Zitierung.
-function BlockZitat({ zitat }: { zitat: string }) {
+function BlockZitat({ zitat, reveal = 'group-hover/blk:opacity-100' }: { zitat: string; reveal?: string }) {
   const [ok, setOk] = useState(false);
   return (
     <button type="button"
       onClick={() => void navigator.clipboard?.writeText(zitat).then(() => { setOk(true); window.setTimeout(() => setOk(false), 1300); })}
       title={`${zitat} kopieren`} aria-label={`${zitat} kopieren`}
-      className="ml-2 align-baseline whitespace-nowrap text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 group-hover/blk:opacity-100 focus:opacity-100">
+      className={`ml-2 align-baseline whitespace-nowrap text-micro text-ink-300 hover:text-brass-700 no-underline opacity-0 transition-opacity duration-150 focus:opacity-100 ${reveal}`}>
       {ok ? '✓ kopiert' : 'Zitat'}
     </button>
   );
@@ -145,6 +145,21 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
         // starke Markierung.
         const blockStark = istAbsatzZitiert && passusMarke == null;
         const blockDezent = istAbsatzZitiert && passusMarke != null;
+        // Absatznummern mit lat. Suffix («1bis», «2ter») wurden bei der
+        // Extraktion teils NICHT ins absatz-Feld übernommen, sondern stehen am
+        // Textanfang («1bis Wurde …»), oder nur das Suffix leckte in den Text
+        // («absatz=1», Text «bis …»). Rein Darstellung (§3): die Marke
+        // rekonstruieren und wie eine normale Absatznummer hängend setzen.
+        let absMarke = b.absatz;
+        let rohtext = b.text;
+        const suffixE = '(?:bis|ter|quater|quinquies|sexies)';
+        if (absMarke == null) {
+          const m = rohtext.match(new RegExp(`^(\\d+${suffixE})\\s+`));
+          if (m) { absMarke = m[1]; rohtext = rohtext.slice(m[0].length); }
+        } else {
+          const m = rohtext.match(new RegExp(`^(${suffixE})\\s+`));
+          if (m) { absMarke = absMarke + m[1]; rohtext = rohtext.slice(m[0].length); }
+        }
         return (
           <div
             key={i}
@@ -160,11 +175,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
-            <p className={zk && b.absatz != null ? 'pl-8 -indent-8' : undefined}>
-              {b.absatz != null && (
+            <p className={zk && absMarke != null ? 'pl-9 -indent-9' : undefined}>
+              {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="mr-3 font-normal !text-brass-600/90" zitat={`${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`}>{b.absatz}</ZitierMarke>
-                  : <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
+                  ? <ZitierMarke klasse="mr-3 font-normal !text-brass-600/90" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
                   Tarif-/Anhang-Kontext (gepunkteter Ziffer-Token ODER Staffel)
@@ -176,7 +191,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // geleakter Label-Rest) aus dem Wortlaut-Block entfernen. Die
                 // Historie selbst gehört an den Artikelfuss (Lesesicht zeigt sie
                 // dort als Fussnote) — hier bleibt nur der reine Wortlaut.
-                const { wortlaut } = trenneAenderungshistorie(b.text);
+                const { wortlaut } = trenneAenderungshistorie(rohtext);
                 const tarifKontext = artikel.includes('.') || staffelZeilen(wortlaut) != null;
                 const anzeige = tarifKontext ? normalisiereTarifText(wortlaut) : wortlaut;
                 // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
@@ -195,8 +210,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
               ))}
               {zk && (
-                <BlockZitat zitat={b.absatz != null
-                  ? `${zk.artikelLabel} Abs. ${b.absatz} ${zk.kuerzel}`
+                <BlockZitat zitat={absMarke != null
+                  ? `${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`
                   : `${zk.artikelLabel} ${zk.kuerzel}`} />
               )}
             </p>
@@ -211,24 +226,29 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   const istItemZitiert = zielItemKey != null
                     && zielItemKey.bi === i
                     && zielItemKey.ji === j;
+                  // Präzises Zitat dieses Items («Art. X Abs. Y lit./Ziff. z ERLASS»).
+                  const itemZitat = zk
+                    ? `${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${litZiff(it.marke)} ${it.marke} ${zk.kuerzel}`
+                    : '';
                   return (
                     <li
                       key={j}
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
-                      className={`flex gap-2 rounded-md px-2 py-1 ${
+                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
                       }`}
                     >
                       {zk
-                        ? <ZitierMarke klasse="shrink-0" zitat={`${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${litZiff(it.marke)} ${it.marke} ${zk.kuerzel}`}>{`${it.marke}.`}</ZitierMarke>
+                        ? <ZitierMarke klasse="shrink-0" zitat={itemZitat}>{`${it.marke}.`}</ZitierMarke>
                         : <span className="num shrink-0 font-semibold text-ink-500">{`${it.marke}.`}</span>}
                       <span>
                         {istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>
                           : verlinkt(it.text)}
+                        {zk && <BlockZitat zitat={itemZitat} reveal="group-hover/li:opacity-100" />}
                       </span>
                     </li>
                   );
