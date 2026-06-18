@@ -124,7 +124,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-50 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.008] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
+      className="group relative z-0 origin-left scroll-mt-28 border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
       {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
           Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
       <div className="lg:hidden mb-2">
@@ -146,7 +146,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
       <div className="hidden lg:block order-1">
         <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
         {(ober.length > 0 || titel) && (
-          <div className="mt-2 space-y-1">
+          <div className="mt-2 space-y-1 break-words hyphens-auto">
             {ober.map((t, i) => (
               <p key={i} className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] leading-tight text-ink-400">{t}</p>
             ))}
@@ -408,7 +408,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       <section key={s.id} className="space-y-3">
         <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} />
         {auf && (
-          <div className="space-y-5 lg:pl-5">
+          <div className="space-y-5">
             {s.kinder.map((k) => renderSektion(k, true))}
             {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
           </div>
@@ -482,7 +482,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
-            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} lg:block lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
+            <div data-toc className={`${tocAuf ? 'block max-h-[60vh] overflow-y-auto' : 'hidden'} lg:block lg:sticky lg:top-[7.25rem] lg:max-h-[calc(100vh-8.25rem)] lg:overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin]`}>
               <div className="mb-2 flex items-baseline justify-between">
                 <p className="lc-overline">Gliederung</p>
                 <button type="button" onClick={() => setTocOffen(false)} className="hidden lg:inline text-micro text-ink-400 hover:text-brass-700" title="Gliederung einklappen">‹ einklappen</button>

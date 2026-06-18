@@ -160,7 +160,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 : blockDezent
                   ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
                   : 'text-ink-700'
-            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-40 hover:!opacity-100 hover:z-10 hover:scale-[1.025] hover:bg-brass-50/60' : ''}`}
+            }${zitierKontext ? ' group/blk rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform group-hover/art:opacity-70 hover:!opacity-100 hover:z-10 hover:scale-[1.012] hover:bg-brass-50/50' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
                 in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
