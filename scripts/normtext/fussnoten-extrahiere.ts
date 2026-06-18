@@ -14,7 +14,7 @@
  */
 
 export interface FnLink { label: string; url: string }
-export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null }
+export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null; item?: string | null }
 
 function clean(s: string): string {
   return s
@@ -60,20 +60,34 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
     // der die <dl> dem vorausgehenden Absatz als items anhängt): Marker in einer
     // <dl> gehören zum zuletzt gesehenen Absatz, nicht zur Artikelebene.
     const fnAbsatz = new Map<string, string | null>();
+    const fnItem = new Map<string, string | null>(); // lit/Ziff-Marke des Items, in dem der Marker steht
     let letzterAbsatz: string | null = null;
+    const setze = (id: string, item: string | null) => {
+      if (!fnAbsatz.has(id)) { fnAbsatz.set(id, letzterAbsatz); fnItem.set(id, item); }
+    };
     const blockRe = /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>|<dl[^>]*>([\s\S]*?)<\/dl>/gi;
     for (const m of body.matchAll(blockRe)) {
-      let seg: string;
       if (m[1] !== undefined) {
-        seg = m[1];
+        const seg = m[1];
         const supM = seg.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
         letzterAbsatz = supM && !/<a[\s>]/i.test(supM[1]) && /^\d+[a-z]?$/.test(supM[1].trim())
           ? supM[1].trim() : null;
+        for (const fm of seg.matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], null);
       } else {
-        seg = m[2]; // <dl> → dem letzten Absatz zuordnen
-      }
-      for (const fm of seg.matchAll(/\bhref="#(fn-[^"]+)"/gi)) {
-        if (!fnAbsatz.has(fm[1])) fnAbsatz.set(fm[1], letzterAbsatz);
+        // <dl>: pro <dt>/<dd>-Paar die lit/Ziff-Marke erfassen — Marker im Paar
+        // gehören zu DIESEM Item (nicht nur zum Absatz). Marke-Format wie der
+        // Snapshot-Extraktor (klein, ohne Punkt: «a», «17»). Gedankenstrich → null.
+        const dlInner = m[2];
+        let paare = 0;
+        for (const pm of dlInner.matchAll(/<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/gi)) {
+          paare++;
+          const markeRoh = pm[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')
+            .replace(/<[^>]+>/g, '').replace(/&nbsp;|\u00a0/g, ' ').trim();
+          const mk = markeRoh.match(/^([0-9]+[a-z]?|[a-z])\s*[.)]?/i);
+          const item = mk ? mk[1].toLowerCase() : null;
+          for (const fm of (pm[1] + pm[2]).matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], item);
+        }
+        if (!paare) for (const fm of dlInner.matchAll(/\bhref="#(fn-[^"]+)"/gi)) setze(fm[1], null);
       }
     }
     const gesehen = new Set<string>();
@@ -83,7 +97,7 @@ export function extrahiereFussnoten(html: string): Record<string, Fussnote[]> {
       if (gesehen.has(id)) continue;
       gesehen.add(id);
       const def = defs.get(id);
-      if (def) liste.push({ ...def, absatz: fnAbsatz.has(id) ? fnAbsatz.get(id)! : null });
+      if (def) liste.push({ ...def, absatz: fnAbsatz.has(id) ? fnAbsatz.get(id)! : null, item: fnItem.get(id) ?? null });
     }
     if (liste.length) perArtikel[token] = liste;
   }

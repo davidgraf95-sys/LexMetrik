@@ -55,8 +55,8 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // Ein Artikel im Lesefluss (Richtung A): ruhige Artikelnummer links (auf Grundlinie
 // des 1. Absatzes), Serif-Bestimmungstext, NEUE Randtitel in der Marge (entdoppelt),
 // amtliche Fussnoten (Änderungs-/AS/BBl-Historie) am Fuss.
-function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
-  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[]; fussnoten?: Fussnote[];
+function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAuf }: {
+  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; marginalie: string[]; fussnoten?: Fussnote[]; fussnotenAuf: boolean;
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
@@ -81,14 +81,19 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
   // Artikelkopf/der Marginalie tragen absatz=null → Artikelebene. Schlüssel =
   // Block-Index (mehrere absatzlose Blöcke kollidieren nicht).
   const fnProAbsatz: Record<number, string[]> = {};
+  const fnProItem: Record<string, string[]> = {}; // Schlüssel «<blockIndex>|<marke>»
   const fnArtikelEbene: string[] = [];
   for (const f of fussAnzeige) {
     if (!f.nr) continue;
-    const idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
-    if (idx >= 0) (fnProAbsatz[idx] ??= []).push(f.nr);
-    else fnArtikelEbene.push(f.nr);
+    let idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
+    if (f.item && idx < 0) idx = e.bloecke.findIndex((b) => (b.items ?? []).some((it) => it.marke === f.item));
+    if (idx >= 0 && f.item && (e.bloecke[idx].items ?? []).some((it) => it.marke === f.item)) {
+      (fnProItem[`${idx}|${f.item}`] ??= []).push(f.nr); // Fussnote am lit/Ziff-Item
+    } else if (idx >= 0) {
+      (fnProAbsatz[idx] ??= []).push(f.nr); // am Absatz
+    } else fnArtikelEbene.push(f.nr); // am Artikel
   }
-  const fnMarker = fnArtikelEbene.length > 0
+  const fnMarker = fussnotenAuf && fnArtikelEbene.length > 0
     ? <sup className="ml-0.5 text-[0.62em] font-medium">{fnArtikelEbene.map((nr, i) => (
         <span key={nr}>{i > 0 && ','}<a href={`#fn-${e.artikel}-${nr}`} className="num text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a></span>
       ))}</sup>
@@ -157,7 +162,8 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
           Unter lg (gestapelt) auf ~40rem begrenzt. */}
       <div className="order-2 max-w-reading lg:max-w-none">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-          zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }} fnProAbsatz={fnProAbsatz}
+          zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
+          fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
           className="space-y-3 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
         {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
         {verweise.length > 0 && (
@@ -166,9 +172,9 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten }: {
             {verweise.map((v) => <NormChip key={v} artikel={v} />)}
           </div>
         )}
-        {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): amtliche
-            Sidecar-Fussnoten oder die aus dem Wortlaut abgetrennte Historie. */}
-        {fussAnzeige.length > 0 && (
+        {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
+            (globaler Schalter in der Suchleiste). */}
+        {fussnotenAuf && fussAnzeige.length > 0 && (
           <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
               <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-28 text-micro leading-snug text-ink-400 target:bg-brass-50">
@@ -218,6 +224,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [aktivPfad, setAktivPfad] = useState<string[]>([]);
   const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
   const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
+  const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
@@ -403,7 +410,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         {auf && (
           <div className="space-y-5 lg:pl-5">
             {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
           </div>
         )}
       </section>
@@ -454,9 +461,17 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         ) : null;
       })()}
 
-      <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-        placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
-        className="lc-input h-9 py-0 text-body-s w-full max-w-md" />
+      {/* Sticky Suchleiste — beim Gesetz immer eingeblendet, plus Fussnoten-Schalter. */}
+      <div className="sticky top-9 z-[9] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-line/60 flex items-center gap-3">
+        <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+          placeholder="Im Gesetz suchen (Artikel, Wortlaut) …" aria-label="Im Gesetz suchen"
+          className="lc-input h-9 py-0 text-body-s flex-1 min-w-0 max-w-md" />
+        <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+          className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+          title="Fussnoten ein-/ausblenden">
+          {fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}
+        </button>
+      </div>
 
       {/* 2-Spalten (TOC + Inhalt) NUR wenn es eine Gliederung gibt. Sonst (flacher
           Fallback ohne Struktur / Suchtreffer) volle Breite — sonst landet der einzige
@@ -484,7 +499,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </aside>
         )}
 
-        <div className="group/lese">
+        {/* Ohne TOC-Spalte (Suche, flaches Gesetz, eingeklappte Gliederung) den
+            Lese-Inhalt zentrieren statt linksbündig kleben zu lassen. */}
+        <div className={`group/lese ${!treffer && sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[52rem]'}`}>
           {!treffer && sektionen.length > 0 && !tocOffen && (
             <button type="button" onClick={() => setTocOffen(true)}
               className="hidden lg:inline-flex items-center gap-1 text-micro text-ink-400 hover:text-brass-700 mb-3" title="Gliederung einblenden">
@@ -492,16 +509,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
             </button>
           )}
           {treffer ? (
-            <div className="space-y-4 max-w-[40rem]">
+            <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} marginalie={marg(e.artikel)} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true))}
@@ -525,6 +542,14 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
   sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>;
   onToggle: (id: string, defOpen: boolean) => void; onSprung: (id: string) => void;
 }) {
+  // Default: Gliederung nur «bis Abteilung» aufgeklappt — tiefere Stufen erst auf
+  // Klick. Offen ist ein Knoten nur, wenn er eine Abteilung UNTER sich hat (und
+  // selbst keine ist): so werden die Abteilungen sichtbar (eingeklappt), alles
+  // andere bleibt auf der obersten Stufe. Gesetze ohne Abteilung → alles zu.
+  const istAbteilung = (s: Sektion) => /abteilung/i.test(s.label);
+  const hatAbteilungTiefer = (s: Sektion): boolean =>
+    s.kinder.some((k) => istAbteilung(k) || hatAbteilungTiefer(k));
+  const tocDefault = (s: Sektion) => hatAbteilungTiefer(s) && !istAbteilung(s);
   const zeile = (s: Sektion, tiefe: number, defOpen: boolean): ReactNode => {
     const auf = offen[s.id] ?? defOpen;
     const { pre, rest } = romanFrei(s.label);
@@ -541,11 +566,11 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
             {pre ? <><span className="font-medium text-ink-700">{pre}:</span> {rest}</> : s.label}
           </button>
         </div>
-        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1, true))}</ul>}
+        {hatKinder && auf && <ul className="space-y-0.5 mt-0.5">{s.kinder.map((k) => zeile(k, tiefe + 1, tocDefault(k)))}</ul>}
       </li>
     );
   };
-  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0, true))}</ul>;
+  return <ul className="space-y-0.5">{sektionen.map((s) => zeile(s, 0, tocDefault(s)))}</ul>;
 }
 
 export function GesetzLeser() {

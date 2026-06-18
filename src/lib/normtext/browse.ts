@@ -113,7 +113,7 @@ export function bandFuerToken(baender: Band[], token: string): number {
 
 // ── Amtliche Gliederung + Marginalien (Struktur-Sidecar, Rubrik V Richtung A) ──
 export interface FnLink { label: string; url: string }
-export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null }
+export interface Fussnote { nr: string; text: string; links: FnLink[]; absatz?: string | null; item?: string | null }
 export interface ArtikelStruktur {
   gliederung: Array<{ ebene: number; label: string }>;
   marginalie: string[];

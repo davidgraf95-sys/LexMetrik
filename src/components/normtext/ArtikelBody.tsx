@@ -111,13 +111,15 @@ function normalisiereTarifText(text: string): string {
     .trim();
 }
 
-export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz }: {
+export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz, fnProItem }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
   /** Lesesicht: Fussnoten-Nummern je Block (Schlüssel = Block-Index) → Marker
    *  am Absatzende, verlinkt zum Fuss-Eintrag. */
   fnProAbsatz?: Record<number, string[]>;
+  /** Lesesicht: Fussnoten-Nummern je lit/Ziff-Item (Schlüssel «<blockIndex>|<marke>»). */
+  fnProItem?: Record<string, string[]>;
   passus: PassusInfo;
   /** Ref auf die markierte Stelle (für Scroll-ins-Sichtfeld im Popover). */
   passusRef?: React.Ref<HTMLElement>;
@@ -205,14 +207,33 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
                 identisches Markup/Styling, nur die Marke unterscheidet sich
                 (Daten). Das zitierte Item wird stark hervorgehoben. */}
-            {b.items != null && b.items.length > 0 && (
+            {b.items != null && b.items.length > 0 && (() => {
+              // Verschachtelungsstufe je Item rekonstruieren (Snapshot ist flach,
+              // Fedlex verschachtelt Abs.→Bst.→Ziff.→Gedankenstrich): Bst (a,b,c)
+              // = Stufe 0; Ziff (1,2,3) NACH einem Bst = Stufe 1, sonst 0;
+              // Gedankenstrich = eine Stufe tiefer als das vorausgehende Item.
+              const typ = (m: string) => /^[–—-]$/.test(m.trim()) ? 'strich' : /^\d/.test(m.trim()) ? 'ziff' : 'lit';
+              const stufen: number[] = [];
+              let sahLit = false, letzteNichtStrich = 0;
+              for (const it of b.items!) {
+                const t = typ(it.marke);
+                let lv: number;
+                if (t === 'strich') lv = letzteNichtStrich + 1;
+                else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
+                else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
+                stufen.push(lv);
+              }
+              return (
               <ul className={`mt-1.5 space-y-1 ${zk ? 'pl-8' : 'pl-1'}`}>
-                {b.items.map((it, j) => {
+                {b.items!.map((it, j) => {
                   // GENAU der eine global bestimmte (Block,Item)-Treffer (B1):
                   // bei gleicher Marke in mehreren Blöcken nur der erste.
                   const istItemZitiert = zielItemKey != null
                     && zielItemKey.bi === i
                     && zielItemKey.ji === j;
+                  // Gedankenstrich: ohne Punkt («–» statt «–.»).
+                  const istStrich = /^[–—-]$/.test(it.marke.trim());
+                  const markeAnzeige = istStrich ? '–' : `${it.marke}.`;
                   // Präzises Zitat dieses Items («Art. X Abs. Y lit./Ziff. z ERLASS»).
                   const itemZitat = zk
                     ? `${zk.artikelLabel}${b.absatz != null ? ` Abs. ${b.absatz}` : ''} ${litZiff(it.marke)} ${it.marke} ${zk.kuerzel}`
@@ -222,26 +243,35 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       key={j}
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
+                      style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
                       className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'group/li' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
                       }`}
                     >
-                      {zk
-                        ? <ZitierMarke klasse="shrink-0" zitat={itemZitat}>{`${it.marke}.`}</ZitierMarke>
-                        : <span className="num shrink-0 font-semibold text-ink-500">{`${it.marke}.`}</span>}
+                      {istStrich
+                        ? <span className="shrink-0 select-none text-ink-400">{markeAnzeige}</span>
+                        : zk
+                          ? <ZitierMarke klasse="shrink-0" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
+                          : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
                       <span>
                         {istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>
                           : verlinkt(it.text)}
-                        {zk && <BlockZitat zitat={itemZitat} reveal="group-hover/li:opacity-100" />}
+                        {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}
+                        {zk && fnProItem?.[`${i}|${it.marke}`]?.map((nr) => (
+                          <a key={nr} href={`#fn-${artikel}-${nr}`}
+                            className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
+                        ))}
+                        {zk && !istStrich && <BlockZitat zitat={itemZitat} reveal="group-hover/li:opacity-100" />}
                       </span>
                     </li>
                   );
                 })}
               </ul>
-            )}
+              );
+            })()}
           </div>
         );
       })}

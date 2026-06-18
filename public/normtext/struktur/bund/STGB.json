@@ -68,7 +68,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -133,7 +134,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "a"
     },
     {
      "nr": "8",
@@ -148,7 +150,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "a"
     },
     {
      "nr": "9",
@@ -163,7 +166,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "c"
     },
     {
      "nr": "10",
@@ -174,7 +178,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -207,7 +212,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -240,7 +246,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/3"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -292,7 +299,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6207"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "14",
@@ -303,7 +311,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/551"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -520,7 +529,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -726,13 +736,15 @@
      "nr": "19",
      "text": "Heute: dem Einzelunternehmen.",
      "links": [],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "20",
      "text": "Heute: einem Einzelunternehmen.",
      "links": [],
-     "absatz": null
+     "absatz": null,
+     "item": "c"
     }
    ]
   },
@@ -769,7 +781,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "22",
@@ -784,7 +797,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -889,7 +903,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "25",
@@ -904,7 +919,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "26",
@@ -923,7 +939,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "27",
@@ -942,7 +959,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -987,7 +1005,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -1032,7 +1051,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1077,7 +1097,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1122,7 +1143,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1166,7 +1188,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "34",
@@ -1181,7 +1204,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "35",
@@ -1196,7 +1220,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -1240,7 +1265,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "38",
@@ -1255,7 +1281,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -1300,7 +1327,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -1373,7 +1401,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -1526,7 +1555,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1603,7 +1633,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1707"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1702,7 +1733,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -1775,7 +1807,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -1820,7 +1853,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -1977,7 +2011,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "60",
@@ -1992,7 +2027,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/95"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "61",
@@ -2007,7 +2043,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "c"
     },
     {
      "nr": "62",
@@ -2022,7 +2059,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "63",
@@ -2037,7 +2075,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -2081,7 +2120,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "68",
@@ -2092,7 +2132,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6214"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "69",
@@ -2107,7 +2148,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "70",
@@ -2122,7 +2164,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -2166,7 +2209,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -2211,7 +2255,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "94",
@@ -2226,7 +2271,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "95",
@@ -2241,7 +2287,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "96",
@@ -2264,7 +2311,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": "c"
     },
     {
      "nr": "97",
@@ -2279,7 +2327,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": "2"
     },
     {
      "nr": "98",
@@ -2302,7 +2351,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "a"
     },
     {
      "nr": "99",
@@ -2317,7 +2367,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "2"
     },
     {
      "nr": "100",
@@ -2340,7 +2391,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     },
     {
      "nr": "101",
@@ -2355,7 +2407,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "b"
     },
     {
      "nr": "102",
@@ -2370,7 +2423,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     },
     {
      "nr": "103",
@@ -2385,7 +2439,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "6"
+     "absatz": "6",
+     "item": null
     },
     {
      "nr": "104",
@@ -2400,7 +2455,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "7"
+     "absatz": "7",
+     "item": null
     }
    ]
   },
@@ -2530,7 +2586,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -2576,7 +2633,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -2659,7 +2717,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -2740,7 +2799,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "d"
     }
    ]
   },
@@ -2777,7 +2837,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -2894,7 +2955,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "128",
@@ -2905,7 +2967,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/492"
       }
      ],
-     "absatz": "7"
+     "absatz": "7",
+     "item": null
     }
    ]
   },
@@ -3049,7 +3112,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1718"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "d"
     },
     {
      "nr": "130",
@@ -3064,7 +3128,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "131",
@@ -3079,7 +3144,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "132",
@@ -3094,7 +3160,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3131,13 +3198,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "c"
     },
     {
      "nr": "134",
      "text": "Ursprünglich Bst. c.",
      "links": [],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "d"
     }
    ]
   },
@@ -3220,7 +3289,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3256,7 +3326,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -3312,7 +3383,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1719"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "d"
     },
     {
      "nr": "140",
@@ -3335,7 +3407,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "141",
@@ -3346,7 +3419,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/430"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     },
     {
      "nr": "142",
@@ -3361,7 +3435,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/433"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -3473,7 +3548,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "e"
     },
     {
      "nr": "144",
@@ -3488,7 +3564,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "e"
     },
     {
      "nr": "145",
@@ -3503,7 +3580,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/883"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "146",
@@ -3518,7 +3596,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -3554,13 +3633,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "148",
      "text": "Heute: Einzelunternehmen.",
      "links": [],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "d"
     }
    ]
   },
@@ -3622,7 +3703,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "151",
@@ -3637,7 +3719,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -3669,7 +3752,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     }
    ]
   },
@@ -3701,7 +3785,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3729,7 +3814,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3774,7 +3860,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "156",
@@ -3785,7 +3872,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/555"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3814,7 +3902,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3847,7 +3936,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "159",
@@ -3858,7 +3948,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3891,7 +3982,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "161",
@@ -3902,7 +3994,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3935,7 +4028,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "163",
@@ -3946,7 +4040,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -3975,7 +4070,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4008,7 +4104,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4053,7 +4150,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/429"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "167",
@@ -4064,7 +4162,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "168",
@@ -4083,7 +4182,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/204"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -4112,7 +4212,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/429"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4141,7 +4242,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/429"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "171",
@@ -4152,7 +4254,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -4181,7 +4284,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2002/429"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4214,7 +4318,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4247,7 +4352,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "175",
@@ -4262,7 +4368,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "176",
@@ -4273,7 +4380,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "177",
@@ -4288,7 +4396,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "178",
@@ -4307,7 +4416,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/228"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "179",
@@ -4322,7 +4432,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "180",
@@ -4341,7 +4452,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/228"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4378,7 +4490,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/994"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "182",
@@ -4393,7 +4506,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -4422,7 +4536,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -4455,7 +4570,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "b"
     },
     {
      "nr": "185",
@@ -4482,7 +4598,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/228"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "c"
     }
    ]
   },
@@ -4515,7 +4632,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4548,7 +4666,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4581,7 +4700,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4614,7 +4734,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4647,7 +4768,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "193",
@@ -4658,7 +4780,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4691,7 +4814,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4732,7 +4856,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/1088"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4777,7 +4902,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4810,7 +4936,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "199",
@@ -4825,7 +4952,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "d"
     }
    ]
   },
@@ -4858,7 +4986,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "201",
@@ -4869,7 +4998,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -4950,7 +5080,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -4999,7 +5130,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -5032,7 +5164,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -5065,7 +5198,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -5186,7 +5320,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "213",
@@ -5197,7 +5332,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "214",
@@ -5208,7 +5344,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2023/739"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "a"
     }
    ]
   },
@@ -5241,7 +5378,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/938"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5274,7 +5412,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "217",
@@ -5285,7 +5424,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5318,7 +5458,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5351,7 +5492,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5400,7 +5542,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5433,7 +5576,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1111"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5513,7 +5657,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5542,7 +5687,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5591,7 +5737,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5656,7 +5803,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -5685,7 +5833,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5718,7 +5867,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1949/1_1249_1233_613"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "233",
@@ -5733,7 +5883,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5766,7 +5917,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -5827,7 +5979,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -5864,7 +6017,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/204"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "237",
@@ -5875,7 +6029,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -5923,7 +6078,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "a"
     },
     {
      "nr": "252",
@@ -5942,7 +6098,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/228"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "b"
     }
    ]
   },
@@ -5989,7 +6146,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/433"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "257",
@@ -6000,7 +6158,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2012/901"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "258",
@@ -6015,7 +6174,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -6047,7 +6207,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1980/1_1241_1216_1032"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6079,7 +6240,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1980/1_1241_1216_1032"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6111,7 +6273,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1980/1_1241_1216_1032"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "262",
@@ -6122,7 +6285,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "263",
@@ -6133,7 +6297,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6188,7 +6353,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "268",
@@ -6211,7 +6377,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "269",
@@ -6234,7 +6401,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "270",
@@ -6249,7 +6417,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_1318_1315_1135"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "271",
@@ -6272,7 +6441,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/612"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6313,7 +6483,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6354,7 +6525,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6395,7 +6567,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6436,7 +6609,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6477,7 +6651,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6518,7 +6693,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6559,7 +6735,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6592,7 +6769,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6625,7 +6803,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6657,7 +6836,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "283",
@@ -6680,7 +6860,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "284",
@@ -6703,7 +6884,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "285",
@@ -6726,7 +6908,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "7"
+     "absatz": "7",
+     "item": null
     },
     {
      "nr": "286",
@@ -6749,7 +6932,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "8"
+     "absatz": "8",
+     "item": "c"
     },
     {
      "nr": "287",
@@ -6772,7 +6956,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "c"
     }
    ]
   },
@@ -6813,7 +6998,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6869,7 +7055,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6901,7 +7088,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "293",
@@ -6916,7 +7104,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/612"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -6948,7 +7137,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -6980,7 +7170,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7020,7 +7211,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7052,7 +7244,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7084,7 +7277,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7116,7 +7310,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "300",
@@ -7131,7 +7326,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -7163,7 +7359,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1580"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7210,7 +7407,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7272,7 +7470,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7304,7 +7503,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "306",
@@ -7319,7 +7519,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "307",
@@ -7334,7 +7535,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -7381,7 +7583,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7413,7 +7616,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7445,7 +7649,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7477,7 +7682,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/43"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7539,7 +7745,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7571,7 +7778,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "317",
@@ -7586,7 +7794,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7618,7 +7827,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -7650,7 +7860,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7682,7 +7893,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7714,7 +7926,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7761,7 +7974,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7789,7 +8003,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7821,7 +8036,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_7258_6536_6201"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "326",
@@ -7832,7 +8048,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "327",
@@ -7847,7 +8064,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -7879,7 +8097,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_7258_6536_6201"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -7911,7 +8130,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -7943,7 +8163,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8005,7 +8226,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_7258_6536_6201"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8052,7 +8274,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "333",
@@ -8067,7 +8290,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8099,7 +8323,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8206,7 +8431,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8238,7 +8464,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1980/1_1241_1216_1032"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "337",
@@ -8253,7 +8480,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "338",
@@ -8268,7 +8496,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "339",
@@ -8283,7 +8512,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -8330,7 +8560,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8377,7 +8608,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "354",
@@ -8388,7 +8620,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -8432,7 +8665,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "371",
@@ -8443,7 +8677,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4780"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "372",
@@ -8454,7 +8689,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8483,7 +8719,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8516,7 +8753,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_525_533_449"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "377",
@@ -8531,13 +8769,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_525_533_449"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "378",
      "text": "Ursprünglich Ziff. 2.",
      "links": [],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8614,7 +8854,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "380",
@@ -8625,7 +8866,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8654,7 +8896,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8687,7 +8930,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8716,7 +8960,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "384",
@@ -8731,7 +8976,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8760,7 +9006,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "386",
@@ -8771,7 +9018,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4715"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "387",
@@ -8782,7 +9030,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4780"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8831,7 +9080,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8864,7 +9114,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8941,7 +9192,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -8988,7 +9240,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1965/1_561_569_474"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9020,7 +9273,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "395",
@@ -9031,7 +9285,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8719"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "396",
@@ -9042,7 +9297,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "397",
@@ -9073,7 +9329,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8823"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "398",
@@ -9084,7 +9341,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8894"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "399",
@@ -9103,7 +9361,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/158"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "400",
@@ -9118,7 +9377,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9154,7 +9414,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2007/425"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "402",
@@ -9165,7 +9426,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8719"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "403",
@@ -9176,7 +9438,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8886"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "404",
@@ -9207,7 +9470,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8823"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "405",
@@ -9218,7 +9482,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8894"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "406",
@@ -9237,7 +9502,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/158"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9284,7 +9550,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_5497_5045_4721"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9380,7 +9647,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1624"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "409",
@@ -9407,7 +9675,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1624"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -9439,7 +9708,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "411",
@@ -9450,7 +9720,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6242"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "412",
@@ -9461,7 +9732,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6207"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -9493,7 +9765,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9521,7 +9794,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9549,7 +9823,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9637,7 +9912,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1951/1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "417",
@@ -9656,7 +9932,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/204"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -9688,7 +9965,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9720,7 +9998,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9748,7 +10027,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "421",
@@ -9767,7 +10047,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "422",
@@ -9782,7 +10063,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -9814,7 +10096,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "436",
@@ -9829,7 +10112,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -9861,7 +10145,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "438",
@@ -9876,7 +10161,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -9908,7 +10194,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9940,7 +10227,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/133"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -9972,7 +10260,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10004,7 +10293,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "443",
@@ -10019,7 +10309,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10066,7 +10357,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10098,7 +10390,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10130,7 +10423,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "448",
@@ -10145,7 +10439,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10177,7 +10472,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "456",
@@ -10192,7 +10488,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10243,7 +10540,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/647"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10271,7 +10569,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "459",
@@ -10286,7 +10585,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/2104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "460",
@@ -10301,7 +10601,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10333,7 +10634,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/4_525_533_449"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "466",
@@ -10344,7 +10646,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "467",
@@ -10355,7 +10658,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -10387,7 +10691,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "478",
@@ -10398,7 +10703,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "479",
@@ -10413,7 +10719,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "480",
@@ -10428,7 +10735,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10460,7 +10768,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/3_1_1_1"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "482",
@@ -10471,7 +10780,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6149"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "483",
@@ -10486,7 +10796,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10530,7 +10841,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10562,7 +10874,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/18"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "501",
@@ -10573,7 +10886,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10605,7 +10919,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10652,7 +10967,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10680,7 +10996,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10712,7 +11029,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10740,7 +11058,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "513",
@@ -10755,7 +11074,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "6"
+     "absatz": "6",
+     "item": null
     },
     {
      "nr": "514",
@@ -10770,7 +11090,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10830,7 +11151,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/611"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -10891,7 +11213,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6277"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "541",
@@ -10902,7 +11225,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "542",
@@ -10917,7 +11241,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -10965,7 +11290,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "545",
@@ -10976,7 +11302,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4976"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "d"
     },
     {
      "nr": "546",
@@ -10995,7 +11322,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "h"
     },
     {
      "nr": "547",
@@ -11006,7 +11334,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6307"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "548",
@@ -11017,7 +11346,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "549",
@@ -11028,7 +11358,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "550",
@@ -11039,7 +11370,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4898"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "551",
@@ -11050,7 +11382,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/7812"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "552",
@@ -11065,7 +11398,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2025/1478"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "553",
@@ -11076,7 +11410,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6319"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "a"
     },
     {
      "nr": "554",
@@ -11091,7 +11426,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/44"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "b"
     },
     {
      "nr": "555",
@@ -11110,7 +11446,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": "b"
     },
     {
      "nr": "556",
@@ -11129,7 +11466,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     },
     {
      "nr": "557",
@@ -11148,7 +11486,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "6"
+     "absatz": "6",
+     "item": null
     }
    ]
   },
@@ -11180,7 +11519,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/611"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11217,13 +11557,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/738"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "574",
      "text": "Beschluss 2008/615/JI des Rates vom 23. Juni 2008 zur Vertiefung der grenzüberschreitenden Zusammenarbeit, insbesondere zur Bekämpfung des Terrorismus und der grenzüberschreitenden Kriminalität, Fassung gemäss ABl. L 210 vom 6.8.2008, S. 1.",
      "links": [],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -11260,19 +11602,22 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2021/738"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "576",
      "text": "Siehe Fussnote zu Art. 356 Abs. 2.",
      "links": [],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "577",
      "text": "Beschluss 2008/616/JI des Rates vom 23. Juni 2008 zur Durchführung des Beschlusses 2008/615/JI zur Vertiefung der grenzüberschreitenden Zusammenarbeit, insbesondere zur Bekämpfung des Terrorismus und der grenzüberschreitenden Kriminalität, ABl. L 210 vom 6.8.2008, S. 12.",
      "links": [],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     },
     {
      "nr": "578",
@@ -11283,7 +11628,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6316"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     },
     {
      "nr": "579",
@@ -11298,7 +11644,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2025/1478"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     }
    ]
   },
@@ -11330,7 +11677,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1181"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11364,7 +11712,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2013/176"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11394,7 +11743,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2015/838"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11426,7 +11776,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/976"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -11479,7 +11830,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1190"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "590",
@@ -11490,7 +11842,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6224"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     },
     {
      "nr": "591",
@@ -11505,7 +11858,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/69"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -11616,7 +11970,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "c"
     }
    ]
   },
@@ -11653,7 +12008,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1190"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     }
    ]
   },
@@ -11686,7 +12042,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -11760,7 +12117,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2005/783"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11792,7 +12150,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "600",
@@ -11807,7 +12166,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -11921,7 +12281,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11954,7 +12315,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -11987,7 +12349,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12036,7 +12399,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/813"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12069,7 +12433,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "205",
@@ -12084,7 +12449,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12117,7 +12483,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12150,7 +12517,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_1405_1361_1297"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "211",
@@ -12161,7 +12529,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -12202,7 +12571,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1111"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12235,7 +12605,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12268,7 +12639,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12292,7 +12664,8 @@
      "nr": "230",
      "text": "Diese Ziff. ist heute aufgehoben.",
      "links": [],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -12325,7 +12698,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1968/1_585_609_427"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12358,7 +12732,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12399,7 +12774,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12436,7 +12812,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2001/467"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "248",
@@ -12451,7 +12828,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/2368"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -12484,7 +12862,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1968/1_585_609_427"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12529,7 +12908,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2001/920"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "243",
@@ -12544,7 +12924,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -12585,7 +12966,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12618,13 +13000,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1968/1_585_609_427"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "245",
      "text": "Heute: ein Einzelunternehmen.",
      "links": [],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12665,7 +13049,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12697,7 +13082,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/292"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "254",
@@ -12712,7 +13098,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2023/2127"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -12748,7 +13135,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2024/1219"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12780,7 +13168,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/95"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12821,7 +13210,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12861,7 +13251,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12889,7 +13280,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/2_1009_1021_901"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12929,7 +13321,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -12969,7 +13362,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13001,7 +13395,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2000/484"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13033,7 +13428,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1980/1_1241_1216_1032"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "341",
@@ -13052,7 +13448,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/994"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "c"
     },
     {
      "nr": "342",
@@ -13067,7 +13464,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/95"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "f"
     },
     {
      "nr": "343",
@@ -13082,7 +13480,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2008/807"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "j"
     },
     {
      "nr": "344",
@@ -13093,7 +13492,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -13125,7 +13525,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/1_1053_1000_875"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "348",
@@ -13136,7 +13537,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13168,7 +13570,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2002/841"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13200,7 +13603,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13240,7 +13644,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "346",
@@ -13263,7 +13668,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1967"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -13307,7 +13713,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1916"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13348,7 +13755,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13403,7 +13811,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1967"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -13432,7 +13841,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/41"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "b"
     }
    ]
   },
@@ -13473,7 +13883,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "b"
     }
    ]
   },
@@ -13624,7 +14035,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6214"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     },
     {
      "nr": "363",
@@ -13635,7 +14047,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4971"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "b"
     },
     {
      "nr": "364",
@@ -13646,7 +14059,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "c"
     },
     {
      "nr": "365",
@@ -13657,7 +14071,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5015"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "d"
     },
     {
      "nr": "366",
@@ -13668,7 +14083,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "e"
     },
     {
      "nr": "367",
@@ -13679,7 +14095,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5621"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "f"
     },
     {
      "nr": "368",
@@ -13690,7 +14107,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5632"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "g"
     },
     {
      "nr": "369",
@@ -13701,7 +14119,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5641"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "h"
     }
    ]
   },
@@ -13734,7 +14153,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1949/1_1249_1233_613"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "375",
@@ -13749,7 +14169,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -13790,7 +14211,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13822,7 +14244,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1975/1_1317_1337_1313"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -13859,7 +14282,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "17",
@@ -13874,7 +14298,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "b"
     },
     {
      "nr": "18",
@@ -13885,7 +14310,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9339"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": "b"
     }
    ]
   },
@@ -13917,7 +14343,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1989/2_1061_961_837"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "424",
@@ -13932,7 +14359,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/100"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "425",
@@ -13943,7 +14371,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8175"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "426",
@@ -13954,7 +14383,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/8202"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "427",
@@ -13969,7 +14399,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/100"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "428",
@@ -13984,7 +14415,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "429",
@@ -13999,7 +14431,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     },
     {
      "nr": "430",
@@ -14010,7 +14443,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/1974/1051_1051_1051"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14042,7 +14476,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1989/2_1061_961_837"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "433",
@@ -14053,7 +14488,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2006/549"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "434",
@@ -14076,7 +14512,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/100"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     }
    ]
   },
@@ -14108,7 +14545,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1999/1_5497_5045_4721"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14148,7 +14586,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2010/1444"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "450",
@@ -14159,7 +14598,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "451",
@@ -14174,7 +14614,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "452",
@@ -14189,7 +14630,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/407"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "453",
@@ -14200,7 +14642,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6221"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "454",
@@ -14215,7 +14658,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2011/1"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -14255,7 +14699,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2009/1423"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "462",
@@ -14266,7 +14711,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9248"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -14298,7 +14744,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1996/3_1405_1361_1297"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "464",
@@ -14313,7 +14760,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -14353,7 +14801,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14385,7 +14834,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14418,7 +14868,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14451,7 +14902,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14500,7 +14952,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14532,7 +14985,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1217"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14565,7 +15019,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/787"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14613,7 +15068,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "485",
@@ -14624,7 +15080,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     }
    ]
   },
@@ -14664,7 +15121,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "489",
@@ -14675,7 +15133,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14707,7 +15166,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "487",
@@ -14718,7 +15178,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "a"
     }
    ]
   },
@@ -14751,13 +15212,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1985/1_1389_1369_1201"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "494",
      "text": "Heute: Einzelunternehmen",
      "links": [],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "495",
@@ -14772,13 +15235,15 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/112"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "496",
      "text": "Heute: Einzelunternehmen.",
      "links": [],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -14810,7 +15275,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/1991/2_969_933_797"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14854,7 +15320,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/680"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "498",
@@ -14865,7 +15332,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4991"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14897,7 +15365,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/18"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "503",
@@ -14908,7 +15377,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     },
     {
      "nr": "504",
@@ -14919,7 +15389,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/11533"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "d"
     }
    ]
   },
@@ -14955,7 +15426,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1932"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "506",
@@ -14966,7 +15438,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5703"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -14996,7 +15469,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15026,7 +15500,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15059,7 +15534,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "520",
@@ -15070,7 +15546,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "521",
@@ -15085,7 +15562,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15118,7 +15596,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15151,7 +15630,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "524",
@@ -15166,7 +15646,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     },
     {
      "nr": "525",
@@ -15181,7 +15662,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     }
    ]
   },
@@ -15214,7 +15696,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15247,7 +15730,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15280,7 +15764,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15313,7 +15798,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "530",
@@ -15324,7 +15810,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "a"
     },
     {
      "nr": "531",
@@ -15339,7 +15826,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "c"
     },
     {
      "nr": "532",
@@ -15354,7 +15842,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -15387,7 +15876,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "534",
@@ -15398,7 +15888,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5993"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "535",
@@ -15413,7 +15904,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "536",
@@ -15428,7 +15920,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -15461,7 +15954,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/131"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "561",
@@ -15480,7 +15974,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "562",
@@ -15491,7 +15986,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1510"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "563",
@@ -15506,7 +16002,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     }
    ]
   },
@@ -15539,7 +16036,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/131"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "566",
@@ -15550,7 +16048,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1510"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15591,7 +16090,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1084"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "568",
@@ -15614,7 +16114,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1514"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15658,7 +16159,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/611"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15698,7 +16200,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2004/1084"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "571",
@@ -15717,7 +16220,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2020/794"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -15757,7 +16261,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2057"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15790,7 +16295,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/124"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15820,7 +16326,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15858,7 +16365,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15888,7 +16396,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15926,7 +16435,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/1229"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15970,7 +16480,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -15996,7 +16507,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/5818"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "595",
@@ -16007,7 +16519,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4971"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": null
     }
    ]
   },
@@ -16084,7 +16597,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/228"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "47",
@@ -16099,7 +16613,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "48",
@@ -16114,7 +16629,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2003/194"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": "a"
     },
     {
      "nr": "49",
@@ -16129,7 +16645,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "50",
@@ -16144,7 +16661,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "51",
@@ -16159,7 +16677,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "52",
@@ -16174,7 +16693,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": "3"
+     "absatz": "3",
+     "item": "c"
     },
     {
      "nr": "53",
@@ -16189,7 +16709,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": "4"
+     "absatz": "4",
+     "item": null
     },
     {
      "nr": "54",
@@ -16204,7 +16725,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2017/2095"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     }
    ]
   },
@@ -16333,7 +16855,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/899"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": null
     }
    ]
   },
@@ -16462,7 +16985,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   },
@@ -16507,7 +17031,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -16552,7 +17077,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2006/104"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -16597,7 +17123,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "73",
@@ -16612,7 +17139,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "b"
     },
     {
      "nr": "74",
@@ -16627,7 +17155,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "c"
     },
     {
      "nr": "75",
@@ -16642,7 +17171,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "f"
     },
     {
      "nr": "76",
@@ -16653,7 +17183,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6234"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "f"
     },
     {
      "nr": "77",
@@ -16676,7 +17207,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2022/1011"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "h"
     },
     {
      "nr": "78",
@@ -16691,7 +17223,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "i"
     },
     {
      "nr": "79",
@@ -16706,7 +17239,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "j"
     },
     {
      "nr": "80",
@@ -16721,7 +17255,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/1154"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "k"
     },
     {
      "nr": "81",
@@ -16736,7 +17271,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "l"
     },
     {
      "nr": "82",
@@ -16759,7 +17295,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/1967"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "m"
     },
     {
      "nr": "83",
@@ -16770,7 +17307,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4851"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "n"
     },
     {
      "nr": "84",
@@ -16781,7 +17319,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/9339"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "o"
     },
     {
      "nr": "85",
@@ -16796,7 +17335,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2018/2301"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "p"
     },
     {
      "nr": "86",
@@ -16807,7 +17347,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4758"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "p"
     }
    ]
   },
@@ -16852,7 +17393,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -16897,7 +17439,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -16942,7 +17485,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -16987,7 +17531,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2013/1078"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "91",
@@ -16998,7 +17543,8 @@
        "url": "https://fedlex.data.admin.ch/eli/oc/2017/423"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     },
     {
      "nr": "92",
@@ -17009,7 +17555,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/4878"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": "a"
     }
    ]
   },
@@ -17055,7 +17602,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "106",
@@ -17070,7 +17618,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2019/1847"
       }
      ],
-     "absatz": "2"
+     "absatz": "2",
+     "item": null
     },
     {
      "nr": "107",
@@ -17085,7 +17634,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "108",
@@ -17100,7 +17650,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "6"
+     "absatz": "6",
+     "item": null
     }
    ]
   },
@@ -17145,7 +17696,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17191,7 +17743,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "111",
@@ -17206,7 +17759,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": "c"
     },
     {
      "nr": "112",
@@ -17221,7 +17775,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": "5"
+     "absatz": "5",
+     "item": "d"
     },
     {
      "nr": "113",
@@ -17236,7 +17791,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "114",
@@ -17251,7 +17807,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2016/1188"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17297,7 +17854,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/1575"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17332,7 +17890,8 @@
      "nr": "116",
      "text": "Ursprünglich: Art. 67b.",
      "links": [],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17376,7 +17935,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17413,7 +17973,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2005/735"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17470,7 +18031,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17507,7 +18069,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17544,7 +18107,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2012/670"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     }
    ]
   },
@@ -17585,7 +18149,8 @@
        "url": "https://fedlex.data.admin.ch/eli/fga/2014/138"
       }
      ],
-     "absatz": null
+     "absatz": null,
+     "item": null
     },
     {
      "nr": "136",
@@ -17596,7 +18161,8 @@
        "url": "https://fedlex.data.admin.ch/vocabulary/legal-taxonomy/6225"
       }
      ],
-     "absatz": "1"
+     "absatz": "1",
+     "item": null
     }
    ]
   }
