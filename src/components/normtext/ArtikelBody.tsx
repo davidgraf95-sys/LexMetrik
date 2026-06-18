@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
 import { trenneAenderungshistorie, absatzMarke } from '../../lib/normtext/darstellung';
@@ -29,6 +29,41 @@ function ZitierMarke({ zitat, sup, klasse, children }: {
     </button>
   );
   return sup ? <sup className="mr-1">{knopf}</sup> : knopf;
+}
+
+// Fussnoten-Verweis (hochgestellte Nummer). Klick zeigt den Fussnotentext in einem
+// Popover DIREKT an der Stelle — ohne die Leseposition zu verschieben (früher
+// sprang der Anker an den Artikelfuss). Quelle ist der gerenderte Fuss-Eintrag
+// (#fn-artikel-nr); schliesst bei Klick ausserhalb / Esc.
+export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; klasse?: string }) {
+  const [auf, setAuf] = useState(false);
+  const [html, setHtml] = useState('');
+  const ref = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (!auf) return;
+    const zu = (e: Event) => { if (ref.current && !ref.current.contains(e.target as Node)) setAuf(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setAuf(false); };
+    document.addEventListener('mousedown', zu);
+    document.addEventListener('keydown', esc);
+    return () => { document.removeEventListener('mousedown', zu); document.removeEventListener('keydown', esc); };
+  }, [auf]);
+  const umschalten = () => {
+    if (!auf) {
+      const def = typeof document !== 'undefined' ? document.getElementById(`fn-${artikel}-${nr}`) : null;
+      setHtml(def?.innerHTML ?? '');
+    }
+    setAuf((v) => !v);
+  };
+  return (
+    <span ref={ref} className="relative">
+      <button type="button" onClick={umschalten} aria-expanded={auf} aria-label={`Fussnote ${nr}`}
+        className={`num align-super text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 ${klasse ?? ''}`}>{nr}</button>
+      {auf && html && (
+        <span role="note" dangerouslySetInnerHTML={{ __html: html }}
+          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-micro font-normal not-italic leading-snug text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
+      )}
+    </span>
+  );
 }
 
 // ArtikelBody: rendert die Absatz-/Item-Blöcke EINES Artikel-Snapshots im
@@ -152,7 +187,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : 'pl-9') : undefined}>
               {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="mr-3 font-normal !text-brass-600/90" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  ? <ZitierMarke klasse="mr-3 font-semibold !text-brass-600" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
@@ -180,8 +215,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
                   klar ist, worauf sich die Fussnote bezieht. */}
               {zk && fnProAbsatz?.[i]?.map((nr) => (
-                <a key={nr} href={`#fn-${artikel}-${nr}`}
-                  className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
+                <FnRef key={nr} artikel={artikel} nr={nr} klasse="ml-0.5" />
               ))}
             </p>
             {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
@@ -235,7 +269,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       ref={istItemZitiert ? (passusRef as React.Ref<HTMLLIElement>) : undefined}
                       {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
                       style={stufen[j] > 0 ? { marginLeft: `${stufen[j] * (zk ? 1.6 : 1.1)}rem` } : undefined}
-                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors hover:bg-brass-100/40' : ''} ${
+                      className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors hover:bg-brass-200/60 hover:ring-1 hover:ring-brass-300/60 hover:shadow-sm' : ''} ${
                         istItemZitiert
                           ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                           : 'text-ink-700'
@@ -252,8 +286,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                           : verlinkt(it.text)}
                         {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}
                         {zk && fnProItem?.[`${i}|${it.marke}`]?.map((nr) => (
-                          <a key={nr} href={`#fn-${artikel}-${nr}`}
-                            className="num align-super ml-0.5 text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a>
+                          <FnRef key={nr} artikel={artikel} nr={nr} klasse="ml-0.5" />
                         ))}
                       </span>
                     </li>

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArtikelBody } from '../components/normtext/ArtikelBody';
+import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import { trenneAenderungshistorie, labelMitBereich, randtitelEintraege } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
@@ -94,9 +94,9 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
     } else fnArtikelEbene.push(f.nr); // am Artikel
   }
   const fnMarker = fussnotenAuf && fnArtikelEbene.length > 0
-    ? <sup className="ml-0.5 text-[0.62em] font-medium">{fnArtikelEbene.map((nr, i) => (
-        <span key={nr}>{i > 0 && ','}<a href={`#fn-${e.artikel}-${nr}`} className="num text-brass-600/80 hover:text-brass-700 no-underline">{nr}</a></span>
-      ))}</sup>
+    ? <span className="ml-0.5">{fnArtikelEbene.map((nr, i) => (
+        <span key={nr}>{i > 0 && <span className="align-super text-[0.62em] text-ink-300">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
+      ))}</span>
     : null;
   // VERWEISE: im Artikel genannte, auflösbare (Bund-)Normverweise als Chips am
   // Fuss sammeln (Davids Referenz). Dedupliziert; nur was fedlexLinkFuerArtikel
@@ -124,7 +124,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 origin-left scroll-mt-[11.5rem] border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[9rem_minmax(0,42rem)] lg:gap-x-7">
+      className="group relative z-0 origin-left scroll-mt-[11.5rem] border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[10.5rem_minmax(0,42rem)] lg:gap-x-7">
       {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
           Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
       <div className="lg:hidden mb-2">
@@ -161,9 +161,9 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
               const leaf = i === randEintraege.length - 1;
               return (
                 <p key={i} className={leaf
-                  ? 'font-serif italic text-[0.85rem] leading-snug text-ink-500'
-                  : 'text-[0.72rem] font-semibold leading-snug text-ink-500'}>
-                  {r.mark && <span className="num mr-1 text-brass-700/70">{r.mark}</span>}{r.titel}
+                  ? 'font-serif italic text-[0.85rem] leading-snug text-ink-600'
+                  : 'text-[0.72rem] font-semibold leading-snug text-ink-600'}>
+                  {r.mark && <span className="num mr-1 text-brass-600">{r.mark}</span>}{r.titel}
                 </p>
               );
             })}

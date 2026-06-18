@@ -37,9 +37,11 @@ function hatKlasse(attrs: string, name: string): boolean {
 
 function reinText(html: string): string {
   return html
-    // Fussnoten (<sup>…</sup> und footnote-Anker) entfernen — sie kleben sonst
-    // als Ziffern am Überschrift-Text («Zehnter Titel:119 …»).
-    .replace(/<sup\b[\s\S]*?<\/sup>/gi, '')
+    // Fussnoten-<sup> (mit <a>-Anker ODER Zahl) entfernen — sie kleben sonst als
+    // Ziffern am Titel («Zehnter Titel:119 …»). ABER Ordinal-Suffixe «bis/ter …»
+    // (<sup>bis</sup>, reine Buchstaben) BLEIBEN — sie gehören zum Titel
+    // («Zweiter Titel» + «bis» = «Zweiter Titelbis», Art. 89a ff. ZGB).
+    .replace(/<sup\b[^>]*>(?:(?!<\/sup>)[\s\S])*?<\/sup>/gi, (m) => (/(<a\b|\d)/i.test(m) ? '' : m))
     .replace(/<a\b[^>]*class="[^"]*footnote[^"]*"[^>]*>[\s\S]*?<\/a>/gi, '')
     .replace(/<[^>]+>/g, '')
     .replace(/&nbsp;|\u00a0/g, ' ')
