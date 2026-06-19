@@ -104,6 +104,16 @@ EINTRAEGE=(
   # ist 20240101 (spätere nur SPA-Shell, Live-Link massgeblich, Muster VMWG).
   "gbv|cc/2011/667|20240101|0|art_86"
   "jstpo|cc/2010/226|20250701|0|art_10"
+  # ── Volltext-Ausbau 19.6.2026 (Batch «wichtigste»): ELI/Konsolidierung/n=0
+  #    empirisch am Filestore-HTML verifiziert, alle Pflicht-Anker vorhanden. ──
+  "bv|cc/1999/404|20240303|0|art_1,art_5,art_8,art_36,art_190"
+  "dbg|cc/1991/1184_1184_1184|20260101|0|art_1,art_16,art_33,art_125,art_205"
+  "vstg|cc/1966/371_385_384|20250101|0|art_1,art_4,art_13,art_21,art_61"
+  "kg|cc/1996/546_546_546|20230701|0|art_1,art_4,art_5,art_7,art_30"
+  "fusg|cc/2004/320|20230101|0|art_1,art_3,art_29,art_69"
+  "mschg|cc/1993/274_274_274|20250701|0|art_1,art_3,art_13,art_30"
+  "uwg|cc/1988/223_223_223|20250101|0|art_1,art_2,art_3,art_23"
+  "patg|cc/1955/871_893_899|20250701|0|art_1,art_3,art_8,art_66"
 )
 
 fehler=0
