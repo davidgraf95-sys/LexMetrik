@@ -80,7 +80,7 @@ export function TeuerungForm() {
   let fehler: string | null = null;
   try {
     ergebnis = berechneTeuerung({
-      modus, betrag: Number(betrag.replace(/['\s]/g, '').replace(',', '.')),
+      modus, betrag: Number(betrag.replace(/['’\s]/g, '').replace(',', '.')),
       vonMonat: von, bisMonat: bis,
       ...(rundung ? { rundung } : {}),
     });

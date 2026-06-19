@@ -250,7 +250,7 @@ export const KV_DEFAULTS: KvAnswers = {
 export function kvStreitwert(a: KvAnswers): number | null {
   const roh = a.begehrenTyp === 'unbeziffert' ? a.unbeziffertMindest : a.streitwert;
   if (roh == null || roh === '') return null;
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
+  const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;
 }
 

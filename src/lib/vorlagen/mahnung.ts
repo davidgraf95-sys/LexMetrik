@@ -107,7 +107,7 @@ export function pruefeMaGates(a: MaAntworten): MaGateErgebnis {
       );
     }
     if (a.zinsVertraglich) {
-      const satz = Number(String(a.zinssatzProzent).replace(/['\s]/g, '').replace(',', '.'));
+      const satz = Number(String(a.zinssatzProzent).replace(/['’\s]/g, '').replace(',', '.'));
       if (!Number.isFinite(satz) || satz <= 5) {
         // BLOCKER statt Warnung (Bug-Check 11.6.2026, Defense-in-depth §3):
         // das Dokument trüge sonst die falsche Rechtsaussage «… (Art. 104

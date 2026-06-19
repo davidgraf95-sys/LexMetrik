@@ -78,7 +78,7 @@ const BGER_DISCLAIMER =
 
 const zahl = (roh: string): number | null => {
   if (roh.trim() === '') return null;
-  const n = Number(roh.replace(/['\s]/g, ''));
+  const n = Number(roh.replace(/['’\s]/g, ''));
   return Number.isFinite(n) && n >= 0 ? n : null;
 };
 
