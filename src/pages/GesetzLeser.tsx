@@ -123,7 +123,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf }: {
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 scroll-mt-[13.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+      className="group relative z-0 scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       {/* Artikel-Kopf: «Art. N» als ruhiger Anker. Randtitel/Übertitel wandern in
           den sticky Running-Header → mehr Platz für den Gesetzestext. */}
       <div className="mb-2 flex items-baseline gap-2">
@@ -158,7 +158,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf }: {
         {fussnotenAuf && fussAnzeige.length > 0 && (
           <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
-              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[13.5rem] text-micro leading-snug text-ink-400 target:bg-brass-50">
+              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-micro leading-snug text-ink-400 target:bg-brass-50">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                 {fnTextMitLinks(fn)}
               </p>
@@ -183,12 +183,14 @@ function SektionKopf({ s, refCb, offen, onToggle }: {
   // Running-Header — daher hier bewusst zurückhaltend (David: Übertitel ersetzen).
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   const regel = s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
+  // Nach Tiefe abgestuft: oberste Stufen in Messing (wahrnehmbar), tiefere ruhig.
+  const stil = s.ebene <= 1 ? 'text-brass-700/80' : s.ebene === 2 ? 'text-ink-500' : 'text-ink-400';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[13.5rem] ${mt} ${regel}`}>
+    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen}
         className="w-full text-left flex items-baseline gap-2 group/sek">
         <span className="text-ink-300 text-[0.6rem] shrink-0 w-3">{offen ? '▾' : '▸'}</span>
-        <span className="lc-overline text-ink-400 group-hover/sek:text-brass-700">{pre || s.label}</span>
+        <span className={`lc-overline ${stil} group-hover/sek:text-brass-700`}>{pre || s.label}</span>
       </button>
     </div>
   );
@@ -465,19 +467,21 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         <span className="text-ink-700 font-medium">{erlass.kuerzel}</span>
       </div>
 
-      <header className="space-y-2 border-b border-line pb-5">
+      <header className="space-y-2.5 border-b border-line pb-5">
         <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`} · {GEBIET_LABEL[erlass.rechtsgebiet]}</p>
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
           {erlass.kuerzel} <span className="text-ink-400 font-normal">— {erlass.titel}</span>
         </h1>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}
+          {erlass.sr && <span className="text-ink-300" aria-hidden>·</span>}
           <span><span className="num">{eintraege.length}</span> Artikel</span>
+          {erlass.stand && <span className="text-ink-300" aria-hidden>·</span>}
           {erlass.stand && <span>Stand <span className="num">{formatiereDatum(erlass.stand)}</span></span>}
           {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">↗ geltende Fassung</a>}
           <button type="button" onClick={herunterladen} className="lc-chip hover:text-brass-700" title="Ganzen Erlass als Textdatei herunterladen">⬇ Herunterladen</button>
+          <span className="basis-full sm:basis-auto sm:ml-auto text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung</span>
         </div>
-        <p className="text-micro text-ink-400">Snapshot — massgeblich ist die amtliche Fassung (Live-Link).</p>
       </header>
 
       {/* Norm↔Werkzeug-Brücke (D1): passende Rechner/Vorlagen zu diesem Erlass */}
@@ -486,9 +490,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         return wz.length > 0 ? (
           <div className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
             <p className="lc-overline mb-2">Passende Werkzeuge</p>
-            <div className="flex flex-wrap gap-2">
+            {/* Mobile: eine horizontal scrollbare Chip-Reihe (sonst stapeln sich
+                viele Werkzeuge sehr hoch); ab sm normaler Umbruch. */}
+            <div className="flex gap-2 overflow-x-auto pb-1 -mb-1 sm:flex-wrap sm:overflow-visible sm:pb-0 sm:mb-0 [scrollbar-width:thin]">
               {wz.map((w) => (
-                <Link key={w.id} to={w.href} className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400">
+                <Link key={w.id} to={w.href} className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">
                   <span className="text-ink-400 mr-1">{w.modus === 'rechner' ? '⊞' : '▤'}</span>{w.titel}
                 </Link>
               ))}
@@ -541,9 +547,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
           {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
-          <div data-such-bar className="sticky top-[6.85rem] z-[15] mb-4 space-y-2">
+          <div data-such-bar className="sticky top-16 sm:top-[6.85rem] z-[15] mb-4 space-y-2 rounded-lg bg-paper">
             {/* Suchleiste — eigene Box. */}
-            <div className="flex items-center gap-3 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
+            <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && !tocOffen && (
                 <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
                   className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
@@ -560,10 +566,10 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 Sachtitel) und den Randtitel des aktuellen Artikels. Ersetzt
                 Marginalien + Übertitel im Lesefluss und folgt dem Scroll. */}
             {!treffer && (aktivPfad.length > 0 || aktivMarg.length > 0) && (
-              <div className="rounded-md border border-line/70 bg-paper-sunken/60 px-3 py-1.5 shadow-sm text-[0.72rem] leading-snug">
+              <div className="rounded-lg border border-line/70 bg-paper-sunken px-3.5 py-2 shadow-sm text-[0.72rem] leading-snug">
                 {aktivPfad.length > 0 && (
                   <div className="flex items-baseline gap-1.5 text-ink-400">
-                    <span aria-hidden className="shrink-0 text-brass-600/70">▸</span>
+                    <span aria-hidden className="shrink-0 text-[0.6rem] uppercase tracking-[0.1em] text-brass-600/80 font-semibold">Hier</span>
                     <span className="min-w-0 flex-1 truncate">
                       {aktivPfad.map((lab, i) => {
                         const last = i === aktivPfad.length - 1;
