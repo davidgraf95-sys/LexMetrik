@@ -130,9 +130,14 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
     // Fussnoten-<sup><a>…</a></sup> aus der <dt>-Marke und dem <dd>-Text tilgen.
     const dtOhneFn = m[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
     const ddOhneFn = m[2].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
-    const markeRoh = entferneTags(dtOhneFn);
+    // Marke-Tags OHNE Leerzeichen strippen: das lat. Suffix steht als <sup>bis</sup>
+    // direkt am Buchstaben («c<sup>bis</sup>»); entferneTags würde es zu «c bis»
+    // trennen und die Regex unten verstümmelte es zu «c» (Bug-Audit 19.6.2026).
+    const markeRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, '')).trim();
     // «a.» / «17.» / «a)» → nackte Marke ohne Punkt/Klammer.
-    const markeMatch = markeRoh.match(/^([0-9]+[a-z]?|[a-z])\s*[.)]?/i);
+    // Bug-Audit 19.6.2026: lat. Suffix bis/ter/quater/quinquies erhalten (sonst
+    // «cbis»→«c», «1bis»→«1b»). Suffix VOR optionalem Buchstaben (wie ABS-Regex).
+    const markeMatch = markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
     const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(/[.)]\s*$/, '');
     const text = entferneTags(ddOhneFn);
     if (marke && text) {

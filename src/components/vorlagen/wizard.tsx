@@ -229,7 +229,7 @@ function VorschauAbsatz({ abs, stil }: { abs: AssembleErgebnis['dokument']['absa
     case 'betreff':
       return (
         <div>
-          <p style={{ ...VORSCHAU.betreff, lineHeight: 1.3 }}>{abs.text}</p>
+          <p style={{ ...VORSCHAU.betreff, lineHeight: 1.3, whiteSpace: 'pre-line' }}>{abs.text}</p>
           <span style={VORSCHAU.betreffLinie} aria-hidden />
         </div>
       );
