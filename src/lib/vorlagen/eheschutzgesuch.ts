@@ -178,7 +178,7 @@ export const EG_SCHEMA: VorlageSchema = {
     { id: 'EG03_betreff', rolle: 'betreff', text: 'Eheschutzgesuch (Art. 175 ff. ZGB; summarisches Verfahren, Art. 271 lit. a ZPO)',
       begruendung: 'Betreff mit Verfahrensbezeichnung.', norm: 'Art. 271 ZPO' },
     { id: 'EG04_rubrum', rolle: 'rubrum',
-      text: 'in Sachen\n{{gesuchstellerRubrum}}\n(gesuchstellende Partei){{vertretungZeile}}\n\ngegen\n\n{{gesuchsgegnerRubrum}}\n(gesuchsgegnerische Partei)\n\nbetreffend Eheschutz',
+      text: 'in Sachen\n{{gesuchstellerRubrum}}\n(gesuchstellende Partei){{vertretungZeile}}\n\ngegen\n\n{{gesuchsgegnerRubrum}}\n(gesuchsgegnerische Partei){{kinderRubrumZeile}}\n\nbetreffend Eheschutz',
       begruendung: 'Parteien und allfällige Vertretung.' },
     { id: 'EG05_begehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
       wiederholeUeber: 'begehrenListe', nummeriert: true,
@@ -301,8 +301,10 @@ export function egZusammenstellen(a: EgAntworten) {
     gerichtBlock,
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}${a.datum ? fmtDatum(a.datum) : '________'}`,
     gesuchstellerRubrum: parteiZeilen(a.gesuchsteller).join(', '),
-    gesuchsgegnerRubrum: parteiZeilen(a.gesuchsgegner).join(', ')
-      + (kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : ''),
+    gesuchsgegnerRubrum: parteiZeilen(a.gesuchsgegner).join(', '),
+    // Bug-Audit 19.6.2026 (H2): Kinder-Block NACH der Rollenzeile, nicht am
+    // Partei-Rubrum — sonst bezeichnet «(gesuchsgegnerische Partei)» optisch die Kinder.
+    kinderRubrumZeile: kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : '',
     vertretungZeile: a.vertretung?.trim() ? `\nvertreten durch ${a.vertretung.trim()}` : '',
     begehrenListe: begehren,
     formellesText: formellesTeile.join(' '),

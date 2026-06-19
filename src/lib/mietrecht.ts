@@ -206,14 +206,17 @@ export function berechneMietkuendigung(input: MietInput): MietErgebnis {
     let zahlungsfristEnde: Date | undefined;
     if (input.kuendigungsart === 'zahlungsverzug' && input.zahlungsaufforderungZugang) {
       const za = parseISO(input.zahlungsaufforderungZugang);
-      const zfRoh = addDays(za, 30);
+      // Bug-Audit 19.6.2026 (H4): Art. 257d Abs. 1 OR — «mindestens zehn Tage, bei
+      // Wohn- und Geschäftsräumen mindestens 30 Tage». Nicht-Raum-Objekte: 10 Tage.
+      const zfTage = istRaum ? 30 : 10;
+      const zfRoh = addDays(za, zfTage);
       const zf = werktagOderNaechster(zfRoh, input.kanton);
       zahlungsfristEnde = zf.tag;
       rechenweg.push({
         beschreibung: 'Stufe 1 – Zahlungsfrist (Art. 257d Abs. 1 OR)',
         zwischenergebnis:
           `Zugang der Zahlungsaufforderung am ${fmt(za)} (RELATIVE Empfangstheorie – der ganze Fristbeginn muss dem Mieter zugutekommen). ` +
-          `Zahlungsfrist mindestens 30 Tage: läuft bis ${fmt(zahlungsfristEnde)}${zf.verschoben ? ' (Art. 78 OR: Verschiebung auf den nächsten Werktag)' : ''}. ` +
+          `Zahlungsfrist mindestens ${zfTage} Tage: läuft bis ${fmt(zahlungsfristEnde)}${zf.verschoben ? ' (Art. 78 OR: Verschiebung auf den nächsten Werktag)' : ''}. ` +
           'Mit Androhung der Kündigung; bei Familienwohnung separat an beide Ehegatten (Art. 266n OR).',
         normen: [N_257d, N_77, N_78],
         rechtsprechung: [rechtsprechung('BGE_119_II_147')],

@@ -2,12 +2,18 @@
 import { describe, expect, it } from 'vitest';
 import { emissionsabgabe, mwstAufschlag, weitereKosten, FREIES_NOTARIAT } from '../lib/beurkundungZusatzkosten';
 
-describe('Emissionsabgabe (StG Art. 6/8) — Freigrenze, kein Freibetrag', () => {
-  it('bis und mit CHF 1 Mio abgabefrei; darüber der GANZE Betrag × 1 %', () => {
-    expect(emissionsabgabe(1_000_000)).toBe(0);        // Freigrenze exakt erreicht
+// Bug-Audit 19.6.2026 (H6): Art. 6 Abs. 1 lit. h StG normiert einen FREIBETRAG
+// (kein Freigrenze): die Beteiligungsrechte sind befreit, «soweit die Leistungen
+// … 1 Million Franken nicht übersteigen» — nur der ÜBERSTEIGENDE Teil ist mit 1 %
+// steuerbar (gefestigte ESTV-Praxis; deckungsgleich mit gruendungsunterlagen.ts).
+// Zuvor zementierte dieser Test fälschlich eine Freigrenze (ganzer Betrag).
+describe('Emissionsabgabe (StG Art. 6/8) — Freibetrag CHF 1 Mio', () => {
+  it('bis und mit CHF 1 Mio abgabefrei; darüber nur der ÜBERSTEIGENDE Teil × 1 %', () => {
+    expect(emissionsabgabe(1_000_000)).toBe(0);        // Freibetrag exakt ausgeschöpft
     expect(emissionsabgabe(999_999)).toBe(0);
-    expect(emissionsabgabe(1_000_001)).toBe(10_000);   // ganzer Betrag, nicht nur Überschuss
-    expect(emissionsabgabe(1_500_000)).toBe(15_000);
+    expect(emissionsabgabe(1_000_001)).toBe(0);        // Überschuss 1 → gerundet 0
+    expect(emissionsabgabe(1_500_000)).toBe(5_000);    // 500'000 × 1 %
+    expect(emissionsabgabe(2_000_000)).toBe(10_000);   // 1'000'000 × 1 %
     expect(emissionsabgabe(0)).toBe(0);
   });
 });
@@ -26,7 +32,7 @@ describe('weitereKosten — Zusammensetzung je Geschäftsart/Kanton', () => {
     const labels = r.posten.map((p) => p.label);
     expect(labels.some((l) => l.startsWith('MwSt'))).toBe(false);
     expect(r.posten.find((p) => p.label.includes('Handelsregister'))?.von).toBe(420);
-    expect(r.posten.find((p) => p.label.includes('Emissionsabgabe'))?.von).toBe(20_000);
+    expect(r.posten.find((p) => p.label.includes('Emissionsabgabe'))?.von).toBe(10_000);
   });
 
   it('AG-Gründung im freien Notariat (GE): MwSt + HReg + Emissionsabgabe', () => {

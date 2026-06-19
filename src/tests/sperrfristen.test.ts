@@ -446,3 +446,24 @@ describe('SHK-Abgleich-Fix 10.6.2026 (B2): BGE 133 III 517, zweite Konstellation
     expect(r.warnungen.some((w) => w.includes('nichtig'))).toBe(true);
   });
 });
+
+// Bug-Audit 19.6.2026 (H1): Bei Zugang am Monatsletzten klemmt addMonths/subMonths
+// (Februar). Die Rückrechnung beginn_frist = subMonths(ordentlichesEnde, frist)
+// rutschte dadurch VOR den Zugang, sodass Sperrgründe vor Kündigungszugang
+// fälschlich gehemmt wurden. Fenster-Untergrenze muss auf max(beginn_frist, zugang).
+describe('Sperrfristen H1 – Monatsende-Klemmung darf Fenster nicht vor Zugang ziehen', () => {
+  it('Krankheit komplett VOR Zugang am 31.12. → keine Hemmung, Beendigung 28.02.', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      vertragsbeginn: '2020-01-01',        // dj6 → 2 Monate Frist
+      zugangKuendigung: '2025-12-31',      // Monatsletzter; addMonths(+2)=28.02. (Klemmung)
+      kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2025-12-28', bis: '2025-12-30' }, // komplett vor Zugang
+      ],
+    });
+    expect(r.status).toBe('ok');
+    expect(r.gehemmtTage).toBe(0);
+    expect(r.beendigungISO).toBe('2026-02-28');
+  });
+});

@@ -142,7 +142,7 @@ export const SB_SCHEMA: VorlageSchema = {
     { id: 'SB03_betreff', rolle: 'betreff', text: 'Gemeinsames Scheidungsbegehren ({{einigungNorm}})',
       begruendung: 'Betreff mit der Einigungs-Variante (umfassende Einigung Art. 285 ZPO bzw. Teileinigung Art. 286 ZPO).', norm: 'Art. 285/286 ZPO' },
     { id: 'SB04_rubrum', rolle: 'rubrum',
-      text: 'in Sachen\n{{ehegatte1Rubrum}}{{vertretung1Zeile}}\n\nund\n\n{{ehegatte2Rubrum}}{{vertretung2Zeile}}\n\n(gesuchstellende Parteien)\n\nbetreffend Scheidung auf gemeinsames Begehren',
+      text: 'in Sachen\n{{ehegatte1Rubrum}}{{vertretung1Zeile}}\n\nund\n\n{{ehegatte2Rubrum}}{{vertretung2Zeile}}\n\n(gesuchstellende Parteien){{kinderRubrumZeile}}\n\nbetreffend Scheidung auf gemeinsames Begehren',
       begruendung: 'Beide Ehegatten als gemeinsam gesuchstellende Parteien — kein Gegner-Rubrum.', norm: 'Art. 285 lit. a ZPO' },
     { id: 'SB05_begehren', ueberschrift: 'Begehren und Anträge', text: '{{item.text}}',
       wiederholeUeber: 'begehrenListe', nummeriert: true,
@@ -229,8 +229,10 @@ export function sbZusammenstellen(a: SbAntworten) {
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}${a.datum ? fmtDatum(a.datum) : '________'}`,
     einigungNorm: a.einigung === 'voll' ? 'umfassende Einigung, Art. 285 ZPO' : 'Teileinigung, Art. 286 ZPO',
     ehegatte1Rubrum: parteiZeilen(a.ehegatte1).join(', '),
-    ehegatte2Rubrum: parteiZeilen(a.ehegatte2).join(', ')
-      + (kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : ''),
+    ehegatte2Rubrum: parteiZeilen(a.ehegatte2).join(', '),
+    // Bug-Audit 19.6.2026 (H2): Kinder-Block NACH der gemeinsamen Rollenzeile
+    // (sonst steht er zwischen Ehegatte 2 und «(gesuchstellende Parteien)»).
+    kinderRubrumZeile: kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : '',
     vertretung1Zeile: a.vertretung1?.trim() ? `\nvertreten durch ${a.vertretung1.trim()}` : '',
     vertretung2Zeile: a.vertretung2?.trim() ? `\nvertreten durch ${a.vertretung2.trim()}` : '',
     begehrenListe: begehren,
