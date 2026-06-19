@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte } from '../components/normtext/ErlassKarte';
 import {
@@ -43,9 +44,20 @@ function Gitter({ erlasse }: { erlasse: BrowseErlass[] }) {
 export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
   const [fehler, setFehler] = useState(false);
-  const [ebene, setEbene] = useState<Ebene>('bund');
   const [suche, setSuche] = useState('');
   const [kanton, setKanton] = useState<string | null>(null);
+
+  // Ebene (Bund/Kantone) liegt in der URL (?ebene=) — so verlinkt die App-Shell-
+  // Seitenleiste direkt auf den Kantone-Tab bzw. (mit #g-<gebiet>) auf ein
+  // Bund-Rechtsgebiet; teilbar und mit Zurück-Taste, wie der Katalog (?kategorie=).
+  const [params, setParams] = useSearchParams();
+  const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton' : 'bund';
+  const setzeEbene = (e: Ebene) => {
+    const p = new URLSearchParams(params);
+    if (e === 'kanton') p.set('ebene', 'kanton'); else p.delete('ebene');
+    setParams(p, { replace: true });
+    setKanton(null);
+  };
 
   useEffect(() => {
     let lebt = true;
@@ -92,7 +104,7 @@ export function Gesetze() {
       {erlasse && (
         <>
           <div className="flex flex-wrap items-center justify-between gap-3">
-            {!suche.trim() && <Segment aktiv={ebene} onWahl={(e) => { setEbene(e); setKanton(null); }} />}
+            {!suche.trim() && <Segment aktiv={ebene} onWahl={setzeEbene} />}
             <input
               type="search"
               value={suche}
@@ -131,7 +143,9 @@ export function Gesetze() {
           {!suche.trim() && ebene === 'bund' && (
             <div className="space-y-8">
               {gruppiereNachGebiet(gefiltert).map((g) => (
-                <section key={g.gebiet} className="space-y-3">
+                /* id-Anker «g-<gebiet>»: Sprungziel der Seitenleisten-Bund-
+                   Rechtsgebiete (navigation.ts → ScrollZuHash). */
+                <section key={g.gebiet} id={`g-${g.gebiet}`} className="space-y-3 scroll-mt-24">
                   <h2 className="lc-overline">{g.label} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
                   <Gitter erlasse={g.erlasse} />
                 </section>

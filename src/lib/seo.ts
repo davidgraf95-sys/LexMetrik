@@ -53,6 +53,7 @@ const DOPPELKARTEN_OVERRIDE: Record<string, string> = {
 // als Entwurf gekennzeichnet.
 const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; ogBeschreibung?: string }> = {
   '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION, ogBeschreibung: SITE_OG_DESCRIPTION },
+  '/recherche': { titel: 'Recherche — LexMetrik', beschreibung: 'Rechner und Vorlagen von LexMetrik im Volltext durchsuchen — feste Rechenregeln, jede Norm direkt verlinkt. Ergebnisse erscheinen sofort, ganz im Browser.' },
   '/gesetze': { titel: 'Schweizer Gesetzessammlung — LexMetrik', beschreibung: 'Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link. Schnelle Navigation zwischen und innerhalb der Gesetze.' },
   '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: 'Wie LexMetrik Fristen, Beträge und Quoten herleitet: feste Regeln statt Sprachmodell, jeder Schritt nachvollziehbar, jede Norm mit der amtlichen Sammlung verlinkt.' },
   '/ueber': { titel: 'Über — LexMetrik', beschreibung: 'Warum es LexMetrik gibt — entstanden bei der Vorbereitung auf die Anwaltsprüfung: überprüfbare, normtreue Rechtsberechnung statt Black Box.' },

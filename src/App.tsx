@@ -14,6 +14,8 @@ import { ROUTEN_MANIFEST } from './routesManifest';
 // Thema B, §5). Hier stehen nur die Sonderrouten, die bewusst NICHT im
 // Katalog sind.
 const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
+// Recherche (App-Shell Phase 4): schlanke Such-Seite, nutzt die Katalog-Suche.
+const Recherche = lazy(() => import('./pages/Recherche').then((m) => ({ default: m.Recherche })));
 // S-5c: Fristenspiegel AUFGELÖST (Auftrag David 10.6.2026 abends) — Link-Erbe
 // alter Teilen-/.ics-Links übernimmt der Redirect auf die Fach-Rechner.
 const FristenspiegelRedirect = lazy(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
@@ -41,13 +43,34 @@ function AltRouteRedirect() {
 }
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
-// neue Seite die alte Scrollposition und man «landet unten»). Sprungmarken
-// auf derselben Seite (#fristen etc.) bleiben dem Browser überlassen.
+// neue Seite die alte Scrollposition und man «landet unten»). Trägt die Route
+// einen Anker (#vorlage-…, #g-…, von der Seitenleiste), übernimmt ScrollZuHash.
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) return;
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
-  }, [pathname]);
+  }, [pathname, hash]);
+  return null;
+}
+
+// Anker-Sprung für die Seitenleisten-Tieflinks (Vorlagen-Gruppe, Bund-Gebiet).
+// react-router scrollt nicht von selbst zum #hash; und das Ziel-Element steckt
+// hinter einer lazy()-Seite, die erst einen Tick später montiert — darum mit
+// requestAnimationFrame ein paar Frames lang erneut versuchen, dann aufgeben.
+function ScrollZuHash() {
+  const { hash, pathname, search } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const id = decodeURIComponent(hash.slice(1));
+    let frames = 0;
+    let raf = requestAnimationFrame(function versuche() {
+      const el = document.getElementById(id);
+      if (el) { el.scrollIntoView({ behavior: 'instant' as ScrollBehavior, block: 'start' }); return; }
+      if (frames++ < 30) raf = requestAnimationFrame(versuche);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [hash, pathname, search]);
   return null;
 }
 
@@ -60,6 +83,7 @@ export default function App() {
     <LocaleProvider>
     <Shell>
       <ScrollToTop />
+      <ScrollZuHash />
       <RouteMeta />
       <ErrorBoundary>
       <Suspense fallback={
@@ -71,6 +95,7 @@ export default function App() {
       <div key={pathname} className="lc-route">
       <Routes>
         <Route path="/" element={<Startseite />} />
+        <Route path="/recherche" element={<Recherche />} />
         {/* Alt-Routen (Free/Pro aufgehoben): alle auf die eine Hauptseite */}
         <Route path="/pro" element={<AltRouteRedirect />} />
         <Route path="/fachpersonen" element={<AltRouteRedirect />} />
