@@ -3,6 +3,7 @@ import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
+import { KTG_GLEICHWERTIGKEIT } from '../lohnfortzahlung';
 export { fmtCHF } from './datum';
 
 // ─── Einzelarbeitsvertrag (Art. 319 ff. OR) – fünfte Vorlage ────────────────
@@ -297,10 +298,10 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
     const wfLohn = a.ktgWartefristLohnProzent ?? 80;
     const praemieAn = a.ktgPraemieAnProzent ?? 50;
     const maengel: string[] = [];
-    if (p < 80) maengel.push(`Taggeld ${p} % (< 80 %)`);
-    if (t < 720) maengel.push(`Leistungsdauer ${t} Tage (< 720)`);
-    if (wf > 3 && wfLohn < 80) maengel.push(`Wartefrist ${wf} Tage mit nur ${wfLohn} % Lohn (< 80 %)`);
-    if (praemieAn > 50) maengel.push(`Arbeitnehmer-Prämienanteil ${praemieAn} % (> 50 %)`);
+    if (p < KTG_GLEICHWERTIGKEIT.taggeldMinProzent) maengel.push(`Taggeld ${p} % (< 80 %)`);
+    if (t < KTG_GLEICHWERTIGKEIT.leistungMinTage) maengel.push(`Leistungsdauer ${t} Tage (< 720)`);
+    if (wf > KTG_GLEICHWERTIGKEIT.karenzMaxTage && wfLohn < KTG_GLEICHWERTIGKEIT.taggeldMinProzent) maengel.push(`Wartefrist ${wf} Tage mit nur ${wfLohn} % Lohn (< 80 %)`);
+    if (praemieAn > KTG_GLEICHWERTIGKEIT.praemieGrenzeProzent) maengel.push(`Arbeitnehmer-Prämienanteil ${praemieAn} % (> 50 %)`);
     if (maengel.length > 0) {
       warnungen.push(`Gleichwertigkeit nicht gesichert (Art. 324a Abs. 4 OR; BGE 135 III 640 – zu verifizieren): ${maengel.join(' · ')}. Fehlt die Gleichwertigkeit, bleibt die gesetzliche Lohnfortzahlung nach Skala anwendbar.`);
     }
