@@ -158,7 +158,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf }: {
         {fussnotenAuf && fussAnzeige.length > 0 && (
           <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
             {fussAnzeige.map((fn, i) => (
-              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-micro leading-snug text-ink-400 target:bg-brass-50">
+              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
                 {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                 {fnTextMitLinks(fn)}
               </p>

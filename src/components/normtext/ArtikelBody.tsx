@@ -60,7 +60,7 @@ export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; kl
         className={`num align-super text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 ${klasse ?? ''}`}>{nr}</button>
       {auf && html && (
         <span role="note" dangerouslySetInnerHTML={{ __html: html }}
-          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-micro font-normal not-italic leading-snug text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
+          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
       )}
     </span>
   );
