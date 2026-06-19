@@ -81,6 +81,17 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
    ansehen — `golden/lexmetrik-golden.json`, `dist/` und `package-lock.json`
    werden nie direkt gelesen (auch nicht von Review-Agents). Das kürzt nur
    den Diagnoseweg, nie ein Tor.
+6. **Datei-Schlankheit (Token-Disziplin, übernommen 19.6.2026):** Eine Datei
+   der **Darstellungs-/Datenschicht** (`src/pages/`, `src/components/`,
+   Vorlagen-Schemas, Config-/Daten-Tabellen) über **~800 Zeilen** wird in
+   Geschwister-Dateien + schlankes Barrel gesplittet (verhaltensneutral nach
+   diesem §6, golden byte-gleich). Aufteilen ist erlaubt und erwünscht — es ist
+   das Gegenteil der nach §4 verbotenen Engine-**Verschmelzung**. Robuste Zahl-/
+   CHF-Parser und Altersberechnung kommen aus der geteilten Infrastruktur
+   (`vorlagen/datum.ts`, `datumsUtils.ts`), nicht als lokale Kopie — es sei
+   denn, die Semantik weicht fachlich bewusst ab (dann am Fundort begründen,
+   §1). So lädt eine Session weniger Kontext pro Aufgabe (weniger Tokens, ohne
+   Qualitätsverlust).
 
 ## §7 Normen: verifizieren, nicht vertrauen
 
