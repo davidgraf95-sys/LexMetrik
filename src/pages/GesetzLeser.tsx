@@ -541,8 +541,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
           {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
-          <div data-such-bar className="sticky top-[6.85rem] z-[15] mb-4 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
-            <div className="flex items-center gap-3">
+          <div data-such-bar className="sticky top-[6.85rem] z-[15] mb-4 space-y-2">
+            {/* Suchleiste — eigene Box. */}
+            <div className="flex items-center gap-3 rounded-md border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && !tocOffen && (
                 <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
                   className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
@@ -554,12 +555,12 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
                 title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
             </div>
-            {/* Running-Header UNTER der Suche: zeigt laufend den Standort im Gesetz
-                (Teil › Titel › Abschnitt — letzte Stufe mit Sachtitel) und den
-                Randtitel des aktuellen Artikels. Ersetzt Marginalien + Übertitel im
-                Lesefluss und folgt dem Scroll (Scroll-Spy). */}
+            {/* Standort-Leiste — SEPARATE, ruhige Box unter der Suche: zeigt laufend
+                den Standort im Gesetz (Teil › Titel › Abschnitt — letzte Stufe mit
+                Sachtitel) und den Randtitel des aktuellen Artikels. Ersetzt
+                Marginalien + Übertitel im Lesefluss und folgt dem Scroll. */}
             {!treffer && (aktivPfad.length > 0 || aktivMarg.length > 0) && (
-              <div className="mt-2 border-t border-line/60 pt-1.5 text-[0.72rem] leading-snug">
+              <div className="rounded-md border border-line/70 bg-paper-sunken/60 px-3 py-1.5 shadow-sm text-[0.72rem] leading-snug">
                 {aktivPfad.length > 0 && (
                   <div className="flex items-baseline gap-1.5 text-ink-400">
                     <span aria-hidden className="shrink-0 text-brass-600/70">▸</span>
