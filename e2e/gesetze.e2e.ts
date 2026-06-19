@@ -52,9 +52,14 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
     await expect(page.getByRole('heading', { level: 1 })).toContainText('OR')
     await expect(page.getByText('Gliederung', { exact: true })).toBeVisible()
     await expect(page.locator('#art-1')).toContainText('Willensäusserung')
-    // Amtliche Gliederung + Randtitel (Marginalie) vorhanden
-    await expect(page.getByText('Die Entstehung der Obligationen', { exact: false }).first()).toBeVisible()
-    await expect(page.locator('#art-1')).toContainText('Abschluss des Vertrages')
+    // Standort-Info (amtliche Gliederung + Randtitel) steht jetzt im sticky
+    // Running-Header (ersetzt Marginalspalte + Übertitel im Fliesstext) und folgt
+    // dem Scroll: nach dem Scrollen zeigt er den Gliederungspfad UND den Randtitel
+    // des aktuellen Artikels.
+    await page.evaluate(() => window.scrollTo(0, 1200))
+    const lauf = page.locator('[data-such-bar]')
+    await expect(lauf).toContainText('Erste Abteilung')
+    await expect(lauf).toContainText('Abschluss des Vertrages')
     // In-Gesetz-Suche filtert
     await page.getByRole('searchbox', { name: 'Im Gesetz suchen' }).fill('Willensäusserung')
     await expect(page.getByText(/Treffer für/)).toBeVisible()
