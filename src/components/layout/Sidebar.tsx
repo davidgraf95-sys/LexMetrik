@@ -69,8 +69,11 @@ function Knoten({ k, loc, onNavigate }: { k: NavKnoten; loc: Location; onNavigat
     <details className="group" open={k.standardOffen || kindAktiv}>
       {/* Disclosure-Dreieck liefert der globale details>summary::after (index.css)
           — kein eigener Marker, sonst doppelt. */}
-      <summary className="flex items-center justify-between gap-2 cursor-pointer select-none rounded-md px-2.5 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
-        {k.label}
+      <summary className="flex items-center gap-2 cursor-pointer select-none rounded-md px-2.5 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
+        <span className="flex-1 truncate" title={k.label}>{k.label}</span>
+        {typeof k.anzahl === 'number' && (
+          <span className="num text-xs text-ink-400" aria-label={`${k.anzahl} verfügbar`}>{k.anzahl}</span>
+        )}
       </summary>
       <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
         {k.kinder.map((kk, i) => (
