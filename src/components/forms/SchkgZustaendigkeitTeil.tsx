@@ -175,7 +175,7 @@ export function SchkgZustaendigkeitTeil() {
   }, [ortKanton, ortGemeinde]);
   const amtTreffer = amtErgebnis !== null && amtErgebnis.schluessel === amtSchluessel ? amtErgebnis.treffer : null;
 
-  const forderung = forderungRoh.trim() === '' ? null : Number(forderungRoh.replace(/['\s]/g, '').replace(',', '.'));
+  const forderung = forderungRoh.trim() === '' ? null : Number(forderungRoh.replace(/['’\s]/g, '').replace(',', '.'));
   const forderungUngueltig = forderung !== null && (!Number.isFinite(forderung) || forderung < 0);
 
   const input: SchkgInput = {

@@ -28,6 +28,14 @@ describe('parsePassus', () => {
   it('Absatz mit lat. Suffix «2ter» bleibt vollständig', () => {
     expect(parsePassus('Art. 5 Abs. 2ter OR')).toEqual({ artikelToken: '5', absatz: '2ter' });
   });
+  // Bug-Audit 19.6.2026 (H5): ARTIKEL-Suffix bis/ter/… ohne Zwischenbuchstaben
+  // («Art. 334bis») wurde zu «334_b» verstümmelt (das [a-z]? frass das «b»,
+  // fehlende Wortgrenze). Muss vollständig «334_bis» bleiben.
+  it('Artikel mit lat. Suffix «334bis» bleibt vollständig (H5 — kein «334_b»)', () => {
+    expect(parsePassus('Art. 334bis ZGB')).toEqual({ artikelToken: '334_bis', absatz: null });
+    expect(parsePassus('Art. 269ter StPO')).toEqual({ artikelToken: '269_ter', absatz: null });
+    expect(parsePassus('Art. 335c OR')).toEqual({ artikelToken: '335_c', absatz: null });
+  });
   // B3: «litera a» darf nicht als lit «e» (Match mitten im Wort «litera»)
   // fehlinterpretiert werden — Schlüsselwort braucht Wortgrenze/Punkt.
   it('«litera a» liefert KEIN fälschliches lit «e» (B3 — Wortgrenze)', () => {

@@ -101,6 +101,17 @@ export const FEDLEX = {
   // JStPO (Jugendstrafprozessordnung) SR 312.1 — eli cc/2010/226,
   // Konsolidierung 20250701 (54 Anker); kollisionsfrei zu StPO (endet auf «JStPO»).
   JStPO: 'https://www.fedlex.admin.ch/eli/cc/2010/226/de',
+  // ── Volltext-Ausbau 19.6.2026: ELI + geltende Konsolidierung empirisch am
+  //    Filestore-HTML verifiziert (n=0, alle Pflicht-Anker vorhanden); SR/Titel
+  //    gegen Fedlex-SR-Register gegengeprüft (§7, [[immer-doppelt-verifizieren]]).
+  BV:    'https://www.fedlex.admin.ch/eli/cc/1999/404/de', // SR 101, Kons. 20240303
+  DBG:   'https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de', // SR 642.11, Kons. 20260101
+  VStG:  'https://www.fedlex.admin.ch/eli/cc/1966/371_385_384/de', // SR 642.21, Kons. 20250101
+  KG:    'https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de', // SR 251, Kons. 20230701
+  FusG:  'https://www.fedlex.admin.ch/eli/cc/2004/320/de', // SR 221.301, Kons. 20230101
+  MSchG: 'https://www.fedlex.admin.ch/eli/cc/1993/274_274_274/de', // SR 232.11, Kons. 20250701
+  UWG:   'https://www.fedlex.admin.ch/eli/cc/1988/223_223_223/de', // SR 241, Kons. 20250101
+  PatG:  'https://www.fedlex.admin.ch/eli/cc/1955/871_893_899/de', // SR 232.14, Kons. 20250701
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

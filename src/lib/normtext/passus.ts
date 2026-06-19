@@ -1,6 +1,9 @@
 // Zitat-Zerlegung. Das Artikel-Token folgt dem Fedlex-Anker-Format
 // (335c → 335_c, 334bis → 334_bis), kongruent zu src/lib/fedlex.ts.
-const ART = /(?:Art\.?|§)\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)/i;
+// Bug-Audit 19.6.2026 (H5): abschliessende Wortgrenze \b nötig, sonst frisst das
+// optionale [a-z]? das «b» von «bis» und «Art. 334bis» wird zu «334_b». Mit \b
+// backtrackt [a-z]? und gibt das Suffix frei (kongruent zu fedlex.ts:161).
+const ART = /(?:Art\.?|§)\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/i;
 // Lat. Suffixe (bis/ter/…) wie bei ART zuerst, sonst verstümmelt «Abs. 1bis»
 // zu «1b» (B2). Reihenfolge: Suffix vor optionalem Einzel-Buchstaben.
 const ABS = /Abs\.?\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)/i;

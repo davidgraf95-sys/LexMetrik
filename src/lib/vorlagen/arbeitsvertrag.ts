@@ -169,7 +169,7 @@ const alterAm = (gebIso: string, stichtagIso: string): number | null => {
 };
 
 const lohnZahl = (roh: string): number | null => {
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
+  const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;
 };
 

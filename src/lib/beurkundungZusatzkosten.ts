@@ -50,12 +50,16 @@ export const EMISSIONSABGABE_ARTEN: ReadonlySet<GeschaeftsartId> = new Set<Gesch
 
 export const EMISSIONSABGABE_QUELLE = { erlass: 'StG (SR 641.10), Art. 8 Abs. 1 i.V.m. Art. 6 Abs. 1 lit. h', url: 'https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de', stand: '1.1.2024' };
 
-/** Emissionsabgabe: 1 % auf Nennwert + Agio. Art. 6 Abs. 1 lit. h StG normiert
- *  eine **Freigrenze** (kein Freibetrag) von CHF 1 Mio: bis und mit 1 Mio
- *  abgabefrei, darüber ist der GANZE Betrag steuerbar (nicht nur der Überschuss). */
+/** Emissionsabgabe: 1 % auf den CHF 1 Mio ÜBERSTEIGENDEN Teil von Nennwert + Agio.
+ *  Art. 6 Abs. 1 lit. h StG normiert einen **Freibetrag** von CHF 1 Mio: befreit,
+ *  «soweit die Leistungen der Gesellschafter gesamthaft eine Million Franken nicht
+ *  übersteigen» — nur der übersteigende Teil ist steuerbar (gefestigte ESTV-Praxis,
+ *  Bundesstempelabgabe). Bug-Audit 19.6.2026 (H6): zuvor fälschlich als Freigrenze
+ *  (ganzer Betrag) gerechnet; jetzt deckungsgleich mit gruendungsunterlagen.ts. */
+const EMISSIONSABGABE_FREIBETRAG_CHF = 1_000_000;
 export function emissionsabgabe(bemessungChf: number): number {
-  if (!Number.isFinite(bemessungChf) || bemessungChf <= 1_000_000) return 0;
-  return Math.round(bemessungChf * 0.01);
+  if (!Number.isFinite(bemessungChf) || bemessungChf <= EMISSIONSABGABE_FREIBETRAG_CHF) return 0;
+  return Math.round((bemessungChf - EMISSIONSABGABE_FREIBETRAG_CHF) * 0.01);
 }
 
 /** MwSt 8,1 % auf die Notariatsgebühr (nur freies Notariat). */

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { NORM_IM_TEXT } from '../lib/fedlex';
-import { NormText } from '../components/NormText';
+import { NormText, type InternRefs } from '../components/NormText';
 import { LocaleProvider } from '../components/locale';
 
 // Inline-Norm-Auto-Linker (Auftrag David 17.6.2026): jeder im Fliesstext
@@ -83,5 +83,45 @@ describe('NormText — Inline-Render (SSR/Prerender)', () => {
     expect(out).toMatch(/#art_19/);
     expect(out).toMatch(/#art_131/);
     expect(out).toContain('nicht § 3, aber ');
+  });
+});
+
+// Interne Querverweise (Lesesicht, intern-Prop): bare «Art. N» → Sprung-Link auf
+// denselben Erlass. Regression zu den Bug-Check-Funden 19.6.2026 (bis/ter-Suffix
+// abgeschnitten + Fremdgesetz-Backtracking).
+describe('NormText — interne Artikel-Sprünge (intern)', () => {
+  // tokenMap wie im Reader: normalisierter Ref → Artikel-Token. Enthält bewusst
+  // die Kollision «122_bis»/«122_b» (real in SG-811.1).
+  const tokenMap = new Map<string, string>([
+    ['122bis', '122_bis'], ['122b', '122_b'], ['6a', '6_a'], ['5', '5'], ['20', '20'], ['329gbis', '329g_bis'],
+  ]);
+  const intern: InternRefs = { tokenMap, basisPfad: '/gesetze/kanton/SG-811.1', springeZu: () => {} };
+
+  it('«Art. 122bis» springt auf 122_bis (NICHT 122_b)', () => {
+    const out = ssr(<NormText text="vgl. Art. 122bis hier" intern={intern} />);
+    expect(out).toContain('href="/gesetze/kanton/SG-811.1#art-122_bis"');
+    expect(out).not.toContain('#art-122_b"');
+    expect(out).toContain('Art. 122bis');
+  });
+
+  it('Buchstabe+lat. Suffix «Art. 329gbis» vollständig erfasst', () => {
+    const out = ssr(<NormText text="nach Art. 329gbis usw." intern={intern} />);
+    expect(out).toContain('#art-329g_bis"');
+  });
+
+  it('bare «Art. 6a» und «Art. 5» werden intern verlinkt', () => {
+    expect(ssr(<NormText text="gemäss Art. 6a" intern={intern} />)).toContain('#art-6_a"');
+    expect(ssr(<NormText text="siehe Art. 5 oben" intern={intern} />)).toContain('#art-5"');
+  });
+
+  it('benannter Fremderlass «Art. 20 des OR» wird NICHT intern verlinkt', () => {
+    const out = ssr(<NormText text="Art. 20 des OR bleibt extern" intern={intern} />);
+    expect(out).not.toContain('#art-');
+    expect(out).toContain('Art. 20 des OR');
+  });
+
+  it('ohne intern-Prop entstehen keine internen Sprung-Links', () => {
+    const out = ssr(<NormText text="gemäss Art. 6a hier" />);
+    expect(out).not.toContain('#art-6_a');
   });
 });

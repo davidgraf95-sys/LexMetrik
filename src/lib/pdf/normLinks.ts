@@ -18,9 +18,11 @@ export const ERLASSE: Record<string, ErlassInfo> = {
 };
 
 const KUERZEL = /\b(ZPO|SchKG|ZGB|BGG|OR)\b/;
-// Bug-Check 10.6.2026 (NIEDRIG): lat. Suffix mit erfassen — «Art. 334bis OR»
-// ergäbe sonst den FALSCHEN Anker #art_334_b statt #art_334_bis.
-const ARTIKEL = /Art\.\s*(\d+)([a-z])?(bis|ter|quater|quinquies)?/i;
+// Bug-Audit 19.6.2026 (H5): Die abschliessende Wortgrenze \b ist nötig — ohne sie
+// frisst das optionale ([a-z])? das «b» von «bis», sodass «Art. 334bis» den TOTEN
+// Anker #art_334_b statt #art_334_bis ergibt. (Der frühere 10.6.-Kommentar behauptete
+// den Fix, ohne dass die Regex ihn leistete.) Mit \b backtrackt ([a-z])?.
+const ARTIKEL = /Art\.\s*(\d+)([a-z])?(bis|ter|quater|quinquies)?\b/i;
 
 export type NormLink = {
   url: string;       // klickbarer Fedlex-Link inkl. Artikel-Anker

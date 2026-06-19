@@ -251,6 +251,13 @@ describe('PDF-Bausteine', () => {
     expect(normLink('Art. 56 Abs. 2 SchKG')?.sr).toBe('281.1');
     expect(normLink('Unbekanntes Gesetz Art. 5')).toBeNull(); // kein Erfinden von Links
   });
+
+  // Bug-Audit 19.6.2026 (H5): Artikel-Suffix bis/ter/… ohne Zwischenbuchstaben
+  // erzeugte einen TOTEN Anker (#art_334_b statt #art_334_bis). Fehlende Wortgrenze.
+  it('normLink: Artikel mit lat. Suffix «334bis» → korrekter Anker #art_334_bis (H5)', () => {
+    expect(normLink('Art. 334bis ZGB')?.url).toContain('#art_334_bis');
+    expect(normLink('Art. 335c OR')?.url).toContain('#art_335_c'); // Einzelbuchstabe unverändert
+  });
 });
 
 // ─── Gemeinsame Vorlage: keine hartcodierten Domäneninhalte ───────────────

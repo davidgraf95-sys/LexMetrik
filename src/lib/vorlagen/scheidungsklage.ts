@@ -174,7 +174,7 @@ export const SK_SCHEMA: VorlageSchema = {
     { id: 'SK03_betreff', rolle: 'betreff', text: 'Scheidungsklage (Art. 290 ZPO) — unbegründete Eingabe',
       begruendung: 'Betreff mit Verfahrensbezeichnung; die Klage darf ohne schriftliche Begründung eingereicht werden.', norm: 'Art. 290 ZPO' },
     { id: 'SK04_rubrum', rolle: 'rubrum',
-      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei){{vertretungZeile}}\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei)\n\nbetreffend Scheidung',
+      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei){{vertretungZeile}}\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei){{kinderRubrumZeile}}\n\nbetreffend Scheidung',
       begruendung: 'Parteien und allfällige Vertretung.', norm: 'Art. 290 lit. a ZPO' },
     { id: 'SK05_begehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
       wiederholeUeber: 'rechtsbegehrenListe', nummeriert: true,
@@ -269,8 +269,10 @@ export function skZusammenstellen(a: SkAntworten) {
     gerichtBlock,
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}${a.datum ? fmtDatum(a.datum) : '________'}`,
     klaegerRubrum: parteiZeilen(a.klaeger).join(', '),
-    beklagteRubrum: parteiZeilen(a.beklagte).join(', ')
-      + (kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : ''),
+    beklagteRubrum: parteiZeilen(a.beklagte).join(', '),
+    // Bug-Audit 19.6.2026 (H2): Kinder-Block NACH der Rollenzeile (sonst labelt
+    // «(beklagte Partei)» optisch die Kinder).
+    kinderRubrumZeile: kinderZeilen ? `\n\ngemeinsame Kinder: ${kinderZeilen}` : '',
     vertretungZeile: a.vertretung?.trim() ? `\nvertreten durch ${a.vertretung.trim()}` : '',
     rechtsbegehrenListe: begehren,
     formellesText: formellesTeile.join(' '),

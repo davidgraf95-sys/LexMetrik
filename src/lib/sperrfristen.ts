@@ -523,7 +523,13 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   // (ohne Vaterschafts-Resttage) — sonst rutscht das hemmbare Fenster um die
   // Resttage nach hinten und frühe Sperrgründe gingen verloren; das Fenster
   // endet aber am verlängerten Endtermin.
-  const beginn_frist = subMonths(kb.ordentlichesEndeDatum ?? ende_ungehemmt, kb.fristMonate);
+  const beginn_frist_roh = subMonths(kb.ordentlichesEndeDatum ?? ende_ungehemmt, kb.fristMonate);
+  // Bug-Audit 19.6.2026 (H1): Bei Zugang am Monatsletzten klemmt addMonths/subMonths
+  // (z. B. Februar) asymmetrisch, sodass die Rückrechnung VOR den Zugang rutschen kann
+  // (Zugang 31.12. + 2 Mt. → 28.02. → −2 Mt. → 28.12.). Ein Sperrgrund vor dem Zugang
+  // kann die erst mit/nach Zugang laufende Kündigungsfrist nicht hemmen (Art. 336c
+  // Abs. 2 OR) → Fenster-Untergrenze auf den Zugang klemmen.
+  const beginn_frist = isBefore(beginn_frist_roh, zugang) ? zugang : beginn_frist_roh;
 
   annahmen.push(
     `Hemmung nach Rückrechnungsprinzip: massgeblich ist die rückgerechnete Kündigungsfrist ` +

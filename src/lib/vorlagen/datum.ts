@@ -19,7 +19,7 @@ export const fmtDatum = (iso?: string): string =>
 
 /** CHF-Betrag mit Tausender-Apostroph und zwei Dezimalen. */
 export function fmtCHF(roh: string): string {
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
+  const n = Number(String(roh).replace(/['’\s]/g, '').replace(',', '.'));
   if (!Number.isFinite(n)) return roh;
   const [ganz, dez] = n.toFixed(2).split('.');
   return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
@@ -37,7 +37,7 @@ export const chf = (n: number): string =>
 
 /** Robuste Zahl aus Nutzereingabe (Apostroph/Komma toleriert) – sonst null. */
 export const zahl = (roh?: string): number | null => {
-  const n = Number(String(roh ?? '').replace(/['\s]/g, '').replace(',', '.'));
+  const n = Number(String(roh ?? '').replace(/['’\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) && String(roh ?? '').trim() !== '' ? n : null;
 };
 

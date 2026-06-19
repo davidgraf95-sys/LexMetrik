@@ -131,7 +131,7 @@ export function koPrefillLesen(search: string): Partial<KoAnswers> | null {
 // ── Streitwert / Mängel / Hinweise ──────────────────────────────────────────
 
 export function koStreitwert(a: KoAnswers): number | null {
-  const roh = String(a.streitwert ?? '').replace(/['\s]/g, '').replace(',', '.');
+  const roh = String(a.streitwert ?? '').replace(/['’\s]/g, '').replace(',', '.');
   if (roh === '') return null;
   const n = Number(roh);
   return Number.isFinite(n) && n >= 0 ? n : null;

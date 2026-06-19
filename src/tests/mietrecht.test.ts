@@ -123,6 +123,17 @@ describe('Ausserordentliche Kündigungen', () => {
     expect(r.warnungen.some((w) => w.includes('272a'))).toBe(true);
   });
 
+  // Bug-Audit 19.6.2026 (H4): Art. 257d Abs. 1 OR — Zahlungsfrist «mindestens zehn
+  // Tage, bei Wohn- und Geschäftsräumen mindestens 30 Tage». Für Nicht-Wohn/Geschäfts-
+  // räume (bewegliche/unbewegliche Sache, möbliertes Zimmer/Einstellplatz) gelten 10 Tage.
+  it('Zahlungsverzug (Art. 257d Abs. 1): Nicht-Raum-Objekt → Zahlungsfrist 10 Tage', () => {
+    const r = berechneMietkuendigung(base({
+      kuendigungsart: 'zahlungsverzug', partei: 'vermieter', objekt: 'bewegliche_sache',
+      zahlungsaufforderungZugang: '2025-03-01', zugang: '2025-04-05',
+    }));
+    expect(r.zahlungsfristEnde).toBe('11.03.2025'); // 01.03. + 10 Tage
+  });
+
   it('Wichtige Gründe (Art. 266g): gesetzliche Frist auf beliebigen Zeitpunkt', () => {
     const r = berechneMietkuendigung(base({ kuendigungsart: 'wichtige_gruende', zugang: '2025-04-15' }));
     expect(r.endtermin).toBe('15.07.2025'); // 3 Monate, gleichbezeichneter Tag
