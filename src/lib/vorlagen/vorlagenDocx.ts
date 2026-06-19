@@ -3,7 +3,7 @@ import {
   ShadingType, HeadingLevel, Footer, PageNumber,
 } from 'docx';
 import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_DOCX, ROLLEN_PDF, rolleLabel, type AusgabeStil } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── DOCX-Renderer der Vorlagen – Referenz-Layout ───────────────────────────
@@ -68,7 +68,7 @@ const linieAbsatz = (after = 160) => new Paragraph({
   border: HAARLINIE, spacing: { after }, children: [new TextRun({ text: '' })],
 });
 
-function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
+function alsParagraphe(a: DocxAbsatz, format: VorlageFormat, stil: AusgabeStil): Paragraph[] {
   switch (a.typ) {
     case 'banner-titel':
       return [new Paragraph({
@@ -110,7 +110,7 @@ function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
         children: [new TextRun({ text: a.text })],
       })];
     case 'absatz':
-      return [absatzParagraph(a, format)];
+      return [absatzParagraph(a, format, stil)];
     case 'disclaimer':
       return [new Paragraph({
         spacing: a.text.startsWith('Bausteine v') ? { before: 40, after: 0 } : { before: 360, after: 0 },
@@ -120,16 +120,16 @@ function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
   }
 }
 
-function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: VorlageFormat): Paragraph {
+function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: VorlageFormat, stil: AusgabeStil): Paragraph {
   const text = a.text === '' ? ' ' : a.text;
-  const dicht = { after: 0, line: 252, lineRule: 'auto' as const };
+  const dicht = { after: 0, line: ROLLEN_DOCX.dichtLine, lineRule: 'auto' as const };
 
   // Unterschrifts-Strichzeile → feine Linie (Rahmen unten, ~5.5 cm)
   if (a.stricheErlaubt && STRICHE.test(a.text)) {
     return new Paragraph({
       border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '5A5A52' } },
-      indent: { right: 6300 },
-      spacing: { before: 480, after: 0 },
+      indent: { right: ROLLEN_DOCX.unterschriftLinieIndentRechts },
+      spacing: { before: ROLLEN_DOCX.unterschriftLinieVor, after: 0 },
       keepLines: true,
       children: [new TextRun({ text: '' })],
     });
@@ -139,63 +139,75 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
     case 'absender':
     case 'adressat':
       return new Paragraph({
-        spacing: a.blockEnde ? { after: a.rolle === 'adressat' ? 300 : 240, line: 252, lineRule: 'auto' } : dicht,
+        spacing: a.blockEnde ? { after: a.rolle === 'adressat' ? ROLLEN_DOCX.adressatNach : ROLLEN_DOCX.absenderNach, line: ROLLEN_DOCX.dichtLine, lineRule: 'auto' } : dicht,
         children: [new TextRun({ text })],
       });
     case 'datumzeile':
       return new Paragraph({
         alignment: AlignmentType.RIGHT,
-        spacing: { before: 240, after: 240 },
+        spacing: { before: ROLLEN_DOCX.datumVor, after: ROLLEN_DOCX.datumNach },
         children: [new TextRun({ text })],
       });
     case 'betreff':
       return new Paragraph({
-        spacing: { after: 80 },
+        spacing: { after: ROLLEN_DOCX.betreffNach },
         border: HAARLINIE,
-        children: [new TextRun({ text, bold: true, size: 26 })],
+        children: [new TextRun({ text, bold: true, size: ROLLEN_PDF.betreffGroesse * 2 })],
       });
     case 'rubrum': {
       if (MUSTER.RUBRUM_ROLLE.test(a.text.trim())) {
+        if (stil === 'modern') {
+          // Ruhiges, gesperrtes Versal-Label (Em-Striche entfallen).
+          return new Paragraph({
+            alignment: AlignmentType.CENTER,
+            spacing: { before: ROLLEN_DOCX.rubrumRolleVor, after: ROLLEN_DOCX.rubrumRolleNach },
+            children: [new TextRun({
+              text: rolleLabel(a.text).toUpperCase(),
+              size: ROLLEN_DOCX.rolleLabelGroesse, color: ROLLEN_DOCX.rolleLabelGrau,
+              characterSpacing: ROLLEN_DOCX.rolleLabelSperrung,
+            })],
+          });
+        }
         return new Paragraph({
           alignment: AlignmentType.CENTER,
-          spacing: { before: 40, after: 160 },
+          spacing: { before: ROLLEN_DOCX.rubrumRolleVor, after: ROLLEN_DOCX.rubrumRolleNach },
           children: [new TextRun({ text: a.text.trim() })],
         });
       }
       if (a.text.trim() === 'gegen') {
         return new Paragraph({
           alignment: AlignmentType.CENTER,
-          spacing: { after: 160 },
+          spacing: { after: ROLLEN_DOCX.rubrumGegenNach },
           children: [new TextRun({ text: 'gegen', bold: true })],
         });
       }
       if (a.text === 'in Sachen') {
-        return new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text })] });
+        return new Paragraph({ spacing: { after: ROLLEN_DOCX.rubrumInSachenNach }, children: [new TextRun({ text })] });
       }
       if (a.text.startsWith('betreffend ')) {
-        return new Paragraph({ spacing: { before: 40, after: 200 }, children: [new TextRun({ text })] });
+        return new Paragraph({ spacing: { before: ROLLEN_DOCX.rubrumBetreffendVor, after: ROLLEN_DOCX.rubrumBetreffendNach }, children: [new TextRun({ text })] });
       }
       return new Paragraph({ spacing: dicht, children: [new TextRun({ text })] });
     }
     case 'anrede':
       return new Paragraph({
-        spacing: { before: 120, after: 240 },
+        spacing: { before: ROLLEN_DOCX.anredeVor, after: ROLLEN_DOCX.anredeNach },
         children: [new TextRun({ text })],
       });
     case 'schlussformel':
       return new Paragraph({
-        spacing: { before: 280, after: 120 },
+        spacing: { before: ROLLEN_DOCX.schlussformelVor, after: ROLLEN_DOCX.schlussformelNach },
         children: [new TextRun({ text })],
       });
     case 'parteien':
       return new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: a.blockEnde ? { after: 280 } : { after: 60 },
+        spacing: a.blockEnde ? { after: ROLLEN_DOCX.parteienBlockNach } : { after: ROLLEN_DOCX.parteienZwischen },
         children: [new TextRun({ text })],
       });
     case 'unterschrift':
       return new Paragraph({
-        spacing: { after: 60, line: 252, lineRule: 'auto' },
+        spacing: { after: ROLLEN_DOCX.unterschriftNach, line: ROLLEN_DOCX.dichtLine, lineRule: 'auto' },
         keepLines: true, keepNext: !a.blockEnde,
         children: [new TextRun({ text })],
       });
@@ -203,21 +215,21 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
       // Nummerierte Klausel → hängender Einzug (wie Referenz num-Listen)
       if (NUMMER.test(a.text)) {
         return new Paragraph({
-          indent: { left: 600, hanging: 340 },
-          spacing: { after: 120 },
+          indent: { left: ROLLEN_DOCX.nummerLinks, hanging: ROLLEN_DOCX.nummerHaengend },
+          spacing: { after: ROLLEN_DOCX.nummerNach },
           children: [new TextRun({ text: text.replace(NUMMER, (m) => m.trimEnd() + '\t') })],
         });
       }
       // «– »-Unterpunkt → doppelt eingezogen
       if (SUB.test(a.text)) {
         return new Paragraph({
-          indent: { left: 1020, hanging: 340 },
-          spacing: { after: 60 },
+          indent: { left: ROLLEN_DOCX.subLinks, hanging: ROLLEN_DOCX.subHaengend },
+          spacing: { after: ROLLEN_DOCX.subNach },
           children: [new TextRun({ text: '–\t' + text.slice(2) })],
         });
       }
       return new Paragraph({
-        spacing: { after: format === 'eingabe' ? 120 : 140 },
+        spacing: { after: format === 'eingabe' ? ROLLEN_DOCX.absatzNachEingabe : ROLLEN_DOCX.absatzNachSonst },
         children: [new TextRun({ text })],
       });
     }
@@ -227,7 +239,8 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
 /** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und gibt es als
  *  Blob zurück — Gegenstück zu vorlagenPdfDokument (Sammel-Downloads packen
  *  den Blob selbst, z. B. ins Gründungs-ZIP; Auftrag David 7.6.2026). */
-export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): Promise<Blob> {
+export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner; stil?: AusgabeStil } = {}): Promise<Blob> {
+  const stil = opts.stil ?? 'modern';
   // Form-Gate-Matrix hart kodiert: Eigenhändigkeits-Dokumente (abschrift)
   // erhalten NIE einen Word-Export – es entstünde ein unterschriftsreif
   // wirkendes Dokument für ein eigenhändigkeitspflichtiges Geschäft.
@@ -258,7 +271,7 @@ export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?:
           })],
         }),
       },
-      children: docxAbsaetze(e, opts.banner).flatMap((a) => alsParagraphe(a, e.dokument.format)),
+      children: docxAbsaetze(e, opts.banner).flatMap((a) => alsParagraphe(a, e.dokument.format, stil)),
     }],
   });
 
@@ -266,8 +279,8 @@ export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?:
 }
 
 /** Baut das Word-Dokument und lädt es herunter (Einzel-Export der Wizards). */
-export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
-  const blob = await vorlagenDocxDokument(e, { banner: opts.banner });
+export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string; stil?: AusgabeStil }) {
+  const blob = await vorlagenDocxDokument(e, { banner: opts.banner, stil: opts.stil });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

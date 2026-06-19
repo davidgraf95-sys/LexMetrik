@@ -492,12 +492,19 @@ describe('Vorschau ≙ Output (werkgetreuer Renderer, 5.6.2026)', () => {
       geld: { betrag: '1000' }, streitgegenstand: 'F', datum: '2026-06-15', ort: 'Basel',
     });
     const html = renderToString(React.createElement(VorschauPanel, { ergebnis: sg }));
-    expect(html).toContain('— klagende Partei —');           // Rubrum zentriert
-    expect(html).toMatch(/text-center font-bold[^>]*>gegen</); // fettes «gegen»
-    expect(html).toContain('w-7 shrink-0');                   // hängender Einzug
-    expect(html).toContain('border-b border-ink-600');        // gezeichnete Unterschriftslinie
-    expect(html).not.toContain('___________');                // kein Roh-Unterstrich
-    expect(html).not.toMatch(/text-center font-bold[^>]*>Schlichtungsgesuch/); // kein Doppeltitel
+    // Darstellung deklariert angepasst (18.6.2026, Variante A «Dokument-Handwerk»):
+    // Vorschau liest die Masse/Stile aus der SSoT (vorschauStil.ts), nicht mehr aus
+    // hartkodierten Tailwind-Klassen. Geprüft bleibt die ANATOMIE-Interpretation
+    // (dieselben MUSTER wie PDF/DOCX), jetzt am neuen Schriftbild.
+    expect(html).toContain('klagende Partei');                       // Parteirolle als Overline
+    expect(html).not.toContain('— klagende Partei —');               // Em-Striche nur im Assemble-Text, nicht in der Anzeige
+    expect(html).toMatch(/text-transform:uppercase[^>]*>klagende Partei</); // ruhige Versal-Overline
+    expect(html).toMatch(/>gegen</);                                 // «gegen» vorhanden
+    expect(html).toContain('display:grid');                          // hängender Einzug (Begehren-Grid)
+    expect(html).toContain('border-bottom:1px solid var(--ink-600)'); // gezeichnete Unterschriftslinie
+    expect(html).toContain('font-variant-numeric:tabular-nums');     // tabellarische Ziffern (Variante A)
+    expect(html).not.toContain('___________');                       // kein Roh-Unterstrich
+    expect(html).not.toMatch(/text-align:center[^>]*>Schlichtungsgesuch/); // kein Doppeltitel (Eingabe trägt Titel im Betreff)
   });
 });
 

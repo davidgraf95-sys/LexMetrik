@@ -9,7 +9,7 @@ import { winAnsiSicher, typografie } from '../pdf/winansi';
 export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
 const pdfText = vorlagenPdfText;
 import type { AssembleErgebnis, DokumentAbsatz } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER, ROLLEN_PDF, rolleLabel, type AusgabeStil } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── PDF-Renderer der Vorlagen – drei Formatvorlagen ────────────────────────
@@ -37,15 +37,16 @@ export { BANNER_ABSCHREIBEN, BANNER_UNTERSCHREIBEN } from './banner';
 
 // Typografie + Ausgabe-Regeln kommen aus der deklarativen SSoT
 // (formatvorlagen.ts, Grundlagen-Berichte 5.6.2026).
-const EINZUG = 7;        // hängender Einzug nummerierter Klauseln (mm)
-const SUB_EINZUG = 12;   // «– »-Unterpunkte
+const EINZUG = ROLLEN_PDF.einzug;        // hängender Einzug nummerierter Klauseln (mm)
+const SUB_EINZUG = ROLLEN_PDF.subEinzug; // «– »-Unterpunkte
 
 const { NUMMER, SUB, STRICHE } = MUSTER;
 
 // Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) – der Download ist
 // in vorlagenPdfErzeugen gekapselt.
-export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): jsPDF {
+export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner; stil?: AusgabeStil } = {}): jsPDF {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const stil = opts.stil ?? 'modern';
   const P = FORMAT_TYPOGRAFIE[e.dokument.format];
   const REGELN = AUSGABE_REGELN[e.dokument.ausgabeArt];
   const RAND = P.randLinks;
@@ -117,7 +118,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       if (opt.striche && STRICHE.test(zl)) {
         seitenumbruch(6);
         y += 2;
-        hairline(RAND, RAND + 62, 0.3, 90);
+        hairline(RAND, RAND + ROLLEN_PDF.unterschriftLinieBreite, 0.3, 90);
         y += zh - 1;
         continue;
       }
@@ -175,64 +176,74 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       case 'adressat':
         setzeBrot();
         blockGeschuetzt(a.text, P.zeileDicht, 4, { dicht: true, striche });
-        y += a.rolle === 'adressat' ? 10 : 8;
+        y += a.rolle === 'adressat' ? ROLLEN_PDF.adressatNach : ROLLEN_PDF.absenderNach;
         return;
       case 'datumzeile':
         setzeBrot();
-        y += 2;
+        y += ROLLEN_PDF.datumVor;
         schreibe(a.text, { align: 'right', striche });
-        y += 8;
+        y += ROLLEN_PDF.datumNach;
         return;
       case 'betreff':
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(ROLLEN_PDF.betreffGroesse);
         blockGeschuetzt(a.text, 5.6, 8, { striche });
-        y += 1.5;
+        y += ROLLEN_PDF.betreffHaarlinieVor;
         hairline(RAND, RAND + BREITE);
-        y += 7;
+        y += ROLLEN_PDF.betreffNach;
         return;
       case 'rubrum':
         setzeBrot();
         for (const zl of a.text.split('\n')) {
           if (MUSTER.RUBRUM_ROLLE.test(zl.trim())) {            // – klagende Partei —
-            seitenumbruch(P.zeile + 2);
-            doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
-            y += P.zeile + 2;
+            seitenumbruch(P.zeile + ROLLEN_PDF.rubrumRolleExtra);
+            if (stil === 'modern') {
+              // Ruhiges, gesperrtes Versal-Label (Em-Striche entfallen).
+              doc.setFontSize(ROLLEN_PDF.rolleLabelGroesse);
+              doc.setTextColor(ROLLEN_PDF.rolleLabelGrau);
+              doc.text(pdfText(rolleLabel(zl).toUpperCase()), RAND + BREITE / 2, y,
+                { align: 'center', charSpace: ROLLEN_PDF.rolleLabelSperrung });
+              doc.setTextColor(26, 26, 23);
+              setzeBrot();
+            } else {
+              doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
+            }
+            y += P.zeile + ROLLEN_PDF.rubrumRolleExtra;
           } else if (zl.trim() === 'gegen') {
-            seitenumbruch(P.zeile + 2);
+            seitenumbruch(P.zeile + ROLLEN_PDF.rubrumRolleExtra);
             doc.setFont('helvetica', 'bold');
             doc.text('gegen', RAND + BREITE / 2, y, { align: 'center' });
             doc.setFont('helvetica', 'normal');
-            y += P.zeile + 2;
+            y += P.zeile + ROLLEN_PDF.rubrumRolleExtra;
           } else if (zl.startsWith('betreffend ')) {
-            y += 1.5;
+            y += ROLLEN_PDF.rubrumBetreffendVor;
             schreibe(zl, { striche });
           } else {
             schreibe(zl, { dicht: zl.trim() !== '' && zl !== 'in Sachen', striche });
-            if (zl === 'in Sachen') y += 1.5;
+            if (zl === 'in Sachen') y += ROLLEN_PDF.rubrumInSachenExtra;
           }
         }
-        y += 7;
+        y += ROLLEN_PDF.rubrumNach;
         return;
       case 'anrede':
         setzeBrot();
-        y += 1.5;
+        y += ROLLEN_PDF.anredeVor;
         schreibe(a.text, { striche });
-        y += 4;
+        y += ROLLEN_PDF.anredeNach;
         return;
       case 'schlussformel':
         setzeBrot();
-        y += 4;
+        y += ROLLEN_PDF.schlussformelVor;
         schreibe(a.text, { striche });
-        y += 2;
+        y += ROLLEN_PDF.schlussformelNach;
         return;
       case 'parteien':
         setzeBrot();
         blockGeschuetzt(a.text, P.zeile, 4, { align: 'center', striche });
-        y += 8;
+        y += ROLLEN_PDF.parteienNach;
         return;
       case 'unterschrift':
         setzeBrot();
-        y += 5;
+        y += ROLLEN_PDF.unterschriftVor;
         blockGeschuetzt(a.text, P.zeile, 8, { striche });
         y += P.absatzGap;
         return;
@@ -286,6 +297,6 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   return doc;
 }
 
-export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string; stil?: AusgabeStil }) {
   vorlagenPdfDokument(e, opts).save(opts.dateiName);
 }
