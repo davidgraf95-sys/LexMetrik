@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
 import { trenneAenderungshistorie, absatzMarke } from '../../lib/normtext/darstellung';
-import { NormText } from '../NormText';
+import { NormText, type InternRefs } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
  *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert. */
@@ -60,7 +60,7 @@ export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; kl
         className={`num align-super text-[0.62em] font-medium text-brass-600/80 hover:text-brass-700 ${klasse ?? ''}`}>{nr}</button>
       {auf && html && (
         <span role="note" dangerouslySetInnerHTML={{ __html: html }}
-          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-micro font-normal not-italic leading-snug text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
+          className="absolute left-0 top-full z-30 mt-1 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />
       )}
     </span>
   );
@@ -131,7 +131,7 @@ function normalisiereTarifText(text: string): string {
     .trim();
 }
 
-export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz, fnProItem }: {
+export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz, fnProItem, intern }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
   artikel: string;
@@ -151,10 +151,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   /** Lesesicht: macht Absatz-/lit.-/Ziff.-Marken zu Zitat-Knöpfen. Default aus
    *  → Popover byte-gleich (golden, §6). */
   zitierKontext?: ZitierKontext;
+  /** Lesesicht: bare Artikelverweise auf denselben Erlass als Sprung-Links. */
+  intern?: InternRefs;
 }) {
   const { passusMarke, zielItemKey } = bestimmePassusZiel(bloecke, passus);
   // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
-  const verlinkt = (s: string) => (autolink ? <NormText text={s} /> : s);
+  const verlinkt = (s: string) => (autolink ? <NormText text={s} intern={intern} /> : s);
   const zk = zitierKontext;
 
   return (

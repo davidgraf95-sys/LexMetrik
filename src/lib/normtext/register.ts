@@ -76,6 +76,10 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('HREGV', 'HRegV', 'Handelsregisterverordnung', '221.411', 'privat', 6, 'HRegV'),
   bund('GEBV_HREG', 'GebV-HReg', 'Gebührenverordnung für das Handelsregister', '221.411.1', 'privat', 7, 'GebVHReg'),
   bund('URG', 'URG', 'Bundesgesetz über das Urheberrecht und verwandte Schutzrechte', '231.1', 'privat', 8),
+  bund('FUSG', 'FusG', 'Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz)', '221.301', 'privat', 9, 'FusG'),
+  bund('UWG', 'UWG', 'Bundesgesetz gegen den unlauteren Wettbewerb', '241', 'privat', 10),
+  bund('MSCHG', 'MSchG', 'Bundesgesetz über den Schutz von Marken und Herkunftsangaben (Markenschutzgesetz)', '232.11', 'privat', 11, 'MSchG'),
+  bund('PATG', 'PatG', 'Bundesgesetz über die Erfindungspatente (Patentgesetz)', '232.14', 'privat', 12, 'PatG'),
   // Strafrecht
   bund('STGB', 'StGB', 'Schweizerisches Strafgesetzbuch', '311.0', 'straf', 1, 'StGB'),
   // Verfahrensrecht
@@ -89,10 +93,12 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('SCHKG', 'SchKG', 'Bundesgesetz über Schuldbetreibung und Konkurs', '281.1', 'schkg', 1, 'SchKG'),
   bund('GEBV_SCHKG', 'GebV SchKG', 'Gebührenverordnung zum SchKG', '281.35', 'schkg', 2, 'GebVSchKG'),
   // Öffentliches Recht
+  bund('BV', 'BV', 'Bundesverfassung der Schweizerischen Eidgenossenschaft', '101', 'oeffentlich', 0),
   bund('SVG', 'SVG', 'Strassenverkehrsgesetz', '741.01', 'oeffentlich', 1),
   bund('DSG', 'DSG', 'Bundesgesetz über den Datenschutz', '235.1', 'oeffentlich', 2),
   bund('BBG', 'BBG', 'Bundesgesetz über die Berufsbildung', '412.10', 'oeffentlich', 3),
   bund('BEWG', 'BewG', 'Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (Lex Koller)', '211.412.41', 'oeffentlich', 4, 'BewG'),
+  bund('KG', 'KG', 'Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen (Kartellgesetz)', '251', 'oeffentlich', 5),
   // Steuern, Sozialversicherung & Abgaben
   bund('KVG', 'KVG', 'Bundesgesetz über die Krankenversicherung', '832.10', 'sozial-abgaben', 1),
   bund('KVV', 'KVV', 'Verordnung über die Krankenversicherung', '832.102', 'sozial-abgaben', 2),
@@ -100,6 +106,8 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('STG', 'StG', 'Bundesgesetz über die Stempelabgaben', '641.10', 'sozial-abgaben', 4, 'StG'),
   bund('EOG', 'EOG', 'Bundesgesetz über den Erwerbsersatz (Erwerbsersatzordnung)', '834.1', 'sozial-abgaben', 5),
   bund('ARG', 'ArG', 'Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)', '822.11', 'sozial-abgaben', 6, 'ArG'),
+  bund('DBG', 'DBG', 'Bundesgesetz über die direkte Bundessteuer', '642.11', 'sozial-abgaben', 7),
+  bund('VSTG', 'VStG', 'Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz)', '642.21', 'sozial-abgaben', 8, 'VStG'),
   // ── Wichtige weitere Bundesgesetze als «nur-live-link»-Stubs (kein Volltext;
   //    Fedlex-Link), verifiziert via SPARQL — bund-stubs.generated.ts (§7). ──
   ...BUND_STUBS,

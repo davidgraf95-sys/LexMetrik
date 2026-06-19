@@ -18,21 +18,13 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(heute)) { console.error('--datum=YYYY-MM-DD nöt
 // Kuratierte wichtige Bundesgesetze OHNE Volltext-Snapshot (die 27 Volltext-
 // Erlasse stehen separat im ERLASS_REGISTER). [SR, Kürzel, Gebiet].
 const LISTE: Array<[string, string, Rechtsgebiet]> = [
-  ['101', 'BV', 'oeffentlich'],
   ['142.20', 'AIG', 'oeffentlich'],
   ['142.31', 'AsylG', 'oeffentlich'],
   ['151.1', 'GlG', 'oeffentlich'],
   ['211.231', 'PartG', 'privat'],
   ['211.412.11', 'BGBB', 'privat'],
-  ['221.301', 'FusG', 'privat'],
-  ['232.11', 'MSchG', 'privat'],
-  ['232.14', 'PatG', 'privat'],
-  ['241', 'UWG', 'privat'],
-  ['251', 'KG', 'oeffentlich'],
   ['311.1', 'JStG', 'straf'],
-  ['642.11', 'DBG', 'sozial-abgaben'],
   ['642.14', 'StHG', 'sozial-abgaben'],
-  ['642.21', 'VStG', 'sozial-abgaben'],
   ['831.10', 'AHVG', 'sozial-abgaben'],
   ['831.20', 'IVG', 'sozial-abgaben'],
   ['831.40', 'BVG', 'sozial-abgaben'],
