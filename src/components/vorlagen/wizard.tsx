@@ -346,7 +346,7 @@ function StilUmschalter({ stil }: { stil: AusgabeStil }) {
           title={s === 'nuechtern' ? 'Klassisch-gerichtstauglich (traditionelles Rubrum mit Gedankenstrichen)' : 'Variante A «Dokument-Handwerk» (ruhige Versal-Labels)'}
           onClick={() => setAusgabeStil(s)}
           className={stil === s
-            ? 'bg-brass-100 px-2.5 py-1 font-medium text-brass-700'
+            ? 'bg-brass-100 px-2.5 py-1 font-medium text-brass-800'
             : 'bg-surface px-2.5 py-1 text-ink-600 hover:text-ink-900'}>
           {s === 'nuechtern' ? 'Nüchtern' : 'Modern'}
         </button>

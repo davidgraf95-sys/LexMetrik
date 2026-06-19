@@ -21,6 +21,7 @@
     --line:color-mix(in srgb, var(--ink-900) 10%, transparent);
     --line-strong:color-mix(in srgb, var(--ink-900) 18%, transparent);
     /* Messing – der eine Akzent (= gravierte Skala) */
+    --brass-800:#654C1E; /* a11y: ≥4.5 Kontrast auf brass-100 (12px) */
     --brass-700:#8A6A2F; --brass-500:#B08D4A; --brass-300:#DDC9A0;
     --brass-600:#9D7B3C; --brass-400:#C7AB75;
     --brass-200:#E6D7B8; --brass-100:#F1E8D6;

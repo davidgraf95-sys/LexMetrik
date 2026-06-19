@@ -190,7 +190,7 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
       anzeige={
         <>
           {artikel}
-          {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
+          {bemerkung && <span className="text-ink-600"> · {bemerkung}</span>}
         </>
       }
     />

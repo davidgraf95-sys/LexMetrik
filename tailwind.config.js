@@ -17,6 +17,7 @@ export default {
         brass: {
           100: 'var(--brass-100)', 200: 'var(--brass-200)', 400: 'var(--brass-400)',
           500: 'var(--brass-500)', 600: 'var(--brass-600)', 700: 'var(--brass-700)',
+          800: 'var(--brass-800)',
         },
         sage: { 500: 'var(--sage-500)', 700: 'var(--sage-700)', bg: 'var(--sage-bg)' },
         slate: { 500: 'var(--slate-500)', 700: 'var(--slate-700)', bg: 'var(--slate-bg)' },
