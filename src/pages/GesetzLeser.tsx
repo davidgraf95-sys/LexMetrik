@@ -124,7 +124,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 origin-left scroll-mt-[11.5rem] border-t border-line/50 pt-6 mt-6 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[10.5rem_minmax(0,42rem)] lg:gap-x-7">
+      className="group relative z-0 origin-left scroll-mt-[11.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 will-change-transform group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5] has-[[data-lese]:hover]:scale-[1.006] lg:grid lg:grid-cols-[10.5rem_minmax(0,42rem)] lg:gap-x-7">
       {/* SCHMAL (< lg): Fedlex-artig — Randtitel als gestufte Überschriften MIT
           Aufzähler, dann die Artikelnummer, darüber dem Volltext. */}
       <div className="lg:hidden mb-2">
@@ -153,17 +153,20 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
           <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
             aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
             className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
-          <a href={`#art-${e.artikel}`} className="num text-[0.95rem] font-semibold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
+          <a href={`#art-${e.artikel}`} className="num text-[1.05rem] font-bold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
         </span>
         {artOffen && randEintraege.length > 0 && (
-          <div className="mt-2 space-y-1 break-words hyphens-auto">
+          <div className="mt-2.5 space-y-1.5 break-words hyphens-auto">
             {randEintraege.map((r, i) => {
               const leaf = i === randEintraege.length - 1;
+              // Hierarchie: Sachtitel (Leaf) prominent (Serif, ink-700); Eltern-
+              // Stufen als feine, hellere Kicker darüber (ink-400) — die Spalte
+              // liest sich gestuft statt gleichförmig.
               return (
                 <p key={i} className={leaf
-                  ? 'font-serif italic text-[0.85rem] leading-snug text-ink-600'
-                  : 'text-[0.72rem] font-semibold leading-snug text-ink-600'}>
-                  {r.mark && <span className="num mr-1 text-brass-600">{r.mark}</span>}{r.titel}
+                  ? 'font-serif italic text-[0.9rem] leading-snug text-ink-700'
+                  : 'text-[0.72rem] font-semibold leading-snug text-ink-400'}>
+                  {r.mark && <span className="num mr-1 not-italic text-brass-600/80">{r.mark}</span>}{r.titel}
                 </p>
               );
             })}
@@ -183,7 +186,7 @@ function ArtikelLeser({ e, erlass, basisPfad, marginalie, fussnoten, fussnotenAu
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
           fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
-          className="space-y-3 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
+          className="space-y-3.5 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
         {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
         {verweise.length > 0 && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -218,20 +221,37 @@ function SektionKopf({ s, refCb, offen, onToggle }: {
   // Nach Verschachtelungstiefe abgestuft (5 Stufen wie Fedlex), als EINE
   // kohärente Zeile: Aufzähler («Erste Abteilung») in Messing, Sachtitel in der
   // Stufen-Schrift — kein kleiner Overline + schwer-fetter Titel mehr.
-  const stil = s.ebene <= 1 ? 'text-h3 font-display text-ink-900'
+  const titelStil = s.ebene <= 1 ? 'text-h3 font-display text-ink-900'
     : s.ebene === 2 ? 'text-body-l font-display text-ink-900'
     : s.ebene === 3 ? 'text-base font-semibold text-ink-800'
     : s.ebene === 4 ? 'text-body-s font-semibold text-ink-700'
     : 'text-xs font-semibold uppercase tracking-[0.08em] text-ink-500';
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
+  // Obere Stufen = echte Abschnitts-Header: dezente Trennregel + Versalien-Kicker
+  // («Erster Teil») in Messing ÜBER dem Sachtitel — die Struktur springt beim
+  // Scrollen sofort ins Auge. Tiefere Stufen bleiben eine ruhige, eingerückte Zeile.
+  const alsHeader = s.ebene <= 2 && !!pre;
+  const regel = s.ebene <= 1 ? 'border-t border-line pt-5' : s.ebene === 2 ? 'border-t border-line/50 pt-4' : '';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[11.5rem] ${mt}`}>
+    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[11.5rem] ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen}
-        className="w-full text-left flex items-baseline gap-2 group/sek">
-        <span className="text-ink-300 text-xs shrink-0 w-3">{offen ? '▾' : '▸'}</span>
-        <span className={`flex-1 ${stil}`}>
-          {pre ? <><span className="text-brass-700/80">{pre}:</span> {rest}</> : s.label}
-        </span>
+        className="w-full text-left group/sek">
+        {alsHeader ? (
+          <>
+            <span className="flex items-center gap-2">
+              <span className="text-ink-300 text-xs shrink-0 w-3">{offen ? '▾' : '▸'}</span>
+              <span className="lc-overline text-brass-700">{pre}</span>
+            </span>
+            <span className={`mt-1 block pl-5 ${titelStil}`}>{rest}</span>
+          </>
+        ) : (
+          <span className="flex items-baseline gap-2">
+            <span className="text-ink-300 text-xs shrink-0 w-3">{offen ? '▾' : '▸'}</span>
+            <span className={`flex-1 ${titelStil}`}>
+              {pre ? <><span className="text-brass-700/80">{pre}:</span> {rest}</> : s.label}
+            </span>
+          </span>
+        )}
       </button>
     </div>
   );
