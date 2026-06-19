@@ -41,14 +41,22 @@ function skalaDauerTage(d: SkalaDauer): number {
   }
 }
 
+// Gleichwertigkeits-Mindestschwellen einer KTG-Lösung (Art. 324a Abs. 4 OR /
+// BGE 135 III 640): geteilte SSoT für die Logik-Vergleiche in lohnfortzahlung
+// UND vorlagen/arbeitsvertrag (§5; Bug-Audit 19.6.2026 — vorher in beiden als
+// Literale dupliziert). Die beschreibenden Zahlen in den Meldungstexten bleiben.
+export const KTG_GLEICHWERTIGKEIT = {
+  taggeldMinProzent: 80, leistungMinTage: 720, karenzMaxTage: 3, praemieGrenzeProzent: 50,
+} as const;
+
 // §2.6: Gleichwertigkeits-Indikation aus der KTG-Checkliste (Orientierung, nicht verbindlich).
 function ktgIndikation(k: KtgKriterien): { ok: boolean; befunde: string[] } {
   const befunde: string[] = [];
   let ok = true;
-  if (k.taggeldProzent != null && k.taggeldProzent < 80) { ok = false; befunde.push(`Taggeld ${k.taggeldProzent} % < 80 %.`); }
-  if (k.leistungsdauerTage != null && k.leistungsdauerTage < 720) { ok = false; befunde.push(`Leistungsdauer ${k.leistungsdauerTage} < 720 Tage.`); }
-  if (k.karenzTage != null && k.karenzTage > 3) { ok = false; befunde.push(`Karenzfrist ${k.karenzTage} Tage > 3 Tage – in keinem Fall zulässig (SHK N 62).`); }
-  if (k.praemienAnteilArbeitgeberProzent != null && k.praemienAnteilArbeitgeberProzent < 50) { ok = false; befunde.push(`Arbeitgeber-Prämienanteil ${k.praemienAnteilArbeitgeberProzent} % < 50 %.`); }
+  if (k.taggeldProzent != null && k.taggeldProzent < KTG_GLEICHWERTIGKEIT.taggeldMinProzent) { ok = false; befunde.push(`Taggeld ${k.taggeldProzent} % < 80 %.`); }
+  if (k.leistungsdauerTage != null && k.leistungsdauerTage < KTG_GLEICHWERTIGKEIT.leistungMinTage) { ok = false; befunde.push(`Leistungsdauer ${k.leistungsdauerTage} < 720 Tage.`); }
+  if (k.karenzTage != null && k.karenzTage > KTG_GLEICHWERTIGKEIT.karenzMaxTage) { ok = false; befunde.push(`Karenzfrist ${k.karenzTage} Tage > 3 Tage – in keinem Fall zulässig (SHK N 62).`); }
+  if (k.praemienAnteilArbeitgeberProzent != null && k.praemienAnteilArbeitgeberProzent < KTG_GLEICHWERTIGKEIT.praemieGrenzeProzent) { ok = false; befunde.push(`Arbeitgeber-Prämienanteil ${k.praemienAnteilArbeitgeberProzent} % < 50 %.`); }
   if (k.alleRisikenAbgedeckt === false) { ok = false; befunde.push('Nicht alle relevanten Risiken abgedeckt.'); }
   if (k.schriftlichVereinbart === false) { ok = false; befunde.push('Keine schriftliche Abrede – Gültigkeitsvoraussetzung (Art. 324a Abs. 4 OR).'); }
   return { ok, befunde };

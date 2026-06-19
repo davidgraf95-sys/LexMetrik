@@ -3,6 +3,7 @@ import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF, zahl } from './datum';
 import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
+import { MWST_NORMALSATZ_PROZENT } from '../../data/tarif/typen';
 export { fmtCHF } from './datum';
 
 // ─── Mietvertrag Wohn- & Geschäftsräume (Art. 253 ff. OR) – sechste Vorlage ──
@@ -26,7 +27,7 @@ export { fmtCHF } from './datum';
 // ── Wartbare, DATIERTE Parameter (Gutachten Stufe 4) ────────────────────────
 export const MV_PARAMETER = {
   referenzzinssatz: { wert: 1.25, stand: '2.6.2026', quelle: 'BWO (gültig seit 2.9.2025, unverändert ab 2.6.2026; quartalsweise publiziert)' },
-  mwstSatz: { wert: 8.1, stand: '1.1.2024' },
+  mwstSatz: { wert: MWST_NORMALSATZ_PROZENT, stand: '1.1.2024' },
 } as const;
 
 // Kantone mit Formularpflicht für den Anfangsmietzins (Art. 270 Abs. 2 OR).
