@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { HeaderSuche } from './HeaderSuche';
 import { SprachUmschalter } from '../SprachUmschalter';
+import { ThemaUmschalter } from './ThemaUmschalter';
 
 // ─── Top-Streifen der App-Shell (Build-Plan App-Shell, Phase 3) ─────────────
 //
@@ -36,7 +37,8 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
           <HeaderSuche />
         </div>
 
-        <div className="shrink-0">
+        <div className="shrink-0 flex items-center gap-1.5 sm:gap-2">
+          <ThemaUmschalter />
           <SprachUmschalter />
         </div>
       </div>

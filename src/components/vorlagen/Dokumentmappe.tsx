@@ -97,7 +97,7 @@ export function MappenAnsicht({ dokumente, bannerEntwurf, bannerFertig = BANNER_
         {dokumente.map((d) => (
           <button key={d.id} type="button" role="tab" aria-selected={d.id === dok.id}
             onClick={() => setAktivesDok(d.id)}
-            className={`lc-chip ${d.id === dok.id ? 'bg-brass-700 text-white border-brass-700' : 'hover:text-brass-700'}`}>
+            className={`lc-chip ${d.id === dok.id ? 'bg-brass-700 text-paper border-brass-700' : 'hover:text-brass-700'}`}>
             {d.titel}
           </button>
         ))}
