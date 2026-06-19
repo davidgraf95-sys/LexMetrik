@@ -2,6 +2,7 @@ import { Link, useLocation, type Location } from 'react-router-dom';
 import {
   NAVIGATION, NAVIGATION_META, type NavKnoten, type NavLink as NavLinkT,
 } from '../../lib/navigation';
+import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 
 // ─── App-Shell-Seitenleiste (Build-Plan App-Shell, Phase 3) ─────────────────
 //
@@ -82,10 +83,19 @@ function Knoten({ k, loc, onNavigate }: { k: NavKnoten; loc: Location; onNavigat
   );
 }
 
-export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
+export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () => void; markeZeigen?: boolean }) {
   const loc = useLocation();
   return (
     <nav aria-label="Hauptnavigation" className="flex flex-col gap-5 p-4 min-h-full">
+      {/* Marke am Kopf der Seitenleiste (Prototyp V2). Auf Mobil trägt der
+          Top-Streifen das Logo (Schublade kann es ausblenden). */}
+      {markeZeigen && (
+        <Link to="/" onClick={onNavigate}
+          className="flex items-center gap-2.5 px-2.5 pt-1 pb-3 no-underline" aria-label="LexMetrik – Startseite">
+          <LexMetrikSiegel size={30} />
+          <LexMetrikWortmarke className="text-[1.3rem]" />
+        </Link>
+      )}
       {NAVIGATION.map((abschnitt, i) => (
         <div key={i} className="flex flex-col gap-0.5">
           {abschnitt.titel && (

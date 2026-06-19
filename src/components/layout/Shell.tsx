@@ -92,7 +92,9 @@ export function Shell({ children }: { children: ReactNode }) {
                 <span aria-hidden className="text-[1.05rem] leading-none">✕</span>
               </button>
             </div>
-            <Sidebar onNavigate={() => setSchubladeOffen(false)} />
+            {/* Schublade trägt eigenen Kopf + der mobile Top-Streifen das Logo
+                → Marke in der Schublade ausblenden. */}
+            <Sidebar onNavigate={() => setSchubladeOffen(false)} markeZeigen={false} />
           </div>
         </div>,
         document.body,

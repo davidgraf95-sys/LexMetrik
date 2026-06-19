@@ -3,15 +3,17 @@ import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import { LocaleProvider } from '../components/locale';
 import { Startseite } from '../pages/Startseite';
+import { Recherche } from '../pages/Recherche';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
 import { RechnerKarte } from '../components/RechnerKarte';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 
-// Akzeptanztests Katalog (Umbauten 5.–7.6.2026) — Stand Radikal-
-// Verschlankung 7.6.2026 (Auftrag David «mache das alles weg und die
-// suchfunktion in den header»): «/» = Hero + Register, NICHTS dazwischen;
-// die Suche lebt im Header und schreibt ?q=; Tabs/Filter/Chips/Zuletzt
-// sind entfernt (deklarierte Test-Anpassung, §6 Ziff. 3).
+// Akzeptanztests Katalog. Stand App-Shell + Startseite V2 (19.6.2026,
+// deklarierte Anpassung §6 Ziff. 3): Der Katalog (vier Oberkategorien, Such-
+// Trefferliste) lebt jetzt auf /recherche; die Startseite «/» ist das
+// «Rechner-zuerst»-Cockpit (Begrüssung, Schnellrechner, Zeiterfassung,
+// Favoriten). Die Katalog-Mechanik (Deckblatt/?kategorie/?q) ist unverändert,
+// wird nur an ihrem neuen Ort (Recherche → Katalog) geprüft.
 
 // Minimaler localStorage-Mock (Node hat keinen)
 beforeEach(() => {
@@ -26,7 +28,17 @@ beforeEach(() => {
   } as unknown as Storage;
 });
 
+// Katalog-Deckblatt/Suche werden auf /recherche gerendert (neuer Ort des
+// Katalogs); die Mechanik liegt unverändert in der Katalog-Komponente.
 const seiteHtml = (url: string) =>
+  renderToString(
+    <MemoryRouter initialEntries={[url]}>
+      <LocaleProvider><Recherche /></LocaleProvider>
+    </MemoryRouter>,
+  );
+
+// Startseite V2 (Cockpit) — eigener Renderer für die Anatomie-Tests.
+const startHtml = (url: string) =>
   renderToString(
     <MemoryRouter initialEntries={[url]}>
       <LocaleProvider><Startseite /></LocaleProvider>
@@ -147,22 +159,44 @@ describe('Katalog-Suche im Top-Streifen (Auftrag David 7.6.2026: «die suchfunkt
   });
 });
 
-describe('Hauptseiten-Anatomie (Radikal-Verschlankung: Hero → Register → Fusszeilen)', () => {
-  it('Hero = Claim + EIN Satz + Kennzahlen ohne Preisaussage (D-4); Fuss = Methodik-Zeile + Hinweis', () => {
+describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte Anpassung §6 Ziff. 3)', () => {
+  it('zeigt Begrüssung, KI-Hinweis, Schnellrechner, Zeiterfassung und Favoriten — KEIN Katalog-Deckblatt', () => {
+    const html = startHtml('/');
+    // Begrüssung (zeitabhängig) + ehrlicher KI-Hinweis (§8)
+    expect(html).toMatch(/Guten (Morgen|Tag|Abend)/);
+    expect(html).toContain('Berechnung statt KI');
+    // Sektionen des Cockpits
+    expect(html).toContain('Schnellrechner');
+    expect(html).toContain('Zeiterfassung');
+    expect(html).toContain('Favoriten');
+    // Schnellrechner ruft die ECHTEN Engines: Default-Streitwert ergibt ein
+    // Gebühren-/Zuständigkeits-Kopfergebnis (kein Platzhalter «—»).
+    expect(html).toContain('live hergeleitet');
+    // Pflichthinweis (§8) bleibt
+    expect(html).toContain('Rechtlicher Hinweis');
+    // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite
+    expect(html).not.toContain('aria-label="Oberkategorien"');
+  });
+
+  it('bietet drei Schnellrechner-Tabs; der aktive (Fristen) verlinkt in den Voll-Rechner', () => {
+    const html = startHtml('/');
+    // Tablist mit drei Tabs
+    expect(html).toContain('role="tablist"');
+    expect((html.match(/role="tab"/g) ?? []).length).toBe(3);
+    expect(html).toContain('>Gebühren<');
+    expect(html).toContain('>Zuständigkeit<');
+    // Aktiver Tab (Fristen) zeigt das echte Engine-Ergebnis-Umfeld + Voll-Rechner-Link
+    expect(html).toContain('href="/rechner/tagerechner"');
+  });
+});
+
+describe('Katalog auf /recherche — Methodik-Fuss + Hinweis bleiben erreichbar', () => {
+  it('Trefferliste/Deckblatt führen Methodik-Link und Pflichthinweis (§8)', () => {
     const html = seiteHtml('/');
-    expect(html).toContain('Schweizer Recht, berechenbar');
-    expect(html).toContain('Zuständigkeit klären. Fristen berechnen. Gebühren beziffern. Dokumente aufsetzen.');
-    expect(html).toContain('sofort verfügbar');
-    expect(html).toContain('Rechtsgebiete');
-    expect(html).not.toContain('kostenlos');
-    expect(html).not.toContain('Deterministisch – gleiche Eingabe');
-    // Fuss: Methodik EINE Zeile mit Link statt 4 Karten (U5)
     expect(html).toContain('So rechnet LexMetrik');
     expect(html).toContain('href="/methodik"');
-    expect(html).not.toContain('Praxis statt Schublade');
     expect(html).toContain('Rechtlicher Hinweis');
-    // Pro-Reste bleiben getilgt
-    expect(html).not.toContain('Werkzeuge für die anwaltliche Praxis');
+    expect(html).not.toContain('kostenlos');
   });
 });
 
