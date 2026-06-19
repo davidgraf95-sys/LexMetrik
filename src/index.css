@@ -72,6 +72,41 @@
     --font-serif:'Source Serif 4 Variable','Charter','Georgia';
   }
 
+  /* ── Dunkelmodus (Auftrag David 19.6.2026) ───────────────────────────────
+     EIN Variablen-Override; die *-bg-Rezepte (color-mix mit var(--paper)) und
+     die Haarlinien (color-mix mit var(--ink-900)) rechnen sich automatisch neu.
+     Gezielt invertiert: Tinte↔Papier; bei Messing/Status werden die TEXT-Töne
+     hell (Links/Akzent/Status-Text) und die FLÄCHEN-Töne dunkel (aktiver Nav-
+     Grund, Hover, Badges), die Linien-/Skala-Mitten bleiben Gold. Aktiviert über
+     die .dark-Klasse am <html> (components/thema.ts), nicht über @media — David
+     kann unabhängig vom System umschalten. */
+  html.dark {
+    color-scheme: dark;
+    /* Tinte → hell (Text & Struktur auf dunklem Papier) */
+    --ink-900:#ECE7DA; --ink-700:#D2CCBD; --ink-600:#B4AE9F; --ink-500:#928D80;
+    --ink-400:#736F64; --ink-300:#56524A;
+    /* Papier → warmes Dunkel (kein Reinschwarz — die Papier-Wärme bleibt) */
+    --paper:#16150F; --paper-raised:#201E16; --paper-sunken:#100F0A;
+    --surface:#1D1B14; --surface-raised:var(--paper-raised);
+    --well:#100F0A;
+    /* Haarlinien etwas kräftiger (helle Tinte auf Dunkel wirkt sonst zu fein) */
+    --line:color-mix(in srgb, var(--ink-900) 14%, transparent);
+    --line-strong:color-mix(in srgb, var(--ink-900) 24%, transparent);
+    /* Messing: Text-Töne (800–600) hell, Flächen-Töne (100/200) dunkel,
+       Linien/Skala (500/400/300) bleiben Gold. */
+    --brass-800:#EAD6A4; --brass-700:#D8BD78; --brass-600:#E6CD8C;
+    --brass-500:#B89653; --brass-400:#9C7C3C;
+    --brass-300:#CBB17B; --brass-200:#574A2C; --brass-100:#2C2616;
+    /* Status: Text-Töne (-700) hell; -bg folgt aus Papier+Tönung; -500 bleibt.
+       Tönung etwas stärker, damit die Flächen auf Dunkel lesbar bleiben. */
+    --status-tint:18%;
+    --sage-700:#AEC6A2; --slate-700:#A9B8BF; --warn-700:#E3AC5E; --danger-700:#E29280;
+    /* Schatten tiefer für Dunkel-Tiefe (Karten heben sich sonst nicht ab) */
+    --shadow-sm:0 1px 2px rgba(0,0,0,.30);
+    --shadow-md:0 1px 2px rgba(0,0,0,.30), 0 2px 8px rgba(0,0,0,.36);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.34), 0 8px 24px rgba(0,0,0,.44);
+  }
+
   html { color-scheme: light; }
   body {
     margin: 0;
@@ -206,6 +241,10 @@
     padding-right: 38px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%238A6A2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
+  }
+  /* Dunkelmodus: heller Messing-Chevron (der Light-SVG ist auf Dunkel blind). */
+  html.dark select.lc-input, html.dark .lc-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23D8BD78' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
   }
   .lc-select { @apply lc-input; }
   .lc-textarea { @apply lc-input; height: auto; min-height: 88px; resize: vertical; line-height: 1.6; }

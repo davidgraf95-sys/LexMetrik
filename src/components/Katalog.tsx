@@ -325,7 +325,10 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
         const verf = alle.filter(istVerfuegbar);
         const geplant = alle.filter((v) => !istVerfuegbar(v));
         return (
-          <div key={s.id} className="space-y-2">
+          /* id-Anker «vorlage-<id>»: Sprungziel der Seitenleisten-Vorlagen-
+             Untergruppen (navigation.ts → ScrollZuHash). scroll-mt klärt den
+             sticky Top-Streifen. */
+          <div key={s.id} id={`vorlage-${s.id}`} className="space-y-2 scroll-mt-24">
             <div className="flex items-center gap-3">
               <h3 className="lc-overline text-brass-700">{s.title}
                 {verf.length > 0 && <span className="num text-ink-500"> ({verf.length})</span>}</h3>

@@ -21,12 +21,13 @@ describe('prerenderRouten()', () => {
         .map((h) => h.split('#')[0]),
     );
     for (const p of kartenPfade) expect(ROUTEN).toContain(p);
-    // 6 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026 —
-    // eigene Browse-Sektion, NICHT im Katalog).
-    for (const p of ['/', '/gesetze', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+    // 7 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026 —
+    // eigene Browse-Sektion, NICHT im Katalog) und /recherche (App-Shell-Umbau
+    // 19.6.2026 — schlanke Such-Seite, eigene Route, NICHT im Katalog).
+    for (const p of ['/', '/recherche', '/gesetze', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 6);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 7);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {

@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import { LocaleProvider } from '../components/locale';
 import { Startseite } from '../pages/Startseite';
-import { Header } from '../components/layout/Header';
+import { HeaderSuche } from '../components/layout/HeaderSuche';
 import { RechnerKarte } from '../components/RechnerKarte';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 
@@ -33,10 +33,12 @@ const seiteHtml = (url: string) =>
     </MemoryRouter>,
   );
 
-const headerHtml = (url: string) =>
+// Suche lebt seit dem App-Shell-Umbau im Top-Streifen (Topbar → HeaderSuche);
+// Verhalten unverändert, neuer Ort (deklarierte Anpassung, §6 Ziff. 3).
+const sucheHtml = (url: string) =>
   renderToString(
     <MemoryRouter initialEntries={[url]}>
-      <LocaleProvider><Header /></LocaleProvider>
+      <LocaleProvider><HeaderSuche /></LocaleProvider>
     </MemoryRouter>,
   );
 
@@ -130,16 +132,16 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
   });
 });
 
-describe('Header-Suche (Auftrag David 7.6.2026: «die suchfunktion in den header»)', () => {
-  it('das Suchfeld lebt im Header und trägt auf «/» den ?q=-Wert', () => {
-    const html = headerHtml('/?q=Rechtsvorschlag');
+describe('Katalog-Suche im Top-Streifen (Auftrag David 7.6.2026: «die suchfunktion in den header»; seit App-Shell im Topbar)', () => {
+  it('das Suchfeld trägt auf «/» den ?q=-Wert', () => {
+    const html = sucheHtml('/?q=Rechtsvorschlag');
     expect(html.match(/type="search"/g)?.length).toBe(1);
     expect(html).toContain('value="Rechtsvorschlag"');
     expect(html).toContain('aria-keyshortcuts="/"');
   });
 
   it('auf anderen Seiten ist das Feld leer (sammelt lokal, Enter führt zu «/»)', () => {
-    const html = headerHtml('/rechner/verzugszins');
+    const html = sucheHtml('/rechner/verzugszins');
     expect(html.match(/type="search"/g)?.length).toBe(1);
     expect(html).toContain('value=""');
   });
