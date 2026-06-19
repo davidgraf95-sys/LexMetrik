@@ -312,3 +312,16 @@ describe('Arbeitsvertrag – Untertyp Kader (P1b Vertrags-Varianten)', () => {
     for (const id of einzel) expect(kader, id).toContain(id);
   });
 });
+
+// Bug-Audit 19.6.2026 (MITTEL): GAV gewählt + Typ, aber Name leer → das Gate liess
+// das durch, gavVariante blieb leer → der Vertrag erklärte einen normwirksamen GAV,
+// enthielt aber KEINE GAV-Klausel (stiller Wegfall). Gate muss den Namen verlangen.
+describe('GAV: Name erforderlich (kein stiller Klausel-Wegfall)', () => {
+  it('Typ gewählt aber Name leer → Blocker', () => {
+    expect(pruefeAvGates(basis({ gav: 'ja', gavTyp: 'ave', gavName: '' })).blocker.join()).toMatch(/benennen/);
+  });
+  it('Typ + Name gesetzt → kein GAV-Blocker', () => {
+    const g = pruefeAvGates(basis({ gav: 'ja', gavTyp: 'ave', gavName: 'L-GAV Gastgewerbe' }));
+    expect(g.blocker.join()).not.toMatch(/benennen/);
+  });
+});

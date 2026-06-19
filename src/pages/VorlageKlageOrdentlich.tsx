@@ -5,6 +5,7 @@ import {
   type KoAnswers,
 } from '../lib/vorlagen/klageOrdentlich';
 import { KV_GERICHTE_BS, kvKlagefrist, type KvAusnahme } from '../lib/vorlagen/klageVereinfacht';
+import { ZPO_SCHWELLEN } from '../lib/zustaendigkeit';
 import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -146,7 +147,7 @@ export function VorlageKlageOrdentlich() {
             checked={a.einzigeInstanz}
             onChange={(v) => set('einzigeInstanz', v)}
             label={<><span>Einzige kantonale Instanz <span className="text-ink-500">(Art. 5/6/8 ZPO — ordentliches Verfahren auch bis CHF 30'000, Art. 243 Abs. 3)</span></span></>} />
-          {a.vermoegensrechtlich && sw !== null && sw > 30000 && (
+          {a.vermoegensrechtlich && sw !== null && sw > ZPO_SCHWELLEN.VEREINFACHT && (
             <p className="lc-notice text-body-s">
               Ordentliches Verfahren (Art. 219 ff. ZPO) — Streitwert über der Grenze des vereinfachten Verfahrens (Art. 243 Abs. 1 ZPO).
             </p>

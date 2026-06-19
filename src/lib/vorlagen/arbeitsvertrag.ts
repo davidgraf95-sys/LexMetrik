@@ -310,6 +310,11 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
   if (a.gav === 'ja' && !a.gavTyp) {
     blocker.push('GAV gewählt: Art der Geltung angeben – allgemeinverbindlich erklärt, Verbandsmitgliedschaft oder blosse vertragliche Verweisung (Art. 356/357 OR; AVEG).');
   }
+  // Bug-Audit 19.6.2026 (MITTEL): ohne Namen wird gavVariante nicht gesetzt → die
+  // GAV-Klausel fiele still weg, obwohl ein normwirksamer GAV erklärt wird.
+  if (a.gav === 'ja' && a.gavTyp && !a.gavName?.trim()) {
+    blocker.push('GAV gewählt: den anwendbaren Gesamtarbeitsvertrag benennen (Name/Bezeichnung) – ohne Namen erscheint keine GAV-Klausel im Vertrag.');
+  }
   if (a.gav !== 'nein') {
     if (a.gavTyp === 'verweis') {
       hinweise.push('Blosse vertragliche Verweisung auf einen GAV erzeugt KEINE Normwirkung – der GAV-Inhalt wird lediglich Vertragsinhalt (Art. 356/357 OR). Für zwingende Wirkung braucht es beidseitige Verbandsmitgliedschaft oder Allgemeinverbindlicherklärung.');
