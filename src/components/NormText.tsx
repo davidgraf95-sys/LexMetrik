@@ -33,15 +33,49 @@ import { RechtsprechungText } from './RechtsprechungLink';
 // Fliesstext ein, anders als der Pillen-Chip an strukturierten Stellen.
 const INLINE_CLASS = 'underline decoration-dotted underline-offset-2 hover:text-brass-700';
 
-/** Fliesstext mit verlinkten Norm- UND Rechtsprechungs-Verweisen — Text bleibt
- *  zeichenidentisch (nur Anker-Hüllen kommen hinzu). */
-export function NormText({ text }: { text: string }) {
-  // Zwischenstück (Nicht-Norm-Text) → durch RechtsprechungText, damit darin
-  // enthaltene BGE/BGer-Zitate ebenfalls verlinkt werden. key nötig, weil die
-  // Stücke in einer Liste stehen.
-  const rest = (s: string, key: string) =>
-    s ? <RechtsprechungText key={key} text={s} /> : null;
+// ─── Interne Querverweise (Lesesicht, Deep-Research-Befund 7) ───────────────
+// In der Gesetzes-Lesesicht sind BARE Artikelverweise («nach Artikel 6a»,
+// «gemäss Art. 12») gemeint = Artikel DESSELBEN Erlasses (Drafting-Konvention;
+// Fremdgesetze tragen das Kürzel und werden bereits von NORM_IM_TEXT erfasst).
+// Solche bare Verweise werden zu Sprung-Links im Reader. Nur aktiv, wenn der
+// Reader `intern` übergibt → andere NormText-Aufrufer (golden/PDF, Tarif-Hinweise)
+// bleiben unverändert.
+export interface InternRefs {
+  /** normalisierter Ref («6a») → Artikel-Token des Erlasses («6_a»). */
+  tokenMap: Map<string, string>;
+  basisPfad: string;
+  springeZu: (token: string) => void;
+}
+const normRef = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+// «Art. N» / «Artikel N» (+ lat. Suffix), NICHT gefolgt von «des/der/über/vom …»
+// (das leitete einen benannten Fremderlass ein → kein interner Sprung).
+const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z]|bis|ter|quater|quinquies|sexies)?)(?!\s+(?:des|der|über|vom)\b)/g;
 
+function restMitIntern(s: string, key: string, intern?: InternRefs): React.ReactNode {
+  if (!intern || !s) return s ? <RechtsprechungText key={key} text={s} /> : null;
+  const out: React.ReactNode[] = [];
+  let last = 0;
+  for (const m of s.matchAll(ART_INTERN)) {
+    const token = intern.tokenMap.get(normRef(m[1]));
+    if (!token) continue; // kein Artikel dieses Erlasses → als Text belassen
+    const start = m.index;
+    if (start > last) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last, start)} />);
+    out.push(
+      <a key={`${key}-a${start}`} href={`${intern.basisPfad}#art-${token}`}
+        onClick={(e) => { e.preventDefault(); intern.springeZu(token); }}
+        className={INLINE_CLASS}>{m[0]}</a>,
+    );
+    last = start + m[0].length;
+  }
+  if (last === 0) return <RechtsprechungText key={key} text={s} />;
+  if (last < s.length) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last)} />);
+  return <>{out}</>;
+}
+
+/** Fliesstext mit verlinkten Norm- UND Rechtsprechungs-Verweisen — Text bleibt
+ *  zeichenidentisch (nur Anker-Hüllen kommen hinzu). `intern` (nur Lesesicht)
+ *  macht bare Artikelverweise auf denselben Erlass zu Sprung-Links. */
+export function NormText({ text, intern }: { text: string; intern?: InternRefs }) {
   const teile: React.ReactNode[] = [];
   let zuletzt = 0;
   for (const treffer of text.matchAll(NORM_IM_TEXT)) {
@@ -51,13 +85,13 @@ export function NormText({ text }: { text: string }) {
     // Nicht auflösbare Treffer bleiben im noch offenen Text-Stück (kein
     // Vorschub von `zuletzt`), werden also als reiner Text mit ausgegeben.
     if (fedlexLinkFuerArtikel(roh) == null) continue;
-    if (start > zuletzt) teile.push(rest(text.slice(zuletzt, start), `r${zuletzt}`));
+    if (start > zuletzt) teile.push(restMitIntern(text.slice(zuletzt, start), `r${zuletzt}`, intern));
     teile.push(<NormChip key={`${start}-${roh}`} artikel={roh} linkClass={INLINE_CLASS} />);
     zuletzt = start + roh.length;
   }
-  // Kein Norm-Treffer → ganzer Text durch RechtsprechungText (reiner Pass-Through,
-  // falls auch keine Rechtsprechung: zeichenidentisch).
-  if (teile.length === 0) return <RechtsprechungText text={text} />;
-  if (zuletzt < text.length) teile.push(rest(text.slice(zuletzt), `r${zuletzt}`));
+  // Kein Norm-Treffer → ganzer Text durch die Rest-Pipeline (ohne intern reiner
+  // Pass-Through durch RechtsprechungText, zeichenidentisch wie bisher).
+  if (teile.length === 0) return intern ? <>{restMitIntern(text, 'r0', intern)}</> : <RechtsprechungText text={text} />;
+  if (zuletzt < text.length) teile.push(restMitIntern(text.slice(zuletzt), `r${zuletzt}`, intern));
   return <>{teile}</>;
 }

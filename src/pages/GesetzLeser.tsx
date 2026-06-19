@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
+import type { InternRefs } from '../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
 import {
   ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
@@ -55,8 +56,8 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // Ein Artikel im Lesefluss (Richtung A): «Art. N» als ruhiger Anker, darunter der
 // Serif-Bestimmungstext über die volle Lesebreite. Randtitel/Übertitel stehen NICHT
 // mehr im Fluss, sondern laufend im sticky Running-Header (mehr Platz für den Text).
-function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf }: {
-  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean;
+function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern }: {
+  e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
@@ -141,10 +142,11 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf }: {
       {/* Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern, breitere
           Lesebreite (~46rem) seit dem Wegfall der Randspalte. */}
       {artOffen && (
-      <div className="max-w-[46rem]">
+      <div className="max-w-[44rem]">
         <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
           zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
           fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
+          intern={intern}
           className="space-y-3.5 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
         {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
         {verweise.length > 0 && (
@@ -272,6 +274,33 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     for (const e of eintraege ?? []) map.set(e.artikel, struktur?.[e.artikel]?.marginalie ?? []);
     return map;
   }, [eintraege, struktur]);
+
+  // Interner Artikel-Sprung (Querverweise im Wortlaut): Vorfahren öffnen, scrollen,
+  // Permalink setzen — derselbe Mechanismus wie der Hash-Sprung.
+  const springeZuArtikel = useCallback((token: string) => {
+    const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
+    if (ids.length) setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
+    if (typeof window === 'undefined') return;
+    window.history.replaceState(null, '', `${basisPfad}#art-${token}`);
+    // Erst nach dem Aufklapp-Render scrollen (behavior:auto wie der Hash-Sprung);
+    // grosse Sektionen wachsen beim Aufklappen → nach Settle ein Korrektur-Scroll.
+    const scrolle = () => {
+      const el = document.getElementById(`art-${token}`);
+      if (!el) return;
+      el.scrollIntoView({ block: 'center', behavior: 'auto' });
+      el.classList.add('lc-ziel-blink');
+      window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
+    };
+    window.requestAnimationFrame(() => window.setTimeout(() => { scrolle(); window.setTimeout(scrolle, 400); }, 110));
+  }, [sektionen, basisPfad]);
+
+  // Token-Auflösung für bare Artikelverweise (normalisiert «6a» → Token «6_a»).
+  const internRefs = useMemo<InternRefs | undefined>(() => {
+    if (!eintraege) return undefined;
+    const tokenMap = new Map<string, string>();
+    for (const e of eintraege) tokenMap.set(e.artikel.toLowerCase().replace(/[^a-z0-9]/g, ''), e.artikel);
+    return { tokenMap, basisPfad, springeZu: springeZuArtikel };
+  }, [eintraege, basisPfad, springeZuArtikel]);
 
   // Offen-Zustand (TOC + Fliesstext geteilt). Default: erster Pfad aufgeklappt,
   // alles andere zu (Perf + Fedlex-Gefühl). Toggle an jeder Stufe.
@@ -449,7 +478,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         {auf && (
           <div className="space-y-5">
             {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
           </div>
         )}
       </section>
@@ -593,14 +622,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true))}
