@@ -17,7 +17,9 @@
 // keiner Fachkonfiguration ableitbar und stehen darum literal.
 
 import { OBERKATEGORIEN } from './oberkategorien';
-import { VORLAGE_SEKTIONEN } from './startseiteConfig';
+import { KATALOG_KARTEN, VORLAGE_SEKTIONEN, istVerfuegbar } from './startseiteConfig';
+import { kategorieFuer } from './oberkategorien';
+import { istVorlage } from './vorlagenKategorie';
 import { GEBIETE } from './normtext/register';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
@@ -26,6 +28,9 @@ export interface NavLink {
   label: string;
   /** Voller Pfad inkl. ?query/#hash — wird unverändert an react-router <Link to> gegeben. */
   ziel: string;
+  /** Optional: Anzahl SOFORT verfügbarer Werkzeuge hinter dem Eintrag (aus dem
+   *  Katalog abgeleitet, §5) — als dezenter Zähler in der Seitenleiste. */
+  anzahl?: number;
 }
 
 /** Knoten mit Kindern: entweder ein Abschnitt mit Überschrift oder eine
@@ -37,6 +42,8 @@ export interface NavGruppe {
   aufklappbar?: boolean;
   /** Bei aufklappbar: Anfangszustand. Bund startet eingeklappt (Build-Plan). */
   standardOffen?: boolean;
+  /** Optional: Anzahl verfügbarer Werkzeuge hinter der Gruppe (dezenter Zähler). */
+  anzahl?: number;
   kinder: NavKnoten[];
 }
 
@@ -52,19 +59,32 @@ export interface NavAbschnitt {
 const link = (label: string, ziel: string): NavLink => ({ art: 'link', label, ziel });
 
 // ─── Abgeleitete Einträge (SSoT) ────────────────────────────────────────────
+//
+// Die echten Werkzeuge (Engines/Vorlagen) hängen DIREKT unter ihrer Kategorie
+// (Auftrag David 19.6.2026): jede Rechner-Oberkategorie und jede Vorlagen-Gruppe
+// ist eine aufklappbare Untergruppe, deren Kinder die SOFORT verfügbaren Karten
+// (mit eigener Seite) als Direktlinks sind — abgeleitet aus dem Katalog (§5),
+// nicht zweitgepflegt. Klicktiefe 1 von der Seitenleiste ins Werkzeug.
 
-// Rechner: die drei Aufgaben-Oberkategorien ausser «Vorlagen» (das ist eine
-// eigene Sidebar-Gruppe). Ziel = der bestehende teilbare Katalog-Zustand
-// «/?kategorie=<id>» (Katalog.tsx liest ?kategorie=).
+const katVon = (k: typeof KATALOG_KARTEN[number]) => kategorieFuer(k) ?? 'vorlagen';
+
+// Verfügbare Karten EINER Kategorie als Werkzeug-Direktlinks (Katalog-Reihenfolge).
+const werkzeugeFuer = (pruefen: (k: typeof KATALOG_KARTEN[number]) => boolean): NavLink[] =>
+  KATALOG_KARTEN.filter((k) => istVerfuegbar(k) && !!k.href && pruefen(k)).map((k) => link(k.title, k.href!));
+
+const werkzeugGruppe = (label: string, kinder: NavLink[]): NavGruppe =>
+  ({ art: 'gruppe', label, aufklappbar: true, standardOffen: false, anzahl: kinder.length, kinder });
+
+// Rechner: die drei Aufgaben-Oberkategorien ausser «Vorlagen» — je als
+// aufklappbare Gruppe mit ihren Rechnern.
 const RECHNER_KINDER: NavKnoten[] = OBERKATEGORIEN
   .filter((k) => k.id !== 'vorlagen')
-  .map((k) => link(k.titel, `/?kategorie=${k.id}`));
+  .map((kat) => werkzeugGruppe(kat.titel, werkzeugeFuer((k) => !istVorlage(k) && katVon(k) === kat.id)));
 
-// Vorlagen: die fünf Dokument-Gruppen. Ziel = Vorlagen-Kategorie mit Anker auf
-// die jeweilige Gruppe (Katalog rendert die Gruppen unter ?kategorie=vorlagen;
-// die Anker «vorlage-<id>» setzt das Vorlagen-Register in Phase 3).
+// Vorlagen: die fünf Dokument-Gruppen — je als aufklappbare Gruppe mit ihren
+// Vorlagen (nach Dokument-Typ `art`).
 const VORLAGEN_KINDER: NavKnoten[] = VORLAGE_SEKTIONEN
-  .map((s) => link(s.title, `/?kategorie=vorlagen#vorlage-${s.id}`));
+  .map((s) => werkzeugGruppe(s.title, werkzeugeFuer((k) => istVorlage(k) && k.art === s.art)));
 
 // Gesetze: «Bund» als aufklappbare Untergruppe nach Rechtsgebiet (eingeklappt),
 // darunter «Kantone». Ziel = /gesetze mit ?ebene= (Tab-Vorwahl) und Gebiets-

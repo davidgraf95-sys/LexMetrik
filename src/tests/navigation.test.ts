@@ -2,33 +2,53 @@
 //
 // Verriegelt Leitplanke 4: die Sidebar-Einträge werden aus der bestehenden
 // Fachkonfiguration ABGELEITET, nicht zweitgepflegt. Eine neue Oberkategorie,
-// Vorlagen-Sektion oder ein neues Bund-Rechtsgebiet erscheint damit automatisch
-// in der Navigation — und die Tests brechen, falls jemand wieder hartcodiert.
+// Vorlagen-Sektion, ein neues Werkzeug oder Bund-Rechtsgebiet erscheint damit
+// automatisch in der Navigation — und die Tests brechen, falls jemand wieder
+// hartcodiert.
+//
+// Stand 19.6.2026 (Auftrag David): die echten Rechner/Vorlagen hängen DIREKT als
+// aufklappbare Werkzeug-Gruppen unter ihrer Kategorie (Klicktiefe 1).
 import { describe, expect, it } from 'vitest';
 import { NAVIGATION, NAVIGATION_META, alleNavLinks, type NavGruppe } from '../lib/navigation';
-import { OBERKATEGORIEN } from '../lib/oberkategorien';
-import { VORLAGE_SEKTIONEN } from '../lib/startseiteConfig';
+import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
+import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
+import { istVorlage } from '../lib/vorlagenKategorie';
 import { GEBIETE } from '../lib/normtext/register';
+import { ROUTEN_MANIFEST } from '../routesManifest';
 
 const abschnitt = (titel: string) => NAVIGATION.find((a) => a.titel === titel)!;
+const katVon = (k: typeof KATALOG_KARTEN[number]) => kategorieFuer(k) ?? 'vorlagen';
 
 describe('Navigations-SSoT', () => {
-  it('Rechner = OBERKATEGORIEN ohne «vorlagen», als Katalog-Kategorie-Ziele', () => {
-    const erwartet = OBERKATEGORIEN
-      .filter((k) => k.id !== 'vorlagen')
-      .map((k) => ({ label: k.titel, ziel: `/?kategorie=${k.id}` }));
-    const ist = abschnitt('Rechner').kinder.map((k) =>
-      k.art === 'link' ? { label: k.label, ziel: k.ziel } : null);
-    expect(ist).toEqual(erwartet);
+  it('Rechner = OBERKATEGORIEN ohne «vorlagen» als aufklappbare Werkzeug-Gruppen', () => {
+    const gruppen = abschnitt('Rechner').kinder as NavGruppe[];
+    const erwarteteKats = OBERKATEGORIEN.filter((k) => k.id !== 'vorlagen');
+    expect(gruppen.map((g) => g.label)).toEqual(erwarteteKats.map((k) => k.titel));
+    // Jede Gruppe trägt genau die verfügbaren Rechner ihrer Kategorie als
+    // Direktlinks (aus dem Katalog abgeleitet), mit passendem Zähler.
+    erwarteteKats.forEach((kat, i) => {
+      const g = gruppen[i];
+      expect(g.art).toBe('gruppe');
+      expect(g.aufklappbar).toBe(true);
+      const erwartet = KATALOG_KARTEN
+        .filter((k) => istVerfuegbar(k) && !!k.href && !istVorlage(k) && katVon(k) === kat.id)
+        .map((k) => ({ label: k.title, ziel: k.href! }));
+      expect(g.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null))).toEqual(erwartet);
+      expect(g.anzahl).toBe(erwartet.length);
+    });
   });
 
-  it('Vorlagen = VORLAGE_SEKTIONEN, je mit Gruppen-Anker', () => {
-    const erwartet = VORLAGE_SEKTIONEN.map((s) => ({
-      label: s.title, ziel: `/?kategorie=vorlagen#vorlage-${s.id}`,
-    }));
-    const ist = abschnitt('Vorlagen').kinder.map((k) =>
-      k.art === 'link' ? { label: k.label, ziel: k.ziel } : null);
-    expect(ist).toEqual(erwartet);
+  it('Vorlagen = VORLAGE_SEKTIONEN als aufklappbare Gruppen mit ihren Vorlagen', () => {
+    const gruppen = abschnitt('Vorlagen').kinder as NavGruppe[];
+    expect(gruppen.map((g) => g.label)).toEqual(VORLAGE_SEKTIONEN.map((s) => s.title));
+    VORLAGE_SEKTIONEN.forEach((s, i) => {
+      const g = gruppen[i];
+      const erwartet = KATALOG_KARTEN
+        .filter((k) => istVerfuegbar(k) && !!k.href && istVorlage(k) && k.art === s.art)
+        .map((k) => ({ label: k.title, ziel: k.href! }));
+      expect(g.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null))).toEqual(erwartet);
+      expect(g.anzahl).toBe(erwartet.length);
+    });
   });
 
   it('Gesetze › Bund = GEBIETE (aufklappbar, eingeklappt); Kantone als Blatt', () => {
@@ -42,13 +62,15 @@ describe('Navigations-SSoT', () => {
     expect(gesetze[1]).toMatchObject({ art: 'link', ziel: '/gesetze?ebene=kanton' });
   });
 
-  it('jedes Blatt-Ziel löst auf eine bekannte Basis-Route auf (keine toten Links)', () => {
-    // Basis-Pfade der App (Sonderrouten + statische Seiten); Katalog-/Gesetze-
-    // Sichten hängen nur Query/Hash an, der Pfad bleibt einer von diesen.
-    const bekanntePfade = new Set(['/', '/recherche', '/gesetze', '/methodik', '/ueber', '/kontakt', '/datenschutz']);
+  it('jedes Blatt-Ziel löst auf eine echte Route auf (keine toten Links)', () => {
+    // Statische Seiten + alle Karten-Routen (Rechner/Vorlagen) aus dem Manifest.
+    const echteRouten = new Set<string>([
+      '/', '/recherche', '/gesetze', '/methodik', '/ueber', '/kontakt', '/datenschutz',
+      ...ROUTEN_MANIFEST.map((r) => r.pfad),
+    ]);
     for (const l of alleNavLinks()) {
       const pfad = l.ziel.split('?')[0].split('#')[0];
-      expect(bekanntePfade.has(pfad), `${l.label} → ${l.ziel}`).toBe(true);
+      expect(echteRouten.has(pfad), `${l.label} → ${l.ziel}`).toBe(true);
     }
   });
 
