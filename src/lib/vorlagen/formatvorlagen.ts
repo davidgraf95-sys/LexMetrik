@@ -1,5 +1,17 @@
 import type { VorlageFormat, AusgabeArt } from './engine';
 
+// Schriftbild-Variante der Ausgabe (Darstellung, nie Rechtsinhalt):
+//   · nuechtern – klassisch-gerichtstaugliches Rubrum «— klagende Partei —»
+//   · modern    – Variante A «Dokument-Handwerk»: Parteirolle als ruhiges,
+//                 gesperrtes Versal-Label (Em-Striche entfallen)
+export type AusgabeStil = 'nuechtern' | 'modern';
+
+/** «— klagende Partei —» → «klagende Partei» (nur Darstellung im modernen
+ *  Stil; der Assemble-Text bleibt unberührt – §3/§6). Geteilt von PDF, DOCX
+ *  und Vorschau, damit die drei Renderer kohärent bleiben (§5 SSoT). */
+export const rolleLabel = (zeile: string): string =>
+  zeile.trim().replace(/^—\s*/, '').replace(/\s*—$/, '');
+
 // ─── Formatvorlagen – deklarative SSoT für alle Vorlagen-Renderer ───────────
 //
 // Grundlage: drei Grundlagen-Berichte vom 5.6.2026 («Eingaben-Formatierungs-
@@ -60,6 +72,64 @@ export const FORMAT_TYPOGRAFIE: Record<VorlageFormat, FormatTypografie> = {
     docx: { sz: 22, line: 276, randLinksTwips: 1417, randRechtsTwips: 1984 },
   },
 };
+
+// ── Rollen-Abstände: die «Reglement-in-Code»-Schicht (§5 SSoT) ──────────────
+//
+// Bis hierher lagen die Absatz-Abstände je Brief-/Dokumentrolle als
+// Magic-Numbers VERSTREUT in den Renderern (vorlagenPdf.ts, vorlagenDocx.ts)
+// und – hartkodiert in Tailwind – in der Vorschau. Jetzt stehen sie an EINER
+// Stelle. Sie sind anwaltliche Usanz und FORMAT-UNABHÄNGIG (die Rollen-
+// Renderer verzweigen nicht nach Format) – darum flache Konstanten, nicht je
+// Format dupliziert.
+//
+// Zwei Einheiten-Sichten, BEWUSST nebeneinander statt auseinander abgeleitet:
+//   · ROLLEN_PDF  – Millimeter (PDF) UND Projektionsbasis der On-Screen-
+//                   Vorschau (mm → rem, vorschauStil.ts).
+//   · ROLLEN_DOCX – Word-Einheiten (Twips / Half-Points).
+// Eine mm→Twips-Umrechnung wäre FALSCH: die Word-Masse sind seit jeher eigen-
+// ständig auf das Word-Schriftbild getunt (z. B. Adressblock 10 mm im PDF vs.
+// 300 Twips ≈ 5.3 mm im DOCX). Sie werden GEMEINSAM gepflegt (ein Eintrag pro
+// Rolle, beide Sichten direkt daneben), nie heimlich auseinander gerechnet.
+// Geteilt ist genau ein Wert: betreffGroesse (pt; DOCX = 2× als Half-Points).
+
+export const ROLLEN_PDF = {
+  einzug: 7,           // hängender Einzug nummerierter Klauseln/Begehren (mm)
+  subEinzug: 12,       // «– »-Unterpunkte (mm)
+  betreffGroesse: 13,  // Betreff-Schriftgrad (pt)
+  adressatNach: 10, absenderNach: 8,
+  datumVor: 2, datumNach: 8,
+  betreffHaarlinieVor: 1.5, betreffNach: 7,
+  rubrumRolleExtra: 2,        // Zusatz-Vorschub je Parteirolle/«gegen» (zu P.zeile)
+  rubrumInSachenExtra: 1.5,   // Zusatz nach «in Sachen»
+  rubrumBetreffendVor: 1.5,   // Vorschub vor «betreffend …»
+  rubrumNach: 7,
+  anredeVor: 1.5, anredeNach: 4,
+  schlussformelVor: 4, schlussformelNach: 2,
+  parteienNach: 8,
+  unterschriftVor: 5, unterschriftLinieBreite: 62,
+  // Modern-Stil: Parteirolle als gesperrtes Versal-Label (pt / mm-Sperrung / Grau)
+  rolleLabelGroesse: 8.5, rolleLabelSperrung: 0.35, rolleLabelGrau: 95,
+} as const;
+
+export const ROLLEN_DOCX = {
+  adressatNach: 300, absenderNach: 240,
+  datumVor: 240, datumNach: 240,
+  betreffNach: 80,
+  rubrumRolleVor: 40, rubrumRolleNach: 160,
+  rubrumGegenNach: 160, rubrumInSachenNach: 120,
+  rubrumBetreffendVor: 40, rubrumBetreffendNach: 200,
+  anredeVor: 120, anredeNach: 240,
+  schlussformelVor: 280, schlussformelNach: 120,
+  parteienBlockNach: 280, parteienZwischen: 60,
+  unterschriftNach: 60,
+  unterschriftLinieVor: 480, unterschriftLinieIndentRechts: 6300,
+  nummerLinks: 600, nummerHaengend: 340, nummerNach: 120,
+  subLinks: 1020, subHaengend: 340, subNach: 60,
+  absatzNachEingabe: 120, absatzNachSonst: 140,
+  dichtLine: 252,
+  // Modern-Stil: Parteirolle als gesperrtes Versal-Label (Half-Points / Sperrung-Twips / Grau)
+  rolleLabelGroesse: 17, rolleLabelSperrung: 14, rolleLabelGrau: '6E6E64',
+} as const;
 
 // ── Ausgabe-Regeln je AusgabeArt (Form-Gate-Matrix, hart kodiert) ───────────
 

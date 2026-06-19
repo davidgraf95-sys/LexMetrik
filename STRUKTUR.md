@@ -22,6 +22,78 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 19.6.2026 — INTEGRATION + PROD-DEPLOY: vorlagen-design ⊕ rechtssammlung gemeinsam auf main (feat/vorlagen-design → main, lexmetrik.vercel.app)
+
+David: «mache alles fertig, gilt alles als abgenommen». Beim Deploy von
+feat/vorlagen-design fiel auf, dass `origin/main` (15b101a) inzwischen die
+komplette **Rubrik V «Gesetze»** (rechtssammlung, PR #1–#4) enthält — der erste
+Deploy aus der db1a737-Basis hätte diese vom Prod gekippt. Korrektur:
+`origin/main` in feat/vorlagen-design gemerged (nur STRUKTUR.md-Konflikt, Code
+konfliktfrei), gate voll + build grün, **gemeinsam neu auf Prod deployt** (beide
+Features live), Branch gepusht und **main fast-forward** auf den integrierten
+Stand. Bug-Check-Fix im selben Strang `7d09500`: AG-Gründungs-Sammel-ZIP reichte
+den Ausgabe-Stil nicht durch → behoben + Regressions-Wächter
+`vorlagenStilDurchreichung.test.ts`. Abnahme: durch David erteilt (alles).
+
+## Session 18.6.2026 — OUTPUT-DESIGN-REGLEMENT + VORLAGEN-SCHRIFTBILD (Variante A) + STIL-UMSCHALTER (feat/vorlagen-design, 19.6. gepusht + deployt + in main)
+
+Auftrag David: «schön, nutzerfreundlich, state of the art» für die Dokument-
+Outputs der Vorlagen — Regeln **in Code erzwungen**; Schlichtungsgesuch als
+erste Umsetzung. Optik-Entscheid: Variante A «Dokument-Handwerk» (nüchtern-
+seriös), per Design-Skizze in claude.ai/design abgenommen. Nachschub David:
+«nüchtern UND modern als Stil bei der Ausgabe» → Umschalter gebaut.
+
+**Geliefert (3 Commits, Worktree, ungepusht):**
+- **Etappe 1** `b67a6c8`: Rollen-Abstände der Renderer als Tokens an EINER
+  Stelle (`ROLLEN_PDF` mm / `ROLLEN_DOCX` twips, `formatvorlagen.ts`). KEINE
+  mm→twips-Ableitung (Word-Masse eigenständig getunt). Byte-gleich bewiesen
+  (datums-/ID-bereinigter Render-Vergleich: PDF-Operatoren + DOCX document.xml
+  identisch, je Fall pro Format).
+- **Etappe 2** `c4d6886`: Live-Vorschau liest neu aus der SSoT
+  (`components/vorlagen/vorschauStil.ts`, dritte rem-Sicht — keine Projektion,
+  weil das «Papier» container-relativ ist). Schriftbild = Variante A:
+  tabellarische Ziffern (NICHT `.num`-Monospace), Parteirollen-Overlines,
+  scanbarer Begehrensblock. Format-agnostisch → jede Vorlage profitiert.
+- **Etappe 3** `ca825fd`: Ausgabe-Stil-Umschalter **nüchtern ⇄ modern**,
+  kohärent über Vorschau + PDF + DOCX. Differenzierer = Rubrum-Parteirolle
+  (`— klagende Partei —` ⇄ Versal-Label, `rolleLabel`). Geteilter Modul-Store
+  `ausgabeStil.ts` (localStorage, Default modern); `stil` als reiner Renderer-
+  Parameter (§3). UI: `StilUmschalter` im Vorschaukopf.
+- **Reglement-Notiz** `DESIGN-REGLEMENT-VORLAGEN.md` (Spiegel von …-RECHNER.md).
+
+Jede Etappe: `assemble` unberührt → golden byte-gleich; gate voll + build grün;
+Struktur-Test `vorlagen.test.ts` deklariert auf neues Schriftbild angepasst
+(§6 Ziff. 3). Design-Karten in claude.ai/design-Projekt (Gruppe «Dokument-
+Vorschau»): Vorher / Nachher A / Nachher B / IMPLEMENTIERT.
+
+**OFFEN für Davids Rückkehr:** (1) fachliche Abnahme der Optik durch
+Ausprobieren (Vorschau + PDF + DOCX, beide Stile) — PDF/DOCX-Modern-Label noch
+nicht visuell gegengeprüft; (2) Default-Stil bestätigen (aktuell `modern`);
+(3) Push/Deploy (§9, nur nach ausdrücklichem Ja). — ERLEDIGT 19.6.2026 (s. Karte oben).
+
+## Session 17./18.6.2026 — RUBRIK V «GESETZE» (browsbare Rechtssammlung) — PROD-DEPLOY (feat/rechtssammlung, in main integriert 19.6., lexmetrik.vercel.app)
+
+**Neue Nav-Rubrik V «Gesetze»** (`/gesetze` + Client-lazy `/gesetze/:ebene/:key`),
+4 Katalog-Tore unberührt. **Reader «Richtung A»** (Serif-Lesespalte): amtliche
+Gliederung benannt + Fedlex-analog einklappbar (TOC↔Text synchron), Randtitel in der
+Marge (entdoppelt), amtliche Fussnoten am Fuss (AS/BBl klickbar), Absatz/lit./Ziff. als
+Ein-Klick-Zitate, Querverweis-Autolink, Hover-Zoom, Tab-Titel, **Download** (ganzer
+Erlass), **globale Suche** (Bund+Kantone). **Daten = generierte Sidecars**
+`public/normtext/struktur/{bund,kanton}/<KEY>.json` (Snapshots/Golden UNBERÜHRT);
+Extraktoren `struktur-extrahiere`/`fussnoten-extrahiere` (Fedlex) + `struktur-lexwork`
+(Kanton). **Kantone = Plattform-Adapter:** EIN LexWork-Adapter deckt 73/113; 40 Nicht-
+LexWork → flacher Fallback. **Bund:** 27 Volltext + 30 SPARQL-verifizierte `nur-live-
+link`-Stubs. **D1 Norm↔Werkzeug-Brücke** (`werkzeuge.ts`, einzigartig). Adversarialer
+Bug-/Logik-Check (7 Agenten) → solide; 2 Display-Bugs aus Davids Review gefixt
+(flacher Reader kollabierte; Hover-Zoom verzerrte lange Artikel) + e2e-Regression.
+Gate voll grün, e2e 5/5. Dossier `bibliothek/normen/gesetzessammlung-rubrik-v.md`.
+**WICHTIG:** Branch `feat/rechtssammlung` (Basis db1a737 = feat/normtext-popup) ist
+**deployt, aber UNGEPUSHT und NICHT in main gemerged** — Code lebt nur im lokalen
+Worktree `/private/tmp/lexmetrik-rechtssammlung`. Push/Merge bei Bedarf separat (§9).
+**Update 19.6.:** via PR #1–#4 in `origin/main` integriert und gemeinsam mit
+vorlagen-design neu auf Prod deployt; weitere P4–P6-Arbeit läuft im Worktree
+separat weiter.
+
 ## Session 17.6.2026 (abend) — KANTONALER VOLLTEXT-AUSBAU + POPOVER-POLITUR + RECHEN-AUDIT — GEPUSHT + PROD-DEPLOY (feat/normtext-popup @ 4b54f67, lexmetrik.vercel.app)
 
 **Volltext-Ausbau (echte Fallback-Quellen 23 → 3):** `parsePassus` löst jetzt

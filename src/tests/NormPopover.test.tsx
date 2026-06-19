@@ -104,6 +104,12 @@ describe('NormPopover — Render', () => {
     expect(out).not.toContain('>Stand: ');
   });
 
+  it('Fuss: «Im Gesetz öffnen» führt in die Lesesicht an die zitierte Stelle', () => {
+    const out = html({ absatz: '1' });
+    expect(out).toContain('Im Gesetz öffnen');
+    expect(out).toContain('href="/gesetze/bund/OR#art-335_c"');
+  });
+
   it('A11y: role=dialog, aria-modal, Schliess-Button, Disclaimer', () => {
     const out = html({ absatz: '1' });
     expect(out).toContain('role="dialog"');

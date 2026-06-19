@@ -8,6 +8,7 @@ import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../c
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { karte } from '../lib/startseiteConfig';
 import { BANNER_MAPPE_FERTIG, type PdfBanner } from '../lib/vorlagen/banner';
+import { getAusgabeStil } from '../components/vorlagen/ausgabeStil';
 import {
   agDokumentmappe,
   AG_DOK_DEFAULTS,
@@ -401,10 +402,13 @@ export function VorlageAgGruendung() {
         return name;
       };
       const docxUebersprungen: string[] = [];
+      // Gewählten Ausgabe-Stil (nüchtern⇄modern) auch im Sammel-ZIP
+      // respektieren — sonst ignoriert der Bulk-Export die Wizard-Wahl.
+      const stil = getAusgabeStil();
       for (const d of mappe.dokumente) {
         const entwurf = d.ergebnis.dokument.ausgabeArt === 'entwurf';
         const banner = entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG;
-        const doc = vorlagenPdfDokument(d.ergebnis, { banner });
+        const doc = vorlagenPdfDokument(d.ergebnis, { banner, stil });
         eintraege[frei(d.dateiName, 'pdf')] = new Uint8Array(doc.output('arraybuffer'));
         if (docxErlaubt) {
           // Per-Dokument-Guard (Bug-Check 7.6.2026 N-1): ein einzelnes
@@ -413,7 +417,7 @@ export function VorlageAgGruendung() {
           // abbrechen — das PDF ist dann schon drin, Word wird ehrlich
           // als übersprungen gemeldet.
           try {
-            const blob = await vorlagenDocxDokument(d.ergebnis, { banner });
+            const blob = await vorlagenDocxDokument(d.ergebnis, { banner, stil });
             eintraege[frei(d.dateiName, 'docx')] = new Uint8Array(await blob.arrayBuffer());
           } catch {
             docxUebersprungen.push(d.dateiName);
