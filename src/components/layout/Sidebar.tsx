@@ -45,11 +45,16 @@ function Blatt({ k, loc, onNavigate, klein }: {
       to={k.ziel}
       onClick={onNavigate}
       aria-current={aktiv ? 'page' : undefined}
-      className={`block rounded-md no-underline transition-colors ${klein ? 'px-3 py-1.5 text-body-s' : 'px-3 py-2 text-body-s font-medium'} ${
-        aktiv ? 'bg-brass-100/60 text-ink-900' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
+      className={`group/blatt flex items-center gap-2.5 rounded-md no-underline transition-colors ${klein ? 'px-2.5 py-1.5 text-body-s' : 'px-2.5 py-2 text-body-s font-medium'} ${
+        aktiv ? 'bg-brass-100 text-brass-800' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
       }`}
     >
-      {k.label}
+      {/* Messing-Skalenstrich als Aktiv-Marke (greift das Siegel-Motiv auf);
+          transparent reserviert den Platz → kein Layout-Sprung beim Wechsel. */}
+      <span aria-hidden className={`h-3.5 w-0.5 rounded-full shrink-0 transition-colors ${
+        aktiv ? 'bg-brass-600' : 'bg-transparent group-hover/blatt:bg-brass-300'
+      }`} />
+      <span className="truncate" title={k.label}>{k.label}</span>
     </Link>
   );
 }
@@ -61,11 +66,11 @@ function Knoten({ k, loc, onNavigate }: { k: NavKnoten; loc: Location; onNavigat
   const kindAktiv = k.kinder.some((kk) => kk.art === 'link' && istAktiv(kk.ziel, loc));
   return (
     <details className="group" open={k.standardOffen || kindAktiv}>
-      <summary className="flex items-center gap-1.5 cursor-pointer list-none select-none rounded-md px-3 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
-        <span aria-hidden className="inline-block transition-transform group-open:rotate-90 text-ink-400">▸</span>
+      <summary className="flex items-center gap-2 cursor-pointer list-none select-none rounded-md px-2.5 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
+        <span aria-hidden className="inline-block w-2.5 text-xs leading-none text-ink-400 transition-transform group-open:rotate-90">▸</span>
         {k.label}
       </summary>
-      <div className="mt-0.5 ml-3 pl-2 border-l border-line flex flex-col gap-0.5">
+      <div className="mt-0.5 ml-3.5 pl-2 border-l border-line flex flex-col gap-0.5">
         {k.kinder.map((kk, i) => (
           kk.art === 'link'
             ? <Blatt key={i} k={kk} loc={loc} onNavigate={onNavigate} klein />
@@ -83,7 +88,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       {NAVIGATION.map((abschnitt, i) => (
         <div key={i} className="flex flex-col gap-0.5">
           {abschnitt.titel && (
-            <p className="lc-overline text-ink-500 px-3 pt-1 pb-1.5">{abschnitt.titel}</p>
+            <p className="lc-overline text-ink-500 px-2.5 pt-1 pb-1.5">{abschnitt.titel}</p>
           )}
           {abschnitt.kinder.map((k, j) => (
             <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />
