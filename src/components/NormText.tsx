@@ -47,9 +47,12 @@ export interface InternRefs {
   springeZu: (token: string) => void;
 }
 const normRef = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-// «Art. N» / «Artikel N» (+ lat. Suffix), NICHT gefolgt von «des/der/über/vom …»
-// (das leitete einen benannten Fremderlass ein → kein interner Sprung).
-const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z]|bis|ter|quater|quinquies|sexies)?)(?!\s+(?:des|der|über|vom)\b)/g;
+// «Art. N» / «Artikel N» (+ Buchstabe UND/ODER lat. Suffix als SEPARATE Gruppen,
+// damit «329gbis»/«10bis» VOLLSTÄNDIG erfasst werden — nicht «329g»/«10b»; analog
+// fedlex.ts). `(?![0-9a-z])` verhindert das `\d+`/Suffix-Backtracking, das sonst
+// «Art. 20 des OR» auf «Art. 2» und «Art. 119bis …» auf «Art. 119b» verkürzte.
+// Der `des/der/über/vom`-Lookahead schliesst benannte Fremderlasse aus.
+const ART_INTERN = /\bArt(?:\.|ikel)\s+(\d+(?:[a-z])?(?:bis|ter|quater|quinquies|sexies)?)(?![0-9a-z])(?!\s+(?:des|der|über|vom)\b)/g;
 
 function restMitIntern(s: string, key: string, intern?: InternRefs): React.ReactNode {
   if (!intern || !s) return s ? <RechtsprechungText key={key} text={s} /> : null;

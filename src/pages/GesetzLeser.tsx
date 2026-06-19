@@ -56,8 +56,9 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
 // Ein Artikel im Lesefluss (Richtung A): «Art. N» als ruhiger Anker, darunter der
 // Serif-Bestimmungstext über die volle Lesebreite. Randtitel/Übertitel stehen NICHT
 // mehr im Fluss, sondern laufend im sticky Running-Header (mehr Platz für den Text).
-function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern }: {
+function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, artRef }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
+  artRef?: (el: HTMLElement | null) => void;
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
@@ -123,7 +124,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern }:
     });
   };
   return (
-    <article id={`art-${e.artikel}`}
+    <article id={`art-${e.artikel}`} ref={artRef}
       className="group relative z-0 scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       {/* Artikel-Kopf: «Art. N» als ruhiger Anker. Randtitel/Übertitel wandern in
           den sticky Running-Header → mehr Platz für den Gesetzestext. */}
@@ -223,6 +224,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
+  const artRefs = useRef<Map<string, HTMLElement>>(new Map()); // gemountete Artikel (Scroll-Spy Randtitel)
 
   useEffect(() => {
     let lebt = true;
@@ -278,6 +280,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // Interner Artikel-Sprung (Querverweise im Wortlaut): Vorfahren öffnen, scrollen,
   // Permalink setzen — derselbe Mechanismus wie der Hash-Sprung.
   const springeZuArtikel = useCallback((token: string) => {
+    // Im Suchmodus erst die Suche verlassen, sonst ist das Ziel nicht im DOM
+    // (nur Treffer gerendert) → Permalink änderte sich ohne Sprung.
+    setSuche('');
     const ids = pfadZu(sektionen, (s) => s.artikel.some((e) => e.artikel === token)) ?? [];
     if (ids.length) setOffen((o) => { const n = { ...o }; for (const id of ids) n[id] = true; return n; });
     if (typeof window === 'undefined') return;
@@ -356,12 +361,13 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         accTimer = window.setTimeout(() => setTocBaum(Object.fromEntries(ids.map((id) => [id, true]))), 220);
       }
       // Aktueller Artikel (oberster über der Schwelle) → dessen Randtitel in den
-      // Running-Header (ersetzt die frühere Marginalspalte).
+      // Running-Header (ersetzt die frühere Marginalspalte). Über die gecachte
+      // artRefs-Map (nur gemountete Artikel) statt einer DOM-Query pro Frame.
       let artBeste: string | null = null;
       let artTop = -Infinity;
-      document.querySelectorAll('article[id^="art-"]').forEach((el) => {
+      artRefs.current.forEach((el, token) => {
         const top = el.getBoundingClientRect().top;
-        if (top <= schwelle && top > artTop) { artTop = top; artBeste = (el as HTMLElement).id.slice(4); }
+        if (top <= schwelle && top > artTop) { artTop = top; artBeste = token; }
       });
       if (artBeste && artBeste !== aktivArtRef.current) {
         aktivArtRef.current = artBeste;
@@ -372,7 +378,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     mess();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); if (accTimer) clearTimeout(accTimer); };
-  }, [sektionen, offen, sekPfadMap, margVoll]);
+    // `offen` bewusst NICHT in den Deps: mess() liest nur Refs + Live-DOM, sonst
+    // unnötiger Listener-Neuaufbau bei jedem Sektions-Toggle.
+  }, [sektionen, sekPfadMap, margVoll]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, erst
   // nach dem Akkordeon-Settle (tocBaum), nie die Seite scrollen.
@@ -422,6 +430,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
   const regRef = (id: string) => (el: HTMLElement | null) => {
     if (el) sekRefs.current.set(id, el); else sekRefs.current.delete(id);
+  };
+  const regArt = (token: string) => (el: HTMLElement | null) => {
+    if (el) artRefs.current.set(token, el); else artRefs.current.delete(token);
   };
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
 
@@ -478,7 +489,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         {auf && (
           <div className="space-y-5">
             {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
           </div>
         )}
       </section>
@@ -576,7 +587,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
           {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
-          <div data-such-bar className="sticky top-16 sm:top-[6.85rem] z-[15] mb-4 space-y-2 rounded-lg bg-paper">
+          <div data-such-bar className="sticky top-16 sm:top-[6.75rem] z-[15] mb-4 space-y-2 rounded-lg bg-paper">
             {/* Suchleiste — eigene Box. */}
             <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && !tocOffen && (
@@ -622,14 +633,14 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true))}
