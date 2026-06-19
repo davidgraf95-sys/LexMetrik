@@ -28,6 +28,7 @@ export default {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
       // Typo-Skala (vollständig): micro 11 · xs 12 · body-s 14 · base 16 ·
       // body-l 18 · h3 20 · h2 25.6 · h1 32 · display 36/44.
