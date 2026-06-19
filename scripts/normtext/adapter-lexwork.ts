@@ -172,7 +172,7 @@ export function extrahiereLexWorkArtikel(
 //   GANZE Marke nur in Klammer-Form «a) », nie «a. » — der reine «a.» kommt in
 //   LexWork-Tarifen nicht als Aufzählungsmarke vor und würde sonst Satzanfänge
 //   zerschneiden). Klammer-Form «a) », «b) » → Buchstaben-Unterpunkt.
-const INLINE_MARKE = /^\s*(\d+[a-z]?)\.\s+|^\s*([a-z])\)\s+/;
+const INLINE_MARKE = /^\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)\.\s+|^\s*([a-z](?:bis|ter|quater|quinquies)?)\)\s+/;
 
 /**
  * Zerlegt einen Absatz mit mehreren text_content-Spans in Einleitung + items,
@@ -291,7 +291,8 @@ function parseSegment(segment: string): LexArtikel {
       const inner = m[2];
       const numCell = inner.match(/<td[^>]*\bclass='[^']*\bnumber\b[^']*'[^>]*>([\s\S]*?)<\/td>/i);
       const markeRoh = numCell ? bereinige(numCell[1]) : '';
-      const marke = (markeRoh.match(/^([0-9]+[a-z]?|[a-z])/i)?.[1] ?? markeRoh)
+      // Bug-Audit 19.6.2026: lat. Suffix bis/ter/… erhalten (Suffix vor Buchstabe).
+      const marke = (markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)/i)?.[1] ?? markeRoh)
         .toLowerCase();
       // alle NICHT-number-td als Text
       const textZellen = [...inner.matchAll(/<td([^>]*)>([\s\S]*?)<\/td>/gi)]

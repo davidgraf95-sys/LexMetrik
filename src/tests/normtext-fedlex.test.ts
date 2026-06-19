@@ -74,6 +74,17 @@ describe('extrahiereArtikel', () => {
       expect(items![0].text).toMatch(/^wenn die Frist nach Tagen/);
       expect(items![2].text).toMatch(/letzten Tag dieses Monates\.$/);
     });
+
+    // Bug-Audit 19.6.2026: lat. Suffix der lit.-Marke (cbis/cter/…) darf nicht zu
+    // «c» verstümmelt werden (sonst trifft das Zitat «lit. cbis» die falsche Marke).
+    it('lit. cbis behält das lateinische Suffix (nicht «c»)', () => {
+      const html = '<article id="art_x"><a name="ax"></a><h6 class="heading " role="heading"><a href="#art_x"><b>Art. X</b></a></h6>'
+        + '<div class="collapseable"><p class="absatz man-space-before-4 "><sup>1</sup>&nbsp;Einleitung:</p>'
+        + '<dl class="man-space-after-0 "><dt class="man-space-before-4  ">c<sup>bis</sup>. </dt>'
+        + '<dd class="man-space-before-4  ">Sondertatbestand bis.</dd></dl></div></article>';
+      const r = extrahiereArtikel(html, 'x');
+      expect(r!.bloecke[0].items!.map((i) => i.marke)).toContain('cbis');
+    });
   });
 
   describe('OR Art. 335_c — Buchstaben-Artikel mit Fussnoten-<sup> in Abs. 3', () => {
