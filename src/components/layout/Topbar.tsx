@@ -27,7 +27,8 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
           <span aria-hidden className="text-[1.1rem] leading-none">☰</span>
         </button>
 
-        <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
+        {/* Logo nur unterhalb lg — ab lg trägt die Seitenleiste die Marke. */}
+        <Link to="/" className="lg:hidden inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
           {/* Wortmarke ab sm — auf schmalen Schirmen trägt die Suche die Mitte. */}
           <LexMetrikWortmarke className="hidden sm:block text-[1.35rem]" />
