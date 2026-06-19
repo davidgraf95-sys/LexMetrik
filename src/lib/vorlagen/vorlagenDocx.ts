@@ -149,10 +149,15 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
         children: [new TextRun({ text })],
       });
     case 'betreff':
+      // Bug-Audit 19.6.2026 (§5): ein eingebettetes \n (z.B. Streitwert-Zeile)
+      // als Zeilenumbruch INNERHALB des einen Betreff-Absatzes rendern (break:1),
+      // nicht als zweiten fetten Absatz mit eigener Haarlinie — wie PDF (eine Linie).
       return new Paragraph({
         spacing: { after: ROLLEN_DOCX.betreffNach },
         border: HAARLINIE,
-        children: [new TextRun({ text, bold: true, size: ROLLEN_PDF.betreffGroesse * 2 })],
+        children: text.split('\n').map((zl, i) => new TextRun({
+          text: zl, bold: true, size: ROLLEN_PDF.betreffGroesse * 2, ...(i > 0 ? { break: 1 } : {}),
+        })),
       });
     case 'rubrum': {
       if (MUSTER.RUBRUM_ROLLE.test(a.text.trim())) {
