@@ -162,8 +162,9 @@ describe('Katalog-Suche im Top-Streifen (Auftrag David 7.6.2026: «die suchfunkt
 describe('Startseite V2 — «Rechner-zuerst»-Cockpit (19.6.2026, deklarierte Anpassung §6 Ziff. 3)', () => {
   it('zeigt Begrüssung, KI-Hinweis, Schnellrechner, Zeiterfassung und Favoriten — KEIN Katalog-Deckblatt', () => {
     const html = startHtml('/');
-    // Begrüssung (zeitabhängig) + ehrlicher KI-Hinweis (§8)
-    expect(html).toMatch(/Guten (Morgen|Tag|Abend)/);
+    // Begrüssung (zufällig, tageszeitpassend → kein fixer Text) + Datum/Uhr-Zeile
+    // + ehrlicher KI-Hinweis (§8).
+    expect(html).toMatch(/·\s\d{2}:\d{2}:\d{2}/); // Datum · HH:MM:SS
     expect(html).toContain('Berechnung statt KI');
     // Sektionen des Cockpits
     expect(html).toContain('Schnellrechner');
