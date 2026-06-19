@@ -81,9 +81,11 @@ export function Shell({ children }: { children: ReactNode }) {
           ersten Render immer false. */}
       {schubladeOffen && createPortal(
         <div className="lg:hidden">
-          <div className="fixed inset-0 z-30 bg-ink-900/30" onClick={() => setSchubladeOffen(false)} aria-hidden />
+          {/* Abdunkelnder Scrim — themenunabhängig dunkel (bg-ink-900 wäre im
+              Dunkelmodus hell und würde aufhellen statt abdunkeln). */}
+          <div className="fixed inset-0 z-30 bg-black/50" onClick={() => setSchubladeOffen(false)} aria-hidden />
           <div id="seitenleisten-schublade" ref={schubladeRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Navigation"
-            className="fixed top-0 left-0 z-40 h-full w-4/5 max-w-xs bg-paper-raised border-r border-line shadow-lg overflow-y-auto focus:outline-none">
+            className="fixed top-0 left-0 z-40 h-full w-4/5 max-w-xs bg-paper-raised border-r border-line shadow-lg overflow-y-auto focus:outline-none [&_nav_a]:py-3 [&_nav_summary]:py-3">
             <div className="flex items-center justify-between px-4 py-3 border-b border-line sticky top-0 bg-paper-raised">
               <span className="lc-overline">Navigation</span>
               <button type="button" className="lc-btn lc-btn-ghost lc-btn-sm" aria-label="Navigation schliessen" onClick={() => setSchubladeOffen(false)}>
