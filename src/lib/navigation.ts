@@ -103,7 +103,9 @@ const GESETZE_KINDER: NavKnoten[] = [
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
 
 export const NAVIGATION: NavAbschnitt[] = [
-  { titel: null, kinder: [link('Start', '/'), link('Recherche', '/recherche')] },
+  // «Recherche» bewusst entfernt (Auftrag David 19.6.2026): das Browsen läuft
+  // über die Kategorie-Drilldowns (Fristen · Gebühren & Beträge · Vorlagen).
+  { titel: null, kinder: [link('Start', '/')] },
   { titel: 'Rechner', kinder: RECHNER_KINDER },
   { titel: 'Vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', kinder: GESETZE_KINDER },

@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { Link, useLocation, type Location } from 'react-router-dom';
 import {
-  NAVIGATION, NAVIGATION_META, type NavKnoten, type NavLink as NavLinkT,
+  NAVIGATION, NAVIGATION_META, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
 } from '../../lib/navigation';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 
@@ -62,13 +63,19 @@ function Blatt({ k, loc, onNavigate, klein }: {
 
 function Knoten({ k, loc, onNavigate }: { k: NavKnoten; loc: Location; onNavigate?: () => void }) {
   if (k.art === 'link') return <Blatt k={k} loc={loc} onNavigate={onNavigate} />;
-  // Aufklappbare Untergruppe (Bund): natives <details> — zugänglich, SSR-sicher.
-  // Offen, wenn standardOffen ODER ein Kind aktiv ist (Tiefverlinkung sichtbar).
+  return <Gruppe k={k} loc={loc} onNavigate={onNavigate} />;
+}
+
+function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigate?: () => void }) {
+  // Offen-Zustand LOKAL gesteuert (nicht controlled über `open`), damit der
+  // Nutzer jede Gruppe frei zu-/aufklappen kann — auch wenn ein Kind aktiv ist
+  // (Auftrag David: Kategorien müssen einklappbar bleiben). Anfangszustand:
+  // offen, wenn standardOffen ODER ein Kind die aktuelle Seite ist.
   const kindAktiv = k.kinder.some((kk) => kk.art === 'link' && istAktiv(kk.ziel, loc));
+  const [offen, setOffen] = useState(!!k.standardOffen || kindAktiv);
   return (
-    <details className="group" open={k.standardOffen || kindAktiv}>
-      {/* Disclosure-Dreieck liefert der globale details>summary::after (index.css)
-          — kein eigener Marker, sonst doppelt. */}
+    <details className="group" open={offen} onToggle={(e) => setOffen((e.currentTarget as HTMLDetailsElement).open)}>
+      {/* Disclosure-Dreieck liefert der globale details>summary::after (index.css). */}
       <summary className="flex items-center gap-2 cursor-pointer select-none rounded-md px-2.5 py-2 text-body-s font-medium text-ink-600 hover:text-ink-900 hover:bg-brass-100/40">
         <span className="flex-1 truncate" title={k.label}>{k.label}</span>
         {typeof k.anzahl === 'number' && (
@@ -81,6 +88,30 @@ function Knoten({ k, loc, onNavigate }: { k: NavKnoten; loc: Location; onNavigat
             ? <Blatt key={i} k={kk} loc={loc} onNavigate={onNavigate} klein />
             : <Knoten key={i} k={kk} loc={loc} onNavigate={onNavigate} />
         ))}
+      </div>
+    </details>
+  );
+}
+
+// Ein Sidebar-Abschnitt. Mit Titel (Rechner/Vorlagen/Gesetze) als ganzes
+// einklappbares <details> (Auftrag David), Anfangszustand offen; die kopflose
+// Top-Gruppe (Start) bleibt schlicht.
+function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: Location; onNavigate?: () => void }) {
+  const [offen, setOffen] = useState(true);
+  if (!a.titel) {
+    return (
+      <div className="flex flex-col gap-0.5">
+        {a.kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
+      </div>
+    );
+  }
+  return (
+    <details className="group flex flex-col" open={offen} onToggle={(e) => setOffen((e.currentTarget as HTMLDetailsElement).open)}>
+      <summary className="flex items-center gap-2 cursor-pointer select-none px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
+        <span className="lc-overline text-ink-500 flex-1">{a.titel}</span>
+      </summary>
+      <div className="flex flex-col gap-0.5">
+        {a.kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
       </div>
     </details>
   );
@@ -100,14 +131,7 @@ export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () =>
         </Link>
       )}
       {NAVIGATION.map((abschnitt, i) => (
-        <div key={i} className="flex flex-col gap-0.5">
-          {abschnitt.titel && (
-            <p className="lc-overline text-ink-500 px-2.5 pt-1 pb-1.5">{abschnitt.titel}</p>
-          )}
-          {abschnitt.kinder.map((k, j) => (
-            <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />
-          ))}
-        </div>
+        <Abschnitt key={i} a={abschnitt} loc={loc} onNavigate={onNavigate} />
       ))}
 
       {/* Utility/Meta unten — abgesetzt durch Hairline. */}

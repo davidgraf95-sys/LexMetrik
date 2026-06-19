@@ -48,11 +48,14 @@ const EINHEITEN: { code: Einheit; label: string }[] = [
 
 const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
-export function EinfacheFristForm() {
+export function EinfacheFristForm({ minimal = false }: { minimal?: boolean } = {}) {
   // Datum-Default heute in LOKALER Zeit (Bug-Check §9, NIEDRIG: toISOString
   // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag).
+  // Im minimal-Modus (prerenderte Startseite) startet das Feld LEER: ein
+  // gebackenes Build-Datum würde sonst beim Hydrieren mit dem Client-Datum
+  // kollidieren (Hydration-Mismatch auf date-input + Fristende).
   const heute = new Date().toLocaleDateString('sv-SE');
-  const [start, setStart] = useState(heute);
+  const [start, setStart] = useState(minimal ? '' : heute);
   const [laenge, setLaenge] = useState(10);
   const [einheit, setEinheit] = useState<Einheit>('tage');
   const [ferien, setFerien] = useState<Ferien>('keine');
@@ -157,29 +160,40 @@ export function EinfacheFristForm() {
         </label>
       </div>
 
-      <fieldset className="space-y-1.5">
-        <legend className="lc-overline">Ferien / Stillstand</legend>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-2xl">
-          {FERIEN_OPTIONEN.map((o) => (
-            <label key={o.code}
-              className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>
-              <span className="flex items-center gap-2">
-                <input type="radio" name="einfache-frist-ferien" value={o.code}
-                  checked={ferien === o.code} onChange={() => waehleFerien(o.code)} />
-                <span className="text-body-s font-medium text-ink-900">{o.label}</span>
-              </span>
-              <span className="block text-xs text-ink-500 leading-snug">{o.sub}</span>
-            </label>
-          ))}
-        </div>
-        <p className="text-micro text-ink-500 max-w-reading">
-          Strafprozessuale Fristen kennen KEINE Gerichtsferien (Art. 89 Abs. 2 StPO) –
-          «Keine Ferien» wählen. Der Verwaltungs-Stillstand (Art. 22a VwVG) und der
-          BGG-Stillstand (Art. 46 BGG) gelten nur für nach Tagen bestimmte Fristen; in
-          den Ausnahmeverfahren nach Abs. 2 (vorsorgliche Massnahmen u. a.) «Keine Ferien»
-          wählen.
-        </p>
-      </fieldset>
+      {minimal ? (
+        // Startseite-Schnellrechner: kompakte Verfahrens-/Ferien-Wahl als
+        // Dropdown, ohne die Erläuterungstexte (Auftrag David: möglichst wenig).
+        <label className="block space-y-1 max-w-xs">
+          <span className="lc-overline block">Ferien / Stillstand</span>
+          <select value={ferien} onChange={(e) => waehleFerien(e.target.value as Ferien)} className={inputCls + ' w-full'}>
+            {FERIEN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
+          </select>
+        </label>
+      ) : (
+        <fieldset className="space-y-1.5">
+          <legend className="lc-overline">Ferien / Stillstand</legend>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-2xl">
+            {FERIEN_OPTIONEN.map((o) => (
+              <label key={o.code}
+                className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>
+                <span className="flex items-center gap-2">
+                  <input type="radio" name="einfache-frist-ferien" value={o.code}
+                    checked={ferien === o.code} onChange={() => waehleFerien(o.code)} />
+                  <span className="text-body-s font-medium text-ink-900">{o.label}</span>
+                </span>
+                <span className="block text-xs text-ink-500 leading-snug">{o.sub}</span>
+              </label>
+            ))}
+          </div>
+          <p className="text-micro text-ink-500 max-w-reading">
+            Strafprozessuale Fristen kennen KEINE Gerichtsferien (Art. 89 Abs. 2 StPO) –
+            «Keine Ferien» wählen. Der Verwaltungs-Stillstand (Art. 22a VwVG) und der
+            BGG-Stillstand (Art. 46 BGG) gelten nur für nach Tagen bestimmte Fristen; in
+            den Ausnahmeverfahren nach Abs. 2 (vorsorgliche Massnahmen u. a.) «Keine Ferien»
+            wählen.
+          </p>
+        </fieldset>
+      )}
 
       {!gueltig ? (
         <p className="text-body-s text-ink-500">Datum und ganzzahlige Dauer eingeben – das Fristende erscheint sofort.</p>
@@ -194,12 +208,14 @@ export function EinfacheFristForm() {
             <p className="lc-overline text-ink-500">Fristende</p>
             <p className="text-h3 font-semibold text-ink-900 num">{ende}</p>
             {endeZusatz !== '' && <p className="text-body-s text-ink-600">{endeZusatz}</p>}
-            {zeilen.length > 0 && (
+            {/* Im Minimal-Modus (Startseite) nur das Fristende — Rechenweg-Zeilen
+                und Verfeinern-Links bleiben dem Voll-Rechner überlassen. */}
+            {!minimal && zeilen.length > 0 && (
               <ul className="text-body-s text-ink-500 leading-relaxed list-disc pl-5 space-y-0.5">
                 {zeilen.map((z) => <li key={z}>{z}</li>)}
               </ul>
             )}
-            {verfeinernZiel && (
+            {!minimal && verfeinernZiel && (
               <p className="text-body-s">
                 <Link to={verfeinernZiel} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
                   Im {ferien === 'zpo' ? 'ZPO' : 'SchKG'}-Rechner verfeinern (Verfahren, Zustellart, Hemmung …) →

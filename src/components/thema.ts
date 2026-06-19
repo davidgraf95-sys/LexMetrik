@@ -20,18 +20,17 @@ export function gespeichertesThema(): Thema | null {
   }
 }
 
-/** System-Vorgabe (prefers-color-scheme); Fallback hell (SSR-sicher). */
-export function systemThema(): Thema {
-  try {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dunkel' : 'hell';
-  } catch {
-    return 'hell';
-  }
+/** Zeitbasierte Vorgabe (Auftrag David 19.6.2026): abends 20:00 bis morgens
+ *  08:00 automatisch dunkel, sonst hell. SSR-sicher (new Date() im Build ist
+ *  unkritisch — main.tsx wendet beim Client-Mount neu an). */
+export function zeitThema(): Thema {
+  const h = new Date().getHours();
+  return h >= 20 || h < 8 ? 'dunkel' : 'hell';
 }
 
-/** Gespeicherte Wahl, sonst System. */
+/** Gespeicherte (manuelle) Wahl gewinnt; sonst die zeitbasierte Vorgabe. */
 export function effektivesThema(): Thema {
-  return gespeichertesThema() ?? systemThema();
+  return gespeichertesThema() ?? zeitThema();
 }
 
 /** Wendet das Thema auf das Dokument an (Klasse + color-scheme). */

@@ -51,15 +51,20 @@ export function Zeiterfassung() {
   const accRef = useRef(0);     // bereits gelaufene ms der aktuellen Aufgabe
   const ivRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => () => { if (ivRef.current) clearInterval(ivRef.current); }, []);
+  const stoppeUhr = () => {
+    if (ivRef.current !== null) { clearInterval(ivRef.current); ivRef.current = null; }
+  };
+
+  useEffect(() => stoppeUhr, []);
 
   const starten = () => {
+    stoppeUhr(); // doppelten Interval ausschliessen
     setLaeuft(true);
     startRef.current = Date.now();
     ivRef.current = setInterval(() => setVerstrichen(accRef.current + (Date.now() - startRef.current)), 250);
   };
   const stoppenUndBuchen = () => {
-    if (ivRef.current) clearInterval(ivRef.current);
+    stoppeUhr();
     setLaeuft(false);
     const total = accRef.current + (Date.now() - startRef.current);
     accRef.current = 0;
@@ -73,10 +78,11 @@ export function Zeiterfassung() {
     }
   };
   const zuruecksetzen = () => {
-    if (ivRef.current) clearInterval(ivRef.current);
+    stoppeUhr();
     setLaeuft(false);
     accRef.current = 0;
     setVerstrichen(0);
+    setAufgabe('');
   };
   const loeschen = () => {
     setEintraege([]);

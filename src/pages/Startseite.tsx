@@ -1,23 +1,15 @@
-import { Link } from 'react-router-dom';
-import { KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
+import { Begruessung } from '../components/start/Begruessung';
 import { Schnellrechner } from '../components/start/Schnellrechner';
 import { Zeiterfassung } from '../components/start/Zeiterfassung';
+import { Favoriten } from '../components/start/Favoriten';
 
 // ─── Startseite V2 — «Rechner-zuerst»-Cockpit (Auftrag David 19.6.2026) ──────
 //
 // Auf Basis des Prototyps LexMetrik-Startseite-V2-Prototyp.html, umgesetzt im
 // gesperrten Designsystem (Geist, Papier/Tinte/Messing; hell+dunkel). Der
-// Schnellrechner ruft die ECHTEN Engines (§1/§3). Der frühere Katalog (vier
-// Oberkategorien) lebt jetzt unter /recherche und in der Seitenleiste.
-
-// Zeitabhängige Begrüssung — reine Darstellung. Die Startseite wird prerendert;
-// die Uhrzeit ist client-spezifisch → suppressHydrationWarning am Element, damit
-// die (am Build gebackene) Begrüssung beim Hydrieren ohne Warnung auf die echte
-// Tageszeit wechselt.
-function begruessung(): string {
-  const h = new Date().getHours();
-  return h < 11 ? 'Guten Morgen' : h < 18 ? 'Guten Tag' : 'Guten Abend';
-}
+// Schnellrechner hostet die ECHTEN Rechner-Formulare (§1/§3). Der frühere
+// Katalog (vier Oberkategorien) lebt jetzt unter /recherche und in der
+// Seitenleiste (Kategorie-Drilldowns).
 
 function Seclabel({ children }: { children: React.ReactNode }) {
   return (
@@ -28,27 +20,12 @@ function Seclabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Favoriten/Schnellzugriff — kuratierte Direktlinks (Klicktiefe 1), aus dem
-// Katalog (SSoT) per href aufgelöst, damit Titel/Ziel nicht driften.
-const FAVORITEN_HREFS = [
-  '/rechner/tagerechner',
-  '/rechner/verzugszins',
-  '/rechner/teuerung',
-  '/vorlagen/testament',
-  '/vorlagen/schlichtungsgesuch-bs',
-];
-const FAVORITEN = FAVORITEN_HREFS
-  .map((href) => KATALOG_KARTEN.find((k) => k.href === href && istVerfuegbar(k)))
-  .filter((k): k is NonNullable<typeof k> => !!k);
-
 export function Startseite() {
   return (
     <div className="max-w-[58rem]">
-      {/* Begrüssung + Ein-Satz-Erklärung + ehrlicher KI-Hinweis */}
+      {/* Begrüssung (zufällig, tageszeitpassend) + Datum/Uhr + KI-Hinweis */}
       <section className="space-y-3">
-        <h1 suppressHydrationWarning className="font-display font-semibold text-ink-900 text-h2 leading-tight">
-          {begruessung()}
-        </h1>
+        <Begruessung />
         <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
           LexMetrik rechnet Schweizer Rechtsfristen, Kosten und Zuständigkeiten nach festen
           Gesetzesregeln aus – und erstellt Dokumente aus geprüften Bausteinen. Gleiche
@@ -65,20 +42,8 @@ export function Startseite() {
       <Seclabel>Zeiterfassung</Seclabel>
       <Zeiterfassung />
 
-      {FAVORITEN.length > 0 && (
-        <>
-          <Seclabel>Favoriten</Seclabel>
-          <div className="flex flex-wrap gap-2.5">
-            {FAVORITEN.map((k) => (
-              <Link key={k.href} to={k.href!}
-                className="inline-flex items-center gap-2 bg-surface border border-line rounded-lg px-3.5 py-2.5 text-body-s text-ink-900 no-underline hover:border-brass-400 transition-colors">
-                <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brass-500 shrink-0" />
-                {k.title}
-              </Link>
-            ))}
-          </div>
-        </>
-      )}
+      <Seclabel>Favoriten</Seclabel>
+      <Favoriten />
 
       {/* Rechtlicher Hinweis (Pflicht, §8) */}
       <section className="lc-notice mt-10">
