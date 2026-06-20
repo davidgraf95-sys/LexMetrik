@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
-import { ErlassKarte } from '../components/normtext/ErlassKarte';
+import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import {
   ladeBrowseManifest, gruppiereNachKanton, gruppiereNachGebiet, filtern,
 } from '../lib/normtext/browse';
@@ -42,12 +42,19 @@ function Gitter({ erlasse }: { erlasse: BrowseErlass[] }) {
   );
 }
 
-// Eine aufklappbare Systematik-Kategorie (modulweit, nicht im Render erzeugt).
-function Kategorie({ id, offen, kopf, anzahl, children }: {
-  id?: string; offen?: boolean; kopf: React.ReactNode; anzahl: number; children: React.ReactNode;
+// Ausführungsrecht (Verordnung/Reglement) erkennt man am Titel — rein für die
+// ANZEIGE-Hierarchie (Leitgesetze prominent, Verordnungen dezent); ändert keine
+// Rechtslogik. Echte Gesetze tragen «Verordnung» nicht im Titel.
+const istVerordnung = (e: BrowseErlass) => /verordnung|reglement/i.test(e.titel);
+
+// Eine aufklappbare Systematik-Kategorie (modulweit, kontrolliert über offen/onToggle).
+function Kategorie({ id, offen, onToggle, kopf, anzahl, children }: {
+  id?: string; offen: boolean; onToggle: () => void; kopf: React.ReactNode; anzahl: number; children: React.ReactNode;
 }) {
   return (
-    <details id={id} open={offen} className="group lc-card overflow-hidden scroll-mt-24">
+    <details id={id} open={offen}
+      onToggle={(e) => { if ((e.currentTarget as HTMLDetailsElement).open !== offen) onToggle(); }}
+      className="group lc-card overflow-hidden scroll-mt-24">
       <summary className="flex items-baseline gap-3 cursor-pointer select-none px-5 py-3.5 hover:bg-brass-100/30">
         {kopf}
         <span className="num text-body-s text-ink-400 ml-auto">{anzahl}</span>
@@ -57,10 +64,34 @@ function Kategorie({ id, offen, kopf, anzahl, children }: {
   );
 }
 
+// Inhalt einer Untergruppe: Leitgesetze als Karten, untergeordnetes
+// Ausführungsrecht (Verordnungen/Reglemente) dezent als eingerückte Liste.
+function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] }) {
+  const gesetze = items.filter((e) => !istVerordnung(e));
+  const verordnungen = items.filter(istVerordnung);
+  return (
+    <div className="space-y-2.5">
+      <div className="flex items-center gap-3">
+        <h3 className="lc-overline text-brass-700">{titel}</h3>
+        <span aria-hidden className="flex-1 h-px bg-line" />
+      </div>
+      {gesetze.length > 0 && <Gitter erlasse={gesetze} />}
+      {verordnungen.length > 0 && (
+        <div className="pl-3 border-l-2 border-line/70 ml-0.5">
+          <p className="lc-overline text-ink-400 mb-1">Verordnungen &amp; Ausführungsrecht</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            {verordnungen.map((e) => <ErlassZeile key={e.key} e={e} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // Bund-Erlasse nach der funktionalen Systematik (systematik.ts): aufklappbare
-// Kategorien (die geläufigen offen), Untergruppen, je Gesetz eine klickbare
-// Karte (Volltext oder Live-Link). «Weitere Erlasse» fängt alles ein, was (noch)
-// keiner Gruppe zugeordnet ist — so geht nie ein Eintrag verloren.
+// Kategorien (geläufige offen), Untergruppen, Leitgesetze als Karten +
+// Verordnungen dezent. «Alle auf-/zuklappen»; «Weitere Erlasse» fängt alles ein,
+// was keiner Gruppe zugeordnet ist (nie ein Verlust).
 function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
   const proKey = new Map(erlasse.map((e) => [e.key, e]));
   const zugeordnet = new Set<string>();
@@ -76,11 +107,23 @@ function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
     return { ...kat, gruppen, anzahl };
   }).filter((k) => k.anzahl > 0);
   const weitere = erlasse.filter((e) => !zugeordnet.has(e.key));
+  const alleIds = [...kategorien.map((k) => k.id), ...(weitere.length ? ['weitere'] : [])];
+
+  const [offen, setOffen] = useState<Set<string>>(() => new Set(kategorien.filter((k) => k.standardOffen).map((k) => k.id)));
+  const alleOffen = offen.size >= alleIds.length;
+  const toggle = (id: string) => setOffen((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
+  const toggleAlle = () => setOffen(alleOffen ? new Set() : new Set(alleIds));
 
   return (
     <div className="space-y-3">
+      <div className="flex justify-end">
+        <button type="button" onClick={toggleAlle}
+          className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+          {alleOffen ? 'Alle einklappen' : 'Alle aufklappen'}
+        </button>
+      </div>
       {kategorien.map((kat) => (
-        <Kategorie key={kat.id} id={`sys-${kat.id}`} offen={kat.standardOffen} anzahl={kat.anzahl}
+        <Kategorie key={kat.id} id={`sys-${kat.id}`} offen={offen.has(kat.id)} onToggle={() => toggle(kat.id)} anzahl={kat.anzahl}
           kopf={
             <span className="flex items-baseline gap-2.5">
               <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.nr}</span>
@@ -88,19 +131,11 @@ function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
             </span>
           }>
           <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
-          {kat.gruppen.map((g) => (
-            <div key={g.id} className="space-y-2">
-              <div className="flex items-center gap-3">
-                <h3 className="lc-overline text-brass-700">{g.titel}</h3>
-                <span aria-hidden className="flex-1 h-px bg-line" />
-              </div>
-              <Gitter erlasse={g.items} />
-            </div>
-          ))}
+          {kat.gruppen.map((g) => <GruppenInhalt key={g.id} titel={g.titel} items={g.items} />)}
         </Kategorie>
       ))}
       {weitere.length > 0 && (
-        <Kategorie anzahl={weitere.length}
+        <Kategorie anzahl={weitere.length} offen={offen.has('weitere')} onToggle={() => toggle('weitere')}
           kopf={<span className="font-sans font-medium text-ink-700 text-body-l">Weitere Erlasse</span>}>
           <Gitter erlasse={weitere} />
         </Kategorie>

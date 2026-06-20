@@ -34,6 +34,24 @@ function KarteInhalt({ e }: { e: BrowseErlass }) {
   );
 }
 
+// Kompakte Zeile für untergeordnetes Ausführungsrecht (Verordnungen/Reglemente):
+// dezent, einzeilig — damit die Leitgesetze (Karten) prominent bleiben
+// (Praktikabilität, Auftrag David). Gleiche Verlinkung wie die Karte.
+export function ErlassZeile({ e }: { e: BrowseErlass }) {
+  const inhalt = (
+    <>
+      <span className="font-medium text-ink-700 shrink-0">{e.kuerzel}</span>
+      <span className="text-ink-500 truncate">{e.titel}</span>
+      {e.sr && <span className="num text-xs text-ink-400 shrink-0 ml-auto">SR {e.sr}</span>}
+      {e.status !== 'snapshot' && <span aria-hidden className="text-xs text-brass-700 shrink-0">↗</span>}
+    </>
+  );
+  const cls = 'flex items-baseline gap-2 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
+  return e.status !== 'snapshot'
+    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
+    : <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>;
+}
+
 export function ErlassKarte({ e }: { e: BrowseErlass }) {
   // nur-live-link: kein interner Reader (ehrlich, §8) → amtlicher Link extern.
   if (e.status !== 'snapshot') {
