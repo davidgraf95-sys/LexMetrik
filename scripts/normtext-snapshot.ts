@@ -629,6 +629,49 @@ async function erzeugePdfSnapshots(
 // ── Hauptprogramm ─────────────────────────────────────────────────────────────
 async function main(): Promise<void> {
   const abgerufen = leseDatum();
+
+  // ── Nur-ZH-Modus (--nur=zh) ─────────────────────────────────────────────────
+  // Regeneriert NUR die ZH-PDF-Snapshots (z. B. nach einer Extraktions-
+  // Verbesserung wie der Spalten-Lücken-Erkennung 20.6.2026), ohne Bund/übrige
+  // Kantone erneut über das Netz zu ziehen — so bleibt der Diff auf ZH
+  // beschränkt (kein stiller Upstream-Drift, §8). Manifest/Register werden aus
+  // der Platte neu gebaut (alle Dateien, nur ZH verändert); der Golden-Index
+  // wird GEMISCHT: alle Nicht-ZH-Einträge bleiben, kanton/ZH/* werden ersetzt.
+  if (process.argv.includes('--nur=zh')) {
+    const goldenIndex: Record<string, string> = {};
+    console.log(`\n[Normtext-Snapshot] --nur=zh, datum=${abgerufen}`);
+    const zhCov = await erzeugeZhPdfSnapshots(abgerufen, goldenIndex);
+    for (const z of zhCov.reportZeilen) console.log(z);
+    console.log(`\nGesamt ZH: ${zhCov.totalSnapshots} Snapshots; fetch-Fehler: ${zhCov.fetchFehler.length}`);
+    for (const f of zhCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
+
+    // Manifest + Register aus der Platte neu (alle Snapshots; nur ZH verändert).
+    const kantonManifest = baueManifest('public/normtext/kanton');
+    const kantonManifestSortiert: Record<string, string> = {};
+    for (const k of Object.keys(kantonManifest).sort()) kantonManifestSortiert[k] = kantonManifest[k];
+    writeFileSync('public/normtext/kanton/index.json', stabelesJson(kantonManifestSortiert), 'utf8');
+
+    const browse = baueBrowseManifest(abgerufen);
+    writeFileSync('public/normtext/register.json', JSON.stringify(browse, null, 2) + '\n', 'utf8');
+
+    // Golden mischen: Nicht-ZH bewahren, kanton/ZH/* ersetzen.
+    let bestand: Record<string, string>;
+    try {
+      bestand = JSON.parse(readFileSync('golden/normtext-snapshot.json', 'utf8')) as Record<string, string>;
+    } catch {
+      throw new Error('--nur=zh: golden/normtext-snapshot.json fehlt — ein Voll-Lauf muss zuerst gelaufen sein.');
+    }
+    const gemischt: Record<string, string> = {};
+    for (const k of Object.keys(bestand)) if (!k.startsWith('kanton/ZH/')) gemischt[k] = bestand[k];
+    for (const k of Object.keys(goldenIndex)) gemischt[k] = goldenIndex[k];
+    const sortiert: Record<string, string> = {};
+    for (const k of Object.keys(gemischt).sort()) sortiert[k] = gemischt[k];
+    mkdirSync('golden', { recursive: true });
+    writeFileSync('golden/normtext-snapshot.json', stabelesJson(sortiert), 'utf8');
+    console.log(`\n[--nur=zh] Fertig. Register ${browse.erlasse.length} Erlasse; Golden ${Object.keys(sortiert).length} Einträge (${Object.keys(goldenIndex).length} ZH ersetzt).`);
+    return;
+  }
+
   const shellQuelle = readFileSync('scripts/fedlex-cache.sh', 'utf8');
   const eintraege = parseFedlexCacheEintraege(shellQuelle);
 
