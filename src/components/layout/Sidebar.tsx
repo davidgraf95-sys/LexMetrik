@@ -93,9 +93,11 @@ function Gruppe({ k, loc, onNavigate }: { k: NavGruppe; loc: Location; onNavigat
   );
 }
 
-// Ein Sidebar-Abschnitt. Mit Titel (Rechner/Vorlagen/Gesetze) als ganzes
-// einklappbares <details> (Auftrag David), Anfangszustand offen; die kopflose
-// Top-Gruppe (Start) bleibt schlicht.
+// Ein Sidebar-Abschnitt (Rechner/Vorlagen/Gesetze). Anfangszustand offen.
+// Die Überschrift ist KLICKBAR zur Gesamtübersicht (a.ziel, Auftrag David
+// 20.6.2026); ein separater Chevron-Knopf klappt die Kinder ein/aus. Bewusst
+// KEIN natives <details>: ein Link in <summary> würde beim Klick zugleich
+// navigieren UND umschalten (preventDefault könnte beides nicht trennen).
 function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: Location; onNavigate?: () => void }) {
   const [offen, setOffen] = useState(true);
   if (!a.titel) {
@@ -105,15 +107,33 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
       </div>
     );
   }
+  const aktiv = a.ziel != null && (loc.pathname + loc.search === a.ziel || (a.ziel === '/gesetze' && loc.pathname.startsWith('/gesetze')));
   return (
-    <details className="group flex flex-col" open={offen} onToggle={(e) => setOffen((e.currentTarget as HTMLDetailsElement).open)}>
-      <summary className="flex items-center gap-2 cursor-pointer select-none px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
-        <span className="lc-overline text-ink-500 flex-1">{a.titel}</span>
-      </summary>
-      <div className="flex flex-col gap-0.5">
-        {a.kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
+    <div className="flex flex-col">
+      <div className="flex items-center gap-1 px-2.5 pt-1 pb-1.5 rounded-md hover:bg-brass-100/30">
+        {a.ziel ? (
+          <Link to={a.ziel} onClick={onNavigate} aria-current={aktiv ? 'page' : undefined}
+            className={`lc-overline flex-1 no-underline transition-colors ${aktiv ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}>
+            {a.titel}
+          </Link>
+        ) : (
+          <span className="lc-overline text-ink-500 flex-1">{a.titel}</span>
+        )}
+        <button type="button" onClick={() => setOffen((o) => !o)} aria-expanded={offen}
+          aria-label={`${a.titel} ${offen ? 'einklappen' : 'aufklappen'}`}
+          className="shrink-0 p-0.5 text-ink-400 hover:text-brass-700 transition-colors">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden
+            className={`transition-transform ${offen ? 'rotate-90' : ''}`}>
+            <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
       </div>
-    </details>
+      {offen && (
+        <div className="flex flex-col gap-0.5">
+          {a.kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
+        </div>
+      )}
+    </div>
   );
 }
 

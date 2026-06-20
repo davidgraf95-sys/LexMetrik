@@ -170,18 +170,23 @@ export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
-  const [kanton, setKanton] = useState<string | null>(null);
 
-  // Ebene (Bund/Kantone) liegt in der URL (?ebene=) — so verlinkt die App-Shell-
-  // Seitenleiste direkt auf den Kantone-Tab bzw. (mit #g-<gebiet>) auf ein
-  // Bund-Rechtsgebiet; teilbar und mit Zurück-Taste, wie der Katalog (?kategorie=).
+  // Ebene (Bund/Kantone) UND der gewählte Kanton liegen in der URL (?ebene= / ?kt=)
+  // — so verlinkt die App-Shell-Seitenleiste direkt auf den Kantone-Tab bzw. einen
+  // einzelnen Kanton (?kt=ZH); teilbar und mit Zurück-Taste, wie der Katalog.
   const [params, setParams] = useSearchParams();
   const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton' : 'bund';
+  const kanton = ebene === 'kanton' ? params.get('kt') : null;
   const setzeEbene = (e: Ebene) => {
     const p = new URLSearchParams(params);
     if (e === 'kanton') p.set('ebene', 'kanton'); else p.delete('ebene');
+    p.delete('kt');
     setParams(p, { replace: true });
-    setKanton(null);
+  };
+  const setzeKanton = (k: string | null) => {
+    const p = new URLSearchParams(params);
+    if (k) p.set('kt', k); else p.delete('kt');
+    setParams(p, { replace: true });
   };
 
   useEffect(() => {
@@ -275,14 +280,14 @@ export function Gesetze() {
             <div className="space-y-6">
               {/* Kantons-Wähler als ruhiges Chip-Raster */}
               <div className="flex flex-wrap gap-1.5" role="group" aria-label="Kanton wählen">
-                <button type="button" onClick={() => setKanton(null)} aria-pressed={kanton === null}
+                <button type="button" onClick={() => setzeKanton(null)} aria-pressed={kanton === null}
                   className={`rounded-full px-3 py-1 text-xs font-medium border transition-colors ${
                     kanton === null ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
                   }`}>
                   Alle Kantone
                 </button>
                 {kantone.map((k) => (
-                  <button type="button" key={k} onClick={() => setKanton(kanton === k ? null : k)} aria-pressed={kanton === k}
+                  <button type="button" key={k} onClick={() => setzeKanton(kanton === k ? null : k)} aria-pressed={kanton === k}
                     className={`rounded-full px-3 py-1 text-xs font-medium num border transition-colors ${
                       kanton === k ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
                     }`}>

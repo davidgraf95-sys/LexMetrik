@@ -21,6 +21,7 @@ import { KATALOG_KARTEN, VORLAGE_SEKTIONEN, istVerfuegbar } from './startseiteCo
 import { kategorieFuer } from './oberkategorien';
 import { istVorlage } from './vorlagenKategorie';
 import { SYSTEMATIK } from './normtext/systematik';
+import { KANTONE } from '../data/tarif/typen';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
 export interface NavLink {
@@ -53,6 +54,10 @@ export type NavKnoten = NavLink | NavGruppe;
  *  Top-Einträgen (Start/Recherche) über den ersten Gruppentitel. */
 export interface NavAbschnitt {
   titel: string | null;
+  /** Optional: macht die Abschnitts-Überschrift selbst klickbar → Gesamtübersicht
+   *  (Auftrag David 20.6.2026: Klick auf Rechner/Vorlagen/Gesetze öffnet die
+   *  jeweilige Übersicht). */
+  ziel?: string;
   kinder: NavKnoten[];
 }
 
@@ -86,18 +91,27 @@ const RECHNER_KINDER: NavKnoten[] = OBERKATEGORIEN
 const VORLAGEN_KINDER: NavKnoten[] = VORLAGE_SEKTIONEN
   .map((s) => werkzeugGruppe(s.title, werkzeugeFuer((k) => istVorlage(k) && k.art === s.art)));
 
-// Gesetze: «Bund» als aufklappbare Untergruppe nach der funktionalen Systematik
-// (systematik.ts — eine Quelle für Seite UND Seitenleiste), darunter «Kantone».
-// Ziel = /gesetze mit ?ebene= (Tab-Vorwahl) und Kategorie-Anker «sys-<id>».
+// Gesetze: «Bund» nach der funktionalen Systematik (systematik.ts) UND «Kantone»
+// nach Kanton — beide als gleichartige aufklappbare Untergruppen (Auftrag David
+// 20.6.2026: Kantone gleich wie Bund, aufklappbar in die Kantone). Ziel = /gesetze
+// mit ?ebene= (Tab-Vorwahl) und Kategorie-Anker «sys-<id>» bzw. ?kt=<KT> (Vorwahl).
 const GESETZE_KINDER: NavKnoten[] = [
   {
     art: 'gruppe',
     label: 'Bund',
     aufklappbar: true,
     standardOffen: false,
+    anzahl: SYSTEMATIK.length,
     kinder: SYSTEMATIK.map((k) => link(k.titel, `/gesetze?ebene=bund#sys-${k.id}`)),
   },
-  link('Kantone', '/gesetze?ebene=kanton'),
+  {
+    art: 'gruppe',
+    label: 'Kantone',
+    aufklappbar: true,
+    standardOffen: false,
+    anzahl: KANTONE.length,
+    kinder: KANTONE.map((kt) => link(kt, `/gesetze?ebene=kanton&kt=${kt}`)),
+  },
 ];
 
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
@@ -106,9 +120,9 @@ export const NAVIGATION: NavAbschnitt[] = [
   // «Recherche» bewusst entfernt (Auftrag David 19.6.2026): das Browsen läuft
   // über die Kategorie-Drilldowns (Fristen · Gebühren & Beträge · Vorlagen).
   { titel: null, kinder: [link('Start', '/')] },
-  { titel: 'Rechner', kinder: RECHNER_KINDER },
-  { titel: 'Vorlagen', kinder: VORLAGEN_KINDER },
-  { titel: 'Gesetze', kinder: GESETZE_KINDER },
+  { titel: 'Rechner', ziel: '/recherche', kinder: RECHNER_KINDER },
+  { titel: 'Vorlagen', ziel: '/recherche?kategorie=vorlagen', kinder: VORLAGEN_KINDER },
+  { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.
