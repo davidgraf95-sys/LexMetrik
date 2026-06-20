@@ -85,7 +85,17 @@ interface PdfStueck {
   y: number;
   h: number;
   s: string;
+  /** Fragment-Breite (pt) — für die Spalten-Lücken-Erkennung. */
+  w: number;
 }
+
+// Schwelle (pt) für eine Spaltengrenze zwischen zwei Fragmenten derselben
+// Textzeile. Empirisch an ZH-Tarif-PDFs (Probe 20.6.2026): normale Marke→Text-
+// Lücken liegen bei 2–15 pt, echte Tabellenspalten (Wert-/Verweis-Spalte,
+// Randtitel→Body) bei ≥21 pt. 18 pt trennt beides sauber. Eingefügt wird NUR ein
+// Leerzeichen an der Spaltengrenze — kein Zeichen geändert/entfernt/umgestellt
+// (Wortlaut unangetastet, §1; konsistent mit entglueZhTarif).
+const SPALTEN_LUECKE_PT = 18;
 
 /** Eine zusammengefügte Textzeile (eine y-Position einer Seite). */
 export interface ZhTextZeile {
@@ -113,6 +123,7 @@ export interface ZhExtrakt {
  */
 export async function extrahiereZhTextZeilen(
   bytes: Uint8Array,
+  spaltenLuecke = false,
 ): Promise<ZhExtrakt> {
   // pdfjs legacy/node-Build: NUR hier (scripts/) importiert — kein src/-Import,
   // damit der Client-Bundle unberührt bleibt.
@@ -146,7 +157,7 @@ export async function extrahiereZhTextZeilen(
         continue; // Kopf-/Fussband
       }
       if (h >= 11) continue; // Erlasstitel (Kopf)
-      stuecke.push({ x, y, h, s: item.str });
+      stuecke.push({ x, y, h, s: item.str, w: (item as { width?: number }).width ?? 0 });
     }
     if (stuecke.length === 0) continue;
 
@@ -182,6 +193,7 @@ export async function extrahiereZhTextZeilen(
 
       let absatz: string | null = null;
       let text = '';
+      let vorEndeX: number | null = null; // rechter Rand des letzten übernommenen Fragments
       for (let k = 0; k < stueckeDerZeile.length; k++) {
         const st = stueckeDerZeile[k];
         const istHoch = st.h < 7.0;
@@ -194,7 +206,15 @@ export async function extrahiereZhTextZeilen(
           // Sonstige Hochzahl (Fussnoten-Verweis, auch «1, 2») → verwerfen.
           if (/^[\s,\d]+$/.test(st.s)) continue;
         }
+        // Spaltengrenze: liegt das nächste Fragment deutlich rechts vom Ende des
+        // vorigen (Wert-/Verweis-Spalte einer Tabelle, Randtitel→Body), fehlt das
+        // Spalten-Whitespace in der PDF-Extraktion → ein Leerzeichen einfügen.
+        // Nur Whitespace, kein Zeichen geändert (§1).
+        if (spaltenLuecke && vorEndeX !== null && st.x - vorEndeX > SPALTEN_LUECKE_PT) {
+          text += ' ';
+        }
         text += st.s;
+        vorEndeX = st.x + st.w;
       }
       const bereinigt = text.replace(/\s+/g, ' ').trim();
       // Reine Leer-/Absatz-Marker-Zeile: trotzdem behalten, falls Absatz gesetzt
@@ -674,7 +694,10 @@ export async function holeZhPdf(
 
   // 4. Extraktion + Parsing. bytes für JEDEN pdfjs-Lauf kopieren (getDocument
   // detacht den Puffer → zweiter Lauf auf demselben Array würfe DataCloneError).
-  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes.slice());
+  // Spalten-Lücken-Erkennung AKTIV (Probe ZH-243 20.6.2026 validiert: nur
+  // Leerzeichen an Spaltengrenzen, Wortlaut beweisbar identisch). Materialisiert
+  // sich erst beim nächsten `npm run normtext` (Rollout) in die ZH-Snapshots.
+  const { zeilen, randText } = await extrahiereZhTextZeilen(bytes.slice(), true);
   const textbasis = serialisiereZhZeilen(zeilen);
   const artikel = extrahiereAlleZhParagraphen(textbasis);
 
