@@ -144,6 +144,16 @@ function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
   );
 }
 
+// Kanton-Vollnamen für die Übersicht (reine Anzeige). Codes bleiben die SSoT;
+// der Name macht das Auswahlraster scannbar.
+const KANTON_NAMEN: Record<string, string> = {
+  ZH: 'Zürich', BE: 'Bern', LU: 'Luzern', UR: 'Uri', SZ: 'Schwyz', OW: 'Obwalden',
+  NW: 'Nidwalden', GL: 'Glarus', ZG: 'Zug', FR: 'Freiburg', SO: 'Solothurn',
+  BS: 'Basel-Stadt', BL: 'Basel-Landschaft', SH: 'Schaffhausen', AR: 'Appenzell A.Rh.',
+  AI: 'Appenzell I.Rh.', SG: 'St. Gallen', GR: 'Graubünden', AG: 'Aargau', TG: 'Thurgau',
+  TI: 'Tessin', VD: 'Waadt', VS: 'Wallis', NE: 'Neuenburg', GE: 'Genf', JU: 'Jura',
+};
+
 // Ein gewählter Kanton, gegliedert nach Kosten-/Abgabe-Art (KANTON_RUBRIKEN) —
 // das passt zum tatsächlichen Bestand (fast nur Gebühren-/Tarif-/Steuer-Erlasse)
 // und zeigt auf einen Blick, wo der gesuchte Tarif liegt.
@@ -278,44 +288,58 @@ export function Gesetze() {
 
           {!suche.trim() && ebene === 'kanton' && (
             <div className="space-y-6">
-              {/* Kantons-Wähler als ruhiges Chip-Raster */}
-              <div className="flex flex-wrap gap-1.5" role="group" aria-label="Kanton wählen">
-                <button type="button" onClick={() => setzeKanton(null)} aria-pressed={kanton === null}
-                  className={`rounded-full px-3 py-1 text-xs font-medium border transition-colors ${
-                    kanton === null ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
-                  }`}>
-                  Alle Kantone
-                </button>
-                {kantone.map((k) => (
-                  <button type="button" key={k} onClick={() => setzeKanton(kanton === k ? null : k)} aria-pressed={kanton === k}
-                    className={`rounded-full px-3 py-1 text-xs font-medium num border transition-colors ${
-                      kanton === k ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
-                    }`}>
-                    {k}
-                  </button>
-                ))}
-              </div>
-
               {kanton ? (
-                /* Ein Kanton → nach Kosten-/Abgabe-Art gegliedert (kantonale Systematik). */
-                <section className="lc-card p-5 sm:p-6 space-y-5 scroll-mt-24">
-                  <div className="flex items-baseline gap-2.5">
-                    <span aria-hidden className="font-display text-h3 leading-none text-brass-700 num">{kanton}</span>
-                    <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">Kantonale Erlasse</span>
-                    <span className="num text-body-s text-ink-400 ml-auto">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
-                  </div>
-                  <KantonRubriken erlasse={gefiltert.filter((e) => e.kanton === kanton)} />
-                </section>
-              ) : (
-                /* «Alle» → nach Kanton; Hinweis auf die Rubriken-Sicht. */
+                /* Ein Kanton → Zurück-Leiste + nach Kosten-/Abgabe-Art gegliedert. */
                 <>
-                  <p className="text-body-s text-ink-500">Einen Kanton wählen, um seine Erlasse nach Kosten- und Abgabe-Art zu gliedern.</p>
-                  {gruppiereNachKanton(gefiltert).map((g) => (
-                    <section key={g.kanton} className="space-y-3">
-                      <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
-                      <Gitter erlasse={g.erlasse} />
-                    </section>
-                  ))}
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                    <button type="button" onClick={() => setzeKanton(null)}
+                      className="inline-flex items-center gap-1 text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+                      ← Alle Kantone
+                    </button>
+                    <span aria-hidden className="text-ink-300">·</span>
+                    {/* Schnellwechsel zu Nachbarkantonen ohne Umweg über die Übersicht */}
+                    <div className="flex flex-wrap gap-1">
+                      {kantone.map((k) => (
+                        <button type="button" key={k} onClick={() => setzeKanton(k)} aria-pressed={kanton === k}
+                          className={`rounded px-1.5 py-0.5 text-xs font-medium num transition-colors ${
+                            kanton === k ? 'bg-brass-100 text-brass-800' : 'text-ink-400 hover:bg-paper-sunken hover:text-brass-700'
+                          }`}>
+                          {k}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <section className="lc-card p-5 sm:p-6 space-y-5 scroll-mt-24">
+                    <div className="flex items-baseline gap-3 border-b border-line pb-3">
+                      <span aria-hidden className="font-display text-h2 leading-none text-brass-700 num">{kanton}</span>
+                      <span className="flex flex-col">
+                        <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
+                        <span className="lc-overline text-ink-400">Kantonale Erlasse</span>
+                      </span>
+                      <span className="num text-body-s text-ink-400 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
+                    </div>
+                    <KantonRubriken erlasse={gefiltert.filter((e) => e.kanton === kanton)} />
+                  </section>
+                </>
+              ) : (
+                /* «Alle» → kompaktes Auswahlraster (Code · Name · Erlass-Zähler) statt
+                    aller Karten — ein Bildschirm Übersicht statt endlosem Scroll. */
+                <>
+                  <p className="text-body-s text-ink-500 max-w-reading">
+                    Kanton wählen — die Erlasse werden dann nach Kosten- und Abgabe-Art (Gerichts-/Anwalts-/Notariats-/Grundbuchkosten, Handänderungssteuern) gegliedert.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                    {gruppiereNachKanton(gefiltert).map((g) => (
+                      <button type="button" key={g.kanton} onClick={() => setzeKanton(g.kanton)}
+                        className="lc-card group flex items-center gap-3 p-3.5 text-left transition-colors hover:border-brass-400">
+                        <span aria-hidden className="font-display text-h3 font-semibold text-ink-900 num leading-none w-9 shrink-0 group-hover:text-brass-700 transition-colors">{g.kanton}</span>
+                        <span className="flex flex-col min-w-0">
+                          <span className="text-body-s font-medium text-ink-800 truncate">{KANTON_NAMEN[g.kanton] ?? g.kanton}</span>
+                          <span className="text-xs text-ink-400"><span className="num">{g.erlasse.length}</span> Erlasse</span>
+                        </span>
+                      </button>
+                    ))}
+                  </div>
                 </>
               )}
               {gefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
