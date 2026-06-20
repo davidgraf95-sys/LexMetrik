@@ -1,10 +1,11 @@
-import { Suspense, lazy, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
 import { ROUTEN_MANIFEST } from './routesManifest';
+import { lazyRetry } from './lazyRetry';
 
 // Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk – der
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
@@ -13,24 +14,24 @@ import { ROUTEN_MANIFEST } from './routesManifest';
 // ROUTEN_MANIFEST (src/routesManifest.ts), katalog-gegated (FUNDAMENT-UMBAU
 // Thema B, §5). Hier stehen nur die Sonderrouten, die bewusst NICHT im
 // Katalog sind.
-const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
+const Startseite = lazyRetry(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
 // Recherche (App-Shell Phase 4): schlanke Such-Seite, nutzt die Katalog-Suche.
-const Recherche = lazy(() => import('./pages/Recherche').then((m) => ({ default: m.Recherche })));
+const Recherche = lazyRetry(() => import('./pages/Recherche').then((m) => ({ default: m.Recherche })));
 // S-5c: Fristenspiegel AUFGELÖST (Auftrag David 10.6.2026 abends) — Link-Erbe
 // alter Teilen-/.ics-Links übernimmt der Redirect auf die Fach-Rechner.
-const FristenspiegelRedirect = lazy(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
-const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
-const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
-const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
-const Kontakt = lazy(() => import('./pages/Kontakt').then((m) => ({ default: m.Kontakt })));
-const Datenschutz = lazy(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
+const FristenspiegelRedirect = lazyRetry(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
+const RechnerStub = lazyRetry(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
+const Methodik = lazyRetry(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
+const Ueber = lazyRetry(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
+const Kontakt = lazyRetry(() => import('./pages/Kontakt').then((m) => ({ default: m.Kontakt })));
+const Datenschutz = lazyRetry(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
 // Rubrik V «Gesetze» (browsbare Rechtssammlung) — eigenständige Nav-Sektion,
 // KEINE Katalog-Oberkategorie (oberkategorien.ts unberührt). Übersicht /gesetze
 // wird prerendert (seo.ts), die Lesesicht /gesetze/:ebene/:key ist client-lazy
 // (SPA-Fallback via vercel.json-Rewrite) — die Routenzahl bleibt stabil bei +1.
-const Gesetze = lazy(() => import('./pages/Gesetze').then((m) => ({ default: m.Gesetze })));
-const GesetzLeser = lazy(() => import('./pages/GesetzLeser').then((m) => ({ default: m.GesetzLeser })));
-const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
+const Gesetze = lazyRetry(() => import('./pages/Gesetze').then((m) => ({ default: m.Gesetze })));
+const GesetzLeser = lazyRetry(() => import('./pages/GesetzLeser').then((m) => ({ default: m.GesetzLeser })));
+const NotFound = lazyRetry(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
 // E2, Auftrag David 7.6.2026): /pro, /fachpersonen, /rechner → «/».
@@ -85,7 +86,10 @@ export default function App() {
       <ScrollToTop />
       <ScrollZuHash />
       <RouteMeta />
-      <ErrorBoundary>
+      {/* key={pathname}: ein aufgefangener Fehler (z. B. einmal fehlgeschlagener
+          Lazy-Chunk) setzt sich beim nächsten Seitenwechsel von selbst zurück —
+          sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}
+      <ErrorBoundary key={pathname}>
       <Suspense fallback={
         /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3) */
         <div className="py-16 text-center space-y-3">
