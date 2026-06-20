@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte } from '../components/normtext/ErlassKarte';
 import {
-  ladeBrowseManifest, gruppiereNachKanton, filtern,
+  ladeBrowseManifest, gruppiereNachKanton, gruppiereNachGebiet, filtern,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import { SYSTEMATIK } from '../lib/normtext/systematik';
@@ -241,12 +241,22 @@ export function Gesetze() {
                 ))}
               </div>
 
-              {gruppiereNachKanton(kanton ? gefiltert.filter((e) => e.kanton === kanton) : gefiltert).map((g) => (
-                <section key={g.kanton} className="space-y-3">
-                  <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
-                  <Gitter erlasse={g.erlasse} />
-                </section>
-              ))}
+              {kanton
+                ? /* Ein Kanton gewählt → nach Rechtsgebiet gegliedert (kantonale
+                     Systematik; jeder Erlass trägt ein verifiziertes rechtsgebiet). */
+                  gruppiereNachGebiet(gefiltert.filter((e) => e.kanton === kanton)).map((g) => (
+                    <section key={g.gebiet} className="space-y-3">
+                      <h2 className="lc-overline text-brass-700">{g.label} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
+                      <Gitter erlasse={g.erlasse} />
+                    </section>
+                  ))
+                : /* «Alle» → nach Kanton gegliedert. */
+                  gruppiereNachKanton(gefiltert).map((g) => (
+                    <section key={g.kanton} className="space-y-3">
+                      <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
+                      <Gitter erlasse={g.erlasse} />
+                    </section>
+                  ))}
               {gefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
             </div>
           )}
