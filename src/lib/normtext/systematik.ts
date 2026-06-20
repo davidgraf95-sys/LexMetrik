@@ -91,6 +91,31 @@ export const SYSTEMATIK: SystematikKategorie[] = [
   },
 ];
 
+// ─── Kantonale Systematik (Auftrag David 20.6.2026) ─────────────────────────
+//
+// Die kantonalen Erlasse in LexMetrik sind fast durchwegs Gebühren-/Tarif-/
+// Kosten- und Abgabe-Erlasse (für die Kostenrechner). Statt sie alle unter
+// «Öffentliches Recht» zu zeigen, gliedert diese funktionale Systematik sie nach
+// KOSTEN-/ABGABE-ART — anhand des Titels/Kürzels (reine Anzeige-Ordnung, §3; kein
+// Norminhalt). Reihenfolge = Priorität: das erste passende Muster gewinnt, die
+// Auffang-Rubrik «Gerichts- & Verfahrenskosten» nimmt den Rest.
+export interface KantonRubrik { id: string; titel: string; test: RegExp }
+
+export const KANTON_RUBRIKEN: KantonRubrik[] = [
+  { id: 'abgaben', titel: 'Handänderungssteuern & Abgaben', test: /handänder|mutation|enregistr|\blods\b|grundbuchabgab|\bgbag\b|lods et droits|\bhstg\b|\bldmg?\b|\bldmi\b/i },
+  { id: 'steuern', titel: 'Kantonale Steuergesetze', test: /steuergesetz|\bstg\b/i },
+  { id: 'anwalt', titel: 'Anwaltstarife', test: /anwält|anwalt|avocat|honorar|\bhono\b|\bhor\b|\banwt\b|\banwhv\b|rechtsanwält|ordine degli avvocati|tariffa.*avvocat/i },
+  { id: 'notariat', titel: 'Notariats- & Beurkundungskosten', test: /notar|notgeb|beurk|notaire|notarile/i },
+  { id: 'grundbuch', titel: 'Grundbuchgebühren', test: /grundbuch|registre fonci|registro fondiario|\bocrf\b|\bgbgt\b|eg zgb|registre foncier/i },
+  { id: 'gericht', titel: 'Gerichts- & Verfahrenskosten', test: /.*/ },
+];
+
+/** Kantonalen Erlass einer Kosten-/Abgabe-Rubrik zuordnen (erstes Muster gewinnt). */
+export function kantonRubrik(titel: string, kuerzel: string): string {
+  const s = `${titel} ${kuerzel}`;
+  return (KANTON_RUBRIKEN.find((r) => r.test.test(s)) ?? KANTON_RUBRIKEN[KANTON_RUBRIKEN.length - 1]).id;
+}
+
 /** Key → [Kategorie-id, Gruppen-id] für schnelle Zuordnung; mehrfach genannte
  *  Keys nehmen die ERSTE Nennung (Primär-Einordnung). */
 export const SYSTEMATIK_VON_KEY: ReadonlyMap<string, { kat: string; gruppe: string }> = (() => {
