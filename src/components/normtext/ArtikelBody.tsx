@@ -113,6 +113,19 @@ function staffelZeilen(text: string): string[] | null {
     const zeilen = text.split(/(?= –\p{L})/u).map((s) => s.trim()).filter(Boolean);
     if (zeilen.length >= 3) return zeilen;
   }
+  // (3) Prozent-/Promille-Staffel mit «vom Mehrbetrag über …» (Notariats-/
+  //     Grundbuchtarife, z. B. BS Notariatstarif: «… bis CHF 2 Mio. 0,25%, vom
+  //     Mehrbetrag über CHF 2 Mio. 0,2%, vom Mehrbetrag über 5 Mio. 0,1% …»).
+  //     NUR Zeilenumbrüche an den Band-Markern «vom Mehrbetrag über» bzw.
+  //     «plus N ‰/%» — der WORTLAUT bleibt unverändert (kein Ziffern-Trennen,
+  //     §1), darum risikolos. ENG: Tarif-Marke (‰/Promille/Mehrbetrag) + ≥2 Bänder.
+  if (/‰|promille|mehrbetrag/i.test(text)) {
+    const marker = text.match(/vom Mehrbetrag über|plus \d/g) ?? [];
+    if (marker.length >= 2) {
+      const zeilen = text.split(/(?=vom Mehrbetrag über|plus \d)/).map((s) => s.trim()).filter(Boolean);
+      if (zeilen.length >= 3) return zeilen;
+    }
+  }
   return null;
 }
 
@@ -129,6 +142,28 @@ function normalisiereTarifText(text: string): string {
     .replace(/(‰)(\d)/gu, '$1 $2')
     .replace(/ {2,}/g, ' ')
     .trim();
+}
+
+// TABELLEN-REGEL (Auftrag David 20.6.2026): erkannte Tarif-/Gebühren-Staffeln
+// (staffelZeilen) werden als gestylte Tabelle dargestellt — umrandeter Block,
+// abgesetzte Kopfzeile, Zeilen-Trenner je Band, tabular-nums. REIN DARSTELLUNG
+// (§3): der Wortlaut je Zeile bleibt unverändert; verschmolzene PDF-Ziffern
+// werden NICHT neu getrennt (§1). Wird sowohl für Absatz-Blöcke als auch für
+// Tarif-Items (lit./Ziff.) verwendet — viele Notariats-/Grundbuchtarife stehen
+// als Items.
+function StaffelTabelle({ zeilen, verlinkt }: { zeilen: string[]; verlinkt: (s: string) => React.ReactNode }) {
+  return (
+    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
+      {zeilen.map((z, j) => (
+        <span key={j}
+          className={`block px-3 py-1.5 leading-snug ${
+            j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-line/60'
+          }`}>
+          {verlinkt(z)}
+        </span>
+      ))}
+    </span>
+  );
 }
 
 export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz, fnProItem, intern }: {
@@ -208,24 +243,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
                 if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
                 const zeilen = staffelZeilen(anzeige);
-                // TABELLEN-REGEL (Auftrag David 20.6.2026): erkannte Tarif-/
-                // Gebühren-Staffeln werden als gestylte Tabelle dargestellt —
-                // umrandeter Block, abgesetzte Kopfzeile, klare Zeilen-Trenner,
-                // Ziffern tabellarisch (tabular-nums) für saubere Ausrichtung.
-                // REIN DARSTELLUNG (§3): der Wortlaut je Zeile bleibt unverändert;
-                // verschmolzene PDF-Ziffern werden NICHT neu getrennt (§1 — eine
-                // falsche Spalten-Trennung wäre ein falsch dargestellter Tarif).
                 return zeilen
-                  ? <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
-                      {zeilen.map((z, j) => (
-                        <span key={j}
-                          className={`block px-3 py-1.5 leading-snug ${
-                            j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-line/60'
-                          }`}>
-                          {verlinkt(z)}
-                        </span>
-                      ))}
-                    </span>
+                  ? <StaffelTabelle zeilen={zeilen} verlinkt={verlinkt} />
                   : verlinkt(anzeige);
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
@@ -299,7 +318,15 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                       <span>
                         {istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>
-                          : verlinkt(it.text)}
+                          : (() => {
+                              // Tarif-Staffel auch in Items als Tabelle (viele
+                              // Notariats-/Grundbuchtarife stehen als lit./Ziff.).
+                              // NUR wenn staffelZeilen matcht → Nicht-Tarif-Items
+                              // bleiben byte-gleich (golden, §6).
+                              const sz = staffelZeilen(it.text);
+                              if (!sz) return verlinkt(it.text);
+                              return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} verlinkt={verlinkt} />;
+                            })()}
                         {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}
                         {zk && fnProItem?.[`${i}|${it.marke}`]?.map((nr) => (
                           <FnRef key={nr} artikel={artikel} nr={nr} klasse="ml-0.5" />
