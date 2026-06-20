@@ -33,7 +33,7 @@ export const SYSTEMATIK: SystematikKategorie[] = [
     nr: '01', id: 'staat', titel: 'Staats- und Verfassungsrecht',
     lede: 'Das Fundament der Rechtsordnung — alles Übrige fusst auf der Bundesverfassung.',
     gruppen: [
-      { id: 'verfassung', titel: 'Verfassung & Bundesorgane', keys: ['BV', 'PARLG', 'RVOG', 'BPR', 'BGG', 'BGERR'] },
+      { id: 'verfassung', titel: 'Verfassung & Bundesorgane', keys: ['BV', 'BGG', 'BGERR'] },
     ],
   },
   {
@@ -43,8 +43,8 @@ export const SYSTEMATIK: SystematikKategorie[] = [
     gruppen: [
       { id: 'zgb', titel: 'Zivilgesetzbuch (ZGB) & Grundbuch', keys: ['ZGB', 'GBV'] },
       { id: 'or', titel: 'Obligationenrecht (OR) & Handelsregister', keys: ['OR', 'VMWG', 'HREGV', 'GEBV_HREG', 'FUSG'] },
-      { id: 'ip', titel: 'Immaterialgüter & Wettbewerb', keys: ['URG', 'PATG', 'MSCHG', 'DESG', 'SORTG', 'UWG', 'KG'] },
-      { id: 'neben', titel: 'Internationales Privatrecht & weitere Erlasse', keys: ['IPRG', 'VVG', 'DSG', 'KKG', 'PRHG', 'PRG', 'BEG', 'PARTG', 'BGBB'] },
+      { id: 'ip', titel: 'Immaterialgüter & Wettbewerb', keys: ['URG', 'PATG', 'MSCHG', 'UWG', 'KG'] },
+      { id: 'neben', titel: 'Weitere Privatrechtserlasse', keys: ['VVG', 'DSG', 'PARTG', 'BGBB'] },
     ],
   },
   {
@@ -58,35 +58,32 @@ export const SYSTEMATIK: SystematikKategorie[] = [
   },
   {
     nr: '04', id: 'straf', titel: 'Strafrecht und Strafverfahren',
-    lede: 'Der staatliche Sanktionsanspruch — materielles Strafrecht, Strafprozess und das Nebenstrafrecht.',
+    lede: 'Der staatliche Sanktionsanspruch — materielles Strafrecht und Strafprozess.',
     standardOffen: true,
     gruppen: [
-      { id: 'stgb', titel: 'Strafrecht (StGB)', keys: ['STGB'] },
+      { id: 'stgb', titel: 'Strafrecht (StGB)', keys: ['STGB', 'MG'] },
       { id: 'stpo', titel: 'Strafverfahren', keys: ['STPO', 'JSTPO', 'JSTG'] },
-      { id: 'neben', titel: 'Neben- & Militärstrafrecht, Rechtshilfe', keys: ['BETMG', 'VSTRR', 'IRSG', 'MSTG', 'MSTP', 'MG'] },
     ],
   },
   {
     nr: '05', id: 'verwaltung', titel: 'Verwaltungsrecht',
     lede: 'Das Verhältnis Bürger ↔ Staat — der praktisch umfangreichste Ast: Verfahren, Steuern, Sozialversicherung, Migration, Bau/Umwelt, Finanzmarkt.',
     gruppen: [
-      { id: 'verfahren', titel: 'Verwaltungsverfahren & Rechtspflege', keys: ['VWVG', 'VGG', 'VG', 'BGOE'] },
+      { id: 'verfahren', titel: 'Verwaltungsverfahren & Rechtspflege', keys: ['VWVG'] },
       { id: 'steuern', titel: 'Steuern & Abgaben', keys: ['DBG', 'STHG', 'MWSTG', 'VSTG', 'STG'] },
-      { id: 'sozial', titel: 'Sozialversicherung', keys: ['ATSG', 'AHVG', 'IVG', 'ELG', 'BVG', 'UVG', 'MVG', 'FAMZG', 'KVG', 'KVV', 'EOG', 'AVIG'] },
-      { id: 'migration', titel: 'Migration & Gleichstellung', keys: ['AIG', 'ASYLG', 'BUEG', 'GLG'] },
-      { id: 'umwelt', titel: 'Raumplanung, Bau & Umwelt', keys: ['RPG', 'USG', 'GSCHG', 'NHG', 'WAG', 'ENG', 'CO2_GESETZ'] },
-      { id: 'wirtschaft', titel: 'Wirtschaft & Finanzmarkt', keys: ['BANKG', 'KAG', 'FINMAG', 'FINIG', 'VAG', 'FIDLEG', 'GWG', 'BEWG'] },
-      { id: 'gesundheit', titel: 'Gesundheit & Lebensmittel', keys: ['HMG', 'EPG', 'TXG', 'LMG'] },
-      { id: 'sektoren', titel: 'Beschaffung, Verkehr & Kommunikation', keys: ['BOEB', 'SVG', 'LFG', 'EBG', 'FMG'] },
-      { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'BBG', 'BGFA'] },
+      { id: 'sozial', titel: 'Sozialversicherung', keys: ['AHVG', 'IVG', 'BVG', 'UVG', 'KVG', 'KVV', 'EOG', 'AVIG'] },
+      { id: 'migration', titel: 'Migration & Gleichstellung', keys: ['AIG', 'ASYLG', 'GLG'] },
+      { id: 'umwelt', titel: 'Raumplanung, Bau & Umwelt', keys: ['RPG', 'USG', 'GSCHG', 'NHG'] },
+      { id: 'wirtschaft', titel: 'Wirtschaft & Finanzmarkt', keys: ['BANKG', 'KAG', 'GWG', 'BEWG'] },
+      { id: 'sektoren', titel: 'Verkehr, Arbeit & Bildung', keys: ['SVG', 'ARG', 'BBG'] },
+      { id: 'anwalt', titel: 'Anwaltsrecht', keys: ['BGFA'] },
     ],
   },
   {
     nr: '06', id: 'voelker', titel: 'Völker- und Europarecht',
-    lede: 'Der internationale Rahmen — wirkt über Querverweise (EMRK, LugÜ u. a.) in die nationalen Äste hinein.',
+    lede: 'Der internationale Rahmen — wirkt über Querverweise (EMRK u. a.) in die nationalen Äste hinein.',
     gruppen: [
-      { id: 'menschenrechte', titel: 'Menschenrechte', keys: ['EMRK', 'UNO_PAKT_II'] },
-      { id: 'international', titel: 'Internationales Verfahren & Vertragsrecht', keys: ['LUGUE', 'VRK'] },
+      { id: 'menschenrechte', titel: 'Menschenrechte', keys: ['EMRK'] },
     ],
   },
 ];

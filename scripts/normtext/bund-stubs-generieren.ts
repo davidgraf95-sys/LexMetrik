@@ -18,28 +18,79 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(heute)) { console.error('--datum=YYYY-MM-DD nöt
 // Kuratierte wichtige Bundesgesetze OHNE Volltext-Snapshot (die 27 Volltext-
 // Erlasse stehen separat im ERLASS_REGISTER). [SR, Kürzel, Gebiet].
 const LISTE: Array<[string, string, Rechtsgebiet]> = [
-  ['142.20', 'AIG', 'oeffentlich'],
-  ['142.31', 'AsylG', 'oeffentlich'],
-  ['151.1', 'GlG', 'oeffentlich'],
+  // Staat & Verfassung
+  ['171.10', 'ParlG', 'oeffentlich'],
+  ['172.010', 'RVOG', 'oeffentlich'],
+  ['161.1', 'BPR', 'oeffentlich'],
+  // Privatrecht & Nebenerlasse
+  ['291', 'IPRG', 'privat'],
   ['211.231', 'PartG', 'privat'],
   ['211.412.11', 'BGBB', 'privat'],
+  ['232.12', 'DesG', 'privat'],
+  ['232.16', 'SortG', 'privat'],
+  ['221.214.1', 'KKG', 'privat'],
+  ['221.112.944', 'PrHG', 'privat'],
+  ['944.3', 'PRG', 'privat'],
+  ['957.1', 'BEG', 'privat'],
+  // Strafrecht & Strafverfahren
   ['311.1', 'JStG', 'straf'],
-  ['642.14', 'StHG', 'sozial-abgaben'],
+  ['812.121', 'BetmG', 'straf'],
+  ['313.0', 'VStrR', 'straf'],
+  ['321.0', 'MStG', 'straf'],
+  ['322.1', 'MStP', 'straf'],
+  ['351.1', 'IRSG', 'straf'],
+  // Verwaltung: Verfahren & Rechtspflege
+  ['173.32', 'VGG', 'prozess'],
+  ['170.32', 'VG', 'prozess'],
+  ['152.3', 'BGÖ', 'oeffentlich'],
+  // Sozialversicherung
+  ['830.1', 'ATSG', 'sozial-abgaben'],
   ['831.10', 'AHVG', 'sozial-abgaben'],
   ['831.20', 'IVG', 'sozial-abgaben'],
+  ['831.30', 'ELG', 'sozial-abgaben'],
   ['831.40', 'BVG', 'sozial-abgaben'],
   ['832.20', 'UVG', 'sozial-abgaben'],
+  ['833.1', 'MVG', 'sozial-abgaben'],
+  ['836.2', 'FamZG', 'sozial-abgaben'],
   ['837.0', 'AVIG', 'sozial-abgaben'],
+  ['642.14', 'StHG', 'sozial-abgaben'],
+  // Migration & Gleichstellung
+  ['142.20', 'AIG', 'oeffentlich'],
+  ['142.31', 'AsylG', 'oeffentlich'],
+  ['141.0', 'BüG', 'oeffentlich'],
+  ['151.1', 'GlG', 'oeffentlich'],
+  // Raumplanung, Bau & Umwelt
   ['700', 'RPG', 'oeffentlich'],
   ['814.01', 'USG', 'oeffentlich'],
   ['814.20', 'GSchG', 'oeffentlich'],
   ['451', 'NHG', 'oeffentlich'],
-  ['935.61', 'BGFA', 'prozess'],
+  ['921.0', 'WaG', 'oeffentlich'],
+  ['730.0', 'EnG', 'oeffentlich'],
+  ['641.71', 'CO2-Gesetz', 'oeffentlich'],
+  // Wirtschaft & Finanzmarkt
   ['955.0', 'GwG', 'oeffentlich'],
   ['952.0', 'BankG', 'oeffentlich'],
   ['951.31', 'KAG', 'oeffentlich'],
+  ['956.1', 'FINMAG', 'oeffentlich'],
+  ['954.1', 'FINIG', 'oeffentlich'],
+  ['961.01', 'VAG', 'oeffentlich'],
+  ['950.1', 'FIDLEG', 'oeffentlich'],
+  // Gesundheit, Sicherheit & Infrastruktur
+  ['812.21', 'HMG', 'oeffentlich'],
+  ['818.101', 'EpG', 'oeffentlich'],
+  ['810.21', 'TxG', 'oeffentlich'],
+  ['817.0', 'LMG', 'oeffentlich'],
+  ['172.056.1', 'BöB', 'oeffentlich'],
+  ['748.0', 'LFG', 'oeffentlich'],
+  ['742.101', 'EBG', 'oeffentlich'],
+  ['784.10', 'FMG', 'oeffentlich'],
+  ['935.61', 'BGFA', 'prozess'],
   ['510.10', 'MG', 'oeffentlich'],
+  // Völker- & Europarecht
   ['0.101', 'EMRK', 'oeffentlich'],
+  ['0.275.12', 'LugÜ', 'oeffentlich'],
+  ['0.111', 'VRK', 'oeffentlich'],
+  ['0.103.2', 'UNO-Pakt II', 'oeffentlich'],
 ];
 
 const ENDPOINT = 'https://fedlex.data.admin.ch/sparqlendpoint';
@@ -71,7 +122,9 @@ for (const [sr, kuerzel, gebiet] of LISTE) {
   const r = await frage(sr);
   if (!r || !r.titel) { fehler.push(`${kuerzel} (SR ${sr})`); continue; }
   if (!r.stand) console.log(`  ⚠ ${kuerzel}: keine Konsolidierung ≤ heute gefunden — Stand=${heute} (prüfen)`);
-  const key = kuerzel.toUpperCase().replace(/[^A-Z0-9]/g, '_');
+  const key = kuerzel.toUpperCase()
+    .replace(/Ä/g, 'AE').replace(/Ö/g, 'OE').replace(/Ü/g, 'UE')
+    .replace(/[^A-Z0-9]/g, '_');
   const esc = (s: string) => s.replace(/'/g, "\\'");
   eintraege.push(`  { key: '${key}', ebene: 'bund', kuerzel: '${esc(kuerzel)}', titel: '${esc(r.titel)}', sr: '${sr}', rechtsgebiet: '${gebiet}', sprache: 'de', rang: 90, status: 'nur-live-link', quelleUrl: '${r.eli}', stand: '${r.stand || heute}' },`);
   console.log(`  ok ${kuerzel.padEnd(8)} SR ${sr.padEnd(12)} ${r.titel.slice(0, 50)}`);
