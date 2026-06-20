@@ -20,7 +20,7 @@ import { OBERKATEGORIEN } from './oberkategorien';
 import { KATALOG_KARTEN, VORLAGE_SEKTIONEN, istVerfuegbar } from './startseiteConfig';
 import { kategorieFuer } from './oberkategorien';
 import { istVorlage } from './vorlagenKategorie';
-import { GEBIETE } from './normtext/register';
+import { SYSTEMATIK } from './normtext/systematik';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
 export interface NavLink {
@@ -86,16 +86,16 @@ const RECHNER_KINDER: NavKnoten[] = OBERKATEGORIEN
 const VORLAGEN_KINDER: NavKnoten[] = VORLAGE_SEKTIONEN
   .map((s) => werkzeugGruppe(s.title, werkzeugeFuer((k) => istVorlage(k) && k.art === s.art)));
 
-// Gesetze: «Bund» als aufklappbare Untergruppe nach Rechtsgebiet (eingeklappt),
-// darunter «Kantone». Ziel = /gesetze mit ?ebene= (Tab-Vorwahl) und Gebiets-
-// Anker «g-<id>» — beides initialisiert die Gesetze-Seite in Phase 3.
+// Gesetze: «Bund» als aufklappbare Untergruppe nach der funktionalen Systematik
+// (systematik.ts — eine Quelle für Seite UND Seitenleiste), darunter «Kantone».
+// Ziel = /gesetze mit ?ebene= (Tab-Vorwahl) und Kategorie-Anker «sys-<id>».
 const GESETZE_KINDER: NavKnoten[] = [
   {
     art: 'gruppe',
     label: 'Bund',
     aufklappbar: true,
     standardOffen: false,
-    kinder: GEBIETE.map((g) => link(g.label, `/gesetze?ebene=bund#g-${g.id}`)),
+    kinder: SYSTEMATIK.map((k) => link(k.titel, `/gesetze?ebene=bund#sys-${k.id}`)),
   },
   link('Kantone', '/gesetze?ebene=kanton'),
 ];
