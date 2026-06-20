@@ -18,6 +18,20 @@ import { effektivesThema, wendeThemaAn } from './components/thema'
 // des prerenderten Light-HTML; das hält es minimal.
 wendeThemaAn(effektivesThema())
 
+// Veralteter Chunk nach einem Deploy: Vite feuert 'vite:preloadError', wenn ein
+// vorab geladener Modul-Chunk fehlt (offener Tab zeigt auf alte Hashes). Einmal
+// neu laden holt das frische index.html mit gültigen Hashes (per sessionStorage
+// gegen eine Endlosschleife abgesichert). Ergänzt lazyRetry für Chunks, die nicht
+// über einen Lazy-Import, sondern über modulepreload geladen werden.
+window.addEventListener('vite:preloadError', () => {
+  try {
+    if (!sessionStorage.getItem('lex-chunk-reload')) {
+      sessionStorage.setItem('lex-chunk-reload', '1')
+      window.location.reload()
+    }
+  } catch { /* sessionStorage nicht verfügbar */ }
+})
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
