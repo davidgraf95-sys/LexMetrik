@@ -151,7 +151,11 @@ function normalisiereTarifText(text: string): string {
 // werden NICHT neu getrennt (§1). Wird sowohl für Absatz-Blöcke als auch für
 // Tarif-Items (lit./Ziff.) verwendet — viele Notariats-/Grundbuchtarife stehen
 // als Items.
-function StaffelTabelle({ zeilen, verlinkt }: { zeilen: string[]; verlinkt: (s: string) => React.ReactNode }) {
+// Reiner Text je Zeile (wie die ursprüngliche Staffel-Darstellung) — kein
+// Autolink/NormText in den Tabellen-Zeilen: Tarif-Bänder enthalten ohnehin keine
+// zitierten Normen, und so bleibt das Markup einfach (keine verschachtelten
+// Fragmente/Key-Themen). Reine Darstellung (§3), Wortlaut unverändert.
+function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
   return (
     <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
       {zeilen.map((z, j) => (
@@ -159,7 +163,7 @@ function StaffelTabelle({ zeilen, verlinkt }: { zeilen: string[]; verlinkt: (s: 
           className={`block px-3 py-1.5 leading-snug ${
             j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-line/60'
           }`}>
-          {verlinkt(z)}
+          {z}
         </span>
       ))}
     </span>
@@ -244,7 +248,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
                 const zeilen = staffelZeilen(anzeige);
                 return zeilen
-                  ? <StaffelTabelle zeilen={zeilen} verlinkt={verlinkt} />
+                  ? <StaffelTabelle zeilen={zeilen} />
                   : verlinkt(anzeige);
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
@@ -325,7 +329,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                               // bleiben byte-gleich (golden, §6).
                               const sz = staffelZeilen(it.text);
                               if (!sz) return verlinkt(it.text);
-                              return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} verlinkt={verlinkt} />;
+                              return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} />;
                             })()}
                         {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}
                         {zk && fnProItem?.[`${i}|${it.marke}`]?.map((nr) => (
