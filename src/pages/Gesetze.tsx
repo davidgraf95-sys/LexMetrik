@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import {
@@ -92,7 +92,7 @@ function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] 
 // Kategorien (geläufige offen), Untergruppen, Leitgesetze als Karten +
 // Verordnungen dezent. «Alle auf-/zuklappen»; «Weitere Erlasse» fängt alles ein,
 // was keiner Gruppe zugeordnet ist (nie ein Verlust).
-function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
+function BundSystematik({ erlasse, hashOffen }: { erlasse: BrowseErlass[]; hashOffen?: string | null }) {
   const proKey = new Map(erlasse.map((e) => [e.key, e]));
   const zugeordnet = new Set<string>();
   const kategorien = SYSTEMATIK.map((kat) => {
@@ -109,7 +109,11 @@ function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
   const weitere = erlasse.filter((e) => !zugeordnet.has(e.key));
   const alleIds = [...kategorien.map((k) => k.id), ...(weitere.length ? ['weitere'] : [])];
 
-  const [offen, setOffen] = useState<Set<string>>(() => new Set(kategorien.filter((k) => k.standardOffen).map((k) => k.id)));
+  // Übersicht zuerst: alle Kategorien eingeklappt (6 Karten = die Systematik auf
+  // einen Blick), erst Klick öffnet sie. Ein Sidebar-Deeplink (#sys-<id>) öffnet
+  // seine Zielkategorie (hashOffen, vom Eltern via key= bei Hash-Wechsel frisch
+  // gemountet) und springt sie an (ScrollZuHash in App.tsx).
+  const [offen, setOffen] = useState<Set<string>>(() => new Set(hashOffen ? [hashOffen] : []));
   const alleOffen = offen.size >= alleIds.length;
   const toggle = (id: string) => setOffen((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
   const toggleAlle = () => setOffen(alleOffen ? new Set() : new Set(alleIds));
@@ -185,6 +189,10 @@ export function Gesetze() {
   // — so verlinkt die App-Shell-Seitenleiste direkt auf den Kantone-Tab bzw. einen
   // einzelnen Kanton (?kt=ZH); teilbar und mit Zurück-Taste, wie der Katalog.
   const [params, setParams] = useSearchParams();
+  // #sys-<id> (Sidebar-Deeplink auf eine Bund-Kategorie) → öffnet sie in der
+  // Systematik; key= an BundSystematik mountet bei Hash-Wechsel frisch.
+  const { hash } = useLocation();
+  const hashSys = hash.startsWith('#sys-') ? hash.slice(5) : null;
   const ebene: Ebene = params.get('ebene') === 'kanton' ? 'kanton' : 'bund';
   const kanton = ebene === 'kanton' ? params.get('kt') : null;
   const setzeEbene = (e: Ebene) => {
@@ -283,7 +291,7 @@ export function Gesetze() {
           {!suche.trim() && ebene === 'bund' && (
             gefiltert.length === 0
               ? <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>
-              : <BundSystematik erlasse={gefiltert} />
+              : <BundSystematik key={hashSys ?? 'base'} erlasse={gefiltert} hashOffen={hashSys} />
           )}
 
           {!suche.trim() && ebene === 'kanton' && (
