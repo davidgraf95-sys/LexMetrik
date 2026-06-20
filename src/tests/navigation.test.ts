@@ -13,7 +13,7 @@ import { NAVIGATION, NAVIGATION_META, alleNavLinks, type NavGruppe } from '../li
 import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
 import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { istVorlage } from '../lib/vorlagenKategorie';
-import { GEBIETE } from '../lib/normtext/register';
+import { SYSTEMATIK } from '../lib/normtext/systematik';
 import { ROUTEN_MANIFEST } from '../routesManifest';
 
 const abschnitt = (titel: string) => NAVIGATION.find((a) => a.titel === titel)!;
@@ -51,14 +51,14 @@ describe('Navigations-SSoT', () => {
     });
   });
 
-  it('Gesetze › Bund = GEBIETE (aufklappbar, eingeklappt); Kantone als Blatt', () => {
+  it('Gesetze › Bund = SYSTEMATIK-Kategorien (aufklappbar, eingeklappt); Kantone als Blatt', () => {
     const gesetze = abschnitt('Gesetze').kinder;
     const bund = gesetze[0] as NavGruppe;
     expect(bund.art).toBe('gruppe');
     expect(bund.aufklappbar).toBe(true);
     expect(bund.standardOffen).toBe(false);
     expect(bund.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
-      .toEqual(GEBIETE.map((g) => ({ label: g.label, ziel: `/gesetze?ebene=bund#g-${g.id}` })));
+      .toEqual(SYSTEMATIK.map((s) => ({ label: s.titel, ziel: `/gesetze?ebene=bund#sys-${s.id}` })));
     expect(gesetze[1]).toMatchObject({ art: 'link', ziel: '/gesetze?ebene=kanton' });
   });
 
