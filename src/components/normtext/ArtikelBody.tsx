@@ -208,10 +208,24 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
                 if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
                 const zeilen = staffelZeilen(anzeige);
+                // TABELLEN-REGEL (Auftrag David 20.6.2026): erkannte Tarif-/
+                // Gebühren-Staffeln werden als gestylte Tabelle dargestellt —
+                // umrandeter Block, abgesetzte Kopfzeile, klare Zeilen-Trenner,
+                // Ziffern tabellarisch (tabular-nums) für saubere Ausrichtung.
+                // REIN DARSTELLUNG (§3): der Wortlaut je Zeile bleibt unverändert;
+                // verschmolzene PDF-Ziffern werden NICHT neu getrennt (§1 — eine
+                // falsche Spalten-Trennung wäre ein falsch dargestellter Tarif).
                 return zeilen
-                  ? zeilen.map((z, j) => (
-                      <span key={j} className={j === 0 ? 'block' : 'block pl-4 -indent-4'}>{z}</span>
-                    ))
+                  ? <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
+                      {zeilen.map((z, j) => (
+                        <span key={j}
+                          className={`block px-3 py-1.5 leading-snug ${
+                            j === 0 ? 'font-medium text-ink-800 bg-paper-sunken/40' : 'border-t border-line/60'
+                          }`}>
+                          {verlinkt(z)}
+                        </span>
+                      ))}
+                    </span>
                   : verlinkt(anzeige);
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
