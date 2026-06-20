@@ -3,10 +3,10 @@ import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import {
-  ladeBrowseManifest, gruppiereNachKanton, gruppiereNachGebiet, filtern,
+  ladeBrowseManifest, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
-import { SYSTEMATIK } from '../lib/normtext/systematik';
+import { SYSTEMATIK, KANTON_RUBRIKEN, kantonRubrik } from '../lib/normtext/systematik';
 
 type Ebene = 'bund' | 'kanton';
 
@@ -144,6 +144,28 @@ function BundSystematik({ erlasse }: { erlasse: BrowseErlass[] }) {
   );
 }
 
+// Ein gewählter Kanton, gegliedert nach Kosten-/Abgabe-Art (KANTON_RUBRIKEN) —
+// das passt zum tatsächlichen Bestand (fast nur Gebühren-/Tarif-/Steuer-Erlasse)
+// und zeigt auf einen Blick, wo der gesuchte Tarif liegt.
+function KantonRubriken({ erlasse }: { erlasse: BrowseErlass[] }) {
+  const proRubrik = KANTON_RUBRIKEN
+    .map((r) => ({ r, items: erlasse.filter((e) => kantonRubrik(e.titel, e.kuerzel) === r.id) }))
+    .filter((x) => x.items.length > 0);
+  return (
+    <div className="space-y-5">
+      {proRubrik.map(({ r, items }) => (
+        <section key={r.id} className="space-y-2.5">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-brass-700">{r.titel} <span className="text-ink-400">· {items.length}</span></h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <Gitter erlasse={items} />
+        </section>
+      ))}
+    </div>
+  );
+}
+
 export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
   const [fehler, setFehler] = useState(false);
@@ -251,47 +273,46 @@ export function Gesetze() {
 
           {!suche.trim() && ebene === 'kanton' && (
             <div className="space-y-6">
-              {/* Kantons-Raster als Schnellfilter */}
-              <div className="flex flex-wrap gap-1.5">
-                <button
-                  onClick={() => setKanton(null)}
-                  aria-pressed={kanton === null}
-                  className={`rounded px-2.5 py-1 text-xs font-medium transition-colors ${
-                    kanton === null ? 'bg-brass-100 text-ink-900' : 'text-ink-500 hover:bg-paper-sunken'
-                  }`}
-                >
-                  Alle
+              {/* Kantons-Wähler als ruhiges Chip-Raster */}
+              <div className="flex flex-wrap gap-1.5" role="group" aria-label="Kanton wählen">
+                <button type="button" onClick={() => setKanton(null)} aria-pressed={kanton === null}
+                  className={`rounded-full px-3 py-1 text-xs font-medium border transition-colors ${
+                    kanton === null ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
+                  }`}>
+                  Alle Kantone
                 </button>
                 {kantone.map((k) => (
-                  <button
-                    key={k}
-                    onClick={() => setKanton(kanton === k ? null : k)}
-                    aria-pressed={kanton === k}
-                    className={`rounded px-2.5 py-1 text-xs font-medium num transition-colors ${
-                      kanton === k ? 'bg-brass-100 text-ink-900' : 'text-ink-500 hover:bg-paper-sunken'
-                    }`}
-                  >
+                  <button type="button" key={k} onClick={() => setKanton(kanton === k ? null : k)} aria-pressed={kanton === k}
+                    className={`rounded-full px-3 py-1 text-xs font-medium num border transition-colors ${
+                      kanton === k ? 'bg-brass-100 text-brass-800 border-brass-400' : 'bg-surface text-ink-600 border-line hover:border-brass-400 hover:text-brass-700'
+                    }`}>
                     {k}
                   </button>
                 ))}
               </div>
 
-              {kanton
-                ? /* Ein Kanton gewählt → nach Rechtsgebiet gegliedert (kantonale
-                     Systematik; jeder Erlass trägt ein verifiziertes rechtsgebiet). */
-                  gruppiereNachGebiet(gefiltert.filter((e) => e.kanton === kanton)).map((g) => (
-                    <section key={g.gebiet} className="space-y-3">
-                      <h2 className="lc-overline text-brass-700">{g.label} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
-                      <Gitter erlasse={g.erlasse} />
-                    </section>
-                  ))
-                : /* «Alle» → nach Kanton gegliedert. */
-                  gruppiereNachKanton(gefiltert).map((g) => (
+              {kanton ? (
+                /* Ein Kanton → nach Kosten-/Abgabe-Art gegliedert (kantonale Systematik). */
+                <section className="lc-card p-5 sm:p-6 space-y-5 scroll-mt-24">
+                  <div className="flex items-baseline gap-2.5">
+                    <span aria-hidden className="font-display text-h3 leading-none text-brass-700 num">{kanton}</span>
+                    <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">Kantonale Erlasse</span>
+                    <span className="num text-body-s text-ink-400 ml-auto">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
+                  </div>
+                  <KantonRubriken erlasse={gefiltert.filter((e) => e.kanton === kanton)} />
+                </section>
+              ) : (
+                /* «Alle» → nach Kanton; Hinweis auf die Rubriken-Sicht. */
+                <>
+                  <p className="text-body-s text-ink-500">Einen Kanton wählen, um seine Erlasse nach Kosten- und Abgabe-Art zu gliedern.</p>
+                  {gruppiereNachKanton(gefiltert).map((g) => (
                     <section key={g.kanton} className="space-y-3">
                       <h2 className="lc-overline">Kanton {g.kanton} <span className="text-ink-400">· {g.erlasse.length}</span></h2>
                       <Gitter erlasse={g.erlasse} />
                     </section>
                   ))}
+                </>
+              )}
               {gefiltert.length === 0 && <p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>}
             </div>
           )}
