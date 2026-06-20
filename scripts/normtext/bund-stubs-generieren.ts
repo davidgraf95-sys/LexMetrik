@@ -112,7 +112,10 @@ SELECT ?abstract ?title ?date WHERE {
     const b = (await res.json() as { results: { bindings: Array<Record<string, { value: string }>> } }).results.bindings[0];
     if (!b?.abstract) return null;
     const eli = b.abstract.value.replace('https://fedlex.data.admin.ch', 'https://www.fedlex.admin.ch') + '/de';
-    return { eli, titel: b.title?.value ?? '', stand: b.date?.value ?? '' };
+    // Fedlex-Titel können HTML-Markup tragen (z. B. CO<sub>2</sub>); die UI
+    // rendert reinen Text → Tags entfernen, Whitespace normalisieren.
+    const titel = (b.title?.value ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    return { eli, titel, stand: b.date?.value ?? '' };
   } catch { return null; }
 }
 
