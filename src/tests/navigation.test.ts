@@ -14,6 +14,7 @@ import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
 import { VORLAGE_SEKTIONEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { istVorlage } from '../lib/vorlagenKategorie';
 import { SYSTEMATIK } from '../lib/normtext/systematik';
+import { KANTONE } from '../data/tarif/typen';
 import { ROUTEN_MANIFEST } from '../routesManifest';
 
 const abschnitt = (titel: string) => NAVIGATION.find((a) => a.titel === titel)!;
@@ -51,7 +52,7 @@ describe('Navigations-SSoT', () => {
     });
   });
 
-  it('Gesetze › Bund = SYSTEMATIK-Kategorien (aufklappbar, eingeklappt); Kantone als Blatt', () => {
+  it('Gesetze › Bund = SYSTEMATIK-Kategorien; Kantone = Kantone (beide aufklappbar)', () => {
     const gesetze = abschnitt('Gesetze').kinder;
     const bund = gesetze[0] as NavGruppe;
     expect(bund.art).toBe('gruppe');
@@ -59,7 +60,13 @@ describe('Navigations-SSoT', () => {
     expect(bund.standardOffen).toBe(false);
     expect(bund.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
       .toEqual(SYSTEMATIK.map((s) => ({ label: s.titel, ziel: `/gesetze?ebene=bund#sys-${s.id}` })));
-    expect(gesetze[1]).toMatchObject({ art: 'link', ziel: '/gesetze?ebene=kanton' });
+    // Kantone gleich wie Bund: aufklappbare Gruppe mit den 26 Kantonen (Auftrag David 20.6.2026).
+    const kantone = gesetze[1] as NavGruppe;
+    expect(kantone.art).toBe('gruppe');
+    expect(kantone.aufklappbar).toBe(true);
+    expect(kantone.standardOffen).toBe(false);
+    expect(kantone.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null)))
+      .toEqual(KANTONE.map((kt) => ({ label: kt, ziel: `/gesetze?ebene=kanton&kt=${kt}` })));
   });
 
   it('jedes Blatt-Ziel löst auf eine echte Route auf (keine toten Links)', () => {
