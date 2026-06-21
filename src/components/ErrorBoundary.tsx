@@ -5,18 +5,18 @@ import { SeitenKopf } from './layout/SeitenKopf';
 // keine Rechtslogik). React kennt für solche Fehler nur Klassen-Komponenten
 // (getDerivedStateFromError / componentDidCatch). Ohne diese Grenze führt ein
 // einzelner Render-Fehler zu einem leeren Bildschirm; hier erscheint stattdessen
-// eine nüchterne Fehlanzeige im Projekt-Design.
+// eine nüchterne Fehlanzeige im Projekt-Design mit der konkreten Meldung.
 //
-// SELBSTHEILUNG (Bug David 20.6.2026 «beim Seitenwechsel Fehler, erst der zweite
-// Versuch klappt»): die häufigste Ursache ist ein transienter Lade-/Render-Fehler
-// oder ein nach einem Deploy veralteter Chunk. Darum lädt die Grenze beim ERSTEN
-// gefangenen Fehler EINMAL automatisch neu (per sessionStorage gegen eine
-// Endlosschleife abgesichert; dasselbe Flag wie lazyRetry/vite:preloadError).
-// Kommt der Fehler nach dem Neuladen wieder, ist er echt → wir zeigen die
-// Fehlanzeige inkl. konkreter Meldung (Diagnose). Bei erfolgreicher Anzeige wird
-// das Flag zurückgesetzt, damit die Selbstheilung später wieder greift.
-
-const RELOAD_FLAG = 'lex-chunk-reload';
+// SELBSTHEILUNG bewusst NICHT hier: das «beim Seitenwechsel Fehler, zweiter
+// Versuch klappt» entsteht durch transiente/veraltete Lazy-Chunks und wird
+// loop-sicher von lazyRetry + dem vite:preloadError-Handler (main.tsx) erledigt
+// — beide setzen ihr Reload-Flag nur einmal und löschen es erst bei
+// NACHGEWIESEN erfolgreichem Import. Ein Auto-Reload AUS der Boundary heraus
+// wäre gefährlich: ein deterministischer Render-Fehler würde endlos neu laden
+// (die Boundary montiert beim Lazy-Suspense zunächst fehlerfrei, der Fehler
+// kommt erst im zweiten Commit). Darum zeigt die Boundary den Fehler ehrlich an,
+// statt ihn wegzuladen; ein Sidebar-/Link-Wechsel setzt sie via key={pathname}
+// (App.tsx) ohnehin zurück.
 
 interface Props {
   children: ReactNode;
@@ -34,25 +34,9 @@ export class ErrorBoundary extends Component<Props, State> {
     return { fehler: true, nachricht: error?.message };
   }
 
-  componentDidMount() {
-    // Diese Grenze (key={pathname} in App.tsx) ist frisch montiert und hat NICHT
-    // gefangen → die Seite wird angezeigt → Selbstheilungs-Flag zurücksetzen.
-    if (!this.state.fehler) {
-      try { sessionStorage.removeItem(RELOAD_FLAG); } catch { /* kein sessionStorage */ }
-    }
-  }
-
   componentDidCatch(error: Error, info: ErrorInfo) {
     // Nur lokale Diagnose – keine Übermittlung (Eingaben bleiben im Browser).
     console.error('Unerwarteter Render-Fehler:', error, info.componentStack);
-    // Einmaliger Selbstheilungs-Versuch: neu laden holt frische Chunks und
-    // räumt transiente Zustände aus. Endlosschleife verhindert das Flag.
-    try {
-      if (!sessionStorage.getItem(RELOAD_FLAG)) {
-        sessionStorage.setItem(RELOAD_FLAG, '1');
-        window.location.reload();
-      }
-    } catch { /* sessionStorage nicht verfügbar → Fehlanzeige bleibt stehen */ }
   }
 
   render() {

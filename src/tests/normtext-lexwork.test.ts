@@ -143,6 +143,35 @@ describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
   });
 });
 
+describe('extrahiereLexWorkArtikel — enumeration_item mit Einrück-Spacer (NW 268.12 §18 lit. a–g)', () => {
+  // NW rendert die zweite Verschachtelungsebene (Ziff. → lit.) mit ZWEI
+  // td.number: zuerst ein leerer Einrück-Spacer (&nbsp;), dann die echte Marke
+  // «a)». Regressionssicherung gegen den Bug, bei dem nur die erste (leere)
+  // Zelle gelesen wurde → leere Marke → das ganze item (Promillestaffel) fiel weg.
+  const NW_SPACER_XHTML =
+    "<div class='article'>" +
+    "<div class='article_number'><span class='article_symbol'>§</span><span class='number'>18</span></div>" +
+    "<div class='paragraph'><span class='number'>1</span><p><span class='text_content'>Bei der oeffentlichen letztwilligen Verfuegung betraegt die Gebuehr:</span></p></div>" +
+    // Standard-Einzelzelle (Ziff. 1) — eine td.number:
+    "<table class='enumeration_item'><tr><td class='number' colspan='3'>1.</td><td class='left_col last'>fuer die Errichtung;</td></tr></table>" +
+    // Zwei-Zellen-Spacer-Form (lit. a, b) — leerer Spacer ZUERST, dann echte Marke:
+    "<table class='enumeration_item'><tr><td class='number'>&nbsp;</td><td class='number'>a)</td><td class='left_col last' colspan='2'>3 Promille bis zu einem Wert von Fr. 200000;</td></tr></table>" +
+    "<table class='enumeration_item'><tr><td class='number'>&nbsp;</td><td class='number'>b)</td><td class='left_col last' colspan='2'>die Mindestgebuehr betraegt Fr. 400.</td></tr></table>" +
+    '</div>';
+
+  it('erfasst trotz leerem Spacer-td die echte Marke a)/b) (sonst fiele die Staffel weg)', () => {
+    const a = extrahiereLexWorkArtikel(NW_SPACER_XHTML, '18');
+    expect(a).not.toBeNull();
+    expect(a!.bloecke).toHaveLength(1);
+    expect(a!.bloecke[0].absatz).toBe('1');
+    expect(a!.bloecke[0].items).toEqual([
+      { marke: '1', text: 'fuer die Errichtung;' },
+      { marke: 'a', text: '3 Promille bis zu einem Wert von Fr. 200000;' },
+      { marke: 'b', text: 'die Mindestgebuehr betraegt Fr. 400.' },
+    ]);
+  });
+});
+
 describe('extrahiereLexWorkArtikel — INLINE-Aufzählung (BS 292.400 §11, kein enumeration_item)', () => {
   it('erfasst § 11 als EINEN Absatz mit Ziffern-items', () => {
     const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');

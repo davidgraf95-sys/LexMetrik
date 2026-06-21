@@ -14,8 +14,8 @@
        --well     = versenkte Eingabefelder (lc-input).
        surface-raised/well sind bewusst Aliasse auf die Papier-Werte —
        eine Tönung, zwei semantische Namensräume. */
-    --paper:#F7F4EC; --paper-raised:#FCFBF5; --paper-sunken:#EEEADF;
-    --surface:#FBF9F2; --surface-raised:var(--paper-raised);
+    --paper:#FAF8F2; --paper-raised:#FEFDFA; --paper-sunken:#F2EFE6;
+    --surface:#FDFCF7; --surface-raised:var(--paper-raised);
     --well:var(--paper-sunken);
     /* Haarlinien */
     --line:color-mix(in srgb, var(--ink-900) 10%, transparent);

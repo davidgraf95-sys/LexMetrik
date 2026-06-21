@@ -149,15 +149,15 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   AI: {
     kanton: 'AI', erlassName: 'Verordnung über die Gebühren der Gerichte (GGV)', erlassNr: 'GS 173.810',
-    artikel: 'Art. 7', stand: '1.1.2024', verifiziert: 'doppelt',
+    artikel: 'Art. 7', stand: '1.1.2024', verifiziert: 'recherche',
     quelleUrl: 'https://ai.clex.ch/app/de/texts_of_law/173.810',
-    hinweis: 'Vorstand CHF 50–300; Urteilsvorschlag/Entscheid 50–500; Einigung/Rückzug/Säumnis 50–200. PRÜFEN (Audit 17.6.): Art. 7 nennt bandabhängig 200–1000 / 300–1000 / 100–600.',
-    regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
+    hinweis: 'Verfahrensabhängig (Art. 7 GGV): Erteilung Klagebewilligung 200–1000 · Urteilsvorschlag/Entscheid 300–1000 · Einigung/Rückzug/Säumnis 100–600 (lit. b–d; lit. a aufgehoben). Re-Verifikation 21.6.: amtlich bestätigt; der pauschale 50–500-Rahmen war falsch.',
+    regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },
   SG: {
     kanton: 'SG', erlassName: 'Gerichtskostenverordnung (GKV)', erlassNr: 'sGS 941.12',
     artikel: 'Art. 8', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', verifiziert: 'doppelt',
-    quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12',
+    quelleUrl: 'https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file',
     hinweis: 'Klagebewilligung CHF 200–1000; Urteilsvorschlag/Entscheid 300–1000; Einigung/Säumnis/Rückzug 100–600.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },
@@ -218,9 +218,9 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VS: {
     kanton: 'VS', erlassName: 'Loi fixant le tarif des frais et dépens (LTar)', erlassNr: 'SGS/VS 173.8',
-    artikel: 'Art. 15', stand: '1.1.2018', verifiziert: 'doppelt',
+    artikel: 'Art. 15', stand: '1.1.2025', verifiziert: 'recherche',
     quelleUrl: 'https://lex.vs.ch/app/de/texts_of_law/173.8',
-    hinweis: 'Citation CHF 50 + séance 60–120; bei Streitwert bis 2000 und Urteilsvorschlägen CHF 60–500. PRÜFEN (Audit 17.6.): Sitzungsgebühr lt. Art. 15 Abs. 1b = 120–250.',
+    hinweis: 'Art. 15 LTar: citation en conciliation 50–100 (je nach Zahl Beklagter, Abs. 1a) + tenue de la séance 120–250 (Abs. 1b) → Normalfall 170–350; Streitwert ≤ 2000 oder proposition de décision 60–500 (Abs. 2). Re-Verifikation 21.6.: amtlich bestätigt (Fassung 1.1.2025).',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   NE: {
@@ -241,10 +241,10 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais en matière civile (RTFMC)', erlassNr: 'rsGE E 1 05.10',
-    artikel: 'Art. 15', stand: '1.1.2011', verifiziert: 'doppelt',
+    artikel: 'Art. 15', stand: '1.7.2025', verifiziert: 'recherche',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
-    hinweis: 'Causes pécuniaires CHF 100–200; bei mehreren Parteien +20 %. PRÜFEN (Audit 17.6.): der «+20 %»-Zuschlag ist in Art. 15 nicht ausgewiesen (Rahmen 100–200 stimmt).',
-    regel: { typ: 'rahmen', vonChf: 100, bisChf: 200 },
+    hinweis: 'Émolument forfaitaire de conciliation (Art. 15 RTFMC): bis 30 000 CHF 100, darüber CHF 200. Re-Verifikation 21.6.: kein «+20 %»-Zuschlag im Artikel; fester Forfait (deterministisch, zweistufig).',
+    regel: { typ: 'staffel_inklusiv', baender: [{ bisChf: 30000, chf: 100 }, { bisChf: INF, chf: 200 }] },
   },
   JU: {
     kanton: 'JU', erlassName: 'Décret fixant les émoluments judiciaires', erlassNr: 'RSJU 176.511',
