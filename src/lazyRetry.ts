@@ -32,8 +32,11 @@ export function lazyRetry<T extends ComponentType<unknown>>(
           if (!sessionStorage.getItem(RELOAD_FLAG)) {
             sessionStorage.setItem(RELOAD_FLAG, '1');
             window.location.reload();
-            // Nie auflösen: der Reload übernimmt die Anzeige.
-            return await new Promise<{ default: T }>(() => {});
+            // Der Reload übernimmt normalerweise die Anzeige, bevor dieser Timeout
+            // greift. Falls der Reload NICHT durchkommt (beforeunload-Abbruch,
+            // bfcache-Eigenheit), nicht ewig im Suspense-Fallback hängen, sondern
+            // nach kurzer Frist den Fehler an die ErrorBoundary werfen.
+            return await new Promise<{ default: T }>((_, reject) => setTimeout(() => reject(err), 4000));
           }
         } catch { /* sessionStorage nicht verfügbar → unten werfen */ }
         throw err;

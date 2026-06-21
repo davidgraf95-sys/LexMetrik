@@ -173,8 +173,11 @@ interface KantonCoverage {
 async function erzeugeKantonsSnapshots(
   abgerufen: string,
   goldenIndex: Record<string, string>,
+  kantonFilter?: Set<string>,
 ): Promise<KantonCoverage> {
-  const inventar = sammleKantonInventar();
+  const inventar = sammleKantonInventar().filter(
+    (g) => !kantonFilter || kantonFilter.has(g.kanton),
+  );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
 
@@ -317,8 +320,11 @@ interface HtmCoverage {
 async function erzeugeHtmSnapshots(
   abgerufen: string,
   goldenIndex: Record<string, string>,
+  kantonFilter?: Set<string>,
 ): Promise<HtmCoverage> {
-  const inventar = sammleHtmInventar();
+  const inventar = sammleHtmInventar().filter(
+    (g) => !kantonFilter || kantonFilter.has(g.kanton),
+  );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
 
@@ -415,8 +421,11 @@ function zhLawIdSafe(url: string): string {
 async function erzeugeZhPdfSnapshots(
   abgerufen: string,
   goldenIndex: Record<string, string>,
+  kantonFilter?: Set<string>,
 ): Promise<HtmCoverage> {
-  const inventar = sammleZhPdfInventar();
+  const inventar = sammleZhPdfInventar().filter(
+    (g) => !kantonFilter || kantonFilter.has(g.kanton),
+  );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
 
@@ -533,8 +542,11 @@ function pdfLawIdSafe(profil: PdfProfilName, url: string): string {
 async function erzeugePdfSnapshots(
   abgerufen: string,
   goldenIndex: Record<string, string>,
+  kantonFilter?: Set<string>,
 ): Promise<HtmCoverage> {
-  const inventar = sammlePdfInventar();
+  const inventar = sammlePdfInventar().filter(
+    (g) => !kantonFilter || kantonFilter.has(g.kanton),
+  );
   const ausgangsDir = 'public/normtext/kanton';
   mkdirSync(ausgangsDir, { recursive: true });
 
@@ -669,6 +681,91 @@ async function main(): Promise<void> {
     mkdirSync('golden', { recursive: true });
     writeFileSync('golden/normtext-snapshot.json', stabelesJson(sortiert), 'utf8');
     console.log(`\n[--nur=zh] Fertig. Register ${browse.erlasse.length} Erlasse; Golden ${Object.keys(sortiert).length} Einträge (${Object.keys(goldenIndex).length} ZH ersetzt).`);
+    return;
+  }
+
+  // ── Gezielter Kantons-Modus (--nur=kanton --kanton=AR,NW) ───────────────────
+  // Regeneriert NUR die Snapshots der genannten Kantone (über ALLE kantonalen
+  // Phasen: LexWork/HTM/ZH/PDF, je nach dem, wo der Kanton geführt wird), ohne
+  // Bund oder die übrigen Kantone erneut über das Netz zu ziehen — so bleibt der
+  // Diff auf die gewünschten Kantone beschränkt (kein stiller Upstream-Drift, §8;
+  // z. B. nach einem Adapter-Fix wie AR-Anhang-Ziffern / NW-§18-Sub-Staffel
+  // 22.6.2026). Golden wird GEMISCHT: alle Einträge ausser kanton/<K>/* bleiben,
+  // die der genannten Kantone werden ersetzt. Manifest/Register aus der Platte neu.
+  if (process.argv.includes('--nur=kanton')) {
+    const kantonArg = process.argv.find((a) => a.startsWith('--kanton='));
+    if (!kantonArg) {
+      throw new Error('--nur=kanton verlangt --kanton=XX[,YY] (z. B. --kanton=AR,NW)');
+    }
+    const kantone = new Set(
+      kantonArg.slice('--kanton='.length).split(',').map((s) => s.trim().toUpperCase()).filter(Boolean),
+    );
+    const goldenIndex: Record<string, string> = {};
+    console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}, datum=${abgerufen}`);
+
+    const cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone);
+    for (const z of cov.reportZeilen) console.log(z);
+    const htmCov = await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);
+    for (const z of htmCov.reportZeilen) console.log(z);
+    const zhCov = await erzeugeZhPdfSnapshots(abgerufen, goldenIndex, kantone);
+    for (const z of zhCov.reportZeilen) console.log(z);
+    const pdfCov = await erzeugePdfSnapshots(abgerufen, goldenIndex, kantone);
+    for (const z of pdfCov.reportZeilen) console.log(z);
+
+    const alleFetchFehler = [
+      ...cov.fetchFehler.map((f) => `LexWork ${f.kanton} ${f.lawId}: ${f.fehler}`),
+      ...htmCov.fetchFehler.map((f) => `HTM ${f.kanton} ${f.url}: ${f.fehler}`),
+      ...zhCov.fetchFehler.map((f) => `ZH ${f.kanton} ${f.url}: ${f.fehler}`),
+      ...pdfCov.fetchFehler.map((f) => `PDF ${f.kanton} ${f.url}: ${f.fehler}`),
+    ];
+    console.log(`\nfetch-Fehler: ${alleFetchFehler.length}`);
+    for (const f of alleFetchFehler) console.log(`  ${f}`);
+
+    // Manifest + Register aus der Platte neu (alle Dateien; nur die Ziel-Kantone verändert).
+    const kantonManifest = baueManifest('public/normtext/kanton');
+    const kantonManifestSortiert: Record<string, string> = {};
+    for (const k of Object.keys(kantonManifest).sort()) kantonManifestSortiert[k] = kantonManifest[k];
+    writeFileSync('public/normtext/kanton/index.json', stabelesJson(kantonManifestSortiert), 'utf8');
+
+    const browse = baueBrowseManifest(abgerufen);
+    writeFileSync('public/normtext/register.json', JSON.stringify(browse, null, 2) + '\n', 'utf8');
+
+    // Golden mischen: Nicht-Ziel-Kantone bewahren, kanton/<K>/* ersetzen.
+    let bestand: Record<string, string>;
+    try {
+      bestand = JSON.parse(readFileSync('golden/normtext-snapshot.json', 'utf8')) as Record<string, string>;
+    } catch {
+      throw new Error('--nur=kanton: golden/normtext-snapshot.json fehlt — ein Voll-Lauf muss zuerst gelaufen sein.');
+    }
+    // §8 (kein stiller Datenverlust): Ein Ziel-Kanton, der in DIESEM Lauf 0
+    // Snapshots lieferte (Fetch-Fehler, alle Tokens fehlend), darf seine
+    // bestehenden Golden-Einträge NICHT verlieren. Darum nur Ziel-Kantone
+    // ersetzen, die tatsächlich frische Einträge erzeugt haben; fehlgeschlagene
+    // behalten den Altbestand und werden laut gewarnt.
+    const erfolgKantone = new Set(Object.keys(goldenIndex).map((k) => k.split('/')[1]));
+    const fehlgeschlagen = [...kantone].filter((k) => !erfolgKantone.has(k));
+    if (fehlgeschlagen.length > 0) {
+      console.log(
+        `\n⚠️  WARN (§8): Ziel-Kantone OHNE neue Snapshots (Fetch-Fehler?): ${fehlgeschlagen.join(', ')} — ` +
+          'ihr Golden-Altbestand bleibt UNVERÄNDERT (kein stiller Verlust).',
+      );
+    }
+    const istErsetzbar = (key: string): boolean => {
+      const k = key.split('/')[1];
+      return kantone.has(k) && erfolgKantone.has(k);
+    };
+    const gemischt: Record<string, string> = {};
+    for (const k of Object.keys(bestand)) if (!istErsetzbar(k)) gemischt[k] = bestand[k];
+    for (const k of Object.keys(goldenIndex)) gemischt[k] = goldenIndex[k];
+    const sortiert: Record<string, string> = {};
+    for (const k of Object.keys(gemischt).sort()) sortiert[k] = gemischt[k];
+    mkdirSync('golden', { recursive: true });
+    writeFileSync('golden/normtext-snapshot.json', stabelesJson(sortiert), 'utf8');
+    const zielN = Object.keys(goldenIndex).length;
+    console.log(
+      `\n[--nur=kanton] Fertig. ${zielN} Snapshots der Kantone ${[...kantone].join(',')} regeneriert; ` +
+        `Golden ${Object.keys(sortiert).length} Einträge gesamt. Register ${browse.erlasse.length} Erlasse.`,
+    );
     return;
   }
 

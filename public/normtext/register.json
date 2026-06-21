@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-20",
+  "erzeugt": "2026-06-22",
   "erlasse": [
     {
       "key": "ZGB",
@@ -2096,18 +2096,18 @@
       "key": "AR-1203",
       "ebene": "kanton",
       "kanton": "AR",
-      "kuerzel": "Gesetz über die Gebühren der Gemeinden (Gebührentarif für die Gemeinden)",
-      "titel": "Gesetz über die Gebühren der Gemeinden (Gebührentarif für die Gemeinden) (bGS 153.2)",
+      "kuerzel": "Gebührentarif für die Gemeinden",
+      "titel": "Gebührentarif für die Gemeinden (bGS 153.2)",
       "sr": "bGS 153.2",
       "rechtsgebiet": "oeffentlich",
       "sprache": "de",
       "rang": 0,
       "status": "snapshot",
       "datei": "kanton/AR-1203.json",
-      "artikelAnzahl": 55,
+      "artikelAnzahl": 59,
       "stand": "2018-01-01",
       "quelleUrl": "https://ar.clex.ch/api/de/versions/1203/pdf_file",
-      "fassungsToken": "a808e467f059e82094e6dedfd938eaa705cb92b36bb304edc4836ccb800cc664"
+      "fassungsToken": "d23f371041b9325c0f44b124652d175e0c5312268f61a12d6fac7b154529e10b"
     },
     {
       "key": "AR-145.53",
@@ -3162,6 +3162,40 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21"
+    },
+    {
+      "key": "SG-3849",
+      "ebene": "kanton",
+      "kanton": "SG",
+      "kuerzel": "für die übrigen öffentlichen Beurkundungen (914.5 (GB-GebV); 821.5 (GebT))",
+      "titel": "Verordnung über die Gebühren für Amtshandlungen der Grundbuchämter und für die Durchführung von Grundstückschätzungen (GB-GebV) — für grundstücksbezogene Beurkundungen; ergänzt durch Gebührentarif für die Kantons- und Gemeindeverwaltung (GebT), Abschnitt III «Beurkundungen und Beglaubigungen»",
+      "sr": null,
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "rang": 0,
+      "status": "snapshot",
+      "datei": "kanton/SG-3849.json",
+      "artikelAnzahl": 611,
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/3849/pdf_file",
+      "fassungsToken": "d30d45f974da19c03161e71be2e35dbc692732daf06ce967a82abd4e24f70b28"
+    },
+    {
+      "key": "SG-2808",
+      "ebene": "kanton",
+      "kanton": "SG",
+      "kuerzel": "Gerichtskostenverordnung (GKV)",
+      "titel": "Gerichtskostenverordnung (GKV) (sGS 941.12)",
+      "sr": "sGS 941.12",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "rang": 0,
+      "status": "snapshot",
+      "datei": "kanton/SG-2808.json",
+      "artikelAnzahl": 34,
+      "stand": "2012-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file",
+      "fassungsToken": "863ea929881a68e053783be380bd36943835cf12ffb348de7b900c132aa44eb8"
     },
     {
       "key": "SG-963.75",

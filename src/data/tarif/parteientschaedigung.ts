@@ -12,8 +12,32 @@ import type { SockelProzentBand } from '../../lib/tarif/staffel';
 
 const INF = Infinity;
 
-// ZH-Skala der Anwaltsgebühr (AnwGebV § 4) — von ZG und GE übernommen.
+// ZH-Skala der Anwaltsgebühr (AnwGebV § 4) — von ZG übernommen (autonome Zuger
+// Tabelle, § 3 V. über die Anwaltskosten, betragsgleich). GE führt eine EIGENE,
+// rechtlich autonome Staffel (GE_STAFFEL, RTFMC Art. 85) — §4: verschiedene
+// Regimes nie zu einer gemeinsamen Konstante kollabieren, auch wenn die Beträge
+// derzeit übereinstimmen (sonst verschiebt eine künftige ZH-Revision still GE).
 const ZH_SKALA: SockelProzentBand[] = [
+  { bisChf: 5000, sockelChf: 0, abChf: 0, prozent: 25, minChf: 100 },
+  { bisChf: 10000, sockelChf: 1250, abChf: 5000, prozent: 23 },
+  { bisChf: 20000, sockelChf: 2400, abChf: 10000, prozent: 15 },
+  { bisChf: 40000, sockelChf: 3900, abChf: 20000, prozent: 11 },
+  { bisChf: 80000, sockelChf: 6100, abChf: 40000, prozent: 9 },
+  { bisChf: 160000, sockelChf: 9700, abChf: 80000, prozent: 6 },
+  { bisChf: 300000, sockelChf: 14500, abChf: 160000, prozent: 3.5 },
+  { bisChf: 600000, sockelChf: 19400, abChf: 300000, prozent: 2 },
+  { bisChf: 1000000, sockelChf: 25400, abChf: 600000, prozent: 1.5 },
+  { bisChf: 4000000, sockelChf: 31400, abChf: 1000000, prozent: 1 },
+  { bisChf: 10000000, sockelChf: 61400, abChf: 4000000, prozent: 0.75 },
+  { bisChf: INF, sockelChf: 106400, abChf: 10000000, prozent: 0.5 },
+];
+
+// GE défraiement (RTFMC Art. 85, rsGE E 1 05.10) — AUTONOME Genfer Prozentstaffel.
+// Wortlaut Art. 85 (Stand 1.7.2025) Tranche für Tranche verifiziert (lokaler
+// Snapshot + amtlich silgeneve.ch, 21.6.2026); derzeit betragsgleich mit der
+// ZH-Skala, aber eigenständige Rechtsgrundlage (§4, s. ZH_SKALA-Kommentar).
+// Art. 85 Abs. 1: Abweichung ±10 % nach den Kriterien des Art. 84.
+const GE_STAFFEL: SockelProzentBand[] = [
   { bisChf: 5000, sockelChf: 0, abChf: 0, prozent: 25, minChf: 100 },
   { bisChf: 10000, sockelChf: 1250, abChf: 5000, prozent: 23 },
   { bisChf: 20000, sockelChf: 2400, abChf: 10000, prozent: 15 },
@@ -71,9 +95,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   UR: {
     kanton: 'UR', erlassName: 'Gerichtsgebührenreglement (GGebR)', erlassNr: 'RB 2.3232',
-    artikel: 'Art. 30 (i.V.m. Art. 31 ff.)', stand: '1.10.2023', verifiziert: 'doppelt',
+    artikel: 'Art. 28 Abs. 1 (i.V.m. Art. 29, Art. 34)', stand: '1.10.2023', verifiziert: 'recherche',
     quelleUrl: 'https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232',
-    hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts. PRÜFEN (Audit 17.6.): zitierter Art. 30 GGebR betrifft die Strafverfahrens-Entschädigung; Zivil-Staffel-Anker in fachlicher Klärung.',
+    hinweis: 'Rahmen je Band; >500 000: 1,5–4 % des Streitwerts. Anker korrigiert (Audit/Re-Verifikation 21.6.): Zivilstaffel steht in Art. 28 Abs. 1 lit. a–f GGebR (nicht Art. 30 = Strafverfahren); Werte wortgetreu bestätigt. Rechtsmittel Art. 29 (bis 60 %), Zeitaufwand Art. 34.',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 5000, minChf: 500, maxChf: 2500 },
       { grenzeChf: 20000, minChf: 1000, maxChf: 6000 },
@@ -309,9 +333,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VD: {
     kanton: 'VD', erlassName: 'Tarif des dépens en matière civile (TDC)', erlassNr: 'BLV 270.11.6',
-    artikel: 'Art. 3 ff.', stand: '1.5.2019', verifiziert: 'doppelt',
+    artikel: 'Art. 4 (i.V.m. Art. 3)', stand: '1.5.2019', verifiziert: 'recherche',
     quelleUrl: 'https://www.lexfind.ch/tolv/135783/fr',
-    hinweis: 'Rahmen je Band; >5 Mio: oberer Rahmen nach Tarif. Art. 2 Abs. 2: keine dépens in der Schlichtung. Mietsachen (LJB) max CHF 1500. PRÜFEN (Audit 17.6.): Staffel steht in Art. 4 (nicht 3); Tranche 2–5 Mio lt. Normtext 20\'000–100\'000.',
+    hinweis: 'Rahmen je Band (Art. 4 TDC; Art. 3 = allgemeine Bemessungsregel). >5 Mio: 40 000 bis 2 % des Streitwerts. Art. 2 Abs. 2: keine dépens in der Schlichtung. Mietsachen (LJB) max CHF 1500. Anker/Obergrenze korrigiert (Re-Verifikation 21.6.): Staffel in Art. 4, alle Bänder amtlich bestätigt.',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 30000, minChf: 1000, maxChf: 9000 },
       { grenzeChf: 100000, minChf: 3000, maxChf: 15000 },
@@ -320,7 +344,7 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
       { grenzeChf: 1000000, minChf: 12000, maxChf: 60000 },
       { grenzeChf: 2000000, minChf: 16000, maxChf: 80000 },
       { grenzeChf: 5000000, minChf: 20000, maxChf: 100000 },
-      { grenzeChf: INF, minChf: 40000, maxChf: null, hinweis: 'über 5 Mio: oberer Rahmen nach Tarif' },
+      { grenzeChf: INF, minChf: 40000, maxProzent: 2, hinweis: 'über 5 Mio: 40 000 bis 2 % des Streitwerts (Art. 4 TDC)' },
     ] },
   },
   VS: {
@@ -363,10 +387,10 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GE: {
     kanton: 'GE', erlassName: 'Règlement fixant le tarif des frais (RTFMC, défraiement)', erlassNr: 'rsGE E 1 05.10',
-    artikel: 'Art. 84/85', stand: '1.7.2025', verifiziert: 'doppelt',
+    artikel: 'Art. 84/85', stand: '1.7.2025', verifiziert: 'recherche',
     quelleUrl: 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm',
-    hinweis: 'Défraiement nach ZH-Skala; Art. 85 ±10 %. Nicht bestimmbar: CHF 600–18 000 (Art. 86). PRÜFEN (Audit 17.6.): Art. 85 RTFMC ist eine autonome GE-Prozentstaffel ohne Verweis auf die ZH-Skala.',
-    regel: { typ: 'staffel_sockel_prozent', baender: ZH_SKALA },
+    hinweis: 'Défraiement nach der autonomen GE-Prozentstaffel (Art. 85 RTFMC); Abweichung ±10 % nach Art. 84. Nicht bestimmbar: CHF 600–18 000 (Art. 86). Etikett korrigiert (Re-Verifikation 21.6.): eigenständige GE-Staffel (kein Verweis auf die ZH-Skala), betragsgleich, Tranchen amtlich bestätigt.',
+    regel: { typ: 'staffel_sockel_prozent', baender: GE_STAFFEL },
   },
   JU: {
     kanton: 'JU', erlassName: 'Décret fixant le tarif des dépens', erlassNr: 'RSJU 188.61',

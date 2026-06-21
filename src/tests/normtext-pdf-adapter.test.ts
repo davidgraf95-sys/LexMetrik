@@ -12,6 +12,7 @@ import {
   extrahiereAllePdfArtikel,
   extrahierePdfArtikel,
   berechnePdfQuelleHash,
+  istAnhangZifferLinks,
   leseSzStand,
   leseTiStand,
   leseVdStand,
@@ -28,6 +29,41 @@ import {
   JU_DECRET_TEXT,
   JU_DECRET_PRAEAMBEL,
 } from './fixtures/pdf-kantone.ts';
+
+describe('istAnhangZifferLinks — Marginalien-Rettung für Anhang-Tarif-Ziffern (AR bGS 153.2)', () => {
+  // Positiv: linksstehende hierarchische Ziffer knapp (≤45pt) links der Body-
+  // Spalte wird gerettet (AR 8.1–8.4 fielen sonst durch den per-Seite-bodyMinX).
+  it('rettet «8.1» knapp links der Body-Spalte (bodyMinX 66, x 44)', () => {
+    expect(istAnhangZifferLinks(44, 66, '8.1')).toBe(true);
+  });
+  it('rettet die geklebte Form «8.1 Eigentum:»', () => {
+    expect(istAnhangZifferLinks(44, 66, '8.1 Eigentum:')).toBe(true);
+  });
+  it('rettet «8.3» bei tiefem bodyMinX 105 (x 83.6, 21pt links)', () => {
+    expect(istAnhangZifferLinks(83.6, 105, '8.3')).toBe(true);
+  });
+
+  // Negativ: echte Randnoten / Nicht-Ziffern bleiben verworfen.
+  it('rettet KEINE Buchstaben-Randnote («Grundpfandrechte:»)', () => {
+    expect(istAnhangZifferLinks(44, 66, 'Grundpfandrechte:')).toBe(false);
+  });
+  it('rettet NICHT, was weiter als 45pt links steht (JU-Marginalie)', () => {
+    expect(istAnhangZifferLinks(20, 135, '8.1')).toBe(false);
+  });
+  it('rettet KEINE einstufige Ziffer «8» (Abschnitts-Überschrift / Absatz)', () => {
+    expect(istAnhangZifferLinks(44, 66, '8')).toBe(false);
+  });
+  it('rettet KEINE SR-/Gesetzes-Nummer «173.8» oder «153.2» (erste Komponente > 99)', () => {
+    expect(istAnhangZifferLinks(44, 66, '173.8')).toBe(false);
+    expect(istAnhangZifferLinks(44, 66, '153.2')).toBe(false);
+  });
+  it('rettet KEINE Jahres-/Datumsform «2020.01.01»', () => {
+    expect(istAnhangZifferLinks(44, 66, '2020.01.01')).toBe(false);
+  });
+  it('rettet NICHTS, was bereits in der Body-Spalte steht (x ≥ bodyMinX−5)', () => {
+    expect(istAnhangZifferLinks(65, 66, '8.1')).toBe(false);
+  });
+});
 
 describe('PDF-Adapter SZ (§-Profil, GebO SRSZ 173.111)', () => {
   it('erkennt § 1 und § 2 als getrennte Artikel', () => {

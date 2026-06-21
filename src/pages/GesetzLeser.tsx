@@ -53,12 +53,13 @@ function fnTextMitLinks(fn: Fussnote): ReactNode {
     : t);
 }
 
-// Ein Artikel im Lesefluss (Richtung A): «Art. N» als ruhiger Anker, darunter der
-// Serif-Bestimmungstext über die volle Lesebreite. Randtitel/Übertitel stehen NICHT
-// mehr im Fluss, sondern laufend im sticky Running-Header (mehr Platz für den Text).
-function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, artRef }: {
+// Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
+// links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
+// gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
+// Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
+function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, marg }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; fussnotenAuf: boolean; intern?: InternRefs;
-  artRef?: (el: HTMLElement | null) => void;
+  marg?: string[];
 }) {
   const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
   const label = labelMitBereich(e.artikelLabel, e.artikel);
@@ -124,76 +125,89 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, a
     });
   };
   return (
-    <article id={`art-${e.artikel}`} ref={artRef}
+    <article id={`art-${e.artikel}`}
       className="group relative z-0 scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
-      {/* Artikel-Kopf: «Art. N» als ruhiger Anker. Randtitel/Übertitel wandern in
-          den sticky Running-Header → mehr Platz für den Gesetzestext. */}
-      <div className="mb-2 flex items-baseline gap-2">
-        <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
-          aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
-          className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
-        <a href={`#art-${e.artikel}`} className="num text-[1.05rem] font-bold tracking-wide text-brass-700 hover:text-brass-800 no-underline">{label}</a>{fnMarker}
+      <div className="lg:grid lg:grid-cols-[12.5rem_minmax(0,1fr)] lg:gap-x-8">
+        {/* Linke Marginalspalte: «Art. N» als ruhiger Anker, darunter die Randtitel
+            (rechtsbündig, ruhig) — die statische Druckfassungs-Randspalte statt des
+            früheren fliegenden Trackers. */}
+        <div className="mb-2 lg:mb-0 lg:pt-1 lg:text-right">
+          <div className="flex items-baseline gap-2 lg:justify-end">
+            <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
+              aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+              className="shrink-0 text-[0.65rem] text-ink-300 hover:text-brass-700">{artOffen ? '▾' : '▸'}</button>
+            <a href={`#art-${e.artikel}`} className="num text-[1.05rem] font-bold tracking-wide text-ink-900 hover:text-brass-700 no-underline">{label}</a>{fnMarker}
+          </div>
+          {artOffen && marg && marg.length > 0 && (
+            <div className="mt-1.5 space-y-0.5 font-serif text-[0.8rem] leading-snug text-ink-400">
+              {marg.map((m, i) => (
+                <div key={i} className={i === marg.length - 1 ? 'italic text-ink-500' : ''}>{m}</div>
+              ))}
+            </div>
+          )}
+          {artOffen && (
+            <div className="mt-2 flex gap-3 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+              <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
+              <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
+            </div>
+          )}
+        </div>
+        {/* Rechte Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern. */}
         {artOffen && (
-          <span className="ml-1 flex gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-            <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-            <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-400 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-          </span>
+        <div className="max-w-[46rem]">
+          <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
+            zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
+            fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
+            intern={intern}
+            className="space-y-3.5 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
+          {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
+          {verweise.length > 0 && (
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <span className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
+              {verweise.map((v) => <NormChip key={v} artikel={v} />)}
+            </div>
+          )}
+          {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
+              (globaler Schalter in der Suchleiste). */}
+          {fussnotenAuf && fussAnzeige.length > 0 && (
+            <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
+              {fussAnzeige.map((fn, i) => (
+                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
+                  {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
+                  {fnTextMitLinks(fn)}
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
         )}
       </div>
-      {/* Lesespalte: grosse Serifenschrift, hängende Messing-Absatznummern, breitere
-          Lesebreite (~46rem) seit dem Wegfall der Randspalte. */}
-      {artOffen && (
-      <div className="max-w-[44rem]">
-        <ArtikelBody bloecke={e.bloecke} artikel={e.artikel} passus={{ absatz: null }} autolink
-          zitierKontext={{ artikelLabel: label, kuerzel: erlass.kuerzel }}
-          fnProAbsatz={fussnotenAuf ? fnProAbsatz : undefined} fnProItem={fussnotenAuf ? fnProItem : undefined}
-          intern={intern}
-          className="space-y-3.5 font-serif text-[1.15rem] leading-[1.65] text-ink-800" />
-        {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
-        {verweise.length > 0 && (
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="text-[0.6rem] font-semibold uppercase tracking-[0.13em] text-ink-400 mr-1">Verweise</span>
-            {verweise.map((v) => <NormChip key={v} artikel={v} />)}
-          </div>
-        )}
-        {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar): nur auf Wunsch
-            (globaler Schalter in der Suchleiste). */}
-        {fussnotenAuf && fussAnzeige.length > 0 && (
-          <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
-            {fussAnzeige.map((fn, i) => (
-              <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
-                {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
-                {fnTextMitLinks(fn)}
-              </p>
-            ))}
-          </div>
-        )}
-      </div>
-      )}
     </article>
   );
 }
 
 // Gliederungs-Überschrift im Fliesstext: klappbar (Fedlex-analog), volle
 // Bezeichnung, nach Ebene abgestuft.
-function SektionKopf({ s, refCb, offen, onToggle }: {
-  s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void;
+function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
+  s: Sektion; refCb: (el: HTMLElement | null) => void; offen: boolean; onToggle: () => void; bereich?: string;
 }) {
-  const { pre } = romanFrei(s.label);
-  // Schlanker, ruhiger Abschnitts-Marker im Fliesstext: nur der Aufzähler
-  // («Erster Titel») als feine Overline + Trennregel auf oberen Stufen. Die
-  // ausführliche Standort-Info (Pfad + Sachtitel + Randtitel) trägt der sticky
-  // Running-Header — daher hier bewusst zurückhaltend (David: Übertitel ersetzen).
+  const { pre, rest } = romanFrei(s.label);
+  // Vollwertige Abschnitts-Überschrift im Fliesstext: feine Overline mit dem
+  // Aufzähler («Erster Abschnitt»), darunter der Sachtitel + Artikel-Bereich. Trägt
+  // wieder die Standort-Info im Text (der frühere fliegende Running-Header entfällt).
   const mt = s.ebene <= 1 ? 'mt-8 first:mt-0' : s.ebene === 2 ? 'mt-6' : s.ebene === 3 ? 'mt-5' : 'mt-4';
   const regel = s.ebene <= 1 ? 'border-t border-line pt-4' : s.ebene === 2 ? 'border-t border-line/50 pt-3' : '';
-  // Nach Tiefe abgestuft: oberste Stufen in Messing (wahrnehmbar), tiefere ruhig.
-  const stil = s.ebene <= 1 ? 'text-brass-700/80' : s.ebene === 2 ? 'text-ink-500' : 'text-ink-400';
+  // Titelgrösse nach Tiefe: oberste Stufen prominent, tiefere ruhiger.
+  const titelStil = s.ebene <= 1 ? 'text-[1.3rem]' : s.ebene === 2 ? 'text-[1.15rem]' : s.ebene === 3 ? 'text-[1.05rem]' : 'text-[0.98rem]';
   return (
     <div ref={refCb} data-sek={s.id} className={`scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] ${mt} ${regel}`}>
-      <button type="button" onClick={onToggle} aria-expanded={offen}
-        className="w-full text-left flex items-baseline gap-2 group/sek">
-        <span className="text-ink-300 text-[0.6rem] shrink-0 w-3">{offen ? '▾' : '▸'}</span>
-        <span className={`lc-overline ${stil} group-hover/sek:text-brass-700`}>{pre || s.label}</span>
+      <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
+        {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
+        <span className="mt-0.5 flex items-baseline gap-2">
+          <span className="text-ink-300 text-[0.6rem] shrink-0 w-3">{offen ? '▾' : '▸'}</span>
+          <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
+          {bereich && <span className="num shrink-0 text-[0.78rem] font-normal text-ink-400">{bereich}</span>}
+        </span>
       </button>
     </div>
   );
@@ -212,19 +226,15 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // immer offen bleibt) — beim Scrollen klappt die aktive Sektion auf, die übrige zu.
   const [tocBaum, setTocBaum] = useState<Record<string, boolean>>({});
   const aktivIdRef = useRef<string | null>(null);
-  const aktivArtRef = useRef<string | null>(null); // aktueller Artikel (Running-Header-Randtitel)
   // Während eines Klick-Sprungs den Scroll-Spy stilllegen, damit der Baum nicht
   // durch die durchscrollten Zwischen-Sektionen flackert (auf/zu).
   const jumpLock = useRef(false);
   const tocToggle = (id: string) => setTocBaum((o) => ({ ...o, [id]: !o[id] }));
-  const [aktivPfad, setAktivPfad] = useState<string[]>([]); // volle Sektions-Labels (Running-Header-Pfad)
-  const [aktivMarg, setAktivMarg] = useState<string[]>([]); // Randtitel des aktuellen Artikels (Running-Header)
   const [aktivIds, setAktivIds] = useState<string[]>([]); // Sektions-IDs (TOC-Markierung, eindeutig)
   const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
   const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
-  const artRefs = useRef<Map<string, HTMLElement>>(new Map()); // gemountete Artikel (Scroll-Spy Randtitel)
 
   useEffect(() => {
     let lebt = true;
@@ -255,25 +265,28 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     [eintraege, struktur],
   );
 
-  const sekPfadMap = useMemo(() => {
-    const map = new Map<string, string[]>();
-    const gehe = (liste: Sektion[], pfad: string[]) => {
-      for (const s of liste) {
-        // Volle Labels (inkl. Sachtitel) — der Running-Header zeigt Vorfahren als
-        // Aufzähler und die aktuelle Stufe mit Sachtitel.
-        const p = [...pfad, s.label];
-        map.set(s.id, p); gehe(s.kinder, p);
-      }
-    };
-    gehe(sektionen, []);
+  // Dokument-Position je Artikel-Token (für den Artikel-Bereich «Art. 1–10» in den
+  // Sektionsüberschriften).
+  const artIndex = useMemo(() => {
+    const map = new Map<string, number>();
+    (eintraege ?? []).forEach((e, i) => map.set(e.artikel, i));
     return map;
-  }, [sektionen]);
+  }, [eintraege]);
 
-  // Volle Randtitel je Artikel — Quelle für den Running-Header (Scroll-Spy zeigt
-  // den Randtitel des Artikels, der gerade oben steht).
-  const margVoll = useMemo(() => {
+  // Randtitel je Artikel als DELTA zum Vorartikel (amtliche Druck-/Fedlex-Manier):
+  // nur die gegenüber dem vorigen Artikel geänderten Randtitel-Stufen werden in der
+  // linken Marginalspalte gezeigt (Art. 1 alle, Art. 2 nur «2. Betreffend
+  // Nebenpunkte» …). Reine Darstellung — ersetzt den früheren fliegenden Tracker.
+  const margAnzeige = useMemo(() => {
     const map = new Map<string, string[]>();
-    for (const e of eintraege ?? []) map.set(e.artikel, struktur?.[e.artikel]?.marginalie ?? []);
+    let prev: string[] = [];
+    for (const e of eintraege ?? []) {
+      const m = struktur?.[e.artikel]?.marginalie ?? [];
+      let i = 0;
+      while (i < m.length && i < prev.length && m[i] === prev[i]) i++;
+      map.set(e.artikel, m.slice(i));
+      prev = m;
+    }
     return map;
   }, [eintraege, struktur]);
 
@@ -355,23 +368,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         const ids = pfadZu(sektionen, (s) => s.id === beste) ?? [];
         // Markierung SOFORT (nur Klassen, flüssig); das Auf-/Zuklappen (Akkordeon)
         // erst nach kurzer Scroll-Pause — sonst flackert der Baum beim Durchscrollen.
-        setAktivPfad(sekPfadMap.get(beste) ?? []);
         setAktivIds(ids);
         if (accTimer) clearTimeout(accTimer);
         accTimer = window.setTimeout(() => setTocBaum(Object.fromEntries(ids.map((id) => [id, true]))), 220);
-      }
-      // Aktueller Artikel (oberster über der Schwelle) → dessen Randtitel in den
-      // Running-Header (ersetzt die frühere Marginalspalte). Über die gecachte
-      // artRefs-Map (nur gemountete Artikel) statt einer DOM-Query pro Frame.
-      let artBeste: string | null = null;
-      let artTop = -Infinity;
-      artRefs.current.forEach((el, token) => {
-        const top = el.getBoundingClientRect().top;
-        if (top <= schwelle && top > artTop) { artTop = top; artBeste = token; }
-      });
-      if (artBeste && artBeste !== aktivArtRef.current) {
-        aktivArtRef.current = artBeste;
-        setAktivMarg(margVoll.get(artBeste) ?? []);
       }
     };
     const onScroll = () => { if (!raf) raf = window.requestAnimationFrame(mess); };
@@ -380,7 +379,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); if (accTimer) clearTimeout(accTimer); };
     // `offen` bewusst NICHT in den Deps: mess() liest nur Refs + Live-DOM, sonst
     // unnötiger Listener-Neuaufbau bei jedem Sektions-Toggle.
-  }, [sektionen, sekPfadMap, margVoll]);
+  }, [sektionen]);
 
   // Aktiven Eintrag im TOC sichtbar halten — sanft, nur den TOC-Container, erst
   // nach dem Akkordeon-Settle (tocBaum), nie die Seite scrollen.
@@ -431,10 +430,23 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const regRef = (id: string) => (el: HTMLElement | null) => {
     if (el) sekRefs.current.set(id, el); else sekRefs.current.delete(id);
   };
-  const regArt = (token: string) => (el: HTMLElement | null) => {
-    if (el) artRefs.current.set(token, el); else artRefs.current.delete(token);
-  };
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
+
+  // Artikel-Bereich «Art. 1–10» einer Sektion (inkl. Unterabschnitte) — erster und
+  // letzter Artikel in Dokument-Reihenfolge. Reine Darstellung (Sektionsüberschrift).
+  const sammleArtikel = (s: Sektion): NormSnapshot[] => [...s.artikel, ...s.kinder.flatMap(sammleArtikel)];
+  const sekBereich = (s: Sektion): string | undefined => {
+    const arts = sammleArtikel(s);
+    if (arts.length === 0) return undefined;
+    let erst = arts[0], letzt = arts[0];
+    for (const a of arts) {
+      const idx = artIndex.get(a.artikel) ?? 0;
+      if (idx < (artIndex.get(erst.artikel) ?? 0)) erst = a;
+      if (idx > (artIndex.get(letzt.artikel) ?? 0)) letzt = a;
+    }
+    if (erst === letzt) return erst.artikelLabel;
+    return `${erst.artikelLabel}–${letzt.artikelLabel.replace(/^(Art\.|§)\s*/, '')}`;
+  };
 
   // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
   const baueText = (): string => {
@@ -485,11 +497,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     const auf = istOffen(s.id, defOpen);
     return (
       <section key={s.id} className="space-y-3">
-        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} />
+        <SektionKopf s={s} refCb={regRef(s.id)} offen={auf} onToggle={() => toggle(s.id, defOpen)} bereich={sekBereich(s)} />
         {auf && (
           <div className="space-y-5">
             {s.kinder.map((k) => renderSektion(k, true))}
-            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
+            {s.artikel.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)} />)}
           </div>
         )}
       </section>
@@ -563,7 +575,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                   // Ziel-Pfad direkt setzen + Spy stilllegen → kein Flackern beim Sprung.
                   jumpLock.current = true;
                   aktivIdRef.current = id;
-                  setAktivPfad(sekPfadMap.get(id) ?? []);
                   setAktivIds(ids);
                   setTocBaum(Object.fromEntries(ids.map((x) => [x, true])));
                   // Präzise unter Header + Suchleiste positionieren (sonst zeigt es
@@ -586,9 +597,11 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         )}
 
         <div className={`group/lese ${sektionen.length > 0 && tocOffen ? '' : 'mx-auto w-full max-w-[56rem]'}`}>
-          {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem Header). */}
-          <div data-such-bar className="sticky top-16 sm:top-[6.75rem] z-[15] mb-4 space-y-2 rounded-lg bg-paper">
-            {/* Suchleiste — eigene Box. */}
+          {/* Suchleiste auf Höhe der Artikel (eigene Zeile, sticky bündig unter dem
+              Header). Der frühere fliegende Standort-Tracker entfällt — der Standort
+              ergibt sich aus der markierten Gliederung, den Sektionsüberschriften und
+              den statischen Randtiteln an den Artikeln. */}
+          <div data-such-bar className="sticky top-16 sm:top-[6.75rem] z-[15] mb-4 rounded-lg bg-paper">
             <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && !tocOffen && (
                 <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
@@ -601,46 +614,18 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
                 title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
             </div>
-            {/* Standort-Leiste — SEPARATE, ruhige Box unter der Suche: zeigt laufend
-                den Standort im Gesetz (Teil › Titel › Abschnitt — letzte Stufe mit
-                Sachtitel) und den Randtitel des aktuellen Artikels. Ersetzt
-                Marginalien + Übertitel im Lesefluss und folgt dem Scroll. */}
-            {!treffer && (aktivPfad.length > 0 || aktivMarg.length > 0) && (
-              <div className="rounded-lg border border-line/70 bg-paper-sunken px-3.5 py-2 shadow-sm text-[0.72rem] leading-snug">
-                {aktivPfad.length > 0 && (
-                  <div className="flex items-baseline gap-1.5 text-ink-400">
-                    <span aria-hidden className="shrink-0 text-[0.6rem] uppercase tracking-[0.1em] text-brass-600/80 font-semibold">Hier</span>
-                    <span className="min-w-0 flex-1 truncate">
-                      {aktivPfad.map((lab, i) => {
-                        const last = i === aktivPfad.length - 1;
-                        const seg = last ? lab : (romanFrei(lab).pre || lab);
-                        return (
-                          <span key={i}>
-                            {i > 0 && <span className="mx-1 text-ink-300">›</span>}
-                            <span className={last ? 'font-semibold text-ink-700' : ''}>{seg}</span>
-                          </span>
-                        );
-                      })}
-                    </span>
-                  </div>
-                )}
-                {aktivMarg.length > 0 && (
-                  <div className="mt-0.5 truncate font-serif italic text-ink-600">{aktivMarg.join(' · ')}</div>
-                )}
-              </div>
-            )}
           </div>
           {treffer ? (
             <div className="space-y-4">
               <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
-              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
+              {treffer.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={struktur?.[e.artikel]?.marginalie} />)}
               {treffer.length === 0 && <p className="text-body-s text-ink-500">Kein Artikel gefunden.</p>}
             </div>
           ) : (
             <div className="space-y-2">
               {ohneGliederung.length > 0 && (
                 <div className="space-y-5 mb-6">
-                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} artRef={regArt(e.artikel)} />)}
+                  {ohneGliederung.map((e) => <ArtikelLeser key={e.id} e={e} erlass={erlass} basisPfad={basisPfad} fussnoten={fn(e.artikel)} fussnotenAuf={fussnotenAuf} intern={internRefs} marg={margAnzeige.get(e.artikel)} />)}
                 </div>
               )}
               {sektionen.map((s) => renderSektion(s, true))}
