@@ -22,6 +22,30 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 22.6.2026 — PROD-DEPLOY: Rechen-Audit A/B/C + Normtext-Adapter-Fixes + Gesetz-Optik (PR #35 → main 3422eff, lexmetrik.vercel.app)
+
+David autonom-Auftrag («mach das alles bis morgen, keine Entscheidung»). Gebündelt
+gelandet + deployt (Commit `7e37210`, Merge `3422eff`, dpl_Dpr4T3…, alle Kernrouten
++ neue /gesetze-Seiten HTTP 200):
+- **Tarif-Rechen-Audit Band A** (doppelt am amtlichen Wortlaut verifiziert,
+  `verifiziert:'recherche'`): TG GK §11 → 20'000; UR-PE-Anker → Art.28 Abs.1;
+  VD-PE → Art.4 + fehlende 2%-Obergrenze; GE-PE eigene `GE_STAFFEL` (§4); GE/AI/VS
+  Schlichtung; NW Testament/Erbvertrag = Audit-Befund WAR FALSCH (Code korrekt,
+  defekter Snapshot). Befunde in `bibliothek/AUDIT-TARIF-2026-06-17.md`.
+- **Normtext-Adapter-Fixes** (+ Unit-Tests): LexWork zwei-td.number (NW §18
+  Sub-Staffel), PDF `istAnhangZifferLinks` (AR 8.1–8.4), Generator `--nur=kanton`
+  (§8-sicher, Golden gemischt).
+- **Anker/Quellen:** AR bGS 153.2 27 Anker «Art.12 Ziff.»→«Anhang Ziff.» +
+  pdf_file-quelleUrl (27/27 lösen auf); SG GebT 821.5 → versions/3849, SG GKV
+  941.12 → versions/2808. Snapshots AR/NW/SG gezielt regeneriert.
+- **UI / Gesetz-Optik:** NormText key-Fix (React-Warnung weg), GesetzLeser/
+  ArtikelBody/index.css Optik-Angleichung, ErrorBoundary/Sidebar/lazyRetry.
+- Tore alle grün (2059 Tests, Lint, Golden byte-identisch, Build 53 Routen,
+  check:normtext/zitate/vollstaendigkeit, Routen-Smoke 0 Konsolenfehler);
+  mehrfacher adversarialer Bug-Check (Band A, B-AR, C, UI, holistisch) — deploy-reif.
+- **Offen:** fachliche Abnahme David (Zeitsperre, kein Druck); C-Rest **OW 210.32**
+  (braucht olexHosts-Inventar-Zeile + Stand-Fallback); VS-173.8 stand-Nachlauf.
+
 ## Session 19.6.2026 — INTEGRATION + PROD-DEPLOY: vorlagen-design ⊕ rechtssammlung gemeinsam auf main (feat/vorlagen-design → main, lexmetrik.vercel.app)
 
 David: «mache alles fertig, gilt alles als abgenommen». Beim Deploy von
