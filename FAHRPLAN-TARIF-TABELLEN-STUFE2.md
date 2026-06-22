@@ -51,3 +51,10 @@ Daueranweisung David) → Regenerieren → Gate → UI-Sicht → Deploy nach Dav
 - **Datenmodell:** generische Mehrspalten-Tabelle (Header + Zeilen×N Zellen) statt nur {beschreibung,betrag}. Render: echte N-Spalten, Beträge rechtsbündig + gruppiereTausender.
 - **Klasse A (NW/BS/SO/VS):** ·/—-Marker → deterministischer Split in Zeilen×Felder (Label:Wert). Variable Felder (Tarif-Nr./Bezeichnung/Betrag/Gemeinde/Kanton) + Hierarchie.
 - Reihenfolge offen: ZH (David-Beispiel) vs. NW (tractabelste). Beide brauchen das gemeinsame Mehrspalten-Modell+Render zuerst.
+
+## NEUER BEFUND David (22.6.): ZH-243 NotGebV § 17 «praktisch unlesbar»
+- ZH-243 = Notariatsgebührenverordnung (NotGebV, LS 243), Text-PDF (zhlex/notes.zh.ch).
+- § 17 = riesige hierarchische Anhang-Tariftabelle (Blöcke bis 3740 Zeichen!), bei der PDF-Extraktion zu EINEM Fliesstext-Klumpen kollabiert: Ziffern (2.3.3, 1.2.4…), Beschreibungen, Ansätze (0,75‰, mind. 50, 100), Bänder (–…) alles verschmolzen. Auch art-1.x Anhang-Ziffern: «Beschreibung 100–1500» (Betrag angeklebt, kein Apostroph).
+- = EIGENE distinkte Struktur (hierarchischer Ziffer-Tarif mit Ansatz-Spalte + Querverweis-Spalte), schwieriger als ZH-215.3 §4. Braucht eigene x-aware Mehrspalten-Extraktion (Spalten: Ziffer | Beschreibung | (Querverweis) | Ansatz/Fr.). Eigener Task/Spec.
+- NICHT von aktueller Stufe 2 abgedeckt (die fixte nur ZH-215.3 §4 + LexWork-·/—-Kantone). Prod zeigt es unverändert.
+- Vermutlich weitere ZH-Tarif-PDFs ähnlich betroffen (ZH-211.11 u.a.) → ZH-Tarif-Tabellen sind ein eigener, grösserer Strang.
