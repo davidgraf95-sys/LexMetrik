@@ -5354,7 +5354,139 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Grundstückgewinnsteuer beträgt unter Berücksichtigung der Eigentumsdauer: Eigentumsdauer: bis 1 Jahr · Steuersatz in Prozenten: 36% — Eigentumsdauer: bis 2 Jahre · Steuersatz in Prozenten: 33% — Eigentumsdauer: bis 3 Jahre · Steuersatz in Prozenten: 31% — Eigentumsdauer: bis 4 Jahre · Steuersatz in Prozenten: 29% — Eigentumsdauer: bis 5 Jahre · Steuersatz in Prozenten: 28% — Eigentumsdauer: bis 6 Jahre · Steuersatz in Prozenten: 27% — Eigentumsdauer: bis 7 Jahre · Steuersatz in Prozenten: 26% — Eigentumsdauer: bis 8 Jahre · Steuersatz in Prozenten: 25% — Eigentumsdauer: bis 9 Jahre · Steuersatz in Prozenten: 24% — Eigentumsdauer: bis 10 Jahre · Steuersatz in Prozenten: 23% — Eigentumsdauer: bis 11 Jahre · Steuersatz in Prozenten: 22% — Eigentumsdauer: bis 12 Jahre · Steuersatz in Prozenten: 21.5% — Eigentumsdauer: bis 13 Jahre · Steuersatz in Prozenten: 21% — Eigentumsdauer: bis 14 Jahre · Steuersatz in Prozenten: 20.5% — Eigentumsdauer: bis 15 Jahre · Steuersatz in Prozenten: 20% — Eigentumsdauer: bis 16 Jahre · Steuersatz in Prozenten: 19.5% — Eigentumsdauer: bis 17 Jahre · Steuersatz in Prozenten: 19% — Eigentumsdauer: bis 18 Jahre · Steuersatz in Prozenten: 18.5% — Eigentumsdauer: bis 19 Jahre · Steuersatz in Prozenten: 18% — Eigentumsdauer: bis 20 Jahre · Steuersatz in Prozenten: 17.5% — Eigentumsdauer: bis 21 Jahre · Steuersatz in Prozenten: 17% — Eigentumsdauer: bis 22 Jahre · Steuersatz in Prozenten: 16.5% — Eigentumsdauer: bis 23 Jahre · Steuersatz in Prozenten: 16% — Eigentumsdauer: bis 24 Jahre · Steuersatz in Prozenten: 15.5% — Eigentumsdauer: bis 25 Jahre · Steuersatz in Prozenten: 15% — Eigentumsdauer: bis 26 Jahre · Steuersatz in Prozenten: 14.5% — Eigentumsdauer: bis 27 Jahre · Steuersatz in Prozenten: 14% — Eigentumsdauer: bis 28 Jahre · Steuersatz in Prozenten: 13.5% — Eigentumsdauer: bis 29 Jahre · Steuersatz in Prozenten: 13% — Eigentumsdauer: bis 30 Jahre · Steuersatz in Prozenten: 12.5% — Eigentumsdauer: mehr als 30 Jahre · Steuersatz in Prozenten: 12%"
+          "text": "Die Grundstückgewinnsteuer beträgt unter Berücksichtigung der",
+          "mehrspaltig": {
+            "kopf": [
+              "Eigentumsdauer",
+              "Steuersatz in Prozenten"
+            ],
+            "zeilen": [
+              [
+                "Eigentumsdauer: bis 1 Jahr",
+                "36%"
+              ],
+              [
+                "bis 2 Jahre",
+                "33%"
+              ],
+              [
+                "bis 3 Jahre",
+                "31%"
+              ],
+              [
+                "bis 4 Jahre",
+                "29%"
+              ],
+              [
+                "bis 5 Jahre",
+                "28%"
+              ],
+              [
+                "bis 6 Jahre",
+                "27%"
+              ],
+              [
+                "bis 7 Jahre",
+                "26%"
+              ],
+              [
+                "bis 8 Jahre",
+                "25%"
+              ],
+              [
+                "bis 9 Jahre",
+                "24%"
+              ],
+              [
+                "bis 10 Jahre",
+                "23%"
+              ],
+              [
+                "bis 11 Jahre",
+                "22%"
+              ],
+              [
+                "bis 12 Jahre",
+                "21.5%"
+              ],
+              [
+                "bis 13 Jahre",
+                "21%"
+              ],
+              [
+                "bis 14 Jahre",
+                "20.5%"
+              ],
+              [
+                "bis 15 Jahre",
+                "20%"
+              ],
+              [
+                "bis 16 Jahre",
+                "19.5%"
+              ],
+              [
+                "bis 17 Jahre",
+                "19%"
+              ],
+              [
+                "bis 18 Jahre",
+                "18.5%"
+              ],
+              [
+                "bis 19 Jahre",
+                "18%"
+              ],
+              [
+                "bis 20 Jahre",
+                "17.5%"
+              ],
+              [
+                "bis 21 Jahre",
+                "17%"
+              ],
+              [
+                "bis 22 Jahre",
+                "16.5%"
+              ],
+              [
+                "bis 23 Jahre",
+                "16%"
+              ],
+              [
+                "bis 24 Jahre",
+                "15.5%"
+              ],
+              [
+                "bis 25 Jahre",
+                "15%"
+              ],
+              [
+                "bis 26 Jahre",
+                "14.5%"
+              ],
+              [
+                "bis 27 Jahre",
+                "14%"
+              ],
+              [
+                "bis 28 Jahre",
+                "13.5%"
+              ],
+              [
+                "bis 29 Jahre",
+                "13%"
+              ],
+              [
+                "bis 30 Jahre",
+                "12.5%"
+              ],
+              [
+                "mehr als 30 Jahre",
+                "12%"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -5369,7 +5501,7 @@
       "quelleUrl": "https://gesetze.nw.ch/app/de/texts_of_law/521.1",
       "abgerufen": "2026-06-22",
       "fassungsToken": "e76c60283e85206c6a7cdf5bb5fc1ab1",
-      "sha": "3d575c07c00a48c930bde6dc4797e90c64a90bea2c23d5ff129e1bdc016b3781"
+      "sha": "51857ae876981f7dd25e53298c2607bac327a8bdf4782487733aa9d2a205850f"
     },
     {
       "id": "kanton/NW/521.1/art_152",

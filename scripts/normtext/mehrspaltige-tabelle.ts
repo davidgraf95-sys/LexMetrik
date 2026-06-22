@@ -117,3 +117,113 @@ export function extrahiereMehrspaltig(
 
   return { kopf: kopfSet, zeilen };
 }
+
+/**
+ * Reichert ein Blöcke-Array um `mehrspaltig` an (in-place, Stufe 2).
+ *
+ * Algorithmus je Block:
+ *  1. Enthält `block.text` kein ` — ` oder ` · ` → unverändert (schneller Guard).
+ *  2. `extrahiereMehrspaltig(block.text)` → null → unverändert (§1).
+ *  3. Tabelle gefunden (≥2 Zeilen):
+ *     a. Leite den kanonischen Spalte-0-Label aus einer SAUBEREN Zeile (Index ≥1)
+ *        ab — die erste Zeile kann durch einen Einleitungssatz kontaminiert sein.
+ *     b. Suche den ERSTEN Auftritt von «<label>: » im Originaltext.
+ *     c. Alles DAVOR = Einleitungssatz → bleibt in `block.text`.
+ *        Alles AB dort = Tabellen-Teil → `extrahiereMehrspaltig` erneut → `block.mehrspaltig`.
+ *     d. Kann kein kanonischer Label gefunden oder der Tabellen-Teil nicht geparst
+ *        werden → Fallback: `block.text = ''`, `block.mehrspaltig` = Parse des ganzen Texts.
+ *     e. Würde der Schnitt die Tabelle leeren → Fallback wie (d).
+ *  4. `block.mehrspaltig` hat Vorrang über `block.tabelle` (Render-Reihenfolge).
+ *
+ * @param bloecke  Mutable Blöcke-Array des Artikels (z.B. aus parseSegment).
+ */
+export function reichereMehrspaltig(
+  bloecke: Array<{
+    absatz: string | null;
+    text: string;
+    items?: Array<{ marke: string; text: string }>;
+    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
+  }>,
+): void {
+  for (const block of bloecke) {
+    const text = block.text;
+
+    // Schneller Guard: beide Marker müssen vorhanden sein
+    if (!text.includes(' — ') || !text.includes(' · ')) continue;
+
+    // Erster Parse-Versuch auf dem ganzen Text
+    const ganz = extrahiereMehrspaltig(text);
+    if (ganz === null) continue; // §1: nicht parsebar → unverändert
+
+    // Mindestens 2 Zeilen nötig (Guard redundant aber explizit)
+    if (ganz.zeilen.length < 2) continue;
+
+    // Einleitungssatz-Erkennung: kanonischen Spalte-0-Label aus einer SAUBEREN
+    // späteren Zeile (Index ≥1) ableiten — die erste Zeile kann durch einen
+    // Einleitungssatz kontaminiert sein (z.B. NW «... berechnen: Leistungslohn-
+    // band: 1» → der Parser sieht das erste `: ` und macht «... berechnen» zum
+    // Label der Spalte 0). Deshalb parsen wir die zweite ` — `-Zeile direkt.
+    //
+    // Vorgehen:
+    //  1. Split am ersten ` — ` → alles NACH dem ersten Trennstrich = «Rest».
+    //  2. «Rest» an ` · ` splitten → erste Zelle der zweiten Zeile.
+    //  3. Diese Zelle an erstem `: ` → kanonischer Label der Spalte 0.
+    //  4. ERSTEN Auftritt von «<label>: » im Originaltext suchen.
+    //  5. Schnitt durchführen; Kandidat nochmals parsen (sauber).
+    //  6. Fallback wenn Label nicht gefunden oder Kandidat nicht parsebar.
+
+    let label0 = '';
+    const ersterTrennstrich = text.indexOf(' — ');
+    if (ersterTrennstrich !== -1) {
+      const restNachTrennstrich = text.slice(ersterTrennstrich + 3);
+      // Erste Zelle der zweiten Zeile
+      const ersteZelleZeile2 = restNachTrennstrich.split(' · ')[0].trim();
+      const doppelIdx = ersteZelleZeile2.indexOf(': ');
+      if (doppelIdx !== -1) {
+        label0 = ersteZelleZeile2.slice(0, doppelIdx).trim();
+      }
+      // Falls keine `: ` in Zeile 2 Zelle 0 (Tarif-Nr.-Stil) → label0 bleibt ''.
+      // In diesem Fall versuchen wir TARIF_NR_LABEL als Marker:
+      if (!label0 && TARIF_NR_RE.test(ersteZelleZeile2)) {
+        // Bare number am Anfang → keine echte Spalte 0 mit Label.
+        // Kein Intro-Split nötig: die Tabelle beginnt mit einer Nummer.
+        // Fallback: Text leer, ganz als mehrspaltig
+        block.text = '';
+        block.mehrspaltig = ganz;
+        continue;
+      }
+    }
+
+    // Suche den ERSTEN Auftritt von «<label>: » im Text
+    let intro = '';
+    let tabellePart = text;
+
+    if (label0) {
+      const marker = `${label0}: `;
+      const idx = text.indexOf(marker);
+      if (idx > 0) {
+        // Einleitungssatz vorhanden (etwas vor dem ersten Marker-Auftritt)
+        const kandidat = text.slice(idx);
+        const parsedKandidat = extrahiereMehrspaltig(kandidat);
+        if (parsedKandidat !== null && parsedKandidat.zeilen.length >= 2) {
+          intro = text.slice(0, idx).trim();
+          tabellePart = kandidat;
+        }
+        // Wenn Kandidat nicht parsebar → Fallback (tabellePart = ganzer Text, intro = '')
+      }
+      // Wenn idx === 0 → kein Einleitungssatz (Label gleich am Anfang)
+    }
+
+    // Finaler Parse
+    const parsed = tabellePart === text ? ganz : extrahiereMehrspaltig(tabellePart);
+    if (parsed === null || parsed.zeilen.length < 2) {
+      // Fallback: ganzen Text als Tabelle (kein Intro-Split)
+      block.text = '';
+      block.mehrspaltig = ganz;
+      continue;
+    }
+
+    block.text = intro;
+    block.mehrspaltig = parsed;
+  }
+}

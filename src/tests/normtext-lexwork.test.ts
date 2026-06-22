@@ -245,23 +245,31 @@ describe('BUG A2 — Token «1_a» findet Artikelnummer «1a»', () => {
   });
 });
 
-describe('TABELLEN — enumeration_tabular wird als lesbarer Text erfasst', () => {
-  it('hängt die Staffel-Zeilen mit getrennten Zellen an den Einleitungs-Absatz', () => {
+describe('TABELLEN — enumeration_tabular → Stufe 2 mehrspaltig (Task 5)', () => {
+  // Task 5 (22.6.2026): reichereMehrspaltig wird in parseSegment aufgerufen und
+  // verschiebt ·/—-Tabellen-Text in block.mehrspaltig (deklarierte fachliche Änderung).
+  // Einleitungssatz bleibt in block.text; Zell-Inhalte verbatim in mehrspaltig.zeilen.
+  it('verschiebt Staffel-Zeilen in mehrspaltig, behält Einleitungssatz in text', () => {
     const a = extrahiereLexWorkArtikel(LEXWORK_ZG1617_TABELLE_XHTML, '11');
     expect(a).not.toBeNull();
     expect(a!.bloecke).toHaveLength(1);
-    const text = a!.bloecke[0].text;
-    // Einleitungssatz bleibt erhalten.
-    expect(text).toContain('beträgt die Entscheidgebühr:');
-    // Staffel-Zeilen mit Spaltenbeschriftung, Zellen sauber getrennt.
-    expect(text).toContain('Streitwert in Franken: bis 1000');
-    expect(text).toContain('Gebühr in Franken: von 100 bis 200');
-    expect(text).toContain('über 1000 bis 3000');
-    expect(text).toContain('von 220 bis 540');
-    expect(text).toContain('jedoch höchstens % des Streitwerts: 22');
-    // Kein zusammengeklebter Text (Zellen nicht direkt aneinander).
-    expect(text).not.toContain('bis 1000von');
-    expect(text).not.toContain('200über');
+    const b = a!.bloecke[0];
+    // Einleitungssatz bleibt in text.
+    expect(b.text).toContain('beträgt die Entscheidgebühr:');
+    // Staffel-Zeilen sind jetzt in mehrspaltig (nicht mehr in text).
+    expect(b.mehrspaltig).toBeDefined();
+    expect(b.mehrspaltig!.kopf).toEqual([
+      'Streitwert in Franken',
+      'Gebühr in Franken',
+      'jedoch höchstens % des Streitwerts',
+    ]);
+    // Erste Zeile: bis 1000, von 100 bis 200, leere 3. Spalte
+    expect(b.mehrspaltig!.zeilen[0]).toEqual(['bis 1000', 'von 100 bis 200', '']);
+    // Zweite Zeile: über 1000 bis 3000, von 220 bis 540, 22
+    expect(b.mehrspaltig!.zeilen[1]).toEqual(['über 1000 bis 3000', 'von 220 bis 540', '22']);
+    // Kein Tabellen-Text mehr im text-Feld.
+    expect(b.text).not.toContain('Streitwert in Franken');
+    expect(b.text).not.toContain('bis 1000');
   });
 });
 

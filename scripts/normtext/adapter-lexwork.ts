@@ -30,12 +30,15 @@
  */
 
 import { dekodiereEntities } from './html-entities.ts';
+import { reichereMehrspaltig } from './mehrspaltige-tabelle.ts';
 
 export interface LexArtikel {
   bloecke: Array<{
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
+    /** Stufe 2: Mehrspalten-Tabelle (NW/BS/SO/VS/ZG/TG ·/—-Text). */
+    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>;
 }
 
@@ -334,6 +337,11 @@ function parseSegment(segment: string): LexArtikel {
       }
     }
   }
+
+  // Stufe 2: ·/—-Tabellen in mehrspaltig-Blöcke anreichern (NW/BS/SO/VS/ZG/TG).
+  // Idempotent: nur wenn extrahiereMehrspaltig ≥2 Zeilen liefert; alle anderen
+  // Blöcke bleiben byte-gleich. Einleitungssatz wird im text-Feld bewahrt.
+  reichereMehrspaltig(bloecke);
 
   return { bloecke };
 }

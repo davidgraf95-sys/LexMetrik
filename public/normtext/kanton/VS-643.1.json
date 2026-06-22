@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/VS/643.1/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "cb7b3ade9a354dd8f9ba20f9e395b93b87873abdada142e3d3a7ac73528ec3dc"
     },
@@ -43,7 +43,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "fe54ff5fb42aefebb37aa9ded8847a99e648ad8885a1bec5bfcde7c3a7e9c9e8"
     },
@@ -66,7 +66,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "ae1d1d72f2a62810a7b7d80f99ede05cfe926a29d973afc94d589c7d80278336"
     },
@@ -89,7 +89,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "762d8f40211e069ca957ae1687291ae2995085403e56f969d3652555295adbe1"
     },
@@ -108,7 +108,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "781ecfadc33ad0d4bd651fd9d9db545fdd2ec1ac282e2c202b6670563374d1cb"
     },
@@ -195,7 +195,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "56589f9931e5c60e1828654d60cb25cf78df9e94db3a0c162142b3245ebbe993"
     },
@@ -228,7 +228,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "1d4a44b886e5b7fde87ab61fb7491a158d5c17a95ba9832ad2386dae373f7a79"
     },
@@ -261,7 +261,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "b7bb7f3c9fe59c394e81b242d9b9584fd3177ef411fdc7783f1f22735c318d07"
     },
@@ -280,7 +280,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "a77d89cc21f9bba3fbbba1d15b437d40707b9d61c9798ad72698f53582981403"
     },
@@ -303,7 +303,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "4a2b0078d677f8f0bd8964b60ec3300e2e9e36f16937111d2b5cce29e4010842"
     },
@@ -326,6 +326,18 @@
             {
               "marke": "b",
               "text": "pour les usufruits, les droits d'habitation et autres droits semblables:"
+            },
+            {
+              "marke": "1",
+              "text": "si un montant unique a été convenu, ce montant est considéré comme contre-prestation,"
+            },
+            {
+              "marke": "2",
+              "text": "si des prestations périodiques ont été convenues, la somme de toutes les prestations périodiques à verser est considérée comme contre-prestation,"
+            },
+            {
+              "marke": "3",
+              "text": "lorsque des prestations périodiques ont été convenues jusqu'au décès de l'ayant droit, la prestation annuelle est multipliée par le nombre des années d'espérance de vie selon les tables de calcul de rentes (taux de rente de 4%); la prestation annuelle s'élève dans tous les cas à au moins quatre pour cent de la valeur cadastrale de l'immeuble;"
             },
             {
               "marke": "c",
@@ -392,9 +404,9 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
-      "sha": "29679a9acb4236ff8b686e0f0d924cdf456ab88585e4fc2f5fbd9cdd1c817293"
+      "sha": "80e57558272a022c2d939cb98f75cfd274a90218664ce8ef4cb0cd3e11952e92"
     },
     {
       "id": "kanton/VS/643.1/art_12",
@@ -411,7 +423,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "e7b9d5e2b812873dd3dc8c2b059e7432dba2f2f9445c379de0c8128be6e95698"
     },
@@ -430,7 +442,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "a2f5ea827b0549474c946e2b03274134bfd2cd0b0fd2eadc80387a8931946c90"
     },
@@ -471,7 +483,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "14b38f2e7a6d96e0540819e58385474e35d3f85afe5bc67871b37e0a33fd226b"
     },
@@ -498,7 +510,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "529f51ce2d86b3137344a84b785034711a5ae908e3f6b6e6770c23018d3497a8"
     },
@@ -531,7 +543,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "2db5912f7a9a312bca222d512afff585955b481376ced01d7211f852d9b3eb2c"
     },
@@ -650,7 +662,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "410c2b27c21a61164bc0782a1ce808313ffe62549e01dfd2b4a67dd9d80498a8"
     },
@@ -679,7 +691,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "f609b8349745cbe01a44f40fd6b597b319db11811f9967ec4e4b7bdba176ce59"
     },
@@ -698,7 +710,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "cff861bf3d07113790bc2155742273754d726e45cb5ddf6d8374c63ac755dd43"
     },
@@ -735,7 +747,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "90678688d60924663624aa3361d438ae2ba504cd730de12e7dc9f676adc694a2"
     },
@@ -754,7 +766,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "db0b6672ace75df08c98dbb2f32c58c33a5202085356e623f136a9aca4bd1c1e"
     },
@@ -773,7 +785,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "8a202337326a1ed3c8a77538ca0beb4bdcfb7c91770ecf3b66aecc6685d007c1"
     },
@@ -806,7 +818,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "61603782dad6209c175af9f4886ce78e4ffc52f660a6db13c0340a127fbfd06b"
     },
@@ -833,7 +845,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "e52c01b68c61098bb0d597c2f5e4256607580ad0ad2e83d45d68fdef24267193"
     },
@@ -856,7 +868,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "50bb5a53e99d79afbde6a73798326a06795a74f850e1bd7230f2db2c9e21f861"
     },
@@ -887,7 +899,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "e921b3dcefebb467d7a92d51da40702a0dee37728d3583a33731fc2b1e952bcc"
     },
@@ -906,7 +918,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "cf5d6d2d5cc6f0fc2715453755b742ba458e1a27959e77eefcd2edf6147f6d84"
     },
@@ -929,7 +941,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "80c71a1e2cbf65104fb1e3ada2c9875a78b84f9c0ae0b6a3fc51bfb7611d7310"
     },
@@ -952,7 +964,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "d99ebf47ef524088d816897c5203e8d006b7ffb832b73706c5df6b13e5e4e5f2"
     },
@@ -975,7 +987,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "951e51377ee4c192a29f1057165228c4c0a4e51e54e31835777292f2073d6d04"
     },
@@ -998,7 +1010,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "4ce88f55c7833dc8a5b1b3534da3bf3a056e343d14f85e5415f029a80df3193c"
     },
@@ -1017,7 +1029,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "39c0c12bcd2107bd174061bfb30e1399a8f17b42dbdbbfc771e18c6a9dbe26bd"
     },
@@ -1036,7 +1048,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "9ae415c5f70a355ae850e74c4fa1526f42d9a2a3527b6f6d55b536fe58868a34"
     },
@@ -1059,7 +1071,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "726aeb0e7ef7e480dfe46d8088c84a7a3f6e58edcd3cd42b217c0ae18096b523"
     },
@@ -1082,7 +1094,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "fc8f74a4e65a64a841f039fcf7e1932233b08865d141f8877f437fe14f33bdfa"
     },
@@ -1101,7 +1113,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "b792c9d92f32821ba0fd2a19af995eb5935e6fa7f89799b5f36e4b260c4d718e"
     },
@@ -1120,7 +1132,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "7d80d50f4df501a172aee31bbd3d82bb5c49fc61dfe91d30138e26c5dd5312c1"
     },
@@ -1139,7 +1151,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "7d644a0c627845c1720649713bcecf396f8baf9e9962c356ea1d17f857b27498"
     },
@@ -1158,7 +1170,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "eca0050cf04d2b182fdbdc8cd52cdc03b6f8ab8a15a4eb516e422d671192f66b"
     },
@@ -1181,7 +1193,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "2f9a6ad314f2724a3d4310f5ead38f4d84d905bc7a9b8077b0250519c9fb6651"
     },
@@ -1200,7 +1212,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "4f77549add780077ce56599e4b9613527f56b85410bad249f6c093d12ada1c22"
     },
@@ -1223,7 +1235,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "7538030c16feaca7f9c294b232aa7f10645d4b0a3e9a87e2a3ecaa56cfa57b18"
     },
@@ -1242,7 +1254,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "1266118a65fbdefe90b20033a87dccabe75a30ac855c5251441593a10ae10bfb"
     },
@@ -1265,7 +1277,7 @@
       ],
       "stand": "2013-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/643.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "2da3e4fa094479dfa77afac64f50bc37",
       "sha": "87449a996a12315c06ca91d2bbb01e40a0b23fbc99e38187a7972ee31e3f1e6f"
     }

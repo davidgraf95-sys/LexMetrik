@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/TG/176.31/art_1",
@@ -34,7 +34,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "30618e12f2bf601d687d70f36853c53cbb73d6321ff7d2760485b258cd4fbe12"
     },
@@ -67,7 +67,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "f1cc9e7d842e0575f4043f2ddf5b617a172d8b3d8f33b30ce0167c3efb23df40"
     },
@@ -124,7 +124,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "d76bbfd705204fed7ced51c66cd3de8fd4b4156ed2786aa3880eb586e27b8d37"
     },
@@ -143,7 +143,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "913e4681b1398d8157399e84bb2da73c67412f8a5f282938c0eede9085f7fc8b"
     },
@@ -157,7 +157,47 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für die Führung eines Zivilprozesses im ordentlichen und vereinfachten Verfahren vor erster oder einziger Instanz beträgt das Grundhonorar bei einem Streitwert von Streitwert: bis Fr. 2'000 · Grundhonorar: Fr. 200 bis Fr. 1'000 — Streitwert: Fr. 2'000 bis Fr. 5'000 · Grundhonorar: Fr. 1'000 bis Fr. 2'000 — Streitwert: Fr. 5'000 bis Fr. 10'000 · Grundhonorar: Fr. 2'000 bis Fr. 3'000 — Streitwert: Fr. 10'000 bis Fr. 30'000 · Grundhonorar: Fr. 3'000 bis Fr. 5'000 — Streitwert: Fr. 30'000 bis Fr. 100'000 · Grundhonorar: Fr. 5'000 bis Fr. 10'000 — Streitwert: Fr. 100'000 bis Fr. 500'000 · Grundhonorar: Fr. 10'000 bis Fr. 30'000 — Streitwert: Fr. 500'000 bis Fr. 2'000'000 · Grundhonorar: Fr. 30'000 bis Fr. 60'000 — Streitwert: über Fr. 2'000'000 · Grundhonorar: Fr. 60'000 bis 3 % des Streitwerts"
+          "text": "Für die Führung eines Zivilprozesses im ordentlichen und vereinfachten Verfahren vor erster oder einziger Instanz beträgt das Grundhonorar bei einem Streitwert von",
+          "mehrspaltig": {
+            "kopf": [
+              "Streitwert",
+              "Grundhonorar"
+            ],
+            "zeilen": [
+              [
+                "bis Fr. 2'000",
+                "Fr. 200 bis Fr. 1'000"
+              ],
+              [
+                "Fr. 2'000 bis Fr. 5'000",
+                "Fr. 1'000 bis Fr. 2'000"
+              ],
+              [
+                "Fr. 5'000 bis Fr. 10'000",
+                "Fr. 2'000 bis Fr. 3'000"
+              ],
+              [
+                "Fr. 10'000 bis Fr. 30'000",
+                "Fr. 3'000 bis Fr. 5'000"
+              ],
+              [
+                "Fr. 30'000 bis Fr. 100'000",
+                "Fr. 5'000 bis Fr. 10'000"
+              ],
+              [
+                "Fr. 100'000 bis Fr. 500'000",
+                "Fr. 10'000 bis Fr. 30'000"
+              ],
+              [
+                "Fr. 500'000 bis Fr. 2'000'000",
+                "Fr. 30'000 bis Fr. 60'000"
+              ],
+              [
+                "über Fr. 2'000'000",
+                "Fr. 60'000 bis 3 % des Streitwerts"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -174,9 +214,9 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
-      "sha": "42818354293ff5c310b40f17a21eda9e40fb701890114659fd405548c7e87687"
+      "sha": "c43b3104f117073e2000c4a1680cc87f04498fbe0469f3fc8837c4a8d06caae1"
     },
     {
       "id": "kanton/TG/176.31/art_6",
@@ -197,7 +237,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "2b89ede1592a77ecb3a2945c7db3e7a4da0ddde8ae133508ab9d5474e6a86df1"
     },
@@ -276,7 +316,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "1abaad30818b0ce5ad195ddc00bd8bc3fc95f54569b6d2f9460f70da079cd2f5"
     },
@@ -295,7 +335,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "1d0a6f39cceefc55a8f8b02b894cdf47bcb77ad6f6215668c3f8e60111daea67"
     },
@@ -314,7 +354,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "f6db847449650e84849fdfd5294f26839d6cb0d410a7685e37519fa72c011394"
     },
@@ -337,7 +377,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "0fc82b7539d9cd25370e4474e8a60bdb387dc6faf636a43c9562635662ac898b"
     },
@@ -386,7 +426,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "c1d19e777da43fe277f44860ff88536c25b80dd0a896fa9e1ce15a639bcf5b9d"
     },
@@ -405,7 +445,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "1f91eb6cf555daadffe7e983a383b79b35bb60570a4b7f242e572cfa556bb921"
     },
@@ -428,7 +468,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "b6cc09755dc69ce2052107d2b3027591a9b3d4ef46a827c1060fc2da3827438a"
     },
@@ -447,7 +487,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "e8f34d0a9df83e6cfc5dc5b1f2f124937699601552417236c22c545dbb598f92"
     },
@@ -470,7 +510,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "89b14792e86e3444c309be39950347f312250592f71e73aa31c1e34457f70dac"
     },
@@ -505,7 +545,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "f8e375a667803bc9665731011fdcdb3beefbf792108a78115ebd11f293fdc0a7"
     },
@@ -524,7 +564,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/176.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "347f5cccf1c4ef09aa51b9de116a5574",
       "sha": "345360c3646ce613b9fb4d7440ca84b300806333575c756d603709e6cf2966f8"
     }

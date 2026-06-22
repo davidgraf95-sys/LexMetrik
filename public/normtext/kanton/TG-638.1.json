@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/TG/638.1/art_1",
@@ -28,7 +28,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "ff6cfe90e72ee0073ecd21d5dc0d6e88994b2999cba9a9cc7e4214baaf6081c7"
     },
@@ -55,7 +55,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "244d6943e066f9f6b0c2250ea1d3cb5163e9349402c136bd2e281869d79a28ca"
     },
@@ -82,7 +82,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "33096526e8d9c95e09ce5dce26b198e766680bcc9890c38b93095df7d4badd36"
     },
@@ -109,7 +109,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "a7fcc11aa361c905cb883fe914efa10abed465449ce84db5d1d8c3d636b4396f"
     },
@@ -128,7 +128,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "3017d2268b1b5745cc6a27fa70bd0c6f031b1a766188cc5edb6cb9143ecaf136"
     },
@@ -151,7 +151,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "1a7a658da02a363fd6e6cbd4443c6597fb9c61691f11fa5a65abfc6386ab9c5e"
     },
@@ -188,7 +188,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "318f344d1028720f77454833d19d32b1533b179b5f0f7e18f55ef444d320dc6f"
     },
@@ -207,7 +207,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "6d7f7aeaf1cce1b0fb53bcab148ef23fa20a85ddc4c47370b15865e3697c71ad"
     },
@@ -228,6 +228,26 @@
               "text": "Schlichtungsverhandlung bei einem Streitwert"
             },
             {
+              "marke": "1",
+              "text": "bis Fr. 2'000 Fr. 100 bis Fr. 150"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 2'000 bis Fr. 8'000 Fr. 120 bis Fr. 200"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 8'000 bis Fr. 30'000 Fr. 160 bis Fr. 300"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 30'000 bis Fr. 100'000 Fr. 240 bis Fr. 400"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 100'000 Fr. 320 bis Fr. 500"
+            },
+            {
               "marke": "2",
               "text": "Schlichtungsverhandlung ohne bestimmten Streitwert Fr. 100 bis Fr. 500"
             },
@@ -244,9 +264,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "88db8f03bcde1349b18296a997ac385ae1c72327f731af2a0a6f0511458f9892"
+      "sha": "ad5bf966450d960f6a6fa88817f2a3e32297339d2fa6b1b7188b0d25043dea91"
     },
     {
       "id": "kanton/TG/638.1/art_8",
@@ -289,7 +309,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "4cb2aec6297322c6b40482254fd7aae50d8d1e704b01598bdc9d6c7853d6b945"
     },
@@ -322,7 +342,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "8daf33ba77b3445e32a8960cb8aae0dd2ff154c1afef9695e019fb5f50fb6eea"
     },
@@ -343,6 +363,22 @@
               "text": "Endentscheide in Zivilsachen mit bestimmbarem Streitwert:"
             },
             {
+              "marke": "1",
+              "text": "von Fr. 30'000 bis Fr. 100'000 Fr. 1'000 bis Fr. 4'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 100'000 bis Fr. 500'000 Fr. 2'000 bis Fr. 8'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 500'000 bis Fr. 1'000'000 Fr. 7'000 bis Fr. 15'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 1'000'000 1 bis 3 % des Streitwertes"
+            },
+            {
               "marke": "2",
               "text": "Endentscheid in Zivilsachen ohne bestimmbaren Streitwert, soweit nicht nach den streitigen vermögensrechtlichen Ansprüchen die Ansätze von Ziff. 1 anwendbar sind Fr. 300 bis Fr. 20'000"
             },
@@ -359,9 +395,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "2949a664e665cc6ab3164757090a5bef77754541afddb22b081aa6511903c3b1"
+      "sha": "bda3cbb8e8a77ab5aef2adbd1677900e31180e671c56c417f0e35189033a3397"
     },
     {
       "id": "kanton/TG/638.1/art_13",
@@ -378,6 +414,30 @@
             {
               "marke": "1",
               "text": "Endentscheide in Zivilsachen mit bestimmbarem Streitwert:"
+            },
+            {
+              "marke": "1",
+              "text": "von Fr. 2'000 bis Fr. 8'000 Fr. 500 bis Fr. 1'500"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 8'000 bis Fr. 30'000 Fr. 1'000 bis Fr. 3'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 30'000 bis Fr. 100'000 Fr. 1'500 bis Fr. 4'500"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 100'000 bis Fr. 500'000 Fr. 3'000 bis Fr. 12'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 500'000 bis Fr. 1'000'000 Fr. 10'000 bis Fr. 20'000"
+            },
+            {
+              "marke": "1",
+              "text": "über Fr. 1'000'000 1,5 bis 4,5 % des Streitwertes"
             },
             {
               "marke": "2",
@@ -410,9 +470,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "1961c02baa7c6c89e14550100e722f790805facc16d6531d6ecf0b032d6bd884"
+      "sha": "f3b20933eba06a91f44458af04b973798342a9a187650306dabd17780c4a9314"
     },
     {
       "id": "kanton/TG/638.1/art_14",
@@ -433,6 +493,30 @@
             {
               "marke": "2",
               "text": "Entscheid über Klagen mit bestimmbarem Streitwert:"
+            },
+            {
+              "marke": "2",
+              "text": "bis Fr. 8'000 Fr. 500 bis Fr. 1'500"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 8'000 bis Fr. 30'000 Fr. 1'000 bis Fr. 3'000"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 30'000 bis Fr. 100'000 Fr. 1'500 bis Fr. 4'500"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 100'000 bis Fr. 500'000 Fr. 3'000 bis Fr. 12'000"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 500'000 bis Fr. 1'000'000 Fr. 10'000 bis Fr. 20'000"
+            },
+            {
+              "marke": "2",
+              "text": "über Fr. 1'000'000 1,5 bis 4,5 % des Streitwertes"
             },
             {
               "marke": "3",
@@ -463,9 +547,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
-      "sha": "04a494d96b84ecf7e3cefaafe589d10266639cced7fa60bdfd2377a72bb84036"
+      "sha": "2cd0dd69c43d0a94c448b1f97d34b48794bb206d4cdbd61d3360886d57094708"
     },
     {
       "id": "kanton/TG/638.1/art_15",
@@ -482,7 +566,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "5806ff837c5c184ed430fffb6b9ba10a331461b981477183299167df3dac5306"
     },
@@ -501,7 +585,7 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "6f2f004c1f2a618b6105e7849f26921f",
       "sha": "347206a5985b5d34cef22c194641d6cdb4506ac9d6388a4eaa266da71b19ab01"
     }
