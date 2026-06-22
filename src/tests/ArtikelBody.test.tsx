@@ -193,6 +193,31 @@ describe('TarifTabelle (block.tabelle → 2-Spalten-Tarif)', () => {
     expect(out).toContain('10.— bis 50.—');
   });
 
+  it('betrag ≥4 Stellen bekommt Schweizer Apostroph (§3 — Stufe-2-D)', () => {
+    const bloeckeTabelle: NormSnapshot['bloecke'] = [{
+      absatz: null, text: '',
+      tabelle: [{ beschreibung: 'X', betrag: '2000.—' }],
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloeckeTabelle} artikel="5" passus={{ absatz: null }} />,
+    );
+    // React SSR escapes U+0027 as &#x27; — check both forms
+    expect(out).toMatch(/2&#x27;000\.—|2'000\.—/);
+    expect(out).not.toContain('>2000.—<');
+  });
+
+  it('beschreibung-Spalte wird NICHT formatiert (§1: nur betrag)', () => {
+    const bloeckeTabelle: NormSnapshot['bloecke'] = [{
+      absatz: null, text: '',
+      tabelle: [{ beschreibung: 'Streitwert bis 10000', betrag: '200.—' }],
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloeckeTabelle} artikel="5" passus={{ absatz: null }} />,
+    );
+    // beschreibung bleibt literal (10000 nicht formatiert)
+    expect(out).toContain('Streitwert bis 10000');
+  });
+
   it('block ohne tabelle rendert byte-identisch (kein Fragment-Wrapper)', () => {
     // Normaler Block — kein tabelle → Render-Pfad unverändert.
     const bl: NormSnapshot['bloecke'] = [{ absatz: '1', text: 'Normaler Absatz.' }];

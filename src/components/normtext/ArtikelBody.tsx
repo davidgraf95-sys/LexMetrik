@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
-import { trenneAenderungshistorie, absatzMarke } from '../../lib/normtext/darstellung';
+import { trenneAenderungshistorie, absatzMarke, gruppiereTausender } from '../../lib/normtext/darstellung';
 import { NormText, type InternRefs } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
@@ -187,7 +187,7 @@ function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag
       {zeilen.map((z, j) => (
         <span key={j} className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
           <span className="text-ink-700">{z.beschreibung}</span>
-          <span className="shrink-0 text-right font-medium text-ink-800">{z.betrag}</span>
+          <span className="shrink-0 text-right font-medium text-ink-800">{gruppiereTausender(z.betrag)}</span>
         </span>
       ))}
     </span>

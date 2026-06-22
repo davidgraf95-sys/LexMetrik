@@ -79,6 +79,16 @@ export function absatzMarke(absatz: string | null, text: string): { marke: strin
   return m ? { marke: absatz + m[1], rest: text.slice(m[0].length) } : { marke: absatz, rest: text };
 }
 
+// Schweizer Tausender-Apostrophe für die Betrag-Spalte der TarifTabelle (§1: nur
+// Gruppierung, kein Zeichen geändert; §3: reine Darstellung). Verwendet den
+// geraden Apostroph U+0027 — konsistent mit dem Zeichen, das die Fedlex-/LexWork-
+// Snapshots selbst schreiben (z. B. «10'000» in BS-154.810.json, geprüft 22.6.2026).
+// Läuft ≥4-stellige zusammenhängende Ziffernfolgen von rechts in 3er-Gruppen;
+// Folgen <4 Stellen und bereits gruppierte Zahlen («2'000») bleiben unberührt.
+export function gruppiereTausender(s: string): string {
+  return s.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, "'"));
+}
+
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei
 // zusammengeklebte Artikelnummern ohne Halbgeviert. Aus der Artikel-id
 // (z. B. «226_a_226_d», «67_70») das Halbgeviert rekonstruieren. IDs mit nur
