@@ -58,6 +58,8 @@ export interface ZhBlock {
   absatz: string | null;
   text: string;
   items?: Array<{ marke: string; text: string }>;
+  /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */
+  mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
 }
 
 export interface ZhArtikel {
@@ -470,7 +472,17 @@ export function berechneZhQuelleHash(
       const items = (b.items ?? [])
         .map((i) => `${i.marke}\t${i.text}`)
         .join('\n');
-      teile.push(`${b.absatz ?? ''}\t${b.text}${items ? `\n${items}` : ''}`);
+      const mTeil = b.mehrspaltig
+        ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
+        : '';
+      teile.push(
+        [
+          `${b.absatz ?? ''}\t${b.text}${items ? `\n${items}` : ''}`,
+          mTeil,
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      );
     }
   }
   return createHash('sha256').update(teile.join('\n'), 'utf8').digest('hex');

@@ -110,13 +110,17 @@ function sha256Bloecke(
     text: string;
     items?: Array<{ marke: string; text: string }>;
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
+    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>,
 ): string {
   const zusammen = bloecke
     .map((b) => {
       const itemTeil = (b.items ?? []).map((i) => `${i.marke}\t${i.text}`).join('\n');
       const tabTeil = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
-      return [b.text, itemTeil, tabTeil].filter(Boolean).join('\n');
+      const mTeil = b.mehrspaltig
+        ? [(b.mehrspaltig.kopf ?? []).join('\t'), ...b.mehrspaltig.zeilen.map((z) => z.join('\t'))].join('\n')
+        : '';
+      return [b.text, itemTeil, tabTeil, mTeil].filter(Boolean).join('\n');
     })
     .join('\n');
   return createHash('sha256').update(zusammen, 'utf8').digest('hex');

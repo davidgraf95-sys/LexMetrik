@@ -25,6 +25,8 @@ export interface NormSnapshot {
     items?: Array<{ marke: string; text: string }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
+    /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */
+    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>;
   /** Konsolidierungs-/Fassungsdatum der Quelle (ISO 'YYYY-MM-DD'). */
   stand: string;

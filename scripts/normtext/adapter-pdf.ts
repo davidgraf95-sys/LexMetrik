@@ -84,6 +84,8 @@ export interface PdfBlock {
   /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag), aus dem Text
    *  zerlegt. text trägt dann nur noch den Einleitungs-Vortext. */
   tabelle?: TarifZeile[];
+  /** Stufe 2: Mehrspalten-Tabelle (Streitwert/Grundgebühr/Zuschlag u.ä.). */
+  mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
 }
 
 export interface PdfArtikel {
