@@ -17,7 +17,17 @@
 // als Rückfall.
 const HISTORIE_STICHWORT =
   'Aufgehoben|Eingefügt|Fassung gemäss|Ursprünglich|Tritt|Siehe auch|In Kraft|Berichtigt|Bereinigt';
-const HISTORIE_RE = new RegExp(`(\\d{1,3})\\s+\\1\\s+(?=(?:${HISTORIE_STICHWORT})\\b)`);
+// Starke Änderungs-Stichwörter: die leiten IMMER eine Fussnoten-/Historie-Notiz ein,
+// nie echten Normtext-Inhalt → dort genügt ein Zwei-Nummern-Präfix (Fussnoten-Ref +
+// Definitionsnummer, oft VERSCHIEDEN, z.B. «337 336 Aufgehoben durch …»).
+const HISTORIE_STARK = 'Aufgehoben|Eingefügt|Fassung gemäss';
+// (a) gleiche Doppelnummer «131 131 <Stichwort>» (alle Stichwörter, konservativ);
+// (b) zwei beliebige Nummern «337 336 <starkes Stichwort>» (deckt verschiedene
+//     Fussnoten-Ref/Def-Nummern, ohne weiche Stichwörter wie «Tritt» falsch zu greifen).
+const HISTORIE_RE = new RegExp(
+  `(\\d{1,3})\\s+\\1\\s+(?=(?:${HISTORIE_STICHWORT})\\b)` +
+  `|(?:\\d{1,3}\\s+){1,3}(?=(?:${HISTORIE_STARK})\\b)`,
+);
 
 export function trenneAenderungshistorie(text: string): { wortlaut: string; historie: string | null } {
   const m = text.match(HISTORIE_RE);
