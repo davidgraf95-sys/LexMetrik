@@ -289,8 +289,16 @@ function parseSegment(segment: string): LexArtikel {
       // enumeration_item: Marke aus td.number, Text aus den übrigen td → ein item
       // am vorigen Absatz.
       const inner = m[2];
-      const numCell = inner.match(/<td[^>]*\bclass='[^']*\bnumber\b[^']*'[^>]*>([\s\S]*?)<\/td>/i);
-      const markeRoh = numCell ? bereinige(numCell[1]) : '';
+      // NW 268.12 (§18 lit. a–g): zweite Verschachtelungsebene (Ziff.→lit.) rendert
+      // LexWork mit ZWEI td.number — einem leeren Einrück-Spacer (&nbsp;) ZUERST,
+      // dann der echten Marke «a)». Nur die erste zu lesen ergäbe '' → das item
+      // würde unten (if marke && text) verworfen (die ganze Promillestaffel fiel
+      // weg). Darum ALLE td.number lesen und die LETZTE nicht-leere als Marke
+      // nehmen; bei der Standard-Einzelzellen-Form (ZG/BS) ist das dieselbe Zelle.
+      const numCells = [...inner.matchAll(/<td[^>]*\bclass='[^']*\bnumber\b[^']*'[^>]*>([\s\S]*?)<\/td>/gi)]
+        .map((c) => bereinige(c[1]))
+        .filter(Boolean);
+      const markeRoh = numCells.length > 0 ? numCells[numCells.length - 1] : '';
       // Bug-Audit 19.6.2026: lat. Suffix bis/ter/… erhalten (Suffix vor Buchstabe).
       const marke = (markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)/i)?.[1] ?? markeRoh)
         .toLowerCase();

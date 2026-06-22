@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { NormChip } from './vorlagen/ui';
 import { RechtsprechungText } from './RechtsprechungLink';
@@ -72,7 +73,9 @@ function restMitIntern(s: string, key: string, intern?: InternRefs): React.React
   }
   if (last === 0) return <RechtsprechungText key={key} text={s} />;
   if (last < s.length) out.push(<RechtsprechungText key={`${key}-r${last}`} text={s.slice(last)} />);
-  return <>{out}</>;
+  // key-tragendes Fragment: restMitIntern-Ergebnisse landen in NormTexts `teile`-
+  // Array (siehe unten); ein bare <>…</> dort löst die React-key-Warnung aus.
+  return <Fragment key={key}>{out}</Fragment>;
 }
 
 /** Fliesstext mit verlinkten Norm- UND Rechtsprechungs-Verweisen — Text bleibt

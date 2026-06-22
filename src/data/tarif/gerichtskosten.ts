@@ -234,7 +234,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   SG: {
     kanton: 'SG', erlassName: 'Gerichtskostenverordnung (GKV)', erlassNr: 'sGS 941.12',
     artikel: 'Art. 10 (i.V.m. Art. 11)', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', verifiziert: 'doppelt',
-    quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12',
+    quelleUrl: 'https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file',
     hinweis: 'Reiner Rahmen (Einzelrichter CHF 500–5000); Art. 11 streitwertabhängige %-Decke (>50k 200 %, >100k 300 %, je +250k +100 %).',
     regel: { typ: 'rahmen', vonChf: 500, bisChf: 6000 },
   },

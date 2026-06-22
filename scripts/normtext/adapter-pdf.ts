@@ -253,6 +253,28 @@ interface PdfStueck {
   s: string;
 }
 
+/**
+ * Marginalien-Rettung: Ein Stück LINKS der Body-Spalte (x < bodyMinX−5, das
+ * `istMarginalie` sonst verwirft) ist KEINE Randnote, sondern eine hierarchische
+ * Anhang-/Tarif-Ziffer-Überschrift, wenn es (a) nur KNAPP links sitzt (≤45pt) und
+ * (b) mit einer mehrstufigen Ziffer «N.M[.…]» beginnt. Hintergrund: bodyMinX wird
+ * pro Seite bestimmt; auf tiefer eingerückten Anhang-Seiten (AR bGS 153.2, Ziff.
+ * 8.1–8.4) fällt die linksstehende Tarif-Ziffer sonst unter die Schwelle und ginge
+ * verloren.
+ *
+ * Härtung gegen False Positives (Bug-Check 22.6.2026): Die erste Ziffer-Komponente
+ * muss klein sein (≤ 99). Das schliesst SR-/Gesetzes-Nummern («173.8», «153.2»),
+ * Jahres-/Datumsformen («2020.01.01») und die meisten Beträge aus, die das reine
+ * N.M-Muster sonst ebenfalls träfen — Anhang-Abschnitts-Nummern sind dagegen klein
+ * (1–15). Laufende Kopf-/Fuss-Erlassnummern sind ohnehin schon übers y-Band raus.
+ * Rein additiv: rettet nur bisher Verworfenes, verwirft nie zusätzlich.
+ */
+export function istAnhangZifferLinks(x: number, bodyMinX: number, text: string): boolean {
+  if (x >= bodyMinX - 5 || x < bodyMinX - 45) return false;
+  const m = text.trim().match(/^(\d+)(?:\.\d+)+(?:\s|$)/);
+  return m != null && Number(m[1]) <= 99;
+}
+
 /** Eine zusammengefügte Body-Textzeile. */
 export interface PdfTextZeile {
   /** Führende Absatznummer (hochgestellte Ziffer am Zeilenanfang) oder null. */
@@ -408,7 +430,19 @@ export async function extrahierePdfZeilen(
     // Marginalie verwerfen: Stücke deutlich LINKS der Body-Spalte (x < bodyMinX−5)
     // sind Sachtitel/Randnoten (TI x≈66 vs. Body 93; JU x≈69 vs. Body 135). Bei
     // SZ/VD liegt der Sachtitel IN der Body-Zeile (gleiche x) → kein Verlust.
-    const istMarginalie = (st: PdfStueck): boolean => st.x < bodyMinX - 5;
+    //
+    // AUSNAHME (AR bGS 153.2, Anhang-Tarif-Ziffern 8.1–8.4): bodyMinX wird PRO
+    // SEITE bestimmt; auf tiefer eingerückten Anhang-Seiten (bodyMinX 66/105) fällt
+    // die linksstehende Tarif-Ziffer (x≈44/84) unter die Schwelle und ginge als
+    // «Marginalie» verloren — obwohl sie die Ziffer-Überschrift IST (auf Seiten mit
+    // bodyMinX≈44 überlebt dieselbe Ziffer). Eine hierarchische Anhang-Ziffer
+    // («8.1», auch geklebt «8.1 Eigentum:») KNAPP links der Body-Spalte (≤45pt) ist
+    // daher KEINE Randnote. Rein additiv (behält nur bisher Verworfenes); das
+    // mehrstufige N.N-Muster schützt vor Seitenzahlen/Fussnoten-Hochzahlen (reine
+    // «\d+») und echten Sachtitel-Marginalien (TI/JU beginnen mit Buchstaben), die
+    // ≤45pt-Schranke vor weit links liegenden Randnoten.
+    const istMarginalie = (st: PdfStueck): boolean =>
+      st.x < bodyMinX - 5 && !istAnhangZifferLinks(st.x, bodyMinX, st.s);
 
     // Nach y gruppieren (eine Textzeile).
     const nachY = new Map<number, PdfStueck[]>();

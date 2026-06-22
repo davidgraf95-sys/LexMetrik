@@ -63,7 +63,7 @@ export function Favoriten() {
           value=""
           onChange={(e) => { hinzufuegen(e.target.value); e.currentTarget.value = ''; }}
           aria-label="Favorit hinzufügen"
-          className="lc-input lc-input-sm w-auto text-ink-600">
+          className="lc-input lc-input-sm w-auto max-w-full text-ink-600">
           <option value="">+ Favorit hinzufügen …</option>
           {waehlbar.map((k) => <option key={k.href} value={k.href!}>{k.title}</option>)}
         </select>
