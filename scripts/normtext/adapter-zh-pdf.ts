@@ -326,6 +326,14 @@ function normalisiereToken(roh: string): string {
  *   - camelCase-Spaltenkopf «StreitwertGebühr/Grund…»: Kleinbuchst.→Grossbuchst.
  * Die reinen Spalten-Zahlenketten (z.B. «5000250») bleiben unangetastet — ihre
  * Spaltentrennung ist ohne Layout-Information nicht eindeutig rekonstruierbar.
+ *
+ * Artefakt-Fix 22.6.2026 — «St PO» → «StPO»: Die ZH-PDF-Spalten-Lücken-Erkennung
+ * (SPALTEN_LUECKE_PT = 18 pt) fügt bei einer Spaltenlücke ein Leerzeichen ein.
+ * In ZH-211.11 GebV OG liegt die Abkürzung «StPO» (Strafprozessordnung) als
+ * zwei PDF-Fragmente («St» und «PO») im Abstand > 18 pt nebeneinander → das
+ * Leerzeichen wird irrtümlich eingefügt (Artefakt «St PO»). «St PO» mit Leerzeichen
+ * kommt in korrekter ZH-Rechtsprosa NIE vor (§1-sicher, empirisch verifiziert
+ * an allen ZH-Snapshots); die Behebung stellt den echten Wortlaut wieder her.
  */
 function entglueZhTarif(text: string): string {
   // Hinweis: \b ist hier untauglich — ü/ö/ä sind im JS-Standard-Regex KEINE
@@ -342,7 +350,14 @@ function entglueZhTarif(text: string): string {
     .replace(/\b(Fr|Mio|zuzügl)\.(\d)/g, '$1. $2')
     .replace(/(%)([A-Za-zÄÖÜäöü])/g, '$1 $2')
     .replace(/\)\(/g, ') (')
-    .replace(/([a-zäöü])([A-ZÄÖÜ])/g, '$1 $2');
+    .replace(/([a-zäöü])([A-ZÄÖÜ])/g, '$1 $2')
+    // Spalten-Lücken-Artefakt: «St PO» (StPO = Strafprozessordnung) — §1-sicher,
+    // da «St PO» mit Leerzeichen in korrekter ZH-Rechtsprosa nicht vorkommt.
+    // Zwei Formen: «St PO» gefolgt von Nicht-Buchstabe (ZH-211.11: «St PO,»)
+    // und «St PO» direkt vor einem Buchstaben ohne Trennleerzeichen
+    // (ZH-215.3: «St PObemisst» → «StPO bemisst»).
+    .replace(/\bSt PO(?=\P{L}|$)/gu, 'StPO')
+    .replace(/\bSt PO(?=\p{L})/gu, 'StPO ');
 }
 
 /** Silbentrennung am Zeilenende zusammenfügen: «…wer-» + «den.» → «…werden.».

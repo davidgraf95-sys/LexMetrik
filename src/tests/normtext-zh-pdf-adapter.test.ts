@@ -155,6 +155,38 @@ describe('ZH-PDF-Adapter — quelleHash (Drift-Token)', () => {
   });
 });
 
+// FIX 1 — 22.6.2026: «St PO» → «StPO» (Spalten-Lücken-Artefakt).
+// Der ZH-PDF-Adapter fügt an Spaltengrenz-Lücken ein Leerzeichen ein; bei der
+// Abkürzung «StPO» (Strafprozessordnung) in ZH-211.11 ergibt das fälschlich
+// «St PO». Die entglueZhTarif-Funktion (über extrahiereAlleZhParagraphen testbar)
+// korrigiert dieses Artefakt vor der Snapshot-Speicherung (§1-sicher: «St PO»
+// mit Leerzeichen kommt in korrekter ZH-Rechtsprosa nicht vor).
+describe('ZH-PDF-Adapter — StPO-Artefakt-Fix (St PO → StPO)', () => {
+  it('«St PO» im Fliesstext wird zu «StPO» (Spalten-Artefakt entfernt)', () => {
+    // Minimale, parser-kompatible Textbasis mit «§ 1.» Artikel und «St PO».
+    const textbasis = '§ 1.\nDieses Gesetz gilt für Verfahren nach der St PO und nach der ZPO.';
+    const alle = extrahiereAlleZhParagraphen(textbasis);
+    expect(alle['1']).toBeDefined();
+    const text = alle['1']!.bloecke[0].text;
+    expect(text).toContain('StPO');
+    expect(text).not.toContain('St PO');
+  });
+
+  it('«St PO» direkt vor Buchstaben («St PObemisst») → «StPO bemisst» (ZH-215.3-Stil)', () => {
+    const textbasis = '§ 1.\nVorverfahren nach Art. 299 ff. St PObemisst sich die Gebühr.';
+    const alle = extrahiereAlleZhParagraphen(textbasis);
+    const text = alle['1']!.bloecke[0].text;
+    expect(text).toContain('StPO bemisst');
+    expect(text).not.toContain('St PO');
+  });
+
+  it('«StPO» (kein Leerzeichen) bleibt unverändert (idempotent)', () => {
+    const textbasis = '§ 1.\nRegelung nach der StPO.';
+    const alle = extrahiereAlleZhParagraphen(textbasis);
+    expect(alle['1']?.bloecke[0].text).toContain('StPO');
+  });
+});
+
 describe('ZH-PDF-Adapter — Netz-Mechanik-Helfer', () => {
   it('extrahiert die OpenAttachment-PDF-URL aus dem Registry-HTML', () => {
     const html =
