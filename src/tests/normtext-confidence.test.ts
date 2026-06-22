@@ -59,19 +59,10 @@ describe('pruefeTreue', () => {
     expect(pruefeTreue([a]).some((f) => f.klasse === 'verklebter-token')).toBe(true);
   });
 
-  it('flaggt eine Absatz-Lücke WEICH', () => {
+  it('flaggt Absatz-Lücken NICHT (legitim bei aufgehobenen Absätzen, §1)', () => {
     const a = art('9', [
       { absatz: '1', text: 'Erstens.' },
-      { absatz: '3', text: 'Drittens — Absatz 2 fehlt.' },
-    ]);
-    expect(pruefeTreue([a]).some((f) => f.klasse === 'absatz-luecke')).toBe(true);
-  });
-
-  it('akzeptiert wiederholte Absatz-Nummern (kein Sprung)', () => {
-    const a = art('10', [
-      { absatz: '1', text: 'Teil a.' },
-      { absatz: '1', text: 'Teil b.' },
-      { absatz: '2', text: 'Weiter.' },
+      { absatz: '3', text: 'Drittens — Absatz 2 wurde aufgehoben.' },
     ]);
     expect(pruefeTreue([a])).toEqual([]);
   });
@@ -128,7 +119,7 @@ describe('bewerteConfidence', () => {
 
   it('senkt den Score bei weichen Befunden graduell', () => {
     const weich = [
-      { artikel: '1', klasse: 'absatz-luecke' as const, detail: '', schwere: 'weich' as const },
+      { artikel: '1', klasse: 'fussnoten-marker-im-text' as const, detail: '', schwere: 'weich' as const },
       { artikel: '2', klasse: 'verklebter-token' as const, detail: '', schwere: 'weich' as const },
     ];
     const r = bewerteConfidence(weich, 1, { weichGewicht: 0.05 });

@@ -46,8 +46,7 @@ export interface TreueFlag {
     | 'leerer-artikel'
     | 'fussnoten-marker-im-text'
     | 'verklebter-token'
-    | 'mojibake'
-    | 'absatz-luecke';
+    | 'mojibake';
   detail: string;
   schwere: TreueSchwere;
 }
@@ -133,23 +132,11 @@ export function pruefeTreue(artikel: SnapArtikel[]): TreueFlag[] {
         schwere: 'weich',
       });
     }
-    // (5) Absatz-Monotonie: die rein numerischen Absatz-Marken müssen 1,2,3,…
-    //     lückenlos aufsteigen. Lücke (1→3) = möglicher verlorener Absatz. WEICH.
-    const nummern = a.bloecke
-      .map((b) => b.absatz)
-      .filter((x): x is string => x != null && /^\d+$/.test(x))
-      .map(Number);
-    for (let i = 1; i < nummern.length; i++) {
-      if (nummern[i] !== nummern[i - 1] + 1 && nummern[i] !== nummern[i - 1]) {
-        flags.push({
-          artikel: a.artikel,
-          klasse: 'absatz-luecke',
-          detail: `${a.artikelLabel}: Absatzsprung ${nummern[i - 1]}→${nummern[i]}`,
-          schwere: 'weich',
-        });
-        break;
-      }
-    }
+    // Hinweis: Eine naive Absatz-Monotonie-Prüfung (1,2,3 lückenlos) ist hier
+    // bewusst NICHT enthalten — konsolidiertes Recht hat legitime Lücken durch
+    // aufgehobene Absätze; ein Sprung ist kein Extraktionsfehler. Verlorene
+    // Absätze fängt der Kreuzdiff gegen das amtliche PDF (Gate C), nicht eine
+    // Heuristik mit hoher Falsch-Positiv-Rate (§1: keine falschen Befunde).
   }
   return flags;
 }
