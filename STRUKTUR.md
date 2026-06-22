@@ -22,6 +22,35 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 22.6.2026 — KANTONALE TARIF-TABELLEN Stufe 1 (Füllpunkt-Zweispalter SG) (Branch feat/kantonale-tarif-tabellen; Prod-Deploy offen, §9)
+
+Auftrag David: «kantonale Gesetze überarbeiten, Zahlen + Tabellen richtig darstellen.»
+Gewählt: §7-sauberer Generator-Extrakt (nicht UI-Heuristik). Subagent-getrieben
+(Spec + Plan unter `docs/superpowers/`), 7 Tasks, iterativer Logik+Bug-Check je Task
+(Daueranweisung David) + adversarialer Schluss + finaler Whole-Branch-Review (opus,
+«ready to merge»). **Geliefert (Stufe 1):**
+- **Extraktion** `scripts/normtext/tarif-tabelle.ts`: Füllpunkt-Zeilen
+  «Beschreibung . . . . Betrag» → `tabelle: {beschreibung, betrag}[]`. Reine,
+  getestete Funktionen `betragAmAnfang`/`extrahiereTarifTabelle`. Konservativ (§1):
+  Block nur Tabelle, wenn letztes Segment reiner Betrag; Reject-Guard bei
+  unvollständigem Split (Betrag+Ziffer in Beschreibung) und **Betrag-ohne-Dash**
+  (keine Phantom-Beträge aus Verweis-Nummern); Leader ≥3 Punkte; `vortext` immer ''
+  (Intro bleibt in 1. Beschreibung — Doppelpunkt-Heuristik verworfen, §1).
+- **Anreicherung** `adapter-pdf.ts`: Helper `reichereTabellen` in `baueBloecke` UND
+  über ALLE Artikel in `holePdf` (idempotent) — erfasst auch die **Anhang-Ziffer-Tarife**
+  (segmentiereAnhangZiffern), wo die Hauptmasse von SG-3849 liegt.
+- **Schema/Drift** `typen.ts` + `sha256Bloecke`/`berechnePdfQuelleHash`: `tabelle`
+  additiv im Snapshot + im Drift-SHA (§7). `pruefeInhaltsSanity` tabelle-aware.
+- **UI** `ArtikelBody.tsx` `TarifTabelle`: 2-Spalten (Betrag rechtsbündig, tabular-nums)
+  via Early-Return → Nicht-Tabellen-Pfad byte-identisch.
+- **Daten:** SG-2808/2935/3849 regeneriert → **381 Tabellen / 413 Zeilen**, 0 leere
+  Zellen, 0 Leader-Reste, 0 Inhaltsverlust. Gate grün (tsc, vitest 2085, golden, lint,
+  check:normtext, smoke). Engine→Norm-Verweise lösen korrekt auf (nur Artikel-Level).
+- **OFFEN / Stufe 2 (Auftrag David 22.6.):** (a) **mehrspaltige Staffeln** (Streitwert |
+  Grundgebühr | Zuschlag) mit verklebten Zahl-Spalten — Befund ZH-215.3 §4 (AnwGebV),
+  ZG-163.4 §3, TG-176.31 §5 («über 5000 bis 100001250»); (b) **Tausendertrenner `'`**
+  in der Anzeige (zentral im Render, deckt auch SG); je Kanton einzeln prüfen.
+
 ## Session 22.6.2026 (vormittags) — Gesetze-UI-Schub + §6-Splits (PRs #37–#49 → main, HEAD 2d5aa10; Prod-Deploy NICHT bestätigt)
 
 Mehrere Sessions am Vormittag (z.T. autonom/parallel) haben PRs #37–#49 auf
