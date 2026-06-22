@@ -7,6 +7,7 @@ import {
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import { SYSTEMATIK, KANTON_RUBRIKEN, kantonRubrik } from '../lib/normtext/systematik';
+import { KantonWappen } from '../components/KantonWappen';
 
 type Ebene = 'bund' | 'kanton';
 
@@ -318,10 +319,13 @@ export function Gesetze() {
                     </div>
                   </div>
                   <section className="lc-card p-5 sm:p-6 space-y-5 scroll-mt-24">
-                    <div className="flex items-baseline gap-3 border-b border-line pb-3">
-                      <span aria-hidden className="font-display text-h2 leading-none text-brass-700 num">{kanton}</span>
+                    <div className="flex items-center gap-3 border-b border-line pb-3">
+                      <KantonWappen kanton={kanton} className="h-11 w-10" />
                       <span className="flex flex-col">
-                        <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
+                        <span className="flex items-baseline gap-2">
+                          <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
+                          <span aria-hidden className="num text-body-s text-ink-400">{kanton}</span>
+                        </span>
                         <span className="lc-overline text-ink-400">Kantonale Erlasse</span>
                       </span>
                       <span className="num text-body-s text-ink-400 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
@@ -340,9 +344,12 @@ export function Gesetze() {
                     {gruppiereNachKanton(gefiltert).map((g) => (
                       <button type="button" key={g.kanton} onClick={() => setzeKanton(g.kanton)}
                         className="lc-card group flex items-center gap-3 p-3.5 text-left transition-colors hover:border-brass-400">
-                        <span aria-hidden className="font-display text-h3 font-semibold text-ink-900 num leading-none w-9 shrink-0 group-hover:text-brass-700 transition-colors">{g.kanton}</span>
+                        <KantonWappen kanton={g.kanton} className="h-9 w-8 transition-transform group-hover:scale-105" />
                         <span className="flex flex-col min-w-0">
-                          <span className="text-body-s font-medium text-ink-800 truncate">{KANTON_NAMEN[g.kanton] ?? g.kanton}</span>
+                          <span className="flex items-baseline gap-1.5">
+                            <span className="text-body-s font-medium text-ink-800 truncate group-hover:text-brass-700 transition-colors">{KANTON_NAMEN[g.kanton] ?? g.kanton}</span>
+                            <span aria-hidden className="num text-xs text-ink-400 shrink-0">{g.kanton}</span>
+                          </span>
                           <span className="text-xs text-ink-400"><span className="num">{g.erlasse.length}</span> Erlasse</span>
                         </span>
                       </button>
