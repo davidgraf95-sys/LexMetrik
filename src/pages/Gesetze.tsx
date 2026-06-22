@@ -8,6 +8,7 @@ import {
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import { SYSTEMATIK, KANTON_RUBRIKEN, kantonRubrik } from '../lib/normtext/systematik';
 import { KantonWappen } from '../components/KantonWappen';
+import { SchweizKarte } from '../components/SchweizKarte';
 
 type Ebene = 'bund' | 'kanton';
 
@@ -297,6 +298,15 @@ export function Gesetze() {
 
           {!suche.trim() && ebene === 'kanton' && (
             <div className="space-y-6">
+              {/* Klickbare Schweiz-Karte: Kanton direkt auf der Landkarte wählen. */}
+              <div className="lc-card p-4 sm:p-6">
+                <SchweizKarte
+                  aktiv={kanton}
+                  onWaehle={setzeKanton}
+                  nameFuer={(k) => KANTON_NAMEN[k] ?? k}
+                  verfuegbar={(k) => kantone.includes(k as typeof kantone[number])}
+                />
+              </div>
               {kanton ? (
                 /* Ein Kanton → Zurück-Leiste + nach Kosten-/Abgabe-Art gegliedert. */
                 <>
