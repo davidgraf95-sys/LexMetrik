@@ -45,3 +45,9 @@ Jede Klasse: Spec/Plan-light → TDD → echte Daten-Validierung (Logik+Bug-Chec
 Daueranweisung David) → Regenerieren → Gate → UI-Sicht → Deploy nach Davids Ja.
 
 *Quelle Worklist: `.superpowers/sdd/canton-bugcheck-report.md` (Scratch, 22.6.).*
+
+## Technische Befunde Mehrspalten (22.6., Entscheid David: «echte Mehrspalten-Tabelle»)
+- **ZH § 4 AnwGebV (David-Beispiel «unübersichtlich»):** Quelle = Text-PDF (notes.zh.ch, pdfjs), KEINE HTML-Tabelle. `100001250` = PDF-Spaltenverlust in der Body-Zeilen-Assemblierung. Sauberer Fix: **x-koordinatenbasierte Spaltenerkennung** (Streitwert | Grundgebühr | Zuschlag). Vorlage: `adapter-zh-pdf.ts` hat bereits `extrahiereZhAnhangSpalten` (spaltenbewusst über x) für den Anhang — § 4 läuft aber durch die normale Body-Assemblierung. NICHT Ziffern raten (§1).
+- **Datenmodell:** generische Mehrspalten-Tabelle (Header + Zeilen×N Zellen) statt nur {beschreibung,betrag}. Render: echte N-Spalten, Beträge rechtsbündig + gruppiereTausender.
+- **Klasse A (NW/BS/SO/VS):** ·/—-Marker → deterministischer Split in Zeilen×Felder (Label:Wert). Variable Felder (Tarif-Nr./Bezeichnung/Betrag/Gemeinde/Kanton) + Hierarchie.
+- Reihenfolge offen: ZH (David-Beispiel) vs. NW (tractabelste). Beide brauchen das gemeinsame Mehrspalten-Modell+Render zuerst.
