@@ -201,6 +201,8 @@ export interface SnapshotBlock {
   items?: Array<{ marke: string; text: string }>;
   /** Tarif-Tabelle (Füllpunkt-Zweispalter); gültig als Block-Inhalt auch wenn text leer. */
   tabelle?: Array<{ beschreibung: string; betrag: string }>;
+  /** Mehrspalten-Tarif-Tabelle (Stufe 2, ZH-Staffeln / ·–-Tabellen); gültig als Block-Inhalt auch wenn text leer. */
+  mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
 }
 
 export interface SnapshotEintrag {
@@ -231,7 +233,8 @@ export function pruefeInhaltsSanity(eintraege: ReadonlyArray<SnapshotEintrag>): 
       const hatText = typeof b.text === 'string' && b.text.trim().length > 0;
       const hatItems = Array.isArray(b.items) && b.items.length > 0;
       const hatTabelle = Array.isArray(b.tabelle) && b.tabelle.length > 0;
-      if (!hatText && !hatItems && !hatTabelle) {
+      const hatMehrspaltig = b.mehrspaltig != null && Array.isArray(b.mehrspaltig.zeilen) && b.mehrspaltig.zeilen.length > 0;
+      if (!hatText && !hatItems && !hatTabelle && !hatMehrspaltig) {
         fehler.push({ snapshotId: e.id, problem: 'leerer-block', blockIndex: i });
       }
     }

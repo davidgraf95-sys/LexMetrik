@@ -347,6 +347,24 @@ describe('pruefeInhaltsSanity', () => {
     expect(result).toHaveLength(0);
   });
 
+  it('akzeptiert Block mit mehrspaltig (kein text, keine items) — Stufe-2 Mehrspalten-Tarif', () => {
+    const eintragNurMehrspaltig: SnapshotEintrag = {
+      id: 'kanton/ZH/215.3/art_4',
+      bloecke: [
+        {
+          absatz: null,
+          text: '',
+          mehrspaltig: {
+            kopf: ['Streitwert', 'Grundgebühr', 'Zuschlag'],
+            zeilen: [['über 5’000 bis 10’000', '1’250', 'zuzügl. 23%']],
+          },
+        },
+      ],
+    };
+    const result = pruefeInhaltsSanity([eintragNurMehrspaltig]);
+    expect(result).toHaveLength(0);
+  });
+
   it('meldet Fehler bei leeren bloecke[]', () => {
     const fehlerEintrag: SnapshotEintrag = {
       id: 'bund/ZGB/art_999',
