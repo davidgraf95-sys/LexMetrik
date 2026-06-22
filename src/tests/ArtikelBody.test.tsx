@@ -175,6 +175,34 @@ describe('randtitelEintraege (schmale Ansicht — Aufzähler erhalten)', () => {
   });
 });
 
+describe('TarifTabelle (block.tabelle → 2-Spalten-Tarif)', () => {
+  it('rendert tabelle als 2-Spalten-Tarif (Beschreibung + Betrag)', () => {
+    const bloeckeTabelle: NormSnapshot['bloecke'] = [{
+      absatz: null, text: '',
+      tabelle: [
+        { beschreibung: 'Vorladung', betrag: '6.—' },
+        { beschreibung: 'Mahnung', betrag: '10.— bis 50.—' },
+      ],
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloeckeTabelle} artikel="5" passus={{ absatz: null }} />,
+    );
+    expect(out).toContain('Vorladung');
+    expect(out).toContain('6.—');
+    expect(out).toContain('Mahnung');
+    expect(out).toContain('10.— bis 50.—');
+  });
+
+  it('block ohne tabelle rendert byte-identisch (kein Fragment-Wrapper)', () => {
+    // Normaler Block — kein tabelle → Render-Pfad unverändert.
+    const bl: NormSnapshot['bloecke'] = [{ absatz: '1', text: 'Normaler Absatz.' }];
+    const out = renderToString(<ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} />);
+    expect(out).toContain('Normaler Absatz.');
+    // Kein Fragment-Marker und keine table-spezifischen Klassen.
+    expect(out).not.toContain('tabular-nums');
+  });
+});
+
 describe('absatzMarke (bis/ter-Rekonstruktion, §3 — Wortlaut unangetastet)', () => {
   it('null-Absatz mit «1bis …» am Textanfang → Marke 1bis, Rest ohne Marke', () => {
     expect(absatzMarke(null, '1bis Wurde in einer Zivilsache …'))

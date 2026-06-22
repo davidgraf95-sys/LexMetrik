@@ -179,6 +179,21 @@ function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
   );
 }
 
+// 2-Spalten-Tarif (Beschreibung | Betrag) aus strukturiertem block.tabelle.
+// Reine Darstellung (§3); Wortlaut je Zelle unverändert.
+function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag: string }> }) {
+  return (
+    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
+      {zeilen.map((z, j) => (
+        <span key={j} className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
+          <span className="text-ink-700">{z.beschreibung}</span>
+          <span className="shrink-0 text-right font-medium text-ink-800">{z.betrag}</span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, autolink = false, zitierKontext, fnProAbsatz, fnProItem, intern }: {
   bloecke: NormSnapshot['bloecke'];
   /** Artikel-Token des Snapshots — steuert die Tarif-Darstellungs-Normalisierung. */
@@ -246,6 +261,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   Artikel (Bund/LexWork, sauber extrahiert) bleiben unberührt.
                   Aufgehobene Absätze («…») → gedämpftes «aufgehoben». */}
               {(() => {
+                // Strukturierte Tarif-Tabelle (Stufe 1) hat Vorrang vor der
+                // Text-Heuristik. block.text (Vortext) bleibt leer (Task-2-Konvention:
+                // bei tableisierten Blöcken ist text ''); nur TarifTabelle rendern.
+                const tab = b.tabelle && b.tabelle.length > 0 ? b.tabelle : null;
+                if (tab) return <TarifTabelle zeilen={tab} />;
                 // Eingemischte Änderungshistorie (verdoppelte Fussnoten-Nr +
                 // geleakter Label-Rest) aus dem Wortlaut-Block entfernen. Die
                 // Historie selbst gehört an den Artikelfuss (Lesesicht zeigt sie
