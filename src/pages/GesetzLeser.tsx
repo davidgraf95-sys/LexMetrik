@@ -126,7 +126,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
   };
   return (
     <article id={`art-${e.artikel}`}
-      className="group relative z-0 scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
+      className="group relative z-0 scroll-mt-[8.5rem] border-t border-line/70 pt-7 mt-7 first:border-t-0 first:mt-0 first:pt-0 transition duration-200 group-has-[[data-lese]:hover]/lese:opacity-80 has-[[data-lese]:hover]:!opacity-100 has-[[data-lese]:hover]:z-[5]">
       <div className="lg:grid lg:grid-cols-[12.5rem_minmax(0,1fr)] lg:gap-x-8">
         {/* Linke Marginalspalte: «Art. N» als ruhiger Anker, darunter die Randtitel
             (rechtsbündig, ruhig) — die statische Druckfassungs-Randspalte statt des
@@ -172,7 +172,7 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
           {fussnotenAuf && fussAnzeige.length > 0 && (
             <div className="mt-3 border-t border-line/50 pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
-                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
+                <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} className="scroll-mt-[8.5rem] text-xs leading-normal text-ink-400 target:bg-brass-50">
                   {fn.nr && <span className="num mr-1 text-ink-300">{fn.nr}</span>}
                   {fnTextMitLinks(fn)}
                 </p>
@@ -200,7 +200,7 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
   // Titelgrösse nach Tiefe: oberste Stufen prominent, tiefere ruhiger.
   const titelStil = s.ebene <= 1 ? 'text-[1.3rem]' : s.ebene === 2 ? 'text-[1.15rem]' : s.ebene === 3 ? 'text-[1.05rem]' : 'text-[0.98rem]';
   return (
-    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] ${mt} ${regel}`}>
+    <div ref={refCb} data-sek={s.id} className={`scroll-mt-[8.5rem] ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
         {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
         <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
@@ -352,7 +352,6 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   useEffect(() => {
     if (!sektionen.length || typeof window === 'undefined') return;
     let raf = 0;
-    let accTimer = 0;
     const mess = () => {
       raf = 0;
       if (jumpLock.current) return;
@@ -366,17 +365,16 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       if (beste && beste !== aktivIdRef.current) {
         aktivIdRef.current = beste;
         const ids = pfadZu(sektionen, (s) => s.id === beste) ?? [];
-        // Markierung SOFORT (nur Klassen, flüssig); das Auf-/Zuklappen (Akkordeon)
-        // erst nach kurzer Scroll-Pause — sonst flackert der Baum beim Durchscrollen.
+        // NUR die aktive Gliederung markieren (Klassen) — der Baum wird beim
+        // Scrollen NICHT mehr auf-/zugeklappt (Auftrag David: kein Akkordeon-
+        // Flackern). Auf-/Zuklappen passiert ausschliesslich auf Klick/Sprung.
         setAktivIds(ids);
-        if (accTimer) clearTimeout(accTimer);
-        accTimer = window.setTimeout(() => setTocBaum(Object.fromEntries(ids.map((id) => [id, true]))), 220);
       }
     };
     const onScroll = () => { if (!raf) raf = window.requestAnimationFrame(mess); };
     mess();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); if (accTimer) clearTimeout(accTimer); };
+    return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); };
     // `offen` bewusst NICHT in den Deps: mess() liest nur Refs + Live-DOM, sonst
     // unnötiger Listener-Neuaufbau bei jedem Sektions-Toggle.
   }, [sektionen]);
@@ -572,25 +570,24 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
                 onToggle={tocToggle}
                 onSprung={(id) => {
                   const ids = pfadZu(sektionen, (s) => s.id === id) ?? [id];
-                  // Ziel-Pfad direkt setzen + Spy stilllegen → kein Flackern beim Sprung.
+                  // Spy stilllegen + Ziel markieren. Den Pfad NUR aufklappen (andere
+                  // Sektionen NICHT zuklappen) — sonst schrumpft das Layout ÜBER dem
+                  // Ziel und der Sprung landet zu kurz (im Vorabschnitt, Bug David).
                   jumpLock.current = true;
                   aktivIdRef.current = id;
                   setAktivIds(ids);
-                  setTocBaum(Object.fromEntries(ids.map((x) => [x, true])));
-                  // Präzise unter Header + Suchleiste positionieren (sonst zeigt es
-                  // das vorige Element). Nach evtl. Layout-Shift einmal korrigieren.
-                  const scrolle = () => {
-                    const el = sekRefs.current.get(id);
-                    if (!el) return;
-                    const hdr = document.querySelector('header')?.getBoundingClientRect().height ?? 110;
-                    const bar = document.querySelector('[data-such-bar]')?.getBoundingClientRect().height ?? 52;
-                    const y = el.getBoundingClientRect().top + window.scrollY - hdr - bar - 10;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                  };
-                  window.requestAnimationFrame(() => window.setTimeout(() => {
-                    scrolle();
-                    window.setTimeout(() => { scrolle(); jumpLock.current = false; }, 450);
-                  }, 60));
+                  setTocBaum((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+                  // Lesebereich-Pfad öffnen, damit die Ziel-Überschrift gerendert IST
+                  // (zugeklappt existiert sie nicht im DOM → Sprung verpufft).
+                  setOffen((o) => ({ ...o, ...Object.fromEntries(ids.map((x) => [x, true])) }));
+                  // Nach dem Render (zwei Frames) präzise positionieren. INSTANT statt
+                  // smooth → kein Scroll-Spy-Race, der den Treffer mitten in der
+                  // Animation auf den Vorabschnitt umlatcht. scrollIntoView respektiert
+                  // das scroll-mt (Header + Suchleiste) → Überschrift landet sichtbar.
+                  requestAnimationFrame(() => requestAnimationFrame(() => {
+                    sekRefs.current.get(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
+                    requestAnimationFrame(() => { jumpLock.current = false; });
+                  }));
                 }} />
             </div>
           </aside>
@@ -601,7 +598,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
               Header). Der frühere fliegende Standort-Tracker entfällt — der Standort
               ergibt sich aus der markierten Gliederung, den Sektionsüberschriften und
               den statischen Randtiteln an den Artikeln. */}
-          <div data-such-bar className="sticky top-16 sm:top-[6.75rem] z-[15] mb-4 rounded-lg bg-paper">
+          <div data-such-bar className="sticky top-16 z-[15] mb-4 rounded-lg bg-paper">
             <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
               {sektionen.length > 0 && !tocOffen && (
                 <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
@@ -649,9 +646,9 @@ function SektionBaumTOC({ sektionen, aktivPfad, offen, onToggle, onSprung }: {
   sektionen: Sektion[]; aktivPfad: string[]; offen: Record<string, boolean>; // aktivPfad = Sektions-IDs
   onToggle: (id: string) => void; onSprung: (id: string) => void;
 }) {
-  // Akkordeon: Standard zu — offen ist nur, was der Scroll-Spy (aktiver Pfad) bzw.
-  // ein Klick aufklappt. Beim Weiterscrollen klappt die verlassene Sektion zu und
-  // die nächste auf.
+  // Akkordeon: Standard zu — aufgeklappt wird NUR durch Klick (Chevron oder
+  // Sprung). Scrollen klappt nichts auf/zu (Auftrag David: kein Flackern); der
+  // Scroll-Spy markiert nur den aktiven Pfad, ohne den Baum umzubauen.
   const zeile = (s: Sektion, tiefe: number): ReactNode => {
     const auf = offen[s.id] ?? false;
     const { pre, rest } = romanFrei(s.label);
