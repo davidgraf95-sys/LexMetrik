@@ -67,8 +67,10 @@ describe('ZH-PDF-Adapter — §-Parser (GebV OG, LS 211.11)', () => {
   it('§ 4: Textanfang «Die Gebühren betragen», Absätze 1/2/3, Tabelle behalten', () => {
     const a = extrahiereZhParagraphen(ZH_GEBVOG_TEXT, '4');
     expect(a).not.toBeNull();
-    // Absatz 1 (implizit, keine ¶-Nummer) + Absatz 2 + 3.
-    expect(a!.bloecke.map((b) => b.absatz)).toEqual([null, '2', '3']);
+    // Absatz 1/2/3 (Bund-Konvention, Fix 22.6.2026): die «¹»-Hochzahl des ersten
+    // Absatzes steht im PDF auf eigener Zeile VOR der «§ 4.»-Kopfzeile und wird
+    // dem ersten Absatz zugeordnet → '1' statt früher fälschlich null.
+    expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '2', '3']);
     expect(a!.bloecke[0].text.startsWith('Die Gebühren betragen:')).toBe(true);
     // Gebührentabelle bleibt im Text (Inhalt vorhanden, wenn auch Zahlen-eng).
     expect(a!.bloecke[0].text).toContain('25% des Streitwertes');
@@ -92,7 +94,9 @@ describe('ZH-PDF-Adapter — §-Parser (GebV OG, LS 211.11)', () => {
   it('§ 5: zwei Absätze, Silbentrennung über Seiten/Zeilen hinweg', () => {
     const a = extrahiereZhParagraphen(ZH_GEBVOG_TEXT, '5');
     expect(a).not.toBeNull();
-    expect(a!.bloecke.map((b) => b.absatz)).toEqual([null, '2']);
+    // Absatz 1/2 (Bund-Konvention, Fix 22.6.2026): erste «¹» dem 1. Absatz
+    // zugeordnet → '1' statt früher null.
+    expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '2']);
     expect(a!.bloecke[0].text).toContain(
       'nach dem tatsächlichen Streitinteresse',
     );

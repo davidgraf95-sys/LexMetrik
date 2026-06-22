@@ -363,7 +363,31 @@ function fuegeZeilen(roh: string[]): string {
   return entglueZhTarif(out.replace(/\s+/g, ' ').trim());
 }
 
-/** Block-Sammler: Absätze + lit.-items eines Artikels aus seinen Zeilen. */
+/** Zerlegt eine Absatznummer «2» / «1bis» / «2ter» in (Zahl, lat. Suffix-Rang),
+ *  damit baueBloecke die Sequenz validieren kann. Suffix-Rang: ''=0, bis=1,
+ *  ter=2, quater=3, quinquies=4 (so folgt «1bis» auf «1», «1ter» auf «1bis»). */
+const ABSATZ_NUMMER = /^(\d+)(bis|ter|quater|quinquies)?$/;
+const SUFFIX_RANG: Record<string, number> = {
+  '': 0,
+  bis: 1,
+  ter: 2,
+  quater: 3,
+  quinquies: 4,
+};
+
+/** Block-Sammler: Absätze + lit.-items eines Artikels aus seinen Zeilen.
+ *
+ *  Absatz-Nummerierung nach VALIDIERTER SEQUENZ (Fix 22.6.2026, Bund-Qualität):
+ *  ein ¶-Marker wird nur dann als echte Absatznummer akzeptiert, wenn er die
+ *  erwartete monotone Folge fortsetzt (1→2→3…, lat. Suffixe «1bis»→«1ter» am
+ *  selben Grund-Index zulässig). Ein Marker, der die Folge bricht (z. B. «¶10»
+ *  wo «¶1» erwartet, «¶5» wo «¶2» erwartet), ist KEINE Absatznummer, sondern ein
+ *  Fussnoten-Verweis (hochgestellte Verweis-Ziffer mitten im Absatz). Er wird
+ *  verworfen: ein leerer Verweis-Marker entfällt ganz, ein Marker mit Resttext
+ *  (Wort-Fragment einer umbrochenen Zeile) fliesst als Fortsetzung in den
+ *  laufenden Absatz — so entstehen weder leere noch Fragment-Blöcke und keine
+ *  «komischen Randziffern» (§1: nur die irrtümlich als Absatz gelesene Ziffer
+ *  entfernt, kein Normtext erfunden/verworfen). */
 function baueBloecke(zeilen: string[]): ZhBlock[] {
   const bloecke: ZhBlock[] = [];
   let aktiv: ZhBlock | null = null;
@@ -371,6 +395,12 @@ function baueBloecke(zeilen: string[]): ZhBlock[] {
   let textPuffer: string[] = [];
   let itemPuffer: string[] = [];
   let aktivItem: { marke: string } | null = null;
+  // Erwartete nächste Absatz-Grundzahl (für die Sequenz-Validierung). Solange
+  // noch kein nummerierter Absatz akzeptiert wurde, ist die erste gültige Nummer
+  // 1 (oder ein impliziter, markerloser Absatz 1). zuletztNummer/-Suffix halten
+  // den zuletzt akzeptierten Absatz, um lat. Suffixe (1→1bis→1ter) zu erlauben.
+  let zuletztNummer = 0;
+  let zuletztSuffix = -1; // -1 = noch kein nummerierter Absatz
 
   const flushText = (): void => {
     if (textPuffer.length > 0 && aktiv) {
@@ -393,14 +423,76 @@ function baueBloecke(zeilen: string[]): ZhBlock[] {
     aktiv = { absatz, text: '' };
     bloecke.push(aktiv);
   };
+  // Accessor: liefert den laufenden Block mit seinem deklarierten Union-Typ
+  // (innerhalb der Schleife verengt TS `aktiv` über die Closure-Mutationen
+  // hinweg auf `null`; der Closure-Zugriff umgeht diese fehlerhafte Verengung).
+  const aktuellerBlock = (): ZhBlock | null => aktiv;
 
   for (const zeile of zeilen) {
     const absM = zeile.match(ABSATZ_MARKER);
     if (absM) {
-      // Neuer Absatz. Sein Resttext startet den Block.
-      neuerBlock(absM[1]);
       const rest = absM[2].trim();
-      if (rest) textPuffer.push(rest);
+      const num = absM[1].match(ABSATZ_NUMMER);
+      // Sequenz-Validierung: akzeptiere die Nummer nur, wenn sie die erwartete
+      // monotone Folge fortsetzt. Gültig ist (a) die nächste Grundzahl
+      // (zuletztNummer+1, Suffix-Rang 0) oder (b) eine lat. Suffix-Steigerung am
+      // SELBEN Grund-Index (1→1bis→1ter). Alles andere bricht die Folge.
+      let gueltig = false;
+      if (num) {
+        const n = Number(num[1]);
+        const rang = SUFFIX_RANG[num[2] ?? ''] ?? 0;
+        // Backfill «¶1»: Steht noch kein nummerierter Absatz, der erste Absatz
+        // begann aber implizit (markerlos, absatz=null) mit echtem Text, und der
+        // nun kommende Marker würde gültig auf eine implizite «1» folgen
+        // («2» als nächste Grundzahl, oder «1bis» als Suffix der «1»), so ist der
+        // erste Absatz die Nr. 1 — rückwirkend benummern (Bund-Konvention
+        // 1,2,3…). So bleibt nie ein «[null,'2',…]» übrig, auch wenn die
+        // «¹»-Recovery (Part A) den Erst-Marker einmal nicht greift.
+        const folgtAufImplizit1 =
+          (n === 2 && rang === 0) || (n === 1 && rang === 1);
+        const ersterBlock = aktuellerBlock();
+        if (
+          zuletztSuffix === -1 &&
+          folgtAufImplizit1 &&
+          ersterBlock !== null &&
+          ersterBlock.absatz === null &&
+          (textPuffer.length > 0 ||
+            ersterBlock.text !== '' ||
+            (ersterBlock.items?.length ?? 0) > 0)
+        ) {
+          // Ersten (impliziten) Absatz als Nr. 1 setzen, dann den Marker prüfen.
+          flushText();
+          flushItem();
+          ersterBlock.absatz = '1';
+          zuletztNummer = 1;
+          zuletztSuffix = 0;
+        }
+        if (n === zuletztNummer + 1 && rang === 0) {
+          gueltig = true;
+        } else if (n === zuletztNummer && rang === zuletztSuffix + 1) {
+          gueltig = true;
+        }
+      }
+      if (gueltig && num) {
+        // Echter Absatz. Sein Resttext startet den Block.
+        neuerBlock(absM[1]);
+        zuletztNummer = Number(num[1]);
+        zuletztSuffix = SUFFIX_RANG[num[2] ?? ''] ?? 0;
+        if (rest) textPuffer.push(rest);
+      } else {
+        // Folge-brechende «Absatznummer» = Fussnoten-Verweis (keine echte
+        // Absatznummer). Marker verwerfen; ein etwaiger Resttext (Wort-Fragment
+        // einer umbrochenen Zeile) fliesst als Fortsetzung in den laufenden
+        // Absatz/Item (§1: kein Normtext verloren, keine Geister-Blöcke).
+        if (rest) {
+          if (aktivItem) {
+            itemPuffer.push(rest);
+          } else {
+            if (!aktiv) neuerBlock(null);
+            textPuffer.push(rest);
+          }
+        }
+      }
       continue;
     }
 
@@ -481,11 +573,38 @@ export function extrahiereAlleZhParagraphen(
     // §-Kopf? (kann an Marginalie-Rest kleben; wir prüfen auf den Marker.)
     const kopf = zeile.match(PARAGRAF_KOPF);
     if (kopf) {
+      // VERLORENE «¹»-Recovery (Bug 22.6.2026): die hochgestellte Absatznummer
+      // «1» des ERSTEN Absatzes steht in den ZH-PDF auf einer EIGENEN Zeile
+      // DIREKT VOR der «§ N.»-Kopfzeile (pdfjs liest sie als «¶1» kurz oberhalb
+      // der Überschrift) — sie gehört also zum NEUEN §, nicht zum vorigen. Steht
+      // als letzte Zeile des laufenden § ein NACKTER ¶-Marker (nur Nummer, kein
+      // Text), so ist das genau dieser verirrte Erst-Absatz-Marker: aus dem
+      // alten § entfernen und dem neuen § voranstellen. (Ein nackter ¶-Marker
+      // kann nie das LETZTE des vorigen § sein — sein Absatztext stünde sonst
+      // zwischen ihm und dem §-Kopf, nicht danach.) §1: nur Zuordnung der
+      // bereits extrahierten Nummer korrigiert, kein Zeichen erfunden.
+      let verirrterMarker: string | null = null;
+      while (aktivZeilen.length > 0 && aktivZeilen[aktivZeilen.length - 1] === '') {
+        aktivZeilen.pop();
+      }
+      const letzte = aktivZeilen[aktivZeilen.length - 1];
+      if (letzte !== undefined) {
+        const m = letzte.match(ABSATZ_MARKER);
+        if (m && m[2].trim() === '') {
+          verirrterMarker = `¶${m[1]}`;
+          aktivZeilen.pop();
+        }
+      }
       // Alles vor dem § ist Marginalie-Rest/Müll → verwerfen; alles nach «§ N.»
       // ist der Beginn des ersten Absatzes.
       speichere();
       aktivToken = normalisiereToken(kopf[1]);
       aktivZeilen = [];
+      // Den verirrten Erst-Absatz-Marker dem neuen § voranstellen, BEVOR der
+      // Resttext der Kopfzeile als (markerlose) Folgezeile dazukommt — so wird
+      // «¶1» dem ersten Absatz korrekt zugewiesen (baueBloecke nimmt den Resttext
+      // als dessen Text auf).
+      if (verirrterMarker !== null) aktivZeilen.push(verirrterMarker);
       const nachKopf = zeile.slice(zeile.indexOf(kopf[0]) + kopf[0].length).trim();
       // Der erste Absatz hat oft keine ¶-Nummer (impliziter Absatz 1) ODER die
       // ¶1-Marke steht auf der eigenen Folgezeile. Den Resttext als erste Zeile
