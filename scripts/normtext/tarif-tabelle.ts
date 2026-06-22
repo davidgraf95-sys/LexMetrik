@@ -37,16 +37,30 @@ export function extrahiereTarifTabelle(
   const segmente = text.split(LEADER);
   if (segmente.length < 2) return null; // kein Leader
 
+  // FIX DEFECT 1 (trailing prose, 22.6.2026): Konservatives Tableisieren.
+  // Das letzte Segment MUSS ein reiner Betrag sein (betragAmAnfang + leerer rest).
+  // Hat es Folgetext → den ganzen Block als Plaintext lassen (return null).
+  // Dies verhindert den stillen Verlust von Übergangsbestimmungen, nächsten
+  // Artikelabsätzen oder anderen Nicht-Tarif-Prosa am Ende eines PDF-Blocks.
+  const letztes = segmente[segmente.length - 1].trim();
+  const letzterBetrag = betragAmAnfang(letztes);
+  if (!letzterBetrag || letzterBetrag.rest.length > 0) return null;
+
   const tabelle: TarifZeile[] = [];
   let offeneBeschreibung = segmente[0].trim();
-  let vortext = '';
 
-  // Einleitungssatz bis und mit «:» (z.B. «… betragen:») als Vortext abtrennen.
-  const doppelp = offeneBeschreibung.lastIndexOf(':');
-  if (doppelp >= 0 && doppelp < offeneBeschreibung.length - 1) {
-    vortext = offeneBeschreibung.slice(0, doppelp + 1).trim();
-    offeneBeschreibung = offeneBeschreibung.slice(doppelp + 1).trim();
-  }
+  // FIX DEFECT 2 (Vortext-Heuristik, 22.6.2026): Das «lastIndexOf(':')»-Muster
+  // hat Beschreibungen mis-splittet, deren Text einen internen Doppelpunkt enthält
+  // («Polizeibeamter: je Stunde», «Errichtung einer Stiftung (Art.81 ZGB): Ansätze…»,
+  // «über Fr. 50000.– bis Fr. 100000.–: Grundgebühr» u.a. — 18 Fehlschnitte in den
+  // SG-Snapshots). Das keyword-verankerte Muster aus der Brief-Spec trifft zwar die
+  // 5 echten Einleitungsfälle («Die Entscheidgebühren betragen: …»), produziert aber
+  // in 2 dieser Fälle immer noch einen Fehlschnitt (mehrseitig zusammengeführte
+  // PDF-Blöcke, bei denen «erhoben für:» tief im Text vergraben liegt).
+  // Entscheid (§1 > Anzeige): vortext = '' immer. Die erste Zeile der Tabelle trägt
+  // die vollständige Beschreibung inkl. allfälliger Einleitungsphrase. Das ist
+  // verlustfrei (kein Inhalt geht verloren) und verhindert jeden Fehlschnitt.
+  const vortext = '';
 
   for (let k = 1; k < segmente.length; k++) {
     const b = betragAmAnfang(segmente[k]);

@@ -56,15 +56,24 @@ describe('extrahiereTarifTabelle', () => {
     });
   });
 
-  it('Vortext (Einleitung mit «:») bleibt erhalten, Rest wird Tabelle', () => {
+  // DELIBERATE SPEC CHANGE (22.6.2026): Vortext-Heuristik wurde gestrichen.
+  // Das «lastIndexOf(":")»-Muster hat 18 Beschreibungen mis-splittet (interne
+  // Doppelpunkte wie «Polizeibeamter: je Stunde»). Das keyword-verankerte Muster
+  // liefert immer noch 2 Fehlschnitte bei mehrseitigen PDF-Blöcken. Entscheid §1:
+  // vortext = '' immer; die Einleitungsphrase bleibt in der ersten beschreibung.
+  // Alt: r!.vortext === 'Die Gebühren betragen:' und erster beschr === 'Vorladung'.
+  // Neu: vortext === '' und erster beschr === 'Die Gebühren betragen: Vorladung'.
+  it('Einleitung mit «:» bleibt ungeteilt in der ersten Beschreibung (kein Vortext mehr)', () => {
     const r = extrahiereTarifTabelle(
       'Die Gebühren betragen: Vorladung . . . . . . . 6.— Mahnung . . . . . . . 10.— bis 50.—',
     );
-    expect(r!.vortext).toBe('Die Gebühren betragen:');
-    expect(r!.tabelle).toEqual([
-      { beschreibung: 'Vorladung', betrag: '6.—' },
-      { beschreibung: 'Mahnung', betrag: '10.— bis 50.—' },
-    ]);
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [
+        { beschreibung: 'Die Gebühren betragen: Vorladung', betrag: '6.—' },
+        { beschreibung: 'Mahnung', betrag: '10.— bis 50.—' },
+      ],
+    });
   });
 
   it('kein Leader → null (normaler Absatz unangetastet)', () => {
@@ -73,5 +82,58 @@ describe('extrahiereTarifTabelle', () => {
 
   it('Leader aber kein Betrag danach → null (kein Fehlschnitt)', () => {
     expect(extrahiereTarifTabelle('Siehe Anhang . . . . . . folgende Bestimmungen')).toBeNull();
+  });
+
+  // FIX DEFECT 1 (trailing prose, 22.6.2026): Letztes Segment muss reiner Betrag sein.
+  // Blocks mit Tarif-Zeilen GEFOLGT VON weiterem Prosatext werden nicht tableisiert
+  // (return null) — verhindert stillen Inhaltsverlust (§1).
+  it('trailing prose nach letztem Betrag → null (kein stiller Inhaltsverlust)', () => {
+    // Realitätsnahes Beispiel: Tarif-Zeile, dann Übergangsbestimmung / nächster Artikel
+    expect(
+      extrahiereTarifTabelle(
+        'Einvernahme . . . . . . 30.— Art. 7 Grundsätze Der Erwerbspreis bestimmt sich nach …',
+      ),
+    ).toBeNull();
+  });
+
+  // FIX DEFECT 2 (interne Doppelpunkte, 22.6.2026): Beschreibungen mit «:» werden
+  // nicht mehr gesplittet — kein Mis-Split auf «Polizeibeamter: je Stunde» o.ä.
+  it('interner Doppelpunkt in Beschreibung wird NICHT mis-splittet', () => {
+    const r = extrahiereTarifTabelle('Polizeibeamter: je Stunde . . . . . . 90.—');
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [{ beschreibung: 'Polizeibeamter: je Stunde', betrag: '90.—' }],
+    });
+  });
+
+  it('interner Doppelpunkt + langer Text bleibt vollständig in beschreibung', () => {
+    const r = extrahiereTarifTabelle(
+      'Ordnungsdienst bei privaten Veranstaltungen: je Polizeibeamter und halber Tag . . . . . . 200.—',
+    );
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [
+        {
+          beschreibung: 'Ordnungsdienst bei privaten Veranstaltungen: je Polizeibeamter und halber Tag',
+          betrag: '200.—',
+        },
+      ],
+    });
+  });
+
+  it('Art.-Verweis mit Doppelpunkt in Beschreibung bleibt ungetrennt', () => {
+    // «Errichtung einer Stiftung (Art.81 ZGB): Ansätze …» — war früher Fehlschnitt
+    const r = extrahiereTarifTabelle(
+      'Errichtung einer Stiftung (Art.81 ZGB): Ansätze je nach Stiftungskapital . . . . . . 500.—',
+    );
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [
+        {
+          beschreibung: 'Errichtung einer Stiftung (Art.81 ZGB): Ansätze je nach Stiftungskapital',
+          betrag: '500.—',
+        },
+      ],
+    });
   });
 });
