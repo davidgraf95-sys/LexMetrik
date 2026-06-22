@@ -22,9 +22,37 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 22.6.2026 — Stufe-2-Fixes: ZH-215.3 §4 Row-11-Spaltenriss + Tausender-Apostrophe (feat/tarif-tabellen-stufe2)
+## Session 22.6.2026 — STUFE 2 Tarif-Tabellen + die 3 ZH-Gesetze «wie beim Bund» (feat/tarif-tabellen-stufe2)
 
-Auf Branch `feat/tarif-tabellen-stufe2` (noch kein PR/Merge); Gate grün.
+Auftrag David: kantonale Gesetze Zahlen/Tabellen richtig + übersichtlich/schön
+darstellen; explizit die 3 ZH-Gesetze «wirklich fertig/perfekt, wie beim Bund»
+(keine Formatierungsfehler/Randziffern/abgeschnittenen Texte/falsch nummerierten
+Absätze). Subagent-getrieben, je Schritt selbst-verifiziert (x-Geometrie + Quell-
+Abgleich + UI desktop/mobil + adversarial). **Gate voll grün.**
+
+**Geliefert (Branch, Commits 2bb7397..8dcd5e1):**
+- **Tausendertrenner `'`** (`gruppiereTausender`, darstellung.ts): Leerzeichen-/bare-Tausender
+  → Apostroph; Bereichs-Strich-Artefakt «65– 250»→«65–250». Render-Schicht (§3).
+- **Mehrspalten-Tabellen** (`MehrspaltigeTabelle`, ArtikelBody): CSS-Table (inhaltsbasierte
+  Spalten), mobil horizontal scrollbar (kein Clipping), Beträge rechtsbündig, Positions-Nr.
+  links. Block-Feld `mehrspaltig?: {kopf?, zeilen}` additiv + Drift-SHA + Sanity-aware.
+- **ZH x-aware Tarif-Extraktion** (adapter-zh-pdf, rein aus PDF-x-Geometrie, §1, kein Raten):
+  ZH-215.3 §4 (3-Sp), ZH-211.11 §3 (2-Sp)/§4 (3-Sp), ZH-243 NotGebV §17-Anhang (132 Ziffer-
+  Zeilen; 3740-Zeichen-Klumpen aufgelöst; Wurzelbug §17-Anhang-Grenze gefixt).
+- **ZH Absatz-Nummerierung wie Bund**: erstes «1» wiederhergestellt, Streu-Fussnoten-
+  Hochzahlen (z.B. ZH-243 §4 «10»/«5») verworfen, Fragmente gemerged → 0 Problem-Artikel.
+- **ZH Fussnoten-Leaks weg**: Definitionen («Fassung gemäss…», «B vom…») aus allen ZH-Bodies
+  gefiltert (0 Leaks); ZH-215.3 §25 trägt jetzt echten Übergangstext. (Offen/Follow-up:
+  echte Fussnoten-Extraktion+Anzeige am Artikelfuss wie Bund — bewusst zurückgestellt.)
+- **6 LexWork-`·`/`—`-Kantone** (Klasse A) je separat: NW-265.51/BS-154.810/SO-614.11/
+  VS-173.8(de/fr)/ZG-163.4/TG-176.31 → MehrspaltigeTabelle; adversarial 0 Inhaltsverlust
+  (NW-Abschnittsüberschrift-Fix). Ausschluss BL-211.71/FR-635.1.1/FR-214.5.16 (Änderungs-
+  platzhalter, kein Tarif) unberührt.
+- Verifikation: alle 3 ZH UI-gerendert (Tabellen/Apostrophe/Absatz-Nr/0 Konsolenfehler),
+  Quell-Abgleich je Tarif, voller Gate grün (tsc/vitest 2235+/golden/lint/check inkl. vollstaendigkeit).
+- **Deploy-Status:** → siehe Folge-Eintrag (Merge main + Prod).
+
+### Detail-Belege (Auswahl)
 
 **Issue 1 (§1-safe): Row-11-Spaltenriss in `extrahiereZhStreitwertStaffel`**
 - PDF-Stück «10 Mio. 106» (x=143.5 pt) landete x-technisch in col1 (Streitwert);
