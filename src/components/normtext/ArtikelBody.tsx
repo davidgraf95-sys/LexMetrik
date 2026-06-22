@@ -166,7 +166,7 @@ function normalisiereTarifText(text: string): string {
 // Fragmente/Key-Themen). Reine Darstellung (§3), Wortlaut unverändert.
 function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
   return (
-    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
+    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [text-indent:0] [font-variant-numeric:tabular-nums]">
       {zeilen.map((z, j) => (
         <span key={j}
           className={`block px-3 py-1.5 leading-snug ${
@@ -214,7 +214,7 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
       kopfZeile ? ' font-medium text-ink-800' : spalteNumerisch[ci] ? ' font-medium text-ink-800' : ' text-ink-700'
     }`;
   return (
-    <span data-mehrspaltig="" className="mt-1.5 block overflow-x-auto rounded-md border border-line [font-variant-numeric:tabular-nums]">
+    <span data-mehrspaltig="" className="mt-1.5 block overflow-x-auto rounded-md border border-line [text-indent:0] [font-variant-numeric:tabular-nums]">
       <span className="table w-full">
         {kopf && kopf.length > 0 && (
           <span className="table-row bg-paper-sunken/40">
@@ -244,7 +244,7 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
 // Reine Darstellung (§3); Wortlaut je Zelle unverändert.
 function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag: string }> }) {
   return (
-    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [font-variant-numeric:tabular-nums]">
+    <span className="mt-1.5 block rounded-md border border-line overflow-hidden [text-indent:0] [font-variant-numeric:tabular-nums]">
       {zeilen.map((z, j) => (
         <span key={j} className={`flex items-baseline justify-between gap-4 px-3 py-1.5 leading-snug ${j > 0 ? 'border-t border-line/60' : ''}`}>
           <span className="text-ink-700">{z.beschreibung}</span>
