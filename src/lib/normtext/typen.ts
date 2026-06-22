@@ -23,6 +23,8 @@ export interface NormSnapshot {
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
+    /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
+    tabelle?: Array<{ beschreibung: string; betrag: string }>;
   }>;
   /** Konsolidierungs-/Fassungsdatum der Quelle (ISO 'YYYY-MM-DD'). */
   stand: string;

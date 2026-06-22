@@ -109,14 +109,14 @@ function sha256Bloecke(
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
+    tabelle?: Array<{ beschreibung: string; betrag: string }>;
   }>,
 ): string {
   const zusammen = bloecke
     .map((b) => {
-      const itemTeil = (b.items ?? [])
-        .map((i) => `${i.marke}\t${i.text}`)
-        .join('\n');
-      return itemTeil ? `${b.text}\n${itemTeil}` : b.text;
+      const itemTeil = (b.items ?? []).map((i) => `${i.marke}\t${i.text}`).join('\n');
+      const tabTeil = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
+      return [b.text, itemTeil, tabTeil].filter(Boolean).join('\n');
     })
     .join('\n');
   return createHash('sha256').update(zusammen, 'utf8').digest('hex');
