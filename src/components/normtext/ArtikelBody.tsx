@@ -75,11 +75,20 @@ export function FnRef({ artikel, nr, klasse }: { artikel: string; nr: string; kl
 // das des Popovers, damit dessen Markup byte-gleich bleibt; die Lesesicht
 // übergibt eine eigene className.
 
-// «aufgehoben»: faithful-Snapshot trägt für aufgehobene Stellen (§7) nur das
-// Auslassungszeichen «…» (ggf. mit Punkten/Whitespace). Rein Darstellung (§3):
-// gedämpftes «aufgehoben» statt des nackten «…»; gilt für Absätze UND Items.
+// «aufgehoben»: faithful-Snapshot trägt für aufgehobene Stellen (§7) entweder
+// nur das Auslassungszeichen «…» ODER das nackte Wort «Aufgehoben» (je nach
+// Quelle uneinheitlich gross/klein). Rein Darstellung (§3): beide Formen werden
+// zum gedämpften, einheitlichen «aufgehoben»; gilt für Absätze UND Items.
 function istAufgehoben(text: string): boolean {
-  return /^[….\s]*$/.test(text) && text.trim() !== '';
+  const t = text.trim();
+  if (t === '') return false;
+  if (/^[….\s]*$/.test(t)) return true;
+  // Nacktes «Aufgehoben», evtl. mit geleaktem Bereichs-Rest kombinierter Artikel
+  // davor («und 51 Aufgehoben», «– 149 Aufgehoben») — kein echter Wortlaut. Echte
+  // Sätze mit «aufgehoben» (Art. 57 «Wird eine juristische Person aufgehoben, …»)
+  // bleiben unberührt: nach dem Wort darf nichts ausser Punkt folgen.
+  const ohneBereich = t.replace(/^(?:(?:und|et|bis|[–-]|\d+)\s+)+/i, '');
+  return /^aufgehoben\.?$/i.test(ohneBereich);
 }
 
 // Tarif-Staffel-Tabelle (z. B. ZH GebV OG § 4) landet aus dem PDF-Snapshot als
