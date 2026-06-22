@@ -179,11 +179,15 @@ function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
   );
 }
 
-// Hilfsfunktion: Zelle gilt als numerisch wenn sie Ziffern enthält, aber kein
-// Wort mit ≥4 Buchstaben (à la «über», «bis», «Mio.»). Numerische Zellen werden
-// rechtsbündig dargestellt + bekommen gruppiereTausender (§3). Rein lokal (§3).
+// Hilfsfunktion: Zelle gilt als (rechtsbündiger) Betrag, wenn sie Ziffern
+// enthält, aber kein Wort mit ≥4 Buchstaben (à la «über», «bis», «zuzügl.»,
+// «übersteigenden») — lange Text-Zellen bleiben linksbündig. AUSNAHME: reine
+// Positions-/Tarif-Nummern («1.1.1.1», «1.», «5000») sind KEINE Beträge → bleiben
+// linksbündig zur Hierarchie. Rein Darstellung (§3); steuert Ausrichtung.
 function istNumerischeZelle(s: string): boolean {
-  return s.trim() !== '' && /\d/.test(s) && !/[A-Za-zÀ-ÿ]{4,}/.test(s);
+  const t = s.trim();
+  if (t === '' || /^\d+(\.\d+)*\.?$/.test(t)) return false;
+  return /\d/.test(t) && !/[A-Za-zÀ-ÿ]{4,}/.test(t);
 }
 
 // N-Spalten-Tarif-Tabelle (Stufe 2) aus strukturiertem block.mehrspaltig.
@@ -197,29 +201,41 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
     while (padded.length < spalten) padded.push('');
     return padded;
   };
+  // Spalte gilt als numerisch, wenn irgendeine ihrer Datenzellen numerisch ist
+  // → rechtsbündig (Kopf + Zellen einheitlich), für saubere Zahlenkolonnen.
+  const spalteNumerisch = Array.from({ length: spalten }, (_, ci) =>
+    zeilen.some((z) => istNumerischeZelle(z[ci] ?? '')),
+  );
+  // CSS-Table = inhaltsbasierte Spaltenbreiten (übersichtlicher als gleichbreite
+  // Flex-Spalten); Wrapper scrollt horizontal statt zu clippen → auf schmalen
+  // Viewports bleibt jede Spalte lesbar (§Lesbarkeit). Beträge brechen nicht um.
+  const zelleCls = (ci: number, kopfZeile: boolean) =>
+    `table-cell px-3 py-1.5 leading-snug align-baseline${spalteNumerisch[ci] ? ' text-right whitespace-nowrap' : ''}${
+      kopfZeile ? ' font-medium text-ink-800' : spalteNumerisch[ci] ? ' font-medium text-ink-800' : ' text-ink-700'
+    }`;
   return (
-    <span data-mehrspaltig="" className="mt-1.5 block overflow-hidden rounded-md border border-line [font-variant-numeric:tabular-nums]">
-      {kopf && kopf.length > 0 && (
-        <span className="flex bg-paper-sunken/40">
-          {padZeile(kopf).map((h, ci) => (
-            <span key={ci} className={`flex-1 px-3 py-1.5 font-medium text-ink-800 leading-snug${ci > 0 ? ' pl-3' : ''}`}>
-              {h}
-            </span>
-          ))}
-        </span>
-      )}
-      {zeilen.map((z, ri) => (
-        <span key={ri} className="flex border-t border-line/60">
-          {padZeile(z).map((cell, ci) => {
-            const numerisch = istNumerischeZelle(cell);
-            return (
-              <span key={ci} className={`flex-1 py-1.5 leading-snug${ci > 0 ? ' pl-3' : ' px-3'}${numerisch ? ' text-right font-medium text-ink-800' : ' text-ink-700'}`}>
+    <span data-mehrspaltig="" className="mt-1.5 block overflow-x-auto rounded-md border border-line [font-variant-numeric:tabular-nums]">
+      <span className="table w-full">
+        {kopf && kopf.length > 0 && (
+          <span className="table-row bg-paper-sunken/40">
+            {padZeile(kopf).map((h, ci) => (
+              <span key={ci} className={zelleCls(ci, true)}>{h}</span>
+            ))}
+          </span>
+        )}
+        {zeilen.map((z, ri) => (
+          <span key={ri} className="table-row">
+            {padZeile(z).map((cell, ci) => (
+              <span
+                key={ci}
+                className={`${zelleCls(ci, false)}${ri > 0 || (kopf && kopf.length) ? ' border-t border-line/60' : ''}`}
+              >
                 {gruppiereTausender(cell)}
               </span>
-            );
-          })}
-        </span>
-      ))}
+            ))}
+          </span>
+        ))}
+      </span>
     </span>
   );
 }
