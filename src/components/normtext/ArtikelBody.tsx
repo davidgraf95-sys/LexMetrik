@@ -179,6 +179,51 @@ function StaffelTabelle({ zeilen }: { zeilen: string[] }) {
   );
 }
 
+// Hilfsfunktion: Zelle gilt als numerisch wenn sie Ziffern enthält, aber kein
+// Wort mit ≥4 Buchstaben (à la «über», «bis», «Mio.»). Numerische Zellen werden
+// rechtsbündig dargestellt + bekommen gruppiereTausender (§3). Rein lokal (§3).
+function istNumerischeZelle(s: string): boolean {
+  return s.trim() !== '' && /\d/.test(s) && !/[A-Za-zÀ-ÿ]{4,}/.test(s);
+}
+
+// N-Spalten-Tarif-Tabelle (Stufe 2) aus strukturiertem block.mehrspaltig.
+// Optionaler Kopf (kopf[]), beliebig viele Datenzeilen (zeilen[][]).
+// Numerische Zellen rechtsbündig + gruppiereTausender; Text-Zellen linksbündig.
+// Reine Darstellung (§3); Zell-Wortlaut unverändert (ausser Tausender-Apostroph).
+function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string[][] }) {
+  const spalten = Math.max(kopf?.length ?? 0, ...zeilen.map((z) => z.length));
+  const padZeile = (z: string[]) => {
+    const padded = [...z];
+    while (padded.length < spalten) padded.push('');
+    return padded;
+  };
+  return (
+    <span data-mehrspaltig="" className="mt-1.5 block overflow-hidden rounded-md border border-line [font-variant-numeric:tabular-nums]">
+      {kopf && kopf.length > 0 && (
+        <span className="flex bg-paper-sunken/40">
+          {padZeile(kopf).map((h, ci) => (
+            <span key={ci} className={`flex-1 px-3 py-1.5 font-medium text-ink-800 leading-snug${ci > 0 ? ' pl-3' : ''}`}>
+              {h}
+            </span>
+          ))}
+        </span>
+      )}
+      {zeilen.map((z, ri) => (
+        <span key={ri} className="flex border-t border-line/60">
+          {padZeile(z).map((cell, ci) => {
+            const numerisch = istNumerischeZelle(cell);
+            return (
+              <span key={ci} className={`flex-1 py-1.5 leading-snug${ci > 0 ? ' pl-3' : ' px-3'}${numerisch ? ' text-right font-medium text-ink-800' : ' text-ink-700'}`}>
+                {numerisch ? gruppiereTausender(cell) : cell}
+              </span>
+            );
+          })}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 // 2-Spalten-Tarif (Beschreibung | Betrag) aus strukturiertem block.tabelle.
 // Reine Darstellung (§3); Wortlaut je Zelle unverändert.
 function TarifTabelle({ zeilen }: { zeilen: Array<{ beschreibung: string; betrag: string }> }) {
@@ -261,6 +306,10 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                   Artikel (Bund/LexWork, sauber extrahiert) bleiben unberührt.
                   Aufgehobene Absätze («…») → gedämpftes «aufgehoben». */}
               {(() => {
+                // Mehrspalten-Tabelle (Stufe 2) hat Vorrang vor Stufe 1 + Text.
+                // Early-return NUR wenn mehrspaltig vorhanden UND mindestens eine Zeile.
+                if (b.mehrspaltig && b.mehrspaltig.zeilen.length > 0)
+                  return <MehrspaltigeTabelle kopf={b.mehrspaltig.kopf} zeilen={b.mehrspaltig.zeilen} />;
                 // Strukturierte Tarif-Tabelle (Stufe 1) hat Vorrang vor der
                 // Text-Heuristik. block.text (Vortext) bleibt leer (Task-2-Konvention:
                 // bei tableisierten Blöcken ist text ''); nur TarifTabelle rendern.
