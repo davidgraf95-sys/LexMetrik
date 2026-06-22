@@ -28,7 +28,10 @@ export interface TarifZeile { beschreibung: string; betrag: string }
 // Leader = ≥3 Punkte, ggf. durch einzelne Leerzeichen getrennt («. . .» / «...»).
 // FIX A (22.6.2026): war {3,} (≥4 Punkte); geändert zu {2,} (≥3 Punkte), weil
 // SG-2808 art=10 den 3-Punkt-Leader «. . . 300.– bis 3000.–» nicht erkannte.
-const LEADER = /\.(?:\s?\.){2,}/g;
+// /g NICHT gesetzt: String.prototype.split ignoriert das Flag ohnehin, aber
+// ein /g-RegExp akkumuliert lastIndex-Zustand, was bei Wiederverwendung
+// zu inkonsistenten Matches führen kann (latenter Footgun entfernt).
+const LEADER = /\.(?:\s?\.){2,}/;
 
 // Signal für unvollständig getrennte Blöcke: ein Geld-Betrag (mit Dash) gefolgt
 // von Leerzeichen + Ziffer (nächste Zeilennummer/-kennung steckt noch in der
@@ -91,6 +94,13 @@ export function extrahiereTarifTabelle(
     if (RESIDUAL_LEADER.test(zeile.beschreibung)) return null;
     if (INCOMPLETE_SPLIT.test(zeile.beschreibung)) return null;
   }
+
+  // §1-Guard (22.6.2026): Jeder Betrag MUSS ein Dash-Zeichen (—/–/-) enthalten.
+  // Ein echter CHF-Tarif-Betrag trägt immer einen Dash («30.—», «—.50», «bis 500.–»).
+  // Bare Dezimalzahlen ohne Dash («1.05», «3.02») sind Positionsnummern / Verweis-Ziffern
+  // — sie als Beträge zu tableisieren wäre eine §1-Verletzung (fabrizierter Preis).
+  // Tritt auch nur ein solcher Wert auf → ganzen Block als Plaintext belassen.
+  if (tabelle.some(zeile => !/[—–-]/.test(zeile.betrag))) return null;
 
   return { vortext, tabelle };
 }

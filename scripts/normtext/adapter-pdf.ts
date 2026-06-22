@@ -683,6 +683,8 @@ function fuegeZeilen(roh: string[]): string {
  * zerlegen (§1: nur wenn eindeutig Beschreibung…Betrag; sonst Text unverändert).
  * Idempotent: Blöcke mit leerem text (bereits tableisiert) werden übersprungen.
  */
+// Idempotent: bereits tableisierte Blöcke haben text==='' und werden durch
+// «if (!b.text) continue» übersprungen — mehrfacher Aufruf ist sicher.
 function reichereTabellen(bloecke: PdfBlock[]): void {
   for (const b of bloecke) {
     if (!b.text) continue;

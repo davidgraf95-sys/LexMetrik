@@ -9,6 +9,9 @@ describe('betragAmAnfang', () => {
   it('liest Rappen-Beträge «—.50»', () => {
     expect(betragAmAnfang('—.50')).toEqual({ betrag: '—.50', rest: '' });
   });
+  it('liest Rappen-Beträge mit Bindestrich «-.50» (hyphen-rappen)', () => {
+    expect(betragAmAnfang('-.50')).toEqual({ betrag: '-.50', rest: '' });
+  });
   it('liest «bis»-Spanne und gibt Folgetext als rest', () => {
     expect(betragAmAnfang('100.— bis 1000.— 22.60 Aufsichtsrechtliche Verfügungen'))
       .toEqual({ betrag: '100.— bis 1000.—', rest: '22.60 Aufsichtsrechtliche Verfügungen' });
@@ -171,6 +174,29 @@ describe('extrahiereTarifTabelle', () => {
           betrag: '500.—',
         },
       ],
+    });
+  });
+
+  // §1-Guard (22.6.2026): Betrag-Wert ohne Dash-Zeichen ist eine Verweis-Nummer,
+  // kein CHF-Preis. Solche Blöcke NICHT tableisieren (return null = Plaintext).
+  it('§1-Guard: bare-decimal Verweis-Nummer rechts (kein Dash) → null', () => {
+    // «1.05» ist eine Positionsnummer / Querverweis-Ziffer, kein Preis.
+    expect(
+      extrahiereTarifTabelle('Beurkundung von Verträgen siehe Ziffer . . . . . 1.05'),
+    ).toBeNull();
+  });
+
+  it('§1-Guard: mehrere bare-decimal Verweis-Nummern → null', () => {
+    expect(
+      extrahiereTarifTabelle('Grundpfandrechte . . . . 3.01 Dienstbarkeiten . . . . 3.02'),
+    ).toBeNull();
+  });
+
+  it('§1-Guard: echter Dash-Betrag tableisiert weiterhin korrekt', () => {
+    const r = extrahiereTarifTabelle('Vorladung . . . 6.—');
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [{ beschreibung: 'Vorladung', betrag: '6.—' }],
     });
   });
 });
