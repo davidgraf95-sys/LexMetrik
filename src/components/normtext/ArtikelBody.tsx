@@ -228,7 +228,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : 'pl-9') : undefined}>
               {absMarke != null && (
                 zk
-                  ? <ZitierMarke klasse="mr-3 font-semibold !text-brass-600" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
+                  ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-400" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
                   : <sup className="num mr-1 font-semibold text-ink-500">{absMarke}</sup>
               )}
               {/* DARSTELLUNGS-NORMALISIERUNG (§3, Wortlaut unverändert): nur im
