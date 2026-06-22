@@ -56,3 +56,20 @@ Erst nach Davids ausdrücklichem Ja (§9), aus sauberem Worktree; Prod-Nachkontr
 - §12: Fixes mit explizitem Pathspec; kein `git add -A`; kein voller `npm run normtext`.
 
 *Stand 22.6.2026 — erstellt vor Ausführung; Phase 0 läuft.*
+
+---
+
+## ERGEBNISSE Korpus-Review (22.6.2026) — 150 Gesetze, 1 Agent/Gesetz
+**92 sauber, 58 mit Befunden.** Klassen-Häufigkeit: fussnoten-leak 103 · leerer/kaputter-Artikel 68 · untableisierter-tarif 22 · zerrissenes/geklebtes-Wort 16 · verdächtiges-Label/Stand 5 · verschmolzene-Zahlen 3 · sonstiges 3.
+
+### BEHOBEN (display-layer, kein Download, deployt)
+- **Fussnoten-/Änderungshistorie-Leak (103)** → `trenneAenderungshistorie` erweitert (1–3 Fussnoten-Nummern vor Aufgehoben/Eingefügt/Fassung gemäss). Korpus-Verifikation 32'280 Blöcke: Rest 2, beide legitim. = größter sichtbarer Fehler, systemisch weg.
+- (vorher in dieser Session: «aufgehoben»-Fehlanzeige 232 Blöcke, text-indent-Clipping, Tausendertrenner, ZH StPO/Absatz-Nr.)
+
+### BACKLOG — braucht Re-Fetch/Extraktion (David: KEINE Downloads → bewusst offen)
+- **untableisierter-tarif (22)**: kantonale Tarif-Tabellen noch als Fliesstext (brauchen x-aware/·–/Füllpunkt-Extraktion = Generator-Lauf mit Netz). Kandidaten u.a. weitere LU/VD/GR/AG-Erlasse + VD-105539 (eigenes «de X à Y»-Format).
+- **leerer/kaputter-Artikel (68)**: «…»-Platzhalter/Fragmente — meist Fedlex-Auslassungen (legitim) oder Extraktions-Fragmente (brauchen Re-Fetch).
+- **zerrissene/geklebte Wörter (16)**, **verschmolzene Zahlen (3)**, **Label/Stand (5)**: Einzelfälle, überwiegend Extraktions-Artefakte (Re-Fetch).
+- **§4-Erstzeile** (Formel in col1) — Einzelfall.
+
+→ Empfehlung: eine spätere, bewusst freigegebene **Download-Welle** (kanton-gefiltert) arbeitet das Backlog ab; bis dahin sind die systemischen Darstellungsfehler behoben.
