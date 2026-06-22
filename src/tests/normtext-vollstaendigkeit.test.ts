@@ -329,6 +329,24 @@ describe('pruefeInhaltsSanity', () => {
     expect(result).toHaveLength(0);
   });
 
+  it('akzeptiert Block mit tabelle (kein text, keine items) — Füllpunkt-Zweispalter', () => {
+    const eintragNurTabelle: SnapshotEintrag = {
+      id: 'kanton/SG/2808/art_8',
+      bloecke: [
+        {
+          absatz: '1',
+          text: '',
+          tabelle: [
+            { beschreibung: 'Einzelrichter', betrag: 'Fr. 300.–' },
+            { beschreibung: 'Kollegialgericht', betrag: 'Fr. 600.–' },
+          ],
+        },
+      ],
+    };
+    const result = pruefeInhaltsSanity([eintragNurTabelle]);
+    expect(result).toHaveLength(0);
+  });
+
   it('meldet Fehler bei leeren bloecke[]', () => {
     const fehlerEintrag: SnapshotEintrag = {
       id: 'bund/ZGB/art_999',

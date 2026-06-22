@@ -678,6 +678,22 @@ function fuegeZeilen(roh: string[]): string {
   return out.replace(/\s+/g, ' ').trim();
 }
 
+/**
+ * Füllpunkt-Tarifzeilen in allen Blöcken einer Liste in strukturierte Tabellen
+ * zerlegen (§1: nur wenn eindeutig Beschreibung…Betrag; sonst Text unverändert).
+ * Idempotent: Blöcke mit leerem text (bereits tableisiert) werden übersprungen.
+ */
+function reichereTabellen(bloecke: PdfBlock[]): void {
+  for (const b of bloecke) {
+    if (!b.text) continue;
+    const t = extrahiereTarifTabelle(b.text);
+    if (t) {
+      b.text = t.vortext;
+      b.tabelle = t.tabelle;
+    }
+  }
+}
+
 /** Block-Sammler (Absätze + lit.-items eines Artikels) — analog HTM/ZH. */
 function baueBloecke(zeilen: string[]): PdfBlock[] {
   const bloecke: PdfBlock[] = [];
@@ -735,16 +751,7 @@ function baueBloecke(zeilen: string[]): PdfBlock[] {
   flushText();
   flushItem();
 
-  // Füllpunkt-Tarifzeilen je Block in strukturierte Tabelle zerlegen (§1: nur
-  // wenn eindeutig Beschreibung…Betrag; sonst Text unverändert).
-  for (const b of bloecke) {
-    if (!b.text) continue;
-    const t = extrahiereTarifTabelle(b.text);
-    if (t) {
-      b.text = t.vortext;
-      b.tabelle = t.tabelle;
-    }
-  }
+  reichereTabellen(bloecke);
   return bloecke.filter(
     (b) => b.text !== '' || (b.items && b.items.length > 0) || (b.tabelle && b.tabelle.length > 0),
   );
@@ -915,6 +922,13 @@ export async function holePdf(
   for (const [ziff, e] of Object.entries(anhang)) {
     if (!(ziff in artikel)) artikel[ziff] = e;
   }
+
+  // Füllpunkt-Tarifzeilen in ALLEN assemblierten Artikeln tableisieren — auch in
+  // Anhang-Ziffer-Einträgen, die baueBloecke umgehen (dort werden sie durch den
+  // Segmentierer direkt konstruiert). Idempotent: bereits tableisierte Blöcke
+  // (text === '') werden durch reichereTabellen übersprungen (if (!b.text) continue).
+  // Der quelleHash unten deckt so die neuen tabelle-Felder korrekt ab.
+  for (const tok of Object.keys(artikel)) reichereTabellen(artikel[tok].bloecke);
 
   // Stand: zuerst Kopf-/Fussband, dann Titel, dann die Präambel (TI: «(del 30
   // novembre 2010)» / JU: «du 24 mars 2010» stehen NICHT im Kopfband, sondern in

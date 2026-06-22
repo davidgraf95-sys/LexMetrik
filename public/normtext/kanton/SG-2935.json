@@ -25,7 +25,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "6de84ccfa44dc069ee77338952d47bdd6f9ceaa757277c36c7d750375a6191e9"
     },
     {
@@ -38,14 +38,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zuschlag für jede zusätzliche Beurkundung, wenn die Parteien nicht gleichzeitig zur öffent- lichen Beurkundung erscheinen . . . . . . . . . . . . 50.– bis 200.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Zuschlag für jede zusätzliche Beurkundung, wenn die Parteien nicht gleichzeitig zur öffent- lichen Beurkundung erscheinen",
+              "betrag": "50.– bis 200.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "d37fd14b27358ce3c36ffd7ca06c5eada257ded40d94d4b30901d8b0164b141e"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "bd8c53d18a1fab1d34059b99184c947cf16f34343c351c836a25a9e701eb0c93"
     },
     {
       "id": "kanton/SG/2935/art_1.02",
@@ -57,14 +63,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zuschlag für eine öffentliche Beurkundung ausserhalb der Amtsräume . . . . . . . . . . . . . . . . 50.– bis 300.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Zuschlag für eine öffentliche Beurkundung ausserhalb der Amtsräume",
+              "betrag": "50.– bis 300.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "5164a882156e3f5bbe04a740efed1c5ec4be7efd80c309c95280947b4eb9e486"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "a7bb3ee36c1a348346b0ae22401ef986e1e56108b7e5c54fbd391de9ce3e5b7a"
     },
     {
       "id": "kanton/SG/2935/art_1.03",
@@ -76,14 +88,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Nachtrag zu einem öffentlich beurkundeten Rechtsgeschäft . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 1000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Nachtrag zu einem öffentlich beurkundeten Rechtsgeschäft",
+              "betrag": "100.– bis 1000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "e0fba14a49ba7e08adeeed09dd8226d40e7ae928c90cd93d1eac1fc70a4dc897"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "480dadbd914b6939fbd6010385a2b2f751251f6102d5079df2c313c57f9c6acf"
     },
     {
       "id": "kanton/SG/2935/art_1.04",
@@ -95,14 +113,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Öffentliche Beurkundung eines nicht beurkun- dungsbedürftigen Rechtsgeschäfts auf Partei- begehren . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Öffentliche Beurkundung eines nicht beurkun- dungsbedürftigen Rechtsgeschäfts auf Partei- begehren",
+              "betrag": "100.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "fdf682f8d9514ed94801ceb2ebf2fd055579f5de14eba5c59172cfbf71fba4c5"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "b1f9855019ee3f3ed08a17fd866ca7298cd48ff82defefc66029a8021c2f47f7"
     },
     {
       "id": "kanton/SG/2935/art_1.05",
@@ -120,7 +144,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "2ae5c58aace76115ee92d54e1ab6989f18dd3f417501270a97bd2c77908950c2"
     },
     {
@@ -143,7 +167,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "5eeb2d01df650c0914f0a7c73c3f2b5f96d1bb9ca81545ac5dea7d898147bed5"
     },
     {
@@ -162,7 +186,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "e7c210b51a5d4fcfa84fd207e889d9923ce75703a308869d0f2eda0c6162755d"
     },
     {
@@ -175,14 +199,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Schuldübernahmeanzeige(Art.834Abs.1ZGB ) und Anzeige an Grundpfandgläubiger infolge Erbgang und Untererbgang . . . . . . . . . . . . . . . . 30.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Schuldübernahmeanzeige(Art.834Abs.1ZGB ) und Anzeige an Grundpfandgläubiger infolge Erbgang und Untererbgang",
+              "betrag": "30.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "6134e3a5f5706c3d0e8e01ae6eaa3e625ce3fececdda1d8ca7c2e0188e884c82"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "fbb9fcb58a3c091df90b8b1068da145fc6a18143a8ecc644d0502dc2a29dfdc5"
     },
     {
       "id": "kanton/SG/2935/art_3.02",
@@ -194,14 +224,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Anzeigen im Rahmen des Vorkaufsrechtsver- fahrens im Auftrag des Veräusserers . . . . . . . . . 30.– bis 300.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Anzeigen im Rahmen des Vorkaufsrechtsver- fahrens im Auftrag des Veräusserers",
+              "betrag": "30.– bis 300.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "a29e9fab16c1b1b142bebf7f9aba20af6bf3697fac95a6ee8b395a7aa62c36e1"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "7a2e7258e911698cf15e35823d51cf83b573ff947963e6d148e9e25cd3a8fe7f"
     },
     {
       "id": "kanton/SG/2935/art_3.03",
@@ -213,14 +249,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Grundbuchauszug auf Papier oder elektronisch signiert, zuzüglich Fr.10.– je weiteres Grund- stück mit Ausnahme von Stammgrundstücken und Anmerkungsgrundstücken . . . . . . . . . . . . 30.– Vollmachten und Erklärungen . . . . . . . . . . . . . 20.– bis 300.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Grundbuchauszug auf Papier oder elektronisch signiert, zuzüglich Fr.10.– je weiteres Grund- stück mit Ausnahme von Stammgrundstücken und Anmerkungsgrundstücken",
+              "betrag": "30.–"
+            },
+            {
+              "beschreibung": "Vollmachten und Erklärungen",
+              "betrag": "20.– bis 300.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "e946344659f561548aa1f8d070c357249ac48046691aecfb547f853c6467468b"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "2666becc77d19ae8a30adf5f61064635160b9b8e4324d50d101cc11a633d77fc"
     },
     {
       "id": "kanton/SG/2935/art_3.09",
@@ -232,14 +278,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Auskünfte, Beratungen oder andere Verrichtun- gen, die nicht zu einem gebührenpflichtigen Geschäft führen . . . . . . . . . . . . . . . . . . . . . . . . . bis 500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Auskünfte, Beratungen oder andere Verrichtun- gen, die nicht zu einem gebührenpflichtigen Geschäft führen",
+              "betrag": "bis 500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "7118169e0c53cff4c191e1b672d7b76801e164af350d65bb3a73e0784d784d99"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "48eba4065c20b802054b5219e7e09f86dc7a96f1587b484d714e1f961b9c5f3a"
     },
     {
       "id": "kanton/SG/2935/art_3.10",
@@ -251,14 +303,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Feststellung der vorkaufsberechtigten Personen auf Verlangen des Veräusserers (Art.42, 47 und 49 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 ), ohne Aus- lagen für Dokumentenbeschaffung . . . . . . . . . 50.– bis 300.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Feststellung der vorkaufsberechtigten Personen auf Verlangen des Veräusserers (Art.42, 47 und 49 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 ), ohne Aus- lagen für Dokumentenbeschaffung",
+              "betrag": "50.– bis 300.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "ac23fb6e41b98765722af96f6d2213a47f39dffae5550689cf7872905d50873d"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "6cf5187487c53e4b1c901f8ecfc9186f34b22a899ae3f708a21553ea21d9165e"
     },
     {
       "id": "kanton/SG/2935/art_3.11",
@@ -270,14 +328,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Anwesenheit der Grundbuchverwalterin oder des Grundbuchverwalters bei einer freiwilli- gen öffentlichen Grundstücksversteigerung (Art.189a des Einführungsgesetzes zum Schwei- zerischen Zivilgesetzbuch vom 3.Juli 1911/ 22. Juni 1942 ) . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 1000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Anwesenheit der Grundbuchverwalterin oder des Grundbuchverwalters bei einer freiwilli- gen öffentlichen Grundstücksversteigerung (Art.189a des Einführungsgesetzes zum Schwei- zerischen Zivilgesetzbuch vom 3.Juli 1911/ 22. Juni 1942 )",
+              "betrag": "100.– bis 1000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "d26b954afd7cb7357eb9b6faf010d03e7f55e63a6655cea8ba9660ae68d6fb2e"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "acd276336fd6f5048088c81d1efc2fb22d848e2a4e1f575426ff162514f05af7"
     },
     {
       "id": "kanton/SG/2935/art_3.12",
@@ -289,14 +353,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Verfahren nach Art.976a und 976b ZGB , ein- schliesslich Erlass von Verfügungen. . . . . . . . . . 100.– bis 1000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Verfahren nach Art.976a und 976b ZGB , ein- schliesslich Erlass von Verfügungen",
+              "betrag": "100.– bis 1000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "f7fffbcf4b89f4148b9a1cab8449ee12d2e4f8cecabe8457152c0ba214a848b4"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "b51893da514043f6e7ee4c7e0bbeab60d4c27fe801d1259de1abd79c1c7dbd64"
     },
     {
       "id": "kanton/SG/2935/art_3.13",
@@ -308,14 +378,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Änderung der Gesellschafts- oder Gemein- schaftsform, des Namens, eines Vornamens, des Geschlechts, des Heimatorts, der Staatsangehö- rigkeit, der Firma, des Sitzes oder der Unterneh- mens-Identifikationsnummer (UID), je Person 50.– 12 4 Löschungen und Grundbuchbereinigung Art. 22 Gebührenfreie Amtshandlungen Es wird keine Gebühr erhoben für: a) die Löschung sämtlicher Einträge im Grundbuch; b) das öffentliche Bereinigungsverfahren nach Art.976c ZGB sowie Eintragungen und Änderungen im Rahmen dieses Verfahrens. Art. 23 Gebührentarif der Gemeinde Der Gemeinderat erlässt einen Tarif über die Gebühren für die Grundbuchberei- nigung. Art. 24 Gebührentarif Schätzungswerte: 1 Promille des Steuerwerts bis Fr.1000000.– zuzüglich 0,2 Promille des darüber liegenden Steuerwerts(Art.12Abs.1Bst.cGGS )imRah- men von . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 3000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Änderung der Gesellschafts- oder Gemein- schaftsform, des Namens, eines Vornamens, des Geschlechts, des Heimatorts, der Staatsangehö- rigkeit, der Firma, des Sitzes oder der Unterneh- mens-Identifikationsnummer (UID), je Person 50.– 12 4 Löschungen und Grundbuchbereinigung Art. 22 Gebührenfreie Amtshandlungen Es wird keine Gebühr erhoben für: a) die Löschung sämtlicher Einträge im Grundbuch; b) das öffentliche Bereinigungsverfahren nach Art.976c ZGB sowie Eintragungen und Änderungen im Rahmen dieses Verfahrens. Art. 23 Gebührentarif der Gemeinde Der Gemeinderat erlässt einen Tarif über die Gebühren für die Grundbuchberei- nigung. Art. 24 Gebührentarif Schätzungswerte: 1 Promille des Steuerwerts bis Fr.1000000.– zuzüglich 0,2 Promille des darüber liegenden Steuerwerts(Art.12Abs.1Bst.cGGS )imRah- men von",
+              "betrag": "200.– bis 3000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "9d103bc75cd7cd22e26957c0e8ac593cf1573c6e38421b132dbaaf91a4636878"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "df0cb6409b58a292e9bad585fcbbefaf12d03cbe6b7a7c62a32a66e73050fcf9"
     },
     {
       "id": "kanton/SG/2935/art_4",
@@ -333,7 +409,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ef1e0fabd4e3b249811fc1d8e5d66ebf645f6dd75dea277348cc5b9e5c28e4a1"
     },
     {
@@ -360,7 +436,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "5ddc83052f553bc54c7a77bf1fd4e95df5159d262b2ddc8b6ef56f2890092ea0"
     },
     {
@@ -373,14 +449,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Vorläufige Schätzung eines landwirtschaftlichen Gewerbes oder Grundstücks (Art.87 Abs.1 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 ) . . . . . . . . . . . . . . . . . . . 300.– bis 1500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Vorläufige Schätzung eines landwirtschaftlichen Gewerbes oder Grundstücks (Art.87 Abs.1 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 )",
+              "betrag": "300.– bis 1500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "90e4dc1d583ca6962162e50db80695f956c996673ffea9ce37972d187cec4ad4"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "7501114cd4dcfbc630b719b8b87f849f2c8d89c456d60a326abcd10872087f66"
     },
     {
       "id": "kanton/SG/2935/art_5.04",
@@ -392,14 +474,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Genehmigung einer durch einen Schätzungs- experten vorgenommenen Ertragswertschät- zung nach Art.87 Abs.2 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Okto- ber 1991 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 1500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Genehmigung einer durch einen Schätzungs- experten vorgenommenen Ertragswertschät- zung nach Art.87 Abs.2 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Okto- ber 1991",
+              "betrag": "200.– bis 1500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "fee7a62b41ab619b4020c987eee674300108d4859318cc910fafc1fbd95f35cb"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "b7b7578cf2b54fa62099b6868582dc4e4e08f01ece611a68ef8e1fc85fb7c128"
     },
     {
       "id": "kanton/SG/2935/art_5.05",
@@ -417,7 +505,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "b893cc6817ef0ac9a879bba7d0d85731d6f279de01c02666feec96fc9f2d4230"
     },
     {
@@ -440,7 +528,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "8f7d4ac0dda113c75b7e21a6b3798ef2dda25a3305ced88d7f85924576f74a6e"
     },
     {
@@ -471,7 +559,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "979f07c0a2669e9b45e1e9449cd2e34798da4cdc1ab577d873d974dfe453aa4f"
     },
     {
@@ -494,7 +582,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "2e9482d839bde4cb5e110e7197a908843b346ba3d949d9527bd45ebac087cdb7"
     },
     {
@@ -521,7 +609,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "d6dde6c21fc5d2cbaf7892326360508f9846d8d0be01ddcd1d3dde076c66d451"
     },
     {
@@ -544,7 +632,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "a7ddaa208a42c811244c6369e454050ae20754260199e00824084fa90cc166d3"
     },
     {
@@ -563,7 +651,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "d0d0d1e8d344e46b12a22cb49a9534e3a86af9e31668310854f6142d231b2afb"
     },
     {
@@ -594,7 +682,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "365a25ad49e944d705eeeb25d70d32063c453ee82ac7b57c033518105e710cb6"
     },
     {
@@ -613,7 +701,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "7098efa78bff8d6fbd628bf1e77bb22b8260504eb30fe06c4b564069df6f28ea"
     },
     {
@@ -646,7 +734,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "7eb9e96590a72da539206845267c9bc2f535eae94597fed888455fc3b2507694"
     },
     {
@@ -665,7 +753,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "28f8aea76e2ee359e4d29d2d5e444ddb2309bd51768191334d415321db9f5b50"
     },
     {
@@ -688,7 +776,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "7f7256ce9dd78b2eec38ec876c90516990cd01bef72b2c9c038a3f5208112ec5"
     },
     {
@@ -711,7 +799,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ed5e0984f9468b479e69a633d4cfc234d53c8b4fbaf7caab5f0044037214a0cc"
     },
     {
@@ -734,7 +822,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "93c6955d862699073dd920e1cadc893b6e89703dd450d47e40efc778bd73ace4"
     },
     {
@@ -753,7 +841,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "48e778fe14221df6513d14ce43cc94762e47f4f8729b001807474bb4d0ec8dcf"
     },
     {
@@ -790,7 +878,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "6050b61384419cb8a794a011cfc13d1e44080fc71a979e767b0ee7a80d7ea4f3"
     },
     {
@@ -803,14 +891,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "2 Promille des Erwerbspreises bis Fr. 2000000.– zuzüglich 0,5 Promille des darüber liegenden Erwerbspreises, ausgenommen in Fällen der Nr. 20.02 dieses Erlasses, im Rahmen von . . . . 200.– bis 10000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "2 Promille des Erwerbspreises bis Fr. 2000000.– zuzüglich 0,5 Promille des darüber liegenden Erwerbspreises, ausgenommen in Fällen der Nr. 20.02 dieses Erlasses, im Rahmen von",
+              "betrag": "200.– bis 10000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "50cf04704fa96b8777ab71c9bdeb5bdf5b334bbe1e8e6423d2e28d284ce3515b"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "fd489cc7b1fb3ba0ee306c9456fb1e1b2b3c236df10b7192595dcd10b3edf1e6"
     },
     {
       "id": "kanton/SG/2935/art_20.02.04",
@@ -828,7 +922,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ef216d94ed96a58d7ab5285a2b9bdc2ac198789ea4ac58c7435547a4bbfbfec1"
     },
     {
@@ -847,7 +941,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ceb0e30682e3e08f63f7d93f0a00c36d0e299d7d2c521d527fadfa50fb7070e5"
     },
     {
@@ -866,7 +960,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "36cf8ed62ad286e97b1c025a6223be02d7376b2225ab4d5a4ef0e075bd7c35d3"
     },
     {
@@ -879,14 +973,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Enteignung: 2 Promille der Enteignungsentschädigung im Rahmen von . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 3000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Enteignung: 2 Promille der Enteignungsentschädigung im Rahmen von",
+              "betrag": "200.– bis 3000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "b06a6b73250a30a6c0db0678abee08c51180a29fc4dd02d42520dfa7f405f6af"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "11357335e8cbb94f2e6d059f25d321ae9c5572595ab9df4cb2d2d01666300107"
     },
     {
       "id": "kanton/SG/2935/art_20.02.08",
@@ -904,7 +1004,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ecbd38685bfc1c4a01874f23f65a7fd331409a2e73e4397a9153ce1a5dda37d1"
     },
     {
@@ -917,14 +1017,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ehevertrag mit Änderung des Güterstandes: 2Promille des anteiligen Verkehrswerts im Rahmen von . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Ehevertrag mit Änderung des Güterstandes: 2Promille des anteiligen Verkehrswerts im Rahmen von",
+              "betrag": "200.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "6a0d20c96bdf2b9fae3e87566afc8ec7702214529a7d5558380315960a40535a"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "d60a8f171e2c147c74841c8845f7bc83eb6736d77cc3443f1033120099456f3f"
     },
     {
       "id": "kanton/SG/2935/art_20.03",
@@ -942,7 +1048,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "a9d8ef1db87ea55d776c5fea72a6c03fe233944d5ac7e7f3d11212adc603604c"
     },
     {
@@ -965,7 +1071,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "43c92c2f7a921a2bd6bd1b4138943f5c3ddbbe0067d897b69514fbae4e848884"
     },
     {
@@ -984,7 +1090,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ff3569c88a785c2144c03624d04a0b561d7a639cd37d7e52960179e708192654"
     },
     {
@@ -997,14 +1103,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ausfertigung des Papier-Schuldbriefs bei Er- richtung, Umwandlung oder Zerlegung . . . . . . 300.– vorbehaltenen Vorgangs . . . . . . . . . . . . . . . . . . 100.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Ausfertigung des Papier-Schuldbriefs bei Er- richtung, Umwandlung oder Zerlegung",
+              "betrag": "300.–"
+            },
+            {
+              "beschreibung": "vorbehaltenen Vorgangs",
+              "betrag": "100.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "dfd119e5056f037dc6f8ad17e37b4b840d9e5489dda2d85cdca94e5baf993b0d"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "a8c46624a8bb71bef41fd0165465227e71bace8e7f87dedacdb97a1d6e28cd57"
     },
     {
       "id": "kanton/SG/2935/art_21.08",
@@ -1016,14 +1132,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Pfandstellen- und/oder Vorgangsänderung, je Pfandrecht . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Pfandstellen- und/oder Vorgangsänderung, je Pfandrecht",
+              "betrag": "100.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "8627b230a6f06d48284db7d00a3421c5c066492c6cc00a1da6d6c238d73c7007"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "2adecde923b1b7a98e70171ec66a7349284418bf79d6d266e343da24e7cc1cd2"
     },
     {
       "id": "kanton/SG/2935/art_21.09",
@@ -1035,14 +1157,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Rangänderung eines Pfandrechts . . . . . . . . . . . 50.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Rangänderung eines Pfandrechts",
+              "betrag": "50.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "a87930b502e03eff0152c35d8aa8a0eeae8f1226cdbeb825ec655f9459e5dbc8"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "4755f22204df4ca02929c5355ffb5bd4947db16175f8d507f0a74f5c1c7de404"
     },
     {
       "id": "kanton/SG/2935/art_21.10",
@@ -1054,14 +1182,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Umwandlung aller Pfandrechtsarten, je Pfand- recht . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Umwandlung aller Pfandrechtsarten, je Pfand- recht",
+              "betrag": "100.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "2ca8ccbfc9ded444a3aebf4135fba664e46a57bf1c686bfa8be808c7fc13b7e5"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "3aee3615125c3809c7dbe6605067ed03323a4d6419f1dd4753ca901aee52501a"
     },
     {
       "id": "kanton/SG/2935/art_21.11",
@@ -1073,14 +1207,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Zerlegung eines Pfandrechts, für jedes neue Pfandrecht . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Zerlegung eines Pfandrechts, für jedes neue Pfandrecht",
+              "betrag": "100.– bis 500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "0a9da552e1473af51f34651e10b97a02709bec1a749022674cade80d73c99908"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "b66173652ddfd5da3bf9ca7a67b96224e088a796adbdf211ff0bb569cfb84ceb"
     },
     {
       "id": "kanton/SG/2935/art_21.12",
@@ -1098,7 +1238,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "85d5dae8e79eafbe3ea72378a55d7f8ff048aff2e960d4acfb062e590143709f"
     },
     {
@@ -1111,14 +1251,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Pfandvermehrung von Grundstückteilen, Stock- werkeigentumswertquoten und Miteigentums- quoten, je Pfandrecht . . . . . . . . . . . . . . . . . . . . . 50.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Pfandvermehrung von Grundstückteilen, Stock- werkeigentumswertquoten und Miteigentums- quoten, je Pfandrecht",
+              "betrag": "50.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "d3613d88485ffd237afa9304915800654627065eee3e8b0f027d457c831f7b9d"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "bf39452a262a111766e1662f4b371776d9efb193bdcb961a0a57a77b71e7ec59"
     },
     {
       "id": "kanton/SG/2935/art_21.14",
@@ -1130,14 +1276,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Pfandentlassung, je Pfandrecht . . . . . . . . . . . . . 50.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Pfandentlassung, je Pfandrecht",
+              "betrag": "50.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "72d1ac8498c6de424c039dcf9ff9ddc966350a2a008c53142be6713f0c3b31d0"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "5bb3ce7caa12c01e31ecd09b98285abe8dd3dbc92345a118b965f2c8b23aab36"
     },
     {
       "id": "kanton/SG/2935/art_21.15",
@@ -1149,14 +1301,24 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Eintrag Gläubiger, Nutzniesser, Bevollmächtig- ter oder Vertreter nach Art.144 Abs.2 Bst.j der eidg Grundbuchverordnung vom 23.Sep- tember 2011 , je Pfandrecht . . . . . . . . . . . . . . . 50.– 6 Art. 11 Gebührentarif men von . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 10000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Eintrag Gläubiger, Nutzniesser, Bevollmächtig- ter oder Vertreter nach Art.144 Abs.2 Bst.j der eidg Grundbuchverordnung vom 23.Sep- tember 2011 , je Pfandrecht",
+              "betrag": "50.–"
+            },
+            {
+              "beschreibung": "6 Art. 11 Gebührentarif men von",
+              "betrag": "200.– bis 10000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "74bbe3e65defeb8fa44d1d9c4659eb1403cecb1013ddb8d426707e8c29a628a9"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "ba203cf417752c27e8b70444789d73298660b1935d03f694acee5d0c090a7766"
     },
     {
       "id": "kanton/SG/2935/art_22",
@@ -1188,7 +1350,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "f186baa4caf007f08c38f8e74db6a25a643d4305c8156530a6e41316e875b03a"
     },
     {
@@ -1207,7 +1369,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "62b7206a9c85a59116694a359fb99f0be811b2d164dd0e4a0574f6fc05afcf62"
     },
     {
@@ -1220,14 +1382,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Änderung eines selbstständigen und dauern- den Baurechts oder einer Grundlast . . . . . . . . . 150.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Änderung eines selbstständigen und dauern- den Baurechts oder einer Grundlast",
+              "betrag": "150.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "02c2896788eb97d4560bea1e87aff4cb82a46652d9b3055eff153dafd1649044"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "b584f851afdd8990371826f48f0a4cfccff8012496c9ef3aaa2cabf27f8c18d2"
     },
     {
       "id": "kanton/SG/2935/art_22.04",
@@ -1239,14 +1407,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Begründung oder Änderung einer anderen Dienstbarkeit . . . . . . . . . . . . . . . . . . . . . . . . . . . 150.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Begründung oder Änderung einer anderen Dienstbarkeit",
+              "betrag": "150.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "df085400cc1b94edc8af0e4fc11eafa6a0f4231e7a46a29065e1d1f55d182219"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "a72bfd94247d60f3229c53dc14bfaecd3c24e07d367f518a85b47c97bac67801"
     },
     {
       "id": "kanton/SG/2935/art_22.05",
@@ -1258,14 +1432,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Übertragung einer Personaldienstbarkeit. . . . . 100.– bis 500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Übertragung einer Personaldienstbarkeit",
+              "betrag": "100.– bis 500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "2a88506d7ba950ea68241750060417ce615da1cce56a16e7529390190888221e"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "f66540a71e32ab1f9431a1339bc32ab90ccf26311462d693a2d9dea7cf681b5e"
     },
     {
       "id": "kanton/SG/2935/art_22.06",
@@ -1283,7 +1463,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "dc8b4a6149a3647c63a75097362223e5303a458b0292e9023766cf28df7f596b"
     },
     {
@@ -1306,7 +1486,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "fa8ef491312ef2ee6483a598d2d568568ec6e835ac9f9a4502da721e81734e6b"
     },
     {
@@ -1325,7 +1505,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "37b74a3a16420d7d443b5ab686a36197f2d82b9e112d966723b9b80b4e0e9a5b"
     },
     {
@@ -1338,14 +1518,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "unlimitiertes Vorkaufsrecht . . . . . . . . . . . . . . . . 100.– bis 1000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "unlimitiertes Vorkaufsrecht",
+              "betrag": "100.– bis 1000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "8eb375c7eb069ab840d5116c229b6b8e8747f6c5aacd1bce1a38064bbc80e7e7"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "4deacc5238dfb819ed2b28d831c7d0ae736f58bd45699fc045a337defd2e22ca"
     },
     {
       "id": "kanton/SG/2935/art_23.05",
@@ -1357,14 +1543,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Aufhebung oder Änderung eines gesetzlichen Vorkaufsrechts (Art.681b Abs.1 ZGB ) . . . . . 100.– bis 500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Aufhebung oder Änderung eines gesetzlichen Vorkaufsrechts (Art.681b Abs.1 ZGB )",
+              "betrag": "100.– bis 500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "3a03df5b3da40b960b9d26488c373ede60f86bd0bd94f318dc415201b4ffbe96"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "e649679bf093f14e24872a4b8d410101ebe2ba81609df8ce514771dd61f8e913"
     },
     {
       "id": "kanton/SG/2935/art_23.06",
@@ -1376,14 +1568,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Ausschluss des Aufhebungsanspruchs der Mit- eigentümer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Ausschluss des Aufhebungsanspruchs der Mit- eigentümer",
+              "betrag": "100.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "90fea8345efed52f53e1c1abe4cf4b8765670377a1d73532feb25f8c7b67f5e6"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "9bc6fb41116e24b3fd81fe667621ac1b46ed8ab535521e6ef014eba2713630d3"
     },
     {
       "id": "kanton/SG/2935/art_23.07",
@@ -1401,7 +1599,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "e85becefd084bbd0e73e91cb40bacc162519d8f02354be262a6ced0ab1c75d73"
     },
     {
@@ -1414,14 +1612,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Änderung oder Übertragung eines persönlichen Rechts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100.– bis 500.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Änderung oder Übertragung eines persönlichen Rechts",
+              "betrag": "100.– bis 500.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "a8be12a8c4514f180b0b58ec05675810844366b14af7ed836315ea8974335675"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "8e4d19734882094f88ab6fc880beaf610c23fc05b833c41bed98b3be0a8def88"
     },
     {
       "id": "kanton/SG/2935/art_23.09",
@@ -1439,7 +1643,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "5dfe28b8cdf39d11fc58f13c702456b2fbdcb52fdcbd673aa4acccddda65279f"
     },
     {
@@ -1458,7 +1662,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ef3d1a6a07e497f64d4e24a5675e8364903ead51c7ff7cdffe0c57d516e5f369"
     },
     {
@@ -1477,7 +1681,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "dd2ff49f4e5d420630a380f2108a7f5bac00dafc4a7cdc4dca064f3cf380fcc2"
     },
     {
@@ -1490,14 +1694,32 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Gebührentarif Schätzungswerte: 1 Promille des Steuerwerts bis Fr.1000000.– zuzüglich 0,2 Promille des darüber liegenden Steuerwerts(Art.12Abs.1Bst.cGGS )imRahmen von . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 3000.– 5.03 Vorläufige Schätzung eines landwirtschaftlichen Gewerbes oder Grundstücks (Art.87 Abs.1 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 ) . . . . . . . . . . . . . . . . . . . 300.– bis 1500.– 5.04 Genehmigung einer durch einen Schätzungsexperten vorgenommenen Ertragswertschätzung nach Art.87 Abs.2 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200.– bis 1500.– 5.05 Schätzungskopie und Schätzungsunterlagen, je Grundstück . . . . . . . . . . . . . . . . . . . . . . . . . . . 20.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Gebührentarif Schätzungswerte: 1 Promille des Steuerwerts bis Fr.1000000.– zuzüglich 0,2 Promille des darüber liegenden Steuerwerts(Art.12Abs.1Bst.cGGS )imRahmen von",
+              "betrag": "200.– bis 3000.–"
+            },
+            {
+              "beschreibung": "5.03 Vorläufige Schätzung eines landwirtschaftlichen Gewerbes oder Grundstücks (Art.87 Abs.1 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991 )",
+              "betrag": "300.– bis 1500.–"
+            },
+            {
+              "beschreibung": "5.04 Genehmigung einer durch einen Schätzungsexperten vorgenommenen Ertragswertschätzung nach Art.87 Abs.2 des Bundesgesetzes über das bäuerliche Bodenrecht vom 4.Oktober 1991",
+              "betrag": "200.– bis 1500.–"
+            },
+            {
+              "beschreibung": "5.05 Schätzungskopie und Schätzungsunterlagen, je Grundstück",
+              "betrag": "20.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "ad0d0f8f188c7632755752b4fa62ff4991d5aced1dbf1361e2b9c41e4d2c19b5"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "02e3c1cd0bded7185784c23570401c21c292f37518335a580b5a39ec27e0c9bc"
     },
     {
       "id": "kanton/SG/2935/art_25",
@@ -1519,7 +1741,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "f2f8f49349436a0c30d06afc986574c3811ff19cfd88b66f2712b888773ce489"
     },
     {
@@ -1532,14 +1754,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Begründung von Stockwerkeigentum, je Stamm- grundstück . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500.– bis 3000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Begründung von Stockwerkeigentum, je Stamm- grundstück",
+              "betrag": "500.– bis 3000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "11a4a2d683977f1cafb43ba34db43bd74881f999a5f20812b6daa965ebdb7717"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "80c64d5686cd35a7692a18e0e882b576cded89675823e927e238ad2316c341bc"
     },
     {
       "id": "kanton/SG/2935/art_25.02",
@@ -1551,14 +1779,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Begründung von selbstständigem Miteigentum durch den oder die Eigentümer, je Stammgrund- stück . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 250.– bis 1000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Begründung von selbstständigem Miteigentum durch den oder die Eigentümer, je Stammgrund- stück",
+              "betrag": "250.– bis 1000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "e0b06309f6dd1ebcce520031323365a419a28d53d8e81221bb7c1929ef1dd6c8"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "2742647667c3173d3da4b5fb02ffe34aef6e4321b539a8c06939fd7af271b68d"
     },
     {
       "id": "kanton/SG/2935/art_25.03",
@@ -1576,7 +1810,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "62b7206a9c85a59116694a359fb99f0be811b2d164dd0e4a0574f6fc05afcf62"
     },
     {
@@ -1589,14 +1823,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Aufhebung von Stockwerkeigentum oder selb- ständigem Miteigentum . . . . . . . . . . . . . . . . . . 250.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Aufhebung von Stockwerkeigentum oder selb- ständigem Miteigentum",
+              "betrag": "250.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "7b9a0edd271b8baf2df4479aad65746d5eccdbb73f6e58bd9124adc2d7898be9"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "6546f39c581adc33779dc1103e8f5af2ef5a1b06314cf69754b2c1437fca56d5"
     },
     {
       "id": "kanton/SG/2935/art_25.05",
@@ -1608,14 +1848,20 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "Änderung von Wertquoten zuzüglich Gebühr gemäss Nr.20.01 bei Erhöhung von Wert- quoten, Berichtigung unrichtiger Wertquoten, Änderung im Sonderrecht, Änderung der Zweckbestimmung . . . . . . . . . . . . . . . . . . . . . . . 150.– bis 2000.–"
+          "text": "",
+          "tabelle": [
+            {
+              "beschreibung": "Änderung von Wertquoten zuzüglich Gebühr gemäss Nr.20.01 bei Erhöhung von Wert- quoten, Berichtigung unrichtiger Wertquoten, Änderung im Sonderrecht, Änderung der Zweckbestimmung",
+              "betrag": "150.– bis 2000.–"
+            }
+          ]
         }
       ],
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
-      "sha": "0e7fcc1c4f1bdefc05fdfca1a12ed3bb1aae76b9cb81db35a26fcd1c27eecc86"
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
+      "sha": "7d266eb94e4dbc1dda1e5c0ead421438c6f126c4691f36a2b6cdf2fae8afac0c"
     },
     {
       "id": "kanton/SG/2935/art_25.06",
@@ -1633,7 +1879,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "2673f5281e57767094e4252238b6d5c0a397d1e11c2bf872536657d01c8e55c3"
     },
     {
@@ -1652,7 +1898,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "ef0c38797cf22b02f763a75a439d1819b43e7f8d688120ee8520f38f96b8b59d"
     },
     {
@@ -1671,7 +1917,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "dedbd2e5fd62f2ac65f977bcd3cdc72e2f0b0ac7594ba5c4e1ba66dedf1d5d1a"
     },
     {
@@ -1690,7 +1936,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "27653b2d5b6cf66266cd113070c715bb2283d8812676ff135c3097036028d507"
     },
     {
@@ -1709,7 +1955,7 @@
       "stand": "2020-06-01",
       "quelleUrl": "https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "37b2d307c5b01c74f6813b35fe35588bf84bd554ccdad1b9e636caef4a1b6e21",
+      "fassungsToken": "e6ea2075c45328eb378545c09db576ebd5f4c596bd5fbc4faccb27f3876e1274",
       "sha": "f75cbf5553cb566f1eb5a0ab19f77dbc246827089ac9de74e6e60a96246f013e"
     }
   ]

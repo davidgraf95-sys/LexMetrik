@@ -199,6 +199,8 @@ export interface SnapshotBlock {
   absatz: string | null;
   text?: string;
   items?: Array<{ marke: string; text: string }>;
+  /** Tarif-Tabelle (Füllpunkt-Zweispalter); gültig als Block-Inhalt auch wenn text leer. */
+  tabelle?: Array<{ beschreibung: string; betrag: string }>;
 }
 
 export interface SnapshotEintrag {
@@ -209,7 +211,8 @@ export interface SnapshotEintrag {
 
 /**
  * Prüft, dass kein Snapshot-Eintrag leere bloecke[] hat und kein Block leeren Inhalt.
- * Ein Block ist gültig, wenn er entweder nicht-leeren text oder nicht-leere items hat.
+ * Ein Block ist gültig, wenn er nicht-leeren text, nicht-leere items ODER nicht-leere tabelle hat.
+ * (tabelle = Füllpunkt-Zweispalter, eingeführt Task 1–5 Kantonale Tarif-Tabellen.)
  *
  * @param eintraege - Alle Snapshot-Einträge (Bund + Kanton)
  * @returns Liste der Sanity-Fehler
@@ -227,7 +230,8 @@ export function pruefeInhaltsSanity(eintraege: ReadonlyArray<SnapshotEintrag>): 
       const b = e.bloecke[i];
       const hatText = typeof b.text === 'string' && b.text.trim().length > 0;
       const hatItems = Array.isArray(b.items) && b.items.length > 0;
-      if (!hatText && !hatItems) {
+      const hatTabelle = Array.isArray(b.tabelle) && b.tabelle.length > 0;
+      if (!hatText && !hatItems && !hatTabelle) {
         fehler.push({ snapshotId: e.id, problem: 'leerer-block', blockIndex: i });
       }
     }
