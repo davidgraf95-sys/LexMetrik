@@ -203,7 +203,7 @@ function SektionKopf({ s, refCb, offen, onToggle, bereich }: {
     <div ref={refCb} data-sek={s.id} className={`scroll-mt-[10.5rem] sm:scroll-mt-[13.5rem] ${mt} ${regel}`}>
       <button type="button" onClick={onToggle} aria-expanded={offen} className="group/sek w-full text-left">
         {pre && <span className="lc-overline group-hover/sek:text-brass-700">{pre}</span>}
-        <span className="mt-0.5 flex items-baseline gap-2">
+        <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
           <span className="text-ink-300 text-[0.6rem] shrink-0 w-3">{offen ? '▾' : '▸'}</span>
           <span className={`font-display font-semibold text-ink-900 ${titelStil} group-hover/sek:text-brass-700`}>{rest || s.label}</span>
           {bereich && <span className="num shrink-0 text-[0.78rem] font-normal text-ink-400">{bereich}</span>}
