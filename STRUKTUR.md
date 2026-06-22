@@ -22,6 +22,30 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 23.6.2026 — Gesetze-Import 3-Tier: Discovery + Confidence-Maschinerie (Branch `feat/gesetze-import-3tier`, NICHT in main)
+
+Auftrag David: alle kantonalen Gesetze sauber + klickbar abbilden OHNE jedes einzeln zu prüfen,
+besser als reines PDF. Vorarbeit: Reverse-Engineering lexfind.ch + clex/LexWork-APIs (Memory
+`lexfind-clex-quelle-strategie`, Recherche-Workflow). Plan: `FAHRPLAN-GESETZE-IMPORT-3TIER.md`.
+
+**Phase 0 bewiesen (live):** clex `/api/{lang}/texts_of_law/{sn}` liefert getypten Body
+(`xhtml_tol` bzw. `show_as_json.json_content` mit `uid`-Ankern + separaten Fussnoten/`law_link`).
+clex *ist* LexWork/Sitrox → der **bestehende `adapter-lexwork.ts` erschliesst clex-Kantone ohne
+neuen Parser** (§10). Tier-A-Pilot AR 146.1: 35 Artikel sauber, Confidence 1.000. Discovery AR:
+331 Erlasse in Kraft, ALLE Tier A.
+
+**Gebaut + getestet (rein §2, Gate grün):**
+- `scripts/normtext/confidence-logik.ts` (Treue-Invarianten + Kreuzdiff-Normalform + Token-Recall
+  + Confidence-Score) — `src/tests/normtext-confidence.test.ts` (20).
+- `scripts/normtext/lexfind-discovery.ts` (LexFind-Enumeration + Host→Tier-Klassifikation +
+  clex-URL-Ableitung) — `src/tests/normtext-lexfind-discovery.test.ts` (7).
+- Recherche `bibliothek/recherche/lexfind-clex-quellen.md` (+ INDEX, §11).
+
+**Bewusst NICHT (§6/§7/§8 + Abnahme-Zeitsperre):** keine Massen-Snapshots regeneriert, keine
+golden-Render-Komponenten geändert, kein gate.sh-Netz-Wiring, kein render_mode im Live-Pfad.
+Nächste, von David freizugebende Schritte = FAHRPLAN Phase 1 (AR voll durch Generator + render_mode
+additiv + Confidence-Gate + Kreuzdiff). Ehrliches Verdikt: ~25–40 % Rest-Review bleibt (kein 0-Check).
+
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
 Auftrag David: alle bestehenden Gesetze (Bund + Kantone) EINZELN reviewen (1 Agent/Gesetz),
