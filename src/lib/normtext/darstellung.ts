@@ -112,6 +112,46 @@ export function gruppiereTausender(s: string): string {
   return r.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, "'"));
 }
 
+// Tausender-Gruppierung NUR in Geld-Kontext (Fliesstext, §3, FIX 2 — 22.6.2026).
+//
+// Zweck: In normalem Artikel-Fliesstext («Fr. 12 000» im ZH-PDF) werden Beträge
+// mit ZH-PDF-Leerzeichen-Tausendertrenner dargestellt. Diese sollen in der Anzeige
+// zum Schweizer Apostroph werden («Fr. 12'000»). ABER: bloss «gruppiereTausender»
+// anzuwenden würde z. B. ein Jahreszahl «2011» → «2'011» verunstalten, weil
+// gruppiereTausender auf ALLE Zahlen ≥ 4 Stellen wirkt.
+//
+// Lösung: NUR nach einem Währungs-Marker (Fr., CHF) ODER vor «Franken» gruppieren.
+// Alle anderen Zahlen (Jahrezahlen, §-Nummern, Prozentzahlen) bleiben unberührt.
+//
+// Regeln (§1: kein Ziffernwert geändert; §3: reine Darstellung):
+//   1. (Fr\.|CHF)\s*(\d[…\d  '']*\d) → Betrag hinter Marker gruppieren.
+//   2. (\d[…\d  '']*\d)\s+Franken → Betrag vor «Franken» gruppieren.
+//   Idempotent: bereits «12'000» bleibt «12'000». «Fr. 500» (3 Stellen) bleibt.
+//   «2011» allein: KEIN Marker → unverändert. «§ 1234»: kein Fr./Franken → unverändert.
+//
+// Implementierung:
+//   gruppiereEineZahl(s) ruft gruppiereTausender auf einen einzelnen Ziffern-String.
+//   Die Regex matcht nur den Zahlen-Teil des Musters und ersetzt ihn.
+function gruppiereEineZahl(zahl: string): string {
+  return gruppiereTausender(zahl);
+}
+
+export function gruppiereBetraege(text: string): string {
+  // Pass 1: Nach Fr. oder CHF: «Fr. 12 000» → «Fr. 12'000»,
+  //         «CHF 12 000» → «CHF 12'000», «Fr. 500» → «Fr. 500» (3 Stellen, unverändert).
+  // Leerzeichen zwischen Marker und Zahl optional (Fr.1000 kommt auch vor).
+  let r = text.replace(
+    /(Fr\.|CHF)(\s*)(\d[\d\s'']*\d|\d)/g,
+    (_, marker, sp, zahl) => `${marker}${sp}${gruppiereEineZahl(zahl)}`,
+  );
+  // Pass 2: Vor «Franken»: «12 000 Franken» → «12'000 Franken».
+  r = r.replace(
+    /(\d[\d\s'']*\d|\d)(\s+)(Franken)\b/g,
+    (_, zahl, sp, wort) => `${gruppiereEineZahl(zahl)}${sp}${wort}`,
+  );
+  return r;
+}
+
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei
 // zusammengeklebte Artikelnummern ohne Halbgeviert. Aus der Artikel-id
 // (z. B. «226_a_226_d», «67_70») das Halbgeviert rekonstruieren. IDs mit nur

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normtext/passusZiel';
-import { trenneAenderungshistorie, absatzMarke, gruppiereTausender } from '../../lib/normtext/darstellung';
+import { trenneAenderungshistorie, absatzMarke, gruppiereTausender, gruppiereBetraege } from '../../lib/normtext/darstellung';
 import { NormText, type InternRefs } from '../NormText';
 
 /** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
@@ -341,9 +341,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
                 if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
                 const zeilen = staffelZeilen(anzeige);
+                // Tausender-Gruppierung NUR in Geld-Kontext (§3, FIX 2 — 22.6.2026):
+                // «Fr. 12 000» → «Fr. 12'000»; Jahrzahlen «2011» bleiben unberührt.
+                // Nicht auf Staffel-Tabellen (StaffelTabelle) — dort nur roher Text.
                 return zeilen
                   ? <StaffelTabelle zeilen={zeilen} />
-                  : verlinkt(anzeige);
+                  : verlinkt(gruppiereBetraege(anzeige));
               })()}
               {/* Fussnoten-Marker dieses Absatzes (klickbar → Fuss-Eintrag), damit
                   klar ist, worauf sich die Fussnote bezieht. */}
@@ -422,7 +425,8 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                               // NUR wenn staffelZeilen matcht → Nicht-Tarif-Items
                               // bleiben byte-gleich (golden, §6).
                               const sz = staffelZeilen(it.text);
-                              if (!sz) return verlinkt(it.text);
+                              // Geld-Kontext-Tausender auch in Items (§3, FIX 2 — 22.6.2026).
+                              if (!sz) return verlinkt(gruppiereBetraege(it.text));
                               return <StaffelTabelle zeilen={staffelZeilen(normalisiereTarifText(it.text)) ?? sz} />;
                             })()}
                         {/* Fussnoten-Marker dieses lit/Ziff-Items (klickbar → Fuss). */}

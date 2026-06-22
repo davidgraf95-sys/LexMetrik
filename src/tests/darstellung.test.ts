@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { gruppiereTausender } from '../lib/normtext/darstellung';
+import { gruppiereTausender, gruppiereBetraege } from '../lib/normtext/darstellung';
 
 // Stufe-2-D (22.6.2026): Schweizer Tausender-Apostrophe in der Betrag-Spalte
 // der TarifTabelle. Zeichen: U+0027 (gerader Apostroph) — übereinstimmend mit
@@ -78,5 +78,53 @@ describe('gruppiereTausender (§1: nur Gruppierung, §3: reine Darstellung)', ()
 
   it('«über 5 000 bis 10 000» → «über 5\'000 bis 10\'000» (Streitwert-Spalte ZH)', () => {
     expect(gruppiereTausender('über 5 000 bis 10 000')).toBe("über 5'000 bis 10'000");
+  });
+});
+
+// FIX 2 — 22.6.2026: gruppiereBetraege — Tausender-Gruppierung NUR in Geld-Kontext
+// (Fr./CHF/Franken), kein «2011»→«2'011», kein «§ 1234»→«§ 1'234».
+describe('gruppiereBetraege (§1: kein Ziffernwert geändert; §3: reine Darstellung, nur Geld-Kontext)', () => {
+  it('«Fr. 12 000» → «Fr. 12\'000» (Kernanwendungsfall ZH-Fliesstext)', () => {
+    expect(gruppiereBetraege('Fr. 12 000')).toBe("Fr. 12'000");
+  });
+
+  it('«CHF 12 000» → «CHF 12\'000»', () => {
+    expect(gruppiereBetraege('CHF 12 000')).toBe("CHF 12'000");
+  });
+
+  it('«12 000 Franken» → «12\'000 Franken»', () => {
+    expect(gruppiereBetraege('12 000 Franken')).toBe("12'000 Franken");
+  });
+
+  it('Jahrzahl «2011» bleibt UNVERÄNDERT (kein Fr./CHF/Franken-Kontext)', () => {
+    expect(gruppiereBetraege('Gesetz vom 1. Januar 2011 über')).toBe('Gesetz vom 1. Januar 2011 über');
+  });
+
+  it('«§ 1234» bleibt UNVERÄNDERT (kein Geld-Kontext)', () => {
+    expect(gruppiereBetraege('§ 1234')).toBe('§ 1234');
+  });
+
+  it('«Fr. 500» (3 Stellen) bleibt UNVERÄNDERT (zu kurz für Tausendertrenner)', () => {
+    expect(gruppiereBetraege('Fr. 500')).toBe('Fr. 500');
+  });
+
+  it('Idempotent: «Fr. 12\'000» bleibt «Fr. 12\'000» (bereits gruppiert)', () => {
+    expect(gruppiereBetraege("Fr. 12'000")).toBe("Fr. 12'000");
+  });
+
+  it('Mischsatz mit Jahr und Betrag: Jahr unverändert, Betrag gruppiert', () => {
+    expect(gruppiereBetraege('In Kraft seit 2011; Busse bis Fr. 5 000.')).toBe(
+      "In Kraft seit 2011; Busse bis Fr. 5'000.",
+    );
+  });
+
+  it('Mehrere Beträge im selben Satz werden alle gruppiert', () => {
+    expect(gruppiereBetraege('von Fr. 1 000 bis Fr. 50 000')).toBe(
+      "von Fr. 1'000 bis Fr. 50'000",
+    );
+  });
+
+  it('Leerer String bleibt leer', () => {
+    expect(gruppiereBetraege('')).toBe('');
   });
 });
