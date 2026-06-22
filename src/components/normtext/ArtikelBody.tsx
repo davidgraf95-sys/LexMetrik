@@ -214,7 +214,7 @@ function MehrspaltigeTabelle({ kopf, zeilen }: { kopf?: string[]; zeilen: string
             const numerisch = istNumerischeZelle(cell);
             return (
               <span key={ci} className={`flex-1 py-1.5 leading-snug${ci > 0 ? ' pl-3' : ' px-3'}${numerisch ? ' text-right font-medium text-ink-800' : ' text-ink-700'}`}>
-                {numerisch ? gruppiereTausender(cell) : cell}
+                {gruppiereTausender(cell)}
               </span>
             );
           })}

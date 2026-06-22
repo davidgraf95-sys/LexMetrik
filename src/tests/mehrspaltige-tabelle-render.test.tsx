@@ -25,7 +25,9 @@ describe('MehrspaltigeTabelle (block.mehrspaltig → N-Spalten-Tarif)', () => {
     expect(out).toContain('Zuschlag');
   });
 
-  it('rendert Datenzeilen (kurze Wörter wie «bis» = 3 Buchstaben → numerisch → gruppiert)', () => {
+  it('rendert Datenzeilen — gruppiereTausender gilt für ALLE Zellen (Issue 2+3, 22.6.2026)', () => {
+    // gruppiereTausender wird auf JEDE Zelle angewendet (nicht nur numerische).
+    // istNumerischeZelle steuert NUR noch die Rechtsbündigkeit.
     const bloecke: NormSnapshot['bloecke'] = [{
       absatz: null,
       text: '',
@@ -40,10 +42,11 @@ describe('MehrspaltigeTabelle (block.mehrspaltig → N-Spalten-Tarif)', () => {
     const out = renderToString(
       <ArtikelBody bloecke={bloecke} artikel="4" passus={{ absatz: null }} />,
     );
-    // «bis 5000»: «bis» hat nur 3 Buchstaben → numerisch → «bis 5'000» (gruppiert)
+    // «bis 5000» → «bis 5'000» (gruppiereTausender auf bare run)
     expect(out).toMatch(/bis 5&#x27;000|bis 5'000/);
-    // «über 5000 bis 10000»: «über» hat 4 Buchstaben → NICHT numerisch → unverändert
-    expect(out).toContain('über 5000 bis 10000');
+    // «über 5000 bis 10000» — TEXT-Zelle, aber gruppiereTausender gilt trotzdem
+    // → «über 5'000 bis 10'000»
+    expect(out).toMatch(/über 5&#x27;000 bis 10&#x27;000|über 5'000 bis 10'000/);
     // «1250» → «1'250»
     expect(out).toMatch(/1&#x27;250|1'250/);
   });
@@ -149,5 +152,59 @@ describe('MehrspaltigeTabelle (block.mehrspaltig → N-Spalten-Tarif)', () => {
     );
     // «1250.–» hat Ziffern, kein 4-Buchstaben-Wort → numerisch → 1'250.–
     expect(out).toMatch(/1&#x27;250\.–|1'250\.–/);
+  });
+
+  // Issue 2+3 (22.6.2026): gruppiereTausender auf ALLE Zellen — Sicherheitstests
+
+  it('Streitwert-Spalte «über 5 000 bis 10 000» → Apostrophe (Issue 3)', () => {
+    // Leerzeichen-getrennte Tausender im Streitwert-Text werden apostrophiert.
+    const bloecke: NormSnapshot['bloecke'] = [{
+      absatz: null,
+      text: '',
+      mehrspaltig: {
+        kopf: ['Streitwert', 'Grundgebühr', 'Zuschlag'],
+        zeilen: [['über 5 000 bis 10 000', '1 250', 'zuzügl. 23%']],
+      },
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloecke} artikel="4" passus={{ absatz: null }} />,
+    );
+    // Streitwert-Spalte: Leerzeichen-Tausender apostrophiert
+    expect(out).toMatch(/über 5&#x27;000 bis 10&#x27;000|über 5'000 bis 10'000/);
+    // Grundgebühr: «1 250» → «1'250»
+    expect(out).toMatch(/1&#x27;250|1'250/);
+  });
+
+  it('Tarif-Nr.-Zelle «1.1.1.1» wird NICHT verändert (keine Tausender-Gruppe)', () => {
+    // «1.1.1.1» enthält keine Ziffernfolge der Form digit+space+3digits → unberührt.
+    const bloecke: NormSnapshot['bloecke'] = [{
+      absatz: null,
+      text: '',
+      mehrspaltig: {
+        zeilen: [['1.1.1.1', 'Beschreibung']],
+      },
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloecke} artikel="4" passus={{ absatz: null }} />,
+    );
+    expect(out).toContain('1.1.1.1');
+  });
+
+  it('«über 10 Mio.» bleibt UNVERÄNDERT (kein digit+space+3digits-Muster)', () => {
+    // «10 Mio.» — «Mio.» ist kein 3-Ziffern-Cluster → kein Apostroph gesetzt.
+    const bloecke: NormSnapshot['bloecke'] = [{
+      absatz: null,
+      text: '',
+      mehrspaltig: {
+        zeilen: [['über 10 Mio.', '106 400']],
+      },
+    }];
+    const out = renderToString(
+      <ArtikelBody bloecke={bloecke} artikel="4" passus={{ absatz: null }} />,
+    );
+    // «über 10 Mio.» unverändert
+    expect(out).toContain('über 10 Mio.');
+    // «106 400» → «106'400»
+    expect(out).toMatch(/106&#x27;400|106'400/);
   });
 });

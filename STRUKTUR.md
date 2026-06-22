@@ -22,6 +22,32 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 22.6.2026 — Stufe-2-Fixes: ZH-215.3 §4 Row-11-Spaltenriss + Tausender-Apostrophe (feat/tarif-tabellen-stufe2)
+
+Auf Branch `feat/tarif-tabellen-stufe2` (noch kein PR/Merge); Gate grün.
+
+**Issue 1 (§1-safe): Row-11-Spaltenriss in `extrahiereZhStreitwertStaffel`**
+- PDF-Stück «10 Mio. 106» (x=143.5 pt) landete x-technisch in col1 (Streitwert);
+  «400» (x=181.3) in col2. Resultat: `['über 10 Mio. 106', '400', 'zuzügl. …']`.
+- Fix: `mioSplit`-Post-Prozess in `scripts/normtext/adapter-zh-pdf.ts` —
+  wenn col1 auf `/(.*\bMio\.)\s+(\d[\d\s]*)$/` matcht, wird der Trailing-Fragment
+  an den ANFANG von col2 verschoben. Kein Zeichen geändert/erfunden, §1.
+- Resultat row 11 nach Regen: `['über 10 Mio.', '106 400', 'zuzügl. 0,5% …']`.
+- ZH-215.3.json regeneriert (22.6.2026), Regression-Test in `zh-streitwert-staffel.test.ts`.
+
+**Issue 2: `gruppiereTausender` — Leerzeichen-getrennte Tausender (ZH-PDF-Stil)**
+- Ergänzt in `src/lib/normtext/darstellung.ts`: Pass 1 vor dem bestehenden Pass 2
+  (bare runs) — `(\d)\s(\d{3})(?=\D|$)` wiederholt bis stabil. «5 000» → «5'000»,
+  «106 400» → «106'400», «über 10 Mio.» unverändert (kein 3-Ziffern-Match).
+- SG-Logik (bare ≥4-stellige Läufe) unberührt.
+
+**Issue 3: `MehrspaltigeTabelle` — `gruppiereTausender` auf ALLE Zellen**
+- `src/components/normtext/ArtikelBody.tsx`: alle Zellen bekommen `gruppiereTausender`,
+  nicht nur numerische. `istNumerischeZelle` steuert nur noch Rechtsbündigkeit.
+- Resultat: Streitwert-Spalte «über 5 000 bis 10 000» → «über 5'000 bis 10'000».
+
+---
+
 ## Session 22.6.2026 — KANTONALE TARIF-TABELLEN Stufe 1 (Füllpunkt-Zweispalter SG) — auf main + PROD-DEPLOY (553b2ee, dpl_DqgCNF…, lexmetrik.vercel.app)
 
 **Deployt 22.6. nach Davids Ja + voller Verifikation** (Bug-Check alle Kantone + UI-Prüfung): SG-3849 rendert 346 saubere 2-Spalten-Tarifzeilen, 0 Konsolenfehler, Kernrouten + /gesetze/kanton/SG-3849 HTTP 200. Stufe-2-Worklist in `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`.

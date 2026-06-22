@@ -135,4 +135,20 @@ describe('extrahiereZhStreitwertStaffel — echte Fixture ZH-215.3 § 4', () => 
     expect(zeile![1]).toContain('25');
     expect(zeile![1]).toContain('400');
   });
+
+  it('REGRESSION §1 (Issue 1, 22.6.2026): Zeile 11 «über 10 Mio.» — «106» nicht in col1 (Spaltenriss)', () => {
+    // Bug: PDF-Stück «10 Mio. 106» liegt x-technisch (x=143.5) unter threshold1
+    // → «106» landete in col1 («über 10 Mio. 106»), «400» in col2 — Grundgebühr «106 400» zerrissen.
+    // Fix: mioSplit-Post-Prozess verschiebt trailing-Digit nach col2 (kein Zeichen geändert, §1).
+    ergebnis = extrahiereZhStreitwertStaffel(STUECKE)!;
+    const letzte = ergebnis.zeilen[ergebnis.zeilen.length - 1];
+    // col1 = «über 10 Mio.» (OHNE «106»)
+    expect(letzte[0]).toBe('über 10 Mio.');
+    // col2 = «106 400» (die zusammengesetzte Grundgebühr)
+    expect(letzte[1]).toBe('106 400');
+    // col3 beginnt mit «zuzügl.»
+    expect(letzte[2]).toMatch(/^zuzügl\./);
+    // Kein Stück «106» darf mehr in col1 stecken
+    expect(letzte[0]).not.toContain('106');
+  });
 });

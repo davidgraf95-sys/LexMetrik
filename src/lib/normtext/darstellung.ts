@@ -83,10 +83,28 @@ export function absatzMarke(absatz: string | null, text: string): { marke: strin
 // Gruppierung, kein Zeichen geändert; §3: reine Darstellung). Verwendet den
 // geraden Apostroph U+0027 — konsistent mit dem Zeichen, das die Fedlex-/LexWork-
 // Snapshots selbst schreiben (z. B. «10'000» in BS-154.810.json, geprüft 22.6.2026).
-// Läuft ≥4-stellige zusammenhängende Ziffernfolgen von rechts in 3er-Gruppen;
-// Folgen <4 Stellen und bereits gruppierte Zahlen («2'000») bleiben unberührt.
+//
+// Zwei Pässe:
+// 1. Leerzeichen-getrennte Tausender-Gruppen (ZH-PDF-Stil): «5 000» → «5'000»,
+//    «1 250» → «1'250», «106 400» → «106'400». Wiederholt bis stabil (Ketten:
+//    «1 234 567» → «1 234'567» → «1'234'567»). Nur wenn linke Seite eine oder
+//    mehrere Ziffern UND die rechte Seite exakt 3 Ziffern ist, und darauf eine
+//    Nicht-Ziffer oder Stringende folgt. Leerzeichen vor Buchstaben («10 Mio.»)
+//    und normale Worttrennungen («mind. aber Fr. 100») werden NICHT angefasst
+//    (die 3-Ziffern-Bedingung + (?=\D|$) schützt zuverlässig).
+// 2. Zusammenhängende ≥4-stellige Ziffernfolgen (SG-/Bund-Stil, kein Leerzeichen):
+//    «2000» → «2'000», «50000» → «50'000». Bereits gruppierte Zahlen («2'000»)
+//    bleiben unberührt (Apostroph unterbricht den \d{4,}-Match).
 export function gruppiereTausender(s: string): string {
-  return s.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, "'"));
+  // Pass 1: Leerzeichen-getrennte Tausender (ZH-PDF) — wiederholen bis stabil.
+  let r = s;
+  let prev: string;
+  do {
+    prev = r;
+    r = r.replace(/(\d)\s(\d{3})(?=\D|$)/g, "$1'$2");
+  } while (r !== prev);
+  // Pass 2: zusammenhängende ≥4-stellige Läufe (SG/Bund-Stil).
+  return r.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, "'"));
 }
 
 // Bereichs-Artikel («Art. 226a226d», «Art. 6770») trägt im Snapshot zwei

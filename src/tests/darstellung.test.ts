@@ -42,4 +42,41 @@ describe('gruppiereTausender (§1: nur Gruppierung, §3: reine Darstellung)', ()
   it('leerer String bleibt leer', () => {
     expect(gruppiereTausender('')).toBe('');
   });
+
+  // Issue 2 (22.6.2026): Leerzeichen-getrennte Tausender (ZH-PDF-Stil)
+  it('«5 000» → «5\'000» (ZH-PDF Leerzeichen-Tausender)', () => {
+    expect(gruppiereTausender('5 000')).toBe("5'000");
+  });
+
+  it('«1 250» → «1\'250» (ZH-PDF Leerzeichen-Tausender)', () => {
+    expect(gruppiereTausender('1 250')).toBe("1'250");
+  });
+
+  it('«10 000» → «10\'000» (ZH-PDF Leerzeichen-Tausender)', () => {
+    expect(gruppiereTausender('10 000')).toBe("10'000");
+  });
+
+  it('«106 400» → «106\'400» (ZH-PDF Leerzeichen-Tausender, Issue 1-Grundgebühr)', () => {
+    expect(gruppiereTausender('106 400')).toBe("106'400");
+  });
+
+  it('«über 10 Mio.» bleibt UNVERÄNDERT (kein 3-Ziffern-Muster nach Leerzeichen)', () => {
+    expect(gruppiereTausender('über 10 Mio.')).toBe('über 10 Mio.');
+  });
+
+  it('«mind. aber Fr. 100» bleibt UNVERÄNDERT (kein digit+space+3digits-Muster)', () => {
+    expect(gruppiereTausender('mind. aber Fr. 100')).toBe('mind. aber Fr. 100');
+  });
+
+  it('«2000.—» → «2\'000.—» (bestehende SG-Logik, unverändert)', () => {
+    expect(gruppiereTausender('2000.—')).toBe("2'000.—");
+  });
+
+  it('Ketten «1 234 567» → «1\'234\'567» (chained Leerzeichen-Gruppen, wiederholt bis stabil)', () => {
+    expect(gruppiereTausender('1 234 567')).toBe("1'234'567");
+  });
+
+  it('«über 5 000 bis 10 000» → «über 5\'000 bis 10\'000» (Streitwert-Spalte ZH)', () => {
+    expect(gruppiereTausender('über 5 000 bis 10 000')).toBe("über 5'000 bis 10'000");
+  });
 });

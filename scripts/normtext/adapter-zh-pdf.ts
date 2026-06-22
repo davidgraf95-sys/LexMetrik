@@ -649,6 +649,19 @@ export function extrahiereZhStreitwertStaffel(
     let c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
     let c3 = col3.join(' ').replace(/\s+/g, ' ').trim();
 
+    // Post-Prozess §1-sicher: Wenn col1 mit «Mio.» endet und danach noch eine
+    // nackte Zifferngruppe folgt («über 10 Mio. 106»), wurde dieses Fragment
+    // fälschlich der Streitwert-Spalte zugerechnet (es liegt x-technisch knapp
+    // links von threshold1). Die Zifferngruppe wird an den ANFANG von col2
+    // verschoben — kein Zeichen geändert/erfunden, nur ein existierendes Fragment
+    // verschoben. Regex: «(… Mio.) <Ziffern>» am Ende von c1.
+    const mioSplit = c1.match(/^(.*\bMio\.)\s+(\d[\d\s]*)$/);
+    if (mioSplit) {
+      c1 = mioSplit[1].trim();
+      const wanderFragment = mioSplit[2].trim();
+      c2 = c2 ? `${wanderFragment} ${c2}` : wanderFragment;
+    }
+
     // Post-Prozess: «zuzügl.» am Ende von col2 → Anfang von col3 verschieben.
     // In der Fixture enthält «250 zuzügl.» (x=181) das Keyword; es gehört semantisch
     // zum Zuschlag. Deterministisch: nur «zuzügl.» am Ende von col2 (nach Trim).
