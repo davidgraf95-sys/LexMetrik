@@ -96,8 +96,13 @@ export function absatzMarke(absatz: string | null, text: string): { marke: strin
 //    «2000» → «2'000», «50000» → «50'000». Bereits gruppierte Zahlen («2'000»)
 //    bleiben unberührt (Apostroph unterbricht den \d{4,}-Match).
 export function gruppiereTausender(s: string): string {
+  // Pass 0: Bereichs-Strich-Artefakt aus der PDF-Extraktion glätten — ein an die
+  // linke Zahl geklebter Halbgeviert-/Geviertstrich mit Leerzeichen vor der
+  // rechten Zahl («65– 250» → «65–250», «250– 420» → «250–420»). Nur Ziffer-
+  // Strich-Leerzeichen-Ziffer; ein Strich mit Leerzeichen auf BEIDEN Seiten
+  // («5 – 7») bleibt unberührt. Reine Darstellung (§3), keine Ziffer geändert.
+  let r = s.replace(/(\d[–—])\s+(\d)/g, '$1$2');
   // Pass 1: Leerzeichen-getrennte Tausender (ZH-PDF) — wiederholen bis stabil.
-  let r = s;
   let prev: string;
   do {
     prev = r;
