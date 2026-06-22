@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/BL/170.31/art_1",
@@ -46,7 +46,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "e2bc0c83487d063c4f43e53c7d17306c2fbc2fa38db9697cdbcc8ad7d20edf18"
     },
@@ -69,7 +69,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "15e62d6c1b4ff977ac7c97805294f7c18a933d1d3986cf79b5d1032f926dc8fc"
     },
@@ -108,7 +108,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "f652c4906f588094d74d994974c7118660795b7f4669599b75fba032dc861060"
     },
@@ -135,7 +135,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "97df0328c198d72d7c06c9f8f02ebaf10b9d1a6f240fda65a7dedc475c50dd17"
     },
@@ -196,7 +196,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "c926f2bd110088d3180fbeb7dff0b9d4a1939429a40b27953c100f30ce97ff77"
     },
@@ -253,7 +253,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "14c7e9c9c69625cdf326d02f459cc153d606d2a9303d8e0b7ba17c66a0cb9673"
     },
@@ -272,7 +272,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "945c052e93caed838f3b6435944e5a9fbb2da1d3127b6ab18a2ab1ca852d2d41"
     },
@@ -305,7 +305,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "9bbe446df7dfb2cd9cc6ed5153b7a039ffd48c7df64e430125a1b6014be94244"
     },
@@ -344,6 +344,22 @@
             {
               "marke": "f",
               "text": "für Endentscheide mit einem Streitwert:"
+            },
+            {
+              "marke": "1",
+              "text": "bis CHF 10'000: CHF 200–1'500.–."
+            },
+            {
+              "marke": "2",
+              "text": "bis CHF 30'000: CHF 500–3'000.–."
+            },
+            {
+              "marke": "3",
+              "text": "bis CHF 100'000: CHF 1'500–10'000.–."
+            },
+            {
+              "marke": "4",
+              "text": "ab CHF 100'001: CHF 2'000–30'000.–."
             },
             {
               "marke": "g",
@@ -426,9 +442,9 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
-      "sha": "38333bd01f2f33142ee1475b1785f7f96fdac5bf3b8caa401455f50f42ad915e"
+      "sha": "bfd75a5dacaae23600f954c64c25b8115325845586d46bc137ec8deca9736981"
     },
     {
       "id": "kanton/BL/170.31/art_9",
@@ -463,7 +479,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "e7d418421d8c4ebcc5bb899e960ae01e3d900b5586159bf26a790f52f8a6b28c"
     },
@@ -498,7 +514,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "da8cb0ec416b82378f694e1ffc5ad234324530a4c01f1e94d68c39b202370969"
     },
@@ -517,7 +533,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "a76cbc3589bfc0c4ca6c417b3fdbf356e12843fac5500e0cd97cbf04d9fe17e6"
     },
@@ -544,7 +560,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "c97375df677477f858a315d29c3cf4b34677b6ca78779756cee16deac9aafcad"
     },
@@ -567,7 +583,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "cb7b6603abaf65724efd81901b568aaf7a48d1c88ecdc633aeb39a321c023fb3"
     },
@@ -622,7 +638,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "c786e4b48fe5768ce525b0bc9d31411748b5fd4c90f8953e2373fc6f7b1531de"
     },
@@ -659,7 +675,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "f2ebc5a3d798ad002fbc253545fc119296ce013b039a60eb64c0d0a8ac63485e"
     },
@@ -682,7 +698,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "534d000cb1bdebf9630bc25b4f1acd2cf3b807165588e4c2be186bf1fecd5181"
     },
@@ -715,7 +731,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "3faa5baec40d01f6150f6e08a8104aa798ff33134cd9941013fc88b4d4701b82"
     },
@@ -744,7 +760,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "40e77a632f36ce7bec6b94ed690f4b5f7d67a30dde096f44b586945d57faccbd"
     },
@@ -773,7 +789,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "907795bf07858d6b3f83a160d66ec0b6b799076a4c987af4e015fff1db2cd340"
     },
@@ -792,7 +808,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "6f7631faa520f019e3297ad211ad72e130953ce908f40d5b360187506a22737c"
     },
@@ -811,7 +827,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "1e22269718adfa5e267d066e662f09cdc44d0676fc4e71cf6c1424481f1c0fb3"
     },
@@ -838,7 +854,7 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "60cce13612fab3a78738e0935ccad7e08e7d702e37908ced30bed1a225e2e3c3"
     }
