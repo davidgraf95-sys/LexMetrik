@@ -50,6 +50,24 @@ function reinText(html: string): string {
     .trim();
 }
 
+// Sachtitel aus einer Artikel-eigenen h6-Überschrift (BV/ZPO/StPO-Manier:
+// «Art. 5 Grundsätze rechtsstaatlichen Handelns»). Fedlex setzt die ARTIKEL-
+// NUMMER in <b>/<i> und Fussnoten in <sup>; der verbleibende Klartext ist der
+// Sachtitel. Robuster als Text-Parsing: behält lowercase-Initialen
+// («b»+«undesrechtliche»), Enumeratoren («b. Bei- und Austritt») und Titel
+// nach kombinierten Nummern, verwirft aber reine Nummern-Fortsetzungen
+// («Art. 370 und 371» → bleibt «und» → kein Titel) und «…»-Platzhalter.
+function artikelSachtitel(roh: string): string | null {
+  const titel = reinText(
+    roh
+      .replace(/<sup\b[\s\S]*?<\/sup>/gi, '')   // Fussnoten-Marker
+      .replace(/<b\b[^>]*>[\s\S]*?<\/b>/gi, '') // Artikelnummer (fett)
+      .replace(/<i\b[^>]*>[\s\S]*?<\/i>/gi, ''), // Nummern-Suffix (kursiv)
+  );
+  if (!titel || /^(?:und|et|…|\.\.\.|[–-])$/i.test(titel)) return null;
+  return titel;
+}
+
 interface Knoten { iscollaps: boolean; pushed: boolean }
 interface Ktx { kind: 'g' | 'm'; ebene: number; label: string; fnIds: string[]; attached: boolean }
 
@@ -60,6 +78,7 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
   const context: Ktx[] = [];
   let pending: Ktx | null = null;
   let cap: { start: number; tag: string } | null = null;
+  let artId: string | null = null; // aktuell offener Artikel (für die fusionierte h6-Marginalie)
 
   for (const m of html.matchAll(TAG)) {
     const ist_close = m[1] === '/';
@@ -81,7 +100,8 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
             // anhängen (Vorfahren mit noch nicht zugeordneten fnIds).
             const rfn: string[] = [];
             for (const c of context) { if (c.fnIds.length && !c.attached) { rfn.push(...c.fnIds); c.attached = true; } }
-            result[id[1].slice(4)] = {
+            artId = id[1].slice(4);
+            result[artId] = {
               gliederung: context.filter((c) => c.kind === 'g').map((c) => ({ ebene: c.ebene, label: c.label })),
               marginalie: context.filter((c) => c.kind === 'm').map((c) => c.label),
               ...(rfn.length ? { randtitelFnIds: rfn } : {}),
@@ -109,9 +129,18 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
         else if (!hm) pending = { kind: 'm', ebene: 0, label, fnIds, attached: false };
         else pending = null;
       } else {
+        // Artikel-eigene h6-Überschrift («Art. N <Sachtitel>», BV/ZPO/StPO-Manier):
+        // den Sachtitel strukturell aus dem h6-Markup ziehen und als Marginalie
+        // dieses Artikels erfassen — nur wenn er sonst keine div.heading-Kontext-
+        // Marginalie hat (OR/ZGB unberührt: deren h6 = nur «Art. N» → kein Titel).
+        if (hm && Number(hm[1]) === 6 && artId && result[artId]?.marginalie.length === 0) {
+          const titel = artikelSachtitel(roh);
+          if (titel) result[artId].marginalie = [titel];
+        }
         pending = null;
       }
     }
+    if (tag === 'article') artId = null;
     if ((tag === 'div' || tag === 'article') && divstack.length) {
       const knoten = divstack.pop()!;
       if (knoten.pushed && context.length) context.pop();
