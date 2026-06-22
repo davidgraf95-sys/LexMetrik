@@ -22,6 +22,37 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 22.6.2026 (vormittags) — Gesetze-UI-Schub + §6-Splits (PRs #37–#49 → main, HEAD 2d5aa10; Prod-Deploy NICHT bestätigt)
+
+Mehrere Sessions am Vormittag (z.T. autonom/parallel) haben PRs #37–#49 auf
+`main` gelandet. **Ehrlichkeitsvermerk (§8):** alle auf `main` gemergt; ein
+Prod-Deploy dieser Stände ist hier **nicht verifiziert** — vor jeder Deploy-
+Behauptung §9 (Davids Ja) + Topologie-Check. Inhalt:
+
+- **§6-Datei-Splits (verhaltensneutral, Token-Disziplin):** `startseiteConfig`
+  → Typen/Karten/Vorlagen + Barrel (#37 `5516796`); `gruendungAgSchemas` → 3
+  Geschwister + Barrel (#38 `fe593e9`); `gruendungAgDokumente` → Typen/Gates/
+  Assembly (#39 `4bc8f32`); `zustaendigkeit` Setup/State in
+  `useZustaendigkeitForm`-Hook (#49 `1ad4416`). Golden byte-gleich.
+- **Gesetze-Darstellung:** Gesetzesanzeige **zweispaltig mit statischen
+  Randtiteln** (#41 `408ae66`) + Sektions-Kopf-Umbruch auf schmalen Viewports
+  (`7f3a799`); Artikel-Randtitel **aus fusionierten h6 extrahieren** (BV u.a.,
+  #42 `06f1e26`); Gliederungs-Sprung präzise + kein Scroll-Akkordeon +
+  Suchleiste am Header (#43 `27f2a44`); aufgehobene Artikel einheitlich
+  «aufgehoben» (#48 `501be00`).
+- **Gesetze-Kanton-Übersicht (visuell):** Kantonswappen (#44 `cfdabb7`);
+  **klickbare Schweiz-Kantonskarte** (#45 `ada4452`); Karte farblich
+  differenziert + Name beim Hover (#46 `f09cbe7`).
+- **Mobile:** Favoriten-Dropdown sprengt Viewport nicht mehr (#40 `4c9be90`).
+- **Normtext-Infrastruktur:** **Fedlex-ELI-Resolver** SR-Nr → ELI + geltende
+  Konsolidierung (#47 `27f657c`).
+- **Offen / nächster Auftrag David (22.6.):** kantonale Gesetze überarbeiten,
+  damit **Zahlen und Tabellen richtig dargestellt** werden — bekannte Wurzel:
+  PDF-Spalten verschmelzen bei der Extraktion zu einem Fliesstext
+  (`scripts/normtext/adapter-pdf.ts`), das UI repariert heuristisch
+  (`ArtikelBody.tsx` `staffelZeilen`/`normalisiereTarifText`); §7-saubere
+  Lösung = besserer Generator-Extrakt, nicht UI-Heuristik.
+
 ## Session 22.6.2026 — PROD-DEPLOY: Rechen-Audit A/B/C + Normtext-Adapter-Fixes + Gesetz-Optik (PR #35 → main 3422eff, lexmetrik.vercel.app)
 
 David autonom-Auftrag («mach das alles bis morgen, keine Entscheidung»). Gebündelt

@@ -4,6 +4,16 @@
 hier ändert sich selten; es hält fest, *wie* gearbeitet wird — nicht *was*
 gerade gebaut ist.
 
+**STRUKTUR.md aktuell halten (Pflicht, Auftrag David 22.6.2026).** Wer in einer
+Session substanzielle Arbeit auf `main` landet (Feature/Fix/Refactor, ein PR),
+zieht in derselben Session oben eine ehrliche Session-Karte in `STRUKTUR.md`
+nach — STRUKTUR.md soll jederzeit den aktuellen Stand repräsentieren. Auch eine
+Parallel-/Autonom-Session (§12) erfüllt diese Pflicht; sieht sie fremde,
+undokumentierte Commits, trägt sie nur die fehlende Karte nach (nicht erneut
+umsetzen). Absicherung: der SessionStart-Hook `struktur-aktuell.py` meldet zu
+Sitzungsbeginn, wenn substanzielle Commits seit der letzten Karten-Pflege NICHT
+in STRUKTUR.md dokumentiert sind — diese Lücke wird dann zuerst geschlossen.
+
 ## §1 Oberstes Ziel: fachliche Korrektheit (Logik vor allem)
 
 Jede andere Zielgrösse — weniger Code, kleinere Bundles, elegantere
