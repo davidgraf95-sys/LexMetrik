@@ -34,7 +34,8 @@
     "normtext:register": "vite-node scripts/normtext/browse-manifest-run.ts --",
     "normtext:struktur": "vite-node scripts/normtext/struktur-run.ts --",
     "normtext:struktur-kanton": "vite-node scripts/normtext/struktur-kanton-run.ts --",
-    "normtext:bund-stubs": "vite-node scripts/normtext/bund-stubs-generieren.ts --"
+    "normtext:bund-stubs": "vite-node scripts/normtext/bund-stubs-generieren.ts --",
+    "fedlex:eli": "vite-node scripts/fedlex-eli-aufloesen.ts --"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
