@@ -248,3 +248,65 @@ describe('Paragraph-1-Schutz: ambige Zelle (kein `: `, keine Tarif-Nr.) -> null'
     expect(r).toBeNull();
   });
 });
+
+// §1-Regression NW-265.51: fehlender ` — `-Separator vor Tarif-Nr.-Abschnittszeile
+// (LexWork liefert kein ` — ` zwischen einem Betrag-Ende und dem nächsten
+//  «Tarif-Nr.: X.Y · Bezeichnung: …»-Eintrag → der Parser muss ihn normalisieren.)
+describe('§1-Regression NW-265.51: fehlende Zeilentrenner vor Abschnittsüberschrift', () => {
+  // Muster aus a1-1 art: «100.–» direkt gefolgt von «Tarif-Nr.: 1.4 · Bezeichnung: Publik...»
+  // ohne dazwischenstehendes ` — `. Die Abschnittszeile 1.4 hat keinen Betrag-Wert.
+  const nwA11Input =
+    'Tarif-Nr.: 1.3.8.8 · Bezeichnung: Arbeitsbewilligung für Schutzbedürftige (S) · Betrag: 100.– Tarif-Nr.: 1.4 · Bezeichnung: Publikationsgesetzgebung (NG 141.1) — Tarif-Nr.: 1.4.1 · Bezeichnung: Amtsblatt';
+
+  it('NW a1-1: Betrag der Zeile 1.3.8.8 ist nur «100.–» (kein Tarif-Nr.-Ballast)', () => {
+    const r = extrahiereMehrspaltig(nwA11Input);
+    expect(r).not.toBeNull();
+    // row[0] = 1.3.8.8-Zeile: Betrag muss sauber «100.–» sein, ohne «Tarif-Nr.: 1.4»
+    const betragIdx = r!.kopf.indexOf('Betrag');
+    expect(betragIdx).toBeGreaterThanOrEqual(0);
+    expect(r!.zeilen[0][betragIdx]).toBe('100.–');
+  });
+
+  it('NW a1-1: Abschnittszeile 1.4 / Publikationsgesetzgebung ist eigene Zeile', () => {
+    const r = extrahiereMehrspaltig(nwA11Input);
+    expect(r).not.toBeNull();
+    // row[1] = 1.4-Abschnittszeile: Tarif-Nr.=«1.4», Bezeichnung=«Publikationsgesetzgebung (NG 141.1)»
+    const tarifIdx = r!.kopf.indexOf('Tarif-Nr.');
+    const bezIdx = r!.kopf.indexOf('Bezeichnung');
+    expect(r!.zeilen[1][tarifIdx]).toBe('1.4');
+    expect(r!.zeilen[1][bezIdx]).toBe('Publikationsgesetzgebung (NG 141.1)');
+  });
+
+  // Muster aus a1-4 art: «10.–» direkt gefolgt von «Tarif-Nr.: 4.2 · Bezeichnung: Zentrum Bevölkerungsschutz»
+  const nwA14Input =
+    'Tarif-Nr.: 4.1.4 · Bezeichnung: zusätzliche Leistungen Wäsche, je Wäschesack · Betrag: 10.– Tarif-Nr.: 4.2 · Bezeichnung: Zentrum Bevölkerungsschutz — Tarif-Nr.: 4.2.1 · Bezeichnung: Plenarsaal, halber / ganzer Tag · Betrag: 150.– / 250.–';
+
+  it('NW a1-4: Betrag der Zeile 4.1.4 ist nur «10.–» (kein Tarif-Nr.-Ballast)', () => {
+    const r = extrahiereMehrspaltig(nwA14Input);
+    expect(r).not.toBeNull();
+    const betragIdx = r!.kopf.indexOf('Betrag');
+    expect(betragIdx).toBeGreaterThanOrEqual(0);
+    expect(r!.zeilen[0][betragIdx]).toBe('10.–');
+  });
+
+  it('NW a1-4: Abschnittszeile 4.2 / Zentrum Bevölkerungsschutz ist eigene Zeile', () => {
+    const r = extrahiereMehrspaltig(nwA14Input);
+    expect(r).not.toBeNull();
+    const tarifIdx = r!.kopf.indexOf('Tarif-Nr.');
+    const bezIdx = r!.kopf.indexOf('Bezeichnung');
+    expect(r!.zeilen[1][tarifIdx]).toBe('4.2');
+    expect(r!.zeilen[1][bezIdx]).toBe('Zentrum Bevölkerungsschutz');
+  });
+
+  // Schutz: kein Doppel-Insert wenn ` — Tarif-Nr.:` bereits vorhanden
+  it('kein Doppel-Insert wenn Trenner bereits korrekt vorhanden', () => {
+    const korrekt =
+      'Tarif-Nr.: 1.1 · Bezeichnung: Alpha · Betrag: 50.– — Tarif-Nr.: 1.2 · Bezeichnung: Beta · Betrag: 30.–';
+    const r = extrahiereMehrspaltig(korrekt);
+    expect(r).not.toBeNull();
+    // Genau 2 Zeilen (kein Doppel-Split durch fehlerhafte Insert)
+    expect(r!.zeilen.length).toBe(2);
+    expect(r!.zeilen[0][r!.kopf.indexOf('Betrag')]).toBe('50.–');
+    expect(r!.zeilen[1][r!.kopf.indexOf('Betrag')]).toBe('30.–');
+  });
+});

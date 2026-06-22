@@ -42,6 +42,33 @@ function zerlegeZelle(
 }
 
 /**
+ * §1-Vorpass: normalisiert fehlende Zeilentrenner in LexWork-Quelltexten.
+ *
+ * LexWork liefert gelegentlich keinen ` — ` (U+2014) zwischen dem
+ * Betrag-Ende einer Zeile und dem Beginn einer neuen Abschnitts-Überschrift
+ * der Form «Tarif-Nr.: X.Y». Ohne diesen Trenner würde der Parser den Betrag
+ * und die Abschnittszeile zu einer einzigen, ambigen Zelle verschmelzen und
+ * den Abschnittsnamen verlieren (§1-Verletzung).
+ *
+ * Trigger: Ziffer / Punkt / En-Dash (U+2013, «–» in Beträgen) direkt gefolgt
+ * von Leerzeichen + «Tarif-Nr.:». Ein vorhandener Trenner «— Tarif-Nr.:» ist
+ * bereits durch ` — ` abgedeckt und hat kein «[\d.–]» unmittelbar davor.
+ *
+ * Nur so weit wie nötig verallgemeinert: Trigger ist «Betrag-Zeichen + WS +
+ * Tarif-Nr.:», nicht ein generisches Label-Muster.
+ *
+ * @param text  Roher Tabellentext aus der LexWork-Quelle.
+ * @returns     Text mit eingefügten ` — ` wo nötig.
+ */
+function normalisiereTrennzeichen(text: string): string {
+  // [\d.–] = Ziffer, Punkt oder En-Dash (U+2013 «–», in Beträgen)
+  // \s+ = ein oder mehr Leerzeichen (aber kein U+2014)
+  // «Tarif-Nr.:» beginnt eine neue Abschnittszeile
+  // U+2014 = «—» (Em-Dash, der Zeilentrenner)
+  return text.replace(/([\d.–])\s+(Tarif-Nr\.:)/g, '$1 — $2');
+}
+
+/**
  * Versucht, `·`/`—`-Flachtext in eine Mehrspalten-Tabelle zu zerlegen.
  *
  * Bedingungen für Erfolg:
@@ -56,10 +83,13 @@ function zerlegeZelle(
 export function extrahiereMehrspaltig(
   text: string,
 ): { kopf: string[]; zeilen: string[][] } | null {
-  // Guard: beide Trennzeichen müssen vorhanden sein
-  if (!text.includes(' — ') || !text.includes(' · ')) return null;
+  // §1-Vorpass: fehlende Zeilentrenner vor Tarif-Nr.-Abschnittszeilen einfügen
+  const normText = normalisiereTrennzeichen(text);
 
-  const roheZeilen = text.split(' — ');
+  // Guard: beide Trennzeichen müssen vorhanden sein
+  if (!normText.includes(' — ') || !normText.includes(' · ')) return null;
+
+  const roheZeilen = normText.split(' — ');
   // Guard: ≥2 Zeilen
   if (roheZeilen.length < 2) return null;
 
