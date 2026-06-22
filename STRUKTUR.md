@@ -22,6 +22,37 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
+
+Auftrag David: alle bestehenden Gesetze (Bund + Kantone) EINZELN reviewen (1 Agent/Gesetz),
+Ultra-Aufwand, KEINE Downloads, alles stimmig/lesbar («nichts abgeschnitten/falsch benannt/
+problematisch»). Werkzeug-Lektion: Playwright ist im Repo (`e2e/`, `@axe-core/playwright`) →
+UI-Checks via Bash, nicht MCP (5s-Cap). Memorys: `werkzeuge-zuerst-pruefen`,
+`lexmetrik-gesetze-rendering-lektionen`, `lesbarkeit-formatierung`, `immer-logik-bugcheck`.
+
+**Korpus-Review:** Workflow, 150 Gesetze (35 Bund-Volltext + 115 Kanton; 79 Bund = Live-Link-
+Stubs), je 1 Agent → 92 sauber, 58 mit Befunden. Klassen: fussnoten-leak 103, leerer/kaputter
+Artikel 68, untableisierter-tarif 22, zerrissenes-Wort 16, Label/Stand 5, versch.-Zahlen 3.
+
+**Behoben + deployt (display-layer, ohne Download) — alles live verifiziert:**
+- **Fussnoten-/Änderungshistorie-Leak (103)**: `trenneAenderungshistorie` (darstellung.ts)
+  erweitert (1–3 Fussnoten-Nummern vor Aufgehoben/Eingefügt/Fassung gemäss). Korpus 32'280
+  Blöcke → Rest 2 (beide legitim «in der Fassung gemäss» mit Wort davor). DBG live = 0.
+- **Falsches «aufgehoben» (232)**: ArtikelBody zeigt «aufgehoben» nur ohne items/tabelle/
+  mehrspaltig (VWVG Art.1 live korrekt).
+- **Tabellen links abgeschnitten**: `[text-indent:0]` auf Tabellen-Komponenten (geerbtes
+  negatives text-indent aus `<p pl-9 -indent-9>` clippte 1. Zeile; scrollWidth zeigt's nicht).
+- **Tausendertrenner `'`**: `gruppiereTausender` (Tabellen) + `gruppiereBetraege` (Fliesstext,
+  Geld-Kontext, Jahre geschützt); Bereichs-Strich «65– 250»→«65–250».
+- **ZH (3 Gesetze) + 6 LexWork-Kantone + SG + BL-331**: x-aware/·–/Füllpunkt-Tabellen, Absatz-
+  Nr. wie Bund, «St PO»→«StPO». (Details Folge-Karten unten.)
+
+**BACKLOG (braucht bewusste Download-Welle, David: keine Downloads):** 22 untableisierte
+kantonale Tarife (Re-Extraktion); 68 «…»-Platzhalter/Fragmente (meist legitime Fedlex-
+Auslassungen); 16 zerrissene Wörter; 3 versch. Zahlen; 5 Label/Stand; §4-Erstzeile; ZH echte
+Fussnoten-Anzeige am Artikelfuss; VD-105539 («de X à Y»-Format, neuer Extraktor). Vollständig
+in `FAHRPLAN-GESETZE-REVIEW.md`.
+
 ## Session 22.6.2026 — STUFE 2 Tarif-Tabellen + die 3 ZH-Gesetze «wie beim Bund» (feat/tarif-tabellen-stufe2)
 
 Auftrag David: kantonale Gesetze Zahlen/Tabellen richtig + übersichtlich/schön
