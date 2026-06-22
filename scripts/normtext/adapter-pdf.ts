@@ -64,6 +64,7 @@
 
 import { createHash } from 'node:crypto';
 import { segmentiereAnhangZiffern } from './anhang-segmenter.ts';
+import { extrahiereTarifTabelle, type TarifZeile } from './tarif-tabelle.ts';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Typen
@@ -80,6 +81,9 @@ export interface PdfBlock {
   absatz: string | null;
   text: string;
   items?: Array<{ marke: string; text: string }>;
+  /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag), aus dem Text
+   *  zerlegt. text trägt dann nur noch den Einleitungs-Vortext. */
+  tabelle?: TarifZeile[];
 }
 
 export interface PdfArtikel {
@@ -731,7 +735,19 @@ function baueBloecke(zeilen: string[]): PdfBlock[] {
   flushText();
   flushItem();
 
-  return bloecke.filter((b) => b.text !== '' || (b.items && b.items.length > 0));
+  // Füllpunkt-Tarifzeilen je Block in strukturierte Tabelle zerlegen (§1: nur
+  // wenn eindeutig Beschreibung…Betrag; sonst Text unverändert).
+  for (const b of bloecke) {
+    if (!b.text) continue;
+    const t = extrahiereTarifTabelle(b.text);
+    if (t) {
+      b.text = t.vortext;
+      b.tabelle = t.tabelle;
+    }
+  }
+  return bloecke.filter(
+    (b) => b.text !== '' || (b.items && b.items.length > 0) || (b.tabelle && b.tabelle.length > 0),
+  );
 }
 
 /**
@@ -855,7 +871,8 @@ export function berechnePdfQuelleHash(artikel: Record<string, PdfArtikel>): stri
     teile.push(`#${token}`);
     for (const b of artikel[token].bloecke) {
       const items = (b.items ?? []).map((i) => `${i.marke}\t${i.text}`).join('\n');
-      teile.push(`${b.absatz ?? ''}\t${b.text}${items ? `\n${items}` : ''}`);
+      const tab = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
+      teile.push(`${b.absatz ?? ''}\t${b.text}${items ? `\n${items}` : ''}${tab ? `\n${tab}` : ''}`);
     }
   }
   return createHash('sha256').update(teile.join('\n'), 'utf8').digest('hex');

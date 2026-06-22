@@ -221,6 +221,33 @@ describe('PDF-Adapter — URL-Ableitung je Profil', () => {
   });
 });
 
+describe('baueBloecke — Füllpunkt-Tarifzeilen werden zu tabelle angereichert', () => {
+  it('baueBloecke: Füllpunkt-Block wird zu tabelle (Text=vortext, jetzt leer)', () => {
+    const basis = [
+      '§ 5',
+      '¶1 Die Gebühren betragen: Vorladung . . . . . . . 6.— Mahnung . . . . . . . 10.— bis 50.—',
+    ].join('\n');
+    const art = extrahiereAllePdfArtikel(basis, '§');
+    const block = art['5'].bloecke[0];
+    expect(block.text).toBe('');  // vortext ist immer '' → Text leer bei voll tableisiertem Block
+    expect(block.tabelle).toEqual([
+      { beschreibung: 'Die Gebühren betragen: Vorladung', betrag: '6.—' },  // Intro bleibt in erster Beschreibung
+      { beschreibung: 'Mahnung', betrag: '10.— bis 50.—' },
+    ]);
+  });
+
+  it('Nicht-Tarif-Block bleibt unverändert (kein tabelle)', () => {
+    const basis = [
+      '§ 1',
+      '¶1 Dieser Erlass regelt die Gebühren.',
+    ].join('\n');
+    const art = extrahiereAllePdfArtikel(basis, '§');
+    const block = art['1'].bloecke[0];
+    expect(block.text).toBe('Dieser Erlass regelt die Gebühren.');
+    expect(block.tabelle).toBeUndefined();
+  });
+});
+
 describe('PDF-Adapter — quelleHash (Drift-Token)', () => {
   it('ist deterministisch und 64-stellig hex', () => {
     const a = extrahiereAllePdfArtikel(VD_TFJC_TEXT, 'Art.');
