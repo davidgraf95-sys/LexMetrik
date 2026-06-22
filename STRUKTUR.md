@@ -22,7 +22,9 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 22.6.2026 — KANTONALE TARIF-TABELLEN Stufe 1 (Füllpunkt-Zweispalter SG) (Branch feat/kantonale-tarif-tabellen; Prod-Deploy offen, §9)
+## Session 22.6.2026 — KANTONALE TARIF-TABELLEN Stufe 1 (Füllpunkt-Zweispalter SG) — auf main + PROD-DEPLOY (553b2ee, dpl_DqgCNF…, lexmetrik.vercel.app)
+
+**Deployt 22.6. nach Davids Ja + voller Verifikation** (Bug-Check alle Kantone + UI-Prüfung): SG-3849 rendert 346 saubere 2-Spalten-Tarifzeilen, 0 Konsolenfehler, Kernrouten + /gesetze/kanton/SG-3849 HTTP 200. Stufe-2-Worklist in `FAHRPLAN-TARIF-TABELLEN-STUFE2.md`.
 
 Auftrag David: «kantonale Gesetze überarbeiten, Zahlen + Tabellen richtig darstellen.»
 Gewählt: §7-sauberer Generator-Extrakt (nicht UI-Heuristik). Subagent-getrieben
