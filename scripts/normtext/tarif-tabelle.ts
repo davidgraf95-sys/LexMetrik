@@ -25,8 +25,19 @@ export function betragAmAnfang(s: string): { betrag: string; rest: string } | nu
 
 export interface TarifZeile { beschreibung: string; betrag: string }
 
-// Leader = ≥4 Punkte, ggf. durch einzelne Leerzeichen getrennt («. . . .» / «....»).
-const LEADER = /\.(?:\s?\.){3,}/g;
+// Leader = ≥3 Punkte, ggf. durch einzelne Leerzeichen getrennt («. . .» / «...»).
+// FIX A (22.6.2026): war {3,} (≥4 Punkte); geändert zu {2,} (≥3 Punkte), weil
+// SG-2808 art=10 den 3-Punkt-Leader «. . . 300.– bis 3000.–» nicht erkannte.
+const LEADER = /\.(?:\s?\.){2,}/g;
+
+// Signal für unvollständig getrennte Blöcke: ein Geld-Betrag (mit Dash) gefolgt
+// von Leerzeichen + Ziffer (nächste Zeilennummer/-kennung steckt noch in der
+// Beschreibung). Das «\D» am Ende stellt sicher, dass «2000000.– zuzüglich» NICHT
+// matcht (Buchstabe danach). Punkt ohne Dash (z.B. «Nr. 20.») passt nicht ins GELD-Atom.
+// FIX B (22.6.2026): verhindert stille §1-Verletzungen bei unvollständig getrennten Blöcken.
+const RESIDUAL_LEADER = /\.(?:\s?\.){2,}/;
+const GELD_ATOM = String.raw`(?:\d[\d''  ]*\.[—–-]|[—–-]\.\d+)`;
+const INCOMPLETE_SPLIT = new RegExp(`(?:${GELD_ATOM})\\s+\\d`);
 
 export function extrahiereTarifTabelle(
   text: string,
@@ -69,5 +80,17 @@ export function extrahiereTarifTabelle(
     offeneBeschreibung = b.rest; // Beschreibung der nächsten Zeile
   }
   if (tabelle.length === 0) return null;
+
+  // FIX B (22.6.2026): §1-Sicherheits-Guard — unvollständig getrennte Blöcke als
+  // Plaintext belassen. Wenn eine Beschreibung noch ein Residual-Leader-Muster ODER
+  // ein Geld-Betrag-gefolgt-von-Ziffer enthält, war die Trennung unvollständig
+  // (z.B. beim Mischfall ohne Leader: «112 Verfügungen 200.– bis 3000.– 12 Kollegial…»).
+  // Solche Blöcke werden NICHT tableisiert; null → Plaintext-Darstellung (§1).
+  // Erlaubt: «…2000000.– zuzüglich…» (Buchstabe direkt nach Betrag = kein Digit-Match).
+  for (const zeile of tabelle) {
+    if (RESIDUAL_LEADER.test(zeile.beschreibung)) return null;
+    if (INCOMPLETE_SPLIT.test(zeile.beschreibung)) return null;
+  }
+
   return { vortext, tabelle };
 }

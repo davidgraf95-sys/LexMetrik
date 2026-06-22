@@ -106,6 +106,43 @@ describe('extrahiereTarifTabelle', () => {
     });
   });
 
+  // FIX A (22.6.2026): 3-Punkt-Leader «. . .» wird jetzt erkannt (war: ≥4 Punkte).
+  // SG-2808 art=10: «122 Prozessleitende Verfügungen (Kollegialgericht) . . . 300.– bis 3000.–»
+  // → der 3-Punkt-Leader war bisher unsichtbar, Betrag landete in der Beschreibung.
+  it('3-Punkt-Leader «. . .» wird erkannt und splittet korrekt', () => {
+    const r = extrahiereTarifTabelle('Vorladung . . . 6.—');
+    expect(r).toEqual({
+      vortext: '',
+      tabelle: [{ beschreibung: 'Vorladung', betrag: '6.—' }],
+    });
+  });
+
+  // FIX B (22.6.2026): Unvollständig getrennte Blöcke (Betrag gefolgt von Ziffer
+  // in der Beschreibung) werden als Plaintext belassen (§1-Safety).
+  // Realfall SG-2808 art=10: «112 Prozessleitende Verfügungen 200.– bis 3000.– 12 Kollegialgericht»
+  // hat keinen Leader → der Betrag steckt in der Beschreibung. Nach Fix A spaltet
+  // das Segment am nächsten 3-Punkt-Leader; die Beschreibung enthält dann
+  // «3000.– 12» → INCOMPLETE_SPLIT greift → return null (ganzer Block als Plaintext).
+  it('incomplete-split: Betrag gefolgt von Ziffer in beschreibung → null (§1-Safety)', () => {
+    const r = extrahiereTarifTabelle(
+      '112 Prozessleitende Verfügungen 200.– bis 3000.– 12 Kollegialgericht 121 Endentscheide . . . . 500.– bis 5000.–',
+    );
+    expect(r).toBeNull();
+  });
+
+  // FIX B (22.6.2026): Formel-Beschreibungen mit Betrag gefolgt von BUCHSTABEN
+  // («zuzüglich», «im Rahmen von» usw.) dürfen NICHT abgewiesen werden.
+  // SG-2935 art=8: «2 Promille des Erwerbspreises bis Fr. 2000000.– zuzüglich 0,5 Promille»
+  // → «2000000.–» gefolgt von « zuzüglich» (Buchstabe, kein Digit) → kein INCOMPLETE_SPLIT.
+  it('Formel-Beschreibung mit Betrag gefolgt von Buchstabe: NICHT abgewiesen', () => {
+    const r = extrahiereTarifTabelle(
+      'Eigentum 20.01 2 Promille des Erwerbspreises bis Fr. 2000000.– zuzüglich 0,5 Promille des darüber liegenden Erwerbspreises, im Rahmen von . . . . 200.– bis 10000.–',
+    );
+    expect(r).not.toBeNull();
+    // Der Betrag-Wert muss digits-unverändert sein (§1: Ziffern nie verändern).
+    expect(r!.tabelle[r!.tabelle.length - 1].betrag).toBe('200.– bis 10000.–');
+  });
+
   it('interner Doppelpunkt + langer Text bleibt vollständig in beschreibung', () => {
     const r = extrahiereTarifTabelle(
       'Ordnungsdienst bei privaten Veranstaltungen: je Polizeibeamter und halber Tag . . . . . . 200.—',
