@@ -219,6 +219,40 @@ export async function extrahiereZhTextZeilen(
         vorEndeX = st.x + st.w;
       }
       const bereinigt = text.replace(/\s+/g, ' ').trim();
+      // FUSSNOTEN-DEFINITIONEN aussondern (Bug 22.6.2026 «mis-assigned ZH
+      // footnotes»): die Quellen-/Änderungs-Fussnoten am Seitenfuss («OS 64, 280»,
+      // «ABl 2008, 1188», «SR 210», «LS 242», «Eingefügt durch B vom …», «Fassung
+      // gemäss B vom …», «In/Kraft seit …», «Begründung siehe …») stehen in der
+      // KLEINEREN Fussnoten-Schrift (h≈8.0; Body ist h≈9.18) und sind KEIN
+      // Normtext. Ohne Filter hängt der §-Parser sie an den letzten § (bei ZH-243
+      // § 17 = Schlussbestimmung, da KEIN § 18 folgt) → unlesbarer Blob, und bei
+      // ZH-215.3 entstand daraus sogar ein Schein-«§ 25». Signatur (§1: NUR
+      // Fussnoten-Definitionen, nie Body): alle Zeilen-Stücke in Fussnoten-Höhe
+      // (h≤8.5) UND der Text beginnt mit einem Fussnoten-Definitions-Marker. So
+      // bleiben die Tarif-/Streitwert-Tabellen (Zahlen, «Gebühr», «bis») unberührt.
+      const istFussnotenSchrift =
+        stueckeDerZeile.length > 0 &&
+        stueckeDerZeile.every((st) => st.h <= 8.5);
+      const istFussnotenDefinition =
+        istFussnotenSchrift &&
+        // Opener-Marker einer Fussnoten-Definition …
+        (/^(?:OS \d|ABl \d|SR \d|LS \d|Eingefügt durch|Fassung gemäss|Aufgehoben durch|In Kraft seit|Kraft seit|Begründung siehe|Inkrafttreten:|\d+\. \w+ \d{4})/.test(
+          bereinigt,
+        ) ||
+          // … oder eine Fussnoten-FORTSETZUNGSZEILE (Umbruch von «… In Kraft /
+          // seit 1. Januar 2024.»): «seit …» bzw. «Kraft seit …» / reines
+          // Datumsfragment «1. Januar 2017 (ABl …).». NUR in Fussnoten-Höhe
+          // (h≤8.5) → Body-Sätze mit «seit» (h≈9.18) bleiben unberührt (§1).
+          /^(?:seit \d|Kraft seit|\d+\. (?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember) \d{4})/.test(
+            bereinigt,
+          ));
+      if (istFussnotenDefinition) {
+        // Eine Fussnoten-Fortsetzungszeile trägt oft eine (fälschlich als Absatz
+        // gelesene) führende Hochzahl (die Fussnoten-Nummer). Diese Zeile wird
+        // komplett verworfen — der Absatz-Marker darf NICHT als leerer §-Block
+        // überleben (sonst Schein-Absätze «¶14»/«¶15» in § 17).
+        continue;
+      }
       // Reine Leer-/Absatz-Marker-Zeile: trotzdem behalten, falls Absatz gesetzt
       // (die Absatznummer steht oft auf eigener y-Zeile vor dem Text).
       if (bereinigt === '' && absatz === null) continue;
@@ -431,6 +465,19 @@ export function extrahiereAlleZhParagraphen(
 
   for (const rohZeile of zeilen) {
     const zeile = rohZeile.replace(/\s+$/g, '');
+    // ANHANG-GRENZE (Bug 22.6.2026): der «Anhang: Gebührentarif» (ZH-243) ist
+    // eine eigene Tarif-TABELLE und wird SPALTENBEWUSST über
+    // extrahiereZhAnhangSpalten erfasst — NICHT vom generischen §-Parser. Da auf
+    // den letzten § (§ 17, Schlussbestimmung) KEIN weiterer §-Kopf folgt, würde
+    // der Parser sonst den GANZEN Anhang an § 17 hängen (3740-Zeichen-Blob).
+    // Beim «Anhang»-Titel wird der laufende § abgeschlossen und die Akkumulation
+    // gestoppt (Rest der Textbasis = Tabelle, gehört nicht in einen §).
+    if (/^Anhang(:|\b)/.test(zeile.trim())) {
+      speichere();
+      aktivToken = null;
+      aktivZeilen = [];
+      continue;
+    }
     // §-Kopf? (kann an Marginalie-Rest kleben; wir prüfen auf den Marker.)
     const kopf = zeile.match(PARAGRAF_KOPF);
     if (kopf) {
@@ -697,6 +744,202 @@ export function extrahiereZhStreitwertStaffel(
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// x-koordinatenbasierte NotGebV-Anhang-Tarif-Extraktion (ZH-243 «Anhang: Gebührentarif»)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Extrahiert den gesamten ZH-NotGebV-Anhang-Gebührentarif (ZH-243, «Anhang:
+ * Gebührentarif (§ 1)», PDF-Seiten 5–22) x-koordinatenbasiert aus den rohen
+ * PDF-Stücken {x,y,h,s,p} der Anhang-Region (alles ab dem «Anhang»-Titel).
+ *
+ * Spaltenmodell (empirisch verifiziert, Geometrie-Spike 22.6.2026 — §7):
+ * Der Anhang ist eine 4-Spalten-Tabelle im Spiegelrand-Buch, deren x-Lage je
+ * Seitenparität wechselt (Bundsteg):
+ *   - UNGERADE Seiten: Ziffer x≈54 · Beschreibung x≈82 (Unter-«–» x≈91)
+ *                      · Ansatz/Fr. x≈252 · «siehe Ziff.» (Verweis) x≈289–295
+ *   - GERADE Seiten:   Ziffer x≈88 · Beschreibung x≈116 (Unter-«–» x≈125)
+ *                      · Ansatz/Fr. x≈286 · «siehe Ziff.» (Verweis) x≈329
+ * Die Schwellen werden RELATIV zur Beschreibungsspalte (descX, linkester
+ * Nicht-Ziffer-Cluster der Seite) bestimmt — robust gegen den Bundsteg:
+ *   descX+170 ≈ Ansatzspalte · descX+207…213 ≈ Verweisspalte.
+ *
+ * §1 (Wortlaut-Treue): der Ansatz (0,75‰, «mindestens 50», Rahmen «100–1500»)
+ * bleibt INLINE in Lese-Reihenfolge in der Beschreibung — bei mehrzeiligen
+ * hierarchischen Einträgen (Unter-«–»-Bänder) steht so jeder Betrag direkt bei
+ * seinem Tatbestand (eine flache Betrags-Spalte würde Betrag und Phrase
+ * trennen → unlesbar/irreführend). Nur die Verweis-Spalte («siehe Ziff.»,
+ * Querverweis-Ziffern wie «2.2.1, 2.2.2,») wird separiert und als
+ * «(vgl. Ziff. …)» ans Zeilenende gestellt. Silbentrennung an Zeilengrenzen
+ * («Begrün-»+«dung» → «Begründung») wird zusammengefügt (ausser vor
+ * Konjunktionen wie «oder/und» = echte Hängestrich-Komposita). Kein Zeichen
+ * geändert/erfunden — nur Spalten getrennt, Trennstriche gefügt (§1/§3).
+ *
+ * Schrift-Trennung (§1): Tarif-/Tatbestand-Stücke sind h≈9.18 (Body). Die
+ * Spaltenköpfe «Ansatz/Fr.»/«Grundbuchgebühren siehe Ziff.:» (h≈8.2) und die
+ * Fussnoten-Definitionen (h≈8.0) werden über h ≥ 8.7 ausgeschlossen — sie
+ * dürfen NIE in eine Tarif-Zelle geraten (Bug 22.6.2026: die Köpfe klebten
+ * früher als «… 50 Ansatz/Fr. Beurkundungsgebühren siehe Ziff.:» in den Text).
+ *
+ * Rückgabe: `{ kopf, zeilen }` — eine N-Spalten-Tabelle des GANZEN Anhangs.
+ * Jede Zeile = [Ziffer, Beschreibung (mit Inline-Ansätzen), «siehe Ziff.»].
+ * Die hierarchischen Ziffern (2.3.3, 2.3.5.1) bleiben als Strings in Spalte 0.
+ * Guard (§1): null, wenn die Geometrie keine Ziffer-Spalte hergibt (mehrdeutig
+ * → kein geratenes Resultat). `holeZhPdf` zerlegt die Zeilen anschliessend in
+ * die je-Ziffer-Snapshot-Einträge (Token-adressierbar für die Zitat-Auflösung).
+ *
+ * §2 rein/deterministisch (kein Date.now/Math.random); §3 keine UI.
+ */
+export function extrahiereZhNotariatsTarif(
+  stuecke: Array<{ x: number; y: number; h: number; s: string; p: number }>,
+): { kopf: string[]; zeilen: string[][] } | null {
+  if (stuecke.length === 0) return null;
+
+  // Nur Body-/Tarif-Schrift (h≈9.18). Köpfe (h≈8.2) + Fussnoten (h≈8.0) raus.
+  const content = stuecke.filter((s) => s.h >= 8.7);
+  if (content.length === 0) return null;
+
+  // Nach (Seite, y) zu Tabellenzeilen gruppieren, von oben nach unten lesen.
+  type S = { x: number; y: number; h: number; s: string; p: number };
+  const byPY = new Map<string, S[]>();
+  for (const s of content) {
+    const key = `${s.p}_${Math.round(s.y)}`;
+    let l = byPY.get(key);
+    if (!l) {
+      l = [];
+      byPY.set(key, l);
+    }
+    l.push(s);
+  }
+  const rows = [...byPY.entries()]
+    .map(([key, ss]) => {
+      const [p, y] = key.split('_').map(Number);
+      return { p, y, ss: ss.sort((a, b) => a.x - b.x) };
+    })
+    .sort((a, b) => a.p - b.p || b.y - a.y);
+
+  // Ziffer-Token am Zeilenanfang in der Ziffer-Spalte. Zwei Formen:
+  //   - hierarchisch «N.N…» (1.1.1, 2.3.3, 5.2) — Sektion A/B + 5.x;
+  //   - nackt «N» / «NN» (1, 2, …, 14) — Sektions-Gruppenköpfe (1–4: «Beurkundungs-
+  //     gebühren», die Halbgebühr-Regel) UND die Sektion-C-Posten (5–14: «Auszüge»,
+  //     «Schriftliche Auskunft» …). Beide tragen eigenen Tarif-Wortlaut und sind je
+  //     eine Tabellenzeile — nur so endet 5.2 NICHT als Riesen-Blob, der 6–14 mit-
+  //     verschluckt. Die x-Lage (Ziffer-Spalte) trennt Kopf von einer nackten
+  //     Betrags-Zahl (die in der Ansatz-/Body-Spalte rechts liegt).
+  // Verweis-Ziffern (2.2.1 …) matchen das Muster auch, liegen aber rechts
+  // (Verweisspalte) → über die x-Schwelle (descX-3) ausgeschlossen.
+  const KOPF = /^(\d+(?:\.\d+)*)\s*(.*)$/; // Token (hierarchisch ODER nackt) + Resttext
+  const REF = /^\d+\.\d+[\d.,\s]*$/; // reine Verweis-Ziffernkette «2.2.1, 2.2.2,»
+  const KONJ = /^(oder|und|bzw|sowie|beziehungsweise)\b/i;
+  // Ein Ziffer-Kopf-Stück: «N.N…» (mit/ohne Resttext) ODER nackt «N»/«NN» (1–2
+  // Stellen, kein Komma/Punkt → keine Betrags-/Verweis-Zahl).
+  const istZifferKopfStueck = (s: string): boolean => {
+    const t = s.trim();
+    return /^\d+(?:\.\d+)+(?:\s|$)/.test(t) || /^\d{1,2}(?:\s|$)/.test(t);
+  };
+
+  // Spalten-x je Seite: tokX = linkester Ziffer-Cluster; descX = linkester
+  // Nicht-Ziffer-Cluster rechts davon (Beschreibungsspalte). Relativ dazu die
+  // Verweisspalte (descX+195) — der Ansatz bleibt INLINE in der Beschreibung.
+  const tokX = new Map<number, number>();
+  for (const r of rows) {
+    const f = r.ss[0];
+    if (istZifferKopfStueck(f.s)) {
+      const c = tokX.get(r.p);
+      if (c === undefined || f.x < c) tokX.set(r.p, f.x);
+    }
+  }
+  const descX = new Map<number, number>();
+  for (const r of rows) {
+    for (const s of r.ss) {
+      if (s.x > (tokX.get(r.p) ?? 0) + 12) {
+        const c = descX.get(r.p);
+        if (c === undefined || s.x < c) descX.set(r.p, s.x);
+      }
+    }
+  }
+
+  type E = { token: string; lines: Array<{ main: string; ref: string }> };
+  const eintraege: E[] = [];
+  let cur: E | null = null;
+
+  // Eine Tabellenzeile in (Beschreibung+Ansatz inline | Verweis) zerlegen.
+  const baueZeile = (pieces: S[], dX: number): { main: string; ref: string } => {
+    const bVer = dX + 195; // Schwelle Beschreibung/Ansatz (inline) → Verweisspalte
+    const main = pieces
+      .filter((s) => s.x < bVer)
+      .map((s) => s.s)
+      .join(' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const ref = pieces
+      .filter((s) => s.x >= bVer && REF.test(s.s.trim()))
+      .map((s) => s.s)
+      .join(' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return { main, ref };
+  };
+
+  for (const r of rows) {
+    const dX = descX.get(r.p) ?? 82;
+    const first = r.ss[0];
+    const firstIstZiffer = first.x < dX - 3 && istZifferKopfStueck(first.s);
+    if (firstIstZiffer) {
+      const m = first.s.trim().match(KOPF)!;
+      // Erster Treffer eines Tokens gewinnt (defensiv gegen Wiederholungen).
+      if (eintraege.some((e) => e.token === m[1])) {
+        cur = eintraege.find((e) => e.token === m[1])!;
+        continue;
+      }
+      cur = { token: m[1], lines: [] };
+      eintraege.push(cur);
+      const ln = baueZeile(r.ss.slice(1), dX);
+      const main = `${m[2] ? `${m[2]} ` : ''}${ln.main}`.replace(/\s+/g, ' ').trim();
+      cur.lines.push({ main, ref: ln.ref });
+      continue;
+    }
+    if (!cur) continue; // vor dem ersten Ziffer-Kopf (Abschnitts-Titel «A.») → ignorieren
+    // Fortsetzungszeile: alles ab der Beschreibungsspalte (Abschnitts-Letter
+    // «A./B./C.» und nackte Top-Level-Zahlen in der Ziffer-Spalte überspringen).
+    const body = r.ss.filter((s) => s.x >= dX - 3);
+    if (body.length === 0) continue;
+    cur.lines.push(baueZeile(body, dX));
+  }
+
+  // Guard (§1): keine Ziffer-Einträge erkannt → mehrdeutige Geometrie → null.
+  if (eintraege.length === 0) return null;
+
+  // Zeilen je Eintrag zusammenfügen: Silbentrennung an Zeilengrenzen (nicht vor
+  // Konjunktionen); Verweise gesammelt als «(vgl. Ziff. …)»-Suffix.
+  const zeilen: string[][] = [];
+  for (const e of eintraege) {
+    let desc = '';
+    for (const ln of e.lines) {
+      const t = ln.main;
+      if (!t) continue;
+      if (/\p{L}-$/u.test(desc) && /^\p{Ll}/u.test(t) && !KONJ.test(t)) {
+        desc = desc.slice(0, -1) + t;
+      } else {
+        desc = desc ? `${desc} ${t}` : t;
+      }
+    }
+    desc = desc.replace(/\s+/g, ' ').trim();
+    const refs = e.lines
+      .map((l) => l.ref)
+      .filter(Boolean)
+      .join(' ')
+      .replace(/[,\s]+$/, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (!desc && !refs) continue;
+    zeilen.push([e.token, desc, refs]);
+  }
+
+  if (zeilen.length === 0) return null;
+  return { kopf: ['Ziffer', 'Beschreibung', 'siehe Ziff.'], zeilen };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Netz-Hülle: Registry-HTML → Redirect → PDF → Extraktion
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -724,33 +967,68 @@ export function loeseRedirect(redirectHtml: string, basisUrl: string): string | 
  * titel/stand/quelleHash; `tokens` filtert die Rückgabe (nur zitierte Artikel),
  * der quelleHash deckt aber den GANZEN extrahierten Volltext ab.
  */
+/** Token-Präfix für die NACKTEN Anhang-Ziffern (1–14): die Sektions-Gruppenköpfe
+ *  (1–4) und die Sektion-C-Posten (5–14) tragen eigenständigen Tarif-Wortlaut,
+ *  ihre nackte Zahl kollidiert aber mit den §§ 1–17. Sie bekommen darum den
+ *  Token «anhang_N» (im Lese-View «Anhang Ziff. N»), damit sie weder die §§
+ *  überschreiben noch verloren gehen. parsePassus löst NUR mehrstufige Anhang-
+ *  Ziffern («Anhang Ziff. N.N») als Token auf — die nackten Posten sind also
+ *  ohnehin kein Zitatziel; «anhang_N» ist reine Sicht-/Vollabdeckungs-Adresse. */
+const ANHANG_NACKT_PREFIX = 'anhang_';
+
 /**
- * Spaltenbewusste Extraktion des ZH-NotGebV-Anhang-Tarifs (Auftrag David 17.6.2026).
- *
- * Der Anhang ist eine 4-Spalten-Tabelle: Ziffer (linkeste Spalte) | Beschreibung
- * | Ansatz/Betrag | Verweis-Ziffern (rechteste Spalte). Der generische
- * Zeilen-Serialisierer liest y-zeilenweise und verschränkt dabei die Verweis-
- * Spalte mitten in die (über mehrere Zeilen umbrochene, silbengetrennte)
- * Beschreibung («Begrün-2.2.1, 2.2.2, dung»). Hier lesen wir je Ziffer-Zeile
- * SPALTENWEISE: Beschreibung+Ansatz (links) zusammen, Verweise (rechts, am
- * Ziffer-Muster erkannt) separat als «(vgl. Ziff. …)» ans Ende; Silbentrennung an
- * Zeilengrenzen wird zusammengefügt (ausser vor Konjunktionen wie «oder/und», die
- * echte Hängestrich-Komposita sind). §3: reine Darstellung, der WORTLAUT bleibt
- * unverändert (kein Zeichen geändert/entfernt — nur Spalten getrennt, Trennstriche
- * gefügt). Die Spalten-x-Geometrie variiert je Seite (Bundsteg) → Schwellen werden
- * RELATIV zur Beschreibungsspalte bestimmt; die Token-Spalte je Seite als linkester
- * Ziffer-Cluster.
+ * Spaltenbewusste Extraktion des ZH-NotGebV-Anhang-Tarifs (Auftrag David
+ * 17.6.2026; x-Geometrie-Neufassung 22.6.2026). Liest die Anhang-Region (alles
+ * ab dem «Anhang»-Titel) und delegiert an die reine, gegen die Fixture getestete
+ * `extrahiereZhNotariatsTarif` (4-Spalten-x-Geometrie, §1). Jede Tarif-Zeile wird
+ * zu einem je-Ziffer-Snapshot-Eintrag: hierarchische Ziffern (1.1.1, 2.3.3 …)
+ * behalten ihren gepunkteten, zitat-auflösbaren Token; nackte Posten (1–14)
+ * erhalten «anhang_N» (Kollisions-Schutz gegen die §§). Verweise stehen als
+ * «(vgl. Ziff. …)» am Zeilenende. Kein 3740-Zeichen-Blob mehr; der frühere
+ * Spaltenkopf-Leak («Ansatz/Fr. Beurkundungsgebühren siehe Ziff.:») ist über die
+ * h≥8.7-Schwelle ausgeschlossen.
  */
 async function extrahiereZhAnhangSpalten(
   bytes: Uint8Array,
 ): Promise<Record<string, ZhArtikel>> {
+  const stuecke = await extrahiereZhAnhangStuecke(bytes);
+  const tarif = extrahiereZhNotariatsTarif(stuecke);
+  if (!tarif) return {};
+
+  const eintraege: Record<string, ZhArtikel> = {};
+  for (const [ziffer, beschreibung, verweis] of tarif.zeilen) {
+    const text = beschreibung + (verweis ? ` (vgl. Ziff. ${verweis})` : '');
+    if (!text) continue;
+    // Nackte Top-Level-Posten (kein Punkt) → «anhang_N» (Kollisions-Schutz §§).
+    const token = ziffer.includes('.') ? ziffer : `${ANHANG_NACKT_PREFIX}${ziffer}`;
+    if (token in eintraege) continue; // erster Treffer gewinnt
+    eintraege[token] = { bloecke: [{ absatz: null, text }] };
+  }
+  return eintraege;
+}
+
+/**
+ * Extrahiert die rohen PDF-Stücke {x,y,h,s,p} der ZH-NotGebV-Anhang-Region
+ * (alles ab der Seite mit dem «Anhang: Gebührentarif»-Titel) — Eingabe für
+ * `extrahiereZhNotariatsTarif`. Vor dem Anhang-Titel (= der §§-Teil) wird NICHTS
+ * aufgenommen, damit die §-Region (inkl. Fussnoten-Definitionen) nicht in die
+ * Tarif-Extraktion gerät. Kopf-/Fussband (y<60 / y>530) und Erlasstitel (h≥11)
+ * raus. Leeres Array, wenn kein «Anhang»-Titel gefunden (defensiv, §1).
+ */
+async function extrahiereZhAnhangStuecke(
+  bytes: Uint8Array,
+): Promise<Array<{ x: number; y: number; h: number; s: string; p: number }>> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
   const doc = await pdfjs.getDocument({ data: bytes, useSystemFonts: true }).promise;
 
   type S = { x: number; y: number; h: number; s: string; p: number };
   const alle: S[] = [];
+  // Anhang-Startseite: die Seite mit dem Titel «Anhang: Gebührentarif» (h≈10.7).
+  let anhangSeite = Number.MAX_SAFE_INTEGER;
+  const seiten: S[][] = [];
   for (let p = 1; p <= doc.numPages; p++) {
     const inhalt = await (await doc.getPage(p)).getTextContent();
+    const stueckeSeite: S[] = [];
     for (const it of inhalt.items) {
       const item = it as { str: string; transform: number[]; height?: number };
       if (!item.str || !item.str.replace(/\s/g, '')) continue;
@@ -758,88 +1036,18 @@ async function extrahiereZhAnhangSpalten(
       if (y < 60 || y > 530) continue; // Kopf-/Fussband
       const h = item.height ?? 9;
       if (h >= 11) continue; // Erlasstitel
-      alle.push({ x: item.transform[4], y, h, s: item.str, p });
-    }
-  }
-
-  // Ziffer-Kopf: Stück, dessen Text mit «N(.N)+» BEGINNT (Token allein ODER mit
-  // angeklebter Beschreibung «1.4.1.1 Begründung …»). Verweis-Ziffern matchen das
-  // Muster auch, liegen aber rechts → über die Token-Spalte (linkester Cluster je
-  // Seite) ausgeschlossen.
-  const TOKP = /^(\d+(?:\.\d+)+)(?:\s+(.*))?$/;
-  const REF = /^\d+\.\d+[\d.,\s]*$/;
-  const pageTokX = new Map<number, number>();
-  for (const s of alle) {
-    if (s.h >= 8.7 && TOKP.test(s.s.trim())) {
-      const c = pageTokX.get(s.p);
-      if (c === undefined || s.x < c) pageTokX.set(s.p, s.x);
-    }
-  }
-  const koepfe = alle
-    .filter((s) => s.h >= 8.7 && TOKP.test(s.s.trim()) && s.x <= pageTokX.get(s.p)! + 15)
-    .sort((a, b) => a.p - b.p || b.y - a.y);
-
-  const KONJ = /^(oder|und|bzw|sowie|beziehungsweise)\b/i;
-  const eintraege: Record<string, ZhArtikel> = {};
-
-  for (let i = 0; i < koepfe.length; i++) {
-    const k = koepfe[i];
-    const nx = koepfe[i + 1];
-    const m = k.s.trim().match(TOKP)!;
-    const token = m[1];
-    const restKopf = m[2] ?? '';
-    if (token in eintraege) continue; // erster Treffer gewinnt
-
-    const inRegion = (s: S): boolean =>
-      (s.p > k.p || (s.p === k.p && s.y <= k.y + 2)) &&
-      (!nx || s.p < nx.p || (s.p === nx.p && s.y > nx.y + 2));
-    const region = alle.filter((s) => inRegion(s) && s.x > k.x + 10 && s.h >= 7.0);
-    const descX = region.length ? Math.min(...region.map((s) => s.x)) : k.x + 28;
-
-    // nach (Seite,y) gruppieren = Tabellenzeile
-    const byY = new Map<string, S[]>();
-    for (const s of region) {
-      const key = `${s.p}_${Math.round(s.y)}`;
-      let l = byY.get(key);
-      if (!l) {
-        l = [];
-        byY.set(key, l);
+      if (/^Anhang(:|\b)/.test(item.str.trim()) && anhangSeite === Number.MAX_SAFE_INTEGER) {
+        anhangSeite = p;
       }
-      l.push(s);
+      stueckeSeite.push({ x: item.transform[4], y, h, s: item.str, p });
     }
-    const zeilenSort = [...byY.entries()].sort((a, b) => {
-      const [pa, ya] = a[0].split('_').map(Number);
-      const [pb, yb] = b[0].split('_').map(Number);
-      return pa - pb || yb - ya;
-    });
-
-    const mainLines: string[] = [];
-    const refLines: string[] = [];
-    if (restKopf) mainLines.push(restKopf);
-    for (const [, ss] of zeilenSort) {
-      const istRef = (s: S): boolean => REF.test(s.s.trim()) && s.x >= descX + 100;
-      const main = ss.filter((s) => !istRef(s)).sort((a, b) => a.x - b.x).map((s) => s.s).join(' ').replace(/\s+/g, ' ').trim();
-      const ref = ss.filter(istRef).sort((a, b) => a.x - b.x).map((s) => s.s).join(' ').replace(/\s+/g, ' ').trim();
-      if (main) mainLines.push(main);
-      if (ref) refLines.push(ref);
-    }
-
-    // Silbentrennung an Zeilengrenzen fügen (nicht vor Konjunktionen).
-    let desc = '';
-    for (const ln of mainLines) {
-      if (/\p{L}-$/u.test(desc) && /^\p{Ll}/u.test(ln) && !KONJ.test(ln)) {
-        desc = desc.slice(0, -1) + ln;
-      } else {
-        desc = desc ? `${desc} ${ln}` : ln;
-      }
-    }
-    desc = desc.replace(/\s+/g, ' ').trim();
-    const refs = refLines.join(' ').replace(/[,\s]+$/, '').replace(/\s+/g, ' ').trim();
-    const text = desc + (refs ? ` (vgl. Ziff. ${refs})` : '');
-    if (text) eintraege[token] = { bloecke: [{ absatz: null, text }] };
+    seiten[p] = stueckeSeite;
   }
-
-  return eintraege;
+  if (anhangSeite === Number.MAX_SAFE_INTEGER) return [];
+  for (let p = anhangSeite; p < seiten.length; p++) {
+    if (seiten[p]) alle.push(...seiten[p]);
+  }
+  return alle;
 }
 
 /**
@@ -993,12 +1201,20 @@ export async function holeZhPdf(
 
   const quelleHash = berechneZhQuelleHash(artikel);
 
-  // Vollabdeckung (§7): ALLE Artikel zurückgeben. Label «§ N» für Paragraphen,
-  // «Anhang Ziff. N.N.N» für die gepunkteten Anhang-Ziffern (kongruent zu
-  // parsePassus, das «Anhang Ziff. …» auf genau diesen Token auflöst).
+  // Vollabdeckung (§7): ALLE Artikel zurückgeben. Label «Anhang Ziff. N.N.N» für
+  // die gepunkteten Anhang-Ziffern (kongruent zu parsePassus, das «Anhang Ziff. …»
+  // auf genau diesen Token auflöst); «Anhang Ziff. N» für die nackten Anhang-Posten
+  // (Token «anhang_N», Kollisions-Schutz gegen die §§); sonst «§ N» (Paragraphen,
+  // inkl. lat. Suffix «8a» aus «8_a»).
   const labels: Record<string, string> = {};
   for (const token of Object.keys(artikel)) {
-    labels[token] = token.includes('.') ? `Anhang Ziff. ${token}` : `§ ${token.replace(/_/g, '')}`;
+    if (token.startsWith(ANHANG_NACKT_PREFIX)) {
+      labels[token] = `Anhang Ziff. ${token.slice(ANHANG_NACKT_PREFIX.length)}`;
+    } else if (token.includes('.')) {
+      labels[token] = `Anhang Ziff. ${token}`;
+    } else {
+      labels[token] = `§ ${token.replace(/_/g, '')}`;
+    }
   }
   return { meta: { titel, stand, quelleHash }, artikel, labels };
 }
