@@ -31,7 +31,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "8493aa1cc1693b5602f3188e6d033a4ab658464fcfb55761a0692e8148f109d8"
     },
     {
@@ -72,7 +72,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "ef29e379bf43c0c910c4687bd0d93e002633c6d65043c119a02269c43dcbb99a"
     },
     {
@@ -85,7 +85,31 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei vermögensrechtlichen Streitigkeiten beträgt die Gebühr für das Schlichtungsverfahren: Streitwert Gebühr (in Franken) (in Franken) bis 1000 65–250 über 1000 bis10000 250–420 über 10000 bis100000 420–615 über 100000 615–1240"
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Streitwert",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "bis 1 000",
+                "65– 250"
+              ],
+              [
+                "über 1 000 bis 10 000",
+                "250– 420"
+              ],
+              [
+                "über 10 000 bis 100 000",
+                "420– 615"
+              ],
+              [
+                "über 100 000",
+                "615–1240"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -99,8 +123,8 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
-      "sha": "0bad516d7be9d827605a10c8e0e6c5588dcdf757ef8668feef6803df59bf340c"
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
+      "sha": "a09d74ac10b0a59fd3244ca2f0d348e886082f9dcee0de111cecdd357b38d6c6"
     },
     {
       "id": "kanton/ZH/211.11/art_4",
@@ -112,7 +136,56 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühren betragen: Streitwert Grundgebühr (in Franken) (in Franken) bis 1000 25% des Streitwertes, mind. Fr. 150 über 1000 bis 5000250 zuzügl. 20% des Fr. 1000 übersteigenden Streitwertes über 5000 bis 200001050 zuzügl. 14% des Fr. 5000 übersteigenden Streitwertes über 20000 bis 800003150 zuzügl. 8% des Fr. 20000 übersteigenden Streitwertes über 80000 bis 3000007950 zuzügl. 4% des Fr. 80000 übersteigenden Streitwertes über 300000 bis 1 Mio. 16750 zuzügl. 2% des Fr. 300000 übersteigenden Streitwertes über 1 Mio. bis 10 Mio. 30750 zuzügl. 1% des Fr. 1 Mio. übersteigenden Streitwertes über 10 Mio. 120750 zuzügl. 0,5% des Fr. 10 Mio. übersteigenden Streitwertes"
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Streitwert",
+              "Grundgebühr",
+              "Zuschlag"
+            ],
+            "zeilen": [
+              [
+                "bis 1 000 25% des Streitwertes, mind. Fr. 150",
+                "",
+                ""
+              ],
+              [
+                "über 1 000 bis 5 000",
+                "250",
+                "zuzügl. 20% des Fr. 1 000 übersteigenden Streitwertes"
+              ],
+              [
+                "über 5 000 bis 20 000",
+                "1 050",
+                "zuzügl. 14% des Fr. 5 000 übersteigenden Streitwertes"
+              ],
+              [
+                "über 20 000 bis 80 000",
+                "3 150",
+                "zuzügl. 8% des Fr. 20 000 übersteigenden Streitwertes"
+              ],
+              [
+                "über 80 000 bis 300 000",
+                "7 950",
+                "zuzügl. 4% des Fr. 80 000 übersteigenden Streitwertes"
+              ],
+              [
+                "über 300 000 bis 1 Mio.",
+                "16 750",
+                "zuzügl. 2% des Fr. 300 000 übersteigenden Streitwertes"
+              ],
+              [
+                "über 1 Mio. bis 10 Mio.",
+                "30 750",
+                "zuzügl. 1% des Fr. 1 Mio. übersteigenden Streitwertes"
+              ],
+              [
+                "über 10 Mio.",
+                "120 750",
+                "zuzügl. 0,5% des Fr. 10 Mio. übersteigenden Streitwertes"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -126,8 +199,8 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
-      "sha": "b411d919455dafd48cd980aad03ee2ec3c8e5f3a4099c3470dd7979e26b8a4ac"
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
+      "sha": "54a7085663d959d3b8838ea793d2bb77ce0fc99e9283cbf4ee30d02c3343b66d"
     },
     {
       "id": "kanton/ZH/211.11/art_5",
@@ -149,7 +222,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "1c97561f86827b7e07f98e977fd18e17439e170e712cd32362151c94af0c94c1"
     },
     {
@@ -186,7 +259,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "8334a67dbba1deb5f655dd0848670cc5a93016604c74913670a3c26b9990ea2e"
     },
     {
@@ -215,7 +288,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "cf068600666cef102edefefcda12665de33189e8c847367b61cf9802d4976008"
     },
     {
@@ -246,7 +319,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "676557044c23179100a3b6da7aa3381e9def6bda003bca8c1fe8c6b9901bd704"
     },
     {
@@ -269,7 +342,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "6d4ffe880b4d5a12294a27958a733905a768b9cb2c36e95d70bd1ee513ddb0d5"
     },
     {
@@ -292,7 +365,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "383e7a58a581c05d62c1dc0f1f76476f3bab519864846ecdd9f2810b3851dd9b"
     },
     {
@@ -311,7 +384,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "eb4b1b8e274c760e70f7cbaf812ee1029be8c456b47116b2dbbfa46953d8845b"
     },
     {
@@ -342,7 +415,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "5d42afc6f6e582134b0940abc82b6cf53b11fceff96d9d7a0450862003953de0"
     },
     {
@@ -379,7 +452,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "c4533b25135863f955638637208a930708c857bb0a62a800ef4d6da4d31a3cf9"
     },
     {
@@ -424,7 +497,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "9e13b369fa4f9d98a03e68e722d1a4daf931f1849dd867f7439bec2efe09edf9"
     },
     {
@@ -461,7 +534,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "b37a1b346f390e2477ccd91d4a952bacd5b31bd7d542f6d898fccaa2130f8245"
     },
     {
@@ -484,7 +557,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "cbe0bb2f7c791275cf8cecac4531097a692c9af93356aa6ddafcea9c18276b8e"
     },
     {
@@ -507,7 +580,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "589dfbc1e1a1822c0d57d7d787c118cd3bf075d3f91a6e7cc64cfef55794a36a"
     },
     {
@@ -530,7 +603,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "4f8592de6888e90356def39bbdf924a7f2d6dfb98be75d9303c2a92bdab1f672"
     },
     {
@@ -549,7 +622,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "0b0ff2385f5922ef65f5508f0bad4ae59d9d9166059e43eae22ca0ee39d203d9"
     },
     {
@@ -568,7 +641,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "31f2b0b448f0772cfb6fe2478727c07587eb29b9c254dfc9a8e432dbc981fe7e"
     },
     {
@@ -591,7 +664,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "486e6bf1b417cf02c41006715fd25a3c62d765fd5510b8afe6e58eacb99f297f"
     },
     {
@@ -610,7 +683,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "63b075cd55ff6c782858bc3811b1c96992f6aa4a3d17c3b4f9b23c6def6b72fe"
     },
     {
@@ -629,7 +702,7 @@
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
       "abgerufen": "2026-06-22",
-      "fassungsToken": "bbf16599d1a0581c5a37fd9c32e459a1de3fbffc9b55d36b2311ff7c31edb249",
+      "fassungsToken": "1ad6aaac74c84a1b5604abb54bf7b2f67dd9656cd4311ec75976da7d8cef4c2c",
       "sha": "883ae0fdd3d374c5fe3ea66034e214ddbe339d8afe352d760b856fe0a347ae7d"
     }
   ]

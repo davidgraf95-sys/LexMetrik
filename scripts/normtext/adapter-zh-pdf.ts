@@ -694,31 +694,32 @@ export function leseZhStandAusUrl(registryUrl: string): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// x-koordinatenbasierte Streitwert-Staffel-Extraktion (ZH-215.3 § 4)
+// x-koordinatenbasierte Streitwert-Staffel-Extraktion (ZH-215.3 § 4, ZH-211.11 § 3 + § 4)
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Extrahiert die Streitwert-Staffel-Tabelle des ZH-215.3 § 4 (AnwGebV) aus den
- * rohen PDF-Stücken {x,y,h,s,p} der § 4-Region (zwischen «§ 4.» und «§ 5.»).
+ * Extrahiert eine Streitwert-Staffel-Tabelle aus den rohen PDF-Stücken {x,y,h,s,p}
+ * einer §-Region. Unterstützt zwei Tabellenformen, automatisch erkannt am Kopf:
  *
- * Die Tabelle hat im PDF zwei sichtbare Spaltenköpfe («Streitwert» | «Gebühr»),
- * wird aber als 3-spaltige Mehrspalten-Tabelle ausgegeben:
- *   kopf: ['Streitwert', 'Grundgebühr', 'Zuschlag']
+ * 3-Spalten-Form (ZH-215.3 § 4, ZH-211.11 § 4, h≈7.50 pt):
+ *   Kopf «Streitwert | Grundgebühr» → kopf: ['Streitwert','Grundgebühr','Zuschlag']
+ *   threshold1 = x von «Grundgebühr» (≈169 pt); threshold2 = threshold1+47 (≈216 pt).
+ *   «zuzügl.»-Token in col2 wird an den Anfang von col3 verschoben (deterministisch).
  *
- * Trennprinzip (§1: nur aus x-Geometrie, kein Ziffern-Raten):
- *   - threshold1 = x der «Gebühr»-Kopfzeile (≈168.65 pt): trennt Streitwert | Grundgebühr.
- *   - threshold2 = threshold1 + 47 ≈ 215.6 pt: trennt Grundgebühr | Zuschlag.
- *     (Zuschlag-Stücke starten empirisch bei x ≥ 215; Grundgebühr-Stücke bei x ≤ 192.)
- *   - Kein Stück wird intern aufgespalten — «1» (x=175) und «250 zuzügl.» (x=181)
- *     kommen beide in Grundgebühr; das «zuzügl.» wird anschliessend als Keyword
- *     erkannt und an den Anfang der Zuschlag-Spalte verschoben (deterministisch,
- *     kein Ziffern-Raten).
+ * 2-Spalten-Form (ZH-211.11 § 3, h≈7.98 pt):
+ *   Kopf «Streitwert | Gebühr» → kopf: ['Streitwert','Gebühr']
+ *   threshold1 = x von «Gebühr» (≈203 pt); kein threshold2.
+ *   Datenzeilen 2-spaltig: [Streitwert, Gebühr].
  *
- * Guard: Falls keine Streitwert-Kopfzeile gefunden oder < 3 Datenzeilen → null.
- * Abs. 2 / Abs. 3 des § 4 (h≈9.2 Body-Text) werden NICHT als Tabellenzeilen
- * aufgenommen (Filter: nur h ≤ 7.7, da Tabellenschrift 7.5 pt).
+ * Erkennungslogik (§1: nur aus x-Geometrie, kein Ziffern-Raten):
+ *   - TABLE_MAX_H = 8.5 pt: erfasst beide Tabellenschrift-Höhen (7.50 und 7.98).
+ *   - Kopfzeile = erste y-Gruppe mit «Streitwert»-Stück.
+ *   - «Grundgebühr» in derselben Kopfzeile → 3-Spalten-Form;
+ *     «Gebühr» ohne «Grundgebühr» → 2-Spalten-Form.
+ *   - Keine Heuristik/Ziffern-Raten — nur Stück-x als Spalten-Zuordnung.
  *
- * §1: nur x-Koordinaten als Trennkriterium; kein Math.random/Date.now (§2).
+ * Guard: keine Kopfzeile oder < 2 Datenzeilen → null (mehrdeutige Geometrie).
+ * §1: Stücke werden nie intern aufgespalten; §2: kein Date.now/Math.random.
  * §3: reine Extraktion, kein UI-Code.
  */
 export function extrahiereZhStreitwertStaffel(
@@ -726,23 +727,21 @@ export function extrahiereZhStreitwertStaffel(
 ): { kopf: string[]; zeilen: string[][] } | null {
   if (stuecke.length === 0) return null;
 
-  // ── Schritt 1: Kopfzeile mit «Streitwert» suchen (Tabellenschrift h≤7.7)
-  // Die Kopfzeile liegt im Körper der Tabelle (nicht in der Marginalie bei x≈28).
-  // Wir filtern Marginalien-Stücke (x < 60) aus.
-  const TABLE_MAX_H = 7.7; // Tabellenschrift 7.5 pt; Body-Text 9.2 pt
-  const TABLE_MIN_H = 6.5; // Absatz-Hochzahlen h≈5.7 pt: NICHT Tabellenspalten
-  const MARG_X_MAX = 60; // Marginalien-Stücke liegen bei x≈28
+  // ── Schritt 1: Tabellenschrift filtern
+  // TABLE_MAX_H = 8.5 pt: erfasst ZH-211.11 § 3 (h=7.98) + ZH-211.11/215.3 § 4 (h=7.50).
+  // Body-Text (h≈9.18) und Absatz-Hochzahlen (h≈5.70) werden ausgeschlossen.
+  // Marginalien (x≤60, h≤7.7) ausschliessen (liegen bei x≈28 im Aussenrand).
+  const TABLE_MAX_H = 8.5; // Tabellenschrift bis 7.98; Body-Text 9.18
+  const TABLE_MIN_H = 6.5; // Absatz-Hochzahlen h≈5.7: NICHT Tabellenspalten
+  const MARG_X_MAX = 60;   // Marginalien-Stücke liegen bei x≈28
 
-  // Alle Tabellenschrift-Stücke (h ∈ [TABLE_MIN_H, TABLE_MAX_H], nicht Marginalie)
   const tabStuecke = stuecke.filter(
     (s) => s.h >= TABLE_MIN_H && s.h <= TABLE_MAX_H && s.x > MARG_X_MAX,
   );
 
   if (tabStuecke.length === 0) return null;
 
-  // ── Schritt 2: Kopfzeile identifizieren (enthält Stück «Streitwert» oder «Gebühr»)
-  // Die Kopfzeile ist die erste y-Gruppe, die «Streitwert» enthält.
-  // Danach folgt die Unterzeile «(in Franken) | (in Franken)» — beide ausschliessen.
+  // ── Schritt 2: Zeilen (p, y-absteigend) bilden
   const byPY = new Map<string, Array<{ x: number; s: string }>>();
   for (const s of tabStuecke) {
     const key = `${s.p}_${Math.round(s.y)}`;
@@ -754,110 +753,148 @@ export function extrahiereZhStreitwertStaffel(
     l.push({ x: s.x, s: s.s });
   }
 
-  // Zeilen (p, y-absteigend)
   const zeilen = [...byPY.entries()].sort((a, b) => {
     const [pa, ya] = a[0].split('_').map(Number);
     const [pb, yb] = b[0].split('_').map(Number);
     return pa - pb || yb - ya;
   });
 
-  // Kopfzeile finden: erste Zeile mit Stück «Streitwert»
+  // ── Schritt 3: Kopfzeile finden + Tabellenform erkennen
+  // Erste Zeile mit «Streitwert»-Stück = Kopfzeile.
+  // threshold1 = x der zweiten Kopfspalte («Grundgebühr» oder «Gebühr»).
+  // threshold2 = threshold1 + 47 (Grundgebühr|Zuschlag-Grenze, empirisch).
+  //
+  // 3-Spalten-Form: «Grundgebühr» im Kopf → dreiSpalten = true (sicher).
+  // Sonst («Gebühr» im Kopf): dreiSpalten = true, WENN in den Datenzeilen nach
+  // dem Kopf tatsächlich Stücke bei x ≥ threshold2 vorhanden sind (ZH-215.3 § 4
+  // hat «Gebühr» als Kopf, aber Zuschlag-Stücke bei x≈216); SONST 2-Spalten-Form
+  // (ZH-211.11 § 3 hat «Gebühr» + keine Stücke rechts von threshold2≈250).
+  // §1: nur x-Koordinaten, kein Ziffern-Raten; mehrdeutige Geometrie → null.
   let kopfIdx = -1;
   let threshold1 = 0;
+  let dreiSpalten = false;
   for (let i = 0; i < zeilen.length; i++) {
     const [, stueckeRow] = zeilen[i];
     const streitwertSt = stueckeRow.find((s) => s.s.trim() === 'Streitwert');
+    if (!streitwertSt) continue;
+    // «Grundgebühr» im Kopf → sicher 3-Spalten
+    const grundgebuehrSt = stueckeRow.find((s) => s.s.trim() === 'Grundgebühr');
+    // «Gebühr» im Kopf → erst Daten prüfen
     const gebuehrSt = stueckeRow.find((s) => s.s.trim() === 'Gebühr');
-    if (streitwertSt && gebuehrSt) {
+    if (grundgebuehrSt) {
       kopfIdx = i;
-      threshold1 = gebuehrSt.x; // x-Position des Kopf «Gebühr» → Spaltengrenze 1|2
+      threshold1 = grundgebuehrSt.x; // x von «Grundgebühr» → Grenze Streitwert|Grundgebühr
+      dreiSpalten = true;
+      break;
+    }
+    if (gebuehrSt) {
+      kopfIdx = i;
+      threshold1 = gebuehrSt.x; // x von «Gebühr» → vorläufige Grenze Streitwert|Gebühr
+      // dreiSpalten wird nach dem Daten-Prüfschritt gesetzt (s.u.)
       break;
     }
   }
 
   if (kopfIdx < 0 || threshold1 === 0) return null;
 
-  // threshold2 = Spaltengrenze Grundgebühr|Zuschlag. Zuschlag-Stücke starten empirisch
-  // bei x ≈ 215 (threshold1 ≈ 168 + 47 = 215). Robuste Bestimmung: wir suchen unter
-  // den Stücken in Zeilen NACH dem Kopf die erste x-Lücke > 20 pt rechts von threshold1.
-  // Fallback: threshold1 + 47 (empirisch aus Fixture).
+  // threshold2 = Grundgebühr|Zuschlag-Grenze (empirisch: threshold1 + 47 pt).
+  // Zuschlag-Stücke (ZH-215.3 § 4) starten empirisch bei x ≈ 215 (threshold1≈168+47).
   const threshold2 = threshold1 + 47;
 
-  // ── Schritt 3: Datenzeilen extrahieren (nach Kopf + Unterzeile, bis Body-Text)
-  // Unterzeilen nach dem Kopf (z. B. «(in Franken) | (in Franken)»): überspringen.
-  // Body-Text-Stücke (h ≥ 9.0) markieren das Ende der Tabelle.
-  // Datenzeilen sind tabStuecke-Zeilen nach kopfIdx+1, die NICHT «(in Franken)» enthalten.
+  // Daten-Prüfschritt: Falls Kopf nur «Gebühr» (kein «Grundgebühr») → prüfen ob
+  // in den Datenzeilen nach dem Kopf Stücke bei x ≥ threshold2 vorhanden (Zuschlag).
+  if (!dreiSpalten) {
+    for (let i = kopfIdx + 1; i < zeilen.length; i++) {
+      const [, stueckeRow] = zeilen[i];
+      if (stueckeRow.some((s) => s.s.includes('(in Franken)'))) continue;
+      if (stueckeRow.some((s) => s.x >= threshold2)) {
+        dreiSpalten = true;
+        break;
+      }
+    }
+  }
+
+  // ── Schritt 4: Datenzeilen extrahieren
+  // «(in Franken)»-Unterzeile und leere Zeilen überspringen.
   const datenZeilen: string[][] = [];
   for (let i = kopfIdx + 1; i < zeilen.length; i++) {
     const [, stueckeRow] = zeilen[i];
-    // Unterzeile «(in Franken)»: überspringen
     if (stueckeRow.some((s) => s.s.includes('(in Franken)'))) continue;
-    // Leere Zeile: überspringen
     if (stueckeRow.length === 0) continue;
 
-    // Stücke in 3 Spalten aufteilen
     const sorted = [...stueckeRow].sort((a, b) => a.x - b.x);
-    const col1: string[] = [];
-    const col2: string[] = [];
-    const col3: string[] = [];
-    for (const st of sorted) {
-      if (st.x < threshold1) {
-        col1.push(st.s);
-      } else if (st.x < threshold2) {
-        col2.push(st.s);
-      } else {
-        col3.push(st.s);
+
+    if (dreiSpalten) {
+      // 3-Spalten-Form: Streitwert | Grundgebühr | Zuschlag
+      const col1: string[] = [];
+      const col2: string[] = [];
+      const col3: string[] = [];
+      for (const st of sorted) {
+        if (st.x < threshold1) {
+          col1.push(st.s);
+        } else if (st.x < threshold2) {
+          col2.push(st.s);
+        } else {
+          col3.push(st.s);
+        }
       }
+
+      let c1 = col1.join(' ').replace(/\s+/g, ' ').trim();
+      let c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
+      let c3 = col3.join(' ').replace(/\s+/g, ' ').trim();
+
+      // Post-Prozess §1-sicher: «über 10 Mio. 106» — «106» (x knapp < threshold1)
+      // fälschlich in col1 → an den Anfang von col2 verschieben (kein Ziffern-Raten,
+      // nur Fragment-Verschiebung).
+      const mioSplit = c1.match(/^(.*\bMio\.)\s+(\d[\d\s]*)$/);
+      if (mioSplit) {
+        c1 = mioSplit[1].trim();
+        const wanderFragment = mioSplit[2].trim();
+        c2 = c2 ? `${wanderFragment} ${c2}` : wanderFragment;
+      }
+
+      // Post-Prozess: «zuzügl.» am Ende von col2 → Anfang von col3 verschieben.
+      if (c2.endsWith(' zuzügl.') || c2 === 'zuzügl.') {
+        const stripped = c2.endsWith(' zuzügl.')
+          ? c2.slice(0, -' zuzügl.'.length).trim()
+          : '';
+        c2 = stripped;
+        c3 = c3 ? `zuzügl. ${c3}` : 'zuzügl.';
+      } else if (c2.includes(' zuzügl.')) {
+        const idx = c2.lastIndexOf(' zuzügl.');
+        const stripped = c2.slice(0, idx).trim();
+        const rest = c2.slice(idx + 1).trim();
+        c2 = stripped;
+        c3 = rest + (c3 ? ` ${c3}` : '');
+      }
+
+      if (!c1 && !c2 && !c3) continue;
+      datenZeilen.push([c1, c2, c3]);
+    } else {
+      // 2-Spalten-Form: Streitwert | Gebühr
+      const col1: string[] = [];
+      const col2: string[] = [];
+      for (const st of sorted) {
+        if (st.x < threshold1) {
+          col1.push(st.s);
+        } else {
+          col2.push(st.s);
+        }
+      }
+
+      const c1 = col1.join(' ').replace(/\s+/g, ' ').trim();
+      const c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
+
+      if (!c1 && !c2) continue;
+      datenZeilen.push([c1, c2]);
     }
-
-    // Spalten zusammenfügen (Leerzeichen zwischen Stücken)
-    let c1 = col1.join(' ').replace(/\s+/g, ' ').trim();
-    let c2 = col2.join(' ').replace(/\s+/g, ' ').trim();
-    let c3 = col3.join(' ').replace(/\s+/g, ' ').trim();
-
-    // Post-Prozess §1-sicher: Wenn col1 mit «Mio.» endet und danach noch eine
-    // nackte Zifferngruppe folgt («über 10 Mio. 106»), wurde dieses Fragment
-    // fälschlich der Streitwert-Spalte zugerechnet (es liegt x-technisch knapp
-    // links von threshold1). Die Zifferngruppe wird an den ANFANG von col2
-    // verschoben — kein Zeichen geändert/erfunden, nur ein existierendes Fragment
-    // verschoben. Regex: «(… Mio.) <Ziffern>» am Ende von c1.
-    const mioSplit = c1.match(/^(.*\bMio\.)\s+(\d[\d\s]*)$/);
-    if (mioSplit) {
-      c1 = mioSplit[1].trim();
-      const wanderFragment = mioSplit[2].trim();
-      c2 = c2 ? `${wanderFragment} ${c2}` : wanderFragment;
-    }
-
-    // Post-Prozess: «zuzügl.» am Ende von col2 → Anfang von col3 verschieben.
-    // In der Fixture enthält «250 zuzügl.» (x=181) das Keyword; es gehört semantisch
-    // zum Zuschlag. Deterministisch: nur «zuzügl.» am Ende von col2 (nach Trim).
-    // Kein Ziffern-Raten — wir verschieben nur das Keyword-Token.
-    if (c2.endsWith(' zuzügl.') || c2 === 'zuzügl.') {
-      const stripped = c2.endsWith(' zuzügl.')
-        ? c2.slice(0, -' zuzügl.'.length).trim()
-        : '';
-      c2 = stripped;
-      c3 = c3 ? `zuzügl. ${c3}` : 'zuzügl.';
-    } else if (c2.includes(' zuzügl.')) {
-      // «zuzügl.» in der Mitte von col2 (sollte nicht vorkommen, defensiv)
-      const idx = c2.lastIndexOf(' zuzügl.');
-      const stripped = c2.slice(0, idx).trim();
-      const rest = c2.slice(idx + 1).trim(); // «zuzügl. …»
-      c2 = stripped;
-      c3 = rest + (c3 ? ` ${c3}` : '');
-    }
-
-    // Nur Zeilen mit mindestens einem nicht-leeren Inhalt aufnehmen
-    if (!c1 && !c2 && !c3) continue;
-
-    datenZeilen.push([c1, c2, c3]);
   }
 
-  // Guard: ≥ 3 Datenzeilen erforderlich (§1: mehrdeutige Geometrie → null)
-  if (datenZeilen.length < 3) return null;
+  // Guard: ≥ 2 Datenzeilen erforderlich (§1: mehrdeutige Geometrie → null)
+  if (datenZeilen.length < 2) return null;
 
   return {
-    kopf: ['Streitwert', 'Grundgebühr', 'Zuschlag'],
+    kopf: dreiSpalten ? ['Streitwert', 'Grundgebühr', 'Zuschlag'] : ['Streitwert', 'Gebühr'],
     zeilen: datenZeilen,
   };
 }
@@ -1170,19 +1207,17 @@ async function extrahiereZhAnhangStuecke(
 }
 
 /**
- * Extrahiert die rohen PDF-Stücke {x,y,h,s,p} der § 4-Region aus dem ZH-215.3-
- * PDF-Byte-Array. Die Region wird durch «§ 4.»-Marker (Start) und «§ 5.»-Marker
- * (Ende) begrenzt — zeilenweise aus den pdfjs-Stücken bestimmt.
+ * Extrahiert die rohen PDF-Stücke {x,y,h,s,p} einer §-Region aus dem ZH-PDF-
+ * Byte-Array. Die Region wird durch startMarker (inkl.) und endMarker (exkl.)
+ * zeilenweise aus den pdfjs-Stücken begrenzt.
  *
- * Gibt die Stücke inkl. Randtext/Marginalie zurück (Filterung in
- * extrahiereZhStreitwertStaffel). Leeres Array wenn § 4 nicht gefunden.
- *
- * Intern-Privat: nur für holeZhPdf. Kein Export (nicht direkt testbar nötig —
- * die Testbarkeit liegt auf der reinen Funktion extrahiereZhStreitwertStaffel
- * gegen die Fixture, §2).
+ * Intern-Privat: nur für holeZhPdf. Kein Export (Testbarkeit liegt auf der
+ * reinen Funktion extrahiereZhStreitwertStaffel gegen die Fixture, §2).
  */
-async function extrahiereZhPar4Stuecke(
+async function extrahiereZhParStuecke(
   bytes: Uint8Array,
+  startMarker: RegExp,
+  endMarker: RegExp,
 ): Promise<Array<{ x: number; y: number; h: number; s: string; p: number }>> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
   const doc = await pdfjs.getDocument({ data: bytes, useSystemFonts: true }).promise;
@@ -1202,7 +1237,7 @@ async function extrahiereZhPar4Stuecke(
     }
   }
 
-  // Zeilen (p, y-absteigend) bilden, um § 4. und § 5. Marker zu finden
+  // Zeilen (p, y-absteigend) bilden
   const byPY = new Map<string, S[]>();
   for (const s of alle) {
     const key = `${s.p}_${Math.round(s.y)}`;
@@ -1216,29 +1251,29 @@ async function extrahiereZhPar4Stuecke(
     return pa - pb || yb - ya;
   });
 
-  // § 4. und § 5. in den Zeilen suchen
-  let par4Start = -1;
-  let par4End = rows.length;
+  // Startmarker und Endmarker in Zeilen suchen
+  let parStart = -1;
+  let parEnd = rows.length;
   for (let i = 0; i < rows.length; i++) {
     const text = rows[i][1].map((s) => s.s).join('');
-    if (par4Start < 0 && /§\s*4\./.test(text)) {
-      par4Start = i;
-    } else if (par4Start >= 0 && /§\s*5\./.test(text)) {
-      par4End = i;
+    if (parStart < 0 && startMarker.test(text)) {
+      parStart = i;
+    } else if (parStart >= 0 && endMarker.test(text)) {
+      parEnd = i;
       break;
     }
   }
 
-  if (par4Start < 0) return [];
+  if (parStart < 0) return [];
 
-  // Stücke der § 4-Region sammeln
-  const par4Stuecke: S[] = [];
-  for (let i = par4Start; i < par4End; i++) {
+  // Stücke der Region sammeln
+  const parStuecke: S[] = [];
+  for (let i = parStart; i < parEnd; i++) {
     for (const s of rows[i][1]) {
-      par4Stuecke.push(s);
+      parStuecke.push(s);
     }
   }
-  return par4Stuecke;
+  return parStuecke;
 }
 
 export async function holeZhPdf(
@@ -1292,14 +1327,30 @@ export async function holeZhPdf(
     if (!(ziff in artikel)) artikel[ziff] = e;
   }
 
-  // ── ZH-215.3 § 4 Streitwert-Staffel spaltenbewusst (Task 3, Stufe-2 Mehrspalten) ─
-  // Nur für ZH-215.3 (AnwGebV): § 4 Abs. 1 enthält eine 2(→3)-spaltige Tarif-Tabelle
-  // (Streitwert | Grundgebühr | Zuschlag). Der generische Zeilen-Serialisierer
-  // verschmilzt die Spalten (z. B. «100001250» = «10000» Streitwert + «1250» Grundgebühr).
-  // Wir lesen die § 4-Region x-bewusst und setzen bei Erfolg mehrspaltig (kein Text).
-  // Nur wenn '4' im Artikel-Ergebnis vorhanden + die x-Extraktion eindeutig → anwenden.
+  // ── Streitwert-Staffel spaltenbewusst (Stufe-2 Mehrspalten) ─────────────────
+  // ZH-215.3 § 4 (AnwGebV): 3-spaltige Tabelle (Streitwert | Grundgebühr | Zuschlag).
+  // ZH-211.11 § 3 (GebV OG): 2-spaltige Tabelle (Streitwert | Gebühr), h=7.98 pt.
+  // ZH-211.11 § 4 (GebV OG): 3-spaltige Tabelle (Streitwert | Grundgebühr | Zuschlag).
+  // Der generische Zeilen-Serialisierer verschmilzt die Spalten (z. B. «bis10000»,
+  // «5000250»). Wir lesen die §-Region x-bewusst und setzen bei Erfolg mehrspaltig.
+  // extrahiereZhStreitwertStaffel erkennt die Tabellenform automatisch am Kopf.
+
+  // ZH-211.11 § 3: 2-spaltig (Streitwert | Gebühr)
+  // NUR für ZH-211.11 (GebV OG): § 3 Abs. 1 enthält eine 2-spaltige Tarif-Tabelle.
+  // Andere Erlasse (ZH-215.3, ZH-243) haben in § 3 keine Tarif-Staffel-Tabelle.
+  const istZh21111 = /erlass-211_11/i.test(registryUrl);
+  if (istZh21111 && '3' in artikel && artikel['3'].bloecke.length > 0) {
+    const par3Stuecke = await extrahiereZhParStuecke(bytes.slice(), /§\s*3\./, /§\s*4\./);
+    const staffel3 = extrahiereZhStreitwertStaffel(par3Stuecke);
+    if (staffel3 !== null) {
+      const block0 = artikel['3'].bloecke[0];
+      artikel['3'].bloecke[0] = { ...block0, text: '', mehrspaltig: staffel3 };
+    }
+  }
+
+  // ZH-215.3 § 4 + ZH-211.11 § 4: 3-spaltig (Streitwert | Grundgebühr | Zuschlag)
   if ('4' in artikel && artikel['4'].bloecke.length > 0) {
-    const par4Stuecke = await extrahiereZhPar4Stuecke(bytes.slice());
+    const par4Stuecke = await extrahiereZhParStuecke(bytes.slice(), /§\s*4\./, /§\s*5\./);
     const staffel = extrahiereZhStreitwertStaffel(par4Stuecke);
     if (staffel !== null) {
       const block0 = artikel['4'].bloecke[0];
