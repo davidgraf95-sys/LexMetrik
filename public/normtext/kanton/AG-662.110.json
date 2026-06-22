@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/AG/662.110/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "176efa38ad3a85feacfc22d52e3b81d27d4a096b24460e999dd35932a36cc550"
     },
@@ -77,7 +77,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "6b0ddf7b52dcb18181547b1a224840a215cf3b7143f4279ecefdcbac2684a109"
     },
@@ -100,7 +100,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "fa56cd7ffc5392e4622e53da22104fddbabb5275c2978d1c0c09fd1933eed177"
     },
@@ -123,7 +123,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "1beeca045d0f1a43d956a8bd0c0a45d9c63f912854e05053483f40b9ebced170"
     },
@@ -150,7 +150,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "73f2e794cb448fde3aa3a8b012778b01fe319f882502853a3d55aa7346c66a51"
     },
@@ -183,7 +183,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "7a39274c07742fa32d40c4cddb4879ac6907200154f13191069d69733bdb5759"
     },
@@ -197,7 +197,55 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Grundansatz der Gebühr in vermögensrechtlichen Streitsachen beträgt: Streitwert (Strw.) in Franken: bis 6'500.– · Grundansatz in Franken: 900.– + 11,0 % des Strw. — Streitwert (Strw.) in Franken: 6'501.– bis 13'000.– · Grundansatz in Franken: 1'160.– + 7,0 % des Strw. — Streitwert (Strw.) in Franken: 13'001.– bis 52'000.– · Grundansatz in Franken: 1'290.– + 6,0 % des Strw. — Streitwert (Strw.) in Franken: 52'001.– bis 100'000.– · Grundansatz in Franken: 770.– + 7,0 % des Strw. — Streitwert (Strw.) in Franken: 100'001.– bis 200'000.– · Grundansatz in Franken: 4'270.– + 3,5 % des Strw. — Streitwert (Strw.) in Franken: 200'001.– bis 400'000.– · Grundansatz in Franken: 6'870.– + 2,2 % des Strw. — Streitwert (Strw.) in Franken: 400'001.– bis 800'000.– · Grundansatz in Franken: 9'670.– + 1,5 % des Strw. — Streitwert (Strw.) in Franken: 800'001.– bis 1'600'000.– · Grundansatz in Franken: 13'670.– + 1,0 % des Strw. — Streitwert (Strw.) in Franken: 1'600'001.– bis 3'300'000.– · Grundansatz in Franken: 21'670.– + 0,5 % des Strw. — Streitwert (Strw.) in Franken: über 3'300'000.– · Grundansatz in Franken: 28'270.– + 0,3 % des Strw."
+          "text": "Der Grundansatz der Gebühr in vermögensrechtlichen Streitsachen beträgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Streitwert (Strw.) in Franken",
+              "Grundansatz in Franken"
+            ],
+            "zeilen": [
+              [
+                "bis 6'500.–",
+                "900.– + 11,0 % des Strw."
+              ],
+              [
+                "6'501.– bis 13'000.–",
+                "1'160.– + 7,0 % des Strw."
+              ],
+              [
+                "13'001.– bis 52'000.–",
+                "1'290.– + 6,0 % des Strw."
+              ],
+              [
+                "52'001.– bis 100'000.–",
+                "770.– + 7,0 % des Strw."
+              ],
+              [
+                "100'001.– bis 200'000.–",
+                "4'270.– + 3,5 % des Strw."
+              ],
+              [
+                "200'001.– bis 400'000.–",
+                "6'870.– + 2,2 % des Strw."
+              ],
+              [
+                "400'001.– bis 800'000.–",
+                "9'670.– + 1,5 % des Strw."
+              ],
+              [
+                "800'001.– bis 1'600'000.–",
+                "13'670.– + 1,0 % des Strw."
+              ],
+              [
+                "1'600'001.– bis 3'300'000.–",
+                "21'670.– + 0,5 % des Strw."
+              ],
+              [
+                "über 3'300'000.–",
+                "28'270.– + 0,3 % des Strw."
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -214,9 +262,9 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
-      "sha": "ffd0cd77dc003b7ff43bf150825001105a32ca50952e3071e5a2595f0252ec92"
+      "sha": "b21cbc96f2ebf970941f1db00f62c967a8c698ed3720e2b4fad1ec15c17a4d0d"
     },
     {
       "id": "kanton/AG/662.110/art_8",
@@ -233,7 +281,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "43eef99afa9af60401cbce879074908c3b94d9aa2634132029ad07445733ac41"
     },
@@ -252,7 +300,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "788c1fdcbf8af29b10059b38b05f1c282f473a4ab73cfabbb5a4ec9c7a162ec1"
     },
@@ -289,7 +337,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "df0d81e1cfcd310efbde1d9f9ad6935c6d4a5d555180f84eb70e93c4831d772c"
     },
@@ -308,7 +356,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "5dec56e436d528051373d71128cc37e86271f626bcc713e7fd6e81a92e83946a"
     },
@@ -349,7 +397,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "ea7140bf7e8a913614dee2c89a51b6daf17b91f1bf3558272c2a69a1fd411fd1"
     },
@@ -368,7 +416,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "7f54445a878dff79f366c8b689caca0301babf8b99cc698e9574741a15a693c1"
     },
@@ -391,7 +439,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "977e81b21c74c158064ead74e47bfd9c272a26361d6dcbf9017dab274f40a6fb"
     },
@@ -410,7 +458,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "c4e87a52967cf5733e38e96c7c4e81d165542765291a3f0edb8ae761f5ccf5b8"
     },
@@ -429,7 +477,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "e4582a36f90f59060ecab423e4f7617cc866ff77c4d86ddc935e2625c5333cb4"
     },
@@ -448,7 +496,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "f84b9725368ec58dc235cfee5764a2cb1f839b3bffc0fa014de0f71cf9b1eb8a"
     },
@@ -467,7 +515,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "3be7d76586a7e065bfc192bccd71eb75806d4c43b41a3cc3ed5169ac4bf0f833"
     },
@@ -486,7 +534,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "e0a9e2e7a8ff1953412930de44f169d8f322fcdeac4c68ac417288e59a322e7b"
     },
@@ -539,7 +587,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "481a59241e8bff4bc2bc9d8bece14220a40ec6562c2b1f12c34e9b583bfee66d"
     },
@@ -570,7 +618,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "63daf3a22dbcc7353b29c904116a83038a6f083779c96ed5a7c3cbf66d5f8e88"
     },
@@ -639,7 +687,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "f8eb08cb59279ef9a03ea8b2dbaa54a75c63052c3ccbcb44e1ba8c6686c5bd8f"
     },
@@ -658,7 +706,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "8fbdbfad3b74fc9ba961535e974cfe119eed4717e3b9a93384a71e2f1a42030d"
     },
@@ -681,7 +729,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "bfdc0f63671fc02dd1e03f07d3dbff881ed77e8b70132db073b3f1382e09f1e7"
     },
@@ -734,7 +782,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "dff882c616acdb01a160f877c494b1d451873e5a44ff35e31a5cefde00b93fb5"
     },
@@ -757,7 +805,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "5edc087509110232dcf3a70a9a70cfca68144c46d804c6998d0a412b12ab5193"
     },
@@ -802,7 +850,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "909a293bf287338593f763249342ed7a5c06e1b5e25a4c3d222a555cda8a55e3"
     },
@@ -821,7 +869,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "37d391f5252f7558f6b009241ceb4594c61c38634467f01dcd4ff59ce6b10ed6"
     },
@@ -840,7 +888,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "a886177e958f117240a80bbd83bd2db1306e01b3ef1190a70ea0d5d7c9c482a7"
     },
@@ -859,7 +907,7 @@
       ],
       "stand": "2024-07-01",
       "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "f66e8226906045a7d12104eb24a484ab",
       "sha": "fb452d4321a33ecf3f2bf707eaa1568a56323ef192950a9c6261614e09de9435"
     }

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-22",
   "eintraege": [
     {
       "id": "kanton/GR/310.250/art_1",
@@ -24,7 +24,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "0c83f31f8b13cbbe9ff0b76ce4dd790fb1a1b6dca937758ae3156f043d7250e5"
     },
@@ -61,7 +61,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "4823d57f0e63eda087145ac35f41cb147087111a3dac0b99556be7d5ecc58c5f"
     },
@@ -79,7 +79,35 @@
         },
         {
           "absatz": "2",
-          "text": "Als üblich gilt ein einmaliger Interessenwertzuschlag, der in einem angemessenen Verhältnis zum Honorar nach Zeitaufwand steht und folgende Ansätze nicht übersteigt: Bei einem Interessenwert: von Fr. 10 000.– bis 50 000.– · Zuschlag: 500.– bis 2500.– — Bei einem Interessenwert: von Fr. 50 000.– bis 100 000.– · Zuschlag: 2500.– bis 4000.– — Bei einem Interessenwert: von Fr. 100 000.– bis 500 000.– · Zuschlag: 4000.– bis 15 000.– — Bei einem Interessenwert: von Fr. 500 000.– bis 1 000 000.– · Zuschlag: 15 000.– bis 20 000.– — Bei einem Interessenwert: über Fr. 1 000 000.– · Zuschlag: höchstens 2% des Interessenwerts"
+          "text": "Als üblich gilt ein einmaliger Interessenwertzuschlag, der in einem angemessenen Verhältnis zum Honorar nach Zeitaufwand steht und folgende Ansätze nicht übersteigt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Bei einem Interessenwert",
+              "Zuschlag"
+            ],
+            "zeilen": [
+              [
+                "von Fr. 10 000.– bis 50 000.–",
+                "500.– bis 2500.–"
+              ],
+              [
+                "von Fr. 50 000.– bis 100 000.–",
+                "2500.– bis 4000.–"
+              ],
+              [
+                "von Fr. 100 000.– bis 500 000.–",
+                "4000.– bis 15 000.–"
+              ],
+              [
+                "von Fr. 500 000.– bis 1 000 000.–",
+                "15 000.– bis 20 000.–"
+              ],
+              [
+                "über Fr. 1 000 000.–",
+                "höchstens 2% des Interessenwerts"
+              ]
+            ]
+          }
         },
         {
           "absatz": "3",
@@ -102,9 +130,9 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
-      "sha": "f83eb894ece8dd729b5cc57243900c1ef3d0aaa54b97b42f3719efdfc52e47bd"
+      "sha": "be8d75435c2b99f560932849613009edb49805c5dc88e1213b9a595eec7b0372"
     },
     {
       "id": "kanton/GR/310.250/art_4",
@@ -129,7 +157,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "c5560a21aa5ea4e8dbe597ee0ab867729bed0f623a7263e15df0050da6aa322b"
     },
@@ -156,7 +184,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "445f18a5bf82e6dbe5411adaa90dd96d471317755eda7a6f66fecf37545e617c"
     },
@@ -175,7 +203,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "7fe82e401a5d2e8d09424ca8033c317caaf4d2f5ed931f6b95e6e8813d33bf14"
     },
@@ -194,7 +222,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "ac44775a54cd858110f6aee6fcb59e81cee8929d0820ad020ac549ecebab3791"
     },
@@ -213,7 +241,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-22",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "29d57ab6ab70b0f38f3df04e2502b63a16e0bc40fe6abdd7d97698a863516c81"
     }
