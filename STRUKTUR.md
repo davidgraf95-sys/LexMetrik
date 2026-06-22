@@ -50,7 +50,7 @@ Abgleich + UI desktop/mobil + adversarial). **Gate voll grün.**
   platzhalter, kein Tarif) unberührt.
 - Verifikation: alle 3 ZH UI-gerendert (Tabellen/Apostrophe/Absatz-Nr/0 Konsolenfehler),
   Quell-Abgleich je Tarif, voller Gate grün (tsc/vitest 2235+/golden/lint/check inkl. vollstaendigkeit).
-- **Deploy-Status:** → siehe Folge-Eintrag (Merge main + Prod).
+- **Deploy-Status:** auf `main` (98d51fc) + **PROD-DEPLOY 22.6.** (dpl_GYt53Q…, lexmetrik.vercel.app); Kernrouten + /gesetze/kanton/ZH-215.3·211.11·243 HTTP 200; ZH-243 live-verifiziert (kein Klumpen, 0 Leaks). Unbeabsichtigtes Voll-Re-Fetch des Korpus vor dem Merge verworfen (nur verifizierte ZH/LexWork-Arbeit deployt).
 
 ### Detail-Belege (Auswahl)
 
