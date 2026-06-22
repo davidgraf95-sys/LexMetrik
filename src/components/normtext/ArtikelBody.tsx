@@ -339,7 +339,13 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 const tarifKontext = artikel.includes('.') || staffelZeilen(wortlaut) != null;
                 const anzeige = tarifKontext ? normalisiereTarifText(wortlaut) : wortlaut;
                 // Ganzkörper-Aufhebung (kein Wortlaut übrig) → gedämpftes «aufgehoben».
-                if (!anzeige.trim() || istAufgehoben(anzeige)) return <span className="italic text-ink-400">aufgehoben</span>;
+                // ABER NICHT, wenn der Block eine Aufzählung (items) trägt: dann ist der
+                // leere Einleitungstext normal (die items SIND der Inhalt) — sonst würde
+                // «aufgehoben» fälschlich über der Liste stehen (Bug 22.6., 232 Blöcke,
+                // z.B. VWVG Art. 1). tabelle/mehrspaltig haben oben bereits Early-Return.
+                const hatItems = b.items != null && b.items.length > 0;
+                if ((!anzeige.trim() || istAufgehoben(anzeige)) && !hatItems) return <span className="italic text-ink-400">aufgehoben</span>;
+                if (!anzeige.trim()) return null;
                 const zeilen = staffelZeilen(anzeige);
                 // Tausender-Gruppierung NUR in Geld-Kontext (§3, FIX 2 — 22.6.2026):
                 // «Fr. 12 000» → «Fr. 12'000»; Jahrzahlen «2011» bleiben unberührt.
