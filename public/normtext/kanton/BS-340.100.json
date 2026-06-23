@@ -1,0 +1,918 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/340.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestimmungen dieser Verordnung gelten für das Herstellen, Inverkehrbringen, Vertreiben, Abgeben, Anwenden und Verschreiben von Heilmitteln sowie für die Führung von Apotheken, Drogerien und anderen Detailhandels- oder Versandhandelsgeschäften."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "50ba9bb017db5ad4d595eaefc41c19bae0c55ff76ed8facddbb1b761dbdce05d"
+    },
+    {
+      "id": "kanton/BS/340.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesundheitsdepartement ist für die Aufsicht über den Umgang mit Heilmitteln zuständig, soweit nicht eine andere Behörde bezeichnet ist."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "931f677bd475e52a5210217de9c11131acbe98fa99c30bae8d8e8aeae133f116"
+    },
+    {
+      "id": "kanton/BS/340.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonsapothekerin oder der Kantonsapotheker vollzieht die Heilmittelgesetzgebung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantonstierärztin oder der Kantonstierarzt vollzieht die Tierheilmittelgesetzgebung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die in den Abs. 1 und 2 genannten polizeilichen Funktionsträgerinnen und Funktionsträger erteilen die in ihren Bereich fallenden Bewilligungen des eidgenössischen und kantonalen Heilmittelrechts und nehmen Aufsichtsfunktionen wahr."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "fef4f5103b9e2f9628f791031a926be0eedda47d9bf04cf44146431106c05279"
+    },
+    {
+      "id": "kanton/BS/340.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesundheitsdepartement kann für die Durchführung von Kontrollen und Inspektionen Kommissionen einsetzen oder geeignete externe Stellen beauftragen; in den Inspektionskommissionen sind die Berufsverbände angemessen vertreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommissionen und externen Stellen unterstehen den Weisungen der Kantonsapothekerin oder des Kantonsapothekers oder der Kantonstierärztin oder des Kantonstierarztes."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "937ec65575971ff0cbd3f8210a27d8a99b0c06f96cba4bcd4cf031c5a618d33d"
+    },
+    {
+      "id": "kanton/BS/340.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellung von Arzneimitteln nach Art. 9 Abs. 2 Bst. a bis cbis HMG und Art. 8 der Verordnung über die Bewilligungen im Arzneimittelbereich (Arzneimittel-Bewilligungsverordnung, AMBV) vom 14. November 2018 ist bewilligungspflichtig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Herstellung von Arzneimitteln wird bewilligt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das erforderliche Fachpersonal verfügbar ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Räumlichkeiten, Einrichtungen und Ausrüstung eine fachgerechte Beschaffung, Herstellung, Abgabe sowie den fachgerechten Vertrieb der Arzneimittel gewährleisten;"
+            },
+            {
+              "marke": "c",
+              "text": "ein angemessenes Qualitätssicherungssystem vorhanden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vorschriften betreffend Detailhandel gelten sinngemäss (vgl. §§ 18 bis 23)."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "1c2242a25649c357fcb59504a490bbd17b9813b869a8188f92a9b742d7247e22"
+    },
+    {
+      "id": "kanton/BS/340.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Arzneimittel, welche nach Formula magistralis, nach Formula officinalis, nach eigener Formel oder nach Formula hospitalis hergestellt werden, sind gemäss den Regeln der Pharmakopöe zu kennzeichnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Arzneimittel, welche nach Formula magistralis hergestellt werden, sind zudem mit dem Namen der Patientin oder des Patienten sowie dem Datum der Abgabe zu bezeichnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Kennzeichnungen sind vorzunehmen, wenn das Rezept dies erfordert."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "a6d81d1ceeff1a7dc69cbe5ec3137117adfba2b1986fd7dde4d80e0ae0506e02"
+    },
+    {
+      "id": "kanton/BS/340.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellung nach § 5 ist zu dokumentieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen der Pharmakopöe sind zu beachten."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "db068441874a259d741ee950c4d9638a9eb23017f194689d7ab37b6b5822e047"
+    },
+    {
+      "id": "kanton/BS/340.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berufsausübungsbewilligung als Apothekerin oder Apotheker oder die Betriebsbewilligung einer Apotheke beinhaltet die Bewilligung zur Herstellung von Arzneimitteln in kleinen Mengen."
+        },
+        {
+          "absatz": "2",
+          "text": "Abs. 1 gilt für Apotheken in Spitälern und Pflegeheimen sinngemäss."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "96464f47ee15aa043d327d77ecc5f06c19e57bc32f69fa11ce9e5329f9d8ac70"
+    },
+    {
+      "id": "kanton/BS/340.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Rezept für ein Heilmittel enthält folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name der ausstellenden Person mit Praxisadresse in Druckschrift; eigenhändige Unterschrift der ausstellenden Person oder qualifizierte elektronische Signatur im Sinne von Art. 14 Abs. 2 bis des Bundesgesetzes betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911;"
+            },
+            {
+              "marke": "b",
+              "text": "Name und Jahrgang der Patientin oder des Patienten;"
+            },
+            {
+              "marke": "c",
+              "text": "Datum der Ausstellung;"
+            },
+            {
+              "marke": "d",
+              "text": "Art und Menge des abzugebenden Heilmittels."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Rezept ist, sofern nichts anderes vermerkt ist, ein Jahr lang gültig."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "031a06b3f8fc8586f1b52211c4a41d1793983d51036ab574cee02e3c00396e02"
+    },
+    {
+      "id": "kanton/BS/340.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rezepte sind nach den Vorschriften der ausstellenden Person auszuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die abgebende Stelle nimmt bei Unstimmigkeiten des Rezeptes oder bei möglichen Kontraindikationen des Arzneimittels mit der ausstellenden Person Kontakt auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Die abgebende Stelle prüft bei Auffälligkeiten, ob das Rezept durch eine berechtigte Person ausgestellt wurde."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Verdacht auf Arzneimittelmissbrauch oder Fälschung des Rezeptes, ist die Abgabe zu verweigern und die zuständige Behörde zu informieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Rezepte für verschreibungspflichtige Heilmittel sind bei jeder Abgabe mit dem Namen der abgebenden Stelle und dem Abgabedatum unter Angabe der abgegebenen Menge zu kennzeichnen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "2f7d579dc7e8df7f5efd3065667ea0b04e720506b6e288724298916222861569"
+    },
+    {
+      "id": "kanton/BS/340.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe von verschreibungspflichtigen Heilmitteln ohne Rezept richtet sich nach Art. 24 HMG."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "7b84897feef863fdd9e3d08b179c3f3ac64190ad09f7332f743ad1312b0bddbb"
+    },
+    {
+      "id": "kanton/BS/340.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Abgabe von verschreibungspflichtigen Arzneimitteln sind Fachpersonen im Gesundheitswesen (Fachpersonen) nach Art. 24 Abs. 1 und 2 HMG berechtigt. Das Selbstdispensationsverbot ist zu beachten."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Rahmen ihrer Berufsausübung ist es neben Medizinalpersonen folgenden Fachpersonen gestattet, verschreibungspflichtige Arzneimittel anzuwenden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bachelor of Science FH in Hebamme;"
+            },
+            {
+              "marke": "b",
+              "text": "diplomierten Dentalhygienikerinnen HF und Dentalhygienikern HF;"
+            },
+            {
+              "marke": "c",
+              "text": "diplomierten Chiropraktorinnen und Chiropraktoren;"
+            },
+            {
+              "marke": "d",
+              "text": "diplomierten Rettungssanitäterinnen HF und -sanitätern HF;"
+            },
+            {
+              "marke": "e",
+              "text": "Fachpersonen im Gebiet der nicht ärztlichen alternativ- und komplementärmedizinischen Berufe und Tätigkeiten mit einer eidgenössisch anerkannten Ausbildung in einem Bereich der Komplementärmedizin (Art. 52 Abs. 2 Bst. e der Verordnung über die Arzneimittel (Arzneimittelverordnung, VAM) vom 21. September 2018)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bewilligung zur Berufsausübung nach § 30 GesG oder die Betriebsbewilligung nach § 36 GesG beinhaltet die Bewilligung zur Anwendung von verschreibungspflichtigen Arzneimitteln durch die in Abs. 2 genannten Fachpersonen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kantonsapothekerin oder der Kantonsapotheker bestimmt die Arzneimittel, welche die in Abs. 2 genannten Fachpersonen anwenden dürfen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "02035758ee437eb7e22ab9ef930ff3ff3c221577e1a8caaeb4276b87dfbba359"
+    },
+    {
+      "id": "kanton/BS/340.100/art_12_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "12_a",
+      "artikelLabel": "§ 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Apothekerinnen und Apotheker können ohne ärztliche Verschreibung die gemäss den Richtlinien des jeweils geltenden Schweizerischen Impfplans empfohlenen Impfungen an Personen, die das 16. Altersjahr vollendet haben, vornehmen.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Apothekerinnen und Apotheker, die Impfungen durchführen, verfügen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Fähigkeitsausweis FPH Impfen und Blutentnahme und erfüllen die damit verbundenen Fortbildungspflichten;"
+            },
+            {
+              "marke": "b",
+              "text": "geeignete Räumlichkeiten, insbesondere über einen abgetrennten und nicht einsehbaren Bereich mit der Möglichkeit, die zu impfende Person in liegender Position zu lagern;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Notfallausrüstung;"
+            },
+            {
+              "marke": "d",
+              "text": "ein angemessenes Qualitätssicherungssystem."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie melden sich vorgängig mit dem dafür vorgesehenen Formular bei der Kantonsapothekerin oder dem Kantonsapotheker.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das spezifische Risiko der Impftätigkeit ist durch eine Haftpflichtversicherung abgedeckt."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Kantonsapothekerin oder der Kantonsapotheker kann ergänzende Weisungen erlassen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "bbaabad5e8f2f29781fb73f0823b2fbf92c8949bd199095205835b399e2fa2cb"
+    },
+    {
+      "id": "kanton/BS/340.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Abgabe von nicht verschreibungspflichtigen Arzneimitteln sind Fachpersonen gemäss Art. 25 Abs. 1 HMG und Art. 49 VAM im Rahmen ihrer Abgabekompetenz berechtigt. Das Selbstdispensationsverbot ist zu beachten."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "21d580a9ac60000a6208147ad1efa716357e73fabc87b56ca377bbf4d3581b93"
+    },
+    {
+      "id": "kanton/BS/340.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Sachverhalte sind vom Verbot der Selbstdispensation gemäss § 54 GesG ausgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Abgabe von Arzneimitteln im Rahmen einer ambulanten Notfallbehandlung;"
+            },
+            {
+              "marke": "b",
+              "text": "die unmittelbare Anwendung von Arzneimitteln an der Patientin oder am Patienten im Rahmen der Behandlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Lagerung von Arzneimitteln zur Sicherstellung einer zweckmässigen Behandlung im Sinne von Bst. a und b;"
+            },
+            {
+              "marke": "d",
+              "text": "die Lagerung und Abgabe von Tierarzneimitteln durch Tierärztinnen und Tierärzte, sofern diese über eine Detailhandelsbewilligung verfügen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Abgabe von Arzneimitteln durch Versand- und Detailhandelsgeschäfte, welche die Bewilligungsanforderungen nach Art. 27 Abs. 2 oder 30 HMG und nach dieser Verordnung erfüllen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "b9521e8bf019f7b4e3fa6b226f568625578fbb1dc0a0fbc3688b17148556bf30"
+    },
+    {
+      "id": "kanton/BS/340.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Arzneimittel sind getrennt von anderen Waren zu lagern."
+        },
+        {
+          "absatz": "2",
+          "text": "Fachpersonen und Betriebe lagern keine Arzneimittel, zu deren Abgabe oder Anwendung sie nicht berechtigt sind; ausgenommen ist die Rücknahme zur fachgeregten Entsorgung."
+        },
+        {
+          "absatz": "3",
+          "text": "Arzneimittel der Abgabekategorien A bis D dürfen nicht frei zugänglich sein."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "c3b9dca4bdaafe00b13e6e3b88ba6c66182f70abc7f8faaa25904d8cb8b92ee1"
+    },
+    {
+      "id": "kanton/BS/340.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung zur Lagerung von Blut- und Blutprodukten gemäss Art. 34 Abs. 4 HMG wird erteilt, wenn die Gesuchstellerin oder der Gesuchsteller nachweist, dass",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die für die Lagerung zuständige Fachperson über die notwendigen Fachkenntnisse und Erfahrung verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Räumlichkeiten, Einrichtungen und Ausrüstungen zweckentsprechend sind;"
+            },
+            {
+              "marke": "c",
+              "text": "ein angemessenes Qualitätssicherungssystem vorhanden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung wird auf längstens fünf Jahre befristet."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "85094a8684f1f5b80451540963ab7516831372deaf82a1ceeb25fa5554be4892"
+    },
+    {
+      "id": "kanton/BS/340.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Versandhandel mit Arzneimitteln ist grundsätzlich untersagt (Art. 27 Abs. 1 HMG)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligungserteilung erfolgt nach den Voraussetzungen von Art. 27 Abs. 2 HMG und Art. 55 VAM."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gesuch für eine Bewilligung für den Versandhandel ist bei der zuständigen Behörde einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bewilligungserteilung für den Versandhandel mit Tierarzneimitteln beachtet zusätzlich die Anforderungen für die Verschreibung, Abgabe und Anwendung gemäss Verordnung über die Tierarzneimittel (Tierarzneimittelverordnung, TAMV) vom 18. August 2004."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "0f3807747802b7d1c424a46ca1b9dbb79a071f964d7ef442f6b593d6caaf48f5"
+    },
+    {
+      "id": "kanton/BS/340.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Detailhandel mit Arzneimitteln wird bewilligt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das erforderliche Fachpersonal verfügbar ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Räumlichkeiten, Einrichtungen und Ausrüstung eine fachgerechte Beschaffung, Herstellung, Abgabe sowie den fachgerechten Vertrieb der Arzneimittel gewährleisten;"
+            },
+            {
+              "marke": "c",
+              "text": "ein angemessenes Qualitätssicherungssystem vorhanden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Detailhandelsbewilligung wird erst nach einer Inspektion der Räumlichkeiten, Einrichtungen und Ausrüstungen erteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gesundheitsdepartement kann unter Beachtung der §§ 19 bis 20 sowie 22 bis 26 Ausführungsvorschriften zu den in Abs. 1 genannten Voraussetzungen erlassen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "3869d7cf531716a83a1370a44c0dacff3c5c97aeaeb7b67c41c7fc993b9d8393"
+    },
+    {
+      "id": "kanton/BS/340.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Räumlichkeiten, Einrichtungen und Ausrüstung gewährleisten zusätzlich die separate und sichere Lagerung von Chemikalien und Heilmitteln."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Hygienevorschriften der Art. 6, 9, 10, 14 und 20 der Verordnung des EDI über die Hygiene beim Umgang mit Lebensmitteln (Hygieneverordnung EDI, HyV) vom 16. Dezember 2016 gelten sinngemäss."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anordnung der Räumlichkeiten und Einrichtungen gewährleistet die Aufsicht durch die fachliche Leitung oder eine Fachperson, welche dieselben Voraussetzungen wie die fachliche Leitung erfüllt."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "1fff4f6112d8d922bf22c1347917e93bf2d202b78ff58b24d0b4f4d69d236639"
+    },
+    {
+      "id": "kanton/BS/340.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Qualitätssicherungssystem hat das Risiko der jeweiligen Berufs- und Betriebstätigkeit zu beachten; Qualitätssicherungssysteme die von Berufsverbänden anerkannt sind, gelten als angemessen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "a3f9e31a0dcd5bbad05fe3019f60bcc343bd7d8cb0abc9c51b334327e344b474"
+    },
+    {
+      "id": "kanton/BS/340.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung zur Berufsausübung als Apothekerin oder Apotheker oder die Bewilligung zur Berufsausübung für Berufe und Tätigkeiten im Gebiet der Drogerie oder die Betriebsbewilligung einer Apotheke oder Drogerie, umfasst die Detailhandelsbewilligung."
+        },
+        {
+          "absatz": "2",
+          "text": "Apotheken in Spitälern oder Pflegeheimen erhalten die Detailhandelsbewilligung separat."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "d5c0b208ed0f558b8e62a45464b49cfcb2198ff343a30a2fa0e11ad51ce6f34b"
+    },
+    {
+      "id": "kanton/BS/340.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Detailhandel in anderen Detailhandelsgeschäften sowie die Abgabe von Tierarzneimitteln in tierärztlichen Privatapotheken oder in Zoo- und Imkerfachgeschäften setzen eine Bewilligung durch die zuständige Behörde voraus."
+        },
+        {
+          "absatz": "2",
+          "text": "Die bewilligungserteilende Behörde beachtet bei der Erteilung der Detailhandelsbewilligung für Zoo- und Imkerfachgeschäfte zusätzlich die Erfüllung der Voraussetzungen nach Art. 9 Abs. 1 und 2 TAMV."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "060a267ab1aa677f508d624b53000e98877ce9285193e5cc3ed65467d06b943e"
+    },
+    {
+      "id": "kanton/BS/340.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe von Heilmitteln an Ausstellungen und Messen durch Detailhandelsgeschäfte bedarf einer Bewilligung durch die zuständige Behörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung wird erteilt, wenn die ordnungsgemässe Abgabe durch die Infrastruktur und das Personal gewährleistet ist."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "7cc03f3b599dfa3a8c1f16fb5ec310095e53b0f67aa69bac7d88c0b12e6017a8"
+    },
+    {
+      "id": "kanton/BS/340.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentlich zugängliche Apotheken sind als solche zu kennzeichnen; es ist ein grünes Kreuz, welches den Normen des Schweizerischen Apothekerverbandes entspricht, zu verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Name der Bewilligungsinhaberin oder des Bewilligungsinhabers ist oder die Namen der Mitglieder der fachlichen Leitung der Apotheke sind an gut sichtbarer Stelle anzubringen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "8eae9fb2e0eb3bea84ba55a3d948ac972b6dedb64fd3b621acf557947331dc9d"
+    },
+    {
+      "id": "kanton/BS/340.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Räumlichkeiten müssen neben den Anforderungen nach den §§ 18 Abs. 1 Bst. b und 19 von apothekenfremden Räumlichkeiten getrennt und separat abschliessbar sein und Raum für eine individuelle fachliche Beratung bieten."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "ec4e84299870381866d17d986c571903ed7d919f0f984a7e215ce64c1e5cd3af"
+    },
+    {
+      "id": "kanton/BS/340.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin oder der Inhaber der Bewilligung zur Berufsausübung als Apothekerin beziehungsweise Apotheker oder mindestens ein Mitglied der fachlichen Leitung der Apotheke übt die Aufsicht über das Personal aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er ist verantwortlich, dass",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die gebräuchlichen und im Notfall erforderlichen Heilmittel geführt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "zweckmässig über den Notfalldienst informiert wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "7868e0f7f432a9d9aed9d0cac1fb5064bad9c1e394684f2db766f90f60cc1494"
+    },
+    {
+      "id": "kanton/BS/340.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach dieser Verordnung erteilte Bewilligungen erlöschen oder werden entzogen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bewilligung zur Berufsausübung erlischt oder entzogen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "die Betriebsbewilligung erlischt oder entzogen wird;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bewilligungsinhaberin oder der Bewilligungsinhaber stirbt;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bewilligungsinhaberin oder der Bewilligungsinhaber oder der Betrieb die Geschäftstätigkeit im Kanton Basel-Stadt aufgibt; oder"
+            },
+            {
+              "marke": "e",
+              "text": "ihre Voraussetzungen nicht mehr erfüllt sind oder nachträglich Tatsachen festgestellt werden, aufgrund derer die Bewilligung hätte verweigert werden müssen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "2e4ce016e4cda6ff61506b8fe98986b0d8765794c904ce683732afbd9f4e4db7"
+    },
+    {
+      "id": "kanton/BS/340.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Heilmittelverordnung (340.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor Wirksamkeit dieser Verordnung erteilte Bewilligungen bleiben gültig."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind innert fünf Jahren nach Wirksamkeit dieser Verordnung deren Erfordernissen anzupassen."
+        }
+      ],
+      "stand": "2026-04-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/340.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ad0f6fcec672782fbec2904567eaafad",
+      "sha": "a91f8c3e554b57f8b9d1b15c0bf50503c784e0a07775de5c522acde166742667"
+    }
+  ]
+}

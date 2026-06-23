@@ -1,0 +1,251 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/771.500/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wasserentnahmen aus öffentlichen Gewässern und Wasserrückgaben sind bewilligungspflichtig."
+        },
+        {
+          "absatz": "2",
+          "text": "Öffentliche Gewässer sind die als Allmend ausgeschiedenen Oberflächengewässer sowie das Grundwasser und seine Aufstösse."
+        },
+        {
+          "absatz": "3",
+          "text": "Von der Bewilligungspflicht ausgenommen sind die öffentlichen Gewässer in den Landgemeinden sowie die Nutzung des Grundwassers und seiner Aufstösse, soweit sie durch die Gemeinden für öffentliche Zwecke und Einrichtungen beansprucht werden."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "2ea027be79e8ca4b8b6d7f7bd2995faf1732d4bd4476355897f403d0df5e0911"
+    },
+    {
+      "id": "kanton/BS/771.500/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entnahme oder Rückleitung von Fluss- und Grundwasser wird bewilligt, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Menge und Güte des Wassers es erlauben;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Verunreinigung oder eine nachteilige Veränderung der Temperatur der Gewässer ausgeschlossen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "keine Nachteile für die öffentliche Wasserversorgung entstehen;"
+            },
+            {
+              "marke": "d",
+              "text": "berechtigte Interessen anderer Bewilligungsinhaber gewahrt bleiben;"
+            },
+            {
+              "marke": "e",
+              "text": "für eine haushälterische Nutzung des entnommenen Wassers Gewähr besteht;"
+            },
+            {
+              "marke": "f",
+              "text": "keine anderen überwiegenden öffentlichen Interessen entgegenstehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung wird mit den zur Wahrung der öffentlichen und privaten Interessen nötigen Bedingungen und Auflagen erteilt. Insbesondere kann die Wasserentnahme mengenmässig und zeitlich beschränkt werden. Die Förderleistung der Entnahmeanlagen ist stets zu beschränken."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "786155289d354807ec2ebf2a5a91d9a5ebad0698f67975af5cad17f2a0bcea13"
+    },
+    {
+      "id": "kanton/BS/771.500/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung kann jederzeit ohne Entschädigung ganz oder teilweise widerrufen werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie aufgrund unrichtiger oder unvollständiger Angaben erteilt worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Voraussetzungen nicht mehr erfüllt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anlage nicht mehr benötigt wird oder seit mehr als fünf Jahren stillgelegt ist;"
+            },
+            {
+              "marke": "d",
+              "text": "überwiegende Interessen es erfordern."
+            }
+          ]
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "cdd5078a3163fcc38e3254f2c7b123fe0d34d40b9f77aeb96a3d5f364b3bba56"
+    },
+    {
+      "id": "kanton/BS/771.500/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die bewilligungspflichtigen Wasserentnahmen werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine einmalige Gebühr für die Prüfung der Wassernutzungsgesuche nach der Gesetzgebung über die Verwaltungsgebühren;"
+            },
+            {
+              "marke": "b",
+              "text": "eine jährlich zu entrichtende Grundgebühr von Fr. 4.– je Liter Förderleistung pro Minute für Anlagen zur Entnahme von Grundwasser und von Fr. –.50 für Anlagen zur Entnahme von Wasser aus Oberflächengewässern;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Nutzungsgebühr von vier Rappen je m&sup3; gefördertes Grundwasser und von einem Rappen je m&sup3; gefördertes Oberflächenwasser."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann die Gebühren durch Verordnung der Preisentwicklung anpassen, sobald der Landesindex der Konsumentenpreise mehr als 20 Prozent vom Stand bei der Festsetzung des geltenden Tarifs abweicht. Die Ansätze der Grundgebühren sind dabei auf zehn Rappen, jene der Nutzungsgebühren auf halbe Rappen zu runden."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "832cbb84354d029c8a43c4be2921355803986d506e58d3fd008378ecf2ae1c34"
+    },
+    {
+      "id": "kanton/BS/771.500/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit Grundwasserentnahmen durch Anreicherungen der Bewilligungsinhaber ausgeglichen werden, sind sie von der Entrichtung der Grund- und der Nutzungsgebühr befreit."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Grundwasser, das zur Kühlung oder zur Energiegewinnung verwendet wird, setzt der Regierungsrat ermässigte Gebührensätze fest. Wasserentnahmen für die öffentliche Trinkwasserversorgung sind gebührenfrei."
+        },
+        {
+          "absatz": "3",
+          "text": "Der zuständige Departementsvorsteher oder die von ihm bezeichnete Verwaltungseinheit kann die Gebühren ermässigen oder erlassen, wenn ein erhebliches öffentliches Interesse an der Wassernutzung besteht."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "8ad75adaf587da057e28aef57c7cd83c9983d9f4dcf2531fe38db1dac0402459"
+    },
+    {
+      "id": "kanton/BS/771.500/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bezüger hat die entnommene Wassermenge zu messen und der zuständigen Behörde periodisch zu melden. Versäumt er dies, so wird die Nutzungsgebühr aufgrund der Förderleistung der Anlage berechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Behörde kann die amtliche Ermittlung des Messergebnisses anordnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Störungen der Messeinrichtungen schätzt die zuständige Behörde die entnommene Wassermenge unter Berücksichtigung früherer oder späterer Messergebnisse."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "cff6f5b45c896f8104668816797c05fd5a84b8c387e97bc1d9a04720aa2ed98e"
+    },
+    {
+      "id": "kanton/BS/771.500/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsorgane des Kantons und die von ihnen zugezogenen Sachverständigen sind zu den erforderlichen Erhebungen und Kontrollen ermächtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geheimhaltungspflicht im Sinne von Art. 320 des Schweizerischen Strafgesetzbuches gilt auch für die Sachverständigen."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "e07d3b33bc9c1630aa960e2239d73ad30ec81ee7d29540ebf56318940753f6dd"
+    },
+    {
+      "id": "kanton/BS/771.500/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Wassernutzungsgesetz (771.500)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für bestehende Wassernutzungen ist innerhalb von sechs Monaten nach Inkrafttreten dieses Gesetzes eine Bewilligung zu beantragen. Die Gebührenpflicht beginnt ein Jahr nach demselben Stichtag."
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "7266c031ae09c0737a774df6847f81985cd8de89ce9fb2198df6fa514bf10310"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/569.110/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien (569.110)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zuständig für den Vollzug des FTG ist das Erziehungsdepartement. Vorbehalten sind die Aufgaben, welche das Gesetz der Medienkommission zuweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Erziehungsdepartement ist mit einem Mitglied in der Medienkommission vertreten."
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/569.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8304c54749b657b5772dd368aade1f10",
+      "sha": "b1c249f3deea76dae05cc7186f55348bf023ad6fef7e40259c75948d8cb0e5ad"
+    },
+    {
+      "id": "kanton/BS/569.110/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz betreffend öffentliche Filmvorführungen und Abgabe von elektronischen Trägermedien (569.110)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Gebühren werden erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Freigabeentscheide mit Visionierung CHF 400,"
+            },
+            {
+              "marke": "b",
+              "text": "Freigabeentscheide ohne Visionierung nach Aufwand, mindestens CHF 100,"
+            },
+            {
+              "marke": "c",
+              "text": "andere Entscheide und Dienstleistungen im Zusammenhang mit dem Vollzug des FTG: pro angebrochene Stunde ein Stundenansatz von CHF 100."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/569.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8304c54749b657b5772dd368aade1f10",
+      "sha": "9c293aef8e8be39e10725c3238b7336c5156c00a56b4c7cead8c2d19bb996a4b"
+    }
+  ]
+}

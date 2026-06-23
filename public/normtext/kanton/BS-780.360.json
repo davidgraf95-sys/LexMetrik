@@ -1,0 +1,438 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/780.360/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Organisation und die Verwaltung des Fonds über die Ausrichtung von Förderbeiträgen für Ladeinfrastrukturen für Elektroautos (nachfolgend Fonds) sowie das Verfahren zu den Fördergesuchen gemäss § 16a ff. USG BS."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "25a471e23306ba3be5777c261db5b58e33344e08569aaa8497ed277bfa1b5018"
+    },
+    {
+      "id": "kanton/BS/780.360/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesamtverantwortung für die Erhebung des Zuschlags zur Elektrifizierung der motorisierten Mobilität (ZEM) liegt beim Fonds. Der Fonds ist dem Departement für Wirtschaft, Soziales und Umwelt unterstellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Aufwand für die Fondsverwaltung einschliesslich der Bearbeitung der Förderbeitragsgesuche geht zu Lasten des Fondsvermögens."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Jahresrechnung des Fonds ist in der Staatsrechnung auszuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kontrollstelle ist die Finanzkontrolle Basel-Stadt."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "a63a75d338570dd29368818aae354a9b44d5b7c89c86ae6714266db9166cf16e"
+    },
+    {
+      "id": "kanton/BS/780.360/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der ZEM beträgt 2,5 Rp./kWh."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Forderung des Kantons gegen die Stromverbraucherinnen und -verbraucher entsteht im Zeitpunkt des Ladevorgangs."
+        },
+        {
+          "absatz": "3",
+          "text": "Der zuständige Verteilnetzbetreiber stellt den Stromverbraucherinnen und -verbrauchern den ZEM gesondert in Rechnung."
+        },
+        {
+          "absatz": "4",
+          "text": "Er überweist die in Rechnung gestellten ZEM-Beträge innert 60 Tagen jeweils auf Monatsende an den Fonds und übernimmt das Inkasso ohne Kostenverrechnung. Das Inkassorisiko verbleibt beim Kanton."
+        },
+        {
+          "absatz": "5",
+          "text": "Dem Fonds sind die für die Kontrolle des ordnungsgemässen Inkassos erforderlichen Angaben zur Verfügung zu stellen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "6a828ec1520d8ee0513a951eb33d03d0a08d24b123561dfb0a550c869ee9d314"
+    },
+    {
+      "id": "kanton/BS/780.360/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zuständige Behörde für die Entgegennahme und die Beurteilung von Förderbeitragsgesuchen ist das Amt für Umwelt und Energie (AUE)."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "8d0c945e0138b4a8aa7a274cd63f96244ef1c86af7506c13815fe86836d32c55"
+    },
+    {
+      "id": "kanton/BS/780.360/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die förderbeitragsberechtigten Kosten umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Installationen ab dem Hausanschluss bis zu den vorgesehenen Ladepunkten, was innerhalb von Gebäuden der Grundinstallation ab dem Hausanschluss mit den Ausbaustufen C1 oder C2 gemäss dem SIA-Merkblatt 2060 betreffend die Infrastruktur für Elektrofahrzeuge in Gebäuden entspricht, unter Einschluss folgender Kostenpositionen:"
+            },
+            {
+              "marke": "1",
+              "text": "Projektadministration,"
+            },
+            {
+              "marke": "2",
+              "text": "Installation einschliesslich Durchbrüche und Kernbohrungen,"
+            },
+            {
+              "marke": "3",
+              "text": "Lastmanagement,"
+            },
+            {
+              "marke": "4",
+              "text": "Hauptverteilung und Unterverteilung,"
+            },
+            {
+              "marke": "5",
+              "text": "technische Installation für Internet- und Kommunikationsanbindung,"
+            },
+            {
+              "marke": "6",
+              "text": "Brandabschottung,"
+            },
+            {
+              "marke": "7",
+              "text": "Tiefbauarbeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "die mit der neuen Ladeinfrastruktur verbundene obligatorische Montage eines separaten Stromzählers (Werkszähler Verteilnetzbetreiber) für die Erhebung des ZEM."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es können nur Förderbeiträge ausbezahlt werden, wenn die geltenden Werkvorschriften (Technische Anschlussbedingungen TAB) eingehalten sind und ein Sicherheitsnachweis Elektroinstallationen (SiNa) gemäss der Verordnung über elektrische Niederspannungsinstallationen (Verordnung über elektrische Niederspannungsinstallationen (Niederspannungs-Installationsverordnung, NIV) vom 7. November 2001) erstellt wurde."
+        },
+        {
+          "absatz": "3",
+          "text": "Auch die Erstellung von Ladeinfrastruktur aufgrund einer gesetzlichen Pflicht zur Bereitstellung von Ladestationen ist förderbeitragsberechtigt."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "7d41177c7a9203f6b48808b28b5bbb5a247e1e647f979d013ca37a8322607040"
+    },
+    {
+      "id": "kanton/BS/780.360/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keine Förderbeiträge werden ausgerichtet für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "temporäre Ladeinfrastrukturen;"
+            },
+            {
+              "marke": "b",
+              "text": "Leistungserhöhungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nachrüstung einer bestehenden Ladeinfrastruktur ohne Schaffung zusätzlicher Ladeplätze;"
+            },
+            {
+              "marke": "d",
+              "text": "die nachträgliche Montage eines separaten Stromzählers (Werkszähler Verteilnetzbetreiber) bei einer bestehenden Ladeinfrastruktur ohne Schaffung zusätzlicher Ladeplätze;"
+            },
+            {
+              "marke": "e",
+              "text": "für die Ladeinfrastruktur nicht notwendige Ausbauten und Erneuerungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "b6c5778eda35543a2ce4b45dadc72cfc25f8c015260ddada6da49c16df5f651c"
+    },
+    {
+      "id": "kanton/BS/780.360/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Förderbeitragsgesuche sind dem AUE mit den notwendigen Angaben und Unterlagen schriftlich oder elektronisch einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben zu enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Offerte;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausführungsplan;"
+            },
+            {
+              "marke": "c",
+              "text": "Rechnung für die förderbeitragsberechtigten Kosten;"
+            },
+            {
+              "marke": "d",
+              "text": "Sicherheitsnachweis Elektroinstallationen (SiNa) gemäss der Verordnung über elektrische Niederspannungsinstallationen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das AUE kann weitere Angaben und Unterlagen verlangen und Informationen bei Dritten einholen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "27757e039c09f70fd6df36c6f4eff33898b2a165ec91875a47c74f0464b7e779"
+    },
+    {
+      "id": "kanton/BS/780.360/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das AUE prüft die Gesuche."
+        },
+        {
+          "absatz": "2",
+          "text": "Entscheidungsgrundlagen des AUE sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die gesetzlichen Grundlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die überprüften und allenfalls berichtigten Angaben der gesuchstellenden Person;"
+            },
+            {
+              "marke": "c",
+              "text": "die allenfalls notwendigen Gutachten und Auskünfte von Sachverständigen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Über Gesuche wird in der Regel aufgrund der darin enthaltenen Rechnungsergebnisse entschieden. Dem AUE steht es jedoch frei, offensichtlich falsche Annahmen und Rechnungen zu berichtigen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "8e365e3bba615e04ff3c099fc42338bdbdaa5e5bd6fc2fec58303415efa7b142"
+    },
+    {
+      "id": "kanton/BS/780.360/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das AUE entscheidet innert zwei Monaten nach Vorliegen der vollständigen Unterlagen über die Gewährung oder Ablehnung von Förderbeiträgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Entscheid wird der gesuchstellenden Person schriftlich mitgeteilt. Diese kann innert 30 Tagen nach Erhalt beim AUE den Erlass einer Verfügung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Förderbeiträge werden innert 60 Tagen nach der schriftlichen Mitteilung bzw. nach Rechtskraft der Verfügung ausbezahlt."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "10081c1a4decfb357fdc29cc6a64561f0114a9dfc49488635f92978fd91125b1"
+    },
+    {
+      "id": "kanton/BS/780.360/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Antrag der gesuchstellenden Person führt das AUE eine Vorprüfung des Vorhabens durch."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem AUE sind dazu folgende Unterlagen einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Antrag auf Vorprüfung;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausführungsplan;"
+            },
+            {
+              "marke": "c",
+              "text": "Offerte für die förderbeitragsberechtigten Kosten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das AUE kann weitere Angaben und Unterlagen verlangen und Informationen bei Dritten einholen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Vorprüfung erfolgt in sinngemässer Anwendung von § 8."
+        },
+        {
+          "absatz": "5",
+          "text": "Das AUE teilt der gesuchstellenden Person innert zwei Monaten nach Vorliegen der vollständigen Unterlagen mit, ob und in welcher Höhe Förderbeiträge zugesichert werden können."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "a495660322427d8844e572e933be19fd38d3eb57356f6bf73d5b6ef2ae5cb5b2"
+    },
+    {
+      "id": "kanton/BS/780.360/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Förderbeiträge können nur gewährt werden, wenn die Arbeiten an der Ladeinfrastruktur bis zum 31. Dezember 2030 endgültig abgeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Förderbeitragsgesuche sind innerhalb eines Jahres nach Abschluss der Arbeiten, spätestens aber bis 31. Dezember 2031 einzureichen. Später eingehende Gesuche werden nicht berücksichtigt."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "7dded2a2c9ae9d3b07d81c314beefb82ed79b056daa8fcac2890c17d630510e4"
+    },
+    {
+      "id": "kanton/BS/780.360/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Förderbeiträge erhalten hat, ist verpflichtet, bei Ladevorgängen den ZEM zu bezahlen, so lange dieser gemäss § 16d Abs. 1 USG BS erhoben wird. Ansonsten müssen die Förderbeiträge in vollem Umfang zurückerstattet werden."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "5ccf7b159dc029f877276abedec981654b1234ce781a61628ce51bef1068bb8b"
+    },
+    {
+      "id": "kanton/BS/780.360/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung Ladeinfrastruktur (780.360)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Verfügungen nach dieser Verordnung kann nach den Vorschriften des Gesetzes betreffend die Organisation des Regierungsrats und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976 Rekurs erhoben werden."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.360",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c0c3bd27d077466ee3433123f5be1e50",
+      "sha": "4d3a0325e1c40c8c7bc2f4e42035d2a67edd408e1e87a0c4d4f0cfab83a0b204"
+    }
+  ]
+}

@@ -1,0 +1,983 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/212.250/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Aufnahme, die Betreuung und die Förderung von Kindern und Jugendlichen in Heimpflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dient dem Schutz und der Förderung von Kindern und Jugendlichen, die in Heimen betreut werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "873ae79387fae787c2a870f5e3095e8973d90343c831d561888125887a98a38b"
+    },
+    {
+      "id": "kanton/BS/212.250/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Heime gelten private und staatliche Einrichtungen sowie private Haushalte, die vier oder mehr Plätze für eine entgeltliche oder unentgeltliche Erziehung, Betreuung, Ausbildung oder Beobachtung von Kindern und Jugendlichen in der Regel tags- und nachtsüber anbieten (Heimpflege)."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht als Heime gelten Einrichtungen oder private Haushalte, die Kinder und Jugendliche in Tagespflege aufnehmen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "1618633e279bdee09f36119a9cc5ea2b6634baaf87833caa976d749a1da83ba7"
+    },
+    {
+      "id": "kanton/BS/212.250/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Heime betreuen und fördern Kinder und Jugendliche unter Berücksichtigung der individuellen Fähigkeiten und Entwicklung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bereiten die Kinder und Jugendlichen auf eine eigenverantwortliche und selbstständige Lebensführung unter besonderer Berücksichtigung der Schul- und Ausbildungsziele vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Herkunftsfamilie und andere wichtige Bezugspersonen werden nach Möglichkeit in die Betreuung und Förderung einbezogen."
+        },
+        {
+          "absatz": "4",
+          "text": "Unterbringungen von kurzer Aufenthaltsdauer dienen der Stabilisierung der persönlichen Situation und der Abklärung des Hilfebedarfs. Sie bezwecken die Reintegration in die Herkunftsfamilie oder den Eintritt in eine geeignete Nachfolgeeinrichtung."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "83e07df561b0be85accbddfb294f019a2a0f41bff694f34a1e18ad01a6975150"
+    },
+    {
+      "id": "kanton/BS/212.250/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erziehungsdepartement ist für die Heimpflege zuständig."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement kann in Ausführung dieser Verordnung ergänzende Richtlinien und Weisungen erlassen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "3092f170c8222cafba920b5f8a71a19a743a177a491a15266bf2956c2dc6bf3b"
+    },
+    {
+      "id": "kanton/BS/212.250/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die an einer Unterbringung und Förderung in einem Heim beteiligten und mitbeteiligten Behörden, Institutionen, Schulen, Mitarbeitenden sowie beteiligte und mitbeteiligte Private arbeiten zum Wohl des Kindes zusammen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind zur Verschwiegenheit über alle ihnen aus dieser Tätigkeit bekannt gewordenen Informationen verpflichtet."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie sind verpflichtet, dem zuständigen Departement die erforderlichen Auskünfte zu erteilen."
+        },
+        {
+          "absatz": "4",
+          "text": "Heime haben dem zuständigen Departement alle wichtigen Änderungen der Verhältnisse, insbesondere Änderungen der Bewilligungs-, Anerkennungs- und Beitragsvoraussetzungen, innert Monatsfrist zu melden. Ausserordentliche Ereignisse melden sie unverzüglich."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "78cd1e054b79e111ff6d012a595e82d92c6cc370fa2e44e19e36920221d5bf5c"
+    },
+    {
+      "id": "kanton/BS/212.250/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Heime klären Kinder und Jugendliche beim Eintritt entsprechend ihrem Alter und ihrer Entwicklung über ihre Rechte auf und beteiligen sie an allen Entscheidungen, die ihren Alltag betreffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informieren weiter über die Pflichten, die zuständige Ansprechperson und die Leitung des Heimes sowie über die Anschrift der zuständigen Aufsichts- sowie Kindes- und Erwachsenenschutzbehörde (KESB)."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie schützen die anvertrauten Kinder und Jugendlichen vor jeglicher Form von körperlicher oder psychischer Gewalt und achten deren persönliche Integrität."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie sind vor wichtigen Entscheiden anderer Behörden, die Auswirkungen auf den Heimaufenthalt und die weitere Entwicklung des Kindes oder Jugendlichen haben, anzuhören."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "c8a7088674531f18b2b0e4abddeddf8bdb55af41112a372c0878d7d2b359c622"
+    },
+    {
+      "id": "kanton/BS/212.250/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Heime bedürfen einer Bewilligung des zuständigen Departements."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bewilligungsgesuch ist gemäss Art. 14 PAVO rechtzeitig vor Betriebsaufnahme einzureichen. Das zuständige Departement stellt Formulare zur Verfügung, welche die notwendigen Angaben festlegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betrieb des Heims darf erst aufgenommen werden, wenn die Bewilligung erteilt worden ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Wechselt die für die Heimleitung verantwortliche Person oder ändern andere Bewilligungsgrundlagen, so ist eine neue Bewilligung einzuholen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "09a24a45f34dbaa90abb8266a942e26c73b2367fdd44c013b21b3521f53fb70d"
+    },
+    {
+      "id": "kanton/BS/212.250/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung darf nur erteilt werden, wenn die Voraussetzungen gemäss Art. 15 PAVO erfüllt sind."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "a4e2afb0f0c3b30c839a06b53eae68497d2594dd12562b2d9a6bd3c3e412e8c3"
+    },
+    {
+      "id": "kanton/BS/212.250/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung wird vom zuständigen Departement der für die Heimleitung verantwortlichen Person erteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie legt fest, wie viele Plätze bewilligt werden sowie welche Kinder und Jugendliche aufgenommen werden dürfen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann mit Auflagen oder Bedingungen verbunden werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "aab04ec2f9b4a76b445ff427d080e6988af58cdd5fa501ec8215de52bdad92f8"
+    },
+    {
+      "id": "kanton/BS/212.250/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung wird vom zuständigen Departement nach spätestens vier Jahren überprüft."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann abgeändert oder entzogen werden, wenn die Voraussetzungen für die Erteilung nicht mehr erfüllt sind oder Auflagen und Bedingungen nicht befolgt werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "0a030e94ed14ad2da800fc72ad72eaf8d7b0ab956a5cb9854fd5cb026fdfd0a4"
+    },
+    {
+      "id": "kanton/BS/212.250/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Heimleitung oder die Trägerschaft des Heims melden der Bewilligungsbehörde wichtige Veränderungen unverzüglich."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "3cfabd29345e2935b5851b4d8f6bad9bf6035d2baa1be6f03103efc65bad7b0e"
+    },
+    {
+      "id": "kanton/BS/212.250/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement ist Aufsichtsbehörde im Sinne von Art. 19 PAVO."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Aufsichtsbehörde sind auf Verlangen jederzeit Zutritt zu den Räumlichkeiten zu gewähren, die erforderlichen Auskünfte zu erteilen und die notwendigen Unterlagen zur Verfügung zu stellen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "58e040e2b14ea0897f133b4324415ed6b2e768339c407f86f44b8dede630e018"
+    },
+    {
+      "id": "kanton/BS/212.250/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kantonale Behörden und Amtsstellen leisten der Bewilligungs- und Aufsichtsbehörde Amtshilfe."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement ist berechtigt, zum Wohl des Kindes insbesondere bei den Gesundheitsdiensten, bei den Bevölkerungsdiensten und dem Migrationsamt, beim Kinder- und Jugenddienst, bei den Universitätskliniken und Universitätspolikliniken, bei den Strafbehörden, bei den psycho-sozialen Diensten der Kantonspolizei und bei der Kindes- und Erwachsenenschutzbehörde (KESB) Auskünfte über die Leitung und Mitarbeitenden in Heimen bzw. zur Leitung und Mitarbeit vorgesehenen Personen einzuholen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "a2dc846f594a1ffa143a7105acc4041379c0677d12f6d8d77fc274efd2f7123e"
+    },
+    {
+      "id": "kanton/BS/212.250/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement betreibt die kantonalen Schulheime und erteilt diesen einen Leistungsauftrag."
+        },
+        {
+          "absatz": "2",
+          "text": "Es legt den Standort und die Organisation fest und bestimmt die verantwortliche Person für die Leitung."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "6de81070876bc1938ce6d95d7d303998dfe0b77738a8fe382c297cdb4be7c256"
+    },
+    {
+      "id": "kanton/BS/212.250/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Heim kann vom zuständigen Departement beitragsrechtlich anerkannt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anerkennung kann befristet, für einzelne Leistungsangebote sowie mit Bedingungen und Auflagen erteilt werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "81c223203ed3d19d9af7d32a3af4bc0fbc1b403c88816ca86b4b71354eee908f"
+    },
+    {
+      "id": "kanton/BS/212.250/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Heim kann auf Antrag anerkannt werden, wenn es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Besitz einer Heimbewilligung ist;"
+            },
+            {
+              "marke": "b",
+              "text": "seine Betriebsrechnung offen legt, eine Kostenrechnung führt sowie einen wirtschaftlichen Betrieb gewährleistet und"
+            },
+            {
+              "marke": "c",
+              "text": "einem ausgewiesenen qualitativen und quantitativen Bedarf des Kantons und der Region entspricht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement kann die «Kommission ergänzende Hilfe zur Erziehung» der Kantone Basel-Stadt und Basel-Landschaft um eine Stellungnahme zum Bedarf ersuchen. Es informiert die Kommission über erfolgte Anerkennungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement kann anerkannte Heime den zuständigen Organen der IVSE melden, damit sie der IVSE unterstellt werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "3e766b1e677b82fd6a38f4f18710a2667a42e115857339c825af8ec2e0192c1a"
+    },
+    {
+      "id": "kanton/BS/212.250/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement und die anerkannten Heime mit Sitz oder Wohnsitz im Kanton Basel-Stadt regeln ihre gegenseitigen Leistungen in einem öffentlich-rechtlichen Vertrag."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "270751a043ee217819a411d357dcacaadf4d9a46d46dade1c160d783736b49b7"
+    },
+    {
+      "id": "kanton/BS/212.250/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausserkantonale Heime können auf Antrag anerkannt werden, wenn sie",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über eine Betriebsbewilligung des Standortkantons verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Angebot einem ausgewiesenen qualitativen und quantitativen Bedarf des Kantons Basel-Stadt entspricht und"
+            },
+            {
+              "marke": "c",
+              "text": "ihre Betriebsrechnungen und Bilanzen offen legen und einen wirtschaftlichen Betrieb gewährleisten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten ist die Anerkennung gemäss der IVSE oder gemäss der Bundesgesetzgebung über Leistungen für den Straf- und Massnahmenvollzug."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "49aeafc4682514b9021375b8224935edf5309a03717e0fb0cd12ebea0be00e94"
+    },
+    {
+      "id": "kanton/BS/212.250/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Heim kann ausnahmsweise für die Betreuung eines einzelnen Kindes anerkannt werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "e8889fb46d0d0f75f7e11720cacd3ef63f0dea783f9d7852b5ca09298393f6e7"
+    },
+    {
+      "id": "kanton/BS/212.250/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement klärt ab, ob die Anerkennungsvoraussetzungen erfüllt sind. Es kann dazu Fachpersonen und Fachberichte beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es entscheidet über die Beitragsberechtigung. Der Entscheid legt fest, für welche Leistungsangebote Beiträge ausgerichtet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Sind die Anerkennungsvoraussetzungen nicht mehr gegeben oder kommt das Heim der Aufforderung zur Behebung beanstandeter Mängel nicht nach, so kann das zuständige Departement die Anerkennung widerrufen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "cf9c98ad89840018c2f6b0d9d29f8f94c1ad14e076027cbcb382420b58394b27"
+    },
+    {
+      "id": "kanton/BS/212.250/art_20_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "20_a",
+      "artikelLabel": "§ 20a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Heimleitung kann gegenüber Jugendlichen, die in schuldhafter Weise gegen die Heimordnung oder gegen Weisungen und Anordnungen der Heimleitung oder des Heimpersonals verstossen, angemessene Disziplinarmassnahmen anordnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als schuldhafter Verstoss gelten insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gewalt, Drohung und Beschimpfung gegenüber der Heimleitung, dem Heimpersonal, anderen Jugendlichen oder anwesenden Dritten;"
+            },
+            {
+              "marke": "b",
+              "text": "Flucht und Vorbereitungshandlungen dazu;"
+            },
+            {
+              "marke": "c",
+              "text": "Urlaubsmissbrauch;"
+            },
+            {
+              "marke": "d",
+              "text": "Störung des Schul-, Arbeits- oder Wohnbetriebs;"
+            },
+            {
+              "marke": "e",
+              "text": "Besitz und Konsum von sowie Handel mit Alkohol und Betäubungsmitteln sowie Missbrauch von Arzneimitteln;"
+            },
+            {
+              "marke": "f",
+              "text": "Besitz von und Handel mit unerlaubten Gegenständen;"
+            },
+            {
+              "marke": "g",
+              "text": "Widersetzung gegen sowie Vereitelung, Umgehung oder Verfälschung von Kontrollen;"
+            },
+            {
+              "marke": "h",
+              "text": "Beschädigung und Aneignung fremden Eigentums;"
+            },
+            {
+              "marke": "i",
+              "text": "Missbräuchliche Verwendung von Geräten zur elektronischen Kommunikation."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Versuch, Anstiftung und Gehilfenschaft zur Begehung von schuldhaften Verstössen können ebenfalls disziplinarisch geahndet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Als Disziplinarmassnahmen können angeordnet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schriftliche Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "Einschränkung von Sport- und Freizeitaktivitäten bis zu einem Monat;"
+            },
+            {
+              "marke": "c",
+              "text": "Einschränkung des Besuchs- und Urlaubsrechts bis zu einem Monat;"
+            },
+            {
+              "marke": "d",
+              "text": "Entzug oder Einschränkung von Vergünstigungen bis zu zwei Monaten;"
+            },
+            {
+              "marke": "e",
+              "text": "Einschliessung im Zimmer bis zu fünf Tagen;"
+            },
+            {
+              "marke": "f",
+              "text": "Time-out-Platzierung bis zu zwei Wochen;"
+            },
+            {
+              "marke": "g",
+              "text": "Einschliessung im Arrestzimmer bis zu sieben Tagen."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "07389ff9d6f6d1dab602b0c1828738b8a54f76315677d388d1a2e4dfa2745a41"
+    },
+    {
+      "id": "kanton/BS/212.250/art_20_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "20_b",
+      "artikelLabel": "§ 20b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Verdacht auf Verbergen unerlaubter Gegenstände oder auf Konsum und Besitz von Alkohol oder Betäubungsmitteln und Missbrauch von Arzneimitteln kann die Heimleitung folgende Kontrollen und Durchsuchungen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kontrolle der persönlichen Gegenstände und der Unterkunft;"
+            },
+            {
+              "marke": "b",
+              "text": "Leibesvisitation;"
+            },
+            {
+              "marke": "c",
+              "text": "Atemluft-, Urin-, Blut- und Haarkontrollen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen bei einem oder einer Jugendlichen konkrete Anzeichen für eine Flucht, die Gefahr von Fremd- oder Selbstgefährdung oder die Gefahr einer erheblichen Sachbeschädigung, kann die Heimleitung folgende Sicherheitsmassnahmen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entzug von Gegenständen, deren missbräuchliche Verwendung zu befürchten ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Trennung von anderen Jugendlichen;"
+            },
+            {
+              "marke": "c",
+              "text": "Entzug des Aufenthaltsrechts in den Gemeinschaftsräumen;"
+            },
+            {
+              "marke": "d",
+              "text": "Vorübergehende Beschränkung des Kontakts zur Aussenwelt;"
+            },
+            {
+              "marke": "e",
+              "text": "Unterbringung in einem besonders gesicherten Raum oder in einem Arrestzimmer."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei unmittelbarer Gefahr für Dritte oder Sachen, unmittelbarer Selbstgefährdung oder zur Verhinderung einer Flucht kann die Heimleitung oder von ihr bezeichnetes Heimpersonal Zwangsmittel anwenden, sofern keine andere Möglichkeit besteht, die Gefährdung abzuwenden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "c33996b1ed4c1df0486e2eaf7182770f27e578aa3f8c95b1989fc1fd41d7b1ed"
+    },
+    {
+      "id": "kanton/BS/212.250/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beiträge an die Aufenthalts- und Betreuungskosten von Kindern und Jugendlichen in Heimen werden ausgerichtet, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Kind seinen Unterstützungswohnsitz im Kanton Basel-Stadt hat;"
+            },
+            {
+              "marke": "b",
+              "text": "der Aufenthalt in einem Heim fachlich indiziert ist;"
+            },
+            {
+              "marke": "c",
+              "text": "der Aufenthalt angeordnet wurde oder die Sorgeberechtigten den Aufenthalt beantragt haben; der Aufenthalt muss von einer anerkannten Fachstelle begleitet werden;"
+            },
+            {
+              "marke": "d",
+              "text": "das Heim über eine Anerkennung gemäss Kapitel III. verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Anerkannte Fachstellen, welche Indikationen im Sinne von Abs. 1 lit. b) stellen können, sind folgende Behörden des Kantons Basel-Stadt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kindes- und Erwachsenenschutzbehörde (KESB);"
+            },
+            {
+              "marke": "b",
+              "text": "der Kinder- und Jugenddienst;"
+            },
+            {
+              "marke": "c",
+              "text": "die Jugendanwaltschaft oder"
+            },
+            {
+              "marke": "d",
+              "text": "die psycho-sozialen Dienste der Kantonspolizei."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Liegen wichtige Gründe vor, so kann auf Antrag einer anerkannten Fachstelle ein Beitrag für den Aufenthalt und die Betreuung von jungen Erwachsenen über das vollendete 18. Lebensjahr bis maximal zum vollendeten 25. Lebensjahr gewährt werden, sofern der Aufenthalt und die Betreuung vor dem vollendeten 18. Lebensjahr begonnen haben."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "b780137f88261424e3aa0ba890b1488251ab19349684c0aaa3efab11e0e7e344"
+    },
+    {
+      "id": "kanton/BS/212.250/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die anerkannte Fachstelle reicht rechtzeitig vor der Platzierung dem zuständigen Departement das Gesuch für die Kostengutsprache samt Indikationsnachweis ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer dringenden, kurzfristigen Platzierung reicht die anerkannte Fachstelle das Gesuch für die Kostengutsprache unmittelbar nach Platzierung beim zuständigen Departement ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Für kurzfristige Notfallplatzierungen bis zu maximal drei Nächte ist kein Gesuch nötig. Das Heim meldet die Platzierung dem zuständigen Departement."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "0fd5daffe37effec412f982e02916e127d39b93310e4a6881ddd7395d1bbfb18"
+    },
+    {
+      "id": "kanton/BS/212.250/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement entscheidet über die Gewährung von Beiträgen. Es teilt seinen Entscheid der Heimleitung sowie der anerkannten Fachstelle mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer kurzfristigen Notfallplatzierung erfolgt der Beitragsentscheid aufgrund der Meldung des Heimes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gewährung von Beiträgen ist zu befristen und kann mit Auflagen verbunden werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "80a79a1c948c999fa8d19861c400851a6da0abce46468cbdb3d444555f2db0fc"
+    },
+    {
+      "id": "kanton/BS/212.250/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der gemäss Beitragsentscheid festgesetzte Betrag wird dem Heim vom zuständigen Departement ausgerichtet."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "de3f188d21a646680c9131239a10c177a83558f2c0275d6a30ee609fbaf7878a"
+    },
+    {
+      "id": "kanton/BS/212.250/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Kostentragung bei der Unterbringung in Heimen im Rahmen des Jugendstrafvollzugs gelten die Bestimmungen der Jugendstrafvollzugsgesetzgebung und der Bundesgesetzgebung über die Leistungen für den Straf- und Massnahmenvollzug."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "db8d047ac1639cb42f3c13ad7c1051493eae7f94c8ff04d746fab72c02deee5a"
+    },
+    {
+      "id": "kanton/BS/212.250/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Heime, die über eine Bewilligung verfügen, stellen dem zuständigen Departement auf Anfrage die für die Planung notwendigen Daten zur Verfügung."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "5c1879e5ca056e3f73ed16c205b920d6750d5e91b7db133b529cfc3b1c18f809"
+    },
+    {
+      "id": "kanton/BS/212.250/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Heime führen das gemäss Art. 17 PAVO verlangte Verzeichnis der Unmündigen."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "b3a8a1fd221742bfc816f8668eda57c6b0b13c76b6c07d795e5a0467c9af3712"
+    },
+    {
+      "id": "kanton/BS/212.250/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement berichtet periodisch über die inhaltlichen, zahlenmässigen und finanziellen Entwicklungen. Es berücksichtigt die Erkenntnisse der «Kommission ergänzende Hilfe zur Erziehung» der Kantone Basel-Stadt und Basel-Landschaft für seinen Bericht."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "b94d1974b66bbadcb50e510bd423d32f01b6c8a6a65fbf5c5e5cff182bc89967"
+    },
+    {
+      "id": "kanton/BS/212.250/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Tätigkeit der Bewilligungs- und Aufsichtsbehörden erfolgt grundsätzlich unentgeltlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Gibt ein Heim zu schwerwiegenden Beanstandungen Anlass und sind deswegen wiederholt ausserordentliche Kontrollen vorzunehmen, kann pro durchgeführter Kontrolle für den entstandenen Aufwand eine Gebühr bis zu Fr. 1'000 erhoben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für nicht rechtzeitig bezahlte Gebühren und Auslagen können Mahngebühren erhoben werden. Allfällige Mahngebühren richten sich nach § 14b der Verordnung zum Gesetz über die Verwaltungsgebühren vom 20. Juni 1972."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "21bb645ba8e5c7c9e17b3011a3300d8892687bf10c6b95c9e0c2e2d65fdd7d97"
+    },
+    {
+      "id": "kanton/BS/212.250/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Pflichten, die sich aus dieser Verordnung und aus darauf gestützten behördlichen Anordnungen ergeben, verletzt, kann vom zuständigen Departement mit einer Busse bis Fr. 1'000 belegt werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "7937cb3d663705bc178ff8d1d49250728201486b46f5a88b0fc9cfed5fcfdcc2"
+    },
+    {
+      "id": "kanton/BS/212.250/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gestützt auf diese Verordnung erlassene Verfügungen können nach den Bestimmungen des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976 bei der zuständigen Departementsvorsteherin bzw. dem zuständigen Departementsvorsteher angefochten werden."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "fd13c566460f786db3d5f3f63913316f9e6f065ca4c7a49e65dc772cc641a405"
+    },
+    {
+      "id": "kanton/BS/212.250/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendheimverordnung, KJHVO (212.250)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Zeitpunkt des Wirksamwerdens dieser Verordnung bei der zuständigen Behörde hängige Gesuche werden nach dem neuen Recht beurteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Wirksamwerden dieser Verordnung bestehende Bewilligungen für Heime und Beitragsentscheide werden, soweit sie nicht befristet sind, innerhalb von zwei Jahren nach Inkrafttreten dieser Verordnung überprüft und nach neuem Recht neu beurteilt."
+        }
+      ],
+      "stand": "2022-03-24",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/212.250",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "51e86d3bc58fdc2072d70248b38b306c",
+      "sha": "b7ae81f49b3f1b7a965911b86d0f0f262613e3ba7dc617e55c60d6479bbe60cc"
+    }
+  ]
+}

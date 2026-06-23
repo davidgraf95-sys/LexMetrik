@@ -1,0 +1,2172 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.260/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt den Umgang der öffentlichen Organe mit Informationen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es bezweckt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Handeln der öffentlichen Organe transparent zu gestalten und damit die freie Meinungsbildung und die Wahrnehmung der demokratischen Rechte zu fördern, soweit nicht überwiegende öffentliche oder private Interessen entgegenstehen, und"
+            },
+            {
+              "marke": "b",
+              "text": "die Grundrechte von natürlichen Personen zu schützen, über welche die öffentlichen Organe Personendaten bearbeiten."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "a87e1fca7ac96f3ddc5354832130d4afa0bb420e852860768f69a07ccd640583"
+    },
+    {
+      "id": "kanton/BS/153.260/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt für alle öffentlichen Organe gemäss § 3 Abs. 1."
+        },
+        {
+          "absatz": "2",
+          "text": "Es findet keine Anwendung, soweit ein öffentliches Organ am wirtschaftlichen Wettbewerb teilnimmt und dabei privatrechtlich handelt. Für das Bearbeiten von Personendaten ist das Bundesgesetz über den Datenschutz (DSG) vom 19. Juni 1992 anwendbar. Die Aufsicht wird von der oder dem Datenschutzbeauftragten gemäss §§ 37ff. ausgeübt, ausser bei öffentlichen Organen, die ausschliesslich am wirtschaftlichen Wettbewerb teilnehmen und dabei privatrechtlich handeln.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "In hängigen Verfahren der Zivil- und Strafrechtspflege sowie der Verfassungs- und Verwaltungsgerichtsbarkeit richten sich die Rechte und Ansprüche der betroffenen Person, die Informationspflicht des öffentlichen Organs bei der Beschaffung von Personendaten, die Bekanntgabe von Personendaten an Verfahrensbeteiligte, die Information der Öffentlichkeit und der allgemeine Informationszugangsanspruch der Öffentlichkeit ausschliesslich nach dem anwendbaren Verfahrensrecht."
+        },
+        {
+          "absatz": "3",
+          "text": "Abweichende und ergänzende Bestimmungen in anderen Gesetzen bleiben vorbehalten, sofern sie den Schutz der Grundrechte von Personen, über welche die öffentlichen Organe Personendaten bearbeiten, im Sinne dieses Gesetzes sicherstellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat sorgt dafür, dass interkantonale Institutionen mit baselstädtischer Beteiligung einen gleichwertigen Datenschutz gewährleisten."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "15826a2c764f011e6aa9a382c4e90f2da2da8155c499334421827ec7085872d4"
+    },
+    {
+      "id": "kanton/BS/153.260/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Organe im Sinne dieses Gesetzes sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Organisationseinheiten des Kantons und der Gemeinden, die eine öffentliche Aufgabe erfüllen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Organisationseinheiten der juristischen Personen des kantonalen und kommunalen öffentlichen Rechts, die eine öffentliche Aufgabe erfüllen;"
+            },
+            {
+              "marke": "c",
+              "text": "Private, soweit ihnen von Kanton oder Gemeinden die Erfüllung öffentlicher Aufgaben übertragen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Informationen im Sinne dieses Gesetzes sind alle Aufzeichnungen, welche die Erfüllung einer öffentlichen Aufgabe betreffen, unabhängig von ihrer Darstellungsform und ihrem Informationsträger."
+        },
+        {
+          "absatz": "3",
+          "text": "Personendaten sind Informationen, die sich auf eine bestimmte oder bestimmbare natürliche Person beziehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Besondere Personendaten sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personendaten, bei deren Bearbeitung eine besondere Gefahr der Grundrechtsverletzung besteht (sensitive Personendaten), insbesondere:"
+            },
+            {
+              "marke": "1",
+              "text": "Angaben über die religiösen, weltanschaulichen, politischen oder gewerkschaftlichen Ansichten oder Tätigkeiten;"
+            },
+            {
+              "marke": "2",
+              "text": "Angaben über die Gesundheit, das Erbgut (genetische Daten), die persönliche Geheimsphäre, das Sexualleben, die sexuelle Orientierung oder die ethnische Herkunft;"
+            },
+            {
+              "marke": "3",
+              "text": "Angaben über Massnahmen der sozialen Hilfe;"
+            },
+            {
+              "marke": "4",
+              "text": "Angaben über administrative oder strafrechtliche Verfolgungen und Sanktionen und"
+            },
+            {
+              "marke": "5",
+              "text": "mit speziellen technischen Verfahren gewonnene personenbezogene Daten zu den physischen, physiologischen oder verhaltenstypischen Merkmalen einer natürlichen Person, welche die eindeutige Identifizierung dieser Person ermöglichen oder bestätigen (biometrische Daten)."
+            },
+            {
+              "marke": "b",
+              "text": "Zusammenstellungen von Informationen, die eine Beurteilung wesentlicher Aspekte der Persönlichkeit einer natürlichen Person erlauben (Persönlichkeitsprofil)."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Bearbeiten ist jeder Umgang mit Informationen, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Beschaffen, Aufbewahren, Verwenden, Verändern, Bekanntgeben, Archivieren, Löschen oder Vernichten sowie das Durchführen logischer oder rechnerischer Operationen mit diesen Informationen."
+        },
+        {
+          "absatz": "6",
+          "text": "Bekanntgeben ist jedes Zugänglichmachen von Informationen wie das Einsichtgewähren, Weitergeben oder Veröffentlichen."
+        },
+        {
+          "absatz": "7",
+          "text": "Profiling ist jede automatisierte Auswertung von Informationen, um wesentliche persönliche Merkmale zu analysieren oder Entwicklungen, insbesondere bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel vorherzusagen."
+        },
+        {
+          "absatz": "8",
+          "text": "Auftragsdatenbearbeiterin oder Auftragsdatenbearbeiter ist die private Person oder das öffentliche Organ, die oder das im Auftrag des für die Bearbeitung veröffentlichen öffentlichen Organs Informationen bearbeitet."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "90c6bd1e099f60b40aee2029d7020e619dd676d27313d404b848354d77e2bbb2"
+    },
+    {
+      "id": "kanton/BS/153.260/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ gestaltet den Umgang mit Informationen so, dass es rasch, umfassend und sachlich informieren kann."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "84aed44a993508dc86df59b4cc765d335b868e700cf3184172ec3b3209e83e2c"
+    },
+    {
+      "id": "kanton/BS/153.260/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ verwaltet seine Informationen nach den Vorschriften über die Aktenführung gemäss dem Archivgesetz."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "b60cacb16c3e334e053e04f60a058c65364b391d97dfaa7f5e65333095748f2d"
+    },
+    {
+      "id": "kanton/BS/153.260/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verantwortung für den Umgang mit Informationen trägt dasjenige öffentliche Organ, das die Informationen zur Erfüllung seiner gesetzlichen Aufgaben bearbeitet."
+        },
+        {
+          "absatz": "2",
+          "text": "Bearbeiten mehrere öffentliche Organe einen gemeinsamen Informationsbestand, regeln sie die Verantwortung und legen fest, welches öffentliche Organ die Gesamtverantwortung trägt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das öffentliche Organ muss nachweisen können, dass es die Datenschutzbestimmungen einhält. Der Regierungsrat regelt das Nähere für die kantonale Verwaltung. Für die Gerichte, die Gemeinden, die weiteren Körperschaften und die selbständigen Anstalten gilt die Regelung des Kantons sinngemäss, soweit sie keine eigene erlassen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "10530ba8ae146680cc341d53464aca97719fc02ac72bb4ee106d7c58aa818392"
+    },
+    {
+      "id": "kanton/BS/153.260/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ kann das Bearbeiten von Informationen Dritten übertragen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine rechtliche Bestimmung oder vertragliche Vereinbarung entgegensteht und"
+            },
+            {
+              "marke": "b",
+              "text": "sichergestellt wird, dass die Informationen nur so bearbeitet werden, wie es das öffentliche Organ tun dürfte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es bleibt für den Umgang mit Informationen nach diesem Gesetz verantwortlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Auftragsdatenbearbeiterin beziehungsweise ein Auftragsdatenbearbeiter darf ohne vorgängige schriftliche Zustimmung des auftraggebenden öffentlichen Organs die Datenbearbeitung keiner weiteren Auftragsdatenbearbeiterin und keinem weiteren Auftragsdatenbearbeiter übertragen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "091109b07958b1fcbe1cb468430698fac64d5003de4bd9f0f6ec03e5be3207bd"
+    },
+    {
+      "id": "kanton/BS/153.260/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ schützt Informationen durch angemessene organisatorische und technische Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Massnahmen richten sich nach den folgenden Schutzzielen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Informationen dürfen nicht unrechtmässig zur Kenntnis gelangen (Vertraulichkeit);"
+            },
+            {
+              "marke": "b",
+              "text": "Informationen müssen richtig und vollständig sein (Integrität);"
+            },
+            {
+              "marke": "c",
+              "text": "Informationen müssen bei Bedarf vorhanden sein (Verfügbarkeit);"
+            },
+            {
+              "marke": "d",
+              "text": "Informationsbearbeitungen müssen einer Person zugerechnet werden können (Zurechenbarkeit);"
+            },
+            {
+              "marke": "e",
+              "text": "Veränderungen von Informationen müssen erkennbar und nachvollziehbar sein (Nachvollziehbarkeit)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die zu treffenden Massnahmen richten sich nach der Art der Information, nach Art und Zweck der Verwendung und nach dem jeweiligen Stand der Technik."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat regelt das Nähere für die kantonale Verwaltung, der Gemeinderat für die kommunale Verwaltung. Für die Gerichte, die Gemeinden, die weiteren Körperschaften und die selbständigen Anstalten gilt die Regelung des Kantons sinngemäss, soweit sie keine eigene erlassen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "c968556d5fa4ff8d609fe7ab0ddbe02bda6d290b417e991191a46c5e46c0b3ab"
+    },
+    {
+      "id": "kanton/BS/153.260/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein öffentliches Organ darf Personendaten bearbeiten, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dafür eine gesetzliche Grundlage besteht oder"
+            },
+            {
+              "marke": "b",
+              "text": "dies zur Erfüllung einer gesetzlichen Aufgabe erforderlich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besondere Personendaten dürfen bearbeitet und ein Profiling darf vorgenommen werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Gesetz dazu ausdrücklich ermächtigt oder verpflichtet oder"
+            },
+            {
+              "marke": "b",
+              "text": "es für eine in einem Gesetz klar umschriebene Aufgabe zwingend notwendig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bearbeiten von Personendaten hat nach Treu und Glauben zu erfolgen und muss verhältnismässig sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Personendaten dürfen nur so lange bearbeitet werden, als es zur Erfüllung der gesetzlichen Aufgabe erforderlich ist."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "f6adde3541befcba824d4f60484434033aaa8db386f03c5b7e0443ad7bf83e6e"
+    },
+    {
+      "id": "kanton/BS/153.260/art_9_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "9_a",
+      "artikelLabel": "§ 9a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann, nachdem er im Rahmen einer Vorabkonsultation nach § 13 die Beurteilung der oder des Datenschutzbeauftragten eingeholt hat, vor Inkrafttreten eines Gesetzes die Bearbeitung von besonderen Personendaten oder ein Profiling bewilligen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufgaben, die diese Bearbeitung erforderlich machen, in einem Gesetz geregelt sind,"
+            },
+            {
+              "marke": "b",
+              "text": "ausreichende Massnahmen zur Verhinderung von Persönlichkeitsverletzungen getroffen werden und"
+            },
+            {
+              "marke": "c",
+              "text": "die praktische Umsetzung einer Datenbearbeitung eine Testphase vor dem Wirksamwerden des Gesetzes zwingend erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die praktische Umsetzung einer Datenbearbeitung kann eine Testphase dann zwingend erfordern, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erfüllung einer Aufgabe technische Neuerungen erfordert, deren Auswirkungen zunächst evaluiert werden müssen,"
+            },
+            {
+              "marke": "b",
+              "text": "die Erfüllung einer Aufgabe bedeutende organisatorische oder technische Massnahmen erfordert, deren Wirksamkeit zunächst geprüft werden muss, insbesondere bei der Zusammenarbeit mit öffentlichen Organen des Bundes und anderer Kantone und Privaten; oder"
+            },
+            {
+              "marke": "c",
+              "text": "sie die Übermittlung von besonderen Personendaten oder Resultaten eines Profilings an Dritte mittels eines Abrufverfahrens erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Pilotprojekte sind auf maximal fünf Jahre zu befristen."
+        },
+        {
+          "absatz": "4",
+          "text": "Jedes Pilotprojekt ist zu evaluieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat regelt die Modalitäten der Datenbearbeitung in einer Verordnung."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "0714ad5e4e7a7c25bd29278989b05c9043b82e835512b3e56f7f8b51b81ec7fa"
+    },
+    {
+      "id": "kanton/BS/153.260/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein öffentliches Organ darf Personendaten zu einem nicht personenbezogenen Zweck, namentlich für Statistik, Planung oder Forschung, bearbeiten, wenn es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Daten nicht mehr für einen personenbezogenen Zweck verwendet oder weitergibt und"
+            },
+            {
+              "marke": "b",
+              "text": "diese Daten anonymisiert oder pseudonymisiert, sobald es der Bearbeitungszweck erlaubt, und"
+            },
+            {
+              "marke": "c",
+              "text": "die Ergebnisse der Bearbeitung nur so bekannt gibt, dass keine Rückschlüsse auf betroffene Personen möglich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "b278c21fedee354eebd17dc303532a4eb6d8a4b744ee41333f4fde5e96fb7f5a"
+    },
+    {
+      "id": "kanton/BS/153.260/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personendaten müssen richtig und, soweit es der Verwendungszweck erfordert, vollständig sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Das öffentliche Organ, das Personendaten bearbeitet, hat sich über deren Richtigkeit zu vergewissern."
+        },
+        {
+          "absatz": "3",
+          "text": "Es sind alle angemessenen Massnahmen zu treffen, damit Daten berichtigt oder vernichtet werden, die im Hinblick auf den Zweck ihrer Beschaffung oder Bearbeitung unrichtig oder unvollständig sind."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "5f67362562d0dd200391a75e5341fccb7b8e5d453f5d58a26f1ac1546647e791"
+    },
+    {
+      "id": "kanton/BS/153.260/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personendaten dürfen nur zu dem Zweck bearbeitet werden, zu dem sie erhoben worden sind, soweit nicht eine gesetzliche Grundlage ausdrücklich eine weitere Verwendung vorsieht oder die betroffene Person im Einzelfall einwilligt."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "d47e97f8c807e96a006e82345c717e78b3035a05952316a8cfa64728439c1b6f"
+    },
+    {
+      "id": "kanton/BS/153.260/art_12_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "12_a",
+      "artikelLabel": "§ 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche öffentliche Organ prüft bei jedem Vorhaben für eine Personendatenbearbeitung, ob voraussichtlich ein hohes Risiko für die Grundrechte der betroffenen Personen besteht. Das hohe Risiko ergibt sich, insbesondere bei Verwendung neuer Technologien, aus der Art, dem Umfang, den Umständen und dem Zweck der Bearbeitung."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht voraussichtlich ein hohes Risiko, ist eine Datenschutz-Folgenabschätzung durchzuführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Folgenabschätzung enthält mindestens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine allgemeine Beschreibung der geplanten Bearbeitungsvorgänge;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Bewertung der in Bezug auf die Grundrechte der betroffenen Personen bestehende Risiken sowie"
+            },
+            {
+              "marke": "c",
+              "text": "eine Darstellung und Bewertung der geplanten Abhilfemassnahmen, Garantien, Sicherheitsvorkehren und Verfahren, durch die der Schutz der Grundrechte der Personen sichergestellt und der Nachweis erbracht werden soll, dass dieses Gesetz eingehalten wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "7cfc2360729c73ec4d387d1a1a35c157620c87926114509fb7a1396631efd98a"
+    },
+    {
+      "id": "kanton/BS/153.260/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche öffentliche Organ legt der oder dem Datenschutzbeauftragten frühzeitig zur Vorabkonsultation vor:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Rechtsetzungsprojekte, die das Bearbeiten von Personendaten betreffen oder die für den Umgang mit Informationen erheblich sind, und"
+            },
+            {
+              "marke": "b",
+              "text": "Vorhaben zur Bearbeitung von Personendaten, die aufgrund der Art der Bearbeitung oder der zu bearbeitenden Daten zu einem hohen Risiko für die Grundrechte der betroffenen Personen führen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die oder der Datenschutzbeauftragte erstellt eine Liste der Bearbeitungsvorgänge, die zur Vorabkonsultation zu unterbreiten sind."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "70581ba43285499ee470cf4804d4abc49cedb849311f15000e20b4836a0ebbb0"
+    },
+    {
+      "id": "kanton/BS/153.260/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ trifft bei Datenbearbeitungen von Anfang an Massnahmen, die das Risiko von Verletzungen der Grundrechte verringern und solchen Verletzungen vorbeugen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es stellt mittels geeigneter Voreinstellungen sicher, dass standardmässig nur diejenigen Personendaten bearbeitet werden, die für den jeweiligen Verwendungszweck erforderlich sind."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "56c5780d4b69683d66ba3835894657650ccaed566147aac6d4e3f6cf0de7b2fc"
+    },
+    {
+      "id": "kanton/BS/153.260/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche öffentliche Organ informiert die betroffene Person über jede Beschaffung von Personendaten. Diese Informationspflicht gilt auch, wenn die Daten bei Dritten beschafft werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Information umfasst insbesondere Angaben über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche öffentliche Organ samt Kontaktdaten;"
+            },
+            {
+              "marke": "b",
+              "text": "die bearbeiteten Daten oder die Kategorien der bearbeiteten Daten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Rechtsgrundlage und den Zweck des Bearbeitens;"
+            },
+            {
+              "marke": "d",
+              "text": "die Datenempfangenden oder die Kategorien der Datenempfangenden, falls die Daten Dritten bekannt gegeben werden, und"
+            },
+            {
+              "marke": "e",
+              "text": "die Rechte der betroffenen Person."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationspflicht entfällt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die betroffene Person bereits über die Informationen nach Abs. 2 verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn das Bearbeiten der Personendaten gesetzlich ausdrücklich vorgesehen ist oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Information nicht oder nur mit unverhältnismässigem Aufwand möglich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Übermittlung der Informationen kann unter denselben Voraussetzungen eingeschränkt werden wie der Zugang zu den eigenen Personendaten."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "b2955f617bf8660dfcbf0fce0204b7e2917739766bbf42816097732c23b7d285"
+    },
+    {
+      "id": "kanton/BS/153.260/art_15_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "15_a",
+      "artikelLabel": "§ 15a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Personen-ID ist eine nicht sprechende und unveränderliche Nummer, die eine Person eindeutig identifiziert."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist für den Austausch und die Verknüpfung von Personendaten zwischen und innerhalb von öffentlichen Organen gemäss § 3 Abs. 1 lit. a und b in systematischer Weise und ausschliesslich intern zu verwenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Personen-ID wird einer natürlichen oder juristischen Person zugewiesen, die im Kanton Basel-Stadt Wohnsitz bzw. Sitz hat oder wenn dies für den Verkehr mit den öffentlichen Organen erforderlich ist. Die Zuweisung erfolgt durch eine zentrale Stelle."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zuständige Stelle legt Vorgaben für die korrekte Verwendung der Personen-ID fest und kontrolliert deren Einhaltung."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "2c1f3f0e3beab4d5b5ae46427d9f0a25862c03df41566f99400d42956b4168c6"
+    },
+    {
+      "id": "kanton/BS/153.260/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nicht mehr benötigte Personendaten, die von der gemäss Archivgesetz zuständigen Stelle als nicht archivwürdig beurteilt werden, sind vom öffentlichen Organ zu vernichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Informationsbestände, die Personendaten enthalten, sind Fristen für die Vernichtung beziehungsweise für die Überprüfung, ob die Daten zur Aufgabenerfüllung noch erforderlich sind, festzulegen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "68c3855224d1a557bd44f5e1500fb58e9635714da053f03837548561de863e81"
+    },
+    {
+      "id": "kanton/BS/153.260/art_16_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "16_a",
+      "artikelLabel": "§ 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche öffentliche Organ meldet der oder dem Datenschutzbeauftragten ohne unangemessene Verzögerung eine Datenschutzverletzung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Auftragsdatenbearbeiterin oder der Auftragsdatenbearbeiter informiert das auftraggebende öffentliche Organ unverzüglich über eine Datenschutzverletzung."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Datenschutzverletzung liegt vor, wenn durch eine Verletzung der Informationssicherheit bearbeitete Personendaten unwiederbringlich vernichtet werden oder verloren gehen, unbeabsichtigt oder unrechtmässig verändert oder offenbart werden oder Unbefugte Zugang zu solchen Personendaten erhalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Meldepflicht besteht nicht, wenn die Datenschutzverletzung voraussichtlich nicht zu einem Risiko für die Grundrechte der betroffenen Person führt."
+        },
+        {
+          "absatz": "5",
+          "text": "Das öffentliche Organ informiert die betroffenen Personen, wenn die Umstände dies erfordern oder der oder die Datenschutzbeauftragte es verlangt."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Benachrichtigung der betroffenen Personen kann ganz oder teilweise unterbleiben oder aufgeschoben werden, wenn eine Einschränkung gemäss § 29 zulässig ist."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "a490b8bda802fec41e660ee05906b8e3d0ade8293ff48d7b93cd850ae2546ff2"
+    },
+    {
+      "id": "kanton/BS/153.260/art_16_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "16_b",
+      "artikelLabel": "§ 16b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Departemente der kantonalen Verwaltung, die Gerichte und die Einwohner- und Bürgergemeinden bezeichnen eine Datenschutzberaterin oder einen Datenschutzberater."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt zusätzlich die Bereiche, Abteilungen und Stabsstellen der kantonalen Verwaltung sowie die öffentlich-rechtlichen Anstalten des kantonalen Rechts, die eine eigene Datenschutzberaterin oder einen eigenen Datenschutzberater zu bezeichnen haben. Er berücksichtigt dabei die Art und Menge der von diesen bearbeiteten Personendaten."
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Person hat die folgenden Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie berät und unterstützt bei der Bearbeitung von Personendaten;"
+            },
+            {
+              "marke": "b",
+              "text": "sie unterstützt bei der Vornahme der Datenschutz-Folgenabschätzungen gemäss § 12a Abs. 1;"
+            },
+            {
+              "marke": "c",
+              "text": "sie arbeitet mit der oder dem Datenschutzbeauftragten zusammen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "fba1ca15f5f3614c7c378a015909c3b5ec6cd1500db5366529b26c4bb72d41e3"
+    },
+    {
+      "id": "kanton/BS/153.260/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "An öffentlichen, allgemein oder nicht allgemein zugänglichen Orten darf Videoüberwachung, bei welcher Personen identifiziert werden können, nur zum Schutz von Personen und Sachen vor strafbaren Handlungen beziehungsweise zur Verfolgung solcher strafbarer Handlungen eingesetzt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Videoüberwachung ist örtlich und zeitlich auf das zur Erreichung des konkreten Zwecks Erforderliche zu beschränken."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Einsatz von Videoüberwachung ist durch geeignete Massnahmen unter Angabe der verantwortlichen Stelle erkennbar zu machen."
+        },
+        {
+          "absatz": "4",
+          "text": "Allfällige Aufzeichnungen, Kopien und Ausdrucke müssen in der Regel spätestens innert einer Woche vernichtet werden. Ausnahmsweise kann das Reglement eine längere Frist festlegen, wenn dies zur Erreichung des konkreten Zwecks erforderlich ist und das Risiko einer Persönlichkeitsverletzung durch technische und organisatorische Vorkehren minimiert wird."
+        },
+        {
+          "absatz": "5",
+          "text": "Vorbehalten bleibt die Verwendung für ein straf- oder zivilrechtliches Verfahren; in diesem Fall sind die Aufzeichnungen zusammen mit der Anzeige oder der Klage den zuständigen Behörden zu übergeben."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "04ee1932a2424b28da50a736697117c9ab83f0bc9fbdd2517d0cd8ce207130d4"
+    },
+    {
+      "id": "kanton/BS/153.260/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für jedes Videoüberwachungssystem muss vor seiner Inbetriebnahme ein Reglement erlassen werden, das insbesondere den Zweck des Systems, die Verantwortlichkeit und die Löschungsfrist regelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig für den Erlass der Reglemente sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Departemente bei Systemen im Verantwortungsbereich kantonaler öffentlicher Organe;"
+            },
+            {
+              "marke": "b",
+              "text": "der Gemeinderat bei Systemen im Verantwortungsbereich kommunaler öffentlicher Organe;"
+            },
+            {
+              "marke": "c",
+              "text": "der Gerichtsrat bei Systemen im Verantwortungsbereich von Gerichten;"
+            },
+            {
+              "marke": "d",
+              "text": "das oberste Führungsorgan selbständiger Anstalten und Körperschaften des öffentlichen Rechts bei Systemen in ihrem Verantwortungsbereich."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Reglement ist jeweils auf eine Dauer von maximal vier Jahren zu befristen. Vor einer allfälligen Verlängerung ist die Wirksamkeit der Videoüberwachung zu evaluieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Vor dem Erlass und der Verlängerung eines Reglements ist das Vorhaben der oder dem Datenschutzbeauftragten zur Vorabkonsultation vorzulegen."
+        },
+        {
+          "absatz": "4bis",
+          "text": "Die Reglemente sind der Öffentlichkeit leicht zugänglich zu machen."
+        },
+        {
+          "absatz": "4ter",
+          "text": "Soweit durch die Bekanntgabe der Kamerastandorte oder anderer Einsatzdetails die Zweckerreichung verunmöglicht wird, kann auf deren Veröffentlichung verzichtet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat regelt das Nähere für die kantonale Verwaltung. Für die Gerichte, die Gemeinden, die weiteren Körperschaften und die selbständigen Anstalten gilt die Regelung des Kantons sinngemäss, soweit sie keine eigene erlassen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "84e95f86e2541dc89e553f2828b23cd75c481d7b1a22b75022400a43b1997332"
+    },
+    {
+      "id": "kanton/BS/153.260/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ kann zur Sicherstellung der Qualität der Informationsbearbeitung seine Verfahren, seine Organisation und seine technischen Einrichtungen durch eine unabhängige und anerkannte Stelle prüfen und bewerten lassen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "8e86dee693ccd63d459a66f9b9eb2ac0a455e5ce12a9d88578704ff252b1ac54"
+    },
+    {
+      "id": "kanton/BS/153.260/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ informiert die Öffentlichkeit über Angelegenheiten von allgemeinem Interesse in seinem Tätigkeitsbereich."
+        },
+        {
+          "absatz": "2",
+          "text": "Von allgemeinem Interesse sind Informationen, die Belange von öffentlichem Interesse betreffen und für die Meinungsbildung und zur Wahrung der demokratischen Rechte der Bevölkerung von Bedeutung sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Das öffentliche Organ stellt Informationen über seinen Aufbau, seine Zuständigkeiten und über Ansprechpersonen zur Verfügung."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat regelt die Informationstätigkeit für die kantonale Verwaltung. Für die Gerichte, die Gemeinden, die weiteren Körperschaften und die selbständigen Anstalten gilt die Regelung des Kantons sinngemäss, soweit sie keine eigene erlassen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "4a3930058e2d871f6b6b654e6ac5fb7189e6495620f2133663cfe55a012712e3"
+    },
+    {
+      "id": "kanton/BS/153.260/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ gibt Personendaten bekannt, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine gesetzliche Bestimmung dazu verpflichtet oder ermächtigt, oder"
+            },
+            {
+              "marke": "b",
+              "text": "dies zur Erfüllung einer gesetzlichen Aufgabe erforderlich ist oder"
+            },
+            {
+              "marke": "c",
+              "text": "im Einzelfall die betroffene Person ausdrücklich zugestimmt hat oder, falls sie dazu nicht in der Lage ist, die Bekanntgabe in ihrem Interesse liegt und ihre Zustimmung in guten Treuen vorausgesetzt werden darf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besondere Personendaten oder Resultate eines Profilings gibt das öffentliche Organ bekannt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Gesetz dazu ausdrücklich verpflichtet oder ermächtigt oder"
+            },
+            {
+              "marke": "b",
+              "text": "dies zur Erfüllung einer in einem Gesetz klar umschriebenen Aufgabe zwingend notwendig ist oder"
+            },
+            {
+              "marke": "c",
+              "text": "im Einzelfall die betroffene Person ausdrücklich zugestimmt hat oder, falls sie dazu nicht in der Lage ist, die Bekanntgabe in ihrem Interesse liegt und ihre Zustimmung in guten Treuen vorausgesetzt werden darf."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "3948210b6944f81afb13520605399e049582d9fd7e423975b3e4d92a180d4193"
+    },
+    {
+      "id": "kanton/BS/153.260/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ kann anderen öffentlichen Organen im Kanton, in anderen Kantonen oder im Bund Personendaten zur Bearbeitung für einen nicht personenbezogenen Zweck, namentlich für Statistik, Planung oder Forschung, bekannt geben, sofern dies nicht durch eine besondere Geheimhaltungsbestimmung ausgeschlossen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Empfängerin oder der Empfänger hat sich zu verpflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Personendaten zu anonymisieren oder zu pseudonymisieren, sobald es der Bearbeitungszweck zulässt, und"
+            },
+            {
+              "marke": "b",
+              "text": "die Auswertungen nur so bekannt zu geben, dass keine Rückschlüsse auf betroffene Personen möglich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Privaten kann das öffentliche Organ Personendaten zur Bearbeitung für Zwecke der Forschung bekannt geben, sofern dies nicht durch eine besondere Geheimhaltungsbestimmung ausgeschlossen ist und sich die Empfängerin oder der Empfänger zusätzlich zu den Anforderungen von Abs. 2 verpflichtet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Personendaten nicht für andere Zwecke zu bearbeiten und"
+            },
+            {
+              "marke": "b",
+              "text": "die Personendaten nicht an Dritte weiterzugeben und"
+            },
+            {
+              "marke": "c",
+              "text": "für die Informationssicherheit zu sorgen."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Unter den gleichen Voraussetzungen kann die richterliche Behörde den in einem kantonalen Anwaltsregister nach dem Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA) vom 23. Juni 2000 eingetragenen Anwältinnen und Anwälte zum Zweck der Berufsausübung Urteile mit Personendaten bekannt geben, sofern die Urteile nicht bereits in anonymisierter Form vorliegen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "5a5c04d3261f448674499d3fc0a4314c6040c0b4568faff7f0e37aa70f97e1d1"
+    },
+    {
+      "id": "kanton/BS/153.260/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Organe dürfen Personendaten anderen Organen oder Privaten, die nicht der Rechtshoheit eines Staates oder einer Organisation unterstehen, welche dem Europaratsübereinkommen zum Schutz des Menschen bei der automatischen Verarbeitung personenbezogener Daten beigetreten sind, nur bekannt geben, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gesetzgebung des Empfängerstaates einen angemessenen Schutz gewährleistet oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch vertragliche Vereinbarungen ein angemessener Schutz garantiert wird oder"
+            },
+            {
+              "marke": "c",
+              "text": "dies im Einzelfall entweder für die Wahrung eines überwiegenden öffentlichen Interesses oder für die Feststellung, Ausübung oder Durchsetzung von Rechtsansprüchen vor Gericht unerlässlich ist oder"
+            },
+            {
+              "marke": "d",
+              "text": "im Einzelfall die betroffene Person ausdrücklich zugestimmt hat oder, falls sie dazu nicht in der Lage ist, die Bekanntgabe in ihrem Interesse liegt und ihre Zustimmung in guten Treuen vorausgesetzt werden darf."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "d02c05485e433e51acc47ddd79ab5d3838a9c8d1cf6eaf7a0f87077330f11d66"
+    },
+    {
+      "id": "kanton/BS/153.260/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ führt ein vollständiges Verzeichnis seiner Verfahren, bei denen Personendaten bearbeitet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verzeichnisse sind der Öffentlichkeit leicht zugänglich zu machen, insbesondere durch öffentliche Datennetze."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt in der Verordnung den Inhalt des Verzeichnisses und die Ausnahmen von der Veröffentlichungspflicht."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "01c29111db09302767dee018203bbb6c2d6d569acff360cb4052172fda0a983d"
+    },
+    {
+      "id": "kanton/BS/153.260/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person hat Anspruch auf Zugang zu den bei einem öffentlichen Organ im Sinne von § 3 Abs. 1 lit. a und b dieses Gesetzes vorhandenen Informationen, ausgenommen zu Aufzeichnungen, die nicht fertig gestellt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "In hängigen Verwaltungs- und Verwaltungsrekursverfahren richtet sich der Anspruch auf Zugang zu Informationen nach dem massgeblichen Verfahrensrecht."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "ae6f31526b6a52c3a39853f13e64de95e8906845e3a485bdf6c01f4d2c6a50fa"
+    },
+    {
+      "id": "kanton/BS/153.260/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person hat Anspruch darauf zu wissen, ob bei einem öffentlichen Organ Personendaten über sie vorhanden sind, und gegebenenfalls auf Zugang zu diesen eigenen Personendaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang umfasst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Personendaten zur gesuchstellenden Person;"
+            },
+            {
+              "marke": "b",
+              "text": "alle verfügbaren Informationen über die Herkunft der Personendaten, wenn sie nicht bei der betroffenen Person erhoben worden sind und"
+            },
+            {
+              "marke": "c",
+              "text": "die weiteren Angaben nach § 15 Abs. 2."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "4c6f05ca855b2be53422478e3369d2e9dbabb25c21344b4fb6c924911dc04613"
+    },
+    {
+      "id": "kanton/BS/153.260/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede betroffene Person kann vom öffentlichen Organ verlangen, dass es kostenlos:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unrichtige Personendaten berichtigt oder, falls die Berichtigung nicht möglich ist, vernichtet;"
+            },
+            {
+              "marke": "b",
+              "text": "das widerrechtliche Bearbeiten von Personendaten unterlässt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Folgen des widerrechtlichen Bearbeitens von Personendaten beseitigt, insbesondere die sie betreffenden Personendaten löscht oder ihre Bekanntgabe an Dritte sperrt;"
+            },
+            {
+              "marke": "d",
+              "text": "die Widerrechtlichkeit des Bearbeitens von Personendaten schriftlich feststellt."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Das schutzwürdige Interesse der betroffenen Person wird vermutet."
+        },
+        {
+          "absatz": "1ter",
+          "text": "Die Berichtigung, Vernichtung oder Löschung von Personendaten und die Sperrung der Bekanntgabe an Dritte ist ausserdem jenen Personen oder Stellen, denen die Daten zuvor bekannt gegeben worden sind, mitzuteilen, soweit dies nicht unmöglich oder mit unverhältnismässigem Aufwand verbunden ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt das Nähere."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "8f54b6f3edfe064321d4cce589e1d327e35a7b2236216f1dcabe09d4c661f7a1"
+    },
+    {
+      "id": "kanton/BS/153.260/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die betroffene Person kann beim öffentlichen Organ die Bekanntgabe ihrer Personendaten an Private schriftlich sperren lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das öffentliche Organ macht in geeigneter Weise auf das Sperrrecht aufmerksam."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bekanntgabe ist trotz Sperrung zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das öffentliche Organ zur Bekanntgabe gesetzlich verpflichtet ist oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Bekanntgabe zur Erfüllung einer gesetzlichen Aufgabe zwingend notwendig ist oder"
+            },
+            {
+              "marke": "c",
+              "text": "die um Bekanntgabe ersuchende Person glaubhaft macht, dass die Personendaten zur Durchsetzung ihrer Rechtsansprüche erforderlich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ist ein Gesuch nach Abs. 3 lit. c nicht von vornherein abzuweisen, gibt das öffentliche Organ der betroffenen Person Gelegenheit zur Stellungnahme innert angemessener Frist. Den Entscheid eröffnet es in Form einer anfechtbaren Verfügung, wenn es die betroffene Person oder die Gesuch stellende Person verlangt."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "5f5994656f948f7c600fa13eb7d68babaabb03c261095c4475462af7a91cdff9"
+    },
+    {
+      "id": "kanton/BS/153.260/art_28_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "28_a",
+      "artikelLabel": "§ 28a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person hat das Recht, sich mit einer aufsichtsrechtlichen Anzeige an die Datenschutzbeauftragte oder den Datenschutzbeauftragten zu wenden, wenn sie der Ansicht ist, dass ein öffentliches Organ, eine Auftragsbearbeiterin oder ein Auftragsbearbeiter bei der Bearbeitung von sie betreffenden Personendaten gegen die datenschutzrechtlichen Vorschriften verstösst."
+        },
+        {
+          "absatz": "2",
+          "text": "Der anzeigenden Person kommt in diesem Verfahren keine Parteistellung zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Die oder der Datenschutzbeauftragte informiert sie innert drei Monaten über den Stand beziehungsweise das Ergebnis der Abklärungen und die Erledigung."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "88c485ee63ae647c5818cedbe23eedac94c689557fb773f48639e4d7ab61c540"
+    },
+    {
+      "id": "kanton/BS/153.260/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ hat die Bekanntgabe von oder den Zugang zu Informationen im Einzelfall ganz oder teilweise zu verweigern oder aufzuschieben, wenn eine besondere gesetzliche Geheimhaltungspflicht oder ein überwiegendes öffentliches oder privates Interesse entgegensteht."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein öffentliches Interesse liegt insbesondere vor, wenn die Bekanntgabe der oder der Zugang zur Information:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sicherheit des Staates oder die öffentliche Sicherheit gefährdet oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Beziehungen zu einem anderen Kanton, zum Bund oder zum Ausland beeinträchtigt oder"
+            },
+            {
+              "marke": "c",
+              "text": "den freien Meinungs- und Willensbildungsprozess der öffentlichen Organe beeinträchtigt oder"
+            },
+            {
+              "marke": "d",
+              "text": "die Position in Verhandlungen beeinträchtigt oder"
+            },
+            {
+              "marke": "e",
+              "text": "die zielkonforme Durchführung konkreter behördlicher, insbesondere polizeilicher Massnahmen beeinträchtigt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ein privates Interesse liegt insbesondere vor, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bekanntgabe von oder der Zugang zu Informationen den Schutz der Privatsphäre beeinträchtigen würde oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch die Bekanntgabe von oder den Zugang zu Informationen Berufs-, Fabrikations- oder Geschäftsgeheimnisse offenbart oder Urheberrechte verletzt würden oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Bekanntgabe von oder der Zugang zu Informationen verlangt wird, die dem öffentlichen Organ von Dritten freiwillig mitgeteilt worden sind und deren Geheimhaltung es zugesichert hat."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Würde der Zugang zu den eigenen Personendaten im medizinischen oder psychiatrischen Bereich nach der Beurteilung des öffentlichen Organs die betroffene Person zu stark belasten, kann er einer Person ihres Vertrauens gewährt werden. Sofern die betroffene Person es ausdrücklich wünscht, ist ihr direkt und umfassend Zugang zu ihren Personendaten zu gewähren."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "894aea0974f33716dbabee6583305eae761b029cfd02362fa823760c073873d9"
+    },
+    {
+      "id": "kanton/BS/153.260/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist der Zugang zu den bei einem öffentlichen Organ vorhandenen Personendaten nicht schon nach § 29 ganz oder teilweise zu verweigern, so sind diese Personendaten vor der Zugangsgewährung zu anonymisieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Anonymisierung nicht bzw. nicht vollständig möglich, so darf das öffentliche Organ Zugang zu nicht anonymisierten Personendaten gewähren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein überwiegendes öffentliches Interesse am Zugang zu diesen Personendaten besteht oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Voraussetzungen für die Bekanntgabe von Personendaten nach diesem Gesetz (§§ 20 ff.) erfüllt sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "d7d4877caca60fa86bb330a50252fe9873f854693d04c1aec74f7d5ccf96a7c8"
+    },
+    {
+      "id": "kanton/BS/153.260/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Zugang zu Informationen gemäss §§ 25 und 26 erlangen will, stellt schriftlich oder mündlich ein Gesuch, das die gewünschte Information hinreichend genau zu bezeichnen hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Person, die ein Gesuch auf Zugang zu den eigenen Personendaten stellt, muss sich über ihre Identität ausweisen, ausser wenn ihre Identität für das ersuchte öffentliche Organ zweifelsfrei feststeht."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "6dadfc53a5390bcfaa42630b8f468bfce5471f7890a68035a79078898e0eb95c"
+    },
+    {
+      "id": "kanton/BS/153.260/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bezieht sich ein Gesuch ausschliesslich auf Informationen, die bereits öffentlich sind und auf angemessene Weise zur Verfügung stehen, so tritt das öffentliche Organ unter Verweis auf die Quelle nicht auf das Gesuch ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind Interessen von Drittpersonen oder von anderen öffentlichen Organen im Sinne von § 29 betroffen, gibt das öffentliche Organ diesen Personen oder Organen Gelegenheit zur Stellungnahme innert angemessener Frist, ausser wenn es auch ohne deren Stellungnahme klar ist, dass der Zugang ganz oder teilweise verweigert werden muss."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "e1679f265db107efc858241e1d72186a802e5f901abc7485f0f1553218fdeda5"
+    },
+    {
+      "id": "kanton/BS/153.260/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steht der Gewährung des Zugangs zu Informationen nichts entgegen, gewährt das öffentliche Organ der gesuchstellenden Person den Zugang."
+        },
+        {
+          "absatz": "2",
+          "text": "Zieht das öffentliche Organ aufgrund seiner Prüfung oder aufgrund der eingeholten Stellungnahmen die vollständige oder teilweise Abweisung des Gesuches in Betracht, teilt es dies der gesuchstellenden Person mit."
+        },
+        {
+          "absatz": "3",
+          "text": "Zieht es in Betracht, dem Zugangsgesuch entgegen den eingeholten Stellungnahmen zu entsprechen, teilt es dies den betroffenen Drittpersonen oder anderen öffentlichen Organen mit."
+        },
+        {
+          "absatz": "4",
+          "text": "Innert 30 Tagen nach Eingang der Mitteilung gemäss den Abs. 2 und 3 können die gesuchstellende Person und die Drittperson beim öffentlichen Organ den Erlass einer anfechtbaren Verfügung verlangen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "1ad01dded9e20365a6204b6a3ce6a06bf427040fe32b5af896cf667e34fa1dab"
+    },
+    {
+      "id": "kanton/BS/153.260/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ gewährt Zugang zu den Informationen, indem es",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Informationen schriftlich, in Form von Kopien oder auf Datenträgern aushändigt oder"
+            },
+            {
+              "marke": "b",
+              "text": "mit dem Einverständnis der gesuchstellenden Person die Informationen mündlich mitteilt oder ihr vor Ort Einsicht in die Informationen gewährt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Auf ein mündlich gestelltes Zugangsgesuch hin kann das öffentliche Organ der gesuchstellenden Person die Informationen mündlich mitteilen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "8fa52ad100afc5184f297c4a07cf031e9443744c3f80593cb0a5f7c0ab6da18f"
+    },
+    {
+      "id": "kanton/BS/153.260/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das öffentliche Organ hat der gesuchstellenden Person innert 30 Tagen nach Eingang des Gesuches",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zugang zu den Informationen zu gewähren,"
+            },
+            {
+              "marke": "b",
+              "text": "eine Mitteilung gemäss § 33 Abs. 2 zukommen zu lassen oder,"
+            },
+            {
+              "marke": "c",
+              "text": "wenn die Frist nicht eingehalten werden kann, unter Angabe der Gründe mitzuteilen, bis wann der Entscheid vorliegen wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "ea14e205b3a3ef3155bd9ee07f6d8ac937f693c0d347510a4c0656bb11dbcd9c"
+    },
+    {
+      "id": "kanton/BS/153.260/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren auf Zugang zu Informationen werden in der Regel keine Gebühren erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine angemessene Gebühr nach Aufwand kann erhoben werden, in keinem Fall jedoch für den Zugang zu den eigenen Personendaten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei aufwändigen Verfahren, wie bei komplizierten Verhältnissen oder bei umfangreichen Anonymisierungen von Informationen;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Anfertigung von Kopien oder sonstigen Datenträgern für die gesuchstellende Person."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das öffentliche Organ weist die gesuchstellende Person darauf hin, wenn das Gesuch mit erheblichen Kostenfolgen verbunden ist; in diesem Fall kann es vor der weiteren Gesuchsbearbeitung einen Kostenvorschuss einfordern."
+        },
+        {
+          "absatz": "4",
+          "text": "Eignen sich Informationen für eine gewerbliche Nutzung, kann ein Entgelt erhoben werden, das sich nach dem Markt richtet."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat erlässt einen Gebührentarif."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "ec28784a1a2fa21f6ab076ce9262f100d9246ebe9b4f76455281693611ad8215"
+    },
+    {
+      "id": "kanton/BS/153.260/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton führt unter dem Namen «Die Datenschutzbeauftragte» oder «Der Datenschutzbeauftragte» eine unabhängige Aufsichtsstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann die Aufsichtsstelle auf Grund eines Staatsvertrags gemeinsam mit anderen Kantonen führen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "18aa5398a54d618e5b9062d5433e1c0a3ac3d5f24413ff42086c78865f338940"
+    },
+    {
+      "id": "kanton/BS/153.260/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte erfüllt die Aufgaben weisungsunabhängig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsstelle ist organisatorisch dem Büro des Grossen Rates zugeordnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kontrolle durch die Datenschutzbeauftragte oder den Datenschutzbeauftragten unterstehen nicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Mitglieder des Grossen Rates und der Grosse Rat als Behörde und"
+            },
+            {
+              "marke": "b",
+              "text": "der Regierungsrat als Behörde;"
+            },
+            {
+              "marke": "c",
+              "text": "Datenbearbeitungen in hängigen Verfahren der Zivil- und Strafrechtspflege und"
+            },
+            {
+              "marke": "d",
+              "text": "Datenbearbeitungen in hängigen Verfahren der Verfassungs- und Verwaltungsgerichtsbarkeit."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "328a940c382fb04d46a4ae1a11cdd2b8a9c567a22684f9e0fae2b2c252e99d7c"
+    },
+    {
+      "id": "kanton/BS/153.260/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsichtsstelle wird von einer in Datenschutzfragen ausgewiesenen Fachperson (der oder dem Beauftragten) geleitet. Die Besoldung erfolgt analog den Zivilgerichtspräsidentinnen und Zivilgerichtspräsidenten des Kantons Basel-Stadt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Grosse Rat wählt die Beauftragte oder den Beauftragten auf Antrag seiner Wahlvorbereitungskommission auf eine feste Amtsdauer von sechs Jahren. Der Wahlvorschlag ist dem Regierungsrat zur Stellungnahme vorzulegen. Wiederwahl ist möglich."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Amt der oder des Beauftragten kann auf zwei Personen mit maximal 100 Stellenprozenten aufgeteilt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die oder der Beauftragte kann bei schwerwiegender Amtspflichtverletzung oder bei fachlichem Ungenügen vom Grossen Rat mit Zweidrittelsmehrheit vor Ablauf der Amtsdauer abgewählt werden."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "ddd21b00fb8d1381cf2772c59010816ea84b23869651683eb18e6f968f1f7d0a"
+    },
+    {
+      "id": "kanton/BS/153.260/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Beauftragte darf kein anderes öffentliches Amt, kein Verwaltungsratsmandat, keine leitende Funktion in einer politischen Partei und keine andere Erwerbstätigkeit ausüben. Der Grosse Rat kann Ausnahmen bewilligen."
+        },
+        {
+          "absatz": "2",
+          "text": "Versieht die oder der Beauftragte ein Teilpensum der Aufsichtsstelle, so darf sie oder er mit Zustimmung der Wahlvorbereitungskommission eine andere Erwerbstätigkeit ausüben oder eine solche aufnehmen. Die Wahlvorbereitungskommission erteilt ihre Zustimmung nicht, wenn wichtige Gründe entgegenstehen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "4403026ab05f4db941d253b69565407f08cc7346ef7b7c292dbb4b54b6c65163"
+    },
+    {
+      "id": "kanton/BS/153.260/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Personalrecht des Kantons ist auf die Beauftragte oder den Beauftragten und die weiteren Mitarbeitenden anwendbar, soweit dieses Gesetz nichts anderes vorsieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die oder der Beauftragte ist im Rahmen des vom Grossen Rat genehmigten Budgets für die Personalgeschäfte der weiteren Mitarbeitenden der Aufsichtsstelle und für personalrechtliche Massnahmen zuständig. Das Rechtsmittelverfahren richtet sich nach §§ 40ff. Personalgesetz."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Büro des Grossen Rates entscheidet über die Einreihung des Personals nach Anhörung des Zentralen Personaldienstes. Die Einreihung erfolgt nach den im Lohngesetz vom 18. Januar 1995 vorgesehenen Grundsätzen der Arbeitsbewertung."
+        },
+        {
+          "absatz": "4",
+          "text": "Verfügungen, welche Einreihungen betreffen, sowie die Ablehnung, ein Verfahren betr. Einreihung durchzuführen, können innert 30 Tagen von der Stelleninhaberin oder dem Stelleninhaber mit Einsprache beim Büro des Grossen Rates angefochten werden. Dieses entscheidet nach Anhörung der Begutachtungskommission."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "a4b18572dc64a23137f0fa9aaf609feaf97871067c0fe6cb015642b9af7ba9f9"
+    },
+    {
+      "id": "kanton/BS/153.260/art_42",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "42",
+      "artikelLabel": "§ 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsichtsstelle erstellt ihr Budget selbständig."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "18b28f0f55b139ed8732c3ca0c6f757fdfccd3a67f65bb16bd5b2e99b985b642"
+    },
+    {
+      "id": "kanton/BS/153.260/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Landgemeinden können für den kommunalen Bereich eine eigene Aufsichtsstelle führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sehen sie davon ab oder erfüllt die kommunale Aufsichtsstelle die Anforderungen an die Unabhängigkeit nicht, so ist die oder der kantonale Datenschutzbeauftragte zuständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Die oder der kommunale Beauftragte und allfällige weitere Mitarbeitende dürfen zusätzlich keine anderen behördlichen Funktionen in der Gemeinde wahrnehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die §§ 44 bis 50 gelten für die kommunale Aufsichtsstelle in ihrem Zuständigkeitsbereich."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "885a3a7204e61468ec471f5806bfaa7ee874b78c2a7712c8a0f666af18255cdd"
+    },
+    {
+      "id": "kanton/BS/153.260/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kontrolliert nach einem autonom aufzustellenden Prüfprogramm die Anwendung der Bestimmungen über den Umgang mit Informationen;"
+            },
+            {
+              "marke": "b",
+              "text": "nimmt Stellung zu Rechtsetzungs- und anderen Vorhaben, die ihr oder ihm nach § 13 zur Vorabkonsultation vorzulegen sind;"
+            },
+            {
+              "marke": "c",
+              "text": "berät die öffentlichen Organe in Fragen des Umgangs mit Informationen;"
+            },
+            {
+              "marke": "d",
+              "text": "berät die betroffenen Personen über ihre Rechte;"
+            },
+            {
+              "marke": "e",
+              "text": "vermittelt zwischen betroffenen Personen und öffentlichen Organen;"
+            },
+            {
+              "marke": "f",
+              "text": "behandelt aufsichtsrechtliche Anzeigen nach § 28a;"
+            },
+            {
+              "marke": "g",
+              "text": "sensibilisiert die öffentlichen Organe für ihre datenschutzrechtlichen Pflichten und die Öffentlichkeit für die Anliegen des Datenschutzes und der Transparenz;"
+            },
+            {
+              "marke": "h",
+              "text": "verfolgt die für den Schutz von Personendaten und das Öffentlichkeitsprinzip massgeblichen Entwicklungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "b34a274c4017a31133cda77afa40e417abf310c146c2ce8d424d2df7e8101551"
+    },
+    {
+      "id": "kanton/BS/153.260/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte kann bei öffentlichen Organen, bei Auftragsdatenbearbeiterinnen und Auftragsdatenbearbeitern sowie bei Drittpersonen, die von einem öffentlichen Organ Personendaten erhalten haben, ungeachtet allfälliger Geheimhaltungspflichten, schriftlich oder mündlich Auskunft über Datenbearbeitungen einholen, Einsicht in alle Unterlagen nehmen, Besichtigungen durchführen und sich Bearbeitungen vorführen lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlichen Organe, die Auftragsdatenbearbeiterinnen und Auftragsdatenbearbeiter sowie Drittpersonen, die von einem öffentlichen Organ Personendaten erhalten haben, sind verpflichtet, die Aufsichtsstelle bei der Erfüllung ihrer Aufgaben zu unterstützen. Sie wirken insbesondere an der Feststellung des Sachverhaltes mit."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berichte, welche die oder der Datenschutzbeauftragte im Rahmen der Kontrolltätigkeit erstellt, und die ihnen zugrunde liegenden Materialien sind nicht öffentlich zugänglich im Sinne von § 25 Abs. 1."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "44def923d967b3acc7dca3f2eb1c541f83286c5d8379d7ce580598139a884979"
+    },
+    {
+      "id": "kanton/BS/153.260/art_46",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte kann zum Umgang mit Informationen Empfehlungen abgeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das öffentliche Organ, an welches die Empfehlung gerichtet ist, hat gegenüber der oder dem Datenschutzbeauftragten zu erklären, ob es der Empfehlung folgen will."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "bf5fdaa55a9adf33b2ac6e778cb3e2adb68d18d1c8db93da94d8421d1c5b9dc5"
+    },
+    {
+      "id": "kanton/BS/153.260/art_47",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn ein öffentliches Organ erklärt, der Empfehlung der oder des Datenschutzbeauftragten nicht folgen zu wollen, oder tatsächlich der Empfehlung nicht folgt, kann die oder der Datenschutzbeauftragte die Empfehlung oder Teile davon als Weisung in Form einer Verfügung erlassen, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Empfehlung das Bearbeiten von Personendaten betrifft und"
+            },
+            {
+              "marke": "b",
+              "text": "das Interesse an der Durchsetzung schwer wiegt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Weisung kann gegenüber dem Appellationsgericht erlassen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die oder der Datenschutzbeauftragte kann direkt eine Weisung erlassen, wenn absehbar ist, dass das öffentliche Organ eine Empfehlung ablehnen oder ihr keine Folge leisten wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden schutzwürdige Interessen offensichtlich gefährdet oder verletzt, so kann die oder der Datenschutzbeauftragte anordnen, dass das öffentliche Organ die Bearbeitung bis zur erfolgten Überprüfung durch das Appellationsgericht einschränkt oder einstellt."
+        },
+        {
+          "absatz": "5",
+          "text": "Das öffentliche Organ, an welches die Weisung gerichtet ist, kann sie mit einem Rekurs nach den allgemeinen Vorschriften beim Appellationsgericht anfechten."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "d7530e6044f759d7576bbb34d7e485a35108e7e95d64cd79832897df052d1f81"
+    },
+    {
+      "id": "kanton/BS/153.260/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte arbeitet zur Erfüllung ihrer oder seiner Aufgaben mit den Organen der anderen Kantone, des Bundes und des Auslandes, welche die gleichen Aufgaben erfüllen, zusammen."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "0bf4e408238e152d72261e4149647f299fea722853df517b328046f158d13fd7"
+    },
+    {
+      "id": "kanton/BS/153.260/art_49",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "49",
+      "artikelLabel": "§ 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Beauftragte und die Mitarbeitenden unterstehen bezüglich der Informationen, die sie bei ihrer Tätigkeit zur Kenntnis nehmen, der gleichen Pflicht zur Verschwiegenheit wie das bearbeitende öffentliche Organ."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Pflicht zur Verschwiegenheit gilt über die Beendigung der Funktion hinaus."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "243619860114e69287460f35e44a8570109310cb303bf6e7f7018b15a1413109"
+    },
+    {
+      "id": "kanton/BS/153.260/art_50",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "50",
+      "artikelLabel": "§ 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Datenschutzbeauftragte erstattet der Wahlbehörde und der Öffentlichkeit periodisch und bei Bedarf Bericht über Umfang und Schwerpunkte der Tätigkeiten, über wichtige Feststellungen und Beurteilungen sowie über die Wirkung des Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "85ca7f995cf134b92a3d7d68d6c9f1120bb10e359b8890769f52cc5914f4774b"
+    },
+    {
+      "id": "kanton/BS/153.260/art_51",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "51",
+      "artikelLabel": "§ 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse bestraft wird, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Auftragsdatenbearbeiterin oder Auftragsdatenbearbeiter gemäss § 7 ohne ausdrückliche Ermächtigung des auftraggebenden öffentlichen Organs vorsätzlich oder fahrlässig Personendaten für sich oder andere verwendet oder anderen bekannt gibt oder"
+            },
+            {
+              "marke": "b",
+              "text": "als Auftragsdatenbearbeiterin oder Auftragsdatenbearbeiter gemäss § 7 ohne vorgängige schriftliche Einwilligung des auftraggebenden öffentlichen Organs die Datenbearbeitung einer weiteren Auftragsdatenbearbeiterin und einem weiteren Auftragsdatenbearbeiter überträgt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer Personendaten, die sie oder er von einem öffentlichen Organ zum Bearbeiten zu nicht personenbezogenen Zwecken erhalten hat, vorsätzlich oder fahrlässig entgegen der Verpflichtung gemäss § 22 Abs. 4 für andere Zwecke bearbeitet oder an Dritte weitergibt, wird mit Busse bestraft."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "2dcfb3e6227d579cabdba4461281ae250cc8548ec3fdc338e5ea65268a472ead"
+    },
+    {
+      "id": "kanton/BS/153.260/art_52",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "52",
+      "artikelLabel": "§ 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Aufenthaltsgesetz Das Gesetz über das Aufenthaltswesen (Aufenthaltsgesetz) vom 16. September 1998 wird wie folgt geändert:"
+            },
+            {
+              "marke": "2",
+              "text": "Organisationsgesetz Das Gesetz betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz) vom 22. April 1976 wird wie folgt geändert:"
+            },
+            {
+              "marke": "3",
+              "text": "Archivgesetz Das Gesetz über das Archivwesen (Archivgesetz) vom 11. September 1996 wird wie folgt geändert:"
+            },
+            {
+              "marke": "4",
+              "text": "Personalgesetz Das Personalgesetz vom 17. November 1999 wird wie folgt geändert:"
+            },
+            {
+              "marke": "5",
+              "text": "Steuergesetz Das Gesetz über die direkten Steuern (Steuergesetz) vom 12. April 2000 wird wie folgt geändert:"
+            },
+            {
+              "marke": "6",
+              "text": "Einführungsgesetz zum Bundesgesetz über die Invalidenversicherung für eine IV-Stelle Basel-Stadt Das Einführungsgesetz zum Bundesgesetz über die Invalidenversicherung für eine IV-Stelle Basel-Stadt vom 19. Januar 1994 wird wie folgt geändert:"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "20f91d71ab7ed42fe3c28167dffc1605e2a27ccae7fda60c4e489e27834509be"
+    },
+    {
+      "id": "kanton/BS/153.260/art_53",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "53",
+      "artikelLabel": "§ 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Wirksamwerden dieses Gesetzes wird das Gesetz über den Schutz von Personendaten (Datenschutzgesetz) vom 18. März 1992 aufgehoben."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "df6c42503707cbb0a89a6fa2aa1f8ca043ccbc147c6ef9bd181bed5ab0de2af0"
+    },
+    {
+      "id": "kanton/BS/153.260/art_54",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "54",
+      "artikelLabel": "§ 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Innerhalb zweier Jahre nach Wirksamwerden dieses Gesetzes sind die Verzeichnisse der Informationsbestände mit Personendaten gemäss § 24 zu veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann die Frist auf begründetes Gesuch hin um ein Jahr verlängern."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "1f770ab8da30bdf87c461fb2af8f1476789df1cc91ed8661b8e89daed9bb0b53"
+    },
+    {
+      "id": "kanton/BS/153.260/art_55",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informations- und Datenschutzgesetz, IDG (153.260)",
+      "artikel": "55",
+      "artikelLabel": "§ 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz ist zu publizieren. Der Regierungsrat bestimmt nach Eintritt der Rechtskraft den Zeitpunkt der Wirksamkeit."
+        }
+      ],
+      "stand": "2025-01-16",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.260",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "12769888e4397ef836af3cfb9547a85b",
+      "sha": "d82fc9853410af35b2eecdfd2e82458691c1d3c1dd5553c4242f55ae32df565a"
+    }
+  ]
+}

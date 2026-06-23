@@ -1,0 +1,411 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/154.128/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte führen eine eigene von der kantonalen Verwaltung unabhängige Informatik und eine eigene Informatikstelle (IT der Gerichte)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte beziehen die Basisleistungen für Informations- und Kommunikationstechnologie (IKT-Basisleistungen) primär bei den kantonalen Leistungserbringerinnen und Leistungserbringern."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gerichte wirken in den zentralen kantonalen Informatik-Gremien mit."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "162bc9d16ddf841bbb47f930ccc72827191353f0a842ee1e79241166cb28e62a"
+    },
+    {
+      "id": "kanton/BS/154.128/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Informatik der Gerichte wird wahrgenommen durch den Gerichtsrat, den IT-Ausschuss, die Verwaltungschefin oder den Verwaltungschef des Appellationsgerichts, die IT der Gerichte sowie die IT-Ansprechpersonen der einzelnen Gerichte."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "9245dd06034fb80b70c21a70fe8c36c0a95e9845c7dd59f6ae7f9fb1db4d8bba"
+    },
+    {
+      "id": "kanton/BS/154.128/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gerichtsrat steuert die Informatik der Gerichte und trifft Entscheide mit strategischer Bedeutung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gerichtsrat ist insbesondere zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Erlass von strategischen Leitlinien und Richtlinien;"
+            },
+            {
+              "marke": "b",
+              "text": "den Entscheid darüber, welche kantonalen Weisungen bei den Gerichten nicht anwendbar sind;"
+            },
+            {
+              "marke": "c",
+              "text": "den Entscheid darüber, welche Dienste nicht von den kantonalen Leistungserbringerinnen und Leistungserbringern bezogen werden;"
+            },
+            {
+              "marke": "d",
+              "text": "Einzelentscheidungen mit strategischer Bedeutung oder bei wesentlichen Divergenzen unter den einzelnen Gerichten;"
+            },
+            {
+              "marke": "e",
+              "text": "Entscheide, die ihm vom IT-Ausschuss oder auf Antrag eines Betroffenen überwiesen werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "487c928425933fa51897a3a83cdfca14899c2e1e1cbef137e7854ff7b5ce6f88"
+    },
+    {
+      "id": "kanton/BS/154.128/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der IT-Ausschuss unterstützt den Gerichtsrat bei der Wahrnehmung seiner Aufgaben und fördert den Informationsaustausch unter den einzelnen Gerichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der IT-Ausschuss ist insbesondere zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vorbereitung der Geschäfte des Gerichtsrats;"
+            },
+            {
+              "marke": "b",
+              "text": "die Begleitung der Umsetzung der Entscheide des Gerichtsrats und der dazu notwendigen Folgeentscheidungen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Entscheid über die Einführung und Handhabung neuer und bestehender Software mit Auswirkungen auf die Nutzerinnen und Nutzer, aber ohne strategische Bedeutung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Entscheid über das Ausrüstungsniveau der Arbeitsplätze mit der notwendigen Hardware;"
+            },
+            {
+              "marke": "e",
+              "text": "den Entscheid über Dienstleistungen der IT der Gerichte für Dritte, soweit diese keine relevanten Auswirkungen auf die Ressourcen der IT der Gerichte haben;"
+            },
+            {
+              "marke": "f",
+              "text": "den regelmässigen Informationsaustausch mit der Verwaltungschefin oder dem Verwaltungschef des Appellationsgerichts und mit der IT der Gerichte."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der IT-Ausschuss führt ein Beschlussprotokoll. Er informiert den Gerichtsrat und die IT-Ansprechpersonen der einzelnen Gerichte über seine Entscheide."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beschlüsse des IT-Ausschusses können vom Gerichtsrat überprüft werden."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "444c8a9c7ffcd37989e0eb85905a4e3981a9dde100f765d3dafd976e13626a98"
+    },
+    {
+      "id": "kanton/BS/154.128/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der IT-Ausschuss setzt sich zusammen aus der Verwaltungschefin oder dem Verwaltungschef des Appellationsgerichts, der Leiterin oder dem Leiter der IT der Gerichte, sowie weiteren durch den Gerichtsrat unter angemessener Vertretung der einzelnen Gerichte bestimmten Mitgliedern, darunter mindestens je eine Vertretung des Zivilgerichts, des Strafgerichts und des Sozialversicherungsgerichts."
+        },
+        {
+          "absatz": "2",
+          "text": "Der IT-Ausschuss wird von der Verwaltungschefin oder dem Verwaltungschef des Appellationsgerichts geleitet."
+        },
+        {
+          "absatz": "3",
+          "text": "Der IT-Ausschuss beschliesst mit der Mehrheit seiner Mitglieder."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "8712c9133424b74a228a51b2e7196422c65911a75316bbcc9a8c5c0000408649"
+    },
+    {
+      "id": "kanton/BS/154.128/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungschefin oder der Verwaltungschef des Appellationsgerichts steht der IT der Gerichte vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verantwortung für die Planung, Erarbeitung und Einhaltung der IT-Strategie;"
+            },
+            {
+              "marke": "b",
+              "text": "Gewährleistung der notwendigen Informatikdienstleistungen zusammen mit der IT der Gerichte;"
+            },
+            {
+              "marke": "c",
+              "text": "Gewährleistung der Kommunikation mit den IT-Ansprechpersonen der einzelnen Gerichte;"
+            },
+            {
+              "marke": "d",
+              "text": "Vertretung der Gerichte im zentralen kantonalen IT-Steuerungsorgan."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "8519e4c92dfee5297151520ae7f56c2670162d8de610b2d2d6e17358a4bf1aee"
+    },
+    {
+      "id": "kanton/BS/154.128/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die IT der Gerichte ist verantwortlich für sämtliche Informatikdienstleistungen, welche für die Aufgabenerfüllung der Gerichte notwendig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Umsetzung der Beschlüsse des Gerichtsrates und des IT-Ausschusses;"
+            },
+            {
+              "marke": "b",
+              "text": "Mitwirkung bei der Entwicklung und Umsetzung der Informatikstrategie des Gerichtsrats;"
+            },
+            {
+              "marke": "c",
+              "text": "Entwicklung, Beschaffung, Bereitstellung und Unterhalt von IKT-Anwendungen (Hard- und Software);"
+            },
+            {
+              "marke": "d",
+              "text": "Selbstständige Beschaffung der notwendigen Hard- und Software - im Rahmen der erteilten Aufträge und unter Einhaltung des Beschaffungsgesetzes. Dies gilt auch für die Wahl der Lieferantinnen und Lieferanten, der Partnerinnen und Partner des Supports;"
+            },
+            {
+              "marke": "e",
+              "text": "Einhaltung und Umsetzung der Vorgaben im Bereich der Informationssicherheit;"
+            },
+            {
+              "marke": "f",
+              "text": "Regelmässigen Kontakt zu den IT-Ansprechpersonen und den Kanzleimitarbeitenden der einzelnen Gerichte;"
+            },
+            {
+              "marke": "g",
+              "text": "Betreibung einer Hotline für die Anwendenden;"
+            },
+            {
+              "marke": "h",
+              "text": "Schulung der Anwendenden;"
+            },
+            {
+              "marke": "i",
+              "text": "Technische Koordination mit den Informatikstellen des Kantons und Mitwirkung in kantonalen Gremien;"
+            },
+            {
+              "marke": "j",
+              "text": "Einhaltung der finanziellen Vorgaben;"
+            },
+            {
+              "marke": "k",
+              "text": "Beobachtung der Entwicklung kantonaler Weisungen und Information des IT-Ausschusses;"
+            },
+            {
+              "marke": "l",
+              "text": "Beobachtung der Entwicklung der Technologien und Sicherheitsstandards sowie Information des IT-Ausschusses."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die IT der Gerichte untersteht der Verwaltungschefin oder dem Verwaltungschef des Appellationsgerichts und ist Teil des Appellationsgerichts."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "ec92aed6cf5618c00798b096db584f68457a3e40452fd71ffa734c4841510aea"
+    },
+    {
+      "id": "kanton/BS/154.128/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte bestimmen ihre für IT-Bedürfnisse zuständige Person mit entsprechenden Managementkompetenzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kenntnisse der vorhandenen IKT-Anwendungen und Tools;"
+            },
+            {
+              "marke": "b",
+              "text": "Information der Mitarbeitenden über die zur Verfügung stehenden Anwendungen und Instruktion darüber;"
+            },
+            {
+              "marke": "c",
+              "text": "Regelmässige Treffen und Informationsaustausch mit der IT der Gerichte;"
+            },
+            {
+              "marke": "d",
+              "text": "Ansprechperson für die IT der Gerichte;"
+            },
+            {
+              "marke": "e",
+              "text": "Meldung der Bedürfnisse ihres Gerichts an die IT der Gerichte;"
+            },
+            {
+              "marke": "f",
+              "text": "Mitwirkung bei der Umsetzung der IT-Vorgaben und Richtlinien."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "50c40608f1d5e19cbb9c164b9aaa4156924f0d09bcc3b05713d5090518fac0da"
+    },
+    {
+      "id": "kanton/BS/154.128/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Informatik der Gerichte folgt den eidgenössischen und kantonalen gesetzlichen Vorgaben. Die Gesetze und Verordnungen des Kantons Basel-Stadt im IKT-Bereich sind anwendbar, soweit die Gerichte nicht ausdrücklich davon ausgenommen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Vorgaben und Weisungen des Regierungsrates und des zentralen kantonalen IT-Steuerungsorgans werden von den Gerichten in der jeweiligen Fassung analog übernommen, soweit diese mit den Bedürfnissen der Gerichte im Einklang stehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Gerichtsrat beschliesst über Abweichungen."
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "45c329e9929481dae4307e86b39f11c985a61cce51e429b528e4cb05ae2abe06"
+    },
+    {
+      "id": "kanton/BS/154.128/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informatikreglement (154.128)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte wenden die Verordnung über die Informationssicherheit (ISV) vom 13. Dezember 2016 mit folgenden Abweichungen an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Der Gerichtsrat trägt die Gesamtverantwortung für die Informationssicherheit der Gerichte (§ 3 Abs. 1 ISV);"
+            },
+            {
+              "marke": "b",
+              "text": "Der Gerichtsrat entscheidet bei einem Dissens zwischen der oder dem departementalen Beauftragten für Informationssicherheit (ISBD) und dem oder der kantonalen Beauftragten für Informationssicherheit (ISB) in Absprache mit dem Steuerungsorgan für Informationssicherheit über Ausnahmen von Informationssicherheitsmassnahmen (§ 4 Abs. 3 ISV);"
+            },
+            {
+              "marke": "c",
+              "text": "Die Gerichte wirken im Steuerungsorgan für Informationssicherheit und in der Kommission für Informationssicherheit mit (gemäss §§ 4 und 6 ISV);"
+            },
+            {
+              "marke": "d",
+              "text": "Der Gerichtsrat übernimmt die Aufgaben und Funktionen eines Departementes. Die Leiterin oder der Leiter der IT der Gerichte übernimmt die Aufgaben und Funktionen der oder des ISBD (analog §§ 7 und 9 ISV)."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-21",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.128",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e11b46a8b0eb933ecbb7cc359a012ee2",
+      "sha": "a44723930c9cf54d643bd01e326510686ef06b8f95ec9e784f871d212e4c7338"
+    }
+  ]
+}

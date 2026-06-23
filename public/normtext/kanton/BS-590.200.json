@@ -1,0 +1,464 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/590.200/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "FWGeV (590.200)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Feuerwehr stellt ihren Aufwand nach folgenden Ansätzen zuzüglich Mehrwertsteuer in Rechnung: Personalkosten pro Std. / pro angefangene 1/4 Std.",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Offizier/Offizierin Fr. 140 / 35"
+            },
+            {
+              "marke": "2",
+              "text": "Unteroffizier/Unteroffizierin Fr. 120 / 30"
+            },
+            {
+              "marke": "3",
+              "text": "Personal der Mannschaft Fr. 108 / 27"
+            },
+            {
+              "marke": "4",
+              "text": "Administrative Mitarbeiter/Mitarbeiterin Fr. 108 / 27"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Fahrzeuge, Anhänger, Wechselladebehälter (ohne Personalkosten)",
+          "items": [
+            {
+              "marke": "5",
+              "text": "Anschaffungskosten des Fahrzeugs bis Fr. 100'000"
+            },
+            {
+              "marke": "5",
+              "text": "Grundgebühr pro Einsatz Fr. 80"
+            },
+            {
+              "marke": "5",
+              "text": "pro angefangene 1/4 Std. Fr. 30"
+            },
+            {
+              "marke": "6",
+              "text": "Anschaffungskosten des Fahrzeugs von Fr. 100'001 bis Fr. 300'000"
+            },
+            {
+              "marke": "6",
+              "text": "Grundgebühr pro Einsatz Fr. 100"
+            },
+            {
+              "marke": "6",
+              "text": "pro angefangene 1/4 Std. Fr. 45"
+            },
+            {
+              "marke": "7",
+              "text": "Anschaffungskosten des Fahrzeugs von Fr. 300'001 bis Fr. 800'000"
+            },
+            {
+              "marke": "7",
+              "text": "Grundgebühr pro Einsatz Fr. 170"
+            },
+            {
+              "marke": "7",
+              "text": "pro angefangene 1/4 Std. Fr. 80"
+            },
+            {
+              "marke": "8",
+              "text": "Anschaffungskosten des Fahrzeugs ab Fr. 800'001"
+            },
+            {
+              "marke": "8",
+              "text": "Grundgebühr pro Einsatz Fr. 180"
+            },
+            {
+              "marke": "8",
+              "text": "pro angefangene 1/4 Std. Fr. 100"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Wasserfahrzeuge",
+          "items": [
+            {
+              "marke": "9",
+              "text": "Feuerlöschboot"
+            },
+            {
+              "marke": "9",
+              "text": "Grundgebühr pro Einsatz Fr. 1'200"
+            },
+            {
+              "marke": "9",
+              "text": "pro angefangene 1/4 Stunde Fr. 300"
+            },
+            {
+              "marke": "10",
+              "text": "Beiboot zu Feuerlöschboot"
+            },
+            {
+              "marke": "10",
+              "text": "Grundgebühr pro Einsatz Fr. 100"
+            },
+            {
+              "marke": "10",
+              "text": "pro angefangene 1/4 Stunde Fr. 25"
+            },
+            {
+              "marke": "11",
+              "text": "Mehrzweckboot"
+            },
+            {
+              "marke": "11",
+              "text": "Grundgebühr pro Einsatz Fr. 100"
+            },
+            {
+              "marke": "11",
+              "text": "pro angefangene 1/4 Stunde Fr. 25"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Retablierungen/Revisionen",
+          "items": [
+            {
+              "marke": "12",
+              "text": "Pumpe/Sauger pro Stk. und Einsatz Fr. 40"
+            },
+            {
+              "marke": "13",
+              "text": "Chemikalien Pumpe/Sauger pro Stk. und Einsatz Fr. 100"
+            },
+            {
+              "marke": "14",
+              "text": "Chemievollschutzanzug pro Stk. und Einsatz Fr. 800"
+            },
+            {
+              "marke": "15",
+              "text": "Chemieschutzanzug leicht pro Stk. und Einsatz Fr. 50"
+            },
+            {
+              "marke": "16",
+              "text": "Atemschutzgeräte Fr. 55"
+            },
+            {
+              "marke": "17",
+              "text": "Kreislaufgeräte Fr. 250"
+            },
+            {
+              "marke": "18",
+              "text": "Pressluftatmer und Filtermasken nach Aufwand"
+            },
+            {
+              "marke": "19",
+              "text": "Bindemittel gemäss Rechnung des Lieferanten"
+            },
+            {
+              "marke": "20",
+              "text": "Pulverfüllungen gemäss Rechnung des Lieferanten"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Automatische Gefahrenmeldeanlagen (GMA)",
+          "items": [
+            {
+              "marke": "21",
+              "text": "Erstellung eines Einsatzplanes pro Std. Fr. 108"
+            },
+            {
+              "marke": "22",
+              "text": "Anschluss inkl. Datenaufnahme Pauschale einmalig Fr. 500"
+            },
+            {
+              "marke": "23",
+              "text": "Schlüsseldepot jährlich pauschal Fr. 200"
+            },
+            {
+              "marke": "24",
+              "text": "Fehlalarmeinsatz bei GMA pauschal Fr. 1'500"
+            },
+            {
+              "marke": "24",
+              "text": "nach 30 Min. Wartezeit pro angef. 1/4 Std. Fr. 375"
+            },
+            {
+              "marke": "25",
+              "text": "Abnahme einer GMA nach Aufwand"
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Instruktionen/Führungen/Besichtigungen",
+          "items": [
+            {
+              "marke": "26",
+              "text": "Instruktion Handfeuerlöscher"
+            },
+            {
+              "marke": "26",
+              "text": "bis 10 teilnehmende Personen Fr. 1'400"
+            },
+            {
+              "marke": "26",
+              "text": "ab 11. teilnehmende Person pro zusätzliche Person Fr. 50"
+            },
+            {
+              "marke": "27",
+              "text": "Führungen Wache"
+            },
+            {
+              "marke": "27",
+              "text": "bis 20 Personen Fr. 200"
+            },
+            {
+              "marke": "27",
+              "text": "bis 40 Personen Fr. 400"
+            },
+            {
+              "marke": "27",
+              "text": "für Feuerwehren und staatl. Institutionen frei"
+            },
+            {
+              "marke": "28",
+              "text": "Besichtigung Löschboot"
+            },
+            {
+              "marke": "28",
+              "text": "pauschal Fr. 300"
+            },
+            {
+              "marke": "28",
+              "text": "für Feuerwehren und staatl. Institutionen frei"
+            },
+            {
+              "marke": "29",
+              "text": "Fahrt mit Löschboot"
+            },
+            {
+              "marke": "29",
+              "text": "pauschal Fr. 1'000"
+            },
+            {
+              "marke": "29",
+              "text": "für Feuerwehren und staatl. Institutionen Fr. 500"
+            },
+            {
+              "marke": "30",
+              "text": "diverse Instruktionen und Kursangebote nach Aufwand"
+            }
+          ]
+        },
+        {
+          "absatz": "7",
+          "text": "Raummieten",
+          "items": [
+            {
+              "marke": "31",
+              "text": "Theoriesaal gross"
+            },
+            {
+              "marke": "31",
+              "text": "ganzer Tag (8 Std.) pauschal Fr. 400"
+            },
+            {
+              "marke": "31",
+              "text": "halber Tag (4 Std.) pauschal Fr. 200"
+            },
+            {
+              "marke": "32",
+              "text": "Theoriesaal klein"
+            },
+            {
+              "marke": "32",
+              "text": "ganzer Tag (8 Std.) pauschal Fr. 200"
+            },
+            {
+              "marke": "32",
+              "text": "halber Tag (4 Std.) pauschal Fr. 100"
+            }
+          ]
+        },
+        {
+          "absatz": "8",
+          "text": "Diverses",
+          "items": [
+            {
+              "marke": "33",
+              "text": "Wärmebildkamera pauschal Fr. 30"
+            },
+            {
+              "marke": "34",
+              "text": "Werkzeuge/Material pro Einsatz pauschal Fr. 50"
+            },
+            {
+              "marke": "35",
+              "text": "Materialentsorgung gemäss Rechnung des Lieferanten"
+            },
+            {
+              "marke": "36",
+              "text": "Insektenbekämpfung pro Einsatz pauschal Fr. 150"
+            },
+            {
+              "marke": "37",
+              "text": "Feuersicherheitswachen nach Aufwand gemäss Abs. 1 und 2"
+            },
+            {
+              "marke": "38",
+              "text": "Unfugalarm nach Aufwand gemäss Abs. 1 und 2"
+            },
+            {
+              "marke": "39",
+              "text": "Abnahme von bewilligungspflichtigen In- und Outdoor Feuerwerken nach Aufwand"
+            },
+            {
+              "marke": "40",
+              "text": "Beratungen und Vorträge nach Aufwand"
+            },
+            {
+              "marke": "41",
+              "text": "Evakuierungsübungen nach Aufwand"
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/590.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b3d86fa3ef105c59b512b4a93d16ca7e",
+      "sha": "c82b1c0166848b02592a2eeb63d7eb513098bd117354a10c387c0f4faea5d6a6"
+    },
+    {
+      "id": "kanton/BS/590.200/art_1_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "FWGeV (590.200)",
+      "artikel": "1_a",
+      "artikelLabel": "§ 1a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leistungen der Feuerwehr im Zusammenhang mit Sport- und Konzertveranstaltungen werden nach Massgabe von § 18 Abs. 1 Ziff. 7 der Verordnung betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeiverordnung, PolV) vom 3. Juni 1997 in Rechnung gestellt."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/590.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b3d86fa3ef105c59b512b4a93d16ca7e",
+      "sha": "91a914f569bd2ea08e6497a645f81fd314cf0d70aec52b0c6acaa5259f7eae06"
+    },
+    {
+      "id": "kanton/BS/590.200/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "FWGeV (590.200)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für folgende Hilfe- und Dienstleistungen werden gestützt auf § 4 Abs. 5 des Gesetzes keine Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Bewässerung von öffentlichen Grünanlagen durch die Milizfeuerwehr ab Gefahrenstufe 5 im Bereich Wald (sehr grosse Waldbrandgefahr)"
+            },
+            {
+              "marke": "2",
+              "text": "Hilfeleistungen im Zoologischen Garten oder im Tierpark Lange Erlen"
+            },
+            {
+              "marke": "3",
+              "text": "Hilfeleistungen bei gemeinnützigen Anlässen"
+            },
+            {
+              "marke": "4",
+              "text": "Transporte für Museen des Kantons Basel-Stadt"
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/590.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b3d86fa3ef105c59b512b4a93d16ca7e",
+      "sha": "35fcc4e0d299cb0ccb9dc437b17b3793e90da43b5abe98315bde721cbcac7988"
+    },
+    {
+      "id": "kanton/BS/590.200/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "FWGeV (590.200)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Feuerwehr kann eine Kaution im Betrag der mutmasslich zu erwartenden Gebührenhöhe erheben, wenn die Bezahlung der Gebühren als nicht gesichert erscheint oder wenn die gebührenpflichtige Person keinen Wohnsitz in der Schweiz hat."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/590.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b3d86fa3ef105c59b512b4a93d16ca7e",
+      "sha": "558b846a16013ffb4f35b796e57549b2a5d93a4c0c030577e5144f162f17f262"
+    },
+    {
+      "id": "kanton/BS/590.200/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "FWGeV (590.200)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zahlungsfrist von Gebühren beträgt 30 Tage."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Ablauf der Zahlungsfrist kann ein Verzugszins von 5% erhoben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für nicht rechtzeitig bezahlte Gebühren können Mahngebühren und Umtriebsgebühren für Inkassomassnahmen erhoben werden. Diese betragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erste Mahnung gratis"
+            },
+            {
+              "marke": "b",
+              "text": "ab zweiter Mahnung je Fr. 40"
+            },
+            {
+              "marke": "c",
+              "text": "Umtriebsgebühr für Inkassomassnahmen Fr. 50"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehalten bleibt die Einforderung weiterer Gebühren im Zusammenhang mit Betreibungsverfahren."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/590.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b3d86fa3ef105c59b512b4a93d16ca7e",
+      "sha": "90138fbc388eccd710d2c2b799ddcb5b19859aa64101002af169ad574c75f01d"
+    }
+  ]
+}

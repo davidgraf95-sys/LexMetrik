@@ -1,0 +1,551 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/781.220/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Verschärfung von Emissionsbegrenzungen für Stickoxide, organische Stoffe und Dieselruss bei Anlagen im Sinne des Bundesgesetzes über den Umweltschutz."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "95bb4eeed17ab499a4e17aa10e743c1604ff9bd6bf77dee4d9293a1a310ea166"
+    },
+    {
+      "id": "kanton/BS/781.220/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Massgebend für die Beurteilung, ob die verschärften allgemeinen Emissionsbegrenzungen (§§ 5 und 6) eingehalten werden, sind die über die jährliche Betriebszeit gemittelten Konzentrationen bzw. Massenströme."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beurteilung der Emissionen von Anlagen nach den §§ 7–12 und 14 richtet sich nach Art. 15 der Luftreinhalte-Verordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine kontinuierliche Messung und Aufzeichnung der Emissionen ist anzuordnen, falls die Ermittlung der Emissionen anders nicht zuverlässig möglich ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "1baaba4c37af2b421c1a0d13fb7d758763b1100b0e7639eab0f3ce8aaa378810"
+    },
+    {
+      "id": "kanton/BS/781.220/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Emissionskonzentration von Stickoxiden, angegeben als Stickstoffdioxid, darf bei einer Fracht von mehr als 5 t/Jahr 100 mg/m&sup3; nicht übersteigen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "a8d14fd5aa90cb617930ba8bca3b67cbd00dac6bdf64587e1fdb3e22c8c1f0c2"
+    },
+    {
+      "id": "kanton/BS/781.220/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Bestimmungen gelten für Stoffe nach Anhang 1 Ziff. 72 der Luftreinhalte-Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Emissionskonzentration von Stoffen der Klassen 2 und 3 sowie die Summe der Emissionskonzentrationen von Stoffen der Klassen 1 bis 3 darf folgende Werte nicht übersteigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einer Fracht von 5 bis 10 t/Jahr sowie einem Massenstrom von 1,5 kg/h oder mehr 75 mg/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Fracht über 10 t/Jahr 50 mg/m&sup3;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "d879d0b2cc766a10aa083ee8a359d3106bb80657582d27e9c93f30141aa3838b"
+    },
+    {
+      "id": "kanton/BS/781.220/art_6_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "6_a",
+      "artikelLabel": "§ 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Firmen, deren stationäre Anlagen auf dem Firmenareal pro Jahr zusammen mehr als 3'000 kg organische Stoffe (Grenzfracht) der Klassen 1 bis 3 gemäss Anhang 1 Ziff. 72 der Luftreinhalte-Verordnung emittieren, müssen diese Emissionen soweit reduzieren, wie es dem neusten Stand der Technik entspricht und verhältnismässig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Ermittlung der Emissionsfracht sind auch die Emissionen organischer Gase und Dämpfe auf dem Firmenareal mit einzubeziehen, die nicht an der Quelle erfasst werden (diffuse Emissionen)."
+        },
+        {
+          "absatz": "3",
+          "text": "Betroffene Firmen erstellen einen Massnahmenkatalog zur Reduktion der Emissionen, wenn eine Überschreitung der Emissionsfracht gemäss Abs. 1 festgestellt wird oder wenn infolge der Inbetriebnahme einer neuen oder wesentlich geänderten Anlage eine solche Überschreitung zu erwarten ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Firmen, die nachweisen, dass sie die Vorkehrungen nach dem neusten Stand der Technik getroffen haben, sind von der Pflicht zur Erstellung eines Massnahmenkatalogs befreit."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "d46516d0f23eae4915928ddcc782035af7ecfe7bf3d1839ce3d724d15f677b03"
+    },
+    {
+      "id": "kanton/BS/781.220/art_7_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "7_b",
+      "artikelLabel": "§ 7b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Firmen, deren stationäre Anlagen für Reinigungs- und Entfettungsprozesse auf dem Firmenareal pro Jahr zusammen mehr als 400 kg organische Stoffe (Grenzfracht) der Klassen 1 bis 3 gemäss Anhang 1 Ziff. 72 der Luftreinhalte-Verordnung emittieren, müssen die Reinigungs- und Entfettungsprozesse soweit auf wässerige oder lösungsmittelarme Prozesse umstellen, als dies dem neusten Stand der Technik entspricht und verhältnismässig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Ermittlung der Emissionsfracht sind auch die Emissionen organischer Gase und Dämpfe auf dem Firmenareal mit einzubeziehen, die nicht an der Quelle erfasst werden (diffuse Emissionen)."
+        },
+        {
+          "absatz": "3",
+          "text": "Betroffene Firmen erstellen einen Massnahmenkatalog zur Reduktion der Emissionen. wenn eine Überschreitung der Emissionsfracht gemäss Abs. 1 festgestellt wird oder wenn infolge der Inbetriebnahme einer neuen oder wesentlich geänderten Anlage eine solche Überschreitung zu erwarten ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Firmen, die nachweisen, dass sie die Vorkehrungen nach dem neusten Stand der Technik getroffen haben, sind von der Pflicht zur Erstellung eines Massnahmenkatalogs befreit."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "a1e2975d792d323698c0411659162edbfa4861db7550857f602b7792ce96ecec"
+    },
+    {
+      "id": "kanton/BS/781.220/art_7_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "7_c",
+      "artikelLabel": "§ 7c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Massnahmenkatalog gemäss § 6a Abs. 3 oder § 7b Abs. 3 ist innert einem Jahr ab Feststellung der Überschreitung der Emissionsfracht beziehungsweise vor Inbetriebnahme einer neuen oder wesentlich geänderten Anlage zu erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Massnahmenkatalog enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben über den neusten Stand der Technik,"
+            },
+            {
+              "marke": "b",
+              "text": "die geplanten Massnahmen,"
+            },
+            {
+              "marke": "c",
+              "text": "den geplanten Zeitrahmen der Umsetzung der Massnahmen,"
+            },
+            {
+              "marke": "d",
+              "text": "die voraussichtliche Emissionsreduktion jeder Massnahme."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Massnahmenkatalog und der Nachweis über getroffene Vorkehrungen nach dem neusten Stand der Technik werden von der zuständigen Behörde genehmigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Behörde ordnet die Umsetzung der Massnahmen innert zwei Jahren an."
+        },
+        {
+          "absatz": "5",
+          "text": "Sofern die Grenzfracht gemäss § 6a Abs. 1 oder § 7b Abs. 1 trotz Umsetzung der Massnahmen nicht eingehalten werden kann, ist der Massnahmenkatalog in der Regel fünf Jahre nach Umsetzung der Massnahmen zu überarbeiten."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "de376b014ea700b205277f6232418169a37819c330e9fe1272c7cdb3134d1127"
+    },
+    {
+      "id": "kanton/BS/781.220/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Anlagen zum Beschichten und Bedrucken mit organischen Stoffen gilt § 6 Abs. 2."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "bf85f0923a5b0859e5396190928e9c0f0ed607c8877146f0d827bcf60be2f0b1"
+    },
+    {
+      "id": "kanton/BS/781.220/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "In Abweichung von Anhang 2 Ziff. 714 Abs. 1 lit. e der Luftreinhalte-Verordnung gilt der Emissionsgrenzwert unabhängig von dem dort festgelegten Massenstrom."
+        },
+        {
+          "absatz": "3",
+          "text": "Neue Anlagen zur Verbrennung von Altholz nach Anhang 2 Ziff. 721 Abs. 2 lit. a der Luftreinhalte-Verordnung mit einer Feuerungswärmeleistung (FWL) bis 10 MW müssen folgende Grenzwerte einhalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kohlenmonoxid 150 mg/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Stickoxide 150 mg/m&sup3;"
+            },
+            {
+              "marke": "c",
+              "text": "Feststoffe 10 mg/m&sup3;"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Für bestehende Anlagen zur Verbrennung von Altholz nach Anhang 2 Ziff. 721 Abs. 2 lit. a der Luftreinhalte-Verordnung mit einer FWL bis 10 MW mit zu hohen Emissionen wird eine Sanierungspflicht von zehn Jahren ab Inkrafttreten dieser Bestimmung gewährt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "6bd52a523ee98ae5b3cd36eae09dc32f29f841932d033c1d6141db6e3a952b83"
+    },
+    {
+      "id": "kanton/BS/781.220/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Bestimmungen gelten in der Regel für alle Otto- und Dieselmotoren, die länger als einen Tag an einem Ort eingesetzt werden, unabhängig vom Treibstoffverbrauch und der Betriebsdauer."
+        },
+        {
+          "absatz": "2",
+          "text": "Notstromgruppen müssen mit einem Betriebsstundenzähler ausgerüstet werden."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Neue Notstromgruppen ab einer FWL von 50 kW, müssen mit einem Partikelfiltersystem zur Abscheidung von Dieselruss ausgerüstet sein, das die Anforderungen nach Anhang 4 Ziff. 32 der Luftreinhalte-Verordnung erfüllt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Emissionen von Stickoxiden, angegeben als Stickstoffdioxid, dürfen bei Anlagen ab einer FWL von 100 kW, welche mehr als 30 Stunden im Jahr betrieben werden, folgende Werte nicht überschreiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Verwendung von Gasbrennstoffen 70 mg/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Verwendung von Dieselöl 110 mg/m&sup3;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Verwendung von Bio-, Holz- und Klärgas in der Regel 100 mg/m&sup3;"
+            }
+          ]
+        },
+        {
+          "absatz": "3bis",
+          "text": "Für Notstromgruppen ab einer FWL von 350 kW, die während höchstens 30 Stunden im Jahr betrieben werden, gelten folgende Grenzwerte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kohlenmonoxid 650 mg/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Stickoxide 2000 mg/m&sup3;"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Diese Grenzwerte beziehen sich auf einen Sauerstoffgehalt im Abgas von 5%."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Anlagen, die aufgrund der Bestimmungen in Abs. 3 und Abs. 3bis sanierungspflichtig werden, wird abweichend von Art. 10 der Luftreinhalte-Verordnung eine Sanierungsfrist von zehn Jahren gewährt. Vorbehalten bleiben die Bestimmungen von Art. 10 Abs. 2 lit. a und c der Luftreinhalte-Verordnung."
+        },
+        {
+          "absatz": "6",
+          "text": "Für neue Anlagen mit Magermotortechnik, die vor dem 1. Juli 1994 in Betrieb gesetzt werden, können auf begründetes Gesuch hin Erleichterungen gewährt werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "5ffaa3bbb2ae7468bbaf72d0d08f06334564410cb1c20bc22dc13daf02edfe39"
+    },
+    {
+      "id": "kanton/BS/781.220/art_11_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "11_a",
+      "artikelLabel": "§ 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/BS/781.220/art_11_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "11_b",
+      "artikelLabel": "§ 11b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieselbetriebene Maschinen und Geräte auf baustellenähnlichen Anlagen wie Steinbrüche, Deponien, Bauschuttrecyclinganlagen, Kies- und Betonwerke, Kompostierungs- und Vergärungsanlagen müssen mit einem Partikelfiltersystem zur Abscheidung von Dieselruss ausgerüstet sein, das die Anforderungen von Anhang 4 Ziff. 32 der Luftreinhalte-Verordnung erfüllt."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "3e1b1d6bc0440631e70fe67acf1b83124e0340acf47de812f1a44a4a1b0c3281"
+    },
+    {
+      "id": "kanton/BS/781.220/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Bestimmungen gelten für Feuerungsanlagen für Heizöl «Extra leicht» und Gasbrennstoffe mit einer FWL über 70 kW."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Emissionen von Stickoxiden gelten die Anforderungen nach Anhang 3 Ziff. 41, 61 und 62 der Luftreinhalte-Verordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "In Abweichung von Anhang 3 Ziff. 412 Abs. 1 und 62 Abs. 1 der Luftreinhalte-Verordnung gelten folgende Übergangsbestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Neuanlagen mit einer FWL unter 1 MW gelten die Emissionsgrenzwerte ab 1. Juli 1992;"
+            },
+            {
+              "marke": "b",
+              "text": "bestehende Anlagen mit einer FWL bis 5 MW, die ein Alter von 20 Jahren erreichen oder erreicht haben, müssen ab 1. Juli 1992 innert zwei Jahren saniert werden; ab 1. Januar 1995 gilt die Sanierungspflicht für Anlagen, die ein Alter von 15 Jahren erreichen;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        },
+        {
+          "absatz": "6",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "7e06efd951a63e559f123ef98230fa48eec6d846604022c0270c63eb9512b08f"
+    },
+    {
+      "id": "kanton/BS/781.220/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verbrennung von Kohle, Kohlebriketts oder Koks in Anlagen mit einer FWL über 70 kW sowie von Heizöl «Mittel» und Heizöl «Schwer» ist nur in Anlagen gestattet, deren Stickoxid-Emissionen (beim jeweils gültigen Sauerstoffbezugsgehalt gemäss Luftreinhalte-Verordnung) nicht höher sind als bei der Verwendung von Heizöl «Extra leicht»."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "568302c5935a983a72993f4bee4041d04b81f6f890ae4922bd9dda7720febe6f"
+    },
+    {
+      "id": "kanton/BS/781.220/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Bestimmungen gelten für Holzfeuerungen mit Holzbrennstoffen gemäss Anhang 5 Ziffer 3 der Luftreinhalteverordnung, die nach dem 1. Januar 1997 bewilligt oder ersetzt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Emissionen von Stickoxiden, angegeben als Stickstoffdioxid, dürfen folgende Grenzwerte nicht überschreiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Anlagen mit einer FWL von 350 kW bis 1 MW: 200 mg/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "für Anlagen mit einer FWL über 1 MW in der Regel: 150 mg/m&sup3;. Die Bezugswerte des Sauerstoffgehaltes im Abgas richten sich nach der Luftreinhalte-Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Emissionen für Feststoffe dürfen bei Neuanlagen mit einer FWL ab 70 kW bis 500 kW den Wert von 20 mg/m&sup3; nicht überschreiten."
+        },
+        {
+          "absatz": "4",
+          "text": "Neue automatische Heizkessel für Holzpellets bis 70 kW FWL müssen mit einem Wärmespeicher eines Volumens von mindestens 20 Litern pro kW Nennwärmeleistung ausgerüstet werden. Aus betrieblichen oder aus technischen Gründen kann die Behörde kleinere Speichergrössen festlegen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "9815b76306ecfa8e8a9b7df077c852d4e4e60cd62db116760770886a09a60cda"
+    },
+    {
+      "id": "kanton/BS/781.220/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Massnahmenverordnung (781.220)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Umwelt und Energie vollzieht die Vorschriften über Feuerungen mit definierten Brennstoffen, das Lufthygieneamt die anderen Vorschriften."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Inhaberinnen und Inhaber der sanierungspflichtigen Anlagen sind rechtzeitig vor Ablauf der Sanierungsfrist aufzufordern, Sanierungsvorschläge einzureichen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2269482e5a59268d789669034c406d8c",
+      "sha": "775452104d3e308e1592837a4e15a3f6b710a49041dd4789b30a87f57070564f"
+    }
+  ]
+}

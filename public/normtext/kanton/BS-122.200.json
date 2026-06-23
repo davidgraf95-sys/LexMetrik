@@ -1,0 +1,547 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/122.200/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die An-, Um- und Abmeldung natürlicher Personen bei Niederlassung oder Aufenthalt in der Einwohnergemeinde und die Führung eines kantonalen Einwohnerregisters."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "604f2d98c2ab621fd829a64e6c9aacd2dac7c4602e4056274eb71d56816dd71f"
+    },
+    {
+      "id": "kanton/BS/122.200/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwohnerkontrollbehörden der Einwohnergemeinden sind zuständig für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die einwohnerkontrollrechtlichen An-, Um- und Abmeldungen sowie"
+            },
+            {
+              "marke": "b",
+              "text": "die Führung des Einwohnerregisters."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das für die Einwohnerkontrolle zuständige kantonale Amt übt die Aufsicht über das Einwohnermeldewesen aus."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die migrationsrechtliche Regelung des Aufenthaltes ist die kantonale Migrationsbehörde zuständig. Sie ist die für den Vollzug des AuG und dessen Ausführungsvorschriften zuständige kantonale Behörde gemäss Art. 88 Abs. 1 VZAE."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "98485dd66e224e2f755796650a9c3281fbf9ccb785b837b1b3781e170e119b03"
+    },
+    {
+      "id": "kanton/BS/122.200/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In diesem Gesetz bedeuten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Niederlassung: Wenn sich eine Person in der Absicht des dauernden Verbleibens in einer Gemeinde aufhält, um dort den für Dritte erkennbaren Mittelpunkt ihres Lebens zu begründen."
+            },
+            {
+              "marke": "b",
+              "text": "Aufenthalt: Wenn sich eine Person mindestens während dreier aufeinander folgender Monate in einer Gemeinde aufhält und die Voraussetzungen von lit. a nicht erfüllt."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "7a707d95aed736691526b7adff0ccf51acd94f117647f921170b35223225c201"
+    },
+    {
+      "id": "kanton/BS/122.200/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer zwecks Niederlassung oder Aufenthalt in eine Gemeinde zuzieht, wer die Wohnadresse ändert oder die Wohnung innerhalb derselben Liegenschaft wechselt oder wer aus der Gemeinde wegzieht, hat dies innerhalb von 14 Tagen einer Einwohnerkontrollbehörde mitzuteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Niederlassungs- oder Aufenthaltsverhältnis erlischt mit der Abmeldung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die An-, Um- oder Abmeldung kann durch persönliche Vorsprache am Schalter einer Einwohnerkontrollbehörde, schriftlich oder elektronisch erfolgen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "cc89c81627ee06a80aea3f5001c13e570c9bb43c93abf33a881599b18ce419d8"
+    },
+    {
+      "id": "kanton/BS/122.200/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die meldepflichtige Person gibt der Einwohnerkontrollbehörde wahrheitsgetreu und vollständig Auskunft über die im Einwohnerregister zu erfassenden Daten betreffend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Identität;"
+            },
+            {
+              "marke": "b",
+              "text": "Zivilstand;"
+            },
+            {
+              "marke": "c",
+              "text": "Abmeldung in der bisherigen Wohnsitzgemeinde;"
+            },
+            {
+              "marke": "d",
+              "text": "administrative Wohnungsnummer."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie weist die Richtigkeit ihrer Angaben insbesondere mit folgenden Belegen oder gleichwertigen Dokumenten nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Pass oder Identitätskarte;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Schweiz ausgestellter Führerausweis;"
+            },
+            {
+              "marke": "c",
+              "text": "Bescheinigungen über den Zivilstand;"
+            },
+            {
+              "marke": "d",
+              "text": "Abmeldebescheinigung der Wegzugsgemeinde;"
+            },
+            {
+              "marke": "e",
+              "text": "Mietvertrag oder Wohnungsausweis."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "dd573871723815bb671acec8735da3e2618d6f9fc77472207722c44b9cbd1be2"
+    },
+    {
+      "id": "kanton/BS/122.200/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kommt die meldepflichtige Person ihren Meldepflichten nicht nach, nimmt die zuständige Einwohnerkontrollbehörde die An-, Um- oder Abmeldung von Amtes wegen kostenpflichtig vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Die säumige Person hat die damit verbundenen Zusatzkosten zu tragen, sofern sie kein unverschuldetes Hindernis nachweisen kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Personen, die eine amtliche Handlung gemäss Abs. 1 verursacht haben und diese rückgängig machen wollen, haben zu belegen, dass die amtliche Handlung zu Unrecht erfolgt ist. Insbesondere haben sie zu belegen, wo sie sich aufgehalten haben."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "6c8d8b8bb978d049042e25f0cacffb183db4012148427697687b7ee3e370c5bf"
+    },
+    {
+      "id": "kanton/BS/122.200/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einer meldepflichtigen Person entgeltlich Unterkunft gewährt, insbesondere eine Wohnung vermietet, hat der Einwohnerkontrollbehörde innerhalb von 14 Tagen nach Entstehen der Anmelde- bzw. Abmeldepflicht über Zu- und Wegzug sowie Wohnungswechsel Mitteilung zu machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Pflicht zur An-, Um- oder Abmeldung nach § 4 nicht nachgekommen, haben Arbeitgeberinnen und Arbeitgeber der Einwohnerkontrollbehörde auf Anfrage über die bei ihnen beschäftigten Personen unentgeltlich entsprechende Auskunft zu erteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Industriellen Werke Basel und andere registerführende Stellen sowie Vermieterinnen oder Vermieter, Liegenschaftsverwaltungen und Logisgeberinnen und Logisgeber sind verpflichtet, die Daten gemäss RHG, die zur Bestimmung und Nachführung der Wohnungsnummer einer Person erforderlich sind, auf Anfrage der Einwohnerkontrollbehörde unentgeltlich zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kollektivhaushalte gemäss § 2 lit. b der Verordnung über die Einführung des Bundesgesetzes über die Harmonisierung der Einwohnerregister und anderer amtlicher Personenregister im Kanton Basel-Stadt (Registerharmonisierungsverordnung; EV RHG) vom 23. Dezember 2008 melden der Einwohnerkontrollbehörde Basel mit Stichtag 31. Dezember eines jeden Jahres jeweils bis 15. Januar des Folgejahres alle Bewohnerinnen und Bewohner, die sich am Stichtag seit mindestens drei Monaten in ihrem Kollektivhaushalt aufhalten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "394b303b07fde33190211caac8611de423186e56b887b9d2c9ffd14dbd3290e4"
+    },
+    {
+      "id": "kanton/BS/122.200/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Selbständig Erwerbstätige ohne Niederlassung oder Aufenthalt, die nicht im Handelsregister eingetragen sind, haben ihre Firmen oder Betriebsstätten bei der Einwohnerkontrollbehörde Basel zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Frist zur Anmeldung beträgt ab Betriebsaufnahme 14 Tage."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Änderung oder Aufgabe der Tätigkeit hat eine Meldung innert 14 Tagen zu erfolgen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "74f92efaf20e1c71c08cf19c05ec1743799eaf8a263d21ecab3f06c9ce222fb6"
+    },
+    {
+      "id": "kanton/BS/122.200/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Organe, insbesondere die Kindes- und Erwachsenenschutzbehörde, das Zivilstandsamt, die Adoptionsbehörde, die Behörde des Straf- und Massnahmenvollzuges und das Straf-, Zivil- und Appellationsgericht melden den Einwohnerkontrollbehörden die für die Registerführung relevanten Daten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "79e92e9058aae3476a0c0200f11cac7021f59e595b96b7443cd956fdf1851b70"
+    },
+    {
+      "id": "kanton/BS/122.200/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Einwohnerregister sind folgende Daten zu führen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Identifikatoren und Merkmale nach Art. 6 und 7 RHG von Personen, die sich niedergelassen haben oder sich aufhalten;"
+            },
+            {
+              "marke": "b",
+              "text": "handlungsfähigkeitseinschränkende oder -aufhebende Beistandschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "Vormundschaften über Minderjährige;"
+            },
+            {
+              "marke": "d",
+              "text": "Sperrvermerke."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "3917d10ebc4653e88b05fceb5ccb100d1403094b201275693f4f05178fa1efd0"
+    },
+    {
+      "id": "kanton/BS/122.200/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit dieses Gesetz keine abweichende Regelung enthält, richtet sich die Bekanntgabe von Personendaten durch die zuständige Einwohnerkontrollbehörde nach den Vorschriften des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz; IDG) vom 9. Juni 2010."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwohnerkontrollbehörde ist befugt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den zuständigen Stellen die erforderlichen Daten zur Herausgabe des Basler Adressbuches und zur Erstellung der Bevölkerungsstatistik bekanntzugeben. Unter Berücksichtigung der Sperrung der Bekanntgabe von Personendaten gemäss § 28 IDG sind die Einwohnerkontrollbehörden zudem befugt, die erforderlichen Daten für offizielle Schriften der Gemeinden bekanntzugeben;"
+            },
+            {
+              "marke": "b",
+              "text": "die Daten bei Zu- und Wegzügen sowie beim Wohnungswechsel innerhalb einer Liegenschaft von Einwohnerinnen und Einwohnern mit den registerführenden Stellen anderer Gemeinden, Kantone und beim Bund gemäss den Vorgaben des Bundes in elektronischer Form auszutauschen;"
+            },
+            {
+              "marke": "c",
+              "text": "privaten Personen oder Organisationen auf schriftliches Gesuch hin Familiennamen und Vornamen, Adresse und Geburtsdatum von einzelnen Personen bekanntzugeben. Weitere Daten, ausgenommen besondere Personendaten, über einzelne Personen können bekanntgegeben werden, soweit schriftlich ein berechtigtes Interesse glaubhaft gemacht wird;"
+            },
+            {
+              "marke": "d",
+              "text": "privaten Personen und Organisationen auf schriftliches Gesuch hin nach bestimmten Kriterien geordnet Familiennamen, Vornamen, Geburtsdatum und Adresse von Personen bekanntzugeben, die in der Gemeinde wohnen, wenn die Daten ausschliesslich für schützenswerte ideelle Zwecke verwendet werden. Zulässige Kriterien sind ausschliesslich Alter, Geschlecht, Adresse, Stimmberechtigung und Zuzug."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bekanntgabe von Personendaten an private Personen und Organisationen steht unter dem Vorbehalt des Rechts auf Sperrung nach dem IDG."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "a0c85428c4a0f67ef85d57f55cc1bf14b3c26fbaad1069340bc4d70dce80bafe"
+    },
+    {
+      "id": "kanton/BS/122.200/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Einwohnerkontrollbehörde kann die zur Kontaktaufnahme für ein bestimmtes Forschungs- oder Präventionsprojekt notwendigen Adressdaten ausgewählter Einwohnerinnen und Einwohner bekannt geben an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "öffentliche und private Stellen und Organisationen, die vom Bund, vom Kanton oder einer Gemeinde mit der Durchführung eines bestimmten Forschungs- oder Präventionsprojektes beauftragt worden sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "öffentlich-rechtliche Forschungseinrichtungen für ihre Forschungsprojekte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Empfängerin oder der Empfänger hat sich vor der Datenbekanntgabe zu verpflichten,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Adressdaten ausschliesslich zur Kontaktaufnahme für das bestimmte Forschungsprojekt beziehungsweise für die bestimmte Präventionsmassnahme zu verwenden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Adressdaten nicht an Dritte weiterzugeben; und"
+            },
+            {
+              "marke": "c",
+              "text": "für die Informationssicherheit zu sorgen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Einwohnerkontrollbehörde kann öffentlichen Organen die für die Durchführung von Umfragen im Rahmen ihrer gesetzlichen Aufgaben notwendigen Adressdaten ausgewählter Einwohnerinnen und Einwohner bekannt geben."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "56b7070a3183d8400f7388ec06d9df37f65fdd450221cebe039baef6e7c4fbb4"
+    },
+    {
+      "id": "kanton/BS/122.200/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer trotz wiederholter Aufforderung den gesetzlichen Meldepflichten gemäss § 4 nicht nachkommt, kann polizeilich vorgeführt werden."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "018d137c8fb0e5bc7ee983d376da601ebb8c4e8b6c09bf55ea1216eda361b320"
+    },
+    {
+      "id": "kanton/BS/122.200/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer den §§ 4, 5, 7 und 8 dieses Gesetzes zuwiderhandelt, wird mit Busse bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Art. 115 – 120 AuG bleiben vorbehalten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "cbe05a9a83999e71024de262a1bb18239235cdc3481e056da6411007c9193460"
+    },
+    {
+      "id": "kanton/BS/122.200/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Einwohnerkontrollbehörde erhebt Gebühren für Verwaltungshandlungen, die sie in Erfüllung der Aufgaben dieses Gesetzes vornimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt eine Gebührenverordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinden sind befugt, für ihre Einwohnerkontrollbehörde eigene Gebührenreglemente zu erlassen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "4a3dcc3ad27f47bc44f7fb2a0afab8c73667f98fc0f287a8d56632c7fec4a569"
+    },
+    {
+      "id": "kanton/BS/122.200/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen auf dieses Gesetz gestützte Verfügungen der kantonalen Behörden kann gemäss §§ 41 ff. des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz; OG) vom 22. April 1976 an das zuständige Departement rekurriert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen auf dieses Gesetz gestützte Verfügungen der Einwohnerkontrollbehörden Riehen und Bettingen kann an den zuständigen Gemeinderat rekurriert werden."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "44a7007f4c7d3a077c9a8bbaa6863fb26cd4cd34a6d2f43fb6c832dc21f3fa0d"
+    },
+    {
+      "id": "kanton/BS/122.200/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt zum Vollzug dieses Gesetzes Ausführungsvorschriften."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "f96b4fef2bad1c840f16047607d30ccc7d585015447e8ecdacc73ce073a4210a"
+    },
+    {
+      "id": "kanton/BS/122.200/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "NAG (122.200)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Schriften, die nach bisherigem Recht bei der Einwohnerkontrollbehörde hinterlegt worden sind, werden bis zur Herausgabe zu Lebzeiten der bzw. des Betroffenen aufbewahrt. Bei einer Abmeldung werden die noch hinterlegten Schriften gegen Rückgabe des Niederlassungs- bzw. Aufenthaltsausweises ausgehändigt."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/122.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "58e5322302925cafea4880c42b3eeb2e",
+      "sha": "0962c7992f360d330f7421c712e52a48883f865e0bcb92cbaee416b57f3bf093"
+    }
+  ]
+}

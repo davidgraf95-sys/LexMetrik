@@ -1,0 +1,106 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.630/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Fernwärme (772.630)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für alle Fernwärmeanwendungen gilt ein Tarif nach Massgabe der folgenden Absätze 2 und 3. Vorbehalten bleibt die Verrechnung nach § 2 (Spezialtarife)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Energiepreis besteht aus einem Einheitspreis pro bezogene Kilowattstunde und aus einem Grundpreis, der sich nach der Netzbelastung der angeschlossenen Apparate richtet. Es gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis = 11,60 Rp. / kWh, inkl. Kosten für die Teilnahme am Emissionshandelssystem gemäss Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz) vom 23. Dezember 2011."
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis = CHF 20 / kW / Jahr, im Minimum CHF 180 / Jahr."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Besondere Bestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Abrechnung erfolgt in der Regel jährlich."
+            },
+            {
+              "marke": "b",
+              "text": "Zusätzlich sind Akontozahlungen zu leisten."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.630",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1366a71551f653864018197d24944b8c",
+      "sha": "040abbe0abf74136d12cb2937fb23e1482cddc37c2c8db9100031a8daebaeba0"
+    },
+    {
+      "id": "kanton/BS/772.630/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Fernwärme (772.630)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einer speziellen Bezugsstruktur, bei Bandbezug, bei unterbrechbarer Lieferung oder bei einem speziellen Verwendungszweck kann der Fernwärmepreis durch einen Spezialvertrag festgelegt werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.630",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1366a71551f653864018197d24944b8c",
+      "sha": "4954cf641341e30b820265a0e4b52cbeb99648a952f895e03234d2eb573447cb"
+    },
+    {
+      "id": "kanton/BS/772.630/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Fernwärme (772.630)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Fernwärmebezug wird in Kilowattstunden verrechnet. Die Verrechnung beruht auf dem gemessenen Volumenstrom des Heizmediums und der gemessenen Vor- und Rücklauftemperatur des Heizmediums."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Grundpreis ist auch für die Zeit zu bezahlen, in der keine Fernwärme bezogen wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Ab 1. Januar 1995 wird auf allen Energiepreisen die Mehrwertsteuer erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Ab 1. Januar 2008 wird auf fossilen Energieträgern die CO₂-Abgabe gemäss Bundesgesetz über die Reduktion der CO₂-Emissionen vom 8. Oktober 1999 erhoben."
+        },
+        {
+          "absatz": "5",
+          "text": "Es wird zusätzlich eine Konzessionsgebühr gemäss § 30 Abs. 3 IWB-Gesetz erhoben."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.630",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1366a71551f653864018197d24944b8c",
+      "sha": "19bcadbb4924698862994e95fa4b6125fc28805f15f5e12682c8594b0530ad19"
+    }
+  ]
+}

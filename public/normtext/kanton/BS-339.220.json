@@ -1,0 +1,385 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/339.220/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührenverordnung Sanität (339.220)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungen der Sanität Basel werden unter Vorbehalt der Tarife des Sozialversicherungsrechts des Bundes gemäss den nachfolgenden Gebühren abgerechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "2bis",
+          "text": "Soweit in dieser Verordnung nicht anders geregelt, werden die zwischen der Sanität Basel und der Gemeinsamen Einrichtung KVG gültigen Tarife angewendet. Die jeweils gültigen Tarife werden gemäss § 2 Abs. 1 des Gesetzes über Publikationen im Kantonsblatt und über die Gesetzessammlung des Kantons Basel-Stadt (Publikationsgesetz) vom 19.Oktober 2016 publiziert und sind zudem beim Justiz- und Sicherheitsdepartement einsehbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Leistungen der Sanität im Zusammenhang mit Sport- und Konzertveranstaltungen werden nach Massgabe von § 18 Abs. 1 Ziff. 7 der Verordnung betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeiverordnung, PolV) vom 3. Juni 1997 in Rechnung gestellt."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Leistungen ausserhalb des Kantonsgebietes kann das Justiz- und Sicherheitsdepartement Vereinbarungen abschliessen, wobei die geltenden Tarife gemäss dieser Verordnung nicht unterschritten werden dürfen."
+        }
+      ],
+      "stand": "2018-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/339.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "65c28983914f9bd7dddf6a4867a66cd2",
+      "sha": "9a65eeb566242c7c15006ce953bfbf251f2414661f87d87b27170d8c19d4fcab"
+    },
+    {
+      "id": "kanton/BS/339.220/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührenverordnung Sanität (339.220)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wo nicht anders vermerkt, sind mit den nachstehenden Grundtaxen folgende Leistungen abgegolten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Primäreinsätze P1-P3 (ohne Notärztin oder Notarzt) auf dem Kantonsgebiet an Werktagen zwischen 07.00 und 19.00 Uhr und bei Sekundärtransporten ohne Zeitbefristung. Notärztlicher Zubringer für einen einstündigen Einsatz auf dem Kantonsgebiet an Werktagen zwischen 07.00 und 19.00 Uhr."
+            },
+            {
+              "marke": "b",
+              "text": "Fahrleistung bei Primäreinsätzen P1-P3, Notärztlicher Zubringer, Einsatzleitung Sanität und Spezialtransporte bis maximal 80 Kilometer."
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Kumulativ können zu den Grundtaxen Zuschläge erhoben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Folgende Kosten werden, wenn nicht anders vermerkt, separat in Rechnung gestellt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Spesen wie Verlade-, Autostrasse- und Autobahngebühren, Verpflegungs- und Übernachtungskosten,"
+            },
+            {
+              "marke": "b",
+              "text": "medizinisches Verbrauchsmaterial bei besonderen Dienstleistungen (Tarifposition 8),"
+            },
+            {
+              "marke": "c",
+              "text": "fremdes Sanitätspersonal und andere bei Dritten eingekaufte Leistungen, nach Aufwand."
+            }
+          ]
+        }
+      ],
+      "stand": "2018-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/339.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "65c28983914f9bd7dddf6a4867a66cd2",
+      "sha": "2f8196edda732ea66e65fc9a9c1ea2a68d9117baf4d21b128bb6906ca3e19558"
+    },
+    {
+      "id": "kanton/BS/339.220/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührenverordnung Sanität (339.220)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Gebühren gelten für krankheits- und unfallbedingte Einsätze sowie für Verlegungstransporte zwischen Spitälern.",
+          "mehrspaltig": {
+            "kopf": [
+              "Pos.",
+              "Bezeichnung",
+              "Gebühr CHF"
+            ],
+            "zeilen": [
+              [
+                "1",
+                "…",
+                "…"
+              ],
+              [
+                "1.1.a)",
+                "…",
+                "…"
+              ],
+              [
+                "1.1.b)",
+                "…",
+                "…"
+              ],
+              [
+                "1.1.c)",
+                "…",
+                "…"
+              ],
+              [
+                "1.2",
+                "…",
+                "…"
+              ],
+              [
+                "2",
+                "Kranken- und Sekundärtransporte, Dringlichkeitsstufe S1-S3",
+                ""
+              ],
+              [
+                "2.1.a)",
+                "Grundtaxe 2017 S1 & S2",
+                "700"
+              ],
+              [
+                "2.1.b)",
+                "Grundtaxe ab 2018 S1 & S2",
+                "720"
+              ],
+              [
+                "2.1.c)",
+                "Grundtaxe S3",
+                "350"
+              ],
+              [
+                "2.1.d)",
+                "Medizinische Leistungen",
+                ""
+              ],
+              [
+                "2.1.e)",
+                "Kleine medizinische Leistung und Sachaufwand (Monitoring, einfache Überwachung, Immobilisation, Sauerstoff)",
+                "80"
+              ],
+              [
+                "2.1.f)",
+                "Mittlere medizinische Leistung und Sachaufwand (zusätzliche Medikamente, Infusion)",
+                "150"
+              ],
+              [
+                "2.1.g)",
+                "Grosse medizinische Leistung und Sachaufwand (zusätzliche Massnahmen wie 12-er EKG, aufwändige Rettungsaktion)",
+                "240"
+              ],
+              [
+                "2.1.h)",
+                "Komplexe medizinische Leistung und Sachaufwand (zusätzliche Massnahmen wie Reanimation, Einsatz Autopulse, i.o Bohrer, aufwändige IPS-Verlegung)",
+                "350"
+              ],
+              [
+                "2.2",
+                "Zuschlag je km (ab Kilometer 26)",
+                "6"
+              ],
+              [
+                "3",
+                "…",
+                "…"
+              ],
+              [
+                "3.1",
+                "…",
+                "…"
+              ],
+              [
+                "3.2",
+                "…",
+                "…"
+              ],
+              [
+                "3.3",
+                "…",
+                "…"
+              ],
+              [
+                "4",
+                "…",
+                "…"
+              ],
+              [
+                "4.1",
+                "…",
+                "…"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2018-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/339.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "65c28983914f9bd7dddf6a4867a66cd2",
+      "sha": "24d7bf7feb8cd2e008caa734b5bac403d576cbaf447e5f160a1b6c1df4dc83da"
+    },
+    {
+      "id": "kanton/BS/339.220/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührenverordnung Sanität (339.220)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": ".",
+          "mehrspaltig": {
+            "kopf": [
+              "Pos.",
+              "Bezeichnung",
+              "Gebühr CHF"
+            ],
+            "zeilen": [
+              [
+                "6",
+                "Fehlfahrten",
+                ""
+              ],
+              [
+                "6.1",
+                "Bei missbräuchlicher Alarmierung der Sanität wird pro Fall die Grundtaxe für Notfalltransporte verrechnet.",
+                ""
+              ],
+              [
+                "6.2",
+                "…",
+                "…"
+              ],
+              [
+                "7",
+                "Einsatz Katastrophenzelt",
+                ""
+              ],
+              [
+                "7.1",
+                "Pauschal pro Tag, betriebsbereit ausgestattet",
+                "1500"
+              ],
+              [
+                "8",
+                "Besondere Dienstleistungen",
+                ""
+              ],
+              [
+                "8.1",
+                "Kurzeinsatz ohne Transport mit Hilfe für gestürzte Person, ohne medizinische Betreuung (Pauschale ohne Zuschläge)",
+                "300"
+              ],
+              [
+                "8.2",
+                "…",
+                "…"
+              ],
+              [
+                "8.3",
+                "Pikettstellung bei Einsätzen der Feuerwehr im Kanton Basel-Landschaft (ohne Transport) gemäss massgeblichem Tarifvertrag",
+                ""
+              ],
+              [
+                "8.4",
+                "Pikettstellung eines Ambulanzfahrzeuges (ohne Transport) je angebrochene Stunde",
+                "100"
+              ],
+              [
+                "8.5",
+                "Pikettstellung eines Personenfahrzeuges (ohne Transport) je angebrochene Stunde",
+                "80"
+              ],
+              [
+                "9",
+                "Tarife für alle übrigen Dienstleistungen",
+                ""
+              ],
+              [
+                "9.1",
+                "Stundenpauschale pro Rettungssanitäterin oder Rettungssanitäter, je angebrochene Stunde (ohne Fahrzeug)",
+                "110"
+              ],
+              [
+                "9.2",
+                "Kilometerpauschale für Ambulanzfahrzeug",
+                "6"
+              ],
+              [
+                "9.3",
+                "Kilometerpauschale für Personenfahrzeug",
+                "3.50"
+              ],
+              [
+                "9.4",
+                "Zuschlag in der Nacht (19.00–07.00 Uhr), pro Stunde",
+                "7"
+              ],
+              [
+                "9.5",
+                "Zuschlag an Sonntagen, pro Stunde",
+                "11"
+              ],
+              [
+                "9.6",
+                "Zuschlag an Feiertagen, pro Stunde",
+                "18"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Für regelmässig wiederkehrende Einsätze für Private von insgesamt mehr als 50 Stunden Dauer kann auf die Stundentarife gemäss Tarifposition 9 hievor eine Ermässigung von maximal bis zu 10% gewährt werden. Zuständig für die Übernahme entsprechender Aufträge bzw. den Abschluss entsprechender Verträge und die Gewährung der Ermässigung ist der Leiter bzw. die Leiterin der Sanität Basel. Die Verträge unterliegen der Genehmigung des Vorstehers bzw. der Vorsteherin des Justiz- und Sicherheitsdepartements."
+        }
+      ],
+      "stand": "2018-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/339.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "65c28983914f9bd7dddf6a4867a66cd2",
+      "sha": "b05d81282b5c4f64bfaa51e1d0df264452212205bf1359e66b64c5de40d8ebe8"
+    },
+    {
+      "id": "kanton/BS/339.220/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührenverordnung Sanität (339.220)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Leistungen, die der Mehrwertsteuer unterliegen, wird ein entsprechender Zuschlag erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sanität Basel stellt ihre Leistungen nach Beendigung eines Einsatzes in Rechnung. Die Zahlungsfrist beträgt 30 Tage."
+        },
+        {
+          "absatz": "3",
+          "text": "Handelt es sich um Dienstleistungen von längerer Dauer, werden in der Regel monatliche Teilrechnungen gestellt. Diese sind nach Erhalt zur Zahlung fällig."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Personen, die nicht den schweizerischen Sozialversicherungen unterstehen oder der Wohnsitz im Ausland liegt, kann ein angemessener Kostenvorschuss verlangt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Bezüglich Verzugszins und Mahngebühren gelten die Bestimmungen in § 14 b der Verordnung zum Verwaltungsgebührengesetz."
+        }
+      ],
+      "stand": "2018-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/339.220",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "65c28983914f9bd7dddf6a4867a66cd2",
+      "sha": "2841c714babec724a24364fcaac2663bef1a11124ed9601930ff19681c470232"
+    }
+  ]
+}

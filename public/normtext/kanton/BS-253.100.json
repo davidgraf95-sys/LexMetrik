@@ -1,0 +1,909 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/253.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach diesem Gesetz wird beurteilt, wer eine Handlung oder Unterlassung begeht, die zur Zeit der Tat in diesem oder einem anderen kantonalen Gesetz oder einer kantonalen Verordnung mit Busse bedroht ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die allgemeinen Bestimmungen dieses Gesetzes finden auf alle Übertretungen des kantonalen Rechts Anwendung, soweit die entsprechenden Erlasse keine abweichenden Vorschriften enthalten."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "c32070b7009464a23220809acad994bf355bf938e21520d83efab3b3e898dcf1"
+    },
+    {
+      "id": "kanton/BS/253.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die allgemeinen Bestimmungen des Schweizerischen Strafgesetzbuches und das Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG) vom 20. Juni 2003 finden auf alle Übertretungen des kantonalen Rechts entsprechende Anwendung, soweit dieses Gesetz oder andere kantonale Erlasse nichts anderes bestimmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007, der Schweizerischen Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO) vom 20. März 2009 sowie der entsprechenden kantonalen Einführungsgesetze gelten für die Verfolgung und Beurteilung aller Übertretungen des kantonalen Rechts, soweit dieses Gesetz oder andere kantonale Erlasse nichts anderes bestimmen."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "c84fed709989162795b85af0f1f0acd7301e0acf91a817cff5c179f99bcf9ab5"
+    },
+    {
+      "id": "kanton/BS/253.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer durch ihr oder sein Verhalten andere Personen ernsthaft gefährdet oder trotz behördlicher Mahnung in unzumutbarer Weise belästigt oder die öffentliche Sicherheit, Ruhe und Ordnung ernsthaft stört, ohne dass eine andere strafbare Handlung vorliegt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "7e9c852d78fee9ceda18733fc5190d5fd45c64cfb562a20fe8a7bcbb8d5a7ba8"
+    },
+    {
+      "id": "kanton/BS/253.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer Angehörigen der Kantonspolizei oder anderer Organe mit polizeilichen Kompetenzen die Ausübung ihres Dienstes erschwert oder ihren Anordnungen oder Aufforderungen nicht nachkommt, die sie innerhalb ihrer Befugnisse erlassen, namentlich die Angabe ihrer oder seiner Personalien verweigert oder unrichtige Angaben macht."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "5fea1f53eaa4263d4b1445849e695ae1ff6d8c0e2a982006b09f5cb5ddc65f68"
+    },
+    {
+      "id": "kanton/BS/253.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer trotz behördlicher Mahnung vorsätzlich oder fahrlässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "an Ruhetagen oder während der Nachtruhe Lärm verursacht. Die Nachtruhe dauert von 23.00 bis 07.00 Uhr;"
+            },
+            {
+              "marke": "b",
+              "text": "an Ruhetagen oder von 22.00 bis 07.00 Uhr ohne Bewilligung im öffentlichen Raum Lautsprecheranlagen oder in elektronischen Geräten verbaute Lautsprecher benutzt;"
+            },
+            {
+              "marke": "c",
+              "text": "an Werktagen in der Zeit von 19.00 Uhr bis zum Beginn der Nachtruhe und von 12.00 bis 13.00 Uhr Haus- und Gartenarbeiten oder landwirtschaftliche Arbeiten verrichtet, die übermässigen Lärm verursachen;"
+            },
+            {
+              "marke": "d",
+              "text": "Lärm verursacht, der über das üblicherweise zu tolerierende Mass am fraglichen Ort oder zur fraglichen Zeit hinausgeht."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "f509f87fb0b2c13c7810e24e6ca462ab3068fb628ae16f2f2abddb3f5ce26be4"
+    },
+    {
+      "id": "kanton/BS/253.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer vorsätzlich oder fahrlässig durch vermeidbare Einwirkungen, namentlich Erschütterungen, Staub, Russ, Geruch, Abgase oder Licht, trotz behördlicher Mahnung andere Personen ernsthaft gefährdet oder in unzumutbarer Weise belästigt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "8757fa0d2083211bd4de15d8cbd3006873d1377467686f2c604d707c7140776f"
+    },
+    {
+      "id": "kanton/BS/253.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den behördlichen Vorschriften über das Betreten oder Benützen von allgemein zugänglichen Orten, namentlich Hausordnungen öffentlicher Parkhäuser sowie Haus- und Benützungsordnungen öffentlicher Sport- und Bewegungsanlagen, zuwiderhandelt;"
+            },
+            {
+              "marke": "b",
+              "text": "unbefugt Landungsstege der Schiffe, der Fähren, der Feuerlösch- und Polizeiboote sowie Fischergalgen betritt;"
+            },
+            {
+              "marke": "c",
+              "text": "in öffentlichen Gewässern im Bereich von signalisiertem oder markiertem Badeverbot badet;"
+            },
+            {
+              "marke": "d",
+              "text": "in öffentlichen Gewässern nicht eingelöste Schlauchboote oder Strandboote benutzt oder an Schiffe heranschwimmt;"
+            },
+            {
+              "marke": "e",
+              "text": "von den Brücken in öffentliche Gewässer springt."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "76c1d7cf0bfb2c7cfed13f413e0692578276c3a1c53355f6f8b42b2446a77c76"
+    },
+    {
+      "id": "kanton/BS/253.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer in bewohntem, öffentlichem oder in bewohntem, allgemein zugänglichem Gebiet die Notdurft ausserhalb sanitärer Einrichtungen verrichtet."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "4c1940ee94359b7bef4b6de3d734ff421bfca2f1f16a9b522e5c510afdbf5ff4"
+    },
+    {
+      "id": "kanton/BS/253.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in organisierter Art und Weise bettelt;"
+            },
+            {
+              "marke": "b",
+              "text": "andere Personen zum Betteln schickt;"
+            },
+            {
+              "marke": "c",
+              "text": "beim Betteln täuschende oder unlautere Methoden anwendet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Busse wird bestraft, wer im öffentlichen Raum oder an allgemein zugänglichen Orten bettelt und dabei die öffentliche Sicherheit, Ruhe und Ordnung stört, namentlich wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in aufdringlicher oder aggressiver Art und Weise bettelt;"
+            },
+            {
+              "marke": "b",
+              "text": "innerhalb von fünf Metern um Ein- und Ausgänge von Bahnhöfen sowie innerhalb von fünf Metern um Haltestellen des öffentlichen Verkehrs und Schiffsanlegestellen bettelt;"
+            },
+            {
+              "marke": "c",
+              "text": "innerhalb von fünf Metern um Geld-, Zahlungs- und Fahrkartenautomaten oder Parkuhren bettelt;"
+            },
+            {
+              "marke": "d",
+              "text": "innerhalb von fünf Metern um Ein- und Ausgänge von Ladengeschäften, Banken, Poststellen, Museen, Theatern, Kinos, Wohn- und Bürogebäuden oder öffentlichen Gebäuden und Einrichtungen bettelt;"
+            },
+            {
+              "marke": "e",
+              "text": "innerhalb von fünf Metern um Ein- und Ausgänge von Hotels, Restaurants sowie auf oder innerhalb von fünf Metern um deren Boulevardbereiche bettelt;"
+            },
+            {
+              "marke": "f",
+              "text": "auf Märkten sowie innerhalb von fünf Metern um Verkaufsstände oder Buvetten bettelt;"
+            },
+            {
+              "marke": "g",
+              "text": "in öffentlichen Parks, Gärten, Friedhöfen, Spielplätzen, Schulanlagen, Unterführungen sowie innerhalb von fünf Metern um deren Ein- und Ausgänge bettelt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die durch strafbares Betteln nach Abs. 1 erlangten Vermögenswerte können sichergestellt und eingezogen werden."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "292b7dbd12eac66eaa25a695aadd847de26b3f70fd2bad986f17ee3e1f607b1c"
+    },
+    {
+      "id": "kanton/BS/253.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer im öffentlichen Raum oder an allgemein zugänglichen Orten ausserhalb der in einer Verordnung bezeichneten Örtlichkeiten (Toleranzzonen):",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der erkennbaren Bereitschaft zur Ausübung der Prostitution potentielle Kundschaft anwirbt oder anzuwerben versucht;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Zweck der Inanspruchnahme von Prostitutionsdienstleistungen mit Personen Kontakt aufnimmt, aufzunehmen versucht oder Prostitutionsdienstleistungen in Anspruch nimmt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Busse wird bestraft, wer vorsätzlich oder fahrlässig durch den Betrieb eines Salons Anwohnerinnen und Anwohner in unzumutbarer Weise belästigt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "b77dab22c965a1371dc62e196754104512dbb927a257fbf0b2f9c06d6d780c00"
+    },
+    {
+      "id": "kanton/BS/253.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ohne Bewilligung oder trotz behördlichem Verbot bewilligungspflichtige Versammlungen oder Demonstrationen im öffentlichen Raum veranlasst oder durchführt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine die öffentliche Sicherheit und Ordnung gefährdende Menschenansammlung im öffentlichen Raum verursacht;"
+            },
+            {
+              "marke": "c",
+              "text": "den behördlichen Auflagen und Anordnungen, die im Interesse der öffentlichen Sicherheit und Ordnung bei Versammlungen, Demonstrationen und sonstigen Menschenansammlungen im öffentlichen Raum getroffen werden, zuwiderhandelt;"
+            },
+            {
+              "marke": "d",
+              "text": "an Versammlungen, Demonstrationen und sonstigen Menschenansammlungen im öffentlichen Raum Waffen oder Gegenstände, die geeignet sind, Menschen zu gefährden oder Sachen zu beschädigen, mit sich führt. Die Waffen und Gegenstände können sichergestellt und eingezogen werden;"
+            },
+            {
+              "marke": "e",
+              "text": "sich bei bewilligungspflichtigen Versammlungen, Demonstrationen und sonstigen Menschenansammlungen im öffentlichen Raum unkenntlich macht. Die zuständige Behörde kann Ausnahmen bewilligen."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "a84a5b37703395c05337bb789f6ef1cdaf85791664f968c63cfbc2d9c68d46f0"
+    },
+    {
+      "id": "kanton/BS/253.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer eine bewilligungspflichtige öffentliche Veranstaltung ohne Bewilligung durchführt oder den behördlichen Auflagen und Anordnungen zuwiderhandelt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "331fdd4518541f056d58ee9d8bd65b4331e9f5ff2e204ae6da77defd7c699327"
+    },
+    {
+      "id": "kanton/BS/253.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer den polizeilichen Vorschriften über die Fasnacht zuwiderhandelt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "e5e1f809a933c043513acbb7dd63adac952b2e95daa71be86595edee78834b9e"
+    },
+    {
+      "id": "kanton/BS/253.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den öffentlichen Raum oder öffentliches oder privates Eigentum verunreinigt oder verunstaltet;"
+            },
+            {
+              "marke": "b",
+              "text": "unbefugt im öffentlichen Raum oder an öffentlichem oder privatem Eigentum Werbe- oder Informationsmaterial oder andere Anschläge anbringt oder anbringen lässt oder rechtmässig angebrachte Anschläge beschädigt oder verändert. Versuch und Gehilfenschaft sind strafbar. Das Anschlagmaterial kann sichergestellt und eingezogen werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beeinträchtigung privaten Eigentums wird nur auf Antrag verfolgt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "dbce0a29159b36c4fe1071904db30889fb0bf2111e73071a15c5aaa3fa5359b4"
+    },
+    {
+      "id": "kanton/BS/253.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer öffentliche oder behördlich vorgeschriebene Alarm-, Notrufs-, Rettungs- oder Schutzvorrichtungen unbefugt verwendet oder ausser Betrieb setzt, entfernt, unbrauchbar macht oder nicht fachgerecht wartet."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "0d427fb2107b872232164973425658ba818a1e3b2d50f80a1525c86d9107b3fb"
+    },
+    {
+      "id": "kanton/BS/253.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich als Inhaberin oder Inhaber eines akademischen Grades oder Titels bezeichnet, ohne diesen rechtmässig erworben zu haben, oder einen Grad oder Titel verwendet, der den Eindruck erweckt, sie oder er habe einen akademischen Grad oder Titel einer anerkannten oder akkreditierten kantonalen oder interkantonalen Hochschule rechtmässig erworben;"
+            },
+            {
+              "marke": "b",
+              "text": "sich öffentlich als Inhaberin oder Inhaber eines Diploms über eine absolvierte Ausbildung oder Befähigung ausgibt, ohne dieses rechtmässig erworben zu haben;"
+            },
+            {
+              "marke": "c",
+              "text": "ohne erforderliche Bewilligung einen Beruf ausübt, ein Gewerbe oder Handelsgeschäft betreibt oder den behördlichen Auflagen und Anordnungen zuwiderhandelt."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "0a2ca4755cc1ff5ef5019c38e714b94c9216ab26d885d8fc716b9b959672ed22"
+    },
+    {
+      "id": "kanton/BS/253.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse bis zum Doppelten der hinterzogenen Regalgebühr wird bestraft, wer den Vorschriften über das Salzregal zuwiderhandelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Widerrechtlich gewonnenes, eingeführtes oder in den Handel gebrachtes Salz kann sichergestellt und eingezogen werden."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "53a55aaf6ab8ec97723a1a8661a48d2f8120c17aa2eef361dc4cf41de5c0c67e"
+    },
+    {
+      "id": "kanton/BS/253.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer ohne Berechtigung Fahrzeuge auf Privatboden abstellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Parkieren auf Privatboden wird nur auf Antrag verfolgt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "052537cf4b8130284a035f544d1ea82bf2cc53e52b68a056112e6d4e5ec26d93"
+    },
+    {
+      "id": "kanton/BS/253.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ohne Bewilligung gefährliche Tiere hält oder den behördlichen Auflagen und Anordnungen zuwiderhandelt;"
+            },
+            {
+              "marke": "b",
+              "text": "vorsätzlich oder fahrlässig gefährliche Tiere nicht angemessen verwahrt oder unter Kontrolle hält oder Vorsichtsmassnahmen unterlässt, zu denen sie oder er nach den Umständen verpflichtet ist, oder nicht sofort Anzeige macht, wenn ihr oder ihm ein solches Tier entwichen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die urteilende Behörde kann die Einziehung und fachgerechte Unterbringung, Unschädlichmachung oder Tötung des Tieres anordnen."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "5eb962e6c18d458d11df20939b2c35f360bd55f1e1656a83d3e1c375bf46ee17"
+    },
+    {
+      "id": "kanton/BS/253.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer vorsätzlich oder fahrlässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch Reizen oder Scheumachen von Tieren eine Gefahr für Menschen, Tiere oder Sachen herbeiführt;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Tier auf Menschen oder andere Tiere hetzt oder pflichtwidrig von einem Angriff auf Menschen oder Tiere nicht abhält;"
+            },
+            {
+              "marke": "c",
+              "text": "als Eigentümerin oder Eigentümer oder als mindestens vorübergehende Halterin oder vorübergehender Halter von Tieren es unterlässt, dafür zu sorgen, dass andere Personen nicht durch Lärm oder anderweitig in unzumutbarer Weise belästigt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "dd4e75785449886951399302bbcadd09bab0f2a767c3ba08ad6b2f2f548ac6d9"
+    },
+    {
+      "id": "kanton/BS/253.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer frei lebende Tauben füttert."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "df81bb1190372329b397f2e83797f7aa372bbb0b05b87c8249de6fa503b17519"
+    },
+    {
+      "id": "kanton/BS/253.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geringfügige Übertretungen des kantonalen Rechts werden in einem vereinfachten Verfahren mit Ordnungsbussen geahndet, wenn die Voraussetzungen von § 24 erfüllt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Höchstbetrag für eine Ordnungsbusse beträgt Fr. 300."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorleben und persönliche Verhältnisse der fehlbaren Person werden nicht berücksichtigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Ordnungsbussenverfahren ist kostenlos."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "a2dc2554b72ac3eeca73a10a3f4353a9967305ba18eade7fb59408902be5e030"
+    },
+    {
+      "id": "kanton/BS/253.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ordnungsbussen werden durch uniformierte Angehörige der Kantonspolizei erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann für bestimmte Übertretungstatbestände Ausnahmen vom Erfordernis der Dienstuniform bestimmen sowie Angehörige von weiteren in einem Gesetz ausdrücklich bezeichneten Organen mit polizeilichen Kompetenzen zur Ordnungsbussenerhebung ermächtigen. Sie haben sich gegenüber der fehlbaren Person unaufgefordert mit einem Dienstausweis zu legitimieren."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "3e60dca83449d9bb895fad896851052c67010c87f36ba2d0eeaaffe96292aaab"
+    },
+    {
+      "id": "kanton/BS/253.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Ordnungsbussenverfahren wird angewendet, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der betreffende Übertretungstatbestand auf der Ordnungsbussenliste aufgeführt ist;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Angehörige oder ein Angehöriger des zuständigen Polizeiorgans die Widerhandlung selbst festgestellt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "der Sachverhalt tatsächlich sowie rechtlich klar ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die fehlbare Person dieser Erledigung zustimmt; und"
+            },
+            {
+              "marke": "e",
+              "text": "keine Ausnahmen nach § 25 vorliegen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Angehörigen des zuständigen Polizeiorgans haben der fehlbaren Person mitzuteilen, dass sie das Ordnungsbussenverfahren ablehnen kann."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "2d9809d1a13c27931cca4229201c702c646debd357d41e246b83bd83adbddf5b"
+    },
+    {
+      "id": "kanton/BS/253.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Ordnungsbussenverfahren wird nicht angewendet, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die fehlbare Person das 15. Altersjahr nicht vollendet hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die fehlbare Person durch die Widerhandlung andere Personen gefährdet oder verletzt oder Sachschaden verursacht hat;"
+            },
+            {
+              "marke": "c",
+              "text": "der fehlbaren Person zusätzlich eine Widerhandlung vorgeworfen wird, die nicht auf der Ordnungsbussenliste aufgeführt ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die fehlbare Person das Ordnungsbussenverfahren für eine oder mehrere der ihr vorgeworfenen Widerhandlungen ablehnt."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "bdd2a6d503818213a14c0e9a6dc4baa32a3c16ae38ad15647a35944674bbfe2e"
+    },
+    {
+      "id": "kanton/BS/253.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfüllt die fehlbare Person durch eine oder mehrere Widerhandlungen mehrere Ordnungsbussentatbestände, werden die Bussen zusammengezählt, und es wird ihr eine Gesamtbusse auferlegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Übersteigt die Summe der Gesamtbusse Fr. 600, werden alle Übertretungen im ordentlichen Verfahren beurteilt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "eca2538b8a3d9459c678eaab72560301f023aab14a5ec90a1ca348d899ac22d0"
+    },
+    {
+      "id": "kanton/BS/253.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die fehlbare Person kann die Ordnungsbusse sofort oder innert 30 Tagen (Bedenkfrist) bezahlen. Die Ordnungsbusse wird mit der Bezahlung rechtskräftig."
+        },
+        {
+          "absatz": "2",
+          "text": "Bezahlt sie sofort, wird ihr eine Quittung ausgestellt, die ihre Personalien nicht nennt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bezahlt sie nicht sofort, hat sie ihre Personalien anzugeben und erhält ein Bedenkfristformular mit Einzahlungsschein, von dem eine Kopie beim zuständigen Polizeiorgan verbleibt. Bezahlt sie innert Frist, wird die Kopie des Bedenkfristformulars vernichtet."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird die Busse nicht innert 30 Tagen bezahlt, wird das ordentliche Verfahren durchgeführt."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "661a58299b3ad8a82d99f34dac0d376e71602a218e2a22fa4f5d9dca446c79c3"
+    },
+    {
+      "id": "kanton/BS/253.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bezahlt die fehlbare Person, die über keinen Wohnsitz in der Schweiz verfügt, die Ordnungsbusse nicht sofort oder lehnt sie das Ordnungsbussenverfahren ab, hat sie den Bussenbetrag zu hinterlegen oder eine angemessene Sicherheit zu leisten."
+        },
+        {
+          "absatz": "2",
+          "text": "Läuft die Bedenkfrist unbenutzt ab oder akzeptiert die fehlbare Person die Ordnungsbusse innerhalb dieser Frist ausdrücklich, wird der hinterlegte Betrag mit der Ordnungsbusse verrechnet. Die Verrechnung gilt als Bezahlung."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "9908ee1406e688eaf6b020ab6032383f9e31096270a6ca084084619008e520fa"
+    },
+    {
+      "id": "kanton/BS/253.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird die fehlbare Fahrzeugführerin oder der fehlbare Fahrzeugführer nicht anlässlich einer Widerhandlung, die mit einem Fahrzeug begangen wurde, angetroffen oder angehalten, wird die Ordnungsbusse der oder dem im Fahrzeugausweis eingetragenen Fahrzeughalterin oder Fahrzeughalter auferlegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Fahrzeughalterin oder dem Fahrzeughalter wird die Ordnungsbusse schriftlich eröffnet. Sie oder er kann sie innert 30 Tagen bezahlen. Wird die Busse nicht innert 30 Tagen bezahlt, wird das ordentliche Verfahren durchgeführt."
+        },
+        {
+          "absatz": "3",
+          "text": "Nennt die Fahrzeughalterin oder der Fahrzeughalter Name und Adresse der fehlbaren Fahrzeugführerin oder des fehlbaren Fahrzeugführers, wird gegen diese oder diesen das Verfahren nach Abs. 2 eingeleitet."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann mit verhältnismässigem Aufwand nicht festgestellt werden, wer die Widerhandlung begangen hat, hat die Fahrzeughalterin oder der Fahrzeughalter die Ordnungsbusse zu bezahlen, es sei denn, sie oder er macht im ordentlichen Strafverfahren glaubhaft, dass das Fahrzeug gegen ihren oder seinen Willen benutzt wurde und dies trotz entsprechender Sorgfalt nicht verhindert werden konnte."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "c25bf81305d73bb11216fac306fae9c3fe53dd5a43b0282c470ba1e228cf5b21"
+    },
+    {
+      "id": "kanton/BS/253.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Erhebung der Ordnungsbusse werden Gegenstände und Vermögenswerte sichergestellt, die nach diesem Gesetz oder anderen kantonalen Erlassen oder den Art. 69 und 70 des Schweizerischen Strafgesetzbuches eingezogen werden können und mit der betreffenden Widerhandlung in Zusammenhang stehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die sichergestellten Gegenstände und Vermögenswerte gelten mit der Bezahlung der Ordnungsbusse als eingezogen."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "a8d5519c36bfa214826b4d8c58adb2a19aee113fe81a6d5d079099b928401c14"
+    },
+    {
+      "id": "kanton/BS/253.100/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Ordnungsbusse kann auch im ordentlichen Verfahren ausgesprochen werden."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "17d5e8e91159699c0ccf195d40bb3833ae2fe6fb03eeda7ab2d9c17bc7749422"
+    },
+    {
+      "id": "kanton/BS/253.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÜStG (253.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Einzelheiten des Ordnungsbussenverfahrens in einer Verordnung und erstellt namentlich die Liste der Übertretungen, die mit Ordnungsbussen geahndet werden, mit den entsprechenden Bussenbeträgen (Ordnungsbussenliste)."
+        }
+      ],
+      "stand": "2021-09-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/253.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7a05e2779c0ca932c1bceaa491ebb83a",
+      "sha": "2b36d975b378017cd65841f0826915d771478bdcd0f689ff5583284f4f77b48d"
+    }
+  ]
+}

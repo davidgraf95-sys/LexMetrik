@@ -1,0 +1,987 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/BaB 152.110/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Bürgergemeinderates nehmen ihre Sitze in der Regel nach der Reihenfolge der Parteilisten und ihren persönlich erhaltenen Stimmen ein. Die Präsidentin oder der Präsident, die Statthalterin oder der Statthalter, die Mitglieder des Bürgerrates und der Protokollführer haben besondere Sitzplätze."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "a2c2cc2d947e722b79f80b6a3ee97844dac29b0595e3a2e0cb08221d8ba6b2e9"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sitzungen finden in der Regel an einem Dienstagnachmittag statt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "db56eef2ae252c8859ddea722b59f77aff0f6b0ca49e550bc10ce30b2f0e44c5"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einladung zur Sitzung erlässt die Präsidentin oder der Präsident im Einvernehmen mit dem Bürgerrat durch Versand einer Mitteilung und durch Publikation im Kantonsblatt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einladung ist zusammen mit der vorgeschlagenen Tagesordnung spätestens zehn Tage vor der Sitzung zu versenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Sitzungsdatum muss den Mitgliedern möglichst frühzeitig, in der Regel vier Wochen vor der Sitzung, mitgeteilt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "f1cfd92a3adb4fd0ad9846b20e644eeddf8a7ac371d4b8daa19447bc6d9b40b4"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder sind gehalten, allen Sitzungen beizuwohnen. Zu Beginn der Sitzung findet ein Namensaufruf statt. Die Namen der Abwesenden werden im Protokoll vermerkt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "12e22a42f2319a78633d12dafeef6d70d9573e0ac1310d1f870e0e524b020b87"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Protokoll über die Sitzungen des Bürgergemeinderates wird vom Präsidium und von der protokollführenden Person unterzeichnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Es hat die wesentlichen Inhalte der Diskussion abzubilden und zu enthalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "sämtliche Gegenstände der Verhandlung;"
+            },
+            {
+              "marke": "2",
+              "text": "die Namen der Votanten;"
+            },
+            {
+              "marke": "3",
+              "text": "die zur Abstimmung kommenden Anträge;"
+            },
+            {
+              "marke": "4",
+              "text": "sämtliche Beschlüsse;"
+            },
+            {
+              "marke": "5",
+              "text": "die Abstimmungs- und Wahlergebnisse;"
+            },
+            {
+              "marke": "6",
+              "text": "bei Namensaufruf die Namen der anwesenden Ratsmitglieder;"
+            },
+            {
+              "marke": "7",
+              "text": "bei namentlicher Abstimmung die Namen der Ratsmitglieder und ihre Stellungnahme."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Gegenstände sind gemäss Weisung des Büros bzw. gemäss den Beschlüssen des Plenums im Protokoll aufzunehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Protokoll wird in der Regel innert 10 Tagen nach der Sitzung der Öffentlichkeit zugänglich gemacht."
+        },
+        {
+          "absatz": "5",
+          "text": "Mitglieder des Bürgergemeinderates und des Bürgerrates können bis 20 Tage nach der Veröffentlichung beim Bürgerratsschreiber bzw. bei der Bürgerratsschreiberin das Protokoll betreffende Beanstandungen vorbringen; über ihre Berücksichtigung entscheidet das Büro endgültig."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "d719d8006be93549131db1d6a7c5c0d172352b1ed96f92d24afd384e07e04f9a"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Amtssprache ist Deutsch (Dialekt oder Schriftsprache); die Anrede lautet: Frau Präsidentin oder Herr Präsident, meine Damen und Herren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "074057cccf6c9a358a3ed0cedebc4e4ed4ca068b7bb79fc3c485933035448488"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Bürgergemeinderates und der von ihm gewählten Kommissionen erhalten folgendes Sitzungsgeld: Für jede Sitzung in Rat, Kommission oder Subkommission:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Präsidentin oder Präsident CHF 150"
+            },
+            {
+              "marke": "b",
+              "text": "Übrige Mitglieder CHF 100"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anspruch auf das Sitzungsgeld entfällt für Mitglieder, die bei Namensaufruf zu Sitzungsbeginn nicht anwesend waren oder nicht innerhalb einer Viertelstunde nach Eröffnung der Sitzung eingetroffen sind, sowie für Mitglieder, die bei einem Namensaufruf gemäss § 10 Abs. 2 der Geschäftsordnung nicht anwesend sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Dauert eine Sitzung länger als zwei Stunden, wird für jede weitere angebrochene Stunde ein Sitzungsgeld von CHF 50 ausgerichtet. Auf dieses Sitzungsgeld erhält die Präsidentin oder der Präsident einen Zuschlag von 50 %."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Mitglieder des Bürgergemeinderates und der von ihm gewählten Kommissionen erhalten pro Jahr einen Grundbetrag von CHF 300."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "f2524c479001e32af46e54a026c1277d88a0c9b0b77a9a101e3a368596fac616"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Bedarfsfall wählt der Bürgergemeinderat aus der Reihe seiner Mitglieder für eine Sitzung einen ausserordentlichen Statthalter/ eine ausserordentliche Statthalterin."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "09b3336331c1ae49f116b9fb4d533496f686da332f89955396769a9b47f9ad44"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Behandlung der Geschäfte des Büros gelten sinngemäss die Vorschriften der §§ 30–38."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "de91cd723d44b81c77fc41069f602a7efdea291757ae19fa38959d46f1406fe1"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_9_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "9_a",
+      "artikelLabel": "§ 9a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Bürgergemeinderats machen Angaben zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihrer beruflichen Tätigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "Tätigkeiten in Führungs- und Aufsichtsgremien in in- und ausländischen Unternehmungen, Körperschaften, Genossenschaften, Anstalten und Stiftungen des privaten und öffentlichen Rechts;"
+            },
+            {
+              "marke": "c",
+              "text": "Tätigkeiten in Kommissionen oder anderen Organen des Staates (Bund, Kanton, Gemeinde), sofern die Wahl nicht durch den Bürgergemeinderat erfolgt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kanzlei des Bürgergemeinderats führt aufgrund der Angaben ein Verzeichnis und aktualisiert dieses laufend."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "e9f400e3f9a5adc7f7cd114c3c71b2d515159f150c601a6451cd2441834738c0"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Vertretern der Medien wird die Berichterstattung über die Verhandlungen des Bürgergemeinderates nach Möglichkeit erleichtert. Diese Erleichterungen und die Voraussetzungen, unter welchen sie gewährt werden, regelt das Büro."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "5b48e47e7debdb781196370f27ca5411072b6cc23df344c7bbc3e9a6639cc705"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berichte und Anträge des Bürgerrates und der Kommissionen müssen mindestens zehn Tage vor ihrer Behandlung an die Mitglieder des Bürgergemeinderates versandt werden. In dringenden Fällen kann der Bürgergemeinderat mit einer Mehrheit von zwei Dritteln der Stimmen auch dann die Behandlung eines Geschäftes beschliessen, wenn diese Frist nicht eingehalten worden ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "39ecf9a1915fdb4f7c9575ab9ee4a90ec5f2c8863e77de5ed1e46fbd5eeecd4e"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behandlung einer Vorlage oder eines Berichtes beginnt mit der Eintretensdebatte. Durch einen Ordnungsantrag wird die Beratung zur Sache nur unterbrochen, falls der Bürgergemeinderat die sofortige Erledigung des Ordnungsantrages beschliesst. Auf den Eintretensbeschluss folgt die Detailberatung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Referent des Bürgerrates und, bei Kommissionsberichten, der Referent der Kommission haben das erste Votum und das Schlusswort. Zur Auskunftserteilung kann ihnen jederzeit das Wort erteilt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "437db1764d7de4ab9fccaba32c04ab2c9fa68b8926113e15fa5a6399c07c7b9b"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bürgergemeinderat kann eine zweite Lesung der zur Beratung stehenden Vorlage beschliessen. Nach ihrer Durchführung oder beim Verzicht auf eine solche erfolgt die Schlussabstimmung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "b2cd623f9cc2886d73c6b9b5001781e1c0a4b241887255862205cdfe5e0890e3"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wortbegehren sind an die Präsidentin oder den Präsidenten zu richten. Das Wort wird in der Reihenfolge der Anmeldung erteilt. Die Präsidentin oder der Präsident kann zuerst den Fraktionssprechern das Wort geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausser der Reihe kann das Wort nur zur Geschäftsordnung erteilt werden, wobei die Redezeit auf fünf Minuten beschränkt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Jedes Ratsmitglied darf zum gleichen Gegenstand nur zweimal sprechen; ausgenommen sind persönliche Erklärungen gemäss § 9 der Geschäftsordnung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "861a85f9c5d2a75f4030d9b8db80bf982721e80ad206530c73c303800aea3914"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anträge zu einem in Beratung stehenden Geschäft sind der Präsidentin oder dem Präsidenten schriftlich und unterzeichnet einzureichen. Wird ein Antrag vom Antragsteller zurückgezogen, so kann er von einem andern Ratsmitglied wieder aufgenommen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "5bca8864c72c12ea666df10b6ce2366ca7f0c049a475b025cb4e5c26108e9d77"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern die Ausführungsbestimmungen nichts anderes vorsehen, ist die Redezeit für alle Ratsmitglieder bei einem ersten Votum auf zehn Minuten und bei einem zweiten Votum auf fünf Minuten beschränkt. Ausgenommen sind die Referenten des Bürgerrates, des Büros und der Kommissionen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "ee6246fe040ecb14f0887363464b66f73e18936d814719149bb3f497f498e093"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit zwei Dritteln der Stimmen kann der Bürgergemeinderat die Rednerliste schliessen. Den bereits gemeldeten Votanten ist das Wort noch zu erteilen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "44920f36c0533364d134616717aa4e80e21e3ea7078f1863f82855eaf8ad1f74"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Bürgerrates sind, soweit keine besonderen Regelungen gelten, den Mitgliedern des Bürgergemeinderates bezüglich Worterteilung, Antragstellung und Redezeit gleichgestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "ded4de190f51907ac87b4db07de855e976cb754877b4dd8a174a618bd99d905f"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Stimmabgabe erfolgt durch Erheben der Hand. Die Präsidentin oder der Präsident stellt fest, ob das Mehr unzweifelhaft ist oder ob eine Auszählung stattzufinden hat. Diese ist auch durchzuführen, wenn ein Ratsmitglied dies verlangt. Stimmenzähler ist der Protokollführer."
+        },
+        {
+          "absatz": "2",
+          "text": "Liegt zu einem Gegenstand nur ein einziger Antrag vor, stellt die Präsidentin oder der Präsident dessen stillschweigende Annahme fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Schlussabstimmungen über Vorlagen sowie Abstimmungen über Bürgeraufnahmen sind immer durch Abmehrung durchzuführen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "f09e4e4e028f91bedc4b83e754626300c9d634d7521a474a2606c00686dd141e"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Wahlen bezeichnet die Präsidentin oder der Präsident die Stimmenzähler aus der Mitte der Ratsmitglieder."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mandatsverteilung bei der Bestellung von Kommissionen nach Fraktionsstärken richtet sich nach dem prozentualen Sitzanteil der Fraktionen aufgrund ihrer Sitzzahl im Bürgergemeinderat. Nach Zuweisung der Vollmandate (= ganze Verteilungszahlen) werden der Reihe nach die grösseren Restwerte hinter dem Komma berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Wahlergebnis wird von den Stimmenzählern unter Aufsicht der Statthalterin oder des Statthalters oder eines andern Mitglieds des Büros ermittelt und dem Bürgergemeinderat von der Präsidentin oder vom Präsidenten mitgeteilt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "bcd3cbe3189716938872ccebd3f478b939381ad3c0a50364f48b0df005b575cf"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Stimmenzähler haben die Zahl der ausgeteilten und der wiedereingegangenen Stimmzettel festzustellen. Übersteigt die Zahl der eingegangenen Stimmzettel die Zahl der ausgeteilten, so ist der Wahlgang ungültig, und es hat ein neuer stattzufinden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "0a90170ead24bd5fecca374fe6971729a5de54848135a0850f244ee3c768cefe"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden gegen ein Wahlverfahren Einsprachen erhoben, so entscheidet das Plenum, ob ein neuer Wahlgang vorzunehmen ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "2d1befa3ec9b605de5d2b42f58c0e12540802d9d40ab5abc9a92e8e18056c539"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Interpellation ist spätestens am Vormittag des dritten der Sitzung vorangehenden Arbeitstages (also in der Regel am Donnerstag) bei der Bürgerratsschreiberin oder beim Bürgerratsschreiber zuhanden der Präsidentin oder des Präsidenten des Bürgergemeinderates schriftlich einzureichen. Die Redezeit zur Begründung ist auf zehn Minuten beschränkt."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach der Beantwortung der Interpellation erklärt der Interpellant, ob er von der Antwort befriedigt ist. Hiezu ist die Redezeit auf zehn Minuten zu beschränken. Der Vertreter des Bürgerrates hat danach das Recht auf eine kurze Erklärung."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Rat kann Diskussion beschliessen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "65261d68f6ece28289c7fa758405e791a13540fec49d259cdb4d22a8dac68078"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Auftrag ist schriftlich einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Auftrag mindestens 20 Tage vor einer Sitzung eingereicht, so wird er in dieser Sitzung behandelt. Er ist gemäss § 3 auf die vorgeschlagene Tagesordnung zu setzen und sein Wortlaut binnen der Frist von § 11 den Mitgliedern des Bürgergemeinderates zur Kenntnis zu bringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird der Auftrag später oder während einer Sitzung eingereicht, so gibt die Präsidentin oder der Präsident dem Plenum unverzüglich Kenntnis vom Wortlaut des Auftrags. Die Behandlung erfolgt in der folgenden Sitzung, doch kann der Bürgergemeinderat mit zwei Dritteln der Stimmen Behandlung in der gleichen Sitzung beschliessen."
+        },
+        {
+          "absatz": "4",
+          "text": "Ein Auftrag kann von der erstunterzeichnenden Person während der Beratung im Wortlaut abgeändert werden."
+        },
+        {
+          "absatz": "4bis",
+          "text": "Zieht ihn die erstunterzeichnende Person vor oder während der Beratung zurück, so kann er von einem anderen Ratsmitglied aufgenommen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Eine Diskussion findet nur statt, wenn der Auftrag bestritten ist. Nach einer Diskussion hat der Erstunterzeichner bzw. das vom Büro oder einer Kommission zur Vertretung des Auftrags bestimmte Mitglied das Schlusswort."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Auftrag ist erledigt, wenn er vom Bürgergemeinderat abgeschrieben worden ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "c9f7a520a964e37672b0b8b17b7de08008d4b691347682a32f03d6c78a6c46f0"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Kleine Anfrage ist schriftlich und unterzeichnet der Kanzlei des Bürgergemeinderates einzureichen, die diese dem Bürgerrat überweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Kleine Anfrage wird dem Bürgergemeinderat zur Kenntnis gebracht; sie wird von diesem nicht behandelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kleine Anfrage wird vom Bürgerrat schriftlich beantwortet; sie ist damit erledigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die schriftliche Antwort geht an die Anfragende bzw. den Anfragenden und wird dem Bürgergemeinderat zur Kenntnis gebracht."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Antwort wird im Bürgergemeinderat nicht behandelt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "132ee29dd5423dd08faea66616c0cfe601d739ca6fad0f7c1171cdf3d910863a"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Antrag ist der Präsidentin oder dem Präsidenten spätestens bei der Behandlung des betreffenden Teiles des Leistungsauftrags und des Globalkredits schriftlich einzureichen. Er wird dort in Beratung gezogen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "e9c2fa3e75cbef41084bcb2c097c74c2455b1fea957ec25d4e1122343aa1edb6"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Antrag zu einer Resolution ist schriftlich und unterzeichnet einzureichen und hat den vorgeschlagenen Wortlaut zu enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Beschliesst der Bürgergemeinderat, auf den Antrag einzutreten, so entscheidet er, an welcher Stelle die Resolution auf die Tagesordnung zu setzen ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "5b872a6faa3028090040c9366be9f80103c906be3eeb4c950b63a71293651fcd"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Petition ist zuhanden des Bürgergemeinderates an die Präsidentin oder den Präsidenten mittels schriftlicher Eingabe zu richten. Dieser/Diese bringt die Petition dem Bürgergemeinderat zur Kenntnis."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "ce0635a214af673671ad6fc68ddc509d2b07d02d4a1c4368c6e251a2a73ecdac"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommissionen werden rechtzeitig durch ihre Präsidentinnen oder Präsidenten unter Angabe der Traktanden eingeladen. Ein Viertel der Kommissionsmitglieder, mindestens zwei, können die Einberufung einer Sitzung verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommissionen können zur Vorbereitung einzelner Geschäfte Subkommissionen bilden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "bbff11c371cd32c17f90795155399d4543d85f4e0acf075db52b2a4303fb11ee"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommissionen sind beschlussfähig, wenn die Mehrheit der Mitglieder anwesend ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident stimmt mit und hat bei Stimmengleichheit den Stichentscheid."
+        },
+        {
+          "absatz": "3",
+          "text": "Beschlüsse können mit einfachem Mehr in Wiedererwägung gezogen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "48877040a26eb1804a034b6217136f88cb0b333e7ea7f02e66006cf5ac54cc56"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu den Beratungen der ständigen und der Spezialkommissionen können Mitglieder des Bürgerrates beigezogen werden. Dem Bürgerrat ist Gelegenheit zu geben, seine Ansicht vor der Kommission zu vertreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vertreter des Bürgerrates ist befugt, Beamte und Sachverständige zur Auskunfterteilung beizuziehen, sofern die Kommission zustimmt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kommissionen sind berechtigt, vom Bürgerrat oder von einzelnen seiner Mitglieder nähere Aufschlüsse und Ergänzungen zu den Akten zu verlangen. Ausserdem steht es ihnen frei, innerhalb der bürgerlichen Verwaltung tätige Personen zur Auskunfterteilung zu ihren Beratungen zuzuziehen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "31af5cad98c7bc8ba07e76e7b562258e7bfeaccdff8dd2493a07134b0cfa3427"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommissionen haben die Wünsche und Anregungen der Mitglieder des Bürgergemeinderates entgegenzunehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommissionen können unter Anzeige an den zuständigen Bürgerrat Gutachten von Sachverständigen einholen und ausserhalb der bürgerlichen Verwaltung stehende Persönlichkeiten zur Auskunfterteilung zu ihren Beratungen zuziehen. Bei entgeltlichen Aufträgen ist vor der Auftragerteilung der Präsidentin oder dem Präsidenten des Bürgergemeinderates ein Kostenvoranschlag zu unterbreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kommissionen können auch Delegierte einer kantonalen oder eidgenössischen Behörde mit beratender Stimme zu ihren Sitzungen einladen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "8016292c470787612cedae560af6b67c57baeb41ed0df9971c9cab99c80eeab1"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über die Kommissionssitzungen wird ein Protokoll geführt. Es hat mindestens die Namen der anwesenden Kommissionsmitglieder, die gestellten Anträge und die Beschlüsse samt Abstimmungsergebnissen zu enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Protokollführung kann einem Kommissionsmitglied, dem Bürgerratsschreiber/der Bürgerratsschreiberin, einem seiner Stellvertreter oder einem Dritten übertragen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "35f8178abd60314f7db1d1998d9f7d88ac6b47f3ddb5c9965c493c19030ab754"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Drittpersonen sowie Ratsmitglieder, die einer Kommission nicht angehören, sind nicht berechtigt, ohne Bewilligung Einsicht in die Protokolle und Akten einer Kommission zu nehmen. Die Kompetenz für die Bewilligung liegt bei der betreffenden Kommission oder, sofern sich eine Kommission aufgelöst hat, beim Büro des Bürgergemeinderates."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Protokolle von ständigen und Spezialkommissionen sind auch den Zentralen Diensten der Bürgergemeinde zuzustellen, ausserdem den Mitgliedern des Bürgerrates für diejenigen Sitzungen, zu welchen sie eingeladen worden sind."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "374ce5094408dab5d9fd7c0b55228f75f183770af32311e488500f1291ac309b"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Ende ihrer Amtsdauer haben ständige und Spezialkommissionen, bei welchen unerledigte Geschäfte liegen, einen Rechenschaftsbericht über ihre Tätigkeit und die bereits gefassten Beschlüsse der Präsidentin oder dem Präsidenten des Bürgergemeinderates abzuliefern. Über weitere Zwischenberichte entscheiden die Kommissionen selbst."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "71f345d6b2918cc70f141d95a599c3a88abe37a57be7aded34f8e4aa611a2a5d"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berichte von ständigen und Spezialkommissionen, welche die Anträge der Kommissionen und eventuelle Minderheitsanträge samt Abstimmungsergebnissen zu enthalten haben, sind der Präsidentin oder dem Präsidenten des Bürgergemeinderates schriftlich einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Kommission keinen andern Referenten bestimmt, erstattet die Präsidentin oder der Präsident dem Bürgergemeinderat Bericht. Eine Minderheit von mindestens zwei Kommissionsmitgliedern kann einen eigenen Bericht vorlegen und durch einen von ihr bestimmten Referenten vertreten lassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Nur mündliche Berichterstattung ist in dringenden Fällen, sonst mit Zustimmung der Präsidentin oder des Präsidenten des Bürgergemeinderates, zulässig."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "2ab0d40e1c4be81aea4acfdc7828071168c11456c47fa6be6e1c1be4bbcbc41c"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Erledigung eines Geschäftes oder nach Auflösung einer Spezialkommission sind alle Kommissionsakten den Zentralen Diensten der Bürgergemeinde abzuliefern."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "4c7d39b0a34a801710036cfd1b380885d328e0e8b91e93cc5592d6feb5818411"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anträge auf Abänderungen dieser Ausführungsbestimmungen hat der Bürgergemeinderat, sofern er darauf eintreten will, dem Büro oder einer Kommission zur Berichterstattung zu überweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Befristete Abweichungen kann er jederzeit mit zwei Dritteln der Stimmen beschliessen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "a75a5377dce14eec62ba8324bf38129fbd94f213db1cdd0ab6c7bddabba492e8"
+    },
+    {
+      "id": "kanton/BS/BaB 152.110/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgergemeinderates der Stadt Basel (BaB 152.110)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch diese Ausführungsbestimmungen werden diejenigen vom 13. Dezember 1977 aufgehoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 152.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4cb14d175256e55bc71625a70ae1d557",
+      "sha": "6f73c9bc50d37e1b539e885b6fb2ba34971ae6c54b5ed4f39c2e0a8fb1188536"
+    }
+  ]
+}

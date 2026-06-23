@@ -1,0 +1,245 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/781.500/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei vorübergehender, übermässiger Belastung der Luft mit Feinstaub (PM 10) werden vom Kanton Massnahmen zum Schutz der Gesundheit der Bevölkerung angeordnet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "188e2b24dcba6363a6d2f9e11a62239abf74bbc6ade7cbfe683a5f80d6b7698d"
+    },
+    {
+      "id": "kanton/BS/781.500/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beurteilung der übermässigen Luftbelastung dienen die vom interkantonalen Immissionsmessnetz der Region Nordwestschweiz und des Bundes erfassten Feinstaubimmissionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht in die Beurteilung einbezogen werden die Daten der Messstandorte in der Nähe von Hochleistungsstrassen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "83b4150ae1208a02df767ff8dd26b1c1ae0e275fcffcd2cc5b55364d80c5f190"
+    },
+    {
+      "id": "kanton/BS/781.500/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anordnung von Massnahmen hat in Abstimmung mit den Kantonen der Nordwestschweiz zu erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Massnahmen werden angeordnet, wenn die massgebenden Schwellenwerte der Feinstaubimmissionen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "an mindestens drei Messstationen in der Region Juranordfuss erreicht oder überschritten sind und"
+            },
+            {
+              "marke": "b",
+              "text": "für die nächsten drei Tage eine austauscharme Wetterlage prognostiziert wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "7f1e392adef8dd7cbaa114b8c2474881e335d0c77818f387ac29947e293e8db5"
+    },
+    {
+      "id": "kanton/BS/781.500/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird das PM10-Tagesmittel von 75 &mu;g/m&sup3; erreicht oder überschritten,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "informiert das Departement für Wirtschaft, Soziales und Umwelt die Bevölkerung über die aktuelle Belastungssituation und -entwicklung und"
+            },
+            {
+              "marke": "b",
+              "text": "veröffentlicht in Zusammenarbeit mit dem Gesundheitsdepartement Verhaltensempfehlungen insbesondere für gesundheitlich besonders gefährdete Menschen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird das PM10-Tagesmittel von 100 &mu;g/m&sup3; erreicht oder überschritten",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dürfen Feststoff-Feuerungen wie Cheminées und Schwedenöfen nicht betrieben werden, wenn eine Heizung mit geringeren, lokalen Schadstoffemissionen zur Verfügung steht;"
+            },
+            {
+              "marke": "b",
+              "text": "ist jede Art von Feuern im Freien verboten;"
+            },
+            {
+              "marke": "c",
+              "text": "dürfen keine Feuerwerkskörper gezündet werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Wird das PM10-Tagesmittel von 150 &mu;g/m&sup3; erreicht oder überschritten, dürfen Diesel-betriebene Maschinen, Traktoren und Geräte mit einer Leistung über 37 kW ohne Partikelfilter auf Baustellen und in der Land- und Forstwirtschaft nicht eingesetzt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "d4ba54d8815f1e13913cc0dc1fd476aa435a2f8704c0028cbbb9f73c2e734893"
+    },
+    {
+      "id": "kanton/BS/781.500/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Angeordnete Massnahmen sind spätestens aufzuheben, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der PM10-Tagesimmissionsgrenzwert von 50 &mu;g/m&sup3; bei allen massgeblichen Messstationen unterschritten wird und"
+            },
+            {
+              "marke": "b",
+              "text": "gemäss den meteorologischen Voraussagen eine Verbesserung der Wettersituation prognostiziert wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "acba5c75588951bcf5004c3a1e28406daf2bcd7e7a39f2b5f45bf0d087f71cf2"
+    },
+    {
+      "id": "kanton/BS/781.500/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Umwelt und Energie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "stellt fest, ob die Voraussetzungen für das Inkrafttreten und die Anordnung oder die Aufhebung der Massnahmen erfüllt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "stellt die diesbezügliche Koordination mit den Lufthygienefachstellen der Nachbarkantone sicher;"
+            },
+            {
+              "marke": "c",
+              "text": "beantragt und begründet dem Departement für Wirtschaft, Soziales und Umwelt das Inkrafttreten und die Anordnung der Massnahmen oder ihre Aufhebung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement für Wirtschaft, Soziales und Umwelt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ordnet Massnahmen gemäss § 4 Abs. 2 und Abs. 3 oder ihr Inkrafttreten sowie ihre Aufhebung an und"
+            },
+            {
+              "marke": "b",
+              "text": "informiert die Bevölkerung in geeigneter Weise darüber."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "a6b09a63d52f6cc2a45dd636595b4411f04d4eed306ca973b46aaacaaeae7f13"
+    },
+    {
+      "id": "kanton/BS/781.500/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement für Wirtschaft, Soziales und Umwelt trifft die nötigen Vorbereitungen, damit die Massnahmen im Bedarfsfall rasch und wirksam umgesetzt werden können."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "97ae59bdce692c4d5fd5873d1805bc70e9e5c9cefdb5754f0a0d2e22ef3dd97f"
+    },
+    {
+      "id": "kanton/BS/781.500/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Smog-Verordnung (781.500)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung ist zu publizieren; sie wird sofort wirksam."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e1e824b5b07ec3a8470d4bf1cc05aa12",
+      "sha": "8b3b855a6897f882ee9f8b5433cbaa83b3d4b9f52c95261fd3344158371f485a"
+    }
+  ]
+}

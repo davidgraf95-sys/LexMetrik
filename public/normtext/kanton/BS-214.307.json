@@ -1,0 +1,273 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/214.307/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Organisation, das Verfahren, die Publikation und den Zugang zum Kataster der öffentlich-rechtlichen Eigentumsbeschränkung (ÖREB-Kataster) und legt fest, welche Geobasisdaten des kantonalen Rechts Gegenstand des ÖREB-Katasters sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit diese Verordnung keine besonderen Vorschriften enthält, gilt die Geoinformationsverordnung (KGeolV) vom 7. August 2012."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "a7998a098668a5ba06555414bd4ea01c3dab0f93e06cceea4dee903e13b80450"
+    },
+    {
+      "id": "kanton/BS/214.307/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Inhalt und die Informationstiefe des ÖREB-Katasters richten sich nach §§ 3 und 4 ÖREBKV sowie den im Geobasisdatenkatalog (§ 3 KGeoIV) als Gegenstand des Katasters bezeichneten Geobasisdaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Zudem werden laufende Änderungen in den ÖREB-Kataster aufgenommen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "c93da983f9b6ff37338c3b45c73399b6f10ce8a5a755f831355fd71b83759fa5"
+    },
+    {
+      "id": "kanton/BS/214.307/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zusätzlich zu den eigentlichen Inhalten des ÖREB-Katasters können als unverbindliche Informationen weitere Geobasisdaten dargestellt werden."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "faf9b789112bcdf055fa6ab3631297fd321965cf680da05619f036b27170920d"
+    },
+    {
+      "id": "kanton/BS/214.307/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuch- und Vermessungsamt ist die für die Führung des ÖREB-Katasters verantwortliche Stelle nach Art. 17 Abs. 2 ÖREBKV. Es erlässt zur Konkretisierung dieser Verordnung die vom Bau- und Verkehrsdepartement zu genehmigende Weisung zum ÖREB-Kataster Basel-Stadt ."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Katasterverantwortliche Stelle übernimmt die operative Gesamtleitung des ÖREB-Katasters Basel-Stadt und sorgt für dessen Weiterentwicklung."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie stellt die Katasterinfrastruktur, insbesondere bestehend aus ÖREB-Fachsystem und ÖREB-Katasterportal, bereit."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "f12114f7a2c94432ad2392f9fae0c2b21b77aff889ed5e55fe6555badb50e900"
+    },
+    {
+      "id": "kanton/BS/214.307/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die im Geobasisdatenkatalog (§ 3 KGeoIV) bezeichnete Fachstelle ist die nach Art. 8 Abs. 1 des Bundesgesetzes über Geoinformation (Geoinformationsgesetz, GeoIG) vom 5. Oktober 2007 zuständige Stelle und sorgt für die Bereitstellung ihrer Daten gemäss § 5 ÖREBKV."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Fachstelle trägt die inhaltliche Verantwortung für die Katasterbearbeitung, welche insbesondere die Erfassung und Nachführung der Geobasisdaten, der Hinweise auf die gesetzlichen Grundlagen und der Rechtsvorschriften im ÖREB-Kataster beinhaltet."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Fachstelle kann eine Dienstleistungserbringerin oder einen Dienstleistungserbringer mit Aufgaben der Katasterbearbeitung beauftragen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "3f93b2bc483b510c26f4f7c1c017426ce19be7118a7c1a1ead3ef747b97eb0c2"
+    },
+    {
+      "id": "kanton/BS/214.307/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei ÖREB-Katasterthemen in Zuständigkeit der Gemeinden gibt die im Geobasisdatenkatalog (§ 3 KGeoIV) bezeichnete Fachstelle des Kantons das Daten- und Darstellungsmodell sowie die Erfassungsrichtlinien vor."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "7c7dd93c88bf3604a483519e1c6ec87df720698c4e5b4e35fee6d4456d403127"
+    },
+    {
+      "id": "kanton/BS/214.307/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das amtliche Publikationsorgan für die ÖREB-Katasterthemen ist das digitale Kantonsblatt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Publikation wird auf die digitale Auflage der Geodaten im ÖREB-Kataster verwiesen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Fachstelle kann die digitale Auflage mit einer analogen Auflage ergänzen. Massgebend ist dabei die über den ÖREB-Kataster einsehbare, digitale Version."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "8dc286e94e941d5a51075ac6f769bef3d961fe804cfdf4a9c803ec233d278372"
+    },
+    {
+      "id": "kanton/BS/214.307/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Fachstellen können in Absprache mit der Katasterverantwortlichen Stelle um die Aufnahme neuer ÖREB-Katasterthemen in den ÖREB-Kataster ersuchen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "ef45e3ab0a870518cabd0288f4ab567611df31492d6c22b43cdde8299bce38f8"
+    },
+    {
+      "id": "kanton/BS/214.307/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundsätzlich werden öffentlich-rechtliche Eigentumsbeschränkungen im ÖREB-Kataster geführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die im Grundbuch angemerkten öffentlich-rechtlichen Eigentumsbeschränkungen sollen zwecks Vollständigkeit auch im ÖREB-Kataster geführt und im Katasterauszug auf das Grundbuch hingewiesen werden."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "a5c7a696f3ccc8ec7a46b8c1f6bffe66c90713d2f642e11137dbe1197912715c"
+    },
+    {
+      "id": "kanton/BS/214.307/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Interessierten wird der unentgeltliche, elektronische Zugang zum ÖREB-Kataster gewährt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "6a48810a8a5158d4f18483e254a27170261ea61833af328cfb182bc81e6a9b14"
+    },
+    {
+      "id": "kanton/BS/214.307/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über das ÖREB-Katasterportal werden der Inhalt des ÖREB-Katasters und die Zusatzinformationen bereitgestellt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "ce3c6a7c79ecf3edbb78df636066f021403a01e9337ef09a4c6bc0ce53b3763a"
+    },
+    {
+      "id": "kanton/BS/214.307/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KÖREBKV (214.307)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Katasterauszüge gemäss ÖREBKV werden unentgeltlich digital über das Katasterportal bereitgestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Katasterverantwortliche Stelle erstellt die Auszüge bei Bedarf auch in analoger Form."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.307",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "01bdfbbd64f53cfe01184947bff0eb2b",
+      "sha": "d2d8d869396966dd93298d5dfb7c4829ebc5ca1a30c2891b33a235ce6e955d4f"
+    }
+  ]
+}

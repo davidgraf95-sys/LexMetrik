@@ -1,0 +1,413 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.350/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Steuerung der Informationstechnologie der kantonalen Verwaltung (IT-Governance)."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "073dc118929bd1b8f42d80718abbafc834192d584ebdc91060fd137d3ccf0695"
+    },
+    {
+      "id": "kanton/BS/153.350/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt für die kantonale Verwaltung und weitere Organisationseinheiten, soweit diese IT-Leistungen der kantonalen Verwaltung beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben Spezialgesetzgebungen oder -regelungen."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "081dd22ad51a6be43764862a4f793bd4e0b1a618ab189f0aed2c87d3ce2a0f12"
+    },
+    {
+      "id": "kanton/BS/153.350/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die IT-Anwendungen werden kategorisiert in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "IT-Basisdienste;"
+            },
+            {
+              "marke": "b",
+              "text": "IT-Querschnittsdienste;"
+            },
+            {
+              "marke": "c",
+              "text": "IT-Fachapplikationen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Kategorisierung ist die Konferenz für Informatik und Informationssicherheit (KIS) zuständig."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "31daa4ae68e20fc0fd54b45c32759d3d54f90a88f734af316f579efd01e7b888"
+    },
+    {
+      "id": "kanton/BS/153.350/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "IT-Basisdienste und IT-Querschnittsdienste werden von IT BS organisiert und betrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind von den Departementen zu nutzen. Über Ausnahmen entscheidet die KIS."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "9146a931b2c55b9623a24d2ef7b90c0b47d80aab1eb5f8c4d60364a048376a93"
+    },
+    {
+      "id": "kanton/BS/153.350/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "IT-Fachapplikationen werden durch die Departemente organisiert und betrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Über Ausnahmen entscheidet die KIS."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "7fb2d23fb11c407221f89472c3abb8964c98de2528d6f5dff989595d4a503001"
+    },
+    {
+      "id": "kanton/BS/153.350/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die folgenden Organe führen und steuern die Informatik der kantonalen Verwaltung strategisch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Regierungsrat;"
+            },
+            {
+              "marke": "b",
+              "text": "Regierungsdelegation Informatik (RRDel Informatik);"
+            },
+            {
+              "marke": "c",
+              "text": "KIS;"
+            },
+            {
+              "marke": "d",
+              "text": "Geschäftsstelle Digitale Verwaltung (GDV)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die folgenden Organe gewährleisten die operative Umsetzung der Informatik der kantonalen Verwaltung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "IT BS;"
+            },
+            {
+              "marke": "b",
+              "text": "Informatikabteilungen der Departemente, Staatsanwaltschaft und Dienststellen;"
+            },
+            {
+              "marke": "c",
+              "text": "Informatik der Gerichte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "2063dbc7d61b0133d5598ae7028340165072a57531c546b3e1b5ac37276a7433"
+    },
+    {
+      "id": "kanton/BS/153.350/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat beschliesst die strategischen, organisatorischen und finanziellen Rahmenbedingungen."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "b8bab747ff2f24ac33cda838256ab22c34b70ad2501c7f79c1f00c829c59e661"
+    },
+    {
+      "id": "kanton/BS/153.350/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die RRDel Informatik ist vorberatendes Gremium für die Berichterstattung der KIS zuhanden des Regierungsrats und berät die KIS bei deren Aufgaben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die KIS stellt ihre Protokolle der RRDel Informatik zu."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "b595de954bf6c818dd545ffec36c6ad9971068c24aa7aab5caed1d8808792316"
+    },
+    {
+      "id": "kanton/BS/153.350/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KIS ist das zentrale Steuerungsgremium der Informatik der kantonalen Verwaltung. Sie bildet die Koordinations- und Schnittstelle zwischen den strategischen und operativen Organen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der KIS obliegen insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Steuerung der Informatik im Interesse der kantonalen Verwaltung, gemäss den Vorgaben und im Auftrag des Regierungsrates;"
+            },
+            {
+              "marke": "b",
+              "text": "Berichterstattung zuhanden des Regierungsrats;"
+            },
+            {
+              "marke": "c",
+              "text": "Organisation und Steuerung des IT- Projekt- und IT-Dienste-Portfolios und der Qualität der IT-Dienste;"
+            },
+            {
+              "marke": "d",
+              "text": "Priorisierung der IT-Vorhaben nach Kosten-Nutzen-Kriterien als Teil der Finanz- und Budgetplanung;"
+            },
+            {
+              "marke": "e",
+              "text": "strategische Steuerung und Umsetzung der Informationssicherheit;"
+            },
+            {
+              "marke": "f",
+              "text": "Abstimmung und Zusammenarbeit mit relevanten Anspruchsgruppen zu IT-Themen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Wahrnehmung dieser Aufgaben kann die KIS Ausführungsbestimmungen erlassen."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "53625033bf52903184cc27b4cd381f94968a8826db7303dd283f5b18bdcb406f"
+    },
+    {
+      "id": "kanton/BS/153.350/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KIS setzt sich zusammen aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einer vertretenden Person pro Departement;"
+            },
+            {
+              "marke": "b",
+              "text": "einer vertretenden Person der Staatskanzlei;"
+            },
+            {
+              "marke": "c",
+              "text": "der Leitung GDV;"
+            },
+            {
+              "marke": "d",
+              "text": "der Leitung IT BS."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte können eine Person in die KIS delegieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat wählt die Mitglieder der KIS gemäss Abs. 1 lit. a - d und deren Vorsitz."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "e72bdfb1b66bd7e495db19b2847a8e2fedd1e346b755be349fb4e6e868e3dbaf"
+    },
+    {
+      "id": "kanton/BS/153.350/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KIS ist ein Kollegialgremium und entscheidet im Interesse der gesamten kantonalen Verwaltung. Sie fällt ihre Entscheide nach Möglichkeit im Konsens. Wird kein Konsens erreicht, entscheidet der Vorsitz auf der Grundlage der geführten Diskussion. Der Vorsitz kann dazu Konsultativabstimmungen durchführen oder die RRDel Informatik zur Beratung beiziehen. Im Übrigen konstituiert sich die KIS selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann externe Fachpersonen beiziehen und Fachausschüsse bilden."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "0e98b7eadd09194cf522c709ff0ef5e67d037d62f48c157c2d1f8aaefb340756"
+    },
+    {
+      "id": "kanton/BS/153.350/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KIS hat eine Geschäftsstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geschäftsstelle wird im Finanzdepartement geführt."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "50140186cd4475caba0f74e84c3e8b8af34661baf1f1482f1ffbbd3d2e7f7e31"
+    },
+    {
+      "id": "kanton/BS/153.350/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verkehr zwischen dem Regierungsrat und der KIS wird vom Finanzdepartement vermittelt."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "fb7e6703d06ce78f7d0aba2546376d14a067398e4d5da8f9a5460482ba3145f2"
+    },
+    {
+      "id": "kanton/BS/153.350/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "IT-Governance-Verordnung, ITGV (153.350)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die GDV fördert die digitale Transformation in der kantonalen Verwaltung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie organisiert das Digitalisierungsportfolio der kantonalen Verwaltung und priorisiert die Digitalisierungsvorhaben."
+        }
+      ],
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9e6d18269e91d6315b697b394993a114",
+      "sha": "af7bb98dda007ee9a42b43dcaf6369c58068072b141c787266adc8e5d0999a8b"
+    }
+  ]
+}

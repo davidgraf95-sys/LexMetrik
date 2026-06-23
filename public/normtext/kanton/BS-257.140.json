@@ -1,0 +1,655 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/257.140/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt den Aufbau und die Benutzung des Informatiksystems der Staatsanwaltschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "07f6399511acf493ddd64953423eca1bdb278d3ffa6842b7c826d9583ae8f75b"
+    },
+    {
+      "id": "kanton/BS/257.140/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Informatiksystem der Staatsanwaltschaft dient der Erfüllung folgender Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verhütung und Verfolgung von Straftaten"
+            },
+            {
+              "marke": "b",
+              "text": "Statistische Erhebungen und wissenschaftliche Untersuchungen"
+            },
+            {
+              "marke": "c",
+              "text": "Auskunftserteilung."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "78997bffd2900ebd3c10283c9ec8a51ee6c20a8eb43376f7cbf674192e7cb708"
+    },
+    {
+      "id": "kanton/BS/257.140/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Informatiksystem der Staatsanwaltschaft werden Grund-, Fall- und Verfahrensdaten aufbewahrt."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "7d7f867c88dcc861a04b16d41b492e5e09ecd72e3df6dd89762ec9a28257da1a"
+    },
+    {
+      "id": "kanton/BS/257.140/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grunddaten sind vollständige Angaben zu natürlichen und juristischen Personen."
+        },
+        {
+          "absatz": "2",
+          "text": "Grunddaten werden im Zusammenhang mit Fall- oder Verfahrensdaten gespeichert."
+        },
+        {
+          "absatz": "3",
+          "text": "Es können insbesondere folgende Grunddaten über natürliche Personen gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Rufname, Vornamen, Geburtsname"
+            },
+            {
+              "marke": "b",
+              "text": "Aliasname"
+            },
+            {
+              "marke": "c",
+              "text": "Geburtsdatum und Geburtsort"
+            },
+            {
+              "marke": "d",
+              "text": "Heimatort(e) und Staatsangehörigkeit(en), Ausländerstatus"
+            },
+            {
+              "marke": "e",
+              "text": "Geschlecht"
+            },
+            {
+              "marke": "f",
+              "text": "Ausweis und Sprache"
+            },
+            {
+              "marke": "g",
+              "text": "Zivilstand und Namen, Vornamen, Ledignamen und Sprache der Ehegattin oder eingetragenen Partnerin oder des Ehegatten oder eingetragenen Partners"
+            },
+            {
+              "marke": "h",
+              "text": "Wohn- oder Aufenthaltsort, Privat- und Geschäftsadresse"
+            },
+            {
+              "marke": "i",
+              "text": "Angaben zu sämtlichen Kommunikationsmitteln"
+            },
+            {
+              "marke": "j",
+              "text": "Namen, Vornamen, Ledignamen und Sprache der Eltern"
+            },
+            {
+              "marke": "k",
+              "text": "Beruf, Arbeitgeberin oder Arbeitgeber, Inhaberverhältnisse von Firmen"
+            },
+            {
+              "marke": "l",
+              "text": "Namen, Vornamen und Sprache von Bezugspersonen"
+            },
+            {
+              "marke": "m",
+              "text": "gesetzliche Vertretung"
+            },
+            {
+              "marke": "n",
+              "text": "Haft- und Festnahmedaten"
+            },
+            {
+              "marke": "o",
+              "text": "Alarmhinweise"
+            },
+            {
+              "marke": "p",
+              "text": "Personenverbindungen"
+            },
+            {
+              "marke": "q",
+              "text": "Personenfahndung"
+            },
+            {
+              "marke": "r",
+              "text": "erkennungsdienstliche Daten"
+            },
+            {
+              "marke": "s",
+              "text": "Namen, Vornamen und Adresse von Rechtsbeiständen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Es können insbesondere folgende Grunddaten über juristische Personen gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Sitz, Verwaltungsdomizil und Form"
+            },
+            {
+              "marke": "b",
+              "text": "Adressen, Angaben der Kommunikationsmittel"
+            },
+            {
+              "marke": "c",
+              "text": "Daten über Inhaberin oder Inhaber, Vertreterin oder Vertreter und verantwortliche Personen"
+            },
+            {
+              "marke": "d",
+              "text": "Angaben aus dem Handelsregister"
+            },
+            {
+              "marke": "e",
+              "text": "Personenverbindungen"
+            },
+            {
+              "marke": "f",
+              "text": "Personenfahndung."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "39f83557cf99a51f081a2b282119f703e32cc07dda3ca99fe0e541c3b31661d8"
+    },
+    {
+      "id": "kanton/BS/257.140/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Falldaten sind Angaben über eine versuchte oder begangene Straftat oder über strafbare Vorbereitungshandlungen gemäss Art. 260bis StGB und weitere Angaben aus Strafanzeigen, Rapporten der Polizei und Meldungen Dritter."
+        },
+        {
+          "absatz": "2",
+          "text": "Es können insbesondere folgende Falldaten gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ereignis, Ereignisart, Ereignisdatum, Ereignisort"
+            },
+            {
+              "marke": "b",
+              "text": "Behörde, bei der die Anzeige eingereicht wurde, und Anzeigedatum"
+            },
+            {
+              "marke": "c",
+              "text": "Tatvorgehen"
+            },
+            {
+              "marke": "d",
+              "text": "Personenbeschreibung"
+            },
+            {
+              "marke": "e",
+              "text": "Beteiligte"
+            },
+            {
+              "marke": "f",
+              "text": "Spuren"
+            },
+            {
+              "marke": "g",
+              "text": "Sachschaden"
+            },
+            {
+              "marke": "h",
+              "text": "getroffene oder zu treffende Massnahmen"
+            },
+            {
+              "marke": "i",
+              "text": "Verbindung zu gleichen Ereignissen"
+            },
+            {
+              "marke": "j",
+              "text": "Fahndungshinweise"
+            },
+            {
+              "marke": "k",
+              "text": "Verbindung zu Verfahren."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "4cd5c6441ec4a64bb26556536d0ff864e66c8e6aa8d349f9eef5a45e08b82820"
+    },
+    {
+      "id": "kanton/BS/257.140/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrensdaten sind Daten über beschuldigte Personen und die ihnen vorgeworfenen Straftaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Es können insbesondere folgende Verfahrensdaten gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Eröffnungs- und Abschlussdatum"
+            },
+            {
+              "marke": "b",
+              "text": "Verfahrensstand"
+            },
+            {
+              "marke": "c",
+              "text": "beschuldigte Person"
+            },
+            {
+              "marke": "d",
+              "text": "Verfahrensleitung und Aktenstandort"
+            },
+            {
+              "marke": "e",
+              "text": "Verbindung zu Akten, Grund- und Falldaten"
+            },
+            {
+              "marke": "f",
+              "text": "Erledigungsart und Erledigungsgrund."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "ef95a910cc95a6289d04f2957f8b3738a221bc391fdf1eb30a59d3b4b9135136"
+    },
+    {
+      "id": "kanton/BS/257.140/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt ist verantwortlich für das Informatiksystem im Sinne von § 6 IDG."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "40bd8a217ae3a79a0dbe203ffa4f6f8c9d09460f227c148d97cb8312efcad99a"
+    },
+    {
+      "id": "kanton/BS/257.140/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt erteilt Mitarbeiterinnen und Mitarbeitern der Staatsanwaltschaft, der Kantonspolizei und des Untersuchungsgefängnisses die Berechtigung zur Bearbeitung derjenigen Informationen, die sie zur Erfüllung ihrer gesetzlichen Aufgaben benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Staatsanwaltschaft kann im Rahmen des Bundesgesetzes über die polizeilichen Informationssysteme (Nationaler Polizeiindex) dem Bund und den angeschlossenen Kantonen elektronischen Zugriff auf das Informatiksystem gewähren."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "dda064ec3911cbb7b66844d6f7ce2b38650ab4caf511571fa3cfd5372d42e0a6"
+    },
+    {
+      "id": "kanton/BS/257.140/art_8_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "8_a",
+      "artikelLabel": "§ 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Informationen, die dem Strafgericht und dem Appellationsgericht bekanntgegeben werden, werden in einem gesonderten Bereich des Informatiksystems der Staatsanwaltschaft bereitgestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt erteilt Mitarbeiterinnen und Mitarbeitern des Strafgerichts und des Appellationsgerichts den Zugriff auf diesen gesonderten Bereich."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "534a7044d827ce470ffa8fcea2d21e68ece5eadf7c719b7d2d71d11a3cd12914"
+    },
+    {
+      "id": "kanton/BS/257.140/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechte der betroffenen Personen richten sich nach dem Gesetz über die Information und den Datenschutz (Informations- und Datenschutzgesetz) vom 9. Juni 2010 oder in hängigen Verfahren nach den entsprechenden Verfahrensordnungen."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "f9d7407f53b6595671458393e8f37c45478e4ab75bb62b0d039c24c3c88c97c3"
+    },
+    {
+      "id": "kanton/BS/257.140/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft entscheidet über Auskunfts-, Einsichts-, Berichtigungs- und Löschungsbegehren."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "80ddf3ab55099ff45b1ad6e9f8f8429560d34aaf24c6acd7a7ecc3db75160ea9"
+    },
+    {
+      "id": "kanton/BS/257.140/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Daten bleiben bis zum Ablauf der für die einzelnen Personenkategorien festgelegten Löschfristen im Informatiksystem der Staatsanwaltschaft."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "97e58b54a4add9354dc4622dae900eb6263e2e464a8f80a2bb3d4c9dd642639f"
+    },
+    {
+      "id": "kanton/BS/257.140/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jeder Vorgang ist bereits bei der Erfassung mit der für die betreffende Personenkategorie festgelegten Löschfristen zu versehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Ablauf der Löschfrist werden die Daten vom System automatisch gelöscht."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "e51fc0bdf3a5d8c6efe9e735ecae61535126a054effcc19c81037bc73061e528"
+    },
+    {
+      "id": "kanton/BS/257.140/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Nach rechtskräftigem Abschluss des Verfahrens gelten folgende Löschfristen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bei Nichtanhandnahmen und Einstellungen ohne Kostentragungspflicht: Die Löschfrist entspricht der Verfolgungsverjährungsfrist, beträgt mindestens aber 5 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "b",
+              "text": "Bei Nichtanhandnahmen und Einstellungen mit Kostentragungspflicht: Die Löschfrist entspricht der Verfolgungsverjährungsfrist, beträgt mindestens aber 10 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "c",
+              "text": "Bei Strafbefehlen, die in das Strafregister-Informationssystem VOSTRA eingetragen werden: 15 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "d",
+              "text": "Bei anderen Strafbefehlen: 10 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "e",
+              "text": "Bei verurteilenden Entscheiden des Gerichts mit einer Freiheitsstrafe von mindestens einem und weniger als fünf Jahren als Sanktion: 20 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "f",
+              "text": "Bei verurteilenden Entscheiden des Gerichts mit einer Freiheitsstrafe von mindestens fünf Jahren als Sanktion: 25 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "g",
+              "text": "Bei anderen verurteilenden Entscheiden des Gerichts: 15 Jahre ab Datum des Entscheids."
+            },
+            {
+              "marke": "h",
+              "text": "Bei vollständigen Freisprüchen des Gerichts: 5 Jahre ab Datum des Entscheids."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Eröffnung eines neuen Verfahrens innerhalb der Löschfrist eines alten Verfahrens gegen dieselbe Person, verlängern sich die Löschfristen des alten Verfahrens automatisch bis zum rechtskräftigen Abschluss des neuen Verfahrens."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "bda3a06a6a68084d092de4bf8486ea9fc20c0a7f919645f57261af10dff1e001"
+    },
+    {
+      "id": "kanton/BS/257.140/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Personen mit erkennungsdienstlicher Behandlung gelten für die automatische Löschung die in Art. 261 StPO festgelegten Fristen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Bezug auf die im Rahmen erkennungsdienstlicher Massnahmen erstellten DNA-Profile gelten die Löschfristen des eidgenössischen DNA-Profil-Gesetzes vom 20. Juni 2003."
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "923905eb64bcd4afae9b0c771537929a031ad83f98e9a4bf3369e6cc40f7c814"
+    },
+    {
+      "id": "kanton/BS/257.140/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Übrigen gelten folgende Löschfristen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen mit Haft- oder Strafvollzugs-Daten: 5 Jahre ab Entlassung bzw. Durch- oder Zuführung"
+            },
+            {
+              "marke": "b",
+              "text": "Anzeigestellende, Geschädigte, Opfer nach OHG sowie deren Vertretung: Verfolgungsverjährungsfrist des Deliktes"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "Jugendliche"
+            },
+            {
+              "marke": "e",
+              "text": "bei verurteilenden Entscheiden eines Gerichts: 10 Jahre ab dem Datum des Entscheids"
+            },
+            {
+              "marke": "1",
+              "text": "bei Strafbefehlen bei Verbrechen und Vergehen: 10 Jahre ab dem Datum des Entscheids"
+            },
+            {
+              "marke": "2",
+              "text": "bei Übertretungen: 5 Jahre ab dem Datum des Entscheids"
+            },
+            {
+              "marke": "e",
+              "text": "bei Freispruch, Einstellung oder Abtretung: 5 Jahre ab dem Datum des Entscheids"
+            },
+            {
+              "marke": "f",
+              "text": "Brandentdeckende: Verfolgungsverjährungsfrist des Deliktes"
+            },
+            {
+              "marke": "g",
+              "text": "Tatzeuginnen und Tatzeugen: Verfolgungsverjährungsfrist des Deliktes"
+            },
+            {
+              "marke": "h",
+              "text": "gesetzliche Vertretung: Verfolgungsverjährungsfrist des Deliktes"
+            },
+            {
+              "marke": "i",
+              "text": "Verdächtige: 5 Jahre ab Abbruch der Ermittlungen"
+            },
+            {
+              "marke": "j",
+              "text": "Finderin und Finder, Geschäftsinhabende, Meldeerstattende, Halterin und Halter, Verletzte, Verstorbene: 5 Jahre ab dem rechtskräftigen Verfahrensabschluss"
+            }
+          ]
+        }
+      ],
+      "stand": "2023-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "26aa621caa211678667aab8bb794af10",
+      "sha": "3b7f9ad175df8f88363e90ef4a1a306f51afb1b404fea318f065faaea7564cab"
+    }
+  ]
+}

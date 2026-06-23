@@ -22,8 +22,12 @@
  * rsn.ne.ch, rsju.jura.ch) sind PDF/HTM → Tier B/C.
  *
  * §2: Klassifikation + URL-Ableitung sind rein/deterministisch (getestet). Der
- * Netz-Enumerator ist eine dünne Hülle (wie holeLexWork), nicht unit-getestet.
+ * Netz-Enumerator ist eine dünne Hülle (wie holeLexWork) — fetch ist über
+ * `opt.netz` (fetchMitWiederholung) injizierbar, das Pagination-/Retry-Verhalten
+ * ist damit ohne echtes Netz regressionsgetestet (Crash GR-ETIMEDOUT 23.6.2026).
  */
+
+import { fetchMitWiederholung, type WiederholOptionen } from './netz-retry.ts';
 
 /** Erschliessungsgrad einer Quelle (bestimmt den Render-/Import-Pfad). */
 export type Tier =
@@ -135,13 +139,20 @@ interface LexFindTreffer {
  */
 export async function enumeriereKanton(
   kanton: string,
-  opt: { lang?: 'de' | 'fr' | 'it'; suchbegriff?: string; nurInKraft?: boolean; proSeite?: number } = {},
+  opt: {
+    lang?: 'de' | 'fr' | 'it';
+    suchbegriff?: string;
+    nurInKraft?: boolean;
+    proSeite?: number;
+    /** Retry-/Timeout-Härtung; injizierbar für Tests (sonst echtes Netz). */
+    netz?: WiederholOptionen;
+  } = {},
 ): Promise<EntdeckterErlass[]> {
   const lang = opt.lang ?? 'de';
   const entity = LEXFIND_ENTITY[kanton];
   if (entity == null) throw new Error(`enumeriereKanton: unbekannter Kanton ${kanton}`);
   const basis = `https://www.lexfind.ch/api/fe/${lang}`;
-  const start = await fetch(`${basis}/fulltext-search`, {
+  const start = await fetchMitWiederholung(`${basis}/fulltext-search`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -157,7 +168,7 @@ export async function enumeriereKanton(
       use_global_systematics: true,
       direct_search: false,
     }),
-  });
+  }, opt.netz);
   if (!start.ok) throw new Error(`LexFind fulltext-search ${kanton}: HTTP ${start.status}`);
   const { id, session_id } = (await start.json()) as { id?: number; session_id?: string };
   if (id == null || !session_id) {
@@ -171,7 +182,7 @@ export async function enumeriereKanton(
   let seite = 1;
   for (;;) {
     const url = `${basis}/fulltext-search/${id}?session_id=${session_id}&page_no=${seite}&results_per_page=${proSeite}`;
-    const res = await fetch(url);
+    const res = await fetchMitWiederholung(url, undefined, opt.netz);
     if (!res.ok) throw new Error(`LexFind Seite ${seite} ${kanton}: HTTP ${res.status}`);
     const data = (await res.json()) as {
       number_of_pages?: number;

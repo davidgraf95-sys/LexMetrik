@@ -1,0 +1,226 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.530/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Gas (772.530)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für alle Benützerinnen und Benützer der Gasversorgung, die Gas zum Kochen, für Durchlauferhitzer, nicht aber für die Raumheizung einsetzen, gilt ein Kleinbezugstarif nach Massgabe der folgenden Absätze 2 und 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Energiepreis besteht aus einem Einheitspreis pro bezogene Kilowattstunde und einem festen Grundpreis pro Zähler. Es gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis = 23,45 Rp./kWh, zuzüglich der jeweils geltenden CO2-Abgabe gemäss Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz) vom 23. Dezember 2011;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis = 60 Fr./Jahr."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Einheitspreis reduziert sich um 0,8 Rp./kWh, falls vom Wahlrecht gemäss § 2bis Abs. 1 lit. b Gebrauch gemacht wird.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.530",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5ea66f8ca4c673b26ca6a12e1e638fcb",
+      "sha": "e4f670e19d255953eed37a8eae1bfd2bd226692b94b5a0a026fd0997a09fa4f4"
+    },
+    {
+      "id": "kanton/BS/772.530/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Gas (772.530)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für alle Benützerinnen und Benützer der Gasversorgung, die Geräte für die Raumheizung einsetzen oder die einen massgeblichen Sommerbezug aufweisen, gilt ein allgemeiner Gastarif nach Massgabe der folgenden Absätze 2 und 3. Vorbehalten bleibt die Verrechnung nach § 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Energiepreis ist abhängig von der Jahresarbeit in Kilowattstunden. Er besteht aus einem Einheitspreis pro bezogene Kilowattstunde und einem Grundpreis, der sich nach der Netzbelastung der angeschlossenen Apparate richtet. Es gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis 0 bis < 99'999 kWh/Jahr = 11,50 Rp./kWh, zuzüglich der jeweils geltenden CO2-Abgabe gemäss Bundesgesetz über die Reduktion der CO2-Emissionen vom 23. Dezember 2011;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis 0 bis < 99'999 kWh/Jahr = 11,50 Fr./kW/Jahr, im Minimum 180 Fr./Jahr;"
+            },
+            {
+              "marke": "c",
+              "text": "Einheitspreis 100'000 bis 499'999 kWh/Jahr = 11,15 Rp./kWh, zuzüglich der jeweils geltenden CO2-Abgabe gemäss Bundesgesetz über die Reduktion der CO2-Emissionen vom 23. Dezember 2011;"
+            },
+            {
+              "marke": "d",
+              "text": "Grundpreis 100'000 bis 499'999 kWh /Jahr = 15,50 Fr./kW/Jahr, im Minimum 900 Fr./Jahr;"
+            },
+            {
+              "marke": "e",
+              "text": "Einheitspreis ab 500'000 kWh/Jahr = 10,85 Rp./kWh, zuzüglich der jeweils geltenden CO2-Abgabe gemäss Bundesgesetz über die Reduktion der CO2-Emissionen vom 23. Dezember 2011;"
+            },
+            {
+              "marke": "f",
+              "text": "Grundpreis ab 500'000 kWh/Jahr = 17,50 Fr./kW/Jahr, im Minimum 2'160 Fr./Jahr."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Einheitspreis reduziert sich um 0,8 Rp./kWh, falls vom Wahlrecht gemäss § 2bis Abs. 1 lit. b Gebrauch gemacht wird.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.530",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5ea66f8ca4c673b26ca6a12e1e638fcb",
+      "sha": "62a1b4cf6da12446456d9e5ea94f553cf2f1c50c6ca3f3081a6379ca23f5a11c"
+    },
+    {
+      "id": "kanton/BS/772.530/art_2_bis",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Gas (772.530)",
+      "artikel": "2_bis",
+      "artikelLabel": "§ 2bis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Lieferung und Abrechnung von Erdgas an Kundinnen und Kunden mit Kleinbezugstarif gemäss § 1 oder allgemeinem Gastarif gemäss § 2 gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die IWB liefert ab 1. Oktober 2024 standardmässig Erdgas mit einem Biogasanteil von 10%."
+            },
+            {
+              "marke": "b",
+              "text": "Die Benützerinnen und Benützer haben das Recht, die Lieferung von Erdgas ohne Biogasanteil zu beantragen (Wahlrecht). Ein entsprechender Antrag kann jederzeit mit einer Frist von 4 Wochen für die folgende Abrechnungsperiode gestellt werden. Der Antrag hat schriftlich zu erfolgen."
+            },
+            {
+              "marke": "c",
+              "text": "Die Abrechnung erfolgt in der Regel jährlich."
+            },
+            {
+              "marke": "d",
+              "text": "Zusätzlich sind Akontozahlungen zu leisten."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.530",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5ea66f8ca4c673b26ca6a12e1e638fcb",
+      "sha": "4c493725d9155b75a5dde6fcb19ee7d02ecce81f505e7ac24ab7a45e06ebb4ec"
+    },
+    {
+      "id": "kanton/BS/772.530/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Gas (772.530)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einer speziellen Bezugsstruktur, bei Bandbezug, bei unterbrechbarer Lieferung oder bei einem speziellen Verwendungszweck kann der Gaspreis durch einen Spezialvertrag festgelegt werden. Zum Abschluss eines Spezialvertrags muss die Kundin oder der Kunde über eine Lastgangmessung verfügen."
+        }
+      ],
+      "stand": "2024-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.530",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5ea66f8ca4c673b26ca6a12e1e638fcb",
+      "sha": "6fc2b23fe9a1476bba70075c14dda8375708f698fc1d791e190b9a0940124033"
+    },
+    {
+      "id": "kanton/BS/772.530/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Gas (772.530)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gasbezug wird in Kubikmetern (m&sup3;) gemessen. Die Verrechnung des Gases erfolgt in Kilowattstunden (kWh) unter Berücksichtigung der physikalischen und atmosphärischen Bedingungen sowie des Heizwertes des abgegebenen Gases. Der Verrechnung wird der obere Heizwert (Ho) zugrunde gelegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Es wird auf allen Energiepreisen die Mehrwertsteuer erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Grundpreis ist auch für die Zeit zu bezahlen, in der kein Gas bezogen wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Ab 1. Januar 2013 wird auf fossilen Energieträgern die CO₂-Abgabe gemäss Bundesgesetz über die Reduktion der CO₂-Emissionen vom 23. Dezember 2011 erhoben."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Netzentgelte als Teil des Gebührentarifs werden gemäss Branchenvereinbarung festgelegt und sind im Anhang ausgewiesen."
+        },
+        {
+          "absatz": "6",
+          "text": "Es wird zusätzlich eine Konzessionsgebühr gemäss § 30 Abs. 3 IWB-Gesetz erhoben."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Tarifzuteilung erfolgt einmal jährlich jeweils zum 1. Oktober eines Jahres aufgrund der Werte im vorangegangenen Bezugsjahr. Das Bezugsjahr umfasst den Zeitraum vom 1. Oktober eines Jahres bis zum 30. September des Folgejahres."
+        },
+        {
+          "absatz": "8",
+          "text": "Bei fehlenden Messwerten oder bei Unterjährigkeit wird für die Berechnung des massgeblichen Jahresverbrauchs der effektiv an der Verbrauchsstätte abgelesene Gasverbrauch auf 12 Monate hochgerechnet."
+        },
+        {
+          "absatz": "9",
+          "text": "Neue Verbrauchsstätten werden für das jeweils laufende Jahr vorläufig anhand der installierten Leistung einem Tarif zugewiesen. Die definitive Tarifzuteilung für das neue Bezugsjahr erfolgt im darauffolgenden Oktober."
+        },
+        {
+          "absatz": "10",
+          "text": "Wechselt die Verbrauchsstätte die Vertragspartnerin bzw. den Vertragspartner, so übernimmt die neue Vertragspartnerin bzw. der neue Vertragspartner den Tarif der Vorgängerin bzw. des Vorgängers bis zur nächsten Jahresverbrauchsanalyse und der entsprechenden Tarifzuteilung. Bei Verbrauchsstätten mit einer stark von der Norm abweichenden Bezugscharakteristik und fehlender Übereinstimmung mit der Tarifzuteilung kann eine Zuteilung in den richtigen Tarif unabhängig der Jahresverbrauchsanalyse erfolgen."
+        }
+      ],
+      "stand": "2024-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.530",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5ea66f8ca4c673b26ca6a12e1e638fcb",
+      "sha": "13a50b2febf27acf80703f85d3a805a8974e50edb84135d004a55d499bc38c4c"
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/695.110/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat setzt die Entschädigung der Verwaltungskommission fest, genehmigt das Geschäftsreglement, den Voranschlag, den Jahresbericht und die Jahresrechnung sowie die Anstellung und den Lohn des Direktors."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Finanzdepartement vermittelt den Verkehr zwischen dem Regierungsrat und der Gebäudeversicherung."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "32f7b09f9323f5f8fb092fe9321caa349650ab3a8ee6493757a1de867fc80422"
+    },
+    {
+      "id": "kanton/BS/695.110/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission besteht aus dem Vorsteher des Finanzdepartements als Präsidenten und sechs weiteren Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leitung der Gebäudeversicherung steht der Verwaltungskommission zu. Ihr obliegt insbesondere – die Ausarbeitung des Geschäftsreglements, – die Anstellung des Direktors, – die Genehmigung von Rückversicherungsverträgen, – die Aufstellung des Voranschlages, die Entgegennahme des Jahresberichtes und der Jahresrechnung, – die Anlage des Reservefonds."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "f34d8712ed59508df75d89c55d99873c3657952cbd60b3e7966a363ff45e0e48"
+    },
+    {
+      "id": "kanton/BS/695.110/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Direktion führt die Geschäfte der Gebäudeversicherung, vertritt sie nach aussen und vollzieht die Beschlüsse der vorgesetzten Organe und Behörden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Mitarbeiter der Gebäudeversicherung werden durch die Direktion angestellt, welche auch deren Anstellungsbedingungen im Rahmen des Personal- und Lohngesetzes des Kantons Basel-Stadt festlegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Direktion bestimmt die Mitglieder der Schatzungskommission."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "bf62f0fe29e50ce7af9fda33759a9fbc060b0e1800a25fc1181287effd68087c"
+    },
+    {
+      "id": "kanton/BS/695.110/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontrollstelle prüft jährlich die Rechnung der Gebäudeversicherung und berichtet darüber der Verwaltungskommission."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "813e38093faef407b7ba3b7811b95b619fec16ddf0c365f73bdae11e8b81a13c"
+    },
+    {
+      "id": "kanton/BS/695.110/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Gebäude gilt jedes Erzeugnis der Bautätigkeit, das einen gedeckten und benützbaren Raum birgt und für einen dauernden Zweck erstellt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht als Gebäude gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "provisorische, für kurze Zeit erstellte Bauten, wie Bau- und Verkaufsbaracken, Messebuden usw.;"
+            },
+            {
+              "marke": "b",
+              "text": "selbständige Silos und Lagertanks ohne Gebäudecharakter;"
+            },
+            {
+              "marke": "c",
+              "text": "Kunstbauten öffentlicher Verkehrswege, wie Brücken, Passerellen, Unterführungen usw. Versichert sind jedoch Teile von solchen, sofern sie Gebäudecharakter haben."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "b7d53345b15569bf16f3a2a0fa8e13c3d325591660a827fe3daedb3acc3a09ba"
+    },
+    {
+      "id": "kanton/BS/695.110/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfügung über den Ausschluss eines Gebäudes von der Versicherung ist dem Eigentümer, den Grundpfandgläubigern und dem Grundbuchamt schriftlich mitzuteilen."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "7f96a057dc505d96715825890608e36e1a0b618a97ed9d5f3b1e8c55b1c4ad0d"
+    },
+    {
+      "id": "kanton/BS/695.110/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als wesentliche Investitionen am Gebäude gelten Bauarbeiten, deren Kosten voraussichtliche Mehrwerte von mindestens CHF 50'000 ergeben."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "6cfa93236e5781bdaa223bd7237707aa3b5e5010d7cc4323cccbb3a7a2bc060e"
+    },
+    {
+      "id": "kanton/BS/695.110/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bauversicherung ist schriftlich anzumelden. Die Gebäudeversicherung verlangt die nötigen Unterlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Beginn der Bauarbeiten gilt der Zeitpunkt, an dem erstmals Bauteile mit dem Baugrund oder einem bestehenden Gebäude endgültig verbunden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "..."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "0db8d86cb2fa4b76b92896f900d1856dd2113973a5b0c409453b26b83b86b57a"
+    },
+    {
+      "id": "kanton/BS/695.110/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Neuwert entspricht dem Kostenaufwand, der für die Wiederherstellung eines Gebäudes gleicher Art, gleicher Grösse, gleichen Standards und gleichen Ausbaues unter Verwendung neuzeitlicher Materialien und Anwendung zeitgemässer Baumethoden erforderlich ist."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "f1714f7108feeec9d73267053a141abe0f7b1ccac3b724ad618aa05de59a355f"
+    },
+    {
+      "id": "kanton/BS/695.110/art_9_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "9_a",
+      "artikelLabel": "§ 9a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wichtige Gründe im Sinne von § 6 des Gesetzes liegen beispielsweise vor:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn gegen bau- oder feuerpolizeiliche Vorschriften verstossen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn ein Gebäude nicht wieder aufgebaut werden kann;"
+            },
+            {
+              "marke": "c",
+              "text": "wenn Kunst-, Historische oder Liebhaberwerte bestehen."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "a31e4846cf10d464704d370cf32346896fdbaf9cf9b0514699a2739df06d9a88"
+    },
+    {
+      "id": "kanton/BS/695.110/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Zeitwert entspricht dem Neuwert abzüglich der Wertverminderung, die seit der Erstellung des Gebäudes zufolge Alters, Abnützung oder anderer Gründe eingetreten ist."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "feef0f5eb33b4859e34691c9fdcc953e6751c5e2afb240b5361c9ce9aa77c65c"
+    },
+    {
+      "id": "kanton/BS/695.110/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kunst-, Historische und Liebhaberwerte können auf Antrag des Gebäudeeigentümers durch Abschluss einer freiwilligen Zusatzversicherung (Kunstwertversicherung) gegen Feuer- und Elementarschäden gemäss § 17 und § 18 des Gebäudeversicherungsgesetzes versichert werden. Diese Zusatzversicherung ist eine Erstrisikoversicherung und wird nicht der Teuerung angepasst."
+        },
+        {
+          "absatz": "2",
+          "text": "Der zu versichernde Wert wird durch den Gebäudeeigentümer festgelegt und muss der Gebäudeversicherung mittels Plänen, Fotografien, Expertisen oder anderweitig dokumentiert werden."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "5d796a2a674ea257b700fe9e9b16e82de3818af1dcd2ba9dad95cdc3e56dfa43"
+    },
+    {
+      "id": "kanton/BS/695.110/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Versicherungswerte werden im Schatzungsverfahren durch zwei unabhängige Schatzungsexperten ermittelt."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "c2792668d18a8dd6a6653eec8d37671c23e128396a1bc86435be3bc37bc6c007"
+    },
+    {
+      "id": "kanton/BS/695.110/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gebäudeeigentümer und die Gebäudeversicherung können jederzeit die Überprüfung des Versicherungswertes eines Gebäudes verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Verlangt der Eigentümer eine Neuschatzung, ohne dass das Gebäude seit der letzten Schatzung wesentliche Ausbauten erfahren hat, hat der Eigentümer die Kosten zu übernehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Kosten betragen 0,25% des neuen Versicherungswertes, mindestens jedoch CHF 100 und höchstens CHF 1'000 je Gebäude."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "bddd324bf473a7100b7b1fcae222a1df3617cca15500fb338dfb1dc18bc29fea"
+    },
+    {
+      "id": "kanton/BS/695.110/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Bekanntgabe der Adressen von Gebäudeeigentümern, für die Ausstellung eines Versicherungsauszuges und für sonstige schriftliche Bemühungen der Gebäudeversicherung wird eine Gebühr von CHF 10 bis 100 erhoben."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "30bf60b73e79a025c736873fe9953cce265cd9114af604742cfc0c5d53b185c3"
+    },
+    {
+      "id": "kanton/BS/695.110/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anpassung der Versicherungswerte erfolgt in Anlehnung an einen allgemein anerkannten Baukostenindex."
+        },
+        {
+          "absatz": "2",
+          "text": "Jede Anpassung der Versicherungswerte ist im Kantonsblatt zu veröffentlichen und den Gebäudeeigentümern schriftlich bekannt zu geben."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "65e0a3175c5625ebba2633c762ce263c02e0645d76e90b57656f65cad191cb8c"
+    },
+    {
+      "id": "kanton/BS/695.110/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung erhebt die Prämien für das laufende Jahr zu Beginn eines Kalenderjahres."
+        },
+        {
+          "absatz": "2",
+          "text": "Entsprechend § 13 des Gesetzes erfolgen bei Handänderungen keine Prämienaufteilungen durch die Gebäudeversicherung."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "01f4ed31845b9cfa406498d428a1f97da905bd69cc3b31a00dca756ad34e372b"
+    },
+    {
+      "id": "kanton/BS/695.110/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prämienrechnungen sind innert 30 Tagen seit Rechnungsstellung zu bezahlen. Nach dieser Frist sind die säumigen Eigentümer zu mahnen. Nach der ersten, gebührenfreien Mahnung wird pro Mahnung eine Mahngebühr von CHF 40 erhoben; für weitere Inkassomassnahmen eine Umtriebsgebühr von CHF 50. Die Gebäudeversicherung verlangt einen Verzugszins von 5% ab Ablauf der Zahlungsfrist gemäss Rechnung."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "393d2a571ad5c1ff53a34b6b6687b7c0eb8518b04306914f3b758ee516276d00"
+    },
+    {
+      "id": "kanton/BS/695.110/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Reservefonds ist zu äufnen, bis er 5,5‰ des Versicherungskapitals erreicht."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "1da957552ac78e9513aeeb1ee22e627c43543dee58b18a21c87e2cfa45ef5ea1"
+    },
+    {
+      "id": "kanton/BS/695.110/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Gebäude gilt als wiederhergestellt, wenn es am alten Ort im gleichen Umfang und Ausbau wieder errichtet oder instandgestellt worden ist. Die Wiederherstellung kann auch in unmittelbarer Nähe erfolgen."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "d6a902f7baba2ee0c305b379835c09b7fbf34623c38d15e44e178c91e03714e2"
+    },
+    {
+      "id": "kanton/BS/695.110/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mehrkosten für beschleunigte Wiederherstellung aus betrieblichen oder sonstigen Gründen werden nicht vergütet."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht beschädigte Gebäudeteile sind nicht zu vergüten."
+        },
+        {
+          "absatz": "3",
+          "text": "Stehen die Kosten für die Behebung eines Schadens zu diesem selbst in einem offensichtlichen Missverhältnis und erleidet das Gebäude oder der beschädigte Gebäudeteil durch Belassung des Schadens weder eine Beeinträchtigung in der Funktion noch eine Einbusse in seinem Gesamtaussehen, kann die Gebäudeversicherung die Übernahme der Behebungskosten teilweise oder ganz ablehnen."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "76e0f3fdd1662a9719f084a5502825ea4658cc61ccc082f2c18a2da60eb65c9a"
+    },
+    {
+      "id": "kanton/BS/695.110/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Wiederherstellung wird die Entschädigung ausbezahlt, sobald der Schaden vollständig behoben ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei grösseren Schäden können Teilzahlungen geleistet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Nichtwiederherstellung wird die Entschädigung erst ausbezahlt, wenn der Schadenplatz ordnungsgemäss geräumt ist."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "54a85b369b453dd46cf210c0eb89530e0b27e6068957a65ba2354dc85f3fdcb6"
+    },
+    {
+      "id": "kanton/BS/695.110/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung sorgt für den Erfahrungsaustausch zwischen der Technischen Kommission der Vereinigung Kantonaler Feuerversicherungen, den Feuerpolizeiorganen der kantonalen Gebäudeversicherungen und den zuständigen baselstädtischen Behörden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebäudeversicherung beteiligt sich im Rahmen der gesetzlichen Möglichkeiten an der Bearbeitung von Aufgaben der Schadenverhütung und -bekämpfung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebäudeversicherung fördert auf geeignete Weise das Interesse der Öffentlichkeit an der Schadenverhütung."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "bd6aa5a5a6a49846992a4e2c3b3beb5bf063abc019dd282741679acae7affbcb"
+    },
+    {
+      "id": "kanton/BS/695.110/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jährlichen Aufwendungen an den Feuerschutzfonds betragen 31% der Prämieneinnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Davon wird die Hälfte der Finanzverwaltung als Beitrag an die Kosten des Löschwesens überwiesen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Fondsvermögen wird auf 10 Mio. Franken begrenzt. Die Prämienrabatte können dem Feuerschutzfonds belastet werden."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "133345391f4dce8ad9e5c59f87028e6adaa3a0464c30ca8bcbdb6a2e46830b7e"
+    },
+    {
+      "id": "kanton/BS/695.110/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann die Gebäudeversicherung mit der Durchführung von Aufgaben ausserhalb ihres Tätigkeitsgebietes betrauen, wenn dies im Interesse des Kantons liegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebäudeversicherung ist hiefür angemessen zu entschädigen."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "2fe74eae06290bbe4ee808768ed70d8019d9782fa6953495554c042a4d1a45dc"
+    },
+    {
+      "id": "kanton/BS/695.110/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch diese Verordnung werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verordnung zum Brandversicherungsgesetz vom 31. Oktober 1908;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verordnung betreffend die Elementarschadenversicherung vom 15. Juni 1936;"
+            },
+            {
+              "marke": "c",
+              "text": "der Regierungsratsbeschluss vom 18. Dezember 1948 betreffend die Einführung einer einheitlichen Bewertungsgrundlage für die Einschatzung der Gebäude;"
+            },
+            {
+              "marke": "d",
+              "text": "der Regierungsratsbeschluss vom 29. März 1949 über die fakultative Versicherung von Neubauten."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "98ea263315f35f198c6b9031e03e998d1ff774048703736f9759b7a1d9446ba6"
+    },
+    {
+      "id": "kanton/BS/695.110/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gebäudeversicherungsgesetz (695.110)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung ist zu publizieren; sie tritt mit dem Gesetz auf den 1. Januar 1974 in Wirksamkeit."
+        }
+      ],
+      "stand": "2010-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2338db04c495032d80f0bdcb144b2aa0",
+      "sha": "250552350f3e35ed4eaa877304f416bd9492776f4e12658e123b635bab7809e7"
+    }
+  ]
+}

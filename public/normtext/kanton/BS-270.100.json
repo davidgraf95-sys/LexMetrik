@@ -1,0 +1,1278 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/270.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfassungs- und Verwaltungsgerichtsbarkeit wird im Kanton Basel-Stadt vom Appellationsgericht ausgeübt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verfassungsgericht beurteilt nach Massgabe der Verfassung und dieses Gesetzes die Verfassungsmässigkeit von Erlassen und Verfügungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Verwaltungsgericht beurteilt Verwaltungsverfügungen nach Massgabe dieses Gesetzes; als Verfügungen gelten auch Entscheidungen der Verwaltungsinstanzen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "f0080a76e5b24781c3d74e7fac3bd02027535f53af81d6c8edbb37577984f282"
+    },
+    {
+      "id": "kanton/BS/270.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zuständigkeit des Appellationsgerichts als Verwaltungsgericht schliesst einen Rekurs an den Grossen Rat und die Anrufung des Zivilgerichts aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verwaltungsgericht entscheidet endgültig über seine Zuständigkeit."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "bea764006fda46b7f16fe464e717787454d8c17bce515b3804547c685922d3cf"
+    },
+    {
+      "id": "kanton/BS/270.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn nach der Entscheidung einer Verwaltungsstreitsache durch das Verwaltungsgericht in derselben Sache eine strafrechtliche Beurteilung eintritt, so ist für diese in Bezug auf die verwaltungsrechtlichen Gesichtspunkte der Sache das Urteil des Verwaltungsgerichts massgebend."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "eeec53669c3c0d9e72bbbce9c8390dfc7dc8f11a87893720690fae457ddbc4d4"
+    },
+    {
+      "id": "kanton/BS/270.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ansprüche auf Schadenersatz gegen Beamte und Staat nach Massgabe von § 9 der Kantonsverfassung sind auf dem Wege des Zivilprozesses geltend zu machen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "f5396f8f50a7cfb556cd900c0edf4f4932d372c7c59d619ee366198c3c41bae9"
+    },
+    {
+      "id": "kanton/BS/270.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sonstige im öffentlichen Rechte begründete vermögensrechtliche Verbindlichkeiten des Staates, der Gemeinden und anderer öffentlicher Körperschaften, für deren Geltendmachung die Gesetze kein Verfahren anordnen, sind unter Vorbehalt von § 6 beim Regierungsrat schriftlich geltend zu machen. Durch die Einreichung der Forderung beim Regierungsrat wird die Verjährung unterbrochen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat entscheidet, welche Behörde zur Behandlung der Eingabe zuständig sei und stellt die Eingabe dieser Behörde zu; betrifft die Forderung den Staat, so kann sie einem Departement zur Erledigung überwiesen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Betrifft die Forderung eine Gemeinde oder eine andere öffentliche Körperschaft, so ist gegen die Entscheidung der zuständigen Behörde in jedem Falle der Rekurs an den Regierungsrat oder das zuständige Departement zulässig."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Frist und Begründung gilt § 16."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Entscheidung ist in angemessener Frist zu treffen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "eedaa0c37b28488348dc0bfffc49833be5201d976f2dfc393e0c8ceb7b032b72"
+    },
+    {
+      "id": "kanton/BS/270.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ansprüche auf Rückerstattung einer nicht geschuldeten oder zuviel entrichteten öffentlich-rechtlichen Vermögensleistung sind binnen einem Jahr nach Ablauf des Kalenderjahres, in dem die Leistung entrichtet worden ist, bei der Amtsstelle geltend zu machen, die sie entgegengenommen hat, oder bei einer vorgesetzten Behörde. Ist der Anspruch binnen dieser Frist nicht geltend gemacht worden, so erlischt er. Die Rückerstattung hat zu erfolgen, wenn der Ansprecher nachweist, dass er sich über die Existenz oder den Umfang seiner Schuldpflicht in einem entschuldbaren Irrtum befunden habe. § 5 Abs. 3 und 5 finden Anwendung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "8659939182adf1ffa4c72e3e5da3f12f578a2c2c0c0ecf805221d5293eee1a04"
+    },
+    {
+      "id": "kanton/BS/270.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über die in den §§ 5 und 6 bezeichneten Ansprüche urteilt nach ihrer Erledigung durch die Verwaltungsbehörden das Verwaltungsgericht gemäss den Vorschriften dieses Gesetzes."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "2c8961eb174a170bf810e72e9239279470e9cbbd5783b329a4669ec04cadab5f"
+    },
+    {
+      "id": "kanton/BS/270.100/art_7_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "7_a",
+      "artikelLabel": "§ 7a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsgericht verwendet eine für alle Parteien verständliche Sprache, insbesondere werden die besonderen Bedürfnisse von Personen mit einer Sinnesbeeinträchtigung sowie Personen mit kognitiven Beeinträchtigungen berücksichtigt. Soweit die schriftliche Eröffnung eines Urteils vorgesehen ist, können die Parteien mit Behinderungen bei Bedarf eine kurze mündliche Erklärung beantragen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "18a6876c25f6ddf063e4598fcfaf0d4997cf85f5908997804bf47e54bff4fad7"
+    },
+    {
+      "id": "kanton/BS/270.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsgericht ist zum Entscheide darüber zuständig, ob die Verwaltung in den Streitsachen, in denen das Gericht angerufen ist, öffentliches Recht nicht oder nicht richtig angewendet, den Tatbestand unrichtig festgestellt, wesentliche Form- oder Verfahrensvorschriften verletzt, oder eine ihr vorgeschriebene Verfügung grundlos verzögert habe."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn das Verwaltungsgericht über eine Beschwerde gegen eine Verfügung entscheidet, überprüft es vorfrageweise Erlasse des Kantons, der Gemeinden und der öffentlichrechtlich anerkannten Kirchen und Religionsgemeinschaften auf deren Übereinstimmung mit der Bundesverfassung, mit den Staatsverträgen und mit der Kantonsverfassung."
+        },
+        {
+          "absatz": "3",
+          "text": "Zivilrechtliche und strafrechtliche Vorfragen beurteilt das Verwaltungsgericht selbständig."
+        },
+        {
+          "absatz": "4",
+          "text": "Soweit eine polizeiliche Verfügung im freien Ermessen der Verwaltung steht oder eine gesetzliche Vermögensleistung nach dem Ermessen der Verwaltung durch Schätzung zu bestimmen ist, entscheidet das Verwaltungsgericht nach Prüfung des Tatbestandes, ob die rechtlichen Grenzen des freien Ermessens verletzt sind oder ob von diesem Ermessen ein willkürlicher Gebrauch gemacht worden ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Über die Angemessenheit einer Verfügung entscheidet es dann, wenn diese eine Strafe verhängt oder wenn es dazu durch besondere gesetzliche Vorschrift berufen ist."
+        },
+        {
+          "absatz": "6",
+          "text": "Das Verwaltungsgericht überprüft letztinstanzliche Entscheide der öffentlichrechtlich anerkannten Kirchen und Religionsgemeinschaften auf die Übereinstimmung mit deren eigenem Recht nur, wenn dieses Recht das vorsieht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "e5be696402b085ae0c01be7cd9efa3a85c3ca5f08857533dbf4a23b1ed962399"
+    },
+    {
+      "id": "kanton/BS/270.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Verwaltung auf ein Gesuch, dessen Entscheidung ihrem Ermessen überlassen ist, wegen Fehlens der gesetzlichen Voraussetzungen nicht eingetreten, so ist der Rekurs gegen diese Verfügung zulässig; er fällt jedoch dahin, wenn die Verwaltung im gerichtlichen Verfahren erklärt, sie könne dem Gesuche auch im Falle der Gutheissung des Rekurses nicht entsprechen, und der Rekurrent diese Erklärung nicht aus den in § 8 Abs. 3 bestimmten Gründen anficht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "388a78380fe4395a8ddcf198a4ec21d9222c24256f06c29e5b560e4cd2397a3e"
+    },
+    {
+      "id": "kanton/BS/270.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Beurteilung des Verwaltungsgerichts unterliegen, vorbehältlich abweichender Vorschriften, die Verfügungen des Regierungsrates, der Präsidienkonferenzen, des Gerichtsrats, der vom Grossen Rat oder Regierungsrat gewählten Kommissionen und des Büros des Grossen Rates."
+        },
+        {
+          "absatz": "2",
+          "text": "Zwischenverfügungen unterliegen nur dann selbständig der Beurteilung durch das Verwaltungsgericht, wenn sie einen nicht wieder gutzumachenden Nachteil bewirken können."
+        },
+        {
+          "absatz": "3",
+          "text": "Ferner unterliegen seiner Beurteilung die Verfügungen, welche die dem Appellationsgericht unterstellten richterlichen Behörden als Wahlbehörden von Beamten und Angestellten über deren Rechte und Pflichten getroffen haben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "73fe96f79b34ef7a70a581fe0c2800f1ee7f383abb1cd21ad7120c4ea28a206d"
+    },
+    {
+      "id": "kanton/BS/270.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsgericht trifft seine Entscheidung auf erhobenen Rekurs hin oder, falls der Regierungsrat Rekursinstanz ist, gestützt auf eine Überweisung durch ihn oder das zuständige Departement."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "35b948253a95f86170f15475bfd546949e12a51a224a2f94f0dd127185183733"
+    },
+    {
+      "id": "kanton/BS/270.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zum Rekurs ist berechtigt, wer durch die angefochtene Verfügung berührt ist und ein schutzwürdiges Interesse an deren Aufhebung oder Änderung hat, ferner wer durch besondere Vorschriften zum Rekurs ermächtigt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Verfügungen der vom Grossen Rat oder vom Regierungsrat gewählten Kommissionen können vom Regierungsrat, dem zuständigen Departementsvorsteher oder einer durch besondere Vorschrift hiezu ermächtigten Verwaltungseinheit angefochten werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "77cbdb76498c139273577027434584c7155ae830686a9d33ebf12f8ecfdd37b7"
+    },
+    {
+      "id": "kanton/BS/270.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer am Entscheide über den Rekurs unmittelbar beteiligt ist, kann von Amtes wegen oder auf seinen Antrag zu dem Verfahren beigeladen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Beiladung muss immer dann erfolgen, wenn der Rekurs nur von einer Seite erhoben wurde und im Streite stehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Rechte und Pflichten von Privaten gegenüber einer Gemeinde oder einer andern öffentlich-rechtlichen Körperschaft oder"
+            },
+            {
+              "marke": "b",
+              "text": "gegenseitige öffentliche Rechte und Pflichten von Privaten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ferner ist die von der angefochtenen Verfügung betroffene Person beizuladen, wenn eine Verfügung gemäss § 13 Abs. 2 angefochten wird."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "d537908e8ce8eaa408ef15a913f7489a4085c12967a6b2cbff8cd0de7804606e"
+    },
+    {
+      "id": "kanton/BS/270.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Beigeladene hat die Rechte und Pflichten einer Partei. Die Anträge der übrigen Parteien sind ihm unter Ansetzung einer Frist für seine Vernehmlassung zuzustellen. Die Rekursentscheidung wird für oder gegen ihn rechtskräftig, auch wenn er am Verfahren nicht teilgenommen hat."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "0ca341b5b7a4cc28a674899d9fa15c5c997d89579b065a7f9b0418c46d579945"
+    },
+    {
+      "id": "kanton/BS/270.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Rekurs ist binnen zehn Tagen nach der Zustellung der Verfügung schriftlich beim Verwaltungsgericht anzumelden. Gegen Verfügungen, die dem Betroffenen nicht persönlich zugestellt werden, läuft die Rekursfrist vom Tage der Bekanntmachung an; ausserdem kann der Rekurs gegen eine solche Verfügung binnen zehn Tagen nach Abweisung eines Begehrens um Rücknahme der Verfügung erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Spätestens binnen 30 Tagen, vom gleichen Zeitpunkt an gerechnet, ist eine schriftliche Rekursbegründung einzureichen, welche die Anträge des Rekurrenten, die Angabe der Tatsachen und Beweismittel und eine kurze Rechtserörterung enthalten soll. Der Präsident ist befugt, für die Rekursbegründung ausnahmsweise eine längere Frist zu gewähren."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Bei elektronischer Übermittlung der Eingaben richtet sich das Vorgehen nach Art. 21a des Bundesgesetzes über das Verwaltungsverfahren (Verwaltungsverfahrensgesetz, VwVG) vom 20. Dezember 1968. Das Gericht kann verlangen, dass die Eingaben in Papierform nachgereicht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Rekursbegründung nicht oder nicht rechtzeitig eingereicht, so erklärt das Gericht den Rekurs als dahingefallen."
+        },
+        {
+          "absatz": "4",
+          "text": "Diese Vorschriften gelten entsprechend auch für die Anfechtung nach § 9. Der Präsident teilt die der Anfechtung unterliegende Erklärung dem Rekurrenten mit; vom Tage dieser Mitteilung an läuft die Frist zur Anfechtung."
+        },
+        {
+          "absatz": "5",
+          "text": "Die besondern Vorschriften über Rekursfrist und Rekursbegründung in Versorgungssachen und bei Rechtsverzögerung bleiben vorbehalten."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "a1e50f384597505eda2f2fdd9c37ae56db6d146dc9ab44297b8d36f568cfea98"
+    },
+    {
+      "id": "kanton/BS/270.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einreichung des Rekurses hemmt die Vollstreckung der angefochtenen Verfügung nicht, es sei denn, dass der Präsident dies ausdrücklich anordnet (§ 24)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anordnung des Präsidenten gilt bis zur Eröffnung des schriftlich begründeten Entscheides oder, falls eine schriftliche Begründung unterbleibt, bis zur Zustellung des Dispositivs. Vorbehalten bleibt der Widerruf der aufschiebenden Wirkung durch den Präsidenten oder das Gericht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "098461f1cabca13cc9ecd3c860d0164aae156854b4dff2cd206a93b2c85a13c3"
+    },
+    {
+      "id": "kanton/BS/270.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsgericht hat bei der Beurteilung der Rekurse, auch wenn die Parteien keine Beweisanträge gestellt haben, die materielle Wahrheit von Amtes wegen zu erforschen, soweit nicht nach besonderer Vorschrift den Parteien der Beweis für die ihre Ansprüche begründenden Tatsachen obliegt. Den Beweisanträgen der Parteien hat es Folge zu geben, wenn sie zur Feststellung des Sachverhaltes dienlich erscheinen. Die von den Parteien anerkannten Tatsachen dürfen als wahr angenommen werden; im Zweifel bleibt dem Gerichte die Beweiserhebung vorbehalten. Als anerkannt gelten auch die in der angefochtenen Verfügung ausdrücklich festgestellten Tatsachen, welche der Rekurrent und die Beigeladenen nicht bestritten haben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "6ed50dd0f5e978c7a710a70cf521b7e7a6e542c79e850c7fd46522f2913d7846"
+    },
+    {
+      "id": "kanton/BS/270.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gericht darf nicht über die Sachanträge der Parteien hinausgehen und die durch Rekurs angefochtene Verfügung nicht zum Nachteil des Rekurrenten abändern; vorbehalten bleiben die Rekurse gemäss § 13 Abs. 2. Soweit ein Antrag eines Rekurrenten über die vor der letzten Verwaltungsinstanz gestellten Sachanträge hinausgeht, bleibt er unberücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine Verfügung ausschliesslich wegen Verletzung von Form- und Verfahrensvorschriften angefochten, so tritt das Verwaltungsgericht nicht auf die Beurteilung ihres materiellen Inhaltes ein. § 20 Abs. 4 bleibt vorbehalten. Wird eine Verfügung wegen unrechtmässigen Gebrauches des freien Ermessens oder wegen Unangemessenheit angefochten, so hat das Gericht nur zu prüfen, ob die in der Rekursbegründung ausdrücklich angeführten Tatsachen und rechtlichen Erwägungen die Anfechtung rechtfertigen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "25b5b66c95f5e11b0aa6d0947b7a3de6a7420b9d5621214d234522fac3e88ce2"
+    },
+    {
+      "id": "kanton/BS/270.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn das Gericht einen Rekurs für begründet erachtet, so hebt es die angefochtene Verfügung auf und erlässt entweder selbst einen den Streit materiell erledigenden Entscheid oder weist die Sache an die Behörde zurück, von der die aufgehobene Verfügung ausging."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Sache zurückgewiesen, so ist die Verwaltungsbehörde verpflichtet, das Verfahren nach Vorschrift des Urteils zu wiederholen oder zu berichtigen und ihrem neuen Entscheide die in dem Urteil ausgesprochene Rechtsanschauung zugrunde zu legen."
+        },
+        {
+          "absatz": "3",
+          "text": "Rückweisung hat immer zu erfolgen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn für die Erledigung einer Sache verschiedene Verfügungen zur Wahl stehen;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn eine Beschwerde wegen Rechtsverzögerung oder wegen Missachtung wesentlicher Form- oder Verfahrensvorschriften für begründet erachtet worden ist;"
+            },
+            {
+              "marke": "c",
+              "text": "wenn ein Rekurs, den der Regierungsrat dem Verwaltungsgericht zur Entscheidung überwiesen hat, Anträge enthält, die nach den §§ 8, 9 und 11 vom Gerichte nicht beurteilt werden können."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Doch kann das Verwaltungsgericht in den Fällen a und b auf Antrag der Verwaltungsbehörde ebenfalls ein materielles Urteil erlassen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "3630988e3a6e20c0df2b234facd86ae11443260ce7360957278066f1ee0e1219"
+    },
+    {
+      "id": "kanton/BS/270.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Verhandlung und das Verfahren vor dem Verwaltungsgericht gelten ergänzend die Vorschriften des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015 sowie die Bestimmungen des Verwaltungsverfahrensgesetzes (VwVG), soweit deren Anwendung auf die in diesem Gesetz vorgesehenen Rekurse und Beschwerden möglich ist und dieses Gesetz nichts anderes bestimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Verwaltungsrechtspflege gelten keine Gerichtsferien."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "e5614088b9a24099691f34b2b047e99112d64927af3b9abf8da481c5af03ad28"
+    },
+    {
+      "id": "kanton/BS/270.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident prüft die Rekurseingaben und weist unklare oder vorschriftswidrige Rekursbegründungen unter Fristansetzung zur Verbesserung zurück; wird die Verbesserung nicht innert der Frist vorgenommen, so erklärt das Gericht den Rekurs als dahingefallen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "e20e3a9fba8097687bb37fb908c12939291cdcb696831fa6d7745d3ecc5acbb5"
+    },
+    {
+      "id": "kanton/BS/270.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vom Eingang der Rekurserklärung gibt der Präsident der Vorinstanz sowie den in § 14 Abs. 2 genannten Beteiligten Kenntnis; die Anzeige gilt in diesen Fällen als Beiladung. Er ordnet allfällige weitere Beiladungen an. Gegen die Abweisung eines Antrages auf Beiladung steht dem Antragsteller binnen zehn Tagen der Rekurs an das Gericht zu."
+        },
+        {
+          "absatz": "2",
+          "text": "Erweist sich der Rekurs nicht als offensichtlich unzulässig oder unbegründet, so setzt der Präsident der Vorinstanz und den Beigeladenen eine Frist zur schriftlichen Vernehmlassung. Die Vorinstanz hat, auch wenn sie keine Anträge stellt, die Akten des Verwaltungsverfahrens vorzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Präsident bestimmt, ob und in welchem Umfang die ursprünglich verfügende Behörde am Verfahren zu beteiligen ist."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "638636bc5994d99a200f6b3ca8160078ce79c46029de13c2d4dd9063c72f25e5"
+    },
+    {
+      "id": "kanton/BS/270.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident trifft die notwendigen vorsorglichen Verfügungen von sich aus oder auf Antrag der Parteien."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "a476642f866ae40bb6c62f62270d2bce0da46f714b529fe01cf761889e8493c1"
+    },
+    {
+      "id": "kanton/BS/270.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident erlässt die nötigen Beweisverfügungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Falle von Streitigkeiten über zivilrechtliche Ansprüche und Verpflichtungen oder strafrechtliche Anklagen im Sinne von Art. 6 Ziff. 1 EMRK findet eine mündliche Verhandlung statt, sofern die Parteien nicht darauf verzichten."
+        },
+        {
+          "absatz": "3",
+          "text": "In den übrigen Fällen kann der Präsident auf Antrag oder von sich aus eine mündliche Verhandlung ansetzen. Statt dessen kann er auch bloss eine Gerichtsberatung anordnen oder den Entscheid mittels Zirkulationsbeschluss herbeiführen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "0b38c8607826e59a037eff7e94379303af917987b1d19ff2be07957774a00543"
+    },
+    {
+      "id": "kanton/BS/270.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Verhandlung kann jede Partei, die Vorinstanz und die ursprünglich verfügende Behörde, sofern sie am Verfahren beteiligt ist, ihre Sache mündlich erörtern oder durch einen Bevollmächtigten erörtern lassen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "5dc7d9bb6e34a181a1b51a129c90ef4b1d8d059147ef0d8298cca1dfebc1a94f"
+    },
+    {
+      "id": "kanton/BS/270.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Macht eine Partei von ihrem Rechte, sich schriftlich oder mündlich vor dem Gerichte zu äussern, keinen Gebrauch, so entscheidet das Gericht aufgrund des vorhandenen Aktenmaterials. Wenn jedoch das persönliche Erscheinen eines Rekurrenten oder Beigeladenen angeordnet worden ist, und der Vorgeladene nicht erscheint, so kann es dessen Vorführung verfügen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "92941af9e5acc231e0b3bca857c6ce0614b8206bd29c97b32deb90d3aaffc25c"
+    },
+    {
+      "id": "kanton/BS/270.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verhandlungen sind für Parteien und Publikum öffentlich. Das Gericht kann jedoch aus wichtigen Gründen die Publikumsöffentlichkeit ausschliessen. In Rekursen, welche sich auf das Gesetz über die direkten Steuern beziehen, wird das Publikum ausgeschlossen, wenn es eine Partei verlangt. Die Parteiöffentlichkeit bleibt auch in diesen Fällen gewährleistet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beratungen des Gerichts finden in keinem Fall öffentlich statt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Urteil wird im Anschluss an die Beratung gegenüber der in der Verhandlung zugelassenen Öffentlichkeit vom Vorsitzenden mündlich verkündet und kurz begründet."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "441dadbc3842414cfcc1e91b52aac7c2805425e5370592ee377ca2081c0177e9"
+    },
+    {
+      "id": "kanton/BS/270.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Falls keine mündliche Verhandlung stattgefunden hat, ist das Urteil in jedem Falle schriftlich zu begründen. Das schriftliche Urteil ist den Parteien und der Vorinstanz sowie der ursprünglich verfügenden Behörde, sofern sich diese am Verfahren beteiligt hat, zuzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat eine mündliche Urteilseröffnung stattgefunden, so kann bei Abweisung des Rekurses eine schriftliche Begründung des Urteils unterbleiben. Diesfalls wird lediglich ein Urteilsdispositiv zugestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Berechnung der Frist zur Einreichung eines Rechtsmittels an das Bundesgericht ist die Zustellung der schriftlichen Urteilsbegründung oder, falls keine solche verfasst wird, des Urteilsdispositivs massgebend."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "9152ee9f1d837a0c8404d367301af9af6a683fb62ef95e15e9ec13899d5a11df"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Verwaltungsrechtspflege sind dem Rekurrenten oder einem Beigeladenen im Falle des Unterliegens in der Regel die Verfahrenskosten aufzuerlegen. Die unterliegende Partei, Vorinstanz oder ursprünglich verfügende Behörde, sofern sie sich am Verfahren beteiligt hat, kann ferner zu einer Parteientschädigung verurteilt werden. Zu Gunsten der Vorinstanz und der ursprünglich verfügenden Behörde werden keine Parteientschädigungen zugesprochen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Rekurrent haftet dem Staat für die durch den Rekurs veranlassten Kosten und hat auf Verlangen deren mutmasslichen Betrag vorzuschiessen. Wird der Kostenvorschuss nicht fristgerecht geleistet, fällt der Rekurs dahin. Vorbehalten bleibt der Kostenerlass."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "441a6df8d02d263755988f7932d9d02e9ad9691081395623c01043758ee71100"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30 l",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30 l",
+      "artikelLabel": "§ 30l",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Beschwerde gegen den Entscheid des Grossen Rates oder auf Vorlage durch diesen hin entscheidet das Verfassungsgericht über die rechtliche Zulässigkeit von Volks- und Gemeindeinitiativen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "884f41c2f1d74ec2831e5c652df5da445065ab83f447f5ab21c71a16add57636"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_a",
+      "artikelLabel": "§ 30a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Appellationsgericht beurteilt als Verfassungsgericht",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschwerden wegen Verletzung verfassungsmässiger Rechte,"
+            },
+            {
+              "marke": "b",
+              "text": "Beschwerden gegen Erlasse,"
+            },
+            {
+              "marke": "c",
+              "text": "Beschwerden wegen Verletzung der Volksrechte,"
+            },
+            {
+              "marke": "d",
+              "text": "Beschwerden wegen Verletzung der Gemeindeautonomie."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es beurteilt weiter die Übereinstimmung von Erlassen der öffentlichrechtlich anerkannten Kirchen und Religionsgemeinschaften mit ihrem eigenen, höherrangigen Recht, wenn dieses eine solche Überprüfung vorsieht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "5c1aee6f1a0f25e6ee45342bcfa492ad90ba499c9fadbdeaf903572e25ec3326"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_b",
+      "artikelLabel": "§ 30b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren vor Verfassungsgericht gelten sinngemäss die Vorschriften über das verwaltungsgerichtliche Verfahren, soweit dieses Gesetz keine abweichenden Bestimmungen enthält."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "7bd94d8cb31a87c2832a4d28c1a53f474dd9fd192f6c4727ba6b31f49eba7558"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_c",
+      "artikelLabel": "§ 30c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde wegen Verletzung verfassungsmässiger Rechte ist nur zulässig, soweit diese Rüge nicht mit einem anderen Rechtsmittel erhoben werden kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit eine Verfügung der Beschwerde an das Sozialversicherungsgericht unterliegt, so beurteilt es auch die Rüge der Verletzung verfassungsmässiger Rechte. Eine Beschwerde an das Verfassungsgericht ist ausgeschlossen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beschwerde ist zulässig gegen Beschlüsse des Grossen Rates."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beschwerde ist auch zulässig gegen die Verweigerung oder Verzögerung der anfechtbaren Verfügung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "fc46d86fbf2365e857d1efe6116ff435b1fb35f43d3aed427b6cb3d7b94f3505"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_d",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_d",
+      "artikelLabel": "§ 30d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Beschwerde an das Verfassungsgericht sind folgende Beschlüsse des Grossen Rates ausgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschlüsse über die kantonale Anerkennung privatrechtlich organisierter Kirchen und Religionsgemeinschaften"
+            },
+            {
+              "marke": "b",
+              "text": "Beschlüsse über Begnadigung und Amnestie"
+            },
+            {
+              "marke": "c",
+              "text": "Beschlüsse über den jährlichen Voranschlag sowie über die jährliche Rechnung"
+            },
+            {
+              "marke": "d",
+              "text": "Beschlüsse über Planungen"
+            },
+            {
+              "marke": "e",
+              "text": "Wahlbeschlüsse"
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "9560dbed7d5ee0f907daa469a637e0e0d1c874f965c185447d3e07daee183c31"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_e",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_e",
+      "artikelLabel": "§ 30e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Verfassungsgericht können angefochten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kantonale Verordnungen und andere unterhalb des Gesetzes stehende kantonale Erlasse"
+            },
+            {
+              "marke": "b",
+              "text": "Erlasse der Gemeinden"
+            },
+            {
+              "marke": "c",
+              "text": "Erlasse anderer Träger öffentlicher Aufgaben"
+            },
+            {
+              "marke": "d",
+              "text": "Erlasse der öffentlichrechtlich anerkannten Kirchen und Religionsgemeinschaften"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht angefochten werden können:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verfassungsbestimmungen"
+            },
+            {
+              "marke": "b",
+              "text": "Gesetze"
+            },
+            {
+              "marke": "c",
+              "text": "Staatsverträge"
+            },
+            {
+              "marke": "d",
+              "text": "Richtpläne"
+            },
+            {
+              "marke": "e",
+              "text": "kantonale und kommunale Nutzungspläne"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Erlasse der Gemeinden, die der Genehmigung durch den Regierungsrat bedürfen, können nur im Falle ihrer Genehmigung angefochten werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "f06ba14c533b36045b15d15c3ef5e8eded15f0821a5fc010c3d83ae44c40d37e"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_f",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_f",
+      "artikelLabel": "§ 30f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beschwerde sind befugt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "jede Person, auf die der angefochtene Erlass künftig einmal angewendet werden könnte;"
+            },
+            {
+              "marke": "b",
+              "text": "die obersten Verwaltungsbehörden des Kantons und der Gemeinden, anderer Träger öffentlicher Aufgaben und der öffentlichrechtlich anerkannten Kirchen und Religionsgemeinschaften, wenn der Vollzug des Erlasses in ihre Zuständigkeit fällt oder ihre schutzwürdigen Interessen beeinträchtigen könnte."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "6bad8802819f98aa7aceb94f0790ff8898a06cd20a05e6e89fd77a8d818eb5b4"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_g",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_g",
+      "artikelLabel": "§ 30g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde ist binnen zehn Tagen nach der Veröffentlichung des Erlasses im Kantonsblatt schriftlich beim Verfassungsgericht anzumelden. Gemäss § 30b gelten § 16 Abs. 2 und 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beschwerde gegen Erlasse der Gemeinden, die der Genehmigung durch den Regierungsrat bedürfen, ist binnen zehn Tagen nach der Publikation der Genehmigung im Kantonsblatt einzureichen. Gemäss § 30b gelten § 16 Abs. 2 und 3."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "15a0bac952f25862aac616434f0ef5a68c794fdf0bc61e9f00930d304840c216"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_h",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_h",
+      "artikelLabel": "§ 30h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde hemmt die Wirksamkeit des angefochtenen Erlasses nicht, es sei denn, dass der Präsident dies ausdrücklich anordnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Präsident veröffentlicht die Anordnung der aufschiebenden Wirkung im Kantonsblatt. Er ist befugt, in besonderen Fällen die Anordnung auf eine andere Art zu veröffentlichen. Die angefochtenen Bestimmungen verlieren mit der Veröffentlichung der Anordnung die Wirksamkeit."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "b0c55f56307bd667b584ae9c12d49b897d406a38e499d59ab0ff06faa05d7b18"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_i",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_i",
+      "artikelLabel": "§ 30i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfassungsgericht hebt verfassungswidrige Erlasse ganz oder teilweise auf."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verfassungsgericht veröffentlicht das Urteil im Kantonsblatt. Es ist befugt, in besonderen Fällen das Urteil auf eine andere Art zu veröffentlichen. Mit der Veröffentlichung des Urteils verlieren die aufgehobenen Bestimmungen ihre Wirksamkeit."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "bd82d4e31014672857b17d08d381b5254d064d67e15e2b42c2b6ec59b8b16baa"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_k",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_k",
+      "artikelLabel": "§ 30k",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wegen Verletzung der Volksrechte kann beim Verfassungsgericht Beschwerde erhoben werden. Gerügt werden kann insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verletzung des Stimmrechts"
+            },
+            {
+              "marke": "b",
+              "text": "die mangelhafte Vorbereitung und Durchführung von Wahlen und Abstimmungen"
+            },
+            {
+              "marke": "c",
+              "text": "die Missachtung von unformulierten Initiativen durch den Grossen Rat"
+            },
+            {
+              "marke": "d",
+              "text": "die unzulässige Übertragung von Befugnissen des Volkes auf andere Organe"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Angefochten werden können:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschlüsse des Grossen Rates"
+            },
+            {
+              "marke": "b",
+              "text": "Verfügungen und Entscheide des Regierungsrates über Wahlen und Abstimmungen"
+            },
+            {
+              "marke": "c",
+              "text": "von der Staatskanzlei gestützt auf das Gesetz betreffend Initiative und Referendum erlassene Verfügungen"
+            },
+            {
+              "marke": "d",
+              "text": "andere Handlungen und Unterlassungen des Grossen Rates und des Regierungsrates, sofern ein Anfechtungsobjekt gemäss Buchstaben a–c dieses Absatzes fehlt"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Nicht angefochten werden kann die Dringlicherklärung eines Gesetzes."
+        },
+        {
+          "absatz": "4",
+          "text": "Beschwerden gemäss lit. b und c von Abs. 2 beurteilt das Appellationsgericht als Verwaltungsgericht."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "47e253c540d9f593c46084010a9cca95b0f9b247210823e5b52bf22ff6046a44"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_m",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_m",
+      "artikelLabel": "§ 30m",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Beschwerde ist jede stimmberechtigte Person befugt, und, falls es um eine Gemeindeinitiative geht, auch die betreffende Einwohnergemeinde."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Anfechtung von Verfügungen der Staatskanzlei über die Vorprüfung einer Volksinitiative ist die Mehrheit des Initiativkomitees befugt. Zur Anfechtung von Verfügungen der Staatskanzlei über das Zustandekommen von Volksinitiativen ist jede stimmberechtigte Person befugt."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "8c7d2c04339cb904e5b2a0145e0d95b7097b0e998382b547ec7c1a80abcfe5f7"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_n",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_n",
+      "artikelLabel": "§ 30n",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde ist innert zehn Tagen nach der Entdeckung des Beschwerdegrundes, nach der Zustellung der Verfügung oder des Entscheides oder nach der Veröffentlichung im Kantonsblatt schriftlich beim Verfassungsgericht anzumelden. Spätestens binnen 30 Tagen, vom gleichen Zeitpunkt an gerechnet, ist eine schriftliche Beschwerdebegründung einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Richtet sich die Beschwerde gegen Entscheide des Regierungsrates nach § 81 des Gesetzes über Wahlen und Abstimmungen, so ist sie innert fünf Tagen seit Zustellung des Entscheids beim Verfassungsgericht schriftlich und begründet einzureichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Fristen sind nicht erstreckbar."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "f84f0e250abb621c926735757b2bd6f4c37945c10a33138b0fed30204af87c4d"
+    },
+    {
+      "id": "kanton/BS/270.100/art_30_o",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "30_o",
+      "artikelLabel": "§ 30o",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wegen Verletzung der Gemeindeautonomie können die Einwohner- und Bürgergemeinden Verfügungen und Entscheide letztinstanzlicher Verwaltungsbehörden des Kantons beim Verfassungsgericht anfechten."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Beschwerde ist die leitende und oberste vollziehende Behörde der Gemeinde berechtigt."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "c4b6f0c128f3442e5e233b5d0226aa67d0a9d604774e8a064cf51608c2994b63"
+    },
+    {
+      "id": "kanton/BS/270.100/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Rekurs wegen grundloser Verzögerung eines der Verwaltung vorgeschriebenen Entscheides gelten die Vorschriften von Abschnitt C dieses Gesetzes mit folgenden Abweichungen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Der Rekurs ist an keine Frist gebunden; er wird durch eine begründete Rekurseingabe erhoben."
+            },
+            {
+              "marke": "2",
+              "text": "Erscheint ein Rekurs als offenbar unbegründet, so weist ihn der Präsident, wenn nötig nach Einholung eines Berichtes der Behörde, unter Angabe der Gründe zurück und setzt dem Rekurrenten eine Frist, binnen deren er zu erklären hat, ob er auf einer Beurteilung beharre; wird dieses Verlangen nicht innert der Frist gestellt, so erklärt das Gericht den Rekurs als dahingefallen."
+            },
+            {
+              "marke": "3",
+              "text": "Wird der Rekurs als begründet erkannt, so stellt das Gericht das Urteil dem Regierungsrat zu mit der Einladung, dafür zu sorgen, dass die erforderliche Verfügung binnen angemessener Frist getroffen werde."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "eada147a721bb5d4f3c8c5aae4ec393fcd7099a8697a2faa78ed2dbaab7b240f"
+    },
+    {
+      "id": "kanton/BS/270.100/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "I. Das Gesetz vom 9. März 1905 über die Verwaltungsrechtspflege wird aufgehoben.  II–VII"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "fd0bd6167da8398587cf6597695f9a56acb50a83957de8dd7d55165484cde1a6"
+    },
+    {
+      "id": "kanton/BS/270.100/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VRPG (270.100)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz tritt am 1. Januar 1929 in Wirksamkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist bei Beschwerden, die zur Zeit, wo dieses Gesetz in Wirksamkeit tritt, beim Verwaltungsgerichte anhängig sind, der Schriftenwechsel der Parteien abgeschlossen, so werden sie nach den Bestimmungen des frühern Gesetzes erledigt."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/270.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8e6af3df13c647e013bf75cd510e3231",
+      "sha": "ff235bdc7c18d7be52e7e652333f6750a4c88cd20292f866d6d80a930563228d"
+    }
+  ]
+}

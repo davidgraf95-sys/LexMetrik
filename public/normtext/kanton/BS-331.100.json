@@ -1,0 +1,760 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/331.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Rechtsstellung, die Organisation und die Aufgaben des Universitätsspitals Basel, der Universitären Psychiatrischen Kliniken Basel und des Felix Platter-Spitals (öffentliche Spitäler)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlichen Spitäler tragen dazu bei, eine wirksame, zweckmässige und wirtschaftliche Spitalversorgung zu gewährleisten."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "7f887fc549cbadd0e0e0083892c54c378174c70463988138a1df193f244a19a9"
+    },
+    {
+      "id": "kanton/BS/331.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler sind Unternehmen des Kantons in der Form selbstständiger öffentlich-rechtlicher Anstalten mit eigener Rechtspersönlichkeit und Sitz in Basel."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlichen Spitäler sind im Handelsregister eingetragen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "7bcfc325d0fefc25bdd66981b06fc2fb602525052c4b8d7f18aee68f56d5fca0"
+    },
+    {
+      "id": "kanton/BS/331.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler dienen der kantonalen, regionalen und überregionalen medizinischen Versorgung im Rahmen der Leistungsaufträge gemäss dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung (KVG)."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie tragen im Rahmen von Leistungsvereinbarungen mit Hochschulen zur Forschung und Lehre bei."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erbringen bedarfsgerecht gemeinwirtschaftliche Leistungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie können weitere Leistungen erbringen, soweit dadurch die Erfüllung der staatlichen Leistungsaufträge nicht beeinträchtigt wird."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "756cbe61e24ad5c0a0c7e79a0ecd5d12d65e26cc4312f955aa3c9b41d729c5b7"
+    },
+    {
+      "id": "kanton/BS/331.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler können Kooperationen eingehen, Unternehmen gründen oder sich an Unternehmen beteiligen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Erwerb von Beteiligungen, die Übertragung von Aktiven auf Dritte oder Verpfändung von Aktiven an Dritte, an welchen ein öffentliches Spital nicht mehrheitlich beteiligt ist, bedarf der Zustimmung des Regierungsrates, wenn der vom Regierungsrat in der Eigentümerstrategie festgelegte Prozentsatz des Eigenkapitals überschritten wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Auslagerungen an privatrechtliche Unternehmen bedürfen der Genehmigung des Regierungsrates."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "e1f05777089dedc035dd505177467f0497cbe9d5b58bfe90cca750b213dbdaa1"
+    },
+    {
+      "id": "kanton/BS/331.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organe des öffentlichen Spitals sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verwaltungsrat;"
+            },
+            {
+              "marke": "b",
+              "text": "Spitalleitung;"
+            },
+            {
+              "marke": "c",
+              "text": "Revisionsstelle."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "ae7c280100be2e8261b07e6a18f7a7465c3e73b2984897c08f948d54ef92d59c"
+    },
+    {
+      "id": "kanton/BS/331.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verwaltungsrat besteht aus fünf bis neun Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident und die weiteren Verwaltungsratsmitglieder werden vom Regierungsrat gewählt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Amtsdauer beträgt vier Jahre. Wiederwahl ist möglich."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Entschädigung der Verwaltungsratsmitglieder wird vom Regierungsrat genehmigt."
+        },
+        {
+          "absatz": "5",
+          "text": "Verwaltungsratsmitglieder können vom Regierungsrat jederzeit abberufen werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Mitglieder des Verwaltungsrates dürfen nicht gleichzeitig dem Grossen Rat angehören. Der Regierungsrat berücksichtigt Personen mit den für die Leitung eines Spitals erforderlichen Qualifikationen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "948c312ecf445f7a2b0d76f27686094ab2f3fbedab9252b7110006773f83b291"
+    },
+    {
+      "id": "kanton/BS/331.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verwaltungsrat ist das oberste Führungsorgan."
+        },
+        {
+          "absatz": "2",
+          "text": "Er hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Festlegung der strategischen Ausrichtung im Rahmen der vom Regierungsrat bestimmten Eigentümerstrategie und der Leistungsaufträge;"
+            },
+            {
+              "marke": "b",
+              "text": "Genehmigung der Mehrjahresplanung und des Budgets inklusive Investitionen;"
+            },
+            {
+              "marke": "c",
+              "text": "Festlegung der Kooperations- und Allianzstrategie;"
+            },
+            {
+              "marke": "d",
+              "text": "Festlegung der Personalstrategie, der Anstellungsbedingungen und des Einreihungsverfahrens;"
+            },
+            {
+              "marke": "e",
+              "text": "Wahl und Anstellung der Mitglieder der Spitalleitung sowie der Spitaldirektorin oder des Spitaldirektors;"
+            },
+            {
+              "marke": "f",
+              "text": "Festlegung der Organisation;"
+            },
+            {
+              "marke": "g",
+              "text": "Aufsicht über die Spitalleitung;"
+            },
+            {
+              "marke": "h",
+              "text": "Durchführung einer angemessenen Risikokontrolle;"
+            },
+            {
+              "marke": "i",
+              "text": "Erlass der erforderlichen Reglemente, insbesondere Finanz-, Preis-, Organisations- und Personalreglemente;"
+            },
+            {
+              "marke": "j",
+              "text": "Vertretung des Spitals nach aussen, insbesondere gegenüber den Behörden des Kantons, unter Vorbehalt anderer Regelungen im Organisationsreglement;"
+            },
+            {
+              "marke": "k",
+              "text": "zeitgerechte und vorausblickende Information und Konsultation des Regierungsrates in den für den Kanton relevanten Fragen."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "7bf833e2e7f2f5b4bf61e2c73cf5b576f116529920720a49dfeeacde2a95ac21"
+    },
+    {
+      "id": "kanton/BS/331.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spitalleitung besteht aus der Spitaldirektorin oder dem Spitaldirektor und den Spitalleitungsmitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Spitaldirektorin oder der Spitaldirektor ist gegenüber den weiteren Spitalleitungsmitgliedern weisungsbefugt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "586c77d4dda1f5301dc17ed4f46e446bbd01fe635f90a21b2ba207b5a33b1c61"
+    },
+    {
+      "id": "kanton/BS/331.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spitalleitung ist das operative Führungsorgan."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Spitalleitung hat unter Vorbehalt der Kompetenzen vorgesetzter Instanzen sämtliche Kompetenzen zur Führung des öffentlichen Spitals. Die Kompetenzen und Aufgaben der Spitalleitung sind im Organisationsreglement festgelegt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "d16ba5c149aa8bd7c80441a2e2052c2e84f2a75d1136a2f4463d81000cc7b598"
+    },
+    {
+      "id": "kanton/BS/331.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Revisionsstelle wird vom Regierungsrat für eine Amtsdauer von einem Jahr gewählt. Wiederwahl ist möglich."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Revisionsstelle prüft die Buchführung und Jahresrechnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erstattet dem Verwaltungsrat schriftlich über das Ergebnis ihrer Prüfung Bericht."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "89136caa03c47cdc41c8c58e9cbd2a1c7b3bcfbcad912758f1d62b06f2a47476"
+    },
+    {
+      "id": "kanton/BS/331.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rahmen seiner Aufsichtsbefugnisse ist der Regierungsrat berechtigt, Auskünfte zu verlangen und in Unterlagen Einsicht zu nehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er nimmt Kenntnis vom Bericht der Revisionsstelle, genehmigt auf Antrag des Verwaltungsrates die Jahresrechnung und entscheidet auf Antrag des Verwaltungsrates über die Verwendung des Bilanzgewinnes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Jahresrechnung wird vom Regierungsrat dem Grossen Rat zur Kenntnis gebracht."
+        },
+        {
+          "absatz": "4",
+          "text": "Gegenüber Dritten und anderen Behörden ist der Regierungsrat zur Wahrung der Geschäftsgeheimnisse verpflichtet."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "66d2d689e631b6668fddb035b32ae2ada5aedca0d662386bcbb7cf2d6f8ac033"
+    },
+    {
+      "id": "kanton/BS/331.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler schliessen mit dem Personal öffentlich-rechtliche Arbeitsverträge ab. Abs. 5 bleibt vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlich-rechtlichen Arbeitsverträge orientieren sich an den Bedürfnissen des Betriebs und des Personals sowie an den Gegebenheiten des Marktes."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verwaltungsrat kann im Einvernehmen mit den massgebenden Personalverbänden Gesamtarbeitsverträge abschliessen."
+        },
+        {
+          "absatz": "4",
+          "text": "Soweit der Gesamtarbeitsvertrag und die Vorschriften des Verwaltungsrates nichts anderes bestimmen, finden die Vorschriften des Bundesgesetzes betreffend die Ergänzung des Schweizerischen Zivilgesetzbuches (Fünfter Teil: Obligationenrecht) vom 30. März 1911 sinngemäss Anwendung."
+        },
+        {
+          "absatz": "5",
+          "text": "Vorbehalten bleiben die durch Drittmittel finanzierten Anstellungsverhältnisse."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "4dd078ad289b4e174d6cde6f728109f684c6f304c2a1d3aeb61efde0b1edd8c3"
+    },
+    {
+      "id": "kanton/BS/331.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verwaltungsrat legt die Voraussetzungen zur Ausübung und die Grundlagen und Rahmenbedingungen der privatärztlichen Tätigkeit in einem Reglement fest."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "4812b381aa84ff323fd3337bd3c889a84389d17c52d48770ac77d71ba17994fd"
+    },
+    {
+      "id": "kanton/BS/331.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Gewährleistung der beruflichen Vorsorge des Personals schliessen sich die öffentlichen Spitäler der Pensionskasse des Basler Staatspersonals an."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bedingungen für das Personal entsprechen denjenigen, die für das Staatspersonal des Kantons Basel-Stadt gelten."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben abweichende Regelungen im Personalreglement."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "ca1e089beac9c62ca4956fa995b5c7c527753e10836caacbe9d57cff09635f26"
+    },
+    {
+      "id": "kanton/BS/331.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Erfüllung seiner Aufgaben gewährt der Kanton jedem öffentlichen Spital ein Dotationskapital."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes öffentliche Spital verfügt über eine angemessene Eigenkapitalquote."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "d7e16ee2876552f5df0d02de7bd8baacd956a231eb18db6694b4a15113ea9e97"
+    },
+    {
+      "id": "kanton/BS/331.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler können Fremdkapital aufnehmen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "76486b81ccd946f7664db15d8a2d89885c16fbec95d8c5dce786f7262674d82f"
+    },
+    {
+      "id": "kanton/BS/331.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler verfügen über eigene Vermögen. Diese beinhalten insbesondere Umlaufvermögen, Immobilien, Mobilien und Immaterialgüterrechte."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "ba9b699c1e2e6802d35751978ee4eb05c5bc4c7f2d7229b938ca95f6275046d9"
+    },
+    {
+      "id": "kanton/BS/331.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler wenden einen allgemein anerkannten Rechnungslegungsstandard an, der ein den tatsächlichen Verhältnissen entsprechendes Bild der Vermögens-, Finanz- und Ertragslage vermittelt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "dd4ed7ae67e0be50b5bb33c547994d1bc129852e01074cbc0f5efd3efdcbe115"
+    },
+    {
+      "id": "kanton/BS/331.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Spitäler sind im Kanton Basel-Stadt von sämtlichen kantonalen und kommunalen Steuern befreit."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "a70b14504af30ec6d4dcf5d4b59bbbcb94a24d9dbfd95748c60342c883e617a8"
+    },
+    {
+      "id": "kanton/BS/331.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Verbindlichkeiten eines öffentlichen Spitals haftet ausschliesslich das jeweilige Spitalvermögen. Die öffentlichen Spitäler schliessen entsprechend der Art und des Umfangs der Risiken Haftpflichtversicherungen ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Für privatrechtlich organisierte Tochtergesellschaften der öffentlichen Spitäler gelten ausschliesslich die Haftungsvorschriften des Obligationenrechts."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "624c9db8c288d000e4b5837c896f18df38a9b1ef35df75b754e393f44d3a31bc"
+    },
+    {
+      "id": "kanton/BS/331.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Verantwortlichkeit der Mitglieder der Verwaltungsräte und der Spitalleitungen sowie der Revisionsstellen der öffentlichen Spitäler gelten sinngemäss die obligationenrechtlichen Bestimmungen über die aktienrechtliche Verantwortlichkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesetz über die Haftung des Staates und seines Personals (Haftungsgesetz, HG) vom 17. November 1999 findet insoweit keine Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Streitigkeiten aus Verantwortlichkeitsansprüchen gemäss Abs. 1 werden durch die Zivilgerichte beurteilt. Der Kanton hat in einem solchen Verfahren die Stellung eines Aktionärs und eines Gesellschaftsgläubigers. Zuständig ist der Regierungsrat."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "dafe72ebf4bf32c082e46533b7c779f877cdbc126117bff414357593748479fb"
+    },
+    {
+      "id": "kanton/BS/331.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Rechtsverhältnis zwischen den Patientinnen und Patienten und den öffentlichen Spitälern ist öffentlich-rechtlich."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "7ea3e1a8e26710322f1f51fd33c7f46476c372b7797f8df10079940fc26e1dbc"
+    },
+    {
+      "id": "kanton/BS/331.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Verwaltungsrat regelt die erstinstanzliche Entscheidbefugnis der Organe und Organisationseinheiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen Verfügungen gemäss Abs. 1 kann gemäss dem Gesetz betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976 beim Verwaltungsrat Rekurs erhoben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegen Verfügungen des Verwaltungsrates kann gemäss dem Gesetz über die Verfassungs- und Verwaltungsrechtspflege (VRPG) vom 14. Juni 1928 beim Verwaltungsgericht Rekurs erhoben werden."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "22e99d823cc8a2136736a6e997a0b3381a9a06a50f0c5492c5db744a3ec141ac"
+    },
+    {
+      "id": "kanton/BS/331.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Wirksamkeit dieses Gesetzes erlangen die öffentlichen Spitäler eigene Rechtspersönlichkeit."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "ceb3214e11daaed964a33a2cb21a4adeade5faebf28e8ab92a1f57af327924e1"
+    },
+    {
+      "id": "kanton/BS/331.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das gesamte betriebsnotwendige Finanz- und Verwaltungsvermögen, insbesondere das Eigentum an sämtlichen Mobilien sowie sämtliche Rechte und Pflichten, welche der Kanton für die öffentlichen Spitäler erworben hat oder eingegangen ist, geht sinngemäss den Bestimmungen des Bundesgesetzes über Fusion, Spaltung, Umwandlung und Vermögensübertragung (Fusionsgesetz, FusG) vom 3. Oktober 2003 im Zeitpunkt der Wirksamkeit des Gesetzes auf die öffentlichen Spitäler über."
+        },
+        {
+          "absatz": "2",
+          "text": "Immobilien werden auf den Zeitpunkt der Wirksamkeit des Gesetzes ohne Grund und Boden auf die öffentlichen Spitäler übertragen. Der Kanton gewährt verzinsliche selbstständige und dauernde Baurechte."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "390f1d27cfb8df8ebf409b1d45481fd28232a84241f535e9ece445ef1e283424"
+    },
+    {
+      "id": "kanton/BS/331.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf den Stichtag der Eröffnungsbilanz erfolgt eine Bewertung der Aktiven und Passiven der öffentlichen Spitäler auf der Basis eines anerkannten Rechnungslegungsstandards im Sinne von § 18."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlichen Spitäler erhalten das Nettovermögen zu Eigenkapital."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "e6ceb6b3653dd1032029b793753bb20a0aace7c735489b040f069e74fd72966d"
+    },
+    {
+      "id": "kanton/BS/331.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die erforderlichen Übergangs- und Ausführungsbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er ist zu allen Handlungen ermächtigt, die für die Überführung der Betriebe der öffentlichen Spitäler in die öffentlich-rechtlichen Anstalten erforderlich sind."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "294ae951a28e2014de6243b1a5cf255ac067256a62017fcaadfec5cc28afeda4"
+    },
+    {
+      "id": "kanton/BS/331.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Solange kein Gesamtarbeitsvertrag im Sinne von § 12 Abs. 3 abgeschlossen wird, richten sich die betreffenden Anstellungsverhältnisse bis längstens 31. Dezember 2015 inhaltlich nach dem Personalgesetz vom 17. November 1999 und dem Gesetz betreffend Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel- Stadt (Lohngesetz) vom 18. Januar 1995."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die durch Drittmittel finanzierten Anstellungsverhältnisse sowie vom Verwaltungsrat für spezielle Fälle erlassene besondere Anstellungs-, Entlöhnungs- und Arbeitsbedingungen zur Sicherstellung der Konkurrenzfähigkeit auf dem Arbeitsmarkt oder zur Gewinnung und Erhaltung von Mitarbeitenden."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "21823ef788f50e26a35bfaa0f3f1ee204250884ea3f560de0b9cfa7c638a5af2"
+    },
+    {
+      "id": "kanton/BS/331.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Öffentliche Spitäler-Gesetz, ÖSpG (331.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz betreffend die Pensionskasse Basel-Stadt (Pensionskassengesetz) vom 28. Juni 2007 wird wie folgt geändert:"
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/331.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bc2883f14f359878ea3d4118b4de910b",
+      "sha": "e15c445190d655ffb54366df2065f6ea2e920395ba56918240371acfbc4f3358"
+    }
+  ]
+}

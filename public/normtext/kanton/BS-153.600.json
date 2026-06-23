@@ -1,0 +1,640 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.600/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv und die Archive der Gemeinden bewahren kulturelles Erbe, helfen Rechte zu sichern und dienen der Verwaltung. Sie gewährleisten für die öffentlichen Organe des Kantons und der Gemeinden sowie für die Öffentlichkeit, insbesondere für die Forschung und Bildung, eine dauerhafte dokumentarische Überlieferung."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "f7c7cc46f5dd0f4d18d9b39d048c1125a404e4b7b9f99f0cfdfbfbe1fef0dc26"
+    },
+    {
+      "id": "kanton/BS/153.600/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz regelt die archivischen Belange",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Kantons,"
+            },
+            {
+              "marke": "b",
+              "text": "der Gemeinden,"
+            },
+            {
+              "marke": "c",
+              "text": "öffentlich-rechtlicher Körperschaften und Anstalten des Kantons und der Gemeinden, die eine öffentliche Aufgabe erfüllen, sowie Privater, soweit ihnen von Kanton und Gemeinden die Erfüllung öffentlicher Aufgaben übertragen ist, falls sie Personendaten bearbeiten und dabei dem Informations- und Datenschutzgesetz unterstellt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat und die Gemeinden können die ihnen zugehörigen öffentlich-rechtlichen Körperschaften und Anstalten sowie private Personen und Organisationen, denen öffentliche Aufgaben übertragen sind, auch unabhängig von der Bedingung von Abs. 1 lit. c dem Archivgesetz unterstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat sorgt dafür, dass interkantonale Institutionen, an denen der Kanton beteiligt ist, archivrechtliche Normen im Sinn dieses Gesetzes beachten."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "b7bfc32be7b7c27fe0537e79a25b04c55869c6650d7a22bd5bf4bf60d38a07e2"
+    },
+    {
+      "id": "kanton/BS/153.600/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Staatliches Archivgut sind alle archivwürdigen Unterlagen, die bei den öffentlichen Organen des Kantons und deren Rechtsvorgängern entstanden sind. Archivgut der Gemeinden sind jene archivwürdigen Unterlagen, die bei öffentlichen Organen der Gemeinden und deren Rechtsvorgängern entstanden sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Staatlichem Archivgut beziehungsweise dem Archivgut der Gemeinden sind gleichgestellt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Unterlagen von Körperschaften, Anstalten, Personen und Organisationen, welche nach § 2 Abs. 1 lit. c und Abs. 2 dem Archivgesetz unterstehen;"
+            },
+            {
+              "marke": "b",
+              "text": "Unterlagen anderer Stellen und Privater, welche das Staatsarchiv und die Archive der Gemeinden im öffentlichen Interesse entgegengenommen haben;"
+            },
+            {
+              "marke": "c",
+              "text": "Dokumentationsmaterialien, welche der Ergänzung des übrigen Archivgutes dienen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Unterlagen sind Akten, Urkunden, Protokolle, Karteien, Pläne, Siegel, Bild- und Tondokumente, Drucksachen sowie die übrigen aufgezeichneten Informationen, unabhängig vom Informationsträger und einschliesslich der Hilfsmittel, die zu deren Verständnis und Benützung notwendig sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Archivwürdig sind Unterlagen, welche voraussichtlich von bleibendem Wert sind für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Dokumentierung der Tätigkeit der öffentlichen Organe,"
+            },
+            {
+              "marke": "b",
+              "text": "Zwecke der Gesetzgebung, Verwaltung oder Rechtssprechung,"
+            },
+            {
+              "marke": "c",
+              "text": "die Sicherung berechtigter Interessen betroffener Personen oder Dritter,"
+            },
+            {
+              "marke": "d",
+              "text": "Wissenschaft und Forschung,"
+            },
+            {
+              "marke": "e",
+              "text": "das Verständnis der Gegenwart und der Geschichte."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Öffentliche Organe sind Behörden und öffentliche Dienste des Kantons, der Einwohnergemeinden, der Bürgergemeinden sowie deren öffentlich-rechtlichen Körperschaften und Anstalten. Öffentliche Dienste des Kantons sind die Verwaltungseinheiten (Abteilungen und Stabsstellen) der Departemente. Private Personen und Organisationen sind den öffentlichen Organen nach § 2 Abs. 1 lit. c und Abs. 2 gleichgestellt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "b99ae1ab87f4472517f3e34e763e75b5cf57fad46c2131f99854bab75b4378ae"
+    },
+    {
+      "id": "kanton/BS/153.600/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Archivbestimmungen des Notariatsgesetzes und der Bundesgesetze bleiben vorbehalten."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "b1a621eca57829b3f25489f4639bb2a7a41487a9d9ccf8a3a6f1d198175cfb52"
+    },
+    {
+      "id": "kanton/BS/153.600/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv hat die Aufgabe,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Unterlagen der öffentlichen Organe des Kantons Basel-Stadt zu erfassen und über deren Archivwürdigkeit zu entscheiden;"
+            },
+            {
+              "marke": "b",
+              "text": "die archivwürdigen Unterlagen"
+            },
+            {
+              "marke": "1",
+              "text": "zu übernehmen, zu verwahren, zu ergänzen, zu erhalten und instandzusetzen,"
+            },
+            {
+              "marke": "2",
+              "text": "zu erschliessen und für die Benützung bereitzustellen;"
+            },
+            {
+              "marke": "c",
+              "text": "sich an der Erforschung und der Veröffentlichung staatlichen Archivgutes zu beteiligen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Staatsarchiv übernimmt, verwahrt und erschliesst, soweit daran ein öffentliches Interesse besteht,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Unterlagen anderer, insbesondere privater Herkunft;"
+            },
+            {
+              "marke": "b",
+              "text": "Dokumentationsmaterialien, welche der Ergänzung des übrigen Archivgutes dienen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Staatsarchiv beteiligt sich am Sichern, Erschliessen und Benützbarmachen archivwürdiger Unterlagen interkantonaler Institutionen, an denen der Kanton beteiligt ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Staatsarchiv berät die öffentlichen Organe bei der Sicherung, Verwaltung und Ablieferung ihrer Unterlagen; es erlässt dazu Weisungen."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Staatsarchiv berät die Gemeinden in Archivfragen."
+        },
+        {
+          "absatz": "6",
+          "text": "Das Staatsarchiv kann im Einvernehmen mit dem anbietenden öffentlichen Organ auch Unterlagen übernehmen, für die noch keine Anbietungspflicht besteht und über deren Archivwürdigkeit noch nicht entschieden worden ist. Bis zu diesem Entscheid bleibt das anbietende öffentliche Organ verantwortlich im Sinn von § 6 des Informations- und Datenschutzgesetzes."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "1872196b13c2fb2fe0519324067b094e65a315692728c8f6ef95c4e2e07146cd"
+    },
+    {
+      "id": "kanton/BS/153.600/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Staatliches Archivgut wird im Staatsarchiv verwahrt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Staatsarchiv sichert die dauerhafte Erhaltung sowie Benützbarkeit des Archivgutes und schützt es vor unbefugter Benützung oder Vernichtung."
+        },
+        {
+          "absatz": "3",
+          "text": "Unterlagen und Dokumentationsmaterialien, welche das Staatsarchiv in Erfüllung seiner Aufgaben nach § 5 Abs. 1 und 2 verwahrt, sind unveräusserlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Staatliches Archivgut kann aufgrund einer Vereinbarung ausnahmsweise bei einer anderen Stelle verwahrt werden, wenn die dauerhafte Erhaltung, die Benützbarkeit und der Schutz vor unbefugter Benützung im Sinne dieses Gesetzes gewährleistet sind. Die Archivierung steht unter der Aufsicht des Staatsarchivs."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "057ad504b32d17e01df6e09649d2893dd47274626579600ba0b4f78755f74ff6"
+    },
+    {
+      "id": "kanton/BS/153.600/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Organe sind verpflichtet, die Unterlagen, welche sie zur Erfüllung der Aufgaben nicht mehr benötigen, auszusondern und periodisch dem Staatsarchiv zur Übernahme anzubieten."
+        },
+        {
+          "absatz": "2",
+          "text": "Anzubieten sind auch diejenigen Unterlagen, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "schutzwürdige Personendaten enthalten,"
+            },
+            {
+              "marke": "b",
+              "text": "einer besonderen Geheimhaltungspflicht unterstehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Nicht anzubieten sind Unterlagen von Mitarbeitergesprächen und Unterlagen zu solchen Stellenbewerbungen, die nicht in ein Anstellungsverhältnis führten."
+        },
+        {
+          "absatz": "2ter",
+          "text": "Vorbehalten bleibt die Anbietung von Unterlagen von Mitarbeitergesprächen mit dem Einverständnis der betroffenen mitarbeitenden Person."
+        },
+        {
+          "absatz": "3",
+          "text": "Durch Vereinbarung zwischen dem anbietenden öffentlichen Organ und dem Staatsarchiv kann",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art und Umfang der anzubietenden Unterlagen im Voraus festgelegt werden,"
+            },
+            {
+              "marke": "b",
+              "text": "auf die Anbietung von Unterlagen von offensichtlich geringer Bedeutung verzichtet werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anbietungspflicht einer Person bleibt auch nach Beendigung ihres Amtes oder öffentlichen Auftrages bestehen und geht nach dem Tod der pflichtigen Person auf die Erben über."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "ccc7588dc424cb99f63975d1913c718ac447e39dde01ff48a6128d90a75be0c9"
+    },
+    {
+      "id": "kanton/BS/153.600/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv hat zu den Registraturen sowie zu den Sammlungen von Daten und Unterlagen der öffentlichen Organe soweit freien Zugang, als dies zur sachgerechten und rationellen Erfüllung seiner Aufgaben notwendig ist."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "759474b8757a556da2b4c0d9b96e7735c8c1b01633193b824ce2ff8903326c0d"
+    },
+    {
+      "id": "kanton/BS/153.600/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Personen haben das Recht, Archivgut nach Massgabe dieses Gesetzes zu benützen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Benützung wird eingeschränkt oder ausgeschlossen soweit",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Grund zur Annahme besteht, dass andernfalls überwiegende schutzwürdige Interessen einer betroffenen Person oder Dritter beeinträchtigt würden;"
+            },
+            {
+              "marke": "b",
+              "text": "mit den derzeitigen oder früheren Eigentümern oder Eigentümerinnen von Archivgut privater Herkunft einschränkende Vereinbarungen getroffen worden sind;"
+            },
+            {
+              "marke": "c",
+              "text": "ein unverhältnismässiger Verwaltungsaufwand entstünde;"
+            },
+            {
+              "marke": "d",
+              "text": "der Erhaltungszustand des Archivgutes dies erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Benützung ist in der Regel unentgeltlich. Für besondere Leistungen des Staatsarchivs können Gebühren erhoben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Staatsarchiv hat Anspruch auf die unentgeltliche Abgabe eines Belegexemplars von Werken, die in wesentlichen Teilen auf der Benützung staatlichen Archivguts beruhen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "d90cff62a562d56db83105bb01a45131c3cad939a163a9d4e2c02a2aef9db637"
+    },
+    {
+      "id": "kanton/BS/153.600/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Archivgut kann in der Regel erst nach einer Schutzfrist von 30 Jahren benützt werden. Unterlagen, die schon bei ihrer Entstehung oder im Laufe ihrer Verwendung zur Veröffentlichung bestimmt oder der Öffentlichkeit zugänglich waren, unterliegen keiner Schutzfrist."
+        },
+        {
+          "absatz": "2",
+          "text": "Unterlagen, die sich ihrer Zweckbestimmung oder ihrem wesentlichen Inhalt nach auf eine natürliche Person beziehen, dürfen erst 10 Jahre nach deren Tod benützt werden. Ist das Todesdatum nicht bekannt oder nur mit unverhältnismässigem Aufwand zu eruieren, endet die Schutzfrist 100 Jahre nach der Geburt. Sind weder Todes- noch Geburtsdatum festzustellen, endet die Schutzfrist 80 Jahre nach Abschluss der Unterlagen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für alle Fristen, die sich auf Unterlagen beziehen, ist das Jahr massgebend, in welchem die Unterlagen durch Vervollständigung oder den letzten organischen Zuwachs abgeschlossen wurden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Schutzfristen nach Abs. 1 und 2 werden um höchstens 20 Jahre verlängert, wenn das öffentliche Interesse dies zwingend erfordert oder wenn Grund zur Annahme besteht, dass eine kürzere Schutzfrist überwiegende schutzwürdige Interessen einer betroffenen Person oder Dritter beeinträchtigen würde."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Staatsarchiv kann Archivgut vor Ablauf der Fristen von Abs. 1, 2 und 4 für die Benützung zugänglich machen, wenn sichergestellt ist, dass das öffentliche Interesse sowie die überwiegenden schutzwürdigen Belange betroffener Personen oder Dritter nicht beeinträchtigt werden. Es kann Archivgut mit Schutzfristen gemäss Abs. 2 beziehungsweise 2 und 4 vor deren Ablauf für die Benützung zugänglich machen, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Unterlagen für die Durchführung eines bestimmten Forschungsvorhabens erforderlich sind oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die betroffene Person – oder nach deren Tod ihre Angehörigen – in die Benützung eingewilligt haben oder"
+            },
+            {
+              "marke": "c",
+              "text": "wenn die Benützung im überwiegenden Interesse der betroffenen Person oder Dritter liegt."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Im Zweifelsfall hört das Staatsarchiv vor der Verkürzung von Schutzfristen das abliefernde öffentliche Organ an. Dies gilt namentlich für Unterlagen mit verlängerten Schutzfristen nach Absatz 4."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Schutzfristen der Abs. 1 und 2 gelten nicht für Archivgut, soweit es vor der Übergabe an das Staatsarchiv nach dem Informations- und Datenschutzgesetz zugänglich war."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "b56b52524e45d33ac8c1d919b3b6a26c7ed6dbd4244f7416c090612996d847bb"
+    },
+    {
+      "id": "kanton/BS/153.600/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Archivgut, dessen Benützung auf einer Verkürzung der Schutzfrist nach § 10 Abs. 5 beruht, darf ausschliesslich zu dem Zweck und zu den Bedingungen benützt werden, welche in der Bewilligungsverfügung des Staatsarchivs angegeben werden. Zuwiderhandlungen werden nach Strafgesetzbuch Art. 292 bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer gegen die Bestimmungen der Benützungsordnung in grober Weise verstösst, kann von der weiteren Benützung ausgeschlossen werden und wird schadenersatzpflichtig."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "8545535af1fb2ec73c3994f3dbc82f3489549896194103a4020a6fc2220af63a"
+    },
+    {
+      "id": "kanton/BS/153.600/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das abliefernde öffentliche Organ kann sein Archivgut ungeachtet der Schutzfristen benützen, soweit dies zur Erfüllung seiner Aufgabe notwendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Zustimmung des abliefernden öffentlichen Organs dürfen andere öffentliche Organe Archivgut während der Schutzfrist benützen, sofern sie es zur Erfüllung ihrer gesetzlichen Aufgaben benötigen. Vorbehalten bleiben besondere Geheimhaltungsvorschriften."
+        },
+        {
+          "absatz": "3",
+          "text": "Abs. 1 und 2 gelten nicht für Archivgut mit Personendaten, das nach § 18 des Datenschutzgesetzes dem zuständigen Archiv angeboten und von diesem übernommen wurde. Vorbehalten bleibt, dass das abliefernde öffentliche Organ oder ein anderes öffentliches Organ offensichtlich im überwiegenden Interesse einer betroffenen Person auf das Archivgut greifen muss und diese Person zugestimmt hat oder ihre Zustimmung nach den Umständen vorausgesetzt werden kann."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "0cb85398dc07db30524eaf6cf16e611a8b9b6fcb52dbf1cf0dfd1cf1cfdb70ad"
+    },
+    {
+      "id": "kanton/BS/153.600/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Betroffenen Personen ist auf Antrag Auskunft zu erteilen über ihre personenbezogenen Daten, soweit das Archivgut durch Personennamen erschlossen ist oder Angaben gemacht werden, die das Auffinden der Daten mit angemessenem Aufwand ermöglichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Anstelle von Auskunft kann Einsicht in das Archivgut gewährt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Auskunft oder Einsicht werden eingeschränkt oder verweigert, wenn zwingende öffentliche Interessen oder überwiegende schutzwürdige Interessen Dritter dies erfordern."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "adc7ce03ba9f12a91d9d92ca160a8c8af448be22fb5530a0420e2dd75ca17151"
+    },
+    {
+      "id": "kanton/BS/153.600/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bestreitet eine betroffene Person die Richtigkeit von Personendaten, so kann sie verlangen, dass den Unterlagen eine Gegendarstellung beigegeben wird. Nach dem Tod der betroffenen Person steht dieses Recht den Angehörigen zu, wenn diese ein berechtigtes Interesse daran geltend machen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "ab6c01e1ebeceb39e1b21d3c6c1900209565caf35907ac6e53dfa456cfe86532"
+    },
+    {
+      "id": "kanton/BS/153.600/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwohnergemeinden und die Bürgergemeinden führen Archive für ihre Unterlagen von bleibendem Wert."
+        },
+        {
+          "absatz": "2",
+          "text": "Ihre öffentlich-rechtlichen Körperschaften, Anstalten und Institutionen sowie private Personen und Organisationen unterstehen dem Archivgesetz nach § 2 Abs. 1 lit. c. Die Gemeinden können die Anwendung des Archivgesetzes nach § 2 Abs. 2 ausdehnen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "76d3e7949990c52a0c90680ab9de8b83205686a96cdc5dcfd26fb45f6c270033"
+    },
+    {
+      "id": "kanton/BS/153.600/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gemeinden gelten die folgenden Bestimmungen dieses Gesetzes sinngemäss:  – § 5 über die Aufgaben des Archivs – § 6 über die Sicherung des Archigutes – § 7 über die Anbietungspflicht – §§ 9 - 11 über Grundsatz der Benützung, Schutzfristen, Zuwiderhandlungen – § 12 Benützung durch öffentliche Organe – §§ 13 - 14 über Auskunft und Einsicht sowie Gegendarstellung."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "28c55fc01727f7cb15d70d71d7ae83f62db376e892d57f59ddb0da893a229b6c"
+    },
+    {
+      "id": "kanton/BS/153.600/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden können aufgrund einvernehmlicher Abmachungen ihre archivischen Aufgaben ganz oder teilweise durch das Staatsarchiv ausführen lassen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "e5a25b720824e606007ccb2f9030cdcaec50c4645ef9b6818f0392e5a3a752cc"
+    },
+    {
+      "id": "kanton/BS/153.600/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt durch Verordnung Ausführungsbestimmungen zu diesem Gesetz, namentlich über die Anbietungspflicht, über die Gebühren und über die Benützung einschliesslich der Abgabe eines Belegexemplars und der Reproduktion von staatlichem Archivgut."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden regeln die weiteren Einzelheiten ihrer archivischen Belange selbständig."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "f6ae26c6e2f27243a1281028ea16f06965df1cb30c2dc9cc9bfac34a74671f18"
+    },
+    {
+      "id": "kanton/BS/153.600/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Archivgesetz (153.600)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen des Staatsarchivs unterliegen der Beschwerde an das zuständige Departement. Im Übrigen gelten die allgemeinen Bestimmungen der Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.600",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dac980f12fca64905d1ca39bc84693",
+      "sha": "c8f4ad00870d04da76e1b7408c39070a25bae09494cdf926517077d9484bf4d5"
+    }
+  ]
+}

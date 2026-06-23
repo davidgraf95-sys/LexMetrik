@@ -1,0 +1,324 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.310/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung regelt Organisation, Betrieb und Weiterentwicklung des Datenmarktes der kantonalen Verwaltung."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "01c3aae2d4af96ae0841b11e7d3b13a278bcf215c552394017e8f775af72c9f9"
+    },
+    {
+      "id": "kanton/BS/153.310/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Datenmarkt werden den öffentlichen Organen gemäss § 3 Abs. 1 IDG Personen- und Sachdaten, die von mehr als einem öffentlichen Organ zur Erfüllung seiner gesetzlichen Aufgaben benötigt werden, tagesaktuell auf einer zentralen Plattform zur Verfügung gestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Kantonal anerkannte Religionsgemeinschaften gemäss § 133 der Verfassung des Kantons Basel-Stadt vom 23. März 2005, denen das Recht verliehen wurde, Daten zu beziehen, wird das gleiche Zugangsrecht auf die Daten ihrer Konfessionszugehörigen gewährt."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "b68a3eaef297c87249de4073e4bf760e1ac025f8a4c16ad6618c655c3a8b9fba"
+    },
+    {
+      "id": "kanton/BS/153.310/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konferenz für Organisation und Informatik (KOI) trägt als Vertreterin der dateneinliefernden Organe die Verantwortung für den kantonalen Datenmarkt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die KOI koordiniert die Nutzung des Gesamtsystems und erlässt Vorgaben für die Nutzung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die KOI hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Festlegung der Anforderungen, welche das Gesamtsystem erfüllen muss und Sicherstellung der Einhaltung dieser Anforderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Festlegung der Qualitätsstandards;"
+            },
+            {
+              "marke": "c",
+              "text": "Sicherstellung des Verfahrens zur Vernichtung von Daten;"
+            },
+            {
+              "marke": "d",
+              "text": "Festlegung des vorzuhaltenden Schutzes des Gesamtsystems;"
+            },
+            {
+              "marke": "e",
+              "text": "Risikomanagement;"
+            },
+            {
+              "marke": "f",
+              "text": "Sicherstellung der Gewährleistung der Rechte der betroffenen Personen;"
+            },
+            {
+              "marke": "g",
+              "text": "Sicherstellung der Berücksichtigung von Sperrcodes;"
+            },
+            {
+              "marke": "h",
+              "text": "Sicherstellung, dass allen Daten eine Dateneignerin oder ein Dateneigner zugewiesen wird;"
+            },
+            {
+              "marke": "i",
+              "text": "Sicherstellung eines bedarfsgerechten Abrufverfahrens;"
+            },
+            {
+              "marke": "j",
+              "text": "Sicherstellung der Einhaltung der Rechte und Pflichten der Dateneignerin oder des Dateneigners."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "335a1893ce167f62f8c52de739c4d5941106f60ece11a7adbec937e20cc7ef01"
+    },
+    {
+      "id": "kanton/BS/153.310/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Organe gemäss § 3 Absatz 1 IDG sind verpflichtet, Daten, die sie aufgrund eines gesetzlichen Auftrages in einer Fachanwendung generieren und die auch von einem anderen öffentlichen Organ oder von mehreren anderen öffentlichen Organen zur Erfüllung ihrer gesetzlichen Aufgaben benötigt werden, dem Datenmarkt kostenlos zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die dateneinliefernden öffentlichen Organe haben insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Festlegung des Schutzbedarfs der gelieferten Daten;"
+            },
+            {
+              "marke": "b",
+              "text": "Sicherstellung der inhaltlichen Richtigkeit der Daten und der geforderten Qualität der Daten;"
+            },
+            {
+              "marke": "c",
+              "text": "Entscheid über Autorisierungsgesuche gemäss § 5 Absatz 2."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "5b6b74dd7336566d994d509da107a67e8827060be7887bb6969c90d11397133e"
+    },
+    {
+      "id": "kanton/BS/153.310/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Datenauslieferung erfolgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Abrufverfahren"
+            },
+            {
+              "marke": "1",
+              "text": "als Datenbekanntgabe über eine Benutzungsoberfläche (Onlinezugriff),"
+            },
+            {
+              "marke": "2",
+              "text": "durch Zurverfügungstellen von Daten via Webservice oder"
+            },
+            {
+              "marke": "3",
+              "text": "durch periodisches und automatisiertes Zurverfügungstellen von Listen;"
+            },
+            {
+              "marke": "b",
+              "text": "durch eine Einzelauslieferung im Auftrag des dateneinliefernden Organs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Datenauslieferungen im Sinne von Absatz 1 lit. a bedürfen einer Autorisierung durch die Dateneignerin oder den Dateneigner."
+        },
+        {
+          "absatz": "3",
+          "text": "Autorisierungen sind der oder dem Datenschutzbeauftragten zur Vorabkontrolle vorzulegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für den Zugriff auf im Datenmarkt gespeicherte oder vom Datenmarkt bezogene Daten müssen sich Benutzerinnen und Benutzer mittels eines dem Schutzbedarf entsprechenden Verfahrens authentisieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie dürfen die Daten ausschliesslich zu dem Zweck verwenden, der in der Autorisierung durch die Dateneignerin oder den Dateneigner angegeben ist."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "dfd6d3659f16a6f510c1014de611c8eaf07db1c74c5c9c039bbd811214a79f1e"
+    },
+    {
+      "id": "kanton/BS/153.310/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "IT BS ist als Leistungserbringerin des Datenmarktes insbesondere zuständig für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den technischen Betrieb und die technische Sicherheit der zentralen Plattform;"
+            },
+            {
+              "marke": "b",
+              "text": "den Aufbau und die Weiterentwicklung der zentralen Plattform;"
+            },
+            {
+              "marke": "c",
+              "text": "die Qualitätssicherung, insbesondere Dublettenbereinigung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Freischaltung von Daten gestützt auf ein genehmigtes Gesuch um Abruf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Erfüllung der Aufgaben gemäss Abs. 1 wird eine Servicevereinbarung zwischen IT BS und der KOI abgeschlossen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Funktionen Entwicklung, Systemadministration und Qualitätssicherung dürfen nicht durch die für die Zugriffsverwaltung und das Autorisierungsverfahren zuständigen Personen wahrgenommen werden."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "79f9dda6c996883f289d2cd15ae0fe48f2e4dc8e44953a281384d69019e1bea1"
+    },
+    {
+      "id": "kanton/BS/153.310/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungserbringerin weist allen Personen, die im kantonalen Datenmarkt erfasst sind, eine Personen-ID zu."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentlichen Organe gemäss § 3 Absatz 1 lit. a und b IDG sind verpflichtet, die Personen-ID in ihren Fachsystemen zu führen und bei Datenlieferung von und zum Datenmarkt zu übermitteln."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Personen-ID darf nicht ausserhalb der kantonalen Verwaltung kommuniziert und verwendet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für den Austausch mit öffentlichen Organen gemäss § 3 Absatz 1 lit. c IDG muss ein anderer Identifikator als die Personen-ID verwendet werden."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "015c2d92db617616b996f6c39e3bc5a31ae8b8676ab8c1a9c2479bf60b14e998"
+    },
+    {
+      "id": "kanton/BS/153.310/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nicht mehr benötigte Personendaten sind zu vernichten."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "a2f6881c954bab96a2ce74df1614b2d12320a8397c01432240e3f9e9f8c4a30b"
+    },
+    {
+      "id": "kanton/BS/153.310/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Datenmarktverordnung, DMV (153.310)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird der Datenmarkt aufgelöst, sind die darin enthaltenen Informationsbestände zu vernichten."
+        }
+      ],
+      "stand": "2021-07-08",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4bcf2f02cb4ee76c9ff95aebf31c1cfd",
+      "sha": "6d9750513211095e54b3d6c176550d5921694dbc049cba4757401513a4bca756"
+    }
+  ]
+}

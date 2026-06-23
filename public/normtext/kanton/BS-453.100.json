@@ -1,0 +1,633 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/453.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt Inhalt und Zuständigkeiten in Bezug auf das Gebäude- und Wohnungsregister des Kantons Basel-Stadt (GWR-BS) und das kantonale Gebäudemodell."
+        },
+        {
+          "absatz": "2",
+          "text": "Das GWR-BS gilt als Referenzinformationssystem für Zwecke der Statistik, Forschung und Planung sowie zur Erfüllung weiterer gesetzlicher Aufgaben."
+        },
+        {
+          "absatz": "3",
+          "text": "Das kantonale Gebäudemodell gibt die inhaltliche und organisatorische Struktur des kantonsinternen Datenmanagements für Gebäudedaten vor."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "8579cbfd77d768357d6568384f614636ec552e060e2e5350a521b996c408f4ec"
+    },
+    {
+      "id": "kanton/BS/453.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden die Begriffe aus Art. 2 der Verordnung über das eidgenössische Gebäude- und Wohnungsregister vom 9. Juni 2017 (VGWR) verwendet."
+        },
+        {
+          "absatz": "2",
+          "text": "Zusätzlich bedeuten in dieser Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Raumgruppe: Baulich zusammenhängende, in sich geschlossene Gesamtheit von Räumen innerhalb eines Gebäudes;"
+            },
+            {
+              "marke": "b",
+              "text": "Wohnung: definiert gemäss Art. 2 lit. c VGWR; eine Wohnung ist ein Raumgruppentyp;"
+            },
+            {
+              "marke": "c",
+              "text": "separater Wohnraum: Bewohnbares Einzelzimmer ohne eigene Kocheinrichtung, das nicht zu einer Wohnung gehört; ein separater Wohnraum ist ein Raumgruppentyp;"
+            },
+            {
+              "marke": "d",
+              "text": "öffentliche Organe: Organisationseinheiten des Kantons, der Gemeinden und der juristischen Personen des kantonalen oder kommunalen öffentlichen Rechts, die eine öffentliche Aufgabe erfüllen sowie Private, soweit ihnen von Kanton oder Gemeinden die Erfüllung öffentlicher Aufgaben übertragen ist;"
+            },
+            {
+              "marke": "e",
+              "text": "administrative Wohnungsnummer (AWN): Eine Wohnungsnummer gemäss Art. 8 Abs. 3 lit. b VGWR, welche nach der Richtlinie zur Wohnungsnummerierung vom Februar 2008 des Bundesamtes für Statistik (BFS) vergeben wird und welche eine Wohnung bzw. einen separaten Wohnraum innerhalb eines Gebäudes eindeutig kennzeichnet;"
+            },
+            {
+              "marke": "f",
+              "text": "statistische Raumeinheit: Räumliche Unterteilung des Kantons zu Zwecken der Statistik, Planung und Forschung in statistisches Wohnviertel, statistischer Bezirk, statistischer Block und statistische Blockseite."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "b3c77a8658df55c6d06e8bfc7d03298f56f21d64636a428307f62b129633c866"
+    },
+    {
+      "id": "kanton/BS/453.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle ist die kantonale Koordinationsstelle gemäss Art. 5 Abs. 1 VGWR."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "1ab25d1e704f05298e70980901aced14a4c209f8b1e7272a131bf1a83a6ee727"
+    },
+    {
+      "id": "kanton/BS/453.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle führt das GWR-BS gemäss § 5 Abs. 3 StatG."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führt im GWR-BS zusätzliche Informationen für die kantonale Nutzung."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "11fff057fbf810826499bf34d6fa4e4c918104ca8341ddb86d7f9a39eb251c90"
+    },
+    {
+      "id": "kanton/BS/453.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle führt das GWR-BS basierend auf dem Merkmalskatalog des BFS."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die zusätzlichen Informationen gemäss § 4 Abs. 2 führt die zentrale Statistikstelle einen eigenen Merkmalskatalog. Sie aktualisiert den Merkmalskatalog jährlich und publiziert ihn auf ihrer Internetseite."
+        },
+        {
+          "absatz": "3",
+          "text": "Merkmale, die Daten eines anderen öffentlichen Organs betreffen, werden nach Anhörung ebendessen durch die Vorsteherin oder den Vorsteher des Präsidialdepartements beschlossen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zentrale Statistikstelle arbeitet bezüglich der zusätzlichen Informationen und deren Spezifizierungen mit den unter § 6 aufgeführten Stellen zusammen und legt nach deren Anhörung die Qualitätsanforderungen fest."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "efcf5b06eb96c0cd0f44982b71e7d3be4f708d60224c711ab8584b58c570fd09"
+    },
+    {
+      "id": "kanton/BS/453.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle arbeitet als kantonale registerführende Stelle des anerkannten Registers gemäss Art. 4 lit. e VGWR mit dem BFS zusammen. Sie arbeitet insbesondere mit dem BFS die Vereinbarung gemäss Art. 6 Abs. 2 VGWR aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bezieht insbesondere von den folgenden öffentlichen Organen und Privaten die zur Führung des GWR-BS notwendigen Informationen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bau- und Gastgewerbeinspektorat;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundbuch- und Vermessungsamt;"
+            },
+            {
+              "marke": "c",
+              "text": "Städtebau & Architektur;"
+            },
+            {
+              "marke": "d",
+              "text": "Tiefbauamt;"
+            },
+            {
+              "marke": "e",
+              "text": "Amt für Umwelt und Energie;"
+            },
+            {
+              "marke": "f",
+              "text": "Rettung;"
+            },
+            {
+              "marke": "g",
+              "text": "Bevölkerungsdienste und Migration;"
+            },
+            {
+              "marke": "h",
+              "text": "Zentrale Informatikdienste IT BS;"
+            },
+            {
+              "marke": "i",
+              "text": "Gebäudeversicherung des Kantons Basel-Stadt;"
+            },
+            {
+              "marke": "j",
+              "text": "Industrielle Werke Basel IWB;"
+            },
+            {
+              "marke": "k",
+              "text": "öffentliche Organe als Eigentümervertreter;"
+            },
+            {
+              "marke": "l",
+              "text": "private Bauherren und / oder Hauseigentümer bzw. Liegenschaftsverwaltungen;"
+            },
+            {
+              "marke": "m",
+              "text": "Einwohnergemeinden Bettingen und Riehen;"
+            },
+            {
+              "marke": "n",
+              "text": "zuständige Stelle des kantonalen Gebäudemodells gemäss § 17 dieser Verordnung."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "90c0600246071b21c42703e20845b539c0af43545f2a022853cb5129871b3547"
+    },
+    {
+      "id": "kanton/BS/453.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle vergibt die AWN. Diese darf nur mit Zustimmung der zentralen Statistikstelle verändert werden."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "c2250cfa11f1a5421efd0d0fef052543d41b10931ecd66d4904e8a251a398166"
+    },
+    {
+      "id": "kanton/BS/453.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle definiert die statistischen Raumeinheiten und führt sie je Gebäude im GWR-BS."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "2d1fcf6da5789cdc813a8c3c775add02b55838ab95766e494c4c68365daf4460"
+    },
+    {
+      "id": "kanton/BS/453.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im GWR-BS werden folgende Objekte geführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bauprojekte;"
+            },
+            {
+              "marke": "b",
+              "text": "alle Gebäude sowie ihre Eingänge (einschliesslich der Adressen) und"
+            },
+            {
+              "marke": "c",
+              "text": "bei Gebäuden mit Wohnnutzung mindestens die dazugehörigen Raumgruppen des Typs Wohnung und die bewohnten Raumgruppen des Typs separater Wohnraum;"
+            },
+            {
+              "marke": "d",
+              "text": "weitere gebaute Objekte und weitere Arten von Bauprojekten, insbesondere die gemäss der Verordnung über die Durchführung von statistischen Erhebungen des Bundes (Statistikerhebungsverordnung) vom 30. Juni 1993 (Liste der statistischen Erhebungen Ziffern 41 und 42) an den Bund zu liefernden Angaben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es gelten die Ausnahmen gemäss Art. 7 Abs. 3 und 4 VGWR."
+        },
+        {
+          "absatz": "3",
+          "text": "Bauprojekte und geplante Gebäude sowie ihre Eingänge und ihre Wohnungen müssen spätestens beim Erteilen der Baubewilligung geführt werden."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "48435b0cc5e2f8159f2747405e37318d2ad2ae1e1ab3b75d7da406f87b2babd9"
+    },
+    {
+      "id": "kanton/BS/453.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu jedem Bauprojekt werden die in Art. 8 Abs. 1 VGWR genannten Informationen geführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Zusätzlich zu den Informationen gemäss Art. 8 Abs. 2 VGWR werden zu jedem Gebäude folgende Informationen geführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Informationen zu den Gebäuden gemäss Versicherungsobjekt Gebäudeversicherung Basel-Stadt;"
+            },
+            {
+              "marke": "b",
+              "text": "Bruttogeschossfläche."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Zusätzlich zu den gemäss Art. 8 Abs. 3 VGWR zu jeder Wohnung zu führenden Informationen werden im GWR-BS zu jeder Raumgruppe folgende zusätzliche Informationen geführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Hilfsmerkmale zur Festlegung der Nutzungsart der Wohnung;"
+            },
+            {
+              "marke": "b",
+              "text": "Belegungsart;"
+            },
+            {
+              "marke": "c",
+              "text": "Wohnungsidentifikatoren von Dritten."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Information nach den Abs. 1-3 kann in Merkmale unterteilt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Merkmale und Ausprägungen, Nomenklaturen und Kodierungen der gemäss Art. 8 Abs. 1-3 VGWR zu führenden Informationen richten sich nach dem Merkmalskatalog des Bundesamtes für Statistik gemäss Art. 3 Abs. 1 VGWR."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Merkmale und Ausprägungen, Nomenklaturen und Kodierungen der zusätzlichen Informationen in den Abs. 1-3 richten sich nach dem Merkmalskatalog der zentralen Statistikstelle gemäss § 5 Abs. 2 dieser Verordnung."
+        },
+        {
+          "absatz": "7",
+          "text": "Die zentrale Statistikstelle kann für die Führung des GWR-BS oder für statistische Auswertungen weitere Merkmale, insbesondere technische Felder oder Hilfsmerkmale, ins GWR-BS aufnehmen."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "b005e28cba6d75158e398b0e958703897ded5bba5983960ead6e07ee9b9f6eec"
+    },
+    {
+      "id": "kanton/BS/453.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten aus Registern des Kantons und der Gemeinden sind der registerführenden Stelle sowie von ihr beauftragten Dritten für die Nachführung des GWR-BS zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Öffentliche Organe und Private, insbesondere die in § 6 Abs. 2 genannten, sind verpflichtet, der registerführenden Stelle sowie von ihr beauftragten Dritten die Informationen nach § 10 zu liefern."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Lieferung der Daten gemäss Abs. 1 und 2 erfolgt unentgeltlich und innerhalb von angemessenen Fristen."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "f113d4b7b4aeefdc5e6b23c032c6ea47c420bdde2cf5f6565880fb04aae482cf"
+    },
+    {
+      "id": "kanton/BS/453.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Nachführung der im GWR-BS geführten Objekte und Informationen können insbesondere die Datenquellen gemäss Art. 9 Abs. 2 VGWR verwendet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Plausibilisierung des GWR-BS können zusätzlich zu den Datenquellen gemäss Art. 9 Abs. 2 lit. h VGWR auch die Angaben aus den Befragungen gemäss § 7 der Verordnung über die öffentliche Statistik (Statistikverordnung) vom 12. Mai 2015 verwendet werden. Im Rahmen der Befragungen ist darauf hinzuweisen, dass die Daten für die Plausibilisierung des GWR-BS verwendet werden können."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "4d3627c449775c9a3606550f7e857852929f763b527de95c40b0d5517c69ccbb"
+    },
+    {
+      "id": "kanton/BS/453.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle ist im Sinne von § 6 Abs. 1 des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010 verantwortlich für die im GWR-BS enthaltenen Daten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie entscheidet über die Bekanntgabe und Verwendung dieser Daten nach Massgabe der Bestimmungen dieser Verordnung und deren Anhang sowie der Berechtigungsstufen gemäss Anhang 1 VGWR."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "f3666378d8e324ac1c2c59179bd6231bb84c9299a10731afa197781082dece1b"
+    },
+    {
+      "id": "kanton/BS/453.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das GWR-BS dient der zentralen Statistikstelle als Grundlage für Teile der kantonalen öffentlichen Statistik gemäss § 5 Abs. 2 StatG."
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere kann die zentrale Statistikstelle auf der Grundlage des GWR-BS:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "statistische Auswertungen vornehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "Stichproben für kantonale Befragungen gemäss § 7 Abs. 2 der Statistikverordnung ziehen."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "3484d0160cb6a87f29ec702bd6840ca8ac0e2cfd00748bf3c0de90024dba6430"
+    },
+    {
+      "id": "kanton/BS/453.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zentrale Statistikstelle stellt öffentlichen Organen zum Zweck der Planung sowie für die Erfüllung weiterer gesetzlicher Aufgaben notwendige Daten der Berechtigungsstufen A und B gemäss Anhang zur Verfügung, soweit sie nicht gemäss der Verordnung über den Datenmarkt (Datenmarktverordnung, DMV) vom 4. Juli 2017 zur Verfügung gestellt werden müssen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellt Forschungsinstitutionen zum Zwecke der Forschung Daten der Berechtigungsstufen A und B gemäss Anhang zur Verfügung."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Nutzung der Daten ist ein begründetes Gesuch an die zentrale Statistikstelle zu richten. Die Nutzungsbedingungen werden in einem Datennutzungsvertrag geregelt."
+        },
+        {
+          "absatz": "4",
+          "text": "Daten der Berechtigungsstufe B gemäss Anhang müssen nach Abschluss der Bearbeitung vernichtet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Daten der Berechtigungsstufe C gemäss Anhang sind für Dritte nicht zugänglich."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "ca200582960801b4aa64aa0fcafd602aacf2d40c1b0f694d5c162f261010187d"
+    },
+    {
+      "id": "kanton/BS/453.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren richten sich nach der Verordnung über die Erhebung von Gebühren der zentralen Statistikstelle (Gebührenverordnung) vom 12. Mai 2015."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "9e675c5a77854cecc0c9caf8bb13f5c058e41062141bcdd0e53609d11764fb96"
+    },
+    {
+      "id": "kanton/BS/453.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konferenz für Organisation und Informatik (KOI) beschliesst den Inhalt des kantonalen Gebäudemodells."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Grundbuch- und Vermessungsamt des Bau- und Verkehrsdepartements ist als zuständige Stelle für die Koordination und Weiterentwicklung des kantonalen Gebäudemodells zuständig."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "2c74359864c75f6b4c4dd7e4974dc4f0915404d48aacb44907ba19c29d09ba6c"
+    },
+    {
+      "id": "kanton/BS/453.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KOI bestimmt die inhaltliche und organisatorische Struktur des kantonalen Gebäudemodells, kann neue Inhalte aufnehmen lassen und deren Konkretisierung der zuständigen Stelle gemäss § 17 Abs. 2 delegieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Das kantonale Gebäudemodell beinhaltet alle im GWR-BS nach Massgabe der VGWR geführten Informationen."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "900b05a95133aa6967c15182758c815d9778b658da80445fed179efad4750d9e"
+    },
+    {
+      "id": "kanton/BS/453.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die KOI beschliesst auf Antrag der zuständigen Stelle gemäss § 17 Abs. 2 den Inhalt des kantonalen Gebäudemodells nach Massgabe von § 18 Abs. 1 und 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Stelle gemäss § 17 Abs. 2 stellt den Antrag nach Anhörung der anderen involvierten Stellen, insbesondere der Zentralen Informatikdienste, des Statistischen Amts und des Bau- und Gastgewerbeinspektorats."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "cd6fcfd1468980fed26f273474ec3a892498458cb18cfa4fcfde975eed846dcd"
+    },
+    {
+      "id": "kanton/BS/453.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VGWR BS (453.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sämtliche Objekte, Informationen und Merkmale, welche in Zusammenhang mit den Inhalten des Gebäudemodells von einem öffentlichen Organ im Rahmen seiner gesetzlichen Aufgabe geführt werden, richten sich nach den Vorgaben des kantonalen Gebäudemodells."
+        }
+      ],
+      "stand": "2021-09-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/453.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16f400caf48f84185d991e6c7b54dc1d",
+      "sha": "0d1f8de0ca14f3465df09b58032840cda97df77090d67972dd5d24ccf05ae410"
+    }
+  ]
+}

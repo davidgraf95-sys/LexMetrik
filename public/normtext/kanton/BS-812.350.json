@@ -1,0 +1,165 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/812.350/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Taxi-ARV (812.350)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt für Taxibetriebe mit Bewilligungen des Kantons Basel-Stadt sowie deren Taxifahrerinnen und Taxifahrern und legt in Abweichung der Verordnung über die Arbeits- und Ruhezeit der berufsmässigen Führer von leichten Personentransportfahrzeugen und schweren Personenwagen (ARV 2) vom 6. Mai 1981 besondere Bestimmungen fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Wo die ARV 2 in den Art. 5, 6, 8 und 11 zwischen selbständigerwerbenden Führern und Arbeitnehmern unterscheidet, haben auch selbständigerwerbende Führer die Bestimmungen für Arbeitnehmer einzuhalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Vollzug der bundesrechtlichen und kantonalen Arbeits- und Ruhezeitbestimmungen ist die Abteilung Verkehr der Kantonspolizei zuständig."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dae8eb378cd56a07f90302b2a27ee3",
+      "sha": "b0a6af9902beedff601e7d9772e12e5d799979a370fcdf7834c1be37344ee962"
+    },
+    {
+      "id": "kanton/BS/812.350/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Taxi-ARV (812.350)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anstelle eines Arbeitsbuches führen Taxifahrerinnen und Taxifahrer persönliche und nicht übertragbare Kontrollkarten. Vollständig ausgefüllte Kontrollkarten gelten als Aufstellung über die Arbeits-, Lenk- und Ruhezeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Kontrollkarten sind von den Taxibetrieben jährlich bei der Vollzugsbehörde gegen Gebühr zu beziehen (§ 23 B. Ziff. 3 der Verordnung über den Strassenverkehr, Strassenverkehrsverordnung, StVO, vom 17. Mai 2011). Die Taxibetriebe haben ihren Taxifahrerinnen und Taxifahrern die Kontrollkarten unentgeltlich zur Verwendung abzugeben. Den Verlust von Kontrollkarten haben die Taxibetriebe der Vollzugsbehörde zu melden und gegen Gebühr Ersatzkontrollkarten zu beziehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Taxibetriebe überwachen laufend anhand der Kontrollmittel, namentlich Kontrollkarten und Einlageblättern des Fahrtschreibers, ob die Bestimmungen über die Arbeits-, Lenk- und Ruhezeit eingehalten worden sind. Sie sind gemäss Art. 21 ARV 2 für die Richtigkeit der Angaben verantwortlich."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dae8eb378cd56a07f90302b2a27ee3",
+      "sha": "8d72e2e4679502d5c239f866d0a46ed54bb9c52b5ea7875507a3bc58f3707ccb"
+    },
+    {
+      "id": "kanton/BS/812.350/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Taxi-ARV (812.350)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Taxifahrerinnen und Taxifahrer haben die folgenden Angaben unveränderbar in die entsprechenden Rubriken der Kontrollkarte einzutragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Arbeitsbeginn: die zusammenhängende Ruhezeit vor Arbeitsbeginn, die Kontrollschildnummer des Fahrzeugs und die Zeit des Arbeitsbeginns;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Arbeitsende: die Zeit des Arbeitsendes und das Total der täglichen Gesamtarbeitszeit;"
+            },
+            {
+              "marke": "d",
+              "text": "am Wochenende: das Total der wöchentlichen Gesamtarbeitszeit."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Zeiteintragungen sind die Ziffern 0000-2400 zu verwenden. Fehlerhafte Einträge sind durchzustreichen und auf der Rückseite der Kontrollkarte in der Rubrik «Bemerkungen» zu korrigieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Tage, an denen keine Taxifahrten ausgeführt werden, sind in der Rubrik «Ruhezeit vor Arbeitsbeginn» wie folgt zu bezeichnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "R = wöchentlicher Ruhetag"
+            },
+            {
+              "marke": "b",
+              "text": "R/2 = wöchentlicher freier Halbtag"
+            },
+            {
+              "marke": "c",
+              "text": "F = Ferien"
+            },
+            {
+              "marke": "d",
+              "text": "K = Krankheit"
+            },
+            {
+              "marke": "e",
+              "text": "U = Unfall"
+            },
+            {
+              "marke": "f",
+              "text": "M = Militärdienst; Zivilschutz"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ist der Fahrtschreiber defekt, haben die Taxifahrerinnen und Taxifahrer auf der Rückseite der verwendeten Kontrollkarte zusätzlich die Kontrollschildnummer des Fahrzeugs, für jeden Tag den Kilometerstand bei Dienstbeginn und Dienstende und das Total der gefahrenen Kilometer für Taxifahrten sowie für Privatfahrten einzutragen."
+        },
+        {
+          "absatz": "5",
+          "text": "Taxifahrerinnen und Taxifahrer, die noch weitere Berufstätigkeiten ausüben, haben die Kontrollkarte vor Arbeitsbeginn mit der Berufsbezeichnung, der Arbeitgeberin bzw. dem Arbeitgeber und der täglichen Arbeitszeit der anderen Berufstätigkeit zu ergänzen."
+        },
+        {
+          "absatz": "6",
+          "text": "Unterstehen sie in ihrer anderen Berufstätigkeit ebenso der ARV, müssen sie zusätzlich im Arbeitsbuch oder in einem anderen zugelassenen Kontrollmittel die Beschäftigung als Taxifahrerin bzw. Taxifahrer festhalten. Während der Tätigkeit als Taxifahrerin bzw. Taxifahrer ist auf der Kontrollkarte unter der Rubrik «Bemerkungen» auf die andere der ARV unterstehende Berufstätigkeit zu verweisen."
+        },
+        {
+          "absatz": "7",
+          "text": "Die persönliche Kontrollkarte der laufenden Woche und der vorangehenden vier Wochen (28 Tage) sind während der Arbeitszeit mitzuführen. Kontrollkarten, die nicht mehr mitgeführt werden müssen, sind innert einer Woche unterzeichnet dem Taxibetrieb abzugeben."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dae8eb378cd56a07f90302b2a27ee3",
+      "sha": "391fe768bf355a2e6991b2a98e06e6aae36dba171278bbd977c6c6cdd8447448"
+    },
+    {
+      "id": "kanton/BS/812.350/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Taxi-ARV (812.350)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Vorschriften dieser Verordnung verletzt, wird nach Art. 28 ARV 2 bestraft."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.350",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "87dae8eb378cd56a07f90302b2a27ee3",
+      "sha": "eb7fc23c819003d618647814195485a10cb4f24e369d1b459cbcfd15e0fe9c01"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/257.135/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über dauernd bestellte und amtliche Sachverständige im Strafverfahren (257.135)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die wissenschaftlichen Mitarbeitenden des Instituts für Rechtsmedizin der Universität Basel sind amtliche Sachverständige für die Bereiche der forensischen Medizin, der forensischen Genetik, der forensischen Chemie und Toxikologie sowie der forensischen Molekularbiologie, namentlich für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Untersuchung und Spurensicherung an lebenden und verstorbenen Personen und die Rekonstruktion von Tatabläufen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bestimmung der Blutalkoholkonzentration oder des Reinheitsgrads von Stoffen und den Nachweis von Betäubungsmitteln, Giften und Medikamenten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Erstellung und die Interpretation von DNA-Profilen."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.135",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16b24be70c689960d68978515c9b3859",
+      "sha": "36e1b498c2dd54b6889d1133d3429ebe3197d2d392d83f3253750f4269d29b5c"
+    },
+    {
+      "id": "kanton/BS/257.135/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über dauernd bestellte und amtliche Sachverständige im Strafverfahren (257.135)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die wissenschaftlichen Mitarbeitenden der forensisch-psychiatrischen Abteilung der Universitären Psychiatrischen Kliniken Basel sind amtliche Sachverständige für forensisch-psychiatrische Untersuchungen und Begutachtungen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.135",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "16b24be70c689960d68978515c9b3859",
+      "sha": "12ffcd3dc6b0ae05f531c2d8a0660305d3e63c7e010a08dd20828e6efe48ce6e"
+    }
+  ]
+}

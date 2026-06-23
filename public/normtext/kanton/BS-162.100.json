@@ -1,0 +1,1311 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/162.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Grundzüge des Arbeitsverhältnisses zwischen dem Kanton als Arbeitgeber und seinem Personal."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gilt für alle Mitarbeiterinnen und Mitarbeiter des Kantons, soweit nicht das Bundesrecht oder das kantonale Recht spezielle Bestimmungen vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann § 16 Abs. 2 und die §§ 40–43 dieses Gesetzes für selbstständige öffentlich-rechtliche Anstalten des Kantons Basel-Stadt für anwendbar erklären, sofern diese ihr Personal gemäss diesem Gesetz angestellt haben und über keine Regelung zum Rechtsschutz der Mitarbeiterinnen und Mitarbeiter verfügen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "1da83f298e80d61650dd46c7b7fa5e2305392ed7353f4784c5fb9b547aff3170"
+    },
+    {
+      "id": "kanton/BS/162.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt abweichender Regelungen gelten die §§ 14 bis 25 dieses Gesetzes sinngemäss auch für die Mitglieder des Regierungsrates sowie für die Inhaberinnen und Inhaber von Nebenämtern."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt die Ausführungsvorschriften und regelt insbesondere den vorzeitigen Rücktritt und die vorzeitige Entlassung aus dem Nebenamt."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "4bc3b9f7ae3bcfa6004e41eb85222e32badbdd501f13c3382b0545f10501f505"
+    },
+    {
+      "id": "kanton/BS/162.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die Ausführungsbestimmungen zu diesem Gesetz. Er kann für besondere Berufsgruppen oder für besondere Kategorien von Mitarbeiterinnen und Mitarbeitern, namentlich für Durchgangspositionen, Praktika und Volontariate zwecks beruflicher Aus-, Weiter- und Fortbildung sowie für Berufslehrgänge und Berufslehren, im Rahmen dieses Gesetzes spezielle Ausführungsbestimmungen vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gerichtsrat kann für das Personal der Gerichte eigene Ausführungsbestimmungen erlassen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "163ea40ee67ec4f887ae83742c6a2339a9e9f371ba9bb43ec15ccf6c802c7a9e"
+    },
+    {
+      "id": "kanton/BS/162.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit dieses Gesetz nichts anderes bestimmt, gelten für das Arbeitsverhältnis die Artikel 319–362 des schweizerischen Obligationenrechts als kantonales öffentliches Recht."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "87d2fffbfe09c2d393b8f8fdfb207743daa9c99ccbbfcb13dffc73d70eb0aa4c"
+    },
+    {
+      "id": "kanton/BS/162.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat definiert die Grundsätze der Personalpolitik und schafft die notwendigen Voraussetzungen zu deren Verwirklichung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Personalpolitik soll namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gewinnen und Erhalten der zur Erfüllung der Aufgaben des Kantons geeigneten Mitarbeiterinnen und Mitarbeiter ermöglichen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine effiziente und bürgernahe Erfüllung der Staatsaufgaben im Rahmen der gesetzlichen Bestimmungen und der Leistungsaufträge fördern;"
+            },
+            {
+              "marke": "c",
+              "text": "das Entwickeln und Realisieren von zeitgemässen Organisationsstrukturen, teamorientierten Führungsmodellen und flexiblen Arbeitszeitregelungen, insbesondere die Schaffung von Teilzeitstellen in allen Bereichen und auf allen hierarchischen Stufen, fördern;"
+            },
+            {
+              "marke": "d",
+              "text": "den Bedürfnissen der Mitarbeiterinnen und Mitarbeiter Rechnung tragen und deren Aus- und Weiterbildung sowie berufliche Entwicklung unterstützen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Chancengleichheit gewährleisten, dies insbesondere für Frauen und Männer sowie Menschen mit Behinderungen;"
+            },
+            {
+              "marke": "f",
+              "text": "eine gut funktionierende Sozialpartnerschaft anstreben und damit ein Klima der Offenheit, des Vertrauens und der Fairness schaffen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Eingliederung von Erwerbslosen unterstützen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "2d3dcbf4f28ffe8892618b67221a1152383fa697a880136b31bdac84c0011d2e"
+    },
+    {
+      "id": "kanton/BS/162.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter haben ein Mitspracherecht in allen sie betreffenden Fragen. Sie nehmen dieses Recht persönlich, durch Personalverbände oder durch Personalausschüsse wahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Paritätische Kommission für Personalangelegenheiten begutachtet auf Antrag des Regierungsrates, eines Departements, des Gerichtsrats oder der Arbeitsgemeinschaft der baselstädtischen Staatspersonalverbände Vorschläge auf Änderung oder Ergänzung personalrechtlicher Erlasse sowie Fragen des Personalwesens. Die Einzelheiten werden in einer Verordnung geregelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter haben das Recht, Personalausschüsse einzusetzen. Zusammensetzung, Wahlberechtigung, Wählbarkeit sowie Einzelheiten des Wahlverfahrens werden auf dem Verordnungsweg geregelt."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "fd8e7185744247afcf39bd55cdf2937fa4a90a42d9baa4f484e625f0015e1bcf"
+    },
+    {
+      "id": "kanton/BS/162.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Offene Stellen sind in der Regel auszuschreiben."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "c3fa08d7249892030bd85d7d6bf616fcc01b0daffe2f97b8849d6ad0f6fdf410"
+    },
+    {
+      "id": "kanton/BS/162.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Voraussetzung für eine Anstellung ist die fachliche und persönliche Eignung der Bewerberin und des Bewerbers."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bezeichnet die Funktionen, für welche das Schweizer Bürgerrecht oder eine besondere Wohnsitznahme erforderlich ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Anstellungsvoraussetzungen aufgrund von Spezialgesetzen bleiben vorbehalten."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "d91d3f67ed80895608748ff5579fb0d4710c8e15fe37e47e25d16f7e1baa2156"
+    },
+    {
+      "id": "kanton/BS/162.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Arbeitsverhältnis entsteht durch den Abschluss eines öffentlich-rechtlichen Arbeitsvertrages auf unbestimmte oder befristete Zeit oder durch die Wahl auf eine feste Amtsdauer, sofern diese gesetzlich vorgesehen ist."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "48f638d4b2ee9958b06de73672ffbbbd1f49ae75c9803e701e512d74fc0ad218"
+    },
+    {
+      "id": "kanton/BS/162.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist Anstellungsbehörde für alle einer Departementsvorsteherin oder einem Departementsvorsteher direkt unterstellten Mitarbeiterinnen und Mitarbeiter sowie für spezielle, in einer Verordnung zu bezeichnende Funktionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Anstellungsbehörde für die übrigen Mitarbeiterinnen und Mitarbeiter ist die Departementsvorsteherin oder der Departementsvorsteher. Diese können mit Genehmigung des Regierungsrates eine nachgeordnete Behörde als Anstellungsbehörde bezeichnen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "c3d01bf8a4f243bd30457acc5389cbcae7c1b1c0914ff79a6a9b4677d5e227fb"
+    },
+    {
+      "id": "kanton/BS/162.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ersten drei Monate des unbefristeten Arbeitsverhältnisses gelten als Probezeit. Im Arbeitsvertrag kann schriftlich eine kürzere oder eine längere Probezeit vereinbart oder eine solche ausnahmsweise wegbedungen werden. Sie darf jedoch höchstens zwölf Monate betragen. Im befristeten Arbeitsverhältnis gilt eine Probezeit nur, wenn sie schriftlich vereinbart wurde."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer effektiven Verkürzung der Probezeit infolge Krankheit, Unfall oder Erfüllung einer nicht freiwillig übernommenen gesetzlichen Pflicht, kann die Anstellungsbehörde die Probezeit angemessen verlängern."
+        },
+        {
+          "absatz": "3",
+          "text": "In den ersten drei Monaten der Probezeit kann das Arbeitsverhältnis beidseitig mit einer Kündigungsfrist von 14 Tagen auf das Ende einer Woche gekündigt werden. Danach beträgt die Kündigungsfrist 30 Tage jeweils auf das Ende eines Monats."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "fe02d9486f0ddb872a356d3584d61676f3340461c9c07dad5fef17ce61264c44"
+    },
+    {
+      "id": "kanton/BS/162.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter sind zur persönlichen Arbeitsleistung entsprechend den gesetzlichen Bestimmungen, ihrem Arbeitsvertrag und gemäss den Weisungen des Arbeitgebers verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben die ihnen übertragenen Aufgaben sorgfältig, gewissenhaft und wirtschaftlich auszuführen und dabei die Interessen des Arbeitgebers zu wahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Sofern erforderlich haben die Mitarbeiterinnen und Mitarbeiter neue Aufgaben bzw. ein der Ausbildung und den Fähigkeiten entsprechendes anderes Aufgabengebiet am selben oder an einem anderen Arbeitsort zu übernehmen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "10b4f9dc804f2e5f439f652d14753d0525625dc1ebfa51f2b649f6ca558543d6"
+    },
+    {
+      "id": "kanton/BS/162.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter haben jährlich mindestens 4 Wochen Ferien. Vom Kalenderjahr an, in dem das 50. bzw. 60. Altersjahr vollendet wird, beträgt der Anspruch mindestens fünf bzw. sechs Wochen. Der Regierungsrat kann für bestimmte Berufsgruppen weitergehende Ferienansprüche festsetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Ausnahmefällen können zusätzliche Ferien bewilligt werden. Ausserdem kann in besonderen Fällen bezahlter oder unbezahlter Urlaub gewährt werden. Der Regierungsrat regelt die Voraussetzungen und legt die Zuständigkeiten fest."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "5aa33dd76c35113291f91b49674f95e7f1c0ae97f8750114b052c011146a0804"
+    },
+    {
+      "id": "kanton/BS/162.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Arbeitgeber achtet und schützt die Würde und die Persönlichkeit der Mitarbeiterinnen und Mitarbeiter."
+        },
+        {
+          "absatz": "2",
+          "text": "Er trifft die zum Schutze von Leben, Gesundheit und persönlicher Integrität seiner Mitarbeiterinnen und Mitarbeiter erforderlichen Massnahmen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "021f1c32bcf40e5ae0405e85cb88227ceb6b7fe9cf60f959319d1f44153c9f4b"
+    },
+    {
+      "id": "kanton/BS/162.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitarbeiterinnen und Mitarbeiter, die sich veranlasst sehen, gegen jemanden wegen Vorkommnissen im Zusammenhang mit ihrer Tätigkeit gerichtlich vorzugehen oder gegen die im Zusammenhang mit ihrer Tätigkeit ein Verfahren angehoben wird, können den Arbeitgeber um Rechtsschutz ersuchen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat entscheidet über die Art und den Umfang des Rechtsschutzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Übrigen gelten die Bestimmungen des Haftungsgesetzes."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "ec5403ba53aec99d083684e37d83e76796e015b39b29f4318a25d651a9baa9ec"
+    },
+    {
+      "id": "kanton/BS/162.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter können bei der vorgesetzten Behörde schriftlich Beschwerde über ihr Arbeitsverhältnis führen. Die Mitarbeiterinnen und Mitarbeiter der Gerichte richten ihre Beschwerde an die jeweilige Präsidienkonferenz."
+        },
+        {
+          "absatz": "2",
+          "text": "In Fällen sexueller Belästigung am Arbeitsplatz können die von einer Belästigung betroffenen Personen bei der Personalrekurskommission schriftlich Beschwerde führen und geeignete Massnahmen beantragen. Die Personalrekurskommission erstattet der vorgesetzten Behörde gemäss Abs. 1 Bericht und empfiehlt allfällige Massnahmen. Das Beschwerderecht verjährt innert eines Jahres seit Vorfall; sofern die Belästigung ein Verbrechen oder ein Vergehen darstellt, ist die im Strafgesetz festgelegte Verjährung massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entscheide über Beschwerden gemäss den Abs. 1 und 2 können von der Beschwerdeführerin und vom Beschwerdeführer sowie von der Person, gegen die sich die Beschwerde richtet, jeweils bei der nächsthöheren Behörde mit Rekurs angefochten werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Streitigkeiten im Arbeitsverhältnis, die das Geschlecht oder die sexuelle Orientierung betreffen, sind die Bestimmungen des Kantonalen Gleichstellungsgesetzes zu Geschlecht und sexueller Orientierung (Kantonales Gleichstellungsgesetz, KGlG) vom 10. Januar 2024 anwendbar. Es wird ein Schlichtungsverfahren durchgeführt."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "ecb70b372cbac400c25237d460192a00b3601d4cc9f08c8c5fa8cf6cbd753109"
+    },
+    {
+      "id": "kanton/BS/162.100/art_16_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "16_a",
+      "artikelLabel": "§ 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ansprüche aus dem Arbeitsverhältnis verjähren mit Ablauf von fünf Jahren. Davon ausgenommen bleiben Ansprüche nach dem Haftungsgesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann zugunsten der Mitarbeitenden abweichende Regelungen erlassen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "a64148ac38de650fd1c1f701a8b10073d6d06f81c092df1ec01d367d2dcb23ce"
+    },
+    {
+      "id": "kanton/BS/162.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn die Tätigkeit es erfordert, kann die Mitarbeiterin oder der Mitarbeiter für die Dauer des Arbeitsverhältnisses verpflichtet werden,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Wohnsitz im Kanton oder in einem bestimmten Gebiet zu nehmen oder;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Dienstwohnung zu beziehen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "f93c1f59da2066084ea953b86f1d85ae205f6aca0c705476785559a5b4bb925b"
+    },
+    {
+      "id": "kanton/BS/162.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitarbeiterinnen und Mitarbeitern ist es verboten, Geschenke oder andere Vorteile, die im Zusammenhang mit dem Arbeitsverhältnis stehen, für sich oder für andere zu fordern, anzunehmen oder sich versprechen zu lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Davon ausgenommen ist die Annahme von Geschenken von geringem Wert sowie von wissenschaftlichen und kulturellen Auszeichnungen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "eacc5149ea4730d4214997c91b8a4e201a0886ee0159e6aff79375ecf7c52a1f"
+    },
+    {
+      "id": "kanton/BS/162.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter sind zur Verschwiegenheit über Angelegenheiten verpflichtet, soweit an der Geheimhaltung ein überwiegendes öffentliches oder privates Interesse besteht oder wenn eine besondere Vorschrift dies vorsieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Verpflichtung bleibt auch nach Beendigung des Arbeitsverhältnisses bestehen."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "2fb5a2872836eb58d245750c4b4f179f75504d28f6352715ad214c2f217f18b0"
+    },
+    {
+      "id": "kanton/BS/162.100/art_19_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "19_a",
+      "artikelLabel": "§ 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitarbeitende sind berechtigt, der kantonalen Ombudsstelle Missstände zu melden. Zulässig sind nur Meldungen, die in gutem Glauben erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Einzelheiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Zulässige Meldungen verstossen nicht gegen die Verschwiegenheitspflicht gemäss § 19 Personalgesetz und stellen keine Amtsgeheimnisverletzung im Sinne von Art. 320 Strafgesetzbuch dar."
+        },
+        {
+          "absatz": "4",
+          "text": "Mitarbeitende dürfen aufgrund von zulässigen Meldungen im Anstellungsverhältnis nicht benachteiligt werden."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "47957792ed0f5d9aeee2e9fc76e3e77df83b1d835b3ffad21022daebf03a25ca"
+    },
+    {
+      "id": "kanton/BS/162.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ausübung einer Nebenbeschäftigung sowie die Übernahme eines öffentlichen Amtes sind zulässig, wenn sie die Aufgabenerfüllung nicht beeinträchtigen und mit der dienstlichen Stellung vereinbar sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bedürfen der Bewilligung durch die Anstellungsbehörde, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufgabenerfüllung dadurch beeinträchtigt werden könnte"
+            },
+            {
+              "marke": "b",
+              "text": "die Möglichkeit einer Interessenkollision besteht"
+            },
+            {
+              "marke": "c",
+              "text": "Arbeitszeit in Anspruch genommen wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anstellungsbehörde kann die Bewilligung mit Auflagen, insbesondere zur Kompensation der beanspruchten Arbeitszeit oder zur Abgabe von Nebeneinnahmen, verbinden."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "cbb2fc1a3979a803e6ba5f4cae5fc2afefca10d4b91c147641b0494dc8c0f598"
+    },
+    {
+      "id": "kanton/BS/162.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitarbeiterinnen und Mitarbeiter sowie Stellenbewerberinnen und -bewerber können verpflichtet werden, sich einer vertrauensärztlichen Untersuchung zu unterziehen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "d0f292d2e794699cf4823dfe9ee86daeb5c4175c1a6b6e44bb425b9861ba8a7c"
+    },
+    {
+      "id": "kanton/BS/162.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitarbeiterinnen und Mitarbeiter, die eine Verfügung oder einen Entscheid zu treffen oder vorzubereiten oder als Mitglied einer Behörde zu amten haben, treten in den Ausstand, wenn sie in der Sache ein persönliches Interesse haben oder wenn sie aus anderen Gründen in der Sache befangen sein könnten."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "f94af5c45bc9d34005db4ff8c0d400c04c0417665a1845cff7ca10db77192ca6"
+    },
+    {
+      "id": "kanton/BS/162.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Arbeitszeit, deren Einteilung sowie die Ruhe- und Freizeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter können auch ausserhalb der ordentlichen Betriebszeit und über die Sollarbeitszeit hinaus in Anspruch genommen werden, wenn es die Aufgabe erfordert und soweit es im Hinblick auf Gesundheit und familiäre Verpflichtungen zumutbar ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt den Anspruch auf Ausgleich oder Vergütung von Überstundenarbeit."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "e9bd50329b4a71dea15440e83d7d4c70de8d74bee30a32b8dee8ca13df09712e"
+    },
+    {
+      "id": "kanton/BS/162.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn Mitarbeiterinnen und Mitarbeiter ihre arbeitsvertraglichen oder gesetzlichen Pflichten verletzen oder ungenügende Leistungen erbringen, ergreift die Anstellungsbehörde geeignete Massnahmen, um die geordnete Aufgabenerfüllung wieder sicherzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anstellungsbehörde kann einen schriftlichen Verweis oder die Änderung des Aufgabengebietes am selben oder an einem anderen Arbeitsplatz verfügen. Bei Änderung des Aufgabengebietes wird der Lohn entsprechend dem Schwierigkeitsgrad der neuen Aufgaben ausgerichtet."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "812351abdb16d11f571a3dfe23090a5402aaa4e8f63801a5b955e73f248e1433"
+    },
+    {
+      "id": "kanton/BS/162.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn der geordnete Vollzug der Aufgaben gefährdet ist, kann die Anstellungsbehörde vorsorgliche Massnahmen anordnen. Namentlich kann sie unter Beibehaltung des bisherigen Lohnanspruches die Änderung des Aufgabengebietes am selben oder an einem anderen Arbeitsplatz oder die Freistellung verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anordnung unaufschiebbarer vorsorglicher Massnahmen sind alle Vorgesetzten zuständig. Die Anordnung ist unverzüglich der Anstellungsbehörde zur Genehmigung zu unterbreiten."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "b8d1e32ced3db678b87fb78d4cb8355b0c378427bbe6f58d18de77af2e75244e"
+    },
+    {
+      "id": "kanton/BS/162.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Verhinderung an der Arbeitsleistung wegen Krankheit oder Unfall haben Mitarbeiterinnen und Mitarbeiter Anspruch auf Lohnfortzahlung bis zur Wiedererlangung der Arbeitsfähigkeit, längstens aber bis zur Beendigung des Anstellungsverhältnisses."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt den Lohnanspruch bei Verhinderung an der Arbeitsleitung wegen Schwangerschaft und Mutterschaft sowie wegen Erfüllung gesetzlicher Pflichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Lohnfortzahlungspflicht ist in Fällen, wo die Leistungspflicht eines Dritten besteht, auf denjenigen Teil beschränkt, der durch den Dritten nicht gedeckt wird. Gegenüber dem Dritten tritt der Kanton Basel-Stadt bis auf die Höhe seiner Leistungen in die Rechte der Mitarbeiterin oder des Mitarbeiters ein."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "16f7c29d2e2f0412d64eb3038d11836a2553ad660b93dadf400879ac5e12aaeb"
+    },
+    {
+      "id": "kanton/BS/162.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Arbeitsverhältnis endet durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ordentliche Kündigung"
+            },
+            {
+              "marke": "b",
+              "text": "Ablauf einer befristeten Anstellung"
+            },
+            {
+              "marke": "c",
+              "text": "fristlose Auflösung"
+            },
+            {
+              "marke": "d",
+              "text": "Auflösung im gegenseitigen Einvernehmen"
+            },
+            {
+              "marke": "e",
+              "text": "Invalidität oder länger dauernde Arbeitsverhinderung"
+            },
+            {
+              "marke": "f",
+              "text": "Erreichen der Altersgrenze und Versetzung in den Ruhestand"
+            },
+            {
+              "marke": "g",
+              "text": "Tod"
+            },
+            {
+              "marke": "h",
+              "text": "Ablauf der Amtsdauer oder vorzeitige Auflösung des Arbeitsverhältnisses während der Amtsperiode"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "9c293651310e239d25ed73f74a3f8df1cd2161b80cf56b7718e5b883bf96e89b"
+    },
+    {
+      "id": "kanton/BS/162.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fristen für die Kündigung des Arbeitsverhältnisses nach Ablauf der Probezeit betragen für beide Vertragsparteien im ersten Anstellungsjahr einen Monat und ab zweitem Anstellungsjahr drei Monate."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Anstellungsvertrag kann eine längere Kündigungsfrist, maximal aber sechs Monate, vereinbart werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kündigung kann jeweils auf Ende eines Monates erfolgen, sofern kein besonderer Kündigungstermin vereinbart wurde."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "cf542c2e2cef1cddf9a3463b8edc158e7dafc968754e453b49ced30f2ab0b5c7"
+    },
+    {
+      "id": "kanton/BS/162.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kündigung durch die Mitarbeiterin oder den Mitarbeiter hat schriftlich zu erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kündigung durch den Arbeitgeber erfolgt in Form einer begründeten Verfügung mit Rechtsmittelbelehrung. Zuständig ist die Anstellungsbehörde."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "f0228b8d00486307842ae9d54b58fb1c07457573a78355ad11ec77a87150b4fa"
+    },
+    {
+      "id": "kanton/BS/162.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeiterinnen und die Mitarbeiter können das Arbeitsverhältnis jederzeit unter Einhaltung der Kündigungsfristen und der Kündigungstermine ohne Grundangabe kündigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anstellungsbehörde kann nach Ablauf der Probezeit das Arbeitsverhältnis kündigen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn die Mitarbeiterin oder der Mitarbeiter ganz oder teilweise an der Aufgabenerfüllung verhindert ist;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Arbeitsstelle aufgehoben wird und die Zuweisung eines anderen, der Ausbildung und den Fähigkeiten entsprechenden Aufgabengebietes nicht möglich ist bzw. wenn die Mitarbeiterin oder der Mitarbeiter die Annahme des neuen Aufgabengebiets verweigert."
+            },
+            {
+              "marke": "c",
+              "text": "wenn die Mitarbeiterin oder der Mitarbeiter ungenügende Leistungen erbringt;"
+            },
+            {
+              "marke": "d",
+              "text": "wenn die Mitarbeiterin oder der Mitarbeiter die vertraglichen oder gesetzlichen Pflichten wiederholt missachtet oder eine schwere Pflichtverletzung begangen hat;"
+            },
+            {
+              "marke": "e",
+              "text": "wenn die Mitarbeiterin oder der Mitarbeiter eine strafbare Handlung begangen hat, die nach Treu und Glauben mit der korrekten Aufgabenerfüllung nicht vereinbar ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Kündigung durch die Anstellungsbehörde gemäss Abs. 2 lit. c und bei wiederholter Pflichtverletzung gemäss Abs. 2 lit. d kann nur ausgesprochen werden, wenn der Mitarbeiterin oder dem Mitarbeiter eine angemessene Bewährungsfrist eingeräumt worden ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kündigung des Arbeitsverhältnisses durch die Anstellungsbehörde ist unzulässig, wenn sie in der ordnungsgemässen Aufgabenerfüllung und der Durchsetzung gesetzlicher oder behördlicher Erlasse oder mit der Tätigkeit als Interessenvertreterin oder Interessenvertreter des Personals begründet ist."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "3c1282272e5563daf4961c0a637ad972c3889510bfedf2ac6f3e845f165a9854"
+    },
+    {
+      "id": "kanton/BS/162.100/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Befristete Arbeitsverhältnisse enden ohne Kündigung mit Ablauf der Befristung. Wird das befristete Arbeitsverhältnis stillschweigend fortgesetzt, so hat es die Wirkungen eines unbefristeten Arbeitsverhältnisses."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "a20b9e55645473520e79c63f08a3e06c83e48e6b2990547557d54f25e2cd8aaf"
+    },
+    {
+      "id": "kanton/BS/162.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Arbeitsverhältnis kann beidseitig ohne Einhaltung von Fristen aufgelöst werden, wenn ein Umstand vorliegt, bei dessen Vorhandensein der kündigenden Partei nach Treu und Glauben die Fortsetzung des Arbeitsverhältnisses nicht mehr zugemutet werden kann."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "4d711cc6f4161451a5e1ef02c08b26bb53bd51f078ccf20dd776dfc5656b7d33"
+    },
+    {
+      "id": "kanton/BS/162.100/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Arbeitsverhältnis kann in gegenseitigem Einvernehmen jederzeit aufgelöst werden."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "b239213a3777210004cb85f025e250b6fbab38a4f53698e2e14f18f696cc7f9c"
+    },
+    {
+      "id": "kanton/BS/162.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Beginn von Rentenzahlungen der Eidg. IV, spätestens jedoch nach 16-monatiger ganzer oder teilweiser Arbeitsverhinderung wegen Krankheit oder Unfall endet das Arbeitsverhältnis im entsprechenden Umfang ohne Kündigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Zusprechung einer Teilinvalidenrente ist das Arbeitsverhältnis den neuen Umständen anzupassen. Ist dies nicht möglich, so ist eine Umschulung im Sinne des IV-Gesetzes anzustreben. Wird eine zumutbare Umschulung abgelehnt, so kann das Arbeitsverhältnis auch gänzlich aufgehoben werden."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "ac7dbefb2d4e0deea417c7d8b23bd64929c1dce04ee2fec39e74a7660b740616"
+    },
+    {
+      "id": "kanton/BS/162.100/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Falls keine anders lautende Abmachung zwischen Arbeitgeber und Arbeitnehmerin bzw. Arbeitnehmer getroffen wurde, endet das Arbeitsverhältnis grundsätzlich am letzten Tag des Monats, in dem die Mitarbeiterin oder der Mitarbeiter das 65. Altersjahr vollendet hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine vorzeitige Pensionierung ab Alter 58 oder eine aufgeschobene Pensionierung bis Alter 70 sind möglich. Die Pensionierung kann auch in Teilschritten erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "In personal-, arbeitsmarkt- und finanzpolitisch ausserordentlichen Situationen kann der Regierungsrat Mitarbeiterinnen und Mitarbeiter, welche das 58. Altersjahr vollendet haben, vorzeitig pensionieren. Das Altersguthaben der Mitarbeiterin bzw. des Mitarbeiters ist so zu erhöhen, dass dieselbe Rente resultiert, wie sie im Alter 65 unter Einrechnung eines Zinses von 1% versichert ist. Der Arbeitgeber vergütet der Pensionskasse die hierzu notwendige Einmaleinlage."
+        },
+        {
+          "absatz": "4",
+          "text": "Erfolgt die vorzeitige Pensionierung im gegenseitigen Einvernehmen, so kann der Arbeitgeber zwecks Erhöhung der Rentenansprüche gegenüber der Pensionskasse eine Einmaleinlage zugunsten der versicherten Person leisten. Die Zuständigkeit liegt beim Regierungsrat."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Schichtdienstleistende, die nach Wirksamwerden des neuen Pensionskassengesetzes und spätestens 2036 mit Alter 64 oder früher in Pension gehen, leistet der Arbeitgeber eine Einmaleinlage. Diese beträgt 17% des durchschnittlich versicherten Schichtlohns, multipliziert mit den vollen in der PKBS vor dem 1. Januar 2008 zurückgelegten Beitragsjahren. Die Beitragsjahre zählen frühestens ab Alter 25. Der durchschnittliche Schichtlohn bestimmt sich als Summe der seit 1. Januar 2008 von Arbeitgeber auf den Schichtzulagen geleisteten Sparbeiträge, dividiert durch 17% und die Anzahl Jahre seit 1. Januar 2008. Allfällige Besitzstandsleistungen werden bis fünf Jahre nach Wirksamwerden des neuen Pensionskassengesetzes voll in Abzug gebracht, für weitere fünf Jahre mit linear sinkendem Anteil."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "965995985c4b6dd189e8924d579bf1c5a08d298d007f78975190641aa7a593cf"
+    },
+    {
+      "id": "kanton/BS/162.100/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anstellungsbehörde setzt eine Abfindung fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Falle einer Kündigung wegen Verhinderung an der Aufgabenerfüllung gemäss § 30 Abs. 2 lit. a);"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Zuweisung eines anderen Aufgabenbereichs gemäss § 30 Abs. 2 lit. b) nicht möglich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Abfindung kann vereinbart werden, wenn das Arbeitsverhältnis im gegenseitigen Einvernehmen aufgelöst wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abfindung beträgt maximal einen Jahreslohn. In Ausnahmefällen kann diese Abfindung mit Genehmigung des Regierungsrates auf maximal zwei Jahreslöhne erhöht werden. In der Summe der Abfindung enthalten sind auch allfällige Massnahmen zur Unterstützung einer beruflichen Neuorientierung."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "d353c78589695277dc0dc6e9789bdbbc44bb7710a9caaa72016a83b52d5c14b2"
+    },
+    {
+      "id": "kanton/BS/162.100/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Falle der Arbeitsverhinderung wegen Krankheit oder Unfall gilt eine Sperrfrist von 365 Tagen. Im Übrigen finden die Bestimmungen des Obligationenrechts über die Kündigung zur Unzeit nach Ablauf der Probezeit sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "c64782511c2112995c69bf89e66423fa5442d6ed93b66f53462b7c76701fd3cb"
+    },
+    {
+      "id": "kanton/BS/162.100/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfolgt die Kündigung während der Probezeit, so endet das Arbeitsverhältnis auf den Kündigungstermin. Ein Rekurs hat keine aufschiebende Wirkung."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Kündigung missbräuchlich erfolgt, so kann eine Entschädigung von maximal drei Monatslöhnen zugesprochen werden."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "53225937932ae3e5677049b2a5d64a575814a7d711fe05a35a035968d9524ea4"
+    },
+    {
+      "id": "kanton/BS/162.100/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Arbeitsverhältnis endet im Falle der fristlosen Auflösung des Arbeitsverhältnisses wie auch bei einer ordentlichen Kündigung auf den Auflösungs-bzw. den Kündigungstermin."
+        },
+        {
+          "absatz": "2",
+          "text": "Erweist sich eine Auflösung des Arbeitsverhältnisses durch den Arbeitgeber als unbegründet, so bietet der Arbeitgeber der betroffenen Person die bisherige Stelle oder ein neues, der Ausbildung und den Fähigkeiten entsprechendes Aufgabengebiet am bisherigen oder an einem anderen Arbeitsort an."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Einverständnis mit der gekündigten Person kann der Regierungsrat anstelle der Weiterbeschäftigung eine Entschädigung von maximal zwei Jahresgehältern ausrichten."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "72ba33e07f32d1b6982b89cc47c62b6469f9df8baa00a65ab53237215804236c"
+    },
+    {
+      "id": "kanton/BS/162.100/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen gemäss den §§ 24 und 25 sowie betreffend Kündigung, fristlose Auflösung des Arbeitsverhältnisses und Abfindungen nach § 36 Abs. 1 können mittels Rekurs bei der Personalrekurskommission und deren Entscheid nach § 43 beim Verwaltungsgericht angefochten werden. Der Rekurs ist innert 10 Tagen nach der Zustellung der Verfügung schriftlich anzumelden. Zudem ist binnen 30 Tagen, vom gleichen Zeitpunkt an gerechnet, eine schriftliche Rekursbegründung einzureichen. Diese Fristen sind nicht erstreckbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Entscheid über den Entzug oder die Wiederherstellung der aufschiebenden Wirkung auf Antrag einer Partei kann nicht mittels Rekurses selbständig angefochten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anstellungsbehörde kann gegen einen Entscheid der Personalrekurskommission selbständig Rekurs beim Verwaltungsgericht erheben."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Rechtsschutz vor allen Rekursinstanzen soll den Grundsatz eines raschen und einfachen Verfahrens befolgen. Das Verfahren ist kostenlos, ausser bei Mutwilligkeit."
+        },
+        {
+          "absatz": "5",
+          "text": "Unter Vorbehalt der Regelungen in diesem Gesetz finden die Bestimmungen des Organisationsgesetzes und des Verwaltungsrechtspflegegesetzes Anwendung."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "6a56046f18cc566c97bbb5db2459c6fa661becab1a5f3dd77ecd91fd2127a0f1"
+    },
+    {
+      "id": "kanton/BS/162.100/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat wählt auf seine Amtszeit eine weisungsunabhängige, paritätisch aus Vertreterinnen und Vertretern der Arbeitgeber- sowie der Arbeitnehmerschaft bestehende Personalrekurskommission, deren Präsidentin oder Präsidenten sowie mindestens zwei weitere Mitglieder als Stellvertretung. Die Mitglieder des Präsidiums verfügen über eine juristische Ausbildung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident der Personalrekurskommission trifft ohne Verzug die erforderlichen Anordnungen für die Durchführung des Verfahrens und stellt den Rekurs der Behörde, welche die angefochtene Verfügung erlassen hat, zur Stellungnahme zu. Bei komplizierten Sachverhalten kann ein weiterer Schriftenwechsel angeordnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Verhandlung haben die Parteien in der Regel persönlich zu erscheinen. Die Verhandlung ist nicht öffentlich. Die rekurrierende Partei kann sich jedoch von einer Person ihres Vertrauens zur Verhandlung begleiten lassen. Eine Partei kann sich auf begründetes Gesuch vor der Personalrekurskommission vertreten lassen, wenn sie nachweisbar aus entschuldbaren Gründen am persönlichen Erscheinen verhindert oder die Streitsache kompliziert ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Personalrekurskommission stellt den Sachverhalt von Amtes wegen fest. Sie entscheidet mit freier Kognition unter Einschluss der Angemessenheit jeweils mit drei Mitgliedern. Die Präsidentin oder der Präsident führt den Vorsitz, die beiden anderen Mitglieder vertreten je die Arbeitgeber- und die Arbeitnehmerschaft."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Personalrekurskommission trifft ihren Entscheid nach geheimer Beratung. Beurteilt sie eine Kündigung oder eine fristlose Auflösung des Arbeitsverhältnisses als widerrechtlich, so ordnet sie die Weiterbeschäftigung an. Der Entscheid wird unter kurzer Begründung den Parteien mündlich eröffnet."
+        },
+        {
+          "absatz": "6",
+          "text": "Nach der Verhandlung wird den Parteien ein Dispositiv des Entscheids zugestellt. Wird beim Verwaltungsgericht gegen den Entscheid Rekurs erhoben, wird die schriftliche Begründung des mündlichen Entscheids nachgeholt."
+        },
+        {
+          "absatz": "7",
+          "text": "Nach Erhalt des begründeten Entscheids, welcher von der Personalrekurskommission zugestellt wird, hat die bzw. der Rekurrierende innert 30 Tagen beim Verwaltungsgericht die Rekursbegründung einzureichen. Diese Frist ist nicht erstreckbar."
+        },
+        {
+          "absatz": "8",
+          "text": "Erscheint die Partei, welche Rekurs erhoben hat, unentschuldigt nicht zur Verhandlung, so wird das Verfahren als erledigt abgeschrieben."
+        },
+        {
+          "absatz": "9",
+          "text": "Im Beschwerdeverfahren wegen sexueller Belästigung gemäss § 16 Abs. 2 ist die Personalrekurskommission untersuchende Behörde. Nach Abschluss der Untersuchung erstattet sie der vorgesetzten Behörde der beschwerdeführenden Person Bericht und empfiehlt allfällige Massnahmen. Im Untersuchungsverfahren haben sowohl die beschwerdeführende Person wie auch diejenige Person, gegen welche sich die Beschwerde richtet, Parteistellung."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "706ee96f7efdd2f55c7c938915edf5e1f5b5e1d426544cb6b00355997f927884"
+    },
+    {
+      "id": "kanton/BS/162.100/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsgericht ist zuständig zur Beurteilung von Rekursen gegen Entscheide der Personalrekurskommission."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verwaltungsgericht entscheidet mit drei Mitgliedern in einem einfachen und raschen Verfahren über den Rekurs. In der Regel findet bloss ein einfacher Schriftenwechsel statt. In einfachen Fällen kann das instruierende Mitglied des Gerichts die Parteien nach Eingang des Rekurses direkt in eine Verhandlung laden. Die Parteien können in jedem Fall auf eine Verhandlung verzichten."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "6176368d190fdf9ddd065848dee8a278e4004d525f3433edd4c59b295ea6ecc7"
+    },
+    {
+      "id": "kanton/BS/162.100/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Gesetz betreffend die Dienstverhältnisse der Beamten und Angestellten des Kantons Basel-Stadt sowie betreffend die Haftbarkeit von Behörden und Staat (Beamtengesetz) vom 25. April 1968 wird aufgehoben."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "d4702e69c7ba621aa49da158cd5c8c921d85869e618aef803cc23478371e4979"
+    },
+    {
+      "id": "kanton/BS/162.100/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Laufende Disziplinarverfahren sind gemäss den Bestimmungen des Beamtengesetzes vom 25. April 1968 abzuschliessen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "b9453a50486e294beebbc438aab0e73dcca0c12470c78ea602a4361767bfc035"
+    },
+    {
+      "id": "kanton/BS/162.100/art_46",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Mitarbeiterinnen und Mitarbeiter, welche nicht vom Grossen Rat oder vom Volk auf eine bestimmte Amtsdauer gewählt sind, endet die Amtsperiode mit dem Zeitpunkt der Wirksamkeit dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitarbeiterinnen und Mitarbeiter erhalten öffentlich-rechtliche Arbeitsverträge. Der Regierungsrat kann eine Übergangsfrist vorsehen."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "86f48edfd6028b679dcaee104026d0da3f0abc0efb181d5dae98eee88db4f762"
+    },
+    {
+      "id": "kanton/BS/162.100/art_47",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalgesetz (162.100)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz ist zu publizieren; es unterliegt dem Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt nach Eintritt der Rechtskraft den Zeitpunkt der Wirksamkeit."
+        }
+      ],
+      "stand": "2025-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0197afce6000b3c2eedc70231e3e2054",
+      "sha": "71bb6686048219839974626881b2db5d6e619de01b73fb987edc18aae023e61d"
+    }
+  ]
+}

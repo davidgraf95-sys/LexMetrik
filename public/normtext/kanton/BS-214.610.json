@@ -1,0 +1,53 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/214.610/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Einführung von weiteren Bewilligungsgründen für den Erwerb von Grundstücken durch Personen im Ausland (214.610)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Bewilligungsgründe gelten die gemäss Art. 8 des Bundesgesetzes umschriebenen Voraussetzungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausserdem wird der Erwerb bewilligt, wenn das Grundstück dient:",
+          "items": [
+            {
+              "marke": "b",
+              "text": "einer natürlichen Person als Zweitwohnung, die aussergewöhnlich enge und schutzwürdige Beziehungen zum Kanton Basel-Stadt unterhält, solange diese andauern."
+            }
+          ]
+        }
+      ],
+      "stand": "1997-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.610",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "48f6bd3928e4fb55d2660a9032b4f764",
+      "sha": "c1548018938eba692a17f18a1eadf5ef20b3288f68a5a5b216487e6e80317597"
+    },
+    {
+      "id": "kanton/BS/214.610/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Einführung von weiteren Bewilligungsgründen für den Erwerb von Grundstücken durch Personen im Ausland (214.610)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die zur Ausführung dieses Gesetzes und des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland vom 16. Dezember 1983 erforderlichen Vorschriften."
+        }
+      ],
+      "stand": "1997-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.610",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "48f6bd3928e4fb55d2660a9032b4f764",
+      "sha": "00ee8b56e2a454434ab6f3cf1c8c0e4a4e5658014f29f473196ec4419290be4a"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/951.110/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÖV-Verordnung (951.110)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Grossveranstaltungen im Stadion St. Jakob-Park mit mindestens 15'000 erwarteten Besucherinnen und Besuchern haben die Veranstalterinnen oder Veranstalter Shuttle-Züge vom und zum Bahnhof SBB im folgenden Umfang zu bestellen und abzugelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bei Fussballspielen: mindestens einen Zug ab Bahnhof Basel SBB (ca. 45 Min. vor Spielbeginn) und mindestens einen Zug ab Haltestelle Basel St. Jakob (ca. 15 Min. nach Spielende);"
+            },
+            {
+              "marke": "b",
+              "text": "bei allen übrigen Veranstaltungen nach Anweisung des Bau- und Verkehrsdepartements des Kantons Basel-Stadt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestellung und die Bezahlung der Leistungen nach Abs. 1 werden als Auflage zur Bewilligung der Veranstaltung im Sinne von § 66 des Polizeigesetzes festgesetzt."
+        }
+      ],
+      "stand": "2011-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/951.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "856daff79a7c1adc3984ac0e6a2b447d",
+      "sha": "58c4e69e179242df11012b389a806b43307698326dc4e6c6a1bc48aaf4533546"
+    },
+    {
+      "id": "kanton/BS/951.110/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ÖV-Verordnung (951.110)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird der Veranstalterin oder dem Veranstalter eine Pauschale je Besucherin bzw. Besucher auferlegt, die einen Beitrag an die Kosten des öffentlichen Verkehrs umfasst, so erfolgt die Bestellung von Shuttle-Zügen durch das Bau- und Verkehrsdepartement des Kantons Basel-Stadt."
+        }
+      ],
+      "stand": "2011-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/951.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "856daff79a7c1adc3984ac0e6a2b447d",
+      "sha": "f8ad6bd02b4d1af753bc3fabd459e0701f72fcab02d6700f43280272603af529"
+    }
+  ]
+}

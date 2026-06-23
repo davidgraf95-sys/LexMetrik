@@ -1,0 +1,851 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/257.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz führt die Schweizerische Strafprozessordnung vom 5. Oktober 2007 aus und gilt für die Verfolgung und Beurteilung der Straftaten nach Bundesrecht durch die Strafbehörden des Kantons Basel-Stadt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen der Schweizerischen Strafprozessordnung und des vorliegenden Einführungsgesetzes gelten auch für die Verfolgung und Beurteilung der im baselstädtischen Übertretungsstrafgesetz vom 15. Juni 1978 aufgeführten Übertretungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die Bestimmungen des Gesetzes betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "0d3195b50e0119d76dca1c55884a4e0eb21aa6738a255481a0f659d347515fd9"
+    },
+    {
+      "id": "kanton/BS/257.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die strafrechtliche Verantwortlichkeit der Mitglieder des Grossen Rates richtet sich nach § 6 des Gesetzes über die Geschäftsordnung des Grossen Rates (GO) vom 29. Juni 2006 über die parlamentarische Immunität."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "931e29b55eb8dbad2a48d80d6434a296d8e0ab8317ace2daad523d33ebf5c76c"
+    },
+    {
+      "id": "kanton/BS/257.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Strafverfolgungsbehörden sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kantonspolizei;"
+            },
+            {
+              "marke": "b",
+              "text": "die Staatsanwaltschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verwaltungsbehörden mit Ermittlungsbefugnis."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "e37ba0549db926a4e34d68363e3a7f71630a2b4aa9eb76f02411fb6b22eb07f0"
+    },
+    {
+      "id": "kanton/BS/257.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gerichte sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Zwangsmassnahmengericht;"
+            },
+            {
+              "marke": "b",
+              "text": "das Strafgericht als erstinstanzliches Gericht;"
+            },
+            {
+              "marke": "c",
+              "text": "das Beschwerdegericht des Appellationsgerichts;"
+            },
+            {
+              "marke": "d",
+              "text": "das Berufungsgericht des Appellationsgerichts."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "a17314e101f094b1bdbc04e66888c497b45c9e872717e2e9d13b7966a055eede"
+    },
+    {
+      "id": "kanton/BS/257.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wahl, Zusammensetzung, Organisation und Befugnisse der Strafbehörden sowie die Aufsicht über die Strafbehörden regeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gesetz betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996,"
+            },
+            {
+              "marke": "b",
+              "text": "das Gesetz betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976,"
+            },
+            {
+              "marke": "c",
+              "text": "das Gesetz betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG) vom 3. Juni 2015."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Der Regierungsrat kann für die Staatsanwaltschaft, die Jugendanwaltschaft und die Kantonspolizei Schwerpunkte der Kriminalitätsbekämpfung einschliesslich Strafverfolgung festlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt eine Verordnung über die Zusammensetzung, Organisation und Befugnisse der Staatsanwaltschaft."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "8bd2921430b86fe90542c4233f9fd89992d4b384ebd18cd96108857e2b2e8c22"
+    },
+    {
+      "id": "kanton/BS/257.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist eine strafbare Handlung begangen worden oder besteht ein entsprechender Verdacht, so trifft die Kantonspolizei die zur Feststellung des Sachverhalts und der Täterschaft sowie zur Auffindung und Sicherung der Beweismittel notwendigen Massnahmen, soweit diese ohne nachteilige Folgen für die Abklärung der Tat nicht verschoben werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Wo andere Behörden zur selbständigen Durchführung des polizeilichen Ermittlungsverfahrens ermächtigt sind, sind sie auch zur Vornahme der notwendigen Massnahmen befugt."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "8af17774ea557ac559567bdac41818f5fdb91efe2348142087e7b2892994789f"
+    },
+    {
+      "id": "kanton/BS/257.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei führt das polizeiliche Ermittlungsverfahren bei den ihr durch Verordnung zugewiesenen Übertretungen und Vergehen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "ec11329735701a6c2885944ac9ffcc159bd388ca1898f2c1ae6774067b0218e7"
+    },
+    {
+      "id": "kanton/BS/257.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die anderen Strafverfolgungsbehörden sind berechtigt, im späteren Verlauf des Verfahrens nach Bedarf die Kantonspolizei beizuziehen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "0767a0a5fb1f92ee1005aba5af690496a47dd9495bada34bd91814b5ca1cfdc8"
+    },
+    {
+      "id": "kanton/BS/257.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kriminalpolizei, die Abteilung Wirtschaftsdelikte und die Jugendanwaltschaft führen das polizeiliche Ermittlungsverfahren, so weit dieses Gesetz keine anderen Zuständigkeiten festlegt."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "7b009a208242b1b0f6b8ddd80f05dd5af73bbccc2463b09caa213a6129cd66f9"
+    },
+    {
+      "id": "kanton/BS/257.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwältinnen und Staatsanwälte der Kriminalpolizei, die Jugendanwältinnen und Jugendanwälte, die Kriminalkommissärinnen und Kriminalkommissäre und die Detektivinnen und Detektive der Kriminalpolizei, der Abteilung Wirtschaftsdelikte und der Jugendanwaltschaft sind befugt, polizeiliche Handlungen vorzunehmen und Zwang auszuüben."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "5b7fd4cb5e6b05f8fc4d326f9eb54660308e846d8d6857140dcf063150735251"
+    },
+    {
+      "id": "kanton/BS/257.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Abteilungen der Staatsanwaltschaft haben die Befugnis, das Untersuchungsverfahren durchzuführen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "6124b675261f3875241ea222dc9de2335191df098a2c82c60de0f089abdfbe8b"
+    },
+    {
+      "id": "kanton/BS/257.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann die Zuständigkeit zur Durchführung des polizeilichen Ermittlungsverfahrens bei Übertretungen durch Verordnung denjenigen Verwaltungsbehörden übertragen, in deren Aufgabenbereich diese Delikte begangen werden (Verwaltungsbehörden mit Ermittlungsbefugnis)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Staatsanwaltschaft kann Verwaltungsbehörden, in deren Aufgabenbereich diese Delikte begangen werden, zur Durchführung des polizeilichen Ermittlungsverfahrens bei Vergehen einsetzen. Aufsicht und Weisungsbefugnis verbleiben bei der Staatsanwaltschaft."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "e7ce8ccc2cfb4b5d3a402d8398e3d28fd7e4deaf824f6b9c78f5b862a2c72cdc"
+    },
+    {
+      "id": "kanton/BS/257.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft beurteilt auf Überweisung mit Antrag durch die Kantonspolizei oder durch die Verwaltungsbehörden mit Ermittlungsbefugnis hin Übertretungen und unter den Voraussetzungen des Art. 352 StPO Vergehen mit einem Strafbefehl oder erhebt gegebenenfalls Anklage."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "efa73dbd5f07b5cf4bf4c7e2b3656b2e8862429f888071b88a0e813b727ac3b6"
+    },
+    {
+      "id": "kanton/BS/257.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungsbehörden verfolgen die Übertretungen, die in ihrem Aufgabenbereich begangen werden. Die Weisungsbefugnis verbleibt bei der Staatsanwaltschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bezeichnet in einer Verordnung die für die Verfolgung der Übertretungen zuständigen Verwaltungsbehörden."
+        },
+        {
+          "absatz": "3",
+          "text": "Übertretungen, für deren Verfolgung keine Behörde bezeichnet ist, werden von der Kantonspolizei verfolgt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kantonspolizei und die Verwaltungsbehörden mit Ermittlungsbefugnis sehen unter den Voraussetzungen des Art. 307 Abs. 4 StPO von einer Berichterstattung an die Staatsanwaltschaft ab oder überweisen die Täterin oder den Täter mit einem Antrag an die Staatsanwaltschaft."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "28b4e6ec65f4d3f8672d13519ac1ac58b7db311f823dd0ad0f8438e69295af02"
+    },
+    {
+      "id": "kanton/BS/257.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft beurteilt die ihr mit Antrag überwiesenen Übertretungen in der Form eines Strafbefehls."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "67bcd33024c99184da6d56c2dae97321b0ea323426740b2045b6abd2f7fa9b7c"
+    },
+    {
+      "id": "kanton/BS/257.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrenssprache der Strafbehörden des Kantons Basel-Stadt ist Deutsch."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "7c4ab3760534e4d5bfc9fb5aa3df32d8c89dab31e8a31a8472e343165e4d129d"
+    },
+    {
+      "id": "kanton/BS/257.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Strafbehörden sind zu Mitteilungen an Behörden über hängige oder abgeschlossene Strafverfahren und deren Beteiligte berechtigt, wenn hiefür berechtigte Interessen vorliegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Mitteilung an Behörden sind sie insbesondere bei Strafverfahren gegen folgende Personen berechtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen Mitglieder einer Behörde, Angestellte von Gemeinden, Kanton oder Bund, gegen Ärztinnen und Ärzte und Medizinalpersonal, Lehr-, Erziehungs- und Betreuungspersonal sowie Rechtsanwältinnen und Rechtsanwälte und Notarinnen und Notare, sofern die ihnen zur Last gelegte Straftat mit der Ausübung ihrer Tätigkeit in Zusammenhang steht oder die weitere ordnungsgemässe Ausübung der Tätigkeit in Frage steht, an die zuständige vorgesetzte Behörde oder Aufsichtsbehörde;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen Ausländerinnen und Ausländer an die zuständige Migrationsbehörde;"
+            },
+            {
+              "marke": "c",
+              "text": "gegen Personen bei Vorliegen eines begründeten Verdachts, dass sie gegenüber Steuerbehörden oder Sozialhilfestellen zu ihren Einkommens- und Vermögensverhältnissen unrichtige oder unvollständige Angaben gemacht haben, an die zuständige Behörde."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Strafverfolgungsbehörden melden Strafverfahren von besonderer Tragweite unverzüglich dem Regierungsrat."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben Bestimmungen anderer Gesetze über die Berechtigung der Strafbehörden zur Mitteilung an andere Behörden."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "2b722449b3d11197f569089ebf1bce9aebe880c07af0e3e70f17fc5d35ba05b9"
+    },
+    {
+      "id": "kanton/BS/257.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Veröffentlichungen gemäss Art. 88 StPO erfolgen im Kantonsblatt des Kantons Basel-Stadt."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "76bfbb413401a8ec021047337ce3d1703b3ba65b0cf3140a53c37a669948296f"
+    },
+    {
+      "id": "kanton/BS/257.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt in einer Verordnung, in welchem Mass Mitarbeitende der Staatsanwaltschaft, der Verwaltungsbehörden mit Ermittlungsbefugnis und der Gerichte befugt sind, Einvernahmen durchzuführen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "d6a7088c66575be90cafa52a67156b65ce6c14a04286d207d6ae3c583667ba05"
+    },
+    {
+      "id": "kanton/BS/257.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn die Gefährdung nach Abschluss des Verfahrens andauert, trifft das zuständige Departement für im Sinne von Art. 149 Abs. 1 StPO gefährdete Personen die geeigneten Schutzmassnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement darf die gefährdete Person im Sinne von Art. 288 StPO mit einer Legende und den dafür notwendigen Urkunden ausstatten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt die Einzelheiten in einer Verordnung."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "baf9a0acd63db1d824ed25d955b528546d6f936e784df5a540bec32d63ae29af"
+    },
+    {
+      "id": "kanton/BS/257.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist berechtigt, für bestimmte Bereiche in einer Verordnung dauernd bestellte oder amtliche Sachverständige vorzusehen."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "695e09c9cfd1b32f8d957c688fd11631e730a895be0d5110b21dc06bb40bdec8"
+    },
+    {
+      "id": "kanton/BS/257.100/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft kann für die erfolgreiche Mitwirkung bei der Fahndung Belohnungen aussetzen und ausrichten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "2d717e6bf3c1edc09791e011d2866611afc3fcf53aee03eca9002f8ed2ff5e6e"
+    },
+    {
+      "id": "kanton/BS/257.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt in einer Verordnung, welche Angehörigen der Kantonspolizei zur Anordnung ermächtigt sind, Personen, welche die Kantonspolizei bei der Begehung einer Übertretung auf frischer Tat ertappt oder unmittelbar nach der Begehung einer solchen angetroffen hat und die vorläufig festgenommen worden sind, länger als drei Stunden festzuhalten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "131c067d43a90f4b55185221862bf7de14dcf551815873c8a7e9ba99c41a87cf"
+    },
+    {
+      "id": "kanton/BS/257.100/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt in einer Verordnung die Rechte und Pflichten der Inhaftierten, ihre Beschwerdemöglichkeiten, die Disziplinarmassnahmen sowie die Aufsicht über die Haftanstalten."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "6cd1dcdf8f8e08017dec529de9c9a176ad654aeba61da3e2d105d7b17e25a83a"
+    },
+    {
+      "id": "kanton/BS/257.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegt ein aussergewöhnlicher Todesfall vor, so ist die Ärztin oder der Arzt, die oder der den Tod festgestellt hat, zu umgehender Meldung an die Kantonspolizei verpflichtet."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "f1990f2f92dceea7f2d05ae320ec0221296b331e60161a82ee86853b5645ba79"
+    },
+    {
+      "id": "kanton/BS/257.100/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die in der Stellung als Mitglieder von Behörden oder als Bedienstete des Kantons Basel-Stadt oder einer baselstädtischen Gemeinde Kenntnis von von Amtes wegen zu verfolgenden Verbrechen oder Vergehen erhalten, haben diese anzuzeigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Anzeigepflicht entfällt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen, deren behördliche oder dienstliche Tätigkeit ein besonderes Vertrauensverhältnis zu einer an der Straftat beteiligten oder von ihr betroffenen Person voraussetzt;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen, welche die Verbrechen oder Vergehen ihrer vorgesetzten Person zur Kenntnis gegeben haben."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die Bestimmungen anderer Gesetze, die jemanden zur Erstattung von Strafanzeigen verpflichten oder davon befreien."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "af10475d05d5a6fffaa8ef8edd3b1522c325df2dbc46ecde2a89e428e01a25aa"
+    },
+    {
+      "id": "kanton/BS/257.100/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt in einer Verordnung, in welchem Umfang Staatsanwältinnen und Staatsanwälte einzelne Untersuchungshandlungen ihren Mitarbeitenden übertragen können."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "15bc54477ce8f7fdf2f0fd12917fad01e2f713bd901f1663ee690b1897248a16"
+    },
+    {
+      "id": "kanton/BS/257.100/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung über den Justizvollzug (Justizvollzugsverordnung, JVV) vom 11. Februar 2014 bezeichnet die Zuständigkeiten der Vollzugsbehörde für nachträgliche Entscheide gemäss Art. 363 Abs. 3 StPO."
+        },
+        {
+          "absatz": "2",
+          "text": "Die für den Vollzug von Strafen und Massnahmen zuständige Vollzugsbehörde ist im Verfahren gemäss Art. 363 Abs. 1 StPO Partei mit vollen Parteirechten. Sie stellt insbesondere beim Gericht die Anträge und vertritt diese vor Gericht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Staatsanwaltschaft wird bei Verfahren gemäss Art. 363 Abs. 1 StPO beigeladen. Erklärt sie, dass sie am Verfahren teilnehmen will, so hat sie neben der Vollzugsbehörde die Rechte und Pflichten einer Partei. Verzichtet die Staatsanwaltschaft auf die Teilnahme, so stehen die Parteirechte ausschliesslich der Vollzugsbehörde zu."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "e726574977e4e727b805807b9718ae661511bf31c2d16cf38b559bf16145919e"
+    },
+    {
+      "id": "kanton/BS/257.100/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für den Vollzug von Strafen und Massnahmen zuständige Behörde wird durch die JVV bestimmt."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "de9f7aa980eeb0eb4c5b289890bd52ec58b7731eae1000a77ec8c3b2d6c3e246"
+    },
+    {
+      "id": "kanton/BS/257.100/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist ein Strafurteil in Rechtskraft erwachsen, so wird es beförderlich vollzogen unter Beachtung des vom Gericht angeordneten Aufschubs einzelner Sanktionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident des urteilenden Gerichtes erlässt die nötigen Verfügungen und stellt sie den verurteilten Personen sowie der für den Vollzug zuständigen Behörde zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Beim Vollzug rechtskräftig gewordener Strafbefehle hat die Staatsanwaltschaft die nach den Bestimmungen dieses Abschnitts der Gerichtspräsidentin oder dem Gerichtspräsidenten zustehenden Befugnisse."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "5a873d32c0259509f2ae5dbf9f0c59c0b9943dcdb012a1b242db7d261db51307"
+    },
+    {
+      "id": "kanton/BS/257.100/art_42",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "42",
+      "artikelLabel": "§ 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erwächst das Urteil nicht mit der Verkündung in Rechtskraft, so sind die nötigen Verfügungen zu treffen, um den Vollzug der verhängten Freiheitsstrafe oder freiheitsentziehenden Massnahme sicherzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Verhaftete Personen, gegen die keine vollziehbare freiheitsentziehende Sanktion verhängt wird, sind auf freien Fuss zu setzen, sofern die Staatsanwaltschaft nicht unmittelbar nach der Urteilsverkündung die Fortdauer der Haft beantragt. Über einen solchen Antrag entscheidet die Präsidentin oder der Präsident des Berufungsgerichts nach Anhörung der Betroffenen unverzüglich. Bis zum Entscheid bleiben die Beurteilten in Haft."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "bd0445d4489dbec5e031d36a9ddc822e41459033e5847000373e7e815b845424"
+    },
+    {
+      "id": "kanton/BS/257.100/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zum Vollzug eines rechtskräftigen Urteils, das eine vollziehbare Freiheitsstrafe verhängt oder eine freiheitsentziehende Massnahme anordnet, erlässt die Präsidentin oder der Präsident des urteilenden Gerichtes einen Vollstreckungsbefehl, der das Urteilsdispositiv sowie die erforderlichen Angaben über Antritt und Dauer der Sanktion enthält. Der Vollstreckungsbefehl geht an die zuständige Verwaltungsbehörde zum Vollzug und an die verurteilte Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Departementsvorsteherinnen und Departementsvorsteher oder die von ihnen ermächtigte Verwaltungsabteilung sind befugt, den Vollzug vorübergehend aufzuschieben, wenn der Vollstrekungsbefehl dies nicht ausschliesst, oder vorübergehend zu unterbrechen (§ 41). Ein Aufschub oder eine Unterbrechung von mehr als 60 Tagen bedarf der Genehmigung durch die Präsidentin oder den Präsidenten des urteilenden Gerichts."
+        },
+        {
+          "absatz": "3",
+          "text": "Erscheint der Vollzug einer Sanktion als dauernd ausgeschlossen, so hat das urteilende Gericht nach Anhörung der Gerichtsärztin oder des Gerichtsarztes über die Einstellung des Vollzuges zu beschliessen. Fällt der Grund der Einstellung weg, so erneuert das Gericht den Vollstrekungsbefehl."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "481348669a35fcaf2a3f64f4925e6e2543fe735f00ed21ae235394951116f9d3"
+    },
+    {
+      "id": "kanton/BS/257.100/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement treibt die finanziellen Leistungen (Verfahrenskosten, Geldstrafen, Bussen und weitere im Zusammenhang mit einem Strafverfahren zu erbringende finanzielle Leistungen) ein."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "515938fda64c28e0063fea248f69e64740ab269d8e81ae7f3db7750615e4d8f8"
+    },
+    {
+      "id": "kanton/BS/257.100/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Strafverfolgungsbehörden und die Gerichte nehmen die in ihren Zuständigkeitsbereich fallenden amtlichen Bekanntmachungen vor."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "d717023fdc18959f70940de220bfbe8bfd6a4ff2336536e86c92334e4c0d9b65"
+    },
+    {
+      "id": "kanton/BS/257.100/art_46",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Strafprozessordnung des Kantons Basel-Stadt vom 8. Januar 1997 wird aufgehoben."
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "1654dd7c6da31026671957a5fd12f155cfdcaaee6153ce8a477a7c81a68150f2"
+    },
+    {
+      "id": "kanton/BS/257.100/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "EG StPO (257.100)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz über den Vollzug der Strafurteile (Strafvollzugsgesetz) vom 13. Dezember 2007 wird wie folgt geändert:"
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a7000e473448dd36e1504d13438ade",
+      "sha": "f9ff400e135d073ab6ae022cbea214d2b2244aa2b727581f24d2cc694b4b6532"
+    }
+  ]
+}

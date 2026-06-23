@@ -1,0 +1,672 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/214.300/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das vorliegende Gesetz regelt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Vollzug des Geoinformationsrechts des Bundes,"
+            },
+            {
+              "marke": "b",
+              "text": "die Erhebung, Nachführung und Verwaltung von Geodaten des Kantons und der Gemeinden,"
+            },
+            {
+              "marke": "c",
+              "text": "im Rahmen der bundesrechtlichen Vorgaben die Erhebung, Nachführung und Verwaltung der Daten der amtlichen Vermessung, des Katasters der öffentlich-rechtlichen Eigentumsbeschränkungen und des Leitungskatasters."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "d5ab40197efe71164554447ee1e32a8424555e2782eafa490c4c14bfe88a1ed2"
+    },
+    {
+      "id": "kanton/BS/214.300/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz bezweckt, dass Geodaten unter Wahrung berechtigter Interessen Dritter den Behörden des Kantons und der Gemeinden sowie der Wirtschaft, der Gesellschaft und der Wissenschaft für eine breite Nutzung, nachhaltig, aktuell, einfach, in der erforderlichen Qualität und zu angemessenen Kosten zur Verfügung gestellt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "471fae2775358de887689b604f4dd3e99c35d61f2e0394e070a62ab1a40cff44"
+    },
+    {
+      "id": "kanton/BS/214.300/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz findet Anwendung auf",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Geobasisdaten des kantonalen Rechts und anderen Geodaten des Kantons,"
+            },
+            {
+              "marke": "b",
+              "text": "Geobasisdaten des kommunalen Rechts und anderen Geodaten der Gemeinden."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "0a87789f2d557168549082eceb24291fc9b86ad9d05063c25eae947491c583a4"
+    },
+    {
+      "id": "kanton/BS/214.300/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Begriffsbestimmungen gemäss Art. 3 Abs. 1 des Bundesgesetzes über die Geoinformation vom 5. Oktober 2007 und Art. 2 der Verordnung vom 21. Mai 2008 über Geoinformation gelten analog."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann durch Verordnung weitere Begriffsbestimmungen erlassen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "7ea0a8f13a4f164bc996981774c508f08addb070a6cb23e163dfe38ca817dbcd"
+    },
+    {
+      "id": "kanton/BS/214.300/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet in einem Katalog",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geobasisdaten des kantonalen Rechts und legt die jeweilige Zugangsberechtigung fest,"
+            },
+            {
+              "marke": "b",
+              "text": "andere Geodaten des Kantons, die mittels direktem elektronischen Zugriff öffentlich zugänglich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er erlässt Vorschriften über die qualitativen und technischen Anforderungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er strebt dabei eine Harmonisierung mit den Geobasisdaten des Bundesrechts an und übernimmt soweit möglich und sinnvoll die Regelungen des Bundesrechts."
+        },
+        {
+          "absatz": "4",
+          "text": "Er kann durch Verordnung festschreiben, dass weitere Geodatensätze erstellt und zugänglich gemacht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "342838a74ced39ce6223e9a64ff20b48e2599d423c3145dec669b7946a1db0ad"
+    },
+    {
+      "id": "kanton/BS/214.300/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden bezeichnen in einem Katalog",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geobasisdaten des kommunalen Rechts und legen die jeweilige Zugangsberechtigung fest,"
+            },
+            {
+              "marke": "b",
+              "text": "andere Geodaten der Gemeinden, die mittels direktem elektronischen Zugriff öffentlich zugänglich sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "416cdb4d0ae7ca89ed04d7df260bb3dcf3319c11567a93ae63f111ed6dc016c6"
+    },
+    {
+      "id": "kanton/BS/214.300/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu den Geobasisdaten des kantonalen und des kommunalen Rechts und den nach § 5 und § 6 bezeichneten anderen Geodaten des Kantons und der Gemeinden müssen Geometadaten geführt und zentral zugänglich gemacht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig für die Erhebung, Nachführung und Verwaltung der Geometadaten ist die Fachstelle, die für die Erhebung und Nachführung der entsprechenden Geodaten zuständig ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "6a85692b940d90dfe9b5baddb051fdf52d89633563bd75d1baba03c845b7a3c7"
+    },
+    {
+      "id": "kanton/BS/214.300/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zuständigkeit für das Erheben, Nachführen und Verwalten der Geobasisdaten richtet sich nach der Fachgesetzgebung."
+        },
+        {
+          "absatz": "2",
+          "text": "Fehlen entsprechende Vorschriften, so liegt die Zuständigkeit bei der Fachstelle des Kantons oder Gemeinde, die für den Sachbereich zuständig ist, auf den sich die Geobasisdaten beziehen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "11b6efd7752a7bdcef8dbba45d3cc87da3f33972b48d4e504cb01f7db301ebe0"
+    },
+    {
+      "id": "kanton/BS/214.300/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für das Erheben, Nachführen und Verwalten zuständige Fachstelle gewährleisten die nachhaltige Verfügbarkeit der Geobasisdaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Historisierung und die Archivierung der Geobasisdaten des kantonalen Rechts."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "faeaaf3b522fd747a46ea01d8e15328e23b197cdcf12f60f59fc28bc8320c095"
+    },
+    {
+      "id": "kanton/BS/214.300/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Erhebung, Nachführung und Verwaltung von Geobasisdaten des kantonalen Rechts gilt Art. 20 des Bundesgesetzes über die Geoinformation analog."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "491ceaeef8273c6429ef3539cfa8a77a9b5aa321cbfd7d475c7923362ef23d44"
+    },
+    {
+      "id": "kanton/BS/214.300/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geodaten gemäss § 3 lit. a und b sind öffentlich zugänglich und können von jeder Person genutzt werden, sofern das übrige kantonale beziehungsweise kommunale Recht keine abweichenden Bestimmungen enthält und keine überwiegenden öffentlichen und privaten Interessen entgegenstehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann bzw. die Gemeinden können für Geodaten gemäss § 3 lit. a bzw. lit. b Zugangsberechtigungen einschränken oder von einer Einwilligung abhängig machen soweit dies zum Schutz privater oder öffentlicher Interessen erforderlich ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "8f69bedc2c93eb607c1917817a2218c0ab390a2601c22de882ecd7f10fdc4eb0"
+    },
+    {
+      "id": "kanton/BS/214.300/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bevor der Regierungsrat die Geodaten gemäss § 3 lit. a mittels direktem elektronischen Zugriff als öffentlich zugänglich erklärt, prüft er die daraus entstehenden möglichen Auswirkungen auf die betroffenen Personen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bevor die Gemeinde die Geodaten gemäss § 3 lit. b mittels direktem elektronischen Zugriff als öffentlich zugänglich erklärt, prüft sie die daraus entstehenden möglichen Auswirkungen auf die betroffenen Personen."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Geodaten gemäss § 3 mit Downloaddienst zugänglich gemacht, ist vorab die oder der Datenschutzbeauftragte gemäss § 13 des Informations- und Datenschutzgesetzes (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010 zu konsultieren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "a94c5e5341b265897fc2eb3c2c2c1ede6c8681895cd31f3c9c2b79cf2f917f25"
+    },
+    {
+      "id": "kanton/BS/214.300/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt bzw. die Gemeinden erlassen für Geodaten gemäss § 3 lit. a bzw. lit. b nähere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulässige Nutzung und Weitergabe sowie das entsprechende Verfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "die Pflichten der Nutzerinnen und Nutzer, namentlich hinsichtlich des Datenschutzes bei der Nutzung und Weitergabe der Daten;"
+            },
+            {
+              "marke": "c",
+              "text": "das Anbringen von Quellenangaben und Warnhinweisen;"
+            },
+            {
+              "marke": "d",
+              "text": "eine allfällig erforderliche Einwilligung für Zugang, Nutzung und Weitergabe."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwilligung wird unter Beachtung des Informations- und Datenschutzgesetzes vom 9. Juni 2010 von der zuständigen Stelle erteilt durch Verfügung, Vertrag oder organisatorische oder technische Zugangskontrollen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "02b6048183e8ecb38b6aae9bdb2caa56ea0c084a560bf42c18baeb7840881cb4"
+    },
+    {
+      "id": "kanton/BS/214.300/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt die Geodienste von kantonalem Interesse und deren Mindestbestand fest und bestimmt die für den Aufbau und Betrieb zuständige Stelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann für diese Geodienste Vorschriften über die qualitativen und technischen Anforderungen im Hinblick auf eine optimale Vernetzung erlassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann vorschreiben, dass bestimmte Geobasisdaten des Bundesrechts und des kantonalen Rechts allein oder in Verbindung mit anderen Daten, zu denen direkter elektronischer Zugriff besteht, im Abrufverfahren oder auf andere Weise in elektronischer Form zugänglich gemacht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "a57325fc7f093849b22ddc1d91ce085c9e740e32c6d7feed5bcb66746a175415"
+    },
+    {
+      "id": "kanton/BS/214.300/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörden des Kantons und der Gemeinden gewähren sich gegenseitig einfachen und direkten Zugang zu Geodaten, soweit sie diese für die Erfüllung ihrer Aufgaben benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "27a0a94b28bf87765a9d0d8a09a84522dc1723f87ee06f2cd27be33210802555"
+    },
+    {
+      "id": "kanton/BS/214.300/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Nutzung von Geodaten wird keine Gebühr erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Zugang zu und die Abgabe von öffentlichen Geodaten wird",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine Gebühr erhoben, wenn sie mittels direkten elektronischen Zugriffs zugänglich sind,"
+            },
+            {
+              "marke": "b",
+              "text": "eine Bereitstellungsgebühr erhoben, wenn sie nicht mittels direkten elektronischen Zugriffs zugänglich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Zugang und die Abgabe von nicht öffentlichen Geodaten wird eine Bereitstellungsgebühr erhoben, sofern der Zugang gemäss § 11 Abs. 2 gewährt werden kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bereitstellungsgebühr deckt die zeit- und aufwandsbedingten Personal- und Sachkosten."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "6238f59f975d9730340da6c51d7fec6ebab26c561bb84d4024daaf4199da3191"
+    },
+    {
+      "id": "kanton/BS/214.300/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt Ausführungsbestimmungen zum Kataster der öffentlichrechtlichen Eigentumsbeschränkungen gemäss Art. 16 des Bundesgesetzes über die Geoinformation."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt fest, welche Geobasisdaten des kantonalen Rechts Gegenstand des Katasters sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Er regelt durch Verordnung die Einzelheiten des Verfahrens, der Organisation, des Zugangs und der Publikation."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "8571edc843c388379b89cc212d1fa7bf88275d748f6bccce928fafb7d91ccd99"
+    },
+    {
+      "id": "kanton/BS/214.300/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt das für die Durchführung der amtlichen Vermessung und deren Aufsicht zuständige Amt. Es steht unter der Aufsicht des zuständigen Departements; es erlässt die hierzu erforderlichen Vorschriften."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "427b73c3c467c1ea2c9c12e26ac34d4ce8cc1f0efdc9fb401b3e7726a19555fb"
+    },
+    {
+      "id": "kanton/BS/214.300/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt unter Vorbehalt der Befugnisse der Bundesbehörden die Durchführung der Aufgaben und regelt durch Verordnung die Vermessungsgebühren im Einklang mit dem Verwaltungsgebührengesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Rechte an den durch die Kantonsvermessung geschaffenen Daten stehen vorbehältlich der Bundesrechte dem Kanton zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt in einer Verordnung die Benützung der Daten der amtlichen Vermessung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "a547c07a75d46db24b510d747060cf64114883ab5e4a2e969f56996c06baf1b0"
+    },
+    {
+      "id": "kanton/BS/214.300/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das für die Durchführung der amtlichen Vermessung zuständige Amt besorgt die Vermessung und Vermarkung des Kantonsgebiets, die Fortführung und den Unterhalt des Grunddatensatzes und der Pläne für das Grundbuch. Es ermöglicht die Einsichtnahme durch Interessierte und sorgt für die Abgabe von Auszügen und Auswertungen der amtlichen Vermessung nach den eidgenössischen und kantonalen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es besorgt ferner die Anlegung und Nachführung eines Leitungskatasters sowie weitere ihm übertragene Vermessungsarbeiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vermarkungsarbeiten und die Vermessungsarbeiten bei Erneuerungen sowie der periodischen Nachführung können auf dem Submissionsweg an private Unternehmen übertragen werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "a296e380cb9fe5c050d58dc1ebb6aed5c3fcbd647d1a923caf11cf559e19b405"
+    },
+    {
+      "id": "kanton/BS/214.300/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Erneuerung der amtlichen Vermessung und ihrer periodischen Nachführung werden nach Abzug des Bundesbeitrages auf den Gebieten der Gemeinden Riehen und Bettingen je zur Hälfte von der jeweiligen Einwohnergemeinde und vom Kanton und auf dem Gebiet der Stadt Basel vom Kanton alleine getragen. Der Gesamtbeitrag wird für jedes infolge Erneuerung oder periodischer Nachführung vermessene Gebiet durch den Regierungsrat festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann nach Anhörung der Landgemeinden deren Kostenanteil abweichend festsetzen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "85aa0c54bc73de1e1671736f0dc25aca974d1d06b7bf64deebcbd8f3274d4621"
+    },
+    {
+      "id": "kanton/BS/214.300/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Vermarkung und die laufende Nachführung entrichten die Eigentümerinnen und Eigentümer bei Ausführung der Arbeiten die in § 19 vorgesehenen Gebühren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "65b7d6eb94ef77261456c08e01e897425cf00013fc84968258855fd0a351b3cb"
+    },
+    {
+      "id": "kanton/BS/214.300/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leitungen mit ihren ober- und unterirdischen baulichen Anlagen zur Ver- und Entsorgung im öffentlichen Raum werden im Leitungskataster geführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die an der Finanzierung beteiligten Körperschaften haben uneingeschränkten Zugriff auf den Leitungskataster und tragen dessen Kosten."
+        },
+        {
+          "absatz": "3",
+          "text": "Andere Nutzerinnen und Nutzer des öffentlichen Raumes haben für die Vermessung der ihnen bewilligten Einrichtungen eine Gebühr zu entrichten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "2aab6b2755de3f20429383c3612952f08ef63a61697619e474c2f77f60e9e149"
+    },
+    {
+      "id": "kanton/BS/214.300/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton betreibt die kantonale Geodateninfrastruktur und koordiniert die kantonalen Geobasisdaten und Geodienste."
+        },
+        {
+          "absatz": "2",
+          "text": "Er betreibt insbesondere die elektronische Plattform für Geodaten (Geoportal), die das Zusammenführen, den Zugriff und die Abgabe von Geodaten an Behörden, Wirtschaft und Private gewährleistet."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat bezeichnet die dafür verantwortliche Stelle und regelt deren Aufgaben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "f2c5be3be7dfc7020e48c354700b84d200e2d838ce51bdc50b37e8b334a23559"
+    },
+    {
+      "id": "kanton/BS/214.300/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIG (214.300)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911 wird wie folgt geändert:"
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesetz betreffend Grundbuchverwaltung und Vermessungswesen vom 11. April 1929 wird aufgehoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6f3cb93828e4679090f20b0a10179cd",
+      "sha": "287c118998b0195c91c2b8f61c725e03386c987050ba64df093d785ca893ac81"
+    }
+  ]
+}

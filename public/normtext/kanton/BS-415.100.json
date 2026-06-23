@@ -1,0 +1,634 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/415.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt die Förderung und den Schutz von Kindern, Jugendlichen und jungen Erwachsenen mit Wohnsitz oder Aufenthalt im Kanton Basel-Stadt durch",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sicherstellung von Leistungen,"
+            },
+            {
+              "marke": "b",
+              "text": "die Finanzierung dieser Leistungen und"
+            },
+            {
+              "marke": "c",
+              "text": "die Regelung der Organisation und Zuständigkeiten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die bundesrechtlichen und kantonalen Bestimmungen zum zivilrechtlichen Kindesschutz."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "86335e57876b850e8acb3ef4df6dd7858f8694b5195aa4194909dbd0c83b5bb5"
+    },
+    {
+      "id": "kanton/BS/415.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Sinne dieses Gesetzes",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wird «Kinder- und Jugendhilfe» verstanden als Handlungsbereich, welcher zusätzlich zu privaten Leistungen in Familien und zur Schule die sozialen Bedingungen des Aufwachsens von Kindern und Jugendlichen gestaltet,"
+            },
+            {
+              "marke": "b",
+              "text": "sind «Kinder und Jugendliche» Personen bis zum vollendeten 18. Lebensjahr und"
+            },
+            {
+              "marke": "c",
+              "text": "«junge Erwachsene» Personen bis zum vollendeten 25. Lebensjahr."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "45abdd5c2732a5407cce6cd868ba8894dcdcfa2107b8eaf70ff1f1dd3efb4505"
+    },
+    {
+      "id": "kanton/BS/415.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei allem staatlichen Handeln, das Kinder und Jugendliche betrifft, ist deren Wohl vorrangig zu berücksichtigen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "4a35568e2283964935bc74dbd93de2edb55138455474be995f47f8532f16482e"
+    },
+    {
+      "id": "kanton/BS/415.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden schaffen Rahmenbedingungen, die zu einer Entwicklung von Kindern und Jugendlichen als eigenständige, sozial verantwortliche Personen und zu deren sozialer, kultureller und politischer Integration beitragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterstützen insbesondere die Schaffung und Erhaltung von kinder-, jugend- und familienfreundlichen Lebensbedingungen sowie die Prävention von besonderen Risiken."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie bieten Hilfen zur Erziehung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "e09d4bbe96c25717242bdbf176f642af716e20d9f0f148e038684db15ce7097a"
+    },
+    {
+      "id": "kanton/BS/415.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden schützen Kinder und Jugendliche inner- und ausserhalb ihrer Familie vor Gefährdungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Behörden treffen Vorkehrungen insbesondere zum Schutz vor Gewalt, Ausbeutung und Vernachlässigung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "dc69691474a6c81ba8aac0a5a84fb88678941f60973405921b8b779d5f361c23"
+    },
+    {
+      "id": "kanton/BS/415.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden sorgen für die Chancengleichheit aller Kinder und Jugendlichen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "bd53e98229da745c9c839db25bbbf82b698b44f6f70d59b8442f5efaebc4cd7f"
+    },
+    {
+      "id": "kanton/BS/415.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden informieren Kinder, Jugendliche und junge Erwachsene sowie ihre Eltern und Erziehungsberechtigten über die sie besonders betreffenden Angelegenheiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beziehen Kinder, Jugendliche und junge Erwachsene sowie ihre Eltern und Erziehungsberechtigten auf geeignete Weise in ihre Meinungs- und Willensbildung ein."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "665bccbbd2a33a1c9e75984fbd3280c93c8eadbae9157d8ef2e53c72c7fa8f07"
+    },
+    {
+      "id": "kanton/BS/415.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden sorgen für ein angemessenes Angebot von Leistungen zur Förderung und zum Schutz von Kindern, Jugendlichen und jungen Erwachsenen, soweit entsprechende Leistungen nicht von den Familien oder privaten Leistungserbringern erbracht werden können."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "4096d2506728aab695fb39e90e435dd69202bf70a6de8cdb5d8de0c9a3dff253"
+    },
+    {
+      "id": "kanton/BS/415.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden sorgen im Rahmen ihrer Zuständigkeit für ein angemessenes Angebot von folgenden Leistungen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Allgemeine Förderung von Kindern, Jugendlichen, jungen Erwachsenen und Familien:"
+            },
+            {
+              "marke": "a",
+              "text": "Familienergänzende Kinderbetreuung;"
+            },
+            {
+              "marke": "b",
+              "text": "offene Kinder- und Jugendarbeit;"
+            },
+            {
+              "marke": "c",
+              "text": "kulturelle Aktivitäten von Kindern und Jugendlichen sowie jungen Erwachsenen;"
+            },
+            {
+              "marke": "d",
+              "text": "Elternbildung."
+            },
+            {
+              "marke": "2",
+              "text": "Information und Beratung zur Bewältigung besonderer Herausforderungen und schwieriger Lebenslagen:"
+            },
+            {
+              "marke": "a",
+              "text": "Information und Beratung für Kinder und Jugendliche sowie junge Erwachsene;"
+            },
+            {
+              "marke": "b",
+              "text": "Information und Beratung für Eltern und Erziehungsberechtigte sowie Personen, die den Kindern und Jugendlichen nahe stehen;"
+            },
+            {
+              "marke": "c",
+              "text": "soziale Arbeit an Schulen;"
+            },
+            {
+              "marke": "d",
+              "text": "Leistungen zur Integration von Jugendlichen und jungen Erwachsenen in die Arbeitswelt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungen können beschränkt werden. Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden bestimmen die Einzelheiten der Leistungen, insbesondere den Umfang und den Zugang."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "717d8cdb882727d4a9a6dea5324f02f71f2c65f7456d8e98dd60b84b6042b354"
+    },
+    {
+      "id": "kanton/BS/415.100/art_9_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "9_a",
+      "artikelLabel": "§ 9a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden sorgen für ein ausreichendes Angebot von früher Deutschförderung fremdsprachiger Kinder im Vorschulbereich. Sie fördern hierzu insbesondere die Deutschförderung in Spielgruppen und Kindertagesstätten."
+        },
+        {
+          "absatz": "2",
+          "text": "Kinder mit Förderbedarf in Deutsch sind verpflichtet, vor der Einschulung während eines Schuljahres an drei Halbtagen pro Woche ein geeignetes Förderangebot zu besuchen. Der Besuch einer Spielgruppe mit Deutschförderung ist in diesem Umfang unentgeltlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement oder die zuständige Stelle der Gemeinden sorgt unter Mitwirkung der Erziehungsberechtigten für die Abklärung des Förderbedarfs."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erziehungsberechtigten sorgen bei festgestelltem Förderbedarf dafür, dass ihr Kind das Förderangebot regelmässig besucht. Der Besuch eines Angebots kann vom zuständigen Departement oder von der zuständigen Stelle der Gemeinden angeordnet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei wiederholter Verletzung ihrer Pflichten können die Erziehungsberechtigten vom zuständigen Departement oder von der zuständigen Stelle der Gemeinden mit einer Busse bis Fr. 1'000 belegt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "c3269afe00fc044837cffe507a7c68fc25d7f6633e511204a241bd6a070bbdcf"
+    },
+    {
+      "id": "kanton/BS/415.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton gewährleistet ein ausreichendes Angebot von Hilfen zur Erziehung. Er sorgt für Abklärungen und Gutachten.",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Ergänzende Hilfen zur Erziehung:"
+            },
+            {
+              "marke": "a",
+              "text": "Pädagogische und therapeutische Leistungen für Kinder und Jugendliche sowie junge Erwachsene;"
+            },
+            {
+              "marke": "b",
+              "text": "aufsuchende Familienarbeit;"
+            },
+            {
+              "marke": "c",
+              "text": "Unterbringung und Betreuung in Pflegefamilien und Institutionen;"
+            },
+            {
+              "marke": "d",
+              "text": "Entlastungsangebote für Eltern in Erziehungsverhältnissen mit besonderen Belastungen und Anforderungen."
+            },
+            {
+              "marke": "2",
+              "text": "Abklärungen und Gutachten:"
+            },
+            {
+              "marke": "a",
+              "text": "Abklärungen des Hilfebedarfs;"
+            },
+            {
+              "marke": "b",
+              "text": "Gutachten zuhanden von Behörden und Gerichten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ergänzende Hilfen zur Erziehung müssen von einer zuständigen und anerkannten Fachstelle zugewiesen oder bewilligt werden. Das zuständige Departement bestimmt die Einzelheiten der Leistungen, den Umfang und den Zugang."
+        },
+        {
+          "absatz": "3",
+          "text": "Abklärungen und Gutachten bedürfen einer behördlichen oder gerichtlichen Anordnung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "a3d71dca840e1256c90cfff71fc89c356954dfdd38450034d0140b773ad54a86"
+    },
+    {
+      "id": "kanton/BS/415.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jugendlichen, denen aufgrund dieses Gesetzes im Zeitpunkt des Erreichens der Mündigkeit Hilfe gewährt wird, kann diese weiterhin gewährt werden, solange dies erforderlich ist, jedoch längstens bis zur Vollendung des 25. Altersjahres."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "c8cf03d9a995c481f16c6f6bb65d9b7c5cae01275f8301111cbf6f1ce4435bd4"
+    },
+    {
+      "id": "kanton/BS/415.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kinder und Jugendliche können im Einzelfall beraten werden, ohne dass die Eltern darüber informiert werden, sofern sonst die Beratung oder der Beratungszweck beeinträchtigt würden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "1e59f5306da0b269d6f076b15a8dddbac5315be77a33b0c31450a42456aba6c3"
+    },
+    {
+      "id": "kanton/BS/415.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden informieren auf die Zielgruppe abgestimmt über die Leistungen im Sinne dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können die Erfüllung von Leistungen im Sinne dieses Gesetzes Dritten übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie bestimmen die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "1fe9556078b8ed168e81ee520c7c39f41003e1bd7d5ca816685f64c4cca79d55"
+    },
+    {
+      "id": "kanton/BS/415.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufgabenteilung zwischen Kanton und Gemeinden sowie die Finanzierung der Leistungen richten sich nach den spezialgesetzlichen Regelungen oder werden zwischen dem zuständigen Departement und den Gemeinden vertraglich geregelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Aufgaben der Einwohnergemeinde der Stadt Basel werden durch die kantonalen Organe und Behörden besorgt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "d1a16f4dbcb59b4132e2c3d8f62fd1e826ef89edf908633643f9a17eed19004f"
+    },
+    {
+      "id": "kanton/BS/415.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Leistungen der Kinder- und Jugendhilfe können von den Leistungsbezügern Kostenbeiträge erhoben werden. Die Kostenbeiträge richten sich in der Regel nach den Einkommens- und Vermögensverhältnissen. Die massgebliche wirtschaftliche Haushaltseinheit und die Berechnung des massgeblichen Einkommens richten sich nach dem Gesetz über die Harmonisierung und Koordination von bedarfsabhängigen Sozialleistungen (Harmonisierungsgesetz Sozialleistungen, SoHaG) vom 25. Juni 2008."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden bestimmen die Einzelheiten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "546f5ce473364ef5276162c3d2cfeb1741c9b1e14c901b20122e0a0ebe7c35cf"
+    },
+    {
+      "id": "kanton/BS/415.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden stellen die Leistungen in Zusammenarbeit mit den anderen Departementen, den Stellen der Gemeinden und den Leistungserbringern sicher. Sie nutzen die Möglichkeit einer regionalen Zusammenarbeit."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "be29adfd5e1454dcab3251a8c88f92268cd9d46598add8ad0852d20e3798c1e0"
+    },
+    {
+      "id": "kanton/BS/415.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat wählt eine Fachkommission zum Zweck der Beratung und der Förderung der Zusammenarbeit. Die Kinder- und Jugendkommission setzt sich zusammen aus Vertreterinnen und Vertretern der Gemeinden, der Leistungserbringer sowie der zuständigen kantonalen Fachstellen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "6f3a908e0d9753be810e965e02092b8fd6330aff5a8a13648fe20e2fa2e61523"
+    },
+    {
+      "id": "kanton/BS/415.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden vollziehen die Aufgaben des vorliegenden Gesetzes, sofern sie nicht ausdrücklich einer anderen Behörde zugeordnet sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt die notwendigen Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "c1a4a9b3ef2bd6365b6ec7fae2bc2faa7e5b5ba5bc0542fa889e06333368350a"
+    },
+    {
+      "id": "kanton/BS/415.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden planen und entwickeln die Leistungen im Sinne dieses Gesetzes und stellen eine bedarfsgerechte Weiterentwicklung des Angebots sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beziehen die Leistungserbringer und weitere betroffene Kreise ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat berichtet periodisch über die Entwicklung der Angebote und Leistungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "4a4a3a8b4113d04e328a11cac0a327d41cbd27fc34f400ae147be2c38bf04996"
+    },
+    {
+      "id": "kanton/BS/415.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement beziehungsweise die zuständige Stelle der Gemeinden sowie die weiteren in der Kinder- und Jugendhilfe tätigen öffentlichen Stellen können zum Zweck der Planung, der Information, der Wirksamkeitsprüfung und der Kontrolle Personendaten bearbeiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können Personendaten privaten Leistungserbringern zur Bearbeitung weiterleiten, die diese zur Erfüllung der öffentlich finanzierten Leistungen im Sinne dieses Gesetzes benötigen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "993e4de92b1b02b0313bbe951666f75c342711fcfd178bf01a2b3bcf46bb46e5"
+    },
+    {
+      "id": "kanton/BS/415.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die Leistungen im Sinne dieses Gesetzes erbringen, sind zur Verschwiegenheit über alle ihnen aus dieser Tätigkeit bekannt gewordenen Tatsachen verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen vertrauliche Informationen nur in Erfüllung einer ausdrücklichen gesetzlichen Pflicht oder mit Zustimmung der betreffenden Personen austauschen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Schweigepflicht besteht nicht gegenüber Fachpersonen und Institutionen im Rahmen der fachlich erforderlichen Zusammenarbeit. Vorbehalten bleiben spezialgesetzliche Bestimmungen zum Berufsgeheimnis."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "976a2ae529c32836af3b26add854923088d41110ebe1843f87cff3bffe163094"
+    },
+    {
+      "id": "kanton/BS/415.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kinder- und Jugendgesetz, KJG (415.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz betreffend kantonale Jugendhilfe vom 17. Oktober 1984 wird aufgehoben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/415.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "320719b89e79679c869c1d6666ba2f3e",
+      "sha": "6b03cfe05fe140d216a7439fffdaf1e8d8d5617ac5a0e47ce13208790ff39d40"
+    }
+  ]
+}

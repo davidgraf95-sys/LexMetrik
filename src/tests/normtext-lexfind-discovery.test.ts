@@ -6,6 +6,7 @@ import { describe, it, expect } from 'vitest';
 import {
   klassifiziereQuelle,
   tierVerteilung,
+  enumeriereKanton,
   LEXFIND_ENTITY,
   type EntdeckterErlass,
 } from '../../scripts/normtext/lexfind-discovery.ts';
@@ -88,5 +89,51 @@ describe('LEXFIND_ENTITY', () => {
     expect(Object.keys(LEXFIND_ENTITY)).toHaveLength(27);
     expect(LEXFIND_ENTITY.AR).toBe(3);
     expect(LEXFIND_ENTITY.CH).toBe(27);
+  });
+});
+
+describe('enumeriereKanton (Netz-Hülle, fetch injiziert)', () => {
+  /** Antwort-Stub mit nur den genutzten Feldern. */
+  const json = (body: unknown): Response =>
+    ({ ok: true, status: 200, json: async () => body } as unknown as Response);
+
+  it('übersteht einen ETIMEDOUT auf Seite 1 und paginiert vollständig (Crash-Regression GR)', async () => {
+    // Reihenfolge: POST start → GET Seite1 (Timeout!) → GET Seite1 (ok, 2 Seiten)
+    //              → GET Seite2 (ok). Der Timeout darf den Lauf NICHT killen.
+    const calls: string[] = [];
+    const fetchImpl = (async (_url: string, init?: RequestInit) => {
+      const istPost = init?.method === 'POST';
+      calls.push(istPost ? 'POST' : `GET#${calls.filter((c) => c.startsWith('GET')).length + 1}`);
+      if (istPost) return json({ id: 1, session_id: 's' });
+      const getNr = calls.filter((c) => c.startsWith('GET')).length;
+      if (getNr === 1) throw new Error('ETIMEDOUT');
+      if (getNr === 2) {
+        return json({
+          number_of_pages: 2,
+          texts_of_law_with_matches: [
+            { systematic_number: '146.1', is_active: true, dta_urls: [{ original_url: 'https://ar.clex.ch/data/146.1/de' }], matches: [{ title: 'A' }] },
+          ],
+        });
+      }
+      return json({
+        number_of_pages: 2,
+        texts_of_law_with_matches: [
+          { systematic_number: '147.1', is_active: true, dta_urls: [{ original_url: 'https://ar.clex.ch/data/147.1/de' }], matches: [{ title: 'B' }] },
+        ],
+      });
+    }) as unknown as typeof fetch;
+
+    const erlasse = await enumeriereKanton('AR', {
+      netz: { fetchImpl, warte: async () => {}, versuche: 3 },
+    });
+
+    expect(erlasse.map((e) => e.systematischeNummer)).toEqual(['146.1', '147.1']);
+    expect(erlasse.every((e) => e.klassifikation.tier === 'A-struktur')).toBe(true);
+    // POST + 1 Timeout-Versuch + Seite1-Erfolg + Seite2 = 4 fetch-Aufrufe
+    expect(calls.length).toBe(4);
+  });
+
+  it('wirft bei unbekanntem Kanton (vor jedem Netz-Zugriff)', async () => {
+    await expect(enumeriereKanton('XX')).rejects.toThrow(/unbekannter Kanton/);
   });
 });

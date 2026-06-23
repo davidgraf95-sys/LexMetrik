@@ -1,0 +1,373 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.830/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anwendung Dieser Tarif gilt für alle Benützerinnen und Benützer der Wasserversorgung; vorbehalten bleibt die Verrechnung nach §§ 2, 3 und 4."
+        },
+        {
+          "absatz": "2",
+          "text": "Wasserpreis Der Wasserpreis besteht aus einem Einheitspreis pro bezogenen Kubikmeter Wasser und einem Grundpreis, der anhand des Spitzendurchflusses auf der Anschlussleitung zum einzelnen Wasserzähler bestimmt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Einheitspreis Der Einheitspreis beträgt Fr. 1.58/m&sup3;."
+        },
+        {
+          "absatz": "4",
+          "text": "Grundpreis",
+          "mehrspaltig": {
+            "kopf": [
+              "Leistungsbereich",
+              "Spitzendurchfluss",
+              "Jährlicher Grundpreis"
+            ],
+            "zeilen": [
+              [
+                "Leistungsbereich 1",
+                "bis 3.24 m&sup3;/h",
+                "Fr. 300"
+              ],
+              [
+                "Leistungsbereich 2",
+                "3.25-4.32 m&sup3;/h",
+                "Fr. 420"
+              ],
+              [
+                "Leistungsbereich 3",
+                "4.33-5.4 m&sup3;/h",
+                "Fr. 600"
+              ],
+              [
+                "Leistungsbereich 4",
+                "5.41-9.00 m&sup3;/h",
+                "Fr. 1'200"
+              ],
+              [
+                "Leistungsbereich 5",
+                "9.01-11.52 m&sup3;/h",
+                "Fr. 1'800"
+              ],
+              [
+                "Leistungsbereich 6",
+                "11.53-19.80 m&sup3;/h",
+                "Fr. 2'100"
+              ],
+              [
+                "Leistungsbereich 7",
+                "19.81-36.00 m&sup3;/h",
+                "Fr. 4'200"
+              ],
+              [
+                "Leistungsbereich 8",
+                "36.01-54 m&sup3;/h",
+                "Fr. 6'600"
+              ],
+              [
+                "Leistungsbereich 9",
+                "54.01-90.00 m&sup3;/h",
+                "Fr. 10'800"
+              ],
+              [
+                "Leistungsbereich 10",
+                "90.01-252.00 m&sup3;/h",
+                "Fr. 21'000"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "5",
+          "text": "Besondere Bestimmungen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Ablesung erfolgt in der Regel jährlich, mit viermonatlichen Akontozahlungen, die je ungefähr einem Drittel der Jahresrechnung entsprechen."
+            },
+            {
+              "marke": "b",
+              "text": "Die Abrechnung gewerblicher und industrieller Bezüger kann monatlich erfolgen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "6dea2649ac30aef7f4420ed9c5d8fb02adcd06b8cb60b48832c5d1a34f35fef6"
+    },
+    {
+      "id": "kanton/BS/772.830/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anwendung Diese Tarife gelten für die Benützerinnen und Benützer der Wasserversorgung, die Wasser für besondere Zwecke einsetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Temporäre Wasserabgabe",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis: Zählerpreis Fr 1.25/Zähler/Tag"
+            },
+            {
+              "marke": "c",
+              "text": "Fixkostenanteil (pro Ausleihung oder Jahr) Fr. 150.-"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Wasserabgabe für Kleingärten",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis Fr. 150.-/Jahr"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Sprinkleranlagen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis (Zur Brandverhütung und -bekämpfung verwendetes Wasser wird nicht verrechnet.) Fr. -.-"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis (Nach Anschlussleistung der Anlage) Fr. 65.-/(m&sup3;/h)/Jahr"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Klima- und Kühlanlagen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis Fr. 60.-/(m&sup3;/h)/Jahr"
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Rohwasserabgabe",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einheitspreis Fr. 0.65/m&sup3;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundpreis gemäss § 1 Abs. 4"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "0b68c5c40fb84ebf725127c811fcf3dcb014d59aefa7f5b019a2859f820aac31"
+    },
+    {
+      "id": "kanton/BS/772.830/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tarif Sockeltarif für den Mindestbezug von 50'000 m&sup3;: Fr. 57'000 / Jahr · Einheitspreis: ab 50'000 bis 100'000 m&sup3;: Fr. 1.14/m&sup3; · Grundpreis: gemäss § 1 Abs. 4"
+        },
+        {
+          "absatz": "2",
+          "text": "Bedingungen für die Brauchwasser-Lieferung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mindestbezug von 50'000 m&sup3;/Jahr;"
+            },
+            {
+              "marke": "b",
+              "text": "Separates Brauchwassernetz mit Brauchwasserzählern in den Gebäuden der Kundin und des Kunden;"
+            },
+            {
+              "marke": "c",
+              "text": "Abschaltbar bei Engpässen in der Trinkwasserversorgung;"
+            },
+            {
+              "marke": "d",
+              "text": "Es wird keine Trinkwasserqualität garantiert."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das unverschmutzte Brauchwasser muss über eine Sauberwasserableitung oder in einen Vorfluter abgeführt werden. Verschmutztes Brauchwasser ist über die ARA abzuleiten. Entsprechende Bewilligungen der zuständigen kantonalen Verwaltung sind vorgängig einzuholen."
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "9cb5bc9601a4287ffc52807aaec87e494cc54160699eab0f764d4733c0d0cf7f"
+    },
+    {
+      "id": "kanton/BS/772.830/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einem Trinkwasserbezug von mehr als 120'000 m&sup3; pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einem reinen Brauchwasserbezug von mehr als 100'000 m&sup3; pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "7e29abc189f8c0dd14f2d5e3b7f9d54a4456adafce158c7b229b3e491ea684a7"
+    },
+    {
+      "id": "kanton/BS/772.830/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wasserverbrauch für öffentliche Zwecke",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Gebühren für das Wasser der öffentlichen Brunnen, das Schwemmen der Strassen und das Begiessen oder Spülen anderer öffentlicher Anlagen werden dem jeweiligen Gemeinwesen in Rechnung gestellt."
+            },
+            {
+              "marke": "b",
+              "text": "Dieser Wasserverbrauch ist den IWB mit 75% des Einheitspreises nach § 1 Abs. 3 zu vergüten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Brunnbriefe",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Industriellen Werke Basel sind ermächtigt, aufgrund von Brunnbriefen käuflich erworbene Berechtigungen zum Bezug von Quellwasser im laufenden Erguss durch Abschluss eines Vertrages zum Bezug zu beliebiger Zeit zu konvertieren, sofern der Abonnent sich bereit erklärt, auf seine Kosten einen Wasserzähler einzubauen und unterhalten zu lassen."
+            },
+            {
+              "marke": "b",
+              "text": "Neben dem Grundpreis nach § 1 Abs. 4 ist in diesem Fall für jeden über 800 m&sup3; (½ Helbling) pro Jahr hinaus bezogenen m&sup3; der Einheitspreis nach § 1 Abs. 3 zu bezahlen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "e4c1234aaa18bc684790077fa6fca117099982e4f22145ce80cbdf70da4d872e"
+    },
+    {
+      "id": "kanton/BS/772.830/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ablesung und Verrechnung",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Der Wasserbezug wird in Kubikmetern (m&sup3;) gemessen und verrechnet."
+            },
+            {
+              "marke": "b",
+              "text": "Der Grundpreis ist auch für die Zeit zu bezahlen, in der kein Wasser bezogen wird."
+            },
+            {
+              "marke": "c",
+              "text": "Auf allen Wasserpreisen wird die Mehrwertsteuer erhoben."
+            },
+            {
+              "marke": "d",
+              "text": "Es wird zusätzlich eine Konzessionsgebühr gemäss § 30 Abs. 3 IWB-Gesetz erhoben."
+            },
+            {
+              "marke": "e",
+              "text": "Es wird zusätzlich ein Zuschlag für die Aufwendungen der öffentlichen Brunnen gemäss § 60 Abs. 4 Ausführungsbestimmungen von IWB Industrielle Werke Basel betreffend die Abgabe von Trinkwasser vom 28. November 2011 in Höhe von Fr. 0.08/m&sup3; erhoben."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "677fd0ad0be481c2671ab987d1682f0b456dbb4541da8f663333b6d16ececb10"
+    },
+    {
+      "id": "kanton/BS/772.830/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verrechnung von Bezügen, die vor und nach Inkrafttreten dieses Gebührentarifs getätigt wurden, beruht auf der Annahme eines gleichmässigen Verbrauchs über die gesamte Abrechnungsperiode. Die Aufteilung erfolgt in einen Anteil vor dem 1. März 2018, der zu den damals gültigen Tarifen in Rechnung gestellt wird, und in einen Anteil nach dem 1. März 2018, welcher nach diesem Gebührentarif in Rechnung gestellt wird."
+        }
+      ],
+      "stand": "2024-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056b039093f84f9168d81ffec929adcf",
+      "sha": "85163af22e0dcf513f06f31030822983d2ac5330c26577b6416cdb0a17993d13"
+    }
+  ]
+}

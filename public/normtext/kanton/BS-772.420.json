@@ -1,0 +1,1446 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.420/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieser Gebührentarif regelt die Gebühren und Tarife für den Anschluss und die Nutzung des Elektrizitätsverteilnetzes der IWB Industrielle Werke Basel (IWB) sowie die Messung von Elektrizität."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "d6efeb4864899c481222f86ee537b1cecb898815308fbd5dff4a07fa725fdece"
+    },
+    {
+      "id": "kanton/BS/772.420/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Erstellung, den Betrieb und den Unterhalt dauerhafter Netzanschlüsse für Grundstücke oder elektrische Anlagen erhebt IWB eine Anschlussgebühr, bestehend aus einem Netzanschlussbeitrag und einem Netzkostenbeitrag, ausser bei Energieerzeugungsanlagen. Für den Anschluss von Energieerzeugungsanlagen gilt § 17 Abs. 3 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität vom 14. Dezember 2023."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "a83472663d65d5f1cc50e0e3e65cfaed39f8273bef0e31ae4b065a8c60d8cf0f"
+    },
+    {
+      "id": "kanton/BS/772.420/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Netzanschlussbeitrag richtet sich nach der Netzebene."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf der Netzebene 7 setzt sich der Netzanschlussbeitrag aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Massgebend für die Höhe des Grundbetrages und der Meterpauschale sind die maximale Sicherungsgrösse des Anschlussüberstromunterbrechers, die maximal übertragbare Leistung sowie die Erforderlichkeit von Tiefbauarbeiten. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung vom Netzanschlusspunkt bis zum Übergabepunkt erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Netzanschlussbeiträge der Netzebene 7 betragen:",
+          "mehrspaltig": {
+            "kopf": [
+              "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
+              "Maximal übertragbare Leistung",
+              "Tiefbauarbeiten",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "63 A",
+                "44 kVA",
+                "ohne",
+                "Fr. 2’000",
+                "Fr. 50"
+              ],
+              [
+                "63 A",
+                "44 kVA",
+                "mit",
+                "Fr. 6’000",
+                "Fr. 150"
+              ],
+              [
+                "100 A",
+                "69 kVA",
+                "ohne",
+                "Fr. 2’000",
+                "Fr. 50"
+              ],
+              [
+                "100 A",
+                "69 kVA",
+                "mit",
+                "Fr. 6’000",
+                "Fr. 150"
+              ],
+              [
+                "160 A",
+                "111 kVA",
+                "ohne",
+                "Fr. 3’000",
+                "Fr. 75"
+              ],
+              [
+                "160 A",
+                "111 kVA",
+                "mit",
+                "Fr. 7’500",
+                "Fr. 200"
+              ],
+              [
+                "250 A",
+                "173 kVA",
+                "ohne",
+                "Fr. 4’000",
+                "Fr. 100"
+              ],
+              [
+                "250 A",
+                "173 kVA",
+                "mit",
+                "Fr. 9’000",
+                "Fr. 250"
+              ],
+              [
+                "315 A",
+                "218 kVA",
+                "ohne",
+                "Fr. 5’000",
+                "Fr. 125"
+              ],
+              [
+                "315 A",
+                "218 kVA",
+                "mit",
+                "Fr. 10’500",
+                "Fr. 300"
+              ],
+              [
+                "400 A",
+                "277 kVA",
+                "ohne",
+                "Fr. 6’000",
+                "Fr. 150"
+              ],
+              [
+                "400 A",
+                "277 kVA",
+                "mit",
+                "Fr. 12’000",
+                "Fr. 400"
+              ],
+              [
+                "500 A",
+                "346 kVA",
+                "ohne",
+                "Fr. 8’000",
+                "Fr. 200"
+              ],
+              [
+                "500 A",
+                "346 kVA",
+                "mit",
+                "Fr. 13’500",
+                "Fr. 500"
+              ],
+              [
+                "630 A",
+                "436 kVA",
+                "ohne",
+                "Fr. 10’000",
+                "Fr. 250"
+              ],
+              [
+                "630 A",
+                "436 kVA",
+                "mit",
+                "Fr. 15’000",
+                "Fr. 600"
+              ],
+              [
+                "800 A",
+                "554 kVA",
+                "ohne",
+                "Fr. 12’000",
+                "Fr. 300"
+              ],
+              [
+                "800 A",
+                "554 kVA",
+                "mit",
+                "Fr. 18’000",
+                "Fr. 800"
+              ],
+              [
+                "1’000 A",
+                "630 kVA",
+                "ohne",
+                "Fr. 15’000",
+                "Fr. 400"
+              ],
+              [
+                "1’000 A",
+                "630 kVA",
+                "mit",
+                "Fr. 23’000",
+                "Fr. 900"
+              ],
+              [
+                "1’250 A",
+                "800 kVA",
+                "ohne",
+                "Fr. 18’000",
+                "Fr. 450"
+              ],
+              [
+                "1’250 A",
+                "800 kVA",
+                "mit",
+                "Fr. 26’000",
+                "Fr. 1’200"
+              ],
+              [
+                "1’600 A",
+                "1000 kVA",
+                "ohne",
+                "Fr. 24’000",
+                "Fr. 600"
+              ],
+              [
+                "1’600 A",
+                "1000 kVA",
+                "mit",
+                "Fr. 32’000",
+                "Fr. 1’600"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "4",
+          "text": "Auf der Netzebene 5 setzt sich der Netzanschlussbeitrag aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Massgebend für die Höhe des Grundbetrages und der Meterpauschale sind der Leitungsquerschnitt sowie die Erforderlichkeit von Tiefbauarbeiten. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung (vom Netzanschlusspunkt bis zum Übergabepunkt) erhoben."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Netzanschlussbeiträge der Netzebene 5 betragen:",
+          "mehrspaltig": {
+            "kopf": [
+              "Leitungsquerschnitt der Anschlussleitung",
+              "Tiefbauarbeiten",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "95 mm&sup2;",
+                "ohne",
+                "Fr. 6’000",
+                "Fr. 100"
+              ],
+              [
+                "95 mm&sup2;",
+                "mit",
+                "Fr. 11’000",
+                "Fr. 250"
+              ],
+              [
+                "150 mm&sup2;",
+                "ohne",
+                "Fr. 7’000",
+                "Fr. 125"
+              ],
+              [
+                "150 mm&sup2;",
+                "mit",
+                "Fr. 12’500",
+                "Fr. 300"
+              ],
+              [
+                "240 mm&sup2;",
+                "ohne",
+                "Fr. 8’000",
+                "Fr. 150"
+              ],
+              [
+                "240 mm&sup2;",
+                "mit",
+                "Fr. 14’000",
+                "Fr. 400"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "6",
+          "text": "Der Netzanschlussbeitrag auf Netzebene 3 richtet sich nach den effektiven Kosten des Netzanschlusses und wird in Form eines Pauschalbetrages in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "500c2717b048a75df431dc2ca5877450c7aa65975d6f81d7ab93e4a916fa4fce"
+    },
+    {
+      "id": "kanton/BS/772.420/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Netzkostenbeitrag richtet sich nach der Netzebene und der Anschlussleistung und wird in Fr. pro kVA wie folgt erhoben: Netzebene 3 · Netzkostenbeitrag: Fr. 40/kVA — Netzebene 5 · Netzkostenbeitrag: Fr. 150/kVA — Netzebene 7, Anschluss ab IWB-Trafostation auf dem angeschlossenen Grundstück · Netzkostenbeitrag: Fr. 160/kVA — Netzebene 7, Anschluss ab Allmend · Netzkostenbeitrag: Fr. 200/kVA"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "f27ac3c8d603d643844117486c0a89d6e84a8ce91a47c6408720d4a452fd57bf"
+    },
+    {
+      "id": "kanton/BS/772.420/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Netzanschlüssen mit spezieller Verlegeart, speziellem Verlegematerial, spezieller Leitungsführung, Rückbauten, Abholzungen oder Tiefbauarbeiten mit einer Tiefe von mehr als 1,50 Meter werden den Kundinnen und Kunden neben der Anschlussgebühr die mit dem zusätzlichen Aufwand verbundenen Kosten (Ist-Kosten) in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "befd9635b7df2276ee4102c1ca295b38eda56f2380338301e68ecda06a2916d8"
+    },
+    {
+      "id": "kanton/BS/772.420/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für temporäre Netzanschlüsse für Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen erhebt IWB eine Gebühr. Die Gebühr richtet sich nach der Anschlussgrösse und umfasst die Kosten für die Erstellung und die Demontage von Netzanschlüssen mit einer Anschlussleitung von bis zu 10 Metern und ohne Tiefbauarbeiten. Die Gebühr beträgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Anschlussgrösse",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "A1 (&le; 5 kW/16 A)",
+                "Fr. 100"
+              ],
+              [
+                "A2 (> 5 kW/16 A &le; 20 kW/32 A)",
+                "Fr. 200"
+              ],
+              [
+                "B (> 20 kW/32 A &le; 40 kW/63 A)",
+                "Fr. 540"
+              ],
+              [
+                "C (> 40 kW/63 A &le; 80 kW/125 A)",
+                "Fr. 960"
+              ],
+              [
+                "D (> 80 kW/125 A &le; 120 kW/160 A)",
+                "Fr. 1’080"
+              ],
+              [
+                "E (> 120 kW/160 A)",
+                "Fr. 1’200"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Der ausserordentliche Aufwand für temporäre Netzanschlüsse mit Tiefbauarbeiten oder einer Anschlussleitung von mehr als 10 Metern wird der Kundin oder dem Kunden zusätzlich in Rechnung gestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Zusatzleistung",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "Expressauftrag (Netzanschluss innerhalb von 5 Arbeitstagen)",
+                "Fr. 250"
+              ],
+              [
+                "Fernsteuerung per SGC (Smart Grid Cabinet)",
+                "Fr. 150"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "01114f217cbcd307eb3637486fc401c5144479bbc0b497907bdbeb2d81fe12b3"
+    },
+    {
+      "id": "kanton/BS/772.420/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Baustromanschlüsse erhebt IWB eine Anschluss- und Bereitstellungsgebühr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anschlussgebühr umfasst die Erstellung und Demontage des Baustromanschlusses und richtet sich nach der Anschlussgrösse gemäss § 22 Abs. 4 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität vom 14. Dezember 2023. Sie deckt die Erstellung und Demontage von Netzanschlüssen mit einer Anschlussleitung von bis zu 10 Metern Länge, ohne Tiefbauarbeiten. Ausserordentlicher Aufwand für Anschlüsse mit Tiefbauarbeiten oder einer Anschlussleitung von mehr als 10 Metern Länge wird den Kundinnen und Kunden zusätzlich in Rechnung gestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bereitstellungsgebühr richtet sich nach der Anschlussgrösse und nach der Bereitstellungdauer des Baustromanschlusses. Sie wird für die ersten sechs Monate pauschal, anschliessend monatlich in Rechnung gestellt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anschluss- und Bereitstellungsgebühren betragen wie folgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Grösse des Baustromanschlusses",
+              "Anschlussgebühr",
+              "Bereitstellungsgebühr"
+            ],
+            "zeilen": [
+              [
+                "125 A",
+                "Fr. 630",
+                "Monat 1 – 6: Fr. 400 (pauschal)"
+              ],
+              [
+                "125 A",
+                "Fr. 630",
+                "ab Monat 7: Fr. 60 je angebrochenem Monat"
+              ],
+              [
+                "400 A",
+                "Fr. 630",
+                "Monat 1 – 6: Fr. 580 (pauschal)"
+              ],
+              [
+                "400 A",
+                "Fr. 630",
+                "ab Monat 7: Fr. 90 je angebrochenem Monat"
+              ],
+              [
+                "500 A",
+                "Fr. 630",
+                "Monat 1 – 6: Fr. 640 (pauschal)"
+              ],
+              [
+                "500 A",
+                "Fr. 630",
+                "ab Monat 7: Fr. 100 je angebrochenem Monat"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "5",
+          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Zusatzleistung",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "Expressauftrag (Netzanschluss innerhalb von 5 Arbeitstagen)",
+                "Fr. 250"
+              ],
+              [
+                "Fernsteuerung per SGC (Smart Grid Cabinet)",
+                "Fr. 150"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "c55478b65ef21a9e89157b35284b2a6bea0d22166c5365797346d351067e7567"
+    },
+    {
+      "id": "kanton/BS/772.420/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Erneuerung von dauerhaften Netzanschlüssen für Grundstücke oder elektrische Anlagen erhebt IWB eine Anschlussersatzgebühr. Die Höhe der Anschlussersatzgebühr richtet sich nach der Netzebene."
+        },
+        {
+          "absatz": "2",
+          "text": "Es wird zwischen dem koordinierten Netzersatz und dem Einzelersatz unterschieden. Ein koordinierter Netzersatz liegt bei der zeitgleichen Erneuerung oder Änderungen von Teilen des Verteilnetzes durch IWB in Koordination gemäss Art. 13 Abs. 1 Vorschriften des Baudepartementes für die Ausführung von Grabarbeiten in der Allmend vom 25. November 1974 vor."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "a1e1f481d5ff9b458b2b40a1ab7dafcad6ff70d905458fea660e66e572a85a15"
+    },
+    {
+      "id": "kanton/BS/772.420/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf der Netzebene 7 setzt sich die Anschlussersatzgebühr im koordinierten Netzersatz aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Mas⁠s⁠gebend für die Höhe des Grundbetrages und der Meterpauschale sind die maximale Sicherungsgrösse des Anschlussüberstromunterbrechers bzw. die maximal übertragbare Leistung. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung vom Netzanschlusspunkt bis zum Übergabepunkt erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 7:",
+          "mehrspaltig": {
+            "kopf": [
+              "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
+              "Maximal übertragbare Leistung",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "bis 100 A",
+                "bis 69 kVA",
+                "Fr. 4’800",
+                "Fr. 120"
+              ],
+              [
+                "125 A / 160 A",
+                "87 kVA / 111 kVA",
+                "Fr. 6’000",
+                "Fr. 160"
+              ],
+              [
+                "200 A / 250 A",
+                "139 kVA / 173 kVA",
+                "Fr. 7’200",
+                "Fr. 200"
+              ],
+              [
+                "315 A",
+                "218 kVA",
+                "Fr. 8’400",
+                "Fr. 240"
+              ],
+              [
+                "400 A",
+                "277 kVA",
+                "Fr. 9’600",
+                "Fr. 320"
+              ],
+              [
+                "500 A",
+                "346 kVA",
+                "Fr. 10’800",
+                "Fr. 400"
+              ],
+              [
+                "630 A",
+                "436 kVA",
+                "Fr. 12’000",
+                "Fr. 480"
+              ],
+              [
+                "800 A",
+                "554 kVA",
+                "Fr. 14’400",
+                "Fr. 640"
+              ],
+              [
+                "1’000 A",
+                "630 kVA",
+                "Fr. 18’400",
+                "Fr. 720"
+              ],
+              [
+                "1’250 A",
+                "800 kVA",
+                "Fr. 20’800",
+                "Fr. 960"
+              ],
+              [
+                "1’600 A",
+                "1’000 kVA",
+                "Fr. 25’600",
+                "Fr. 1’280"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "3",
+          "text": "Auf der Netzebene 5 setzt sich die Anschlussersatzgebühr aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Massgebend für die Höhe des Grundbetrages und der Meterpauschale ist der Leitungsquerschnitt. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung vom Netzanschlusspunkt bis zum Übergabepunkt erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 5:",
+          "mehrspaltig": {
+            "kopf": [
+              "Leitungsquerschnitt der Anschlussleitung",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "95 mm&sup2;",
+                "Fr. 8’800",
+                "Fr. 200"
+              ],
+              [
+                "150 mm&sup2;",
+                "Fr. 10’000",
+                "Fr. 240"
+              ],
+              [
+                "240 mm&sup2;",
+                "Fr. 11’200",
+                "Fr. 320"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anschlussersatzgebühr im koordinierten Netzersatz richtet sich auf Netzebene 3 nach den effektiven Kosten des Netzanschlusses und wird in Form eines Pauschalbetrages in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "54c6323847c7ed57b01a92309cfc96de04c77b40920182fa1b592ddefe294129"
+    },
+    {
+      "id": "kanton/BS/772.420/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf der Netzebene 7 setzt sich die Anschlussersatzgebühr im Einzelersatz aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Massgebend für die Höhe des Grundbetrages und der Meterpauschale sind die maximale Sicherungsgrösse des Anschlussüberstromunterbrechers bzw. die maximal übertragbare Leistung. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung vom Netzanschlusspunkt bis zum Übergabepunkt erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 7:",
+          "mehrspaltig": {
+            "kopf": [
+              "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
+              "Maximal übertragbare Leistung",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "bis 100 A",
+                "bis 69 kVA",
+                "Fr. 6’000",
+                "Fr. 150"
+              ],
+              [
+                "125 A / 160 A",
+                "87 kVA / 111 kVA",
+                "Fr. 7’500",
+                "Fr. 200"
+              ],
+              [
+                "200 A / 250 A",
+                "139 kVA / 173 kVA",
+                "Fr. 9’000",
+                "Fr. 250"
+              ],
+              [
+                "315 A",
+                "218 kVA",
+                "Fr. 10’500",
+                "Fr. 300"
+              ],
+              [
+                "400 A",
+                "277 kVA",
+                "Fr. 12’000",
+                "Fr. 400"
+              ],
+              [
+                "500 A",
+                "346 kVA",
+                "Fr. 13’500",
+                "Fr. 500"
+              ],
+              [
+                "630 A",
+                "436 kVA",
+                "Fr. 15’000",
+                "Fr. 600"
+              ],
+              [
+                "800 A",
+                "554 kVA",
+                "Fr. 18’000",
+                "Fr. 800"
+              ],
+              [
+                "1’000 A",
+                "630 kVA",
+                "Fr. 23’000",
+                "Fr. 900"
+              ],
+              [
+                "1’250 A",
+                "800 kVA",
+                "Fr. 26’000",
+                "Fr. 1’200"
+              ],
+              [
+                "1’600 A",
+                "1’000 kVA",
+                "Fr. 32’000",
+                "Fr. 1’600"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "3",
+          "text": "Auf der Netzebene 5 setzt sich die Anschlussersatzgebühr im Einzelersatz aus einem Grundbetrag und einem Pauschalbetrag pro Meter Anschlussleitung (Meterpauschale) zusammen. Massgebend für die Höhe des Grundbetrages und der Meterpauschale ist der Leitungsquerschnitt. Die Meterpauschale wird jeweils für jeden Meter Anschlussleitung (vom Netzanschlusspunkt bis zum Übergabepunkt) erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 5:",
+          "mehrspaltig": {
+            "kopf": [
+              "Leitungsquerschnitt der Anschlussleitung",
+              "Grundbetrag",
+              "Meterpauschale (pro Meter Anschlussleitung)"
+            ],
+            "zeilen": [
+              [
+                "95 mm&sup2;",
+                "Fr. 11’000",
+                "Fr. 250"
+              ],
+              [
+                "150 mm&sup2;",
+                "Fr. 12’500",
+                "Fr. 300"
+              ],
+              [
+                "240 mm&sup2;",
+                "Fr. 14’000",
+                "Fr. 400"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anschlussersatzgebühr im Einzelersatz richtet sich auf Netzebene 3 nach den effektiven Kosten des Netzanschlusses und wird in Form eines Pauschalbetrages in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "ccda96b05569940f7514e2f10e5fe1c18b09a18bd39c678b47c1c843894ba13f"
+    },
+    {
+      "id": "kanton/BS/772.420/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Netzanschlüssen mit spezieller Verlegeart, speziellem Verlegematerial, spezieller Leitungsführung, Rückbauten, Abholzungen oder Tiefbauarbeiten mit einer Tiefe von mehr als 1,50 Meter werden den Kundinnen und Kunden neben der Anschlussersatzgebühr die mit dem zusätzlichen Aufwand verbundenen Kosten (Ist-Kosten) in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "e312d60fad04ecbb21364c8fa935839b81c44753c0cc76d6df77ff704934d43c"
+    },
+    {
+      "id": "kanton/BS/772.420/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Nutzung des Verteilnetzes erhebt IWB bei den Kundinnen und Kunden ein Netznutzungsentgelt basierend auf den Vorgaben des Bundesgesetzes über die Stromversorgung (StromVG) vom 23. März 2007 und der Stromversorgungsverordnung (StromVV) vom 14. März 2008."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Netznutzungsentgelt richtet sich nach der Netzebene (Anschlussebene) und berechnet sich nach dem Wirkenergieverbrauch pro kWh (verbrauchsabhängiges Netznutzungsentgelt) sowie bei Netzanschlüssen mit einer Bezügersicherung grösser oder gleich 100 A zusätzlich nach der maximalen viertelstündlichen Wirkleistung (kW) während der Normaltarifzeit in einem Monat (verbrauchs- und leistungsabhängiges Netznutzungsentgelt)."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist ein Doppeltarif (Normal- und Spartarif) vorgesehen, gilt der Normaltarif von Montag bis Freitag zwischen 06.00 und 20.00 Uhr, der Spartarif ausserhalb dieser Zeiten."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Kundinnen und Kunden ohne Messmittel gemäss § 40 Abs. 2 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität vom 14. Dezember 2023 wird eine angemessene Tarifpauschale pro Verbrauchsstätte erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "658bc9fc0b44ae8c4c8ed080c2d327795048156869c7c1b9bd894ffecfb8fad3"
+    },
+    {
+      "id": "kanton/BS/772.420/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einfachtarif kommt zur Anwendung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Kundinnen und Kunden ohne Smart Meter oder anderem doppeltariffähigen Elektrizitätszähler;"
+            },
+            {
+              "marke": "b",
+              "text": "für Kundinnen und Kunden mit Smart Meter oder anderem doppeltariffähigen Elektrizitätszähler, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die Kundin oder der Kunde den Einfachtarif wählt oder"
+            },
+            {
+              "marke": "2",
+              "text": "die Kundin oder der Kunde den Einfachtarif von der vorherigen Kundin bzw. dem vorherigen Kunden übernimmt. Eine Übernahme erfolgt, wenn für den betreffenden Messpunkt zuletzt, vor Begründung des Grundversorgungsverhältnisses durch die Kundin oder den Kunden gemäss § 31 Abs. 2 der Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität vom 14. Dezember 2023, der Einfachtarif zur Anwendung kam und die Kundin oder der Kunde keine abweichende Wahl zugunsten des Doppeltarifs trifft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Einfachtarif in Form eines Arbeitstarifs pro kWh (verbrauchsabhängiges Netznutzungsentgelt) gilt § 10 Abs. 2."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "78cfcca9a1e3c5262702f71c10dfece216ab26c6171d8f258dd03c6f197ffa5d"
+    },
+    {
+      "id": "kanton/BS/772.420/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einfachtarif (Basistarif) gilt unabhängig von der Sicherungsgrösse als Basistarif für Endverbraucher auf der Netzebene 7 mit einem Jahresverbrauch bis zu 50 MWh pro Kalenderjahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Basistarif in Form eines Arbeitstarifs pro kWh (verbrauchsabhängiges Netznutzungsentgelt) beträgt das Netznutzungsentgelt wie folgt: Netznutzungsentgelt · Einfachtarif (Basistarif): Rp. 13.20/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "a853470aea03b5e417597aeb704a42e22775198c2e465753cad0b1cecfa2de8c"
+    },
+    {
+      "id": "kanton/BS/772.420/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Doppeltarif ist ein Arbeitstarif und wird pro kWh (verbrauchsabhängiges Netznutzungsentgelt) erhoben. Bei Netzanschlüssen auf Netzebene 7 ohne Einfachtarif (Basistarif) gemäss §§ 9 und 10 und mit einer Bezügersicherung kleiner 100 A (Netzanschlüsse ohne Leistungsmessung) gilt der Doppeltarif wie folgt: Netznutzungsentgelt · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 13.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 8.20/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "40b26c7d63159ad328860d92d6c66ea1d7412279e325a35cc67ee329d261ac6b"
+    },
+    {
+      "id": "kanton/BS/772.420/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Netzanschlüssen auf Netzebene 7 ohne Basistarif gemäss § 10 und mit einer Bezügersicherung grösser oder gleich 100 A (Netzanschlüsse mit Leistungsmessung) wird ein verbrauchs- und leistungsabhängiges Netznutzungsentgelt, erhoben. Der Leistungstarif richtet sich nach der höchsten viertelstündlichen Wirkleistung (kW) während der Normaltarifzeit in einem Monat, der Arbeitstarif (Doppeltarif) nach dem Wirkenergieverbrauch (kWh). Die Tarifhöhe richtet sich nach der anwendbaren Tarifzone (Zone 1 oder 2)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entgelte sind wie folgt festgelegt: Netznutzungsentgelt · Tarifzone: Zone 1 (&le; 27 kW/Monat und &le; 50’000 kWh/Jahr) · Leistungstarif: Fr. 16.20/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 9.50/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 6.45/kWh — Netznutzungsentgelt · Tarifzone: Zone 2 (> 27 kW/Monat und > 50’000 kWh/Jahr) · Leistungstarif: Fr. 11.80/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 5.85/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 4.10/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "1ab0bad1736bd3c9d3eb814fd573fbc6ecc08aa0463e198b01ebb2f91fe6b77a"
+    },
+    {
+      "id": "kanton/BS/772.420/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Netzanschlüssen auf den Netzebenen 5 und 3 wird ein verbrauchs- und leistungsabhängiges Netznutzungsentgelt, erhoben. Der Leistungstarif richtet sich nach der höchsten viertelstündlichen Wirkleistung (kW) während der Normaltarifzeit in einem Monat, der Arbeitstarif (Doppeltarif) nach dem Wirkenergieverbrauch (kWh)."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Netzebene 5 gelten die Ansätze: Netznutzungsentgelt · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
+        },
+        {
+          "absatz": "3",
+          "text": "Für Netzebene 3 gelten die Ansätze: Netznutzungsentgelt · Leistungstarif: Fr. 7.40/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 3.70/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 2.50/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "2b14cd3b7bb817675401f097d7cf37af733db2545f01d91d6ffb09f574e37e53"
+    },
+    {
+      "id": "kanton/BS/772.420/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kundinnen und Kunden können den Wahltarif für unterbrechbare Verbraucher wählen."
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Wahltarif für unterbrechbare Verbraucher wird die Stromlieferung bis zu dreimal täglich für bis zu zwei Stunden unterbrochen. Der Zeitpunkt und die Dauer der Unterbrechungen wird von IWB bestimmt. Die Zeit zwischen zwei aufeinanderfolgenden Unterbrechungen beträgt mindestens zwei volle Stunden. Bei unterbrechbarer ⁠Stromlieferung für Elektromobilität oder Wärmepumpen wird abweichend die Stromlieferung zweimal täglich für zwei Stunden unterbrochen. Die Unterbrechungszeiten sind auf 11.30 Uhr – 13.30 Uhr und 17.00 Uhr – 19.00 Uhr festgelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Kundinnen und Kunden mit Wahltarif für unterbrechbare Verbraucher dürfen mit ihren unterbrechbaren Anlagen (wie beispielsweise Wärmepumpen, Grossboilern oder Elektromobilen) weder direkt noch durch Vermittlung einer Drittperson am Regelleistungs- bzw. Regelenergiemarkt teilnehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei unterbrechbaren Verbrauchern wird ein verbrauchsabhängiges Netznutzungsentgelt (pro kWh). gemäss §§ 15 und 16 erhoben. Bei fehlendem oder nur geringem Verbrauch gilt das entsprechende Minimalentgelt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "7d51ce4d1fe0373384d0e4ec7266597fd718831ee62d4bdcd7d83e333e3b8202"
+    },
+    {
+      "id": "kanton/BS/772.420/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Tarife betragen: Netznutzungsentgelt · Einfachtarif: Rp. 8.20/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird) · Einfachtarif: Rp. 40.20/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "e3dc4bf71af12923e94072d81a3a1b45f43d83491ecfa17a128a7dea1def433c"
+    },
+    {
+      "id": "kanton/BS/772.420/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Tarife betragen: Netznutzungsentgelt · Leistungstarif: - · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird, gilt zusätzlich der Leistungstarif) · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "f7a6d7e506765b18c34adbaffd48d8b21199389a5759b673415e7b4446ca8921"
+    },
+    {
+      "id": "kanton/BS/772.420/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Kundinnen und Kunden mit Netzanschluss auf Netzebene 7 und einer Bezügersicherung grösser oder gleich 100 A sowie für Kundinnen und Kunden mit Netzanschluss auf den Netzebenen 5 oder 3 kann für die Bemessung des Netznutzungsentgelts zusätzlich die Höhe des Blindenergieverbrauchs (kvarh) berücksichtigt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Blindenergieverbrauch grösser als 50 % des Wirkenergieverbrauchs, wird der die Hälfte des Wirkenergieverbrauchs übersteigende Blindenergieverbrauch mit Rp. 3.00/kvarh in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "8cea62e87c547125eb7b1921845017ad5a1421cf65f3c411b6e7e4137a487330"
+    },
+    {
+      "id": "kanton/BS/772.420/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Temporäre Netzanschlüsse für Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen sowie Baustromanschlüsse werden immer auf der Netzebene 7 mit Energie versorgt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "8b7c47c85482b07f71f5430ae9be7c9bebf6760219b670c7b2f3e802b0bae43e"
+    },
+    {
+      "id": "kanton/BS/772.420/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für temporäre Netzanschlüsse mit einer Bezügersicherung kleiner 100 A gilt der Einfachtarif (verbrauchsabhängiges Netznutzungsentgelt) wie folgt: Netznutzungsentgelt · Einfachtarif: Rp. 13.20/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "47794cf6d211f5eac78bdea78d664ecef3eb61056892ca680525d189d0101bb3"
+    },
+    {
+      "id": "kanton/BS/772.420/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für temporäre Netzanschlüsse mit einer Bezügersicherung grösser oder gleich 100 A kann IWB eine Leistungsmessung verlangen. In diesem Fall kommen die Tarife gemäss § 11 zur Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten der Montage und Demontage der Messmittel werden von IWB zusätzlich in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "b07548b16aa4662ac0e4504610ce47a100d54104de8630c0c390e22fbf5e762c"
+    },
+    {
+      "id": "kanton/BS/772.420/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Endverbrauchern, Erzeugern von Elektrizität aus erneuerbaren Energien und Speicherbetreibern die sich zu einer lokalen Elektrizitätsgemeinschaft (LEG) zusammenschliessen und die selbst erzeugte Elektrizität innerhalb der lokalen Elektrizitätsgemeinschaft absetzen, kann auf Antrag gestützt auf Art. 17e StromVG sowie Art. 19h StromVV ein reduziertes Netznutzungsentgelt verrechnet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zusammenschluss zu einer lokalen Elektrizitätsgemeinschaft ist nur auf den Netzebenen 5 und 7 zulässig."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "f2f9e6169f2ffb40f54f9153fe3f5e237c3d9c1f093f4d9f6a7097ad229fe186"
+    },
+    {
+      "id": "kanton/BS/772.420/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gestützt auf Art. 14a StromVG sowie Art. 18d – 18i StromVV werden für Speicher mit Endverbrauch sowie Anlagen zur Umwandlung von Elektrizität folgende Rückerstattungstarife festgelegt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Netzebene",
+              "Rückerstattungstarif"
+            ],
+            "zeilen": [
+              [
+                "Netzebene 3",
+                "Rp. 3.00/kWh"
+              ],
+              [
+                "Netzebene 5",
+                "Rp. 3.58/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung grösser oder gleich 100 A mit Leistungsmessung Zone 1 und 2)",
+                "Rp. 6.23/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung kleiner 100 A ohne Leistungsmessung) - Einfachtarif",
+                "Rp. 13.20/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung kleiner 100 A ohne Leistungsmessung) - Doppeltarif",
+                "Rp. 10.37/kWh"
+              ],
+              [
+                "Netzebene 7 Unterbrechbare Verbraucher",
+                "Rp. 8.20/kWh"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Speichern mit Endverbrauch, die Teilnehmer einer lokalen Elektrizitätsgemeinschaft sind und Elektrizität aus der Gemeinschaft zurückspeisen, wird für die Berechnung des Rückerstattungstarifs nur der gemäss Art. 17d – 17e StromVG und Art. 19e – 19h StromVV reduzierte Tarif berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die dargelegten Rückerstattungstarife werden nur auf Antrag gewährt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "7f770353429f697705a29c117e2770aa4ac61e9bba4f5a8992251f431c5d5496"
+    },
+    {
+      "id": "kanton/BS/772.420/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gestützt auf Art. 17a StromVG sowie Art. 8 StromVV erhebt IWB Messtarife für die Messung der Elektrizität."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Messtarife richten sich nach der Netzebene (Anschlussebene) und werden je Messpunkt in Fr. pro Monat je Endverbraucher, Speicher oder Produzent erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Messtarife betragen:",
+          "mehrspaltig": {
+            "kopf": [
+              "Netzebene",
+              "Tarif"
+            ],
+            "zeilen": [
+              [
+                "Netzebene 3",
+                "Fr. 110.00/Monat"
+              ],
+              [
+                "Netzebene 5",
+                "Fr. 68.00/Monat"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung grösser oder gleich 100 A mit Leistungsmessung)",
+                "Fr. 23.30/Monat"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung kleiner 100 A ohne Leistungsmessung)",
+                "Fr. 4.50/Monat"
+              ],
+              [
+                "Virtuelle Messpunkte ohne physisches Gerät",
+                "Fr. 1.00/Monat"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "6bc5fff3bfd699af0a177a772bb0fb2aec467fea790699e99134897f4ef692b6"
+    },
+    {
+      "id": "kanton/BS/772.420/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Sperrung und Entsperrung von Netzanschlüssen betragen: Sperrung / Unterbrechung von Netzanschlüssen gemäss § 26 Abs. 5 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität · Gebühr: Fr. 100 — Entsperrung / Wiederinbetriebnahme von unterbrochenen Netzanschlüssen · Gebühr: Fr. 100"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "90872ac4956a286cc66cf69fcc4496c53f4a63d2c312477e0640336b76c8d4c7"
+    },
+    {
+      "id": "kanton/BS/772.420/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zusätzlich zu den vorgängigen Gebühren werden von IWB noch folgende Abgaben und Zuschläge erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Abgaben für Leistungen an den Kanton Basel-Stadt für die öffentliche Beleuchtung und die öffentlichen Uhren;"
+            },
+            {
+              "marke": "b",
+              "text": "Abgaben für die Finanzierung der ungedeckten Kosten für die Vergütungen von Solarstrom, die nicht durch den Verkauf von Solarstrom oder durch die Einspeisevergütung des Bundes gemäss § 14 Abs. 4 Energiegesetz (EnG) vom 16. November 2016 gedeckt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Zuschlag für Systemdienstleistungen an die Swissgrid AG;"
+            },
+            {
+              "marke": "d",
+              "text": "Zuschlag für die Stromreserve zur Vorbeugung einer Strommangellage im Winter gemäss Art. 22 Abs. 2 lit. a der Verordnung über die Errichtung einer Stromreserve für den Winter (Winterreserveverordnung, WResV) vom 25. Januar 2023;"
+            },
+            {
+              "marke": "e",
+              "text": "Zuschlag für besondere Kosten des Übertragungsnetzes im Zusammenhang mit Unterstützungsmassnahmen und Verstärkungen im Verteilnetz und von Anschlussleitungen gem. Artikel 14bis und 15b StromVG (Solidarisierte Kosten)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höhe der Abgaben richtet sich nach der Netzebene."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abgaben für die öffentliche Beleuchtung und die öffentlichen Uhren sind wie folgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Netzebene",
+              "Abgabe"
+            ],
+            "zeilen": [
+              [
+                "Netzebene 3",
+                "Rp. 0.22/kWh"
+              ],
+              [
+                "Netzebene 5",
+                "Rp. 0.40/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung grösser oder gleich 100 A mit Leistungsmessung Zone 1)",
+                "Rp. 0.80/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung grösser oder gleich 100 A mit Leistungsmessung Zone 2)",
+                "Rp. 0.40/kWh"
+              ],
+              [
+                "Netzebene 7 (mit Bezügersicherung kleiner 100 A ohne Leistungsmessung)",
+                "Rp. 0.80/kWh"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "4",
+          "text": "Die Abgaben für die Finanzierung der ungedeckten Kosten der Vergütung von Solarstrom sind wie folgt:",
+          "mehrspaltig": {
+            "kopf": [
+              "Netzebene",
+              "Abgaben"
+            ],
+            "zeilen": [
+              [
+                "Netzebene 3",
+                "Rp. 0.05/kWh"
+              ],
+              [
+                "Netzebene 5",
+                "Rp. 0.05/kWh"
+              ],
+              [
+                "Netzebene 7",
+                "Rp. 0.05/kWh"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "5",
+          "text": "Der Zuschlag für Systemdienstleistungen ist wie folgt: Zuschlag Systemdienstleistungen · Höhe: Rp. 0.27/kWh"
+        },
+        {
+          "absatz": "6",
+          "text": "Der Zuschlag für die Stromreserve ist wie folgt: Stromreserve · Höhe: Rp. 0.41/kWh"
+        },
+        {
+          "absatz": "7",
+          "text": "Der Zuschlag für die Solidarisierten Kosten über das Übertragungsnetz ist wie folgt: Solidarisierte Kosten über das Übertragungsnetz · Höhe: Rp. 0.05/kWh"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "89189a8b9443c806e8161106c1ec62d99a0d91b9a728fb62524ee072f1beef40"
+    },
+    {
+      "id": "kanton/BS/772.420/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anwendbare Steuern und Abgaben richten sich nach den gesetzlichen Bestimmungen und werden von IWB zusätzlich erhoben. Dies betrifft insbesondere die Mehrwertsteuer, die Förder- und Lenkungsabgaben gemäss kantonalen Energiegesetz sowie die Konzessionsgebühr gemäss IWB-Gesetz). Gestützt auf Art. 35 des eidgenössischen Energiegesetzes vom 30. September 2016 erhebt der Bund von den Netzbetreibern einen Zuschlag auf das Netznutzungsentgelt (Netzzuschlag), welcher insbesondere für die Finanzierung erneuerbarer Energien eingesetzt wird. Gestützt auf die vorerwähnte Bestimmung überwälzt IWB den Netzzuschlag auf ihre Kunden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "e5d38d2d52ce8f4f1dbe06b7f8b62c8ffaea28e11fd98c07724bb2ec3c254544"
+    },
+    {
+      "id": "kanton/BS/772.420/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie sowie die Messung von Elektrizität (772.420)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verrechnung von Bezügen, die vor und nach Inkrafttreten dieser Änderung getätigt wurden, beruht auf der Annahme eines gleichmässigen Verbrauchs über die gesamte Abrechnungsperiode. Die Aufteilung erfolgt in einen Anteil vor dem 1. Januar 2026, der zu den damals gültigen Tarifen in Rechnung gestellt wird, und in einen Anteil nach dem 1. Januar 2026, welcher mit den in diesen Ausführungsbestimmungen festgelegten Tarifen in Rechnung gestellt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
+      "sha": "095c956944e4a77119fa046584a378acbaf8b85c56f918ba90fe08b7ccf3a852"
+    }
+  ]
+}

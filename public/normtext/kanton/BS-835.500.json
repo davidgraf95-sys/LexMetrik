@@ -1,0 +1,460 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/835.500/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Arbeitslosenhilfe (ALH) fördert die Integration arbeitsloser Personen in den Arbeitsmarkt. Integration wird erreicht durch Massnahmenplätze, die Arbeit und Bildung anbieten."
+        },
+        {
+          "absatz": "2",
+          "text": "Von dieser Förderung profitieren in erster Linie bedürftige, erwerbsfähige Personen mit guten Erfolgsaussichten, die keinen Anspruch auf Leistungen der Arbeitslosenversicherung haben."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "c9902b27277958168e112a540ba4175f3d9b5dc93e0472aea1ba990d95bee279"
+    },
+    {
+      "id": "kanton/BS/835.500/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt die Anzahl der Massnahmenplätze."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "7749e2b598a2b5d471e673123108362b9c281f9aa9e98da3b63fc88dc39b7b97"
+    },
+    {
+      "id": "kanton/BS/835.500/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Antrag auf ALH können grundsätzlich diejenigen Personen stellen, die nach Ausschöpfung ihres Anspruchs auf Leistungen der Arbeitslosenversicherung eine offene Rahmenfrist gemäss Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (AVIG) vom 25. Juni 1982 nachweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann den in Abs. 1 genannten Grundsatz durch Verordnung auf Personen ausweiten, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keinen oder noch keinen Anspruch auf Leistungen der Arbeits-losenversicherung haben, wenn sie im Sinne des AVIG vermittlungsfähig sind, oder"
+            },
+            {
+              "marke": "b",
+              "text": "innerhalb der letzten drei Jahre vor Erreichen des AHV-Rentenalters keinen Anspruch auf Leistungen der Arbeitslosenversicherung haben, wenn sie im Sinne des AVIG vermittlungsfähig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "43a502e7643ac6725ce00aa27209b3ba9fbc7828eeeb13de7d2d7cf279c56a08"
+    },
+    {
+      "id": "kanton/BS/835.500/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die zum Zeitpunkt der Antragstellung",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Regel bedürftig und"
+            },
+            {
+              "marke": "b",
+              "text": "vermittlungsfähig und"
+            },
+            {
+              "marke": "c",
+              "text": "aus- und weiterbildungsfähig sind und"
+            },
+            {
+              "marke": "d",
+              "text": "seit 2 Jahren ununterbrochen im Kanton Basel-Stadt ihren Wohnsitz und gewöhnlichen Aufenthalt haben,"
+            }
+          ]
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "ced629d4bb0455dc7859a0985e5c2fb695f8e968f7da7d902656e4ebc376c608"
+    },
+    {
+      "id": "kanton/BS/835.500/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ALH erbringt Leistungen in Form von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entlöhnter Beschäftigung,"
+            },
+            {
+              "marke": "b",
+              "text": "unterstützter Bildung,"
+            },
+            {
+              "marke": "c",
+              "text": "Übernahme von Projektkosten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Beschäftigung wird ein Arbeitsvertrag, für die Bildung eine Bildungsvereinbarung abgeschlossen. Die personalrechtlichen Bestimmungen des Kantons gelten nicht für die Beschäftigten gemäss Abs. 1 lit. a."
+        },
+        {
+          "absatz": "3",
+          "text": "Die ALH kann Entschädigungslücken mit Geldleistungen abgelten, wenn eine der in Abs. 1 genannten Massnahmen wegen Krankheit, Unfall oder Mutterschaft unterbrochen werden muss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die ALH kann zur Verhinderung von Beitragslücken in den Sozialversicherungen (AHV/IV) ausnahmsweise Geldleistungen erbringen."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "5acf1fd951905bb233f0e0da44693c9fa3693d7c8fde1bf6aa2b8ff4b8abb397"
+    },
+    {
+      "id": "kanton/BS/835.500/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anspruch auf Leistung beginnt mit Aufnahme der Massnahme."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton leistet",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei entlöhnter Beschäftigung eine angemessene Entlöhnung,"
+            },
+            {
+              "marke": "b",
+              "text": "bei unterstützter Bildung eine monatliche Pauschale und die Übernahme der Bildungskosten,"
+            },
+            {
+              "marke": "c",
+              "text": "die Übernahme von Projektkosten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entlöhnung der Beschäftigung und die monatliche Pauschale bei einer Bildungsmassnahme bemessen sich",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Antragstellende gemäss § 3 Abs. 1 dieses Gesetzes an ihrem Arbeitslosenversicherungstaggeld bis höchstens im Umfang von Lohnklasse 1, Lohnstufe 15, gemäss dem Gesetz über Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt (Lohngesetz) vom 18. Januar 1995;"
+            },
+            {
+              "marke": "b",
+              "text": "für Antragstellende gemäss § 3 Abs. 2 dieses Gesetzes nach Lohnklasse 1, Anlaufstufe A bis Lohnstufe 15 des Lohngesetzes."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Leistungen der ALH können während der laufenden Rahmenfrist, höchstens aber während eines Jahres gewährt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat kann in besonderen Situationen die Leistungshöhe überschreiten oder die Leistungsdauer verlängern."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "913b8445a84a56017572fef9709fa2a50b04da5bb696136eee3112e2d212e204"
+    },
+    {
+      "id": "kanton/BS/835.500/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistung wird eingestellt, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die berufliche Eingliederung abgeschlossen ist oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahme wegen einer Vertragsverletzung oder einer Verletzung der Bildungsvereinbarung abgebrochen werden muss oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Massnahme von der leistungsberechtigten Person abgelehnt wird oder"
+            },
+            {
+              "marke": "d",
+              "text": "eine der Voraussetzungen gemäss § 4 dieses Gesetzes dahinfällt."
+            }
+          ]
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "e899957884ac647a02e4c2b2f8dadb35c5ae4c52b9bd860ee94e52817f15ad6b"
+    },
+    {
+      "id": "kanton/BS/835.500/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leistungen nach § 5 Abs. 1 Buchstabe b, Abs. 3 und Abs. 4 dieses Gesetzes können mit Renten und Taggeldern der Sozialversicherungen verrechnet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Lohnzahlungen werden mit rückwirkend ausbezahlten Renten nicht verrechnet."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "97d169a7ee91e2571fc9c68ad9ec7fd45b9550e50f210a4818f0a391e15464b7"
+    },
+    {
+      "id": "kanton/BS/835.500/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt das für den Vollzug zuständige Departement."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "34fc603bb15ea47793c0f85c5c2743e0cbaa36deb8050ef99323aaba01b65bdb"
+    },
+    {
+      "id": "kanton/BS/835.500/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Antrag auf ALH ist bei der zuständigen Stelle persönlich zu stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Stelle eröffnet den Antragstellenden den Entscheid über Gutheissung oder Abweisung mittels Verfügung."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "2bdc9fe7055ee66b946d6f9a4bcbdd5384bb6222e1fd94b90e478b16e54ae070"
+    },
+    {
+      "id": "kanton/BS/835.500/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Änderungen in den persönlichen oder finanziellen Verhältnissen sind der zuständigen Stelle unaufgefordert und ohne Verzug zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Verletzung der Auskunfts- und Meldepflicht sowie bei pflichtwidrigem Verhalten kann die zuständige Stelle jegliche weitere Leistung verweigern. Ein erneuter Antrag ist frühestens nach Ablauf von 2 Jahren möglich."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "df4ce031974541dc9cfb8458350bc9e00d8b05985f9d81ab4058e226829c61ff"
+    },
+    {
+      "id": "kanton/BS/835.500/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Verfügungen kann innerhalb von 30 Tagen bei der verfügenden Stelle Einsprache erhoben werden."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "327e2f065c40b4a82ded799d134509290cba414e0c4db1cf6f0fedde9c35a1e9"
+    },
+    {
+      "id": "kanton/BS/835.500/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Einspracheentscheide der zuständigen Stelle steht den Betroffenen ein Rekursrecht nach den Bestimmungen des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung des Kantons Basel-Stadt (Organisationsgesetz) vom 22. April 1976 zu."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "3930661018c09614a4d0b85a5b323f478e3575b220b86ba252ddcee84ccada7f"
+    },
+    {
+      "id": "kanton/BS/835.500/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Klagen aus dem Arbeitsverhältnis sind an das Gewerbliche Schiedsgericht zu richten. Dieses entscheidet endgültig."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "0ce908edd64595ee1a3c6d2a7537b6e269b5caaca2f75ea88d3e60da092d9f42"
+    },
+    {
+      "id": "kanton/BS/835.500/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die Vollzugsverordnung."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "66bf1f88538550fd7a4e5aaee40f70212e0c90be605ac10fbb6f49821f3701a9"
+    },
+    {
+      "id": "kanton/BS/835.500/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Wirksamkeit dieses Gesetzes wird das Gesetz betreffend kantonale Arbeitslosenhilfe vom 14. März 1985 aufgehoben."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "65cf6e97137e0ab2160641fc0ad8796d0e9237249848e8eb807300c155728df8"
+    },
+    {
+      "id": "kanton/BS/835.500/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ALHG (835.500)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz ist zu publizieren; es unterliegt dem Referendum. Nach Eintritt der Rechtskraft bestimmt der Regierungsrat den Zeitpunkt der Wirksamkeit."
+        }
+      ],
+      "stand": "2005-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
+      "sha": "c814ac1265336d99f0517c5be5a7f87b09c8e85de54def327c9b8baf3680dc37"
+    }
+  ]
+}

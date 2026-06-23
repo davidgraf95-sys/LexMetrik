@@ -1,0 +1,465 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.300/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Organisation, den Betrieb und die Nutzung des zentralen elektronischen Behördenportals der kantonalen Verwaltung und stellt die Einhaltung datenschutzrechtlicher Grundsätze sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwohnergemeinden Bettingen und Riehen können sich am kantonalen elektronischen Behördenportal beteiligen."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "e5eee0a523fadd1036943c1278da22c03944195afc31a1f130cfdea06a5b9870"
+    },
+    {
+      "id": "kanton/BS/153.300/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Behördenportal beinhaltet ein vielfältiges Angebot elektronischer Dienste. Es ermöglicht Privatpersonen und Unternehmen die Geschäftsabwicklung mit der Verwaltung über das Internet und die medienbruchfreie Weiterverarbeitung elektronischer Behördengänge."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit dem Behördenportal wird sichergestellt, dass die Nutzerinnen und Nutzer entsprechend den Anforderungen der abzuwickelnden Geschäfte authentisiert werden."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "fe6904e0dac29f6e08263cd7f6cf52603a4d54fc9d03e9531eb79841948d3c8f"
+    },
+    {
+      "id": "kanton/BS/153.300/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Behördenportal hat insbesondere folgende Komponenten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eKonto;"
+            },
+            {
+              "marke": "b",
+              "text": "Authentisierungsdienst;"
+            },
+            {
+              "marke": "c",
+              "text": "Autorisierungsdienst;"
+            },
+            {
+              "marke": "d",
+              "text": "Benachrichtigungsdienst;"
+            },
+            {
+              "marke": "e",
+              "text": "Technische Sicherheitsinfrastruktur, einschliesslich verschlüsselter Kommunikation."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "491f6256b59489d46ef401cf737b3d0f2122d0245d4d2f719708b30deed6dc18"
+    },
+    {
+      "id": "kanton/BS/153.300/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nutzung des Behördenportals setzt die Eröffnung eines eKontos voraus. Dieses eKonto dient der Identifizierung der Nutzerinnen und Nutzer."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "df1b7e0292a75cef9371b7d49c31624f70f230ac8e379ed3471413f03ee67658"
+    },
+    {
+      "id": "kanton/BS/153.300/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das eKonto enthält für die Eröffnung folgende zwingende oder freiwillig anzugebende Daten zu den Nutzerinnen und Nutzern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Identifizierende Daten zur Person: Name, Vorname, Geburtsdatum (zwingend);"
+            },
+            {
+              "marke": "b",
+              "text": "Adressdaten (zwingend);"
+            },
+            {
+              "marke": "c",
+              "text": "E-Mail-Adresse (zwingend);"
+            },
+            {
+              "marke": "d",
+              "text": "weitere Personendaten (freiwillig)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei juristischen Personen oder Personengesellschaften sind zusätzlich die Firma oder der Name und der Nachweis der Vertretungsberechtigung zwingend anzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für eine höhere Authentisierungsstufe sind weitere identifizierende Daten zwingend erforderlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Mit der Eröffnung des eKontos wird eine eindeutige und unveränderliche eKontonummer automatisch erzeugt und der Nutzerin oder dem Nutzer mittels E-Mail an die angegebene Adresse mitgeteilt."
+        },
+        {
+          "absatz": "5",
+          "text": "Im eKonto werden alle in Abs. 1 bis 4 aufgeführten Daten sowie beschreibende Daten zu den über das Behördenportal bearbeiteten Geschäftsfällen gespeichert."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "26f7fd1ee5596bf561c6cc3c6c0b8ca6aa12a5e6611cca5e0ca227e81a499a6a"
+    },
+    {
+      "id": "kanton/BS/153.300/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fachdaten zu den über das Behördenportal bearbeiteten Geschäftsfällen werden im eKonto zwischengespeichert."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "4a8b35312072a4a1a3b5210fdc3c68afa00ca1580e87da2a275eacdf0c5239ea"
+    },
+    {
+      "id": "kanton/BS/153.300/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Eröffnung jedes eKontos setzt die Angabe der Daten gemäss § 5 Abs. 1 und 2 sowie die Zustimmung zu den Nutzungsbedingungen voraus."
+        },
+        {
+          "absatz": "2",
+          "text": "Juristische Personen und Personengesellschaften, die für ihre Mitarbeiterinnen und Mitarbeiter mehrere eKonten benötigen, erhalten hierfür einen Unternehmenszugang."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "2c0ca96069bc27b9c9d2e66f063d6ef7ca32a0c0587cee4af0e8714e2e1e27a6"
+    },
+    {
+      "id": "kanton/BS/153.300/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nutzerinnen und Nutzer des Behördenportals haben sich vor der Bearbeitung eines Geschäftsfalles persönlich und elektronisch zu identifizieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Entsprechend dem unterschiedlich hohen Schutzbedarf der möglichen Geschäftsfälle sind verschiedene Stufen der Authentisierung vorzusehen, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Keine Authentisierung (öffentliche Daten);"
+            },
+            {
+              "marke": "b",
+              "text": "1-stufige Authentisierung (Grundschutzbedarf);"
+            },
+            {
+              "marke": "c",
+              "text": "2-stufige Authentisierung (erhöhter Schutzbedarf);"
+            },
+            {
+              "marke": "d",
+              "text": "2-stufige Authentisierung mit qualifiziertem Zertifikat (sehr hoher Schutzbedarf)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat legt das Verfahren und die Anforderungen an die technische Umsetzung und die Authentisierungsstellen fest. Er richtet sich dabei nach dem jeweiligen Stand der Technik."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "eba40c93d75177866686b991c4c150b34d932c4b24f4d05a6fd6bb47dcb7fdab"
+    },
+    {
+      "id": "kanton/BS/153.300/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nutzerinnen und Nutzer können ihr eKonto auflösen. Die dort gespeicherten Daten werden unwiderruflich gelöscht."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "5c1e77a91fb52246061da90332b42fdbc611eaa6566b3774e5786f12cfd28873"
+    },
+    {
+      "id": "kanton/BS/153.300/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Weitere Rechte und Pflichten sind in den Nutzungsbedingungen geregelt."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "d7e99870e9028c9edc90d550dfedaed9f4a964cb60c93ce60eaed299be22eaa8"
+    },
+    {
+      "id": "kanton/BS/153.300/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Autorisierte Mitarbeitende der Verwaltung haben Zugriff auf das eKonto, soweit dies zur Erfüllung ihrer gesetzlichen Aufgaben erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zugriffsberechtigung unterteilt sich in eine Abfrage- und Bearbeitungsberechtigung."
+        },
+        {
+          "absatz": "3",
+          "text": "Jeder Zugriff auf das Behördenportal wird zwecks Nachvollziehbarkeit protokolliert."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "7f74f527e35e517ea13eae5cf98741c26bc6ff7625bad180ae662f2449298faf"
+    },
+    {
+      "id": "kanton/BS/153.300/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Haben sich Nutzerinnen und Nutzer mehr als zwei Jahre nicht mehr an ihrem Konto angemeldet, wird dieses nach Vorankündigung automatisch aufgelöst und die dort gespeicherten Daten werden gelöscht."
+        },
+        {
+          "absatz": "2",
+          "text": "Verstossen Nutzerinnen und Nutzer gegen die Nutzungsbedingungen, entscheidet die zuständige Stelle unter Vorankündigung über die Auflösung des eKontos und die Löschung der dort gespeicherten Daten."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "6e770fa3b4c2ddb919c2c0043f1ec2df6d835ebd5a8f92fd78d9a147ef06fdf8"
+    },
+    {
+      "id": "kanton/BS/153.300/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Mitarbeitende der Verwaltung, die auf Daten des Behördenportals zugreifen können, gilt das Amtsgeheimnis."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "824260c2360667e599c54f688ca5ed462d3bb5121507049048a9e7ff0708a262"
+    },
+    {
+      "id": "kanton/BS/153.300/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat trägt die Gesamtverantwortung für das Behördenportal. Diese umfasst insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Strategische Weiterentwicklung des Behördenportals;"
+            },
+            {
+              "marke": "b",
+              "text": "Definition der einzuhaltenden Sicherheitsbestimmungen;"
+            },
+            {
+              "marke": "c",
+              "text": "Sicherstellung, dass die Sicherheitsmassnahmen des Behördenportals mindestens dem Schutzbedarf der zu bearbeitenden bzw. erstellten Daten im Behördenportal entsprechen;"
+            },
+            {
+              "marke": "d",
+              "text": "regelmässige Überprüfung der Einhaltung der Sicherheitsbestimmungen und –massnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "Definition der Rahmenbedingungen für den Zugang der Behörden zum Behördenportal;"
+            },
+            {
+              "marke": "f",
+              "text": "Regelung der Zugangs- und Nutzungsbedingungen der Nutzerinnen und Nutzer zum Behördenportal;"
+            },
+            {
+              "marke": "g",
+              "text": "Beaufsichtigung der technischen Betreiberin des Behördenportals sowie"
+            },
+            {
+              "marke": "h",
+              "text": "Entscheid über die Auflösung des eKontos und die Löschung der Daten gemäss § 12 Abs. 2."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann einzelne Aufgaben an das zuständige Departement delegieren."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "dba7934d2aeb924b227b87dfae38a148382538a88dab21d679abf5585b4ae059"
+    },
+    {
+      "id": "kanton/BS/153.300/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Dienststelle ist verantwortlich für den technischen Betrieb, den Unterhalt und die technische Weiterentwicklung des Behördenportals."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erstellt zum Schutz der Daten im Behördenportal regelmässig Datenbackups. Diese werden nach drei Monaten gelöscht."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "60135af9dcc4acd05ea94c5c00e41851c975e2a8abbf1273f2ca79e1dc5fa156"
+    },
+    {
+      "id": "kanton/BS/153.300/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Behördenportalgesetz (153.300)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fachbehörden sind verantwortlich für die Bearbeitung ihrer Daten gemäss den jeweils anwendbaren Spezialgesetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie definieren den Schutzbedarf für die Daten, welche im Bearbeitungsprozess im Behördenportal erzeugt, angezeigt oder übertragen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wenn mehrere Fachbehörden an der Geschäftsabwicklung beteiligt sind, ist eine hauptverantwortliche Fachbehörde zu bestimmen."
+        }
+      ],
+      "stand": "2017-02-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2801a15efd7da3b67562eadc0248b492",
+      "sha": "4170fd251469bf0ce5bdc7bbf5e0a10712c406b806050e6360238a8bada1404e"
+    }
+  ]
+}

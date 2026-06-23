@@ -1,0 +1,598 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/RiE 153.300/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Reglement regelt unter Berücksichtigung des übergeordneten kantonalen Rechts sowie kantonaler Vorgaben die Umsetzung der Informationssicherheit in der Gemeinde Riehen, insbesondere die Zuständigkeiten, die Sicherheitsprozesse sowie die Sicherstellung des Geschäftsbetriebs."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "f3cde0ed3228e1d88978b8f36a58fef05746197b602e67c5bb5b210f5c755b8f"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Informationssicherheit bezweckt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gewährleistung der Vertraulichkeit, der Integrität und der Verfügbarkeit von Informationen, die zur Ausübung der geschäftlichen Tätigkeit der Gemeinde verwendet werden, ungeachtet der Art ihrer Darstellung und Speicherung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zurechenbarkeit und Nachvollziehbarkeit der Informationsbearbeitungen durch angemessene Massnahmen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Sicherheit von IT-Systemen bei der Bearbeitung, Speicherung und Übermittlung von elektronischen Informationen und"
+            },
+            {
+              "marke": "d",
+              "text": "den Einsatz datenschutzfreundlicher Technologien."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "b5320aca4e4b074af5e7c979ccc8dc62866cb4a8e409c71d1c5f28a2ae6fe87d"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Reglement gilt für alle Organisationseinheiten der Gemeinde Riehen im Sinne von § 3 Abs. 1 IDG und für alle Informationen gemäss § 3 Abs. 2 IDG."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Regelungen betreffen alle Informationen und IT-Systeme im Zusammenhang mit der Aufgabenerfüllung der Gemeinde Riehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ziehen Organisationseinheiten externe Leistungserbringende für ihre Aufgabenerfüllung bei, stellen die Organisationseinheiten vertraglich sicher, dass die externen Leistungserbringenden die Anforderungen dieses Reglements ebenfalls erfüllen."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "ff617bbbca696a9d17a0db92f686fe93264d5c390a79b926d37f1635ab59400d"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organisationseinheiten schützen Informationen durch angemessene organisatorische und technische Massnahmen. Die Schutzziele richten sich nach § 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zu treffenden Massnahmen richten sich nach der Art der Information, nach Art und Zweck der Verwendung und nach dem jeweiligen Stand der Technik."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "1b4009e461874fa25faaedf43578f1f0a1a9fd897df8c8fbd79ec9c12be42693"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es dürfen für die Aufgabenerfüllung der Gemeinde Riehen nur die von der Leitung Informatikbetrieb bereitgestellten oder freigegebenen IT-Systeme benutzt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleibt der Einsatz externer IT-Systeme, der von der Leitung Informatikbetrieb bewilligt wurde."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "e0cd7b6398d3eb0b7807bda51d5dc584a0616990b09c18e9008487ed65ae06a9"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gemeinderat trägt die Gesamtverantwortung für die Informationssicherheit und sorgt für ein entsprechendes Informationssicherheitsmanagementsystem, welches auch ein Risikomanagementsystem betreffend Informationssicherheit umfasst. Er stellt die notwendigen Ressourcen sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Er definiert die strategischen Vorgaben zur Informationssicherheit, zur digitalen Transformation der Verwaltung und zum Umgang mit den damit verbundenen Risiken."
+        },
+        {
+          "absatz": "3",
+          "text": "Er steuert die Umsetzung der jeweiligen Strategien mit dem Informationssicherheitsmanagementsystem."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "0de212a1130339dffb2ba985ab27dce95cc55dd1c8a555f13ca7cee83487de54"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungsleiterin oder der Verwaltungsleiter stellt die operative Umsetzung der Informationssicherheit und der Anforderungen der digitalen Transformation mit angemessenen Massnahmen sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "stellt die Führung und zeitgerechte Anpassung des Informationssicherheits- und des Risikomanagementsystems an veränderte Verhältnisse sicher;"
+            },
+            {
+              "marke": "b",
+              "text": "setzt einen beratenden Fachausschuss ein;"
+            },
+            {
+              "marke": "c",
+              "text": "erlässt den übergeordneten Massnahmenplan und genehmigt die Massnahmen- und Notfallpläne der Organisationseinheiten;"
+            },
+            {
+              "marke": "d",
+              "text": "genehmigt die Klassifizierung der Informationen, das Schutzobjektinventar und das Register der Datensammlungen;"
+            },
+            {
+              "marke": "e",
+              "text": "entscheidet über das Vorgehen betreffend die Übernahme von Risiken, schwerwiegender Sicherheits- und Datenschutzvorfälle und Verstösse gegen Sicherheitsvorgaben;"
+            },
+            {
+              "marke": "f",
+              "text": "erlässt die notwendigen Richtlinien und Weisungen zur Informationssicherheit."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "6eeba8bb1b4691d9fba6470b33153f1947141024037b3508351f792ca78bc0f5"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Generalsekretärin oder der Generalsekretär, die Abteilungsleitungen und die Fachbereichsleitungen sind in ihren Zuständigkeitsbereichen für die Sicherstellung der Informationssicherheit gemäss den Richtlinien und Weisungen Informationssicherheit verantwortlich."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "0c12a2415a464cf28899f40fdc9425f54df7a34ad41c718df98b2f69d7b7c3ed"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leitung Informatikbetrieb ist für die Entwicklung, Beschaffung, Bereitstellung und den Unterhalt der IT-Systeme sowie für deren sicheren Betrieb verantwortlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterstützt die Organisationseinheiten beim sicheren Betrieb ihrer Fachanwendungen und der Umsetzung und Kontrolle der Sicherheitsmassnahmen."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "389597125c8db0c13733a03b41eee10bf095ea726c68c9d596573f3bda117f8f"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Informationssicherheitsbeauftragte ist die Anlaufstelle für den Bereich Informationssicherheit und hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beratung und Unterstützung bei der strategischen Planung und operativen Umsetzung der Informationssicherheit;"
+            },
+            {
+              "marke": "b",
+              "text": "Beobachten von Entwicklungen und Risiken im Bereich der Informationssicherheit;"
+            },
+            {
+              "marke": "c",
+              "text": "Koordination der Umsetzung der Informationssicherheit;"
+            },
+            {
+              "marke": "d",
+              "text": "Führung und Überprüfung des Informationssicherheitsmanagementsystems und des Schutzobjektinventars;"
+            },
+            {
+              "marke": "e",
+              "text": "Mitarbeit in Projekten, die für die Informationssicherheit relevant sind;"
+            },
+            {
+              "marke": "f",
+              "text": "Durchführung von Risikoanalysen und jährliche Überprüfung der organisatorischen und technischen Sicherheitsmassnahmen;"
+            },
+            {
+              "marke": "g",
+              "text": "Analyse, Behandlung und Dokumentation von Sicherheitsvorfällen;"
+            },
+            {
+              "marke": "h",
+              "text": "Erarbeitung der notwendigen Richtlinien und Weisungen sowie technischer Vorgaben;"
+            },
+            {
+              "marke": "i",
+              "text": "Ausarbeitung von Empfehlungen zu risikomindernden Massnahmen;"
+            },
+            {
+              "marke": "j",
+              "text": "Sensibilisierung und Schulung der Mitarbeitenden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "e23f4b7e46e6821f21f749c828f53312d4106e2ac353b031d82f98b573f5101d"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Schutzobjekte, insbesondere IT-Systeme, Informationen, Gebäude usw. werden einer Objekteignerin oder einem Objekteigner zugeordnet. Sie sind verantwortlich für die Inventarisierung, Klassifizierung und die Sicherheit ihrer Schutzobjekte in Zusammenarbeit mit der oder dem Informationssicherheitsbeauftragten und überprüfen diese regelmässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Dateneignerinnen und -eigner tragen die Verantwortung für die Sicherheit der Informationen sowie für deren korrekten Umgang und den rechtmässigen Zugriff auf die Informationen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anwendungsverantwortlichen sind für ihre Applikationen und damit auch für die Sicherheit der darauf bearbeiteten Informationen verantwortlich."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Systemeignerinnen und -eigner sind für den ordnungsgemässen Betrieb ihrer Systeme zuständig. Sie tragen die Betriebsverantwortung für die Systeme."
+        },
+        {
+          "absatz": "5",
+          "text": "Jedem Informationssicherheitsrisiko wird eine Risikoeignerin oder ein Risikoeigner im Sinne des Internen Kontrollsystems zugeordnet."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Aufgaben der Eignerinnen und Eigner sowie der Anwendungsverantwortlichen werden in einer Richtlinie zur Informationssicherheit geregelt."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "5334423068251f22c363ccf850ca3f533dd14b40681ce9eebe6da9b16a67d5bc"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Informationssicherheitsbeauftragte definiert in einem Schutzkatalog die Schutzziele gemäss § 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schutzbedarfsanalyse bildet die Grundlage für die Festlegung und Umsetzung der Schutzmassnahmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Besteht ein erhöhter oder sehr hoher Schutzbedarf, müssen die Dateneignerinnen und -eigner eine Risikoanalyse durchführen."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "48ef812fc874cf4377119e452798d59c36dffc58174b8caa95eb0666d5df886a"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Objekteignerinnen und -eigner analysieren und klassifizieren ihre Daten bzw. Objekte mittels Schutzbedarfsanalyse gemäss dem Schutzkatalog und den Richtlinien und Weisungen Informationssicherheit, erfassen sie im Schutzobjektinventar und überprüfen dies mindestens einmal jährlich."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "15ef28d1251d3d423f2b4853b5ffb3453da37ea12a1ed2db8ad8351586d9d180"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Risiken der Informationssicherheit werden im Rahmen des Risikomanagements einheitlich bewertet, im Risikoregister dokumentiert und einer Risikoeignerin oder einem Risikoeigner zugewiesen. Das Risikoregister Informationssicherheit ist Teil des Risikomanagementsystems der Gemeinde Riehen und wird von der oder vom Informationssicherheitsbeauftragten periodisch überprüft."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Risikoelimination nicht möglich oder wirtschaftlich nicht tragbar, sind die entstehenden Restrisiken auszuweisen."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "0f130ed4d803f4cd38591abaaa45f98d028eae14dd5ac752b417b59c9e0fec42"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Informationssicherheitsbeauftragte definiert in einem übergeordneten Massnahmenplan, wie die gesetzlichen und internen Vorgaben innerhalb der Gemeindeverwaltung umzusetzen sind. Dieser wird von der Verwaltungsleiterin oder dem Verwaltungsleiter erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Generalsekretärin oder der Generalsekretär, die Abteilungsleitungen und die Fachbereichsleitungen sind für die Erarbeitung der abteilungsspezifischen Massnahmenpläne in ihren Zuständigkeitsbereichen verantwortlich, welche von der Verwaltungsleiterin oder vom Verwaltungsleiter genehmigt werden."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "99540a5b8f1023dfda26d9b2a425aee5c4081a27f2f5003fd4e4ed37b472b4d7"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Informationssicherheitsbeauftragte führt und überprüft regelmässig das übergeordnete Zugriffs- und Berechtigungskonzept sowie das übergeordnete Aufbewahrungs- und Löschkonzept, welche den Zugriff auf Personendaten sowie deren Aufbewahrung und Löschung definieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er wird von den Dateneignerinnen und -eignern, den Anwendungsverantwortlichen und Fachstelle Records Management unterstützt."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "584d4ac21379b867b66b9b227d7447d6de57740baab7f7d9a9d6a884822957f2"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn aus berechtigten Gründen einzelne Sicherheitsmassnahmen nicht umgesetzt werden können, muss das damit verbundene Risiko beurteilt, dokumentiert und durch die Risikoeignerin oder den Risikoeigner erfasst werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Risiken müssen der Verwaltungsleiterin oder dem Verwaltungsleiter gemeldet werden. Sie oder er informiert den Gemeinderat über das weitere Vorgehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Abweichungen gegenüber Vorgaben der Informationssicherheit sind gemäss den Richtlinien Informationssicherheit zu melden."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "b42cb22e1da9d3f3d8bedb250f6ce8942c594db883582a0a81a8b35b4542246e"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Sicherheitsvorfälle gelten Verstösse gegen Sicherheitsvorgaben und sicherheitsrelevante Ereignisse, die effektiv einen Schaden verursacht haben oder einen solchen beinahe verursacht hätten, sowie vermutete oder tatsächliche Verstösse gegen den Datenschutz oder die Datenschutzbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Datenschutzverletzung liegt vor, wenn durch eine Verletzung der Informationssicherheit bearbeitete Personendaten unwiederbringlich vernichtet werden oder verloren gehen, unbeabsichtigt oder unrechtmässig verändert oder offenbart werden oder wenn Unbefugte Zugang zu solchen Personendaten erhalten. Datenschutzverletzungen sind gemäss den Vorgaben des IDG zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Solche Vorfälle sind zudem umgehend den zuständigen Abteilungsleitungen und der oder dem Informationssicherheitsbeauftragten zu melden, damit die notwendigen Massnahmen eingeleitet werden können. Bei schweren Fällen sind die Verwaltungsleiterin oder der Verwaltungsleiter sowie der Gemeinderat zu informieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Die externen Leistungserbringenden informieren die auftraggebende Organisationseinheit unverzüglich über eine Datenschutzverletzung."
+        },
+        {
+          "absatz": "5",
+          "text": "Sicherheitsvorfälle werden von der oder vom Informationssicherheitsbeauftragten dokumentiert und ausgewertet."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "7e579c2d31f15305523e67f6507a1f09940768509d92254ab89711b3a4e652d1"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Geschäftsprozesse, deren Ausfall oder Beeinträchtigung negative Folgen für die Gemeindeverwaltung Riehen oder die Einwohnerinnen und Einwohner der Gemeinde haben können, entwickeln die Generalsekretärin oder der Generalsekretär, die Abteilungsleitungen und die Fachbereichsleitungen entsprechende Notfallkonzepte."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leitung Informatikbetrieb entwickelt einen Notfallplan für den Informatikbetrieb."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Notfallkonzept wird das Verfahren festgelegt, welches eine schnelle, wirksame und planmässige Reaktion auf sicherheitsrelevante Ereignisse, insbesondere Betriebsausfälle, ermöglicht. Es definiert die Rahmenbedingungen für die einzelnen Notfallpläne."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "2acf7f416b5b378a5b5154029864c249f620e783e616de109bc0afbbbcf6da83"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In einem jährlichen Bericht fasst die oder der Informationssicherheitsbeauftragte wichtige Vorkommnisse wie Sicherheitsvorfälle, Auditergebnisse, Risiken und Projekte im Bereich der Informationssicherheit zu Handen des Gemeinderats und der Verwaltungsleiterin oder des Verwaltungsleiters zusammen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er wird bei der Berichterstellung von der Generalsekretärin oder vom Generalsekretär, den Abteilungsleitungen, den Fachbereichsleitungen und der Leitung Informatikbetrieb unterstützt."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "04e6d604e26790dc5a065c48ee9e46c57c9791f530fb38e7320defc72642b102"
+    },
+    {
+      "id": "kanton/BS/RiE 153.300/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Informationssicherheitsreglement (RiE 153.300)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bisherige IT-Systeme, Applikationen und Datensammlungen sind bis zum 31. Dezember 2022 an die Vorgaben dieses Reglements anzupassen."
+        }
+      ],
+      "stand": "2021-08-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ff50c4c5baf27f92210c6d9742a995c3",
+      "sha": "1523ef1454b20a785e04e4fcea675c8d6f67c8e5833d5de08da6de1339ebcf8d"
+    }
+  ]
+}

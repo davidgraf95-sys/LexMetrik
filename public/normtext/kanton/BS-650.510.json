@@ -1,0 +1,159 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/650.510/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Personenwagen, unabhängig ihrer Antriebsart, setzt sich die jährliche Steuer aus den Komponenten Leergewicht und CO2-Emissionen zusammen. Können die CO2-Emissionen nicht festgestellt werden, bemisst die Behörde den gesamten zu bezahlenden Steuerbetrag auf der Berechnungsgrundlage von 250% des Leergewichtsansatzes."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Für Fahrzeugarten, die ausschliesslich durch elektrische Energie angetrieben und nach Hubraum (cm&sup3;) besteuert werden, erfolgt die Berechnung des (theoretischen) Hubraums durch Umwandlung der Leistung (kW) aufgrund nachstehender Formel:  H = L &divide; 0,045  H = Hubraum L = Motorleistung in Kilowatt (kW) 0,045 = Umwandlungskonstante"
+        },
+        {
+          "absatz": "2",
+          "text": "Für Hybridfahrzeuge, die mit einem Verbrennungs- und einem Elektromotor ausgerüstet sind sowie nach Hubraum (cm&sup3;) besteuert werden, wird für die Bestimmung des zu entrichtenden Steuerbetrags nur der Hubraum des Verbrennungsmotors berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Feststellung des prozentualen Anteils an Personenwagen mit ausschliesslichem Elektroantrieb gemäss § 3 Abs. 9 des Gesetzes über die Besteuerung der Motorfahrzeuge gilt als Stichtag jeweils der Stand vom 30. Juni. Allfällige Änderungen werden auf den 1. Januar des Folgejahres wirksam."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "8142ecccbf4e393c5516388dd8bc4e75377c191eb39162fcda3e43ef5124b7f9"
+    },
+    {
+      "id": "kanton/BS/650.510/art_1_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "1_a",
+      "artikelLabel": "§ 1a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beweislast für die Steuerbemessungskriterien trägt die Fahrzeughalterin bzw. der Fahrzeughalter. Sind die Angaben für die Steuerberechnung nicht zweifelsfrei feststellbar, bleibt eine individuelle Steuerbemessung durch die Behörde vorbehalten."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "618db9ade0a7e36d259acb95709b984ae09ef9683c1b41aed79fca152b85aec9"
+    },
+    {
+      "id": "kanton/BS/650.510/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Für umweltfreundliche Lieferwagen (EURO5–Abgasnorm und besser) wird ein Steuerrabatt von Fr. 250 gewährt, wobei die jährliche Steuer in jedem Fall mindestens Fr. 180 beträgt."
+        },
+        {
+          "absatz": "4",
+          "text": "Für umweltunfreundliche Lieferwagen (EURO4–Abgasnorm und schlechter) wird ein Steuerzuschlag von Fr. 50 erhoben."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Motorräder mit elektrischem Antrieb wird die ordentliche Steuer um 20% ermässigt, die jährliche Steuer beträgt in jedem Fall mindestens Fr. 50."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Beweislast für die den Steuerrabatt auslösenden Kriterien trägt die Fahrzeughalterin bzw. der Fahrzeughalter. Für Fahrzeuge, bei denen die Steuerrabatt- bzw. die Steuerzuschlagskriterien nicht zweifelsfrei feststellbar sind, bleibt eine individuelle Steuerbemessung durch die Behörde sowie ein Steuerzuschlag von Fr. 250 vorbehalten."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "a8ef81edaf7e024a3a99c507444ab4af4b668d66f15307bef5d8909bc6daaf35"
+    },
+    {
+      "id": "kanton/BS/650.510/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Motorfahrzeugsteuer wird im Voraus für ein ganzes Kalenderjahr erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "In begründeten Fällen kann die Entrichtung der Steuer ausnahmsweise in halbjährlichen Raten bewilligt werden. Pro Rate ist ein Zuschlag von Fr. 10 als Gebühr zu entrichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Motorfahrzeugsteuer für ein angebrochenes Jahr wird pro Tag berechnet. Der Tagessteuersatz beträgt ein Dreihundertfünfundsechzigstel der Jahressteuer."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "6024e73824ec21204f8e5b5900acce54b91216afc682a5a98daaf46785e67b2c"
+    },
+    {
+      "id": "kanton/BS/650.510/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Teilsteuerbeträge unter Fr. 10 werden der betreffenden Person beim nächsten Geschäftsfall verrechnet."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "25672063de5aeba44e6e0c5924ff56cd83a2b5c9be01b9f7eb2d5c9d4403de9f"
+    },
+    {
+      "id": "kanton/BS/650.510/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gesetz über die Besteuerung der Motorfahrzeuge (650.510)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gewährung der Steuerbefreiung gemäss § 4 Abs. 2 des Gesetzes und die Erhebung der Strafsteuer gemäss § 7 Abs. 2 des Gesetzes ist das Justiz- und Sicherheitsdepartement zuständig."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
+      "sha": "774e62dcc3799dbc83f0f2f6e0135e414ca6e49d0e8b0d9faa7440ee6a0bc0d3"
+    }
+  ]
+}

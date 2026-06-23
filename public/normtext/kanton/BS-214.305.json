@@ -1,0 +1,809 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/214.305/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt den Vollzug des allgemeinen Teils des Geoinformationsgesetzes des Bundes und dessen Verordnungen sowie des allgemeinen Teils des kantonalen Geoinformationsgesetzes."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "cc5d99aa9c310472d8f7a3d4fe7b53b5d0425f15033781191cb8eebde1cc7ba1"
+    },
+    {
+      "id": "kanton/BS/214.305/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geobasisdaten des Bundesrechts und Geobasisdaten des kantonalen Rechts werden nachfolgend als Geobasisdaten bezeichnet. Geobasisdaten werden in einem im Geoportal veröffentlichten Onlinekatalog (nachfolgend: Katalog), mit folgenden Informationen geführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben zu den Rechtsgrundlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "zuständige Stelle gemäss § 8 KGeoIG (nachfolgend: zuständige Fachstelle);"
+            },
+            {
+              "marke": "c",
+              "text": "verbindliche Festlegungen gemäss dieser Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Die anderen Geodaten des Kantons (nachfolgend: andere Geodaten) werden im Katalog mit folgenden Informationen geführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zuständige Fachstelle,"
+            },
+            {
+              "marke": "b",
+              "text": "verbindliche Festlegungen gemäss dieser Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Für den Beschluss über Anpassungen von Geobasisdaten ist die Vorsteherin oder der Vorsteher des Bau- und Verkehrsdepartements zuständig. Die GIS-Koordination (§ 26) kann als Fachgremium zu den Anpassungen Stellung nehmen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "f533d944ca8a9fdb14144014d7acf56a652535daca8e642b2706179ddbf1e940"
+    },
+    {
+      "id": "kanton/BS/214.305/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Lage- und Höhenbezug der Geobasisdaten richtet sich nach den für die Geobasisdaten des Bundesrechts geltenden Vorschriften und technischen Normen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Lagebezug der amtlichen Vermessung richtet sich nach dem Lagebezugssystem CH1903+ mit dem Lagebezugsrahmen LV95."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "b8bc14ef2b55f6e552f0fb337c4ab222e5a7bb4881cea924d1764131024d6e2e"
+    },
+    {
+      "id": "kanton/BS/214.305/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Geobasisdaten und anderen Geodaten ist mindestens ein Geodatenmodell zugeordnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Fachstelle bestimmt auf Grund des fachgesetzlichen Rahmens und der fachlichen Anforderungen ein Geodatenmodell. Sie legt darin die Struktur und den Detaillierungsgrad des Inhalts fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Geodatenmodell richtet sich nach den für die Geobasisdaten des Bundesrechts geltenden Vorschriften und technischen Normen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "f165b53fbedf12399cab98523315317dee9f4b167b6d7bc971e2a80bbb53669b"
+    },
+    {
+      "id": "kanton/BS/214.305/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Fachstelle bestimmt für die Geobasisdaten und anderen Geodaten ein oder mehrere Darstellungsmodelle und beschreibt diese. Die Beschreibung legt insbesondere den Detaillierungsgrad, die Signaturen und die Legenden fest."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "ec08278c67cb4b273742a4fe3afc3f21aa44b190823d43a6997126d913038348"
+    },
+    {
+      "id": "kanton/BS/214.305/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Geobasisdaten und andere Geodaten werden durch die zuständige Fachstelle mit Geometadaten beschrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Geometadaten werden zusammen mit den Geodaten, die sie beschreiben, verwaltet, nachgeführt, zugänglich gemacht und archiviert."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "457631bed176c5a852bc43bea436eb909c40349a2cbfc8a63f13b1afdcf9366a"
+    },
+    {
+      "id": "kanton/BS/214.305/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geobasisdaten und andere Geodaten werden durch folgende Geodienste zugänglich und nutzbar gemacht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch Darstellungsdienste: mindestens alle Geobasisdaten und andere Geodaten der Zugangsberechtigungsstufe A;"
+            },
+            {
+              "marke": "b",
+              "text": "durch Downloaddienste: mindestens die im Katalog entsprechend bezeichneten Geobasisdaten und andere Geodaten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Weitere Geodienste können bei Bedarf angeboten werden."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "1bbd83fd0215bb05edb0eb1e7ad3d7f04574a349e1fdc0c5a56f7949cdd8844d"
+    },
+    {
+      "id": "kanton/BS/214.305/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Enthalten die fachgesetzlichen Vorschriften keine Bestimmungen über Zeitpunkt und Art der Nachführung der Geobasisdaten des kantonalen Rechts, so erstellt die zuständige Fachstelle ein Nachführungskonzept."
+        },
+        {
+          "absatz": "2",
+          "text": "Geobasisdaten, die eigentümerinnen- und eigentümer- oder behördenverbindliche Beschlüsse abbilden, werden so historisiert, dass jeder Rechtszustand mit hinreichender Sicherheit und vertretbarem Aufwand innert nützlicher Frist rekonstruiert werden kann."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "fb83a3a20ea3d8ea0ac1efc271237f14e4c1dc189d76efaebd9f1454b3f94b19"
+    },
+    {
+      "id": "kanton/BS/214.305/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegt die Zuständigkeit für einen Geodatensatz gemäss § 2 bei einer Stelle des Kantons, so richtet sich die Archivierung nach dem Gesetz über das Archivwesen."
+        },
+        {
+          "absatz": "2",
+          "text": "Liegt die Zuständigkeit für einen Geodatensatz gemäss § 2 bei der Gemeinde, so stellt diese die Archivierung sicher."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Staatsarchiv erarbeitet zusammen mit den zuständigen Fachstellen und der Fachstelle Geoinformation ein entsprechendes Archivierungskonzept."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Zuständigkeit für archivierte Geodaten obliegt dem Staatsarchiv."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "075ba4d126f8176268b00b73a05598e97924c03fae5d8bf9feb0ad07f204a61a"
+    },
+    {
+      "id": "kanton/BS/214.305/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Fachstellen oder die Gemeinden liefern die jeweils aktualisierten Geobasisdaten und anderen Geodaten zeitnah und in vorgegebener Qualität kostenlos an die Fachstelle für Geoinformation."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "a8ca1d0a9b2033eef7530c3749563871faf1a45a5fb5b284a670b3e88ff234f3"
+    },
+    {
+      "id": "kanton/BS/214.305/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konferenz für Organisation und Informatik des Kantons Basel-Stadt kann auf Antrag der GIS-Koordination (§ 26) für die Geobasisdaten und die anderen Geodaten weiterführende Vorschriften betreffend technische Anforderungen und Normen erlassen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "b2d57be55aaed9810e854e278ea6c97d62dbfe6898f61b43c9a07641f6ccd2a4"
+    },
+    {
+      "id": "kanton/BS/214.305/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Zugang zu den Geobasisdaten und den anderen Geodaten wird nach den Bestimmungen des KGeoIG, des Informations- und Datenschutzgesetzes und dem Gesetz über das Archivwesen festgelegt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "e8549905dcc20e3802693ca35bb5d8225c5689882ade42c055a41e2c356b51dc"
+    },
+    {
+      "id": "kanton/BS/214.305/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Geobasisdaten und den anderen Geodaten werden im Katalog folgende Zugangsberechtigungsstufen zugewiesen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "öffentlich zugänglich: Zugangsberechtigungsstufe A;"
+            },
+            {
+              "marke": "b",
+              "text": "beschränkt öffentlich zugänglich: Zugangsberechtigungsstufe B."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "483d63bd21ef8f91b87b671fb0bba513b6a18d75d4cf0d84825b3e4c37984b05"
+    },
+    {
+      "id": "kanton/BS/214.305/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Geobasisdaten und anderen Geodaten der Zugangsberechtigungsstufe A wird grundsätzlich Zugang gewährt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang wird im Einzelfall oder generell für Teile des Datensatzes eingeschränkt, aufgeschoben oder verweigert, wenn die Voraussetzungen gemäss § 29 des Informations- und Datenschutzgesetzes erfüllt sind."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "9150dc279cf840b0f2a129b9a0d1d64f26d33cbc0f0da15d7734a7078b24a199"
+    },
+    {
+      "id": "kanton/BS/214.305/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Geobasisdaten und anderen Geodaten der Zugangsberechtigungsstufe B wird kein Zugang gewährt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang wird im Einzelfall oder generell ganz oder für Teile des Datensatzes gewährt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen oder"
+            },
+            {
+              "marke": "b",
+              "text": "die überwiegenden öffentlichen oder privaten Interessen durch rechtliche, organisatorische oder technische Massnahmen gewahrt werden können."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "33e77a0683781e5b92df8ffa33c45ed2d3298ec4ef8f48ad24e54713707570eb"
+    },
+    {
+      "id": "kanton/BS/214.305/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwilligung zur Nutzung wird durch die zuständige Fachstelle erteilt wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zugang gemäss § 14 oder § 15 gewährt werden kann,"
+            },
+            {
+              "marke": "b",
+              "text": "die Nutzerin oder der Nutzer deklariert hat, dass die Nutzungsbedingungen eingehalten werden und"
+            },
+            {
+              "marke": "c",
+              "text": "die Daten auch Dritten zugänglich gemacht werden dürfen, an welche die Weitergabe vorgesehen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwilligung zur Nutzung gilt vorbehältlich der Einhaltung der Vorschriften des Informations- und Datenschutzgesetzes."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "59ee37b703e107a9dc197682114697284dd83545e75a2ebc0212e0cf30e7025c"
+    },
+    {
+      "id": "kanton/BS/214.305/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwilligung zur Nutzung kann durch ein technisches Verfahren, durch Vertrag oder durch Verfügung gewährt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden Geobasisdaten des Bundesrechts, des kantonalen Rechts oder andere Geodaten widerrechtlich genutzt, so wird das Verfahren zur Erteilung der Einwilligung nachträglich von Amtes wegen durchgeführt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "dac28c17b02e920f6822990b72dcc5b223b0c69176eef0cbb18d63d945803e40"
+    },
+    {
+      "id": "kanton/BS/214.305/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe von Geobasisdaten des Bundesrechts, des kantonalen Rechts oder anderen Geodaten erfolgt durch das Grundbuch- und Vermessungsamt oder durch die zuständige Fachstelle, sofern die Einwilligung zur Nutzung gewährt werden kann."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "546e38aa05c3234d8403235ba8e4280d49f2efb8c9165de0e4c41bf19451cd7e"
+    },
+    {
+      "id": "kanton/BS/214.305/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besitzen Geobasisdaten nach kantonalem Recht und andere Geodaten die Zugangsstufe A, dürfen diese ohne Quellenangabe wiedergegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Fachstelle kann in begründeten Fällen eine Pflicht zur Quellenangabe in den Metadaten vorschreiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Details werden in den im Geoportal publizierten Nutzungsbedingungen geregelt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "da6c4d07d09af95f8b5b58ec709cfb38fd187b3782010a4fd00646555f280fa5"
+    },
+    {
+      "id": "kanton/BS/214.305/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bereitstellung von Geodaten und Basisleistungen für Geoinformationssysteme (GIS) innerhalb der kantonalen Verwaltung wird durch eine Servicevereinbarung für die GIS-Basisleistungen geregelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Durch eine Vereinbarung wird die angemessene Beteiligung der Gemeinden an der Bereitstellung von Geodaten und GIS-Basisleistungen geregelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Gegenüber ausserkantonalen schweizerischen Behörden und Behörden des angrenzenden Auslands kommt der erleichterte Austausch von Geobasisdaten des Bundesrechts, des kantonalen Rechts und anderer Geodaten zur Anwendung, soweit diese Gegenrecht gewähren. Die Art. 37 bis 42a der Verordnung über Geoinformation (Geoinformationsverordnung, GeoIV) vom 21. Mai 2008 gelten sinngemäss."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "ca2a218dc4e9931e09bea69b591808517561fca407ee90fc5a2a1aa7a212b39a"
+    },
+    {
+      "id": "kanton/BS/214.305/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den direkten elektronischen Zugriff wird keine Gebühr erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Bezug über eine Abgabestelle werden in der Regel folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bereitstellungskosten betragen pro Bestellung einschliesslich des ersten Datensatzes CHF 150"
+            },
+            {
+              "marke": "b",
+              "text": "für jeden weiteren Datensatz der gleichen Bestellung CHF 20"
+            },
+            {
+              "marke": "c",
+              "text": "bei Abgabe der Daten auf einem elektronischen Datenträger erhöhen sich die Bereitstellungskosten pro Datenträger um CHF 30"
+            },
+            {
+              "marke": "d",
+              "text": "die Versandkosten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "cbf9e96df1cf0b5fba8df40ddf32873fd393e214e48cc6e9e266cd82d831d30f"
+    },
+    {
+      "id": "kanton/BS/214.305/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Bezug über einen direkten elektronischen Zugriff werden folgende Gebühren verlangt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die einmalige Einrichtung der Zugriffsberechtigung max. CHF 250"
+            },
+            {
+              "marke": "b",
+              "text": "für den nutzungsbezogenen Beitrag an den Betrieb des elektronischen Zugriffs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Bezug über eine Abgabestelle werden zusätzlich zu den Bereitstellungsgebühren in § 21 für jeden beschränkt öffentlichen Datensatz max. CHF 150 erhoben."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "5fd33bf318c4702acc22bc8bcab43a3d96ca58fd03fce25e7cd98e830d480dee"
+    },
+    {
+      "id": "kanton/BS/214.305/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zusätzliche kundenspezifische Dienstleistungen werden nach Aufwand verrechnet. Der interne Zeitaufwand wird gemäss den Stundenansätzen der Koordinationskonferenz der Bau- und Liegenschaftsorgane der öffentlichen Bauherren (KBOB) verrechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Unterstehen Leistungen der Mehrwertsteuer, so wird diese zusätzlich belastet."
+        },
+        {
+          "absatz": "3",
+          "text": "Für anerkannte Bildungsinstitutionen kann die Bereitstellungsgebühr reduziert werden."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "42fbaa1f4f30f93289728758415dc2c01ab0e883449b977a36561322ed2800f4"
+    },
+    {
+      "id": "kanton/BS/214.305/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die im Katalog aufgeführten Fachstellen sind zuständig für die ihnen zugeordneten Daten, die entsprechenden GIS-Applikationen und GIS-Projekte und stellen die Koordination mit der Fachstelle für Geoinformation sicher."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "853dbed1d4af6aab8f81fc213f9e6a4889cea9378fa8ea9650d2ad69bbd1398e"
+    },
+    {
+      "id": "kanton/BS/214.305/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fachstelle für Geoinformation des Grundbuch- und Vermessungsamtes ist zuständig für die zentralen GIS-Basisleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese werden über einen Leistungsauftrag geregelt und beinhalten insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Betrieb der Geodateninfrastruktur, der zentralen Geodienste und des Geoportals,"
+            },
+            {
+              "marke": "b",
+              "text": "die Unterstützung der zuständigen Fachstellen,"
+            },
+            {
+              "marke": "c",
+              "text": "die Koordination mit anderen Behörden und Gremien."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "eacf3bc19e27713478b99fad4c67f1d09608cd90fff7a97b3a3c52c3c328996b"
+    },
+    {
+      "id": "kanton/BS/214.305/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die GIS-Koordination besteht aus Vertretungen der zuständigen Fachstellen, der Gemeinden und der Fachstelle für Geoinformation."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellt die Koordination und den Informationsaustausch sicher."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie bereitet den Leistungsauftrag für die GIS-Basisleistungen sowie technische und organisatorische Weisungen zu Handen der Konferenz für Organisation und Informatik vor."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "e303deb88db9dfe45051ea3a83aec260a309f279a2f0105f48d8295adbeb5f64"
+    },
+    {
+      "id": "kanton/BS/214.305/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuch- und Vermessungsamt ist zuständig für die Meldung von Flügen für Luftaufnahmen, die der Erfassung von Geobasisdaten des Bundesrechts sowie des kantonalen Rechts dienen, an das Bundesamt für Landestopografie."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Fachstellen melden diese Flüge vorgängig dem Grundbuch- und Vermessungsamt."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "93cc9f7e0eb9735fb5edde66371be1b226dd2ee35f0191aa0a1be96a8ae74b41"
+    },
+    {
+      "id": "kanton/BS/214.305/art_27_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "27_a",
+      "artikelLabel": "§ 27a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nicht mehr benötigte Informationen, welche aus einem Fachsystem stammen und darin erhalten bleiben, sind zu vernichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Entstehen durch eine Kombination von Daten aus einem oder mehreren Fachsystemen neue Informationen, ist die Zugehörigkeit der einzelnen Daten festzustellen und diese den gemäss § 24 zuständigen Fachstellen zurückzugeben. Ist eine Rückgabe nicht möglich, sind die Informationsbestände unter Berücksichtigung der Regelung von § 16 des Informations- und Datenschutzgesetzes zu vernichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Bestehen gegenüber den Informationen aus der Geodateninfrastruktur Abhängigkeiten von anderen Datensystemen oder Datennutzern, sind angemessene Fristen bis zur Vernichtung der Informationen der Geodateninfrastruktur vorzusehen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "8f4685037d040b96dcdd32390c1b96c436c7529aac339032817a3bcb06da5743"
+    },
+    {
+      "id": "kanton/BS/214.305/art_27_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "27_b",
+      "artikelLabel": "§ 27b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige öffentliche Organ gemäss § 25 kann das Bearbeiten von Informationen unter Einhaltung der Voraussetzungen gemäss § 7 des Informations- und Datenschutzgesetzes Dritten übertragen."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "9789c35de341fb152038ac05ea803f9a082333f686c43a4a24c935bfd3e3677e"
+    },
+    {
+      "id": "kanton/BS/214.305/art_27_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "KGeoIV (214.305)",
+      "artikel": "27_c",
+      "artikelLabel": "§ 27c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird die Geodateninfrastruktur aufgelöst, sind die darin enthaltenen Informationsbestände den gemäss § 24 zuständigen Fachstellen zurückzugeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Rückgabe nicht möglich, sind die Informationsbestände unter Berücksichtigung der Regelung von § 16 des Informations- und Datenschutzgesetzes zu vernichten."
+        }
+      ],
+      "stand": "2026-02-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.305",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aaff837b6390692bded794e30d7d4c26",
+      "sha": "a803c9282fd5bd2466886f3574a523793af8b4df9486b13373cd09ace7de6984"
+    }
+  ]
+}

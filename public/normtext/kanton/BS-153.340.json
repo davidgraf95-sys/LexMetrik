@@ -1,0 +1,43 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.340/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VoAGOV (153.340)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die technische Betreiberin des Behördenportals kann den Authentifizierungsdienst der Schweizer Behörden AGOV zur Identifizierung und Authentisierung der Nutzenden einbinden."
+        }
+      ],
+      "stand": "2024-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.340",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "923dbd5bbd14095ea82b48cb57af9b31",
+      "sha": "0e557d32b69ab320ac16f01a8ec451f36c90edb75f78d4ba8a35617e1b8d3762"
+    },
+    {
+      "id": "kanton/BS/153.340/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "VoAGOV (153.340)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Fachbehörde bestimmt, welche AGOV-Authentifizierungsqualität (AGOVaq) für den Zugang zu einem elektronischen Dienst notwendig ist."
+        }
+      ],
+      "stand": "2024-06-15",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.340",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "923dbd5bbd14095ea82b48cb57af9b31",
+      "sha": "a0d94d83f1e2eb183869ed23661cc0e708d3d764398f49e3be7f2bc421ef53f4"
+    }
+  ]
+}

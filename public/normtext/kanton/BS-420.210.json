@@ -1,0 +1,907 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/420.210/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung beinhaltet die allgemeinen Ausführungsbestimmungen zum Kantonalen Gesetz über die Berufsbildung."
+        },
+        {
+          "absatz": "2",
+          "text": "Für das Absenzen- und Disziplinarwesen an den Berufsfachschulen besteht eine separate Verordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Gebühren betreffend Bildungsgänge und Kurse der höheren Berufsbildung, Kurse der berufsorientierten Weiterbildung sowie Kurse für Berufsbildnerinnen und Berufsbildner richten sich nach der Verordnung über Studien-, Kurs- und Verwaltungsgebühren in der kantonalen Berufsbildung."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "7f373092eb7aa2c33e08ea1bb5aebbc44aaa3b53cf004f427c891dd4d6db8bd0"
+    },
+    {
+      "id": "kanton/BS/420.210/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Bildung in beruflicher Praxis sowie für die Berufsfachschulen ist das Erziehungsdepartement zuständig."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständige Verwaltungsabteilung für die Bildung in beruflicher Praxis sowie die Berufs- und Laufbahnberatung ist die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung ."
+        },
+        {
+          "absatz": "3",
+          "text": "Zuständige Verwaltungsabteilung für die Berufsfachschulen ist die Abteilung Weiterführende Schulen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "eb4c28f1573affedfa58c3717b75f131a35b3601b1ea278dd7c3da70c9fb00fe"
+    },
+    {
+      "id": "kanton/BS/420.210/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommission für die Berufsbildung in Gewerbe, Industrie und Dienstleistungen sowie die Kommission für die kaufmännische Berufsbildung werden vom Regierungsrat auf dessen eigene Amtsdauer gewählt, unter gleichzeitiger Bezeichnung der Präsidentinnen bzw. Präsidenten. Die Kommissionen setzen sich aus je 8–15 Mitgliedern zusammen."
+        },
+        {
+          "absatz": "2",
+          "text": "Arbeitgeberorganisationen und Arbeitnehmerorganisationen werden gleichmässig berücksichtigt. Ebenfalls wählbar sind Vertreterinnen und Vertreter privater Bildungsinstitutionen. Die Verwaltung ist bis zu höchstens einem Drittel der Mitglieder durch Berufsfachschulen, Kinder- und Jugendgesundheitsdienst, Abteilung Berufsberatung, Berufs- und Erwachsenenbildung sowie die Prüfungsleitungen vertreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Personen, auch Vertreterinnen und Vertreter der Berufsfachschulen und Delegationen der Lernenden, können mit beratender Stimme beigezogen werden. Die Präsidentin oder der Präsident der zuständigen Berufsbildungskommission legt nach Rücksprache mit der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung und den Berufsfachschulen die jeweilige Vertretung fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Sekretariat der Kommissionen wird von der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung geführt."
+        },
+        {
+          "absatz": "5",
+          "text": "Jährlich findet mindestens eine gemeinsame Sitzung beider Kommissionen statt."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "93dc1366b3cf7dd32c5f5fd6354d6c356cdd219d9f92680c63609ac2a2825af6"
+    },
+    {
+      "id": "kanton/BS/420.210/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Kommissionen obliegen folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Behandlung grundsätzlicher Probleme oder spezieller Fragen in der Berufsbildung und der Berufs- und Laufbahnberatung. Sie können hierfür Ausschüsse bilden, die von einem Kommissionsmitglied oder der Vorsteherin bzw. dem Vorsteher der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung präsidiert werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Wahl und Ersatz von Mitgliedern der Fachkommissionen;"
+            },
+            {
+              "marke": "c",
+              "text": "Genehmigung von Budgets und Abrechnungen der Prüfungen und eventuell anderer Qualifikationsverfahren."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "ae88905f29cab2305b91908b5fb7c48ba808d4cb513224af3e04cc932e2735d6"
+    },
+    {
+      "id": "kanton/BS/420.210/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Wahlen erfolgen aufgrund von Vorschlägen der Organisationen der Arbeitswelt. In Wirtschaftszweigen, für welche keine Organisationen der Arbeitswelt bestehen, können geeignete Berufsvertreterinnen oder Berufsvertreter ernannt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fachkommissionen setzen sich in der Regel aus einer gleichen Zahl von Arbeitgebenden und Arbeitnehmenden zusammen. Sie bestimmen ihre Leitung selbst."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Organisationen der Arbeitswelt können im Einvernehmen mit der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung bei Bedarf auch Personen, die nicht mehr aktiv im Berufsleben stehen, mit der weiteren Fachkommissionstätigkeit betrauen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "d4c8b850d1338c3b98f4d7c192ab8dcde56ef1ce2fd8ebe615c0f2aef3d5d0a9"
+    },
+    {
+      "id": "kanton/BS/420.210/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung erteilt den Fachkommissionen die erforderlichen Aufträge. Sie haben vor allem folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Prüfung von Lehrbetrieben und Berichterstattung hinsichtlich der Eignung zur Bildung in beruflicher Praxis;"
+            },
+            {
+              "marke": "b",
+              "text": "Überwachung der Bildung in beruflicher Praxis;"
+            },
+            {
+              "marke": "c",
+              "text": "Durchführung von Zwischenprüfungen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Mitglieder der Fachkommission in einer Frage geteilter Meinung, so haben sie der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung getrennte Berichte einzureichen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "2a78f358d270fd4b7a0e65daacdb1559af76da9062092b9c82e1b30c4ad7cd8e"
+    },
+    {
+      "id": "kanton/BS/420.210/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung stellt ein Grundangebot an Berufs- und Laufbahnberatung bereit. Dieses umfasst die Informationsvermittlung und die Beratung von Jugendlichen und Erwachsenen in Fragen der Berufswahl, der Studienmöglichkeiten sowie der Laufbahn- und Weiterbildungsplanung. Dieses Grundangebot ist unentgeltlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Grundangebot kann durch erweiterte oder vertiefende Angebote ergänzt werden. Diese sind kostenpflichtig."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Besuch der Berufs- und Laufbahnberatung ist freiwillig. Die Vertraulichkeit der Beratungen ist gewährleistet."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "1d1cf7d84455907c185a938b7f5778fce17dacf07c0c19a547aad4e5a4ec94e0"
+    },
+    {
+      "id": "kanton/BS/420.210/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung hilft nach Möglichkeit bei der Suche nach Lehrstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führt Erhebungen über freie Lehrstellen durch in Zusammenarbeit mit der Wirtschaft und deren Verbänden."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie vermittelt nach Bedarf spezielle Abklärungen durch Fachpersonen"
+        },
+        {
+          "absatz": "4",
+          "text": "Sie wirkt mit in Fragen der Berufswahl und der Vorbereitung auf die berufliche Grundbildung und arbeitet zu diesem Zweck mit Schulen, Eltern, Wirtschaft, Arbeitsmarktbehörde und weiteren Institutionen im Sozialbereich zusammen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "9a55f8468bbe3b1a1f1a80181f46d97af6957c9181a31d1dac11d7ff28fdff73"
+    },
+    {
+      "id": "kanton/BS/420.210/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Vorbereitung auf die berufliche Grundbildung gemäss Art. 7 der Verordnung zum Bundesgesetz gelten folgende Angebote:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "berufsorientierte Vorkurse"
+            },
+            {
+              "marke": "b",
+              "text": "Vorlehren mit Betriebspraktikum"
+            },
+            {
+              "marke": "c",
+              "text": "andere praxis- und arbeitsweltbezogene Angebote."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "537a56f23e4576e53a98c494dd93d3cfb0d26fe843566b1cf55858fdab2ed98b"
+    },
+    {
+      "id": "kanton/BS/420.210/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Lehrbetrieb hat den Berufsinspektorinnen und Berufsinspektoren sowie den Fachkommissionsmitgliedern, soweit sie im Auftrage der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung handeln, den Zutritt zu den Arbeits- und Unterkunftsräumen der Lernenden zum Zwecke der Kontrolle zu gestatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kontrollorgane sind berechtigt, Betriebsangehörige, nötigenfalls ohne Anwesenheit weiterer Personen, zu befragen. Die Wahrnehmungen sind vertraulich zu behandeln"
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "73ba61e615697a1c5988c0dbe6247c773fe544587f78187d494cab93d136110f"
+    },
+    {
+      "id": "kanton/BS/420.210/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die mit der Ausbildung beauftragte Mitarbeiterin oder der mit der Ausbildung beauftragte Mitarbeiter des Lehrbetriebs muss im Lehrvertrag namentlich aufgeführt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird diese oder dieser ersetzt, ist die Nachfolgerin oder der Nachfolger der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung zu melden. Ist keine solche oder kein solcher vorgesehen, trifft die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung die notwendigen Vorkehrungen zur Sicherung der Bildung in beruflicher Praxis."
+        },
+        {
+          "absatz": "3",
+          "text": "Erfolgt die Bildung in einer betriebsinternen Lehrwerkstätte, so ist die jeweilige verantwortliche Leiterin oder der jeweilige verantwortliche Leiter im Lehrvertrag zu nennen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "37cb8e05482217315cd71c7e8ffa9e84b8b2a537acc14b34de70fdbf0f53754f"
+    },
+    {
+      "id": "kanton/BS/420.210/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Absolventinnen und Absolventen anerkannter Ausbildungskurse für Berufsbildnerinnen und Berufsbildner erhalten einen Kursausweis."
+        },
+        {
+          "absatz": "2",
+          "text": "Gesuche um Befreiung vom Besuch der Ausbildungskurse sind innert zehn Tagen nach Erlass des Kursaufgebots der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung einzureichen. Die Unterlagen mit dem Nachweis einer gleichwertigen Qualifikation sind dem Dispensationsgesuch beizulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Begründete Verschiebungsgesuche sind innert der gleichen Frist an die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung zu richten."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "f2370ae386197365d68bd17bde3639392451c8ef23814415e7d2047ec9f41ce4"
+    },
+    {
+      "id": "kanton/BS/420.210/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das betriebliche Bildungsprogramm eines Lehrbetriebsverbunds ist vom Leitbetrieb oder von der Leitorganisation der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung zur Genehmigung einzureichen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "4afbe948481439c49d4358d60fb0e190858e69120f947dc431cd86b6630113ab"
+    },
+    {
+      "id": "kanton/BS/420.210/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die obligatorischen Lehrmittel für den Pflichtunterricht, die Stützkurse, die berufsbezogenen Freikurse und die Berufsmaturität werden durch die Berufsfachschulen bezeichnet"
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Lehrmittel zur Verfügung gestellt werden, so muss dies im Lehrvertrag unter «Besondere Vereinbarungen» geregelt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die abgegebenen Lehrmittel sind Eigentum der Lernenden."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Härtefall kann ein Gesuch an die zuständige Abteilung Berufsberatung, Berufs- und Erwachsenenbildung gerichtet werden."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "dd00eae272229d95e3155b44133ef73023b5ca4108be94c1596439dda284411b"
+    },
+    {
+      "id": "kanton/BS/420.210/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufforderung zur ärztlichen Untersuchung erfolgt durch den Kinder- und Jugendgesundheitsdienst."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ärztliche Untersuchung kann von Amtsärztinnen und Amtsärzten, frei praktizierenden Ärztinnen und Ärzten oder Werkärztinnen und Werkärzten durchgeführt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Vor Beginn der Lehrzeit haben die Lernenden einen Fragebogen des Kinder- und Jugendgesundheitsdienstes auszufüllen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung kann im Einzelfall eine ärztliche Untersuchung einer lernenden Person verlangen. In solchen Fällen wird der Kinder- und Jugendgesundheitsdienst beigezogen."
+        },
+        {
+          "absatz": "5",
+          "text": "Ergibt der ärztliche Befund, dass die lernende Person den gesundheitlichen Anforderungen des Berufs nicht gewachsen ist, so hat der Kinder- und Jugendgesundheitsdienst die Lehrvertragsparteien und die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung unverzüglich über die Berufseignung zu informieren."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "1041b4ba5f6594628e500f9301dcbe05c747f1c40cd48b0699b636a4e0a2f965"
+    },
+    {
+      "id": "kanton/BS/420.210/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Lernenden mit Behinderungen entscheidet die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung in Absprache mit den betreffenden Fachstellen und den Vertragsparteien über spezielle Massnahmen wie Dispensationen und angemessene Prüfungsmodalitäten."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "511aeff2e0db9e636fb678b72fc8f1aed3b3d44829fc5745177bc3263adf4638"
+    },
+    {
+      "id": "kanton/BS/420.210/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die schulische Bildung kann an öffentlichen oder privaten Berufsfachschulen erteilt werden. Private Anbieter bedürfen einer Bewilligung durch die zuständigen Ressorts des Erziehungsdepartements."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung kann nach Anhören der interessierten Organisationen der Arbeitswelt, der Berufsfachschulen und im Einvernehmen mit der Abteilung Schulen des Erziehungsdepartements den Besuch auswärtiger Fachklassen anordnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berufsfachschulen fördern und koordinieren geeignete Formen der schulinternen Mitsprache der Lernenden."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "abd198f310c1e271f5f365e57021c05b6874b54541b0016b7340f9cc61723a56"
+    },
+    {
+      "id": "kanton/BS/420.210/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Berufsmaturität, Frei- und Stützkurse sollen in der Regel am Ort des obligatorischen Berufsschulunterrichts besucht werden. Über Ausnahmen entscheidet die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung im Einvernehmen mit den Berufsfachschulen."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Regel dürfen Frei- und Stützkurse einen halben zusätzlichen Tag zum Pflichtunterricht nicht überschreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berufsfachschule kann gemäss Art. 22 des Bundesgesetzes den Besuch von Stützkursen im Einvernehmen mit dem Lehrbetrieb und der lernenden Person anordnen und dessen Dauer bestimmen. Lernende, welche Stützkurse besuchen, dürfen Freikurse während der Arbeitszeit nur mit dem Einverständnis des Lehrbetriebes belegen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "93d331554bee50f3f295836e6d2dd408156a86e1a3a94a26ba55f4599f6f1ea8"
+    },
+    {
+      "id": "kanton/BS/420.210/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche für Kostenrückerstattung sind der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung einzureichen. Reisespesen werden für den Schulbesuch ausserhalb des Einzugsgebiets des Tarifverbunds Nordwestschweiz (TNW) aufgrund der benutzten Fahrausweise zurückerstattet."
+        },
+        {
+          "absatz": "2",
+          "text": "Für auswärtige Verpflegung wird ein Pauschalbetrag von CHF 13.00 entrichtet. Für Übernachtung mit Nachtessen und Frühstück werden CHF 70.00 zurückerstattet. Alle Kostenrückerstattungen erfolgen nur gegen Beleg. Weitere Modalitäten werden in Richtlinien geregelt."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "a861c81a548d96ae85396f18990fa788b7bf33da78b8e7b0ad4d454c1c5b0b97"
+    },
+    {
+      "id": "kanton/BS/420.210/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Wahl der Prüfungsexpertinnen und Prüfungsexperten erfolgt durch die Prüfungskommission aufgrund von Vorschlägen der Organisationen der Arbeitswelt, der Berufsfachschulen und der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung In der Regel sollen Arbeitgebende und Arbeitnehmende gleichmässig berücksichtigt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Expertinnen oder Experten sind ausgewiesene Fachleute mit einigen Jahren Berufserfahrung und Lehrkräfte an Berufsfachschulen zu wählen. Sie haben die vom Bund oder Kanton angebotenen Expertenkurse zu besuchen; über Ausnahmen entscheidet die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung ."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Prüfungskommissionen können bei Bedarf im Einvernehmen mit der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung ausnahmsweise auch Personen, die nicht mehr aktiv im Berufsleben stehen, mit der weiteren Expertentätigkeit betrauen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung kann von sich aus oder auf Antrag den Ersatz einer Expertin oder eines Experten verlangen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "6ab90b869468c0e539272a635fdc22fc6f96b9ca3e6cf9dfb9436aa9c3582682"
+    },
+    {
+      "id": "kanton/BS/420.210/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Organisationen der Arbeitswelt, die Prüfungen oder andere Qualifikationsverfahren durchführen, haben die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung zuhanden der Berufsbildungskommissionen Budget und Jahresrechnung rechtzeitig einzureichen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "22b47a647f56be8abcf6d887b9f050d195c70bfdfbf5288e4fb1d0d8098eb583"
+    },
+    {
+      "id": "kanton/BS/420.210/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organisationen der Arbeitswelt sind verpflichtet, der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung jährlich einen Bericht über die von ihnen organisierten Prüfungen vorzulegen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "025a9d15aab4ceaab057b03c92675b6e625d4987053845e68e694a687e957c6b"
+    },
+    {
+      "id": "kanton/BS/420.210/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfungskommissionen haben der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung rechtzeitig die Prüfungstermine bekannt zu geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung kann im Ausnahmefall für einzelne Kandidatinnen oder Kandidaten Prüfungen ausserhalb dieser Zeit anordnen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "49eb0c6787c1829e5d5a406b4e39401a7714f36df4a5bb3d1ceb3723a0af6c2a"
+    },
+    {
+      "id": "kanton/BS/420.210/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfungsleitungen und die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung erarbeiten gemeinsam die den Prüfungsprogrammen beigegebenen Wegleitungen. Diese sowie allfällige eidgenössische Weisungen sind den Kandidatinnen und Kandidaten in geeigneter Form bekannt zu geben."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "0e49b9189134cb636c80236ce73735c0b096865655621f3d063b7919ce699b1a"
+    },
+    {
+      "id": "kanton/BS/420.210/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu den Prüfungen und anderen Qualifikationsverfahren haben die Mitglieder der Berufsbildungs- und Prüfungskommissionen, die Mitarbeiterinnen und Mitarbeiter der Abteilung Berufsberatung, Berufs- und Erwachsenenbildung , die Lehrkräfte der Berufsfachschulen sowie, mit Genehmigung der Prüfungskommissionen, auch Vertreterinnen und Vertreter anderer interessierter Behörden und Institutionen Zutritt. Dagegen dürfen sie der Prüfung ihrer eigenen Kinder und Lernenden nicht beiwohnen."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "7bc013666fd3735f32b2d0dae98db26be4de13a16e75c8dda42f431f3901a914"
+    },
+    {
+      "id": "kanton/BS/420.210/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Anmeldung haben die Repetierenden bekannt zu geben, ob sie die gesamte Prüfung oder nur diejenigen Fächer mit ungenügenden Noten wiederholen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zur Ablegung der Prüfung benötigte Material wird den ausserhalb eines Lehrverhältnisses stehenden Kandidierenden belastet."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "d0e660c26084875c458fda56a7dfd65f6b64565258e7ef9e56b3c221d6b24893"
+    },
+    {
+      "id": "kanton/BS/420.210/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei kurzfristiger Abmeldung oder unentschuldigtem Fernbleiben von Prüfungen kann die zuständige Prüfungsleitung eine Bearbeitungsgebühr von maximal Fr. 250 erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "ebc2c0baf6cb162c0fe52756770ddf6965476a3254c66d6e6819c2795fb2d464"
+    },
+    {
+      "id": "kanton/BS/420.210/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erziehungsdepartement erlässt Richtlinien zur Umsetzung der zweijährigen Grundbildungen mit Berufsattest insbesondere für den Bereich der fachkundigen individuellen Begleitung."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "c807299288917f40707ccfbb33527e9ef88028537032172749480daea3cfd06a"
+    },
+    {
+      "id": "kanton/BS/420.210/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erziehungsdepartement entscheidet darüber, ob einer Institution für die Durchführung von Kursen der Nachholbildung, der berufsorientierten Weiterbildung und der höheren Berufsbildung Beiträge gewährt werden."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "d35dff46b20d6c6134c47d84e5a35bff0cffae65d3512831469f36948b76fd76"
+    },
+    {
+      "id": "kanton/BS/420.210/art_29_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "29_a",
+      "artikelLabel": "§ 29a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bildungsgänge auf Niveau höhere Fachschulen können von kantonalen Berufsfachschulen und von kantonalen oder privaten höheren Fachschulen angeboten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bildungsanbieter erlassen nach den Vorgaben der Verordnung des WBF über die Mindestvorschriften für die Anerkennung von Bildungsgängen und Nachdiplomstudien der höheren Fachschulen (MiVo-HF) vom 11. September 2017 und der entsprechenden Rahmenlehrpläne ein Studien- und Prüfungsreglement. Dieses ist den Studierenden in geeigneter Form bekannt zu geben."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "02fb83847eeca93f2f23c72f7f1eb5ae5797d5af5a30ceb934916b6e93c87079"
+    },
+    {
+      "id": "kanton/BS/420.210/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche um Beiträge an Studien, Pilotversuche und andere Massnahmen zur Entwicklung der Berufsbildung sind an das Erziehungsdepartement zu richten. Diese müssen mindestens eine Beschreibung des Vorhabens und ein Budget enthalten."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "d8ce88d8d3c66a9d997b6c0085d521b0c0a9c9b4e714ef55f2a75f49f68bee0f"
+    },
+    {
+      "id": "kanton/BS/420.210/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton gewährt Beiträge gemäss den in Art. 57 des Bundesgesetzes über die Berufsbildung festgehaltenen Bedingungen und Auflagen. Sie werden in der Regel in Form von Pauschalen in Verbindung mit einer Leistungsvereinbarung entrichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Beiträge können auch an Organisationen für die Bildung und Weiterbildung in Berufen gewährt werden, die dem Berufsbildungsgesetz nicht unterstellt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständigen Ressorts des Erziehungsdepartements schliessen mit den Anbietern in der Regel Leistungsvereinbarungen ab. Sie regeln namentlich das Angebot, die Qualitätsstandards, die finanziellen Mittel sowie die Verantwortlichkeiten."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "003f23cbb811ad8ae29a37ce5975f48fa3a9a2f6e7b0ae05e2027806aac82642"
+    },
+    {
+      "id": "kanton/BS/420.210/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erziehungsdepartement erlässt Richtlinien über die Höhe der zu gewährenden Kantonsbeiträge. Es stützt sich dabei auf interkantonal vereinbarte Ansätze."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abteilung Berufsberatung, Berufs- und Erwachsenenbildung kann Vorauszahlungen bis zu 80% der voraussichtlichen Kantonssubvention gewähren."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "df7c3cb20dbbf0c68740e9e5f7dbb4cbd7685ddd131fada43c8f876145028bf6"
+    },
+    {
+      "id": "kanton/BS/420.210/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird gemäss Art. 58 des Bundesgesetzes über die Berufsbildung der Bundesbeitrag gekürzt oder sind die Voraussetzungen für die Entrichtung des Kantonsbeitrags nicht mehr gegeben, kann das Amt für Berufsbildung und Berufsberatung einen bereits ausgerichteten Kantonsbeitrag ganz oder teilweise zurückverlangen, unter Vorbehalt einer strafrechtlichen Verfolgung."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "b61db356cbd6647a8f93521b045d9a1c5d4bec65268c50f0f2dfe621e1ac4311"
+    },
+    {
+      "id": "kanton/BS/420.210/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Sportamt ist für die Bereitstellung der finanziellen Mittel und für die Kursabrechnungen zuständig."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "f1f09ca6b1eeaec31035a0d641241fa170a3fd672765f8042e128449c8ba18b7"
+    },
+    {
+      "id": "kanton/BS/420.210/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Berufsbildungsverordnung (420.210)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung ist zu publizieren; sie wird sofort wirksam. Auf den gleichen Zeitpunkt wird die Verordnung über den Vollzug des Kantonalen Gesetzes über die Berufsbildung (Berufsbildungsverordnung) vom 25. Februar 1986 aufgehoben."
+        }
+      ],
+      "stand": "2020-03-19",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/420.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "19b1a45ac88eb64f94b3cc37e22e23aa",
+      "sha": "af2eecbfdcb0f845f37c99c14311a3f64ec6eeb5ca9ed3cca3facbc1b167365e"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/153.320/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Informationssicherheit im Kanton Basel-Stadt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Informationssicherheit bezweckt die Gewährleistung der Vertraulichkeit, der Integrität und der Verfügbarkeit von Informationen sowie die Zurechenbarkeit und Nachvollziehbarkeit von diese betreffende Handlungen oder Abläufen durch angemessene Massnahmen."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "73ac494482313a14ce2d23a285991a2386d002268e361a706273535e00fde37d"
+    },
+    {
+      "id": "kanton/BS/153.320/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt für die Organisationseinheiten des Kantons im Sinne von § 3 Abs. 1 lit. a IDG mit Ausnahme der Gerichte."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "0e63f350222260251529279cc3bc26bbb3554d65066f3925e613df660d45462d"
+    },
+    {
+      "id": "kanton/BS/153.320/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat trägt die Gesamtverantwortung für die Informationssicherheit."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt die Informationssicherheitsstrategie fest und steuert mit einem Informationssicherheits-Management-System die Umsetzung der Informationssicherheitsstrategie und stellt deren zeitgerechte Anpassung an veränderte Verhältnisse sicher."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "4fe7e5521d88a8a815c4e32b2ca1debdd9be5df04226efd489033b5df166d5b5"
+    },
+    {
+      "id": "kanton/BS/153.320/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Steuerungsorgan für Informationssicherheit steht dem Regierungsrat als beratendes Gremium zur Seite und stellt die Anträge zur Anpassung der Informationssicherheitsstrategie. Die oder der Vorsitzende des Steuerungsorgans für Informationssicherheit erstattet dem Regierungsrat einmal jährlich Bericht über die Erreichung der Ziele der Strategie in den Departementen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Steuerungsorgan für Informationssicherheit erlässt Weisungen und kontrolliert deren Einhaltung über eine jährliche Berichterstattung durch die kantonale Beauftragte oder den kantonalen Beauftragten für Informationssicherheit (ISB)."
+        },
+        {
+          "absatz": "3",
+          "text": "Es entscheidet abschliessend über Ausnahmen von Informationssicherheitsmassnahmen."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "36081a71567ddbd1161072de657255fbf28281765cdbdd514b051de78d7d463a"
+    },
+    {
+      "id": "kanton/BS/153.320/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der ISB führt die zentrale Fachstelle für Informationssicherheit und hat folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erarbeitung der Informationssicherheitsstrategie unter Berücksichtigung der kantonalen Informatikstrategie;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erstellung eines jährlichen Berichts über die Informationssicherheit zu Handen des Steuerungsorgans für Informationssicherheit;"
+            },
+            {
+              "marke": "c",
+              "text": "die Erhebung der gesamtkantonalen Informationssicherheitsrisiken auf Basis anerkannter Methoden;"
+            },
+            {
+              "marke": "d",
+              "text": "die Überprüfung der von der Dateneignerin oder dem Dateneigner erhobenen Schutzbedarfs- und Risikoanalysen und die Empfehlung von risikomindernden Massnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Erstellung und Aktualisierung eines Verzeichnisses über die vorhandenen Informationsbestände und Informations- und Kommunikations-Anwendungen (IKT-Anwendungen) inkl. Auflistung der jeweils verantwortlichen Dateneignerin oder des verantwortlichen Dateneigners, der Schutzstufe sowie die Führung eines Risiko- und Ausnahmenregisters;"
+            },
+            {
+              "marke": "f",
+              "text": "die Leitung der Kommission Informationssicherheit;"
+            },
+            {
+              "marke": "g",
+              "text": "die Unterstützung des Steuerungsorgans für Informationssicherheit und der Departemente bei der Wahrnehmung ihrer Aufgaben zur Einhaltung der Informationssicherheit;"
+            },
+            {
+              "marke": "h",
+              "text": "die Durchführung von Informationssicherheitsprüfungen in den Departementen in Absprache mit dem zentralen Leistungserbringer;"
+            },
+            {
+              "marke": "i",
+              "text": "die erstinstanzliche Entscheidung über Ausnahmebewilligungen von Informationssicherheitsmassnahmen - die Bewilligungen sind zeitlich zu befristen;"
+            },
+            {
+              "marke": "j",
+              "text": "die Ausarbeitung von Ausführungsbestimmungen zur Umsetzung der Informationssicherheitsstrategie."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "a025fd20859188c22996eeea7bbe672082feb4d6e8989f6e64a3af275e967fde"
+    },
+    {
+      "id": "kanton/BS/153.320/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommission Informationssicherheit unterstützt das Steuerungsorgan für Informationssicherheit und die oder den ISB bei der Wahrnehmung der ihnen übertragenen taktischen Aufgaben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie koordiniert die Tätigkeiten der departementalen Beauftragten für Informationssicherheit (ISBD) und entwickelt Sensibilisierungskampagnen zuhanden des Steuerungsorgans für Informationssicherheit."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "37d4ed415a0c6208953d2f4c3a8a4da380407aea3464aaefeb0b3d987fb5d47c"
+    },
+    {
+      "id": "kanton/BS/153.320/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Departemente gewährleisten die operative Umsetzung der Informationssicherheitsstrategie mit angemessenen Massnahmen und dem Informationssicherheits-Management-System sowie eine jährliche Berichterstattung an die oder den ISB."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes Departement bezeichnet eine oder einen ISBD, die oder der die Departemente bei der Umsetzung der Massnahmen und der Berichterstattung gemäss Abs. 1 unterstützt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufgaben der Departemente umfassen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bereitstellung der finanziellen und personellen Ressourcen zur Umsetzung der Informationssicherheitsmassnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erstellung eines Verzeichnisses über die vorhandenen Informationsbestände und IKT-Anwendungen, deren Schutzstufen inkl. Bezeichnung der verantwortlichen Dateneignerin oder des verantwortlichen Dateneigners sowie eines Risikoregisters;"
+            },
+            {
+              "marke": "c",
+              "text": "die regelmässige Aktualisierung des Verzeichnisses gemäss Bst. b und Meldung der Veränderungen an die oder den ISBD."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "3032cac72e54dd23582e1341932e8f6b6ca2fcdb99d90f5cddd5b51e9245b773"
+    },
+    {
+      "id": "kanton/BS/153.320/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verantwortung für den Umgang mit Informationen trägt dasjenige öffentliche Organ, das die Informationen zur Erfüllung seiner gesetzlichen Aufgaben bearbeitet. Dieses ist insbesondere zuständig für die Ermittlung des Schutzbedarfs der vorhandenen Informationsbestände und IKT-Anwendungen nach den Schutzzielen gemäss § 8 Abs. 2 IDG. Ergibt eine entsprechende Ermittlung einen über den Grundschutz hinausgehenden Schutzbedarf, ist eine Risikoanalyse inkl. Massnahmenplan zur Risikosenkung durchzuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Massnahmenplan ist jährlich auf seine Zweckmässigkeit und Aktualität zu überprüfen und muss als Teil des Grundschutzes mindestens Regelungen zu den folgenden Punkten enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Erstellen und Verwalten eines Zugriffs- und Berechtigungskonzepts;"
+            },
+            {
+              "marke": "b",
+              "text": "die Datenaufbewahrung und -löschung unter Einhaltung der Archivierungsvorschriften;"
+            },
+            {
+              "marke": "c",
+              "text": "den sicheren Informationsaustausch mit Dritten;"
+            },
+            {
+              "marke": "d",
+              "text": "den Einbezug der Mitarbeitenden in den Sicherheitsprozess und"
+            },
+            {
+              "marke": "e",
+              "text": "die Dokumentation von bewilligten und abgelehnten Ausnahmen von Informationssicherheitsmassnahmen sowie des Risikoregisters."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dateneignerin oder der Dateneigner berichtet über die Umsetzung von Informationssicherheitsmassnahmen im Rahmen der jährlichen departementalen Berichterstattung."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "f9edf569bea8eb68c2b78fae8a5034d10bc56a30d0385fe397736701dc0af702"
+    },
+    {
+      "id": "kanton/BS/153.320/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der ISBD:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ist Ansprechpartnerin oder Ansprechpartner für die oder den ISB und die Datenschutzbeauftragte oder den Datenschutzbeauftragten;"
+            },
+            {
+              "marke": "b",
+              "text": "führt und aktualisiert ein Risikoregister auf Ebene Departement und dokumentiert die Ausnahmebewilligungen;"
+            },
+            {
+              "marke": "c",
+              "text": "prüft die Umsetzung der organisatorischen und technischen Sicherheitsmassnahmen;"
+            },
+            {
+              "marke": "d",
+              "text": "empfiehlt Sicherheitsmassnahmen zur Umsetzung;"
+            },
+            {
+              "marke": "e",
+              "text": "ist die zentrale Anlaufstelle für Sicherheitsfragen im Bereich der IKT-Anwendungen;"
+            },
+            {
+              "marke": "f",
+              "text": "unterstützt die Departementsführung bei der Erstellung der organisatorischen Sicherheitsvorgaben;"
+            },
+            {
+              "marke": "g",
+              "text": "unterstützt die Dateneignerin oder den Dateneigner, dass die Informationen im Departement durch angemessene organisatorische und technische Massnahmen geschützt werden;"
+            },
+            {
+              "marke": "h",
+              "text": "verwaltet die internen und externen Sicherheitsprüfungen;"
+            },
+            {
+              "marke": "i",
+              "text": "meldet technische Informationssicherheitslücken der oder dem ISB;"
+            },
+            {
+              "marke": "j",
+              "text": "vertritt das Departement in der Kommission Informationssicherheit;"
+            },
+            {
+              "marke": "k",
+              "text": "organisiert Informationsveranstaltungen zur Informationssicherheit auf Stufe Departement."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "84c1569ce636cc6b941373c29934115f94228b239d4fd6ebe0965e9d572d20d0"
+    },
+    {
+      "id": "kanton/BS/153.320/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "ISV (153.320)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der zentrale Leistungserbringer ist für die Entwicklung, Beschaffung, Bereitstellung, den Unterhalt von IKT-Anwendungen sowie die Einhaltung und Umsetzung der Vorgaben im Bereich der Informationssicherheit zuständig, welche die Departemente unter Einhaltung der datenschutz- und informationssicherheitsrechtlichen Vorgaben zur Erfüllung ihrer gesetzlichen Aufgaben benötigen, soweit diese Anwendungen nicht dezentral beschafft werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden die IKT-Anwendungen von Dritten bezogen, ist sicherzustellen, dass diese die Vorgaben gemäss Abs. 1 einhalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der zentrale Leistungserbringer erstellt den entsprechenden Bericht gemäss § 7 Abs. 1."
+        },
+        {
+          "absatz": "4",
+          "text": "Die oder der Informationssicherheitsbeauftragte des zentralen Leistungserbringers (ISBZ) übernimmt bei diesem die Funktionen der oder des ISBD."
+        },
+        {
+          "absatz": "5",
+          "text": "Der zentrale Leistungserbringer ist befugt, Dienstleistungen Dritten ausserhalb des Geltungsbereichs gemäss § 2 zu erbringen, wenn diese sich verpflichten, mindestens die kantonalen Sicherheitsvorgaben zu gewährleisten. Der zentrale Leistungserbringer ist befugt, entsprechende Kontrollen vorzunehmen oder zu delegieren."
+        }
+      ],
+      "stand": "2016-12-18",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.320",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "93f614f8cbff57ee7efd26ea43a7b712",
+      "sha": "d19e4e8053526213ed620eaa5ee691c5b242561580032e9d24cb51729cb16939"
+    }
+  ]
+}

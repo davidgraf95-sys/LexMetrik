@@ -1,0 +1,378 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.430/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieser Gebührentarif legt die Tarife für die Energielieferung im Rahmen der Grundversorgung mit elektrischer Energie durch die IWB Industrielle Werke Basel (IWB) fest."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "5ec00c54732e1524a40f264618eb78dc41646b8eb6c9b8efa3bf6769e5f71092"
+    },
+    {
+      "id": "kanton/BS/772.430/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gebührentarif basiert auf den Vorgaben des Bundesgesetzes über die Stromversorgung (Stromversorgungsgesetz, StromVG) vom 23. März 2007 und der Stromversorgungsverordnung (StromVV) vom 14. März 2008."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gebührentarif unterscheidet zwischen verschiedenen Kundensegmenten. Für jedes Segment gelten einheitliche Tarife. Vorgesehen sind Einfachtarife und nach Zeiten differenzierte Doppeltarife, bestehend aus einem Normaltarif und einem Spartarif. Normaltarife gelten von Montag bis Freitag zwischen 06.00 und 20.00 Uhr, Spartarife ausserhalb dieser Zeiten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "70f33737e0e6598918b9e5d9b64b9901f8e95e81d39a90773d7f83cbacffecfc"
+    },
+    {
+      "id": "kanton/BS/772.430/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Der Gebührentarif unterscheidet zwischen folgenden Kundensegmenten",
+              "Segment",
+              "Zuordnungskriterium"
+            ],
+            "zeilen": [
+              [
+                "",
+                "1",
+                "Small",
+                "Vorjahresverbrauch <13 MWh oder temporäre Netzanschlüsse (Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen sowie Baustromanschlüsse)"
+              ],
+              [
+                "2",
+                "",
+                "Small plus",
+                "Vorjahresverbrauch &ge;13 MWh bis <50 MWh"
+              ],
+              [
+                "3",
+                "",
+                "Medium",
+                "Vorjahresverbrauch &ge;50 MWh bis <100 MWh"
+              ],
+              [
+                "4",
+                "",
+                "Medium plus",
+                "Vorjahresverbrauch &ge;100 MWh bis <1 GWh"
+              ],
+              [
+                "5",
+                "",
+                "Big",
+                "Vorjahresverbrauch &ge;1 GWh bis <10 GWh"
+              ],
+              [
+                "6",
+                "",
+                "Big plus",
+                "Vorjahresverbrauch &ge;10 GWh"
+              ],
+              [
+                "7",
+                "",
+                "Switch",
+                "Kundinnen und Kunden mit Wahltarif unterbrechbare Verbraucher gemäss § 13 Gebührentarif von IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie"
+              ],
+              [
+                "8",
+                "",
+                "Crowd",
+                "Kundinnen und Kunden mit Wahltarif IWB Sonnenbox Crowd"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Der für die Zuordnung zu einem Segment massgebende Vorjahresverbrauch richtet sich nach den von IWB bei den Kundinnen und Kunden erhobenen Messdaten. Die Datenerhebung richtet sich nach §§ 45 ff. der Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität vom 14. Dezember 2023 ."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Neuanschlüssen ohne Messung eines Vorjahresverbrauchs erfolgt im ersten Kalenderjahr eine Zuordnung zum Segment small, bei nachweisbar höherer Jahresverbrauchsprognose kann eine abweichende Zuordnung vorgenommen werden. Ab dem zweiten Kalenderjahr richtet sich die Zuordnung grundsätzlich nach Abs. 2. Bei unterjährigem Beginn des Grundversorgungsverhältnisses und einem Bezugszeitraum von zwei Monaten oder weniger im ersten Kalenderjahr erfolgt auch im zweiten Kalenderjahr eine Zuordnung zum Segment small und wird die Zuordnung nach dem Vorjahresverbrauch erst im dritten Kalenderjahr vorgenommen. Für die Berechnung des Vorjahresverbrauchs im zweiten Kalenderjahr gilt bei unterjährigem Beginn des Grundversorgungsverhältnisses Abs. 5."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei einem Kundenwechsel wird die neue Kundin oder der neue Kunde im ersten Kalenderjahr dem Segment der bisherigen Kundin oder des bisherigen Kunden zugeordnet; bei nachweisbar abweichender Jahresverbrauchsprognose der neuen Kundin oder des neuen Kunden kann eine abweichende Zuordnung vorgenommen werden. Ab dem zweiten Kalenderjahr richtet sich die Zuordnung grundsätzlich nach Abs. 2. Ist der Kundenwechsel unterjährig erfolgt und beträgt der Bezugszeitraum der neuen Kundin oder des neuen Kunden im ersten Kalenderjahr zwei Monate oder weniger, erfolgt die Zuordnung zum Segment der bisherigen Kundin oder des bisherigen Kunden für das erste und zweite Kalenderjahr und wird die Zuordnung nach dem Vorjahresverbrauch erst im dritten Kalenderjahr vorgenommen. Für die Berechnung des Vorjahresverbrauchs im zweiten Kalenderjahr gilt bei unterjährigem Beginn des Grundversorgungsverhältnisses Abs. 5."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei unterjährigem Beginn des Grundversorgungsverhältnisses und damit verbundenen unvollständigen Jahresverbrauchsdaten werden für die Berechnung des massgebenden Vorjahresverbrauchs die vorhandenen Messdaten linear auf 12 Monate hochgerechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "dc447fba532327144aae2a34b40b18d9b96fe700eb024025523647d9a274b043"
+    },
+    {
+      "id": "kanton/BS/772.430/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Pro Kundensegment gelten folgende Tarife",
+              "Segment",
+              "Tarifbezeichnung",
+              "Einfachtarif (Rp./kWh)",
+              "Normaltarif (Rp./kWh)",
+              "Spartarif (Rp./kWh)"
+            ],
+            "zeilen": [
+              [
+                "",
+                "1",
+                "Small",
+                "IWB Strom small",
+                "11.10",
+                "12.25",
+                "9.65"
+              ],
+              [
+                "2",
+                "",
+                "Small plus",
+                "IWB Strom small plus",
+                "9.40",
+                "10.55",
+                "7.90"
+              ],
+              [
+                "3",
+                "",
+                "Medium",
+                "IWB Strom medium",
+                "9.20",
+                "10.40",
+                "7.85"
+              ],
+              [
+                "4",
+                "",
+                "Medium plus",
+                "IWB Strom medium plus",
+                "8.60",
+                "9.80",
+                "7.45"
+              ],
+              [
+                "5",
+                "",
+                "Big",
+                "IWB Strom big",
+                "–",
+                "9.60",
+                "7.30"
+              ],
+              [
+                "6",
+                "",
+                "Big plus",
+                "IWB Strom big plus",
+                "–",
+                "9.40",
+                "7.10"
+              ],
+              [
+                "7",
+                "",
+                "Switch",
+                "IWB Strom switch",
+                "8.70",
+                "–",
+                "–"
+              ],
+              [
+                "8",
+                "",
+                "Crowd",
+                "IWB Sonnenbox Crowd",
+                "14.85",
+                "14.85",
+                "14.85"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Ist sowohl ein Einfach- als auch ein Doppeltarif vorgesehen (Segment 1 bis 4) gilt der Doppeltarif gemäss § 2 Abs. 2, soweit gemäss Abs. 3 nicht der Einfachtarif zur Anwendung kommt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Einfachtarif kommt zur Anwendung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Kundinnen und Kunden ohne Smart Meter oder anderen doppeltariffähigen Elektrizitätszähler;"
+            },
+            {
+              "marke": "b",
+              "text": "für Kundinnen und Kunden mit Smart Meter oder anderem doppeltariffähigen Elektrizitätszähler, wenn:"
+            },
+            {
+              "marke": "1",
+              "text": "die Kundin oder der Kunde den Einfachtarif wählt oder"
+            },
+            {
+              "marke": "2",
+              "text": "die Kundin oder der Kunde den Einfachtarif von der bisherigen Kundin bzw. dem bisherigen Kunden übernimmt. Eine Übernahme erfolgt, wenn für den betreffenden Messpunkt zuletzt, vor Begründung des Grundversorgungsverhältnisses durch die Kundin oder den Kunden (§ 31 Abs. 2 der Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität), der Einfachtarif zur Anwendung kam und die Kundin oder der Kunde keine abweichende Wahl zugunsten des Doppeltarifs trifft."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Tarife werden grundsätzlich verbrauchsabhängig (pro kWh) in Rechnung gestellt. Bei fehlender Messung gilt § 5."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "233480f99fc62fe530247e7a06fbed29db8d7ea42e11f7a59753f494180416a5"
+    },
+    {
+      "id": "kanton/BS/772.430/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Kundinnen und Kunden ohne Messung gemäss § 40 Abs. 2 der Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität werden Tarifpauschalen in Rechnung gestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tarifpauschale für Kundinnen und Kunden mit temporärem Netzanschluss (Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen sowie Baustromanschlüsse) ohne Messung richtet sich nach der maximalen Anschlussleistung (in kVA), der Anschlussdauer (Anzahl Tage vom Zeitpunkt der Installation bis zur Demontage des temporären Netzanschlusses), den effektiven Betriebsstunden und dem Tarif IWB Strom small (Einfachtarif). Diese berechnet sich wie folgt: Tarifpauschale für temporäre Anschlüsse (in Fr.) = Maximale Anschlussleistung x Anschlussdauer x Betriebsstunden x 0.5 x IWB Strom small, Einfachtarif"
+        },
+        {
+          "absatz": "3",
+          "text": "Für Kundinnen und Kunden mit dauerhaftem Netzanschluss ohne Messung wird von IWB eine angemessene Tarifpauschale festgesetzt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "d90a968386f88be58f3b673399cdde45b42253546033f1b9312237904baa557a"
+    },
+    {
+      "id": "kanton/BS/772.430/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Tarif «IWB Sonnenbox Crowd» ist ein Tarif mit Vorauszahlung der Kundin oder des Kunden für eine bestimmte Energiemenge (kWh) aus schweizerischer Solarstromproduktion."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tarifwahl erfolgt durch den Erwerb eines oder mehrerer virtueller Quadratmeter an einer bestimmten Photovoltaikanlage von IWB."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei einer Neuanlage (Anlage, die von IWB noch nicht in Betrieb genommen wurde) beträgt der Preis für einen virtuellen Quadratmeter Fr. 297.12 und entspricht einer Vorauszahlung für eine Energiemenge von 100 kWh pro Jahr über einen Zeitraum von 20 Jahren, beginnend ab dem nächsten Monatsersten nach Inbetriebnahme der Anlage."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei einer Bestandsanlage (Anlage, die von IWB bereits in Betrieb genommen wurde) beträgt der Preis für einen virtuellen Quadratmeter Fr. 297.12 abzüglich Fr. 1.24 für jeden abgelaufenen Monat seit Inbetriebnahme der Anlage und entspricht einer Vorauszahlung für eine Energiemenge von 100 kWh pro Jahr bis zum Ablauf von 20 Jahren nach Inbetriebnahme der Anlage, beginnend ab dem nächsten Monatsersten nach dem Erwerb."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Tarif «IWB Sonnenbox Crowd» gilt für die der Vorauszahlung entsprechenden Verbrauchsmenge in einem Abrechnungszeitraum. Für Verbrauchsmengen, die über die vorausbezahlte Menge hinausgehen, gilt der gemäss § 3 anwendbare Tarif. Für vorausbezahlte und in einem Abrechnungszeitraum nicht bezogene Mengen erhält die Kundin oder der Kunde eine Gutschrift zum Tarif «IWB Sonnenbox Crowd»."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Tarif «IWB Sonnenbox Crowd» gilt bis zum Ende der Vorauszahlung. Bei einer Beendigung des Grundversorgungsverhältnisses vor dem Ende der Vorauszahlung oder bei einem vorzeitigen Tarifwechsel durch die Kundin oder den Kunden gilt Abs. 5 entsprechend und erhält die Kundin bzw. der Kunde für die nicht bezogene Menge eine Gutschrift zum Tarif «IWB Sonnenbox Crowd». Ein Tarifwechsel kann jeweils zum 1. Januar eines Jahres erfolgen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "83cfeca96cbbc2c5ba8542ace3951fdf21c6ac203a5dc2e7f9b06c67f31fa63b"
+    },
+    {
+      "id": "kanton/BS/772.430/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anwendbare Steuern und Abgaben richten sich nach den gesetzlichen Bestimmungen und werden von IWB zusätzlich erhoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "b984d41255b475ca47e2f21878f5dce0dea5f63e5f67ef352f2d7cde153c232e"
+    },
+    {
+      "id": "kanton/BS/772.430/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebührentarif der IWB Industrielle Werke Basel für die elektrische Energie (772.430)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abrechnung von Bezügen vor und nach Inkrafttreten des Gebührentarifs beruht auf der Annahme eines gleichmässigen Verbrauchs über die gesamte Abrechnungsperiode. Der Bezugsanteil vor dem 1. Januar 2025 wird der Kundin oder dem Kunden zu dem bis dahin gültigen Tarif in Rechnung gestellt, der Bezugsanteil nach dem 1. Januar 2025 wird der Kundin oder dem Kunden zu dem in dieser Änderung festgelegten Tarif in Rechnung gestellt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
+      "sha": "9fde0a772a9d0eb48a449ff24102128f167fe12f81124417fa04c18a5cac6b22"
+    }
+  ]
+}

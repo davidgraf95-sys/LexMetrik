@@ -1,0 +1,232 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/772.380/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die intelligenten Messsysteme im Bereich Elektrizität gelten die gesetzlichen Vorgaben des Bundesgesetzes über die Stromversorgung (Stromversorgungsgesetz, StromVG) vom 23. März 2007 und der Stromversorgungsverordnung (StromVV) vom 14. März 2008."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "173592c8e2168ff933c1a069828a9cb30e64737863f3488aad90f6b6374cdc0e"
+    },
+    {
+      "id": "kanton/BS/772.380/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die intelligenten Messsysteme in den Bereichen Gas (Erdgas/Biogas), Fernwärme und Wasser knüpfen - soweit vorhanden - an die intelligenten Messsysteme im Bereich Elektrizität an (Elektrizitätszähler als Kommunikationsmodul, siehe Art. 8a Abs. 2 lit. d StromVV und nachfolgend lit. b und bestehen aus folgenden Elementen (Illustration siehe Anhang):",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Zähler der entsprechenden Sparte (Spartenzähler), der die bezogenen Verbrauchs-mengen erfasst (Gas in Betriebskubikmeter [Bm&sup3;], Wasser in Kubikmeter [m&sup3;] und Fernwärme in Kilowattstunden [kWh]) und über eine intelligente Kommunikationsschnittstelle zur Übertragung der Daten an ein digitales Kommunikationssystem verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "einem Kommunikationsmodul, bestehend aus einem intelligenten Elektrizitätszähler oder, falls kein intelligenter Elektrizitätszähler vorhanden ist, einem separaten Kommunikationsmodul;"
+            },
+            {
+              "marke": "c",
+              "text": "einem digitalen Kommunikationssystem, das die automatisierte Datenübermittlung zwischen dem Elektrizitätszähler und dem Datenbearbeitungssystem gewährleistet und"
+            },
+            {
+              "marke": "d",
+              "text": "einem Datenbearbeitungssystem, mit dem die Daten abgerufen werden können."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Elemente des intelligenten Messsystems funktionieren so zusammen, dass die Zählerstände der betroffenen Person:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von den Spartenzählern laufend pseudonymisiert erfasst werden;"
+            },
+            {
+              "marke": "b",
+              "text": "mit einer Periodizität von 60 Minuten von den Spartenzählern an das Kommunikationsmodul übertragen und dort zu Zählerstandzeitreihen (Stundenlastgängen) zusammengefasst werden;"
+            },
+            {
+              "marke": "c",
+              "text": "zusammen mit den Stundenlastgängen über ein digitales Kommunikationssystem automatisiert zum Datenbearbeitungssystem übertragen werden. Die Datenübertragung erfolgt maximal einmal pro Tag, sofern der Netzbetrieb nicht eine häufigere Abrufung erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Speicherung der erfassten Daten (Zählerstände und Lastgänge) gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Kommunikationsschnittstelle des Spartenzählers (§ 2 Abs. 1 lit. a) werden die 60-minütigen Zählerstände der Kundin oder des Kunden 60 Minuten gespeichert und sodann durch Überschreiben mit dem neuen Zählerstand gelöscht;"
+            },
+            {
+              "marke": "b",
+              "text": "im Kommunikationsmodul (§ 2 Abs. 1 lit. b) werden die Zählerstände und Lastgänge mindestens 60 Tage gespeichert und nach spätestens 365 Tagen durch Überschreiben gelöscht;"
+            },
+            {
+              "marke": "c",
+              "text": "im Datenbearbeitungssystem (§ 2 Abs. 1 lit. d) werden die Daten nach 12 Monaten gelöscht, sofern sie nicht abrechnungsrelevant oder anonymisiert sind oder die betroffene Person in eine längere Aufbewahrung einwilligt (§ 35a Abs. 5 IWB-Gesetz). Die Einwilligung hat ausdrücklich zu erfolgen (schriftlich, per E-Mail oder elektronisch in Form eines Opt-in) und kann von der Kundin oder vom Kunden für die Zukunft widerrufen werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Zählerstände und Lastgänge werden der betroffenen Person in einem Online-Kundenportal von IWB verständlich dargestellt."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "d1bb4f3e95f9b2c284f4c7daad108bfd8a3c65ec836d41993313f2bdc768ed7d"
+    },
+    {
+      "id": "kanton/BS/772.380/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spartenzähler unterstehen der Messmittelverordnung (MessMV) vom 15. Februar 2006 und den entsprechenden Ausführungsvorschriften des Eidgenössischen Justiz- und Polizeidepartements, sofern sie in deren Geltungsbereich fallen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Sicherheitsstandards des intelligenten Messsystems gelten in Bezug auf die Elektrizitätszähler die gesetzlichen Vorgaben des StromVG und der StromVV sowie die jeweils aktuellen Branchenempfehlungen des Verbands Schweizerischer Elektrizitätsversorgungsunternehmen (VSE). In Bezug auf die übrigen Elemente des intelligenten Messsystems gelten, vorbehaltlich abweichender gesetzlicher Bestimmungen, die Vorgaben der ISO / IEC-27000-Reihe."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "5dac253d52767070acbd79f231932dfd66754a83ce75ef375aa6024c8822a6c1"
+    },
+    {
+      "id": "kanton/BS/772.380/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Datenbearbeitung zu den in § 35a Abs. 1 IWB-Gesetz genannten Zwecken ist keine Einwilligung der betroffenen Person erforderlich. Die Bearbeitung erfolgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die in § 35a Abs. 1 lit. a, b und d IWB-Gesetz genannten Zwecke: in pseudonymisierter Form;"
+            },
+            {
+              "marke": "b",
+              "text": "für die in § 35a Abs. 1 lit. c und e IWB-Gesetz genannten Zwecke: in identifizierender Form."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In der Sparte Gas werden für die in § 35a Abs. 1 IWB-Gesetz genannten Zwecke die Stundenlastgänge bearbeitet. In den Sparten Fernwärme und Wasser werden für die in § 35a Abs. 1 lit. a-c IWB-Gesetz genannten Zwecke, abhängig von der Grösse des Anschlusses, die Monats-, Quartals- oder Jahres-Zählerstände und für die in § 35a Abs. 1 lit. d und e IWB-Gesetz genannten Zwecke die Stundenlastgänge bearbeitet."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "6eeaf7744ea47a3290da45c8eb8a646ca3b53ce5a8141089c0f7f19a34032c95"
+    },
+    {
+      "id": "kanton/BS/772.380/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die in § 35a Abs. 2 IWB-Gesetz genannten Zwecke erfolgt die Bearbeitung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Einwilligung der betroffenen Person: in identifizierender Form;"
+            },
+            {
+              "marke": "b",
+              "text": "ohne Einwilligung der betroffenen Person: in anonymisierter Form."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Periodizität der bearbeiteten Daten richtet sich nach dem Inhalt der konkreten Energiedienstleistung. Das für die Erbringung der Energiedienstleistung erforderliche Mass darf nicht überschritten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einwilligung der betroffenen Person hat ausdrücklich (schriftlich, per E-Mail oder elektronisch in Form eines Opt-in) zu erfolgen und kann für die Zukunft widerrufen werden. Der Widerruf kann, vorbehaltlich abweichender vertraglicher Vereinbarungen mit der betroffenen Person, jederzeit erfolgen."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "5fb401d3f3616cc4ab14a6127231ca3b827a51d48f22a210b71f867cd4cb0d7e"
+    },
+    {
+      "id": "kanton/BS/772.380/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Begriff des Bearbeitens richtet sich nach § 3 Abs. 5 des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010 und umfasst auch die Weitergabe (Bekanntgabe) der Daten an Dritte, wenn und soweit die Bekanntgabe für die in § 35a Abs. 1 oder Abs. 2 IWB-Gesetz genannten Zwecke erforderlich ist. Eine Weitergabe mit ausdrücklicher Einwilligung im Einzelfall (gemäss § 21 Abs. 1 lit. c IDG) bleibt vorbehalten."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "a53fff89ba643f4018449f8df801feef055083beeda16e9cae5ff22468ff1fa4"
+    },
+    {
+      "id": "kanton/BS/772.380/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "AB IWB Datenbearbeitung (772.380)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "IWB gewährleistet bei der Datenbearbeitung die Datensicherheit. Sie beachtet dabei die anwendbaren gesetzlichen Vorgaben sowie allfällige internationale Normen und Empfehlungen anerkannter Fachorganisationen."
+        }
+      ],
+      "stand": "2021-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.380",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b07ece75ea843030f9c46af42ffa5dcd",
+      "sha": "6dd16fa6b4daef2e389c829eb6b9a6a5038f5ebf1a2c1b655802271630371fb5"
+    }
+  ]
+}

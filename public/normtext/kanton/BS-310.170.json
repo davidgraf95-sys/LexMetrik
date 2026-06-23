@@ -1,0 +1,516 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/310.170/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung zur Berufsausübung gemäss § 30 GesG beträgt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "universitäre Medizinalberufe gemäss Art. 2 Bundesgesetz über die universitären Medizinalberufe (MedBG) vom 23. Juni 2006 sowie Psychologieberufe gemäss Art. 2 Bundesgesetz über die Psychologieberufe (PsyG) vom 18. März 2011 Fr. 700"
+            },
+            {
+              "marke": "b",
+              "text": "Berufe und Tätigkeiten in den Gebieten Augenoptik, Dentalhygiene, Drogerie, Ergotherapie, Ernährungsberatung, Logopädie, medizinische Massage, Physiotherapie, Podologie, Gesundheits- und Krankenpflege, Zahnprothetik, Geburtshilfe sowie des Rettungswesens Fr. 400"
+            },
+            {
+              "marke": "c",
+              "text": "das Führen eines medizinischen Laboratoriums Fr. 700"
+            },
+            {
+              "marke": "d",
+              "text": "nicht ärztliche alternativ- und komplementärmedizinische Berufe und Tätigkeiten Fr. 400"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren gemäss Abs. 1 gelten auch für die Bewilligung des Erbringens von medizinischen Ferndienstleistungen auf diesen Gebieten (§ 30 Abs. 1 Bst. e GesG)."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist die Bewilligungsnehmerin oder der Bewilligungsnehmer bereits in einem anderen Kanton zugelassen, wird keine Gebühr erhoben."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "3bef108d6b3abab7ebbde87f8ae1870cc5ea67d4ec6a34ab3687b1a109a1481e"
+    },
+    {
+      "id": "kanton/BS/310.170/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung der eingeschränkten Berufsausübung nach § 8 Verordnung über die Fachpersonen und Betriebe im Gesundheitswesen (Bewilligungsverordnung) vom 6. Dezember 2011 beträgt die Hälfte der Gebühren gemäss § 1."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "5b2e87dd51790040e75d22e3eced1130a8aa288a30f7c6e7405c01452684da41"
+    },
+    {
+      "id": "kanton/BS/310.170/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für eine Betriebsbewilligung gemäss § 36 GesG beträgt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Spitäler Fr. 700 – 7'000"
+            },
+            {
+              "marke": "b",
+              "text": "Pflegeheime Fr. 700 – 3'500"
+            },
+            {
+              "marke": "c",
+              "text": "Organisationen der spitalexternen Gesundheits- und Krankenpflege Fr. 400 – 2'000"
+            },
+            {
+              "marke": "d",
+              "text": "ambulante Einrichtungen in den Gebieten der universitären Medizinalberufe gemäss Art. 2 MedBG sowie der Psychologieberufe gemäss Art. 2 PsyG Fr. 700 – 3'500"
+            },
+            {
+              "marke": "e",
+              "text": "ambulante Einrichtungen in den Gebieten Augenoptik, Dentalhygiene, Drogerie, Ergotherapie, Ernährungsberatung, Logopädie, medizinische Massage, Physiotherapie, Podologie, Zahnprothetik, Geburtshilfe sowie nicht ärztliche Alternativ- und Komplementärmedizin Fr. 400 – 2'000"
+            },
+            {
+              "marke": "f",
+              "text": "Geburtshäuser Fr. 400 – 2'000"
+            },
+            {
+              "marke": "g",
+              "text": "Apotheken Fr. 700 – 3'500"
+            },
+            {
+              "marke": "h",
+              "text": "medizinische Laboratorien Fr. 700 – 3'500"
+            },
+            {
+              "marke": "i",
+              "text": "Rettungsdienste Fr. 700 – 3'500"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren gemäss Abs. 1 gelten auch für die Betriebsbewilligung von Organisationen, die medizinische Ferndienstleistungen auf diesen Gebieten anbieten (§ 36 Abs. 1 Bst. f GesG)."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist die Bewilligungsnehmerin oder der Bewilligungsnehmer bereits in einem anderen Kanton zugelassen, wird keine Gebühr erhoben."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "82f10ababda12576358e7f6ce03f0e07c358ad097b20b2532d9c177c7ddfc52c"
+    },
+    {
+      "id": "kanton/BS/310.170/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung der Tätigkeit als Stellvertreterin oder Stellvertreter gemäss § 29 Abs. 1 Bewilligungsverordnung beträgt Fr. 150."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "6e9544f37eb2f04493fe3898144ffad332423f558569e48741d1bd4f7db9d706"
+    },
+    {
+      "id": "kanton/BS/310.170/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung der Herstellung von Arzneimitteln gemäss § 5 Abs. 1 Heilmittelverordnung vom 6. Dezember 2011 beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Herstellung von Zytostatika Fr. 600"
+            },
+            {
+              "marke": "b",
+              "text": "für die Herstellung von allen anderen Arzneimitteln Fr. 400"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "81be564ea61c0adeda2d8b03a77781ef1792ddc9b46058203fbb1a0472c0d9dd"
+    },
+    {
+      "id": "kanton/BS/310.170/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung des Detailhandels mit Arzneimitteln oder Tierarzneimitteln gemäss § 18 Heilmittelverordnung beträgt Fr. 400."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Bewilligung der Abgabe von Heilmitteln an Ausstellungen und Messen gemäss § 23 Heilmittelverordnung beträgt Fr. 200."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "b5e09728351657d9b214f3d00de1010e51d1fa5f73f571689dfb9ac9041b6659"
+    },
+    {
+      "id": "kanton/BS/310.170/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung des Versandhandels mit Arzneimitteln gemäss § 17 Heilmittelverordnung beträgt Fr. 500 bis 2’000."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "9278a5a15f7a38d3d71dbb675d77b436251210ec87f3a11ca5aa65cbe7021b33"
+    },
+    {
+      "id": "kanton/BS/310.170/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung des Anbaus, des Bezugs, der Lagerung und der Verwendung von Betäubungsmitteln nach Art. 14 BetmG beträgt Fr. 200 bis 1'000."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für den Bezug von Betäubungsmittelrezeptblöcken beträgt Fr. 30 pro Rezeptblock."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "50af5adeffb19984418edae828d0eac92f553c57b7056b05a93dc53f5da7d795"
+    },
+    {
+      "id": "kanton/BS/310.170/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung zur Lagerung von Blut und Blutprodukten gemäss § 16 Heilmittelverordnung beträgt Fr. 400."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Erneuerung der Bewilligung beträgt Fr. 200."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "1aebeb3d2ba8ee777997f3ddb01c5dce6adc259b690afcfcbcf594eac78736cb"
+    },
+    {
+      "id": "kanton/BS/310.170/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung der Tätigkeiten in der Fortpflanzungsmedizin gemäss Art. 8 Bundesgesetz über die medizinisch unterstützte Fortpflanzung (Fortpflanzungsmedizingesetz, FMedG) vom 18. Dezember 1998 beträgt Fr. 700."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "a651d762c1338605e752d07ccd586f456a0680069b5d74f7bee32a02ee39243e"
+    },
+    {
+      "id": "kanton/BS/310.170/art_10_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "10_a",
+      "artikelLabel": "§ 10a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Zulassung von Leistungserbringern zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung gemäss Art. 36 KVG beträgt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "selbstständig tätige Gesundheitsfachpersonen Fr. 200"
+            },
+            {
+              "marke": "b",
+              "text": "Betriebe und Organisationen Fr. 200 – 800"
+            },
+            {
+              "marke": "c",
+              "text": "Laboratorien Fr. 200"
+            },
+            {
+              "marke": "d",
+              "text": "Abgabestellen für Mittel und Gegenstände Fr. 200"
+            },
+            {
+              "marke": "e",
+              "text": "Transport- und Rettungsunternehmen Fr. 200"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "a2c77b69634e826c3a0af51a342eaffa52478f18d1f30d8611869c8b1b68e658"
+    },
+    {
+      "id": "kanton/BS/310.170/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Änderung einer Bewilligung aufgrund von veränderten Verhältnissen nach § 20 Abs. 2 Bewilligungsverordnung beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Berufsausübung gemäss § 30 GesG Fr. 200"
+            },
+            {
+              "marke": "b",
+              "text": "für Betriebsbewilligungen Fr. 200 – 500"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "b979d5b558c0a1fd3f4df1c14aa06147125b044e83f567e12bf27b33c932e53b"
+    },
+    {
+      "id": "kanton/BS/310.170/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Meldungen von Fachpersonen und Betrieben in den Gebieten Augenoptik und nicht ärztliche Alternativ- und Komplementärmedizin im bewilligungsfreien Bereich gemäss § 7 Abs. 2 Bewilligungsverordnung beträgt Fr. 100."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für Meldungen von Stellvertretungen und Assistenzen gemäss § 29 Abs. 2 und 3 sowie § 30 Abs. 2 Bewilligungsverordnung beträgt Fr. 100."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "55c62955bd8b8dfd9f5dc44c9e90027796855409afe7112aac0d8aed23bac874"
+    },
+    {
+      "id": "kanton/BS/310.170/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Ausstellung einer Unbedenklichkeitsbescheinigung (Certificate of good standing) beträgt Fr. 75."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Beglaubigung von ärztlichen Zeugnissen oder Rezepten beträgt Fr. 30."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für das Ausstellen eines Bewilligungsdokuments beträgt Fr. 50."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "772640d4e6c13530317a3d75f588dba35f9981ee9e27fcf4f08ce643cdff210b"
+    },
+    {
+      "id": "kanton/BS/310.170/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Inspektionen und Kontrollen im Rahmen des Vollzugs der eidgenössischen und kantonalen Medizinal- und Heilmittelgesetzgebung richtet sich nach dem Zeitaufwand. Der Stundenansatz beträgt Fr. 200."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für Inspektionen gemäss Art. 12 FMedG beträgt Fr. 1'000 bis Fr. 3’000. Für alle anderen Inspektionen und Kontrollen beträgt die Gebühr Fr. 300 bis Fr. 2'000."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Inspektion durch das Regionale Heilmittelinspektorat Nordwestschweiz (RHI) durchgeführt, richtet sich die Gebühr nach dessen Gebührenreglement vom 22. März 2004."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "feafc286269a3d3091be9802a004d1f992c5057449a5d7f94b9326c57b37d83b"
+    },
+    {
+      "id": "kanton/BS/310.170/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spruchgebühr gemäss § 51a Abs. 3 GKV kann ganz oder teilweise erlassen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sie für die am Verfahren beteiligte Partei eine unverhältnismässige wirtschaftliche Belastung darstellt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn sie für mehrere Verfahren derselben Art geschuldet ist, die sich inhaltlich gleichen und in der gleichen Tarifperiode rechtshängig gemacht worden sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Verfahren der Genehmigung und der Verlängerung von Tarifverträgen gemäss Art. 46 Abs. 4 und Art. 47 Abs. 3 des Bundesgesetzes über die Krankenversicherung (KVG) vom 18. März 1994 beträgt pro Parteiseite des Tarifvertrages Fr. 75."
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "6c7daa2954ae4a8d6fb3c4edfa901ab4ae5c1e8de72fcaf99ab0ad9e899da06d"
+    },
+    {
+      "id": "kanton/BS/310.170/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Erlasse werden geändert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung über die Fachpersonen und Betriebe im Gesundheitswesen (Bewilligungsverordnung) vom 6. Dezember 2011;"
+            },
+            {
+              "marke": "b",
+              "text": "Heilmittelverordnung vom 6. Dezember 2011."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Erlasse werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung betreffend Gebühren für Berufsausübende im Gesundheitsbereich und für Bewilligungen für medizinische Institute und Spitäler sowie Alters- und Pflegeheime (Gebührenverordnung Gesundheitsbereich) vom 15. September 1992;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung betreffend Gebühren des Desinfektionsdienstes des Gesundheitsamtes Basel-Stadt vom 15. November 1994;"
+            },
+            {
+              "marke": "c",
+              "text": "Verordnung über die Gebühren der Prüfung in nicht ärztlicher Alternativ- und Komplementärmedizin vom 6. Dezember 2011."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "8af087c588071a9f44af929ab0378021fb456067ca1468f96155e991525fca9f"
+    }
+  ]
+}

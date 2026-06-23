@@ -1,0 +1,980 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/695.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die «Gebäudeversicherung des Kantons Basel-Stadt», im folgenden Gebäudeversicherung genannt, ist eine selbständige juristische Person des öffentlichen Rechts mit Sitz in Basel."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Verbindlichkeiten der Gebäudeversicherung haftet allein deren Vermögen. Ihre Mittel dürfen nicht zweckentfremdet werden."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "214fd3436bfefa5da61d75e2976d8e865c7218b0bbad5df726450cf6a8de1ed5"
+    },
+    {
+      "id": "kanton/BS/695.100/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organe der Gebäudeversicherung sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwaltungskommission,"
+            },
+            {
+              "marke": "b",
+              "text": "die Direktion,"
+            },
+            {
+              "marke": "c",
+              "text": "die Kontrollstelle."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat übt die Aufsicht über die Gebäudeversicherung aus. Er setzt die Befugnisse der Organe fest und wählt auf seine Amtsdauer die Verwaltungskommission und die Kontrollstelle."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat berichtet dem Grossen Rat jährlich über die Geschäftsführung und die Rechnung der Gebäudeversicherung."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "ae8e73a4471853a951f0d7acf48610513276f316446395811037db3caefe373b"
+    },
+    {
+      "id": "kanton/BS/695.100/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sämtliche Gebäude im Kanton Basel-Stadt sind bei der Gebäudeversicherung gegen die in den §§ 17 und 18 genannten Gefahren und Schäden zu versichern. Sie dürfen hiefür nicht anderweitig versichert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebäudeversicherung kann ausnahmsweise Objekte, bei denen eine besonders grosse Schadengefahr besteht, ganz oder für einzelne Gefahren von der Versicherung ausschliessen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "bbe5864ff129b52f41995c77ea5287e42fd4f4c18c6c889e2f3abd784aef3220"
+    },
+    {
+      "id": "kanton/BS/695.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neubauten sowie Um- und Ausbauten sind vom Beginn der Bauarbeiten an zu versichern."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Eigentümer ist verpflichtet, Neubauten sowie wertvermehrende Investitionen am Gebäude zur Versicherung zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Versicherung erlischt mit dem Abbruch des Gebäudes oder nach einem Totalschaden."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "8f98bd0a607752ba3803532650318cf720a52b4f22e944af575e61490c0027b4"
+    },
+    {
+      "id": "kanton/BS/695.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäude sind zum Neuwert versichert."
+        },
+        {
+          "absatz": "2",
+          "text": "Gebäude, deren Entwertung 50% übersteigt, sind zum Zeitwert versichert. Der Eigentümer kann bei der Gebäudeversicherung eine Neuwert-Zusatzversicherung abschliessen. Wird die Zusatzversicherung missbräuchlich beantragt, lehnt die Gebäudeversicherung sie ab."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "b8b8c0aa050a854f8d32471f67daef673f7077dff5119f9cb698527e528209db"
+    },
+    {
+      "id": "kanton/BS/695.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung kann ein Gebäude zum Zeitwert oder einem anderen Wert versichern, sofern wichtige Gründe dies rechtfertigen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "f93e9784b0b0b3f7f7528f6ade3f663a405452f094c81781429fc39cc8764d27"
+    },
+    {
+      "id": "kanton/BS/695.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Ermittlung der Versicherungswerte ist auf die orts- und handelsüblichen Baukosten abzustellen"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Eigentümer hat den Versicherungswert des Gebäudes soweit zumutbar auf seine Richtigkeit zu prüfen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat erlässt Bestimmungen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ermittlung der Versicherungswerte,"
+            },
+            {
+              "marke": "b",
+              "text": "die mit den Gebäuden zu versichernden Einrichtungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "5e377f504c848a6e6cebecfee4cd6c385e4334a3ec1b544d4b631e4c63240d16"
+    },
+    {
+      "id": "kanton/BS/695.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung passt die Versicherungswerte jährlich den veränderten Baukosten an."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "0d20246c5e7721daa8f94db85d21f410e8c3164522b6f386a89fdf03e204ecfb"
+    },
+    {
+      "id": "kanton/BS/695.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäude werden in Risikoklassen eingeteilt, die vom Regierungsrat umschrieben werden. Er bestimmt die Prämiensätze."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prämien setzen sich zusammen aus der Versicherungsprämie und dem Beitrag für die Schadenverhütung und -bekämpfung (Feuerschutzfonds, § 33)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Versicherungsprämien sind so anzusetzen, dass die Schäden vergütet und ein Reservefonds (§ 16) unterhalten werden kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Prämien werden von den Versicherungswerten erhoben."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "d4b543c17a80bbf088b0e1ccfba6e057337c260be99dd86613ef4892bdcca1cf"
+    },
+    {
+      "id": "kanton/BS/695.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besteht die Versicherung während eines Teiles des Jahres, sind die Prämien nur für diese Zeit zu entrichten. Angebrochene Monate werden voll berechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Schadenfall erfolgt für das laufende Jahr keine Prämienrückerstattung."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "af4b29cda276cc5df9d7e64501fd6d7f4f173ccb6383f9a4c4b1a4bf2f5e509c"
+    },
+    {
+      "id": "kanton/BS/695.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei teilweisem Ausschluss eines Gebäudes von der Versicherung gemäss § 3 Abs. 2 ist die Prämie uneingeschränkt, bei vollständigem Ausschluss noch während zwei Jahren in vollem Umfang weiter zu leisten."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "e88e1aab50b9cf287f003cce37fa3e216467a7585958042126f5ccd4d4d801d3"
+    },
+    {
+      "id": "kanton/BS/695.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Eigentümer hat der Gebäudeversicherung jede wesentliche Gefahrerhöhung innert Monatsfrist zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat der Eigentümer die wesentliche Gefahrerhöhung nicht angezeigt, fordert die Gebäudeversicherung die ihr entgangenen Prämien für das laufende und höchstens für die vergangenen fünf Jahre nach."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei wesentlicher Gefahrverminderung sind die Prämien von dem Zeitpunkt an zu berichtigen, an dem der Eigentümer der Gebäudeversicherung die Änderung schriftlich mitgeteilt hat."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "3a49f23a929caf473259483af10e5c6ebdbdec32a8a0d527e48514c0a0216eb8"
+    },
+    {
+      "id": "kanton/BS/695.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prämien sind vom Eigentümer des Grundstückes geschuldet, der im Zeitpunkt der Zustellung der Prämienrechnung im Grundbuch eingetragen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausserdem sind sie durch eine öffentlich-rechtliche Grundlast gesichert (EG zum ZGB § 188)."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Erwerber eines Gebäudes haftet für ausstehende Prämien."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "b1836c7c02fb54cdfe3d6d079b51179cba790268d685f1af5117be9440debf84"
+    },
+    {
+      "id": "kanton/BS/695.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Festsetzung der Prämien ist einem vollstreckbaren gerichtlichen Urteil im Sinne von Art. 80 des Bundesgesetzes über Schuldbetreibung und Konkurs vom 11. April 1889 gleichgestellt."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "14fb0444f196166abfff3a3f5156c091fc7283c45c43e4b0c882c207727df2ab"
+    },
+    {
+      "id": "kanton/BS/695.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung kann Rückversicherungsverträge abschliessen, sich an Versicherungsgemeinschaften oder Rückversicherungsinstitutionen beteiligen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "4d6cc16b71d721a34980817dc7f416483a6060a36d2ccaff02f113c6aa78dee1"
+    },
+    {
+      "id": "kanton/BS/695.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung hat einen angemessenen Reservefonds zu äufnen und zu unterhalten."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "19e0a73a2487ab7d8ac45ea584da65701c923ea4c5192a3989b6222f0ee25307"
+    },
+    {
+      "id": "kanton/BS/695.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäude sind versichert gegen Schäden zufolge",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Feuer, Rauch oder Hitze,"
+            },
+            {
+              "marke": "b",
+              "text": "Blitzschlag,"
+            },
+            {
+              "marke": "c",
+              "text": "Explosion,"
+            },
+            {
+              "marke": "d",
+              "text": "Absturz von Luftfahrzeugen oder Teilen davon."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht gedeckt sind",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schäden durch Abnützung zufolge bestimmungsgemässer Feuer-, Rauch- oder Hitzeeinwirkung;"
+            },
+            {
+              "marke": "b",
+              "text": "Schäden, die durch Schleuderbrüche oder andere kräftemechanische Betriebseinwirkungen verursacht worden sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "f35e017deae1bb8dcf805c39954b92eceb877b8301fcd76f1099d4c33652105d"
+    },
+    {
+      "id": "kanton/BS/695.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäude sind versichert gegen Schäden zufolge",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sturmwind,"
+            },
+            {
+              "marke": "b",
+              "text": "Hagelschlag,"
+            },
+            {
+              "marke": "c",
+              "text": "Hochwasser und Überschwemmung, Sturmflut,"
+            },
+            {
+              "marke": "d",
+              "text": "Schneedruck und -rutsch,"
+            },
+            {
+              "marke": "e",
+              "text": "Erdrutsch, Erdschlipf, Rüfe"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Elementarschäden und nicht zu vergüten sind Schäden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die nicht auf eine äussere Einwirkung von aussergewöhnlicher Heftigkeit zurückzuführen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die durch fortgesetztes Einwirken, z.B. durch Feuchtigkeit, Bodensenkungen usw. entstanden sind;"
+            },
+            {
+              "marke": "c",
+              "text": "die voraussehbar waren und durch rechtzeitige zumutbare Massnahmen hätten verhindert werden können, wie beispielsweise Schäden zufolge fehlerhafter Arbeit oder Konstruktion, ungeeigneten Materials, mangelhaften Gebäudeunterhalts;"
+            },
+            {
+              "marke": "d",
+              "text": "welche durch Frosteinwirkung entstanden sind"
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "e8680e0a84791a2106b40dfbec08283a358af6eb7a8efeb35519fcdd4fc8ca24"
+    },
+    {
+      "id": "kanton/BS/695.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nicht versichert sind Schäden an Gebäuden, die mittelbar oder unmittelbar durch Veränderung der Atomkernstruktur, Meteoritenaufprall, direkte oder indirekte Folgen eines Erdbebens, künstliche Wasserstauungen, Überschallknall, Massnahmen oder Übungen des Militärs oder von Zivilschutzorganisationen, Unruhen aller Art oder kriegerische Ereignisse entstanden sind."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "36e08459e5e961bf0888c01e2752fc5010c3aa7407ff5fa556e76ebf67dc0441"
+    },
+    {
+      "id": "kanton/BS/695.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Totalschaden von Gebäuden, die zum Neuwert versichert sind, vergütet die Gebäudeversicherung die Kosten der Wiederherstellung. Dabei sind Änderungen der Baukosten während längstens zwei Jahren seit dem Tage des Schadens zu berücksichtigen. In begründeten Fällen kann diese Frist um höchstens zwei Jahre verlängert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wertvermehrende Investitionen am Gebäude, die der Eigentümer nicht zur Versicherung gemeldet hat, sind bei der Schadenberechnung nicht zu berücksichtigen (Unterversicherung)."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Gebäude, die zum Zeitwert versichert sind, beschränkt sich die Leistung bei Totalschaden und Wiederherstellung auf diesen Wert."
+        },
+        {
+          "absatz": "4",
+          "text": "Wurde eine andere Versicherungssumme vereinbart (§ 6), so darf die Entschädigung bei Totalschaden diese nicht übersteigen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei Teilschäden gelten Abs. 1–4 sinngemäss."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Nebenleistungen gemäss § 23 sind in jedem Fall zusätzlich zu vergüten."
+        },
+        {
+          "absatz": "7",
+          "text": "Wenn die Kosten eines Hagelereignisses die gesamte Rückversicherungskapazität sowie 50% des Reservefonds der Gebäudeversicherung übersteigen, so wird die maximale Versicherungsleistung pro Gebäude inklusive Nebenleistungen gemäss Abs. 6 auf Fr. 100'000 beschränkt. Fallen aufgrund der Beschränkung die ausgerichteten Leistungen geringer als die gesamte Rückversicherungskapazität sowie 50% des Reservefonds der Gebäudeversicherung aus, so wird die Differenz proportional auf die verbleibenden Schäden verteilt."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "189333c31db09c99f34b17fc5fcab19531823f9ee00e4032f247f514ba1209f3"
+    },
+    {
+      "id": "kanton/BS/695.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Schäden an unvollendeten Gebäuden ist nur der Wert der zur Zeit des Schadenereignisses eingebauten Gebäudeteile zu vergüten, soweit sie bei der Ermittlung der Versicherungswerte zu berücksichtigen sind."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "3847e89c4b03cffb5dbd44a8be8f895f3185396be94f6ed28950e97452568386"
+    },
+    {
+      "id": "kanton/BS/695.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Gebäuden, die zum Abbruch bestimmt oder wegen Zerfalls nicht mehr benützbar sind, wird nur der Abbruchwert vergütet, selbst wenn das Gebäude wieder hergestellt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Teilschäden vergütet die Gebäudeversicherung die Kosten einer behelfsmässigen Reparatur, höchstens jedoch den Abbruchwert."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "c1cc058e1de9d6a389aad8d80a99e4fa6418b473625eca410416f4fbf0d852b4"
+    },
+    {
+      "id": "kanton/BS/695.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung vergütet die Kosten für folgende Massnahmen und Schäden, soweit sie unmittelbar durch ein versichertes Ereignis entstanden sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Räumung zerstörter Gebäudeteile;"
+            },
+            {
+              "marke": "b",
+              "text": "Rettungsarbeiten und andere Vorkehren, die zum Schutze noch vorhandener Gebäudeteile erforderlich sind; dienen diese Vorkehren nicht nur dem Schutze der Überreste des Gebäudes, vergütet die Gebäudeversicherung nur die in diesem Interesse entstandenen Kosten;"
+            },
+            {
+              "marke": "c",
+              "text": "Schäden an anderen versicherten Gebäuden sowie an Bäumen, Kulturen und Einfriedigungen, die bei der Schadenbekämpfung entstanden sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht gedeckt sind Aufräumungs-, Ablagerungs- und Entsorgungskosten infolge Kontamination versicherter Gebäudeteile sowie die Entsorgung von Luft, Wasser und Erdreich (inkl. Flora und Fauna)."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "1701f5c70c9c99e7693d25d1948fb3c39b660c496a56fa567b50fbca748acc43"
+    },
+    {
+      "id": "kanton/BS/695.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Gebäude nicht innert vier Jahren seit dem Schadenereignis wieder hergestellt, wird der Verkehrswert des Gebäudes vergütet. Dieser darf die Entschädigung, die bei Wiederherstellung geschuldet wäre, nicht übersteigen."
+        },
+        {
+          "absatz": "2",
+          "text": "In begründeten Fällen kann die Gebäudeversicherung die Frist für den Wiederaufbau angemessen, höchstens um weitere vier Jahre verlängern."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "09fa12f90d47f7ae349e8c347504f331cc49cb8bebaffea679656b347e10c773"
+    },
+    {
+      "id": "kanton/BS/695.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wurde das Schadenereignis durch den Eigentümer vorsätzlich herbeigeführt, entfällt vorbehältlich § 32 jeglicher Entschädigungsanspruch."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde der Schaden durch den Eigentümer grobfahrlässig herbeigeführt, kann die Gebäudeversicherung die Entschädigung dem Verschulden des Eigentümers entsprechend kürzen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "caa9d99f0a39f41b2d1c3a476c1e5e30cec7e31638d9d47ad9e11eea039bb49e"
+    },
+    {
+      "id": "kanton/BS/695.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist ein Dritter für den Schaden haftbar, geht der Ersatzanspruch des Eigentümers auf die Gebäudeversicherung über, soweit sie Entschädigung geleistet hat. Die Gebäudeversicherung ist nach den Bestimmungen des Obligationenrechts zum Rückgriff berechtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Eigentümer ist für jede Handlung oder Unterlassung, durch die er dieses Recht der Gebäudeversicherung schmälert, ersatzpflichtig."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "015ee2d5886866cd2d2ece0ae72eba979df8aa6c5e955fb34770461f71b87a5b"
+    },
+    {
+      "id": "kanton/BS/695.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Eintritt eines Schadens ist der Gebäudeversicherung sofort zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Entschädigungsansprüche, die nicht innert eines Jahres nach dem Schadenereignis geltend gemacht werden, sind verwirkt."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "c2fa84c33773496b1886fa1da7353cba73951aa1bf038f788e1782b2c1d7c627"
+    },
+    {
+      "id": "kanton/BS/695.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Schadenfall ist der Eigentümer verpflichtet, alle Sofortmassnahmen zu treffen, um den Schaden möglichst klein zu halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Unterlässt er dies, ist die Gebäudeversicherung berechtigt, die Entschädigung um den Betrag zu kürzen, um den sich der Schaden hätte verkleinern lassen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "1396b615c13d70a0e9ffb66c5b4f9c97ac364a3fcd859d7a221caaaf0130324d"
+    },
+    {
+      "id": "kanton/BS/695.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wurde zur Ermittlung der Schadenursache und allfälliger Verantwortlichkeiten eine amtliche Untersuchung durchgeführt, hat die Gebäudeversicherung jederzeit das Recht, die Untersuchungsakten einzusehen."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "2653ec3875f157c9ccdca6ed6d59e205799e471f2c52c568dd6e1d44a71c13f4"
+    },
+    {
+      "id": "kanton/BS/695.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung ermittelt die Höhe des Schadens."
+        },
+        {
+          "absatz": "2",
+          "text": "§ 7 Abs. 1 gilt sinngemäss."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "83862c8da2cdafa9ce5f9bb929d788bf9fee42693464137c06398473f91a997b"
+    },
+    {
+      "id": "kanton/BS/695.100/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung kann ein Entschädigungsbegehren ganz oder teilweise abweisen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ohne Zustimmung der Gebäudeversicherung an der Schadenstätte Veränderungen vorgenommen wurden, die nicht der Rettungspflicht dienten (§ 28) oder nicht auf behördliche Anordnung erfolgten;"
+            },
+            {
+              "marke": "b",
+              "text": "Ursache oder Höhe des Schadens nicht mehr feststellbar sind;"
+            },
+            {
+              "marke": "c",
+              "text": "der Schaden erst nach seiner Behebung gemeldet wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "f7801d38efdee3d9255e629c59a8384b8df5eabe76e1da5bf565741063c7522c"
+    },
+    {
+      "id": "kanton/BS/695.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegenüber Grundpfandgläubigern, die nachweisen, dass ihre Forderungen aus dem Vermögen des Eigentümers nicht gedeckt sind, haftet die Gebäudeversicherung im Schadenfall bis zur Höhe der Entschädigung, sofern der Eigentümer gemäss § 25 des Entschädigungsanspruches verlustig geht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungen der Gebäudeversicherung gemäss Abs. 1 an die Grundpfandgläubiger sind ihr vom Eigentümer zurückzuerstatten."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird ein Gebäude von der Versicherung ausgeschlossen, bleiben die Rechte der Grundpfandgläubiger noch während zwei Jahren gewahrt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Rechte der Grundpfandgläubiger nach Art. 822 des Schweizerischen Zivilgesetzbuches bleiben vorbehalten."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "ff01178df1f8622593b90dc861ea34d9b92680c2862425186b74749c3c4caf94"
+    },
+    {
+      "id": "kanton/BS/695.100/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebäudeversicherung äufnet einen Feuerschutzfonds; dessen Mittel dienen der Schadenverhütung und -bekämpfung durch Beiträge und auf andere Weise."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "0ab09757538bba268b54b211ee461f762505ba5551aea0efef0fb3633754b33d"
+    },
+    {
+      "id": "kanton/BS/695.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen der Gebäudeversicherung sind dem Gebäudeeigentümer schriftlich zu eröffnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterliegen nach den allgemeinen Bestimmungen dem Rekurs an die Verwaltungskommission und an das Verwaltungsgericht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zuständigkeit der Zivilgerichte für Streitigkeiten aus § 26 dieses Gesetzes bleibt vorbehalten."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "ad65a3d38dd62dab1c08d7eb0711896092cbdad935bd885189f72f573735854c"
+    },
+    {
+      "id": "kanton/BS/695.100/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die aufgrund des bisherigen Gesetzes rechtskräftig festgesetzten, den veränderten Baukosten angepassten Versicherungswerte gelten bis zur nächsten Schatzung weiter."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "412de8a4cd8465869dbaec784878346c797b06a449c970ef9494b48b272745cb"
+    },
+    {
+      "id": "kanton/BS/695.100/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch dieses Gesetz werden das Brandversicherungsgesetz vom 2. Juli 1908 und das Gesetz vom 11. November 1920 betreffend Änderung des Brandversicherungsgesetzes vom 2. Juli 1908 aufgehoben."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "c044babfe1f483728f743a1fac6f8ecf7040c49add08fa83dae2c9be68ad2a58"
+    },
+    {
+      "id": "kanton/BS/695.100/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gebäudeversicherungsgesetz (695.100)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt den Zeitpunkt des Inkrafttretens."
+        }
+      ],
+      "stand": "2020-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/695.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "23dbce9ded7fcb17c9cf70d3b84ac3b7",
+      "sha": "fb452d4321a33ecf3f2bf707eaa1568a56323ef192950a9c6261614e09de9435"
+    }
+  ]
+}

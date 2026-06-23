@@ -1,0 +1,2239 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/BS/258.210/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung enthält ausführende Bestimmungen zum Vollzug von Strafen und Massnahmen, der Untersuchungs- und Sicherheitshaft, der Bewährungshilfe und sozialen Betreuung für Erwachsene sowie der ausländerrechtlichen Haft im Kanton Basel-Stadt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie regelt die Organisation und legt die Zuständigkeiten und Abläufe der einzelnen Abteilungen und Vollzugseinrichtungen fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie beinhaltet Vorschriften zum Justizvollzug an nach Jugendstrafrecht zu beurteilenden oder beurteilten Personen, die in einer kantonalen Vollzugseinrichtung untergebracht sind."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "e5369a13ef40b832ae4000d25cbf69de52b73d11be8bf27da07d7d5e085867e3"
+    },
+    {
+      "id": "kanton/BS/258.210/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Justiz- und Sicherheitsdepartement ist das für den Justizvollzug des Kantons Basel-Stadt zuständige Departement."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist Rekursinstanz gemäss § 33 Abs. 1 des Gesetzes über den Justizvollzug (Justizvollzugsgesetz, JVG) vom 13. November 2019."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "f2e2dd57e8a08d89ddf2302a81baed60b795477e0a64bc650e29ec9ee4b94672"
+    },
+    {
+      "id": "kanton/BS/258.210/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Justizvollzug des Justiz- und Sicherheitsdepartements setzt sich aus der Leitung sowie folgenden Abteilungen und Vollzugseinrichtungen zusammen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Straf- und Massnahmenvollzug;"
+            },
+            {
+              "marke": "b",
+              "text": "Bewährungsdienste;"
+            },
+            {
+              "marke": "c",
+              "text": "Untersuchungsgefängnis Basel-Stadt;"
+            },
+            {
+              "marke": "d",
+              "text": "Gefängnis Bässlergut;"
+            },
+            {
+              "marke": "e",
+              "text": "Vollzugszentrum Klosterfiechten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es übernimmt alle Aufgaben des Justizvollzugs, soweit sie nach kantonalem Recht keiner anderen Behörde zugewiesen sind. Die Abteilungen des Amtes für Justizvollzug und die Vollzugseinrichtungen sind in ihrem Aufgabenbereich befugt, für das Amt zu entscheiden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "c4074aa86723f9c81b460e4441c8fb663d97071ca513266ef4dfb54ade95b198"
+    },
+    {
+      "id": "kanton/BS/258.210/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Straf- und Massnahmenvollzug übt als Vollzugsbehörde die Aufgaben und Befugnisse bei Freiheitsstrafen und strafrechtlichen Massnahmen an Erwachsenen aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist im Weiteren zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Inkasso gemäss § 44 des Gesetz über die Einführung der Schweizerischen Strafprozessordnung (EG StPO) vom 13. Oktober 2010;"
+            },
+            {
+              "marke": "b",
+              "text": "die Führung der kantonalen Koordinationsstelle gemäss Art. 4 des Bundesgesetzes zum Internationalen Übereinkommen zum Schutz aller Personen vor dem Verschwindenlassen vom 18. Dezember 2015;"
+            },
+            {
+              "marke": "c",
+              "text": "die nachträglichen Entscheide gemäss § 38 Abs. 1 EG StPO;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anordnung der elektronischen Überwachung im Rahmen eines Kontakt- und Rayonverbots (Art. 67b des Schweizerischen Strafgesetzbuches [StGB] vom 21. Dezember 1937);"
+            },
+            {
+              "marke": "e",
+              "text": "die Einschränkung und Aufhebung von Tätigkeits-, Kontakt- und Rayonverboten in Verbindung mit unbedingten Freiheitsstrafen (Art. 67c StGB)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "d6fc33c02a5951643795bc25fd2bbe94841e10a4b1afd863b666791aecef5b47"
+    },
+    {
+      "id": "kanton/BS/258.210/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Bewährungsdienste ist zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Durchführung der gesetzlichen Bewährungshilfe (Art. 93 StGB);"
+            },
+            {
+              "marke": "b",
+              "text": "die Kontrolle von Weisungen (Art. 94 StGB);"
+            },
+            {
+              "marke": "c",
+              "text": "die freiwillige soziale Betreuung (Art. 96 StGB);"
+            },
+            {
+              "marke": "d",
+              "text": "den Vollzug von Tätigkeits-, Kontakt- und Rayonverboten (Art. 67 ff. StGB);"
+            },
+            {
+              "marke": "e",
+              "text": "die Abklärung der Tragung von Gesundheitskosten in allen Vollzugsphasen;"
+            },
+            {
+              "marke": "f",
+              "text": "die freiwillige Beratung nach Beendigung der gesetzlichen Bewährungshilfe;"
+            },
+            {
+              "marke": "g",
+              "text": "die Gefährderansprache bei häuslicher Gewalt (§ 37d des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996;"
+            },
+            {
+              "marke": "h",
+              "text": "die Durchführung von Lernprogrammen (Art. 55a Abs. 2 StGB)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "417b0b5312015a0228984176a33f9fa9d4dab960557c6dd2313bf8d5cd9346f9"
+    },
+    {
+      "id": "kanton/BS/258.210/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Untersuchungsgefängnis Basel-Stadt werden aufgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen in Untersuchungs- und Sicherheitshaft;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen im Straf- und Massnahmenvollzug;"
+            },
+            {
+              "marke": "c",
+              "text": "Personen in Auslieferungshaft;"
+            },
+            {
+              "marke": "d",
+              "text": "Personen im polizeilichen Gewahrsam;"
+            },
+            {
+              "marke": "e",
+              "text": "Personen in ausländerrechtlicher Administrativhaft;"
+            },
+            {
+              "marke": "f",
+              "text": "Personen zum Vollzug von Untersuchungs- oder Sicherheitshaft nach Jugendstrafprozessrecht, zum Freiheitsentzug oder zum Vollzug einer Erziehungs- oder Behandlungsmassnahme gemäss Jugendstrafrecht, zum Vollzug einer durch eine stationäre sozialpädagogische Einrichtung der Jugendhilfe verfügten Disziplinarmassnahme oder aufgrund der Anordnung einer stationären Beobachtung oder Begutachtung einer Jugendanwaltschaft oder einer Gerichtspräsidentin bzw. eines Gerichtspräsidenten;"
+            },
+            {
+              "marke": "g",
+              "text": "Personen, die wegen Fluchtgefahr oder unmittelbarer Gefährdung gestützt auf die Verfügung einer Administrativbehörde vorübergehend eingewiesen werden, weil eine andere Unterbringung unmöglich ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "6bba23dfd92f34c0ad6138e2016684928d496ea9d1c3ad403bf627ab4480a63a"
+    },
+    {
+      "id": "kanton/BS/258.210/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Gefängnis Bässlergut werden aufgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen im Straf- und Massnahmenvollzug;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen in ausländerrechtlicher Administrativhaft."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "2e97b6ee508268ec456b27e2c1520c37b66de1f00a11f3049c05013db62f1878"
+    },
+    {
+      "id": "kanton/BS/258.210/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Vollzugszentrum Klosterfiechten werden aufgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen im offenen stationären Massnahmenvollzug;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen im Arbeitsexternat;"
+            },
+            {
+              "marke": "c",
+              "text": "Personen in der Halbgefangenschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es übt zudem folgende Aufgaben aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vollzugsbegleitende ambulante Behandlungen gemäss Auftrag der Vollzugsbehörde;"
+            },
+            {
+              "marke": "b",
+              "text": "Vollzug von Wohn- und Arbeitsexternaten;"
+            },
+            {
+              "marke": "c",
+              "text": "Vollzug von Freiheitsstrafen in Form der elektronischen Überwachung;"
+            },
+            {
+              "marke": "d",
+              "text": "Vollzug der gemeinnützigen Arbeit;"
+            },
+            {
+              "marke": "e",
+              "text": "elektronische Überwachung von Tätigkeits-, Kontakt- und Rayonverboten sowie Ersatzmassnahmen;"
+            },
+            {
+              "marke": "f",
+              "text": "elektronische Überwachung bei Jugendlichen im Rahmen eines Jugendstrafverfahrens oder ‑sanktionenvollzugs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Es betreibt die Fachstelle für besondere Vollzugsformen, die im Auftrag der Vollzugsbehörde die Eignung der verurteilten Personen für eine besondere Vollzugsform abklärt und Empfehlungen abgibt."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "5e0aca50257d5aeacd410b884b2eefa8eec767a5fee3836a5ec2eaf615713045"
+    },
+    {
+      "id": "kanton/BS/258.210/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Migrationsamt ist zuständig für den Vollzug der Landesverweisungen nach den Art. 66a ff. StGB und den Art. 49a ff. des Militärstrafgesetzes (MstG) vom 13. Juni 1927."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "252ca0e20d723fb6f8864c71e09e1cbe1160a5f5d009a2caf17af81f2ec4e505"
+    },
+    {
+      "id": "kanton/BS/258.210/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leitung der Vollzugseinrichtung erlässt eine Hausordnung sowie konkretisierende Weisungen, insbesondere betreffend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sicherheit;"
+            },
+            {
+              "marke": "b",
+              "text": "das Eintrittsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterbringung und Bekleidung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Besitz, die Aufbewahrung sowie die Kontrolle der Effekten, Wertgegenstände und Ausweise;"
+            },
+            {
+              "marke": "e",
+              "text": "das Zellen- oder Zimmerinventar;"
+            },
+            {
+              "marke": "f",
+              "text": "die Tagesordnung, Mahlzeiteneinnahme sowie Arbeits- und Ausbildungszeiten;"
+            },
+            {
+              "marke": "g",
+              "text": "die Arbeit sowie Aus- und Weiterbildung;"
+            },
+            {
+              "marke": "h",
+              "text": "den Vollzugsplan;"
+            },
+            {
+              "marke": "i",
+              "text": "die Ausrichtung und Verwendung des Arbeitsentgelts, den Besitz von Bargeld sowie das Führen eines Frei- und Sperrkontos;"
+            },
+            {
+              "marke": "j",
+              "text": "den Empfang und Versand von Briefen und Paketen sowie die Benützung von Telefonen;"
+            },
+            {
+              "marke": "k",
+              "text": "die Verwendung von Büchern, Zeitungen und elektronischen Geräten;"
+            },
+            {
+              "marke": "l",
+              "text": "den Empfang von Besuchen sowie die Aussen- und Freizeitaktivitäten;"
+            },
+            {
+              "marke": "m",
+              "text": "die Gesundheits- und Sozialbetreuung sowie die Seelsorge;"
+            },
+            {
+              "marke": "n",
+              "text": "die Disziplinarmassnahmen;"
+            },
+            {
+              "marke": "o",
+              "text": "das Austrittsverfahren."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Hausordnungen sowie die sie konkretisierenden Weisungen bedürfen der Genehmigung durch die Leitung des Amtes für Justizvollzug."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Hausordnung und die sie konkretisierenden Weisungen sind der eingewiesenen Person auf deren Verlangen und wenn möglich in einer für sie verständlichen Sprache auszuhändigen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "20d4cfc2bc2f90b1f36d7bdec2cad15d71241dad58dc8ba8e277616a4f268516"
+    },
+    {
+      "id": "kanton/BS/258.210/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesenen Personen haben den Anweisungen des Personals der Vollzugseinrichtung Folge zu leisten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Personal der Vollzugseinrichtung und die eingewiesenen Personen begegnen einander mit Anstand und Respekt."
+        },
+        {
+          "absatz": "3",
+          "text": "Private und rechtsgeschäftliche Beziehungen zwischen eingewiesenen Personen und dem Personal der Vollzugseinrichtung sowie rechtsgeschäftliche Beziehungen unter den eingewiesenen Personen sind verboten. Über Ausnahmen entscheidet die Leitung der Vollzugseinrichtung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "18db43dbfca0567c33f000092e7bcb0636c113594f362376366e1a53db6c1775"
+    },
+    {
+      "id": "kanton/BS/258.210/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Vermeidung der Einschleusung von verbotenen Gegenständen oder von Deliktsgut können eingewiesene Personen einer Leibesvisitation unterzogen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Leibesvisitationen können namentlich durchgeführt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beim Ein- und Austritt;"
+            },
+            {
+              "marke": "b",
+              "text": "nach einem Besuchsempfang;"
+            },
+            {
+              "marke": "c",
+              "text": "nach einem Arbeitseinsatz;"
+            },
+            {
+              "marke": "d",
+              "text": "nach einer externen Zuführung;"
+            },
+            {
+              "marke": "e",
+              "text": "nach der Rückkehr aus dem Ausgang oder Urlaub."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Leibesvisitationen werden bei Frauen durch eine Aufseherin, bei Männern durch einen Aufseher vorgenommen. Zur Unterstützung kann Polizeipersonal des gleichen Geschlechts wie die zu kontrollierende Person zugezogen werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Intime Leibesvisitationen dürfen nur durch medizinisch geschulte Fachpersonen des gleichen Geschlechts wie die zu kontrollierende Person vorgenommen werden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "748456b334b143573571741dd427148825cac8181c3039b4449acd1aaee5a0a1"
+    },
+    {
+      "id": "kanton/BS/258.210/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Handel, Besitz und Konsum von Alkohol und Drogen ist während des Freiheitsentzugs in den Vollzugseinrichtungen untersagt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten von Urin-, Atemluft-, Haar- und Blutkontrollen werden bei positivem Befund der eingewiesenen Person übertragen, soweit diese über die nötigen finanziellen Mittel verfügt."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "d2e9a6c3d2a5d169f271c2cad78ce1df2273e5f2eaba20a1e71ac6fb5d28539a"
+    },
+    {
+      "id": "kanton/BS/258.210/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kontrollen zur Sicherstellung der Ordnung in den Zellen oder Zimmern erfolgen grundsätzlich in Anwesenheit der eingewiesenen Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Zellen- oder Zimmerkontrollen zur Gewährleistung der Sicherheit erfolgen in Abwesenheit der eingewiesenen Person. Sie ist über die Kontrolle nachträglich zu informieren."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "6864d0e7b10add01a15364b17d5af79764885e1ed575093add9a7ce16f88c6fe"
+    },
+    {
+      "id": "kanton/BS/258.210/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Elektronische Geräte wie Computer und Mobiltelefone von Personen, die sich im Straf- oder Massnahmenvollzug befinden, kann die Leitung der Vollzugseinrichtung kontrollieren oder untersuchen lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei bedingt entlassenen Personen kann die Vollzugsbehörde die Kontrolle und Untersuchung der elektronischen Geräte in Form einer Weisung anordnen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "0a743b13853a744ef59324541cae0ea9e808605a66868089f4fdf8d0c05357de"
+    },
+    {
+      "id": "kanton/BS/258.210/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als zulässige Hilfsmittel bei der Anwendung von physischem Zwang gelten Hand- und Fussfesseln, andere Fesselungsmittel sowie Diensthunde. Diensthunde werden nur zur Verhinderung einer Entweichung eingesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Als zulässige Waffen gelten Schlag- und Abwehrstöcke sowie Reizstoffe."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "37a88a9b6c8ad003dd415a1db85a7b0888a11aa210b5d3522731f993fe3e1856"
+    },
+    {
+      "id": "kanton/BS/258.210/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist ein sofortiges medizinisches Eingreifen erforderlich, nimmt die zuständige Ärztin oder der zuständige Arzt die medizinisch indizierte Zwangsmassnahme nach den ärztlichen Berufs- und Sorgfaltspflichten eigenständig vor."
+        },
+        {
+          "absatz": "2",
+          "text": "In diesen Fällen erfolgt die Verfügung der einweisenden Behörde nachträglich."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "e31f8d1388320c5ff5df0c6de6bf9a36fead26ee43a0e612c5d7aea924802754"
+    },
+    {
+      "id": "kanton/BS/258.210/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beweisgrundlagen sind schriftlich festzuhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Art und Dauer der Disziplinarmassnahmen bemisst sich nach der Art der Pflichtverletzung oder Beeinträchtigung des Betriebs der Vollzugseinrichtung sowie dem Verschulden der eingewiesenen Person."
+        },
+        {
+          "absatz": "3",
+          "text": "Es können mehrere Disziplinarmassnahmen gleichzeitig angeordnet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Disziplinarverfügung ist schriftlich zu verfassen, zu begründen und mit einer Rechtsmittelbelehrung zu versehen. Sie wird der eingewiesenen Person mündlich eröffnet. Der Empfang ist unterschriftlich zu bestätigen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Vollzugseinrichtung informiert die einweisende Behörde über die verfügten Disziplinarmassnahmen."
+        },
+        {
+          "absatz": "6",
+          "text": "Bei Disziplinarsanktionen gemäss §§ 17 ff. JVG bleiben die strafrechtliche Verfolgung sowie Schadenersatzforderungen infolge Sachbeschädigungen vorbehalten."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "7d9ddec73ff68a93201d108bc0e07619a298d25b6e2771c8993288fc43b2f095"
+    },
+    {
+      "id": "kanton/BS/258.210/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Zelleneinschluss und Arrest bleibt die eingewiesene Person von Arbeit, sportlicher Betätigung, Briefkontakten, privaten Besuchen, Bezug von Waren von inner- und ausserhalb der Vollzugseinrichtung, Bibliotheksbenützung sowie Besitz von persönlichen Gegenständen und Benützung des Telefons ausgeschlossen. Ausgenommen sind Anwaltskorrespondenz und -besuche."
+        },
+        {
+          "absatz": "2",
+          "text": "Am ersten Tag besteht kein Anspruch auf Spaziergang."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "3163d19b4487546bfcb4dbbcf4f00ee409a56c7c340393588770688ee8e81e53"
+    },
+    {
+      "id": "kanton/BS/258.210/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Strafbehörden stellen der Abteilung Straf- und Massnahmenvollzug ihre rechtskräftigen Urteile, Vollzugsentscheide oder Strafbefehle sowie sämtliche für den Vollzug erforderlichen Akten zu."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "a67f110a1122c1b817ea7aa0ba386528d6fc0a29d416e3628e490f8ca7b2c8a6"
+    },
+    {
+      "id": "kanton/BS/258.210/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Freiheitsstrafen und freiheitsentziehende strafrechtliche Massnahmen sind in der Regel innert drei Monaten nach Eintritt der Rechtskraft des Urteils anzutreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen zum sofortigen Vollzugsantritt gemäss Art. 439 Abs. 3 StPO bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "62e8175b88cec8e5071e486b005da5ea70097bb821ad618fd20cb701f1fc53cc"
+    },
+    {
+      "id": "kanton/BS/258.210/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrensleitung übermittelt der Abteilung Straf- und Massnahmenvollzug mit der Bewilligung des vorzeitigen Straf- und Massnahmenvollzugs die erforderlichen Akten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörde entscheidet über Vollzugsöffnungen. Vorgängig kann sie die Stellungnahme der Verfahrensleitung einholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verfahrensleitung entscheidet über Haftentlassungen. Vorgängig kann sie die Stellungnahme der Vollzugsbehörde einholen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "107b0acf2a1e49e0796ddec9681b75d8f2a7f4c8ea3a7e0f1945fea8da1b361e"
+    },
+    {
+      "id": "kanton/BS/258.210/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsplanung umfasst die Steuerung und Koordination des gesamten Straf- und Massnahmenvollzugs mit seinen Vollzugsstufen und der Probezeit nach der bedingten Entlassung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausgestaltung der Vollzugsplanung und des Vollzugsplans richtet sich nach den Richtlinien des Konkordats der Kantone der Nordwest- und Innerschweiz über den Vollzug von Strafen und Massnahmen vom 5. Mai 2006 (Konkordat)."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "943cefc4605089f4058c2939c7c5b10d7e0b36b02f35ce60267979e357c631ca"
+    },
+    {
+      "id": "kanton/BS/258.210/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugseinrichtungen erstellen im Auftrag der zuständigen Behörde Berichte über die Einhaltung des Vollzugplans, die Erreichung der Ziele und die Mitwirkung der eingewiesenen Person."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "e76dbea82a0bf51ddd71d060a3294bac9474b7f4f3ac148dcd28484656c4492f"
+    },
+    {
+      "id": "kanton/BS/258.210/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Straf- und Massnahmenvollzug kann über eine eingewiesene Person bei einer forensisch-psychiatrischen Fachperson ein Gutachten in Auftrag geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die eingewiesene Person erhält Gelegenheit, zum Fragenkatalog der Abteilung Straf- und Massnahmenvollzug sowie zur Person der Gutachterin oder des Gutachters Stellung zu nehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie hat bei der Wahl der Gutachterin oder des Gutachters kein Mitspracherecht."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "d202df42cd290c7bef62bf9afe623e13e6a1673921916eedeb061ffa113b64ae"
+    },
+    {
+      "id": "kanton/BS/258.210/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ein- und Austritt erfolgt nach Anordnung der zuständigen Behörde durch die Haftleitstelle der Kantonspolizei oder die Leitung der Vollzugseinrichtung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Haftleitstelle der Kantonspolizei führt die Kontrolle der Ein- und Austritte durch und informiert die einweisende Behörde."
+        },
+        {
+          "absatz": "3",
+          "text": "Die eingewiesene Person hat sich mit einem amtlichen Ausweispapier mit Lichtbild auszuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die eingewiesene Person wird über ihre Rechte und Pflichten informiert. Die Hausordnung und andere relevante Vollzugsvorschriften wie Merkblätter werden ihr zugänglich gemacht."
+        },
+        {
+          "absatz": "5",
+          "text": "Nach Eintritt in die Vollzugseinrichtung erhält die eingewiesene Person Gelegenheit zum Gespräch mit der Leitung der Vollzugseinrichtung, dem Betreuungs- oder dem Sozialdienst."
+        },
+        {
+          "absatz": "6",
+          "text": "Jede neu eintretende Person wird einer medizinischen Untersuchung durch den Gesundheitsdienst der Vollzugseinrichtung unterzogen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "349ace92d6ef96452346563ad853f85abffa93d9ef96c2cc2f318caedf249e04"
+    },
+    {
+      "id": "kanton/BS/258.210/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person wird in einer Einzel- oder Mehrbettzelle untergebracht. Es besteht kein Anspruch auf eine Einzelzelle."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "af3dbe64e01e8552eb62b0fd5f53c408569d35279ed27a0277254ac5cd1bf9b2"
+    },
+    {
+      "id": "kanton/BS/258.210/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person erhält eine ausreichende und ausgewogene Verpflegung."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf besondere Speisewünsche aufgrund religiöser oder ethischer Überzeugung ist nach Möglichkeit Rücksicht zu nehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Medizinische Spezialkost wie Diätkost wird nur auf ärztliche Anordnung abgegeben."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "534350a2df8a11c4124d338bf881f09b63232175c302d9964f4b0d0fdb03ca34"
+    },
+    {
+      "id": "kanton/BS/258.210/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person ist zur Arbeit verpflichtet, soweit die Vollzugseinrichtung über ein entsprechendes Angebot verfügt. Sie hat die ihr zugewiesene Arbeit gewissenhaft auszuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die geleistete Arbeit erhält die eingewiesene Person ein von ihrer Leistung abhängiges Entgelt. Die Höhe des Entgelts sowie dessen Verwendung richten sich nach den Richtlinien des Konkordats."
+        },
+        {
+          "absatz": "3",
+          "text": "Kann keine Arbeit angeboten werden, erhält die eingewiesene Person ab dem fünften Hafttag einen reduzierten Betrag gutgeschrieben, sofern kein subsidiärer Kostenträger ein Taschengeld oder ein anderes Entgelt entrichtet."
+        },
+        {
+          "absatz": "4",
+          "text": "Fünf Jahre nach Entweichung einer eingewiesenen Person kann die Leitung der Vollzugseinrichtung deren Arbeitsentgelt oder Taschengeld in einen Fürsorgefonds zur Unterstützung von eingewiesenen oder entlassenen Personen überweisen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "b1a87822695692999342c7e600bea8dbbec9844079af8dcbc75393dada9221c0"
+    },
+    {
+      "id": "kanton/BS/258.210/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person hat Anspruch darauf, sich täglich mindestens eine Stunde im Spazierhof der Vollzugseinrichtung aufzuhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugseinrichtung bietet der eingewiesenen Person Gelegenheit zur sportlichen Betätigung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "9c3ab49f8b75bc9488b3a449d553c94cc55f047088c1bfc7df103ddd6ec64642"
+    },
+    {
+      "id": "kanton/BS/258.210/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person kann im Rahmen der Hausordnung der Vollzugseinrichtung Kommunikationsmittel und weitere elektronische Geräte benutzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Benützung elektronischer Geräte kann die Vollzugseinrichtung ein Entgelt erheben."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Besitz und die Benützung von privaten Kommunikations- und Datenübermittlungsgeräten sowie weiteren elektronischen Geräten sind verboten. Die Leitung der Vollzugseinrichtung kann abweichende Regelungen festlegen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "e4f753dff20d9fc738f1fe4936a456a860621ca6c465f9dfa7aef26e712113ec"
+    },
+    {
+      "id": "kanton/BS/258.210/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person kann auf eigene Kosten Zeitungen, Zeitschriften und Bücher erwerben, soweit deren Inhalt nicht die Ruhe, Ordnung und Sicherheit der Vollzugseinrichtung gefährdet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der eingewiesenen Person steht in den geschlossenen Vollzugseinrichtungen eine Bibliothek zur Verfügung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "7adc19d5638a382ec2e26a1382e66bf1e1ec358831eb074fbd9f7fc1e378803b"
+    },
+    {
+      "id": "kanton/BS/258.210/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person kann Besuche empfangen. Vorbehalten bleiben Einschränkungen, die zur Aufrechterhaltung eines geordneten Betriebs der Vollzugseinrichtung erforderlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Besucherin oder der Besucher hat sich auszuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leitung der Vollzugseinrichtung kann Personen, welche die Sicherheit und Ordnung des Betriebs der Vollzugseinrichtung gefährden oder gegen die Besuchsregelungen verstossen haben, bis zu drei Monaten von Besuchen ausschliessen. Bei anhaltender Gefährdung oder wiederholtem Verstoss gegen die Besuchsregelung kann die betreffende Person dauerhaft von Besuchen ausgeschlossen werden. Ausgenommen sind Ehegattinnen oder Ehegatten, eingetragene Partnerinnen oder Partner, Lebenspartnerinnen oder -partner, Kinder und Eltern."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "eb58c0fedafe7e14586dcfad3298f2dbaf312a0da86f33ee123bb2b6e072a442"
+    },
+    {
+      "id": "kanton/BS/258.210/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person hat Anspruch darauf, Briefe und Pakete zu empfangen und auf eigene Kosten zu versenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugseinrichtung führt Behältniskontrollen unter Wahrung des Schriftgeheimnisses durch. Bei Verdacht auf eine Gefährdung der Sicherheit und Ordnung kann eine inhaltliche Kontrolle vorgenommen werden. Von den Kontrollen ausgenommen sind Anwalts- und Behördenpost."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "1bb44e7bc73c3bb2852242dd187a5a49076cb668af690afea5774bca53d0ce3c"
+    },
+    {
+      "id": "kanton/BS/258.210/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rahmen des betrieblich Möglichen kann die eingewiesene Person Dinge des täglichen Gebrauchs einkaufen und Waren empfangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die eingewiesene Person abgegebene Waren werden durch die Vollzugseinrichtung nur entgegengenommen, wenn sie die Ruhe, Ordnung und Sicherheit in der Vollzugseinrichtung nicht gefährden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "90cd018139bd05a3dec0545a35bde2bc8d3175df7d97d227b5708b1c1f6ca994"
+    },
+    {
+      "id": "kanton/BS/258.210/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugseinrichtung gewährleistet die medizinische Betreuung der eingewiesenen Person. Zur Vermeidung gesundheitlicher Risiken können allgemeinmedizinische oder psychiatrische Untersuchungen und Abklärungen veranlasst werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die medizinische Betreuung ist in erster Linie der Gesundheitsdienst der Vollzugseinrichtung zuständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Die eingewiesenen Personen dürfen nur die von der Ärztin oder dem Arzt der Vollzugseinrichtung zugelassenen oder verschriebenen Medikamente besitzen und einnehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Bedarf kann der Gesundheitsdienst nach Rücksprache mit der Leitung der Vollzugseinrichtung weitere Abklärungen durch eine Fachärztin oder einen Facharzt vornehmen lassen."
+        },
+        {
+          "absatz": "5",
+          "text": "Erfordert der gesundheitliche Zustand einer eingewiesenen Person die Versetzung in ein Spital oder eine psychiatrische Klinik, holt der Gesundheitsdienst vorgängig die Zustimmung der einweisenden Behörde ein. In dringenden Fällen wird die Versetzung vom Gesundheitsdienst unter gleichzeitiger Information der einweisenden Behörde veranlasst."
+        },
+        {
+          "absatz": "6",
+          "text": "Für die eingewiesenen Personen besteht keine freie Wahl der Ärztin oder des Arztes."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "261c3b08e92137e067f7a0dc142eb363cf25738b304ae878d0b6c907cf463dc0"
+    },
+    {
+      "id": "kanton/BS/258.210/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesenen Personen haben die notwendigen Massnahmen zum Gesundheitsschutz und zur Hygiene zu beachten und den diesbezüglichen Anordnungen der Ärztin oder des Arztes, des Gesundheitsdienstes und des Personals der Vollzugseinrichtung Folge zu leisten."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "c54e0cd26945891164cc4fba34fddecc8450d0e629992f2cdd5d1c671f78c823"
+    },
+    {
+      "id": "kanton/BS/258.210/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zahnärztliche Behandlungen erfolgen nur, soweit sie unaufschiebbar sind. Eine weitergehende Behandlung kann bewilligt werden, sofern die Kostentragung durch die eingewiesene Person oder dritte Kostenträger sichergestellt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gesundheitsdienst der Vollzugseinrichtung bezeichnet die Zahnärztin oder den Zahnarzt."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "41538a0915ae824a3b0460524dd95bbca80c6963df973c03637dcedcf836e6fb"
+    },
+    {
+      "id": "kanton/BS/258.210/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person hat während der Dauer des Vollzugs für eine ausreichende Kranken- und Unfallversicherung zu sorgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten für die ärztliche Behandlung hat die eingewiesene Person zu tragen, soweit sie über die finanziellen Mittel verfügt. Im Übrigen gelten die Richtlinien des Konkordats."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "cb798137edd598fd337f39ddfdcd8ed72872aa046a4ac217a2ea0a46c21a0d5b"
+    },
+    {
+      "id": "kanton/BS/258.210/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugseinrichtung gewährleistet die seelsorgerische Betreuung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "26fe5a6e1344744f1535cd6443fdcc673f021a16697a80cfd223d39a20aec635"
+    },
+    {
+      "id": "kanton/BS/258.210/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter die besonderen Vollzugsformen fallen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Halbgefangenschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "Gemeinnützige Arbeit;"
+            },
+            {
+              "marke": "c",
+              "text": "elektronische Überwachung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "664b6c81a9447ea29591836b9280538039f81b25ca41844ca0485b9c3ad6285b"
+    },
+    {
+      "id": "kanton/BS/258.210/art_42",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "42",
+      "artikelLabel": "§ 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anordnung und der Vollzug der besonderen Vollzugsformen richten sich nach den Richtlinien des Konkordats, insbesondere in Bezug auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zeitlichen und persönlichen Voraussetzungen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Bewilligungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "den Vollzugsplan und die Vollzugsöffnungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Folgen bei Regelverstössen oder bei Nichteinhalten des Vollzugsplans;"
+            },
+            {
+              "marke": "e",
+              "text": "die Kostenbeteiligung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anrechnung von Teilzahlungen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Änderungen der Zulassungsvoraussetzungen nach erteilter Bewilligung oder während des Vollzugs;"
+            },
+            {
+              "marke": "h",
+              "text": "den Abbruch des Vollzugs;"
+            },
+            {
+              "marke": "i",
+              "text": "die Beendigung des Vollzugs."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "d90a06cdca85ab934a10fdbe32dd972d8a1783b20209919131f5bd0875da46bc"
+    },
+    {
+      "id": "kanton/BS/258.210/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch, eine Strafe ganz oder teilweise in einer besonderen Vollzugsform zu verbüssen, ist bis 60 Tage vor Antritt der besonderen Vollzugsform schriftlich bei der Abteilung Straf- und Massnahmenvollzug einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern die Voraussetzungen erfüllt sind, ordnet die Abteilung Straf- und Massnahmenvollzug die entsprechende Vollzugsform mit den Auflagen und Bedingungen sowie den zu zahlenden Vollzugskostenanteil an."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "35255a3959580a4bbf30c591fa6f6371dca2d7a25fef61bad3dc627b2bc61a06"
+    },
+    {
+      "id": "kanton/BS/258.210/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die beauftragte Fachperson oder Einrichtung verpflichtet sich zur Durchführung einer deliktpräventiven Therapie."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "8761ddf31f52ad5c4f47a4b9487bd8c9cd0a0918d8ab9542a201c9c5265662f8"
+    },
+    {
+      "id": "kanton/BS/258.210/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die beauftragte Fachperson oder Einrichtung erstattet der Vollzugsbehörde auf Anfrage, mindestens aber einmal jährlich, Bericht über den Therapieverlauf."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bericht enthält insbesondere Angaben aus fachlicher Sicht über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Diagnose und die Beschreibung der Therapie einschliesslich der bearbeiteten Problembereiche;"
+            },
+            {
+              "marke": "b",
+              "text": "die Behandlungsmotivation;"
+            },
+            {
+              "marke": "c",
+              "text": "die Einhaltung von Auflagen;"
+            },
+            {
+              "marke": "d",
+              "text": "das Erreichen von Therapiezielen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Einschätzung der Rückfallgefahr;"
+            },
+            {
+              "marke": "f",
+              "text": "die Notwendigkeit der Fortführung der Therapie."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die beauftragte Fachperson oder Einrichtung informiert die Vollzugsbehörde unverzüglich und unaufgefordert über rückfallrelevante kritische Entwicklungen, die Nichteinhaltung von Abmachungen und Terminen durch die verurteilte Person und andere Vorkommnisse, welche die Fortführung einer Therapie in Frage stellen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "f9e2143c99a230fbb30f3a001bf7484dc6bb1304ed1fb545ec75a5ffe074a4a6"
+    },
+    {
+      "id": "kanton/BS/258.210/art_46",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Straf- und Massnahmenvollzug reicht den Antrag auf Verlängerung oder Umwandlung einer stationären oder ambulanten Massnahme in der Regel sechs Monate vor deren Ablauf beim zuständigen Gericht ein."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "8c44918c0c5c5fceb76fbd96dcb02a32b1f1c868797f6790a0aa4ea4ef135663"
+    },
+    {
+      "id": "kanton/BS/258.210/art_47",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stationäre Massnahmen werden in der Regel in Institutionen wie Kliniken, Massnahmeninstitutionen oder anerkannten privaten Einrichtungen vollzogen."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht die Gefahr, dass die eingewiesene Person flieht oder weitere Straftaten begeht, wird die Massnahme in einer geschlossenen Einrichtung vollzogen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Durchführung des stationären Massnahmenvollzugs kommen sinngemäss die §§ 10 bis 40 zur Anwendung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "3f7fcc30c5af7808b20d8a08540cc959061e2ef7751b3df340801a4e3cba4927"
+    },
+    {
+      "id": "kanton/BS/258.210/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die behandelnde Fachstelle schliesst mit der verurteilten Person einen Behandlungsvertrag ab, in dem die Therapieziele festgelegt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die verurteilte Person verpflichtet sich zur Mitarbeit an der Erreichung der festgelegten Therapieziele."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "8ee8505b34b788bd1873d45565c402d1da21fea8eccb69f25fb5ad0cae3cde0e"
+    },
+    {
+      "id": "kanton/BS/258.210/art_49",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "49",
+      "artikelLabel": "§ 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde beauftragt die therapeutische Fachstelle der Vollzugseinrichtung mit der Durchführung der vollzugsbegleitenden ambulanten Behandlung während des Freiheitsentzugs."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausgestaltung der ambulanten Behandlung wird in den Vollzugsplan aufgenommen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "599e8731c29ffeb80ffda2692dbffed8e19d8721f82b0bf44cb4e801784863e7"
+    },
+    {
+      "id": "kanton/BS/258.210/art_50",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "50",
+      "artikelLabel": "§ 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Bewährungsdienste erfüllt ihren gesetzlichen Auftrag nach den Standards und Richtlinien des Konkordats."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit der Bewährungshilfe soll die Rückfälligkeit der betreuten Person vermindert und die dafür erforderliche Sozial- und Fachhilfe vermittelt werden. Die Eigenständigkeit und Eigenverantwortung der betreuten Person sowie die Eingliederung in die Gesellschaft werden gefördert. Dabei wird dem Unterstützungs-, Kontroll- und Veränderungsbedarf der betreuten Person besonders Rechnung getragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Nichteinhaltung der angeordneten Bewährungshilfe und der Weisungen kann die Abteilung Bewährungsdienste die betreute Person verwarnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bewährungshilfe kann auch auf freiwilliger Basis in Anspruch genommen werden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "7245438624c3e1d5dc06c61108ccf0ea6750c0b094772d222f54b88dcd90c0e4"
+    },
+    {
+      "id": "kanton/BS/258.210/art_51",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "51",
+      "artikelLabel": "§ 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Auftrag oder bei besonderen Vorkommnissen erstellt die Abteilung Bewährungsdienste Berichte über die betreute Person für die Staatsanwaltschaft, die Gerichte oder die Vollzugsbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bericht enthält soweit erforderlich Angaben über die Persönlichkeit der betreuten Person, ihr persönliches Umfeld, den Verlauf der Betreuung, die Veränderungen in den deliktrelevanten Problembereichen sowie über den Unterstützungs- und Kontrollbedarf. Die betreute Person wird über den Inhalt des Berichts informiert."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "caa151cc9c16de0411cf27a170c0d357a6460d84316d87a862f38b16656cb0cb"
+    },
+    {
+      "id": "kanton/BS/258.210/art_52",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "52",
+      "artikelLabel": "§ 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die betreute Person ist verpflichtet, die ihr auferlegten Weisungen einzuhalten sowie den Terminen und Absprachen mit der Abteilung Bewährungsdienste nachzukommen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "667f4826aa11507e66789d4a494888fbb6180ed80edf6e95e1e3a77f679ab557"
+    },
+    {
+      "id": "kanton/BS/258.210/art_53",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "53",
+      "artikelLabel": "§ 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Während des Strafverfahrens sowie im Straf- und Massnahmenvollzug kann die eingewiesene Person soziale Betreuung in Anspruch nehmen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "eedcbe0fb611702d075d6296c5c8da1e5d2804e10feb3468a5602c9d80860546"
+    },
+    {
+      "id": "kanton/BS/258.210/art_54",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "54",
+      "artikelLabel": "§ 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Bewährungsdienste kann zur Erfüllung ihrer Aufgaben weitere Fachstellen und private Personen beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie schliesst mit den beigezogenen Fachstellen und Personen eine Vereinbarung über die Ausgestaltung des Auftrags, die konkrete Zusammenarbeit sowie Meldepflichten bei besonderen Vorkommnissen ab."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "5013d8dd5b184e4aaa5a36fe40b7472a2a97442308bffc5cfe6a180f5b8ee1cf"
+    },
+    {
+      "id": "kanton/BS/258.210/art_55",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "55",
+      "artikelLabel": "§ 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchführung von Untersuchungs- und Sicherheitshaft erfolgt nach den nachfolgenden Bestimmungen sowie besonderen Anordnungen der Verfahrensleitung im Rahmen des Untersuchungsverfahrens. Die §§ 10 bis 40 sind sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "6192055b3b3975592179ec80231033baf418b6d1fff5a87f68de7391fc84a73e"
+    },
+    {
+      "id": "kanton/BS/258.210/art_56",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "56",
+      "artikelLabel": "§ 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der eingewiesenen Person wird im Rahmen des vorhandenen Arbeitsangebots und der betrieblichen Möglichkeiten die Gelegenheit zur Arbeitsleistung gegeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist nicht verpflichtet, das Arbeitsangebot anzunehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kann keine Arbeit angeboten werden, erhält die eingewiesene Person ab dem fünften Hafttag einen reduzierten Betrag gutgeschrieben, sofern kein subsidiärer Kostenträger ein Taschengeld oder ein anderes Entgelt entrichtet."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "90e06a6859ebe57a81e40340d89b2c4221b8ef1db3a88f7cc571e61f1ca0c590"
+    },
+    {
+      "id": "kanton/BS/258.210/art_57",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "57",
+      "artikelLabel": "§ 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrensleitung entscheidet über Gesuche um Bewilligung eines Urlaubs."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "21101112771ba73885e43c09b5ce2905349d778f0c980ae293042d679f7773b4"
+    },
+    {
+      "id": "kanton/BS/258.210/art_58",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "58",
+      "artikelLabel": "§ 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Besuche der eingewiesenen Person ist eine Bewilligung der Verfahrensleitung erforderlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Im ersten Monat dauern Besuche in der Regel eine halbe Stunde pro Woche. Danach ist für Besuche mindestens eine Stunde pro Woche einzuräumen. Während des Besuchs darf nicht über ein hängiges Verfahren gesprochen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abs. 1 und 2 gelten nicht für bevollmächtigte Anwältinnen oder Anwälte. Sie haben innerhalb der Besuchszeiten unbeschränkten Zugang zu ihren Mandantinnen oder Mandanten."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "4772ef6d4216a472d5764f17c2ca9870a75db746db6d661446300fc4041ed4c1"
+    },
+    {
+      "id": "kanton/BS/258.210/art_59",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "59",
+      "artikelLabel": "§ 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der eingewiesenen Person ist das Telefonieren grundsätzlich untersagt. Die Verfahrensleitung kann Ausnahmen bewilligen und regelt deren Durchführung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "423339b627576bc7f30b832383c5cbeaabd09f5ae0fd36e60b24076dabe204d8"
+    },
+    {
+      "id": "kanton/BS/258.210/art_60",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "60",
+      "artikelLabel": "§ 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesenen Personen haben das Recht, pro Woche zwei Briefe innerhalb der Schweiz auf Kosten der Vollzugseinrichtung zu versenden. Mittellose Personen können alle Briefe auf Kosten der Vollzugseinrichtung innerhalb der Schweiz versenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Briefe und Mitteilungen, die sich auf ein hängiges Verfahren beziehen, anderweitig gegen den Zweck der Haft verstossen oder drohende, ehrverletzende oder verleumderische Äusserungen enthalten, werden nicht weitergeleitet. Die eingewiesene Person ist von der Verfahrensleitung hierüber zu informieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit Ausnahme des Briefverkehrs mit Anwältinnen oder Anwälten sowie mit Behörden wird sämtliche Korrespondenz einer inhaltlichen Kontrolle unterzogen. In begründeten Fällen kann für den Briefverkehr mit Anwältinnen oder Anwälten sowie mit Behörden eine Behältniskontrolle durch die Verfahrensleitung angeordnet werden; dabei ist das Schriftgeheimnis strikt zu wahren."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "b55f54bb2ad25e88b900c18bcd3577e8611ccc218f8152ea7e22b33a588ff454"
+    },
+    {
+      "id": "kanton/BS/258.210/art_61",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "61",
+      "artikelLabel": "§ 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Empfang und Besitz von Zeitungen, Zeitschriften und Büchern unterliegt der Zustimmung der Verfahrensleitung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "962e4615f5369d911b44e497431529b138b6aa75bcb0581c7b81d07170e258b0"
+    },
+    {
+      "id": "kanton/BS/258.210/art_62",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "62",
+      "artikelLabel": "§ 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einer Person in Untersuchungshaft sind der Besitz und die Benützung von elektronischen Geräten, mit Ausnahme der Radio- und Fernsehgeräte der Vollzugseinrichtung, untersagt. Über Ausnahmen entscheidet die Leitung der Vollzugseinrichtung."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "9a5a2c55f6c2469a29162fa8e5d37d09377db226685b8078c6cdd85c83f34fd7"
+    },
+    {
+      "id": "kanton/BS/258.210/art_63",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "63",
+      "artikelLabel": "§ 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugseinrichtung informiert die Verfahrensleitung über die angeordneten Disziplinarmassnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer jugendlichen Person wird bei Anordnung eines Zelleneinschlusses, eines Disziplinararrests oder einer Besuchersperre mit der Verfahrensleitung gemäss § 15 des Gesetzes über den Vollzug von jugendstrafrechtlichen Sanktionen (Jugendstrafvollzugsgesetz, JStVG) vom 13. Oktober 2010 Rücksprache genommen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "cc78df588a396b28e3b16b043e4f305cd54aa2865c1ec77dd035c70b74e1a9cc"
+    },
+    {
+      "id": "kanton/BS/258.210/art_64",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "64",
+      "artikelLabel": "§ 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchführung der ausländerrechtlichen Haft erfolgt nach den nachfolgenden Bestimmungen sowie sinngemäss nach den §§ 10 bis 40."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "27f8c922bfeb3c94461f43042c5830df2df424dbf02d0a686587e8d42a125d34"
+    },
+    {
+      "id": "kanton/BS/258.210/art_65",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "65",
+      "artikelLabel": "§ 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person hat Anspruch darauf, sich täglich mindestens zwei Stunden im Spazierhof der Vollzugseinrichtung aufzuhalten."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "1b06bf8fccc3846b1fdd27c4c1f2a795e5fda49f6d56ac6e96a8831d79fc6b51"
+    },
+    {
+      "id": "kanton/BS/258.210/art_66",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "66",
+      "artikelLabel": "§ 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der eingewiesenen Person wird im Rahmen des vorhandenen Arbeitsangebots und der betrieblichen Möglichkeiten spätestens ab dem fünften Hafttag die Möglichkeit zur Arbeitsleistung gegeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist nicht dazu verpflichtet, das Arbeitsangebot anzunehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kann keine Arbeit angeboten werden, erhält die eingewiesene Person ab dem fünften Hafttag einen reduzierten Betrag gutgeschrieben, sofern kein subsidiärer Kostenträger ein Taschengeld oder ein anderes Entgelt entrichtet."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "00567e91d1d864f011627d95b0013ca5d69a57d2e49ab7417e67dc1f281dab5b"
+    },
+    {
+      "id": "kanton/BS/258.210/art_67",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "67",
+      "artikelLabel": "§ 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person kann auf Kosten der Vollzugseinrichtung telefonieren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beim Eintritt in die Vollzugseinrichtung;"
+            },
+            {
+              "marke": "b",
+              "text": "mit Rechtsvertreterinnen und Rechtsvertretern;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Förderung des Wegweisungsverfahrens."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "c2e25e42016ea35394dc454ded6b5160cdded47b35e5dd567352d9a638ddc59b"
+    },
+    {
+      "id": "kanton/BS/258.210/art_68",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "68",
+      "artikelLabel": "§ 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die eingewiesene Person kann auf Kosten der Vollzugseinrichtung Briefe innerhalb der Schweiz sowie jegliche Korrespondenz, die der Durchführung des Wegweisungsverfahrens dient, versenden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "5a6fd06b21b2eaab695f98053b346db2c9242f2c8ca0336874a88e4a83a2f996"
+    },
+    {
+      "id": "kanton/BS/258.210/art_69",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "69",
+      "artikelLabel": "§ 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugseinrichtung informiert die Migrationsbehörde über die verfügten Disziplinarmassnahmen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "7db67bffce270bff13bcd28445dd519d90dce13cb7ca2c3a438bf752403f4458"
+    },
+    {
+      "id": "kanton/BS/258.210/art_70",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "70",
+      "artikelLabel": "§ 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Private Einrichtungen haben zur Bewilligung des Vollzugs von Freiheitsstrafen und freiheitsentziehenden strafrechtlichen Massnahmen ein Gesuch beim Amt für Justizvollzug einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch hat zum Nachweis der gesetzlichen Anforderungen insbesondere Unterlagen und Angaben zu folgenden Punkten zu enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kantonale Anerkennung gemäss kantonalem Gesetz über die Behindertenhilfe oder Zertifizierung des Qualitätsmanagements durch eine staatlich anerkannte Prüfstelle;"
+            },
+            {
+              "marke": "b",
+              "text": "Trägerschaft und Organisation;"
+            },
+            {
+              "marke": "c",
+              "text": "Strafregisterauszug der Leitung;"
+            },
+            {
+              "marke": "d",
+              "text": "Betreibungsregisterauszug der Einrichtung sowie der Leitung;"
+            },
+            {
+              "marke": "e",
+              "text": "Standort und Raumplan;"
+            },
+            {
+              "marke": "f",
+              "text": "Leistungsangebot;"
+            },
+            {
+              "marke": "g",
+              "text": "Betriebs- und Sicherheitskonzept;"
+            },
+            {
+              "marke": "h",
+              "text": "Leitbild;"
+            },
+            {
+              "marke": "i",
+              "text": "Betreuungskonzept;"
+            },
+            {
+              "marke": "j",
+              "text": "Stellenplan;"
+            },
+            {
+              "marke": "k",
+              "text": "Hausordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Amt für Justizvollzug legt die inhaltlichen Anforderungen betreffend Abs. 2 lit. b - k fest. Es berücksichtigt hierbei die Erlasse des Konkordats."
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehalten bleibt das Erfordernis weiterer staatlicher Anerkennungen und Bewilligungen zum Betrieb von Einrichtungen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "15874e497e9a08d4d24dff6f5530f1284eddd62844dfb905cbd5b1ec84e7ebfe"
+    },
+    {
+      "id": "kanton/BS/258.210/art_71",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "71",
+      "artikelLabel": "§ 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung zum Vollzug von Freiheitsstrafen und freiheitsentziehenden strafrechtlichen Massnahmen wird unbefristet erteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann entzogen werden, wenn trotz Mahnung die gesetzlichen Voraussetzungen für die Bewilligungserteilung nicht mehr erfüllt sind oder die mit der Bewilligung verbundenen Auflagen missachtet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei schwerwiegenden Verstössen kann die Bewilligung sofort entzogen werden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "d65aff75a758b8ae34d198976683117e0476644de296c1ec22564dae0ce7fc44"
+    },
+    {
+      "id": "kanton/BS/258.210/art_72",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "72",
+      "artikelLabel": "§ 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zur Erfüllung einzelner Aufgaben beizuziehenden privaten Fachpersonen müssen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über den erforderlichen Leumund verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "angemessen ausgebildet sein und sich regelmässig weiterbilden;"
+            },
+            {
+              "marke": "c",
+              "text": "eine unabhängige Auftragserfüllung gewährleisten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die beiziehende Stelle schliesst mit den privaten Fachpersonen einen Leistungsauftrag ab, der die konkreten Aufgaben und Befugnisse festlegt."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "ae2206dcd163c40c5ad14c5976f60cc4c02fcf0c1c779a5feef19f1a8f2b8b75"
+    },
+    {
+      "id": "kanton/BS/258.210/art_73",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "73",
+      "artikelLabel": "§ 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Justizvollzug übt die Aufsicht über die privaten Einrichtungen aus. Es prüft periodisch, ob die gesetzlichen Vorgaben und die mit der Bewilligung verbundenen Auflagen eingehalten werden, und veröffentlicht eine Liste mit den bewilligten privaten Einrichtungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die beiziehende Stelle übt die Aufsicht über die privaten Fachpersonen aus."
+        },
+        {
+          "absatz": "3",
+          "text": "Die privaten Einrichtungen und Fachpersonen sind verpflichtet, soweit es für die Wahrnehmung der jeweiligen Aufsicht erforderlich ist, der zuständigen kantonalen Aufsichtsbehörde:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben zum Betrieb, zur Leistung und zur Qualität vorzulegen;"
+            },
+            {
+              "marke": "b",
+              "text": "Änderungen hinsichtlich der gesetzlichen oder vertraglichen Voraussetzungen für die Erteilung der Bewilligung oder den Abschluss des Leistungsauftrages zu melden;"
+            },
+            {
+              "marke": "c",
+              "text": "den Zutritt zu den Räumlichkeiten der privaten Einrichtung zu gewähren."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "ed2182da29efd45875a85b8f1066d20ce6bc643f20acd01cf134a1ea9b898cb8"
+    },
+    {
+      "id": "kanton/BS/258.210/art_74",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "74",
+      "artikelLabel": "§ 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person kann Umstände und Tatsachen, namentlich eine unkorrekte persönliche Behandlung, die ein Einschreiten der Leitung der Vollzugseinrichtung erforderlich machen, dieser anzeigen. Sie erhält innert nützlicher Frist Auskunft über die Art der Erledigung der Anzeige."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Anzeigestellerin oder der Anzeigesteller mit der Erledigung der Anzeige nicht zufrieden, kann dies mit einer kurzen Begründung der Leitung des Amtes für Justizvollzug angezeigt werden."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "65c13dbd811829f38974bdf27942eb0117a2a07d3a1c236ce4e070c11f9755a6"
+    },
+    {
+      "id": "kanton/BS/258.210/art_75",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "75",
+      "artikelLabel": "§ 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte besuchen jährlich die Vollzugseinrichtungen, namentlich zur Prüfung der Vollzugsmodalitäten oder des Fortgangs der hängigen Strafverfahren."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "4ba597d7eb7256c6d20262cd22d3f49fc8d7c6bf1934bf44a7758b6b0d4d669f"
+    },
+    {
+      "id": "kanton/BS/258.210/art_76",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "76",
+      "artikelLabel": "§ 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorsteherin oder der Vorsteher des Justiz- und Sicherheitsdepartements besucht jährlich die Vollzugseinrichtungen und gibt den eingewiesenen Personen dabei die Möglichkeit, ihre Anliegen in einem vertraulichen Gespräch vorzutragen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "86e67e326090eb430f165090150a12a95da81b1148491686c9502eed8f549065"
+    },
+    {
+      "id": "kanton/BS/258.210/art_77",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "77",
+      "artikelLabel": "§ 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Private Einrichtungen haben spätestens bis zum 1. Januar 2022 eine Betriebsbewilligung gemäss § 70 einzuholen."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "1b5e69d23255604bcdf5f07de8d2444dac203ee37be2aa4c2b945b666bee559d"
+    },
+    {
+      "id": "kanton/BS/258.210/art_78",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Justizvollzugsverordnung, JVV (258.210)",
+      "artikel": "78",
+      "artikelLabel": "§ 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wurde der vorzeitige Straf- oder Massnahmenvollzug vor dem 1. Januar 2024 gewährt, wird vor dem Entscheid über eine Vollzugsöffnung in jedem Fall die Stellungnahme der Verfahrensleitung eingeholt."
+        }
+      ],
+      "stand": "2026-04-23",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/258.210",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c02f7e938505f622064f4fc238bc55ba",
+      "sha": "04e1f9b210912f9abf1b2f3a9d26591d1a07e446d17aa973767a27c7d489f105"
+    }
+  ]
+}
