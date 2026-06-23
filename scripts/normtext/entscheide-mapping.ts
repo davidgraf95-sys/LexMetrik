@@ -10,7 +10,10 @@ import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 const ABK_REGISTER: Record<string, string> = {
   OR: 'OR', ZGB: 'ZGB', ZPO: 'ZPO', STGB: 'STGB', STPO: 'STPO', BGG: 'BGG',
   SCHKG: 'SCHKG', VVG: 'VVG', VMWG: 'VMWG', ARG: 'ARG', BV: 'BV', DBG: 'DBG',
-  DSG: 'DSG', AHVG: 'AHVG', AIG: 'AIG', STG: 'STG', HREGV: 'HREGV',
+  DSG: 'DSG', AIG: 'AIG', STG: 'STG', HREGV: 'HREGV',
+  // Sozialversicherung / Abgaben (Audit: SG-Versicherungsfälle EL/IV/UV …)
+  ATSG: 'ATSG', AHVG: 'AHVG', IVG: 'IVG', UVG: 'UVG', AVIG: 'AVIG', BVG: 'BVG',
+  ELG: 'ELG', FAMZG: 'FAMZG', STHG: 'STHG',
 };
 
 export function normKeyFuerAbk(abk: string): string | null {
@@ -68,4 +71,50 @@ export function gerichtstypFuerCourt(court: string): Gerichtstyp {
     case 'bpatger': return 'bundespatentgericht';
     default: return 'kantonal';
   }
+}
+
+// Lesbare Gerichts-Anzeigenamen (Audit P0): roher OCL-Court-Code → Bezeichnung.
+// Explizit für die erfassten Gerichte; sonst Suffix-Ableitung. Status 'maschinell'.
+const GERICHT_ANZEIGE: Record<string, string> = {
+  zh_obergericht: 'Obergericht ZH',
+  zh_verwaltungsgericht: 'Verwaltungsgericht ZH',
+  be_verwaltungsgericht: 'Verwaltungsgericht BE',
+  be_zivilstraf: 'Obergericht BE',
+  ag_gerichte: 'Obergericht AG',
+  sg_gerichte: 'Verwaltungs-/Versicherungsgericht SG',
+  gr_gerichte: 'Kantonsgericht GR',
+};
+const SUFFIX_NAME: Record<string, string> = {
+  obergericht: 'Obergericht', verwaltungsgericht: 'Verwaltungsgericht',
+  versicherungsgericht: 'Versicherungsgericht', sozialversicherungsgericht: 'Sozialversicherungsgericht',
+  appellationsgericht: 'Appellationsgericht', kantonsgericht: 'Kantonsgericht',
+  handelsgericht: 'Handelsgericht', strafgericht: 'Strafgericht', zivilgericht: 'Zivilgericht',
+  kassationsgericht: 'Kassationsgericht',
+};
+export function gerichtAnzeigename(court: string, canton: string, courtName?: string | null): string {
+  if (canton === 'CH') return courtName || 'Bundesgericht';
+  if (GERICHT_ANZEIGE[court]) return GERICHT_ANZEIGE[court];
+  const parts = String(court).split('_');
+  const kt = (parts[0] || '').toUpperCase();
+  const name = SUFFIX_NAME[parts.slice(1).join('_')] || 'Kantonales Gericht';
+  return `${name} ${kt}`.trim();
+}
+
+// Kantonale Aktenzeichen-Präfixe → Sachgebiet (best-effort, deklariert, 'maschinell').
+const KANT_PRAEFIX: Array<[RegExp, Rechtsgebiet]> = [
+  [/^(EL|IV|UV|ALV|EO|AHV|BV|KV|FZ)\b/i, 'sozial-abgaben'],
+  [/^(ZR|ZB|ZK|ZG|PS|PQ|PC|PD|PF|RE|RU|NP|LB|LC|LF|RB|HG)\b/i, 'privat'],
+  [/^(SB|SK|UE|UH|US|BK|SU)\b/i, 'straf'],
+  [/^(WBE|VB|VWBE)\b/i, 'oeffentlich'],
+];
+export function kantonalSachgebiet(docket: string): Rechtsgebiet | null {
+  const d = String(docket).trim();
+  for (const [re, g] of KANT_PRAEFIX) if (re.test(d)) return g;
+  return null;
+}
+
+/** ISO 'YYYY-MM-DD' → 'DD.MM.YYYY' für Zitierungen. */
+export function fmtDatumDe(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso));
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : String(iso);
 }

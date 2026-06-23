@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { normalisiereRegeste, kuerzeRegeste } from '../lib/rechtsprechung/register';
+import { normalisiereRegeste, kuerzeRegeste, bereinigeFliesstext } from '../lib/rechtsprechung/register';
 import { filterEntscheide, nachDatum } from '../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
 import { sha256EntscheidBloecke } from '../../scripts/normtext/sha-entscheide';
@@ -18,6 +18,27 @@ describe('normalisiereRegeste', () => {
   });
   it('kollabiert 3+ Leerzeilen und trimmt', () => {
     expect(normalisiereRegeste('A\n\n\n\nB\n')).toBe('A\n\nB');
+  });
+  it('schneidet das OCL-Rechtsgebiet-Suffix " | X" ab', () => {
+    expect(normalisiereRegeste('Unfallversicherung (Kausalzusammenhang) | Unfallversicherung'))
+      .toBe('Unfallversicherung (Kausalzusammenhang)');
+  });
+});
+
+describe('bereinigeFliesstext', () => {
+  it('strippt Markdown-Links + Zitat-Zeilenumbrüche, erhält echte Absätze', () => {
+    const roh = 'Endentscheid (\nArt. 90 BGG\n) vgl.\n[BGE 137 III 47\nE. 1.2.2](https://mcp.opencaselaw.ch/entscheid/x).\n\nZweiter Absatz.';
+    expect(bereinigeFliesstext(roh)).toBe('Endentscheid (Art. 90 BGG) vgl. BGE 137 III 47 E. 1.2.2.\n\nZweiter Absatz.');
+  });
+  it('lässt sauberen Text unverändert', () => {
+    expect(bereinigeFliesstext('Ein klarer Satz.')).toBe('Ein klarer Satz.');
+  });
+  it('heilt Silbentrennung am Umbruch, erhält Komposita-Bindestrich', () => {
+    expect(bereinigeFliesstext('wer-\nden')).toBe('werden');
+    expect(bereinigeFliesstext('Justiz-\nund Verwaltungsrecht')).toBe('Justiz- und Verwaltungsrecht');
+  });
+  it('entfernt freistehende <URL>-Autolinks', () => {
+    expect(bereinigeFliesstext('Quelle <https://www.gr.ch/x>.')).toBe('Quelle.');
   });
 });
 

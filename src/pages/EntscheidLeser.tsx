@@ -30,7 +30,7 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
   return (
     <nav aria-label="Abschnitte" className="sticky top-16 z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-2 bg-paper border-b border-line">
       {/* Mobil: horizontaler Chip-Streifen (scrollbar); Desktop: normale Reihe. */}
-      <div className="flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
+      <div className="flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]">
         {ziele.map((z) => (
           <a key={z.anker} href={`#${z.anker}`}
             className="lc-chip shrink-0 whitespace-nowrap no-underline hover:text-brass-700 hover:border-brass-400">

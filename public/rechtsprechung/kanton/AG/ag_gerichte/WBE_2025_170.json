@@ -4,13 +4,13 @@
     {
       "id": "kanton/AG/ag_gerichte/WBE_2025_170",
       "gericht": "ag_gerichte",
-      "gerichtName": "AG Gerichte",
+      "gerichtName": "Obergericht AG",
       "gerichtstyp": "kantonal",
       "kanton": "AG",
       "abteilung": null,
       "nummer": "WBE.2025.170",
       "bgeReferenz": null,
-      "zitierung": "AG_GERICHTE WBE.2025.170 vom 26. Januar 2026",
+      "zitierung": "Obergericht AG WBE.2025.170 vom 26.01.2026",
       "datum": "2026-01-26",
       "sprache": "de",
       "leitcharakter": "routine",
@@ -22,7 +22,7 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "Aargau Obergericht Verwaltungsgericht 26.01.2026 WBE.2025.170\n\nAargau Obergericht Verwaltungsgericht\nArgovie Verwaltungsgericht\nArgovia Verwaltungsgericht\nObergericht / Verwaltungsgericht / 2. Kammer Obergericht / Verwaltungsgericht / 2. Kammer"
+              "text": "Aargau Obergericht Verwaltungsgericht 26.01.2026 WBE.2025.170\n\nAargau Obergericht Verwaltungsgericht Argovie Verwaltungsgericht Argovia Verwaltungsgericht Obergericht / Verwaltungsgericht / 2. Kammer Obergericht / Verwaltungsgericht / 2. Kammer"
             }
           ]
         }
@@ -37,7 +37,7 @@
       "quelleUrl": "https://decwork.ag.ch/api/main/v1/de/decrees_pdf/12161",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8cd68f89d54792f4565c0dc1b9c71f9f24cc01f45b45ee431291bca4d147d5d3",
-      "sha": "b68eb53ae49b4768bb08a93b5b363f0eac4a82c5e69bc1843b30d2d75cbc1b1c"
+      "sha": "df4d68ee9ad0cab3b42dca6ea6231dd264680ecabafd344654be2398da051f00"
     }
   ]
 }

@@ -15,15 +15,13 @@ function formatiereDatum(iso: string): string {
 export function EntscheidKarte({ e }: { e: BrowseEntscheid }) {
   // Hauptanker: BGE-Referenz (amtliche Sammlung) bevorzugt, sonst Aktenzeichen.
   const anker = e.bgeReferenz ?? e.nummer;
-  // Kartentext: geglättete Kurzregeste, sonst die volle Zitierung als Ersatz.
-  const text = e.regesteKurz ?? e.zitierung;
   return (
-    <div className="lc-card group p-4 transition-colors hover:border-brass-400">
+    <div className="lc-card group p-4 flex flex-col h-full transition-colors hover:border-brass-400">
       {/* Lese-Bereich (klickbar) — der amtliche Link liegt als eigener <a> im Fuss
-          (keine verschachtelten <a>). */}
+          (keine verschachtelten <a>). flex-1 schiebt den Fuss auf gleiche Höhe. */}
       <Link
         to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
-        className="block no-underline"
+        className="block flex-1 no-underline"
       >
         <div className="flex items-baseline justify-between gap-3">
           <span className="num font-display text-h3 font-semibold text-ink-900 leading-none">{anker}</span>
@@ -36,7 +34,11 @@ export function EntscheidKarte({ e }: { e: BrowseEntscheid }) {
             )}
           </span>
         </div>
-        <p className="mt-2 text-body-s text-ink-600 leading-snug line-clamp-3">{text}</p>
+        {/* Kartentext: Kurzregeste, sonst ehrlicher gedämpfter Hinweis (NICHT die
+            Zitierung wiederholen — die steht schon als Anker/im Fuss). */}
+        {e.regesteKurz
+          ? <p className="mt-2 text-body-s text-ink-600 leading-snug line-clamp-3">{e.regesteKurz}</p>
+          : <p className="mt-2 text-body-s text-ink-400 italic">Keine amtliche Regeste erfasst</p>}
         <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           <span>{e.gerichtName}</span>
           <span className="text-ink-300" aria-hidden>·</span>
@@ -55,8 +57,9 @@ export function EntscheidKarte({ e }: { e: BrowseEntscheid }) {
           </div>
         )}
       </Link>
-      {/* Fuss: immer ein Link auf die amtliche Fassung (relevancy.bger.ch) + Provenienz. */}
-      <div className="mt-3 pt-2.5 border-t border-line/70 flex items-center justify-between gap-3 text-xs">
+      {/* Fuss: immer Link auf die amtliche Fassung (relevancy.bger.ch) + Provenienz.
+          mt-auto → gleiche Fusslinie über alle Karten des Rasters. */}
+      <div className="mt-auto pt-2.5 border-t border-line/70 flex items-center justify-between gap-3 text-xs">
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"
           className="text-ink-400 no-underline hover:text-brass-700"
           title="Amtliche Fassung beim Bundesgericht öffnen">
@@ -67,7 +70,7 @@ export function EntscheidKarte({ e }: { e: BrowseEntscheid }) {
             <span className="text-ink-300" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell</span>
           )}
           <Link to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
-            className="font-medium text-brass-700 no-underline opacity-0 transition-opacity group-hover:opacity-100">
+            className="font-medium text-brass-700 no-underline opacity-100 lg:opacity-0 lg:transition-opacity lg:group-hover:opacity-100">
             lesen →
           </Link>
         </span>

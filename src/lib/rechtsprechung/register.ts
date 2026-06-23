@@ -76,6 +76,7 @@ export function normalisiereRegeste(roh: string): string {
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/\r\n/g, '\n')
     .replace(/\[([^\]]+)\]\((?:https?:|\/)[^)]+\)/g, '$1')
+    .replace(/\s*\|\s*[^|\n]+\s*$/, '')   // OCL-Suffix " | <Rechtsgebiet>" (redundant zu sachgebiet) abschneiden
     .replace(/[ \t]+\n/g, '\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
@@ -85,4 +86,30 @@ export function normalisiereRegeste(roh: string): string {
 export function kuerzeRegeste(text: string, max = 240): string {
   const eine = text.replace(/\s+/g, ' ').trim();
   return eine.length <= max ? eine : eine.slice(0, max - 1).trimEnd() + '…';
+}
+
+/**
+ * Bereinigt Urteils-Fliesstext (Sachverhalt/Erwägungen/Dispositiv) für die Anzeige —
+ * Bug-Klasse, unit-getestet. OCL markiert Zitate mit eingestreuten Zeilenumbrüchen
+ * und liefert Quer-Zitate als Markdown-Links samt interner URL:
+ *   "(\nArt. 90 BGG\n)"  ·  "[BGE 137 III 47\nE. 1.2.2](https://…/entscheid/…)"
+ * → Markdown-Links auf den Text reduzieren, EINZELNE \n (Annotations-Artefakte) zu
+ * Leerzeichen, ECHTE Absätze (\n\n) erhalten, Leerzeichen vor Satzzeichen/in Klammern
+ * glätten. Die Norm-Verlinkung übernimmt danach <NormText> auf dem sauberen Text.
+ */
+export function bereinigeFliesstext(roh: string): string {
+  return String(roh)
+    .replace(/\[([^\]]+)\]\((?:https?:|\/)[^)]*\)/g, '$1') // Markdown-Link -> reiner Text
+    .replace(/\s*<https?:\/\/[^>]*>/g, '')                 // freistehende <URL>-Autolinks entfernen
+    .replace(/\r\n/g, '\n')
+    // Silbentrennung am Zeilenumbruch heilen ("wer-\nden" -> "werden"); echte
+    // Komposita-Bindestriche ("Justiz-\nund …") bleiben (kleines Folgewort und/oder/…).
+    .replace(/([a-zäöüß])-\n[ \t]*(?!(?:und|oder|bzw|sowie|aber|sondern)\b)([a-zäöü])/g, '$1$2')
+    .split(/\n{2,}/)                     // echte Absaetze trennen
+    .map((para) => para.replace(/[ \t]*\n[ \t]*/g, ' ').replace(/[ \t]{2,}/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n\n')                       // Absaetze mit Leerzeile zusammenfuegen
+    .replace(/ +([.,;:!?)\]])/g, '$1')   // kein Leerzeichen vor Satzzeichen/Klammer-zu
+    .replace(/([([]) +/g, '$1')          // kein Leerzeichen nach Klammer-auf
+    .trim();
 }

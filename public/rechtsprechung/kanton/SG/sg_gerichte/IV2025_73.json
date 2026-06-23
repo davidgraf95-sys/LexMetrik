@@ -4,17 +4,17 @@
     {
       "id": "kanton/SG/sg_gerichte/IV2025_73",
       "gericht": "sg_gerichte",
-      "gerichtName": "SG Gerichte",
+      "gerichtName": "Verwaltungs-/Versicherungsgericht SG",
       "gerichtstyp": "kantonal",
       "kanton": "SG",
       "abteilung": null,
       "nummer": "IV 2025/73",
       "bgeReferenz": null,
-      "zitierung": "SG_GERICHTE IV 2025/73 vom 15. Januar 2026",
+      "zitierung": "Verwaltungs-/Versicherungsgericht SG IV 2025/73 vom 15.01.2026",
       "datum": "2026-01-15",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "regeste": {
         "text": "Art. 52 ATSG.\nEinsprachefrist. Unbewiesen gebliebene Zustellung einer Verfügung (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 15. Januar 2026, IV 2025/73).",
         "quelle": "opencaselaw"
@@ -25,7 +25,7 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "St.Gallen Versicherungsgericht 15.01.2026 IV 2025/73\nSaint-Gall Versicherungsgericht 15.01.2026 IV 2025/73\nSan Gallo Versicherungsgericht 15.01.2026 IV 2025/73\n\nArt. 52 ATSG.\r\nEinsprachefrist. Unbewiesen gebliebene Zustellung einer Verfügung (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 15. Januar 2026, IV 2025/73).\n\nSt.Gallen Versicherungsgericht \nSaint-Gall Versicherungsgericht \nSan Gallo Versicherungsgericht \nIV - Invalidenversicherung"
+              "text": "St.Gallen Versicherungsgericht 15.01.2026 IV 2025/73 Saint-Gall Versicherungsgericht 15.01.2026 IV 2025/73 San Gallo Versicherungsgericht 15.01.2026 IV 2025/73\n\nArt. 52 ATSG. Einsprachefrist. Unbewiesen gebliebene Zustellung einer Verfügung (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 15. Januar 2026, IV 2025/73).\n\nSt.Gallen Versicherungsgericht Saint-Gall Versicherungsgericht San Gallo Versicherungsgericht IV - Invalidenversicherung"
             }
           ]
         }
@@ -40,7 +40,7 @@
       "quelleUrl": "https://publikationen.sg.ch/rechtsprechung-gerichte?tx_diamjudicalsg_judicalpublicationpdf%5Bcontroller%5D=DownloadPdf&tx_diamjudicalsg_judicalpublicationpdf%5Bpublication%5D=14321&type=1563347022&cHash=73033a21a09282b13e8c4a3338d66a94",
       "abgerufen": "2026-06-23",
       "fassungsToken": "06c105a2cbb72d0ce75f51aa2b4b2eb59e4d7fc5e94bb86aa876e0f28de2bb0d",
-      "sha": "9d7aa3947b6cbf17983476d93b67dcf05cb6362184e7ccad2c921f074d264997"
+      "sha": "c0bc5d4b5a5c885a869631b6d395b7e06030fe0359a2ba4fb18ec080451e47b2"
     }
   ]
 }

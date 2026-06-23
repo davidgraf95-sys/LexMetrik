@@ -1,18 +1,16 @@
 import type { MouseEvent } from 'react';
-import type { EntscheidAbschnitt } from '../../lib/rechtsprechung/typen';
+import type { EntscheidAbschnitt, EntscheidBlock } from '../../lib/rechtsprechung/typen';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../../lib/rechtsprechung/abschnitte';
 import { NormText } from '../NormText';
 
 // EntscheidBody: rendert die Abschnitte eines Entscheid-Snapshots (Sachverhalt /
-// Erwägungen / Dispositiv). Erwägungen werden — wie im amtlichen BGer-Layout —
-// als klar ABGETRENNTE, nummerierte Blöcke gesetzt: die amtliche Ziffer ('E. 2.3')
-// steht als eigene Kopfzeile über ihrem Absatz, Erwägungen oberster Ebene sind
-// durch eine Haarlinie + Abstand getrennt, Unter-Erwägungen nach Tiefe eingerückt.
-// Jede Ziffer ist ein stabiler Anker + Pin-Cite-Permalink (Reglement R6/R7). Jeder
-// Absatz läuft durch <NormText> → genannte Bundesnormen werden verlinkt.
-//
-// Ehrlichkeit (§8): Liegt nur EIN Fliesstext-Block ohne Erwägungs-Marken vor
-// (kantonal/Fallback ohne amtliche Gliederung), wird das offen ausgewiesen.
+// Erwägungen / Dispositiv) im amtlichen BGer-Lesebild:
+//  · Erwägungen sind klar ABGETRENNTE, nummerierte Blöcke (Ziffer als Kopfzeile,
+//    oberste Ebene mit Haarlinie getrennt, Unter-Erwägungen eingerückt mit
+//    Randlinie). Jede Ziffer = stabiler Anker + Pin-Cite-Permalink (R6/R7).
+//  · Dispositiv als nummerierte Liste (R: Anordnungen einzeln).
+//  · Wrapper-Klasse `rsp-prose` hält inline-Norm-Links dezent (R11).
+//  · Ehrlicher Fallback (§8), wenn keine Gliederung vorliegt (kantonal).
 
 /** Stabiler Anker einer Erwägung aus ihrer amtlichen Marke ('E. 2.3' → 'e-2-3'). */
 function erwaegungAnker(marke: string): string {
@@ -29,46 +27,58 @@ function kopierePermalink(ev: MouseEvent, anker: string) {
   }
 }
 
-function Abschnitt({ a }: { a: EntscheidAbschnitt }) {
-  const istErwaegung = a.typ === 'erwaegung';
+const ABSATZ = 'font-serif text-[1.08rem] leading-[1.7] text-ink-800 whitespace-pre-line';
+
+function Erwaegung({ b }: { b: EntscheidBlock }) {
+  const tiefe = Math.max(0, (b.tiefe ?? 1) - 1);
+  const top = tiefe === 0;
+  const anker = b.marke ? erwaegungAnker(b.marke) : undefined;
   return (
-    <section id={abschnittAnker(a.typ)} className="scroll-mt-[7rem] space-y-4">
-      <h2 className="lc-overline text-brass-700 flex items-center gap-3">
-        {ABSCHNITT_TITEL[a.typ]}
-        <span aria-hidden className="flex-1 h-px bg-line" />
-      </h2>
-      <div className={istErwaegung ? '' : 'space-y-6'}>
-        {a.bloecke.map((b, i) => {
-          if (!istErwaegung) {
-            return (
-              <p key={i} className="font-serif text-[1.08rem] leading-[1.7] text-ink-800 whitespace-pre-line">
-                <NormText text={b.text} />
-              </p>
-            );
-          }
-          // Erwägung: abgetrennter Block mit Ziffer als Kopfzeile (amtliches Layout).
-          const tiefe = Math.max(0, (b.tiefe ?? 1) - 1);
-          const top = tiefe === 0;
-          const anker = b.marke ? erwaegungAnker(b.marke) : undefined;
-          return (
-            <div key={i} id={anker}
-              className={`group scroll-mt-[7rem] ${top ? 'mt-6 pt-5 border-t border-line/70 first:mt-0 first:pt-0 first:border-0' : 'mt-4'}`}
-              style={tiefe > 0 ? { marginLeft: `${tiefe * 1.25}rem` } : undefined}>
-              {b.marke && anker && (
-                <a href={`#${anker}`} onClick={(e) => kopierePermalink(e, anker)}
-                  title="Fundstelle kopieren"
-                  className={`mb-1.5 inline-flex items-baseline no-underline num tabular-nums font-semibold ${top ? 'text-ink-900 text-[1.05rem]' : 'text-brass-700 text-body-s'}`}>
-                  {b.marke}
-                  <span aria-hidden className="ml-1.5 text-brass-700 opacity-0 group-hover:opacity-70 transition-opacity">§</span>
-                </a>
-              )}
-              <p className="font-serif text-[1.08rem] leading-[1.7] text-ink-800 whitespace-pre-line">
-                <NormText text={b.text} />
-              </p>
-            </div>
-          );
-        })}
-      </div>
+    <div id={anker}
+      className={[
+        'group scroll-mt-[7rem]',
+        top ? 'mt-7 pt-5 border-t border-line first:mt-2 first:pt-0 first:border-0' : 'mt-4 border-l border-line/70 pl-4',
+      ].join(' ')}
+      style={tiefe > 1 ? { marginLeft: `${(tiefe - 1) * 1}rem` } : undefined}>
+      {b.marke && anker && (
+        <a href={`#${anker}`} onClick={(e) => kopierePermalink(e, anker)}
+          title="Fundstelle kopieren"
+          className={`mb-1 inline-flex items-baseline no-underline num tabular-nums font-semibold ${top ? 'text-ink-900 text-[1.05rem]' : 'text-ink-700 text-[0.95rem]'}`}>
+          {b.marke}
+          <span aria-hidden className="ml-1.5 text-brass-600 opacity-0 group-hover:opacity-80 transition-opacity">§</span>
+        </a>
+      )}
+      <p className={ABSATZ}><NormText text={b.text} /></p>
+    </div>
+  );
+}
+
+function Dispositiv({ bloecke }: { bloecke: EntscheidBlock[] }) {
+  // Nummerierte Anordnungen als Liste; ohne Marken (Fallback) als Fliesstext.
+  if (!bloecke.some((b) => b.marke)) {
+    return <>{bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</>;
+  }
+  return (
+    <ol className="space-y-3">
+      {bloecke.map((b, i) => (
+        <li key={i} className="grid grid-cols-[1.6rem_minmax(0,1fr)] gap-x-2">
+          <span className="num tabular-nums font-semibold text-ink-700">{b.marke}</span>
+          <p className="font-serif text-[1.05rem] leading-[1.65] text-ink-800"><NormText text={b.text} /></p>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function Abschnitt({ a }: { a: EntscheidAbschnitt }) {
+  return (
+    <section id={abschnittAnker(a.typ)} className="scroll-mt-[7rem] space-y-3">
+      <h2 className="lc-overline text-brass-700">{ABSCHNITT_TITEL[a.typ]}</h2>
+      {a.typ === 'erwaegung'
+        ? <div>{a.bloecke.map((b, i) => <Erwaegung key={i} b={b} />)}</div>
+        : a.typ === 'dispositiv'
+          ? <Dispositiv bloecke={a.bloecke} />
+          : <div className="space-y-4">{a.bloecke.map((b, i) => <p key={i} className={ABSATZ}><NormText text={b.text} /></p>)}</div>}
     </section>
   );
 }
@@ -89,7 +99,7 @@ export function EntscheidBody({ abschnitte }: { abschnitte: EntscheidAbschnitt[]
   }
 
   return (
-    <div className="space-y-9">
+    <div className="rsp-prose space-y-9">
       {ohneStruktur && (
         <p className="lc-notice text-body-s">
           Strukturierte Gliederung (Sachverhalt / Erwägungen / Dispositiv) nicht verfügbar — der Text wird unverändert wiedergegeben.

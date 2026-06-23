@@ -4,13 +4,13 @@
     {
       "id": "kanton/AG/ag_gerichte/KBE_2025_73",
       "gericht": "ag_gerichte",
-      "gerichtName": "AG Gerichte",
+      "gerichtName": "Obergericht AG",
       "gerichtstyp": "kantonal",
       "kanton": "AG",
       "abteilung": null,
       "nummer": "KBE.2025.73",
       "bgeReferenz": null,
-      "zitierung": "AG_GERICHTE KBE.2025.73 vom 23. Januar 2026",
+      "zitierung": "Obergericht AG KBE.2025.73 vom 23.01.2026",
       "datum": "2026-01-23",
       "sprache": "de",
       "leitcharakter": "routine",
@@ -22,7 +22,7 @@
           "bloecke": [
             {
               "marke": null,
-              "text": "Aargau Obergericht Schuldbetreibungs- und Konkurskommission 23.01.2026 KBE.2025.73\n\nAargau Obergericht Schuldbetreibungs- und Konkurskommission\nArgovie Schuldbetreibungs- und Konkurskommission\nArgovia Schuldbetreibungs- und Konkurskommission\nObergericht / Zivilgericht / Schuldbetreibungs- und Konkurskommission Obergericht / Zivilgericht / Schuldbetreibungs- und Konkurskommission"
+              "text": "Aargau Obergericht Schuldbetreibungs- und Konkurskommission 23.01.2026 KBE.2025.73\n\nAargau Obergericht Schuldbetreibungs- und Konkurskommission Argovie Schuldbetreibungs- und Konkurskommission Argovia Schuldbetreibungs- und Konkurskommission Obergericht / Zivilgericht / Schuldbetreibungs- und Konkurskommission Obergericht / Zivilgericht / Schuldbetreibungs- und Konkurskommission"
             }
           ]
         }
@@ -37,7 +37,7 @@
       "quelleUrl": "https://decwork.ag.ch/api/main/v1/de/decrees_pdf/12175",
       "abgerufen": "2026-06-23",
       "fassungsToken": "ea2bbe63fa1710fd45ff105dcb7ae4c5a3aa4b1e2a2768aa8994eab82563dc8c",
-      "sha": "318cd443422a2c898c7d55c9e7515756e8a76d197b14b58dcac96da3d9a41a04"
+      "sha": "43135e2a6378386c228355614ef0d24b01f3c9b36661b5a320683790390b6b9f"
     }
   ]
 }

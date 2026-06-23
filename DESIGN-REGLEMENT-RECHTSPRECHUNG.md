@@ -304,3 +304,28 @@ Falls dieses Dokument später formalisiert/erweitert wird, diese Abschnitte:
 - **Übersicht:** klare **Bund/Kanton-Trennung** — Segment (Alle · Bundesgericht ·
   Kantone) + beschriftete Abschnitte.
 - **Amtlicher Link** (relevancy.bger.ch) auf JEDER Karte (Fuss) + im Reader.
+
+### Fix-Runde 2 (Stand 23.6.2026, 3-Agenten-Audit: visuell/Konsistenz/Textqualität)
+
+- **Fliesstext-Bereinigung** (`bereinigeFliesstext`, register.ts): OCL-Markdown-Links
+  → Text, eingestreute Zitat-Zeilenumbrüche → Leerzeichen (kein Zeilenbruch je Zitat
+  mehr), echte Absätze (`\n\n`) erhalten, **Silbentrennung am Umbruch geheilt**
+  („wer-\\nden" → „werden", Komposita „Justiz- und" bleiben), freistehende `<URL>`
+  entfernt. Unit-getestet.
+- **Inline-Links dezent (R11):** `.rsp-prose a` (index.css, unlayered) nimmt im
+  Lese-Fliesstext die Tailwind-`underline`-Utility von `NormText` zurück → ruhige
+  Bottom-Border statt bunter Unterstrich-Flut; hell/dunkel über Tokens.
+- **Einheitlichkeit Kantone:** lesbare Zitierung + `gerichtName` aus
+  `gerichtAnzeigename` (statt rohem Court-Code „GR_GERICHTE…"); kantonale
+  Aktenzeichen-Präfixe → Sachgebiet (`kantonalSachgebiet`); `ABK_REGISTER` um
+  Sozialversicherungs-Erlasse (ATSG/IVG/UVG/ELG/AVIG/BVG…) erweitert.
+- **Regeste:** OCL-Suffix „ | <Rechtsgebiet>" abgeschnitten (redundant zum Sachgebiet).
+- **Karten:** gleiche Höhe (`flex h-full`, Fuss `mt-auto`); ohne Regeste **kein**
+  wiederholter Zitat-Text, sondern gedämpfter Hinweis; „lesen →" auch mobil sichtbar.
+- **Dispositiv:** bewusst EIN Block (OCL `dispositiv_orders` zerteilt unzuverlässig an
+  Datumsangaben „2. Dezember" → §1 kein Falsch-Split).
+- **Sub-Erwägungen** kräftiger (ink-700 statt brass) + linke Randlinie zur Tiefe;
+  Sektions-Overline ohne die ins Leere laufende Volllinie.
+- **Offen/bewusst später:** Dispositiv-Liste (sichere Split-Heuristik), Sachverhalt-
+  Sublabel-Absätze, Status-/Treatment-Farben (R16), Reader-Steuerung (R17), Facetten-
+  Trefferzahlen + CH-Datumsformat im Filter (R15), Datums-Plausibilität (1 GR-Zukunftsdatum).

@@ -9,10 +9,11 @@ import type {
   EntscheidSnapshot, EntscheidAbschnitt, EntscheidBlock, EntscheidSprache,
 } from '../../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../../src/lib/normtext/register';
-import { normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
+import { normalisiereRegeste, bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import {
   statutesZuNormKeys, legalAreaZuSachgebiet, abteilungZuSachgebiet, gerichtstypFuerCourt,
+  gerichtAnzeigename, kantonalSachgebiet, fmtDatumDe,
 } from './entscheide-mapping';
 
 const API = 'https://mcp.opencaselaw.ch/api';
@@ -83,24 +84,26 @@ export function mappeEntscheidOCL(
   const abschnitte: EntscheidAbschnitt[] = [];
   if (str) {
     if (typeof str.sachverhalt_excerpt === 'string' && str.sachverhalt_excerpt.trim()) {
-      abschnitte.push({ typ: 'sachverhalt', bloecke: [{ marke: null, text: str.sachverhalt_excerpt.trim() }] });
+      abschnitte.push({ typ: 'sachverhalt', bloecke: [{ marke: null, text: bereinigeFliesstext(str.sachverhalt_excerpt) }] });
     }
     const paras: OclParagraph[] = Array.isArray(str.erwaegungen_paragraphs) ? str.erwaegungen_paragraphs : [];
     const ervBloecke: EntscheidBlock[] = paras
       .map((p) => ({
         marke: p.e_number ? `E. ${p.e_number}` : null,
         tiefe: typeof p.depth === 'number' ? p.depth : undefined,
-        text: String(p.text ?? p.text_excerpt ?? '').trim(),
+        text: bereinigeFliesstext(String(p.text ?? p.text_excerpt ?? '')),
       }))
       .filter((b) => b.text);
     if (ervBloecke.length) abschnitte.push({ typ: 'erwaegung', bloecke: ervBloecke });
+    // Dispositiv als EIN sauberer Block. (OCL dispositiv_orders zerteilt unzuverlässig
+    // an Datumsangaben wie „2. Dezember" → bewusst nicht als Liste, §1: kein Falsch-Split.)
     if (typeof str.dispositiv === 'string' && str.dispositiv.trim()) {
-      abschnitte.push({ typ: 'dispositiv', bloecke: [{ marke: null, text: str.dispositiv.trim() }] });
+      abschnitte.push({ typ: 'dispositiv', bloecke: [{ marke: null, text: bereinigeFliesstext(str.dispositiv) }] });
     }
   }
   // Fallback: keine Gliederung → ganzer Volltext als ein Erwägungs-Block (ehrlich markiert in der UI).
   if (abschnitte.length === 0 && typeof det.full_text === 'string' && det.full_text.trim()) {
-    abschnitte.push({ typ: 'erwaegung', bloecke: [{ marke: null, text: det.full_text.trim() }] });
+    abschnitte.push({ typ: 'erwaegung', bloecke: [{ marke: null, text: bereinigeFliesstext(det.full_text) }] });
   }
   if (abschnitte.length === 0) return null;
 
@@ -130,7 +133,9 @@ export function mappeEntscheidOCL(
     opts.sachgebietHint
     ?? legalAreaZuSachgebiet(det.legal_area)
     ?? abteilungZuSachgebiet(docket)
+    ?? kantonalSachgebiet(docket)
     ?? 'oeffentlich';
+  const gerichtName = gerichtAnzeigename(court, canton, det.court_name as string | undefined);
 
   // Leitentscheid = amtliche Publikation: marked_for_publication ODER BGE-Fundstelle
   // ODER vorhandene amtliche Regeste (eine Regeste tragen nur publizierte Entscheide).
@@ -144,13 +149,17 @@ export function mappeEntscheidOCL(
   return {
     id: idSafe,
     gericht: court,
-    gerichtName: String(det.court_name ?? (canton === 'CH' ? 'Bundesgericht' : court)),
+    gerichtName,
     gerichtstyp: gerichtstypFuerCourt(court),
     kanton: canton,
     abteilung: det.chamber ? String(det.chamber) : null,
     nummer: docket,
     bgeReferenz: det.bge_reference ? String(det.bge_reference) : null,
-    zitierung: String(det.citation_string_de ?? `${court.toUpperCase()} ${docket}`),
+    // Lesbare Zitierung: Bund über OCL-Zitat; Kanton deterministisch aus Anzeigename
+    // (OCL liefert dort nur den rohen Court-Code, Audit P0).
+    zitierung: canton === 'CH'
+      ? String(det.citation_string_de ?? `BGer ${docket} vom ${fmtDatumDe(String(det.decision_date ?? ''))}`)
+      : `${gerichtName} ${docket} vom ${fmtDatumDe(String(det.decision_date ?? ''))}`,
     datum: String(det.decision_date ?? ''),
     sprache,
     leitcharakter: leit ? 'leitentscheid' : 'routine',
