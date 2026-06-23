@@ -25,6 +25,7 @@
     "check:vollstaendigkeit": "vite-node scripts/normtext/check-vollstaendigkeit.ts",
     "check:normtext": "vite-node scripts/normtext/check-drift.ts",
     "check:normtext-netz": "vite-node scripts/normtext/check-drift.ts -- --netz",
+    "check:confidence": "vite-node scripts/normtext/check-confidence.ts",
     "golden": "vite-node scripts/golden-outputs.ts",
     "golden:vergleich": "vite-node scripts/golden-outputs.ts vergleich",
     "golden:diff": "vite-node scripts/golden-outputs.ts diff",
