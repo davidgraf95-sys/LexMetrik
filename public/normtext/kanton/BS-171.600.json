@@ -53,11 +53,19 @@
           "items": [
             {
               "marke": "a",
+              "text": ""
+            },
+            {
+              "marke": "a",
               "text": "Die Allmenden, sowie die städtischen Zwecken dienenden Liegenschaften und Gebäude sind im Inventar nach ihrer Lage, ihrem Inhalte und allfälligem Schätzungswert bezeichnet und unterliegen keiner weitern Berechnung."
             },
             {
               "marke": "a",
               "text": "Die zur Verwertung bestimmten oder ertragsfähigen Grundstücke, Anstalten und Gebäude, sowie die Vorräte und Mobilien sind durch Experten abzuschätzen. Über diese Vermögensobjekte mit Einschluss der Kapitalien und Schulden der Einwohnergemeinde wird auf den 1. Januar 1876 ein Status aufgestellt, dessen Ansätze die Grundlage für spätere Verrechnungen bilden."
+            },
+            {
+              "marke": "b",
+              "text": ""
             },
             {
               "marke": "b",
@@ -92,13 +100,17 @@
               "text": "Mobilien und Vorräte sollen im Fall der Rückerstattung nach billiger Schätzung vergütet werden."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "Hinsichtlich des zum Löschwesen gehörenden Inventars findet bei dessen Zurückerstattung an die Einwohnergemeinde keine solche Verrechnung statt."
         }
       ],
       "stand": "1876-06-26",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/171.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "01dd46892e82ea3d43b8a4821e06426d",
-      "sha": "5784c01d768554958f0d14ebd3f3eb956dbeed918483d6f773f49204711874d8"
+      "sha": "d7f27d79d3e469502db94dc2e7ffaf41ef203798ff0bb2805d0f42d2e5ef3484"
     }
   ]
 }

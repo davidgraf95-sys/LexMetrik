@@ -8,6 +8,7 @@
       "erlass": "Reglement über die Erhebung von Gebühren im Einbürgerungsverfahren (RiB 121.150)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Stellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -52,13 +53,17 @@
               "text": "um Entlassung aus dem Gemeindebürgerrecht CHF 150"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "II. Berechnung  Die Gebühren werden bei Gesuchen um gemeinsame Einbürgerung oder Entlassung für Ehepaare bzw. für Eltern(-teile) mit ihren einbezogenen Kindern einmal pro Gesuch erhoben."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiB 121.150",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a65100be5d9ecba9bf812da94e76a16e",
-      "sha": "1189d749f47b690cb6169a88d1751b11febd5eb802e4e1bbaf3861e0c7436692"
+      "sha": "84968ad51d44c87c7e9d6babb63e2f2715c7582a35e160d1296b0d98dde47753"
     },
     {
       "id": "kanton/BS/RiB 121.150/art_2",

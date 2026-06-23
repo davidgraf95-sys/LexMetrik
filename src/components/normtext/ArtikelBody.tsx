@@ -427,7 +427,11 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                           ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
                       <span>
-                        {istAufgehoben(it.text)
+                        {/* S3 (BS-Audit 23.6.2026): aufgehobene lit. werden mit Marke
+                            und LEEREM Text gespeichert (kein fabrizierter «Aufgehoben.»-
+                            Text, §7). Leeren Item-Text wie eine Aufhebung gedämpft
+                            zeigen — die Marke bleibt links sichtbar (Lücke geschlossen). */}
+                        {it.text.trim() === '' || istAufgehoben(it.text)
                           ? <span className="italic text-ink-400">aufgehoben</span>
                           : (() => {
                               // Tarif-Staffel auch in Items als Tabelle (viele

@@ -8,6 +8,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Aufsicht und Vollzugsbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -60,6 +62,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Zuständigkeiten und Koordination",
       "bloecke": [
         {
           "absatz": "1",
@@ -105,6 +108,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Zusammenarbeit mit Dritten",
       "bloecke": [
         {
           "absatz": "1",
@@ -128,6 +132,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Aufgabenverteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -141,12 +146,32 @@
       "sha": "0039cc57e0548ce8c1b51992de679f1f932c091c2394dcb4fa0c45d069389ca5"
     },
     {
+      "id": "kanton/BS/351.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2018-10-25",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/351.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b32e39e8560d01bd7364da8943e51dfb",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/351.100/art_7",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Bewilligungen für Betriebe",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,6 +195,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Pilzkontrolle",
       "bloecke": [
         {
           "absatz": "1",
@@ -189,6 +215,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Entschädigung für nicht beanstandete Proben",
       "bloecke": [
         {
           "absatz": "1",
@@ -208,6 +235,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -235,6 +263,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Rechtsmittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -266,6 +295,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Strafverfolgung",
       "bloecke": [
         {
           "absatz": "1",
@@ -289,6 +319,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -308,6 +339,7 @@
       "erlass": "Vollziehungsverordnung zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände (351.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

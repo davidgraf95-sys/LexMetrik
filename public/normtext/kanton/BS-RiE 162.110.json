@@ -8,6 +8,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Beschlüsse und generelle Weisungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -62,6 +64,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Arbeitsverträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -111,6 +114,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Vertragsänderungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,6 +134,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Weisungsrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -149,6 +154,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "5_a",
       "artikelLabel": "§ 5a",
+      "titel": "Bearbeitung von Personendaten und Akteneinsicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -188,6 +194,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "5_b",
       "artikelLabel": "§ 5b",
+      "titel": "Schutz vor Diskriminierungen und sexuellen Belästigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -219,6 +226,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Stellenausschreibung",
       "bloecke": [
         {
           "absatz": "1",
@@ -246,6 +254,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Anstellungsinstanz",
       "bloecke": [
         {
           "absatz": "1",
@@ -277,6 +286,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Vertrauensärztliche Untersuchung",
       "bloecke": [
         {
           "absatz": "1",
@@ -316,6 +326,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Strafregisterauszüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -341,12 +352,32 @@
       "sha": "b3634d9d884b9bd712605fc182dfcb686c91a140d0ba4260e9d6b77a1128b835"
     },
     {
+      "id": "kanton/BS/RiE 162.110/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 162.110/art_11",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Probezeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -370,6 +401,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Interner Stellenwechsel",
       "bloecke": [
         {
           "absatz": "1",
@@ -387,12 +419,32 @@
       "sha": "56f17b5ba4c620c8129bbf589040fc7b5cb3968e76b6ee3592637d92324065a7"
     },
     {
+      "id": "kanton/BS/RiE 162.110/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 162.110/art_14",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Beschäftigung von Mitarbeitenden nach Erreichen der ordentlichen Altersgrenze",
       "bloecke": [
         {
           "absatz": "1",
@@ -424,6 +476,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Jahresarbeitszeit (JAZ)",
       "bloecke": [
         {
           "absatz": "1",
@@ -455,6 +508,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "15_a",
       "artikelLabel": "§ 15a",
+      "titel": "Einsätze bei Wahlen und Abstimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -474,6 +528,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Soll-Arbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -493,6 +548,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Zeiterfassung und Absenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -520,6 +576,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Bezahlte Abwesenheit",
       "bloecke": [
         {
           "absatz": "1",
@@ -547,6 +604,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Werktagsarbeit, Tagesarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -582,6 +640,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19_a",
       "artikelLabel": "§ 19a",
+      "titel": "Zuschläge für Nacht- sowie Sonn- und Feiertagsarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -605,6 +664,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19_b",
       "artikelLabel": "§ 19b",
+      "titel": "Zuschläge für kurzfristig angeordnete Abend- oder Samstagsarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -628,6 +688,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19_c",
       "artikelLabel": "§ 19c",
+      "titel": "Homeoffice",
       "bloecke": [
         {
           "absatz": "1",
@@ -663,6 +724,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19_d",
       "artikelLabel": "§ 19d",
+      "titel": "Vertrauensarbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -702,6 +764,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "19_e",
       "artikelLabel": "§ 19e",
+      "titel": "Ausgleich Vertrauensarbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -729,6 +792,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Zeiteinteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -774,6 +838,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Einschränkungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -835,6 +900,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "21_a",
       "artikelLabel": "§ 21a",
+      "titel": "Pausen und Ruhezeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -874,6 +940,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "21_b",
       "artikelLabel": "§ 21b",
+      "titel": "Pikettdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -917,6 +984,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "21_c",
       "artikelLabel": "§ 21c",
+      "titel": "Einsatz bei ausserordentlichen Ereignissen",
       "bloecke": [
         {
           "absatz": "1",
@@ -940,6 +1008,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Jahresarbeitszeitsaldo und Bandbreiten der Arbeitszeitschwankungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -979,6 +1048,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "22_a",
       "artikelLabel": "§ 22a",
+      "titel": "Jahresarbeitszeitsaldo für Teilzeitbeschäftigte",
       "bloecke": [
         {
           "absatz": "1",
@@ -1018,6 +1088,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "22_b",
       "artikelLabel": "§ 22b",
+      "titel": "Steuerung des Jahresarbeitszeitsaldos",
       "bloecke": [
         {
           "absatz": "1",
@@ -1049,6 +1120,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Kompensation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1080,6 +1152,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "23_a",
       "artikelLabel": "§ 23a",
+      "titel": "Barvergütung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1111,6 +1184,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Austritt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1128,12 +1202,32 @@
       "sha": "3b6d81e7136b8f9d009f27a8afcfd47b617ecc578b50396f3796dff680514ccf"
     },
     {
+      "id": "kanton/BS/RiE 162.110/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 162.110/art_26",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Umfang",
       "bloecke": [
         {
           "absatz": "1",
@@ -1161,6 +1255,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Bestimmung des Zeitpunktes",
       "bloecke": [
         {
           "absatz": "1",
@@ -1184,6 +1279,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Übertragung der Ferien",
       "bloecke": [
         {
           "absatz": "1",
@@ -1207,6 +1303,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Ersatz bei Krankheit oder Unfall in den Ferien",
       "bloecke": [
         {
           "absatz": "1",
@@ -1226,6 +1323,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Arbeitsfreie Tage",
       "bloecke": [
         {
           "absatz": "1",
@@ -1267,6 +1365,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Austritt und Todesfall",
       "bloecke": [
         {
           "absatz": "1",
@@ -1294,6 +1393,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Gesuch",
       "bloecke": [
         {
           "absatz": "1",
@@ -1317,6 +1417,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Öffentliches Amt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1350,6 +1451,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Sitzung der Personalverbände und Personalausschüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -1383,6 +1485,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Jubiläumstag",
       "bloecke": [
         {
           "absatz": "1",
@@ -1406,6 +1509,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Persönliche Angelegenheiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1467,6 +1571,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Weiterbildung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1502,6 +1607,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "37_a",
       "artikelLabel": "§ 37a",
+      "titel": "Bezahlter Urlaub für Lernende",
       "bloecke": [
         {
           "absatz": "1",
@@ -1529,6 +1635,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "37_b",
       "artikelLabel": "§ 37b",
+      "titel": "Bezahlter Urlaub für ausserschulische Jugendarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1556,6 +1663,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Weiterer bezahlter und unbezahlter Urlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1589,6 +1697,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Unbezahlter Urlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1616,6 +1725,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Kompensation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1643,6 +1753,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Meldung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1666,6 +1777,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "41_a",
       "artikelLabel": "§ 41a",
+      "titel": "Anspruch auf Mutterschaftsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1703,6 +1815,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "41_b",
       "artikelLabel": "§ 41b",
+      "titel": "Krankheit und Unfall",
       "bloecke": [
         {
           "absatz": "1",
@@ -1730,6 +1843,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Dauer des Mutterschaftsurlaubs",
       "bloecke": [
         {
           "absatz": "1",
@@ -1781,6 +1895,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Sicherung des Arbeitsplatzes",
       "bloecke": [
         {
           "absatz": "1",
@@ -1800,6 +1915,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Änderung des Beschäftigungsgrads",
       "bloecke": [
         {
           "absatz": "1",
@@ -1823,6 +1939,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Vertragliche Einigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1846,6 +1963,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "45_a",
       "artikelLabel": "§ 45a",
+      "titel": "Arbeitszeit und Stillzeit bei Schwangerschaft und Mutterschaft",
       "bloecke": [
         {
           "absatz": "1",
@@ -1891,6 +2009,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Bezahlter Adoptionsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1918,6 +2037,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46_a",
       "artikelLabel": "§ 46a",
+      "titel": "Bezahlter Vaterschaftsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1953,6 +2073,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46_b",
       "artikelLabel": "§ 46b",
+      "titel": "Betreuungsurlaub für die Pflege schwer beeinträchtigter Kinder",
       "bloecke": [
         {
           "absatz": "1",
@@ -1996,6 +2117,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46_c",
       "artikelLabel": "§ 46c",
+      "titel": "Bezahlter Urlaub bei eingetragener Partnerschaft",
       "bloecke": [
         {
           "absatz": "1",
@@ -2019,6 +2141,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46_d",
       "artikelLabel": "§ 46d",
+      "titel": "Unbezahlter Eltern- oder Adoptionsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -2054,6 +2177,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "46_e",
       "artikelLabel": "§ 46e",
+      "titel": "Vorbezug des 13. Monatslohns für unbezahlten Eltern- oder Adoptionsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -2077,6 +2201,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Begriff",
       "bloecke": [
         {
           "absatz": "1",
@@ -2096,6 +2221,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "48",
       "artikelLabel": "§ 48",
+      "titel": "Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -2119,6 +2245,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "49",
       "artikelLabel": "§ 49",
+      "titel": "Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2168,6 +2295,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Massnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2191,6 +2319,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "Trinkgelder und Geschenke",
       "bloecke": [
         {
           "absatz": "1",
@@ -2218,6 +2347,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "51_a",
       "artikelLabel": "§ 51a",
+      "titel": "Abschiedsgeschenk bei Pensionierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2241,6 +2371,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "51_b",
       "artikelLabel": "§ 51b",
+      "titel": "Freiwillige Nebenleistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2260,6 +2391,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Arbeitskleider",
       "bloecke": [
         {
           "absatz": "1",
@@ -2283,6 +2415,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Sachschäden an Privateigentum von Mitarbeiterinnen und Mitarbeitern",
       "bloecke": [
         {
           "absatz": "1",
@@ -2316,6 +2449,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Rechtsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -2353,6 +2487,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "Arbeitsunfähigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -2384,6 +2519,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "Einvernehmliche Streitbeilegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2403,6 +2539,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Leitung Personal",
       "bloecke": [
         {
           "absatz": "1",
@@ -2426,6 +2563,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Beratungsangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -2471,6 +2609,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "58_a",
       "artikelLabel": "§ 58a",
+      "titel": "Sexuelle Belästigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2516,6 +2655,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "58_b",
       "artikelLabel": "§ 58b",
+      "titel": "Abklärungsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -2547,6 +2687,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "59",
       "artikelLabel": "§ 59",
+      "titel": "Schriftliche Mitteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2578,6 +2719,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "60",
       "artikelLabel": "§ 60",
+      "titel": "Verfügung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2631,6 +2773,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "61",
       "artikelLabel": "§ 61",
+      "titel": "Vorsorgliche Massnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2676,6 +2819,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "62",
       "artikelLabel": "§ 62",
+      "titel": "Abfindungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2721,6 +2865,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "62_a",
       "artikelLabel": "§ 62a",
+      "titel": "Rechtsmittelverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -2752,6 +2897,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "63",
       "artikelLabel": "§ 63",
+      "titel": "Orientierung der Mitarbeiterinnen und Mitarbeiter",
       "bloecke": [
         {
           "absatz": "1",
@@ -2771,6 +2917,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "64",
       "artikelLabel": "§ 64",
+      "titel": "Bildung von Personalausschüssen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2794,6 +2941,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "65",
       "artikelLabel": "§ 65",
+      "titel": "Mitwirkung der Personalverbände und Personalausschüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -2817,6 +2965,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "66",
       "artikelLabel": "§ 66",
+      "titel": "Ergänzende Richtlinien und Weisungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2874,6 +3023,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "66_a",
       "artikelLabel": "§ 66a",
+      "titel": "Saldierung allfälliger positiver Mehrleistungsguthaben per 31.12.2015",
       "bloecke": [
         {
           "absatz": "1",
@@ -2895,12 +3045,165 @@
       "sha": "2ca89623e9797b4b1ec5bed5b8c0a3fc1508fafad66b7dade4402e081d779da4"
     },
     {
+      "id": "kanton/BS/RiE 162.110/art_66_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "66_b",
+      "artikelLabel": "§ 66b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_67",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "67",
+      "artikelLabel": "§ 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_68",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "68",
+      "artikelLabel": "§ 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_69",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "69",
+      "artikelLabel": "§ 69",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_70",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "70",
+      "artikelLabel": "§ 70",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_71",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "71",
+      "artikelLabel": "§ 71",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_72",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "72",
+      "artikelLabel": "§ 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/RiE 162.110/art_73",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Personalreglement (RiE 162.110)",
+      "artikel": "73",
+      "artikelLabel": "§ 73",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ce8c4c35a78327a0e48e6fe6251724d2",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 162.110/art_73_a",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "73_a",
       "artikelLabel": "§ 73a",
+      "titel": "Fakultative Vertrauensarbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -2928,6 +3231,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "74",
       "artikelLabel": "§ 74",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -2973,6 +3277,7 @@
       "erlass": "Personalreglement (RiE 162.110)",
       "artikel": "75",
       "artikelLabel": "§ 75",
+      "titel": "Publikation und Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

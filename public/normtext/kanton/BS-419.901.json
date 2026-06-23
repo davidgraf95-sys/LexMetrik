@@ -5,9 +5,10 @@
       "id": "kanton/BS/419.901/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Gegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -28,9 +29,10 @@
       "id": "kanton/BS/419.901/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Ziel",
       "bloecke": [
         {
           "absatz": "1",
@@ -47,9 +49,10 @@
       "id": "kanton/BS/419.901/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "titel": "Anerkennungsbehörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -66,9 +69,10 @@
       "id": "kanton/BS/419.901/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "titel": "Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -89,9 +93,10 @@
       "id": "kanton/BS/419.901/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Delegation des Vollzugs an Dritte",
       "bloecke": [
         {
           "absatz": "1",
@@ -112,9 +117,10 @@
       "id": "kanton/BS/419.901/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Reglemente der SDK",
       "bloecke": [
         {
           "absatz": "1",
@@ -141,9 +147,10 @@
       "id": "kanton/BS/419.901/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Reglemente des SRK oder anderer Dritter",
       "bloecke": [
         {
           "absatz": "1",
@@ -194,9 +201,10 @@
       "id": "kanton/BS/419.901/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "titel": "SRK-Abschlüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -221,9 +229,10 @@
       "id": "kanton/BS/419.901/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "titel": "Andere Abschlüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -244,6 +253,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "als den SRK-Abschlüssen gleichwertig anerkennt."
+        },
+        {
           "absatz": "2",
           "text": "Das SRK regelt das Verfahren für die Prüfung der Gleichwertigkeit und die Übergangsfristen. In diesem Verfahren ist vorzusehen, dass bei nicht unerheblichen Abweichungen in den Ausbildungsanforderungen die Gleichwertigkeit der Abschlüsse durch geeignete Auflagen wie Nachweis einer Mindestdauer praktischer Tätigkeit im betreffenden Beruf oder Ablegen einer theoretischen und praktischen Berufsprüfung sichergestellt wird. Die Verfahrensgebühren sind von den Gesuchstellerinnen/Gesuchstellern zu tragen."
         },
@@ -256,15 +269,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/419.901",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05d71c6216bed0f9dca9f3269f600865",
-      "sha": "8e47e0abeefe690603363e490dcfff5bb936c1cf45739a40e51165f44cbe15d8"
+      "sha": "b83f30a312f6f3745d20472f6c635268e9e427fb8cf1e2a9a050ac925b72bf40"
     },
     {
       "id": "kanton/BS/419.901/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "titel": "Abschluss, Titel",
       "bloecke": [
         {
           "absatz": "1",
@@ -285,9 +299,10 @@
       "id": "kanton/BS/419.901/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "titel": "Rechtsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -312,9 +327,10 @@
       "id": "kanton/BS/419.901/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "titel": "Übergangsbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -335,9 +351,10 @@
       "id": "kanton/BS/419.901/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Anerkennungsverordnung Inland (AVO Inland) (419.901)",
+      "erlass": "Verordnung der SDK über die Anerkennung kantonaler Ausbildungsabschlüsse im Gesundheitswesen in der Schweiz, Anerkennungsverordnung Inland (AVO Inland) (419.901)",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

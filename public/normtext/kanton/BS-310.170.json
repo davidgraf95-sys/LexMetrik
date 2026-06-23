@@ -8,6 +8,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Berufsausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -53,6 +54,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Eingeschränkte Berufsausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -72,6 +74,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Betriebe",
       "bloecke": [
         {
           "absatz": "1",
@@ -137,6 +140,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Stellvertretungsbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -156,6 +160,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Herstellungsbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -185,6 +190,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Detailhandelsbewilligung und Abgabebewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -208,6 +214,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Versandhandelsbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -227,6 +234,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Betäubungsmittelbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -250,6 +258,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Bewilligung zur Lagerung von Blut und Blutprodukten",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,6 +282,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Fortpflanzungsmedizin",
       "bloecke": [
         {
           "absatz": "1",
@@ -292,6 +302,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "10_a",
       "artikelLabel": "§ 10a",
+      "titel": "Zulassung von ambulanten Leistungserbringern",
       "bloecke": [
         {
           "absatz": "1",
@@ -333,6 +344,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Veränderte Verhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -362,6 +374,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Meldungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -385,6 +398,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Bescheinigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -412,6 +426,7 @@
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Inspektionen und Kontrollen",
       "bloecke": [
         {
           "absatz": "1",
@@ -433,12 +448,32 @@
       "sha": "feafc286269a3d3091be9802a004d1f992c5057449a5d7f94b9326c57b37d83b"
     },
     {
+      "id": "kanton/BS/310.170/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-03-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/310.170",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d8204afe10c180c15cac2421a0d28316",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/310.170/art_16",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Gebühren im Gesundheitswesen (310.170)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Tariffestsetzung sowie Genehmigung und Verlängerung von Tarifverträgen",
       "bloecke": [
         {
           "absatz": "1",

@@ -235,6 +235,13 @@ export function pruefeInhaltsSanity(eintraege: ReadonlyArray<SnapshotEintrag>): 
       const hatTabelle = Array.isArray(b.tabelle) && b.tabelle.length > 0;
       const hatMehrspaltig = b.mehrspaltig != null && Array.isArray(b.mehrspaltig.zeilen) && b.mehrspaltig.zeilen.length > 0;
       if (!hatText && !hatItems && !hatTabelle && !hatMehrspaltig) {
+        // Aufgehoben-Konvention (S1, BS-Audit 23.6.2026): ein EINZELNER leerer
+        // Block ist die bewusste, ehrliche Darstellung eines aufgehobenen, aber
+        // umnummerierten Artikels (Display → gedämpftes «aufgehoben»; §8). Der
+        // Extraktor erzeugt ihn genau dann, wenn die Quelle keinen Body liefert.
+        // Nur als Fehler werten, wenn der leere Block NEBEN Inhalt steht (echter
+        // Streublock in einem mehrblockigen Eintrag).
+        if (e.bloecke.length === 1) break;
         fehler.push({ snapshotId: e.id, problem: 'leerer-block', blockIndex: i });
       }
     }

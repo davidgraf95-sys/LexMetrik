@@ -376,15 +376,15 @@ describe('pruefeInhaltsSanity', () => {
     expect(result[0].problem).toBe('leere-bloecke');
   });
 
-  it('meldet Fehler bei Block ohne text und ohne items', () => {
-    const fehlerEintrag: SnapshotEintrag = {
-      id: 'bund/OR/art_42',
-      bloecke: [{ absatz: '1', text: '' }], // kein text, kein items
+  it('akzeptiert EINZELNEN leeren Block als Aufgehoben-Konvention (S1)', () => {
+    // Geänderte Semantik (BS-Audit 23.6.2026): ein aufgehobener, aber
+    // umnummerierter Artikel wird bewusst als einzelner leerer Block gehalten
+    // (Display → gedämpftes «aufgehoben», §8), damit die §-Reihe lückenlos bleibt.
+    const aufgehoben: SnapshotEintrag = {
+      id: 'kanton/BS/410.100/art_6',
+      bloecke: [{ absatz: null, text: '' }],
     };
-    const result = pruefeInhaltsSanity([fehlerEintrag]);
-    expect(result).toHaveLength(1);
-    expect(result[0].problem).toBe('leerer-block');
-    expect(result[0].blockIndex).toBe(0);
+    expect(pruefeInhaltsSanity([aufgehoben])).toHaveLength(0);
   });
 
   it('meldet nur den leeren Block, nicht den guten', () => {
@@ -407,21 +407,26 @@ describe('pruefeInhaltsSanity', () => {
 
   it('meldet Fehler aus mehreren Einträgen', () => {
     const e1: SnapshotEintrag = { id: 'bund/A/art_1', bloecke: [] };
-    const e2: SnapshotEintrag = { id: 'bund/B/art_2', bloecke: [{ absatz: null, text: '' }] };
+    // Streublock: leerer Block NEBEN Inhalt (mehrblockig) bleibt ein Fehler.
+    const e2: SnapshotEintrag = { id: 'bund/B/art_2', bloecke: [{ absatz: '1', text: 'X' }, { absatz: '2', text: '' }] };
     const result = pruefeInhaltsSanity([e1, e2]);
     expect(result).toHaveLength(2);
     expect(result.map((r) => r.snapshotId)).toContain('bund/A/art_1');
     expect(result.map((r) => r.snapshotId)).toContain('bund/B/art_2');
   });
 
-  it('Block mit nur Whitespace-text gilt als leer', () => {
+  it('Block mit nur Whitespace-text gilt als leer (Streublock neben Inhalt)', () => {
+    // Whitespace-only zählt als leer; im mehrblockigen Eintrag (neben echtem
+    // Inhalt) bleibt das ein Fehler — anders als der EINZELNE leere Block, der
+    // die Aufgehoben-Konvention (S1) trägt.
     const e: SnapshotEintrag = {
       id: 'bund/X/art_1',
-      bloecke: [{ absatz: null, text: '   ' }],
+      bloecke: [{ absatz: '1', text: 'Echt' }, { absatz: '2', text: '   ' }],
     };
     const result = pruefeInhaltsSanity([e]);
     expect(result).toHaveLength(1);
     expect(result[0].problem).toBe('leerer-block');
+    expect(result[0].blockIndex).toBe(1);
   });
 });
 

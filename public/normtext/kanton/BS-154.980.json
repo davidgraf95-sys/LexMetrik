@@ -8,6 +8,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Verfahrenskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -41,6 +42,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Auslagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -98,6 +100,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Entschädigung der Zeuginnen und Zeugen sowie der Auskunftspersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -125,6 +128,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Gebühren zur Deckung des Aufwands",
       "bloecke": [
         {
           "absatz": "1",
@@ -162,11 +166,16 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Ermittlungs- und Untersuchungshandlungen",
       "bloecke": [
         {
           "absatz": "1",
           "text": "Für die nachstehend aufgeführten Ermittlungs- und Untersuchungshandlungen werden folgende Gebühren erhoben:",
           "items": [
+            {
+              "marke": "a",
+              "text": ""
+            },
             {
               "marke": "a",
               "text": "Schriftliche Vorladung: CHF 50"
@@ -246,7 +255,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.980",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8b24011817e1aaf431d2e994834602f3",
-      "sha": "a3f40c0a62820915a3f009d919407cef685592e073ebed5798d2e763996b9572"
+      "sha": "530e588045a5100dc931dd9f0fb5b1af82b3c1ce4a75b5f885b3e3d9d183a512"
     },
     {
       "id": "kanton/BS/154.980/art_5_a",
@@ -255,6 +264,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "5_a",
       "artikelLabel": "§ 5a",
+      "titel": "Ausstandsentscheid",
       "bloecke": [
         {
           "absatz": "1",
@@ -274,6 +284,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Abschlussgebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -281,11 +292,19 @@
           "items": [
             {
               "marke": "a",
+              "text": ""
+            },
+            {
+              "marke": "a",
               "text": "Gebühr bei Abschluss des Verfahrens durch Anklageerhebung (auch im abgekürzten Verfahren), Einstellungsverfügung oder Nichtanhandnahmeverfügung für jede kostenpflichtige Person: CHF 200 bis 10'000"
             },
             {
               "marke": "a",
               "text": "in ausserordentlichen Fällen: bis CHF 50'000"
+            },
+            {
+              "marke": "b",
+              "text": ""
             },
             {
               "marke": "b",
@@ -310,7 +329,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.980",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8b24011817e1aaf431d2e994834602f3",
-      "sha": "2628f2fd959b3807690d1655481a173d79e921c0584607c3cbd31039306c0a62"
+      "sha": "31fc30cab068c7800ea6890cdbaaf1b16b8edb242979b54bdfd3ba3390184b97"
     },
     {
       "id": "kanton/BS/154.980/art_7",
@@ -319,11 +338,16 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Gebühren im Strafbefehlsverfahren",
       "bloecke": [
         {
           "absatz": "1",
           "text": "Im Strafbefehlsverfahren werden von der Staatsanwaltschaft oder gemäss § 44 EG StPO von der Inkassostelle nachfolgende Gebühren erhoben:",
           "items": [
+            {
+              "marke": "a",
+              "text": ""
+            },
             {
               "marke": "a",
               "text": "Gebühr bei Abschluss des Verfahrens durch Erlass eines Strafbefehls: CHF 200 bis 10'000"
@@ -334,11 +358,19 @@
             },
             {
               "marke": "b",
+              "text": ""
+            },
+            {
+              "marke": "b",
               "text": "Gebühr bei Rückzug einer Einsprache gegen einen Strafbefehl: CHF 50 bis 1'200"
             },
             {
               "marke": "b",
               "text": "in ausserordentlichen Fällen: bis CHF 4'000"
+            },
+            {
+              "marke": "c",
+              "text": ""
             },
             {
               "marke": "c",
@@ -359,7 +391,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.980",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8b24011817e1aaf431d2e994834602f3",
-      "sha": "f56699e14c10857e3aeeb8f7920b978017e8677a119041794d858c272d7e9373"
+      "sha": "e8e9354277f9fad8db3a9f8dca65f068e3f329bfb330c66f2997c06c8be5ad47"
     },
     {
       "id": "kanton/BS/154.980/art_8",
@@ -368,6 +400,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Gebühren im Jugendstrafverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -417,6 +450,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Gebühr für Akteneinsicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -450,6 +484,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Gebühr für Fotokopien und Datenträger",
       "bloecke": [
         {
           "absatz": "1",
@@ -495,6 +530,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Zusätzliche Gebühren der Strafverfolgungsbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -555,6 +591,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Im Übrigen gelangen die Gebühren gemäss § 23 der Verordnung über den Strassenverkehr zur Anwendung."
+        },
+        {
           "absatz": "2",
           "text": "Die Gebühren gemäss Abs. 1 werden auch im Falle eines Verzichts der berechtigten Person auf die Rückgabe des Fahrzeugs geschuldet."
         }
@@ -563,7 +603,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.980",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8b24011817e1aaf431d2e994834602f3",
-      "sha": "91a685679fc486761c342ee8273a5873ebd4955e1f44d0995438f5b20bee7c1c"
+      "sha": "7ddb80891221ed81309532fc4c69845ba70477f8e9393814dbd9229cc057fd5e"
     },
     {
       "id": "kanton/BS/154.980/art_12",
@@ -572,6 +612,7 @@
       "erlass": "Verordnung betreffend die Verfahrenskosten für die Strafverfolgungsbehörden (154.980)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Gebührenbemessung",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Einladung",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Leitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,6 +48,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -65,6 +68,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Präsenz und Stimmrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -84,6 +88,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Beschlussfähigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -103,6 +108,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Eröffnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -122,6 +128,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Tagesordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -153,6 +160,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Referenten",
       "bloecke": [
         {
           "absatz": "1",
@@ -176,6 +184,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Diskussion",
       "bloecke": [
         {
           "absatz": "1",
@@ -203,6 +212,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Ordnungsanträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -222,6 +232,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Abstimmungen und Wahlen",
       "bloecke": [
         {
           "absatz": "1",
@@ -249,6 +260,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Anzüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -270,12 +282,51 @@
       "sha": "80871e6a3411f8c6666940362ffe1deb8601e1c3aee6a29208f743948e923351"
     },
     {
+      "id": "kanton/BS/411.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2010-05-20",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f108221dd21991e77914eedbf664d6a5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/411.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2010-05-20",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f108221dd21991e77914eedbf664d6a5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/411.100/art_15",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Jahresbericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -295,6 +346,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Wahlgeschäfte",
       "bloecke": [
         {
           "absatz": "1",
@@ -324,6 +376,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Amtsdauer und Stellvertretung",
       "bloecke": [
         {
           "absatz": "1",
@@ -347,6 +400,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Abhaltung der Sitzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -374,6 +428,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Leitung und Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -393,6 +448,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Beschlussfassung",
       "bloecke": [
         {
           "absatz": "1",
@@ -420,6 +476,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Anzüge der Mitglieder und der Schulkonferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -443,6 +500,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Fragen der Erziehung und des Schulwesens",
       "bloecke": [
         {
           "absatz": "1",
@@ -464,12 +522,32 @@
       "sha": "e4d4cba67a25079c33c9804704fb630d4ef5582ed63faacae79b428f9404a73d"
     },
     {
+      "id": "kanton/BS/411.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2010-05-20",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f108221dd21991e77914eedbf664d6a5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/411.100/art_24",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Jahresbericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -489,6 +567,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Vorbereitung der Versammlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -508,6 +587,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Wahlgeschäfte",
       "bloecke": [
         {
           "absatz": "1",
@@ -543,6 +623,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -566,6 +647,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Geschäftsbehandlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -585,6 +667,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Geschäftsverteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -624,6 +707,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Behördliche Aufträge an die Synode",
       "bloecke": [
         {
           "absatz": "1",
@@ -647,6 +731,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Behördliche Aufträge an die Staatliche Schulsynode",
       "bloecke": [
         {
           "absatz": "1",
@@ -664,12 +749,32 @@
       "sha": "137ee06fa4f00adf15641f3e203938738b78c8bd2effe0bb944c8bdcc4f64398"
     },
     {
+      "id": "kanton/BS/411.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2010-05-20",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f108221dd21991e77914eedbf664d6a5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/411.100/art_33",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Ordentliche Kosten der Staatlichen Synode",
       "bloecke": [
         {
           "absatz": "1",
@@ -691,12 +796,32 @@
       "sha": "96eb63e842c8805ec9ca9ebf29a379420510f1a036d46351b212438a0dac8207"
     },
     {
+      "id": "kanton/BS/411.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2010-05-20",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f108221dd21991e77914eedbf664d6a5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/411.100/art_35",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Publikationen der Staatlichen Synode",
       "bloecke": [
         {
           "absatz": "1",
@@ -716,6 +841,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Obligatorium der Versammlungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -735,6 +861,7 @@
       "erlass": "Verordnung über die Staatliche Schulsynode des Kantons Basel-Stadt (411.100)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Anordnung der Vorstandswahlen",
       "bloecke": [
         {
           "absatz": "1",

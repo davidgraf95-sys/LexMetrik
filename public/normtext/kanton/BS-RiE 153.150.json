@@ -8,6 +8,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -31,6 +32,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Jahrespauschale",
       "bloecke": [
         {
           "absatz": "1",
@@ -72,6 +74,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "2_bis",
       "artikelLabel": "§ 2bis",
+      "titel": "Abgabepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -85,12 +88,32 @@
       "sha": "4ab57f407f8db0f0202bf2c7b7953c388759b506cf6ce39e7b754468df152f46"
     },
     {
+      "id": "kanton/BS/RiE 153.150/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2015-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 153.150",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "7820e2aaedab62c7b5dbe7c932aae699",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 153.150/art_4",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Ausserordentliche Entschädigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -122,6 +145,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Spesen",
       "bloecke": [
         {
           "absatz": "1",
@@ -163,6 +187,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Zahlungsmodalitäten",
       "bloecke": [
         {
           "absatz": "1",
@@ -182,6 +207,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Leistungen bei Krankheit oder Unfall",
       "bloecke": [
         {
           "absatz": "1",
@@ -201,6 +227,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Berufliche Vorsorge",
       "bloecke": [
         {
           "absatz": "1",
@@ -224,6 +251,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Anpassung an veränderte Verhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -243,6 +271,7 @@
       "erlass": "Ordnung über die Entschädigung der Mitglieder des Gemeinderats der Einwohnergemeinde Riehen (RiE 153.150)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Rechtskraft und Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

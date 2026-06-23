@@ -8,6 +8,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Zweck des Informatiksystems",
       "bloecke": [
         {
           "absatz": "1",
@@ -68,6 +70,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -87,6 +90,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Grunddaten",
       "bloecke": [
         {
           "absatz": "1",
@@ -222,6 +226,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Falldaten",
       "bloecke": [
         {
           "absatz": "1",
@@ -291,6 +296,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Verfahrensdaten",
       "bloecke": [
         {
           "absatz": "1",
@@ -340,6 +346,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Verantwortung",
       "bloecke": [
         {
           "absatz": "1",
@@ -363,6 +370,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Berechtigung zur Bearbeitung von Informationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -390,6 +398,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "8_a",
       "artikelLabel": "§ 8a",
+      "titel": "Datenaustausch mit dem Strafgericht und dem Appellationsgericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -413,6 +422,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Auskunfts-, Einsichts- und Berichtigungsrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -432,6 +442,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -451,6 +462,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Aufbewahrung",
       "bloecke": [
         {
           "absatz": "1",
@@ -470,6 +482,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Löschung",
       "bloecke": [
         {
           "absatz": "1",
@@ -493,6 +506,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Personen nach rechtskräftigem Abschluss von Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -558,6 +572,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Personen mit erkennungsdienstlicher Behandlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -581,6 +596,7 @@
       "erlass": "Verordnung über das Informatiksystem der Staatsanwaltschaft (257.140)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Weitere Personenkategorien",
       "bloecke": [
         {
           "absatz": "1",
@@ -609,6 +625,10 @@
             {
               "marke": "e",
               "text": "bei verurteilenden Entscheiden eines Gerichts: 10 Jahre ab dem Datum des Entscheids"
+            },
+            {
+              "marke": "e",
+              "text": ""
             },
             {
               "marke": "1",
@@ -649,7 +669,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/257.140",
       "abgerufen": "2026-06-23",
       "fassungsToken": "26aa621caa211678667aab8bb794af10",
-      "sha": "3b7f9ad175df8f88363e90ef4a1a306f51afb1b404fea318f065faaea7564cab"
+      "sha": "ccdd9f80bff02590adcb8627d77ebe667a47bcd75e2c2b5a2b55c780c027c6e1"
     }
   ]
 }

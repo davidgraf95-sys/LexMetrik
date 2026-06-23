@@ -5,9 +5,10 @@
       "id": "kanton/BS/955.100/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -32,6 +33,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Langschiffe gelten als Kleinschiffe und können mit bis zu max. 12 Fahrgästen zugelassen werden."
+        },
+        {
           "absatz": "3",
           "text": "Für die Grossschifffahrt ist die öffentlichrechtliche Anstalt Schweizerische Rheinhäfen SRH zuständig."
         }
@@ -40,15 +45,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/955.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3428dcd8b5e1e4562468fdbfe8770121",
-      "sha": "39d42b979003515aed996702b3db8ee502b653ff54e8ddbaa928ac7c6dec0155"
+      "sha": "362b2e7ecd5d3544c2cd886b047101b3e4cda1c7c7b34d6f5ca54bd7da7a66ef"
     },
     {
       "id": "kanton/BS/955.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Einstellung der Kleinschifffahrt bei Hochwasser",
       "bloecke": [
         {
           "absatz": "1",
@@ -75,9 +81,10 @@
       "id": "kanton/BS/955.100/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Wasserskifahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -102,6 +109,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Die Kantonspolizei kann Ausnahmebewilligungen erteilen."
+        },
+        {
           "absatz": "2",
           "text": "Das Wasserskifahren im Hafengebiet ist verboten."
         }
@@ -110,15 +121,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/955.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3428dcd8b5e1e4562468fdbfe8770121",
-      "sha": "e17dcf0fea6e136a3c3f21ef1d191eaf9a7b3bb6a2c1c2430c7b13cc8067c775"
+      "sha": "d208f9dea2140f993f6eed0809eac7b273c976dc0177427733292483257bac50"
     },
     {
       "id": "kanton/BS/955.100/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Verbot von besonderen Wassersportarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -135,9 +147,10 @@
       "id": "kanton/BS/955.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Praktische Schiffsführerprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -154,9 +167,10 @@
       "id": "kanton/BS/955.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -304,12 +318,32 @@
       "sha": "72773ef63590f945fcb49e129aa12f379f58ee81668c8b3e73a51fee8c2876c8"
     },
     {
+      "id": "kanton/BS/955.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/955.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "3428dcd8b5e1e4562468fdbfe8770121",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/955.100/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Kleinschifffahrtsverordnung (955.100)",
+      "erlass": "Vollziehungsverordnung zum Bundesgesetz über die Binnenschifffahrt, Kleinschifffahrtsverordnung (955.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Aufgehobene Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",

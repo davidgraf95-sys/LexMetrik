@@ -5,9 +5,10 @@
       "id": "kanton/BS/152.100/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Einberufung",
       "bloecke": [
         {
           "absatz": "1",
@@ -39,12 +40,32 @@
       "sha": "357e222c45cc00fe4ba3af1c419472dcc993c3e8fbe50ce8c36a666c63ca7fff"
     },
     {
+      "id": "kanton/BS/152.100/art_1_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
+      "artikel": "1_a",
+      "artikelLabel": "§ 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-11-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/152.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5b26b99354fdfcb3511cfb63c5f00513",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/152.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Öffentlichkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -69,9 +90,10 @@
       "id": "kanton/BS/152.100/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Medien",
       "bloecke": [
         {
           "absatz": "1",
@@ -92,9 +114,10 @@
       "id": "kanton/BS/152.100/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -119,9 +142,10 @@
       "id": "kanton/BS/152.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Publikationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -142,9 +166,10 @@
       "id": "kanton/BS/152.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Parlamentarische Immunität",
       "bloecke": [
         {
           "absatz": "1",
@@ -165,9 +190,10 @@
       "id": "kanton/BS/152.100/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Unabhängigkeit und Offenlegung der Interessenbindungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -196,9 +222,10 @@
       "id": "kanton/BS/152.100/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Ausstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -219,9 +246,10 @@
       "id": "kanton/BS/152.100/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Entschädigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -250,9 +278,10 @@
       "id": "kanton/BS/152.100/art_9_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "9_a",
       "artikelLabel": "§ 9a",
+      "titel": "Berufliche Vorsorge",
       "bloecke": [
         {
           "absatz": "1",
@@ -285,9 +314,10 @@
       "id": "kanton/BS/152.100/art_9_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "9_b",
       "artikelLabel": "§ 9b",
+      "titel": "Ausnahmen von der beruflichen Vorsorge",
       "bloecke": [
         {
           "absatz": "1",
@@ -308,9 +338,10 @@
       "id": "kanton/BS/152.100/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Anpassung der Entschädigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -328,12 +359,32 @@
       "sha": "862a69e5a63525cca7ae05dd4db4733aad37be39a5e0d122c1d720b811a2aab2"
     },
     {
+      "id": "kanton/BS/152.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-11-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/152.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5b26b99354fdfcb3511cfb63c5f00513",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/152.100/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Rücktritt",
       "bloecke": [
         {
           "absatz": "1",
@@ -354,9 +405,10 @@
       "id": "kanton/BS/152.100/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Bildung einer Fraktion",
       "bloecke": [
         {
           "absatz": "1",
@@ -381,9 +433,10 @@
       "id": "kanton/BS/152.100/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Vertretung nach Fraktionsstärke",
       "bloecke": [
         {
           "absatz": "1",
@@ -416,9 +469,10 @@
       "id": "kanton/BS/152.100/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Amtsperiode und Amtsjahr",
       "bloecke": [
         {
           "absatz": "1",
@@ -439,9 +493,10 @@
       "id": "kanton/BS/152.100/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Wahl des Präsidiums",
       "bloecke": [
         {
           "absatz": "1",
@@ -466,9 +521,10 @@
       "id": "kanton/BS/152.100/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Wahl des Ratsbüros",
       "bloecke": [
         {
           "absatz": "1",
@@ -493,9 +549,10 @@
       "id": "kanton/BS/152.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Aufgaben des Ratsbüros",
       "bloecke": [
         {
           "absatz": "1",
@@ -570,9 +627,10 @@
       "id": "kanton/BS/152.100/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Parlamentsdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -601,9 +659,10 @@
       "id": "kanton/BS/152.100/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Leitung und Vertretung",
       "bloecke": [
         {
           "absatz": "1",
@@ -632,9 +691,10 @@
       "id": "kanton/BS/152.100/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Wahrung der Ordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -671,9 +731,10 @@
       "id": "kanton/BS/152.100/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Vorberatung",
       "bloecke": [
         {
           "absatz": "1",
@@ -704,9 +765,10 @@
       "id": "kanton/BS/152.100/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Beschlussfähigkeit, Präsenzfeststellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -727,9 +789,10 @@
       "id": "kanton/BS/152.100/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Tagesordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -746,9 +809,10 @@
       "id": "kanton/BS/152.100/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Rückzug von Vorlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -765,9 +829,10 @@
       "id": "kanton/BS/152.100/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Rückständebericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -784,9 +849,10 @@
       "id": "kanton/BS/152.100/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Teilnahme des Regierungsrates",
       "bloecke": [
         {
           "absatz": "1",
@@ -803,9 +869,10 @@
       "id": "kanton/BS/152.100/art_27_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "27_a",
       "artikelLabel": "§ 27a",
+      "titel": "Teilnahme der Gerichte",
       "bloecke": [
         {
           "absatz": "1",
@@ -826,9 +893,10 @@
       "id": "kanton/BS/152.100/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Abstimmungsverfahren; Wiedererwägungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -857,9 +925,10 @@
       "id": "kanton/BS/152.100/art_28_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "28_a",
       "artikelLabel": "§ 28a",
+      "titel": "Abstimmungen in Abwesenheit in Krisensituationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -892,9 +961,10 @@
       "id": "kanton/BS/152.100/art_28_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "28_b",
       "artikelLabel": "§ 28b",
+      "titel": "Abstimmungen in Abwesenheit aus persönlichen Gründen",
       "bloecke": [
         {
           "absatz": "1",
@@ -941,9 +1011,10 @@
       "id": "kanton/BS/152.100/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Mehr",
       "bloecke": [
         {
           "absatz": "1",
@@ -969,12 +1040,32 @@
       "sha": "49a760d2cc6275580acf3955c644a444aeeeac2ab78e695eb8f95e5ae6f004f1"
     },
     {
+      "id": "kanton/BS/152.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-11-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/152.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5b26b99354fdfcb3511cfb63c5f00513",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/152.100/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Wahlverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -999,9 +1090,10 @@
       "id": "kanton/BS/152.100/art_32",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Wahlgänge; Quoren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1022,9 +1114,10 @@
       "id": "kanton/BS/152.100/art_33",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Listenwahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -1045,9 +1138,10 @@
       "id": "kanton/BS/152.100/art_34",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Vorbehalt abweichender Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1064,9 +1158,10 @@
       "id": "kanton/BS/152.100/art_35",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Bericht zur strategischen Planung des Regierungsrates",
       "bloecke": [
         {
           "absatz": "1",
@@ -1083,9 +1178,10 @@
       "id": "kanton/BS/152.100/art_36",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Budget",
       "bloecke": [
         {
           "absatz": "1",
@@ -1106,9 +1202,10 @@
       "id": "kanton/BS/152.100/art_37",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Jahresbericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1129,9 +1226,10 @@
       "id": "kanton/BS/152.100/art_38",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Staatsverträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1160,9 +1258,10 @@
       "id": "kanton/BS/152.100/art_39",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Initiativen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1179,9 +1278,10 @@
       "id": "kanton/BS/152.100/art_40",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Petitionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1206,9 +1306,10 @@
       "id": "kanton/BS/152.100/art_41",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Begnadigungsgesuche",
       "bloecke": [
         {
           "absatz": "1",
@@ -1225,9 +1326,10 @@
       "id": "kanton/BS/152.100/art_42",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Inhalt und Eintretensbeschluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -1256,9 +1358,10 @@
       "id": "kanton/BS/152.100/art_43",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Weiteres Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1295,9 +1398,10 @@
       "id": "kanton/BS/152.100/art_44",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Inhalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1314,9 +1418,10 @@
       "id": "kanton/BS/152.100/art_45",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1337,9 +1442,10 @@
       "id": "kanton/BS/152.100/art_46",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Inhalt und Eintretensbeschluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -1364,9 +1470,10 @@
       "id": "kanton/BS/152.100/art_47",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Weiteres Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1388,12 +1495,32 @@
       "sha": "6a86bd0786710ccab4d21e3fbfed235063e329ec3b72d16b5be539d1b4985779"
     },
     {
+      "id": "kanton/BS/152.100/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-11-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/152.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5b26b99354fdfcb3511cfb63c5f00513",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/152.100/art_49",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "49",
       "artikelLabel": "§ 49",
+      "titel": "Inhalt und Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1418,9 +1545,10 @@
       "id": "kanton/BS/152.100/art_50",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Inhalt und Eintreten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1445,9 +1573,10 @@
       "id": "kanton/BS/152.100/art_51",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "Behandlung bei der Verabschiedung des Budgets",
       "bloecke": [
         {
           "absatz": "1",
@@ -1464,9 +1593,10 @@
       "id": "kanton/BS/152.100/art_52",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Standesinitiative",
       "bloecke": [
         {
           "absatz": "1",
@@ -1499,9 +1629,10 @@
       "id": "kanton/BS/152.100/art_53",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Standesreferendum",
       "bloecke": [
         {
           "absatz": "1",
@@ -1526,9 +1657,10 @@
       "id": "kanton/BS/152.100/art_54",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Resolution",
       "bloecke": [
         {
           "absatz": "1",
@@ -1545,9 +1677,10 @@
       "id": "kanton/BS/152.100/art_55",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "Parlamentarische Erklärung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1564,9 +1697,10 @@
       "id": "kanton/BS/152.100/art_56",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "Interpellation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1591,9 +1725,10 @@
       "id": "kanton/BS/152.100/art_57",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Schriftliche Anfrage",
       "bloecke": [
         {
           "absatz": "1",
@@ -1610,9 +1745,10 @@
       "id": "kanton/BS/152.100/art_58",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Persönliche Erklärung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1629,9 +1765,10 @@
       "id": "kanton/BS/152.100/art_59",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "59",
       "artikelLabel": "§ 59",
+      "titel": "Aufgaben der Kommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1652,9 +1789,10 @@
       "id": "kanton/BS/152.100/art_60",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "60",
       "artikelLabel": "§ 60",
+      "titel": "Vertraulichkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1683,9 +1821,10 @@
       "id": "kanton/BS/152.100/art_61",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "61",
       "artikelLabel": "§ 61",
+      "titel": "Geheimhaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1710,9 +1849,10 @@
       "id": "kanton/BS/152.100/art_62",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "62",
       "artikelLabel": "§ 62",
+      "titel": "Verletzung der Vertraulichkeit oder der Geheimhaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1729,9 +1869,10 @@
       "id": "kanton/BS/152.100/art_63",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "63",
       "artikelLabel": "§ 63",
+      "titel": "Amtsdauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -1756,9 +1897,10 @@
       "id": "kanton/BS/152.100/art_63_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "63_a",
       "artikelLabel": "§ 63a",
+      "titel": "Verteilung der Sitze",
       "bloecke": [
         {
           "absatz": "1",
@@ -1789,9 +1931,10 @@
       "id": "kanton/BS/152.100/art_64",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "64",
       "artikelLabel": "§ 64",
+      "titel": "Stellvertretung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1820,9 +1963,10 @@
       "id": "kanton/BS/152.100/art_65",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "65",
       "artikelLabel": "§ 65",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -1839,9 +1983,10 @@
       "id": "kanton/BS/152.100/art_66",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "66",
       "artikelLabel": "§ 66",
+      "titel": "Aufgaben der ständigen Kommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1866,9 +2011,10 @@
       "id": "kanton/BS/152.100/art_67",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "67",
       "artikelLabel": "§ 67",
+      "titel": "Bestand und Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1903,9 +2049,10 @@
       "id": "kanton/BS/152.100/art_68",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "68",
       "artikelLabel": "§ 68",
+      "titel": "Finanzkommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -1922,9 +2069,10 @@
       "id": "kanton/BS/152.100/art_69",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "69",
       "artikelLabel": "§ 69",
+      "titel": "Geschäftsprüfungskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -1957,9 +2105,10 @@
       "id": "kanton/BS/152.100/art_70",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "70",
       "artikelLabel": "§ 70",
+      "titel": "Bestand und Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1976,9 +2125,10 @@
       "id": "kanton/BS/152.100/art_71",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "71",
       "artikelLabel": "§ 71",
+      "titel": "Aufgaben der Sachkommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2009,9 +2159,10 @@
       "id": "kanton/BS/152.100/art_72",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "72",
       "artikelLabel": "§ 72",
+      "titel": "Bestand und Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2054,9 +2205,10 @@
       "id": "kanton/BS/152.100/art_73",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "73",
       "artikelLabel": "§ 73",
+      "titel": "Petitionskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -2073,9 +2225,10 @@
       "id": "kanton/BS/152.100/art_74",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "74",
       "artikelLabel": "§ 74",
+      "titel": "Begnadigungskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -2092,9 +2245,10 @@
       "id": "kanton/BS/152.100/art_75",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "75",
       "artikelLabel": "§ 75",
+      "titel": "Disziplinarkommission für die Gerichte und die Staatsanwaltschaft",
       "bloecke": [
         {
           "absatz": "1",
@@ -2111,9 +2265,10 @@
       "id": "kanton/BS/152.100/art_76",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "76",
       "artikelLabel": "§ 76",
+      "titel": "Wahlvorbereitungskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -2138,9 +2293,10 @@
       "id": "kanton/BS/152.100/art_77",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "77",
       "artikelLabel": "§ 77",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -2157,9 +2313,10 @@
       "id": "kanton/BS/152.100/art_78",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "78",
       "artikelLabel": "§ 78",
+      "titel": "Aufgaben und Bestellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2196,9 +2353,10 @@
       "id": "kanton/BS/152.100/art_79",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "79",
       "artikelLabel": "§ 79",
+      "titel": "Untersuchungsbefugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -2223,9 +2381,10 @@
       "id": "kanton/BS/152.100/art_80",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "80",
       "artikelLabel": "§ 80",
+      "titel": "Beizug von Sachverständigen, Anhörung von Zeuginnen und Zeugen und Auskunftspersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2250,9 +2409,10 @@
       "id": "kanton/BS/152.100/art_81",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "81",
       "artikelLabel": "§ 81",
+      "titel": "Rechtliches Gehör",
       "bloecke": [
         {
           "absatz": "1",
@@ -2277,9 +2437,10 @@
       "id": "kanton/BS/152.100/art_82",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "82",
       "artikelLabel": "§ 82",
+      "titel": "Bestellung und Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2308,9 +2469,10 @@
       "id": "kanton/BS/152.100/art_83",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "83",
       "artikelLabel": "§ 83",
+      "titel": "Bestellung durch das Ratsbüro",
       "bloecke": [
         {
           "absatz": "1",
@@ -2327,9 +2489,10 @@
       "id": "kanton/BS/152.100/art_84",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "84",
       "artikelLabel": "§ 84",
+      "titel": "Abweichung vom Wahlmodus; Ersatzwahlen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2350,9 +2513,10 @@
       "id": "kanton/BS/152.100/art_84_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "84_a",
       "artikelLabel": "§ 84a",
+      "titel": "Bestellung und Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2369,7 +2533,7 @@
       "id": "kanton/BS/152.100/art_85",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "85",
       "artikelLabel": "§ 85",
       "bloecke": [
@@ -2414,7 +2578,7 @@
       "id": "kanton/BS/152.100/art_86",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "86",
       "artikelLabel": "§ 86",
       "bloecke": [
@@ -2437,7 +2601,7 @@
       "id": "kanton/BS/152.100/art_87",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "87",
       "artikelLabel": "§ 87",
       "bloecke": [
@@ -2467,12 +2631,32 @@
       "sha": "def20958e3c8098429c1b16f022c59ef7b9c7368958ec7e55320b0b2d1225f48"
     },
     {
+      "id": "kanton/BS/152.100/art_88",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
+      "artikel": "88",
+      "artikelLabel": "§ 88",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-11-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/152.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5b26b99354fdfcb3511cfb63c5f00513",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/152.100/art_88_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "88_a",
       "artikelLabel": "§ 88a",
+      "titel": "Übergangsbestimmung zur Änderung betreffend § 72 Abs. 2",
       "bloecke": [
         {
           "absatz": "1",
@@ -2489,9 +2673,10 @@
       "id": "kanton/BS/152.100/art_89",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "GO (152.100)",
+      "erlass": "Gesetz über die Geschäftsordnung des Grossen Rates, GO (152.100)",
       "artikel": "89",
       "artikelLabel": "§ 89",
+      "titel": "Schlussbestimmung",
       "bloecke": [
         {
           "absatz": "1",

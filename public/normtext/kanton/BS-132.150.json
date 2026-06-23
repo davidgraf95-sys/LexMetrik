@@ -8,6 +8,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Testbetrieb",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Zur elektronischen Stimmabgabe zugelassene Stimmberechtigte",
       "bloecke": [
         {
           "absatz": "1",
@@ -62,6 +64,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Organisierende Behörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -81,6 +84,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "System zur elektronischen Stimmabgabe",
       "bloecke": [
         {
           "absatz": "1",
@@ -102,12 +106,32 @@
       "sha": "6e67704cef897fb3bd82f679ea60fa1495b2090e6e6c8d2f87b788d91f630f43"
     },
     {
+      "id": "kanton/BS/132.150/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2023-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/132.150",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9c6d0fd15002bc55b85b32e8c812421f",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/132.150/art_6",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Zustellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -131,6 +155,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Bestimmung der Art der Stimmabgabe",
       "bloecke": [
         {
           "absatz": "1",
@@ -154,6 +179,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Elektronische Stimmabgabe",
       "bloecke": [
         {
           "absatz": "1",
@@ -181,6 +207,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "8_a",
       "artikelLabel": "§ 8a",
+      "titel": "Wahlkomitee",
       "bloecke": [
         {
           "absatz": "1",
@@ -226,6 +253,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Öffnung und Schliessung der elektronischen Urne",
       "bloecke": [
         {
           "absatz": "1",
@@ -249,6 +277,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Helpdesk",
       "bloecke": [
         {
           "absatz": "1",
@@ -268,6 +297,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Wahrung des Stimmgeheimnisses",
       "bloecke": [
         {
           "absatz": "1",
@@ -287,6 +317,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Kontrolle des Doppelstimmverbots",
       "bloecke": [
         {
           "absatz": "1",
@@ -308,12 +339,51 @@
       "sha": "93b464b47f0096c2949b6e8d39b42fe0d024381085d3c4792433a1ba44027af1"
     },
     {
+      "id": "kanton/BS/132.150/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2023-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/132.150",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9c6d0fd15002bc55b85b32e8c812421f",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/132.150/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2023-06-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/132.150",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "9c6d0fd15002bc55b85b32e8c812421f",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/132.150/art_15",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Schlussprotokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -333,6 +403,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Löschung der Daten",
       "bloecke": [
         {
           "absatz": "1",
@@ -356,6 +427,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Subsidiär anwendbares Recht",
       "bloecke": [
         {
           "absatz": "1",
@@ -375,6 +447,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Weisungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -394,6 +467,7 @@
       "erlass": "Verordnung über den Testbetrieb für die elektronische Stimmabgabe (132.150)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Publikation und Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

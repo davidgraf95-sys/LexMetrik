@@ -6,7 +6,7 @@ import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
-import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang, type KantonSystematik } from '../lib/normtext/systematik';
+import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang, srVergleich, type KantonSystematik } from '../lib/normtext/systematik';
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
 
@@ -186,7 +186,6 @@ function SysZeile({ e }: { e: BrowseErlass }) {
 // flache Trefferliste — diese gegliederte Ansicht zeigt sich nur ohne Suche.
 function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: KantonSystematik }) {
   const gruppen = useMemo(() => {
-    const srNum = (e: BrowseErlass) => parseFloat((e.sr ?? '').replace(/[^\d.]/g, '')) || 0;
     const rangTop = sachgebietRang(sys);
     const tops = new Map<string, Map<string, BrowseErlass[]>>();
     for (const e of erlasse) {
@@ -206,7 +205,7 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
           .map(([sub, items]) => ({
             sub,
             titel: subTitel(sys, top, sub),
-            items: items.sort((a, b) => srNum(a) - srNum(b) || a.titel.localeCompare(b.titel, 'de')),
+            items: items.sort((a, b) => srVergleich(a.sr, b.sr) || a.titel.localeCompare(b.titel, 'de')),
           }));
         return { top, titel: topTitel(sys, top), anzahl, untergruppen };
       });

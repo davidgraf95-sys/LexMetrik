@@ -8,6 +8,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zweck und Auftrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Bibliotheksbetrieb",
       "bloecke": [
         {
           "absatz": "1",
@@ -62,6 +64,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Bibliothekskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -105,6 +108,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Aufgaben der Bibliothekskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -128,12 +132,32 @@
       "sha": "3be8f850e040fbda68f2838f99e695aca93870df8f9e6657cd9f8999b3f5724b"
     },
     {
+      "id": "kanton/BS/RiE 440.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 440.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "039c9f628645e53c654cd9513da6b20b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 440.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Medienbestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -157,6 +181,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Nutzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -188,6 +213,7 @@
       "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Gebühren und Jahresbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -207,6 +233,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "039c9f628645e53c654cd9513da6b20b",
       "sha": "244533f6c18b6d7a78369ef9a11cbb42ca4736b75a205f9e9d814a3ac8835e1a"
+    },
+    {
+      "id": "kanton/BS/RiE 440.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement für die Gemeindebibliothek Riehen (RiE 440.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 440.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "039c9f628645e53c654cd9513da6b20b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }

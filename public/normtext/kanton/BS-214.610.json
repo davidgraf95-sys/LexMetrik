@@ -18,6 +18,10 @@
           "text": "Ausserdem wird der Erwerb bewilligt, wenn das Grundstück dient:",
           "items": [
             {
+              "marke": "a",
+              "text": ""
+            },
+            {
               "marke": "b",
               "text": "einer natürlichen Person als Zweitwohnung, die aussergewöhnlich enge und schutzwürdige Beziehungen zum Kanton Basel-Stadt unterhält, solange diese andauern."
             }
@@ -28,7 +32,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.610",
       "abgerufen": "2026-06-23",
       "fassungsToken": "48f6bd3928e4fb55d2660a9032b4f764",
-      "sha": "c1548018938eba692a17f18a1eadf5ef20b3288f68a5a5b216487e6e80317597"
+      "sha": "42c54734620723a2104c004a01bb9eda01e5555c41c25fb83af7cc4da1fd99d5"
     },
     {
       "id": "kanton/BS/214.610/art_2",

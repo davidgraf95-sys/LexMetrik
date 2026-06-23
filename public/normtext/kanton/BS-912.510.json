@@ -5,9 +5,10 @@
       "id": "kanton/BS/912.510/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Aufsichts- und Vollzugsbehörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,9 +25,10 @@
       "id": "kanton/BS/912.510/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Kantonale Fischereiverwaltung und Kantonale Fischereiaufsicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -55,9 +57,10 @@
       "id": "kanton/BS/912.510/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Beizug der Fischereiberechtigten",
       "bloecke": [
         {
           "absatz": "1",
@@ -74,9 +77,10 @@
       "id": "kanton/BS/912.510/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Vergabe von Fischereirechten",
       "bloecke": [
         {
           "absatz": "1",
@@ -97,9 +101,10 @@
       "id": "kanton/BS/912.510/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Patent- und Pachtsystem / Fischereikarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,9 +135,10 @@
       "id": "kanton/BS/912.510/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Sachkundenachweis",
       "bloecke": [
         {
           "absatz": "1",
@@ -207,9 +213,10 @@
       "id": "kanton/BS/912.510/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Ausstellen der Fischereikarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -238,9 +245,10 @@
       "id": "kanton/BS/912.510/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Kategorien",
       "bloecke": [
         {
           "absatz": "1",
@@ -287,9 +295,10 @@
       "id": "kanton/BS/912.510/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Verpachtung",
       "bloecke": [
         {
           "absatz": "1",
@@ -323,12 +332,32 @@
       "sha": "5484c8f9b6effd8ca9e051ac878485028f67b943d297f64be5de89b7b3ac03e6"
     },
     {
+      "id": "kanton/BS/912.510/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/912.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "a4be6c7639ee274cb2b69d5b3139952b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/912.510/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -349,9 +378,10 @@
       "id": "kanton/BS/912.510/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Ausweispflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -368,9 +398,10 @@
       "id": "kanton/BS/912.510/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Fanggeräte",
       "bloecke": [
         {
           "absatz": "1",
@@ -451,9 +482,10 @@
       "id": "kanton/BS/912.510/art_13_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "13_a",
       "artikelLabel": "§ 13a",
+      "titel": "Verbotene Handlungen und Fangarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -488,9 +520,10 @@
       "id": "kanton/BS/912.510/art_13_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "13_b",
       "artikelLabel": "§ 13b",
+      "titel": "Fangmindestmasse, Schonzeiten und geschützte Arten",
       "bloecke": [
         {
           "absatz": "1",
@@ -519,9 +552,10 @@
       "id": "kanton/BS/912.510/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Einschränkungen der Fischerei und Massnahmen zum Schutz der aquatischen Fauna",
       "bloecke": [
         {
           "absatz": "1",
@@ -550,9 +584,10 @@
       "id": "kanton/BS/912.510/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Galgenfischerei im Rhein",
       "bloecke": [
         {
           "absatz": "1",
@@ -569,9 +604,10 @@
       "id": "kanton/BS/912.510/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Fanglimite für Fische",
       "bloecke": [
         {
           "absatz": "1",
@@ -592,9 +628,10 @@
       "id": "kanton/BS/912.510/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Sonderfänge",
       "bloecke": [
         {
           "absatz": "1",
@@ -633,9 +670,10 @@
       "id": "kanton/BS/912.510/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Köderfische / Fischnährtiere",
       "bloecke": [
         {
           "absatz": "1",
@@ -668,9 +706,10 @@
       "id": "kanton/BS/912.510/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Meldepflicht der Fänge",
       "bloecke": [
         {
           "absatz": "1",
@@ -699,9 +738,10 @@
       "id": "kanton/BS/912.510/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Fischbesatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -730,9 +770,10 @@
       "id": "kanton/BS/912.510/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Fischereiverbote",
       "bloecke": [
         {
           "absatz": "1",
@@ -765,9 +806,10 @@
       "id": "kanton/BS/912.510/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -826,9 +868,10 @@
       "id": "kanton/BS/912.510/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Notabfischungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -846,12 +889,32 @@
       "sha": "5da013181712f5dfacf5c91d247ffec9644f11e1f90d00fefa511ed00e257fe5"
     },
     {
+      "id": "kanton/BS/912.510/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/912.510",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "a4be6c7639ee274cb2b69d5b3139952b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/912.510/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Fischereiveranstaltungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -876,9 +939,10 @@
       "id": "kanton/BS/912.510/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Bewilligung für technische Eingriffe",
       "bloecke": [
         {
           "absatz": "1",
@@ -911,9 +975,10 @@
       "id": "kanton/BS/912.510/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Meldepflicht kleiner Unterhaltsmassnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -938,9 +1003,10 @@
       "id": "kanton/BS/912.510/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Verbot der Fischereiausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -957,9 +1023,10 @@
       "id": "kanton/BS/912.510/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Rechtsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -980,9 +1047,10 @@
       "id": "kanton/BS/912.510/art_29_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "29_a",
       "artikelLabel": "§ 29a",
+      "titel": "Übergangsbestimmung zur Änderung von § 9 Abs. 1 und 2 vom 14. Oktober 2025",
       "bloecke": [
         {
           "absatz": "1",
@@ -999,9 +1067,10 @@
       "id": "kanton/BS/912.510/art_29_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fischereiverordnung (912.510)",
+      "erlass": "Verordnung über die Fischerei im Kanton Basel-Stadt, Fischereiverordnung (912.510)",
       "artikel": "29_b",
       "artikelLabel": "§ 29b",
+      "titel": "Übergangsbestimmung zur Änderung von § 13 Abs. 4 vom 14. Oktober 2025",
       "bloecke": [
         {
           "absatz": "1",

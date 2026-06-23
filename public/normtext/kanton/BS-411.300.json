@@ -8,6 +8,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gegenstand und Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -31,6 +32,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "1_a",
       "artikelLabel": "§ 1a",
+      "titel": "Zusammensetzung der Volksschulleitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -50,6 +52,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Gesamtverantwortung",
       "bloecke": [
         {
           "absatz": "1",
@@ -73,6 +76,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Leitung der Konferenzen der Volksschulleitung und der Gesamtkonferenz der Schulleitungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -96,6 +100,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Schulstandorte und Angebotsprofile",
       "bloecke": [
         {
           "absatz": "1",
@@ -115,6 +120,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Unterrichtsausfall",
       "bloecke": [
         {
           "absatz": "1",
@@ -134,6 +140,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Personalrechtliche Aufgaben in Bezug auf die Schulleitungsmitglieder",
       "bloecke": [
         {
           "absatz": "1",
@@ -167,6 +174,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Personalrechtliche Aufgaben in Bezug auf die Lehr- und Fachpersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -196,6 +204,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Beurteilung sowie Aufnahmeprüfungen und Leistungstests",
       "bloecke": [
         {
           "absatz": "1",
@@ -225,6 +234,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Schulausschlüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -244,6 +254,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Schulratspräsidien",
       "bloecke": [
         {
           "absatz": "1",
@@ -373,6 +384,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Führung der Schulleitungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -408,6 +420,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Aufsicht, Berichterstattung und Massnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -431,6 +444,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Personalrechtliche Aufgaben in Bezug auf die Schulleitungsmitglieder",
       "bloecke": [
         {
           "absatz": "1",
@@ -468,6 +482,7 @@
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Personalrechtliche Aufgaben in Bezug auf die Mitarbeitenden der Schulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -503,12 +518,32 @@
       "sha": "66ce1beeab0d0987f7838bc94335f9e4f1e680336f4bf0bf537020aa3dafcead"
     },
     {
+      "id": "kanton/BS/411.300/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Volksschulleitung (411.300)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-08-11",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "aff51a4d64cbacd9c480e03e3b54ecbe",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/411.300/art_17",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über die Volksschulleitung (411.300)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Beachtung der Teilautonomie der Schulleitungen",
       "bloecke": [
         {
           "absatz": "1",

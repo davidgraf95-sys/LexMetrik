@@ -70,12 +70,32 @@
       "sha": "54d405520ba9a91061917f107ab2303ed760da5c2ba71570095de6980ec99cac"
     },
     {
+      "id": "kanton/BS/BaB 111.100/art_2_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "2_a",
+      "artikelLabel": "§ 2a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 111.100/art_2_b",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_b",
       "artikelLabel": "§ 2b",
+      "titel": "Produktegruppe",
       "bloecke": [
         {
           "absatz": "1",
@@ -115,6 +135,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_c",
       "artikelLabel": "§ 2c",
+      "titel": "Globalkredite",
       "bloecke": [
         {
           "absatz": "1",
@@ -138,6 +159,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_d",
       "artikelLabel": "§ 2d",
+      "titel": "Leistungsaufträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -165,6 +187,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_e",
       "artikelLabel": "§ 2e",
+      "titel": "Geltungsdauer der Leistungsaufträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -184,6 +207,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_f",
       "artikelLabel": "§ 2f",
+      "titel": "Finanzierungsvorbehalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -203,6 +227,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_g",
       "artikelLabel": "§ 2g",
+      "titel": "Kreditübertragung",
       "bloecke": [
         {
           "absatz": "1",
@@ -226,6 +251,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_h",
       "artikelLabel": "§ 2h",
+      "titel": "Produktesummenbudget",
       "bloecke": [
         {
           "absatz": "1",
@@ -253,6 +279,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_i",
       "artikelLabel": "§ 2i",
+      "titel": "Jahresbericht",
       "bloecke": [
         {
           "absatz": "1",
@@ -280,6 +307,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_j",
       "artikelLabel": "§ 2j",
+      "titel": "Produktesummenrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -307,6 +335,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_k",
       "artikelLabel": "§ 2k",
+      "titel": "Produkte mit Produktekrediten",
       "bloecke": [
         {
           "absatz": "1",
@@ -334,6 +363,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "2_l",
       "artikelLabel": "§ 2l",
+      "titel": "Controlling",
       "bloecke": [
         {
           "absatz": "1",
@@ -357,6 +387,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Oberstes Organ",
       "bloecke": [
         {
           "absatz": "1",
@@ -376,6 +407,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Wahl- und Stimmrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -419,6 +451,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Wahl des Gemeindeparlamentes",
       "bloecke": [
         {
           "absatz": "1",
@@ -438,6 +471,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Referendum und Initiative",
       "bloecke": [
         {
           "absatz": "1",
@@ -465,6 +499,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Petition",
       "bloecke": [
         {
           "absatz": "1",
@@ -488,6 +523,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Stellung, Grösse und Wahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -511,6 +547,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Amtsdauer und Amtsjahr",
       "bloecke": [
         {
           "absatz": "1",
@@ -534,6 +571,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Einberufung",
       "bloecke": [
         {
           "absatz": "1",
@@ -575,6 +613,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Aufgaben und Befugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -704,6 +743,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Fakultatives Referendum und Genehmigungsvorbehalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -731,6 +771,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_a",
       "artikelLabel": "§ 12a",
+      "titel": "Einflussnahme des Bürgergemeinderats auf beschlossene Produktegruppen",
       "bloecke": [
         {
           "absatz": "1",
@@ -766,6 +807,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_b",
       "artikelLabel": "§ 12b",
+      "titel": "Vereinbarungen mit langer Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -785,6 +827,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_c",
       "artikelLabel": "§ 12c",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -804,6 +847,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_d",
       "artikelLabel": "§ 12d",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -857,6 +901,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_e",
       "artikelLabel": "§ 12e",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -890,6 +935,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_f",
       "artikelLabel": "§ 12f",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -927,6 +973,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "12_g",
       "artikelLabel": "§ 12g",
+      "titel": "Arbeitsweise",
       "bloecke": [
         {
           "absatz": "1",
@@ -954,6 +1001,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Grösse, Wahl und Amtsdauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -985,6 +1033,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Aufgaben und Befugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -1074,6 +1123,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "14_a",
       "artikelLabel": "§ 14a",
+      "titel": "Finanz- und Verwaltungsvermögen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1097,6 +1147,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "14_b",
       "artikelLabel": "§ 14b",
+      "titel": "Finanzvermögen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1138,6 +1189,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Verwaltungsvermögen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1186,12 +1238,32 @@
       "sha": "5333e0a0aee532d2f1c8a612a2a91b900d1cab4d16449ba8863d2dc105629770"
     },
     {
+      "id": "kanton/BS/BaB 111.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 111.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1219,6 +1291,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Wahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -1242,6 +1315,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Aufgaben und Befugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -1261,6 +1335,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "20_a",
       "artikelLabel": "§ 20a",
+      "titel": "Offenlegung von Interessenbindungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1284,6 +1359,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "20_b",
       "artikelLabel": "§ 20b",
+      "titel": "Ausstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -1309,12 +1385,32 @@
       "sha": "7a0384d5b82e916391441b8aa8325831352fda120d3098a3f1943f58bdfd43dc"
     },
     {
+      "id": "kanton/BS/BaB 111.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 111.100/art_21_a",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_a",
       "artikelLabel": "§ 21a",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -1368,6 +1464,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_b",
       "artikelLabel": "§ 21b",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1385,12 +1482,32 @@
       "sha": "c8b6deb1370058cab2c2fffb89039f922eab6fe56e62224f1f90e7cf28405c6e"
     },
     {
+      "id": "kanton/BS/BaB 111.100/art_21_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_c",
+      "artikelLabel": "§ 21c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 111.100/art_21_d",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_d",
       "artikelLabel": "§ 21d",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -1426,6 +1543,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_e",
       "artikelLabel": "§ 21e",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1457,6 +1575,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_f",
       "artikelLabel": "§ 21f",
+      "titel": "Bestand",
       "bloecke": [
         {
           "absatz": "1",
@@ -1480,6 +1599,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "21_g",
       "artikelLabel": "§ 21g",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1505,12 +1625,184 @@
       "sha": "4992a44edd9ef11e9906d83b6444f0e16d5b38dfddce928e23f227a9511cfbfa"
     },
     {
+      "id": "kanton/BS/BaB 111.100/art_21_h",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_h",
+      "artikelLabel": "§ 21h",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_21_i",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_i",
+      "artikelLabel": "§ 21i",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_21_j",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_j",
+      "artikelLabel": "§ 21j",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_21_k",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_k",
+      "artikelLabel": "§ 21k",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_21_l",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "21_l",
+      "artikelLabel": "§ 21l",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 111.100/art_26",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Aufsicht und Kommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -1534,6 +1826,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Amtsdauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -1553,6 +1846,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -1568,6 +1862,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
       "sha": "1104f9e3aa3abba0b1d80093407d13d9b1cf1cfd5195c7f3d9bc05fe51f794bc"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/BaB 111.100/art_30",
@@ -1599,6 +1912,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Bestand und Aufsicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1618,6 +1932,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Organisation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1649,6 +1964,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Vermögensverwaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1676,6 +1992,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Reglement",
       "bloecke": [
         {
           "absatz": "1",
@@ -1695,6 +2012,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1714,6 +2032,7 @@
       "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -1747,6 +2066,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
       "sha": "c726581dce3c6d952bcdb4ec0f4969f751524df9dbb71a0101b9978dc8e7827d"
+    },
+    {
+      "id": "kanton/BS/BaB 111.100/art_36_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gemeindeordnung der Bürgergemeinde der Stadt Basel (BaB 111.100)",
+      "artikel": "36_a",
+      "artikelLabel": "§ 36a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 111.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4039fef4f34c032f7b5e2475ef326d88",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }

@@ -8,6 +8,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gesamtgericht (§ 34 GOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -43,6 +44,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Präsidienkonferenz (§ 35 GOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -74,6 +76,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Vorsitzende Präsidentin, Vorsitzender Präsident (§ 36 GOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,6 +110,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Verwaltungschefin, Verwaltungschef / Erste Gerichtschreiberin, Erster Gerichtsschreiber",
       "bloecke": [
         {
           "absatz": "1",
@@ -151,13 +155,17 @@
               "text": "betreut und führt die Gerichtsschreiberinnen und Gerichtsschreiber in fachlicher und organisatorischer Hinsicht."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "Sie oder er hat beratende Stimme an der Konferenz des Präsidiums und an den Sitzungen des Gesamtgerichts."
         }
       ],
       "stand": "2024-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.250",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3df68b5c304bc5225d1d1953e473003b",
-      "sha": "d0f787a8b975f757b5081d2607bad48e07ac708e992caea24409d1a2fa50e5c8"
+      "sha": "5869f3258948d82a0f05391231d51f1280ca1cc0d9dffabc6b6f90e7dc914e01"
     },
     {
       "id": "kanton/BS/154.250/art_5",
@@ -166,6 +174,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Die Gerichtsschreiberinnen und Gerichtsschreiber (§ 47 GOG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -203,6 +212,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Spruchköprer",
       "bloecke": [
         {
           "absatz": "1",
@@ -230,6 +240,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Geschäftsverteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -253,6 +264,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Zeichnungsberechtigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -272,6 +284,7 @@
       "erlass": "Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen (154.250)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Ordentliche Kosten",
       "bloecke": [
         {
           "absatz": "1",

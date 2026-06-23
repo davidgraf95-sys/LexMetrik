@@ -17,13 +17,18 @@
  */
 import { readFileSync, writeFileSync } from 'fs';
 import { fetchMitWiederholung } from './netz-retry.ts';
+// Single Source of Truth (§5): exakt dieselbe präfix-bewahrende Normalisierung
+// wie der Lookup in der UI (src/lib/normtext/systematik.ts:sachgruppe).
+import { systematikSchluessel } from '../../src/lib/normtext/systematik.ts';
 
 interface Sachgebiet { nummer: string; name: string; }
 /** Pro Kanton: Top-Level-Sachgebiete mit ihren Untergruppen (2. Ebene) für die
- *  Anzeige + Index jedes Baum-Knotens (nur Ziffern) → [Top-Nummer, Untergruppe-
- *  Nummer] seiner Vorfahren. So ordnet die UI einen Erlass über Längster-Präfix-
- *  Match seinem Sachgebiet UND seiner Untergruppe zu — korrekt auch bei AI
- *  (Hunderter), UR (10/20/…), ZG (+10). */
+ *  Anzeige + Index jedes Baum-Knotens (präfix-bewahrender Schlüssel via
+ *  systematikSchluessel: reine Ziffern «640100» bzw. Namespace «BaB#152110») →
+ *  [Top-Nummer, Untergruppe-Nummer] seiner Vorfahren. So ordnet die UI einen
+ *  Erlass über Längster-Präfix-Match seinem Sachgebiet UND seiner Untergruppe zu
+ *  — korrekt auch bei AI (Hunderter), UR (10/20/…), ZG (+10) UND beim
+ *  Gemeinderecht (BaB/BeB/BeE/RiB/RiE), das nie an numerische Wurzeln kippt. */
 interface KantonSystematik {
   roots: Array<Sachgebiet & { kinder: Sachgebiet[] }>;
   index: Record<string, [string, string]>;
@@ -36,8 +41,6 @@ type ApiKnoten = {
     children?: ApiKnoten[];
   };
 };
-
-const nurZiffern = (s: string): string => s.replace(/\D/g, '');
 
 async function holeSystematik(host: string): Promise<KantonSystematik> {
   const res = await fetchMitWiederholung(
@@ -59,8 +62,8 @@ async function holeSystematik(host: string): Promise<KantonSystematik> {
       // Untergruppe = der Knoten der 2. Ebene. parentSub leer → ich BIN die 2.
       // Ebene (meine eigene Nummer); sonst erbe ich die Untergruppe meines Vorfahren.
       const meinSub = parentSub || String(c.systematic_number);
-      const d = nurZiffern(String(c.systematic_number));
-      if (d && !(d in index)) index[d] = [top, meinSub];
+      const schluessel = systematikSchluessel(String(c.systematic_number));
+      if (schluessel && !(schluessel in index)) index[schluessel] = [top, meinSub];
       if (Array.isArray(c.children)) lauf(c.children, top, meinSub);
     }
   };
@@ -73,8 +76,8 @@ async function holeSystematik(host: string): Promise<KantonSystematik> {
       .filter((cc): cc is NonNullable<typeof cc> => !!cc?.systematic_number && !!cc?.name)
       .map((cc) => ({ nummer: String(cc.systematic_number), name: String(cc.name).trim() }));
     roots.push({ nummer, name: String(c.name).trim(), kinder });
-    const d = nurZiffern(nummer);
-    if (d) index[d] = [nummer, ''];
+    const schluessel = systematikSchluessel(nummer);
+    if (schluessel) index[schluessel] = [nummer, ''];
     if (Array.isArray(c.children)) lauf(c.children, nummer, '');
   }
   return { roots, index };

@@ -8,6 +8,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gegenstand und Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -31,6 +32,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Auftrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -64,6 +66,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Aufgaben des Schulrats",
       "bloecke": [
         {
           "absatz": "1",
@@ -113,6 +116,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Vermittlungsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,6 +174,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Aufgaben der Präsidentin bzw. des Präsidenten",
       "bloecke": [
         {
           "absatz": "1",
@@ -207,6 +212,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Aufgaben der Präsidentin bzw. des Präsidenten und der einzelnen schulexternen Mitglieder des Schulrats",
       "bloecke": [
         {
           "absatz": "1",
@@ -234,6 +240,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Anspruch auf Informationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -253,6 +260,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Pflichten",
       "bloecke": [
         {
           "absatz": "1",
@@ -280,6 +288,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Einberufung",
       "bloecke": [
         {
           "absatz": "1",
@@ -303,6 +312,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Ort und Zeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -326,6 +336,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Einladung",
       "bloecke": [
         {
           "absatz": "1",
@@ -345,6 +356,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Anwesenheits- und Beschlussquorum, Ausstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -372,6 +384,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Leitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -391,6 +404,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -414,6 +428,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Berichterstattung",
       "bloecke": [
         {
           "absatz": "1",
@@ -437,6 +452,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Zusammensetzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -457,6 +473,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Das Präsidium muss eine schulexterne Person sein."
+        },
+        {
           "absatz": "2",
           "text": "In den Sekundarschulen kann der Schulrat mit zwei Vertretungen der Schülerschaft aus zwei zusätzlichen schulinternen Mitgliedern bestehen."
         },
@@ -469,7 +489,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/411.150",
       "abgerufen": "2026-06-23",
       "fassungsToken": "644851241542f5f37609809ac526453c",
-      "sha": "be71a86710fb0a21c97b656ece64f69843dd5794f611c8ca1672f777ea157ec3"
+      "sha": "cb7dbc93675b98c99decb6a6c8cca4c44efcefa35eee5d3e6c0b3b06dd706fdd"
     },
     {
       "id": "kanton/BS/411.150/art_16_a",
@@ -478,6 +498,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "16_a",
       "artikelLabel": "§ 16a",
+      "titel": "Unvereinbarkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -501,6 +522,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Wahl der Präsidentin bzw. des Präsidenten",
       "bloecke": [
         {
           "absatz": "1",
@@ -546,6 +568,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Wahl der schulexternen Mitglieder",
       "bloecke": [
         {
           "absatz": "1",
@@ -575,6 +598,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Bestimmung und Wahl der schulinternen Mitglieder",
       "bloecke": [
         {
           "absatz": "1",
@@ -606,6 +630,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Entlassung und Nichtwiederwahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -629,6 +654,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Entschädigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -656,6 +682,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Administrative Unterstützung durch das Schulsekretariat",
       "bloecke": [
         {
           "absatz": "1",
@@ -675,6 +702,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Teilnahme an der Schulkonferenz",
       "bloecke": [
         {
           "absatz": "1",
@@ -694,6 +722,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Semestertreffen der Schulratspräsidien",
       "bloecke": [
         {
           "absatz": "1",
@@ -713,6 +742,7 @@
       "erlass": "Verordnung betreffend die Tätigkeit der Schulräte der Volksschulen (411.150)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Volksschulleitung und zuständige Stelle der Gemeinden",
       "bloecke": [
         {
           "absatz": "1",

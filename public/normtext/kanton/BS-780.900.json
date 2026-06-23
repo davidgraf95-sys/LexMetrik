@@ -8,6 +8,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Gebührenpflichtige Tätigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -64,6 +66,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Kontrolle bestehender Anlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -87,6 +90,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Störfälle",
       "bloecke": [
         {
           "absatz": "1",
@@ -110,6 +114,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Gebührenansätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -134,6 +139,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Zusätzlich zu diesen Kosten werden – entsprechend dem Aufwand – Computerstunden sowie ausserordentliche Aufwendungen für Messungen usw. verrechnet."
+        },
+        {
           "absatz": "3",
           "text": "Kanzleigebühren werden gemäss dem kantonalen Verwaltungsgebührengesetz und der dazugehörigen Verordnung erhoben."
         },
@@ -146,7 +155,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.900",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a9329a9d059816ddd0b215167fbd4173",
-      "sha": "6b8e5ca9439d644853b8374a4fe9f7564b6ca9f20ac6ad4d9cb15e72261047ad"
+      "sha": "2f19cb8ecf852dae714aaed818dfdf1729825a65a8cd93d33a52cb706c2c00e3"
     },
     {
       "id": "kanton/BS/780.900/art_6",
@@ -155,6 +164,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Gebührenfreiheit",
       "bloecke": [
         {
           "absatz": "1",
@@ -182,6 +192,7 @@
       "erlass": "Verordnung über die Gebühren des Kantonalen Laboratoriums im Bereich der Umweltschutzgesetzgebung (780.900)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Besondere Kategorien von Beschäftigten",
       "bloecke": [
         {
           "absatz": "1",
@@ -41,6 +42,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Stelleneinreihung",
       "bloecke": [
         {
           "absatz": "1",
@@ -68,6 +70,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Änderung oder Schaffung einer Musterfunktion",
       "bloecke": [
         {
           "absatz": "1",
@@ -93,12 +96,32 @@
       "sha": "d29e4262559a31874b1d0b21bdc3a0e52227a834cdd1c1009fd37eeea9c184fd"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_4_a",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "4_a",
       "artikelLabel": "§ 4a",
+      "titel": "Rechtsmittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -122,6 +145,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Musterfunktion und Festlegung des Lohnbereichs",
       "bloecke": [
         {
           "absatz": "1",
@@ -191,6 +215,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Einreihungsschema und Verzeichnis der Musterfunktionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -214,6 +239,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Stellvertretungsaufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -233,6 +259,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -256,6 +283,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Höhe",
       "bloecke": [
         {
           "absatz": "1",
@@ -291,6 +319,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Anrechnung von zusätzlicher Erfahrung und Ausbildung",
       "bloecke": [
         {
           "absatz": "1",
@@ -318,6 +347,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Lohnerhöhungen aufgrund von Beförderungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -337,6 +367,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Lohnbestimmung bei Funktionswechsel",
       "bloecke": [
         {
           "absatz": "1",
@@ -360,6 +391,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -379,6 +411,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "13_a",
       "artikelLabel": "§ 13a",
+      "titel": "Berechnung der ausserordentlichen generellen Lohnanpassung",
       "bloecke": [
         {
           "absatz": "1",
@@ -408,6 +441,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -431,6 +465,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Beurteilungsgespräche",
       "bloecke": [
         {
           "absatz": "1",
@@ -450,6 +485,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Mitteilung",
       "bloecke": [
         {
           "absatz": "1",
@@ -463,12 +499,72 @@
       "sha": "39899d30e3b44fd26472a1885e51e011906980a51af3a1c77fe11433e8b8c09d"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 164.110/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "titel": "Zuständigkeit",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/BaB 164.110/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "titel": "Rechtsmittel",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_20",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Anwendungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -524,6 +620,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Arten",
       "bloecke": [
         {
           "absatz": "1",
@@ -561,6 +658,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Form der Ausrichtung",
       "bloecke": [
         {
           "absatz": "1",
@@ -580,6 +678,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Verfahren für die Ausrichtung von Spontanprämien",
       "bloecke": [
         {
           "absatz": "1",
@@ -603,6 +702,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "23_a",
       "artikelLabel": "§ 23a",
+      "titel": "Verfahren für die Ausrichtung von Anerkennungsprämien",
       "bloecke": [
         {
           "absatz": "1",
@@ -626,6 +726,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Ansätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -645,6 +746,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Anpassung der Ansätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -668,6 +770,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Anwendbare Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -687,6 +790,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Teilzeitbeschäftigte",
       "bloecke": [
         {
           "absatz": "1",
@@ -710,6 +814,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Anspruch",
       "bloecke": [
         {
           "absatz": "1",
@@ -747,6 +852,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Höhe",
       "bloecke": [
         {
           "absatz": "1",
@@ -766,6 +872,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Anrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -789,6 +896,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Teilzeitbeschäftigte",
       "bloecke": [
         {
           "absatz": "1",
@@ -808,6 +916,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Unterstützungsbedürftige im gleichen Haushalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -831,6 +940,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Abweichende Arbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -848,12 +958,33 @@
       "sha": "208f9cebef9709060e440dc3ef724e2b663d5a3fe8e40ecf6e137440e33067cd"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "titel": "Sonn- und Feiertagsdienstzulage",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_35",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Pikettdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -877,6 +1008,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Präsenzdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -898,12 +1030,33 @@
       "sha": "90f321989b907366d41a89b9b51e5517db074bd815ac134167924953a5b28aaa"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "titel": "Umwandlung von Geldzulagen in Zeitzulagen",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_38",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Nachtbonus",
       "bloecke": [
         {
           "absatz": "1",
@@ -927,6 +1080,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -946,6 +1100,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Anspruchsberechtigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -965,6 +1120,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Umfang des Anspruchs",
       "bloecke": [
         {
           "absatz": "1",
@@ -1004,6 +1160,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Verhältnis der Zulagen untereinander",
       "bloecke": [
         {
           "absatz": "1",
@@ -1025,12 +1182,32 @@
       "sha": "d4fd1ed59f4632d7dd48c9bcc863c8fcd18116a27634e82bdf611ce262d3a867"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_43",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_44",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Stellvertretungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1058,6 +1235,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Versicherung der Stellvertretungszulage",
       "bloecke": [
         {
           "absatz": "1",
@@ -1077,6 +1255,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Ausrichtung der Stellvertretungszulage",
       "bloecke": [
         {
           "absatz": "1",
@@ -1096,6 +1275,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1113,12 +1293,33 @@
       "sha": "e5d3a22a737c4c800cbee5a1c707bdc88b67c3bb536dfbc908a2a496ea82bbf4"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "titel": "Zuständigkeit",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_49",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "49",
       "artikelLabel": "§ 49",
+      "titel": "Reise- und Transportspesen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1138,6 +1339,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Geschäftsfahrten mit Privatfahrzeugen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1159,12 +1361,33 @@
       "sha": "6d2d8a5f07c242b9b2e68dc37409327da6c269d932b202134ed96bf158c689f0"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_51",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "51",
+      "artikelLabel": "§ 51",
+      "titel": "Bahnspesen",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_52",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Verpflegungs- und Übernachtungsspesen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1196,6 +1419,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1215,6 +1439,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Festlegung der Beiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1232,12 +1457,33 @@
       "sha": "ba48fc0a4acd7de7e0c9e7882f242a12aee08416ebd00d2c860c9da12c2fe2b7"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_55",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "55",
+      "artikelLabel": "§ 55",
+      "titel": "Anpassung der Beiträge",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_56",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "Verpflegung im Betrieb",
       "bloecke": [
         {
           "absatz": "1",
@@ -1257,6 +1503,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Anspruchsvoraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1280,6 +1527,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Höhe",
       "bloecke": [
         {
           "absatz": "1",
@@ -1303,6 +1551,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "59",
       "artikelLabel": "§ 59",
+      "titel": "Anrechnung der Dienstjahre",
       "bloecke": [
         {
           "absatz": "1",
@@ -1322,6 +1571,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "60",
       "artikelLabel": "§ 60",
+      "titel": "Umrechnung 13. Monatslohn in Ferien (§ 16 LO)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1339,12 +1589,33 @@
       "sha": "92ab097c8ea0d2b6c1b9fc18d9ca7ac6f9b784b67a1eb8be1d2c7d932b333e86"
     },
     {
+      "id": "kanton/BS/BaB 164.110/art_61",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
+      "artikel": "61",
+      "artikelLabel": "§ 61",
+      "titel": "Stichtag",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 164.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "67acf3b9f292d61b9a40573c31ef144e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 164.110/art_62",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "62",
       "artikelLabel": "§ 62",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1364,6 +1635,7 @@
       "erlass": "Reglement zur Lohnordnung (BaB 164.110)",
       "artikel": "63",
       "artikelLabel": "§ 63",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",

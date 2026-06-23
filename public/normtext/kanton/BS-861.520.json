@@ -5,9 +5,10 @@
       "id": "kanton/BS/861.520/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Preisgünstige Wohnungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,9 +25,10 @@
       "id": "kanton/BS/861.520/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Organisationen des gemeinnützigen Wohnungsbaus",
       "bloecke": [
         {
           "absatz": "1",
@@ -65,9 +67,10 @@
       "id": "kanton/BS/861.520/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Dachorganisationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -84,9 +87,10 @@
       "id": "kanton/BS/861.520/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Geschäftsbericht und Rechnungslegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,9 +111,10 @@
       "id": "kanton/BS/861.520/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Revisionspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,9 +135,10 @@
       "id": "kanton/BS/861.520/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Übertragung von Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -149,9 +155,10 @@
       "id": "kanton/BS/861.520/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Darlehen für Projektentwicklungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -180,9 +187,10 @@
       "id": "kanton/BS/861.520/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Bürgschaften",
       "bloecke": [
         {
           "absatz": "1",
@@ -207,9 +215,10 @@
       "id": "kanton/BS/861.520/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Abgabe von Grundstücken im Baurecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -230,9 +239,10 @@
       "id": "kanton/BS/861.520/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Auflagen für die Gewährung von Leistungen gemäss §§ 11-13 des Gesetzes",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,6 +283,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Die Nutzfläche, die innerhalb der Wohnung liegt, ist gemäss der Norm SIA 416 \"Flächen und Volumen von Gebäuden\" zu bemessen. Nicht mitgezählt werden Flächen von Räumen mit einer geringeren Raumhöhe als 1.80 Meter. Gemeinschaftsräume mit einer erweiterten Wohnnutzung werden an die Summe der Nutzflächen angerechnet."
+        },
+        {
           "absatz": "3",
           "text": "Die Empfängerinnen und Empfänger von Leistungen gemäss §§ 11-13 des Gesetzes sind überdies zu verpflichten, dass",
           "items": [
@@ -303,15 +317,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/861.520",
       "abgerufen": "2026-06-23",
       "fassungsToken": "02f3d06647d47ad0b8e1f389afea92c0",
-      "sha": "6c320d98e3eea77abaaa22046d76dfe71b0922766c3340cca3cdc1a4e63f9fea"
+      "sha": "b61fa9e54cccb914f18cee1796c826b8347273654b27794f7edee5e9c8f6b7d3"
     },
     {
       "id": "kanton/BS/861.520/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Auskunftspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -328,9 +343,10 @@
       "id": "kanton/BS/861.520/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -351,9 +367,10 @@
       "id": "kanton/BS/861.520/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Lage des Wohnraums",
       "bloecke": [
         {
           "absatz": "1",
@@ -374,9 +391,10 @@
       "id": "kanton/BS/861.520/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Art des Wohnraums",
       "bloecke": [
         {
           "absatz": "1",
@@ -405,9 +423,10 @@
       "id": "kanton/BS/861.520/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Mieterkreis",
       "bloecke": [
         {
           "absatz": "1",
@@ -428,9 +447,10 @@
       "id": "kanton/BS/861.520/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Vermietung",
       "bloecke": [
         {
           "absatz": "1",
@@ -455,9 +475,10 @@
       "id": "kanton/BS/861.520/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Untervermietung",
       "bloecke": [
         {
           "absatz": "1",
@@ -474,9 +495,10 @@
       "id": "kanton/BS/861.520/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Belegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -501,9 +523,10 @@
       "id": "kanton/BS/861.520/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Kündigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -528,9 +551,10 @@
       "id": "kanton/BS/861.520/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Ersatzangebot",
       "bloecke": [
         {
           "absatz": "1",
@@ -547,9 +571,10 @@
       "id": "kanton/BS/861.520/art_20_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "20_a",
       "artikelLabel": "§ 20a",
+      "titel": "Kompetenzstelle Soziales Wohnen",
       "bloecke": [
         {
           "absatz": "1",
@@ -596,9 +621,10 @@
       "id": "kanton/BS/861.520/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Information und Beratung",
       "bloecke": [
         {
           "absatz": "1",
@@ -615,9 +641,10 @@
       "id": "kanton/BS/861.520/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Bedarf nach einer rollstuhlgängigen Wohnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -638,9 +665,10 @@
       "id": "kanton/BS/861.520/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Wohnsitzdauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -657,9 +685,10 @@
       "id": "kanton/BS/861.520/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Wohnungsbelegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -684,9 +713,10 @@
       "id": "kanton/BS/861.520/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Berücksichtigung der Einkommens- und Vermögensverhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -715,9 +745,10 @@
       "id": "kanton/BS/861.520/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Verhältnis zu Ergänzungsleistungen und Sozialhilfe",
       "bloecke": [
         {
           "absatz": "1",
@@ -734,9 +765,10 @@
       "id": "kanton/BS/861.520/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Antragstellung, Anspruchsbeginn und Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -765,9 +797,10 @@
       "id": "kanton/BS/861.520/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Vollzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -784,9 +817,10 @@
       "id": "kanton/BS/861.520/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wohnraumförderungsverordnung, WRFV (861.520)",
+      "erlass": "Verordnung über die Wohnraumförderung, Wohnraumförderungsverordnung, WRFV (861.520)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Rechtsmittelverfahren",
       "bloecke": [
         {
           "absatz": "1",

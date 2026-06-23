@@ -8,6 +8,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Begriff",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Inhalt des Mietvertrages",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,6 +48,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Beginn und Dauer des Mietverhältnisses",
       "bloecke": [
         {
           "absatz": "1",
@@ -65,46 +68,23 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Berechnung des Mietzinses",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Grundsatz Die Mietzinse für Dienstwohnungen werden von der Immobilien Basel-Stadt – ausgehend von einem orts- und quartierüblichen Mietzins und unter Berücksichtigung eines Abzuges von 35% für Inkonvenienzen – festgelegt."
-            }
-          ]
+          "text": "a) Grundsatz Die Mietzinse für Dienstwohnungen werden von der Immobilien Basel-Stadt – ausgehend von einem orts- und quartierüblichen Mietzins und unter Berücksichtigung eines Abzuges von 35% für Inkonvenienzen – festgelegt."
         },
         {
           "absatz": "2",
-          "text": "",
-          "items": [
-            {
-              "marke": "b",
-              "text": "Reduktion des Mietzinses Wird eine Dienstwohnung unterbelegt, kann der betroffene Dienstwohnungsinhaber bzw. die betroffene Dienstwohnungsinhaberin beim zuständigen Personalchef bzw. Personalchefin eine Erhöhung des Inkonvenienzabzuges auf 40% beantragen. Eine Unterbelegung liegt vor, wenn die Gesamtzahl der Wohnräume die Gesamtzahl der Bewohner um mehr als zwei Einheiten überschreitet."
-            }
-          ]
+          "text": "b) Reduktion des Mietzinses Wird eine Dienstwohnung unterbelegt, kann der betroffene Dienstwohnungsinhaber bzw. die betroffene Dienstwohnungsinhaberin beim zuständigen Personalchef bzw. Personalchefin eine Erhöhung des Inkonvenienzabzuges auf 40% beantragen. Eine Unterbelegung liegt vor, wenn die Gesamtzahl der Wohnräume die Gesamtzahl der Bewohner um mehr als zwei Einheiten überschreitet."
         },
         {
           "absatz": "3",
-          "text": "",
-          "items": [
-            {
-              "marke": "c",
-              "text": "Reduktion des Mietzinses Übersteigt der Mietzins gemäss Abs. 1 einen Viertel des Bruttomonatslohnes gemäss Lohnklasse 9, Stufe 3 (Anh. 1 des Lohngesetzes), so wird der Mietzins durch den zuständigen Personalchef bzw. Personalchefin auf dieses Mass reduziert. Diese Mietzinslimitierung gilt nicht für Dienstwohnungsinhaber bzw. Dienstwohnungsinhaberinnen in den Lohnklassen 16 bis 28."
-            }
-          ]
+          "text": "c) Reduktion des Mietzinses Übersteigt der Mietzins gemäss Abs. 1 einen Viertel des Bruttomonatslohnes gemäss Lohnklasse 9, Stufe 3 (Anh. 1 des Lohngesetzes), so wird der Mietzins durch den zuständigen Personalchef bzw. Personalchefin auf dieses Mass reduziert. Diese Mietzinslimitierung gilt nicht für Dienstwohnungsinhaber bzw. Dienstwohnungsinhaberinnen in den Lohnklassen 16 bis 28."
         },
         {
           "absatz": "4",
-          "text": "",
-          "items": [
-            {
-              "marke": "d",
-              "text": "Überprüfung des Mietzinses Werden vom Vermieter während der Mietdauer wertvermehrende, über die ordentliche Unterhaltspflicht des Vermieters hinaus gehende Verbesserungen am Mietobjekt gemacht, so wird der Mietzins durch die Immobilien Basel-Stadt neu festgelegt."
-            }
-          ]
+          "text": "d) Überprüfung des Mietzinses Werden vom Vermieter während der Mietdauer wertvermehrende, über die ordentliche Unterhaltspflicht des Vermieters hinaus gehende Verbesserungen am Mietobjekt gemacht, so wird der Mietzins durch die Immobilien Basel-Stadt neu festgelegt."
         },
         {
           "absatz": "5",
@@ -112,20 +92,14 @@
         },
         {
           "absatz": "6",
-          "text": "",
-          "items": [
-            {
-              "marke": "e",
-              "text": "Garagen, Einstellplätze und Parkplätze Die Gebühren für Garagen, Einstellhallenplätze und offene Parkplätze richten sich nach dem Reglement betreffend Parkieren von Motorfahrzeugen der Mitarbeiterinnen und Mitarbeiter auf Staatsarealen (Parkplatz-Reglement) vom 9. Mai 1995."
-            }
-          ]
+          "text": "e) Garagen, Einstellplätze und Parkplätze Die Gebühren für Garagen, Einstellhallenplätze und offene Parkplätze richten sich nach dem Reglement betreffend Parkieren von Motorfahrzeugen der Mitarbeiterinnen und Mitarbeiter auf Staatsarealen (Parkplatz-Reglement) vom 9. Mai 1995."
         }
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/163.200",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05260474824cc72a410e4a796304a1d1",
-      "sha": "ed24899444e83c7cd395f8f7e86b7b8043773b0cff6725f0aded10b710839cc8"
+      "sha": "8c9a3b3a506c3cb65565ced20cebed860efbac03e5cadb105002147de70dd85d"
     },
     {
       "id": "kanton/BS/163.200/art_5",
@@ -134,26 +108,15 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Neben- und Betriebskosten",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Gas, Elektrizität Die Kosten für Gas und elektrische Energie gehen voll zu Lasten des Dienstwohnungsinhabers. In Fällen, wo keine Separatzähler für die Wohnung bestehen, wird eine von den zuständigen Werken berechnete Pauschalvergütung in Abzug gebracht."
-            }
-          ]
+          "text": "a) Gas, Elektrizität Die Kosten für Gas und elektrische Energie gehen voll zu Lasten des Dienstwohnungsinhabers. In Fällen, wo keine Separatzähler für die Wohnung bestehen, wird eine von den zuständigen Werken berechnete Pauschalvergütung in Abzug gebracht."
         },
         {
           "absatz": "2",
-          "text": "",
-          "items": [
-            {
-              "marke": "b",
-              "text": "Heizung Die Heizkosten hat der Dienstwohnungsinhaber bzw. die Dienstwohnungsinhaberin entsprechend dem Verbrauchsanteil zu übernehmen. Das Amt für Energie und technische Anlagen legt die Heizkosten fest."
-            }
-          ]
+          "text": "b) Heizung Die Heizkosten hat der Dienstwohnungsinhaber bzw. die Dienstwohnungsinhaberin entsprechend dem Verbrauchsanteil zu übernehmen. Das Amt für Energie und technische Anlagen legt die Heizkosten fest."
         },
         {
           "absatz": "3",
@@ -161,13 +124,7 @@
         },
         {
           "absatz": "4",
-          "text": "",
-          "items": [
-            {
-              "marke": "c",
-              "text": "Warmwasser Die Abrechnung für Warmwasser wird entsprechend der Wärmekostenverordnung durchgeführt. Bei Dienstwohnungen, die an einer neuen Verteilanlage angeschlossen sind, gehen die Kosten für Warmwasser entsprechend dem Verbrauchsanteil zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin."
-            }
-          ]
+          "text": "c) Warmwasser Die Abrechnung für Warmwasser wird entsprechend der Wärmekostenverordnung durchgeführt. Bei Dienstwohnungen, die an einer neuen Verteilanlage angeschlossen sind, gehen die Kosten für Warmwasser entsprechend dem Verbrauchsanteil zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin."
         },
         {
           "absatz": "5",
@@ -175,40 +132,22 @@
         },
         {
           "absatz": "6",
-          "text": "",
-          "items": [
-            {
-              "marke": "d",
-              "text": "Kaltwasser Im Mietzins inbegriffen ist die Wasserversorgungsgrundgebühr. Im Mietzins nicht inbegriffen sind die ARA-Gebühren und der Wasserverbrauch."
-            }
-          ]
+          "text": "d) Kaltwasser Im Mietzins inbegriffen ist die Wasserversorgungsgrundgebühr. Im Mietzins nicht inbegriffen sind die ARA-Gebühren und der Wasserverbrauch."
         },
         {
           "absatz": "7",
-          "text": "",
-          "items": [
-            {
-              "marke": "e",
-              "text": "Waschmaschine Bestehende Waschmaschinen sind im Mietzins inbegriffen. Die Kosten für den Betrieb der Waschmaschine gehen zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin. Ein Anspruch auf Einrichtung von Waschmaschinen in Dienstwohnungen besteht nicht."
-            }
-          ]
+          "text": "e) Waschmaschine Bestehende Waschmaschinen sind im Mietzins inbegriffen. Die Kosten für den Betrieb der Waschmaschine gehen zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin. Ein Anspruch auf Einrichtung von Waschmaschinen in Dienstwohnungen besteht nicht."
         },
         {
           "absatz": "8",
-          "text": "",
-          "items": [
-            {
-              "marke": "f",
-              "text": "Fernsehanschluss Bestehende Fernsehanschlüsse sind in den Mietzinsen inbegriffen. Abonnementsgebühren gehen zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin. Ein Anspruch auf Einrichtung von Fernsehanschlüssen besteht nicht. An die Kosten allfälliger hausinterner Anschlusseinrichtungen ist vom Dienstwohnungsinhaber bzw. der Dienstwohnungsinhaberin ein einmaliger Anteil von 10% zu entrichten."
-            }
-          ]
+          "text": "f) Fernsehanschluss Bestehende Fernsehanschlüsse sind in den Mietzinsen inbegriffen. Abonnementsgebühren gehen zu Lasten des Dienstwohnungsinhabers bzw. der Dienstwohnungsinhaberin. Ein Anspruch auf Einrichtung von Fernsehanschlüssen besteht nicht. An die Kosten allfälliger hausinterner Anschlusseinrichtungen ist vom Dienstwohnungsinhaber bzw. der Dienstwohnungsinhaberin ein einmaliger Anteil von 10% zu entrichten."
         }
       ],
       "stand": "2009-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/163.200",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05260474824cc72a410e4a796304a1d1",
-      "sha": "0cd083d1e5daa71d8cf0e67a7ae6ba5c9d96120146c8a403555a39be3c1088f3"
+      "sha": "d51323b5d799ad7602990e0a8c7beae8f2087e0fb333bd9f48558d7418399f08"
     },
     {
       "id": "kanton/BS/163.200/art_6",
@@ -217,6 +156,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Untermiete",
       "bloecke": [
         {
           "absatz": "1",
@@ -240,6 +180,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Tierhaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -259,6 +200,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Kleine Reparaturen",
       "bloecke": [
         {
           "absatz": "1",
@@ -278,6 +220,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Verrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -297,6 +240,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Verwaltung und Unterhalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -320,6 +264,7 @@
       "erlass": "Verordnung betreffend Dienstwohnungen (163.200)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Anpassung der Mietzinse, Gebühren und Ansätze",
       "bloecke": [
         {
           "absatz": "1",

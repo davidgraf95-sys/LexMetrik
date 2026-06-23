@@ -145,6 +145,16 @@ function ArtikelLeser({ e, erlass, basisPfad, fussnoten, fussnotenAuf, intern, m
               ))}
             </div>
           )}
+          {/* N1 (BS-Audit 23.6.2026): amtlicher Randtitel (article_title) aus dem
+              Snapshot. Nur zeigen, wenn KEINE feinere struktur-Marginalie (marg)
+              vorliegt — dann ist der article_title die einzige Randtitel-Quelle
+              (LexWork-Erlasse ohne struktur-File). «…»-Aufhebungstitel liefert der
+              Extraktor gar nicht erst (§7). */}
+          {artOffen && (!marg || marg.length === 0) && e.titel && (
+            <div className="mt-1.5 font-serif text-[0.8rem] leading-snug italic text-ink-500">
+              {e.titel}
+            </div>
+          )}
           {artOffen && (
             <div className="mt-2 flex gap-3 lg:justify-end opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
               <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-400 hover:text-brass-700" aria-label={`${zitat} kopieren`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>

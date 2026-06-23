@@ -25,6 +25,44 @@
       "sha": "b22cc55633e4f04e6e2620a8406a8b7b85ce2901572dc2ae469804894952a02b"
     },
     {
+      "id": "kanton/BS/783.400/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2001-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/783.400",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "214a7667d10ba1ead00715bb2aabbe9c",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/783.400/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2001-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/783.400",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "214a7667d10ba1ead00715bb2aabbe9c",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/783.400/art_4",
       "ebene": "kanton",
       "quelle": "BS",
@@ -76,6 +114,7 @@
       "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Weitere Schutzzone (S 3)",
       "bloecke": [
         {
           "absatz": "1",
@@ -95,6 +134,7 @@
       "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Engere Schutzzone, innerhalb der Bauzone (S 2b)",
       "bloecke": [
         {
           "absatz": "1",
@@ -114,6 +154,7 @@
       "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Engere Schutzzone, ausserhalb der Bauzone (S 2a)",
       "bloecke": [
         {
           "absatz": "1",
@@ -137,6 +178,7 @@
       "erlass": "Gesetz über Grundwasserschutzzonen (783.400)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Fassungs- und Anreicherungsbereich (S 1)",
       "bloecke": [
         {
           "absatz": "1",

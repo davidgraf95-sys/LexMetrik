@@ -5,9 +5,10 @@
       "id": "kanton/BS/442.300/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Zweck",
       "bloecke": [
         {
           "absatz": "1",
@@ -28,9 +29,10 @@
       "id": "kanton/BS/442.300/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Subsidiarität zu Mitträgervereinbarungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -47,9 +49,10 @@
       "id": "kanton/BS/442.300/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "titel": "Grundsätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -74,9 +77,10 @@
       "id": "kanton/BS/442.300/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "titel": "Beitragsberechtigte Studienangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -123,9 +127,10 @@
       "id": "kanton/BS/442.300/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Beitragsberechtigte Studienangebote privater Institutionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -164,9 +169,10 @@
       "id": "kanton/BS/442.300/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Datenbank für beitragsberechtigte Studienangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -187,9 +193,10 @@
       "id": "kanton/BS/442.300/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Studierende",
       "bloecke": [
         {
           "absatz": "1",
@@ -214,9 +221,10 @@
       "id": "kanton/BS/442.300/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "titel": "Bemessungsgrundlage",
       "bloecke": [
         {
           "absatz": "1",
@@ -237,9 +245,10 @@
       "id": "kanton/BS/442.300/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "titel": "Grundlagen für die Festlegung der interkantonalen Beiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -256,6 +265,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Die Kosten werden auf der Grundlage der Statistik der Hochschulfinanzen des Bundesamtes für Statistik BFS ermittelt. Die Infrastrukturkosten werden nicht angerechnet."
+        },
+        {
           "absatz": "2",
           "text": "Die Definition der Fachbereiche und deren Zuordnung zu einer Kostengruppe erfolgt im Anhang zur Vereinbarung."
         },
@@ -268,15 +281,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/442.300",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e5f0298f9ab47c1cf4eb99baffd120fa",
-      "sha": "d82a2c73332384f2e8b356b770fd907c5c4e1518e542d89a6bf467dd4ad8a48d"
+      "sha": "cceaf2bb98e519ae581c49694451ef53cac79f92396bfaa19a55f96eed718aa8"
     },
     {
       "id": "kanton/BS/442.300/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "titel": "Höhe der interkantonalen Beiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -301,9 +315,10 @@
       "id": "kanton/BS/442.300/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "titel": "Dauer der Beitragspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -328,9 +343,10 @@
       "id": "kanton/BS/442.300/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "titel": "Zahlungspflichtiger Kanton",
       "bloecke": [
         {
           "absatz": "1",
@@ -351,9 +367,10 @@
       "id": "kanton/BS/442.300/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "titel": "Studiengebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -370,9 +387,10 @@
       "id": "kanton/BS/442.300/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "titel": "Gleichbehandlung bei der Zulassung",
       "bloecke": [
         {
           "absatz": "1",
@@ -389,9 +407,10 @@
       "id": "kanton/BS/442.300/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "titel": "Behandlung von Studierenden aus Nichtvereinbarungskantonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -416,9 +435,10 @@
       "id": "kanton/BS/442.300/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "titel": "Die Konferenz der Vereinbarungskantone",
       "bloecke": [
         {
           "absatz": "1",
@@ -489,9 +509,10 @@
       "id": "kanton/BS/442.300/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "titel": "Kommission IUV",
       "bloecke": [
         {
           "absatz": "1",
@@ -538,9 +559,10 @@
       "id": "kanton/BS/442.300/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "titel": "Geschäftsstelle",
       "bloecke": [
         {
           "absatz": "1",
@@ -561,9 +583,10 @@
       "id": "kanton/BS/442.300/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "titel": "Vollzugskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -580,9 +603,10 @@
       "id": "kanton/BS/442.300/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "titel": "Streitbeilegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -603,9 +627,10 @@
       "id": "kanton/BS/442.300/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "21",
       "artikelLabel": "Art. 21",
+      "titel": "Beitritt",
       "bloecke": [
         {
           "absatz": "1",
@@ -626,9 +651,10 @@
       "id": "kanton/BS/442.300/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "22",
       "artikelLabel": "Art. 22",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",
@@ -649,9 +675,10 @@
       "id": "kanton/BS/442.300/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "23",
       "artikelLabel": "Art. 23",
+      "titel": "Kündigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -668,9 +695,10 @@
       "id": "kanton/BS/442.300/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "24",
       "artikelLabel": "Art. 24",
+      "titel": "Weiterbestehen der Verpflichtungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -687,9 +715,10 @@
       "id": "kanton/BS/442.300/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "25",
       "artikelLabel": "Art. 25",
+      "titel": "Fürstentum Liechtenstein",
       "bloecke": [
         {
           "absatz": "1",
@@ -706,9 +735,10 @@
       "id": "kanton/BS/442.300/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "26",
       "artikelLabel": "Art. 26",
+      "titel": "Übergangsrecht",
       "bloecke": [
         {
           "absatz": "1",
@@ -733,9 +763,10 @@
       "id": "kanton/BS/442.300/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Interkantonale Universitätsvereinbarung, IUV (442.300)",
+      "erlass": "Interkantonale Vereinbarung über die Beiträge an die Ausbildungskosten von universitären Hochschulen, Interkantonale Universitätsvereinbarung, IUV (442.300)",
       "artikel": "27",
       "artikelLabel": "Art. 27",
+      "titel": "Berechnung der Beiträge im Übergang von der IUV 1997 auf die IUV 2019",
       "bloecke": [
         {
           "absatz": "1",

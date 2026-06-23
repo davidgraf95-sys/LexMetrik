@@ -8,6 +8,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Einladung; Tagesordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Präsenz",
       "bloecke": [
         {
           "absatz": "1",
@@ -54,6 +56,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Versand der Berichte",
       "bloecke": [
         {
           "absatz": "1",
@@ -73,6 +76,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Zuziehung Aussenstehender",
       "bloecke": [
         {
           "absatz": "1",
@@ -92,6 +96,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -137,6 +142,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Entschädigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -172,6 +178,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "6_a",
       "artikelLabel": "§ 6a",
+      "titel": "Offenlegung der Interessenbindungen, Umfang",
       "bloecke": [
         {
           "absatz": "1",
@@ -209,6 +216,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Behandlung der Geschäfte",
       "bloecke": [
         {
           "absatz": "1",
@@ -228,6 +236,7 @@
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Protokoll",
       "bloecke": [
         {
           "absatz": "1",
@@ -271,12 +280,32 @@
       "sha": "d7ca3cf963d54aa6b2439d3cbe946f8f68a84179bcc2d10bcdd5c00818ea22c7"
     },
     {
+      "id": "kanton/BS/BaB 153.110/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 153.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "cb702c0bb977068f929f269b07940362",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 153.110/art_10",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Entschädigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -288,6 +317,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "cb702c0bb977068f929f269b07940362",
       "sha": "bad07af2b847e0c9b9dc657794eddd833b57872fef99be171c773dbe8a14ee26"
+    },
+    {
+      "id": "kanton/BS/BaB 153.110/art_10_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ausführungsbestimmungen zur Geschäftsordnung des Bürgerrates der Stadt Basel (BaB 153.110)",
+      "artikel": "10_a",
+      "artikelLabel": "§ 10a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 153.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "cb702c0bb977068f929f269b07940362",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }

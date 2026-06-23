@@ -40,6 +40,14 @@ export interface LexArtikel {
     /** Stufe 2: Mehrspalten-Tabelle (NW/BS/SO/VS/ZG/TG ·/—-Text). */
     mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>;
+  /**
+   * N1 — amtlicher Randtitel (Sachtitel) des Artikels aus
+   * <div class='article_title'><span class='title_text'>…</span></div>,
+   * fussnoten-bereinigt. Fehlt der Titel oder ist er nur «…»/leer (aufgehobene,
+   * umnummerierte Artikel), bleibt das Feld undefined — wir fabrizieren keinen
+   * Randtitel (§7). Wird in der Lesesicht als Randtitel angezeigt.
+   */
+  titel?: string;
 }
 
 export interface LexWorkErgebnis {
@@ -132,7 +140,15 @@ export function extrahiereAlleLexWorkArtikel(xhtml: string): {
       );
     if (token in artikel) continue; // erster Treffer gewinnt (stabil)
     const parsed = parseSegment(segment);
-    if (parsed.bloecke.length === 0) continue;
+    // S1 (BS-Audit 23.6.2026) — aufgehobene, aber UMNUMMERIERTE Artikel haben einen
+    // Artikel-Header (Nummer + «…»-Titel), aber KEIN paragraph/enumeration-Segment
+    // → parseSegment liefert bloecke=[]. Früher wurde der Eintrag hier verworfen,
+    // wodurch die Nummerierung riss und der Artikel komplett verschwand (410.100
+    // §6–§30, 153.100 §53). Statt droppen einen Eintrag mit EINEM leeren Block
+    // emittieren — die Lesesicht (ArtikelBody) rendert leere Blöcke bereits als
+    // gedämpftes «aufgehoben». KEINEN Text «Aufgehoben.» fabrizieren (§7: zweite
+    // Wahrheit; der Quell-Body ist tatsächlich leer).
+    if (parsed.bloecke.length === 0) parsed.bloecke.push({ absatz: null, text: '' });
     artikel[token] = parsed;
     // Label aus Designator + roher Nummer (ohne Unterstrich-Normalisierung):
     // «§ 1a», «Art. 335bis» — wie die Quelle die Nummer schreibt.
@@ -177,6 +193,11 @@ export function extrahiereLexWorkArtikel(
 //   zerschneiden). Klammer-Form «a) », «b) » → Buchstaben-Unterpunkt.
 const INLINE_MARKE = /^\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)\.\s+|^\s*([a-z](?:bis|ter|quater|quinquies)?)\)\s+/;
 
+/** Wortzahl eines bereinigten Strings (für die Zwischentitel-Heuristik S4). */
+function wortzahl(s: string): number {
+  return s.trim() === '' ? 0 : s.trim().split(/\s+/).length;
+}
+
 /**
  * Zerlegt einen Absatz mit mehreren text_content-Spans in Einleitung + items,
  * wenn die Spans eine INLINE-Aufzählung bilden (BS 292.400 §11-Stil:
@@ -186,11 +207,70 @@ const INLINE_MARKE = /^\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)\.\s+|^\s*([a-
  *
  * Hat KEIN Span eine Marke, gibt es keine Aufzählung → items leer, der ganze
  * Absatztext steht in `text` (Normalfall einfacher Absätze).
+ *
+ * S4 (BS-Audit 23.6.2026) — ABSATZ-ZWISCHENTITEL nicht als lit. fehldeuten:
+ * In 834.410 §8a sind Abs. 1/2/3 je EIN paragraph-Block, dessen ERSTER Span ein
+ * kurzer markierter Sachtitel ist («a) Spital», «b) Pflegeheim», «c) Beitragshöhe»)
+ * und dessen FOLGE-Spans der eigentliche (markenlose) Normtext sind. Das ist KEINE
+ * Buchstaben-Aufzählung, sondern eine absatz-interne Zwischenüberschrift. Kriterium
+ * (robust, NICHT die reine ≥2-Marken-Schwelle — die heilt §8a Abs. 1/2 mit nur EINER
+ * Marke nicht): GENAU EINE Marke, am ersten Span, deren Resttext kurz ist (≤4 Wörter,
+ * ein Label), gefolgt von mindestens einem markenlosen Span → der markierte Span ist
+ * ein Zwischentitel und gehört ZUM Absatztext (Marker bleibt verbatim erhalten, §7),
+ * es entsteht kein lit.-item. Echte Inline-Aufzählungen (≥2 Marken, BS §11) und
+ * echte Einzel-Listen (lit. über <table class='enumeration_item'>, eigener Pfad)
+ * sind nicht betroffen.
  */
 function spaltInline(spans: string[]): {
   text: string;
   items: Array<{ marke: string; text: string }>;
 } {
+  // Marken-Familie: 'd' = Ziffern-Punkt («1.»), 'a' = Buchstaben-Klammer («a)»).
+  const familie = (s: string): 'd' | 'a' | null => {
+    const m = s.match(INLINE_MARKE);
+    if (!m) return null;
+    return m[1] != null ? 'd' : 'a'; // m[1]=Ziffer, m[2]=Buchstabe
+  };
+  const familien = spans.map(familie);
+
+  // S4 (Fall A) — genau eine Marke insgesamt, am ersten Span, kurzer Label-Resttext,
+  // danach markenloser Langtext: «a) Spital» / «b) Pflegeheim» (834.410 §8a Abs. 1/2).
+  // Reiner Zwischentitel-Absatz, KEINE Aufzählung.
+  const markenIdx = familien.map((f, i) => (f ? i : -1)).filter((i) => i >= 0);
+  if (
+    markenIdx.length === 1 &&
+    markenIdx[0] === 0 &&
+    spans.length > 1 &&
+    wortzahl(spans[0].replace(INLINE_MARKE, '')) <= 4
+  ) {
+    return { text: spans.map((s) => s.trim()).filter(Boolean).join(' ').trim(), items: [] };
+  }
+
+  // S4 (Fall B) — der ERSTE Span trägt eine kurze Label-Marke EINER Familie, deren
+  // Marke im Block sonst NICHT wiederkehrt, während die FOLGENDEN Marken einer
+  // ANDEREN Familie eine echte Aufzählung bilden: «c) Beitragshöhe» gefolgt von
+  // «1.», «2.», … (834.410 §8a Abs. 3). Der einsame Buchstaben-Kopf ist ein
+  // Zwischentitel und gehört in den Einleitungstext, NICHT als lit.-item — die
+  // Ziffern-Aufzählung bleibt erhalten. Schützt §11 (BS 292.400): dort gehört «1.»
+  // zur Ziffern-Familie, die mehrfach vorkommt → kein Peel.
+  const ersteFam = familien[0];
+  if (
+    ersteFam &&
+    spans.length > 1 &&
+    wortzahl(spans[0].replace(INLINE_MARKE, '')) <= 4 &&
+    // erste Marke ist die EINZIGE ihrer Familie …
+    familien.filter((f) => f === ersteFam).length === 1 &&
+    // … und es gibt mindestens eine Marke einer ANDEREN Familie danach.
+    familien.slice(1).some((f) => f != null && f !== ersteFam)
+  ) {
+    const zwischentitel = spans[0].trim();
+    const rest = spaltInline(spans.slice(1));
+    return {
+      text: [zwischentitel, rest.text].filter(Boolean).join(' ').trim(),
+      items: rest.items,
+    };
+  }
+
   const intro: string[] = [];
   const items: Array<{ marke: string; text: string }> = [];
   for (const roh of spans) {
@@ -266,8 +346,14 @@ function parseSegment(segment: string): LexArtikel {
   // paragraph-Blöcke (bis zum schliessenden </p></div>, das den GANZEN Absatz
   // inkl. mehrerer <p> umschliesst), enumeration_item-Tabellen und
   // enumeration_tabular-Gebührentabellen in Dokumentreihenfolge — alles Geschwister.
+  // WICHTIG (S2-Reihenfolge): die LEERE paragraph_post-Form
+  // «<div class='paragraph_post'></div>» MUSS als eigene (verworfene) Alternative
+  // ZUERST stehen. Sonst würde die nachfolgende, inhaltstragende paragraph_post-
+  // Alternative mit ihrem lazy [\s\S]*? über die leere Hülle hinaus bis zum </p></div>
+  // des FOLGENDEN echten Absatzes laufen und diesen verschlucken (834.410 §8a:
+  // leere _post stehen zwischen Abs. 1/2/3 — sonst verloren Abs. 2/3 ihre Nummer).
   for (const m of segment.matchAll(
-    /<div\s+class='paragraph'>([\s\S]*?)<\/p>\s*<\/div>|<table\s+class='enumeration_item'>([\s\S]*?)<\/table>|<table\s+class='enumeration_tabular'>([\s\S]*?)<\/table>/gi,
+    /<div\s+class='paragraph_post'>\s*<\/div>|<div\s+class='paragraph'>([\s\S]*?)<\/p>\s*<\/div>|<table\s+class='enumeration_item'>([\s\S]*?)<\/table>|<table\s+class='enumeration_tabular'>([\s\S]*?)<\/table>|<div\s+class='paragraph_post'>([\s\S]*?)<\/p>\s*<\/div>/gi,
   )) {
     if (m[1] !== undefined) {
       // paragraph: Nummer aus erstem .number-Span; ALLE text_content-Spans lesen
@@ -311,7 +397,14 @@ function parseSegment(segment: string): LexArtikel {
         .map((c) => bereinige(c[2]))
         .filter(Boolean);
       const text = textZellen.join(' ').trim();
-      if (marke && text) {
+      // S3 (BS-Audit 23.6.2026) — AUFGEHOBENE lit.-Buchstaben behalten: hat ein
+      // enumeration_item eine Marke, aber leeren Body (640.100 §35 lit. g, 832.710
+      // §14 lit. b: aufgehobene Buchstaben mit «&nbsp;» als Zelle), wurde das item
+      // früher (if marke && text) komplett verworfen → Lücke in der lit.-Reihe
+      // (a,b,c,d,e,f,h ohne g). Jetzt: bei vorhandener Marke das item MIT leerem
+      // Text behalten (Marke bleibt sichtbar; KEIN fabrizierter «Aufgehoben.»-Text,
+      // §7 — der Body ist tatsächlich leer; die Lesesicht zeigt leere Items gedämpft).
+      if (marke) {
         const item = { marke, text };
         if (bloecke.length > 0) {
           const last = bloecke[bloecke.length - 1];
@@ -335,6 +428,31 @@ function parseSegment(segment: string): LexArtikel {
           bloecke.push({ absatz: null, text: tabelleText });
         }
       }
+    } else if (m[4] !== undefined) {
+      // S2 (BS-Audit 23.6.2026) — paragraph_post / text_content_post: LexWork
+      // hängt substantiellen Normtext als FORTSETZUNG hinter eine Tabelle/einen
+      // Absatz (834.410 §8a: Ziff. 2–6 mit Vermögensgrenze Fr. 1'000'000, 360
+      // Pflegetage, ausserkantonal-Klausel). Früher matchte parseSegment nur
+      // paragraph/enumeration_item/enumeration_tabular → der gesamte _post-Inhalt
+      // ging verloren. Jetzt: die text_content_post-Spans als Folgeabsatz lesen
+      // (gleiche INLINE-Aufzählungslogik wie paragraph, da die _post-Ziffern die
+      // Aufzählung des vorangehenden Absatzes fortsetzen). Leere paragraph_post
+      // («<div class='paragraph_post'></div>») matchen mangels </p> gar nicht.
+      const inner = m[4];
+      const spans = [
+        ...inner.matchAll(/<span\s+class='text_content_post'>([\s\S]*?)<\/span>/gi),
+      ].map((s) => bereinige(s[1]));
+      // Fallback: kein text_content_post-Span → ganzer Inhalt als Text.
+      if (spans.length === 0) {
+        const text = bereinige(inner);
+        if (text) bloecke.push({ absatz: null, text });
+      } else {
+        const { text, items } = spaltInline(spans);
+        const block: LexArtikel['bloecke'][number] = { absatz: null, text };
+        if (items.length > 0) block.items = items;
+        // Nur emittieren, wenn echter Inhalt entstand (kein Leer-Block).
+        if (block.text || (block.items && block.items.length > 0)) bloecke.push(block);
+      }
     }
   }
 
@@ -343,7 +461,29 @@ function parseSegment(segment: string): LexArtikel {
   // Blöcke bleiben byte-gleich. Einleitungssatz wird im text-Feld bewahrt.
   reichereMehrspaltig(bloecke);
 
-  return { bloecke };
+  // N1 (BS-Audit 23.6.2026) — Randtitel (article_title) lesen. Der Sachtitel sitzt
+  // in <div class='article_title'><span class='title_text'>…</span></div>; nur das
+  // erste article_title des Segments (= das des Artikelkopfs) wird gelesen, nicht
+  // spätere title-Blöcke (Abschnittsüberschriften level_N). bereinige() entfernt
+  // Fussnoten-Anker (153.100 §53 «Änderung anderer Gesetze[4]»). «…»/leere Titel
+  // (aufgehobene, umnummerierte Artikel: «&hellip;» bzw. «&nbsp;») ergeben nach
+  // bereinige() '' bzw. '…' → KEIN Randtitel (§7: nichts fabrizieren).
+  const titelBlock = segment.match(
+    /<div\s+class='article_title'>([\s\S]*?)<\/div>/i,
+  );
+  let titel: string | undefined;
+  if (titelBlock) {
+    const tt = titelBlock[1].match(
+      /<span\s+class='title_text'>([\s\S]*?)<\/span>/i,
+    );
+    const roh = bereinige(tt ? tt[1] : titelBlock[1]);
+    // '…' (aus &hellip;) ist der Aufhebungs-Platzhalter, kein Sachtitel.
+    if (roh && roh !== '…' && roh !== '...') titel = roh;
+  }
+
+  const ergebnis: LexArtikel = { bloecke };
+  if (titel) ergebnis.titel = titel;
+  return ergebnis;
 }
 
 /**

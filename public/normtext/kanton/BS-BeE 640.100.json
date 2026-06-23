@@ -8,6 +8,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zweck",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Anwendbares Recht",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,6 +48,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Steuerarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -79,6 +82,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Steuerpflicht und Bemessungsgrundlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -102,6 +106,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Steuergrundlage und Steuerfuss",
       "bloecke": [
         {
           "absatz": "1",
@@ -125,6 +130,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Behörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,6 +176,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Steuererhebung",
       "bloecke": [
         {
           "absatz": "1",
@@ -191,12 +198,32 @@
       "sha": "bc9b54365f4d1bbe27622575fcdc4abc70032dc91f105306629c3b1ceb8ee9a6"
     },
     {
+      "id": "kanton/BS/BeE 640.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2019-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BeE 640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f1a0b0c35a382090b3a2c1f93bd84a36",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BeE 640.100/art_9",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Fälligkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -220,6 +247,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Zinsausgleich",
       "bloecke": [
         {
           "absatz": "1",
@@ -247,6 +275,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Einsprache",
       "bloecke": [
         {
           "absatz": "1",
@@ -278,6 +307,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Rekurs",
       "bloecke": [
         {
           "absatz": "1",
@@ -305,6 +335,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Übergangsbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -354,6 +385,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "13_a",
       "artikelLabel": "§ 13a",
+      "titel": "Übergangsbestimmung zur Änderung vom 11. Dezember 2018",
       "bloecke": [
         {
           "absatz": "1",
@@ -373,6 +405,7 @@
       "erlass": "Steuerordnung der Gemeinde Bettingen (BeE 640.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Inkraftsetzung",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Vollzugsbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Information",
       "bloecke": [
         {
           "absatz": "1",
@@ -58,6 +60,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Aufsichts- und Kontrollbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -81,6 +84,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Bewilligungsgesuche",
       "bloecke": [
         {
           "absatz": "1",
@@ -104,6 +108,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Änderung der Bewilligungsverhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -131,6 +136,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Ausnahmen von der Bewilligungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -166,6 +172,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Persönliche Geltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -193,6 +200,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Vereins- und Klubwirtschaften",
       "bloecke": [
         {
           "absatz": "1",
@@ -210,12 +218,32 @@
       "sha": "0e548148b780546c8aed54b299fd197c355b344b90520c1fc7494f56d854f987"
     },
     {
+      "id": "kanton/BS/563.110/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2020-02-06",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/563.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "74b8d67c299f7dc9b519d3f2e585451d",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/563.110/art_10",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Gelegenheits- und Festwirtschaften",
       "bloecke": [
         {
           "absatz": "1",
@@ -239,6 +267,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Standort",
       "bloecke": [
         {
           "absatz": "1",
@@ -258,6 +287,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Verantwortliche Person",
       "bloecke": [
         {
           "absatz": "1",
@@ -285,6 +315,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Fähigkeitsausweis",
       "bloecke": [
         {
           "absatz": "1",
@@ -308,6 +339,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Anerkennung anderer Fähigkeitsausweise und gleichwertiger Fähigkeitsnachweise",
       "bloecke": [
         {
           "absatz": "1",
@@ -343,6 +375,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Verbot des Alkoholausschanks",
       "bloecke": [
         {
           "absatz": "1",
@@ -370,6 +403,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Rauchverbot in Innenräumen",
       "bloecke": [
         {
           "absatz": "1",
@@ -401,6 +435,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Allgemeine Öffnungszeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -432,6 +467,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Generell verlängerte Öffnungszeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -459,6 +495,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Befristete Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -482,6 +519,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Lärmrequisitionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -501,6 +539,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Änderung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -520,6 +559,7 @@
       "erlass": "Verordnung zum Gastgewerbegesetz (563.110)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

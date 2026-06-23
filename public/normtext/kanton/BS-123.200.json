@@ -31,6 +31,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Staatschutzbehörde des Kantons Basel-Stadt",
       "bloecke": [
         {
           "absatz": "1",
@@ -64,6 +65,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Kontrollorgan",
       "bloecke": [
         {
           "absatz": "1",
@@ -117,6 +119,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Weitere baselstädtische Behörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -158,6 +161,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Bestand und Finanzierung des Staatschutzes",
       "bloecke": [
         {
           "absatz": "1",
@@ -181,6 +185,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Informationsbeschaffung und Informationsauswertung",
       "bloecke": [
         {
           "absatz": "1",
@@ -216,6 +221,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Datenbewirtschaftung",
       "bloecke": [
         {
           "absatz": "1",
@@ -261,6 +267,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Kontrolle, Weiterleitung und Löschung der Daten",
       "bloecke": [
         {
           "absatz": "1",
@@ -285,6 +292,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Nach einem Jahr wird der Vermerk gelöscht."
+        },
+        {
           "absatz": "4",
           "text": "Alle anderen Daten werden nach Ablauf von fünf Jahren in der Arbeitsdatenbank der Fachgruppe gelöscht."
         }
@@ -293,7 +304,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/123.200",
       "abgerufen": "2026-06-23",
       "fassungsToken": "c00a09f55ccd2ff7e9ce4d22ba183c3e",
-      "sha": "866fbfb785ac1525191130b61841bf667d3a87feb0128bc1781ef182a13c1bfc"
+      "sha": "70cfa7d6d06c6ce8ab2322c053f22fe651472169ad3355262a4a8d24243ecb2f"
     },
     {
       "id": "kanton/BS/123.200/art_9",
@@ -302,6 +313,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Flussdiagramme über den Datenfluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -325,6 +337,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Kompetenzen des Kontrollorgans",
       "bloecke": [
         {
           "absatz": "1",
@@ -404,6 +417,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Rechenschaftsablage",
       "bloecke": [
         {
           "absatz": "1",
@@ -423,6 +437,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Bericht des Kontrollorgans",
       "bloecke": [
         {
           "absatz": "1",
@@ -446,6 +461,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Aufsicht durch die Datenschutzbeauftragte oder den Datenschutzbeauftragten",
       "bloecke": [
         {
           "absatz": "1",
@@ -465,6 +481,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Stellen der Dienstaufsicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -484,6 +501,7 @@
       "erlass": "Verordnung über den Vollzug des Bundesgesetzes zur Wahrung der inneren Sicherheit (123.200)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Grosser Rat und Geschäftsprüfungskommission",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "1. Regionaler Entwässerungsplan (REP)",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "2. Generelle Entwässerungspläne (GEP)",
       "bloecke": [
         {
           "absatz": "1",
@@ -50,6 +52,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "1. Ökologische Aufwertung der Fliessgewässer",
       "bloecke": [
         {
           "absatz": "1",
@@ -73,6 +76,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "2. Einleitung und Versickerung von Abwasser",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,13 +111,17 @@
               "text": "von Bauten und Anlagen mit einer zu entwässernden Fläche von mehr als 500 m&sup2;."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "Sie liefern ihm die nötigen Angaben zur Führung des Versickerungskatasters."
         }
       ],
       "stand": "2020-07-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/783.200",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d98a7cf1b789005d6f3d17f67a027a61",
-      "sha": "19871012be5e96bc9d976654477329f1e591a57687c2d2c48f39336813168d0b"
+      "sha": "a12a013115537a99e7944c792d8724450a7d8340ca56346673b39a33471616f3"
     },
     {
       "id": "kanton/BS/783.200/art_5",
@@ -122,6 +130,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "3. Bauliche Massnahmen in und an Gewässern",
       "bloecke": [
         {
           "absatz": "1",
@@ -167,6 +176,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "1. Bewilligungs- und Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -188,12 +198,32 @@
       "sha": "5388417f442073f32cd414e40c01a0b364f5dd63bf769c6cce143ce144efb135"
     },
     {
+      "id": "kanton/BS/783.200/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/783.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d98a7cf1b789005d6f3d17f67a027a61",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/783.200/art_8",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "3. Revisionsarbeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -213,6 +243,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "1. Bewilligungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -244,6 +275,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "2. Kanalisationsbegehren",
       "bloecke": [
         {
           "absatz": "1",
@@ -267,6 +299,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "3. Voraussetzungen der Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -296,6 +329,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "4. Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -333,6 +367,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "5. Gültigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -356,6 +391,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "1. Zugelassene Unternehmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -383,6 +419,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "2. Überwachung",
       "bloecke": [
         {
           "absatz": "1",
@@ -402,6 +439,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "3. Kontrollschacht",
       "bloecke": [
         {
           "absatz": "1",
@@ -425,6 +463,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "4. Grundstückentwässerung",
       "bloecke": [
         {
           "absatz": "1",
@@ -456,6 +495,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "5. Inbetriebnahme der Abwasseranlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -483,6 +523,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "6. Unterhaltspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -510,6 +551,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "1. Öffentliche Kanalisationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -533,6 +575,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "2. Private Kanalisationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -590,6 +633,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "1. Gebührenpflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -635,6 +679,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "2. Ermittlung der Wassermengen",
       "bloecke": [
         {
           "absatz": "1",
@@ -670,6 +715,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "3. Ermittlung der versiegelten Flächen",
       "bloecke": [
         {
           "absatz": "1",
@@ -715,6 +761,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "4. Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -734,6 +781,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "5. Beginn der Gebührenpflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -753,6 +801,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "1. Amt für Umwelt und Energie",
       "bloecke": [
         {
           "absatz": "1",
@@ -780,6 +829,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "29_a",
       "artikelLabel": "§ 29a",
+      "titel": "2. Tiefbauamt",
       "bloecke": [
         {
           "absatz": "1",
@@ -813,6 +863,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "3. Gemeinden",
       "bloecke": [
         {
           "absatz": "1",
@@ -848,6 +899,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "3. Rheinschifffahrtsdirektion",
       "bloecke": [
         {
           "absatz": "1",
@@ -867,6 +919,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "1. Alarmierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -894,6 +947,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "2. Gewässerschutz-Pikettdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -921,6 +975,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "3. Zwangsmassnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -985,6 +1040,7 @@
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "35_a",
       "artikelLabel": "§ 35a",
+      "titel": "Strafbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -998,12 +1054,33 @@
       "sha": "eb57b15d19fb122708c431de6d9e80173afac330418f097e0da1d7136aa635f5"
     },
     {
+      "id": "kanton/BS/783.200/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "titel": "1. Änderung des Kanalisationsreglements Dreispitz",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2020-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/783.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d98a7cf1b789005d6f3d17f67a027a61",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/783.200/art_37",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Kantonale Gewässerschutzverordnung (783.200)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "2. Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",

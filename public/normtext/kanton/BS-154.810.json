@@ -5,9 +5,10 @@
       "id": "kanton/BS/154.810/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,21 +47,26 @@
               "text": "des Erbschaftsamts und der Aufsichtsbehörde über das Erbschaftsamt (§ 29, 30)."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "Die gemeinsamen Bestimmungen finden sich in §§ 31 bis 40."
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "1f80a23aa468b1288d8cdb5a18b8b33ddb244c616334d00855f9b7899ce0d875"
+      "sha": "cd337383724fcf4ab683110270484e4d710452d46d515950466b733f0f8c1f9d"
     },
     {
       "id": "kanton/BS/154.810/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Grundsätze der Gebührenbemessung",
       "bloecke": [
         {
           "absatz": "1",
@@ -83,21 +89,26 @@
               "text": "in Zivilsachen und Verwaltungsgerichtssachen vorwiegend vermögensrechtlicher Natur: der Streitwert bzw. das tatsächliche Streitinteresse."
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "Die Gebühr wird im Einzelfall anhand dieser Grundsätze nach den Bestimmungen dieses Reglements festgelegt."
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "6eaedc044652f9f0fa85d871353850667993f7db20409a501697a4009787283a"
+      "sha": "c1efa540ffdf5a0574f093f9ec6140924e417cc98c414f75048a1df006487ba1"
     },
     {
       "id": "kanton/BS/154.810/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Gebühren der Schlichtungsbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -122,9 +133,10 @@
       "id": "kanton/BS/154.810/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -153,9 +165,10 @@
       "id": "kanton/BS/154.810/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Ordentliche und vereinfachte Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -216,9 +229,10 @@
       "id": "kanton/BS/154.810/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Mietrechtliche Streitigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -263,9 +277,10 @@
       "id": "kanton/BS/154.810/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Scheidungsverfahren und Auflösung einer eingetragenen Partnerschaft",
       "bloecke": [
         {
           "absatz": "1",
@@ -286,9 +301,10 @@
       "id": "kanton/BS/154.810/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Unterhaltsklagen, separate güterrechtliche Auseinandersetzung, Abänderungen und Ergänzungen von Scheidungsurteilen",
       "bloecke": [
         {
           "absatz": "1",
@@ -309,9 +325,10 @@
       "id": "kanton/BS/154.810/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Statusklagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -332,9 +349,10 @@
       "id": "kanton/BS/154.810/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Summarische Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -355,9 +373,10 @@
       "id": "kanton/BS/154.810/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Entscheide des Appellationsgerichts als erste Instanz",
       "bloecke": [
         {
           "absatz": "1",
@@ -374,9 +393,10 @@
       "id": "kanton/BS/154.810/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Berufungsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -397,9 +417,10 @@
       "id": "kanton/BS/154.810/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Beschwerdeverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -420,9 +441,10 @@
       "id": "kanton/BS/154.810/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Revisionsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -443,9 +465,10 @@
       "id": "kanton/BS/154.810/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Erhöhungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -480,9 +503,10 @@
       "id": "kanton/BS/154.810/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Ermässigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -521,9 +545,10 @@
       "id": "kanton/BS/154.810/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Gänzliche oder teilweise Erledigung ohne Entscheid",
       "bloecke": [
         {
           "absatz": "1",
@@ -544,9 +569,10 @@
       "id": "kanton/BS/154.810/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Andere Gebühren der Gerichte in Zivilsachen",
       "bloecke": [
         {
           "absatz": "1",
@@ -567,9 +593,10 @@
       "id": "kanton/BS/154.810/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Gebühren des Strafgerichts",
       "bloecke": [
         {
           "absatz": "1",
@@ -586,9 +613,10 @@
       "id": "kanton/BS/154.810/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Gebühren des Jugendgerichts",
       "bloecke": [
         {
           "absatz": "1",
@@ -605,9 +633,10 @@
       "id": "kanton/BS/154.810/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Gebühren im Rechtsmittelverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -632,9 +661,10 @@
       "id": "kanton/BS/154.810/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Revisionsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -655,9 +685,10 @@
       "id": "kanton/BS/154.810/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Entscheide des Verwaltungsgerichts",
       "bloecke": [
         {
           "absatz": "1",
@@ -686,9 +717,10 @@
       "id": "kanton/BS/154.810/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Entscheide des Verfassungsgerichts",
       "bloecke": [
         {
           "absatz": "1",
@@ -705,9 +737,10 @@
       "id": "kanton/BS/154.810/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Revisionsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -728,9 +761,10 @@
       "id": "kanton/BS/154.810/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Entscheide des Sozialversicherungsgerichts",
       "bloecke": [
         {
           "absatz": "1",
@@ -755,9 +789,10 @@
       "id": "kanton/BS/154.810/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Beschwerden gegen fürsorgerische Unterbringungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -774,9 +809,10 @@
       "id": "kanton/BS/154.810/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Entscheide der Aufsichtskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -793,9 +829,10 @@
       "id": "kanton/BS/154.810/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Gebühren des Erbschaftsamtes",
       "bloecke": [
         {
           "absatz": "1",
@@ -824,9 +861,10 @@
       "id": "kanton/BS/154.810/art_30",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Aufsichtsbehörde über das Erbschaftsamt",
       "bloecke": [
         {
           "absatz": "1",
@@ -843,9 +881,10 @@
       "id": "kanton/BS/154.810/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Verzicht auf Entscheidbegründung",
       "bloecke": [
         {
           "absatz": "1",
@@ -866,9 +905,10 @@
       "id": "kanton/BS/154.810/art_32",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Erläuterung und Berichtigung eines Entscheids",
       "bloecke": [
         {
           "absatz": "1",
@@ -885,9 +925,10 @@
       "id": "kanton/BS/154.810/art_33",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Ausstandsbegehren",
       "bloecke": [
         {
           "absatz": "1",
@@ -904,9 +945,10 @@
       "id": "kanton/BS/154.810/art_34",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Entscheid über Wiederherstellungsbegehren",
       "bloecke": [
         {
           "absatz": "1",
@@ -923,9 +965,10 @@
       "id": "kanton/BS/154.810/art_35",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Protokollberichtigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -942,9 +985,10 @@
       "id": "kanton/BS/154.810/art_36",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Rechtskrafts- und Vollstreckbarkeitsbescheinigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -961,9 +1005,10 @@
       "id": "kanton/BS/154.810/art_37",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Erledigung auswärtiger Rechtshilfeersuchen",
       "bloecke": [
         {
           "absatz": "1",
@@ -988,9 +1033,10 @@
       "id": "kanton/BS/154.810/art_37_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "37_a",
       "artikelLabel": "§ 37a",
+      "titel": "Akteneinsichtsgesuche und andere Verfügungen und Entscheide",
       "bloecke": [
         {
           "absatz": "1",
@@ -1015,9 +1061,10 @@
       "id": "kanton/BS/154.810/art_38",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Kanzlei- und administrative Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1066,9 +1113,10 @@
       "id": "kanton/BS/154.810/art_39",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Mahn- und Inkassogebühren, Verzugszins",
       "bloecke": [
         {
           "absatz": "1",
@@ -1097,9 +1145,10 @@
       "id": "kanton/BS/154.810/art_40",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Verzicht auf Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1116,9 +1165,10 @@
       "id": "kanton/BS/154.810/art_41",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Gerichtsgebührenreglement, GGR (154.810)",
+      "erlass": "Reglement über die Gerichtsgebühren, Gerichtsgebührenreglement, GGR (154.810)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Übergangsbestimmungen",
       "bloecke": [
         {
           "absatz": "1",

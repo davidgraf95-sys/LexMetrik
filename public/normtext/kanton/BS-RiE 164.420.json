@@ -8,6 +8,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Spesen",
       "bloecke": [
         {
           "absatz": "1",
@@ -76,6 +78,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Grundsatz der Spesenrückerstattung",
       "bloecke": [
         {
           "absatz": "1",
@@ -103,6 +106,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Ersatz der Kosten für die öffentlichen Verkehrsmittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -157,6 +161,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Ersatz der Kosten für Privatfahrzeuge",
       "bloecke": [
         {
           "absatz": "1",
@@ -206,6 +211,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -225,6 +231,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Verpflegungskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -262,6 +269,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Übernachtungskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -289,6 +297,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Delegationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -308,6 +317,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Repräsentationsauslagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -333,12 +343,32 @@
       "sha": "bdedf871d0e2428f87417dcea63c10fdba490481e414da6a038312e631270b3e"
     },
     {
+      "id": "kanton/BS/RiE 164.420/art_10_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
+      "artikel": "10_a",
+      "artikelLabel": "§ 10a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/RiE 164.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "286fe9eafda4dd038236e55daa0043ef",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/RiE 164.420/art_11",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Vorgängige Zustimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -362,6 +392,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Spesenabrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -389,6 +420,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -408,6 +440,7 @@
       "erlass": "Spesenreglement der Gemeindeverwaltung Riehen (RiE 164.420)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Publikation und Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Allgemeiner Wassertarif",
       "bloecke": [
         {
           "absatz": "1",
@@ -85,6 +86,10 @@
           }
         },
         {
+          "absatz": null,
+          "text": "Für Einfamilienhäuser mit bis zu fünf Räumen mit Wasseranschluss wird ein jährlicher Grundpreis von Fr. 180 verrechnet."
+        },
+        {
           "absatz": "5",
           "text": "Besondere Bestimmungen",
           "items": [
@@ -103,7 +108,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "6dea2649ac30aef7f4420ed9c5d8fb02adcd06b8cb60b48832c5d1a34f35fef6"
+      "sha": "db1fd4f3bf4ceafd41af7be9c779d50e2507d5142b22aa35c6b9e9c5a73354e8"
     },
     {
       "id": "kanton/BS/772.830/art_2",
@@ -112,6 +117,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Sondertarife",
       "bloecke": [
         {
           "absatz": "1",
@@ -150,6 +156,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "(Die Entleerung der Leitung zum Schutz des Zählers vor dem Einfrieren hat die Benützerin oder der Benützer vorzunehmen.)"
+        },
+        {
           "absatz": "4",
           "text": "Sprinkleranlagen",
           "items": [
@@ -178,6 +188,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Grundpreis nach Anschlussleistung der Anlage, Minimalpreis Fr. 600.- pro Anlage"
+        },
+        {
           "absatz": "6",
           "text": "Rohwasserabgabe",
           "items": [
@@ -196,7 +210,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "0b68c5c40fb84ebf725127c811fcf3dcb014d59aefa7f5b019a2859f820aac31"
+      "sha": "90a14d0150e2a5729a321c66ef7fa1fc79812ac6522dce9414ccecefef2bf2f3"
     },
     {
       "id": "kanton/BS/772.830/art_3",
@@ -205,6 +219,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Sondertarif Brauchwasser",
       "bloecke": [
         {
           "absatz": "1",
@@ -250,6 +265,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Spezialverträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,6 +289,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Spezielle Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -316,6 +333,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Allgemeine Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -357,6 +375,7 @@
       "erlass": "Gebührentarif der IWB Industrielle Werke Basel betreffend Wasser (772.830)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",

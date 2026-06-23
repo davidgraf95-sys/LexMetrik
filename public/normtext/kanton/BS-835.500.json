@@ -5,9 +5,10 @@
       "id": "kanton/BS/835.500/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Integration",
       "bloecke": [
         {
           "absatz": "1",
@@ -28,9 +29,10 @@
       "id": "kanton/BS/835.500/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Umfang",
       "bloecke": [
         {
           "absatz": "1",
@@ -47,9 +49,10 @@
       "id": "kanton/BS/835.500/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Allgemeine Voraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -80,9 +83,10 @@
       "id": "kanton/BS/835.500/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Individuelle Voraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -105,21 +109,26 @@
               "text": "seit 2 Jahren ununterbrochen im Kanton Basel-Stadt ihren Wohnsitz und gewöhnlichen Aufenthalt haben,"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "können von den zur Verfügung gestellten Massnahmenplätzen profitieren. Stehen keine Massnahmenplätze zur Verfügung, so besteht eine Warteliste."
         }
       ],
       "stand": "2005-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
-      "sha": "ced629d4bb0455dc7859a0985e5c2fb695f8e968f7da7d902656e4ebc376c608"
+      "sha": "01fe92f3d62d9f97b45278f3952af7eab6cbb19fc3eda3ca85206b827b0c1b19"
     },
     {
       "id": "kanton/BS/835.500/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Art der Leistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -140,6 +149,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Es können mehrere Leistungen gleichzeitig bezogen werden."
+        },
+        {
           "absatz": "2",
           "text": "Für die Beschäftigung wird ein Arbeitsvertrag, für die Bildung eine Bildungsvereinbarung abgeschlossen. Die personalrechtlichen Bestimmungen des Kantons gelten nicht für die Beschäftigten gemäss Abs. 1 lit. a."
         },
@@ -156,15 +169,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/835.500",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3114c6566cae5762985e8f33b71b8365",
-      "sha": "5acf1fd951905bb233f0e0da44693c9fa3693d7c8fde1bf6aa2b8ff4b8abb397"
+      "sha": "d373c8350e8165d5af7e980c736d76a9105ef48697da2d821366f2b69a5651aa"
     },
     {
       "id": "kanton/BS/835.500/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Beginn, Höhe und Dauer der Leistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -221,9 +235,10 @@
       "id": "kanton/BS/835.500/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Einstellung der Leistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -258,9 +273,10 @@
       "id": "kanton/BS/835.500/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Verrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -281,9 +297,10 @@
       "id": "kanton/BS/835.500/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Zuständige Behörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -300,9 +317,10 @@
       "id": "kanton/BS/835.500/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Antragstellung",
       "bloecke": [
         {
           "absatz": "1",
@@ -323,9 +341,10 @@
       "id": "kanton/BS/835.500/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Auskunfts- und Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -346,9 +365,10 @@
       "id": "kanton/BS/835.500/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Einsprache",
       "bloecke": [
         {
           "absatz": "1",
@@ -365,9 +385,10 @@
       "id": "kanton/BS/835.500/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Beschwerde",
       "bloecke": [
         {
           "absatz": "1",
@@ -384,9 +405,10 @@
       "id": "kanton/BS/835.500/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Arbeitsrechtliche Streitigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -403,9 +425,10 @@
       "id": "kanton/BS/835.500/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Ausführungsvorschriften",
       "bloecke": [
         {
           "absatz": "1",
@@ -422,9 +445,10 @@
       "id": "kanton/BS/835.500/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -441,9 +465,10 @@
       "id": "kanton/BS/835.500/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "ALHG (835.500)",
+      "erlass": "Gesetz betreffend kantonale Arbeitslosenhilfe, ALHG (835.500)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Zeitpunkt der Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

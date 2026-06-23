@@ -5,7 +5,7 @@
       "id": "kanton/BS/640.100/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
       "bloecke": [
@@ -54,7 +54,7 @@
       "id": "kanton/BS/640.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
       "bloecke": [
@@ -95,7 +95,7 @@
       "id": "kanton/BS/640.100/art_2_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "2_a",
       "artikelLabel": "§ 2a",
       "bloecke": [
@@ -114,7 +114,7 @@
       "id": "kanton/BS/640.100/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
       "bloecke": [
@@ -141,9 +141,10 @@
       "id": "kanton/BS/640.100/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "a) Geschäftsbetriebe, Betriebsstätten und Grundstücke",
       "bloecke": [
         {
           "absatz": "1",
@@ -178,9 +179,10 @@
       "id": "kanton/BS/640.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "b) Andere steuerbare Werte",
       "bloecke": [
         {
           "absatz": "1",
@@ -227,7 +229,7 @@
       "id": "kanton/BS/640.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
       "bloecke": [
@@ -254,7 +256,7 @@
       "id": "kanton/BS/640.100/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
       "bloecke": [
@@ -273,7 +275,7 @@
       "id": "kanton/BS/640.100/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
       "bloecke": [
@@ -304,7 +306,7 @@
       "id": "kanton/BS/640.100/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
       "bloecke": [
@@ -331,7 +333,7 @@
       "id": "kanton/BS/640.100/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
       "bloecke": [
@@ -366,7 +368,7 @@
       "id": "kanton/BS/640.100/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
       "bloecke": [
@@ -401,7 +403,7 @@
       "id": "kanton/BS/640.100/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
       "bloecke": [
@@ -432,7 +434,7 @@
       "id": "kanton/BS/640.100/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
       "bloecke": [
@@ -452,10 +454,29 @@
       "sha": "464ca91010d1274dc1bd8c1443e8cd5caa87aa234e375bbc83a2233ae19f863c"
     },
     {
+      "id": "kanton/BS/640.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
       "bloecke": [
@@ -478,7 +499,7 @@
       "id": "kanton/BS/640.100/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
       "bloecke": [
@@ -505,7 +526,7 @@
       "id": "kanton/BS/640.100/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
       "bloecke": [
@@ -528,9 +549,10 @@
       "id": "kanton/BS/640.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "a) Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -555,9 +577,10 @@
       "id": "kanton/BS/640.100/art_18_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "18_a",
       "artikelLabel": "§ 18a",
+      "titel": "b) Mitarbeiterbeteiligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -588,9 +611,10 @@
       "id": "kanton/BS/640.100/art_18_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "18_b",
       "artikelLabel": "§ 18b",
+      "titel": "c) Einkünfte aus echten Mitarbeiterbeteiligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -615,9 +639,10 @@
       "id": "kanton/BS/640.100/art_18_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "18_c",
       "artikelLabel": "§ 18c",
+      "titel": "d) Einkünfte aus unechten Mitarbeiterbeteiligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -634,9 +659,10 @@
       "id": "kanton/BS/640.100/art_18_d",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "18_d",
       "artikelLabel": "§ 18d",
+      "titel": "e) Anteilsmässige Besteuerung",
       "bloecke": [
         {
           "absatz": "1",
@@ -653,9 +679,10 @@
       "id": "kanton/BS/640.100/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "a) Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -684,9 +711,10 @@
       "id": "kanton/BS/640.100/art_19_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "19_a",
       "artikelLabel": "§ 19a",
+      "titel": "b) Aufschubtatbestände",
       "bloecke": [
         {
           "absatz": "1",
@@ -707,9 +735,10 @@
       "id": "kanton/BS/640.100/art_19_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "19_b",
       "artikelLabel": "§ 19b",
+      "titel": "c) Teilbesteuerung der Einkünfte aus Beteiligungen des Geschäftsvermögens",
       "bloecke": [
         {
           "absatz": "1",
@@ -730,9 +759,10 @@
       "id": "kanton/BS/640.100/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "d) Unternehmensumstrukturierungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -767,9 +797,10 @@
       "id": "kanton/BS/640.100/art_20_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "20_a",
       "artikelLabel": "§ 20a",
+      "titel": "Einkommen aus Patenten und vergleichbaren Rechten (Patentbox)",
       "bloecke": [
         {
           "absatz": "1",
@@ -786,9 +817,10 @@
       "id": "kanton/BS/640.100/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "a) Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -877,9 +909,10 @@
       "id": "kanton/BS/640.100/art_21_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "21_a",
       "artikelLabel": "§ 21a",
+      "titel": "b) Indirekte Teilliquidation und Transponierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -910,7 +943,7 @@
       "id": "kanton/BS/640.100/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
       "bloecke": [
@@ -951,7 +984,7 @@
       "id": "kanton/BS/640.100/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
       "bloecke": [
@@ -1020,7 +1053,7 @@
       "id": "kanton/BS/640.100/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
       "bloecke": [
@@ -1065,7 +1098,7 @@
       "id": "kanton/BS/640.100/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
       "bloecke": [
@@ -1150,7 +1183,7 @@
       "id": "kanton/BS/640.100/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
       "bloecke": [
@@ -1169,7 +1202,7 @@
       "id": "kanton/BS/640.100/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
       "bloecke": [
@@ -1210,9 +1243,10 @@
       "id": "kanton/BS/640.100/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "a) Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -1303,9 +1337,10 @@
       "id": "kanton/BS/640.100/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "b) Ersatzbeschaffungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1330,9 +1365,10 @@
       "id": "kanton/BS/640.100/art_30",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "c) Verluste",
       "bloecke": [
         {
           "absatz": "1",
@@ -1353,7 +1389,7 @@
       "id": "kanton/BS/640.100/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
       "bloecke": [
@@ -1408,9 +1444,10 @@
       "id": "kanton/BS/640.100/art_32",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "a) Von der Höhe des Einkommens unabhängige Abzüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1505,9 +1542,10 @@
       "id": "kanton/BS/640.100/art_33",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "b) Von der Höhe des Einkommens abhängige Abzüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1534,7 +1572,7 @@
       "id": "kanton/BS/640.100/art_34",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "34",
       "artikelLabel": "§ 34",
       "bloecke": [
@@ -1579,7 +1617,7 @@
       "id": "kanton/BS/640.100/art_35",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
       "bloecke": [
@@ -1612,6 +1650,10 @@
               "text": "3'300 Franken für allein stehende Rentner und Rentnerinnen zusätzlich zum Abzug nach lit. c;"
             },
             {
+              "marke": "g",
+              "text": ""
+            },
+            {
               "marke": "h",
               "text": "18'500 Franken höchstens für die Unterstützung der Partnerin oder des Partners einer Lebensgemeinschaft mit gemeinsamen oder nicht gemeinsamen Kindern, insoweit deren bzw. dessen Einkommen zur Deckung des nötigen Lebensbedarfs von Fr. 18'000 nicht ausreicht."
             }
@@ -1634,13 +1676,13 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "8303b9e40e025c28819058c04f54d61457b4d0181ff936f36583a73bc8f86441"
+      "sha": "54c805d160555ecb2d09b92bfb43eebd5300a689884a5048fdb8b7da80dd75d9"
     },
     {
       "id": "kanton/BS/640.100/art_36",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
       "bloecke": [
@@ -1667,7 +1709,7 @@
       "id": "kanton/BS/640.100/art_36_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "36_a",
       "artikelLabel": "§ 36a",
       "bloecke": [
@@ -1686,7 +1728,7 @@
       "id": "kanton/BS/640.100/art_37",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "37",
       "artikelLabel": "§ 37",
       "bloecke": [
@@ -1713,9 +1755,10 @@
       "id": "kanton/BS/640.100/art_38",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "a) Kapitalabfindungen für wiederkehrende Leistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1732,9 +1775,10 @@
       "id": "kanton/BS/640.100/art_38_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "38_a",
       "artikelLabel": "§ 38a",
+      "titel": "b) Vereinfachtes Abrechnungsverfahren für kleine Arbeitsentgelte",
       "bloecke": [
         {
           "absatz": "1",
@@ -1767,9 +1811,10 @@
       "id": "kanton/BS/640.100/art_38_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "38_b",
       "artikelLabel": "§ 38b",
+      "titel": "c) Liquidationsgewinne",
       "bloecke": [
         {
           "absatz": "1",
@@ -1790,9 +1835,10 @@
       "id": "kanton/BS/640.100/art_39",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "d) Kapitalleistungen aus Vorsorge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1817,7 +1863,7 @@
       "id": "kanton/BS/640.100/art_40",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "40",
       "artikelLabel": "§ 40",
       "bloecke": [
@@ -1848,7 +1894,7 @@
       "id": "kanton/BS/640.100/art_41",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "41",
       "artikelLabel": "§ 41",
       "bloecke": [
@@ -1875,9 +1921,10 @@
       "id": "kanton/BS/640.100/art_42",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "a) Eintritt der Mündigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1894,9 +1941,10 @@
       "id": "kanton/BS/640.100/art_43",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "b) Begründung und Auflösung der Ehe",
       "bloecke": [
         {
           "absatz": "1",
@@ -1921,9 +1969,10 @@
       "id": "kanton/BS/640.100/art_44",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "c) Konkurs",
       "bloecke": [
         {
           "absatz": "1",
@@ -1940,7 +1989,7 @@
       "id": "kanton/BS/640.100/art_45",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "45",
       "artikelLabel": "§ 45",
       "bloecke": [
@@ -1967,7 +2016,7 @@
       "id": "kanton/BS/640.100/art_46",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "46",
       "artikelLabel": "§ 46",
       "bloecke": [
@@ -2010,7 +2059,7 @@
       "id": "kanton/BS/640.100/art_47",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "47",
       "artikelLabel": "§ 47",
       "bloecke": [
@@ -2033,7 +2082,7 @@
       "id": "kanton/BS/640.100/art_48",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "48",
       "artikelLabel": "§ 48",
       "bloecke": [
@@ -2052,7 +2101,7 @@
       "id": "kanton/BS/640.100/art_49",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "49",
       "artikelLabel": "§ 49",
       "bloecke": [
@@ -2089,7 +2138,7 @@
       "id": "kanton/BS/640.100/art_50",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "50",
       "artikelLabel": "§ 50",
       "bloecke": [
@@ -2116,9 +2165,10 @@
       "id": "kanton/BS/640.100/art_51",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "a) Steuerpflichtige Personen mit geringem Einkommen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2135,9 +2185,10 @@
       "id": "kanton/BS/640.100/art_52",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "b) Vermögen mit geringer Rendite",
       "bloecke": [
         {
           "absatz": "1",
@@ -2154,7 +2205,7 @@
       "id": "kanton/BS/640.100/art_53",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "53",
       "artikelLabel": "§ 53",
       "bloecke": [
@@ -2181,7 +2232,7 @@
       "id": "kanton/BS/640.100/art_54",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "54",
       "artikelLabel": "§ 54",
       "bloecke": [
@@ -2204,9 +2255,10 @@
       "id": "kanton/BS/640.100/art_55",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "a) Eintritt der Mündigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -2223,9 +2275,10 @@
       "id": "kanton/BS/640.100/art_56",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "b) Begründung und Auflösung der Ehe",
       "bloecke": [
         {
           "absatz": "1",
@@ -2250,9 +2303,10 @@
       "id": "kanton/BS/640.100/art_57",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "c) Erbgang, Konkurs",
       "bloecke": [
         {
           "absatz": "1",
@@ -2273,7 +2327,7 @@
       "id": "kanton/BS/640.100/art_58",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "58",
       "artikelLabel": "§ 58",
       "bloecke": [
@@ -2310,7 +2364,7 @@
       "id": "kanton/BS/640.100/art_59",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "59",
       "artikelLabel": "§ 59",
       "bloecke": [
@@ -2329,7 +2383,7 @@
       "id": "kanton/BS/640.100/art_60",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "60",
       "artikelLabel": "§ 60",
       "bloecke": [
@@ -2380,7 +2434,7 @@
       "id": "kanton/BS/640.100/art_61",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "61",
       "artikelLabel": "§ 61",
       "bloecke": [
@@ -2411,7 +2465,7 @@
       "id": "kanton/BS/640.100/art_62",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "62",
       "artikelLabel": "§ 62",
       "bloecke": [
@@ -2430,7 +2484,7 @@
       "id": "kanton/BS/640.100/art_63",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "63",
       "artikelLabel": "§ 63",
       "bloecke": [
@@ -2461,7 +2515,7 @@
       "id": "kanton/BS/640.100/art_64",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "64",
       "artikelLabel": "§ 64",
       "bloecke": [
@@ -2480,7 +2534,7 @@
       "id": "kanton/BS/640.100/art_65",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "65",
       "artikelLabel": "§ 65",
       "bloecke": [
@@ -2511,7 +2565,7 @@
       "id": "kanton/BS/640.100/art_66",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "66",
       "artikelLabel": "§ 66",
       "bloecke": [
@@ -2572,7 +2626,7 @@
       "id": "kanton/BS/640.100/art_67",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "67",
       "artikelLabel": "§ 67",
       "bloecke": [
@@ -2603,7 +2657,7 @@
       "id": "kanton/BS/640.100/art_68",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "68",
       "artikelLabel": "§ 68",
       "bloecke": [
@@ -2622,9 +2676,10 @@
       "id": "kanton/BS/640.100/art_69",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "69",
       "artikelLabel": "§ 69",
+      "titel": "Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -2695,9 +2750,10 @@
       "id": "kanton/BS/640.100/art_69_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "69_a",
       "artikelLabel": "§ 69a",
+      "titel": "Patente und vergleichbare Rechte: Begriffe",
       "bloecke": [
         {
           "absatz": "1",
@@ -2758,9 +2814,10 @@
       "id": "kanton/BS/640.100/art_69_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "69_b",
       "artikelLabel": "§ 69b",
+      "titel": "Patente und vergleichbare Rechte: Besteuerung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2823,9 +2880,10 @@
       "id": "kanton/BS/640.100/art_70",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "70",
       "artikelLabel": "§ 70",
+      "titel": "Geschäftsmässig begründeter Aufwand",
       "bloecke": [
         {
           "absatz": "1",
@@ -2916,9 +2974,10 @@
       "id": "kanton/BS/640.100/art_70_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "70_a",
       "artikelLabel": "§ 70a",
+      "titel": "Entlastungsbegrenzung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2939,9 +2998,10 @@
       "id": "kanton/BS/640.100/art_71",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "71",
       "artikelLabel": "§ 71",
+      "titel": "Erfolgsneutrale Vorgänge",
       "bloecke": [
         {
           "absatz": "1",
@@ -2976,9 +3036,10 @@
       "id": "kanton/BS/640.100/art_72",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "72",
       "artikelLabel": "§ 72",
+      "titel": "Unternehmensumstrukturierungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3039,9 +3100,10 @@
       "id": "kanton/BS/640.100/art_73",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "73",
       "artikelLabel": "§ 73",
+      "titel": "Ersatzbeschaffungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3070,9 +3132,10 @@
       "id": "kanton/BS/640.100/art_73_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "73_a",
       "artikelLabel": "§ 73a",
+      "titel": "Aufdeckung stiller Reserven bei Beginn der Steuerpflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -3101,9 +3164,10 @@
       "id": "kanton/BS/640.100/art_73_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "73_b",
       "artikelLabel": "§ 73b",
+      "titel": "Besteuerung stiller Reserven am Ende der Steuerpflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -3124,9 +3188,10 @@
       "id": "kanton/BS/640.100/art_74",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "74",
       "artikelLabel": "§ 74",
+      "titel": "Gewinne von Vereinen, Stiftungen und kollektiven Kapitalanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3155,9 +3220,10 @@
       "id": "kanton/BS/640.100/art_74_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "74_a",
       "artikelLabel": "§ 74a",
+      "titel": "Gewinne von juristischen Personen mit ideellen Zwecken",
       "bloecke": [
         {
           "absatz": "1",
@@ -3174,9 +3240,10 @@
       "id": "kanton/BS/640.100/art_75",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "75",
       "artikelLabel": "§ 75",
+      "titel": "Verluste",
       "bloecke": [
         {
           "absatz": "1",
@@ -3197,7 +3264,7 @@
       "id": "kanton/BS/640.100/art_76",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "76",
       "artikelLabel": "§ 76",
       "bloecke": [
@@ -3232,9 +3299,10 @@
       "id": "kanton/BS/640.100/art_77",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "77",
       "artikelLabel": "§ 77",
+      "titel": "a) Beteiligungsabzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -3316,10 +3384,86 @@
       "sha": "bb6696e690713071d380620c578cbb03ffd16de5fcd2f4a947015e10dac9619d"
     },
     {
+      "id": "kanton/BS/640.100/art_78",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "78",
+      "artikelLabel": "§ 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/640.100/art_79",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "79",
+      "artikelLabel": "§ 79",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/640.100/art_80",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "80",
+      "artikelLabel": "§ 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/640.100/art_81",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "81",
+      "artikelLabel": "§ 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_82",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "82",
       "artikelLabel": "§ 82",
       "bloecke": [
@@ -3350,7 +3494,7 @@
       "id": "kanton/BS/640.100/art_83",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "83",
       "artikelLabel": "§ 83",
       "bloecke": [
@@ -3381,7 +3525,7 @@
       "id": "kanton/BS/640.100/art_84",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "84",
       "artikelLabel": "§ 84",
       "bloecke": [
@@ -3400,7 +3544,7 @@
       "id": "kanton/BS/640.100/art_85",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "85",
       "artikelLabel": "§ 85",
       "bloecke": [
@@ -3439,7 +3583,7 @@
       "id": "kanton/BS/640.100/art_86",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "86",
       "artikelLabel": "§ 86",
       "bloecke": [
@@ -3476,7 +3620,7 @@
       "id": "kanton/BS/640.100/art_87",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "87",
       "artikelLabel": "§ 87",
       "bloecke": [
@@ -3507,7 +3651,7 @@
       "id": "kanton/BS/640.100/art_88",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "88",
       "artikelLabel": "§ 88",
       "bloecke": [
@@ -3534,7 +3678,7 @@
       "id": "kanton/BS/640.100/art_89",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "89",
       "artikelLabel": "§ 89",
       "bloecke": [
@@ -3557,7 +3701,7 @@
       "id": "kanton/BS/640.100/art_90",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "90",
       "artikelLabel": "§ 90",
       "bloecke": [
@@ -3580,7 +3724,7 @@
       "id": "kanton/BS/640.100/art_91",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "91",
       "artikelLabel": "§ 91",
       "bloecke": [
@@ -3621,7 +3765,7 @@
       "id": "kanton/BS/640.100/art_92",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "92",
       "artikelLabel": "§ 92",
       "bloecke": [
@@ -3660,7 +3804,7 @@
       "id": "kanton/BS/640.100/art_93",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "93",
       "artikelLabel": "§ 93",
       "bloecke": [
@@ -3679,7 +3823,7 @@
       "id": "kanton/BS/640.100/art_94",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "94",
       "artikelLabel": "§ 94",
       "bloecke": [
@@ -3728,7 +3872,7 @@
       "id": "kanton/BS/640.100/art_94_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "94_a",
       "artikelLabel": "§ 94a",
       "bloecke": [
@@ -3763,7 +3907,7 @@
       "id": "kanton/BS/640.100/art_95",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "95",
       "artikelLabel": "§ 95",
       "bloecke": [
@@ -3786,7 +3930,7 @@
       "id": "kanton/BS/640.100/art_96",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "96",
       "artikelLabel": "§ 96",
       "bloecke": [
@@ -3805,7 +3949,7 @@
       "id": "kanton/BS/640.100/art_97",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "97",
       "artikelLabel": "§ 97",
       "bloecke": [
@@ -3850,7 +3994,7 @@
       "id": "kanton/BS/640.100/art_98",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "98",
       "artikelLabel": "§ 98",
       "bloecke": [
@@ -3881,7 +4025,7 @@
       "id": "kanton/BS/640.100/art_99",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "99",
       "artikelLabel": "§ 99",
       "bloecke": [
@@ -3908,7 +4052,7 @@
       "id": "kanton/BS/640.100/art_100",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "100",
       "artikelLabel": "§ 100",
       "bloecke": [
@@ -3927,6 +4071,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "unterliegen für diese Leistungen einem Steuerabzug an der Quelle."
+        },
+        {
           "absatz": "2",
           "text": "Als steuerbare Einkünfte gelten die Bruttoeinkünfte."
         },
@@ -3943,13 +4091,13 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "079fc716858ad776a0044c7ee1da3b1f0f0b559fcbb953846dd00d84e1746ced"
+      "sha": "f29e3b68daba9556b80d35bbf260fa04de2822c8c62ed24bf8953a8d44b6972c"
     },
     {
       "id": "kanton/BS/640.100/art_100_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "100_a",
       "artikelLabel": "§ 100a",
       "bloecke": [
@@ -3972,7 +4120,7 @@
       "id": "kanton/BS/640.100/art_101",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "101",
       "artikelLabel": "§ 101",
       "bloecke": [
@@ -3995,7 +4143,7 @@
       "id": "kanton/BS/640.100/art_101_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "101_a",
       "artikelLabel": "§ 101a",
       "bloecke": [
@@ -4032,7 +4180,7 @@
       "id": "kanton/BS/640.100/art_101_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "101_b",
       "artikelLabel": "§ 101b",
       "bloecke": [
@@ -4051,7 +4199,7 @@
       "id": "kanton/BS/640.100/art_102",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "102",
       "artikelLabel": "§ 102",
       "bloecke": [
@@ -4074,7 +4222,7 @@
       "id": "kanton/BS/640.100/art_103",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "103",
       "artikelLabel": "§ 103",
       "bloecke": [
@@ -4103,7 +4251,7 @@
       "id": "kanton/BS/640.100/art_104",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "104",
       "artikelLabel": "§ 104",
       "bloecke": [
@@ -4140,7 +4288,7 @@
       "id": "kanton/BS/640.100/art_105",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "105",
       "artikelLabel": "§ 105",
       "bloecke": [
@@ -4189,9 +4337,10 @@
       "id": "kanton/BS/640.100/art_106",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "106",
       "artikelLabel": "§ 106",
+      "titel": "a) Berechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4220,9 +4369,10 @@
       "id": "kanton/BS/640.100/art_107",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "107",
       "artikelLabel": "§ 107",
+      "titel": "b) Besitzdauerabzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -4247,9 +4397,10 @@
       "id": "kanton/BS/640.100/art_108",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "108",
       "artikelLabel": "§ 108",
+      "titel": "c) Verlustverrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4274,7 +4425,7 @@
       "id": "kanton/BS/640.100/art_109",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "109",
       "artikelLabel": "§ 109",
       "bloecke": [
@@ -4309,7 +4460,7 @@
       "id": "kanton/BS/640.100/art_110",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "110",
       "artikelLabel": "§ 110",
       "bloecke": [
@@ -4350,7 +4501,7 @@
       "id": "kanton/BS/640.100/art_111",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "111",
       "artikelLabel": "§ 111",
       "bloecke": [
@@ -4373,7 +4524,7 @@
       "id": "kanton/BS/640.100/art_112",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "112",
       "artikelLabel": "§ 112",
       "bloecke": [
@@ -4400,7 +4551,7 @@
       "id": "kanton/BS/640.100/art_113",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "113",
       "artikelLabel": "§ 113",
       "bloecke": [
@@ -4437,7 +4588,7 @@
       "id": "kanton/BS/640.100/art_114",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "114",
       "artikelLabel": "§ 114",
       "bloecke": [
@@ -4456,7 +4607,7 @@
       "id": "kanton/BS/640.100/art_115",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "115",
       "artikelLabel": "§ 115",
       "bloecke": [
@@ -4475,7 +4626,7 @@
       "id": "kanton/BS/640.100/art_116",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "116",
       "artikelLabel": "§ 116",
       "bloecke": [
@@ -4494,7 +4645,7 @@
       "id": "kanton/BS/640.100/art_117",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "117",
       "artikelLabel": "§ 117",
       "bloecke": [
@@ -4521,7 +4672,7 @@
       "id": "kanton/BS/640.100/art_118",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "118",
       "artikelLabel": "§ 118",
       "bloecke": [
@@ -4558,7 +4709,7 @@
       "id": "kanton/BS/640.100/art_119",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "119",
       "artikelLabel": "§ 119",
       "bloecke": [
@@ -4585,7 +4736,7 @@
       "id": "kanton/BS/640.100/art_120",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "120",
       "artikelLabel": "§ 120",
       "bloecke": [
@@ -4618,9 +4769,10 @@
       "id": "kanton/BS/640.100/art_121",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "121",
       "artikelLabel": "§ 121",
+      "titel": "a) Erbrechtliche Vermögensübergänge",
       "bloecke": [
         {
           "absatz": "1",
@@ -4641,9 +4793,10 @@
       "id": "kanton/BS/640.100/art_122",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "122",
       "artikelLabel": "§ 122",
+      "titel": "b) Zuwendungen unter Lebenden",
       "bloecke": [
         {
           "absatz": "1",
@@ -4664,9 +4817,10 @@
       "id": "kanton/BS/640.100/art_123",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "123",
       "artikelLabel": "§ 123",
+      "titel": "c) Versicherungsansprüche",
       "bloecke": [
         {
           "absatz": "1",
@@ -4683,9 +4837,10 @@
       "id": "kanton/BS/640.100/art_124",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "124",
       "artikelLabel": "§ 124",
+      "titel": "d) Leistungen aus einem Arbeitsverhältnis",
       "bloecke": [
         {
           "absatz": "1",
@@ -4702,7 +4857,7 @@
       "id": "kanton/BS/640.100/art_125",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "125",
       "artikelLabel": "§ 125",
       "bloecke": [
@@ -4729,7 +4884,7 @@
       "id": "kanton/BS/640.100/art_126",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "126",
       "artikelLabel": "§ 126",
       "bloecke": [
@@ -4774,7 +4929,7 @@
       "id": "kanton/BS/640.100/art_127",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "127",
       "artikelLabel": "§ 127",
       "bloecke": [
@@ -4809,7 +4964,7 @@
       "id": "kanton/BS/640.100/art_128",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "128",
       "artikelLabel": "§ 128",
       "bloecke": [
@@ -4854,7 +5009,7 @@
       "id": "kanton/BS/640.100/art_129",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "129",
       "artikelLabel": "§ 129",
       "bloecke": [
@@ -4873,14 +5028,19 @@
       "id": "kanton/BS/640.100/art_130",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "130",
       "artikelLabel": "§ 130",
+      "titel": "a) Grundtarif",
       "bloecke": [
         {
           "absatz": "1",
           "text": "Die einfache Steuer beträgt, vorbehältlich Abs. 3:",
           "items": [
+            {
+              "marke": "a",
+              "text": ""
+            },
             {
               "marke": "b",
               "text": "4% für Eltern und Adoptiveltern;"
@@ -4920,15 +5080,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "8858927cca841b12346acbda1aadd1bc2f0f02617eda7fa86aa33c800c768c5b"
+      "sha": "3e19c2e7888822ea249ef0155703eef8019a424f6ae81ec604b9193fe6a05016"
     },
     {
       "id": "kanton/BS/640.100/art_131",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "131",
       "artikelLabel": "§ 131",
+      "titel": "b) Zuschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -4949,7 +5110,7 @@
       "id": "kanton/BS/640.100/art_132",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "132",
       "artikelLabel": "§ 132",
       "bloecke": [
@@ -4980,7 +5141,7 @@
       "id": "kanton/BS/640.100/art_133",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "133",
       "artikelLabel": "§ 133",
       "bloecke": [
@@ -5003,7 +5164,7 @@
       "id": "kanton/BS/640.100/art_134",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "134",
       "artikelLabel": "§ 134",
       "bloecke": [
@@ -5048,7 +5209,7 @@
       "id": "kanton/BS/640.100/art_134_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "134_a",
       "artikelLabel": "§ 134a",
       "bloecke": [
@@ -5083,7 +5244,7 @@
       "id": "kanton/BS/640.100/art_135",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "135",
       "artikelLabel": "§ 135",
       "bloecke": [
@@ -5110,7 +5271,7 @@
       "id": "kanton/BS/640.100/art_136",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "136",
       "artikelLabel": "§ 136",
       "bloecke": [
@@ -5145,7 +5306,7 @@
       "id": "kanton/BS/640.100/art_137",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "137",
       "artikelLabel": "§ 137",
       "bloecke": [
@@ -5186,9 +5347,10 @@
       "id": "kanton/BS/640.100/art_138",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "138",
       "artikelLabel": "§ 138",
+      "titel": "a) Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -5209,9 +5371,10 @@
       "id": "kanton/BS/640.100/art_139",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "139",
       "artikelLabel": "§ 139",
+      "titel": "b) Amtshilfe unter Steuerbehörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -5228,9 +5391,10 @@
       "id": "kanton/BS/640.100/art_140",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "140",
       "artikelLabel": "§ 140",
+      "titel": "c) Amtshilfe von anderen Behörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -5255,9 +5419,10 @@
       "id": "kanton/BS/640.100/art_141",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "141",
       "artikelLabel": "§ 141",
+      "titel": "d) Amtshilfe an andere Behörden",
       "bloecke": [
         {
           "absatz": "1",
@@ -5274,7 +5439,7 @@
       "id": "kanton/BS/640.100/art_141_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "141_a",
       "artikelLabel": "§ 141a",
       "bloecke": [
@@ -5327,7 +5492,7 @@
       "id": "kanton/BS/640.100/art_142",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "142",
       "artikelLabel": "§ 142",
       "bloecke": [
@@ -5354,7 +5519,7 @@
       "id": "kanton/BS/640.100/art_143",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "143",
       "artikelLabel": "§ 143",
       "bloecke": [
@@ -5381,7 +5546,7 @@
       "id": "kanton/BS/640.100/art_144",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "144",
       "artikelLabel": "§ 144",
       "bloecke": [
@@ -5404,7 +5569,7 @@
       "id": "kanton/BS/640.100/art_145",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "145",
       "artikelLabel": "§ 145",
       "bloecke": [
@@ -5427,7 +5592,7 @@
       "id": "kanton/BS/640.100/art_146",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "146",
       "artikelLabel": "§ 146",
       "bloecke": [
@@ -5454,7 +5619,7 @@
       "id": "kanton/BS/640.100/art_147",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "147",
       "artikelLabel": "§ 147",
       "bloecke": [
@@ -5489,7 +5654,7 @@
       "id": "kanton/BS/640.100/art_148",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "148",
       "artikelLabel": "§ 148",
       "bloecke": [
@@ -5572,7 +5737,7 @@
       "id": "kanton/BS/640.100/art_149",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "149",
       "artikelLabel": "§ 149",
       "bloecke": [
@@ -5595,7 +5760,7 @@
       "id": "kanton/BS/640.100/art_150",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "150",
       "artikelLabel": "§ 150",
       "bloecke": [
@@ -5618,9 +5783,10 @@
       "id": "kanton/BS/640.100/art_151",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "151",
       "artikelLabel": "§ 151",
+      "titel": "a) Steuererklärung",
       "bloecke": [
         {
           "absatz": "1",
@@ -5645,9 +5811,10 @@
       "id": "kanton/BS/640.100/art_152",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "152",
       "artikelLabel": "§ 152",
+      "titel": "b) Beilagen zur Steuererklärung",
       "bloecke": [
         {
           "absatz": "1",
@@ -5690,9 +5857,10 @@
       "id": "kanton/BS/640.100/art_153",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "153",
       "artikelLabel": "§ 153",
+      "titel": "c) Weitere Mitwirkungspflichten",
       "bloecke": [
         {
           "absatz": "1",
@@ -5717,7 +5885,7 @@
       "id": "kanton/BS/640.100/art_154",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "154",
       "artikelLabel": "§ 154",
       "bloecke": [
@@ -5736,7 +5904,7 @@
       "id": "kanton/BS/640.100/art_155",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "155",
       "artikelLabel": "§ 155",
       "bloecke": [
@@ -5781,7 +5949,7 @@
       "id": "kanton/BS/640.100/art_156",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "156",
       "artikelLabel": "§ 156",
       "bloecke": [
@@ -5800,7 +5968,7 @@
       "id": "kanton/BS/640.100/art_157",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "157",
       "artikelLabel": "§ 157",
       "bloecke": [
@@ -5849,7 +6017,7 @@
       "id": "kanton/BS/640.100/art_158",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "158",
       "artikelLabel": "§ 158",
       "bloecke": [
@@ -5872,7 +6040,7 @@
       "id": "kanton/BS/640.100/art_159",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "159",
       "artikelLabel": "§ 159",
       "bloecke": [
@@ -5895,7 +6063,7 @@
       "id": "kanton/BS/640.100/art_159_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "159_a",
       "artikelLabel": "§ 159a",
       "bloecke": [
@@ -5918,7 +6086,7 @@
       "id": "kanton/BS/640.100/art_160",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "160",
       "artikelLabel": "§ 160",
       "bloecke": [
@@ -5949,7 +6117,7 @@
       "id": "kanton/BS/640.100/art_161",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "161",
       "artikelLabel": "§ 161",
       "bloecke": [
@@ -5972,7 +6140,7 @@
       "id": "kanton/BS/640.100/art_162",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "162",
       "artikelLabel": "§ 162",
       "bloecke": [
@@ -5995,7 +6163,7 @@
       "id": "kanton/BS/640.100/art_163",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "163",
       "artikelLabel": "§ 163",
       "bloecke": [
@@ -6014,7 +6182,7 @@
       "id": "kanton/BS/640.100/art_164",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "164",
       "artikelLabel": "§ 164",
       "bloecke": [
@@ -6045,9 +6213,10 @@
       "id": "kanton/BS/640.100/art_165",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "165",
       "artikelLabel": "§ 165",
+      "titel": "a) Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -6064,7 +6233,7 @@
       "id": "kanton/BS/640.100/art_165_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "165_a",
       "artikelLabel": "§ 165a",
       "bloecke": [
@@ -6087,9 +6256,10 @@
       "id": "kanton/BS/640.100/art_166",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "166",
       "artikelLabel": "§ 166",
+      "titel": "b) Vernehmlassung",
       "bloecke": [
         {
           "absatz": "1",
@@ -6114,9 +6284,10 @@
       "id": "kanton/BS/640.100/art_167",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "167",
       "artikelLabel": "§ 167",
+      "titel": "c) Mündliche Verhandlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -6137,9 +6308,10 @@
       "id": "kanton/BS/640.100/art_168",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "168",
       "artikelLabel": "§ 168",
+      "titel": "d) Befugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -6160,9 +6332,10 @@
       "id": "kanton/BS/640.100/art_168_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "168_a",
       "artikelLabel": "§ 168a",
+      "titel": "e) Zuständigkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -6209,9 +6382,10 @@
       "id": "kanton/BS/640.100/art_169",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "169",
       "artikelLabel": "§ 169",
+      "titel": "f) Entscheid und Eröffnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -6240,9 +6414,10 @@
       "id": "kanton/BS/640.100/art_170",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "170",
       "artikelLabel": "§ 170",
+      "titel": "g) Kosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -6275,7 +6450,7 @@
       "id": "kanton/BS/640.100/art_171",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "171",
       "artikelLabel": "§ 171",
       "bloecke": [
@@ -6306,7 +6481,7 @@
       "id": "kanton/BS/640.100/art_172",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "172",
       "artikelLabel": "§ 172",
       "bloecke": [
@@ -6325,7 +6500,7 @@
       "id": "kanton/BS/640.100/art_173",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "173",
       "artikelLabel": "§ 173",
       "bloecke": [
@@ -6362,7 +6537,7 @@
       "id": "kanton/BS/640.100/art_174",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "174",
       "artikelLabel": "§ 174",
       "bloecke": [
@@ -6389,7 +6564,7 @@
       "id": "kanton/BS/640.100/art_175",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "175",
       "artikelLabel": "§ 175",
       "bloecke": [
@@ -6416,7 +6591,7 @@
       "id": "kanton/BS/640.100/art_176",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "176",
       "artikelLabel": "§ 176",
       "bloecke": [
@@ -6443,7 +6618,7 @@
       "id": "kanton/BS/640.100/art_177",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "177",
       "artikelLabel": "§ 177",
       "bloecke": [
@@ -6462,7 +6637,7 @@
       "id": "kanton/BS/640.100/art_178",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "178",
       "artikelLabel": "§ 178",
       "bloecke": [
@@ -6505,7 +6680,7 @@
       "id": "kanton/BS/640.100/art_179",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "179",
       "artikelLabel": "§ 179",
       "bloecke": [
@@ -6536,7 +6711,7 @@
       "id": "kanton/BS/640.100/art_179_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "179_a",
       "artikelLabel": "§ 179a",
       "bloecke": [
@@ -6581,7 +6756,7 @@
       "id": "kanton/BS/640.100/art_180",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "180",
       "artikelLabel": "§ 180",
       "bloecke": [
@@ -6604,7 +6779,7 @@
       "id": "kanton/BS/640.100/art_181",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "181",
       "artikelLabel": "§ 181",
       "bloecke": [
@@ -6635,9 +6810,10 @@
       "id": "kanton/BS/640.100/art_182",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "182",
       "artikelLabel": "§ 182",
+      "titel": "a) Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -6654,9 +6830,10 @@
       "id": "kanton/BS/640.100/art_183",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "183",
       "artikelLabel": "§ 183",
+      "titel": "b) Sicherung der Inventaraufnahme",
       "bloecke": [
         {
           "absatz": "1",
@@ -6677,9 +6854,10 @@
       "id": "kanton/BS/640.100/art_184",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "184",
       "artikelLabel": "§ 184",
+      "titel": "c) Mitwirkungspflichten",
       "bloecke": [
         {
           "absatz": "1",
@@ -6722,9 +6900,10 @@
       "id": "kanton/BS/640.100/art_185",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "185",
       "artikelLabel": "§ 185",
+      "titel": "d) Auskunfts- und Bescheinigungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -6749,9 +6928,10 @@
       "id": "kanton/BS/640.100/art_186",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "186",
       "artikelLabel": "§ 186",
+      "titel": "e) Prüfung des Inventars durch die Steuerverwaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -6772,9 +6952,10 @@
       "id": "kanton/BS/640.100/art_187",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "187",
       "artikelLabel": "§ 187",
+      "titel": "f) Mitteilung des Inventars",
       "bloecke": [
         {
           "absatz": "1",
@@ -6791,7 +6972,7 @@
       "id": "kanton/BS/640.100/art_188",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "188",
       "artikelLabel": "§ 188",
       "bloecke": [
@@ -6814,7 +6995,7 @@
       "id": "kanton/BS/640.100/art_189",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "189",
       "artikelLabel": "§ 189",
       "bloecke": [
@@ -6863,7 +7044,7 @@
       "id": "kanton/BS/640.100/art_190",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "190",
       "artikelLabel": "§ 190",
       "bloecke": [
@@ -6886,7 +7067,7 @@
       "id": "kanton/BS/640.100/art_190_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "190_a",
       "artikelLabel": "§ 190a",
       "bloecke": [
@@ -6909,7 +7090,7 @@
       "id": "kanton/BS/640.100/art_191",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "191",
       "artikelLabel": "§ 191",
       "bloecke": [
@@ -6946,7 +7127,7 @@
       "id": "kanton/BS/640.100/art_191_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "191_a",
       "artikelLabel": "§ 191a",
       "bloecke": [
@@ -6965,7 +7146,7 @@
       "id": "kanton/BS/640.100/art_192",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "192",
       "artikelLabel": "§ 192",
       "bloecke": [
@@ -6988,7 +7169,7 @@
       "id": "kanton/BS/640.100/art_193",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "193",
       "artikelLabel": "§ 193",
       "bloecke": [
@@ -7007,7 +7188,7 @@
       "id": "kanton/BS/640.100/art_194",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "194",
       "artikelLabel": "§ 194",
       "bloecke": [
@@ -7074,7 +7255,7 @@
       "id": "kanton/BS/640.100/art_195",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "195",
       "artikelLabel": "§ 195",
       "bloecke": [
@@ -7109,7 +7290,7 @@
       "id": "kanton/BS/640.100/art_196",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "196",
       "artikelLabel": "§ 196",
       "bloecke": [
@@ -7128,7 +7309,7 @@
       "id": "kanton/BS/640.100/art_197",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "197",
       "artikelLabel": "§ 197",
       "bloecke": [
@@ -7155,7 +7336,7 @@
       "id": "kanton/BS/640.100/art_197_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "197_a",
       "artikelLabel": "§ 197a",
       "bloecke": [
@@ -7194,7 +7375,7 @@
       "id": "kanton/BS/640.100/art_198",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "198",
       "artikelLabel": "§ 198",
       "bloecke": [
@@ -7221,7 +7402,7 @@
       "id": "kanton/BS/640.100/art_199",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "199",
       "artikelLabel": "§ 199",
       "bloecke": [
@@ -7248,7 +7429,7 @@
       "id": "kanton/BS/640.100/art_200",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "200",
       "artikelLabel": "§ 200",
       "bloecke": [
@@ -7275,9 +7456,10 @@
       "id": "kanton/BS/640.100/art_201",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "201",
       "artikelLabel": "§ 201",
+      "titel": "a) Voraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -7302,9 +7484,10 @@
       "id": "kanton/BS/640.100/art_201_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "201_a",
       "artikelLabel": "§ 201a",
+      "titel": "b) Ausschlussgründe",
       "bloecke": [
         {
           "absatz": "1",
@@ -7343,9 +7526,10 @@
       "id": "kanton/BS/640.100/art_201_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "201_b",
       "artikelLabel": "§ 201b",
+      "titel": "c) Verfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -7374,7 +7558,7 @@
       "id": "kanton/BS/640.100/art_202",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "202",
       "artikelLabel": "§ 202",
       "bloecke": [
@@ -7405,7 +7589,7 @@
       "id": "kanton/BS/640.100/art_203",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "203",
       "artikelLabel": "§ 203",
       "bloecke": [
@@ -7436,7 +7620,7 @@
       "id": "kanton/BS/640.100/art_204",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "204",
       "artikelLabel": "§ 204",
       "bloecke": [
@@ -7459,7 +7643,7 @@
       "id": "kanton/BS/640.100/art_205",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "205",
       "artikelLabel": "§ 205",
       "bloecke": [
@@ -7478,7 +7662,7 @@
       "id": "kanton/BS/640.100/art_206",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "206",
       "artikelLabel": "§ 206",
       "bloecke": [
@@ -7497,7 +7681,7 @@
       "id": "kanton/BS/640.100/art_207",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "207",
       "artikelLabel": "§ 207",
       "bloecke": [
@@ -7528,7 +7712,7 @@
       "id": "kanton/BS/640.100/art_208",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "208",
       "artikelLabel": "§ 208",
       "bloecke": [
@@ -7551,6 +7735,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "wird mit Busse bestraft."
+        },
+        {
           "absatz": "2",
           "text": "Die Busse beträgt bis zu 1'000 Franken, in schweren Fällen oder im Wiederholungsfall bis zu 10'000 Franken."
         },
@@ -7563,13 +7751,13 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "2144f7cae195e48b0c08d9d2db9011a28cfea971fc25296ee29e86c43f296e97"
+      "sha": "ab98a3834e4f7e3634212d528ee9fe806b2dfb89cfc9a5155f223db8c1597582"
     },
     {
       "id": "kanton/BS/640.100/art_209",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "209",
       "artikelLabel": "§ 209",
       "bloecke": [
@@ -7628,7 +7816,7 @@
       "id": "kanton/BS/640.100/art_210",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "210",
       "artikelLabel": "§ 210",
       "bloecke": [
@@ -7651,7 +7839,7 @@
       "id": "kanton/BS/640.100/art_211",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "211",
       "artikelLabel": "§ 211",
       "bloecke": [
@@ -7682,7 +7870,7 @@
       "id": "kanton/BS/640.100/art_212",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "212",
       "artikelLabel": "§ 212",
       "bloecke": [
@@ -7720,10 +7908,29 @@
       "sha": "0473e6764533ce7a5a8ce8a8391ec89cabc0e8c02990e1fa109a8d82d3fdd257"
     },
     {
+      "id": "kanton/BS/640.100/art_213",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "213",
+      "artikelLabel": "§ 213",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_214",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "214",
       "artikelLabel": "§ 214",
       "bloecke": [
@@ -7742,9 +7949,10 @@
       "id": "kanton/BS/640.100/art_215",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "215",
       "artikelLabel": "§ 215",
+      "titel": "a) Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -7769,9 +7977,10 @@
       "id": "kanton/BS/640.100/art_215_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "215_a",
       "artikelLabel": "§ 215a",
+      "titel": "b) Selbstanzeige",
       "bloecke": [
         {
           "absatz": "1",
@@ -7836,7 +8045,7 @@
       "id": "kanton/BS/640.100/art_216",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "216",
       "artikelLabel": "§ 216",
       "bloecke": [
@@ -7859,7 +8068,7 @@
       "id": "kanton/BS/640.100/art_217",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "217",
       "artikelLabel": "§ 217",
       "bloecke": [
@@ -7882,7 +8091,7 @@
       "id": "kanton/BS/640.100/art_218",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "218",
       "artikelLabel": "§ 218",
       "bloecke": [
@@ -7909,7 +8118,7 @@
       "id": "kanton/BS/640.100/art_219",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "219",
       "artikelLabel": "§ 219",
       "bloecke": [
@@ -7940,7 +8149,7 @@
       "id": "kanton/BS/640.100/art_220",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "220",
       "artikelLabel": "§ 220",
       "bloecke": [
@@ -7959,7 +8168,7 @@
       "id": "kanton/BS/640.100/art_221",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "221",
       "artikelLabel": "§ 221",
       "bloecke": [
@@ -8008,7 +8217,7 @@
       "id": "kanton/BS/640.100/art_222",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "222",
       "artikelLabel": "§ 222",
       "bloecke": [
@@ -8043,7 +8252,7 @@
       "id": "kanton/BS/640.100/art_223",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "223",
       "artikelLabel": "§ 223",
       "bloecke": [
@@ -8070,7 +8279,7 @@
       "id": "kanton/BS/640.100/art_224",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "224",
       "artikelLabel": "§ 224",
       "bloecke": [
@@ -8097,7 +8306,7 @@
       "id": "kanton/BS/640.100/art_225",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "225",
       "artikelLabel": "§ 225",
       "bloecke": [
@@ -8116,7 +8325,7 @@
       "id": "kanton/BS/640.100/art_226",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "226",
       "artikelLabel": "§ 226",
       "bloecke": [
@@ -8143,7 +8352,7 @@
       "id": "kanton/BS/640.100/art_227",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "227",
       "artikelLabel": "§ 227",
       "bloecke": [
@@ -8166,7 +8375,7 @@
       "id": "kanton/BS/640.100/art_228",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "228",
       "artikelLabel": "§ 228",
       "bloecke": [
@@ -8193,7 +8402,7 @@
       "id": "kanton/BS/640.100/art_228_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "228_a",
       "artikelLabel": "§ 228a",
       "bloecke": [
@@ -8216,7 +8425,7 @@
       "id": "kanton/BS/640.100/art_228_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "228_b",
       "artikelLabel": "§ 228b",
       "bloecke": [
@@ -8240,10 +8449,29 @@
       "sha": "a2f1c34d1d7287e2fc5c674922562df8ec24a3392291c60157796aef0cfdee6b"
     },
     {
+      "id": "kanton/BS/640.100/art_229",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "229",
+      "artikelLabel": "§ 229",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_229_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "229_a",
       "artikelLabel": "§ 229a",
       "bloecke": [
@@ -8300,7 +8528,7 @@
       "id": "kanton/BS/640.100/art_230",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "230",
       "artikelLabel": "§ 230",
       "bloecke": [
@@ -8323,7 +8551,7 @@
       "id": "kanton/BS/640.100/art_231",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "231",
       "artikelLabel": "§ 231",
       "bloecke": [
@@ -8342,7 +8570,7 @@
       "id": "kanton/BS/640.100/art_232",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "232",
       "artikelLabel": "§ 232",
       "bloecke": [
@@ -8361,7 +8589,7 @@
       "id": "kanton/BS/640.100/art_233",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "233",
       "artikelLabel": "§ 233",
       "bloecke": [
@@ -8380,7 +8608,7 @@
       "id": "kanton/BS/640.100/art_233_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "233_a",
       "artikelLabel": "§ 233a",
       "bloecke": [
@@ -8399,7 +8627,7 @@
       "id": "kanton/BS/640.100/art_234",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "234",
       "artikelLabel": "§ 234",
       "bloecke": [
@@ -8588,7 +8816,7 @@
       "id": "kanton/BS/640.100/art_235",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "235",
       "artikelLabel": "§ 235",
       "bloecke": [
@@ -8607,7 +8835,7 @@
       "id": "kanton/BS/640.100/art_236",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "236",
       "artikelLabel": "§ 236",
       "bloecke": [
@@ -8630,9 +8858,10 @@
       "id": "kanton/BS/640.100/art_237",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "237",
       "artikelLabel": "§ 237",
+      "titel": "a) Renten",
       "bloecke": [
         {
           "absatz": "1",
@@ -8667,9 +8896,10 @@
       "id": "kanton/BS/640.100/art_238",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "238",
       "artikelLabel": "§ 238",
+      "titel": "b) Kapitalabfindungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -8686,9 +8916,10 @@
       "id": "kanton/BS/640.100/art_239",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "239",
       "artikelLabel": "§ 239",
+      "titel": "c) Einkauf von Beitragsjahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -8705,7 +8936,7 @@
       "id": "kanton/BS/640.100/art_239_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "239_a",
       "artikelLabel": "§ 239a",
       "bloecke": [
@@ -8721,10 +8952,29 @@
       "sha": "91e7c15296fcf6faef94541c5a86fb4082768686ffe52bbf62a81a9d6e48b2a8"
     },
     {
+      "id": "kanton/BS/640.100/art_239_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "239_b",
+      "artikelLabel": "§ 239b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_239_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "239_c",
       "artikelLabel": "§ 239c",
       "bloecke": [
@@ -8743,9 +8993,10 @@
       "id": "kanton/BS/640.100/art_240",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "240",
       "artikelLabel": "§ 240",
+      "titel": "a) Bezüger und Bezügerinnen von Renten der eidgenössischen Alters-, Hinterlassenen- und Invalidenversicherung",
       "bloecke": [
         {
           "absatz": "1",
@@ -8770,9 +9021,10 @@
       "id": "kanton/BS/640.100/art_241",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "241",
       "artikelLabel": "§ 241",
+      "titel": "b) Bezüger und Bezügerinnen von Kinderalimenten",
       "bloecke": [
         {
           "absatz": "1",
@@ -8797,7 +9049,7 @@
       "id": "kanton/BS/640.100/art_241_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "241_a",
       "artikelLabel": "§ 241a",
       "bloecke": [
@@ -8816,7 +9068,7 @@
       "id": "kanton/BS/640.100/art_241_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "241_b",
       "artikelLabel": "§ 241b",
       "bloecke": [
@@ -8850,10 +9102,29 @@
       "sha": "afef684b6af272b207a47549401952d9cc80378dfc6880fe48c1abbc01f13fb6"
     },
     {
+      "id": "kanton/BS/640.100/art_241_bis",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "241_bis",
+      "artikelLabel": "§ 241bis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_242",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "242",
       "artikelLabel": "§ 242",
       "bloecke": [
@@ -8881,10 +9152,48 @@
       "sha": "80801fe587a3d29689ae1e215748eec2f8c3116024e081c731106ae403ca640b"
     },
     {
+      "id": "kanton/BS/640.100/art_242_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "242_a",
+      "artikelLabel": "§ 242a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/640.100/art_242_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
+      "artikel": "242_b",
+      "artikelLabel": "§ 242b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/640.100/art_242_bis",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "242_bis",
       "artikelLabel": "§ 242bis",
       "bloecke": [
@@ -8935,7 +9244,7 @@
       "id": "kanton/BS/640.100/art_242_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "242_c",
       "artikelLabel": "§ 242c",
       "bloecke": [
@@ -8972,7 +9281,7 @@
       "id": "kanton/BS/640.100/art_242_ter",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "242_ter",
       "artikelLabel": "§ 242ter",
       "bloecke": [
@@ -8995,7 +9304,7 @@
       "id": "kanton/BS/640.100/art_243",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Steuergesetz, StG (640.100)",
+      "erlass": "Gesetz über die direkten Steuern, Steuergesetz, StG (640.100)",
       "artikel": "243",
       "artikelLabel": "§ 243",
       "bloecke": [

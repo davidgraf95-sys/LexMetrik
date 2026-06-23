@@ -5,9 +5,10 @@
       "id": "kanton/BS/780.100/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zweck und Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -38,9 +39,10 @@
       "id": "kanton/BS/780.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Verursacherprinzip",
       "bloecke": [
         {
           "absatz": "1",
@@ -61,7 +63,7 @@
       "id": "kanton/BS/780.100/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
       "bloecke": [
@@ -84,9 +86,10 @@
       "id": "kanton/BS/780.100/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Beurteilung der Risikoermittlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -111,9 +114,10 @@
       "id": "kanton/BS/780.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Verzeichnis der Gefahrenquellen",
       "bloecke": [
         {
           "absatz": "1",
@@ -142,9 +146,10 @@
       "id": "kanton/BS/780.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -193,9 +198,10 @@
       "id": "kanton/BS/780.100/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Periodische Emissionsmessungen und -kontrollen",
       "bloecke": [
         {
           "absatz": "1",
@@ -216,9 +222,10 @@
       "id": "kanton/BS/780.100/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Feuerungs- und Verbrennungsanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -253,9 +260,10 @@
       "id": "kanton/BS/780.100/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Emissionsgutschriften",
       "bloecke": [
         {
           "absatz": "1",
@@ -302,9 +310,10 @@
       "id": "kanton/BS/780.100/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Emissionsverbund",
       "bloecke": [
         {
           "absatz": "1",
@@ -363,9 +372,10 @@
       "id": "kanton/BS/780.100/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Lärmempfindlichkeitsstufen",
       "bloecke": [
         {
           "absatz": "1",
@@ -398,9 +408,10 @@
       "id": "kanton/BS/780.100/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Lärmschutzmassnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -429,9 +440,10 @@
       "id": "kanton/BS/780.100/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Förderung umweltfreundlicher Verkehrsmittel und Fortbewegungsarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -529,12 +541,51 @@
       "sha": "a563c7db59b89dfe8216c4013e1db8be8cebb4fee5d502673aea09cd470f66db"
     },
     {
+      "id": "kanton/BS/780.100/art_13 a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
+      "artikel": "13 a",
+      "artikelLabel": "§ 13a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17f0d96868f90b3fa8a5fe889173a3c9",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/780.100/art_13 b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
+      "artikel": "13 b",
+      "artikelLabel": "§ 13b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17f0d96868f90b3fa8a5fe889173a3c9",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/780.100/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Schutz der Wohngebiete",
       "bloecke": [
         {
           "absatz": "1",
@@ -559,9 +610,10 @@
       "id": "kanton/BS/780.100/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Einhalten von Verkehrsbeschränkungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -582,9 +634,10 @@
       "id": "kanton/BS/780.100/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Parkplätze auf öffentlichem Grund",
       "bloecke": [
         {
           "absatz": "1",
@@ -643,9 +696,10 @@
       "id": "kanton/BS/780.100/art_16_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_a",
       "artikelLabel": "§ 16a",
+      "titel": "Lademöglichkeiten für Elektroautos",
       "bloecke": [
         {
           "absatz": "1",
@@ -666,9 +720,10 @@
       "id": "kanton/BS/780.100/art_16_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_b",
       "artikelLabel": "§ 16b",
+      "titel": "Finanzielle Förderung der Ladeinfrastruktur für Elektroautos",
       "bloecke": [
         {
           "absatz": "1",
@@ -697,9 +752,10 @@
       "id": "kanton/BS/780.100/art_16_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_c",
       "artikelLabel": "§ 16c",
+      "titel": "Finanzierung des Fonds",
       "bloecke": [
         {
           "absatz": "1",
@@ -738,9 +794,10 @@
       "id": "kanton/BS/780.100/art_16_d",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_d",
       "artikelLabel": "§ 16d",
+      "titel": "Befristung des ZEM",
       "bloecke": [
         {
           "absatz": "1",
@@ -761,9 +818,10 @@
       "id": "kanton/BS/780.100/art_16_e",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_e",
       "artikelLabel": "§ 16e",
+      "titel": "Fördergegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -794,9 +852,10 @@
       "id": "kanton/BS/780.100/art_16_f",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_f",
       "artikelLabel": "§ 16f",
+      "titel": "Förderkriterien",
       "bloecke": [
         {
           "absatz": "1",
@@ -821,9 +880,10 @@
       "id": "kanton/BS/780.100/art_16_g",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_g",
       "artikelLabel": "§ 16g",
+      "titel": "Förderumfang",
       "bloecke": [
         {
           "absatz": "1",
@@ -854,9 +914,10 @@
       "id": "kanton/BS/780.100/art_16_h",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_h",
       "artikelLabel": "§ 16h",
+      "titel": "Rückforderung",
       "bloecke": [
         {
           "absatz": "1",
@@ -877,9 +938,10 @@
       "id": "kanton/BS/780.100/art_16_i",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "16_i",
       "artikelLabel": "§ 16i",
+      "titel": "Vollzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -896,9 +958,10 @@
       "id": "kanton/BS/780.100/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Finanzielle Unterstützung von Parkierungsanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -937,9 +1000,10 @@
       "id": "kanton/BS/780.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Parkieren von Motorfahrzeugen auf Staatsarealen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1004,9 +1068,10 @@
       "id": "kanton/BS/780.100/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Park-and-Ride- und Bike-and-Ride-Anlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1043,9 +1108,10 @@
       "id": "kanton/BS/780.100/art_19 a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19 a",
       "artikelLabel": "§ 19a",
+      "titel": "Kontrolle von Sendeanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1066,9 +1132,10 @@
       "id": "kanton/BS/780.100/art_19 b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19 b",
       "artikelLabel": "§ 19b",
+      "titel": "Immissionsüberwachung durch den Kanton",
       "bloecke": [
         {
           "absatz": "1",
@@ -1085,9 +1152,10 @@
       "id": "kanton/BS/780.100/art_19_bis",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19_bis",
       "artikelLabel": "§ 19bis",
+      "titel": "Quartierparkings",
       "bloecke": [
         {
           "absatz": "1",
@@ -1132,9 +1200,10 @@
       "id": "kanton/BS/780.100/art_19_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19_c",
       "artikelLabel": "§ 19c",
+      "titel": "Gesundheitsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1151,9 +1220,10 @@
       "id": "kanton/BS/780.100/art_19_ter",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "19_ter",
       "artikelLabel": "§ 19ter",
+      "titel": "Mobilitätsfonds",
       "bloecke": [
         {
           "absatz": "1",
@@ -1190,9 +1260,10 @@
       "id": "kanton/BS/780.100/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Grundsätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -1221,9 +1292,10 @@
       "id": "kanton/BS/780.100/art_20_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "20_a",
       "artikelLabel": "§ 20a",
+      "titel": "Sauberkeit und Abfallvermeidung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1282,9 +1354,10 @@
       "id": "kanton/BS/780.100/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Übertragung und Übernahme von Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -1305,9 +1378,10 @@
       "id": "kanton/BS/780.100/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Wiederverwertung der Siedlungsabfälle",
       "bloecke": [
         {
           "absatz": "1",
@@ -1328,9 +1402,10 @@
       "id": "kanton/BS/780.100/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Sammlung der Siedlungsabfälle",
       "bloecke": [
         {
           "absatz": "1",
@@ -1355,9 +1430,10 @@
       "id": "kanton/BS/780.100/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Beseitigung der Siedlungsabfälle",
       "bloecke": [
         {
           "absatz": "1",
@@ -1382,9 +1458,10 @@
       "id": "kanton/BS/780.100/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Beseitigung von Sonderabfällen aus Haushaltungen und aus dem Kleingewerbe",
       "bloecke": [
         {
           "absatz": "1",
@@ -1409,9 +1486,10 @@
       "id": "kanton/BS/780.100/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Abfälle aus Industrie und Gewerbe",
       "bloecke": [
         {
           "absatz": "1",
@@ -1436,9 +1514,10 @@
       "id": "kanton/BS/780.100/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Baustellenabfälle",
       "bloecke": [
         {
           "absatz": "1",
@@ -1455,9 +1534,10 @@
       "id": "kanton/BS/780.100/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Verbotene Beseitigungsarten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1482,9 +1562,10 @@
       "id": "kanton/BS/780.100/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Bewilligungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1545,9 +1626,10 @@
       "id": "kanton/BS/780.100/art_30",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Abfallverbrennungsanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1568,9 +1650,10 @@
       "id": "kanton/BS/780.100/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Zuweisung der Abfälle zu den Abfallanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1606,10 +1689,29 @@
       "sha": "a2e14d34a5b56ae2d33960e665f19110ec977984ca733a9d8303750c4ac7531b"
     },
     {
+      "id": "kanton/BS/780.100/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17f0d96868f90b3fa8a5fe889173a3c9",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/780.100/art_33",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
       "bloecke": [
@@ -1632,7 +1734,7 @@
       "id": "kanton/BS/780.100/art_33 a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "33 a",
       "artikelLabel": "§ 33a",
       "bloecke": [
@@ -1659,9 +1761,10 @@
       "id": "kanton/BS/780.100/art_34",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1708,9 +1811,10 @@
       "id": "kanton/BS/780.100/art_35",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Bodenuntersuchungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1739,9 +1843,10 @@
       "id": "kanton/BS/780.100/art_36",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Erhaltung der Bodenfruchtbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1758,9 +1863,10 @@
       "id": "kanton/BS/780.100/art_37",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Verunreinigter Aushub",
       "bloecke": [
         {
           "absatz": "1",
@@ -1781,9 +1887,10 @@
       "id": "kanton/BS/780.100/art_38",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Schneeräumung, Bekämpfung von Glatteis",
       "bloecke": [
         {
           "absatz": "1",
@@ -1800,9 +1907,10 @@
       "id": "kanton/BS/780.100/art_39",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Altlasten und Bodensanierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1827,9 +1935,10 @@
       "id": "kanton/BS/780.100/art_40",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Kontrollstelle für Chemiesicherheit, Gift und Umwelt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1886,9 +1995,10 @@
       "id": "kanton/BS/780.100/art_41",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Überwachung umweltgefährdender Stoffe",
       "bloecke": [
         {
           "absatz": "1",
@@ -1917,9 +2027,10 @@
       "id": "kanton/BS/780.100/art_42",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Zuständigkeit im Vollzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -1936,9 +2047,10 @@
       "id": "kanton/BS/780.100/art_42_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "42_a",
       "artikelLabel": "§ 42a",
+      "titel": "Polizeiliche Kompetenzen Amt für Umwelt und Energie",
       "bloecke": [
         {
           "absatz": "1",
@@ -1959,9 +2071,10 @@
       "id": "kanton/BS/780.100/art_43",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Information und Beratung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1986,9 +2099,10 @@
       "id": "kanton/BS/780.100/art_44",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Ausbildung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2013,9 +2127,10 @@
       "id": "kanton/BS/780.100/art_45",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Forschung und Entwicklung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2036,9 +2151,10 @@
       "id": "kanton/BS/780.100/art_46",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -2055,9 +2171,10 @@
       "id": "kanton/BS/780.100/art_47",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Umweltverträglichkeitsprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2074,9 +2191,10 @@
       "id": "kanton/BS/780.100/art_48",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "48",
       "artikelLabel": "§ 48",
+      "titel": "Beschwerderecht der Umweltschutzorganisationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2090,12 +2208,32 @@
       "sha": "c00c59de3fbff14591938dd9ed4b764f28be1723ea78195857648b245c6eaaad"
     },
     {
+      "id": "kanton/BS/780.100/art_49",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
+      "artikel": "49",
+      "artikelLabel": "§ 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/780.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17f0d96868f90b3fa8a5fe889173a3c9",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/780.100/art_50",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Selbstverpflichtung des Kantons und der Landgemeinden",
       "bloecke": [
         {
           "absatz": "1",
@@ -2142,9 +2280,10 @@
       "id": "kanton/BS/780.100/art_51",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "Berichterstattung der Regierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2187,9 +2326,10 @@
       "id": "kanton/BS/780.100/art_51_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "51_a",
       "artikelLabel": "§ 51a",
+      "titel": "Strafbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2272,9 +2412,10 @@
       "id": "kanton/BS/780.100/art_52",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Strafbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2291,9 +2432,10 @@
       "id": "kanton/BS/780.100/art_53",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Hochbautengesetz",
       "bloecke": [
         {
           "absatz": "1",
@@ -2310,9 +2452,10 @@
       "id": "kanton/BS/780.100/art_54",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "USG BS (780.100)",
+      "erlass": "Umweltschutzgesetz Basel-Stadt, USG BS (780.100)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Referendumsklausel, Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

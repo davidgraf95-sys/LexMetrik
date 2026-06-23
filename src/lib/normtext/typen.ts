@@ -13,6 +13,13 @@ export interface NormSnapshot {
   /** Menschliche Artikel-Bezeichnung ('Art. 335c', '§ 4'). */
   artikelLabel: string;
   /**
+   * N1 (BS-Audit 23.6.2026) — amtlicher Randtitel (Sachtitel) des Artikels, falls
+   * die Quelle einen trägt (LexWork article_title). Fehlt er oder ist er nur der
+   * Aufhebungs-Platzhalter «…», bleibt das Feld weg (§7: nichts fabrizieren). Wird
+   * in der Lesesicht als Randtitel angezeigt.
+   */
+  titel?: string;
+  /**
    * Absatz-/Marginalie-Blöcke in Reihenfolge; absatz: '1','2','a','bis' …
    * - text: Einleitungstext des Absatzes OHNE die Listenpunkte.
    * - items (optional): lit./Ziff.-Aufzählungspunkte des Absatzes. marke ist

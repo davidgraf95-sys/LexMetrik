@@ -8,6 +8,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Zweck",
       "bloecke": [
         {
           "absatz": "1",
@@ -39,6 +40,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -58,6 +60,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "titel": "Zusammenarbeit mit dem Bund",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,6 +110,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "titel": "Anerkennungsbehörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,6 +134,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Vollzug der Vereinbarung",
       "bloecke": [
         {
           "absatz": "1",
@@ -157,6 +162,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Anerkennungsreglemente",
       "bloecke": [
         {
           "absatz": "1",
@@ -202,6 +208,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Anerkennungsvoraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -257,6 +264,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "titel": "Wirkungen der Anerkennung",
       "bloecke": [
         {
           "absatz": "1",
@@ -288,6 +296,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "titel": "Dokumentation, Publikation",
       "bloecke": [
         {
           "absatz": "1",
@@ -311,6 +320,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "titel": "Rechtsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -338,6 +348,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "titel": "Strafbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -357,6 +368,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "titel": "Kosten und Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -389,6 +401,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "können Gebühren in der Höhe von mindestens CHF 100.-- bis höchstens CHF 3'000.-- erhoben werden."
+        },
+        {
           "absatz": "4",
           "text": "Der Vorstand der jeweiligen Konferenz legt die einzelnen Entscheidgebühren in einem Gebührenreglement fest. Sie bemisst sich nach dem jeweiligen Zeit- und Arbeitsaufwand sowie nach dem öffentlichen Interesse an der jeweiligen Tätigkeit."
         }
@@ -397,7 +413,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/419.900",
       "abgerufen": "2026-06-23",
       "fassungsToken": "7de5e3cd2ebfaf96f4feceae161959fc",
-      "sha": "4b8ec7ff5f722bccde74c254d1e4cdb131e9e5c4be5e6aa739d8e8331ab7196d"
+      "sha": "30308aa6a6eb2e9d86c20022d802e282b5ac4e7d1c3dd1a21c7a80b29b32be68"
     },
     {
       "id": "kanton/BS/419.900/art_12_bis",
@@ -406,6 +422,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "12_bis",
       "artikelLabel": "Art. 12bis",
+      "titel": "Liste über Lehrpersonen ohne Unterrichtsberechtigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -445,6 +462,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "12_ter",
       "artikelLabel": "Art. 12ter",
+      "titel": "Register über Gesundheitsfachpersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -504,6 +522,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "titel": "Beitritt / Kündigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -527,6 +546,7 @@
       "erlass": "Interkantonale Vereinbarung über die Anerkennung von Ausbildungsabschlüssen (419.900)",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "titel": "In-Kraft-Treten",
       "bloecke": [
         {
           "absatz": "1",

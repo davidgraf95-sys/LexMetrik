@@ -147,6 +147,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "2_bis",
       "artikelLabel": "§ 2bis",
+      "titel": "Schulen mit kantonalem Auftrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,6 +171,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "2_ter",
       "artikelLabel": "§ 2ter",
+      "titel": "Schulen in den kantonalen Schulheimen",
       "bloecke": [
         {
           "absatz": "1",
@@ -246,6 +248,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Ziel",
       "bloecke": [
         {
           "absatz": "1",
@@ -259,12 +262,32 @@
       "sha": "8bec501aa88665ed1d71330f9c25e72412b8c9eeea39d8cce6ec044886ababb6"
     },
     {
+      "id": "kanton/BS/410.100/art_4_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "4_a",
+      "artikelLabel": "§ 4a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Angebot und Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -282,12 +305,526 @@
       "sha": "cd1c466482c10bdb817d6047d9bb471fe6cd2b88bf5d7624709c82987168d5a1"
     },
     {
+      "id": "kanton/BS/410.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_16_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "16_a",
+      "artikelLabel": "§ 16a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_28_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "28_a",
+      "artikelLabel": "§ 28a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_31",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Ziel",
       "bloecke": [
         {
           "absatz": "1",
@@ -307,6 +844,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Angebot und Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -344,6 +882,82 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "afdd745b620a0f584ba96a181830ad4bfccd88477c40637d68b38b77ce18d9c6"
+    },
+    {
+      "id": "kanton/BS/410.100/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_37",
@@ -409,6 +1023,44 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "732be4ca2a9a6018158d6d1ea475eaa1ea1408475871c4a3f1ac54c9e409e4b2"
+    },
+    {
+      "id": "kanton/BS/410.100/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_42",
@@ -503,6 +1155,234 @@
       "sha": "bd8425cbf4c2bfa7c2ff092450d5b1920b49ecc825fd6329e06ddb5c1c305c6e"
     },
     {
+      "id": "kanton/BS/410.100/art_44",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_45",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_46",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_47",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_49",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "49",
+      "artikelLabel": "§ 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_50",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "50",
+      "artikelLabel": "§ 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_51",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "51",
+      "artikelLabel": "§ 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_51_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "51_a",
+      "artikelLabel": "§ 51a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_51_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "51_b",
+      "artikelLabel": "§ 51b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_51_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "51_c",
+      "artikelLabel": "§ 51c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_51_d",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "51_d",
+      "artikelLabel": "§ 51d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_52",
       "ebene": "kanton",
       "quelle": "BS",
@@ -528,6 +1408,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "52_a",
       "artikelLabel": "§ 52a",
+      "titel": "Zulassungsbeschränkungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -569,6 +1450,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "52_bis",
       "artikelLabel": "§ 52bis",
+      "titel": "Die Wirtschaftsmittelschule",
       "bloecke": [
         {
           "absatz": "1",
@@ -588,6 +1470,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "52_ter",
       "artikelLabel": "§ 52ter",
+      "titel": "Das Zentrum für Brückenangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -599,6 +1482,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "ff1cc5351a4469e4f6a530e608b735a802c2bb54d7d1535c75f0f816f3fe29c7"
+    },
+    {
+      "id": "kanton/BS/410.100/art_53",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "53",
+      "artikelLabel": "§ 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_54",
@@ -626,6 +1528,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "Schulpflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -674,12 +1577,32 @@
       "sha": "df988ce49cb51532330b93b0991f9f0f20abd7b9100636961e2344b03feee002"
     },
     {
+      "id": "kanton/BS/410.100/art_56_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "56_a",
+      "artikelLabel": "§ 56a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_57",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Überspringen eines Schuljahres",
       "bloecke": [
         {
           "absatz": "1",
@@ -707,6 +1630,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "57_a",
       "artikelLabel": "§ 57a",
+      "titel": "Wiederholen eines Schuljahres",
       "bloecke": [
         {
           "absatz": "1",
@@ -730,6 +1654,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "57_b",
       "artikelLabel": "§ 57b",
+      "titel": "Übertrittsentscheide",
       "bloecke": [
         {
           "absatz": "1",
@@ -753,6 +1678,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "57_c",
       "artikelLabel": "§ 57c",
+      "titel": "Leistungstests",
       "bloecke": [
         {
           "absatz": "1",
@@ -792,6 +1718,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "57_d",
       "artikelLabel": "§ 57d",
+      "titel": "Volksschulabschluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -811,6 +1738,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Aufnahme von Schülerinnen und Schülern mit Aufenthalt im Kanton",
       "bloecke": [
         {
           "absatz": "1",
@@ -846,6 +1774,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "59",
       "artikelLabel": "§ 59",
+      "titel": "Dispens vom Besuch der Volksschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -867,6 +1796,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "cdb9b1fa86d1be4d440b66fce00a9b01ce7465b94b22c6ac9ca34ee1bf220530"
+    },
+    {
+      "id": "kanton/BS/410.100/art_60",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "60",
+      "artikelLabel": "§ 60",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_61",
@@ -902,6 +1850,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "62",
       "artikelLabel": "§ 62",
+      "titel": "Aufnahme von Schülerinnen und Schülern ohne Aufenthalt im Kanton",
       "bloecke": [
         {
           "absatz": "1",
@@ -933,6 +1882,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "63",
       "artikelLabel": "§ 63",
+      "titel": "Vorzeitige Schulentlassung",
       "bloecke": [
         {
           "absatz": "1",
@@ -952,6 +1902,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "63_a",
       "artikelLabel": "§ 63a",
+      "titel": "Unterricht",
       "bloecke": [
         {
           "absatz": "1",
@@ -979,6 +1930,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "63_b",
       "artikelLabel": "§ 63b",
+      "titel": "Förderangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -1052,6 +2004,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "64",
       "artikelLabel": "§ 64",
+      "titel": "Verstärkte Massnahmen (Sonderschulung)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1079,6 +2032,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "64_a",
       "artikelLabel": "§ 64a",
+      "titel": "Fördermassnahmen vor der Einschulung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1121,6 +2075,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "65",
       "artikelLabel": "§ 65",
+      "titel": "Schulbesuch",
       "bloecke": [
         {
           "absatz": "1",
@@ -1179,6 +2134,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "67",
       "artikelLabel": "§ 67",
+      "titel": "Schuljahr",
       "bloecke": [
         {
           "absatz": "1",
@@ -1198,6 +2154,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "67_a",
       "artikelLabel": "§ 67a",
+      "titel": "Unterrichtslektionen der vom Kanton geführten Schulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1251,6 +2208,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "67_b",
       "artikelLabel": "§ 67b",
+      "titel": "Klassengrössen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1308,6 +2266,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "68",
       "artikelLabel": "§ 68",
+      "titel": "Lehrpläne",
       "bloecke": [
         {
           "absatz": "1",
@@ -1373,6 +2332,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "69",
       "artikelLabel": "§ 69",
+      "titel": "Erfahrungsschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1434,6 +2394,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "70",
       "artikelLabel": "§ 70",
+      "titel": "Schulbesuchstage",
       "bloecke": [
         {
           "absatz": "1",
@@ -1453,6 +2414,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "71",
       "artikelLabel": "§ 71",
+      "titel": "Ferien",
       "bloecke": [
         {
           "absatz": "1",
@@ -1466,12 +2428,32 @@
       "sha": "eed178af3e38451f4557ebb967ca91e5316af0b0510cd5d6b29088a58f33f837"
     },
     {
+      "id": "kanton/BS/410.100/art_72",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "72",
+      "artikelLabel": "§ 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_73",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "73",
       "artikelLabel": "§ 73",
+      "titel": "Unterrichtszeit der Volksschule",
       "bloecke": [
         {
           "absatz": "1",
@@ -1503,6 +2485,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "74",
       "artikelLabel": "§ 74",
+      "titel": "Verordnungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1620,6 +2603,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "74_a",
       "artikelLabel": "§ 74a",
+      "titel": "Schulstandorte und Angebotsprofile",
       "bloecke": [
         {
           "absatz": "1",
@@ -1639,6 +2623,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "75",
       "artikelLabel": "§ 75",
+      "titel": "Kosten des Schulwesens",
       "bloecke": [
         {
           "absatz": "1",
@@ -1697,6 +2682,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77",
       "artikelLabel": "§ 77",
+      "titel": "Von den öffentlichrechtlich und kantonal anerkannten Kirchen und Religionsgemeinschaften verantworteter Religionsunterricht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1726,12 +2712,32 @@
       "sha": "eb04bd0d22e64f1e017391d3b3e749f9643c2d40290cb0ab6c225ebaea6dc4c6"
     },
     {
+      "id": "kanton/BS/410.100/art_77_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "77_a",
+      "artikelLabel": "§ 77a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_77_b",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_b",
       "artikelLabel": "§ 77b",
+      "titel": "Tagesstrukturen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1759,6 +2765,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_c",
       "artikelLabel": "§ 77c",
+      "titel": "Ferienangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -1782,6 +2789,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_d",
       "artikelLabel": "§ 77d",
+      "titel": "Anforderungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1823,6 +2831,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_e",
       "artikelLabel": "§ 77e",
+      "titel": "Verantwortung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1850,6 +2859,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_f",
       "artikelLabel": "§ 77f",
+      "titel": "Private Anbieterinnen und Anbieter",
       "bloecke": [
         {
           "absatz": "1",
@@ -1895,6 +2905,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_g",
       "artikelLabel": "§ 77g",
+      "titel": "Qualitätssicherung und Weiterentwicklung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1914,6 +2925,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_h",
       "artikelLabel": "§ 77h",
+      "titel": "Zusammenarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1937,6 +2949,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_i",
       "artikelLabel": "§ 77i",
+      "titel": "Datenbearbeitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1956,6 +2969,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "77_j",
       "artikelLabel": "§ 77j",
+      "titel": "Kostenbeteiligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1983,6 +2997,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "78",
       "artikelLabel": "§ 78",
+      "titel": "Aufsicht über das Schulwesen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2002,6 +3017,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "79",
       "artikelLabel": "§ 79",
+      "titel": "Erziehungsrat",
       "bloecke": [
         {
           "absatz": "1",
@@ -2069,6 +3085,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "79_a",
       "artikelLabel": "§ 79a",
+      "titel": "Schulräte",
       "bloecke": [
         {
           "absatz": "1",
@@ -2096,6 +3113,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "79_b",
       "artikelLabel": "§ 79b",
+      "titel": "Zusammensetzung der Schulräte",
       "bloecke": [
         {
           "absatz": "1",
@@ -2147,6 +3165,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "79_c",
       "artikelLabel": "§ 79c",
+      "titel": "Aufgaben der Schulräte",
       "bloecke": [
         {
           "absatz": "1",
@@ -2200,6 +3219,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "80",
       "artikelLabel": "§ 80",
+      "titel": "Schulkommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2250,6 +3270,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "82",
       "artikelLabel": "§ 82",
+      "titel": "Zusammensetzung der Schulkommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2366,6 +3387,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "86",
       "artikelLabel": "§ 86",
+      "titel": "Aufgaben der Schulkommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2437,12 +3459,32 @@
       "sha": "655fffbb4792b8326149e8587d0b151d8067c7c38477610501a27ec1bfb50585"
     },
     {
+      "id": "kanton/BS/410.100/art_87",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "87",
+      "artikelLabel": "§ 87",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_87_a",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "87_a",
       "artikelLabel": "§ 87a",
+      "titel": "Volksschulleitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2470,6 +3512,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "87_b",
       "artikelLabel": "§ 87b",
+      "titel": "Leitung Mittelschulen und Berufsbildung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2489,6 +3532,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "87_c",
       "artikelLabel": "§ 87c",
+      "titel": "Schulleitungen für die Schulstandorte der Volksschule",
       "bloecke": [
         {
           "absatz": "1",
@@ -2520,6 +3564,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "88",
       "artikelLabel": "§ 88",
+      "titel": "Schulleitungen für die Schulstandorte der Mittelschulen, der Wirtschaftsmittelschule und des Zentrums für Brückenangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -2551,6 +3596,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "88_a",
       "artikelLabel": "§ 88a",
+      "titel": "Rechtsmittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -2574,6 +3620,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "88_bis",
       "artikelLabel": "§ 88bis",
+      "titel": "Lehrpersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2593,6 +3640,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "88_ter",
       "artikelLabel": "§ 88ter",
+      "titel": "Fachpersonen",
       "bloecke": [
         {
           "absatz": "1",
@@ -2606,12 +3654,51 @@
       "sha": "1e8a7d44b42514e07c1fbc559e17b0b5a9c3c9a32f1d27999a69f556b6db76aa"
     },
     {
+      "id": "kanton/BS/410.100/art_89",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "89",
+      "artikelLabel": "§ 89",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_90",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "90",
+      "artikelLabel": "§ 90",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_91",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "91",
       "artikelLabel": "§ 91",
+      "titel": "Erziehungsberechtigte",
       "bloecke": [
         {
           "absatz": "1",
@@ -2709,6 +3796,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "91_a",
       "artikelLabel": "§ 91a",
+      "titel": "Elterndelegierte, Elternräte",
       "bloecke": [
         {
           "absatz": "1",
@@ -2758,6 +3846,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "91_b",
       "artikelLabel": "§ 91b",
+      "titel": "Schülerinnen und Schüler",
       "bloecke": [
         {
           "absatz": "1",
@@ -2956,6 +4045,25 @@
       "sha": "c0853f92d80718f429f7b1e6d07f1bb082a160e9f837fe1ba0cc9d5b2b540bbc"
     },
     {
+      "id": "kanton/BS/410.100/art_97",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "97",
+      "artikelLabel": "§ 97",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_97_a",
       "ebene": "kanton",
       "quelle": "BS",
@@ -3031,6 +4139,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "98",
       "artikelLabel": "§ 98",
+      "titel": "Rektorinnen und Rektoren",
       "bloecke": [
         {
           "absatz": "1",
@@ -3050,6 +4159,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "99",
       "artikelLabel": "§ 99",
+      "titel": "Konrektorinnen und Konrektoren",
       "bloecke": [
         {
           "absatz": "1",
@@ -3069,6 +4179,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "100",
       "artikelLabel": "§ 100",
+      "titel": "Jahresarbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -3092,6 +4203,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "101",
       "artikelLabel": "§ 101",
+      "titel": "Pflichtlektionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3104,6 +4216,14 @@
             {
               "marke": "2",
               "text": "Primarschulen 28 Lekt."
+            },
+            {
+              "marke": "2",
+              "text": ""
+            },
+            {
+              "marke": "3",
+              "text": ""
             },
             {
               "marke": "4",
@@ -3142,6 +4262,10 @@
               "text": "Sport 25 Lekt."
             },
             {
+              "marke": "6",
+              "text": ""
+            },
+            {
               "marke": "7",
               "text": "Allgemeine Gewerbeschule Basel, Berufsfachschule Basel, Schule für Gestaltung Basel 25 Lekt."
             },
@@ -3176,7 +4300,178 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
-      "sha": "e59bf659b9f7e83d2681914ab12e4c63f87f5cdd9969614ad24ab99517c7f47a"
+      "sha": "57eb9f174a385ae01fbf7ca9a5af2b7681ad6bb48a08c84fd45e719eb3840811"
+    },
+    {
+      "id": "kanton/BS/410.100/art_102",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "102",
+      "artikelLabel": "§ 102",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_103",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "103",
+      "artikelLabel": "§ 103",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_104",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "104",
+      "artikelLabel": "§ 104",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_105",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "105",
+      "artikelLabel": "§ 105",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_106",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "106",
+      "artikelLabel": "§ 106",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_107",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "107",
+      "artikelLabel": "§ 107",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_108",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "108",
+      "artikelLabel": "§ 108",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_109",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "109",
+      "artikelLabel": "§ 109",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_110",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "110",
+      "artikelLabel": "§ 110",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_111",
@@ -3185,6 +4480,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "111",
       "artikelLabel": "§ 111",
+      "titel": "Reiseentschädigung, Studienbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -3208,6 +4504,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "112",
       "artikelLabel": "§ 112",
+      "titel": "Urlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -3231,6 +4528,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "113",
       "artikelLabel": "§ 113",
+      "titel": "Art der Konferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3268,6 +4566,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "114",
       "artikelLabel": "§ 114",
+      "titel": "Aufgabe der Konferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3303,12 +4602,51 @@
       "sha": "c2bc38eb5d32b4a889616fbc28ee3532d791ecc0dd69643d2a794138f1fe01de"
     },
     {
+      "id": "kanton/BS/410.100/art_115",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "115",
+      "artikelLabel": "§ 115",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/410.100/art_116",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "116",
+      "artikelLabel": "§ 116",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_117",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "117",
       "artikelLabel": "§ 117",
+      "titel": "Schulkonferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3350,6 +4688,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "118",
       "artikelLabel": "§ 118",
+      "titel": "Versammlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -3389,12 +4728,32 @@
       "sha": "45c0286ecbce174ca0a959b0fef7bb985017a07798eec3eae171d2d8cfc5b389"
     },
     {
+      "id": "kanton/BS/410.100/art_119",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "119",
+      "artikelLabel": "§ 119",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_120",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "120",
       "artikelLabel": "§ 120",
+      "titel": "Fachgruppen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3430,6 +4789,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "121",
       "artikelLabel": "§ 121",
+      "titel": "Kantonale Fachkonferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3515,6 +4875,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "124",
       "artikelLabel": "§ 124",
+      "titel": "Leitender Ausschuss",
       "bloecke": [
         {
           "absatz": "1",
@@ -3550,6 +4911,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "125",
       "artikelLabel": "§ 125",
+      "titel": "Vorstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -3575,12 +4937,32 @@
       "sha": "a0210741bc70ac5b85fc3f9e812840cc7c110bbb797d9c8ed7a349bef82f1bbd"
     },
     {
+      "id": "kanton/BS/410.100/art_126",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "126",
+      "artikelLabel": "§ 126",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_127",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "127",
       "artikelLabel": "§ 127",
+      "titel": "Gesamtkonferenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3643,12 +5025,33 @@
       "sha": "1fa0120ee2d506de67372ab9f79348284769f5d5e454fbc0ccd899e368bebc2a"
     },
     {
+      "id": "kanton/BS/410.100/art_129",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "129",
+      "artikelLabel": "§ 129",
+      "titel": "Geschäftsordnung",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/410.100/art_130",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Schulgesetz (410.100)",
       "artikel": "130",
       "artikelLabel": "§ 130",
+      "titel": "Bewilligung von Privatschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3668,6 +5071,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "131",
       "artikelLabel": "§ 131",
+      "titel": "Voraussetzungen für die Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -3745,6 +5149,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "131_a",
       "artikelLabel": "§ 131a",
+      "titel": "Bewilligungsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -3768,6 +5173,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "131_b",
       "artikelLabel": "§ 131b",
+      "titel": "Überprüfung und Entzug von Bewilligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3799,6 +5205,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "132",
       "artikelLabel": "§ 132",
+      "titel": "Aufsichts- und Kontaktperson",
       "bloecke": [
         {
           "absatz": "1",
@@ -3822,6 +5229,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "133",
       "artikelLabel": "§ 133",
+      "titel": "Pflichten der bewilligten Privatschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3867,6 +5275,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "133_a",
       "artikelLabel": "§ 133a",
+      "titel": "Sonderpädagogisches Angebot für Schülerinnen und Schüler von Privatschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -3894,6 +5303,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "134",
       "artikelLabel": "§ 134",
+      "titel": "Zutritt zu staatlichen Museen, Sportstätten und Theatern",
       "bloecke": [
         {
           "absatz": "1",
@@ -3913,6 +5323,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "134_a",
       "artikelLabel": "§ 134a",
+      "titel": "Anerkennung von Privatschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -4054,6 +5465,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "136",
       "artikelLabel": "§ 136",
+      "titel": "Verwaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4073,6 +5485,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "137",
       "artikelLabel": "§ 137",
+      "titel": "Schulhauswartinnen und Schulhauswarte",
       "bloecke": [
         {
           "absatz": "1",
@@ -4096,6 +5509,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "138",
       "artikelLabel": "§ 138",
+      "titel": "Lokalbenützung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4115,6 +5529,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "139",
       "artikelLabel": "§ 139",
+      "titel": "Körperübung, Schulausflüge",
       "bloecke": [
         {
           "absatz": "1",
@@ -4142,6 +5557,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "139_a",
       "artikelLabel": "§ 139a",
+      "titel": "Gesundheitspflege",
       "bloecke": [
         {
           "absatz": "1",
@@ -4169,6 +5585,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "140",
       "artikelLabel": "§ 140",
+      "titel": "Kinder- und Jugendgesundheitsdienst",
       "bloecke": [
         {
           "absatz": "1",
@@ -4234,6 +5651,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "140_a",
       "artikelLabel": "§ 140a",
+      "titel": "Schulzahnpflege",
       "bloecke": [
         {
           "absatz": "1",
@@ -4253,6 +5671,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "141",
       "artikelLabel": "§ 141",
+      "titel": "Schulpsychologie",
       "bloecke": [
         {
           "absatz": "1",
@@ -4290,6 +5709,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "142",
       "artikelLabel": "§ 142",
+      "titel": "Krisensituationen in den Volksschulen",
       "bloecke": [
         {
           "absatz": "1",
@@ -4309,6 +5729,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "143",
       "artikelLabel": "§ 143",
+      "titel": "Abschlussgefährdete Jugendliche",
       "bloecke": [
         {
           "absatz": "1",
@@ -4328,6 +5749,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "144",
       "artikelLabel": "§ 144",
+      "titel": "Schulsozialarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -4369,6 +5791,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "145",
       "artikelLabel": "§ 145",
+      "titel": "Weitere Unterstützungsangebote",
       "bloecke": [
         {
           "absatz": "1",
@@ -4388,6 +5811,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "145_a",
       "artikelLabel": "§ 145a",
+      "titel": "Anmeldung zu Abklärungen, Beratungen und Behandlungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -4411,6 +5835,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "146",
       "artikelLabel": "§ 146",
+      "titel": "Anzeigepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -4463,6 +5888,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "147_a",
       "artikelLabel": "§ 147a",
+      "titel": "Haftpflichtversicherung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4482,6 +5908,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "147_b",
       "artikelLabel": "§ 147b",
+      "titel": "Schulunfallversicherung",
       "bloecke": [
         {
           "absatz": "1",
@@ -4497,6 +5924,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "97b925fd536da4062e28e33527075e48d5f96ba82bcaec883c5a26c65d8f4c49"
+    },
+    {
+      "id": "kanton/BS/410.100/art_148",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "148",
+      "artikelLabel": "§ 148",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_149",
@@ -4524,6 +5970,25 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
       "sha": "a711bcf619e42567661ee187874f8b7864fa83906f49c8871a31f2afbf5faba3"
+    },
+    {
+      "id": "kanton/BS/410.100/art_150",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Schulgesetz (410.100)",
+      "artikel": "150",
+      "artikelLabel": "§ 150",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-08-12",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dbfc5b78e3ffe667b24f0630e39038ba",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/410.100/art_151",
@@ -4612,6 +6077,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "155",
       "artikelLabel": "§ 155",
+      "titel": "Gültigkeit der bisherigen Privatschulbewilligungen und Gültigkeit der Bewilligungen und Anerkennungen für Sonderschulen mit kantonalem Auftrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -4635,6 +6101,7 @@
       "erlass": "Schulgesetz (410.100)",
       "artikel": "156",
       "artikelLabel": "§ 156",
+      "titel": "Nachqualifikation für Kindergartenlehrpersonen",
       "bloecke": [
         {
           "absatz": "1",

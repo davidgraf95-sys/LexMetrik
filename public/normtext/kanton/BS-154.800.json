@@ -25,6 +25,25 @@
       "sha": "693930ee67ba812545d740557b6e9e90c2c6f815e07204f2091f67e9c9feee59"
     },
     {
+      "id": "kanton/BS/154.800/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Gerichtsgebühren (154.800)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2018-07-05",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.800",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0156e468bcf0bf06b9a89155389ac54f",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/154.800/art_2_a",
       "ebene": "kanton",
       "quelle": "BS",
@@ -97,6 +116,7 @@
       "erlass": "Gesetz über die Gerichtsgebühren (154.800)",
       "artikel": "3_a",
       "artikelLabel": "§ 3a",
+      "titel": "Übergangsbestimmung zur Änderung vom 10. Juni 2018",
       "bloecke": [
         {
           "absatz": "1",

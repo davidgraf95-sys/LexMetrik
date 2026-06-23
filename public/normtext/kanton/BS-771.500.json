@@ -5,9 +5,10 @@
       "id": "kanton/BS/771.500/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Bewilligungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -32,9 +33,10 @@
       "id": "kanton/BS/771.500/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Voraussetzungen der Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -81,9 +83,10 @@
       "id": "kanton/BS/771.500/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Widerruf der Bewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -118,9 +121,10 @@
       "id": "kanton/BS/771.500/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -155,9 +159,10 @@
       "id": "kanton/BS/771.500/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Ermässigung oder Erlass der Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -182,9 +187,10 @@
       "id": "kanton/BS/771.500/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Ermittlung der Wassermengen",
       "bloecke": [
         {
           "absatz": "1",
@@ -209,9 +215,10 @@
       "id": "kanton/BS/771.500/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Erhebungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -232,9 +239,10 @@
       "id": "kanton/BS/771.500/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Wassernutzungsgesetz (771.500)",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Bestehende Wassernutzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -246,6 +254,26 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
       "sha": "7266c031ae09c0737a774df6847f81985cd8de89ce9fb2198df6fa514bf10310"
+    },
+    {
+      "id": "kanton/BS/771.500/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz über die Nutzung von öffentlichem Fluss- und Grundwasser, Wassernutzungsgesetz (771.500)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "titel": "Anpassung anderer Gesetze",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "1984-01-29",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4d0e82a41a3b46bb7660c7fe662c392f",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }

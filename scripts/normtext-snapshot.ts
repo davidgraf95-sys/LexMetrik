@@ -191,10 +191,30 @@ function lawIdSafe(lawId: string): string {
   return lawId.replace(/\//g, '_');
 }
 
-// ── Erlass-Bezeichnung lesbar: 'GebV OG (LS 211.11)' ─────────────────────────
-function erlassBezeichnung(abkuerzung: string, erlassName: string, erlassNr: string): string {
-  const basis = abkuerzung.trim() || erlassName.trim();
-  return erlassNr.trim() ? `${basis} (${erlassNr.trim()})` : basis;
+// ── Erlass-Bezeichnung lesbar ────────────────────────────────────────────────
+// Format: 'Volltitel, Kürzel (SR-Nr.)'. Das nachgelagerte browse-manifest
+// (identitaetAusErlass) splittet am LETZTEN Komma: davor der Titel, danach das
+// Kürzel; die Klammer ist die SR-Nr. So zeigen Liste UND Reader den echten
+// Volltitel, das Kürzel separat.
+//
+// S9 (BS-Audit 23.6.2026) — VOR dem Fix war «basis = abkuerzung || erlassName»:
+// sobald eine Abkürzung vorlag, fiel der Volltitel komplett weg → 129 Erlasse
+// zeigten nur «KÜRZEL (SR)», ~406 trugen den Langtitel fälschlich im Kürzel-Feld.
+// Jetzt wird der Volltitel (tol.title via meta.titel, sonst erlassName) als Titel
+// geführt und die Abkürzung NUR dann separat als Kürzel angehängt, wenn sie
+// existiert UND sich vom Titel unterscheidet (keine zweite Wahrheit, §5).
+export function erlassBezeichnung(titel: string, abkuerzung: string, erlassNr: string): string {
+  const t = titel.trim();
+  const abk = abkuerzung.trim();
+  const nr = erlassNr.trim();
+  // Basis-Anzeige: Titel; fehlt der Titel, das Kürzel als Notbehelf.
+  let basis: string;
+  if (t && abk && abk !== t) {
+    basis = `${t}, ${abk}`;
+  } else {
+    basis = t || abk;
+  }
+  return nr ? `${basis} (${nr})` : basis;
 }
 
 // ── Coverage-Befunde der Kantons-Phase ───────────────────────────────────────
@@ -261,13 +281,14 @@ async function erzeugeKantonsSnapshots(
     if (ergebnis.meta.nurPdf) {
       cov.nurPdf.push({
         kanton: g.kanton,
-        erlass: erlassBezeichnung(ergebnis.meta.abkuerzung, g.erlassName, g.erlassNr),
+        erlass: erlassBezeichnung(ergebnis.meta.titel || g.erlassName, ergebnis.meta.abkuerzung, g.erlassNr),
         lawId: g.lawId,
       });
       continue;
     }
 
-    const erlass = erlassBezeichnung(ergebnis.meta.abkuerzung, g.erlassName, g.erlassNr);
+    // S9: Volltitel (tol.title) als Titel, Abkürzung separat als Kürzel.
+    const erlass = erlassBezeichnung(ergebnis.meta.titel || g.erlassName, ergebnis.meta.abkuerzung, g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
     const schluessel = lawSchluessel(g); // filesafe, mit '-de'/'-fr' nur wenn zweisprachig
 
@@ -286,6 +307,9 @@ async function erzeugeKantonsSnapshots(
         erlass,
         artikel: token,
         artikelLabel: ergebnis.labels[token] ?? artikelLabel(token),
+        // N1: amtlicher Randtitel (article_title) aus der LexWork-Extraktion,
+        // falls vorhanden (aufgehobene «…»-Titel liefert der Adapter als undefined).
+        ...(treffer.titel ? { titel: treffer.titel } : {}),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         // LexWork hat keinen Artikel-Anker → Gesetzes-Seite (originale /app/-URL).
@@ -387,7 +411,7 @@ async function erzeugeHtmSnapshots(
       continue;
     }
 
-    const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+    const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
 
     // Vollabdeckung (§7): ALLE Artikel des Erlasses speichern; Label einheitlich
@@ -483,7 +507,7 @@ async function erzeugeZhPdfSnapshots(
       continue;
     }
 
-    const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+    const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
 
     // Vollabdeckung (§7): ALLE Artikel; Label einheitlich «§ N» (ergebnis.labels).
@@ -626,7 +650,7 @@ async function erzeugePdfSnapshots(
         cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
         continue;
       }
-      const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+      const erlass = erlassBezeichnung(g.erlassName, '', g.erlassNr);
       // Vollabdeckung: ALLE Artikel der Quelle; Label einheitlich aus dem Profil-
       // Marker (ergebnis.labels). Pro (Datei, token, quelleUrl) genau ein Eintrag:
       // verschiedene quelleUrls zum selben token (JU-Download-Variante) erzeugen je
@@ -1058,7 +1082,16 @@ async function main(): Promise<void> {
   console.log(`\nGolden-Index: golden/normtext-snapshot.json (${Object.keys(goldenSortiert).length} Einträge)`);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+// Nur als CLI-Skript ausführen, NICHT beim Import aus einem Unit-Test (der nur
+// erlassBezeichnung u.ä. prüft). Unter vite-node steht der Skriptpfad NICHT in
+// process.argv (das ist nur ['node','vite-node', …flags]) — ein Pfad-Regex
+// schlägt darum fehl und main() liefe nie (Bug 23.6.). Der einzige Importer ist
+// der vitest-Test; vitest setzt process.env.VITEST. Daran erkennen wir den Import
+// und überspringen main(); jeder echte CLI-Lauf (vite-node) hat VITEST nicht.
+const direktAufruf = typeof process !== 'undefined' && !process.env.VITEST;
+if (direktAufruf) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}

@@ -2,12 +2,32 @@
   "erzeugt": "2026-06-23",
   "eintraege": [
     {
+      "id": "kanton/BS/423.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Zweck der Schule",
       "bloecke": [
         {
           "absatz": "1",
@@ -31,6 +51,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Schulkommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -66,6 +87,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Ausschüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -79,12 +101,32 @@
       "sha": "dce50e6125a23d365b4070159d85a66b4eeec274ba0618d5ddde5ba90697f6ad"
     },
     {
+      "id": "kanton/BS/423.100/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Entschädigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -104,6 +146,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Bestreitung der Ausgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -123,6 +166,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Gliederung der Schule",
       "bloecke": [
         {
           "absatz": "1",
@@ -142,6 +186,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Einführung von neuen Bildungsangeboten",
       "bloecke": [
         {
           "absatz": "1",
@@ -169,6 +214,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Lehrpläne, Schulordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -186,12 +232,32 @@
       "sha": "f8a851daa5e62b2dacf1c2f029d89e43caf896afc6e3aa961f1102f6e5164770"
     },
     {
+      "id": "kanton/BS/423.100/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_12",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Schulferien",
       "bloecke": [
         {
           "absatz": "1",
@@ -205,12 +271,32 @@
       "sha": "6a949404ca7999c97f50117efed5a37ec27ed7079502b7c398609764bb5fbcaa"
     },
     {
+      "id": "kanton/BS/423.100/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_14",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Aufnahme",
       "bloecke": [
         {
           "absatz": "1",
@@ -224,12 +310,70 @@
       "sha": "578d3fb15e5a0ef611f04c6eaf6cae004dd39f80065d2a5e5ee4664833945d9b"
     },
     {
+      "id": "kanton/BS/423.100/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/423.100/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/423.100/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Anzahl der Lernenden pro Klasse",
       "bloecke": [
         {
           "absatz": "1",
@@ -243,12 +387,32 @@
       "sha": "058180d75bdacfc12c3ce98e9a186085d48a996bd57f01b517e493f587c742f0"
     },
     {
+      "id": "kanton/BS/423.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_20",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Kursgeld",
       "bloecke": [
         {
           "absatz": "1",
@@ -276,6 +440,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Erlass des Kursgeldes",
       "bloecke": [
         {
           "absatz": "1",
@@ -295,6 +460,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Unterrichtsmaterial",
       "bloecke": [
         {
           "absatz": "1",
@@ -314,6 +480,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Pflichten der Lernenden",
       "bloecke": [
         {
           "absatz": "1",
@@ -333,6 +500,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Ausschluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -360,6 +528,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Zeugnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -379,6 +548,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Leitung und Verwaltung der Schule",
       "bloecke": [
         {
           "absatz": "1",
@@ -398,6 +568,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Lehrtätigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -417,6 +588,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Anstellung und Bestätigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -430,12 +602,32 @@
       "sha": "a931bb32c0d07309a0e0af66c89cc9e87fc90d98eddc3ead0139487b0f94a857"
     },
     {
+      "id": "kanton/BS/423.100/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_30",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Stellvertretung",
       "bloecke": [
         {
           "absatz": "1",
@@ -455,6 +647,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Anstellung und Bestätigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -482,6 +675,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Amtsordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -501,6 +695,7 @@
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Abteilungsvorsteherinnen und Abteilungsvorsteher",
       "bloecke": [
         {
           "absatz": "1",
@@ -518,12 +713,32 @@
       "sha": "c4746811f5c841f53aa505382664fe7517e26102c171079e2e3a7bbfba172543"
     },
     {
+      "id": "kanton/BS/423.100/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_35",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Schulkonferenz",
       "bloecke": [
         {
           "absatz": "1",
@@ -545,6 +760,25 @@
       "sha": "2d5ddd257e542a674997730e70c52928f573e1e111c189daa8eec1bd2e452c17"
     },
     {
+      "id": "kanton/BS/423.100/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/423.100/art_37",
       "ebene": "kanton",
       "quelle": "BS",
@@ -562,6 +796,63 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "ef8459d86c34b117a9179314599d9108",
       "sha": "1defdd795978d9269cfd11dc1d92646797a0f0c1c66f34673677982580abfd22"
+    },
+    {
+      "id": "kanton/BS/423.100/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/423.100/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/423.100/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend die Berufsfachschule Basel (BFS Basel) (423.100)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2013-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/423.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef8459d86c34b117a9179314599d9108",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }

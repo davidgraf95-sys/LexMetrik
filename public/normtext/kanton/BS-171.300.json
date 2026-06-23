@@ -125,6 +125,25 @@
       "sha": "c3f75ab22896c6f9a7b599f58576f8a6e154a4dca10a67929bb8deeb2a99c626"
     },
     {
+      "id": "kanton/BS/171.300/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend Verschmelzung der Gemeinde Kleinhüningen mit der Stadt Basel (171.300)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "1907-11-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/171.300",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c757c46eb659c5f88e7d937a6fbf901b",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/171.300/art_7",
       "ebene": "kanton",
       "quelle": "BS",
@@ -168,6 +187,10 @@
             {
               "marke": "1",
               "text": "Die bisherige Bezeichnung «Gemeinde Kleinhüningen» wird im Grundbuch und in den Grundbuchplänen unter Beibehaltung der bestehenden Umgrenzung durch «Sektion IX des Grundbuchs der Stadt Basel» ersetzt."
+            },
+            {
+              "marke": "2",
+              "text": ""
             }
           ]
         }
@@ -176,7 +199,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/171.300",
       "abgerufen": "2026-06-23",
       "fassungsToken": "c757c46eb659c5f88e7d937a6fbf901b",
-      "sha": "f7863ddd30031409d5304c2f3ac402fdaad0c2d643063286c9cf1d13d862b633"
+      "sha": "f134ce7c871f00cd8011164018d1bbb7bddcfee8fa6996c1299ca4052c4f1823"
     },
     {
       "id": "kanton/BS/171.300/art_9",

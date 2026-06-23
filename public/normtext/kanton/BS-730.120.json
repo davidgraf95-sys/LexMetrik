@@ -5,9 +5,10 @@
       "id": "kanton/BS/730.120/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "1. Zweck",
       "bloecke": [
         {
           "absatz": "1",
@@ -36,9 +37,10 @@
       "id": "kanton/BS/730.120/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Bemessungsregeln",
       "bloecke": [
         {
           "absatz": "1",
@@ -93,7 +95,7 @@
       "id": "kanton/BS/730.120/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "3",
       "artikelLabel": "§ 3",
       "bloecke": [
@@ -112,9 +114,10 @@
       "id": "kanton/BS/730.120/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "1. Baubegehren für Bauten und Anlagen mit bestimmten Erstellungskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -143,9 +146,10 @@
       "id": "kanton/BS/730.120/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "2. Baubegehren ohne bestimmte Erstellungskosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -162,9 +166,10 @@
       "id": "kanton/BS/730.120/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "3. Baubegehren für Reklamen",
       "bloecke": [
         {
           "absatz": "1",
@@ -193,9 +198,10 @@
       "id": "kanton/BS/730.120/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "4. Nichteintreten und Rückzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -222,9 +228,10 @@
       "id": "kanton/BS/730.120/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "5. Abweisungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -242,12 +249,32 @@
       "sha": "e9bf3564e69de13e5fad80ff9b00210b8df90275661b8b97f663d0ea8766b674"
     },
     {
+      "id": "kanton/BS/730.120/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-05-02",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.120",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "de3a767a2ad550ed5b517aef81b8282c",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/730.120/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "7. Vorentscheide aufgrund genereller Baubegehren",
       "bloecke": [
         {
           "absatz": "1",
@@ -264,9 +291,10 @@
       "id": "kanton/BS/730.120/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "8. Zuschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -295,9 +323,10 @@
       "id": "kanton/BS/730.120/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "9. Umweltverträglichkeitsprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -318,9 +347,10 @@
       "id": "kanton/BS/730.120/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "10. Expertisen",
       "bloecke": [
         {
           "absatz": "1",
@@ -337,9 +367,10 @@
       "id": "kanton/BS/730.120/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "1. Kontrollen, Abnahmen und Freigaben im Bewilligungsverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -360,9 +391,10 @@
       "id": "kanton/BS/730.120/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "2. Kontrollen im Meldeverfahren",
       "bloecke": [
         {
           "absatz": "1",
@@ -383,9 +415,10 @@
       "id": "kanton/BS/730.120/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "3. Nachkontrollen",
       "bloecke": [
         {
           "absatz": "1",
@@ -402,9 +435,10 @@
       "id": "kanton/BS/730.120/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "1. Baupolizeiliche Verfügungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -421,9 +455,10 @@
       "id": "kanton/BS/730.120/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "2. Verzeigungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -440,9 +475,10 @@
       "id": "kanton/BS/730.120/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Verzugszins, Kanzlei-, Schreib- und Mahngebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -489,9 +525,10 @@
       "id": "kanton/BS/730.120/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Baugebührenverordnung; BauGebV (730.120)",
+      "erlass": "Verordnung über die Gebühren der Baubewilligungsbehörden, Baugebührenverordnung; BauGebV (730.120)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "4. Ausleihe von Bauplänen",
       "bloecke": [
         {
           "absatz": "1",

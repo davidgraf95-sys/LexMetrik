@@ -5,9 +5,10 @@
       "id": "kanton/BS/834.410/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zuständige Departemente",
       "bloecke": [
         {
           "absatz": "1",
@@ -116,9 +117,10 @@
       "id": "kanton/BS/834.410/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Gemeinsame Institution",
       "bloecke": [
         {
           "absatz": "1",
@@ -135,9 +137,10 @@
       "id": "kanton/BS/834.410/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Grundlagen zur Bedarfsermittlung",
       "bloecke": [
         {
           "absatz": "1",
@@ -158,9 +161,10 @@
       "id": "kanton/BS/834.410/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Spitalliste / Liste der Pflegeheime",
       "bloecke": [
         {
           "absatz": "1",
@@ -181,9 +185,10 @@
       "id": "kanton/BS/834.410/art_4_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "4_a",
       "artikelLabel": "§ 4a",
+      "titel": "Förderung ambulanter Untersuchungen und Behandlungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -260,9 +265,10 @@
       "id": "kanton/BS/834.410/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Betriebsvergleiche",
       "bloecke": [
         {
           "absatz": "1",
@@ -279,9 +285,10 @@
       "id": "kanton/BS/834.410/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Statistiken",
       "bloecke": [
         {
           "absatz": "1",
@@ -298,9 +305,10 @@
       "id": "kanton/BS/834.410/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Ausserkantonale Hospitalisation",
       "bloecke": [
         {
           "absatz": "1",
@@ -317,9 +325,10 @@
       "id": "kanton/BS/834.410/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Eigenbeitrag der versicherten Person an die Kosten der stationären Pflege",
       "bloecke": [
         {
           "absatz": "1",
@@ -336,38 +345,23 @@
       "id": "kanton/BS/834.410/art_8_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_a",
       "artikelLabel": "§ 8a",
+      "titel": "Kantonale Beiträge an die Spital- und Pflegeheimtaxen",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Spital Reduziert ein Krankenversicherer seine Leistungen pro Spitaltag in Anwendung von Art. 49 Abs. 4 KVG und bezieht die versicherte Person weder eine Rente der AHV oder IV noch ein Taggeld der IV oder Sozialhilfe, richtet der Kanton bis zum 360. Pflegetag an den Aufenthalt der versicherten Person in den Spitälern, welche auf der Spitalliste des Kantons aufgeführt sind, auf Gesuch hin Beiträge aus."
-            }
-          ]
+          "text": "a) Spital Reduziert ein Krankenversicherer seine Leistungen pro Spitaltag in Anwendung von Art. 49 Abs. 4 KVG und bezieht die versicherte Person weder eine Rente der AHV oder IV noch ein Taggeld der IV oder Sozialhilfe, richtet der Kanton bis zum 360. Pflegetag an den Aufenthalt der versicherten Person in den Spitälern, welche auf der Spitalliste des Kantons aufgeführt sind, auf Gesuch hin Beiträge aus."
         },
         {
           "absatz": "2",
-          "text": "",
-          "items": [
-            {
-              "marke": "b",
-              "text": "Pflegeheim Bei Aufenthalt der versicherten Person, welche weder eine Rente der AHV oder IV noch ein Taggeld der IV oder Sozialhilfe bezieht, in einem Pflegeheim oder in einer Pflegeabteilung eines Spitals, welche auf der Pflegeheimliste des Kantons aufgeführt ist, richtet der Kanton bis zum 360. Pflegetag auf Gesuch hin Beiträge aus."
-            }
-          ]
+          "text": "b) Pflegeheim Bei Aufenthalt der versicherten Person, welche weder eine Rente der AHV oder IV noch ein Taggeld der IV oder Sozialhilfe bezieht, in einem Pflegeheim oder in einer Pflegeabteilung eines Spitals, welche auf der Pflegeheimliste des Kantons aufgeführt ist, richtet der Kanton bis zum 360. Pflegetag auf Gesuch hin Beiträge aus."
         },
         {
           "absatz": "3",
-          "text": "",
+          "text": "c) Beitragshöhe",
           "items": [
-            {
-              "marke": "c",
-              "text": "Beitragshöhe"
-            },
             {
               "marke": "1",
               "text": "Die Höhe der Beiträge richtet sich nach den für die individuelle Prämienverbilligung (IPV) geltenden Einkommensgruppen und entspricht der Differenz zwischen den vom Regierungsrat festgelegten oder in Verträgen zwischen dem Regierungsrat und den Leistungserbringern vereinbarten Spital- und Pflegeheimtaxen und der nachfolgend aufgeführten maximalen Eigenleistung der versicherten Person."
@@ -457,21 +451,48 @@
               ]
             ]
           }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "2",
+              "text": "Die Beiträge sind zu Leistungen Dritter subsidiär."
+            },
+            {
+              "marke": "3",
+              "text": "Die Beiträge werden nur an Personen mit Wohnsitz im Kanton ausgerichtet."
+            },
+            {
+              "marke": "4",
+              "text": "Keinen Anspruch auf Beiträge gemäss § 8 lit. a und b haben Personen mit einem steuerbaren Vermögen von mehr als Fr. 1'000'000."
+            },
+            {
+              "marke": "5",
+              "text": "Das Gesundheitsdepartement kann die Beitragsgewährung über die genannten 360 Pflegetage hinaus verlängern."
+            },
+            {
+              "marke": "6",
+              "text": "Der Kanton kann die Beiträge auch bei Aufenthalten der versicherten Person in ausserkantonalen Spitälern und Pflegeheimen ausrichten."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/834.410",
       "abgerufen": "2026-06-23",
       "fassungsToken": "86c6d416119d77d7a504ac4303d48790",
-      "sha": "2f35002d99bd73acfa060b3561bf87399a8f0e0cc7389761e807519cfe570bbb"
+      "sha": "9f09c41f93f4708c0441ea1fbfec6aad191be575eb56bdaf33345cbadff1b1e8"
     },
     {
       "id": "kanton/BS/834.410/art_8_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_b",
       "artikelLabel": "§ 8b",
+      "titel": "Eigenbeitrag der versicherten Person an die Kosten der ambulanten Pflege",
       "bloecke": [
         {
           "absatz": "1",
@@ -492,9 +513,10 @@
       "id": "kanton/BS/834.410/art_8_c",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_c",
       "artikelLabel": "§ 8c",
+      "titel": "Kantonale Beiträge an die Kosten der ambulanten Pflege",
       "bloecke": [
         {
           "absatz": "1",
@@ -531,18 +553,15 @@
       "id": "kanton/BS/834.410/art_8_d",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_d",
       "artikelLabel": "§ 8d",
+      "titel": "Restfinanzierung durch den Kanton in Anwendung von Art. 25a Abs. 5 KVG",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pflegeaufwand in Minuten pro Tag: … · Pflegekosten pro Tag in Fr.: … —",
+          "text": "a) Pflegeheime Pflegeaufwand in Minuten pro Tag: … · Pflegekosten pro Tag in Fr.: … —",
           "items": [
-            {
-              "marke": "a",
-              "text": "Pflegeheime"
-            },
             {
               "marke": "1",
               "text": "Die Pflegenormkosten ergeben sich aus der Multiplikation des vom Regierungsrat festgelegten Punktwertes in Franken mit den Indexwerten pro Pflegestufe (Anhang 1 § 2)."
@@ -619,13 +638,43 @@
           }
         },
         {
-          "absatz": "2",
-          "text": "",
+          "absatz": null,
+          "text": "1.bis 1.ter Für Pflegeheime, welche dem Pflegeheim-Rahmenvertrag nicht beigetreten sind, reduzieren sich die Pflegenormkosten um 10 Prozent. 1.quater Der Regierungsrat legt den Punktwert in Franken für Pflegeheime in der Regel alle vier Jahre in einem Pflegeheim-Rahmenvertrag fest. 1.quinquies Er legt die Pflegenormkosten auf der Basis von Kosten-, Leistungs- und Bedarfsdaten fest. Er berücksichtigt bei der Festlegung die Kosten und den Bedarf sowie insbesondere die regulatorischen und finanzpolitischen Rahmenbedingungen als auch die Preis- und Lohnentwicklungen der für die Langzeitpflege kostenrelevanten Faktoren. Er kann zudem die Vergleichswerte anderer Kantone berücksichtigen. 1.sexies Während der Geltungsdauer des im Pflegeheim-Rahmenvertrag festgelegten Punktwertes in Franken wird jährlich per 1. Januar ein automatischer Teuerungsausgleich auf die gesamten Pflegenormkosten gewährt. Dieser beruht auf der Entwicklung des Basler Index der Konsumentenpreise der Jahresteuerung zum Juni (Juni-Index) des Vorjahres. Weist der Juni-Index eine negative Entwicklung aus, findet keine Anpassung der Pflegenormkosten statt. Ein Teuerungsausgleich wird erst wieder gewährt, wenn der kumulierte Wert positiv ist.",
           "items": [
             {
-              "marke": "b",
-              "text": "Ambulante Pflege"
+              "marke": "2",
+              "text": "Die Höhe der Restfinanzierung entspricht der Differenz zwischen den anerkannten Pflegekosten und den Leistungen der Krankenversicherer gemäss Art. 7a der Krankenpflege-Leistungsverordnung (KLV) sowie dem maximalen Eigenbeitrag der versicherten Person gemäss § 8. Die Restfinanzierung für versicherte Personen, für die der Kanton Basel-Stadt zuständig ist, ist vom Pflegeheim direkt der entsprechenden kantonalen Stelle elektronisch in Rechnung zu stellen. Das Gesundheitsdepartement regelt die Einzelheiten der elektronischen Abrechnung in einem Reglement. 2.bis Das Pflegeheim kann für Bewohnende, die einen stark erhöhten Pflegebedarf aufweisen, beim Gesundheitsdepartement für jeweils sechs Monate eine Sondertaxe beantragen. Eine Sondertaxe wird gewährt, wenn kumulativ folgende Voraussetzungen erfüllt sind:"
             },
+            {
+              "marke": "a",
+              "text": "Die aktuelle Pflegestufe der Bewohnerin oder des Bewohners entspricht der höchsten Pflegestufe oder es besteht eine invasive Beatmung beziehungsweise eine nicht-invasive Beatmung an der Maschine mit Maskenbeatmung."
+            },
+            {
+              "marke": "b",
+              "text": "Die erbrachten Pflegeleistungen überschreiten den Maximalwert der Pflegestufe um mindestens 60 Minuten pro Tag. Der Maximalwert der Pflegestufe 12 beträgt 240 Minuten."
+            },
+            {
+              "marke": "c",
+              "text": "Der stark erhöhte Pflegebedarf besteht seit mindestens zwei Monaten zuzüglich der vierzehntägigen Beobachtungsphase."
+            },
+            {
+              "marke": "d",
+              "text": "Die Pflegesituation ist stabil und es ist keine kurzfristige Änderung zu erwarten. 2.ter Die Höhe der Sondertaxe entspricht der Multiplikation der Differenz zwischen dem Maximalwert der Pflegestufe gemäss Art. 7a Abs. 3 KLV und dem effektiv ausgewiesenen spezifischen Pflegeaufwand in Minuten mit dem vom Regierungsrat festgelegten Punktwert in Franken (§ 8d Abs. 1 Ziff. 1). Die Pflegenormkosten werden um diese Sondertaxe erhöht."
+            },
+            {
+              "marke": "3",
+              "text": "Bei Übernahme vertraglicher Verpflichtungen durch die Pflegeheime, insbesondere bei erhöhten Anforderungen an die Qualifikation des Personals, an die Qualitätssicherung, an die Ausbildungstätigkeit und für Spezialleistungen kann der Regierungsrat höhere Kosten anerkennen. Der Regierungsrat kann entsprechende Verträge abschliessen."
+            },
+            {
+              "marke": "4",
+              "text": "Für die Ermittlung des Pflegebedarfs der Bewohnerinnen und Bewohner gilt für die Pflegeheime, welche auf der kantonalen Pflegeheimliste aufgeführt sind, das Bedarfsermittlungsinstrument gemäss Anhang 1 § 1."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "b) Ambulante Pflege",
+          "items": [
             {
               "marke": "1",
               "text": "Für die Berechnung der Restfinanzierung durch den Kanton gelten die nachfolgenden, anerkannten Pflegekosten."
@@ -660,21 +709,40 @@
               ]
             ]
           }
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "2",
+              "text": "Die Höhe der Restfinanzierung entspricht der Differenz zwischen den anerkannten Pflegekosten und den Leistungen der Krankenversicherer gemäss Art. 7a KLV sowie dem maximalen Eigenbeitrag der versicherten Person gemäss § 8b. Die Restfinanzierung für versicherte Personen, für die der Kanton Basel-Stadt zuständig ist, ist vom Spitexanbieter direkt bei der entsprechenden kantonalen Stelle elektronisch in Rechnung zu stellen. Diese kann Ausnahmen von der Pflicht zur elektronischen Abrechnung vorsehen. Das Gesundheitsdepartement regelt die Einzelheiten der elektronischen Abrechnung in einem Reglement."
+            },
+            {
+              "marke": "3",
+              "text": "Bei Übernahme vertraglicher Verpflichtungen durch die Spitexanbieter, insbesondere bei erhöhten Anforderungen an die Qualifikation des Personals, an die Qualitätssicherung, an die Ausbildungstätigkeit, für Spezialleistungen und zur Gewährleistung der Versorgungssicherheit erkennt der Regierungsrat die dadurch entstehenden höheren Kosten an. Der Regierungsrat kann entsprechende Verträge abschliessen."
+            },
+            {
+              "marke": "4",
+              "text": "Für die Dauer der Übergangsbestimmung zur Änderung des Bundesgesetzes über die Krankenversicherung vom 18. Dezember 2020 (Vergütung des Pflegematerials) werden während eines Jahres ab Inkrafttreten der Änderung, sofern die Kosten für Mittel und Gegenstände, welche durch die Pflegefachperson appliziert werden, über einen längeren Zeitraum oder die gesamte Pflegedauer durchschnittlich mehr als zehn Prozent der höchsten vom Regierungsrat im Bereich der Behandlungspflege anerkannten Pflegekosten gemäss Ziffer 1 betragen, diese zusätzlich anerkannt. Das Gesundheitsdepartement regelt die Einzelheiten in einem Reglement."
+            }
+          ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/834.410",
       "abgerufen": "2026-06-23",
       "fassungsToken": "86c6d416119d77d7a504ac4303d48790",
-      "sha": "39d2b7d71f9e750ea555a9e6856d7ae8bca4d8726742b838694041fa8e7c1162"
+      "sha": "428171a5ee0ffe40c603f7681d7cd30fba5849de681d34238f83b71d8d14887a"
     },
     {
       "id": "kanton/BS/834.410/art_8_d_bis",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_d_bis",
       "artikelLabel": "§ 8dbis",
+      "titel": "Taxe für Pension und Betreuung für Pflegeheime",
       "bloecke": [
         {
           "absatz": "1",
@@ -699,9 +767,10 @@
       "id": "kanton/BS/834.410/art_8_e",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_e",
       "artikelLabel": "§ 8e",
+      "titel": "Zuständigkeit für die Restfinanzierung (Art. 25a Abs. 5 KVG)",
       "bloecke": [
         {
           "absatz": "1",
@@ -726,9 +795,10 @@
       "id": "kanton/BS/834.410/art_8_f",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "8_f",
       "artikelLabel": "§ 8f",
+      "titel": "Kantonale Beiträge an die Kosten für hauswirtschaftliche Leistungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -745,9 +815,10 @@
       "id": "kanton/BS/834.410/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Ausstand von Leistungserbringern",
       "bloecke": [
         {
           "absatz": "1",
@@ -764,9 +835,10 @@
       "id": "kanton/BS/834.410/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Sicherstellung der medizinischen Versorgung",
       "bloecke": [
         {
           "absatz": "1",
@@ -787,9 +859,10 @@
       "id": "kanton/BS/834.410/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Zusammenarbeit mit den Krankenversicherern",
       "bloecke": [
         {
           "absatz": "1",
@@ -814,9 +887,10 @@
       "id": "kanton/BS/834.410/art_11_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "11_a",
       "artikelLabel": "§ 11a",
+      "titel": "Revision der Abrechnungen der Krankenversicherer nach Art. 64a KVG",
       "bloecke": [
         {
           "absatz": "1",
@@ -855,9 +929,10 @@
       "id": "kanton/BS/834.410/art_11_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "11_b",
       "artikelLabel": "§ 11b",
+      "titel": "Einem Verlustschein gleichzusetzende Rechtstitel",
       "bloecke": [
         {
           "absatz": "1",
@@ -874,9 +949,10 @@
       "id": "kanton/BS/834.410/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Sicherstellung des Versicherungsobligatoriums gemäss KVG",
       "bloecke": [
         {
           "absatz": "1",
@@ -919,9 +995,10 @@
       "id": "kanton/BS/834.410/art_12_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "12_a",
       "artikelLabel": "§ 12a",
+      "titel": "Gebühr für die Prüfung von Befreiungsgesuchen von der Obligatorischen Krankenversicherung",
       "bloecke": [
         {
           "absatz": "1",
@@ -939,12 +1016,32 @@
       "sha": "8b969839a4cec36fac83cc9ddd4f2029c41ed8a1d5f861aa5ba1e9fccf871cb1"
     },
     {
+      "id": "kanton/BS/834.410/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/834.410",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "86c6d416119d77d7a504ac4303d48790",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/834.410/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Informationspflicht der Krankenversicherer",
       "bloecke": [
         {
           "absatz": "1",
@@ -961,9 +1058,10 @@
       "id": "kanton/BS/834.410/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Anspruchsvoraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -980,9 +1078,10 @@
       "id": "kanton/BS/834.410/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Anspruchsentstehung bei Zuzug aus einem anderen Kanton oder aus dem Ausland sowie bei Personen gemäss Art. 65a lit. a bis c KVG",
       "bloecke": [
         {
           "absatz": "1",
@@ -1007,9 +1106,10 @@
       "id": "kanton/BS/834.410/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Anspruchsprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1030,9 +1130,10 @@
       "id": "kanton/BS/834.410/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Grundlage für die Anspruchsermittlung und -berechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1053,9 +1154,10 @@
       "id": "kanton/BS/834.410/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Kaufkraftbereinigung des anrechenbaren Einkommens von Personen mit Wohnsitz in der Europäischen Union, Island oder Norwegen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1080,9 +1182,10 @@
       "id": "kanton/BS/834.410/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Rechtsmittel gegen Gebühr wegen Meldepflichtverletzung (§ 39 SoHaV)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1103,9 +1206,10 @@
       "id": "kanton/BS/834.410/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Massgebende Prämien",
       "bloecke": [
         {
           "absatz": "1",
@@ -1134,9 +1238,10 @@
       "id": "kanton/BS/834.410/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Leistungsgrenzen und Prämienbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1157,9 +1262,10 @@
       "id": "kanton/BS/834.410/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Finanzierung durch Bund und Kanton",
       "bloecke": [
         {
           "absatz": "1",
@@ -1180,9 +1286,10 @@
       "id": "kanton/BS/834.410/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Subrogation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1199,9 +1306,10 @@
       "id": "kanton/BS/834.410/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Auszahlung der Beiträge an die Krankenversicherungsprämien",
       "bloecke": [
         {
           "absatz": "1",
@@ -1222,9 +1330,10 @@
       "id": "kanton/BS/834.410/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Meldung an die Krankenversicherer / Information der versicherten Personen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1249,9 +1358,10 @@
       "id": "kanton/BS/834.410/art_26_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "26_a",
       "artikelLabel": "§ 26a",
+      "titel": "Meldungen der Krankenversicherer",
       "bloecke": [
         {
           "absatz": "1",
@@ -1276,9 +1386,10 @@
       "id": "kanton/BS/834.410/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Auszahlungsmodus",
       "bloecke": [
         {
           "absatz": "1",
@@ -1311,7 +1422,7 @@
       "id": "kanton/BS/834.410/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "28",
       "artikelLabel": "§ 28",
       "bloecke": [
@@ -1330,9 +1441,10 @@
       "id": "kanton/BS/834.410/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -1349,9 +1461,10 @@
       "id": "kanton/BS/834.410/art_30",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Änderung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -1368,9 +1481,10 @@
       "id": "kanton/BS/834.410/art_30_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "30_a",
       "artikelLabel": "§ 30a",
+      "titel": "Übergangsbestimmung zur Änderung von § 8d Abs. 1 Ziff. 4 vom 22. Oktober 2024",
       "bloecke": [
         {
           "absatz": "1",
@@ -1387,9 +1501,10 @@
       "id": "kanton/BS/834.410/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "KVO (834.410)",
+      "erlass": "Verordnung über die Krankenversicherung im Kanton Basel-Stadt, KVO (834.410)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

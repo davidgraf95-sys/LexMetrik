@@ -67,6 +67,30 @@ describe('ArtikelBody', () => {
     expect(out).not.toContain('>…<');
   });
 
+  // S3 (BS-Audit 23.6.2026): aufgehobene lit. werden mit Marke + LEEREM Text
+  // gespeichert (kein fabrizierter «Aufgehoben.»-Text). Die Lesesicht zeigt das
+  // leere item gedämpft als «aufgehoben», die Marke (hier «g.») bleibt sichtbar.
+  it('lit. mit Marke aber leerem Text → Marke sichtbar, Text «aufgehoben»', () => {
+    const out = renderToString(
+      <ArtikelBody
+        artikel="35"
+        passus={{ absatz: null }}
+        bloecke={[
+          {
+            absatz: '1', text: 'Vom Einkommen werden abgezogen:',
+            items: [
+              { marke: 'f', text: '3300 Franken;' },
+              { marke: 'g', text: '' },
+              { marke: 'h', text: '18500 Franken.' },
+            ],
+          },
+        ]}
+      />,
+    );
+    expect(out).toContain('g.'); // Marke bleibt sichtbar (Lücke geschlossen)
+    expect(out).toContain('aufgehoben'); // leeres item gedämpft
+  });
+
   it('autolink: verlinkt zitierte Normen im Wortlaut, aus = Klartext', () => {
     const bl = [{ absatz: '1', text: 'Der Schuldner haftet nach Art. 41 OR für den Schaden.' }];
     const mitLink = renderToString(<ArtikelBody bloecke={bl} artikel="1" passus={{ absatz: null }} autolink />);

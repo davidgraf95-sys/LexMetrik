@@ -111,7 +111,8 @@ export interface Sachgebiet { nummer: string; name: string; }
 
 /** Amtliche Systematik eines Kantons (aus /normtext/kanton-systematik.json,
  *  erzeugt von scripts/normtext/kanton-systematik-run.ts): Top-Sachgebiete mit
- *  ihren Untergruppen (2. Ebene) + Index jedes Baum-Knotens (nur Ziffern) →
+ *  ihren Untergruppen (2. Ebene) + Index jedes Baum-Knotens (präfix-bewahrender
+ *  Schlüssel via systematikSchluessel: «640100» bzw. «BaB#152110») →
  *  [Top-Nummer, Untergruppe-Nummer] seiner Vorfahren. */
 export interface KantonSystematik {
   roots: Array<Sachgebiet & { kinder: Sachgebiet[] }>;
@@ -121,24 +122,104 @@ export interface KantonSystematik {
 const nurZiffern = (s: string): string => s.replace(/\D/g, '');
 
 /**
+ * Präfix-bewahrender Namespace-Schlüssel einer systematischen Nummer
+ * (Determinismus §2, Single Source of Truth §5: Generator UND Lookup nutzen
+ * exakt diese Funktion). Behebt die Fehleinsortierung des Gemeinderechts:
+ *
+ *  - Rein numerische Nummern («640.100»)  → reine Ziffern «640100» (wie bisher,
+ *    inhaltlich unverändert).
+ *  - Buchstaben-Präfix («BeE 117.220», «BaB 152.110») → «<PRÄFIX>#<Ziffern>»,
+ *    z. B. «BeE#117220». Das «#» trennt Namespaces hart: ein «BeE …»-Knoten
+ *    teilt nie ein Präfix mit einem rein numerischen Knoten, und ein «BaB»-Knoten
+ *    nie mit einem «BeB»-Knoten.
+ *  - Reiner Buchstaben-Präfix ohne Ziffern (Wurzel «BaB») → «BaB#» (leerer
+ *    Ziffern-Teil) — so liegt die Wurzel als kürzester Präfix im selben Namespace.
+ *
+ * Der Buchstaben-Präfix ist der führende [A-Za-z]+-Block der Nummer; alles
+ * danach wird auf Ziffern reduziert. Liefert '' für Nummern ganz ohne Ziffern
+ * und ohne Buchstaben-Präfix (neutraler Fallback im Aufrufer).
+ */
+export function systematikSchluessel(nummer: string | null | undefined): string {
+  const s = (nummer ?? '').trim();
+  const m = /^([A-Za-z]+)/.exec(s);
+  const d = nurZiffern(s);
+  if (m) return `${m[1]}#${d}`;
+  return d;
+}
+
+/**
  * Ordnet einen Erlass über Längster-Präfix-Match im amtlichen Systematik-Baum
  * seinem Top-Sachgebiet UND seiner Untergruppe (2. Ebene) zu. Deterministisch
  * (§2). Korrekt auch bei abweichenden Schemata (AI Hunderter, UR 10/20/…, ZG
- * +10), weil der Baum die echte Hierarchie liefert. Neutraler Fallback (§8) auf
- * die führende Ziffer, wenn keine Daten vorliegen oder die Nummer nicht greift.
+ * +10), weil der Baum die echte Hierarchie liefert. Der Präfix-Match läuft NUR
+ * innerhalb desselben Namespaces (Gemeinderecht «BeE …» matcht nie eine
+ * numerische Wurzel und umgekehrt). Neutraler Fallback (§8) auf die führende
+ * Ziffer bzw. den Buchstaben-Präfix, wenn keine Daten vorliegen oder die Nummer
+ * nicht greift.
  */
 export function sachgruppe(
   sys: KantonSystematik | undefined,
   sr: string | null | undefined,
 ): { top: string; sub: string } {
-  const d = nurZiffern(sr ?? '');
-  if (sys && d) {
-    for (let l = d.length; l >= 1; l--) {
-      const treffer = sys.index[d.slice(0, l)];
-      if (treffer !== undefined) return { top: treffer[0], sub: treffer[1] };
+  const k = systematikSchluessel(sr);
+  if (sys && k) {
+    const hash = k.indexOf('#');
+    // Innerhalb des Namespaces wird nur der Ziffern-Teil schrittweise gekürzt;
+    // der Präfix («BeE#») bleibt erhalten, der leere Wurzel-Schlüssel («BeE#»)
+    // ist der kürzeste Kandidat.
+    if (hash >= 0) {
+      const ns = k.slice(0, hash + 1); // inkl. «#»
+      const digits = k.slice(hash + 1);
+      for (let l = digits.length; l >= 0; l--) {
+        const treffer = sys.index[ns + digits.slice(0, l)];
+        if (treffer !== undefined) return { top: treffer[0], sub: treffer[1] };
+      }
+    } else {
+      for (let l = k.length; l >= 1; l--) {
+        const treffer = sys.index[k.slice(0, l)];
+        if (treffer !== undefined) return { top: treffer[0], sub: treffer[1] };
+      }
     }
   }
-  return { top: d ? d[0] : '~', sub: '' };
+  // Fallback (§8): Bei Buchstaben-Präfix MIT Ziffern den Namespace als Top
+  // behalten (Gemeinderecht «BeE 117.220» ohne BeE-Daten → «BeE», nie eine
+  // numerische Wurzel). Reiner Buchstaben-Block ohne Ziffern («ABC») bleibt
+  // «Ohne Systematik-Nummer» (~), wie bisher.
+  const hash = k.indexOf('#');
+  if (hash > 0 && k.length > hash + 1) return { top: k.slice(0, hash), sub: '' };
+  if (hash >= 0) return { top: '~', sub: '' };
+  return { top: k ? k[0] : '~', sub: '' };
+}
+
+/**
+ * Vergleicht zwei systematische Nummern für die Anzeige-Sortierung innerhalb
+ * einer Gruppe (S7), ohne Namespaces oder Mehrpunkt-Nummern zu zerstören
+ * (Determinismus §2). Reihenfolge:
+ *   1. Buchstaben-Präfix alphabetisch (rein numerische Nummern vor präfixierten),
+ *   2. dann der Ziffern-Teil als Punkt-getrennte Tupel stufenweise numerisch
+ *      («152.110» < «152.1100», «7.10» nach «7.9»).
+ * Stabil und transitiv; kein parseFloat (das «152.110» und «152.1100» oder
+ * «117.220» vs. «1172.20» verwechseln würde).
+ */
+export function srVergleich(a: string | null | undefined, b: string | null | undefined): number {
+  const zerlege = (s: string | null | undefined): { praefix: string; teile: number[] } => {
+    const t = (s ?? '').trim();
+    const m = /^([A-Za-z]+)/.exec(t);
+    const praefix = m ? m[1] : '';
+    const rest = t.slice(praefix.length);
+    const teile = (rest.match(/\d+/g) ?? []).map((x) => Number(x));
+    return { praefix, teile };
+  };
+  const A = zerlege(a);
+  const B = zerlege(b);
+  if (A.praefix !== B.praefix) return A.praefix < B.praefix ? -1 : 1;
+  const n = Math.max(A.teile.length, B.teile.length);
+  for (let i = 0; i < n; i++) {
+    const x = A.teile[i] ?? -1; // kürzere Nummer (weniger Stufen) zuerst
+    const y = B.teile[i] ?? -1;
+    if (x !== y) return x - y;
+  }
+  return 0;
 }
 
 /** Anzeige-Titel eines Top-Sachgebiets (amtlich, sonst ehrlicher Fallback, §8). */

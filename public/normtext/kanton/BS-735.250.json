@@ -8,6 +8,7 @@
       "erlass": "Reglement betreffend Reinigungsintervalle für Feuerungsanlagen (735.250)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Allgemeine Bestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -35,6 +36,7 @@
       "erlass": "Reglement betreffend Reinigungsintervalle für Feuerungsanlagen (735.250)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Feuerungsanlagen für Raumheizung, Wasseraufbereitung und Kochzwecke",
       "bloecke": [
         {
           "absatz": "1",
@@ -95,6 +97,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Die Reinigungsfristen von lit. a, b und c sind sinngemäss anzuwenden, wobei die Aufteilung der Betriebszeiten für die einzelnen Brennstoffe massgebend ist."
+        },
+        {
           "absatz": "2",
           "text": "Für die Reinigung der Abgasanlage ist der kürzeste Reinigungsintervall gemäss Abs. 1 lit. a, b und c einzuhalten."
         }
@@ -103,7 +109,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/735.250",
       "abgerufen": "2026-06-23",
       "fassungsToken": "9106989f9c65231b8bd014f9a7e233cb",
-      "sha": "0a72e3e4834240ea85733c229ed0a3788bf63f5be38c89c0785b0240c27dc5bb"
+      "sha": "539278163b2394709cff2339827ae382b78c7ab1d24db1714acd251e4276eae8"
     },
     {
       "id": "kanton/BS/735.250/art_3",
@@ -112,6 +118,7 @@
       "erlass": "Reglement betreffend Reinigungsintervalle für Feuerungsanlagen (735.250)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Gewerbliche und industrielle Feuerungsanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -139,6 +146,7 @@
       "erlass": "Reglement betreffend Reinigungsintervalle für Feuerungsanlagen (735.250)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Schlussbestimmung",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Stipendien",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,6 +48,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Darlehen",
       "bloecke": [
         {
           "absatz": "1",
@@ -65,6 +68,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Schweizer Bürgerinnen und Bürger",
       "bloecke": [
         {
           "absatz": "1",
@@ -106,6 +110,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Ausländerinnen und Ausländer",
       "bloecke": [
         {
           "absatz": "1",
@@ -137,12 +142,32 @@
       "sha": "fc6c8d4a458d63fb6309710456497d53050a7b57c8cff3eb263160ffb53b9513"
     },
     {
+      "id": "kanton/BS/491.100/art_5_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
+      "artikel": "5_a",
+      "artikelLabel": "§ 5a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2014-01-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/491.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e82296c4782baea00e284eb178751627",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/491.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Schülerinnen und Schüler",
       "bloecke": [
         {
           "absatz": "1",
@@ -162,6 +187,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Eignung",
       "bloecke": [
         {
           "absatz": "1",
@@ -185,6 +211,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Finanzielle Verhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -220,6 +247,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Höhe der Ausbildungsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -239,6 +267,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Dauer der Gewährung",
       "bloecke": [
         {
           "absatz": "1",
@@ -258,6 +287,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Ort der Ausbildung",
       "bloecke": [
         {
           "absatz": "1",
@@ -277,6 +307,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Aufenthalte und Reisen im In- und Ausland",
       "bloecke": [
         {
           "absatz": "1",
@@ -296,6 +327,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -323,6 +355,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Mittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -346,6 +379,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Kommission für Ausbildungsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -373,6 +407,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Amt für Ausbildungsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -392,6 +427,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Aufgaben der Kommission für Ausbildungsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -427,6 +463,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Beiträge zum Stipendienfonds",
       "bloecke": [
         {
           "absatz": "1",
@@ -450,6 +487,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Aufgaben des Amtes für Ausbildungsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -477,6 +515,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Pflichten des Beitragsbezügers",
       "bloecke": [
         {
           "absatz": "1",
@@ -504,6 +543,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Rekurs",
       "bloecke": [
         {
           "absatz": "1",
@@ -523,6 +563,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Vollziehungsverordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -538,6 +579,26 @@
       "abgerufen": "2026-06-23",
       "fassungsToken": "e82296c4782baea00e284eb178751627",
       "sha": "96d094bf5b4393407d350185260dbeabbe7fcd47fb7db0261cde9b43e6cc8d0e"
+    },
+    {
+      "id": "kanton/BS/491.100/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "titel": "Änderung und Ausserkrafttreten bisheriger Gesetze",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2014-01-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/491.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "e82296c4782baea00e284eb178751627",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/491.100/art_24",
@@ -565,6 +626,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "24_a",
       "artikelLabel": "§ 24a",
+      "titel": "Besitzstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -584,6 +646,7 @@
       "erlass": "Gesetz betreffend Ausbildungsbeiträge (491.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

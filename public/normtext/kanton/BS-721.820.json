@@ -8,6 +8,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "1",
       "artikelLabel": "Art. 1",
+      "titel": "Vertragsgegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -49,6 +50,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "2",
       "artikelLabel": "Art. 2",
+      "titel": "Bauausführung und Kosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -94,6 +96,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "3",
       "artikelLabel": "Art. 3",
+      "titel": "Unterhaltung und Änderung, Kosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -117,6 +120,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "4",
       "artikelLabel": "Art. 4",
+      "titel": "Abweichende Vereinbarungen über Unterhaltung und Änderung",
       "bloecke": [
         {
           "absatz": "1",
@@ -140,6 +144,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "5",
       "artikelLabel": "Art. 5",
+      "titel": "Grenzabfertigungsanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -163,6 +168,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "6",
       "artikelLabel": "Art. 6",
+      "titel": "Nebenbetriebe",
       "bloecke": [
         {
           "absatz": "1",
@@ -208,6 +214,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "7",
       "artikelLabel": "Art. 7",
+      "titel": "Post- und Fernmeldeanlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -251,6 +258,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "8",
       "artikelLabel": "Art. 8",
+      "titel": "Eingangsabgaben bei Bau, Unterhaltung, Änderung und Betrieb",
       "bloecke": [
         {
           "absatz": "1",
@@ -294,6 +302,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "9",
       "artikelLabel": "Art. 9",
+      "titel": "Zoll- und steuerrechtliche Sonderregelungen für Nebenbetriebe",
       "bloecke": [
         {
           "absatz": "1",
@@ -326,6 +335,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "überweist die Schweiz jährlich die Hälfte unter Abzug von fünf Prozent für Verwaltungskosten an die Bundesrepublik Deutschland. Für die Berechnung des Steueraufkommens nach lit. b haben die Unternehmer der Eidgenössischen Steuerverwaltung die nötigen Auskünfte zu erteilen. Über die Einzelheiten der Ermittlung des der Bundesrepublik Deutschland jährlich zustehenden Anteils am Steueraufkommen verständigen sich das Bundesministerium der Finanzen und die Eidgenössische Steuerverwaltung."
+        },
+        {
           "absatz": "6",
           "text": "Waren, die entsprechend den Abs. 1 und 2 zu den Nebenbetrieben gelangt sind, dürfen ausschliesslich an nach der Schweiz ausreisende Personen und nur zu deren persönlichem Gebrauch oder Verbrauch, für ihren Haushalt oder für Geschenkzwecke abgegeben werden, Treib- und Schmierstoffe für Motorfahrzeuge (Kraftfahrzeuge) jedoch nur in einer für das einzelne Fahrzeug vorgesehenen Menge."
         },
@@ -342,7 +355,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/721.820",
       "abgerufen": "2026-06-23",
       "fassungsToken": "4ae9cad92e955134a1d629643a842384",
-      "sha": "5adaa54114e5fa1a1c4bef255cb29b88c1b58c84e293f7833bf4ae3bea52eebe"
+      "sha": "fe653ae22ba57b730b2f41c2f399d7101e18497dfccea15319ddc02094252b13"
     },
     {
       "id": "kanton/BS/721.820/art_10",
@@ -351,6 +364,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "10",
       "artikelLabel": "Art. 10",
+      "titel": "Direkte Steuern",
       "bloecke": [
         {
           "absatz": "1",
@@ -365,13 +379,17 @@
               "text": "das Abkommen vom 15. Juli 1931 zwischen der Schweizerischen Eidgenossenschaft und dem Deutschen Reich zur Vermeidung der Doppelbesteuerung auf dem Gebiete der direkten Steuern und der Erbschaftssteuern in der Fassung des Zusatzprotokolls vom 20. März 1959"
             }
           ]
+        },
+        {
+          "absatz": null,
+          "text": "oder die an ihre Stelle tretenden Regelungen."
         }
       ],
       "stand": "1980-06-10",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/721.820",
       "abgerufen": "2026-06-23",
       "fassungsToken": "4ae9cad92e955134a1d629643a842384",
-      "sha": "5d82e8de7b0bfea15d422d4384f56d17b7a1f52ae25c637725da0fc2317754c7"
+      "sha": "b8c56c476d0a49fa91198c9cdd328318f4f4b3c76c47b705641b34fda90580fd"
     },
     {
       "id": "kanton/BS/721.820/art_11",
@@ -380,6 +398,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "11",
       "artikelLabel": "Art. 11",
+      "titel": "Waren in den Nebenbetrieben",
       "bloecke": [
         {
           "absatz": "1",
@@ -437,6 +456,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "12",
       "artikelLabel": "Art. 12",
+      "titel": "Ausländerrechtliche Regelung",
       "bloecke": [
         {
           "absatz": "1",
@@ -476,6 +496,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "13",
       "artikelLabel": "Art. 13",
+      "titel": "Grenzübertritt zum Wenden",
       "bloecke": [
         {
           "absatz": "1",
@@ -499,6 +520,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "14",
       "artikelLabel": "Art. 14",
+      "titel": "Benutzung der Zubringerstrasse",
       "bloecke": [
         {
           "absatz": "1",
@@ -530,6 +552,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "15",
       "artikelLabel": "Art. 15",
+      "titel": "Zusammenwirken der Bediensteten der Vertragsstaaten",
       "bloecke": [
         {
           "absatz": "1",
@@ -549,6 +572,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "16",
       "artikelLabel": "Art. 16",
+      "titel": "Gemischte Kommissionen",
       "bloecke": [
         {
           "absatz": "1",
@@ -586,6 +610,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "17",
       "artikelLabel": "Art. 17",
+      "titel": "Schiedsklausel",
       "bloecke": [
         {
           "absatz": "1",
@@ -621,6 +646,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "18",
       "artikelLabel": "Art. 18",
+      "titel": "Vertragsdauer und Vertragsänderung",
       "bloecke": [
         {
           "absatz": "1",
@@ -644,6 +670,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "19",
       "artikelLabel": "Art. 19",
+      "titel": "Berlin-Klausel",
       "bloecke": [
         {
           "absatz": "1",
@@ -663,6 +690,7 @@
       "erlass": "Vertrag zwischen der Schweizerischen Eidgenossenschaft und der Bundesrepublik Deutschland über den Autobahnzusammenschluss im Raum Basel und Weil am Rhein (721.820)",
       "artikel": "20",
       "artikelLabel": "Art. 20",
+      "titel": "Ratifikation, Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

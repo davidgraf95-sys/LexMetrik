@@ -5,9 +5,10 @@
       "id": "kanton/BS/162.420/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -36,9 +37,10 @@
       "id": "kanton/BS/162.420/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -93,9 +95,10 @@
       "id": "kanton/BS/162.420/art_2_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "2_a",
       "artikelLabel": "§ 2a",
+      "titel": "Verlängerung des bezahlten Mutterschaftsurlaubs bei längerem Spitalaufenthalt des Neugeborenen",
       "bloecke": [
         {
           "absatz": "1",
@@ -126,9 +129,10 @@
       "id": "kanton/BS/162.420/art_2_b",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "2_b",
       "artikelLabel": "§ 2b",
+      "titel": "Ende des Anspruchs bei Wiederaufnahme der Arbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -142,12 +146,33 @@
       "sha": "26fc257705a38a120ababcbcc69754e4fc68af04a64d676114c4bb7d4e899c52"
     },
     {
+      "id": "kanton/BS/162.420/art_3",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "titel": "Stillurlaub",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "62f87338ed956130b5707742c0507859",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/162.420/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Sicherung des Arbeitsplatzes",
       "bloecke": [
         {
           "absatz": "1",
@@ -164,9 +189,10 @@
       "id": "kanton/BS/162.420/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Änderung des Beschäftigungsgrades",
       "bloecke": [
         {
           "absatz": "1",
@@ -183,9 +209,10 @@
       "id": "kanton/BS/162.420/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Lohnanspruch",
       "bloecke": [
         {
           "absatz": "1",
@@ -214,9 +241,10 @@
       "id": "kanton/BS/162.420/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Berechnung des Lohnes",
       "bloecke": [
         {
           "absatz": "1",
@@ -237,9 +265,10 @@
       "id": "kanton/BS/162.420/art_7_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "7_a",
       "artikelLabel": "§ 7a",
+      "titel": "Stillzeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -279,12 +308,51 @@
       "sha": "35de8f99f8b24ff46de374c0e99ace66630b0c4d9af7772c617ebd56f3944243"
     },
     {
+      "id": "kanton/BS/162.420/art_7_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
+      "artikel": "7_b",
+      "artikelLabel": "§ 7b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "62f87338ed956130b5707742c0507859",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/162.420/art_7_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
+      "artikel": "7_c",
+      "artikelLabel": "§ 7c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/162.420",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "62f87338ed956130b5707742c0507859",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/162.420/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Schlussbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -301,9 +369,10 @@
       "id": "kanton/BS/162.420/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "SMUV (162.420)",
+      "erlass": "Verordnung über den Schwangerschafts- und Mutterschaftsurlaub, SMUV (162.420)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Aufhebung und Änderung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gegenstand",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Aufgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -62,6 +64,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "2_a",
       "artikelLabel": "§ 2a",
+      "titel": "Besondere Bedürfnisse von Menschen mit Behinderungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -89,6 +92,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Bedürftigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -108,6 +112,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Anspruch",
       "bloecke": [
         {
           "absatz": "1",
@@ -131,6 +136,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Subsidiarität",
       "bloecke": [
         {
           "absatz": "1",
@@ -162,12 +168,33 @@
       "sha": "cc4e060659ab7099020facda7c945c60e85cdc02b9b7af04cbd34c5b1b09ce40"
     },
     {
+      "id": "kanton/BS/890.100/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Sozialhilfegesetz (890.100)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "titel": "Bevorschussung von Kinder-Alimenten",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/890.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17ae8bd1905b933b823035edaffc26fd",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/890.100/art_7",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Umfang",
       "bloecke": [
         {
           "absatz": "1",
@@ -203,6 +230,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Einkünfte und Vermögen",
       "bloecke": [
         {
           "absatz": "1",
@@ -226,6 +254,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Entgelte in Lebens- und Wohngemeinschaften",
       "bloecke": [
         {
           "absatz": "1",
@@ -245,6 +274,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Form und Ausrichtung",
       "bloecke": [
         {
           "absatz": "1",
@@ -268,6 +298,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Verpfändung, Abtretung und Verrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -291,6 +322,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Übergang von Ansprüchen gegenüber Dritten",
       "bloecke": [
         {
           "absatz": "1",
@@ -314,6 +346,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Eingliederungsmassnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -353,6 +386,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Pflichten der unterstützten Person",
       "bloecke": [
         {
           "absatz": "1",
@@ -410,6 +444,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Verwandtenunterstützungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -437,6 +472,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Rückerstattung und Verrechnung aufgrund Leistungen Dritter",
       "bloecke": [
         {
           "absatz": "1",
@@ -456,6 +492,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Rückerstattung aufgrund wirtschaftlicher Verhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -483,6 +520,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Rückerstattung aus dem Nachlass",
       "bloecke": [
         {
           "absatz": "1",
@@ -502,6 +540,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Rückerstattung bei unrechtmässigem Bezug",
       "bloecke": [
         {
           "absatz": "1",
@@ -525,6 +564,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Verzinsung",
       "bloecke": [
         {
           "absatz": "1",
@@ -544,6 +584,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Verjährung",
       "bloecke": [
         {
           "absatz": "1",
@@ -567,6 +608,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -586,6 +628,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -613,6 +656,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Organisation und Finanzierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -626,12 +670,33 @@
       "sha": "af7da0d9276927e4400c3196f30b433c29efdc105514348fa65a33356978df7a"
     },
     {
+      "id": "kanton/BS/890.100/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Sozialhilfegesetz (890.100)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "titel": "Delegation der Sozialhilfe in der Stadt Basel",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/890.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "17ae8bd1905b933b823035edaffc26fd",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/890.100/art_26",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Aufsichtsbehörde",
       "bloecke": [
         {
           "absatz": "1",
@@ -655,6 +720,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Rechtsmittel",
       "bloecke": [
         {
           "absatz": "1",
@@ -678,6 +744,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Schweigepflicht, Auskunftspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -705,6 +772,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -724,6 +792,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Aufhebung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -743,6 +812,7 @@
       "erlass": "Sozialhilfegesetz (890.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

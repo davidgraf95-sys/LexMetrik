@@ -5,9 +5,10 @@
       "id": "kanton/BS/610.110/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Gegenstand der Verordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,9 +25,10 @@
       "id": "kanton/BS/610.110/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -47,9 +49,10 @@
       "id": "kanton/BS/610.110/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Steuerungsgrössen",
       "bloecke": [
         {
           "absatz": "1",
@@ -74,9 +77,10 @@
       "id": "kanton/BS/610.110/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Vorprüfung von Vorlagen auf finanzielle Auswirkungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -105,9 +109,10 @@
       "id": "kanton/BS/610.110/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Handbuch für Steuerung und Ausgaben",
       "bloecke": [
         {
           "absatz": "1",
@@ -132,9 +137,10 @@
       "id": "kanton/BS/610.110/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Grundsätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -151,9 +157,10 @@
       "id": "kanton/BS/610.110/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Budgetentwurf des Regierungsrates",
       "bloecke": [
         {
           "absatz": "1",
@@ -178,9 +185,10 @@
       "id": "kanton/BS/610.110/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Budgetnachtrag des Regierungsrates",
       "bloecke": [
         {
           "absatz": "1",
@@ -201,9 +209,10 @@
       "id": "kanton/BS/610.110/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Definitives Budget",
       "bloecke": [
         {
           "absatz": "1",
@@ -224,9 +233,10 @@
       "id": "kanton/BS/610.110/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Fehlender Budgetbeschluss",
       "bloecke": [
         {
           "absatz": "1",
@@ -261,9 +271,10 @@
       "id": "kanton/BS/610.110/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Verwaltungsinterne Kreditsteuerung: Erfolgsrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -292,6 +303,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Alle anderen Positionen im Betriebsergebnis vor Abschreibungen werden im Pauschalbereich zusammengefasst."
+        },
+        {
           "absatz": "4",
           "text": "Der Regierungsrat beschliesst die Vorgaben für den Pauschalbereich pro Departement sowie die Vorgaben für die Einzelposten."
         },
@@ -308,15 +323,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/610.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "eb4ea1e158d4da7fe052016afbc3cca6",
-      "sha": "142f804594140b388140fd757baaf11bf45f79f1de05ed4da95f56783b285464"
+      "sha": "ba9b201c3f7122dd55452c4ae154d4cd0ee2d1938b1433b16666730502701b6a"
     },
     {
       "id": "kanton/BS/610.110/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Verwaltungsinterne Kreditsteuerung: Investitionsrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -341,9 +357,10 @@
       "id": "kanton/BS/610.110/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Budgetabweichungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -364,9 +381,10 @@
       "id": "kanton/BS/610.110/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Kreditüberschreitung",
       "bloecke": [
         {
           "absatz": "1",
@@ -391,9 +409,10 @@
       "id": "kanton/BS/610.110/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Nachtragskredit",
       "bloecke": [
         {
           "absatz": "1",
@@ -414,9 +433,10 @@
       "id": "kanton/BS/610.110/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Kreditübertragungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -453,9 +473,10 @@
       "id": "kanton/BS/610.110/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Rücklagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -510,9 +531,10 @@
       "id": "kanton/BS/610.110/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Interne Verrechnungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -537,9 +559,10 @@
       "id": "kanton/BS/610.110/art_19",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Kosten- und Leistungsrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -568,9 +591,10 @@
       "id": "kanton/BS/610.110/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Risikomanagement",
       "bloecke": [
         {
           "absatz": "1",
@@ -613,9 +637,10 @@
       "id": "kanton/BS/610.110/art_21",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Versicherungsverträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -654,9 +679,10 @@
       "id": "kanton/BS/610.110/art_22",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Internes Kontrollsystem (IKS)",
       "bloecke": [
         {
           "absatz": "1",
@@ -703,9 +729,10 @@
       "id": "kanton/BS/610.110/art_23",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Ausgabenbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -734,9 +761,10 @@
       "id": "kanton/BS/610.110/art_24",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Ausgaben für Leasings",
       "bloecke": [
         {
           "absatz": "1",
@@ -761,9 +789,10 @@
       "id": "kanton/BS/610.110/art_25",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Delegation der Ausgabenkompetenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -810,9 +839,10 @@
       "id": "kanton/BS/610.110/art_26",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Formen der Ausgabenbewilligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -829,9 +859,10 @@
       "id": "kanton/BS/610.110/art_27",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Erläuterungen zu Ausgabenbewilligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -874,9 +905,10 @@
       "id": "kanton/BS/610.110/art_28",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Nicht oder teilweise genutzte Ausgabenbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -897,9 +929,10 @@
       "id": "kanton/BS/610.110/art_29",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Erhöhung von Ausgabenbewilligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -924,9 +957,10 @@
       "id": "kanton/BS/610.110/art_30",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Kontrolle und Abrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -965,9 +999,10 @@
       "id": "kanton/BS/610.110/art_31",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Regelwerk",
       "bloecke": [
         {
           "absatz": "1",
@@ -992,9 +1027,10 @@
       "id": "kanton/BS/610.110/art_32",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Abweichungen vom Regelwerk",
       "bloecke": [
         {
           "absatz": "1",
@@ -1049,9 +1085,10 @@
       "id": "kanton/BS/610.110/art_33",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Handbuch für Rechnungslegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1076,9 +1113,10 @@
       "id": "kanton/BS/610.110/art_34",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Steuerertrag",
       "bloecke": [
         {
           "absatz": "1",
@@ -1099,9 +1137,10 @@
       "id": "kanton/BS/610.110/art_35",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Investitionsrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1122,9 +1161,10 @@
       "id": "kanton/BS/610.110/art_36",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Geldflussrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1145,9 +1185,10 @@
       "id": "kanton/BS/610.110/art_37",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Aktivierungsgrenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1190,9 +1231,10 @@
       "id": "kanton/BS/610.110/art_38",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Gegebene Investitionsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1245,9 +1287,10 @@
       "id": "kanton/BS/610.110/art_39",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Erhaltene Investitionsbeiträge",
       "bloecke": [
         {
           "absatz": "1",
@@ -1268,9 +1311,10 @@
       "id": "kanton/BS/610.110/art_40",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Immobilien im Finanzvermögen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1287,9 +1331,10 @@
       "id": "kanton/BS/610.110/art_41",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Rückstellungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1314,9 +1359,10 @@
       "id": "kanton/BS/610.110/art_42",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Eventualforderungen und -verbindlichkeiten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1337,9 +1383,10 @@
       "id": "kanton/BS/610.110/art_43",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Anhang der Jahresrechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1398,9 +1445,10 @@
       "id": "kanton/BS/610.110/art_44",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Treuhänderisch verwaltete Fonds",
       "bloecke": [
         {
           "absatz": "1",
@@ -1421,9 +1469,10 @@
       "id": "kanton/BS/610.110/art_45",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Konsolidierungskreis",
       "bloecke": [
         {
           "absatz": "1",
@@ -1440,9 +1489,10 @@
       "id": "kanton/BS/610.110/art_46",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Vorgaben für konsolidierte Organisationen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1463,9 +1513,10 @@
       "id": "kanton/BS/610.110/art_47",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Anhang der konsolidierten Rechnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1500,9 +1551,10 @@
       "id": "kanton/BS/610.110/art_48",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "48",
       "artikelLabel": "§ 48",
+      "titel": "Konsolidierungsmethode und Bewertung der Beteiligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1527,9 +1579,10 @@
       "id": "kanton/BS/610.110/art_49",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "49",
       "artikelLabel": "§ 49",
+      "titel": "Buchführungsgrundsätze",
       "bloecke": [
         {
           "absatz": "1",
@@ -1566,9 +1619,10 @@
       "id": "kanton/BS/610.110/art_50",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Kontenrahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1589,9 +1643,10 @@
       "id": "kanton/BS/610.110/art_51",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "Organisation",
       "bloecke": [
         {
           "absatz": "1",
@@ -1612,9 +1667,10 @@
       "id": "kanton/BS/610.110/art_52",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Inventarführung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1635,9 +1691,10 @@
       "id": "kanton/BS/610.110/art_53",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Finanzdepartement",
       "bloecke": [
         {
           "absatz": "1",
@@ -1658,9 +1715,10 @@
       "id": "kanton/BS/610.110/art_54",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Immobilien Basel-Stadt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1737,9 +1795,10 @@
       "id": "kanton/BS/610.110/art_55",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "Finanzverwaltung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1834,9 +1893,10 @@
       "id": "kanton/BS/610.110/art_56",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "Geld- und Kapitalmarktgeschäfte",
       "bloecke": [
         {
           "absatz": "1",
@@ -1879,9 +1939,10 @@
       "id": "kanton/BS/610.110/art_57",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1898,9 +1959,10 @@
       "id": "kanton/BS/610.110/art_57_a",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "57_a",
       "artikelLabel": "§ 57a",
+      "titel": "Übergangsbestimmung zu § 28",
       "bloecke": [
         {
           "absatz": "1",
@@ -1917,9 +1979,10 @@
       "id": "kanton/BS/610.110/art_58",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Finanzhaushaltverordnung (610.110)",
+      "erlass": "Verordnung zum Gesetz über den kantonalen Finanzhaushalt, Finanzhaushaltverordnung (610.110)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Publikation und Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

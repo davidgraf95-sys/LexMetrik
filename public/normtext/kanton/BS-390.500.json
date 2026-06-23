@@ -21,12 +21,70 @@
       "sha": "21edcd1a37cc64714d9a03684ee50d559b8c0fae0a37af15caf370f252d15f70"
     },
     {
+      "id": "kanton/BS/390.500/art_1_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
+      "artikel": "1_a",
+      "artikelLabel": "§ 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2021-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/390.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f7a81b93e98dab51768ba054140b92fa",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/390.500/art_1_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
+      "artikel": "1_b",
+      "artikelLabel": "§ 1b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2021-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/390.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f7a81b93e98dab51768ba054140b92fa",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "kanton/BS/390.500/art_1_c",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
+      "artikel": "1_c",
+      "artikelLabel": "§ 1c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2021-04-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/390.500",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f7a81b93e98dab51768ba054140b92fa",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/390.500/art_1_d",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
       "artikel": "1_d",
       "artikelLabel": "§ 1d",
+      "titel": "Gebühren für eingeführte Leichen und Urnen",
       "bloecke": [
         {
           "absatz": "1",
@@ -60,6 +118,7 @@
       "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
       "artikel": "1_e",
       "artikelLabel": "§ 1e",
+      "titel": "Gebühren und Kosten bei Ausgrabungen und Verlegungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -87,6 +146,7 @@
       "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Im Allgemeinen",
       "bloecke": [
         {
           "absatz": "1",
@@ -118,6 +178,7 @@
       "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Gebühren für Leistungen Dritter",
       "bloecke": [
         {
           "absatz": "1",
@@ -159,6 +220,7 @@
       "erlass": "Verordnung über Gebühren im Bestattungswesen (390.500)",
       "artikel": "3_a",
       "artikelLabel": "§ 3a",
+      "titel": "Gebühren für zusätzliche Leistungen",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -88,6 +89,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Verantwortung",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,6 +109,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Normalfall und Abweichungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,6 +133,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Brandrisikobewertung",
       "bloecke": [
         {
           "absatz": "1",
@@ -149,6 +153,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Sicherheitsbeauftragte, Sicherheitsbeauftragter",
       "bloecke": [
         {
           "absatz": "1",
@@ -198,6 +203,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Zugang für Feuerwehr",
       "bloecke": [
         {
           "absatz": "1",
@@ -221,6 +227,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Türen",
       "bloecke": [
         {
           "absatz": "1",
@@ -242,12 +249,32 @@
       "sha": "dd3a82c6ebdfbb5dba8458c82ed45c45c05c7f2f0fc6a31c889c92786f3915b4"
     },
     {
+      "id": "kanton/BS/735.200/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über den Brandschutz (735.200)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2024-12-26",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/735.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "bcbec768d5d1e06a49b60c690164ed84",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/735.200/art_10",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Fluchtwegkonzept, Rettungswegkennzeichnungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -271,6 +298,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Anpassung bestehender Gebäude, Anlagen und Einrichtungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -741,6 +769,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Ex-Schutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -928,6 +957,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Gebühren",
       "bloecke": [
         {
           "absatz": "1",
@@ -974,6 +1004,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "41_a",
       "artikelLabel": "§ 41a",
+      "titel": "Strafbestimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1022,6 +1053,7 @@
       "erlass": "Verordnung über den Brandschutz (735.200)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Aufgehobener Erlass",
       "bloecke": [
         {
           "absatz": "1",

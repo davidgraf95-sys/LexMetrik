@@ -5,9 +5,10 @@
       "id": "kanton/BS/812.100/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Zuständigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -36,9 +37,10 @@
       "id": "kanton/BS/812.100/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Betriebsverzeichnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -55,9 +57,10 @@
       "id": "kanton/BS/812.100/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Industrielle Betriebe",
       "bloecke": [
         {
           "absatz": "1",
@@ -78,9 +81,10 @@
       "id": "kanton/BS/812.100/art_4",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -97,9 +101,10 @@
       "id": "kanton/BS/812.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Planbegutachtung, Plangenehmigung und Betriebsbewilligung",
       "bloecke": [
         {
           "absatz": "1",
@@ -128,9 +133,10 @@
       "id": "kanton/BS/812.100/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Beseitigung nachträglich erkannter Übelstände",
       "bloecke": [
         {
           "absatz": "1",
@@ -148,12 +154,32 @@
       "sha": "0fa7637f56c30191b793b811050cd19aa6ed9cbc9a4928b1372aefdfaec8d596"
     },
     {
+      "id": "kanton/BS/812.100/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2009-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "98bb370080631c3bd63615a67cdb0ee5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/812.100/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Arbeitszeitbewilligungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,9 +196,10 @@
       "id": "kanton/BS/812.100/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Feiertage",
       "bloecke": [
         {
           "absatz": "1",
@@ -189,19 +216,14 @@
       "id": "kanton/BS/812.100/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Jugendliche unter 15 Jahren",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Bewilligungspflicht Die Beschäftigung von schulpflichtigen oder schulentlassenen Kindern unter 15 Jahren bedarf einer Bewilligung des Amtes."
-            }
-          ]
+          "text": "a) Bewilligungspflicht Die Beschäftigung von schulpflichtigen oder schulentlassenen Kindern unter 15 Jahren bedarf einer Bewilligung des Amtes."
         },
         {
           "absatz": "2",
@@ -209,13 +231,7 @@
         },
         {
           "absatz": "3",
-          "text": "",
-          "items": [
-            {
-              "marke": "b",
-              "text": "Ärztliche Untersuchung Das Amt hat vor der Bewilligungserteilung Jugendliche unter 15 Jahren dem Schularzt zuzuweisen, der sich darüber auszusprechen hat, ob der vorgesehenen Beschäftigung des Jugendlichen nicht eine Krankheit, ein Gebrechen oder eine Entwicklungsstörung entgegenstehen. Im Weiteren ist abzuklären, ob der vorgesehene Arbeitsplatz für die Beschäftigung eines Kindes unter 15 Jahren geeignet ist."
-            }
-          ]
+          "text": "b) Ärztliche Untersuchung Das Amt hat vor der Bewilligungserteilung Jugendliche unter 15 Jahren dem Schularzt zuzuweisen, der sich darüber auszusprechen hat, ob der vorgesehenen Beschäftigung des Jugendlichen nicht eine Krankheit, ein Gebrechen oder eine Entwicklungsstörung entgegenstehen. Im Weiteren ist abzuklären, ob der vorgesehene Arbeitsplatz für die Beschäftigung eines Kindes unter 15 Jahren geeignet ist."
         },
         {
           "absatz": "4",
@@ -232,15 +248,16 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "98bb370080631c3bd63615a67cdb0ee5",
-      "sha": "8c1a4d73acd357dcd49b63b88dee9c04ef6ed329a1d963388dbe09c9c0ebefa1"
+      "sha": "3c5ad70f899b595d5274c995af41f08444260b322cff996b0567346c08d41158"
     },
     {
       "id": "kanton/BS/812.100/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Vorbehalt weiterer Vorschriften",
       "bloecke": [
         {
           "absatz": "1",
@@ -257,9 +274,10 @@
       "id": "kanton/BS/812.100/art_12",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Kontrolle der Betriebsordnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -276,9 +294,10 @@
       "id": "kanton/BS/812.100/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Verfügungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -295,9 +314,10 @@
       "id": "kanton/BS/812.100/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Anzeigen",
       "bloecke": [
         {
           "absatz": "1",
@@ -314,9 +334,10 @@
       "id": "kanton/BS/812.100/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Beschwerden",
       "bloecke": [
         {
           "absatz": "1",
@@ -345,7 +366,7 @@
       "id": "kanton/BS/812.100/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
       "bloecke": [
@@ -364,7 +385,7 @@
       "id": "kanton/BS/812.100/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
       "bloecke": [
@@ -387,9 +408,10 @@
       "id": "kanton/BS/812.100/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Aufhebung kantonaler Vorschriften",
       "bloecke": [
         {
           "absatz": "1",
@@ -413,12 +435,33 @@
       "sha": "1c6f30c8b70ceec3c99fb5ee886f6fa63332fd0ec8ae2047ad9cdecb04eedc88"
     },
     {
+      "id": "kanton/BS/812.100/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "titel": "Abänderung kantonaler Vorschriften",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2009-01-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/812.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "98bb370080631c3bd63615a67cdb0ee5",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/812.100/art_20",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Arbeitsgesetz (812.100)",
+      "erlass": "Einführungsgesetz zum Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel, Arbeitsgesetz (812.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Inkrafttreten",
       "bloecke": [
         {
           "absatz": "1",

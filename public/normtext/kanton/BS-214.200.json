@@ -5,9 +5,10 @@
       "id": "kanton/BS/214.200/art_1",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Geltungsbereich",
       "bloecke": [
         {
           "absatz": "1",
@@ -24,9 +25,10 @@
       "id": "kanton/BS/214.200/art_2",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Entgegennahme der Fundanzeige",
       "bloecke": [
         {
           "absatz": "1",
@@ -47,9 +49,10 @@
       "id": "kanton/BS/214.200/art_3",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Hinterlegung des Fundgegenstandes",
       "bloecke": [
         {
           "absatz": "1",
@@ -71,12 +74,32 @@
       "sha": "97760b11f82cfd3c83dcf805c66dabc2ec1620f419349fea428135cd62e9dec6"
     },
     {
+      "id": "kanton/BS/214.200/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2016-10-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "59e9fcfbb30e661563198abffa9e3b94",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/214.200/art_5",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Kontrollschilder",
       "bloecke": [
         {
           "absatz": "1",
@@ -93,9 +116,10 @@
       "id": "kanton/BS/214.200/art_6",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Haus- und Anstaltsfunde",
       "bloecke": [
         {
           "absatz": "1",
@@ -116,9 +140,10 @@
       "id": "kanton/BS/214.200/art_7",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Aufbewahrungsfristen",
       "bloecke": [
         {
           "absatz": "1",
@@ -143,9 +168,10 @@
       "id": "kanton/BS/214.200/art_8",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Herausgabe",
       "bloecke": [
         {
           "absatz": "1",
@@ -170,9 +196,10 @@
       "id": "kanton/BS/214.200/art_9",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Auskündung und Verwertung",
       "bloecke": [
         {
           "absatz": "1",
@@ -193,9 +220,10 @@
       "id": "kanton/BS/214.200/art_10",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Verderbliche Waren und kostspieliger Unterhalt",
       "bloecke": [
         {
           "absatz": "1",
@@ -212,9 +240,10 @@
       "id": "kanton/BS/214.200/art_11",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Freihandverkauf",
       "bloecke": [
         {
           "absatz": "1",
@@ -228,12 +257,32 @@
       "sha": "8fe1520995e5b709695875fc10124615ba2b6ca91b5c722becbce3194a712762"
     },
     {
+      "id": "kanton/BS/214.200/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2016-10-30",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/214.200",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "59e9fcfbb30e661563198abffa9e3b94",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/214.200/art_13",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Kosten",
       "bloecke": [
         {
           "absatz": "1",
@@ -250,9 +299,10 @@
       "id": "kanton/BS/214.200/art_14",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Finderlohn",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,9 +323,10 @@
       "id": "kanton/BS/214.200/art_15",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Gebühren und Kostenersatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -316,9 +367,10 @@
       "id": "kanton/BS/214.200/art_16",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Übergangsbestimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -335,9 +387,10 @@
       "id": "kanton/BS/214.200/art_17",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Aufgehobene Erlasse",
       "bloecke": [
         {
           "absatz": "1",
@@ -354,9 +407,10 @@
       "id": "kanton/BS/214.200/art_18",
       "ebene": "kanton",
       "quelle": "BS",
-      "erlass": "Fundsachenverordnung (214.200)",
+      "erlass": "Verordnung über die Behandlung von Fundsachen, Fundsachenverordnung (214.200)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

@@ -8,6 +8,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Besondere Kategorien von Beschäftigten",
       "bloecke": [
         {
           "absatz": "1",
@@ -41,6 +42,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Sozialpartnerschaftliche Begutachtungskommission",
       "bloecke": [
         {
           "absatz": "1",
@@ -72,6 +74,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Personalausschüsse",
       "bloecke": [
         {
           "absatz": "1",
@@ -99,6 +102,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "4",
       "artikelLabel": "§ 4",
+      "titel": "Zusammenarbeit mit Personalverbänden",
       "bloecke": [
         {
           "absatz": "1",
@@ -122,6 +126,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Grundsätzliches zu Aus-, Fort- und Weiterbildungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -149,6 +154,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Interessenlage",
       "bloecke": [
         {
           "absatz": "1",
@@ -182,6 +188,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Gewährung von Bildungsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -209,6 +216,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Beteiligung an den Aufwendungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -232,6 +240,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Rückzahlungsverpflichtung",
       "bloecke": [
         {
           "absatz": "1",
@@ -248,6 +257,10 @@
           ]
         },
         {
+          "absatz": null,
+          "text": "Die Nicht-Einhaltung der Rückzahlungsverpflichtung kann die volle Rückerstattungspflicht zur Folge haben."
+        },
+        {
           "absatz": "2",
           "text": "Es besteht keine Rückzahlungsverpflichtung, wenn das Arbeitsverhältnis durch den Arbeitgeber aus einem nicht bei der Mitarbeiterin oder dem Mitarbeiter liegenden Grund beendet wird. Dazu gehören auch Restrukturierungsmassnahmen von Seiten des Arbeitgebers sowie längere krankheits- oder unfallbedingte Abwesenheit."
         }
@@ -256,7 +269,27 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 162.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8512a5836aad6cf5e9e7c7d24facac5e",
-      "sha": "64f49b48a984ec7c8c590119b9c18039e674df04b50fb94f7448d8920106bf56"
+      "sha": "68e72b5c8849cd97c13687d3943b68c264157e7afd6a30284169d6c281e7b874"
+    },
+    {
+      "id": "kanton/BS/BaB 162.110/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "titel": "Rückerstattung der Aufwendungen",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2023-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8512a5836aad6cf5e9e7c7d24facac5e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/BaB 162.110/art_10_a",
@@ -265,6 +298,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "10_a",
       "artikelLabel": "§ 10a",
+      "titel": "Privatrechtliche Anstellungsverhältnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -314,6 +348,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Arbeitsvertragliche Kompetenzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -337,6 +372,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -364,6 +400,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Form der Kündigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -391,6 +428,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "13_a",
       "artikelLabel": "§ 13a",
+      "titel": "Massnahme vor Aussprechen einer Kündigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -410,6 +448,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "13_b",
       "artikelLabel": "§ 13b",
+      "titel": "Rechtliches Gehör und Anhörung",
       "bloecke": [
         {
           "absatz": "1",
@@ -435,12 +474,33 @@
       "sha": "824d58914154e60c7af934573ba68afd10a49aa312bd961080e47408c191b56a"
     },
     {
+      "id": "kanton/BS/BaB 162.110/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "titel": "Verfahren",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2023-07-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 162.110",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8512a5836aad6cf5e9e7c7d24facac5e",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 162.110/art_15",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Erreichen der ordentlichen Altersgrenze",
       "bloecke": [
         {
           "absatz": "1",
@@ -464,6 +524,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Fortsetzung des Arbeitsverhältnisses über die ordentliche Altersgrenze hinaus",
       "bloecke": [
         {
           "absatz": "1",
@@ -487,6 +548,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Fortsetzung des Arbeitsverhältnisses über das AHV-Alter hinaus",
       "bloecke": [
         {
           "absatz": "1",
@@ -506,6 +568,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Invalidität",
       "bloecke": [
         {
           "absatz": "1",
@@ -533,6 +596,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Befristung",
       "bloecke": [
         {
           "absatz": "1",
@@ -552,6 +616,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Durchschnittliche, wöchentliche Arbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -575,6 +640,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Mehrarbeit, Überzeitarbeit und verschobene Arbeitszeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -602,6 +668,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Anordnung und Leistung von Überzeitarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -625,6 +692,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Kompensation oder Auszahlung der Mehrarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -652,6 +720,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Zuschläge für Überzeitarbeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -679,6 +748,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Anspruch und Bezug",
       "bloecke": [
         {
           "absatz": "1",
@@ -710,6 +780,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Kürzung bei langer Abwesenheit",
       "bloecke": [
         {
           "absatz": "1",
@@ -759,6 +830,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -782,6 +854,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Bezahlter Urlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -813,6 +886,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Lohnanspruch",
       "bloecke": [
         {
           "absatz": "1",
@@ -836,6 +910,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Unbezahlter Urlaub und Unterbruch des Arbeitsverhältnisses",
       "bloecke": [
         {
           "absatz": "1",
@@ -867,6 +942,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "30_a",
       "artikelLabel": "§ 30a",
+      "titel": "Betreuungsurlaub",
       "bloecke": [
         {
           "absatz": "1",
@@ -906,6 +982,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Gründe und Dauer",
       "bloecke": [
         {
           "absatz": "1",
@@ -999,6 +1076,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1018,6 +1096,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Auswirkungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1045,6 +1124,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Versicherungsschutz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1086,6 +1166,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Nicht obligatorische Beförderungsdienste",
       "bloecke": [
         {
           "absatz": "1",
@@ -1109,6 +1190,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Leistung und Prämie bei den Personalversicherungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1140,6 +1222,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "36_a",
       "artikelLabel": "§ 36a",
+      "titel": "Meldepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1163,6 +1246,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "36_b",
       "artikelLabel": "§ 36b",
+      "titel": "Bewilligungspflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -1196,6 +1280,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "36_c",
       "artikelLabel": "§ 36c",
+      "titel": "Bewilligungsinstanzen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1227,6 +1312,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Öffentliches Amt",
       "bloecke": [
         {
           "absatz": "1",
@@ -1250,6 +1336,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Grundsatz",
       "bloecke": [
         {
           "absatz": "1",
@@ -1277,6 +1364,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Betriebsinterne Regelung bei der Entgegennahme von Geschenken",
       "bloecke": [
         {
           "absatz": "1",
@@ -1304,6 +1392,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Haftbarkeit des Personals",
       "bloecke": [
         {
           "absatz": "1",
@@ -1323,6 +1412,7 @@
       "erlass": "Reglement zur Anstellungsordnung (BaB 162.110)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Wirksamkeit",
       "bloecke": [
         {
           "absatz": "1",

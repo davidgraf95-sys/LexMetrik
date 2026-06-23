@@ -8,6 +8,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "1",
       "artikelLabel": "§ 1",
+      "titel": "Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -27,6 +28,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "2",
       "artikelLabel": "§ 2",
+      "titel": "Inhalt des Wahl- und Stimmrechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -46,6 +48,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "3",
       "artikelLabel": "§ 3",
+      "titel": "Voraussetzungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -59,12 +62,32 @@
       "sha": "41df7b96c6e83b828fed0d6b8532a747c8119590ba2e5ebcb661b759c68247b5"
     },
     {
+      "id": "kanton/BS/BaB 132.100/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": ""
+        }
+      ],
+      "stand": "2022-10-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/BaB 132.100",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c23476727718da6648c4236d37f47678",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "id": "kanton/BS/BaB 132.100/art_5",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "5",
       "artikelLabel": "§ 5",
+      "titel": "Wählbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -84,6 +107,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "6",
       "artikelLabel": "§ 6",
+      "titel": "Anlegung",
       "bloecke": [
         {
           "absatz": "1",
@@ -107,6 +131,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "7",
       "artikelLabel": "§ 7",
+      "titel": "Eintragung",
       "bloecke": [
         {
           "absatz": "1",
@@ -130,6 +155,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "8",
       "artikelLabel": "§ 8",
+      "titel": "Stimmrechtsausweis",
       "bloecke": [
         {
           "absatz": "1",
@@ -149,6 +175,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "9",
       "artikelLabel": "§ 9",
+      "titel": "Art der Ausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -180,6 +207,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "10",
       "artikelLabel": "§ 10",
+      "titel": "Persönliche Ausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -207,6 +235,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "11",
       "artikelLabel": "§ 11",
+      "titel": "Briefliche Ausübung",
       "bloecke": [
         {
           "absatz": "1",
@@ -234,6 +263,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "11_a",
       "artikelLabel": "§ 11a",
+      "titel": "Stimmabgabe durch Dritte",
       "bloecke": [
         {
           "absatz": "1",
@@ -273,6 +303,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "12",
       "artikelLabel": "§ 12",
+      "titel": "Ungültige Wahl- und Stimmzettel und ungültige Stimmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -330,6 +361,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "13",
       "artikelLabel": "§ 13",
+      "titel": "Protokollaufnahmen",
       "bloecke": [
         {
           "absatz": "1",
@@ -395,6 +427,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
+      "titel": "Stimmabgabe nach dem Urnensystem",
       "bloecke": [
         {
           "absatz": "1",
@@ -422,6 +455,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "15",
       "artikelLabel": "§ 15",
+      "titel": "Wahl- und Abstimmungslokale",
       "bloecke": [
         {
           "absatz": "1",
@@ -441,6 +475,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "16",
       "artikelLabel": "§ 16",
+      "titel": "Bestellung der Wahlbüros",
       "bloecke": [
         {
           "absatz": "1",
@@ -472,6 +507,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "17",
       "artikelLabel": "§ 17",
+      "titel": "Entschädigung",
       "bloecke": [
         {
           "absatz": "1",
@@ -491,6 +527,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "18",
       "artikelLabel": "§ 18",
+      "titel": "Präsenz der Mitglieder des Wahlbüros",
       "bloecke": [
         {
           "absatz": "1",
@@ -518,6 +555,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "19",
       "artikelLabel": "§ 19",
+      "titel": "Ordnung im Wahllokal",
       "bloecke": [
         {
           "absatz": "1",
@@ -561,6 +599,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "20",
       "artikelLabel": "§ 20",
+      "titel": "Unzulässige Beeinflussung der Stimmberechtigten",
       "bloecke": [
         {
           "absatz": "1",
@@ -584,6 +623,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "21",
       "artikelLabel": "§ 21",
+      "titel": "Aufstellung und Transport der Urnen",
       "bloecke": [
         {
           "absatz": "1",
@@ -603,6 +643,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "22",
       "artikelLabel": "§ 22",
+      "titel": "Beobachtung der Wahlen und Abstimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -622,6 +663,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "23",
       "artikelLabel": "§ 23",
+      "titel": "Schweigepflicht",
       "bloecke": [
         {
           "absatz": "1",
@@ -641,6 +683,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "24",
       "artikelLabel": "§ 24",
+      "titel": "Anordnung der Wahlen und Abstimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -664,6 +707,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "25",
       "artikelLabel": "§ 25",
+      "titel": "Zustellung der Abstimmungsvorlagen",
       "bloecke": [
         {
           "absatz": "1",
@@ -683,6 +727,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "26",
       "artikelLabel": "§ 26",
+      "titel": "Das Aufbieten zu Wahlen und Abstimmungen",
       "bloecke": [
         {
           "absatz": "1",
@@ -710,6 +755,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "27",
       "artikelLabel": "§ 27",
+      "titel": "Amtliche Erläuterung",
       "bloecke": [
         {
           "absatz": "1",
@@ -737,6 +783,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "28",
       "artikelLabel": "§ 28",
+      "titel": "Zeitpunkt und Wahlkreis",
       "bloecke": [
         {
           "absatz": "1",
@@ -760,6 +807,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "29",
       "artikelLabel": "§ 29",
+      "titel": "Wählbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -779,6 +827,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "30",
       "artikelLabel": "§ 30",
+      "titel": "Einreichung der Wahlvorschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -798,6 +847,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "31",
       "artikelLabel": "§ 31",
+      "titel": "Inhaltliche Erfordernisse und Unterzeichnung der Wahlvorschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -843,6 +893,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "32",
       "artikelLabel": "§ 32",
+      "titel": "Zustimmung der Kandidatinnen und Kandidaten",
       "bloecke": [
         {
           "absatz": "1",
@@ -862,6 +913,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "33",
       "artikelLabel": "§ 33",
+      "titel": "Stille Wahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -881,6 +933,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "34",
       "artikelLabel": "§ 34",
+      "titel": "Vertretung der Wahlvorschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -904,6 +957,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "35",
       "artikelLabel": "§ 35",
+      "titel": "Prüfung der Wahlvorschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -923,6 +977,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "36",
       "artikelLabel": "§ 36",
+      "titel": "Mehrfacher Vorschlag",
       "bloecke": [
         {
           "absatz": "1",
@@ -946,6 +1001,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "37",
       "artikelLabel": "§ 37",
+      "titel": "Ersatzvorschläge",
       "bloecke": [
         {
           "absatz": "1",
@@ -965,6 +1021,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "38",
       "artikelLabel": "§ 38",
+      "titel": "Bezeichnung und Listenverbindung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1008,6 +1065,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "39",
       "artikelLabel": "§ 39",
+      "titel": "Freie Listen",
       "bloecke": [
         {
           "absatz": "1",
@@ -1027,6 +1085,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "40",
       "artikelLabel": "§ 40",
+      "titel": "Insbesondere Panaschieren und Kumulieren",
       "bloecke": [
         {
           "absatz": "1",
@@ -1058,6 +1117,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "41",
       "artikelLabel": "§ 41",
+      "titel": "Änderung der Listenbezeichnung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1097,6 +1157,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "42",
       "artikelLabel": "§ 42",
+      "titel": "Gültige Wahlzettel",
       "bloecke": [
         {
           "absatz": "1",
@@ -1116,6 +1177,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "43",
       "artikelLabel": "§ 43",
+      "titel": "Stimmen für Verstorbene",
       "bloecke": [
         {
           "absatz": "1",
@@ -1135,6 +1197,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "44",
       "artikelLabel": "§ 44",
+      "titel": "Wahlbüro",
       "bloecke": [
         {
           "absatz": "1",
@@ -1158,6 +1221,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "45",
       "artikelLabel": "§ 45",
+      "titel": "Zentralbüro",
       "bloecke": [
         {
           "absatz": "1",
@@ -1177,6 +1241,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "46",
       "artikelLabel": "§ 46",
+      "titel": "Feststellung der Stimmenzahl",
       "bloecke": [
         {
           "absatz": "1",
@@ -1212,6 +1277,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "47",
       "artikelLabel": "§ 47",
+      "titel": "Zuteilung der Sitze",
       "bloecke": [
         {
           "absatz": "1",
@@ -1255,6 +1321,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "48",
       "artikelLabel": "§ 48",
+      "titel": "Gleichheit der Quotienten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1282,6 +1349,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "49",
       "artikelLabel": "§ 49",
+      "titel": "Überzählige Sitze",
       "bloecke": [
         {
           "absatz": "1",
@@ -1301,6 +1369,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "50",
       "artikelLabel": "§ 50",
+      "titel": "Wahlprotokoll des Zentralbüros",
       "bloecke": [
         {
           "absatz": "1",
@@ -1328,6 +1397,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "51",
       "artikelLabel": "§ 51",
+      "titel": "Mitteilung des Wahlergebnisses",
       "bloecke": [
         {
           "absatz": "1",
@@ -1351,6 +1421,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "52",
       "artikelLabel": "§ 52",
+      "titel": "Ermittlung des Gesamtergebnisses",
       "bloecke": [
         {
           "absatz": "1",
@@ -1370,6 +1441,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "53",
       "artikelLabel": "§ 53",
+      "titel": "Überprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1393,6 +1465,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "54",
       "artikelLabel": "§ 54",
+      "titel": "Unvereinbarkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1416,6 +1489,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "55",
       "artikelLabel": "§ 55",
+      "titel": "Ersatz von Mitgliedern des Bürgergemeinderates während der Amtsdauer (Nachrücken)",
       "bloecke": [
         {
           "absatz": "1",
@@ -1439,6 +1513,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "56",
       "artikelLabel": "§ 56",
+      "titel": "Bekanntmachung der Ergebnisse",
       "bloecke": [
         {
           "absatz": "1",
@@ -1458,6 +1533,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "57",
       "artikelLabel": "§ 57",
+      "titel": "Aufbewahrung der Wahl- und Stimmzettel",
       "bloecke": [
         {
           "absatz": "1",
@@ -1477,6 +1553,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "58",
       "artikelLabel": "§ 58",
+      "titel": "Validierung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1500,6 +1577,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "59",
       "artikelLabel": "§ 59",
+      "titel": "Beschwerden",
       "bloecke": [
         {
           "absatz": "1",
@@ -1541,6 +1619,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "60",
       "artikelLabel": "§ 60",
+      "titel": "Anordnung einer Nachzählung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1564,6 +1643,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "61",
       "artikelLabel": "§ 61",
+      "titel": "Ungültigkeit",
       "bloecke": [
         {
           "absatz": "1",
@@ -1601,6 +1681,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "62",
       "artikelLabel": "§ 62",
+      "titel": "Publikation der Beschwerdeentscheide",
       "bloecke": [
         {
           "absatz": "1",
@@ -1620,6 +1701,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "63",
       "artikelLabel": "§ 63",
+      "titel": "Neuer Wahlgang",
       "bloecke": [
         {
           "absatz": "1",
@@ -1639,6 +1721,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "64",
       "artikelLabel": "§ 64",
+      "titel": "Ausübung des Mandates",
       "bloecke": [
         {
           "absatz": "1",
@@ -1662,6 +1745,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "65",
       "artikelLabel": "§ 65",
+      "titel": "Allgemeines",
       "bloecke": [
         {
           "absatz": "1",
@@ -1681,6 +1765,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "66",
       "artikelLabel": "§ 66",
+      "titel": "Formulierte Initiative",
       "bloecke": [
         {
           "absatz": "1",
@@ -1704,6 +1789,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "67",
       "artikelLabel": "§ 67",
+      "titel": "Unformulierte Initiative",
       "bloecke": [
         {
           "absatz": "1",
@@ -1727,6 +1813,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "68",
       "artikelLabel": "§ 68",
+      "titel": "Einheit der Materie",
       "bloecke": [
         {
           "absatz": "1",
@@ -1746,6 +1833,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "69",
       "artikelLabel": "§ 69",
+      "titel": "Unterschriftenliste",
       "bloecke": [
         {
           "absatz": "1",
@@ -1783,6 +1871,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "70",
       "artikelLabel": "§ 70",
+      "titel": "Vorprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1814,6 +1903,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "71",
       "artikelLabel": "§ 71",
+      "titel": "Unterschrift",
       "bloecke": [
         {
           "absatz": "1",
@@ -1841,6 +1931,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "72",
       "artikelLabel": "§ 72",
+      "titel": "Einreichung der Unterschriftenlisten",
       "bloecke": [
         {
           "absatz": "1",
@@ -1864,6 +1955,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "73",
       "artikelLabel": "§ 73",
+      "titel": "Prüfung des Zustandekommens",
       "bloecke": [
         {
           "absatz": "1",
@@ -1901,6 +1993,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "74",
       "artikelLabel": "§ 74",
+      "titel": "Verfügung",
       "bloecke": [
         {
           "absatz": "1",
@@ -1924,6 +2017,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "75",
       "artikelLabel": "§ 75",
+      "titel": "Rückzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -1951,6 +2045,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "76",
       "artikelLabel": "§ 76",
+      "titel": "Rechtliche Überprüfung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2008,6 +2103,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "77",
       "artikelLabel": "§ 77",
+      "titel": "Eintretensentscheid",
       "bloecke": [
         {
           "absatz": "1",
@@ -2043,6 +2139,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "78",
       "artikelLabel": "§ 78",
+      "titel": "Behandlung einer formulierten Initiative im Bürgergemeinderat",
       "bloecke": [
         {
           "absatz": "1",
@@ -2082,6 +2179,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "79",
       "artikelLabel": "§ 79",
+      "titel": "Behandlung einer unformulierten Initiative im Bürgergemeinderat",
       "bloecke": [
         {
           "absatz": "1",
@@ -2113,6 +2211,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "80",
       "artikelLabel": "§ 80",
+      "titel": "Unterschriftenliste, Unterschriften",
       "bloecke": [
         {
           "absatz": "1",
@@ -2146,6 +2245,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "81",
       "artikelLabel": "§ 81",
+      "titel": "Einreichung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2169,6 +2269,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "82",
       "artikelLabel": "§ 82",
+      "titel": "Prüfung des Zustandekommens",
       "bloecke": [
         {
           "absatz": "1",
@@ -2214,6 +2315,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "83",
       "artikelLabel": "§ 83",
+      "titel": "Rückzug",
       "bloecke": [
         {
           "absatz": "1",
@@ -2233,6 +2335,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "84",
       "artikelLabel": "§ 84",
+      "titel": "Abstimmung",
       "bloecke": [
         {
           "absatz": "1",
@@ -2252,6 +2355,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "85",
       "artikelLabel": "§ 85",
+      "titel": "Rechtskraft",
       "bloecke": [
         {
           "absatz": "1",
@@ -2271,6 +2375,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "86",
       "artikelLabel": "§ 86",
+      "titel": "Zusätzlich anwendbares Recht",
       "bloecke": [
         {
           "absatz": "1",
@@ -2294,6 +2399,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "87",
       "artikelLabel": "§ 87",
+      "titel": "Änderung bisherigen Rechts",
       "bloecke": [
         {
           "absatz": "1",
@@ -2317,6 +2423,7 @@
       "erlass": "Ordnung betreffend die politischen Rechte in der Bürgergemeinde der Stadt Basel (BaB 132.100)",
       "artikel": "88",
       "artikelLabel": "§ 88",
+      "titel": "Wirksamwerden",
       "bloecke": [
         {
           "absatz": "1",
