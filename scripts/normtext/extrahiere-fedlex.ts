@@ -18,6 +18,9 @@ export interface ArtikelText {
     absatz: string | null;
     text: string;
     items?: Array<{ marke: string; text: string }>;
+    /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
+     *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis). */
+    mehrspaltig?: { kopf?: string[]; zeilen: string[][] };
   }>;
 }
 
@@ -40,7 +43,14 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   const articleMatch = html.match(articleRe);
   if (!articleMatch) return null;
 
-  const inner = articleMatch[1];
+  // Fussnoten-Apparat (<div class="footnotes">…</div>) und Artikel-Überschrift
+  // (<h6>…</h6>, trägt eine Heading-Fussnote) sind KEIN Normtext und werden vorab
+  // entfernt — sonst leckt der Fallback-Pfad (unnummerierte plain-<p>-Artikel wie
+  // BETMG/VStrR) den Fussnotentext + Marker in den Normtext (Bug-Check 23.6.2026).
+  // Der Haupt-Loop matcht diese Elemente ohnehin nicht; nur der Fallback profitiert.
+  const inner = articleMatch[1]
+    .replace(/<div\s+class="footnotes">[\s\S]*$/i, '') // Apparat steht am Artikelende
+    .replace(/<h6\b[^>]*>[\s\S]*?<\/h6>/gi, '');
 
   // <p>-Absätze UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE durchlaufen
   // (Geschwister im collapseable-div). Vier Alternativen:
@@ -55,24 +65,32 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   // über mehrere Absätze und verschmilzt z.B. SchKG art_219 Abs. 5 (Bug 23.6.2026).
   // Bestehende Gesetze (class="absatz"-Markup) treffen (1) zuerst → unberührt,
   // ausser sie tragen echte alte Listen-Labels (dann korrekt verbessert, §6-Re-Baseline).
+  //  (5) <table> — Mehrspalten-Tabelle (Rententabellen u.ä.); wird als GANZES
+  //      konsumiert, damit ihre Zellen-<p> nicht einzeln matchen, und als
+  //      mehrspaltig-Block geführt (sonst kompletter Verlust, Bug 23.6.2026).
   const NICHT_P = '(?:(?!</p>)[\\s\\S])*?';
   const bloeckeUndListenRe = new RegExp(
     '<p[^>]*\\bclass="[^"]*\\babsatz\\b[^"]*"[^>]*>([\\s\\S]*?)</p>' +
-      `|<p[^>]*>((?:\\s|&nbsp;)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
+      `|<p[^>]*>((?:\\s|&nbsp;|<\\/?inl>)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
       `|<p[^>]*>(${NICHT_P})</p>(?=\\s*<dl)` +
-      '|<dl[^>]*>([\\s\\S]*?)</dl>',
+      '|<dl[^>]*>([\\s\\S]*?)</dl>' +
+      '|<table[^>]*>([\\s\\S]*?)</table>',
     'gi',
   );
   const bloecke: ArtikelText['bloecke'] = [];
 
   for (const match of inner.matchAll(bloeckeUndListenRe)) {
-    if (match[1] !== undefined || match[2] !== undefined || match[3] !== undefined) {
+    if (match[5] !== undefined) {
+      // ── Tabelle (<table><tr><th>…</th></tr><tr><td>…</td></tr></table>) ──────
+      const mehr = parseFedlexTabelle(match[5]);
+      if (mehr.zeilen.length > 0) bloecke.push({ absatz: null, text: '', mehrspaltig: mehr });
+    } else if (match[1] !== undefined || match[2] !== undefined || match[3] !== undefined) {
       // ── Absatz (<p class="absatz"> | <p><sup>N</sup> | <p> vor <dl>) ──────
       const roh = match[1] ?? match[2] ?? match[3]!;
 
       // Absatznummer: erstes <sup>, das KEIN <a>-Kind enthält und nur Ziffern/[a-z] enthält.
       // Fussnoten-<sup> sehen so aus: <sup><a href="...">188</a></sup> → verwerfen.
-      const supMatch = roh.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
+      const supMatch = roh.match(/^(?:\s|&nbsp;|<\/?inl>)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
       let absatz: string | null = null;
       if (supMatch) {
         const supInhalt = supMatch[1];
@@ -89,7 +107,7 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
       // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
       // damit die Ziffer nicht in den sichtbaren Text einfließt.
       const ohneAbsatzNr = absatz
-        ? ohneFootnotes.replace(/^(?:\s|&nbsp;)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s)*/i, '')
+        ? ohneFootnotes.replace(/^(?:\s|&nbsp;|<\/?inl>)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s|<\/?inl>)*/i, '')
         : ohneFootnotes;
 
       const text = entferneTags(ohneAbsatzNr).trim();
@@ -160,6 +178,31 @@ function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: st
     }
   }
   return items;
+}
+
+/**
+ * Zerlegt eine Fedlex-<table> in einen mehrspaltig-Block {kopf, zeilen}.
+ * <th>-Zellen der ersten Zeile bilden den Kopf; <td>-Zeilen die Daten. Jede
+ * Zelle wird tag-bereinigt (Fussnoten-<sup> getilgt). Leere Zeilen entfallen.
+ * Reale Struktur (IVG art_28b): <tr><th><p>…</p></th>…</tr><tr><td><p>…</p></td>…</tr>.
+ */
+function parseFedlexTabelle(tableInner: string): { kopf?: string[]; zeilen: string[][] } {
+  let kopf: string[] = [];
+  const zeilen: string[][] = [];
+  for (const r of tableInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+    const ths = [...r[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) =>
+      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
+    );
+    if (ths.length > 0) {
+      if (ths.some((x) => x !== '')) kopf = ths;
+      continue;
+    }
+    const tds = [...r[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
+      entferneTags(c[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '')),
+    );
+    if (tds.some((x) => x !== '')) zeilen.push(tds);
+  }
+  return kopf.length > 0 ? { kopf, zeilen } : { zeilen };
 }
 
 /**

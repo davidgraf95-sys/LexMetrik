@@ -1597,8 +1597,388 @@
           "text": "Die Steuer für ein Steuerjahr beträgt:"
         },
         {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "",
+              "",
+              "Franken",
+              "",
+              ""
+            ],
+            "zeilen": [
+              [
+                "bis",
+                "15 200 Franken Einkommen",
+                "0.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "0.77",
+                ";",
+                ""
+              ],
+              [
+                "für",
+                "33 200 Franken Einkommen",
+                "138.60",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "0.88",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "43 500 Franken Einkommen",
+                "229.20",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "2.64",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "58 000 Franken Einkommen",
+                "612.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "2.97",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "76 200 Franken Einkommen",
+                "1 152.55",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "5.94",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "82 100 Franken Einkommen",
+                "1 502.95",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "6.60",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "108 900 Franken Einkommen",
+                "3 271.75",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "8.80",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "141 500 Franken Einkommen",
+                "6 140.55",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "11.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "185 100 Franken Einkommen",
+                "10 936.55",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "13.20",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "793 900 Franken Einkommen",
+                "91 298.15",
+                "",
+                ""
+              ],
+              [
+                "für",
+                "794 000 Franken Einkommen",
+                "91 310.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "11.50",
+                "",
+                "mehr."
+              ]
+            ]
+          }
+        },
+        {
           "absatz": "2",
           "text": "Für Ehepaare, die in rechtlich und tatsächlich ungetrennter Ehe leben, beträgt die jährliche Steuer:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "",
+              "",
+              "Franken",
+              "",
+              ""
+            ],
+            "zeilen": [
+              [
+                "bis",
+                "29 700 Franken Einkommen",
+                "0.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "1.00",
+                ";",
+                ""
+              ],
+              [
+                "für",
+                "53 400 Franken Einkommen",
+                "237.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "2.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "61 300 Franken Einkommen",
+                "395.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "3.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "79 100 Franken Einkommen",
+                "929.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "4.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "94 900 Franken Einkommen",
+                "1 561.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "5.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "108 700 Franken Einkommen",
+                "2 251.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "6.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "120 600 Franken Einkommen",
+                "2 965.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "7.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "130 500 Franken Einkommen",
+                "3 658.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "8.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "138 400 Franken Einkommen",
+                "4 290.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "9.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "144 300 Franken Einkommen",
+                "4 821.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "10.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "148 300 Franken Einkommen",
+                "5 221.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "11.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "150 400 Franken Einkommen",
+                "5 452.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "12.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "152 400 Franken Einkommen",
+                "5 692.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "13.00",
+                "",
+                "mehr;"
+              ],
+              [
+                "für",
+                "941 300 Franken Einkommen",
+                "108 249.00",
+                "",
+                ""
+              ],
+              [
+                "für",
+                "941 400 Franken Einkommen",
+                "108 261.00",
+                "",
+                ""
+              ],
+              [
+                "",
+                "und für je weitere 100 Franken Einkommen",
+                "11.50",
+                "",
+                "mehr."
+              ]
+            ]
+          }
         },
         {
           "absatz": "2bis",
@@ -1613,7 +1993,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_36",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "16b07aea26f9550d446fd6ce89fd432abb3fb53b119b3faeeac1060dfe5695ed"
+      "sha": "a29b25816c9e609c6c173a450d9ff6bf803f947511f0ad05bab1267a4fc8a31e"
     },
     {
       "id": "bund/DBG/art_37",
@@ -1996,14 +2376,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "131 131 Aufgehoben durch Ziff. I 1 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, mit Wirkung seit 1. Jan. 1998 ( AS 1998 669 ; BBl 1997 II 1164 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_53",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "2518fb3603826b00aeea3f5212bf28c1a94441e3535635e3d70383d160e4f921"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_54",
@@ -2789,14 +3169,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "170 170 Aufgehoben durch Ziff. I 1 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, mit Wirkung seit 1. Jan. 1998 ( AS 1998 669 ; BBl 1997 II 1164 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_73_78",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "95a440a7757f6e126570ca9d628aad4f0db03ca45749646c897b4cb04c82ebef"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_79",
@@ -2862,14 +3242,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "173 173 Aufgehoben durch Ziff. I 1 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, mit Wirkung seit 1. Jan. 1998 ( AS 1998 669 ; BBl 1997 II 1164 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_81",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "78ccab91a860d9a2577ce58884b796e424325d4b8d31870b30fc6a4425b9c86a"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_82",
@@ -2999,14 +3379,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "und 87 179 179 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_86_87",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "d8d51cbcbed6b94c52d715d75fe5a2af3fdac39ec6eb4e7b0617eb7d1a3c8fe2"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_88",
@@ -3147,14 +3527,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "184 184 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_90",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "751252ce2cf3e3ed636e5ba59f359d9dd97ba8787afba194762973a66d3af77d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_91",
@@ -3366,14 +3746,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "194 194 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_97",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "ce1a2488b65870d4a9aa83927ddf961cea3faa187873361d21399294792cc613"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_97_a",
@@ -3408,14 +3788,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "196 196 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_98",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "4347cb8385c35ce2d31f12152dad5eb4fc13e5cd8c52ecdf01ee8f21af2a55b5"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_99",
@@ -3555,14 +3935,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "202 202 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_101",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "c8c9d7576cf89b56cbb5294cd24d4845b213cfcf6e02903ae43518ba60222c59"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_102",
@@ -4215,14 +4595,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "225 225 Aufgehoben durch Ziff. I 1 des BG vom 16. Dez. 2016 über die Revision der Quellenbesteuerung des Erwerbseinkommens, mit Wirkung seit 1. Jan. 2021 ( AS 2018 1813 ; BBl 2015 657 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_118",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "fb46df25eb6d2e61cdc5b39dde736b1c259e04e521173742c5b3166c7c696b25"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_119",
@@ -6318,14 +6698,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "280 280 Aufgehoben durch Ziff. I 1 des BG vom 8. Okt. 2004 über die Aufhebung der Haftung der Erben für Steuerbussen, mit Wirkung seit 1. März 2005 ( AS 2005 1051 ; BBl 2004 1437 1451 ). Siehe auch die SchlB dieser Änd. am Ende dieses Textes."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_179",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "a6a0c7ef4abee10e187b394e11ee8dd9febdde70df2fdde0440e6d5d32cdbd2d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_180",
@@ -7147,14 +7527,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "c 324 324 Eingefügt durch Ziff. I des BG vom 25. Sept. 2009 ( AS 2010 453 ; BBl 2009 1657 ). Aufgehoben durch Ziff. I 1 des BG vom 26. Sept. 2014 (Anpassung an die Allgemeinen Bestimmungen des StGB), mit Wirkung seit 1. Jan. 2017 ( AS 2015 779 ; BBl 2012 2869 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_205_c",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "9f9e0feeaa1456b605f5ecc7b557d83a6c34e157253a249eed2b29bbd1f730f7"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_205_d",
@@ -7227,14 +7607,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "329 329 Aufgehoben durch Ziff. I 1 des BG vom 26. Sept. 2014 (Anpassung an die Allgemeinen Bestimmungen des StGB), mit Wirkung seit 1. Jan. 2017 ( AS 2015 779 ; BBl 2012 2869 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_206",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "b7be35deef3cd0a3d3528251758e4f71f97cf0f5774af22597c4485d88db0f98"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_207",
@@ -7331,14 +7711,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "334 334 Aufgehoben durch Ziff. I 1 des BG vom 22. März 2013 über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen, mit Wirkung seit 1. Jan. 2014 ( AS 2013 2397 ; BBl 2011 3593 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_208_220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "12597090c9bd5325ad8f7dd866ff6f71d1c19217b34bb20e9d4f071cce3b3568"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_220_a",
@@ -7350,14 +7730,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a 335 335 Heute: Art. 205 b bis ( AS 2013 2397 ; BBl 2011 3593 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_220_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "fbc72407392be910ebe3ea877025832752f6214e46ebf6529a722dcd5f793b5d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/DBG/art_221",
@@ -7396,14 +7776,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "336 Datum des Inkrafttretens: 1. Januar 1995 337 336 Aufgehoben durch Ziff. I 1 des BG vom 10. Okt. 1997 über die Reform der Unternehmensbesteuerung 1997, mit Wirkung seit 1. Jan. 1998 ( AS 1998 669 ; BBl 1997 II 1164 ). 337 BRB vom 3. Juni 1991"
+          "text": "Datum des Inkrafttretens: 1. Januar 1995 337"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_222",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "1bc1276e75c5778082636c0d50b5db0f605e17972d0e94db7be8cded3c3bdc16"
+      "sha": "d8351045a7647cfd7414ca54b0124687f68153be184dbe1237d330c90ced4209"
     }
   ]
 }

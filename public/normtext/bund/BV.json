@@ -4961,14 +4961,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a 119 119 Angenommen in der Volksabstimmung vom 9. Febr. 2003 (BB vom 4. Okt. 2002, BRB vom 25. März 2003 – AS 2003 1949 ; BBl 2001 4803 , 6080 ; 2002 6485 ; 2003 3111 ). Aufgehoben in der Volksabstimmung vom 27. Sept. 2009 , mit Wirkung seit 27. Sept. 2009 (BB vom 19. Dez. 2008, BRB vom 1. Dez. 2009 – AS 2009 6409 ; BBl 2008 2891 , 2907 ; 2009 13 , 8719 ). Dieser Art. in der Fassung des BB vom 4. Okt. 2002 ist nie in Kraft getreten."
+          "text": "…"
         }
       ],
       "stand": "2024-03-03",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/404/de#art_139_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20240303",
-      "sha": "6d7946432456c9e1afd1c36d56478e6f6a0c0bc9f0aaf925dae7aef8196f029f"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BV/art_139_b",
@@ -6687,13 +6687,58 @@
         },
         {
           "absatz": "2",
-          "text": "Diese Abgabe beträgt:",
-          "items": [
-            {
-              "marke": "c",
-              "text": "für Gesellschaftswagen"
-            }
-          ]
+          "text": "Diese Abgabe beträgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "zeilen": [
+              [
+                "",
+                "Fr."
+              ],
+              [
+                "a. für Lastwagen und Sattelmotorfahrzeuge von",
+                ""
+              ],
+              [
+                "– über 3,5 bis 12 t",
+                "650"
+              ],
+              [
+                "– über 12 bis 18 t",
+                "2000"
+              ],
+              [
+                "– über 18 bis 26 t",
+                "3000"
+              ],
+              [
+                "– über 26 t",
+                "4000"
+              ],
+              [
+                "b. für Anhänger von"
+              ],
+              [
+                "– über 3,5 bis 8 t",
+                "650"
+              ],
+              [
+                "– über 8 bis 10 t",
+                "1500"
+              ],
+              [
+                "– über 10 t",
+                "2000"
+              ],
+              [
+                "c. für Gesellschaftswagen",
+                "650"
+              ]
+            ]
+          }
         },
         {
           "absatz": "3",
@@ -6808,7 +6853,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/404/de#art_196",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20240303",
-      "sha": "5ff8dc7a94888aa4e7260228c77fa2f9dce408eedbd7f94bfa550bb008e09a96"
+      "sha": "58450666ccf2c7ef94b4beece563174bea29258831d445306ed595f4c8a80daa"
     },
     {
       "id": "bund/BV/art_197",

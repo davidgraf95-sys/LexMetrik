@@ -511,13 +511,41 @@
         {
           "absatz": null,
           "text": "Die Altersgutschriften werden jährlich in Prozenten des koordinierten Lohnes berechnet. Dabei gelten folgende Ansätze:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Altersjahr",
+              "Ansatz in Prozenten des koordinierten Lohnes"
+            ],
+            "zeilen": [
+              [
+                "25–34",
+                "7"
+              ],
+              [
+                "35–44",
+                "10"
+              ],
+              [
+                "45–54",
+                "15"
+              ],
+              [
+                "55–65",
+                "18"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_16",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "85c0d57327c8294e615a321c8a2abd714eb3e3e5b31b5f5f961e247af774aae6"
+      "sha": "a90d82631c891555b3138b614b0abdd54321bce2505e79f61e78a6d09ebe80e8"
     },
     {
       "id": "bund/BVG/art_17",
@@ -868,13 +896,65 @@
         {
           "absatz": "4",
           "text": "Bei einem Invaliditätsgrad im Sinne der IV von unter 50 Prozent gelten die folgenden prozentualen Anteile:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "zeilen": [
+              [
+                "Invaliditätsgrad",
+                "Prozentualer Anteil"
+              ],
+              [
+                "49 Prozent",
+                "47,5 Prozent"
+              ],
+              [
+                "48 Prozent",
+                "45 Prozent"
+              ],
+              [
+                "47 Prozent",
+                "42,5 Prozent"
+              ],
+              [
+                "46 Prozent",
+                "40 Prozent"
+              ],
+              [
+                "45 Prozent",
+                "37,5 Prozent"
+              ],
+              [
+                "44 Prozent",
+                "35 Prozent"
+              ],
+              [
+                "43 Prozent",
+                "32,5 Prozent"
+              ],
+              [
+                "42 Prozent",
+                "30 Prozent"
+              ],
+              [
+                "41 Prozent",
+                "27,5 Prozent"
+              ],
+              [
+                "40 Prozent",
+                "25 Prozent"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_24_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "0d1da97242741defedfff27bb388853eb9977979fb8f949814af6309d753bc01"
+      "sha": "8e290664746608e0337df1158915958824efd9491f3bce08b433412c879d0902"
     },
     {
       "id": "bund/BVG/art_24_b",
@@ -1024,14 +1104,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "95 95 Aufgehoben durch Anhang Ziff. 3 des Freizügigkeitsgesetzes vom 17. Dez. 1993, mit Wirkung seit 1. Jan. 1995 ( AS 1994 2386 ; BBl 1992 III 533 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_28_30",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "25269c87dba729d18a94a28743b69732e950f372585f307b8b34c97a90fff339"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_30_a",
@@ -1354,14 +1434,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "111 111 Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 ( AS 2011 3393 ; BBl 2007 5669 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_33",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "ad1bd2e9ab796f8f6e2f3588fac750a2a0ba77ee059ef24cfd6c0659aa0aa3a0"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_33_a",
@@ -2689,14 +2769,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "200 200 Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 ( AS 2011 3393 ; BBl 2007 5669 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_53",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "57ca38fa8a753decf04f465822dcbd44a3fdaa81c632417fc0d9f7da0e3a2fd2"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_53_a",
@@ -3793,14 +3873,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "263 263 Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 ( AS 2011 3393 ; BBl 2007 5669 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_63",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "83fe50fbc0419e749cd11d3d22bb6965dbd7018a59a5a561b7f785eafd5f3b09"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_63_a",
@@ -3812,14 +3892,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a 264 264 Eingefügt durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision) ( AS 2004 1677 ; BBl 2000 2637 ). Aufgehoben durch Ziff. I des BG vom 19. März 2010 (Strukturreform), mit Wirkung seit 1. Jan. 2012 ( AS 2011 3393 ; BBl 2007 5669 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_63_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "63776141a053e2fc0bce27139dd4f07e2ac5efb0962a4130262ef56c06a4ef56"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_64",
@@ -4357,14 +4437,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "293 293 Aufgehoben durch Ziff. I des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), mit Wirkung seit 1. Jan. 2012 ( AS 2011 3385 ; BBl 2008 8411 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_69",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "e2794999dadf589fff92c501a5ed2bb9a87cbc4e055eb3a3e4f4cbee107e029e"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_70",
@@ -4376,14 +4456,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "294 294 Aufgehoben durch Ziff. I des BG vom 3. Okt. 2003 (1. BVG-Revision), mit Wirkung seit 1. Jan. 2005 ( AS 2004 1677 ; BBl 2000 2637 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_70",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "bd69af10c23c65877318f09b15a5a067dc5a332b6e4c62bc569b87c9a248530a"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_71",
@@ -5589,14 +5669,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "359 359 Aufgehoben durch Anhang Ziff. 10 des Bundesstatistikgesetzes vom 9. Okt. 1992, mit Wirkung seit 1. Aug. 1993 ( AS 1993 2080 ; BBl 1992 I 373 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_89",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "335bd9b99f9e9718e2c0a58965d0bbfe73c1fc3a93b7407759cad3294d20cab8"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_89_a",
@@ -5803,14 +5883,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "376 376 Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 ( AS 2008 3437 ; BBl 2007 6121 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_92_94",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "19a5dfdf3e10578b970e46c2517cf507461a6107a5bb25998120a8ca7efe070d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_95",
@@ -5823,13 +5903,46 @@
         {
           "absatz": null,
           "text": "Während der ersten zwei Jahre nach Inkrafttreten des Gesetzes gelten für die Berechnung der Altersgutschriften folgende Mindestansätze:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Männer",
+              "Frauen",
+              ""
+            ],
+            "zeilen": [
+              [
+                "25–34",
+                "25–31",
+                "7"
+              ],
+              [
+                "35–44",
+                "32–41",
+                "10"
+              ],
+              [
+                "45–54",
+                "42–51",
+                "11"
+              ],
+              [
+                "55–65",
+                "52–62",
+                "13"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_95",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "a3bc68b9a42fa5a0b551812733fa03b75ebf82302d5402932c9f914f3c312a1a"
+      "sha": "8b42ed6e6852239a3ed5a2ca35c2d4a404f47c7a49249ce874a96ec2a37bafa1"
     },
     {
       "id": "bund/BVG/art_96",
@@ -5841,14 +5954,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "377 377 Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 ( AS 2008 3437 ; BBl 2007 6121 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_96",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "c5cd478aca439839cf9ab7cb0bfb61d703191a6a332c584b99ec5392c3595857"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_96_a",
@@ -5860,14 +5973,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a 378 378 Eingefügt durch Ziff. I 10 des BG vom 19. März 1999 über das Stabilisierungsprogramm 1998 ( AS 1999 2374 ; BBl 1999 4 ). Aufgehoben durch Ziff. II 41 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 ( AS 2008 3437 ; BBl 2007 6121 )."
+          "text": "…"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de#art_96_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20250101",
-      "sha": "f4eb62a591acc3134480159c35ff11c46a70f4a5a749a4dc4e651da63ddc3802"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/BVG/art_97",

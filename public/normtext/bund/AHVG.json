@@ -752,14 +752,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "91 91 Aufgehoben durch Ziff. I des BG vom 4. Okt. 1968, mit Wirkung seit 1. Jan. 1969 ( AS 1969 111 ; BBl 1968 I 602 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_17",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "b5f812e885171f79d62b16053010af3cfb5d27bb096cee45d1b75d1b3487ab27"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_18",
@@ -802,14 +802,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "103 103 Aufgehoben durch Ziff. I des BG vom 19. Dez. 1963, mit Wirkung seit 1. Jan. 1964 ( AS 1964 285 ; BBl 1963 II 517 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_19",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "1257446646f36c9b830d7d49d6ecff8d0270121de5c225c9ec17c44fb32da12b"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_20",
@@ -881,14 +881,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "112 112 Aufgehoben durch Ziff. I des BG vom 7. Okt. 1994 (10. AHV-Revision), mit Wirkung seit 1. Jan. 1997 ( AS 1996 2466 ; BBl 1990 II 1 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_22",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "cc81e0e9f87b359e2fc2c2b3d9b35c2ebec057d6605a0d4b86ee0dbc92b8a099"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_22_bis",
@@ -1133,14 +1133,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "128 128 Aufgehoben durch Ziff. I des BG vom 7. Okt. 1994 (10. AHV-Revision), mit Wirkung seit 1. Jan. 1997 ( AS 1996 2466 ; BBl 1990 II 1 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_26_28",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "22e53406ee64d506575784225501907dc02d2c42e06a8b8b54cd05ac18498315"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_28_bis",
@@ -1612,14 +1612,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "166 166 Aufgehoben durch Ziff. I des BG vom 7. Okt. 1994 (10. AHV-Revision), mit Wirkung seit 1. Jan. 1997 ( AS 1996 2466 ; BBl 1990 II 1 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_32",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "391a3046c101219ee5d748350587d7a318ff7a6c6be17de5839574edb5a2e795"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_33",
@@ -1804,6 +1804,54 @@
           "text": "Der Grundzuschlag wird folgendermassen abgestuft:"
         },
         {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Anspruchsberechtigter Jahrgang",
+              "Monatlicher Zuschlag in Prozent des Grundzuschlags"
+            ],
+            "zeilen": [
+              [
+                "Frauen mit Jahrgang 1961",
+                "25"
+              ],
+              [
+                "Frauen mit Jahrgang 1962",
+                "50"
+              ],
+              [
+                "Frauen mit Jahrgang 1963",
+                "75"
+              ],
+              [
+                "Frauen mit Jahrgang 1964",
+                "100"
+              ],
+              [
+                "Frauen mit Jahrgang 1965",
+                "100"
+              ],
+              [
+                "Frauen mit Jahrgang 1966",
+                "81"
+              ],
+              [
+                "Frauen mit Jahrgang 1967",
+                "63"
+              ],
+              [
+                "Frauen mit Jahrgang 1968",
+                "44"
+              ],
+              [
+                "Frauen mit Jahrgang 1969",
+                "25"
+              ]
+            ]
+          }
+        },
+        {
           "absatz": "3",
           "text": "Der Übergangsgeneration gehören die Frauen an, die das Referenzalter in den ersten neun Jahren nach Inkrafttreten dieser Bestimmung erreichen."
         },
@@ -1820,7 +1868,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_34_bis",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "3ff63127056c9256bed8bf861042d14739395c01a1a05a0526d5a3fc5513b0e7"
+      "sha": "23250704e53ec3cd4e435f72c6904f4dbb77993c93c74f039e2bec7b67b575e8"
     },
     {
       "id": "bund/AHVG/art_34_ter",
@@ -2147,13 +2195,45 @@
         {
           "absatz": null,
           "text": "Frauen der Übergangsgeneration können die Rente nach den Modalitäten der Artikel 40 und 40 b ab dem vollendeten 62. Altersjahr vorbeziehen. Für sie werden folgende Kürzungssätze auf die vorbezogenen Altersrenten angewendet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Vorbezugsjahre",
+              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen tiefer als oder gleich hoch ist wie der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34",
+              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher als der Betrag der vierfachen minimalen jährlichen Altersrente nach Art. 34, aber tiefer als oder gleich hoch ist wie der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34",
+              "Kürzungssatz in %, wenn das massgebende durchschnittliche Jahreseinkommen höher ist als der Betrag der fünffachen minimalen jährlichen Altersrente nach Art. 34"
+            ],
+            "zeilen": [
+              [
+                "1",
+                "0",
+                "2,5",
+                "3,5"
+              ],
+              [
+                "2",
+                "2",
+                "4,5",
+                "6,5"
+              ],
+              [
+                "3",
+                "3",
+                "6,5",
+                "10,5"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_40_c",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "ad43b98013f4e81b08bcd88ddbe89503ca184a022c3b18fa3f935c280f73b080"
+      "sha": "b2dc0508ca6fe114850004284e1a6cfa699455ab1275cfdd8c7d86619c92be5a"
     },
     {
       "id": "bund/AHVG/art_41",
@@ -2377,14 +2457,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "236 236 Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_45",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "56e58e05abe56b238a075469f0346b1b75b2cd1524ca39d1c693762440f5becd"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_46",
@@ -2427,14 +2507,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "240 240 Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_47",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "fe54b642f6659f2321f63fe9fdf7ece4fb2c34d75bd82e4de2e6ce0e7933efcb"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_48",
@@ -2446,14 +2526,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "241 241 Aufgehoben durch Ziff. 2 des Anhangs zum BG vom 20. März 1981 über die Unfallversicherung, mit Wirkung seit 1. Jan. 1984 ( AS 1982 1676 1724 Art. 1 Abs. 1; BBl 1976 III 141 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_48",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "88be9e12fec266bad6cdc632537d7c6d58f154b19908906b718201f6080ca1b0"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_48_bis_48_sexies",
@@ -2465,14 +2545,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "bis – 48 sexies 242 242 Eingefügt durch Ziff. I des BG vom 24. Juni 1977 (9. AHV-Revision) ( AS 1978 391 ; BBl 1976 III 1 ). Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_48_bis_48_sexies",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "49dcdc4c46e64fc3d395a84c49b20c69f1f9fb3a78a40705c3e1e4fd44bb6f8b"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_49",
@@ -2753,14 +2833,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "253 253 Aufgehoben durch Ziff. I der V der BVers vom 21. Juni 2002, mit Wirkung seit 1. Jan. 2003 ( AS 2002 3453 ; BBl 2002 803 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "dc447690448c05f432605cd80639d70f08d3a9818db2ddaf2d7a1b03f0f00e23"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_50_a",
@@ -2983,14 +3063,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "d – 50 g 290 290 Eingefügt durch Ziff. I des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer) ( AS 2007 5259 ; BBl 2006 501 ). Aufgehoben durch Ziff. I des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 ( AS 2021 758 ; BBl 2019 7359 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_50_d_50_g",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "46144f06bbca44de8e9fea4808aa3a58de7c49f9dca0ddc595ea21cfce5a2a17"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_51",
@@ -3109,14 +3189,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "306 b. … 306 Aufgehoben durch Ziff. I des BG vom 17. Juni 2022 (Modernisierung der Aufsicht), mit Wirkung seit 1. Jan. 2024 ( AS 2023 688 ; BBl 2020 1 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_54",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "75f29a068a068ee34611a6ddd131a3e489c4b4fcbc6164554feba8f5358c890d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_55",
@@ -4231,14 +4311,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "388 388 Aufgehoben durch Anhang Ziff. 5 des BG vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge, mit Wirkung seit 1. Jan. 1985 ( AS 1983 797 827 ; BBl 1976 I 149 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_74_83",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "5f46f59ca06dd3b436d44b2f25b7b1f0376d33f59dedb6c078716536a956e7f9"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_84",
@@ -4269,14 +4349,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "391 391 Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_85",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "fb6298a85e42d70d54b20bf96d917626f087c2cb7456be12439a3d2463f1e849"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_85_bis",
@@ -4315,14 +4395,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "398 398 Aufgehoben durch Anhang Ziff. 107 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_86",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "8ee288d1b9fd8d99f589c148de7fe4a33478ef4e7595a65fcf3f1a5341649bd8"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_87",
@@ -4420,14 +4500,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "410 410 Aufgehoben durch Ziff. I des BG vom 18. Dez. 2020 (Systematische Verwendung der AHV-Nummer durch Behörden), mit Wirkung seit 1. Jan. 2022 ( AS 2021 758 ; BBl 2019 7359 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_89",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "5be38a7d4f0bf3193833643e206f009cece9dbcc1180aa496fd1674141fed127"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_90",
@@ -4481,14 +4561,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "415 415 Aufgehoben durch Ziff. I des BG vom 23. Juni 2000, mit Wirkung seit 1. Jan. 2001 ( AS 2000 2677 ; BBl 1999 4983 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_92",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "387e9c90c689640d100a3748a9c64e593bcd01e6fb6a48ec705bb78783c48e5d"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_92_a",
@@ -4500,14 +4580,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "a 416 416 Eingefügt durch Ziff. I des BG vom 7. Okt. 1994 (10. AHV-Revision) ( AS 1996 2466 ; BBl 1990 II 1 ). Aufgehoben durch Ziff. I des BG vom 23. Juni 2006 (Neue AHV-Versichertennummer), mit Wirkung seit 1. Dez. 2007 ( AS 2007 5259 ; BBl 2006 501 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_92_a",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "86c2741605604cfa1e9d4eda9bee098a21802892b924fc6601939cdb4eb64e80"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_93",
@@ -4565,14 +4645,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "419 419 Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts, mit Wirkung seit 1. Jan. 2003 ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_94",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "cda1c92759055ec84e671176deb394efb1b4a3ea8bdb15592dd4db68ee4f7d84"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_95",
@@ -4666,14 +4746,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "423 423 Aufgehoben durch Anhang Ziff. 7 des BG vom 6. Okt. 2000 über den Allgemeinen Teil des Sozialversicherungsrechts ( AS 2002 3371 ; BBl 1991 II 185 910 , 1994 V 921 , 1999 4523 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_96",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "6dff0826e4bdc8ffbd18f65f06b0dce5169f736b30b710a1d908a9af90ea0179"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_97",
@@ -4685,14 +4765,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "424 424 Aufgehoben durch Anhang Ziff. 1 des BG vom 21. Juni 2019, mit Wirkung seit 1. Jan. 2021 ( AS 2020 5137 ; BBl 2018 1607 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_97",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "1e4a392b46ac70b2aef19486eed6ee69e8332ef496edd60d3a33527d378196fa"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_98",
@@ -4704,14 +4784,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "425 425 Aufgehoben durch Art. 18 des BG vom 19. März 1965 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung, mit Wirkung seit 1. Jan. 1966 ( AS 1965 537 ; BBl 1964 II 681 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_98",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "1ea3597403b82bab2f2281e0734db395e0e91c77e8814066630834f27c123941"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_99",
@@ -4723,14 +4803,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "426 426 Aufgehoben durch Anhang Ziff. 13 des BG vom 16. Dez. 1994, mit Wirkung seit 1. Jan. 1997 ( AS 1995 1227 ; BBl 1991 III 1 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_99",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "2db6a8d387c5ebaaaff25a43b42f8478a1fd5bd729f6e1e0ff97df7281a3845c"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_100",
@@ -4742,14 +4822,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "427 427 Aufgehoben durch Ziff. II 409 des BG vom 15. Dez. 1989 über die Genehmigung kantonaler Erlasse durch den Bund, mit Wirkung seit 1. Febr. 1991 ( AS 1991 362 ; BBl 1988 II 1333 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "6d8f7469e0339dd56eba59d779a88852cc467863ad97d06ffe0f602403951eba"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_101",
@@ -4761,14 +4841,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "428 428 Aufgehoben durch Ziff. I 1 des BG vom 5. Okt. 1984, mit Wirkung seit 1. Jan. 1986 ( AS 1985 2002 ; BBl 1981 III 737 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_101",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "7de60622cc7937a48ff7527d56a9f738168a8589aabae57707e2e7e6d11c0c92"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_101_bis",
@@ -4829,14 +4909,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "ter 436 436 Eingefügt durch Ziff. I des BG vom 21. Juni 2002 ( AS 2002 3475 ; BBl 2002 803 ). Aufgehoben durch Anhang Ziff. 107 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_101_ter",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "86f566769d6dd21be1db5c4cf1965d45e27822f447cc99988c8296657b19d310"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_102",
@@ -4939,14 +5019,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "und 106 447 447 Aufgehoben durch Ziff. I 1 des BG vom 5. Okt. 1984, mit Wirkung seit 1. Jan. 1986 ( AS 1985 2002 ; BBl 1981 III 737 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_105_106",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "3309d9746ac5346f63bdad077d121661919f084b8fcb01657ae47d09bf162531"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_107",
@@ -4985,14 +5065,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "452 452 Aufgehoben durch Anhang Ziff. II 4 des Ausgleichsfondsgesetzes vom 16. Juni 2017, mit Wirkung seit 1. Jan. 2019 ( AS 2017 7563 ; BBl 2016 311 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_108",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "b4f92bba441f4b58a2957539ffd324606eaf9a3e25a6f43e90da8c9303f5bed9"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_109",
@@ -5023,14 +5103,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "455 455 Aufgehoben durch Anhang Ziff. II 4 des Ausgleichsfondsgesetzes vom 16. Juni 2017, mit Wirkung seit 1. Jan. 2019 ( AS 2017 7563 ; BBl 2016 311 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "7d31a7116bb6e6e7029dfe654a22c2bc95fa6ba125118e57e2b810c6ea0412c7"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_111",
@@ -5042,14 +5122,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "456 456 Aufgehoben durch Ziff. I des BG vom 17. Dez. 2021 (AHV 21), mit Wirkung seit 1. Jan. 2024 ( AS 2023 92 ; BBl 2019 6305 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_111",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "d1fce820adfc2aa248fd54b9d4b2b6234e7a342c9fb27a68fc769749707da548"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_112",
@@ -5061,14 +5141,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "457 457 Aufgehoben durch Ziff. I des BG vom 19. Dez. 1963, mit Wirkung seit 1. Jan. 1964 ( AS 1964 285 ; BBl 1963 II 517 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_112",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "ee6fe53a88469ae23f6f6a92492524cbadd042e5803d1843490fa89a8804b1dd"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_113_153",
@@ -5080,14 +5160,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "458 458 Aufgehoben durch Art. 46 Bst. a des BG vom 21. März 1969 über die Tabakbesteuerung, mit Wirkung seit 1. Jan. 1970 ( AS 1969 645 ; BBl 1968 II 345 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_113_153",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "5d04727bb9a966d0ac7a0c526eff7b4603e96f0f9fd4f580786da8ce62c77beb"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
     {
       "id": "bund/AHVG/art_153_a",
@@ -5439,14 +5519,14 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "473 473 Eingefügt durch Ziff. I 1 des BG vom 5. Okt. 1984 ( AS 1985 2002 ; BBl 1981 III 737 ). Aufgehoben durch Ziff. II 39 des BG vom 20. März 2008 zur formellen Bereinigung des Bundesrechts, mit Wirkung seit 1. Aug. 2008 ( AS 2008 3437 ; BBl 2007 6121 )."
+          "text": "…"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de#art_155",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "a161be542a0a397b78379d4b56e00390c356dc28cc3a20db2e3af92703e852d5"
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     }
   ]
 }
