@@ -19,7 +19,10 @@ import {
   sammleHtmInventar,
   sammleZhPdfInventar,
   sammlePdfInventar,
+  type KantonInventarGruppe,
 } from './normtext/inventar-kanton.ts';
+import { enumeriereKanton } from './normtext/lexfind-discovery.ts';
+import { discoveryZuInventar } from './normtext/kanton-discovery-quellen.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
@@ -178,8 +181,12 @@ async function erzeugeKantonsSnapshots(
   abgerufen: string,
   goldenIndex: Record<string, string>,
   kantonFilter?: Set<string>,
+  inventarOverride?: KantonInventarGruppe[],
 ): Promise<KantonCoverage> {
-  const inventar = sammleKantonInventar().filter(
+  // Phase-1 (FAHRPLAN-GESETZE-IMPORT-3TIER): mit --discovery liefert der Aufrufer
+  // den Vollkorpus eines Kantons (alle Tier-A-Erlasse via LexFind) als Override
+  // statt nur der tarif-zitierten Erlasse aus sammleKantonInventar().
+  const inventar = (inventarOverride ?? sammleKantonInventar()).filter(
     (g) => !kantonFilter || kantonFilter.has(g.kanton),
   );
   const ausgangsDir = 'public/normtext/kanton';
@@ -705,22 +712,44 @@ async function main(): Promise<void> {
       kantonArg.slice('--kanton='.length).split(',').map((s) => s.trim().toUpperCase()).filter(Boolean),
     );
     const goldenIndex: Record<string, string> = {};
-    console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}, datum=${abgerufen}`);
+    // Phase-1 (FAHRPLAN-GESETZE-IMPORT-3TIER): mit --discovery wird der Kanton-
+    // Vollkorpus via LexFind enumeriert (Tier A) statt nur tarif-zitierte Erlasse.
+    // Dann läuft NUR die LexWork-Phase (Discovery liefert ausschliesslich Tier-A-
+    // LexWork-Quellen); HTM/ZH/PDF entfallen.
+    const discovery = process.argv.includes('--discovery');
+    console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}${discovery ? ' --discovery' : ''}, datum=${abgerufen}`);
 
-    const cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone);
+    let cov: KantonCoverage;
+    if (discovery) {
+      const FR_KANTONE = new Set(['FR', 'VS', 'GE', 'NE', 'JU', 'VD']);
+      const gruppen: KantonInventarGruppe[] = [];
+      for (const k of kantone) {
+        const lang = FR_KANTONE.has(k) ? 'fr' : 'de';
+        const erlasse = await enumeriereKanton(k, { lang, nurInKraft: true });
+        const routing = discoveryZuInventar(erlasse, k);
+        console.log(
+          `  Discovery ${k}: ${erlasse.length} Erlasse → ${routing.gruppen.length} Tier-A-Gruppen ` +
+            `(${routing.uebersprungen.length} übersprungen)`,
+        );
+        gruppen.push(...routing.gruppen);
+      }
+      cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone, gruppen);
+    } else {
+      cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone);
+    }
     for (const z of cov.reportZeilen) console.log(z);
-    const htmCov = await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);
-    for (const z of htmCov.reportZeilen) console.log(z);
-    const zhCov = await erzeugeZhPdfSnapshots(abgerufen, goldenIndex, kantone);
-    for (const z of zhCov.reportZeilen) console.log(z);
-    const pdfCov = await erzeugePdfSnapshots(abgerufen, goldenIndex, kantone);
-    for (const z of pdfCov.reportZeilen) console.log(z);
+    const htmCov = discovery ? null : await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);
+    if (htmCov) for (const z of htmCov.reportZeilen) console.log(z);
+    const zhCov = discovery ? null : await erzeugeZhPdfSnapshots(abgerufen, goldenIndex, kantone);
+    if (zhCov) for (const z of zhCov.reportZeilen) console.log(z);
+    const pdfCov = discovery ? null : await erzeugePdfSnapshots(abgerufen, goldenIndex, kantone);
+    if (pdfCov) for (const z of pdfCov.reportZeilen) console.log(z);
 
     const alleFetchFehler = [
       ...cov.fetchFehler.map((f) => `LexWork ${f.kanton} ${f.lawId}: ${f.fehler}`),
-      ...htmCov.fetchFehler.map((f) => `HTM ${f.kanton} ${f.url}: ${f.fehler}`),
-      ...zhCov.fetchFehler.map((f) => `ZH ${f.kanton} ${f.url}: ${f.fehler}`),
-      ...pdfCov.fetchFehler.map((f) => `PDF ${f.kanton} ${f.url}: ${f.fehler}`),
+      ...(htmCov?.fetchFehler ?? []).map((f) => `HTM ${f.kanton} ${f.url}: ${f.fehler}`),
+      ...(zhCov?.fetchFehler ?? []).map((f) => `ZH ${f.kanton} ${f.url}: ${f.fehler}`),
+      ...(pdfCov?.fetchFehler ?? []).map((f) => `PDF ${f.kanton} ${f.url}: ${f.fehler}`),
     ];
     console.log(`\nfetch-Fehler: ${alleFetchFehler.length}`);
     for (const f of alleFetchFehler) console.log(`  ${f}`);
