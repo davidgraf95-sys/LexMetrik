@@ -355,6 +355,13 @@
     content: ''; width: .5rem; height: .5rem; border-radius: 9999px;
     background: var(--sage-500); box-shadow: 0 0 0 3px var(--sage-bg);
   }
+
+  /* Dünne, zurückhaltende Scrollleiste für horizontale Schienen (Verlauf-
+     Chips auf Mobil) — passt zur ruhigen Papier/Tinte-Ästhetik. */
+  .lc-scroll-x { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+  .lc-scroll-x::-webkit-scrollbar { height: 6px; }
+  .lc-scroll-x::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 9999px; }
+  .lc-scroll-x::-webkit-scrollbar-track { background: transparent; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -145,17 +145,24 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
 });
 
 describe('Katalog-Suche im Top-Streifen (Auftrag David 7.6.2026: «die suchfunktion in den header»; seit App-Shell im Topbar)', () => {
-  it('das Suchfeld trägt auf «/» den ?q=-Wert', () => {
-    const html = sucheHtml('/?q=Rechtsvorschlag');
+  // Deklarierte fachliche Änderung (§6.3, Startseiten-Überarbeitung): Das
+  // Topbar-Feld spiegelt ?q= nur noch auf /recherche live. Auf der Startseite
+  // «/» besitzt die prominente Universal-Suche den ?q=-Parameter allein (sonst
+  // schrieben zwei Felder in denselben Parameter) — das Topbar-Feld ist dort
+  // wie auf jeder anderen Seite leer und sammelt lokal.
+  it('das Suchfeld trägt auf /recherche den ?q=-Wert', () => {
+    const html = sucheHtml('/recherche?q=Rechtsvorschlag');
     expect(html.match(/type="search"/g)?.length).toBe(1);
     expect(html).toContain('value="Rechtsvorschlag"');
     expect(html).toContain('aria-keyshortcuts="/"');
   });
 
-  it('auf anderen Seiten ist das Feld leer (sammelt lokal, Enter führt zu «/»)', () => {
-    const html = sucheHtml('/rechner/verzugszins');
-    expect(html.match(/type="search"/g)?.length).toBe(1);
-    expect(html).toContain('value=""');
+  it('auf «/» und anderen Seiten ist das Feld leer (sammelt lokal, Enter führt zu «/»)', () => {
+    for (const url of ['/?q=Rechtsvorschlag', '/rechner/verzugszins']) {
+      const html = sucheHtml(url);
+      expect(html.match(/type="search"/g)?.length).toBe(1);
+      expect(html).toContain('value=""');
+    }
   });
 });
 

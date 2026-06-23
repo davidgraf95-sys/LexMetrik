@@ -1,18 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
-// Katalog-Suche im Top-Streifen: Auf der Hauptseite ist die URL führend (?q=,
+// Katalog-Suche im Top-Streifen: Auf /recherche ist die URL führend (?q=,
 // teil-/lesezeichenfähig, Zurück-Taste; replace statt push — Tippen füllt
 // keine History) und filtert das Register live. Auf allen anderen Seiten
 // sammelt das Feld lokal und Enter führt zur Trefferliste auf «/».
 // «/» fokussiert das Feld (Verhalten unverändert, neuer Ort: vormals Header).
+//
+// Die STARTSEITE «/» ist bewusst NICHT mehr aufKatalog (Überarbeitung): dort
+// ist die prominente Universal-Suche die alleinige ?q=-Eingabe (sonst zwei
+// Felder, die in denselben Parameter schreiben). Enter im Top-Feld führt von
+// «/» wie von jeder anderen Seite zur Universal-Suche der Startseite.
 export function HeaderSuche() {
   const { pathname } = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  // «/» und die Recherche-Seite filtern live in der URL (?q=); auf allen
-  // anderen Seiten sammelt das Feld lokal und Enter führt zur Trefferliste auf «/».
-  const aufKatalog = pathname === '/' || pathname === '/recherche';
+  // Nur /recherche filtert live in der URL (?q=); auf allen anderen Seiten —
+  // inkl. der Startseite — sammelt das Feld lokal und Enter führt nach «/».
+  const aufKatalog = pathname === '/recherche';
   const q = aufKatalog ? (searchParams.get('q') ?? '') : '';
   const [wert, setWert] = useState(q);
   // URL führt: ändert sich ?q= (Zurück-Taste, Permalink, Zurücksetzen im
@@ -29,8 +34,21 @@ export function HeaderSuche() {
       if (ziel && (/^(INPUT|TEXTAREA|SELECT)$/.test(ziel.tagName) || ziel.isContentEditable)) return;
       if (feld.current) { e.preventDefault(); feld.current.focus(); }
     };
+    // Die Suche-Schnellaktion der Seitenleiste fokussiert dasselbe Feld (so
+    // teilt sich die App EINE globale Sucheingabe, §5) — auch aus der mobilen
+    // Schublade heraus, nachdem sie sich geschlossen hat.
+    const fokus = () => {
+      const el = feld.current;
+      if (!el) return;
+      el.focus(); el.select();
+      el.scrollIntoView({ block: 'nearest', behavior: 'instant' as ScrollBehavior });
+    };
     window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    window.addEventListener('lexmetrik:fokus-suche', fokus);
+    return () => {
+      window.removeEventListener('keydown', handler);
+      window.removeEventListener('lexmetrik:fokus-suche', fokus);
+    };
   }, []);
 
   const setze = (v: string) => {

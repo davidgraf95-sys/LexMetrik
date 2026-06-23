@@ -4,6 +4,7 @@ import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
+import { VerlaufTracker } from './components/VerlaufTracker';
 import { ROUTEN_MANIFEST } from './routesManifest';
 import { lazyRetry } from './lazyRetry';
 
@@ -91,6 +92,8 @@ export default function App() {
       <ScrollToTop />
       <ScrollZuHash />
       <RouteMeta />
+      {/* Merkt besuchte Routen für die «Weiter wo du warst»-Schiene der Startseite */}
+      <VerlaufTracker />
       {/* key={pathname}: ein aufgefangener Fehler (z. B. einmal fehlgeschlagener
           Lazy-Chunk) setzt sich beim nächsten Seitenwechsel von selbst zurück —
           sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}

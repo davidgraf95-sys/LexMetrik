@@ -146,6 +146,28 @@ function Abschnitt({ a, loc, onNavigate }: { a: typeof NAVIGATION[number]; loc: 
   );
 }
 
+// Suche-Schnellaktion (Angleich an die suchzentrierte Startseite): fokussiert
+// die EINE globale Sucheingabe (Top-Streifen, §5) — auch aus der mobilen
+// Schublade, die selbst keine Suche trägt. Erst Schublade schliessen
+// (onNavigate), dann im nächsten Frame fokussieren (Feld ist dann sichtbar).
+function SucheKnopf({ onNavigate }: { onNavigate?: () => void }) {
+  const fokussiere = () => {
+    onNavigate?.();
+    requestAnimationFrame(() => window.dispatchEvent(new Event('lexmetrik:fokus-suche')));
+  };
+  return (
+    <button type="button" onClick={fokussiere} aria-keyshortcuts="/"
+      className="group flex w-full items-center gap-2.5 rounded-lg border border-line bg-surface px-3 py-2 text-body-s text-ink-500 transition-colors hover:border-brass-400 hover:text-ink-800">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0 text-ink-400 transition-colors group-hover:text-brass-600">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M20 20l-3.6-3.6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+      <span className="flex-1 text-left">Suchen</span>
+      <kbd className="num shrink-0 rounded border border-line px-1.5 text-xs leading-5 text-ink-400">/</kbd>
+    </button>
+  );
+}
+
 export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () => void; markeZeigen?: boolean }) {
   const loc = useLocation();
   return (
@@ -154,12 +176,22 @@ export function Sidebar({ onNavigate, markeZeigen = true }: { onNavigate?: () =>
           Top-Streifen das Logo (Schublade kann es ausblenden). */}
       {markeZeigen && (
         <Link to="/" onClick={onNavigate}
-          className="flex items-center gap-2.5 px-2.5 pt-1 pb-3 no-underline" aria-label="LexMetrik – Startseite">
+          className="flex items-center gap-2.5 px-2.5 pt-1 pb-1 no-underline" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
           <LexMetrikWortmarke className="text-[1.3rem]" />
         </Link>
       )}
-      {NAVIGATION.map((abschnitt, i) => (
+
+      {/* Such-Schnellaktion + «Start» als zusammengehöriger Kopf-Block,
+          abgesetzt durch eine Haarlinie (Rhythmus der Startseiten-Seclabels). */}
+      <div className="flex flex-col gap-1.5 -mt-1">
+        <SucheKnopf onNavigate={onNavigate} />
+        {NAVIGATION[0].kinder.map((k, j) => <Knoten key={j} k={k} loc={loc} onNavigate={onNavigate} />)}
+      </div>
+
+      <div aria-hidden className="h-px bg-line -mt-2.5" />
+
+      {NAVIGATION.slice(1).map((abschnitt, i) => (
         <Abschnitt key={i} a={abschnitt} loc={loc} onNavigate={onNavigate} />
       ))}
 

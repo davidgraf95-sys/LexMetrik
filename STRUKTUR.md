@@ -22,6 +22,15 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 23.6.2026 — STARTSEITE-ÜBERARBEITUNG: Universal-Suche + Verlauf + Sidebar-Angleich (main, PROD-Deploy)
+
+Auftrag David: Startseite nützlicher + schöner, Seitenleiste angleichen (Ultracode-Plan → umgesetzt). Design-Workflow (4 Konzepte → Jury → Synthese); alles im gesperrten Papier/Tinte/Messing-System, gate-grün (golden byte-gleich → keine Rechtslogik berührt, §1/§3).
+- **Universal-Suche** (`src/components/start/UniversalSuche.tsx` + reiner Aggregator `src/lib/universalSuche.ts`): EIN Feld über Rechner+Vorlagen (`katalogSuche`), Fristen-Presets (`presetSuche`), Gesetze (`normtext/browse` `filtern`) und Rechtsprechung (`filterEntscheide`) — gruppiert, gekappt 6 + «alle zeigen». Bündelt nur bestehende Such-/Filter-Funktionen (§5); schwere Daten (Register/Preset-Index) **erst beim ersten Tastendruck lazy** (Start-Chunk schlank verifiziert).
+- **«Weiter wo du warst»-Verlauf** (`src/lib/verlauf.ts` SSoT localStorage `lexmetrik-verlauf` + `verlaufLabel.ts` Resolver + `VerlaufTracker.tsx` in App.tsx): Chips zurück zum zuletzt Geöffneten. Label aus Manifesten (Gesetz→Kürzel, Entscheid→Zitierung), nie Rohpfad; KEIN `document.title`-Hack. Speichert nur Pfad+Label, nie Suchbegriffe/Formularinhalte (Berufsgeheimnis) + Löschknopf. Kein `Date.now()` in src/lib (§2 — Reihenfolge per Array-Position).
+- **Verschlankt**: Favoriten+Zeiterfassung zu zweispaltiger «Werkzeuge»-Zeile; Schnellrechner bleibt sichtbar (Rechner-zuerst). Kopf-Absatz auf einen Satz.
+- **Seitenleiste angeglichen** (`Sidebar.tsx`): «Suchen /»-Schnellaktion oben (fokussiert globale Topbar-Suche via Event `lexmetrik:fokus-suche` in `HeaderSuche.tsx`; **füllt die fehlende Suche in der Mobil-Schublade**), Kopf-Block per Haarlinie abgesetzt. `HeaderSuche` auf `/` neutralisiert → Hero-Suche besitzt `?q=` allein (deklarierte Änderung §6.3, `katalog.test.tsx` aktualisiert).
+- **Verifiziert** (Playwright Bash, hell+dunkel+mobil 375px): Lazy-Loading (0 Daten-Fetch vor Tastendruck), SSR/Hydration 0 Warnungen mit vorbefülltem Verlauf, kein Mobil-Autofokus. 19 neue Unit-Tests. Offen (Backlog, bewusst verschoben): Stichtage-Widget aus Verfallsregister (braucht ISO-Strukturierung).
+
 ## Session 23.6.2026 — BS-VORBILDKANTON: Vollimport + Darstellung + 2× Ultra-Check + Rechtsprechung-Merge (main, PROD-Deploy)
 
 Auftrag David: Gesetze ausbauen (freie Wahl) → BS als Vorbildkanton «beste Gesetzesseite im Netz». Abgearbeitet, alles auf `main`, gate-grün, render-verifiziert:

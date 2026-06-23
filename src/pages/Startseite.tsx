@@ -1,15 +1,19 @@
 import { Begruessung } from '../components/start/Begruessung';
+import { Verlauf } from '../components/start/Verlauf';
+import { UniversalSuche } from '../components/start/UniversalSuche';
 import { Schnellrechner } from '../components/start/Schnellrechner';
 import { Zeiterfassung } from '../components/start/Zeiterfassung';
 import { Favoriten } from '../components/start/Favoriten';
 
-// ─── Startseite V2 — «Rechner-zuerst»-Cockpit (Auftrag David 19.6.2026) ──────
+// ─── Startseite — «Suche-zuerst»-Cockpit (Überarbeitung, Auftrag David) ──────
 //
-// Auf Basis des Prototyps LexMetrik-Startseite-V2-Prototyp.html, umgesetzt im
-// gesperrten Designsystem (Geist, Papier/Tinte/Messing; hell+dunkel). Der
-// Schnellrechner hostet die ECHTEN Rechner-Formulare (§1/§3). Der frühere
-// Katalog (vier Oberkategorien) lebt jetzt unter /recherche und in der
-// Seitenleiste (Kategorie-Drilldowns).
+// Komposition (oben → unten): Kopf (Gruss/Datum) · Verlauf-Schiene «Weiter wo
+// du warst» · Universal-Suche (Held: ein Feld über Rechner/Vorlagen, Fristen-
+// Vorlagen, Gesetze und Rechtsprechung) · Schnellrechner (bleibt sichtbar, der
+// Star — rechnet ohne Seitenwechsel) · Werkzeuge (Favoriten + Zeiterfassung
+// zweispaltig) · Rechtlicher Hinweis (§8). Reine Darstellung (§3); jede Sektion
+// ist eine eigene, schlanke Komponente (§6.6). Vorher: Schnellrechner/
+// Zeiterfassung/Favoriten als drei gestapelte Blöcke ohne Suche/Verlauf.
 
 function Seclabel({ children }: { children: React.ReactNode }) {
   return (
@@ -23,27 +27,40 @@ function Seclabel({ children }: { children: React.ReactNode }) {
 export function Startseite() {
   return (
     <div className="max-w-[58rem]">
-      {/* Begrüssung (zufällig, tageszeitpassend) + Datum/Uhr + KI-Hinweis */}
+      {/* Kopf: Gruss (zufällig, tageszeitpassend) + Datum/Uhr + «Berechnung statt KI» */}
       <section className="space-y-3">
         <Begruessung />
         <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
-          LexMetrik rechnet Schweizer Rechtsfristen, Kosten und Zuständigkeiten nach festen
-          Gesetzesregeln aus – und erstellt Dokumente aus geprüften Bausteinen. Gleiche
-          Eingaben ergeben immer dasselbe, nachvollziehbare Ergebnis.
+          Schweizer Recht berechnen und erstellen – nach festen Gesetzesregeln, jeder Schritt nachvollziehbar.
         </p>
         <p className="inline-flex items-center gap-2 text-body-s font-medium text-brass-700 bg-brass-100 border border-brass-200 rounded-full px-3 py-1">
           <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brass-600" /> Berechnung statt KI
         </p>
       </section>
 
-      <Seclabel>Schnellrechner</Seclabel>
+      {/* Weiter wo du warst (rendert nichts bei leerem Verlauf) */}
+      <div className="mt-8">
+        <Verlauf />
+      </div>
+
+      {/* Universal-Suche — der Held */}
+      <Seclabel>Wonach suchen Sie?</Seclabel>
+      <UniversalSuche />
+
+      <Seclabel>Schnell rechnen</Seclabel>
       <Schnellrechner />
 
-      <Seclabel>Zeiterfassung</Seclabel>
-      <Zeiterfassung />
-
-      <Seclabel>Favoriten</Seclabel>
-      <Favoriten />
+      <Seclabel>Werkzeuge</Seclabel>
+      <div className="grid gap-x-4 gap-y-5 md:grid-cols-2 md:items-start">
+        <div className="space-y-2.5">
+          <span className="lc-overline text-ink-500">Favoriten</span>
+          <div className="lc-card p-4"><Favoriten /></div>
+        </div>
+        <div className="space-y-2.5">
+          <span className="lc-overline text-ink-500">Zeiterfassung</span>
+          <Zeiterfassung />
+        </div>
+      </div>
 
       {/* Rechtlicher Hinweis (Pflicht, §8) */}
       <section className="lc-notice mt-10">
