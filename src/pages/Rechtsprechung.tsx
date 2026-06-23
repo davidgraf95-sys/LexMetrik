@@ -2,32 +2,58 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { EntscheidKarte } from '../components/rechtsprechung/EntscheidKarte';
+import { EntscheidZeile } from '../components/rechtsprechung/EntscheidZeile';
 import { EntscheidFilter } from '../components/rechtsprechung/EntscheidFilter';
 import { SachgebietKacheln } from '../components/rechtsprechung/SachgebietKacheln';
 import {
-  ladeEntscheidManifest, gruppiereNachSachgebiet, filterEntscheide, nachDatum,
-  type EntscheidFilterWerte,
+  ladeEntscheidManifest, filterEntscheide, sortiere, gruppiereNachLeit,
+  zaehleSachgebiete, normLabel,
+  type EntscheidFilterWerte, type SortModus,
 } from '../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
 import type { Rechtsgebiet } from '../lib/normtext/register';
 
-// Übersicht der Rubrik «Rechtsprechung» — Pendant zu /gesetze, aber kuratiert
-// (Sachgebiet-Kacheln, Leitentscheide-first), nicht bloss eine flache Liste.
-// Reine Darstellung (§3): Laden/Gruppieren/Filtern liegen in lib/rechtsprechung,
-// hier nur die Anzeige + URL-gehaltener Sachgebiet-Filter (?rg=).
+// Übersicht der Rubrik «Rechtsprechung» — kuratierter Einstieg (Sachgebiets-Rail,
+// Leitentscheide-first, Norm-Verzahnung), bessere Übersicht als eine flache
+// Trefferliste. Reine Darstellung (§3): Laden/Sortieren/Filtern/Gruppieren liegen
+// in lib/rechtsprechung/browse.ts; hier nur Anzeige + URL-Zustand (?rg= Sachgebiet,
+// ?norm= angewandte Norm). Sortierung/Dichte lokal (Dichte in localStorage).
 
-// Beschrifteter Abschnitt (Bundesgericht / Kantonale Gerichte) mit Karten-Raster.
-function Sektion({ titel, liste }: { titel: string; liste: BrowseEntscheid[] }) {
+type Dichte = 'liste' | 'karten';
+const DICHTE_KEY = 'rsp:dichte';
+
+function leseDichte(): Dichte {
+  if (typeof localStorage === 'undefined') return 'liste';
+  return localStorage.getItem(DICHTE_KEY) === 'karten' ? 'karten' : 'liste';
+}
+
+// Eine Treffer-Liste je Dichte rendern (geteilte Datenquelle, nur Darstellung).
+function Liste({ liste, dichte, onNorm }: { liste: BrowseEntscheid[]; dichte: Dichte; onNorm: (k: string) => void }) {
+  if (dichte === 'karten') {
+    return (
+      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+        {liste.map((e) => <EntscheidKarte key={e.key} e={e} onNorm={onNorm} />)}
+      </div>
+    );
+  }
+  return (
+    <div className="lc-panel divide-y divide-line overflow-hidden">
+      {liste.map((e) => <EntscheidZeile key={e.key} e={e} onNorm={onNorm} />)}
+    </div>
+  );
+}
+
+function Sektion({ titel, liste, dichte, onNorm }: {
+  titel: string; liste: BrowseEntscheid[]; dichte: Dichte; onNorm: (k: string) => void;
+}) {
   if (!liste.length) return null;
   return (
     <section className="space-y-3">
       <h2 className="lc-overline text-brass-700 flex items-center gap-3">
         {titel}<span className="num text-ink-400">{liste.length}</span>
-        <span aria-hidden className="flex-1 h-px bg-line" />
+        <span aria-hidden className="h-px flex-1 bg-line" />
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {liste.map((e) => <EntscheidKarte key={e.key} e={e} />)}
-      </div>
+      <Liste liste={liste} dichte={dichte} onNorm={onNorm} />
     </section>
   );
 }
@@ -36,15 +62,22 @@ export function Rechtsprechung() {
   const [alle, setAlle] = useState<BrowseEntscheid[] | null>(null);
   const [fehler, setFehler] = useState(false);
   const [params, setParams] = useSearchParams();
-  // Restliche (nicht-URL-gehaltene) Filterwerte lokal — das Sachgebiet liegt in
-  // der URL (?rg=), damit die Sidebar-/Kachel-Auswahl teilbar bleibt.
+  // Nicht-URL-gehaltene Filterwerte lokal; Sachgebiet (?rg) und Norm (?norm) in der URL (teilbar).
   const [rest, setRest] = useState<EntscheidFilterWerte>({});
+  const [sort, setSort] = useState<SortModus>('relevanz');
+  const [dichte, setDichte] = useState<Dichte>(leseDichte);
 
   const sachgebiet = (params.get('rg') as Rechtsgebiet | null) ?? null;
-  const setzeSachgebiet = (g: Rechtsgebiet | null) => {
+  const norm = params.get('norm');
+
+  const setzeUrl = (schluessel: 'rg' | 'norm', wert: string | null) => {
     const p = new URLSearchParams(params);
-    if (g) p.set('rg', g); else p.delete('rg');
+    if (wert) p.set(schluessel, wert); else p.delete(schluessel);
     setParams(p, { replace: true });
+  };
+  const setzeDichte = (d: Dichte) => {
+    setDichte(d);
+    if (typeof localStorage !== 'undefined') localStorage.setItem(DICHTE_KEY, d);
   };
 
   useEffect(() => {
@@ -57,45 +90,47 @@ export function Rechtsprechung() {
     return () => { lebt = false; };
   }, []);
 
-  // Sachgebiet (URL) + restliche Filter (lokal) zusammenführen.
-  const werte: EntscheidFilterWerte = useMemo(() => ({ ...rest, sachgebiet }), [rest, sachgebiet]);
+  // URL-Achsen (Sachgebiet/Norm) + restliche Filter zusammenführen.
+  const werte: EntscheidFilterWerte = useMemo(
+    () => ({ ...rest, sachgebiet, norm }), [rest, sachgebiet, norm]);
 
-  // Kachel-Zähler IMMER über den vollen Bestand (unabhängig vom Sachgebiet-Filter,
-  // sonst zeigt die nicht gewählte Kachel «0»); restliche Filter dürfen die Zähler
-  // aber einschränken (Suche/Datum), darum ohne sachgebiet.
-  const fuerKacheln = useMemo(
-    () => (alle ? filterEntscheide(alle, { ...rest, sachgebiet: null }) : []),
-    [alle, rest],
+  // Rail-Zähler über den vollen Bestand minus Sachgebiet (sonst zeigt die nicht
+  // gewählte Kachel «0»); restliche Filter (Suche/Norm/…) dürfen die Zähler aber
+  // einschränken, darum ohne sachgebiet.
+  const fuerRail = useMemo(
+    () => (alle ? filterEntscheide(alle, { ...rest, norm, sachgebiet: null }) : []),
+    [alle, rest, norm],
   );
-  const gruppen = useMemo(() => gruppiereNachSachgebiet(fuerKacheln), [fuerKacheln]);
+  const railZaehler = useMemo(() => zaehleSachgebiete(fuerRail), [fuerRail]);
 
   const gefiltert = useMemo(
-    () => (alle ? nachDatum(filterEntscheide(alle, werte)) : []),
-    [alle, werte],
+    () => (alle ? sortiere(filterEntscheide(alle, werte), sort) : []),
+    [alle, werte, sort],
   );
-  // Klare Trennung Bund ↔ Kantone (Auftrag David).
-  const bundListe = useMemo(() => gefiltert.filter((e) => e.kanton === 'CH'), [gefiltert]);
-  const kantonListe = useMemo(() => gefiltert.filter((e) => e.kanton !== 'CH'), [gefiltert]);
-  const [ebene, setEbene] = useState<'alle' | 'bund' | 'kanton'>('alle');
+  const leitAnzahl = useMemo(() => gefiltert.filter((e) => e.leitcharakter === 'leitentscheid').length, [gefiltert]);
+
+  // Zwei Sektionen (Leitentscheide / Weitere) nur im Default-Sort ohne aktive
+  // Suche/Norm — sonst EIN sortierter Strom (Leit oben via Sortierung).
+  const alsSektionen = sort === 'relevanz' && !werte.q?.trim() && !norm;
+  const gruppen = useMemo(() => gruppiereNachLeit(gefiltert), [gefiltert]);
 
   const onFilter = (w: EntscheidFilterWerte) => {
-    // Sachgebiet aus dem Filter geht in die URL, der Rest bleibt lokal.
-    const { sachgebiet: rg, ...r } = w;
-    if (rg !== sachgebiet) setzeSachgebiet(rg ?? null);
+    // Sachgebiet & Norm gehören in die URL, der Rest bleibt lokal.
+    const { sachgebiet: rg, norm: n, ...r } = w;
+    if ((rg ?? null) !== sachgebiet) setzeUrl('rg', rg ?? null);
+    if ((n ?? null) !== norm) setzeUrl('norm', n ?? null);
     setRest(r);
   };
+  const waehleSachgebiet = (g: Rechtsgebiet | null) => setzeUrl('rg', g);
+  const waehleNorm = (k: string) => setzeUrl('norm', k);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <SeitenKopf
         overline="Rubrik VI · Rechtsprechung"
         titel="Rechtsprechung"
-        intro="Ausgewählte Entscheide des Bundesgerichts und kantonaler Gerichte im Volltext, nach Sachgebiet erschlossen und mit den Gesetzen verzahnt. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
-      >
-        <p className="text-body-s text-ink-400 max-w-reading">
-          Keine Rechtsberatung; massgeblich ist die amtliche Fassung.
-        </p>
-      </SeitenKopf>
+        intro="Kuratierte Auswahl von Entscheiden des Bundesgerichts und kantonaler Gerichte — Leitentscheide und Sachfrage zuerst, verzahnt mit der angewandten Norm. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
+      />
 
       {fehler && (
         <div className="lc-notice lc-notice-warn">
@@ -104,8 +139,8 @@ export function Rechtsprechung() {
       )}
 
       {!alle && !fehler && (
-        <div className="py-12 text-center space-y-3">
-          <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
+        <div className="space-y-3 py-12 text-center">
+          <div className="scale-rule mx-auto max-w-[200px]" aria-hidden />
           <p className="text-body-s text-ink-500">Die Sammlung wird abgerufen …</p>
         </div>
       )}
@@ -117,38 +152,77 @@ export function Rechtsprechung() {
       )}
 
       {alle && alle.length > 0 && (
-        <>
-          <SachgebietKacheln gruppen={gruppen} aktiv={sachgebiet} onWaehle={setzeSachgebiet} />
+        <div className="lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6">
+          {/* Links: Sachgebiets-Rail (Mobil oben als Chip-Band). */}
+          <div className="mb-4 lg:mb-0">
+            <SachgebietKacheln
+              zaehler={railZaehler}
+              gesamt={fuerRail.length}
+              aktiv={sachgebiet}
+              onWaehle={waehleSachgebiet}
+            />
+          </div>
 
-          <EntscheidFilter werte={werte} onChange={onFilter} bestand={alle} />
+          {/* Rechts: Ergebnis-Spalte. */}
+          <div className="min-w-0 space-y-4">
+            <EntscheidFilter
+              werte={werte}
+              onChange={onFilter}
+              bestand={alle}
+              sort={sort}
+              onSort={setSort}
+              dichte={dichte}
+              onDichte={setzeDichte}
+            />
 
-          <div className="space-y-5">
-            {/* Bund/Kanton-Segment — klare Trennung der Ebenen. */}
-            <div className="flex flex-wrap items-center gap-2 text-body-s">
-              {([
-                ['alle', 'Alle', gefiltert.length],
-                ['bund', 'Bundesgericht', bundListe.length],
-                ['kanton', 'Kantone', kantonListe.length],
-              ] as const).map(([id, label, n]) => (
-                <button key={id} type="button" onClick={() => setEbene(id)}
-                  aria-pressed={ebene === id}
-                  className={`lc-chip ${ebene === id ? 'border-brass-400 text-brass-700' : ''}`}>
-                  {label} <span className="num text-ink-400">{n}</span>
+            {/* Norm-Kontextstreifen — der explizite Pfad «Rechtsprechung zu Art. X». */}
+            {norm && (
+              <div className="lc-notice flex items-center justify-between gap-3">
+                <span className="text-body-s">
+                  Rechtsprechung zu <span className="font-medium text-ink-900">{normLabel(norm)}</span>
+                  {' '}— <span className="num">{gefiltert.length}</span> {gefiltert.length === 1 ? 'Entscheid' : 'Entscheide'}
+                </span>
+                <button type="button" onClick={() => setzeUrl('norm', null)}
+                  className="shrink-0 text-xs font-medium text-brass-700 hover:text-brass-600">
+                  aufheben
                 </button>
-              ))}
-              <span className="ml-auto text-ink-400">neueste zuerst</span>
+              </div>
+            )}
+
+            {/* Treffer-Zähler + Ebene-Segment (klare Trennung Bund ↔ Kantone, Auftrag David). */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-ink-500">
+              <span><span className="num text-ink-700">{gefiltert.length}</span> {gefiltert.length === 1 ? 'Entscheid' : 'Entscheide'}</span>
+              {leitAnzahl > 0 && <span>· <span className="num">{leitAnzahl}</span> Leitentscheide</span>}
+              <div className="ml-auto flex flex-wrap items-center gap-1.5">
+                {([['', 'Alle'], ['bund', 'Bundesgericht'], ['kanton', 'Kantone']] as const).map(([id, label]) => {
+                  const aktivE = (rest.ebene ?? '') === id;
+                  return (
+                    <button key={id || 'alle'} type="button" aria-pressed={aktivE}
+                      onClick={() => setRest({ ...rest, ebene: (id || null) as 'bund' | 'kanton' | null })}
+                      className={`lc-chip ${aktivE ? 'border-brass-400 text-brass-700' : ''}`}>
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {gefiltert.length === 0 ? (
-              <p className="text-body-s text-ink-500">Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.</p>
-            ) : (
+              <div className="lc-notice">Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.</div>
+            ) : alsSektionen ? (
               <div className="space-y-8">
-                {(ebene === 'alle' || ebene === 'bund') && <Sektion titel="Bundesgericht" liste={bundListe} />}
-                {(ebene === 'alle' || ebene === 'kanton') && <Sektion titel="Kantonale Gerichte" liste={kantonListe} />}
+                <Sektion titel="Leitentscheide" liste={gruppen.leitentscheide} dichte={dichte} onNorm={waehleNorm} />
+                <Sektion titel="Weitere Entscheide" liste={gruppen.weitere} dichte={dichte} onNorm={waehleNorm} />
               </div>
+            ) : (
+              <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />
             )}
+
+            <p className="border-t border-line/60 pt-3 text-micro text-ink-400">
+              Keine Rechtsberatung. «ungeprüft» = maschinell erfasst, fachlich noch nicht abgenommen; massgeblich ist stets die amtliche Fassung (Link je Entscheid).
+            </p>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

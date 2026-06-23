@@ -1,40 +1,48 @@
-import type { SachgebietGruppe } from '../../lib/rechtsprechung/browse';
+import type { SachgebietZaehler } from '../../lib/rechtsprechung/browse';
 import type { Rechtsgebiet } from '../../lib/normtext/register';
 
-// Sachgebiet-Kacheln (Übersicht /rechtsprechung): je Rechtsgebiet eine Kachel
-// mit Treffer-Anzahl — Klick filtert die Liste auf das Sachgebiet. Das ist der
-// kuratierte Einstieg (Mehrwert ggü. einer flachen Trefferliste). Reine
-// Darstellung (§3); die Gruppierung kommt aus gruppiereNachSachgebiet().
+// Sachgebiet-Navigation — die EINZIGE Sachgebiet-Steuerung (das alte Filter-
+// Select entfällt, Entdoppelung). Kontrastreiche, zählende Rail: der kuratierte
+// Primär-Einstieg (Mehrwert ggü. einer flachen Trefferliste). Desktop: vertikale,
+// klebende Liste; Mobil/Tablet: horizontales Chip-Band. Reine Darstellung (§3);
+// Zähler kommen aus zaehleSachgebiete().
 
-export function SachgebietKacheln({ gruppen, aktiv, onWaehle }: {
-  gruppen: SachgebietGruppe[];
+export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
+  zaehler: SachgebietZaehler[];
+  gesamt: number;
   aktiv: Rechtsgebiet | null;
   onWaehle: (g: Rechtsgebiet | null) => void;
 }) {
-  if (gruppen.length === 0) return null;
+  const eintraege: { id: Rechtsgebiet | null; label: string; count: number }[] = [
+    { id: null, label: 'Alle Sachgebiete', count: gesamt },
+    ...zaehler.map((z) => ({ id: z.sachgebiet, label: z.label, count: z.count })),
+  ];
+
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
-      {gruppen.map((g) => {
-        const an = aktiv === g.gebiet;
-        return (
-          <button
-            type="button"
-            key={g.gebiet}
-            onClick={() => onWaehle(an ? null : g.gebiet)}
-            aria-pressed={an}
-            className={`lc-card group flex flex-col gap-1.5 p-3.5 text-left transition-colors ${
-              an ? 'border-brass-500 bg-brass-100/40' : 'hover:border-brass-400'
-            }`}
-          >
-            <span className={`text-body-s font-medium leading-snug ${an ? 'text-brass-800' : 'text-ink-800 group-hover:text-brass-700'}`}>
-              {g.label}
-            </span>
-            <span className="num text-xs text-ink-400">
-              {g.entscheide.length} {g.entscheide.length === 1 ? 'Entscheid' : 'Entscheide'}
-            </span>
-          </button>
-        );
-      })}
-    </div>
+    <nav aria-label="Sachgebiete" className="lg:sticky lg:top-20">
+      {/* Desktop: vertikale Rail. Mobil/Tablet: scrollbares Chip-Band. */}
+      <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
+        {eintraege.map((e) => {
+          const an = aktiv === e.id;
+          return (
+            <li key={e.id ?? 'alle'} className="shrink-0 lg:shrink">
+              <button
+                type="button"
+                onClick={() => onWaehle(e.id)}
+                aria-current={an ? 'true' : undefined}
+                className={`flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-md border-l-2 px-3 py-2 text-left text-body-s transition-colors ${
+                  an
+                    ? 'border-brass-500 bg-brass-100 font-medium text-brass-800'
+                    : 'border-transparent text-ink-700 hover:bg-well'
+                }`}
+              >
+                <span className="truncate">{e.label}</span>
+                <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-400'}`}>{e.count}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }
