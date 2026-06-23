@@ -6,7 +6,7 @@
   :root {
     /* ── LexMetrik-Designtokens (Designsystem §2) ─────────────────────── */
     /* Tinte – Text & Struktur */
-    --ink-900:#1A1A17; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
+    --ink-900:#1A1A17; --ink-800:#2A2A25; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
     --ink-400:#8B8B81; --ink-300:#A9A99F;
     /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
        --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
@@ -83,7 +83,7 @@
   html.dark {
     color-scheme: dark;
     /* Tinte → hell (Text & Struktur auf dunklem Papier) */
-    --ink-900:#ECE7DA; --ink-700:#D2CCBD; --ink-600:#B4AE9F; --ink-500:#928D80;
+    --ink-900:#ECE7DA; --ink-800:#DFD9CB; --ink-700:#D2CCBD; --ink-600:#B4AE9F; --ink-500:#928D80;
     --ink-400:#736F64; --ink-300:#56524A;
     /* Papier → warmes Dunkel (kein Reinschwarz — die Papier-Wärme bleibt) */
     --paper:#16150F; --paper-raised:#201E16; --paper-sunken:#100F0A;

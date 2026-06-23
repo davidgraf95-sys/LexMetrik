@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         ink: {
-          900: 'var(--ink-900)', 700: 'var(--ink-700)', 600: 'var(--ink-600)',
+          900: 'var(--ink-900)', 800: 'var(--ink-800)', 700: 'var(--ink-700)', 600: 'var(--ink-600)',
           500: 'var(--ink-500)', 400: 'var(--ink-400)', 300: 'var(--ink-300)',
         },
         line: { DEFAULT: 'var(--line)', strong: 'var(--line-strong)' },
