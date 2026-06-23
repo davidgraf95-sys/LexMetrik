@@ -44,3 +44,19 @@ export function werkzeugeFuer(key: string): Werkzeug[] {
   }
   return out;
 }
+
+/**
+ * Werkzeuge zu den ANGEWANDTEN Normen eines Entscheids (transitiv über die
+ * Norm↔Werkzeug-Brücke). Grob (Erlass-Granularität) → «auch relevant»-Klasse,
+ * Status 'maschinell'; keine kuratierte Empfehlung (§8). Dedupliziert.
+ */
+export function werkzeugeFuerEntscheid(normKeys: string[]): Werkzeug[] {
+  const seen = new Set<string>();
+  const out: Werkzeug[] = [];
+  for (const k of normKeys) {
+    for (const w of werkzeugeFuer(k)) {
+      if (!seen.has(w.id)) { seen.add(w.id); out.push(w); }
+    }
+  }
+  return out;
+}

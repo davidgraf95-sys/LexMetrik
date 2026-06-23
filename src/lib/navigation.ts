@@ -21,6 +21,7 @@ import { KATALOG_KARTEN, VORLAGE_SEKTIONEN, istVerfuegbar } from './startseiteCo
 import { kategorieFuer } from './oberkategorien';
 import { istVorlage } from './vorlagenKategorie';
 import { SYSTEMATIK } from './normtext/systematik';
+import { GEBIETE } from './normtext/register';
 import { KANTONE } from '../data/tarif/typen';
 
 /** Blatt: ein Navigationsziel (Route, ggf. mit Query/Hash für eine Teilsicht). */
@@ -114,6 +115,13 @@ const GESETZE_KINDER: NavKnoten[] = [
   },
 ];
 
+// Rechtsprechung: gleichrangig zu «Gesetze». Direktlinks je Sachgebiet (GEBIETE,
+// dieselbe Sach-Achse wie die Gesetze → Verzahnung); Ziel = /rechtsprechung mit
+// ?rg=<gebiet> (Sachgebiet-Vorwahl, teilbar).
+const RECHTSPRECHUNG_KINDER: NavKnoten[] = GEBIETE.map(
+  (g) => link(g.label, `/rechtsprechung?rg=${g.id}`),
+);
+
 // ─── Hauptnavigation ─────────────────────────────────────────────────────────
 
 export const NAVIGATION: NavAbschnitt[] = [
@@ -123,6 +131,7 @@ export const NAVIGATION: NavAbschnitt[] = [
   { titel: 'Rechner', ziel: '/recherche', kinder: RECHNER_KINDER },
   { titel: 'Vorlagen', ziel: '/recherche?kategorie=vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
+  { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
 ];
 
 // Utility/Meta unten in der Seitenleiste — echte, indexierbare Routen.

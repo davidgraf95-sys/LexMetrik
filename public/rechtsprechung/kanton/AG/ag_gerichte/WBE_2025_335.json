@@ -1,0 +1,45 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AG/ag_gerichte/WBE_2025_335",
+      "gericht": "ag_gerichte",
+      "gerichtName": "Obergericht AG",
+      "gerichtstyp": "kantonal",
+      "kanton": "AG",
+      "abteilung": null,
+      "nummer": "WBE.2025.335",
+      "bgeReferenz": null,
+      "zitierung": "Obergericht AG WBE.2025.335 vom 27.01.2026",
+      "datum": "2026-01-27",
+      "sprache": "de",
+      "leitcharakter": "routine",
+      "sachgebiet": "oeffentlich",
+      "rubrum": null,
+      "regeste": null,
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Aargau Obergericht Verwaltungsgericht 27.01.2026 WBE.2025.335\n\nAargau Obergericht Verwaltungsgericht Argovie Verwaltungsgericht Argovia Verwaltungsgericht Obergericht / Verwaltungsgericht / 1. Kammer Obergericht / Verwaltungsgericht / 1. Kammer"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [],
+      "zitierteNormen": [],
+      "normKeys": [],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://decwork.ag.ch/api/main/v1/de/decrees_pdf/12244",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "202aa21c855b4d842fc1147be2ae077cd75e43ee2a1b0b6d86dac3f6629b1df1",
+      "sha": "f7f5dd5ea649fade1baf28be9a170b502ae9e07988b74a0839433e0d65ac09ba"
+    }
+  ]
+}

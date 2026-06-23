@@ -375,3 +375,18 @@
     details::details-content { transition: none; }
   }
 }
+
+/* Rechtsprechungs-Reader: inline-Norm-/Entscheid-Links dezent halten (Reglement R11 —
+   die Erwägungen sollen sich „wie ein Buch" lesen, nicht getigert). Unlayered →
+   überschreibt die Tailwind-Utility `underline …` von NormText im Lese-Fliesstext.
+   `.rsp-prose a` schlägt die Utility-Spezifität; greift hell + dunkel über die Tokens. */
+.rsp-prose a {
+  text-decoration: none;
+  color: var(--ink-900);
+  border-bottom: 1px solid color-mix(in srgb, var(--brass-500) 38%, transparent);
+  transition: color .15s, border-color .15s;
+}
+.rsp-prose a:hover {
+  color: var(--accent-text);
+  border-bottom-color: var(--brass-500);
+}

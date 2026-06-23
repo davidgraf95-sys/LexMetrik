@@ -12,6 +12,7 @@ import { GEBIET_LABEL } from '../lib/normtext/register';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { NormChip } from '../components/vorlagen/ui';
 import { werkzeugeFuer } from '../lib/normtext/werkzeuge';
+import { rechtsprechungFuerErlass, type EntscheidRef } from '../lib/rechtsprechung/norm-index';
 import type { BrowseErlass, BrowseManifest } from '../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
@@ -248,6 +249,13 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
   // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
   const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
+  const [rspr, setRspr] = useState<EntscheidRef[]>([]); // BGer-Entscheide zu diesem Erlass (Verzahnung)
+  useEffect(() => {
+    if (!erlass) return;  // kein synchrones setState im Effekt-Body (Default ist [])
+    let lebt = true;
+    rechtsprechungFuerErlass(erlass.key).then((r) => { if (lebt) setRspr(r); });
+    return () => { lebt = false; };
+  }, [erlass]);
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
@@ -592,6 +600,26 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
           </div>
         ) : null;
       })()}
+
+      {/* Verzahnung (Norm→Entscheid): Bundesgerichtsentscheide zu diesem Erlass.
+          Quelle = maschinell extrahierte Norm-Nennungen → keine geprüfte Präjudizienliste (§8). */}
+      {rspr.length > 0 && (
+        <div className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3 mt-3">
+          <p className="lc-overline mb-2">Bundesgerichtsentscheide zu diesem Erlass</p>
+          <ul className="flex flex-col gap-1.5">
+            {rspr.slice(0, 8).map((r) => (
+              <li key={r.key} className="text-sm">
+                <Link to={`/rechtsprechung/${r.key}`} className="no-underline hover:text-brass-700">
+                  <span className="font-medium">{r.zitierung}</span>
+                  {r.leitcharakter === 'leitentscheid' ? <span className="lc-chip ml-2 align-middle text-micro">Leitentscheid</span> : null}
+                  {r.regesteKurz ? <span className="text-ink-500"> — {r.regesteKurz}</span> : null}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-micro text-ink-400 mt-2">Maschinell aus den zitierten Normen zugeordnet — keine geprüfte Präjudizienliste.</p>
+        </div>
+      )}
 
       {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt mit Suchleiste auf
           HÖHE DER ARTIKEL (in der Inhalts-Spalte, nicht über der Gliederung). */}

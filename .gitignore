@@ -43,3 +43,9 @@ abnahme/design-2026-06/screenshots/
 # geschützt, nie ins Git/Deploy; Sichtung: bibliothek/quellen/SICHTUNG.md)
 bibliothek/quellen/*
 !bibliothek/quellen/SICHTUNG.md
+
+# Lokale Rechtsprechung-Screenshots (P0-Verifikation)
+e2e-shots/
+
+# Recherche-/MCP-Artefakte (nicht versionieren)
+.playwright-mcp/
