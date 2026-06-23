@@ -63,6 +63,8 @@ export interface EntscheidFilterWerte {
   kanton?: string | null;
   sprache?: string | null;
   nurLeitentscheide?: boolean;
+  /** Nur amtlich in der BGE-Sammlung publizierte Entscheide (höchste Autorität). */
+  nurBge?: boolean;
   datumVon?: string | null;
   datumBis?: string | null;
   /** Angewandter Erlass (normKeys-Eintrag, z.B. 'OR'); zweite Navigationsachse (?norm=). */
@@ -139,6 +141,7 @@ export function filterEntscheide(liste: BrowseEntscheid[], f: EntscheidFilterWer
     if (f.ebene === 'bund' && e.kanton !== 'CH') return false;
     if (f.ebene === 'kanton' && e.kanton === 'CH') return false;
     if (f.nurLeitentscheide && e.leitcharakter !== 'leitentscheid') return false;
+    if (f.nurBge && !e.bgeReferenz) return false;
     if (f.datumVon && e.datum < f.datumVon) return false;
     if (f.datumBis && e.datum > f.datumBis) return false;
     if (q) {

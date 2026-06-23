@@ -47,6 +47,7 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
   if (werte.gericht) aktiveChips.push({ key: 'gericht', label: `Gericht: ${bestand.find((e) => e.gericht === werte.gericht)?.gerichtName ?? werte.gericht}`, loesche: () => setze({ gericht: null }) });
   if (werte.sprache) aktiveChips.push({ key: 'sprache', label: `Sprache: ${SPRACH_LABEL[werte.sprache] ?? werte.sprache}`, loesche: () => setze({ sprache: null }) });
   if (werte.nurLeitentscheide) aktiveChips.push({ key: 'leit', label: 'Nur Leitentscheide', loesche: () => setze({ nurLeitentscheide: false }) });
+  if (werte.nurBge) aktiveChips.push({ key: 'bge', label: 'Nur BGE (amtlich publiziert)', loesche: () => setze({ nurBge: false }) });
   if (werte.datumVon) aktiveChips.push({ key: 'von', label: `ab ${werte.datumVon}`, loesche: () => setze({ datumVon: null }) });
   if (werte.datumBis) aktiveChips.push({ key: 'bis', label: `bis ${werte.datumBis}`, loesche: () => setze({ datumBis: null }) });
   const suchAktiv = !!werte.q?.trim();
@@ -133,6 +134,11 @@ export function EntscheidFilter({ werte, onChange, bestand, sort, onSort, dichte
             <input type="checkbox" className="h-4 w-4 accent-brass-600"
               checked={!!werte.nurLeitentscheide} onChange={(e) => setze({ nurLeitentscheide: e.target.checked })} />
             Nur Leitentscheide
+          </label>
+          <label className="flex items-center gap-2 self-end pb-1 text-body-s text-ink-700">
+            <input type="checkbox" className="h-4 w-4 accent-brass-600"
+              checked={!!werte.nurBge} onChange={(e) => setze({ nurBge: e.target.checked })} />
+            Nur BGE (amtlich publiziert)
           </label>
         </div>
       </details>

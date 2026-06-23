@@ -155,6 +155,10 @@ describe('filterEntscheide', () => {
     expect(filterEntscheide(liste, { kanton: 'CH', nurLeitentscheide: true }).map((e) => e.key)).toEqual(['p1']);
     expect(filterEntscheide(liste, { datumVon: '2025-01-01' }).map((e) => e.key).sort()).toEqual(['p1', 's1']);
   });
+  it('filtert nurBge auf amtlich publizierte Entscheide', () => {
+    const mitBge = [...liste, be({ key: 'bge1', bgeReferenz: '150 III 1' })];
+    expect(filterEntscheide(mitBge, { nurBge: true }).map((e) => e.key)).toEqual(['bge1']);
+  });
   it('trennt Ebene Bund vs. Kantone', () => {
     expect(filterEntscheide(liste, { ebene: 'bund' }).map((e) => e.key).sort()).toEqual(['p1', 's1']);
     expect(filterEntscheide(liste, { ebene: 'kanton' }).map((e) => e.key)).toEqual(['o1']);
