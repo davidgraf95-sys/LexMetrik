@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EinfacheFristForm } from '../forms/EinfacheFristForm';
+import { FristenKalender } from './FristenKalender';
 import { ProzesskostenForm } from '../forms/ProzesskostenForm';
 import { GebvKostenForm } from '../forms/GebvKostenForm';
 import { NotariatGrundbuchForm } from '../forms/NotariatGrundbuchForm';
@@ -22,12 +23,15 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'zustaendigkeit', label: 'Zuständigkeit' },
 ];
 
-// Gebühren-Unterauswahl: alle bestehenden Gebühren-Rechner.
-type GebuehrenArt = 'prozess' | 'betreibung' | 'notariat';
-const GEBUEHREN: { id: GebuehrenArt; label: string; href: string; rechner: string }[] = [
-  { id: 'prozess', label: 'Prozesskosten (Gericht & Partei)', href: '/rechner/prozesskosten', rechner: 'Prozesskostenrechner' },
-  { id: 'betreibung', label: 'Betreibungskosten (GebV SchKG)', href: '/rechner/betreibungskosten', rechner: 'Betreibungskostenrechner' },
-  { id: 'notariat', label: 'Notariat & Grundbuch', href: '/rechner/notariat-grundbuch', rechner: 'Notariats-/Grundbuchrechner' },
+// Gebühren-Unterauswahl als Segment-Buttons (ein Klick statt Select-Aufklappen,
+// Auftrag David «weniger Klicks bis zum Resultat»). Der Grundstückkauf läuft
+// SCHLANK (NotariatGrundbuchForm minimal: Kanton + Kaufpreis + Steuer); der
+// volle Notariats-/Grundbuchrechner ist verlinkt («auf richtigen verweisen»).
+type GebuehrenArt = 'prozess' | 'betreibung' | 'grundstueck';
+const GEBUEHREN: { id: GebuehrenArt; kurz: string; href: string; rechner: string; was: string }[] = [
+  { id: 'prozess', kurz: 'Prozesskosten', href: '/rechner/prozesskosten', rechner: 'Prozesskostenrechner', was: 'Modifikatoren, Vorschuss, Kostenrisiko, Rechenweg' },
+  { id: 'betreibung', kurz: 'Betreibung', href: '/rechner/betreibungskosten', rechner: 'Betreibungskostenrechner', was: 'alle Gebührenarten, Rechenweg' },
+  { id: 'grundstueck', kurz: 'Grundstückkauf', href: '/rechner/notariat-grundbuch', rechner: 'Notariats-/Grundbuchrechner', was: 'Grundpfand, Handänderungssteuer, interkantonaler Vergleich, PDF' },
 ];
 
 // Ausführlicher Verweis auf den jeweiligen Voll-Rechner (Auftrag David).
@@ -45,16 +49,24 @@ function GebuehrenTab() {
   const aktiv = GEBUEHREN.find((g) => g.id === art)!;
   return (
     <div className="space-y-4">
-      <label className="flex flex-col gap-1.5 max-w-md">
-        <span className="text-body-s text-ink-600">Welche Gebühr?</span>
-        <select className="lc-input" value={art} onChange={(e) => setArt(e.target.value as GebuehrenArt)} aria-label="Gebührenart">
-          {GEBUEHREN.map((g) => <option key={g.id} value={g.id}>{g.label}</option>)}
-        </select>
-      </label>
+      {/* Segment-Buttons: ein Klick wählt die Gebührenart (weniger Klicks). */}
+      <div role="tablist" aria-label="Gebührenart" className="inline-flex flex-wrap gap-0.5 rounded-lg border border-line bg-surface p-0.5">
+        {GEBUEHREN.map((g) => {
+          const an = g.id === art;
+          return (
+            <button key={g.id} type="button" role="tab" aria-selected={an} onClick={() => setArt(g.id)}
+              className={`px-3 py-1.5 text-body-s font-medium rounded-md transition-colors ${
+                an ? 'bg-brass-100 text-brass-800' : 'text-ink-600 hover:text-ink-900'
+              }`}>
+              {g.kurz}
+            </button>
+          );
+        })}
+      </div>
       {art === 'prozess' && <ProzesskostenForm />}
       {art === 'betreibung' && <GebvKostenForm />}
-      {art === 'notariat' && <NotariatGrundbuchForm />}
-      <VollRechnerHinweis href={aktiv.href} name={aktiv.rechner} was="Modifikatoren, Vorschuss, Kostenrisiko, Rechenweg" />
+      {art === 'grundstueck' && <NotariatGrundbuchForm minimal />}
+      <VollRechnerHinweis href={aktiv.href} name={aktiv.rechner} was={aktiv.was} />
     </div>
   );
 }
@@ -84,7 +96,18 @@ export function Schnellrechner() {
       <div className="p-5">
         {tab === 'fristen' && (
           <div className="space-y-4">
-            <EinfacheFristForm minimal />
+            {/* Zwei Hälften (Auftrag David): links rechnen (Ferien-Wahl), rechts
+                der Fristen-Kalender als Monatsansicht — dieselbe Engine. */}
+            <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
+              <div className="space-y-2">
+                <span className="lc-overline text-ink-500">Berechnen</span>
+                <EinfacheFristForm minimal />
+              </div>
+              <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
+                <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
+                <FristenKalender />
+              </div>
+            </div>
             <VollRechnerHinweis href="/rechner/tagerechner" name="Fristenrechner" was="Rückwärts, Zwischenfrist, ZPO/SchKG-Verfeinerung" />
           </div>
         )}

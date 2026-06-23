@@ -80,7 +80,12 @@ function PostenKarte({ titel, posten, akzent }: { titel: string; posten: NgPoste
   );
 }
 
-export function NotariatGrundbuchForm() {
+// `minimal` (Startseiten-Schnellrechner, Auftrag David): schlanke Grundstückkauf-
+// Schätzung — nur Kanton + Kaufpreis + Handänderungssteuer-Schalter und das
+// Kernresultat (Beurkundung + Grundbuch + Total). Grundpfand, interkantonaler
+// Vergleich, Teilen, PDF und Aktenzeichen bleiben dem Voll-Rechner vorbehalten
+// (dorthin wird im Schnellrechner verlinkt). Dieselbe Engine (§3/§5).
+export function NotariatGrundbuchForm({ minimal = false }: { minimal?: boolean } = {}) {
   const ausLink = useMemo(() => {
     try { return permalinkLesen(NG_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {} as Record<string, unknown>; }
@@ -140,14 +145,18 @@ export function NotariatGrundbuchForm() {
         </Field>
       </div>
 
-      <label className="flex items-start gap-2 text-body-s text-ink-700">
-        <input type="checkbox" checked={pfand} onChange={(e) => setPfand(e.target.checked)} className="mt-0.5" />
-        <span>Grundpfand (Schuldbrief/Hypothek) mitberechnen</span>
-      </label>
-      {pfand && (
-        <Field label="Pfandsumme (CHF)" hint="Standard = Kaufpreis, falls leer">
-          <BetragsFeld value={ps} onChange={setPs} className={inputCls} placeholder="z. B. 800'000" />
-        </Field>
+      {!minimal && (
+        <>
+          <label className="flex items-start gap-2 text-body-s text-ink-700">
+            <input type="checkbox" checked={pfand} onChange={(e) => setPfand(e.target.checked)} className="mt-0.5" />
+            <span>Grundpfand (Schuldbrief/Hypothek) mitberechnen</span>
+          </label>
+          {pfand && (
+            <Field label="Pfandsumme (CHF)" hint="Standard = Kaufpreis, falls leer">
+              <BetragsFeld value={ps} onChange={setPs} className={inputCls} placeholder="z. B. 800'000" />
+            </Field>
+          )}
+        </>
       )}
       <label className="flex items-start gap-2 text-body-s text-ink-700">
         <input type="checkbox" checked={steuer} onChange={(e) => setSteuer(e.target.checked)} className="mt-0.5" />
@@ -180,14 +189,16 @@ export function NotariatGrundbuchForm() {
             {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
-          <div className="mt-4 flex flex-wrap items-center gap-3">
-            <button type="button" onClick={() => setVergleich((v) => !v)} className="text-body-s underline text-ink-700 hover:text-ink-900">
-              {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was kostet es in anderen Kantonen? →'}
-            </button>
-            <LinkTeilenButton query={() => permalinkKodieren(NG_LINK_SPEC, { kanton, kp: kaufpreis, pfand: pfand ? true : undefined, ps: pfand ? pfandsumme : undefined, steuer: steuer ? undefined : false })} />
-          </div>
+          {!minimal && (
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <button type="button" onClick={() => setVergleich((v) => !v)} className="text-body-s underline text-ink-700 hover:text-ink-900">
+                {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was kostet es in anderen Kantonen? →'}
+              </button>
+              <LinkTeilenButton query={() => permalinkKodieren(NG_LINK_SPEC, { kanton, kp: kaufpreis, pfand: pfand ? true : undefined, ps: pfand ? pfandsumme : undefined, steuer: steuer ? undefined : false })} />
+            </div>
+          )}
 
-          {vergleichsListe && (
+          {!minimal && vergleichsListe && (
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[34rem] text-body-s border-collapse">
                 <caption className="text-xs text-ink-500 text-left mb-2">
@@ -217,7 +228,7 @@ export function NotariatGrundbuchForm() {
             </div>
           )}
 
-          {pdfConfig && (
+          {!minimal && pdfConfig && (
             <div className="mt-5 border-t border-line pt-4 space-y-3">
               <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
               <PdfExportButton config={pdfConfig} />

@@ -1,4 +1,5 @@
 import { Begruessung } from '../components/start/Begruessung';
+import { NewsHeader } from '../components/start/NewsHeader';
 import { Verlauf } from '../components/start/Verlauf';
 import { UniversalSuche } from '../components/start/UniversalSuche';
 import { Schnellrechner } from '../components/start/Schnellrechner';
@@ -37,6 +38,12 @@ export function Startseite() {
           <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brass-600" /> Berechnung statt KI
         </p>
       </section>
+
+      {/* News-Header: neueste Bundesgerichtsentscheide (rendert nichts in SSR/
+          bei leerem Register; erweiterbar auf weitere amtliche Quellen) */}
+      <div className="mt-8">
+        <NewsHeader />
+      </div>
 
       {/* Weiter wo du warst (rendert nichts bei leerem Verlauf) */}
       <div className="mt-8">

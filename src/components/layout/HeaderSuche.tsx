@@ -70,7 +70,7 @@ export function HeaderSuche() {
         onKeyDown={(e) => { if (e.key === 'Enter') absenden(); }}
         placeholder="Suchen …  ( / )"
         className="lc-input h-9 py-0 text-body-s w-full"
-        aria-label="Über Rechner, Vorlagen, Gesetze und Rechtsprechung suchen"
+        aria-label="LexMetrik durchsuchen"
         aria-keyshortcuts="/"
         aria-expanded={zeigtPanel}
         autoComplete="off"
