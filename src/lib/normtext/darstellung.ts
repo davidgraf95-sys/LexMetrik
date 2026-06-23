@@ -80,13 +80,44 @@ export function randtitelEintraege(marginalie: string[]): { mark: string; titel:
 // Wort «bis/ter» am Satzanfang («bis zum Ablauf …») zu strippen: der geleakte
 // Suffix wird vom Absatz-Beginn (Grossbuchstabe) gefolgt.
 const ABS_SUFFIX = '(?:bis|ter|quater|quinquies|sexies)';
+
+// S6 (BS-Audit 23.6.2026) — Absatz-Marker vereinheitlichen (§3, reine Darstellung).
+// LexWork-Quellen liefern den Absatz-Designator uneinheitlich: «1.», «10.»,
+// «Ziff. 2.1.», «1. II». Für die hängende Absatznummer-Darstellung wird daraus
+// eine schlichte Nummer gemacht:
+//   - führendes «Ziff.»/«Ziffer» wird entfernt («Ziff. 2.1.» → «2.1»);
+//   - ein einzelner abschliessender Punkt fällt weg («1.» → «1», «2.1.» → «2.1»);
+//   - bei «<Nr>. <nicht-numerischer Rest>» («1. II», «1. IIa») bleibt die
+//     schlichte Absatznummer «1» übrig (der römische/alphabetische Teil ist eine
+//     Unter-Gliederung, keine Absatznummer).
+// NICHT-numerische Marker («-», «2-4») werden NICHT zu einer Nummer verbogen —
+// sie bleiben verbatim erhalten (§7: nichts fabrizieren; §1: keine falsche Zahl).
+const NUMMER_RE = /^\d+(?:\.\d+)*$/;
+export function normalisiereAbsatzNummer(absatz: string): string {
+  let s = absatz.trim();
+  // «Ziff.»/«Ziffer» (auch mit Doppelpunkt/Leerraum) am Anfang entfernen.
+  s = s.replace(/^Ziff(?:er|\.)?\s*/i, '').trim();
+  // Reine (hierarchische) Nummer mit abschliessendem Punkt: «1.»/«2.1.» → ohne Punkt.
+  const mDot = s.match(/^(\d+(?:\.\d+)*)\.$/);
+  if (mDot) return mDot[1];
+  // bereits schlicht numerisch (inkl. «2.1») → unverändert.
+  if (NUMMER_RE.test(s)) return s;
+  // «<Nr>. <nicht-numerischer Rest>» («1. II»): schlichte Absatznummer = führende Nr.
+  const mNumDotRest = s.match(/^(\d+)\.\s+\S/);
+  if (mNumDotRest) return mNumDotRest[1];
+  // alles andere (nicht-numerisch: «-», «2-4», bis/ter-Suffix-Formen) verbatim.
+  return s;
+}
+
 export function absatzMarke(absatz: string | null, text: string): { marke: string | null; rest: string } {
   if (absatz == null) {
     const m = text.match(new RegExp(`^(\\d+${ABS_SUFFIX})\\s+`));
     return m ? { marke: m[1], rest: text.slice(m[0].length) } : { marke: null, rest: text };
   }
+  // S6: Designator vor der Verwendung vereinheitlichen.
+  const norm = normalisiereAbsatzNummer(absatz);
   const m = text.match(new RegExp(`^(${ABS_SUFFIX})\\s+(?=[A-ZÄÖÜ])`));
-  return m ? { marke: absatz + m[1], rest: text.slice(m[0].length) } : { marke: absatz, rest: text };
+  return m ? { marke: norm + m[1], rest: text.slice(m[0].length) } : { marke: norm, rest: text };
 }
 
 // Schweizer Tausender-Apostrophe für die Betrag-Spalte der TarifTabelle (§1: nur

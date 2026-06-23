@@ -366,7 +366,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gebühr pro Kilogramm inkl. Mehrwertsteuer:",
+          "text": "Gebühr pro Kilogramm inkl. Mehrwertsteuer:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Abfallart",
@@ -386,7 +390,11 @@
         },
         {
           "absatz": "2",
-          "text": "Mindestgebühr inkl. Mehrwertsteuer pro Leerung eines Containers, falls die Gebühr gemäss Abs. 1 diesen Betrag nicht überschreitet:",
+          "text": "Mindestgebühr inkl. Mehrwertsteuer pro Leerung eines Containers, falls die Gebühr gemäss Abs. 1 diesen Betrag nicht überschreitet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Containertyp",
@@ -422,7 +430,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gebührenpflichtige Sammelsäcke inkl. Mehrwertsteuer sowie Herstellungs- und Vertriebskosten: Abfallart: Kehricht ·",
+          "text": "Gebührenpflichtige Sammelsäcke inkl. Mehrwertsteuer sowie Herstellungs- und Vertriebskosten:"
+        },
+        {
+          "absatz": null,
+          "text": "Abfallart: Kehricht ·",
           "mehrspaltig": {
             "kopf": [
               "Sackvolumen (Liter)",
@@ -463,7 +475,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/786.150",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a554049639abf7c0b866d54df1aa0ca1",
-      "sha": "7408ff00bc110bf7c655385662e5baa2851884ce0bbd334f0c3e68dbd5e14211"
+      "sha": "f9379e8ecc17ee72ee6565db01ccd44404bce1b5e026fe268900f3e97f50cd5e"
     },
     {
       "id": "kanton/BS/786.150/art_14",
@@ -476,7 +488,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Vignetten inkl. Mehrwertsteuer sowie Herstellungs- und Vertriebskosten:",
+          "text": "Vignetten inkl. Mehrwertsteuer sowie Herstellungs- und Vertriebskosten:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Abfallart",
@@ -525,7 +541,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Abholungen auf Bestellung (Extrafahrt) inkl. Mehrwertsteuer:",
+          "text": "Abholungen auf Bestellung (Extrafahrt) inkl. Mehrwertsteuer:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Art",

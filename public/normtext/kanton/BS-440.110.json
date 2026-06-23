@@ -146,7 +146,36 @@
         },
         {
           "absatz": "5",
-          "text": "Die Universitätsangehörigen können folgenden Gruppierungen angehören: Gruppierung I: · Inhaberinnen und Inhaber von Professuren, Assistenzprofessorinnen und Assistenzprofessoren mit Tenure Track, Förderungsprofessorinnen und Förderungsprofessoren des Schweizerischen Nationalfonds; — Gruppierung II: · Assistenzprofessorinnen und Assistenzprofessoren ohne Tenure Track, Universitätsdozierende, Titularprofessorinnen und Titularprofessoren, Privatdozentinnen und Privatdozenten sowie wissenschaftliche Mitarbeiterinnen und Mitarbeiter mit Lehrverpflichtung; — Gruppierung III: · Doktorierende und Postdoktorierende der Universität Basel; — Gruppierung IV: · Wissenschaftliche, technische und administrative Mitarbeiterinnen und Mitarbeiter ohne Lehrverpflichtung; — Gruppierung V: · Studierende in BA und MA-Studiengängen."
+          "text": "Die Universitätsangehörigen können folgenden Gruppierungen angehören:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Gruppierung I:",
+                "Inhaberinnen und Inhaber von Professuren, Assistenzprofessorinnen und Assistenzprofessoren mit Tenure Track, Förderungsprofessorinnen und Förderungsprofessoren des Schweizerischen Nationalfonds;"
+              ],
+              [
+                "Gruppierung II:",
+                "Assistenzprofessorinnen und Assistenzprofessoren ohne Tenure Track, Universitätsdozierende, Titularprofessorinnen und Titularprofessoren, Privatdozentinnen und Privatdozenten sowie wissenschaftliche Mitarbeiterinnen und Mitarbeiter mit Lehrverpflichtung;"
+              ],
+              [
+                "Gruppierung III:",
+                "Doktorierende und Postdoktorierende der Universität Basel;"
+              ],
+              [
+                "Gruppierung IV:",
+                "Wissenschaftliche, technische und administrative Mitarbeiterinnen und Mitarbeiter ohne Lehrverpflichtung;"
+              ],
+              [
+                "Gruppierung V:",
+                "Studierende in BA und MA-Studiengängen."
+              ]
+            ]
+          }
         },
         {
           "absatz": "6",
@@ -161,7 +190,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/440.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "faf503ec9f1107e5f9e022415e241194",
-      "sha": "9ff4e8cac47011e95911a058a2e6bc22b55c174a5904372695772428e39d5253"
+      "sha": "2846facce3e67d002d38f7b012f87c1827f84fa0810272734dd0415adc9a5ab1"
     },
     {
       "id": "kanton/BS/440.110/art_5",

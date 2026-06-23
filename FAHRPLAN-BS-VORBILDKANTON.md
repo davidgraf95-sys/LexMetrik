@@ -195,3 +195,143 @@ Heute sind alle 859 BS-Erlasse ununterscheidbar `snapshot`; ein ungeprüfter Aut
 - **Lauf C (Struktur-Bulk):** N2 + N3-Daten.
 - **Reine UI/Test (kein Generator):** S8, S10–S13, N6–N13, N15, D6.
 - **Daten+UI:** D1, D2/N5, D3, D4.
+
+
+---
+
+## Ultra-Check Gesetzesdarstellung (23.6.2026, 33 Befunde)
+
+1. **[HOCH·mittel·vollstaendig]** BS-Tariftabellen rendern als flacher ·/—-Fliesstext statt als Tabelle (enumeration_tabular wird nicht strukturiert)
+2. **[HOCH·gross·einheitlich]** Keine Gliederung/TOC für faktisch alle BS-Erlasse — Bund hat sie, Kanton nicht
+3. **[HOCH·gross·uebersichtlich]** BS-Gesetze haben gar keine Gliederung/TOC — auch das Vorbild-Flaggschiff StG (292 Art.) wird strukturlos durchgescrollt
+4. **[HOCH·mittel·nuetzlich]** Einkommenssteuer-Tarif StG § 36 ist eine Textwand statt einer Tarif-Tabelle
+5. **[HOCH·mittel·nuetzlich]** Vermögenssteuer-Tarif StG § 50 zeigt rohe Tabellen-Trennzeichen (· und —) im Fliesstext
+6. **[HOCH·klein·nuetzlich]** HTML-Entities &sup2; &sup3; &ge; &le; &acirc; u.a. erscheinen unaufgelöst im Normtext
+7. **[HOCH·mittel·nuetzlich]** Reader-H1, Breadcrumb und Browser-Tab zeigen bei ~27 BS-Verträgen einen sinnlosen Titel-Fragmentsatz statt des Erlasstitels
+8. **[HOCH·mittel·nuetzlich]** Interne Querverweise mit § werden nicht verlinkt (trifft 740 von 859 BS-Erlassen)
+9. **[HOCH·mittel·nuetzlich]** Globale Kopf-Suche findet keine Gesetze (nur Rechner/Vorlagen-Katalog)
+10. **[MITTEL·gross·vollstaendig]** Keine Abschnitts-/Gliederungsnavigation (gliederung) für 854 von 859 BS-Erlassen
+11. **[MITTEL·klein·einheitlich]** «SR 111.100» für kantonale Erlasse — falsche Sammlungsbezeichnung (Bund-Label am Kanton)
+12. **[MITTEL·mittel·einheitlich]** Absatz-Marker uneinheitlich: «Ziff. 2.1.» / «1. II» / «1.» statt schlichter Absatznummer
+13. **[MITTEL·mittel·uebersichtlich]** Kein Running-Header / Standortpfad beim Scrollen — auf Mobil komplett orientierungslos
+14. **[MITTEL·mittel·uebersichtlich]** StG zeigt verwaiste Unter-Randtitel (»a) Grundsatz«) ohne übergeordnete Überschrift
+15. **[MITTEL·mittel·nuetzlich]** Gebühren-Tabellen mit Prosa-Vorlauf bleiben als Textwand (Gerichtsgebührenreglement § 29 u.a.)
+16. **[MITTEL·mittel·nuetzlich]** Spaltenversatz in IWB-Gebührentarif-Tabelle (BS-772.430 § 3): Caption als Phantom-Spalte, Tarif-Nr. verrutscht
+17. **[MITTEL·klein·uebersichtlich]** Vor/Zurück-Navigation am Erlass-Fuss läuft auf schmalem Viewport über den rechten Rand (abgeschnittener Link)
+18. **[MITTEL·gross·nuetzlich]** Keine kantonsweite Volltext-Suche über Erlasse hinweg
+19. **[NIEDRIG·klein·einheitlich]** Whole-repealed Artikel mal mit, mal ohne Randtitel — quellenbedingt, aber visuell uneinheitlich
+20. **[NIEDRIG·klein·einheitlich]** Bestätigt einheitlich: «aufgehoben»-Darstellung über Absätze, lit./Ziff. und Ganz-Artikel
+21. **[NIEDRIG·klein·einheitlich]** Bestätigt einheitlich: Tausendertrenner, lit./Ziff.-Marken und Reader-Kopf (Bund vs. Kanton)
+22. **[NIEDRIG·klein·einheitlich]** Top-Sektionstitel «Erziehung Wissenschafts- und Kulturpflege» fehlen die Trennzeichen (Daten-Inkonsistenz, prominent)
+23. **[NIEDRIG·klein·nuetzlich]** Gekürzte Erlass-Titel in der Systematik-Liste haben keinen title-Tooltip (Lese-Sackgasse)
+24. **[NIEDRIG·klein·uebersichtlich]** Mobiler Top-Sektionstitel klemmt mehrteilige Namen unschön (line-clamp-2 schneidet «Organisation» ab)
+25. **[NIEDRIG·klein·uebersichtlich]** Reader-Overline trägt für StG das überlange Top-Sachgebiet statt der treffenden Untergruppe
+26. **[NIEDRIG·klein·uebersichtlich]** Mobile-Gliederungs-Umschalter erscheint nie, weil er an sektionen.length hängt
+27. **[NIEDRIG·klein·nuetzlich]** Bestätigt gut: strukturierte mehrspaltig-Tabellen rendern sauber (Ausrichtung, Tausendertrenner, horizontales Scrollen)
+28. **[NIEDRIG·klein·uebersichtlich]** Mobile-Overflow im Steuergesetz (BS-640.100) noch in PROD sichtbar — lokaler S13-Fix nicht deployt
+29. **[NIEDRIG·klein·uebersichtlich]** Verwaiste temporäre e2e-Testdateien im Repo (frühere Sessions)
+30. **[NIEDRIG·klein·nuetzlich]** Bestätigt gut: Suche, Suffix-Anker, Gemeinderecht-Reader, Aufgehoben-Marker, Übersichts-Titel
+31. **[NIEDRIG·klein·nuetzlich]** Kein Erlassart-Filter (Gesetz / Verordnung) in der Kanton-Liste
+32. **[NIEDRIG·klein·nuetzlich]** Amtlicher Quelle-Link enthält rohe Leerzeichen (162 BS-Erlasse) — fragil
+33. **[NIEDRIG·mittel·nuetzlich]** Kein direkter amtlicher PDF-/Versions-Link je Erlass
+
+---
+
+Hier ist der priorisierte Fixplan als Chefarchitekt. Ich habe die 30 bestätigten Befunde nach Impact×Aufwand und den vier Kriterien synthetisiert. Eine Erkenntnis vorab strukturiert alles: **die Hälfte der schweren Befunde hat eine gemeinsame Wurzel** (Tarif-Tabellen-Flattening + fehlende Gliederung), und zwei winzige Datei-Edits räumen die sichtbarsten Schäden weg.
+
+---
+
+# TOP-7 (höchster Nutzen zuerst)
+
+**T1 — HTML-Entities dekodieren (`&sup2;`/`&ge;`/`&le;`/`&acirc;`)**
+Höchstes Impact/Aufwand-Verhältnis überhaupt: kleinster Fix (eine Datei), korrigiert 438+ sichtbare Vorkommen, und die `&ge;/&le;`-Leaks verfälschen Tarif-SCHWELLEN (inhaltlich irreführend, nicht nur kosmetisch).
+Weg: `scripts/normtext/html-entities.ts` → `NAMED_ENTITIES` ergänzen (`&sup1/2/3`, `&ge`→≥, `&le`→≤, `&acirc/&Acirc`, `&mu`, `&plusmn`, `&divide`, `&not`, `&reg`, `&frasl`, `&eta`); danach `npm run normtext` (§7: nie von Hand editieren); Regressionstest in `src/tests/normtext-entities.test.ts`. Aufwand: klein.
+
+**T2 — Kaputte Reader-Titel bei ~27 BS-Verträgen (H1/Tab/Breadcrumb = Satzfragment)**
+Der sichtbarste Identitätstext zeigt mid-sentence-Fragmente wie „b) den Betrieb der Hafenbahn…" statt des Erlasstitels — direkt im Vorbildkanton, im register.json eingefroren.
+Weg: `scripts/normtext/browse-manifest.ts` `identitaetAusErlass()` (Z.56-69) härten: Last-Comma-Split nur akzeptieren, wenn der Tail kürzel-typisch ist (kurz/ein Wort/Grossbuchstaben-Abk.) UND nicht klein bzw. „x)" beginnt — sonst `kuerzel=titel=voller String`. **Wichtig:** auch grossgeschriebene Fragmente abdecken (BS-955.700/952.820/428.100), die die Lowercase-Heuristik verpasst. Reader robust gegen `kuerzel==titel`. Manifest neu generieren. Aufwand: mittel.
+
+**T3 — Tarif-Tabellen rendern (StG §36/§50, GGR §29) — die gemeinsame Tabellen-Wurzel**
+Bündelt 5 schwere Befunde: StG §36 Einkommenssteuer (Textwand), §50 Vermögenssteuer (rohe `·`/`—` im Lesetext = „kaputt"-Eindruck), §39/§131, GGR-Gebühren, IWB. Häufigste Nachschlage-Operation eines Steuergesetzes, namentlicher Prüfpunkt.
+Weg (zweistufig):
+- Sauber (§7-konform): in `scripts/normtext/mehrspaltige-tabelle.ts` `zerlegeZelle()`/`extrahiereMehrspaltig()` (Z.15-42) einen eng getriggerten Tarif-Band-Pfad ergänzen: label-lose Zellen positionsbasiert als Spalten zulassen, wenn ≥2 Zeilen STABIL gleiche `·`-Zellzahl haben; `TARIF_NR_RE` um buchstaben-suffigierte Positionen (`4.a)`, `ca)`) erweitern; Prosa-Vorlauf vor erster Tarif-Nr. als Caption abtrennen. Dann greift `MehrspaltigeTabelle` automatisch.
+- Sofort-Auffangnetz (ohne Re-Generierung): `staffelZeilen()` (`ArtikelBody.tsx` Z.104-139) um case-insensitives `(Von|Über)`-Band + **Em-Dash U+2014** (nicht nur En-Dash U+2013) erweitern, damit nie rohe `·`/`—` im Lesetext stehen.
+- Adversarial gegen die 31-37 Fundstellen prüfen (keine normalen Absätze zerschneiden), dann `npm run normtext`. Aufwand: mittel.
+
+**T4 — Gliederung/TOC für BS füllen (StG & alle Erlasse) — Bund hat sie, Kanton nicht**
+Bündelt 5 Befunde (Hauptlücke + Stilbruch + verwaiste Unter-Randtitel + Running-Header + Mobile-Toggle). BS-Flaggschiff StG (292 Art.) wird strukturlos durchgescrollt; KEIN BS-Erlass bekommt TOC, während OR 158 Sektionen zeigt. Die TOC-Infrastruktur (`baueGliederungsbaum`, Scroll-Spy, `aktivIds`/`pfadZu`) steht komplett — es fehlen nur die `gliederung`-Daten.
+Weg: **Kern-Korrektur am Vorbefund** — kein Neubau nötig: `scripts/normtext/struktur-kanton-run.ts` (npm `normtext:struktur-kanton`) iteriert bereits alle BS-Snapshots und `extrahiereStrukturLexWork` liefert verifiziert non-empty `gliederung` für alle 292 StG-Tokens. Der Fix ist im Kern ein **RE-RUN** + Klärung, warum bisher nur 5 BS-Sidecars (alle mit leerer `gliederung`) erzeugt wurden (Coverage-/Lauflücke, keine Capability-Lücke). Danach greifen TOC-Spalte, Inline-Sektionen, Scroll-Spy und die a)/b)-Randtitel bekommen ihren Eltern-Kontext automatisch. Aufwand: realistisch klein-mittel (nach Vorbefund-Korrektur, nicht „gross").
+
+**T5 — Globale Kopf-Suche + interne §-Verlinkung (Auffindbarkeit & Verzahnung)**
+Zwei Verzahnungs-Lücken, beide mit bereits vorhandener Infrastruktur, hoher Praxisnutzen:
+- Kopf-Suche (`HeaderSuche.tsx` Z.14-16) durchsucht nur den Rechner/Vorlagen-Katalog, NICHT die 859+ Gesetze. „Advokaturgesetz"/„291.100" findet nichts. Weg: bei Eingabe zusätzlich `ladeBrowseManifest` über `filtern()` durchsuchen, Top-Treffer als Deeplinks `/gesetze/<ebene>/<key>`. Daten + Filter existieren — nur Verdrahtung in der Shell.
+- §-Querverweise (`NormText.tsx` ART_INTERN Z.52-57) matchen nur „Art."; 4104 „§ N"-Verweise in 740 BS-Erlassen sind toter Text. Weg: `§ N` (inkl. Suffix `§ 12a`) als INTERNEN Selbstbezug gegen die vorhandene `tokenMap` auflösen (kein Fremd-Erlass-Risiko; nicht aufgelöste § bleiben Text → §8). 3421/4104 würden klickbar. Aufwand je: mittel.
+
+**T6 — „SR"-Label am Kanton korrigieren (`sammlungsLabel`)**
+Fachlich falsch: „SR 111.100" auf der BS-Verfassung („SR" = Bundessammlung). Betrifft 697 BS- / 963 kantonale Erlasse, plus Doppel-Defekt „SR BaB 111.100" bei 162 Präfix-tragenden.
+Weg: Helper `sammlungsLabel(erlass)` an beiden Stellen (`GesetzLeser.tsx` Z.566 Header + Z.493 Download): Bund→„SR", Kanton→ohne „SR" bzw. neutral „Nr."; **vorhandenes sr-Präfix (BaB/RiE) respektieren**, nicht blind „SG" voranstellen. Aufwand: klein.
+
+**T7 — Mobile-Layout-Overflow beheben + S13-Fix deployen**
+Drei zusammenhängende Layout-Befunde, alle klein, alle auf der Aushänge-BS-Verfassung sichtbar:
+- Vor/Zurück-Nav am Erlassfuss (`GesetzLeser.tsx` Z.672-676) erzeugt bei 360px 32px H-Overflow (ungekürzte volle kuerzel). Weg: `truncate min-w-0 max-w-[45%]` + `title=` oder `flex-col` auf schmal. Synergie mit T2 (kürzere kuerzel).
+- Item-Text-Overflow im StG (§66 lit. d) ist in PROD noch sichtbar, weil der bereits committete S13-Fix (`ArtikelBody.tsx` Z.429) nicht deployt ist → nach §9 David-Freigabe ausrollen.
+- Quelle-URL mit rohem Leerzeichen (162 BS-Erlasse, BeE/RiE) bricht beim Kopieren/Download. Weg: `encodeURIComponent` auf den Pfadteil in `kanton-discovery-quellen.ts:64` (oder defensiv beim Rendern → wirkt sofort auf Download-Text Z.494). Aufwand: klein.
+
+---
+
+# 1) SOFORT-FIXES (Bugs/Logik/Inkonsistenzen)
+
+| # | Befund | Datei/Stelle | Aufwand |
+|---|--------|--------------|---------|
+| S1 | **Entities `&sup2;/&ge;/&le;/&acirc;`** unaufgelöst (438+×; Tarif-Schwellen betroffen) | `scripts/normtext/html-entities.ts` NAMED_ENTITIES + `npm run normtext` | klein |
+| S2 | **Kaputte Reader-H1/Tab** bei ~27 BS-Verträgen (Satzfragment) | `scripts/normtext/browse-manifest.ts` `identitaetAusErlass()` Z.56-69 + Regenerierung | mittel |
+| S3 | **`·`/`—`-Rohtrenner im Lesetext** (StG §50, IWB) | `mehrspaltige-tabelle.ts` `zerlegeZelle` Z.25-43 / Fallback `staffelZeilen` Em-Dash | mittel |
+| S4 | **IWB-Spaltenversatz** (Caption als Phantom-Spalte, §3+§4) | `adapter-lexwork.ts` Caption→Vortext trennen, Tarif-Nr. in Spalte 0 | mittel |
+| S5 | **„SR"-Label am Kanton** + Doppel-Präfix „SR BaB" | `GesetzLeser.tsx` Z.566/Z.493, Helper `sammlungsLabel()` | klein |
+| S6 | **Absatz-Marker uneinheitlich** („Ziff. 2.1.", „1. II"+Body-Doppelung, „1.") 16 Dateien | Extraktor heilen + defensiv `darstellung.ts` `absatzMarke()` Z.83-90 (`\d+\.`→`\d+`; nicht-num. nicht als Nummer) | mittel |
+| S7 | **Quelle-URL roher Space** (162 BS, bricht Copy/Download) | `kanton-discovery-quellen.ts:64` `encodeURIComponent` | klein |
+| S8 | **Systematik-Titel ohne Trenner** „Erziehung Wissenschafts- und Kulturpflege" | im Systematik-Adapter/Mapping → „Erziehung · Wissenschaft · Kultur"; neu generieren (nicht JSON von Hand) | klein |
+| S9 | **Mobile-Toggle-Kopplung** an `sektionen.length` (greift nach T4-Daten-Fix) | `GesetzLeser.tsx` Z.599/601-603/643 — beim Daten-Fix mitprüfen | klein |
+| S10 | **Verwaiste `_tmp_*.e2e.ts`** (testMatch sammelt sie ein) — Evidenz veraltet, Kern real: `rm e2e/_tmp_aufgehoben.e2e.ts` + testMatch `!**/_tmp_*` | `playwright.config.ts` | klein |
+
+---
+
+# 2) FORMATIERUNG & ÜBERSICHT (konkrete UI-Schritte)
+
+- **F1 — Gliederung/TOC für BS füllen** (= T4): `normtext:struktur-kanton` RE-RUN; danach erscheinen TOC-Spalte, Inline-Sektionen, Scroll-Spy. Andockpunkt `struktur-lexwork.ts:52` / `struktur-kanton-run.ts`.
+- **F2 — Running-Header/Breadcrumb beim Scrollen**: in die sticky Suchleiste (`GesetzLeser.tsx` Z.641-654) gekürzten Gliederungspfad aus vorhandenem `aktivIds`+`pfadZu` einblenden; mobil als einzige Standortquelle. Greift automatisch sobald F1 Daten liefert.
+- **F3 — Reader-Overline kürzen**: bei vorhandener Untergruppe `subTitel` („64 Allgemeine Steuern") statt langem Top-Compound zeigen — `GesetzLeser.tsx` `overlineGebiet` Z.463-471 (nur wenn `sub` nicht-leer).
+- **F4 — Nav-Overflow am Fuss** (= T7): `truncate min-w-0 max-w-[45%]`/`flex-col`, `GesetzLeser.tsx` Z.672-676.
+- **F5 — title-Tooltip auf gekürzten Titeln**: `title={e.titel}` an `Gesetze.tsx:184` (SysZeile) und `ErlassKarte.tsx:44` (`kuerzel — titel`). Layout-/a11y-neutral, ein Attribut.
+- **F6 — Mobile Top-Sektionstitel** verwaister `·`: `line-clamp-3` auf Mobil oder schmalere Nummernspalte, `Gesetze.tsx:256`.
+- **F7 — Aufgehobene-Artikel-Randtitel** (70/962 uneinheitlich): quellentreu belassen ist vertretbar (§7) — **Entscheid David** vor Vereinheitlichung einholen, nicht eigenmächtig ausgrauen.
+
+---
+
+# 3) NÜTZLICHKEIT / DIFFERENZIERER (Funktionslücken)
+
+- **N1 — Globale Kopf-Suche über Gesetze** (= T5a): `HeaderSuche.tsx` Z.14-16. Grösste Auffindbarkeits-Reibung; Daten+Filter vorhanden.
+- **N2 — Interne §-Verlinkung** (= T5b): `NormText.tsx` ART_INTERN Z.52-57; 4104 tote „§ N" → klickbar via `tokenMap`.
+- **N3 — Kantonsweite Volltext-Suche**: Build-Zeit-Index (minisearch/lunr) pro Kanton, clientseitig, statik-konform (§2); BS als Pilot. Aufwand: gross — nach N1/N2 priorisieren.
+- **N4 — Amtlicher PDF-/Versions-Link je Erlass**: `meta.pdfUrl` wird in `adapter-lexwork.ts:606` bereits gefetcht (`pdf_link_tol`), nur nicht ins register persistiert → ins `register.json` schreiben + Chip „↗ Amtliches PDF" neben „geltende Fassung" (`GesetzLeser.tsx` Z.571). Datenseitig fast gratis. Aufwand: mittel.
+- **N5 — Erlassart-Filter (Gesetz/Verordnung)**: leichter Toggle in `KantonSystematik`-Kopfzeile mit bestehender `istVerordnung()` (`Gesetze.tsx` Z.50); würde BS-Liste ~halbieren. Komfort, nachrangig. Aufwand: klein.
+
+---
+
+# Bestätigt gut (keine Massnahme, als Regressions-Baseline halten)
+
+- **„aufgehoben"-Darstellung** über Absatz/lit./Ziff./Ganz-Artikel konsistent gedämpft, 0 Falsch-Positive (`ArtikelBody.tsx` Z.82-92) — Referenzmuster für andere Kantone.
+- **`mehrspaltig`-Tabellen-Rendering solide** (Ausrichtung, tabular-nums, Tausendertrenner, overflow-x-auto) — das Fundament steht, T3 muss nur Inhalte zuleiten.
+- **Tausendertrenner** (Geld-kontextsensitiv, Jahre ungruppiert), **lit./Ziff.-Ableitung**, **Reader-Kopf Bund/Kanton strukturgleich**, **titelRedundant**. (Nebenbefund ausserhalb BS: Overline labelt Bundes-VO hart als „Bundesgesetz" `GesetzLeser.tsx` Z.561 — real, aber nicht BS-Fokus.)
+- **Suche/Suffix-Anker/Gemeinderecht-Reader** edge-case-fest.
+
+---
+
+# Architekten-Empfehlung zur Reihenfolge
+
+**Welle 1 (ein Tag, sichtbarster Gewinn):** S1+S5+S7+S8+F5+F6 — alles kleine Edits, die die meisten sichtbaren Schäden im Vorbildkanton wegräumen. Dann T4-RE-RUN (F1), da er die grösste Übersichtslücke schliesst und F2/N-Randtitel-Kontext mitzieht.
+**Welle 2:** S2 (kaputte Titel) + T3 (Tarif-Tabellen) — beide mittel, beide schwere/sichtbare Mängel mit gemeinsamer Tabellen-Wurzel.
+**Welle 3:** N1+N2 (Verzahnung/Auffindbarkeit) + N4 (PDF-Link, fast gratis).
+**Welle 4:** N3 (Volltext-Index) als grösserer Differenzierer.
+
+Kritischer Hebel: **T4 ist kein „gross"-Neubau** wie zwei Vorbefunde behaupteten — der Kanton-Struktur-Runner existiert und funktioniert auf BS-LexWork bereits; der Fix ist primär ein Lauf + Coverage-Klärung. Das verschiebt die grösste Übersichtslücke von „teuer/später" nach „früh/billig". Vor jedem Deploy: Topologie-Check (Memory-Lektion) + §9 David-Freigabe.

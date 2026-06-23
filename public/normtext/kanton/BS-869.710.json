@@ -844,18 +844,106 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Betreuungspauschalen für die Leistungen im Bereich Wohnen berechnen sich nach Bedarfsstufe wie folgt: a) · Bedarfsstufe: 0 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 360/12 x 10 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 360/12 x 10 — b) · Bedarfsstufe: 1 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 360/12 x 30 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 360/12 x 30 — c) · Bedarfsstufe: 2 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 360/12 x 50 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 360/12 x 50 — d) · Bedarfsstufe: 3 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 360/12 x 70 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 360/12 x 70 — e) · Bedarfsstufe: 4 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 360/12 x 90 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 360/12 x 90"
+          "text": "Die Betreuungspauschalen für die Leistungen im Bereich Wohnen berechnen sich nach Bedarfsstufe wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Bedarfsstufe",
+              "Institutionsspezifische Betreuungspauschale pro Monat",
+              "Normkosten für personale IFEG-Leistungen pro Monat"
+            ],
+            "zeilen": [
+              [
+                "a)",
+                "0",
+                "TaxpunktInst x 360/12 x 10",
+                "TaxpunktNorm x 360/12 x 10"
+              ],
+              [
+                "b)",
+                "1",
+                "TaxpunktInst x 360/12 x 30",
+                "TaxpunktNorm x 360/12 x 30"
+              ],
+              [
+                "c)",
+                "2",
+                "TaxpunktInst x 360/12 x 50",
+                "TaxpunktNorm x 360/12 x 50"
+              ],
+              [
+                "d)",
+                "3",
+                "TaxpunktInst x 360/12 x 70",
+                "TaxpunktNorm x 360/12 x 70"
+              ],
+              [
+                "e)",
+                "4",
+                "TaxpunktInst x 360/12 x 90",
+                "TaxpunktNorm x 360/12 x 90"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
-          "text": "Die Betreuungspauschalen für die Leistungen in den Bereichen Tagesgestaltung und Arbeit berechnen sich (bei einem Pensum von 100 Prozent) wie folgt: a) · Bedarfsstufe: 0 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 260/12 x 6 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 260/12 x 6 — b) · Bedarfsstufe: 1 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 260/12 x 18 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 260/12 x 18 — c) · Bedarfsstufe: 2 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 260/12 x 30 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 260/12 x 30 — d) · Bedarfsstufe: 3 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 260/12 x 42 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 260/12 x 42 — e) · Bedarfsstufe: 4 · Institutionsspezifische Betreuungspauschale pro Monat: TaxpunktInst x 260/12 x 54 · Normkosten für personale IFEG-Leistungen pro Monat: TaxpunktNorm x 260/12 x 54"
+          "text": "Die Betreuungspauschalen für die Leistungen in den Bereichen Tagesgestaltung und Arbeit berechnen sich (bei einem Pensum von 100 Prozent) wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Bedarfsstufe",
+              "Institutionsspezifische Betreuungspauschale pro Monat",
+              "Normkosten für personale IFEG-Leistungen pro Monat"
+            ],
+            "zeilen": [
+              [
+                "a)",
+                "0",
+                "TaxpunktInst x 260/12 x 6",
+                "TaxpunktNorm x 260/12 x 6"
+              ],
+              [
+                "b)",
+                "1",
+                "TaxpunktInst x 260/12 x 18",
+                "TaxpunktNorm x 260/12 x 18"
+              ],
+              [
+                "c)",
+                "2",
+                "TaxpunktInst x 260/12 x 30",
+                "TaxpunktNorm x 260/12 x 30"
+              ],
+              [
+                "d)",
+                "3",
+                "TaxpunktInst x 260/12 x 42",
+                "TaxpunktNorm x 260/12 x 42"
+              ],
+              [
+                "e)",
+                "4",
+                "TaxpunktInst x 260/12 x 54",
+                "TaxpunktNorm x 260/12 x 54"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/869.710",
       "abgerufen": "2026-06-23",
       "fassungsToken": "7c20703cd2b8dd57539da03bfcacf945",
-      "sha": "0f3141f883331115ebbf476562b7d14e57da02b25850aae72fe53fe591a24f5b"
+      "sha": "355947b8db12e4805709b7bc6d4202549b4b3c9ce410a857105b6f5e68ce25e4"
     },
     {
       "id": "kanton/BS/869.710/art_24",
@@ -940,18 +1028,26 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Objektpauschale für die Leistungen im Bereich Wohnen berechnet sich wie folgt: Institutionsspezifische Objektpauschale pro Monat: (ObjektkostenInst pro Jahr/Anzahl Belegungstage) x 360/12 · Normkosten für nicht personale IFEG-Leistungen pro Monat: ObjektkostenNorm pro Belegungstag x 360/12"
+          "text": "Die Objektpauschale für die Leistungen im Bereich Wohnen berechnet sich wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Institutionsspezifische Objektpauschale pro Monat: (ObjektkostenInst pro Jahr/Anzahl Belegungstage) x 360/12 · Normkosten für nicht personale IFEG-Leistungen pro Monat: ObjektkostenNorm pro Belegungstag x 360/12"
         },
         {
           "absatz": "2",
-          "text": "Die Objektpauschalen für die Leistungen in den Bereichen Tagesgestaltung und Arbeit berechnen sich (bei einem Pensum von 100 Prozent) wie folgt: Institutionsspezifische Objektpauschale pro Monat: (ObjektkostenInst pro Jahr/Anzahl Belegungstage) x 260/12 · Normkosten für nicht personale IFEG-Leistungen pro Monat: ObjektkostenNorm pro Belegungstag x 260/12"
+          "text": "Die Objektpauschalen für die Leistungen in den Bereichen Tagesgestaltung und Arbeit berechnen sich (bei einem Pensum von 100 Prozent) wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Institutionsspezifische Objektpauschale pro Monat: (ObjektkostenInst pro Jahr/Anzahl Belegungstage) x 260/12 · Normkosten für nicht personale IFEG-Leistungen pro Monat: ObjektkostenNorm pro Belegungstag x 260/12"
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/869.710",
       "abgerufen": "2026-06-23",
       "fassungsToken": "7c20703cd2b8dd57539da03bfcacf945",
-      "sha": "c5f3a1f932b45d6007072ff6af36d2c08f9de765607b69df2f1896f6fb473d98"
+      "sha": "dbbfe65d224346d5e01ac355eb5589946cf1b48e6444cbb2866ad2e01302a677"
     },
     {
       "id": "kanton/BS/869.710/art_27",
@@ -1015,7 +1111,11 @@
         },
         {
           "absatz": "3",
-          "text": "Die Stundenansätze für die anderen Leistungstypen institutioneller ambulanter personaler Leistungen ergeben sich durch Multiplikation des Stundenansatzes gemäss Abs. 1 mit den Faktoren aus der nachfolgenden Tabelle:",
+          "text": "Die Stundenansätze für die anderen Leistungstypen institutioneller ambulanter personaler Leistungen ergeben sich durch Multiplikation des Stundenansatzes gemäss Abs. 1 mit den Faktoren aus der nachfolgenden Tabelle:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Leistungskategorie",

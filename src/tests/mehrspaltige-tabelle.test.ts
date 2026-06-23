@@ -310,3 +310,73 @@ describe('§1-Regression NW-265.51: fehlende Zeilentrenner vor Abschnittsübersc
     expect(r!.zeilen[1][r!.kopf.indexOf('Betrag')]).toBe('30.–');
   });
 });
+
+// ─── T3 (BS-Audit 23.6.2026) — POSITIONS-basierte, label-lose Tarif-Tabellen ──
+// StG §50/§131 liefern eine enumeration_tabular mit LEEREN <th>; tabelleZuText
+// erzeugt daraus label-lose ·/—-Zeilen. extrahiereMehrspaltig muss sie
+// positionsbasiert (ohne kopf) lesen, wenn die Zellzahl je Zeile STABIL ist.
+describe('T3 — label-lose positions-basierte Tarif-Tabelle (StG §50/§131)', () => {
+  // Echtes §50-Muster (Tarif A): 3 Spalten, «Über …»-Zeile mit leerer Mittelzelle.
+  const stg50 =
+    "Von Fr. 0 · bis Fr. 250'000: · Fr. 4.50 je Fr. 1'000 — " +
+    "Von Fr. 250'000 · bis Fr. 750'000: · Fr. 6.50 je Fr. 1'000 — " +
+    "Über Fr. 750'000: ·  · Fr. 7.90 je Fr. 1'000";
+
+  it('§50: ohne kopf (label-los), 3 Spalten, leere Mittelzelle erhalten', () => {
+    const r = extrahiereMehrspaltig(stg50);
+    expect(r).not.toBeNull();
+    expect(r!.kopf).toEqual([]); // label-lose positions-Tabelle: keine Kopfzeile
+    expect(r!.zeilen[0]).toEqual(['Von Fr. 0', "bis Fr. 250'000:", "Fr. 4.50 je Fr. 1'000"]);
+    expect(r!.zeilen[2]).toEqual(["Über Fr. 750'000:", '', "Fr. 7.90 je Fr. 1'000"]);
+  });
+
+  // Echtes §131-Muster: 4 Spalten, stabil.
+  const stg131 =
+    "25% · bei einem Empfange · bis zu · CHF 100'000 — " +
+    "50% · bei einem Empfange · bis zu · CHF 200'000 — " +
+    "175% · bei einem Empfange · von über · CHF 3'000'000.";
+
+  it('§131: 4 Spalten, alle Zeilen positionsgetreu', () => {
+    const r = extrahiereMehrspaltig(stg131);
+    expect(r).not.toBeNull();
+    expect(r!.kopf).toEqual([]); // label-lose positions-Tabelle: keine Kopfzeile
+    expect(r!.zeilen[0]).toEqual(['25%', 'bei einem Empfange', 'bis zu', "CHF 100'000"]);
+    expect(r!.zeilen.every((z) => z.length === 4)).toBe(true);
+  });
+
+  // §1-KONSERVATIV: instabile Zellzahl (3,2) → kein Raten → null (Fliesstext bleibt).
+  it('instabile Zellzahl → null (kein normaler Absatz wird zerschnitten)', () => {
+    const r = extrahiereMehrspaltig('a · b · c — d · e');
+    expect(r).toBeNull();
+  });
+
+  // §1-KONSERVATIV: enthält IRGENDEINE Zelle ein «: »-Label → label-basierter Pfad,
+  // positions-Fallback greift NICHT (sonst würde ein Absatz mit einem Streu-Label
+  // positionsbasiert zerschnitten).
+  it('Streu-«Label: …» blockiert den positions-Fallback (null)', () => {
+    const r = extrahiereMehrspaltig('Foo: bar · baz — qux · quux');
+    expect(r).toBeNull();
+  });
+
+  // §1-KONSERVATIV: eine einzige Spalte (kein ·) ist keine Tabelle → null.
+  it('nur ·-loser —-Fliesstext bleibt null', () => {
+    const r = extrahiereMehrspaltig('Erstens etwas — zweitens etwas');
+    expect(r).toBeNull();
+  });
+});
+
+// ─── T3 — buchstaben-suffigierte Positions-Nummern als Tarif-Nr. ──────────────
+// GerGebV §29 nutzt «4.a)»; mit der erweiterten TARIF_NR_RE muss die label-basierte
+// Tabelle (Tarif-Nr. + beschriftete Spalten) auch solche Zeilen aufnehmen.
+describe('T3 — Tarif-Nr. mit Buchstaben-Suffix («4.a)», GerGebV §29)', () => {
+  const ger29 =
+    'Tarif-Nr.: 3. · Gegenstand: Vorladungen und Anzeigen · Gebühren: Fr. 6 — ' +
+    'Tarif-Nr.: 4.a) · Gegenstand: Auskunftsschreiben · Gebühren: Fr. 20 bis Fr. 600';
+
+  it('«4.a)» wird als Tarif-Nr. in Spalte 0 geführt', () => {
+    const r = extrahiereMehrspaltig(ger29);
+    expect(r).not.toBeNull();
+    expect(r!.kopf![0]).toBe('Tarif-Nr.');
+    expect(r!.zeilen[1][0]).toBe('4.a)');
+  });
+});

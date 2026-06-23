@@ -55,7 +55,125 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Anteil der selbst zu tragenden Kosten wird wie folgt festgelegt: a) · Betrag Taxi: Fr. 00.00 - 10.00 · Selbstbehalt Fahrgast: Fr. 7.00 — b) · Betrag Taxi: Fr. 10.05 - 15.00 · Selbstbehalt Fahrgast: Fr. 8.00 — c) · Betrag Taxi: Fr. 15.05 - 20.00 · Selbstbehalt Fahrgast: Fr. 10.00 — d) · Betrag Taxi: Fr. 20.05 - 25.00 · Selbstbehalt Fahrgast: Fr. 11.00 — e) · Betrag Taxi: Fr. 25.05 - 30.00 · Selbstbehalt Fahrgast: Fr. 12.00 — f) · Betrag Taxi: Fr. 30.05 - 35.00 · Selbstbehalt Fahrgast: Fr. 13.00 — g) · Betrag Taxi: Fr. 35.05 - 40.00 · Selbstbehalt Fahrgast: Fr. 14.00 — h) · Betrag Taxi: Fr. 40.05 - 45.00 · Selbstbehalt Fahrgast: Fr. 15.00 — i) · Betrag Taxi: Fr. 45.05 - 50.00 · Selbstbehalt Fahrgast: Fr. 16.00 — j) · Betrag Taxi: Fr. 50.05 - 55.00 · Selbstbehalt Fahrgast: Fr. 17.00 — k) · Betrag Taxi: Fr. 55.05 - 60.00 · Selbstbehalt Fahrgast: Fr. 18.00 — l) · Betrag Taxi: Fr. 60.05 - 65.00 · Selbstbehalt Fahrgast: Fr. 19.00 — m) · Betrag Taxi: Fr. 65.05 - 70.00 · Selbstbehalt Fahrgast: Fr. 20.00 — o) · Betrag Taxi: Fr. 70.05 - 75.00 · Selbstbehalt Fahrgast: Fr. 21.00 — n) · Betrag Taxi: Fr. 75.05 - 80.00 · Selbstbehalt Fahrgast: Fr. 23.00 — p) · Betrag Taxi: Fr. 80.05 - 85.00 · Selbstbehalt Fahrgast: Fr. 25.00 — q) · Betrag Taxi: Fr. 85.05 - 90.00 · Selbstbehalt Fahrgast: Fr. 27.00 — r) · Betrag Taxi: Fr. 90.05 - 95.00 · Selbstbehalt Fahrgast: Fr. 29.00 — s) · Betrag Taxi: Fr. 95.05 - 100.00 · Selbstbehalt Fahrgast: Fr. 32.00 — t) · Betrag Taxi: Fr. 100.05 - 110.00 · Selbstbehalt Fahrgast: Fr. 35.00 — u) · Betrag Taxi: Fr. 110.05 - 120.00 · Selbstbehalt Fahrgast: Fr. 40.00"
+          "text": "Der Anteil der selbst zu tragenden Kosten wird wie folgt festgelegt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Betrag Taxi",
+              "Selbstbehalt Fahrgast"
+            ],
+            "zeilen": [
+              [
+                "a)",
+                "Fr. 00.00 - 10.00",
+                "Fr. 7.00"
+              ],
+              [
+                "b)",
+                "Fr. 10.05 - 15.00",
+                "Fr. 8.00"
+              ],
+              [
+                "c)",
+                "Fr. 15.05 - 20.00",
+                "Fr. 10.00"
+              ],
+              [
+                "d)",
+                "Fr. 20.05 - 25.00",
+                "Fr. 11.00"
+              ],
+              [
+                "e)",
+                "Fr. 25.05 - 30.00",
+                "Fr. 12.00"
+              ],
+              [
+                "f)",
+                "Fr. 30.05 - 35.00",
+                "Fr. 13.00"
+              ],
+              [
+                "g)",
+                "Fr. 35.05 - 40.00",
+                "Fr. 14.00"
+              ],
+              [
+                "h)",
+                "Fr. 40.05 - 45.00",
+                "Fr. 15.00"
+              ],
+              [
+                "i)",
+                "Fr. 45.05 - 50.00",
+                "Fr. 16.00"
+              ],
+              [
+                "j)",
+                "Fr. 50.05 - 55.00",
+                "Fr. 17.00"
+              ],
+              [
+                "k)",
+                "Fr. 55.05 - 60.00",
+                "Fr. 18.00"
+              ],
+              [
+                "l)",
+                "Fr. 60.05 - 65.00",
+                "Fr. 19.00"
+              ],
+              [
+                "m)",
+                "Fr. 65.05 - 70.00",
+                "Fr. 20.00"
+              ],
+              [
+                "o)",
+                "Fr. 70.05 - 75.00",
+                "Fr. 21.00"
+              ],
+              [
+                "n)",
+                "Fr. 75.05 - 80.00",
+                "Fr. 23.00"
+              ],
+              [
+                "p)",
+                "Fr. 80.05 - 85.00",
+                "Fr. 25.00"
+              ],
+              [
+                "q)",
+                "Fr. 85.05 - 90.00",
+                "Fr. 27.00"
+              ],
+              [
+                "r)",
+                "Fr. 90.05 - 95.00",
+                "Fr. 29.00"
+              ],
+              [
+                "s)",
+                "Fr. 95.05 - 100.00",
+                "Fr. 32.00"
+              ],
+              [
+                "t)",
+                "Fr. 100.05 - 110.00",
+                "Fr. 35.00"
+              ],
+              [
+                "u)",
+                "Fr. 110.05 - 120.00",
+                "Fr. 40.00"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -66,7 +184,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/953.940",
       "abgerufen": "2026-06-23",
       "fassungsToken": "900cf2c46b8e95c798b7294137ef0872",
-      "sha": "6ec9dbb5f0a9307cfd6e96e4e63893bbee93f6effe481dd30da53f961983541a"
+      "sha": "ab69fb40bfaff333c4e0bad33dd0e22d9ebf7695082632e37c013bad644de96e"
     }
   ]
 }

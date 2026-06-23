@@ -247,29 +247,36 @@ describe('BUG A2 — Token «1_a» findet Artikelnummer «1a»', () => {
 
 describe('TABELLEN — enumeration_tabular → Stufe 2 mehrspaltig (Task 5)', () => {
   // Task 5 (22.6.2026): reichereMehrspaltig wird in parseSegment aufgerufen und
-  // verschiebt ·/—-Tabellen-Text in block.mehrspaltig (deklarierte fachliche Änderung).
-  // Einleitungssatz bleibt in block.text; Zell-Inhalte verbatim in mehrspaltig.zeilen.
-  it('verschiebt Staffel-Zeilen in mehrspaltig, behält Einleitungssatz in text', () => {
+  // verschiebt ·/—-Tabellen-Text in block.mehrspaltig.
+  // S4/T3 (BS-Audit 23.6.2026, deklarierte fachliche Änderung): die
+  // enumeration_tabular wird NICHT mehr in den Caption-Absatz hineingemischt,
+  // sondern als EIGENER Block emittiert. Dadurch verschmilzt die Caption nicht
+  // mehr mit der ersten Tabellenzelle (kein Phantom-Spalten-Versatz, IWB §3) und
+  // label-lose Tarif-Tabellen (StG §50/§131) werden positionsbasiert lesbar.
+  // Der Caption-Absatz bleibt als vorangehender eigener Block stehen (visuell
+  // identisch: Einleitungszeile über der Tabelle).
+  it('emittiert Caption-Absatz + Tabellen-Block getrennt (S4/T3)', () => {
     const a = extrahiereLexWorkArtikel(LEXWORK_ZG1617_TABELLE_XHTML, '11');
     expect(a).not.toBeNull();
-    expect(a!.bloecke).toHaveLength(1);
-    const b = a!.bloecke[0];
-    // Einleitungssatz bleibt in text.
-    expect(b.text).toContain('beträgt die Entscheidgebühr:');
-    // Staffel-Zeilen sind jetzt in mehrspaltig (nicht mehr in text).
-    expect(b.mehrspaltig).toBeDefined();
-    expect(b.mehrspaltig!.kopf).toEqual([
+    expect(a!.bloecke).toHaveLength(2);
+    // Block 0: der Caption-Absatz (eigener Absatz, KEINE Tabelle).
+    const caption = a!.bloecke[0];
+    expect(caption.text).toContain('beträgt die Entscheidgebühr:');
+    expect(caption.mehrspaltig).toBeUndefined();
+    expect(caption.text).not.toContain('Streitwert in Franken');
+    // Block 1: der reine Tabellen-Block (text leer, Zellen in mehrspaltig).
+    const tab = a!.bloecke[1];
+    expect(tab.text).toBe('');
+    expect(tab.mehrspaltig).toBeDefined();
+    expect(tab.mehrspaltig!.kopf).toEqual([
       'Streitwert in Franken',
       'Gebühr in Franken',
       'jedoch höchstens % des Streitwerts',
     ]);
     // Erste Zeile: bis 1000, von 100 bis 200, leere 3. Spalte
-    expect(b.mehrspaltig!.zeilen[0]).toEqual(['bis 1000', 'von 100 bis 200', '']);
+    expect(tab.mehrspaltig!.zeilen[0]).toEqual(['bis 1000', 'von 100 bis 200', '']);
     // Zweite Zeile: über 1000 bis 3000, von 220 bis 540, 22
-    expect(b.mehrspaltig!.zeilen[1]).toEqual(['über 1000 bis 3000', 'von 220 bis 540', '22']);
-    // Kein Tabellen-Text mehr im text-Feld.
-    expect(b.text).not.toContain('Streitwert in Franken');
-    expect(b.text).not.toContain('bis 1000');
+    expect(tab.mehrspaltig!.zeilen[1]).toEqual(['über 1000 bis 3000', 'von 220 bis 540', '22']);
   });
 });
 

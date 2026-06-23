@@ -118,7 +118,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Es gelten folgende jährliche Mindest- und Höchstmietzinsgrenzen (Werte in Fr.):",
+          "text": "Es gelten folgende jährliche Mindest- und Höchstmietzinsgrenzen (Werte in Fr.):"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Anzahl Zimmer je Wohnung",

@@ -19,7 +19,36 @@
         },
         {
           "absatz": "3",
-          "text": "Für Angehörige von Mitarbeiterinnen und Mitarbeitern, die verpflegt werden und das 20. Altersjahr noch nicht vollendet haben, betragen die Pauschalbeiträge pro Tag: Kinder bis zum 7. Altersjahr · 30 % · Fr. 6.70 — Kinder zwischen 7 und 13 Jahren · 50 % · Fr. 11.15 — Kinder zwischen 14 und 16 Jahren · 70 % · Fr. 15.60 — Kinder zwischen 17 und 20 Jahren · 90 % · Fr. 20.05"
+          "text": "Für Angehörige von Mitarbeiterinnen und Mitarbeitern, die verpflegt werden und das 20. Altersjahr noch nicht vollendet haben, betragen die Pauschalbeiträge pro Tag:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Kinder bis zum 7. Altersjahr",
+                "30 %",
+                "Fr. 6.70"
+              ],
+              [
+                "Kinder zwischen 7 und 13 Jahren",
+                "50 %",
+                "Fr. 11.15"
+              ],
+              [
+                "Kinder zwischen 14 und 16 Jahren",
+                "70 %",
+                "Fr. 15.60"
+              ],
+              [
+                "Kinder zwischen 17 und 20 Jahren",
+                "90 %",
+                "Fr. 20.05"
+              ]
+            ]
+          }
         },
         {
           "absatz": "4",
@@ -30,7 +59,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/163.400",
       "abgerufen": "2026-06-23",
       "fassungsToken": "b2ddc9180e1de9d8fa46f5ea7b0a9322",
-      "sha": "6e66ebfdf77c28071799cab42d94bc9d6311c67e64e3c1d0e53246fcce4aafe1"
+      "sha": "c5d8651be49a2352efaddf53c393b703f68bed37c91ca00b667f537e65f81e6a"
     },
     {
       "id": "kanton/BS/163.400/art_2",

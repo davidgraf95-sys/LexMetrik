@@ -12,14 +12,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La concession comprend l’utilisation des forces hydrauliques du Rhin depuis la frontière badoise-suisse jusqu’à l’embouchure de la Birse et implique l’autorisation de relever sur le dit tronçon le niveau de l’eau, conformément aux dispositions de l’art. 2 ci-dessous, au moyen d’un barrage situé à environ quatre kilomètres en aval de la frontière suisse. La limite supérieure de la région du remous est constituée par une ligne perpendiculaire à l’axe du fleuve, tracée à cinquante mètres en aval du point de jonction, dans le lit du Rhin, des frontières cantonales de B&acirc;le-Ville et B&acirc;le-Campagne."
+          "text": "La concession comprend l’utilisation des forces hydrauliques du Rhin depuis la frontière badoise-suisse jusqu’à l’embouchure de la Birse et implique l’autorisation de relever sur le dit tronçon le niveau de l’eau, conformément aux dispositions de l’art. 2 ci-dessous, au moyen d’un barrage situé à environ quatre kilomètres en aval de la frontière suisse. La limite supérieure de la région du remous est constituée par une ligne perpendiculaire à l’axe du fleuve, tracée à cinquante mètres en aval du point de jonction, dans le lit du Rhin, des frontières cantonales de Bâle-Ville et Bâle-Campagne."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "14a4a25bbeddaaa6e30d1d81a936ed8b256c347e63051e559219363de5b4a240"
+      "sha": "431e7b4b349f9836b15c46caa4e06e804bcd7c673f6cd94c7657501b60799f77"
     },
     {
       "id": "kanton/BS/771.600/art_2",
@@ -32,19 +32,23 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Le niveau de la retenue au barrage sera réglé de façon à maintenir à l’entrée du port de Petit-Huningue un niveau constant à la cote 244,26 m + NN (= 244,65 m; RPN = 373,6) pour tous les débits du Rhin à B&acirc;le (St. Alban) inférieurs ou égaux à 2800 m&sup3;/sec. Pour les débits supérieurs à 2800 m&sup3;/sec, la retenue sera abaissée progressivement de façon à atteindre la cote 242,00 m + NN au barrage pour un débit de 3500 m&sup3;/sec."
+          "text": "Le niveau de la retenue au barrage sera réglé de façon à maintenir à l’entrée du port de Petit-Huningue un niveau constant à la cote 244,26 m + NN (= 244,65 m; RPN = 373,6) pour tous les débits du Rhin à Bâle (St. Alban) inférieurs ou égaux à 2800 m³/sec. Pour les débits supérieurs à 2800 m³/sec, la retenue sera abaissée progressivement de façon à atteindre la cote 242,00 m + NN au barrage pour un débit de 3500 m³/sec."
         },
         {
           "absatz": "2",
-          "text": "A ces conditions correspondent les relations suivantes, données à titre d’indication, entre le débit du Rhin à B&acirc;le et les niveaux correspondants de la retenue au barrage:",
+          "text": "A ces conditions correspondent les relations suivantes, données à titre d’indication, entre le débit du Rhin à Bâle et les niveaux correspondants de la retenue au barrage:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
-              "Débit du Rhin à B&acirc;le (St. Alban)",
+              "Débit du Rhin à Bâle (St. Alban)",
               "Cote du niveau de la retenue au barrage"
             ],
             "zeilen": [
               [
-                "m&sup3;/sec",
+                "m³/sec",
                 "+ NN (m)"
               ],
               [
@@ -111,7 +115,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "89adac1f683aeaf612745d346421ec275afb223e7bef5da8d3bbc19d0ba99f20"
+      "sha": "8564b7de6d534a682efd08706a8652fa6fedcee6e986ed1663543521b21a1e47"
     },
     {
       "id": "kanton/BS/771.600/art_3",
@@ -124,7 +128,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La société concessionnaire devra élire domicile dans le Canton de B&acirc;le-Ville dès l’octroi de la présente concession."
+          "text": "La société concessionnaire devra élire domicile dans le Canton de Bâle-Ville dès l’octroi de la présente concession."
         },
         {
           "absatz": "2",
@@ -135,7 +139,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "c3581866bfb344ba86d95ac8614073174b8668500402e175d36b8ae6f584fea2"
+      "sha": "7a4e8ea64e4f34e2683934f61303d238e01ab690cba516c8d3b1d6f0522f06bd"
     },
     {
       "id": "kanton/BS/771.600/art_4",
@@ -264,14 +268,14 @@
         },
         {
           "absatz": "2",
-          "text": "La société concessionnaire est tenue d’envoyer, en trois exemplaires, au Conseil fédéral et au Canton de B&acirc;le-Ville, ses statuts, de même que son rapport annuel de gestion, son bilan et son compte de profits et pertes."
+          "text": "La société concessionnaire est tenue d’envoyer, en trois exemplaires, au Conseil fédéral et au Canton de Bâle-Ville, ses statuts, de même que son rapport annuel de gestion, son bilan et son compte de profits et pertes."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "b58a4a1c70735c7844b66e41d6bd5e4cb52b3d3337f89e2441d66c11f97020fd"
+      "sha": "e5de37b0bcbc6047e990079d8f7ca8add48ec2bcc748ea882bdae172c6492e56"
     },
     {
       "id": "kanton/BS/771.600/art_9",
@@ -308,14 +312,14 @@
         },
         {
           "absatz": "2",
-          "text": "Comme garantie pour les travaux et charges qui incombent au Canton de B&acirc;le-Ville selon le chapitre III du présent acte, la société concessionnaire fournira, six mois après l’entrée en vigueur de la concession, un cautionnement vis-à-vis de ce Canton de 300'000 (trois cent mille) francs suisses. Ce cautionnement sera constituté à B&acirc;le sous une des formes prévues à l’al. 1 de cet article. Après la mise en service de l’usine ce cautionnement sera réduit à 100'000 (cent mille) francs suisses, qui resteront comme garantie jusqu’à l’expiration du délai de quatre ans prévu au dernier alinéa de l’art. 15 du présent acte."
+          "text": "Comme garantie pour les travaux et charges qui incombent au Canton de Bâle-Ville selon le chapitre III du présent acte, la société concessionnaire fournira, six mois après l’entrée en vigueur de la concession, un cautionnement vis-à-vis de ce Canton de 300'000 (trois cent mille) francs suisses. Ce cautionnement sera constituté à Bâle sous une des formes prévues à l’al. 1 de cet article. Après la mise en service de l’usine ce cautionnement sera réduit à 100'000 (cent mille) francs suisses, qui resteront comme garantie jusqu’à l’expiration du délai de quatre ans prévu au dernier alinéa de l’art. 15 du présent acte."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "9692b2a8866d3a9519ed34bcc75677f445444d6d32797e92dbe61a4af88c8024"
+      "sha": "1708ef93624f464ed09c2cc2df7cdecdbe153a5583bb5640d62400889dce095a"
     },
     {
       "id": "kanton/BS/771.600/art_11",
@@ -328,7 +332,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour l’adaptation du système des égouts de la Ville de B&acirc;le aux conditions nouvelles du Rhin occasionnées par le remous, la société concessionnaire versera au Canton la somme de 2'800'000 (deux millions huit cent mille) francs suisses. Cette somme sera payable en deux annuités de 1'400'000 (un million quatre cent mille) francs suisses chacune, la première quatre, la seconde cinq ans après l’entrée en vigueur de la concession."
+          "text": "Pour l’adaptation du système des égouts de la Ville de Bâle aux conditions nouvelles du Rhin occasionnées par le remous, la société concessionnaire versera au Canton la somme de 2'800'000 (deux millions huit cent mille) francs suisses. Cette somme sera payable en deux annuités de 1'400'000 (un million quatre cent mille) francs suisses chacune, la première quatre, la seconde cinq ans après l’entrée en vigueur de la concession."
         },
         {
           "absatz": "2",
@@ -339,7 +343,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "95da1be69552cf803a5c4421da0d7c11d17263cb23e4daf10c54fa725ee2ed88"
+      "sha": "175554ac876b291627e2a52bd7fe6e8b99663e6463a47a3954208b5f92ee43f2"
     },
     {
       "id": "kanton/BS/771.600/art_12",
@@ -352,14 +356,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour les frais de service, d’entretien et de renouvellement des installations mentionnées à l’art. 11, la société concessionnaire sera redevable, au Canton de B&acirc;le-Ville, de 80'000 (quatre-vingt mille) francs suisses par an pendant toute la durée de la concession à partir de la mise en service de ces installations. Cette somme sera payable d’avance le 1er janvier de chaque année; pour l’année de la mise en service de ces installations au prorata."
+          "text": "Pour les frais de service, d’entretien et de renouvellement des installations mentionnées à l’art. 11, la société concessionnaire sera redevable, au Canton de Bâle-Ville, de 80'000 (quatre-vingt mille) francs suisses par an pendant toute la durée de la concession à partir de la mise en service de ces installations. Cette somme sera payable d’avance le 1er janvier de chaque année; pour l’année de la mise en service de ces installations au prorata."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "3d24db1d574e6161e901d509a1ece08a5a30e3e0a6d47013cf301c2f88f7f9a1"
+      "sha": "a42cd579d46b44fbd0b031b21167dac111c3392d6be24160facd9d2f740781d4"
     },
     {
       "id": "kanton/BS/771.600/art_13",
@@ -372,11 +376,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Le relèvement du niveau de la nappe d’eau souterraine dans les bas quartiers du Petit-B&acirc;le, causé par la retenue, doit être limité de façon à n’avoir aucune influence défavorable sur le régime actuel des eaux souterraines. Cet abaissement ne devra porter atteinte en aucune façon à la qualité de l’eau."
+          "text": "Le relèvement du niveau de la nappe d’eau souterraine dans les bas quartiers du Petit-Bâle, causé par la retenue, doit être limité de façon à n’avoir aucune influence défavorable sur le régime actuel des eaux souterraines. Cet abaissement ne devra porter atteinte en aucune façon à la qualité de l’eau."
         },
         {
           "absatz": "2",
-          "text": "Il est entendu que le Canton de B&acirc;le-Ville exécutera, à ces fins, avant le premier relèvement du plan d’eau, les travaux suivants:"
+          "text": "Il est entendu que le Canton de Bâle-Ville exécutera, à ces fins, avant le premier relèvement du plan d’eau, les travaux suivants:"
         },
         {
           "absatz": "3",
@@ -384,14 +388,14 @@
         },
         {
           "absatz": "4",
-          "text": "Les projets d’exécution des travaux seront arrêtés d’un commun accord entre le Canton de B&acirc;le-Ville et la société concessionnaire. Cette dernière aura le droit de vérifier si les travaux sont exécutés conformément aux dits projets."
+          "text": "Les projets d’exécution des travaux seront arrêtés d’un commun accord entre le Canton de Bâle-Ville et la société concessionnaire. Cette dernière aura le droit de vérifier si les travaux sont exécutés conformément aux dits projets."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "8c5f7262208c02fdb4c50bc37c8c2c2c0113fb3cc21a831b7ed2aec93cc398fb"
+      "sha": "e0f25215927d80ef624befa60c9e89bc1995f62a8aa10342b648984334898008"
     },
     {
       "id": "kanton/BS/771.600/art_14",
@@ -404,14 +408,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour l’exécution des travaux mentionnés à l’art. 13, la société concessionnaire versera au Canton de B&acirc;le-Ville la somme de 1'000'000 (un million) de francs suisses; cette somme sera payable en deux annuités de 500'000 (cinq cent mille) francs suisses chacune, la première quatre, la deuxième cinq ans après l’entrée en vigueur de la concession."
+          "text": "Pour l’exécution des travaux mentionnés à l’art. 13, la société concessionnaire versera au Canton de Bâle-Ville la somme de 1'000'000 (un million) de francs suisses; cette somme sera payable en deux annuités de 500'000 (cinq cent mille) francs suisses chacune, la première quatre, la deuxième cinq ans après l’entrée en vigueur de la concession."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "0a102a1a5793e1236a6ec3a46f8681966054ace701cbaff1e3303962a2277223"
+      "sha": "3dfcc1f0023a4749e6798d56337afe78e3a53c9d5f2a29640c0282e3b35f8bea"
     },
     {
       "id": "kanton/BS/771.600/art_15",
@@ -428,7 +432,7 @@
         },
         {
           "absatz": "2",
-          "text": "Pendant cette période d’essai limitée à deux ans, la société concessionnaire assumera la charge de tous travaux complémentaires reconnus nécessaires. L’étude des travaux à envisager, ainsi que leur exécution, incombera aux autorités compétentes du Canton de B&acirc;le-Ville, qui s’entendront avec la sociéte concessionnaire."
+          "text": "Pendant cette période d’essai limitée à deux ans, la société concessionnaire assumera la charge de tous travaux complémentaires reconnus nécessaires. L’étude des travaux à envisager, ainsi que leur exécution, incombera aux autorités compétentes du Canton de Bâle-Ville, qui s’entendront avec la sociéte concessionnaire."
         },
         {
           "absatz": "3",
@@ -436,14 +440,14 @@
         },
         {
           "absatz": "4",
-          "text": "Le délai de quatre années expiré, tous les risques et périls seront partagés par moitié entre le Canton de B&acirc;le-Ville et la société concessionnaire. Restent toutefois résérvés les art. 4 et 6 du présent acte de concession."
+          "text": "Le délai de quatre années expiré, tous les risques et périls seront partagés par moitié entre le Canton de Bâle-Ville et la société concessionnaire. Restent toutefois résérvés les art. 4 et 6 du présent acte de concession."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "c16c03cc7e219c7e35aca25f76aaa016c782d609b7abe4bda4b75512c2d4deec"
+      "sha": "4f98bfc5c206e8a27431fe617fa5570d024c528efd112d56b7bd0bf207c49504"
     },
     {
       "id": "kanton/BS/771.600/art_16",
@@ -456,7 +460,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour les frais de service, d’entretien et de renouvellement des installations mentionnées aux articles précédents sous B, la société concessionnaire sera redevable, au Canton de B&acirc;le-Ville, de 50'000 (cinquante mille) francs suisses par an pendant toute la durée de la concession à partir de l’achèvement des installations comprises dans le projet. Cette somme sera payable d’avance le 1er janvier de chaque année; pour l’année de l’achèvement de ces installations au prorata."
+          "text": "Pour les frais de service, d’entretien et de renouvellement des installations mentionnées aux articles précédents sous B, la société concessionnaire sera redevable, au Canton de Bâle-Ville, de 50'000 (cinquante mille) francs suisses par an pendant toute la durée de la concession à partir de l’achèvement des installations comprises dans le projet. Cette somme sera payable d’avance le 1er janvier de chaque année; pour l’année de l’achèvement de ces installations au prorata."
         },
         {
           "absatz": "2",
@@ -467,7 +471,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "e7d112cffb4cb51d4686e16a4f22ddba4b4aefabeff830a3ad7676c1a4cfd686"
+      "sha": "1ebf37504bf6b7f888416249ea3a676b286e2a81458ef1fb15cb3d5bd484242d"
     },
     {
       "id": "kanton/BS/771.600/art_17",
@@ -483,14 +487,14 @@
         },
         {
           "absatz": "2",
-          "text": "La société concessionnaire ne pourra actionner ni la Confédération suisse, ni le Canton de B&acirc;le-Ville, ni le Canton de B&acirc;le-Campagne du fait des dég&acirc;ts causés à ses installations, ni de perturbations apportées à ses services ou installations par ces matières liquides ou solides, y compris les eaux d’égouts, eaux souterraines, etc. Demeure réservée la responsabilité civile des tiers envers la société en vertu des lois suisses."
+          "text": "La société concessionnaire ne pourra actionner ni la Confédération suisse, ni le Canton de Bâle-Ville, ni le Canton de Bâle-Campagne du fait des dégâts causés à ses installations, ni de perturbations apportées à ses services ou installations par ces matières liquides ou solides, y compris les eaux d’égouts, eaux souterraines, etc. Demeure réservée la responsabilité civile des tiers envers la société en vertu des lois suisses."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "a15894883f5b62f31777fc31b119858f35746c05941a0382a79b563e940ca8a8"
+      "sha": "6cae15499cba30b7c7b96b3935c8fabe23b86bbbc3852cef4482834924654020"
     },
     {
       "id": "kanton/BS/771.600/art_18",
@@ -502,7 +506,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour l’exécution des travaux nécessaires à la protection des rives formant propriété publique contre les effets du remous, ainsi que pour l’adaptation des installations publiques telles que ports, places d’atterrissage, bains, etc., aux conditions nouvelles, la société concessionnaire payera au Canton de B&acirc;le-Ville la somme de 600'000 (six cent mille) francs suisses, payable en trois annuités égales et consécutives, la première étant versée trois ans après l’entrée en vigueur de la concession."
+          "text": "Pour l’exécution des travaux nécessaires à la protection des rives formant propriété publique contre les effets du remous, ainsi que pour l’adaptation des installations publiques telles que ports, places d’atterrissage, bains, etc., aux conditions nouvelles, la société concessionnaire payera au Canton de Bâle-Ville la somme de 600'000 (six cent mille) francs suisses, payable en trois annuités égales et consécutives, la première étant versée trois ans après l’entrée en vigueur de la concession."
         },
         {
           "absatz": "2",
@@ -517,7 +521,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "f827bfb5a58cd810dc0d477de2eb8b9da75c35895dc4d19bc3f191b4c3bbaacf"
+      "sha": "7d436e193dbf09d8fc2980ce9ca62e7e9ad8ebf7daf3cb0dd457d0540a498a66"
     },
     {
       "id": "kanton/BS/771.600/art_19",
@@ -529,14 +533,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La société concessionnaire reste responsable envers les tiers propriétaires d’immeubles et d’installations en bordure du Rhin des dég&acirc;ts causés par l’effet du remous. Elle aura à s’entendre avec les intéressés sur les modifications à apporter à ces immeubles avant le premier relèvement du plan d’eau."
+          "text": "La société concessionnaire reste responsable envers les tiers propriétaires d’immeubles et d’installations en bordure du Rhin des dégâts causés par l’effet du remous. Elle aura à s’entendre avec les intéressés sur les modifications à apporter à ces immeubles avant le premier relèvement du plan d’eau."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "a3afd6f82364a4390d57fe9e9287ab0ccd403910b33feef0bb6053532dd03a16"
+      "sha": "0825822fd71264a7b2c0cd0711a0171c634c771d74b0b550d9b13c9a2f677a8e"
     },
     {
       "id": "kanton/BS/771.600/art_20",
@@ -548,14 +552,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Le Canton de B&acirc;le-Ville fera son affaire des mesures qu’il jugerait nécessaire de prendre sur territoire suisse pour remédier aux dépôts d’alluvions. Le concessionnaire ne pourra prétendre à aucune indemnité pour les répercussions que ces travaux pourraient entraîner dans le fleuve à l’aval."
+          "text": "Le Canton de Bâle-Ville fera son affaire des mesures qu’il jugerait nécessaire de prendre sur territoire suisse pour remédier aux dépôts d’alluvions. Le concessionnaire ne pourra prétendre à aucune indemnité pour les répercussions que ces travaux pourraient entraîner dans le fleuve à l’aval."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "2eb05731acd60a737d8d3d7dc05793c9da07d263e4cea16e222ef695d66c2b98"
+      "sha": "c43c085a3f0eb668c208230b82f6873bdd895cbe3f73b1ed83770a3a2d422202"
     },
     {
       "id": "kanton/BS/771.600/art_21",
@@ -568,14 +572,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Le Canton de B&acirc;le-Ville fera son affaire des mesures qu’il jugerait nécessaire de prendre sur territoire suisse pour le cas où le remous de l’usine causerait des inconvénients quelconques à la Ville de B&acirc;le au point de vue hygiénique. Le concessionnaire ne pourra prétendre à aucune indemnité pour les répercussions que ces travaux pourraient entraîner dans le fleuve à l’aval."
+          "text": "Le Canton de Bâle-Ville fera son affaire des mesures qu’il jugerait nécessaire de prendre sur territoire suisse pour le cas où le remous de l’usine causerait des inconvénients quelconques à la Ville de Bâle au point de vue hygiénique. Le concessionnaire ne pourra prétendre à aucune indemnité pour les répercussions que ces travaux pourraient entraîner dans le fleuve à l’aval."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "6a20fec0e0f6ea60048a685f60bb4ba5f1f32a0e05fa9e2932964b716b0f833c"
+      "sha": "cb9e7e6ccaf61996eaf9d70e0d9e8df46a2ec03efb0faef223237d3fbe211822"
     },
     {
       "id": "kanton/BS/771.600/art_22",
@@ -588,14 +592,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Au point de vue de l’esthétique, les installations et constructions de la société concessionnaire en territoire suisse devront être irréprochables et sauvegarder l’aspect de la Ville de B&acirc;le."
+          "text": "Au point de vue de l’esthétique, les installations et constructions de la société concessionnaire en territoire suisse devront être irréprochables et sauvegarder l’aspect de la Ville de Bâle."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "d83ee330943bc5bfb502af3ddf026237d3d6ba238a6b2359e11a4721df304f6c"
+      "sha": "546903622196767600f349018d23c1556f03e1d94397ef92d333c518d6b42305"
     },
     {
       "id": "kanton/BS/771.600/art_23",
@@ -608,14 +612,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La société concessionnaire payera au Canton de B&acirc;le-Ville une somme de 30'000 (trente mille) francs suisses au moment de l’entrée en vigueur de la concession."
+          "text": "La société concessionnaire payera au Canton de Bâle-Ville une somme de 30'000 (trente mille) francs suisses au moment de l’entrée en vigueur de la concession."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "25fb2d03f11d1c30cf8939119f9e82b827fa091ce34725b94d31c93f99e44802"
+      "sha": "b9ffe6b8911c8442e013fb9380e1d7017a51896da89e1ff12f94044ef6b2c8a9"
     },
     {
       "id": "kanton/BS/771.600/art_24",
@@ -628,7 +632,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "De plus, la société concessionnaire remboursera à la Confédération suisse, aux Cantons de B&acirc;le-Ville et B&acirc;le-Campagne et aux communes intéressées les frais qui leur auront été occasionnés du fait de la concession pour fourniture de plans et documents, études techniques, mensurations, travaux préparatoires, négociations relatives à la concession, imprimés, reproductions, etc."
+          "text": "De plus, la société concessionnaire remboursera à la Confédération suisse, aux Cantons de Bâle-Ville et Bâle-Campagne et aux communes intéressées les frais qui leur auront été occasionnés du fait de la concession pour fourniture de plans et documents, études techniques, mensurations, travaux préparatoires, négociations relatives à la concession, imprimés, reproductions, etc."
         },
         {
           "absatz": "2",
@@ -639,7 +643,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "460bf0a435fc4b2e2d9ed5ed297a0c2ea979876fa00b4a4dfde2ecaf21b7be9f"
+      "sha": "7af3043c86f076960530be635513cdeeef7abd0812550d8ef8a635f49aab38f4"
     },
     {
       "id": "kanton/BS/771.600/art_25",
@@ -652,7 +656,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Le concessionnaire payera au Canton de B&acirc;le-Ville, pour l’utilisation de la chute correspondant au remous sur territoire suisse, une redevance annuelle."
+          "text": "Le concessionnaire payera au Canton de Bâle-Ville, pour l’utilisation de la chute correspondant au remous sur territoire suisse, une redevance annuelle."
         },
         {
           "absatz": "2",
@@ -664,7 +668,7 @@
         },
         {
           "absatz": "4",
-          "text": "La redevance annuelle sera payée par termes semestriels au Canton de B&acirc;le-Ville, le 1er août pour le premier semestre de l’année courante, et le 1er février pour le second semestre de l’année précédente."
+          "text": "La redevance annuelle sera payée par termes semestriels au Canton de Bâle-Ville, le 1er août pour le premier semestre de l’année courante, et le 1er février pour le second semestre de l’année précédente."
         },
         {
           "absatz": "5",
@@ -675,7 +679,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "ac36b6ff5aed6d44c7594e87774c82adcccbeeb1b4f447336adc4135844e6a4b"
+      "sha": "c623847611d4fa5b7fb2830d8b832dca57190439f309e2abe60134668b2c5fe9"
     },
     {
       "id": "kanton/BS/771.600/art_26",
@@ -692,7 +696,7 @@
         },
         {
           "absatz": "2",
-          "text": "Les autorités fédérales pourront, après avoir entendu le Canton de B&acirc;le-Ville, édicter des prescriptions spéciales au sujet de l’emploi de cette part de force. Celle-ci ne pourra être utilisée hors de Suisse que conformément aux dispositions légales suisses sur l’exportation de l’énergie électrique."
+          "text": "Les autorités fédérales pourront, après avoir entendu le Canton de Bâle-Ville, édicter des prescriptions spéciales au sujet de l’emploi de cette part de force. Celle-ci ne pourra être utilisée hors de Suisse que conformément aux dispositions légales suisses sur l’exportation de l’énergie électrique."
         },
         {
           "absatz": "3",
@@ -707,7 +711,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "025f98cbef3f12b27d22701013e17301ae44dd251b7d27c6b112555e97f47b83"
+      "sha": "6f084e8894e35d4c16eea91dfbab4571e732de785a235cff5305687c74a2cff1"
     },
     {
       "id": "kanton/BS/771.600/art_27",
@@ -720,14 +724,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Outre la part de force mentionnée à l’article précédent, la société concessionnaire ne pourra livrer en Suisse de l’énergie provenant de l’usine de Kembs ou d’ailleurs qu’avec l’autorisation du Conseil fédéral, qui entendra à ce sujet le Canton de B&acirc;le-Ville."
+          "text": "Outre la part de force mentionnée à l’article précédent, la société concessionnaire ne pourra livrer en Suisse de l’énergie provenant de l’usine de Kembs ou d’ailleurs qu’avec l’autorisation du Conseil fédéral, qui entendra à ce sujet le Canton de Bâle-Ville."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "6b8075e96d34c5057c6c5d1936dd055edaba1d944c2d2d2986e5adf711628b1b"
+      "sha": "0cd844e7cbd69ada770dd78a3d69ac58cbe010505ec8f9b69915585b8f9acc7a"
     },
     {
       "id": "kanton/BS/771.600/art_28",
@@ -760,14 +764,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Afin d’éviter des dég&acirc;ts sur le tronçon suisse et dans les installations suisses touchées par le remous, la société concessionnaire devra observer, lors de la construction et de l’exploitation de ses installations, les dispositions ci-après."
+          "text": "Afin d’éviter des dégâts sur le tronçon suisse et dans les installations suisses touchées par le remous, la société concessionnaire devra observer, lors de la construction et de l’exploitation de ses installations, les dispositions ci-après."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "a4573039627e3cc3618b404829970572cbbb6137ef295f358904f11600426850"
+      "sha": "d6b48d0966e3728cd1e9744cd86bcc4c0a8602d48714d3c178ab98dd9767eddf"
     },
     {
       "id": "kanton/BS/771.600/art_30",
@@ -804,7 +808,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La section totale d’écoulement du barrage et du canal devra pouvoir livrer passage sans difficulté, même dans le cas de la fermeture d’une vanne du barrage ou de chômage de l’usine, à un débit maximum de 6'000 m&sup3; par seconde, dont 5'150 pour le barrage et 850 pour le canal. Pour ce débit, il ne devra se produire sur territoire suisse aucune surélévation du niveau du fleuve par rapport à son niveau naturel tel qu’il s’établirait si le barrage et la dérivation n’existaient pas."
+          "text": "La section totale d’écoulement du barrage et du canal devra pouvoir livrer passage sans difficulté, même dans le cas de la fermeture d’une vanne du barrage ou de chômage de l’usine, à un débit maximum de 6'000 m³ par seconde, dont 5'150 pour le barrage et 850 pour le canal. Pour ce débit, il ne devra se produire sur territoire suisse aucune surélévation du niveau du fleuve par rapport à son niveau naturel tel qu’il s’établirait si le barrage et la dérivation n’existaient pas."
         },
         {
           "absatz": "2",
@@ -819,7 +823,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "38e3b20611640b7302f0417ecec1c3f44323d49916fba8aa38463c2ff401468e"
+      "sha": "6f0f424b4e39be3e57c0956eec0b1367fe11a6d84adcc902595468cf86a9284c"
     },
     {
       "id": "kanton/BS/771.600/art_32",
@@ -828,7 +832,7 @@
       "erlass": "Concession de la Confédération Suisse pour l’extension du remous du Rhin sur territoire suisse jusqu’à l’embouchure de la Birse en vue de la construction et de l’exploitation d’ouvrages sur le Rhin près de Kembs destinés à la production de force hydraulique et à la navigation (771.600)",
       "artikel": "32",
       "artikelLabel": "Art. 32",
-      "titel": "B&acirc;timent des machines",
+      "titel": "Bâtiment des machines",
       "bloecke": [
         {
           "absatz": "1",
@@ -920,7 +924,7 @@
         },
         {
           "absatz": "8",
-          "text": "Le service fédéral des eaux établira officiellement avant le relèvement du plan d’eau la relation entre le nouveau limnimètre près de l’embouchure de la Birse et le limnimètre actuel de B&acirc;le «Schifflände»."
+          "text": "Le service fédéral des eaux établira officiellement avant le relèvement du plan d’eau la relation entre le nouveau limnimètre près de l’embouchure de la Birse et le limnimètre actuel de Bâle «Schifflände»."
         },
         {
           "absatz": "9",
@@ -931,7 +935,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "f0f95b85fa63897401921c2692273557f23e7fdf53143b429968fd33c2ff6def"
+      "sha": "c42cf52244c5ab5466d5258f6f44ed460e3a9af888a8b41c5dbc33078cd86064"
     },
     {
       "id": "kanton/BS/771.600/art_35",
@@ -944,11 +948,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "La société concessionnaire a l’obligation expresse de faire passer d’une façon continue par le barrage et le b&acirc;timent des machines le débit naturel total du fleuve."
+          "text": "La société concessionnaire a l’obligation expresse de faire passer d’une façon continue par le barrage et le bâtiment des machines le débit naturel total du fleuve."
         },
         {
           "absatz": "2",
-          "text": "Si des travaux de révision ou de réparation indispensables nécessitent un abaissement passager du niveau de retenue, la société concessionnaire s’entendra préalablement en temps utile avec les autorités de B&acirc;le-Ville sur l’exécution et la date de ces travaux. Pour l’entretien périodique des berges, un abaissement du niveau au barrage de Kembs à la cote 244,00 m + NN pourra avoir lieu, sous réserve d’un préavis écrit de huit jours."
+          "text": "Si des travaux de révision ou de réparation indispensables nécessitent un abaissement passager du niveau de retenue, la société concessionnaire s’entendra préalablement en temps utile avec les autorités de Bâle-Ville sur l’exécution et la date de ces travaux. Pour l’entretien périodique des berges, un abaissement du niveau au barrage de Kembs à la cote 244,00 m + NN pourra avoir lieu, sous réserve d’un préavis écrit de huit jours."
         },
         {
           "absatz": "3",
@@ -959,7 +963,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "5e51ac3a4b3c648926cda7ccec5dc31eef7ded87c9db06b406cc91391359e5d5"
+      "sha": "1551b2af7b5597c6c78559ccee1fb7edef04003d4a7594d3f005577e5fe8e0e3"
     },
     {
       "id": "kanton/BS/771.600/art_36",
@@ -996,14 +1000,14 @@
         },
         {
           "absatz": "2",
-          "text": "Les droits de pêche dans le tronçon suisse demeureront expressément réservés au Canton de B&acirc;le-Ville et aux ayants droit."
+          "text": "Les droits de pêche dans le tronçon suisse demeureront expressément réservés au Canton de Bâle-Ville et aux ayants droit."
         }
       ],
       "stand": "1963-06-30",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/771.600",
       "abgerufen": "2026-06-23",
       "fassungsToken": "433470c1c8a0570fc2909bd9d85c40be",
-      "sha": "1b7684ee81009bf8a8bf3af5b6cc3b98b7f79a0d1624bf8b6f5e85cc9442597a"
+      "sha": "b6dc6c28cfdea0b9de59e38e9e010197f1eb801d4a1b02a16b7247f87480a634"
     },
     {
       "id": "kanton/BS/771.600/art_38",

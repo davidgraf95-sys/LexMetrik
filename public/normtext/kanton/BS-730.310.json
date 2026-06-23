@@ -104,7 +104,7 @@
         },
         {
           "absatz": "3",
-          "text": "Der Flächenbedarf je Arbeitsplatz beträgt 30 m&sup2; für Dienstleistungs- und Bürobetriebe, 60 m&sup2; für Gewerbe- und Fabrikationsbetriebe, 120 m&sup2; für Lagerbetriebe."
+          "text": "Der Flächenbedarf je Arbeitsplatz beträgt 30 m² für Dienstleistungs- und Bürobetriebe, 60 m² für Gewerbe- und Fabrikationsbetriebe, 120 m² für Lagerbetriebe."
         },
         {
           "absatz": "4",
@@ -115,7 +115,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.310",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e7e18d2eef87fcba63b628a9e4f31263",
-      "sha": "9dfe95df61a47f7865f2b3bccf6e6b5e7427a088753a578ba165020c9d382069"
+      "sha": "0b4a9cb49d1595d547dea2ec1891dc73a48fa6aa9438142f209239fcc07fff7d"
     },
     {
       "id": "kanton/BS/730.310/art_5",
@@ -178,10 +178,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Ausgangszahl für Parkplätze wächst degressiv mit der BGF gemäss folgender Tabelle:",
+          "text": "Die Ausgangszahl für Parkplätze wächst degressiv mit der BGF gemäss folgender Tabelle:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
-              "Fläche in m&sup2; BGF",
+              "Fläche in m² BGF",
               "Ausgangszahl für Parkplätze"
             ],
             "zeilen": [
@@ -219,7 +223,7 @@
               ],
               [
                 "Über 50'000",
-                "+ 12 pro 1'000m&sup2;"
+                "+ 12 pro 1'000m²"
               ]
             ]
           }
@@ -241,7 +245,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.310",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e7e18d2eef87fcba63b628a9e4f31263",
-      "sha": "8b223964c90bc6652fddf81bad9b58aab8c62378faa31e0dcaff488d2b0e0811"
+      "sha": "86c184ec590523019b4a152beec6e57d978e6a75bcdaa7eb54d0a6f57bdb3892"
     },
     {
       "id": "kanton/BS/730.310/art_7",
@@ -282,14 +286,14 @@
         },
         {
           "absatz": "2",
-          "text": "Für Wohnungen mit mehr als vier Zimmern oder mehr als 120 m&sup2; BGF kann das Bau- und Verkehrsdepartement zusätzliche Parkplätze bewilligen."
+          "text": "Für Wohnungen mit mehr als vier Zimmern oder mehr als 120 m² BGF kann das Bau- und Verkehrsdepartement zusätzliche Parkplätze bewilligen."
         }
       ],
       "stand": "2022-08-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.310",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e7e18d2eef87fcba63b628a9e4f31263",
-      "sha": "5a57555a9f6993dca2a2d6fa31492f2e21f8b09f75cce5ba441eecc2d39ab806"
+      "sha": "b99c1a717c3930986423523fd6a3845f59d18fd5fe7408d3d4c5e73fd98dfaff"
     },
     {
       "id": "kanton/BS/730.310/art_9",
@@ -527,14 +531,59 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Als spezifische Verkehrspotenziale werden folgende Werte angewendet: Bewohnerinnen und Bewohner · 2.5 Fahrten/PP/Tag — Besucherinnen und Besucher · 2.5 Fahrten/PP/Tag — Beschäftigte · 2.5 Fahrten/PP/Tag — Kundschaft Büro/Praxis/Hotel · 4 Fahrten/PP/Tag — Kundschaft Restaurant · 8 Fahrten/PP/Tag — Kundschaft Messe/Kongress · 2.5 Fahrten/PP/Tag — Kundschaft Verkauf · 10 Fahrten/PP/Tag — Kundschaft Kino · 5 Fahrten/PP/Tag — Kundschaft Theater/Konzert · 2.5 Fahrten/PP/Tag"
+          "text": "Als spezifische Verkehrspotenziale werden folgende Werte angewendet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Bewohnerinnen und Bewohner",
+                "2.5 Fahrten/PP/Tag"
+              ],
+              [
+                "Besucherinnen und Besucher",
+                "2.5 Fahrten/PP/Tag"
+              ],
+              [
+                "Beschäftigte",
+                "2.5 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Büro/Praxis/Hotel",
+                "4 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Restaurant",
+                "8 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Messe/Kongress",
+                "2.5 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Verkauf",
+                "10 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Kino",
+                "5 Fahrten/PP/Tag"
+              ],
+              [
+                "Kundschaft Theater/Konzert",
+                "2.5 Fahrten/PP/Tag"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2022-08-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.310",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e7e18d2eef87fcba63b628a9e4f31263",
-      "sha": "97b75a9d20d5dee7799b7a74fd1c7e0738c20e632d7846653423f482ce79666e"
+      "sha": "d85c16a716bf5daf90a95967db8549d8723aee5488bc65f2075c305a1e3c6d00"
     },
     {
       "id": "kanton/BS/730.310/art_15",

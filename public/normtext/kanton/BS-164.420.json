@@ -138,7 +138,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Es werden folgende Entschädigungen ausgerichtet: Bei mehr als 4000 km bewilligten jährlichen Fahrleistung mit dem Privatfahrzeug wird anstelle einer Kilometerentschädigung eine Pauschale ausgerichtet: Jährlicher Grundbetrag · Fahrzeuge der Kat. A: CHF 1'200 · Fahrzeuge der Kat. B: CHF 1'600 — plus Kilometerentschädigung · Fahrzeuge der Kat. A: CHF –.40 · Fahrzeuge der Kat. B: CHF –.50"
+          "text": "Es werden folgende Entschädigungen ausgerichtet: Bei mehr als 4000 km bewilligten jährlichen Fahrleistung mit dem Privatfahrzeug wird anstelle einer Kilometerentschädigung eine Pauschale ausgerichtet:"
+        },
+        {
+          "absatz": null,
+          "text": "Jährlicher Grundbetrag · Fahrzeuge der Kat. A: CHF 1'200 · Fahrzeuge der Kat. B: CHF 1'600 — plus Kilometerentschädigung · Fahrzeuge der Kat. A: CHF –.40 · Fahrzeuge der Kat. B: CHF –.50"
         },
         {
           "absatz": null,
@@ -153,7 +157,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/164.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3d37c33e9c7785188f5e1987dbd892f2",
-      "sha": "23182639fb0ad6171715246f01489389901e0b47563a46051bbfd462f3ade43a"
+      "sha": "4306f0c03a3b63f2608c41b471a7d457d90a1214d6647e592ccf32e93c3537f7"
     },
     {
       "id": "kanton/BS/164.420/art_6",
@@ -266,7 +270,31 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für Dienstreisen mit der Bahn werden die Kosten auf folgender Basis vergütet: a) · Mitarbeiterinnen und Mitarbeiter der LK 16-28: · 1. Klasse — b) · Mitarbeiterinnen und Mitarbeiter der LK 01-15: · 2. Klasse — c) · Mitarbeiterinnen und Mitarbeiter der LK 01-15 in Begleitung eines bzw. einer Vorgesetzen der Lohnklasse 16-28: · 1. Klasse"
+          "text": "Für Dienstreisen mit der Bahn werden die Kosten auf folgender Basis vergütet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "a)",
+                "Mitarbeiterinnen und Mitarbeiter der LK 16-28:",
+                "1. Klasse"
+              ],
+              [
+                "b)",
+                "Mitarbeiterinnen und Mitarbeiter der LK 01-15:",
+                "2. Klasse"
+              ],
+              [
+                "c)",
+                "Mitarbeiterinnen und Mitarbeiter der LK 01-15 in Begleitung eines bzw. einer Vorgesetzen der Lohnklasse 16-28:",
+                "1. Klasse"
+              ]
+            ]
+          }
         },
         {
           "absatz": "1bis",
@@ -293,7 +321,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/164.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3d37c33e9c7785188f5e1987dbd892f2",
-      "sha": "cc2a843329bccd9606a99fcd60adb32492d8c0985e6367584c8c8c4fab087f21"
+      "sha": "d582a0422aa26615180cba04c971b6f6b973554c1241834e2f8ce19a1c12b17c"
     },
     {
       "id": "kanton/BS/164.420/art_11_a",

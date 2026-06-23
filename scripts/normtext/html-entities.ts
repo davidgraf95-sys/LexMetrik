@@ -50,6 +50,25 @@ const NAMED_ENTITIES: Record<string, string> = {
   '&frac14;': '¼',
   '&frac34;': '¾',
   '&radic;': '√',
+  // BS-Audit 23.6.2026 (T1/S1) — empirisch im Korpus gefundene, bislang
+  // unaufgelöste Entities. ACHTUNG: &ge;/&le; tragen Tarif-/Grenzwert-SCHWELLEN
+  // (BS-772.110 «U &le; 0,15», BS-772.430 «Vorjahresverbrauch &ge;13 MWh») —
+  // unaufgelöst verfälschen sie den Inhalt, nicht nur die Optik.
+  '&sup1;': '¹',
+  '&sup2;': '²',
+  '&sup3;': '³',
+  '&ge;': '≥',
+  '&le;': '≤',
+  '&mu;': 'µ', // BS-781.500 «µg/m²» (Feinstaub-Grenzwert)
+  '&eta;': 'η', // AR-750.11 Nutzungsgrad-Symbol
+  '&plusmn;': '±', // BS-563.210 Toleranzangabe «±10»
+  '&divide;': '÷', // BS-650.510 Formel «H = L ÷ 0…»
+  '&not;': '¬', // RiE 162.110 (Quell-Eigenheit: weiches Trennzeichen als ¬ kodiert)
+  '&reg;': '®', // BS-772.110 «MINERGIE®»
+  '&frasl;': '⁄', // ZG-641.1 Bruchstrich «1⁄2»
+  // Romanische Akzentbuchstaben (FR/IT-Korpus): «Bâle» = Basel auf Französisch.
+  '&acirc;': 'â',
+  '&Acirc;': 'Â',
   // Deutsche Umlaute
   '&auml;': 'ä',
   '&ouml;': 'ö',

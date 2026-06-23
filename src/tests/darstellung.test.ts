@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { gruppiereTausender, gruppiereBetraege } from '../lib/normtext/darstellung';
+import {
+  gruppiereTausender, gruppiereBetraege, normalisiereAbsatzNummer, absatzMarke,
+} from '../lib/normtext/darstellung';
 
 // Stufe-2-D (22.6.2026): Schweizer Tausender-Apostrophe in der Betrag-Spalte
 // der TarifTabelle. Zeichen: U+0027 (gerader Apostroph) — übereinstimmend mit
@@ -126,5 +128,53 @@ describe('gruppiereBetraege (§1: kein Ziffernwert geändert; §3: reine Darstel
 
   it('Leerer String bleibt leer', () => {
     expect(gruppiereBetraege('')).toBe('');
+  });
+});
+
+// S6 (BS-Audit 23.6.2026) — Absatz-Marker vereinheitlichen (§3, reine Darstellung).
+// Reale BS-absatz-Werte: «1.», «10.», «Ziff. 2.1.», «1. II»; nicht-numerische
+// Marker («-», «2-4») dürfen NICHT zu einer Zahl verbogen werden (§7/§1).
+describe('normalisiereAbsatzNummer (S6: schlichte Absatznummer)', () => {
+  it('strippt abschliessenden Punkt: «1.» → «1», «10.» → «10»', () => {
+    expect(normalisiereAbsatzNummer('1.')).toBe('1');
+    expect(normalisiereAbsatzNummer('10.')).toBe('10');
+    expect(normalisiereAbsatzNummer('13.')).toBe('13');
+  });
+
+  it('entfernt «Ziff.»-Präfix + Punkt: «Ziff. 2.1.» → «2.1»', () => {
+    expect(normalisiereAbsatzNummer('Ziff. 2.1.')).toBe('2.1');
+    expect(normalisiereAbsatzNummer('Ziff. 1.1.')).toBe('1.1');
+  });
+
+  it('«1. II» / «1. IIa» → schlichte Absatznummer «1»', () => {
+    expect(normalisiereAbsatzNummer('1. II')).toBe('1');
+    expect(normalisiereAbsatzNummer('1. IIa')).toBe('1');
+    expect(normalisiereAbsatzNummer('1. III')).toBe('1');
+  });
+
+  it('bereits schlichte (hierarchische) Nummer bleibt unverändert', () => {
+    expect(normalisiereAbsatzNummer('1')).toBe('1');
+    expect(normalisiereAbsatzNummer('2.1')).toBe('2.1');
+  });
+
+  it('bis/ter-Suffix-Formen bleiben unverändert (legitime Absatznummer)', () => {
+    expect(normalisiereAbsatzNummer('1bis')).toBe('1bis');
+    expect(normalisiereAbsatzNummer('2ter')).toBe('2ter');
+    expect(normalisiereAbsatzNummer('1quater')).toBe('1quater');
+  });
+
+  it('NICHT-numerische Marker bleiben verbatim (keine erfundene Zahl, §1/§7)', () => {
+    expect(normalisiereAbsatzNummer('-')).toBe('-');
+    expect(normalisiereAbsatzNummer('2-4')).toBe('2-4');
+  });
+
+  it('absatzMarke wendet die Normalisierung an, bis/ter-Leak bleibt intakt', () => {
+    expect(absatzMarke('1.', 'Der Vertrag ist nichtig.'))
+      .toEqual({ marke: '1', rest: 'Der Vertrag ist nichtig.' });
+    expect(absatzMarke('Ziff. 2.1.', 'Etwas.'))
+      .toEqual({ marke: '2.1', rest: 'Etwas.' });
+    // bis-Leak (absatz=1, Text «bis Erfordert …») → weiterhin «1bis».
+    expect(absatzMarke('1', 'bis Erfordert die Erstellung eines Schriftstücks …'))
+      .toEqual({ marke: '1bis', rest: 'Erfordert die Erstellung eines Schriftstücks …' });
   });
 });

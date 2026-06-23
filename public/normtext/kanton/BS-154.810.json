@@ -172,7 +172,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Grundgebühr bemisst sich bei vermögensrechtlichen Streitigkeiten wie folgt. Sie wird innerhalb des angegebenen Rahmens unter Berücksichtigung der tatsächlichen und rechtlichen Komplexität festgesetzt.",
+          "text": "Die Grundgebühr bemisst sich bei vermögensrechtlichen Streitigkeiten wie folgt. Sie wird innerhalb des angegebenen Rahmens unter Berücksichtigung der tatsächlichen und rechtlichen Komplexität festgesetzt."
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Streitwert (Fr.)",
@@ -360,14 +364,127 @@
         },
         {
           "absatz": "2",
-          "text": "Die Grundgebühr beträgt 1 · Verfahren: in Eheschutzverfahren · Gebühr: Fr. 300 bis Fr. 2'000 — 1.1. · Verfahren: in aufwendigen Fällen · Gebühr: bis Fr. 10'000 — 2. · Verfahren: Drittschuldneranweisungen · Gebühr: Fr. 200 bis Fr. 1'000 — 3. · Verfahren: Annäherungs- und Kontaktverbote · Gebühr: Fr. 200 bis Fr. 1'000 — 4. · Verfahren: Berichtigung von Zivilstandsregistereinträgen · Gebühr: Fr. 500 bis Fr. 2'000 — 5. · Verfahren: Verschollenheitssachen · Gebühr: Fr. 500 bis Fr. 2'000 — 6. · Verfahren: Kraftloserklärungen · Gebühr: Fr. 500 bis Fr. 2'000 — 7. · Verfahren: Provisorische Eintragung eines Bauhandwerkerpfandrechts oder eines Pfandrechts für Stockwerkeigentümerbeiträge — 7.1 · Verfahren: bis Fr. 2'000 · Gebühr: Fr. 600 — 7.2 · Verfahren: bis Fr. 10'000 · Gebühr: Fr. 800 — 7.3 · Verfahren: bis Fr. 50'000 · Gebühr: Fr. 1'100 — 7.4 · Verfahren: bis Fr. 200'000 · Gebühr: Fr. 1'900 — 7.5 · Verfahren: bis Fr. 300'000 · Gebühr: Fr. 2'400 — 7.6 · Verfahren: bis Fr. 400'000 · Gebühr: Fr. 2'800 — 7.7 · Verfahren: bis Fr. 500'000 · Gebühr: Fr. 3'200 — 7.8 · Verfahren: darüber · Gebühr: bis Fr. 5'000 — 8. · Verfahren: Gerichtliche Verbote · Gebühr: Fr. 1'000 — 9. · Verfahren: Vollstreckbarerklärung ausländischer Entscheide · Gebühr: Fr. 400 bis Fr. 1'000 — 10. · Verfahren: Verfahren um Rechtsschutz in klaren Fällen · Gebühr: Fr. 200 bis Fr. 5'000 — 11. · Verfahren: Ausweisungsverfahren (Rechtsschutz in klaren Fällen) · Gebühr: Fr. 600"
+          "text": "Die Grundgebühr beträgt"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Verfahren",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "1",
+                "in Eheschutzverfahren",
+                "Fr. 300 bis Fr. 2'000"
+              ],
+              [
+                "1.1.",
+                "in aufwendigen Fällen",
+                "bis Fr. 10'000"
+              ],
+              [
+                "2.",
+                "Drittschuldneranweisungen",
+                "Fr. 200 bis Fr. 1'000"
+              ],
+              [
+                "3.",
+                "Annäherungs- und Kontaktverbote",
+                "Fr. 200 bis Fr. 1'000"
+              ],
+              [
+                "4.",
+                "Berichtigung von Zivilstandsregistereinträgen",
+                "Fr. 500 bis Fr. 2'000"
+              ],
+              [
+                "5.",
+                "Verschollenheitssachen",
+                "Fr. 500 bis Fr. 2'000"
+              ],
+              [
+                "6.",
+                "Kraftloserklärungen",
+                "Fr. 500 bis Fr. 2'000"
+              ],
+              [
+                "7.",
+                "Provisorische Eintragung eines Bauhandwerkerpfandrechts oder eines Pfandrechts für Stockwerkeigentümerbeiträge",
+                ""
+              ],
+              [
+                "7.1",
+                "bis Fr. 2'000",
+                "Fr. 600"
+              ],
+              [
+                "7.2",
+                "bis Fr. 10'000",
+                "Fr. 800"
+              ],
+              [
+                "7.3",
+                "bis Fr. 50'000",
+                "Fr. 1'100"
+              ],
+              [
+                "7.4",
+                "bis Fr. 200'000",
+                "Fr. 1'900"
+              ],
+              [
+                "7.5",
+                "bis Fr. 300'000",
+                "Fr. 2'400"
+              ],
+              [
+                "7.6",
+                "bis Fr. 400'000",
+                "Fr. 2'800"
+              ],
+              [
+                "7.7",
+                "bis Fr. 500'000",
+                "Fr. 3'200"
+              ],
+              [
+                "7.8",
+                "darüber",
+                "bis Fr. 5'000"
+              ],
+              [
+                "8.",
+                "Gerichtliche Verbote",
+                "Fr. 1'000"
+              ],
+              [
+                "9.",
+                "Vollstreckbarerklärung ausländischer Entscheide",
+                "Fr. 400 bis Fr. 1'000"
+              ],
+              [
+                "10.",
+                "Verfahren um Rechtsschutz in klaren Fällen",
+                "Fr. 200 bis Fr. 5'000"
+              ],
+              [
+                "11.",
+                "Ausweisungsverfahren (Rechtsschutz in klaren Fällen)",
+                "Fr. 600"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "6aa6605dae0b9ed521e2be17f40f4e7903f70a39b23171d91bca4d2079f6accd"
+      "sha": "e0e9db96613fe6421e0fff575eff523614328decded1dd3131f9cbd943703e08"
     },
     {
       "id": "kanton/BS/154.810/art_11",
@@ -576,7 +693,65 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für weitere Verrichtungen, Verfügungen und Entscheide werden folgende Gebühren erhoben. 1. · Gegenstand: Entgegennahme und Aufbewahrung von Schutzschriften · Gebühr: Fr. 500 — 2. · Gegenstand: Verwahrungen von Geld, Wertpapieren und Sachen für jedes angefangene Jahr bis auf Fr. 10'000 · Gebühr: 1 % mind. aber Fr. 50 — 2.1. · Gegenstand: vom Mehrbetrag bis auf Fr. 150'000 · Gebühr: ½ % — 2.2. · Gegenstand: vom Mehrbetrag über Fr. 150'000 · Gebühr: ¼ % — 2.3. · Gegenstand: werden besondere Aufbewahrungs- oder Verwaltungsmassnahmen erforderlich, so kann die Gebühr verdoppelt werden. — 2.4. · Gegenstand: Die Hinterlage haftet für Gebühr und Auslagen. — 2.5. · Gegenstand: Hinterlegte Geldsummen ab Fr. 10'000 sind vom dritten Monat an zu dem jeweils bei der Basler Kantonalbank gültigen Kontokorrent-Zinssatz zu verzinsen. — 3. · Gegenstand: Verfügungen und Entscheide in Verfahren betreffend die Schiedsgerichtsbarkeit · Gebühr: Fr. 200 bis Fr. 2'000 — 3.1. · Gegenstand: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 12'000"
+          "text": "Für weitere Verrichtungen, Verfügungen und Entscheide werden folgende Gebühren erhoben."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Gegenstand",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "1.",
+                "Entgegennahme und Aufbewahrung von Schutzschriften",
+                "Fr. 500"
+              ],
+              [
+                "2.",
+                "Verwahrungen von Geld, Wertpapieren und Sachen für jedes angefangene Jahr bis auf Fr. 10'000",
+                "1 % mind. aber Fr. 50"
+              ],
+              [
+                "2.1.",
+                "vom Mehrbetrag bis auf Fr. 150'000",
+                "½ %"
+              ],
+              [
+                "2.2.",
+                "vom Mehrbetrag über Fr. 150'000",
+                "¼ %"
+              ],
+              [
+                "2.3.",
+                "werden besondere Aufbewahrungs- oder Verwaltungsmassnahmen erforderlich, so kann die Gebühr verdoppelt werden.",
+                ""
+              ],
+              [
+                "2.4.",
+                "Die Hinterlage haftet für Gebühr und Auslagen.",
+                ""
+              ],
+              [
+                "2.5.",
+                "Hinterlegte Geldsummen ab Fr. 10'000 sind vom dritten Monat an zu dem jeweils bei der Basler Kantonalbank gültigen Kontokorrent-Zinssatz zu verzinsen.",
+                ""
+              ],
+              [
+                "3.",
+                "Verfügungen und Entscheide in Verfahren betreffend die Schiedsgerichtsbarkeit",
+                "Fr. 200 bis Fr. 2'000"
+              ],
+              [
+                "3.1.",
+                "in aussergewöhnlichen Fällen",
+                "bis Fr. 12'000"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -587,7 +762,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "aadcc54ce40427ffee20a49ba84d9a125ac0a0ed236b118edfa661b69ae8852b"
+      "sha": "3dd19b723b69ac7911fc0f138af24d96509fabe87d6b3e360bafa771cf66e90f"
     },
     {
       "id": "kanton/BS/154.810/art_19",
@@ -600,14 +775,107 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Strafgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben. 1. · Verfahren: Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl · Gebühr: Fr. 100 bis Fr. 2'000 — 1.1. · Verfahren: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 5'000 — 2. · Verfahren: Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden · Gebühr: Fr. 100 bis Fr. 2'000 — 2.1. · Verfahren: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 5'000 — 3.1 · Verfahren: Entscheid-/Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor: — a) · Verfahren: dem Einzelgericht · Gebühr: Fr. 100 bis Fr. 2'500 — b) · Verfahren: dem Dreiergericht · Gebühr: Fr. 150 bis Fr. 5'000 — c) · Verfahren: der Kammer · Gebühr: Fr. 200 bis Fr. 10'000 — 3.2. · Verfahren: In aussergewöhnlichen Fällen von Ziff. 3.1 lit. a-c, bei Zweiteilung der Hauptverhandlung und bei mehrtägigen Verhandlungen · Gebühr: bis Fr. 100'000 — 3.3. · Verfahren: Dieselben Ansätze können Anwendung finden: — a) · Verfahren: bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden; — b) · Verfahren: bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg; — c) · Verfahren: bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung; — d) · Verfahren: bei Beschlüssen über den Vollzug aufgeschobener Strafen; — e) · Verfahren: bei Beschlüssen über die Umwandlung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 des Schweizerischen Strafgesetzbuches vom 21. Dezember 1937 (StGB); — f) · Verfahren: bei selbständigen nachträglichen Entscheiden gemäss Art. 363 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007."
+          "text": "Das Strafgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Verfahren",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "1.",
+                "Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl",
+                "Fr. 100 bis Fr. 2'000"
+              ],
+              [
+                "1.1.",
+                "in aussergewöhnlichen Fällen",
+                "bis Fr. 5'000"
+              ],
+              [
+                "2.",
+                "Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden",
+                "Fr. 100 bis Fr. 2'000"
+              ],
+              [
+                "2.1.",
+                "in aussergewöhnlichen Fällen",
+                "bis Fr. 5'000"
+              ],
+              [
+                "3.1",
+                "Entscheid-/Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor:",
+                ""
+              ],
+              [
+                "a)",
+                "dem Einzelgericht",
+                "Fr. 100 bis Fr. 2'500"
+              ],
+              [
+                "b)",
+                "dem Dreiergericht",
+                "Fr. 150 bis Fr. 5'000"
+              ],
+              [
+                "c)",
+                "der Kammer",
+                "Fr. 200 bis Fr. 10'000"
+              ],
+              [
+                "3.2.",
+                "In aussergewöhnlichen Fällen von Ziff. 3.1 lit. a-c, bei Zweiteilung der Hauptverhandlung und bei mehrtägigen Verhandlungen",
+                "bis Fr. 100'000"
+              ],
+              [
+                "3.3.",
+                "Dieselben Ansätze können Anwendung finden:",
+                ""
+              ],
+              [
+                "a)",
+                "bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden;",
+                ""
+              ],
+              [
+                "b)",
+                "bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg;",
+                ""
+              ],
+              [
+                "c)",
+                "bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung;",
+                ""
+              ],
+              [
+                "d)",
+                "bei Beschlüssen über den Vollzug aufgeschobener Strafen;",
+                ""
+              ],
+              [
+                "e)",
+                "bei Beschlüssen über die Umwandlung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 des Schweizerischen Strafgesetzbuches vom 21. Dezember 1937 (StGB);",
+                ""
+              ],
+              [
+                "f)",
+                "bei selbständigen nachträglichen Entscheiden gemäss Art. 363 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007.",
+                ""
+              ]
+            ]
+          }
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "68412092ec68ee6d1c142c41fe3d1e29c8306ea1367e9a6d2d10a505f6321901"
+      "sha": "bfd709cfd3e4ca2d1d549c6fdbc1c6cef39ea4b76d0fb2379a6ca095842918c8"
     },
     {
       "id": "kanton/BS/154.810/art_20",
@@ -620,14 +888,122 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Das Jugendgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben. 1. · Verfahren: Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl · Gebühr: Fr. 50 bis Fr. 1'000 — 2. · Verfahren: Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.1. · Verfahren: Entscheid- / Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor: — a) · Verfahren: dem Einzelgericht · Gebühr: Fr. 50 bis Fr. 1'000 — b) · Verfahren: dem Dreiergericht · Gebühr: Fr. 50 bis Fr. 5'000 — c) · Verfahren: bei Zirkulationsentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — d) · Verfahren: bei Präsidialentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.2. · Verfahren: Entscheid-/Beschlussgebühr in Vollzugsverfahren sowie in Verfahren gemäss § 20 des Gesetzes über den Vollzug von jugendstrafrechtlichen Sanktionen (Jugendstrafvollzugsgesetzes, JStVG) vom 13. Oktober 2010 durch: — a) · Verfahren: das Einzelgericht · Gebühr: Fr. 50 bis Fr. 1'000 — b) · Verfahren: das Dreiergericht · Gebühr: Fr. 50 bis Fr. 5'000 — c) · Verfahren: bei Zirkulationsentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — d) · Verfahren: bei Präsidialentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.3. · Verfahren: Dieselben Ansätze können Anwendung finden: — a) · Verfahren: bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden; — b) · Verfahren: bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg; — c) · Verfahren: bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung; — d) · Verfahren: bei Beschlüssen über den Vollzug aufgeschobener Strafen; — e) · Verfahren: bei Beschlüssen über die Umwandung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 StGB; — f) · Verfahren: bei selbstständigen nachträglichen Entscheiden gemäss Art. 363 StPO."
+          "text": "Das Jugendgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Verfahren",
+              "Gebühr"
+            ],
+            "zeilen": [
+              [
+                "1.",
+                "Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "2.",
+                "Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "3.1.",
+                "Entscheid- / Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor:",
+                ""
+              ],
+              [
+                "a)",
+                "dem Einzelgericht",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "b)",
+                "dem Dreiergericht",
+                "Fr. 50 bis Fr. 5'000"
+              ],
+              [
+                "c)",
+                "bei Zirkulationsentscheiden",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "d)",
+                "bei Präsidialentscheiden",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "3.2.",
+                "Entscheid-/Beschlussgebühr in Vollzugsverfahren sowie in Verfahren gemäss § 20 des Gesetzes über den Vollzug von jugendstrafrechtlichen Sanktionen (Jugendstrafvollzugsgesetzes, JStVG) vom 13. Oktober 2010 durch:",
+                ""
+              ],
+              [
+                "a)",
+                "das Einzelgericht",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "b)",
+                "das Dreiergericht",
+                "Fr. 50 bis Fr. 5'000"
+              ],
+              [
+                "c)",
+                "bei Zirkulationsentscheiden",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "d)",
+                "bei Präsidialentscheiden",
+                "Fr. 50 bis Fr. 1'000"
+              ],
+              [
+                "3.3.",
+                "Dieselben Ansätze können Anwendung finden:",
+                ""
+              ],
+              [
+                "a)",
+                "bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden;",
+                ""
+              ],
+              [
+                "b)",
+                "bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg;",
+                ""
+              ],
+              [
+                "c)",
+                "bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung;",
+                ""
+              ],
+              [
+                "d)",
+                "bei Beschlüssen über den Vollzug aufgeschobener Strafen;",
+                ""
+              ],
+              [
+                "e)",
+                "bei Beschlüssen über die Umwandung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 StGB;",
+                ""
+              ],
+              [
+                "f)",
+                "bei selbstständigen nachträglichen Entscheiden gemäss Art. 363 StPO.",
+                ""
+              ]
+            ]
+          }
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "2cdd88c2779d46e43b5a16d7fbbfa6c567c5acd44d0052143402c198f3ea3d1a"
+      "sha": "fd120cac5225d763f66c822fb3d3dd93753c2fcebefbb40d8aff1956ebf82c60"
     },
     {
       "id": "kanton/BS/154.810/art_21",
@@ -836,7 +1212,270 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für Verrichtungen des Erbschaftsamtes werden folgende Gebühren erhoben. 1. · Gegenstand: Auskündungen (Rechnungsruf und dergleichen) · Gebühren: Fr. 25 — 2. · Gegenstand: Einschreibung einer Gläubigerin oder eines Gläubigers beim öffentlichen Inventar und bei der amtlichen Liquidation · Gebühren: Fr. 6 — 3. · Gegenstand: Vorladungen und Anzeigen · Gebühren: Fr. 6 — 4.a) · Gegenstand: Auskunfts- und Erkundigungsschreiben, Korrespondenz, Vernehmlassungen, Berichte und Begutachtungen, Abfragen im Internet · Gebühren: Fr. 20 bis Fr. 600 — b) · Gegenstand: Einfache Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen · Gebühren: Fr. 50 bis Fr. 300 — c) · Gegenstand: Komplizierte Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen insbesondere mit Liegenschaften und Verschollenheitsgesuche · Gebühren: Fr. 100 bis Fr. 1'000 — d) · Gegenstand: Ermittlung der Erbinnen und Erben, je halbe Stunde · Gebühren: Fr. 15 bis Fr. 50 — 5. · Gegenstand: Protokoll der Ausschlagerklärungen, Konkursprotokoll · Gebühren: Fr. 20 bis Fr. 120 — 6. · Gegenstand: Publikationen zur Ermittlung der Erbinnen und Erben (Erbenruf) · Gebühren: Fr. 30 bis Fr. 350 — 7. · Gegenstand: Registrierung und Bescheinigung der Hinterlegung einer letztwilligen Verfügung oder eines Ehe- und/oder Erbvertrages bzw. Vermögensvertrages · Gebühren: Fr. 40 bis Fr. 100 — 8. · Gegenstand: Auswechseln einer Verfügung oder von Beilagen sowie Deponierung von weiteren Verfügungen oder Beilagen · Gebühren: Fr. 20 bis Fr. 100 — 9. · Gegenstand: Entgegennahme einer von den Zeuginnen und Zeugen in Schrift verfassten mündlichen letztwilligen Verfügung und der darauf bezüglichen Erklärung der Zeuginnen und Zeugen; Protokollierung einer solchen letztwilligen Verfügung und der Erklärungen der Zeuginnen und Zeugen · Gebühren: Fr. 50 bis Fr. 350 — 10. · Gegenstand: Eröffnung einer letztwilligen Verfügung (inbegriffen Eröffnungsbescheinigung) · Gebühren: Fr. 50 bis Fr. 350 — 11. · Gegenstand: Öffentliche Anzeige der erfolgten Eröffnung einer letztwilligen Verfügung · Gebühren: Fr. 20 bis Fr. 60 — 12. · Gegenstand: Öffnung und Weiterleitung von letztwilligen Verfügungen auswärtiger Erblasserinnen und Erblasser · Gebühren: Fr. 20 bis Fr. 350 — 13. · Gegenstand: Eintragung einer letztwilligen Verfügung in das Testamentenprotokoll · Gebühren: Fr. 8 — 14. · Gegenstand: Abschriften und Auszüge von Inventaren, letztwilligen Verfügungen, Teilungen und Abrechnungen, für die angefangene Seite · Gebühren: Fr. 3 — 15. · Gegenstand: Requisitionen: Auftragserteilung an oder Erledigung für auswärtige Behörden · Gebühren: Fr. 50 bis Fr. 350 — 16. · Gegenstand: Ansetzung von Fristen und Fristverlängerungen. Die Ansetzung einer Frist ist nicht zu berechnen, wenn sie bei einer Massnahme erfolgt, für die ein besonderer Gebührensatz besteht · Gebühren: Fr. 20 bis Fr. 60 — 17. · Gegenstand: Siegelung einer Erbschaft, Anordnung anderweitiger Sicherungsmassnahmen, Entscheidung über Fortführung eines Geschäftes · Gebühren: Fr. 50 bis Fr. 1'200 — 18. · Gegenstand: Inventarisierung und Schätzung in Erb- und Ehegüterrechtssachen: — a) · Gegenstand: für Liegenschaften sowie Schenkungen und Vorempfänge an die gleiche Empfängerin oder den gleichen Empfänger · Gebühren: Fr. 50 bis Fr. 1'200 — b) · Gegenstand: für Einzelinventur von Mobiliar, wo sich ein besonderer Ansatz wegen des Umfanges der Bemühungen rechtfertigt · Gebühren: 1 bis 2 ‰ — c) · Gegenstand: für die übrigen inventierten Aktiven: — ca) · Gegenstand: bis Fr. 100'000 · Gebühren: 3 ‰ — cb) · Gegenstand: von Fr. 100'001 bis Fr. 5'000'000 · Gebühren: 2 ‰ — cc) · Gegenstand: von Fr. 5'000'001 bis Fr. 10'000'000 · Gebühren: 1 ‰ — cd) · Gegenstand: über Fr. 10'000'000 · Gebühren: ½ ‰ höchstens Fr. 30'000 — Gegenstand: Die Gebühren für inventierte Aktiven von mehr als Fr. 5'000'000 verstehen sich für einen durchschnittlichen Aufwand für die Inventarisierung. — Gegenstand: Ist der Aufwand des Erbschaftsamtes gering, so ist die Gebühr um bis zu einem Drittel zu ermässigen; bei einem grossen Aufwand um bis zu einem Drittel zu erhöhen, höchstens aber bis auf Fr. 30'000. — d) · Gegenstand: Güterrechtliche Inventare: — da) · Gegenstand: vom Wert der inventierten Fahrnis und Guthaben bis Fr. 50'000 · Gebühren: 3 ‰ — db) · Gegenstand: vom Mehrbetrag · Gebühren: 2 ‰ — dc) · Gegenstand: pro inventierte Liegenschaft · Gebühren: Fr. 20 bis Fr. 600 — 19. · Gegenstand: Erbschaftsverwaltung und amtliche Verwaltung des Erbteils einer Verschollenen oder eines Verschollenen: — a) · Gegenstand: vom Wert der Aktiven für das Halbjahr Ein angefangenes Halbjahr wird als voll berechnet · Gebühren: 3 ‰ mind. aber Fr. 30 — b) · Gegenstand: Ist mit der Erbschaftsverwaltung eine Liegenschaftsverwaltung verbunden, so bezieht das Amt ausserdem von den Bruttoeinnahmen eine spezielle Gebühr für Liegenschaftsverwaltung in der Höhe von · Gebühren: 5 % — 20. · Gegenstand: Amtliche und dem Erbschaftsamt freiwillig übertragene Liquidationen vom Werte der liquidierten Aktiven · Gebühren: ½ bis 3 % — a) · Gegenstand: Amtliche und dem Erbschaftsamt freiwillig übertragene Teilungen und Vermögens-auseinandersetzungen durch die Zivilgerichtsschreiberei vom Werte der zu teilenden Aktiven · Gebühren: ½ bis 3 % — b) · Gegenstand: Ist das Amt, ohne dass ein Liquidations- und Teilungsauftrag vorliegt, von Beteiligten mit einer speziellen Aufgabe betraut worden, so kann für diese Tätigkeit je nach dem Umfang der Bemühungen des Amtes eine Gebühr vom Werte dieser Aktiven von ½ bis 3 % erhoben werden. — Gegenstand: Bei Rückzug des Auftrages kann für die schon aufgewendete Arbeit eine Gebühr von höchstens drei Viertel der vorgenannten Ansätze erhoben werden. — 21. · Gegenstand: Wird eine Notarin oder ein Notar vom Erbschaftsamt oder von der Zivilgerichtsschreiberei mit einer Inventarisation irgendwelcher Art betraut oder mit einer Erbschaftsverwaltung oder mit einer amtlichen Liquidation, so bezieht sie oder er die in den Ziff. 19–21 erwähnten Gebühren. — Gegenstand: Für Kontrolle ist zu entrichten · Gebühren: Fr. 50 bis Fr. 1'200 — Gegenstand: In ausserordentlichen Fällen kann die Gebühr für die Kontrolltätigkeit bei Erbschaftsverwaltungen oder amtlichen Liquidationen bis auf Fr. 2'000 erhöht werden. — 22. · Gegenstand: Gesetzlich vorgeschriebene Mitwirkung bei einer Teilung: vom Wert des Erbteils · Gebühren: ½ bis 3 % — 23. · Gegenstand: Behandlung eines Gesuchs um Bestellung einer Vertreterin oder eines Vertreters der Erbengemeinschaft · Gebühren: Fr. 100 bis Fr. 1'200 — 24. · Gegenstand: Wo keine Inventurgebühr erhoben wird und keine der vorstehenden Gebühren anwendbar ist, gelten die folgenden Aufwandgebühren pro Stunde: — a) · Gegenstand: Vorsteherin oder Vorsteher · Gebühren: Fr. 150 — b) · Gegenstand: Inventurbeamtin oder Inventurbeamter · Gebühren: Fr. 120 — c) · Gegenstand: Sachbearbeiterin oder Sachbearbeiter · Gebühren: Fr. 100"
+          "text": "Für Verrichtungen des Erbschaftsamtes werden folgende Gebühren erhoben."
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Tarif-Nr.",
+              "Gegenstand",
+              "Gebühren"
+            ],
+            "zeilen": [
+              [
+                "1.",
+                "Auskündungen (Rechnungsruf und dergleichen)",
+                "Fr. 25"
+              ],
+              [
+                "2.",
+                "Einschreibung einer Gläubigerin oder eines Gläubigers beim öffentlichen Inventar und bei der amtlichen Liquidation",
+                "Fr. 6"
+              ],
+              [
+                "3.",
+                "Vorladungen und Anzeigen",
+                "Fr. 6"
+              ],
+              [
+                "4.a)",
+                "Auskunfts- und Erkundigungsschreiben, Korrespondenz, Vernehmlassungen, Berichte und Begutachtungen, Abfragen im Internet",
+                "Fr. 20 bis Fr. 600"
+              ],
+              [
+                "b)",
+                "Einfache Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen",
+                "Fr. 50 bis Fr. 300"
+              ],
+              [
+                "c)",
+                "Komplizierte Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen insbesondere mit Liegenschaften und Verschollenheitsgesuche",
+                "Fr. 100 bis Fr. 1'000"
+              ],
+              [
+                "d)",
+                "Ermittlung der Erbinnen und Erben, je halbe Stunde",
+                "Fr. 15 bis Fr. 50"
+              ],
+              [
+                "5.",
+                "Protokoll der Ausschlagerklärungen, Konkursprotokoll",
+                "Fr. 20 bis Fr. 120"
+              ],
+              [
+                "6.",
+                "Publikationen zur Ermittlung der Erbinnen und Erben (Erbenruf)",
+                "Fr. 30 bis Fr. 350"
+              ],
+              [
+                "7.",
+                "Registrierung und Bescheinigung der Hinterlegung einer letztwilligen Verfügung oder eines Ehe- und/oder Erbvertrages bzw. Vermögensvertrages",
+                "Fr. 40 bis Fr. 100"
+              ],
+              [
+                "8.",
+                "Auswechseln einer Verfügung oder von Beilagen sowie Deponierung von weiteren Verfügungen oder Beilagen",
+                "Fr. 20 bis Fr. 100"
+              ],
+              [
+                "9.",
+                "Entgegennahme einer von den Zeuginnen und Zeugen in Schrift verfassten mündlichen letztwilligen Verfügung und der darauf bezüglichen Erklärung der Zeuginnen und Zeugen; Protokollierung einer solchen letztwilligen Verfügung und der Erklärungen der Zeuginnen und Zeugen",
+                "Fr. 50 bis Fr. 350"
+              ],
+              [
+                "10.",
+                "Eröffnung einer letztwilligen Verfügung (inbegriffen Eröffnungsbescheinigung)",
+                "Fr. 50 bis Fr. 350"
+              ],
+              [
+                "11.",
+                "Öffentliche Anzeige der erfolgten Eröffnung einer letztwilligen Verfügung",
+                "Fr. 20 bis Fr. 60"
+              ],
+              [
+                "12.",
+                "Öffnung und Weiterleitung von letztwilligen Verfügungen auswärtiger Erblasserinnen und Erblasser",
+                "Fr. 20 bis Fr. 350"
+              ],
+              [
+                "13.",
+                "Eintragung einer letztwilligen Verfügung in das Testamentenprotokoll",
+                "Fr. 8"
+              ],
+              [
+                "14.",
+                "Abschriften und Auszüge von Inventaren, letztwilligen Verfügungen, Teilungen und Abrechnungen, für die angefangene Seite",
+                "Fr. 3"
+              ],
+              [
+                "15.",
+                "Requisitionen: Auftragserteilung an oder Erledigung für auswärtige Behörden",
+                "Fr. 50 bis Fr. 350"
+              ],
+              [
+                "16.",
+                "Ansetzung von Fristen und Fristverlängerungen. Die Ansetzung einer Frist ist nicht zu berechnen, wenn sie bei einer Massnahme erfolgt, für die ein besonderer Gebührensatz besteht",
+                "Fr. 20 bis Fr. 60"
+              ],
+              [
+                "17.",
+                "Siegelung einer Erbschaft, Anordnung anderweitiger Sicherungsmassnahmen, Entscheidung über Fortführung eines Geschäftes",
+                "Fr. 50 bis Fr. 1'200"
+              ],
+              [
+                "18.",
+                "Inventarisierung und Schätzung in Erb- und Ehegüterrechtssachen:",
+                ""
+              ],
+              [
+                "a)",
+                "für Liegenschaften sowie Schenkungen und Vorempfänge an die gleiche Empfängerin oder den gleichen Empfänger",
+                "Fr. 50 bis Fr. 1'200"
+              ],
+              [
+                "b)",
+                "für Einzelinventur von Mobiliar, wo sich ein besonderer Ansatz wegen des Umfanges der Bemühungen rechtfertigt",
+                "1 bis 2 ‰"
+              ],
+              [
+                "c)",
+                "für die übrigen inventierten Aktiven:",
+                ""
+              ],
+              [
+                "ca)",
+                "bis Fr. 100'000",
+                "3 ‰"
+              ],
+              [
+                "cb)",
+                "von Fr. 100'001 bis Fr. 5'000'000",
+                "2 ‰"
+              ],
+              [
+                "cc)",
+                "von Fr. 5'000'001 bis Fr. 10'000'000",
+                "1 ‰"
+              ],
+              [
+                "cd)",
+                "über Fr. 10'000'000",
+                "½ ‰ höchstens Fr. 30'000"
+              ],
+              [
+                "",
+                "Die Gebühren für inventierte Aktiven von mehr als Fr. 5'000'000 verstehen sich für einen durchschnittlichen Aufwand für die Inventarisierung.",
+                ""
+              ],
+              [
+                "",
+                "Ist der Aufwand des Erbschaftsamtes gering, so ist die Gebühr um bis zu einem Drittel zu ermässigen; bei einem grossen Aufwand um bis zu einem Drittel zu erhöhen, höchstens aber bis auf Fr. 30'000.",
+                ""
+              ],
+              [
+                "d)",
+                "Güterrechtliche Inventare:",
+                ""
+              ],
+              [
+                "da)",
+                "vom Wert der inventierten Fahrnis und Guthaben bis Fr. 50'000",
+                "3 ‰"
+              ],
+              [
+                "db)",
+                "vom Mehrbetrag",
+                "2 ‰"
+              ],
+              [
+                "dc)",
+                "pro inventierte Liegenschaft",
+                "Fr. 20 bis Fr. 600"
+              ],
+              [
+                "19.",
+                "Erbschaftsverwaltung und amtliche Verwaltung des Erbteils einer Verschollenen oder eines Verschollenen:",
+                ""
+              ],
+              [
+                "a)",
+                "vom Wert der Aktiven für das Halbjahr Ein angefangenes Halbjahr wird als voll berechnet",
+                "3 ‰ mind. aber Fr. 30"
+              ],
+              [
+                "b)",
+                "Ist mit der Erbschaftsverwaltung eine Liegenschaftsverwaltung verbunden, so bezieht das Amt ausserdem von den Bruttoeinnahmen eine spezielle Gebühr für Liegenschaftsverwaltung in der Höhe von",
+                "5 %"
+              ],
+              [
+                "20.",
+                "Amtliche und dem Erbschaftsamt freiwillig übertragene Liquidationen vom Werte der liquidierten Aktiven",
+                "½ bis 3 %"
+              ],
+              [
+                "a)",
+                "Amtliche und dem Erbschaftsamt freiwillig übertragene Teilungen und Vermögens-auseinandersetzungen durch die Zivilgerichtsschreiberei vom Werte der zu teilenden Aktiven",
+                "½ bis 3 %"
+              ],
+              [
+                "b)",
+                "Ist das Amt, ohne dass ein Liquidations- und Teilungsauftrag vorliegt, von Beteiligten mit einer speziellen Aufgabe betraut worden, so kann für diese Tätigkeit je nach dem Umfang der Bemühungen des Amtes eine Gebühr vom Werte dieser Aktiven von ½ bis 3 % erhoben werden.",
+                ""
+              ],
+              [
+                "",
+                "Bei Rückzug des Auftrages kann für die schon aufgewendete Arbeit eine Gebühr von höchstens drei Viertel der vorgenannten Ansätze erhoben werden.",
+                ""
+              ],
+              [
+                "21.",
+                "Wird eine Notarin oder ein Notar vom Erbschaftsamt oder von der Zivilgerichtsschreiberei mit einer Inventarisation irgendwelcher Art betraut oder mit einer Erbschaftsverwaltung oder mit einer amtlichen Liquidation, so bezieht sie oder er die in den Ziff. 19–21 erwähnten Gebühren.",
+                ""
+              ],
+              [
+                "",
+                "Für Kontrolle ist zu entrichten",
+                "Fr. 50 bis Fr. 1'200"
+              ],
+              [
+                "",
+                "In ausserordentlichen Fällen kann die Gebühr für die Kontrolltätigkeit bei Erbschaftsverwaltungen oder amtlichen Liquidationen bis auf Fr. 2'000 erhöht werden.",
+                ""
+              ],
+              [
+                "22.",
+                "Gesetzlich vorgeschriebene Mitwirkung bei einer Teilung: vom Wert des Erbteils",
+                "½ bis 3 %"
+              ],
+              [
+                "23.",
+                "Behandlung eines Gesuchs um Bestellung einer Vertreterin oder eines Vertreters der Erbengemeinschaft",
+                "Fr. 100 bis Fr. 1'200"
+              ],
+              [
+                "24.",
+                "Wo keine Inventurgebühr erhoben wird und keine der vorstehenden Gebühren anwendbar ist, gelten die folgenden Aufwandgebühren pro Stunde:",
+                ""
+              ],
+              [
+                "a)",
+                "Vorsteherin oder Vorsteher",
+                "Fr. 150"
+              ],
+              [
+                "b)",
+                "Inventurbeamtin oder Inventurbeamter",
+                "Fr. 120"
+              ],
+              [
+                "c)",
+                "Sachbearbeiterin oder Sachbearbeiter",
+                "Fr. 100"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -855,7 +1494,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "7164f251a6e54110a2d4c671326cdbb4e57df1192098e61eeecbe65c068663c7"
+      "sha": "8f6b7ed62e9663e4340f40a969ceb31c98ed160a0d347c127bb91eda8cb7c3f7"
     },
     {
       "id": "kanton/BS/154.810/art_30",

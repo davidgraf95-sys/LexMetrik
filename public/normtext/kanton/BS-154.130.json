@@ -11,14 +11,47 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Zum Zweck der Aufstellung des Arbeitsgerichts werden folgende Berufsgruppen gebildet: Gruppe 1 · Bau, Immobilien, Reinigung, Gewerbe und Industrie (soweit nicht anderweitig eingeteilt) — Gruppe 2 · Gastgewerbe — Gruppe 3 · Handel, Verwaltung, Verkauf, Elektronische Datenverarbeitung (EDV), Chemische Industrie — Gruppe 4 · Transport, Autogewerbe — Gruppe 5 · Gesundheit und Erziehung — Gruppe 6 · Medien, Theater, Druck und Papier"
+          "text": "Zum Zweck der Aufstellung des Arbeitsgerichts werden folgende Berufsgruppen gebildet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Gruppe 1",
+                "Bau, Immobilien, Reinigung, Gewerbe und Industrie (soweit nicht anderweitig eingeteilt)"
+              ],
+              [
+                "Gruppe 2",
+                "Gastgewerbe"
+              ],
+              [
+                "Gruppe 3",
+                "Handel, Verwaltung, Verkauf, Elektronische Datenverarbeitung (EDV), Chemische Industrie"
+              ],
+              [
+                "Gruppe 4",
+                "Transport, Autogewerbe"
+              ],
+              [
+                "Gruppe 5",
+                "Gesundheit und Erziehung"
+              ],
+              [
+                "Gruppe 6",
+                "Medien, Theater, Druck und Papier"
+              ]
+            ]
+          }
         }
       ],
       "stand": "2016-07-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.130",
       "abgerufen": "2026-06-23",
       "fassungsToken": "8e14e9e182975bf93213edc21e6bc01a",
-      "sha": "5ae80b42e7ae44b182d650ffe50673dc096bebac792dbed729ce8114e42e596f"
+      "sha": "ab0f0c38fabfa6a30f1d40077567eed8b19b90d07f129c2ae7d1de848412bdc1"
     },
     {
       "id": "kanton/BS/154.130/art_2",

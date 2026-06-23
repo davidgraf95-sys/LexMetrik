@@ -24,18 +24,18 @@
         },
         {
           "absatz": "4",
-          "text": "Die Verordnung ist vollständig anzuwenden bei Neubauten mit weniger als 4'000 m&sup2; Bruttogeschossfläche sowie bei allen wesentlichen baulichen Änderungen oder Nutzungsänderungen, die einer Baubewilligung bedürfen. Sie gilt nicht für Abstellplätze auf Allmend."
+          "text": "Die Verordnung ist vollständig anzuwenden bei Neubauten mit weniger als 4'000 m² Bruttogeschossfläche sowie bei allen wesentlichen baulichen Änderungen oder Nutzungsänderungen, die einer Baubewilligung bedürfen. Sie gilt nicht für Abstellplätze auf Allmend."
         },
         {
           "absatz": "5",
-          "text": "Für Neubauten mit mehr als 4'000 m&sup2; Bruttogeschossfläche sind die §§ 5-7 anzuwenden."
+          "text": "Für Neubauten mit mehr als 4'000 m² Bruttogeschossfläche sind die §§ 5-7 anzuwenden."
         }
       ],
       "stand": "2017-01-29",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.320",
       "abgerufen": "2026-06-23",
       "fassungsToken": "80079ac2767c4316a617b33741c4a06a",
-      "sha": "5cd92e1e2ed94dbc8a4c10664ae86c92aded59ecb37c8ea56620ffe510c67810"
+      "sha": "7c3f2bf90206b27a781829709ce9d6e6ebb5a91f5e48156eac9156df7d321284"
     },
     {
       "id": "kanton/BS/730.320/art_2",
@@ -52,56 +52,64 @@
         },
         {
           "absatz": "2",
-          "text": "Pro folgende Bruttogeschossflächen (BGF) ist mindestens ein Abstellplatz für das Kurzzeitparkieren erforderlich:",
+          "text": "Pro folgende Bruttogeschossflächen (BGF) ist mindestens ein Abstellplatz für das Kurzzeitparkieren erforderlich:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Nutzungsart",
-              "1 Abstellplatz pro m&sup2; BGF"
+              "1 Abstellplatz pro m² BGF"
             ],
             "zeilen": [
               [
                 "Verkauf des täglichen Bedarfs",
-                "50 m&sup2;"
+                "50 m²"
               ],
               [
                 "kundschaftsintensive Dienstleistungen und Gastronomie",
-                "75 m&sup2;"
+                "75 m²"
               ],
               [
                 "Sonstiger Verkauf",
-                "200 m&sup2;"
+                "200 m²"
               ],
               [
                 "Sonstige Dienstleistung",
-                "400 m&sup2;"
+                "400 m²"
               ],
               [
                 "Gewerbe und Industrie",
-                "1'000 m&sup2;"
+                "1'000 m²"
               ]
             ]
           }
         },
         {
           "absatz": "3",
-          "text": "Pro folgende Bruttogeschossflächen (BGF) ist mindestens ein Abstellplatz für das Langzeitparkieren erforderlich:",
+          "text": "Pro folgende Bruttogeschossflächen (BGF) ist mindestens ein Abstellplatz für das Langzeitparkieren erforderlich:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Nutzungsart",
-              "1 Abstellplatz pro m&sup2; BGF"
+              "1 Abstellplatz pro m² BGF"
             ],
             "zeilen": [
               [
                 "Dienstleistung und Gastronomie",
-                "100 m&sup2;"
+                "100 m²"
               ],
               [
                 "Verkauf",
-                "150 m&sup2;"
+                "150 m²"
               ],
               [
                 "Gewerbe und Industrie",
-                "250 m&sup2;"
+                "250 m²"
               ]
             ]
           }
@@ -111,7 +119,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/730.320",
       "abgerufen": "2026-06-23",
       "fassungsToken": "80079ac2767c4316a617b33741c4a06a",
-      "sha": "e8f258070dc7dfd521fd0cf5b1ff2723146b377fa1150a489288ea5e0840c1e8"
+      "sha": "c4532ec8b94820b38e3e1f922268b8a638fe393bec6d43e0482df5f342660131"
     },
     {
       "id": "kanton/BS/730.320/art_3",

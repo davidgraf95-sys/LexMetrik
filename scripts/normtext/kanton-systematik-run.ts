@@ -75,6 +75,15 @@ async function holeSystematik(host: string): Promise<KantonSystematik> {
       .map((ch) => ch.systematic_category)
       .filter((cc): cc is NonNullable<typeof cc> => !!cc?.systematic_number && !!cc?.name)
       .map((cc) => ({ nummer: String(cc.systematic_number), name: String(cc.name).trim() }));
+    // S8 (BS-Audit 23.6.2026, §7-Verdikt): der Sachgebiets-Name wird VERBATIM aus
+    // der amtlichen clex-Quelle übernommen (nur getrimmt) — KEIN Trenner wird
+    // fabriziert. Befund (verifiziert 23.6.2026 gegen
+    // GET https://www.gesetzessammlung.bs.ch/api/de/systematic_categories): das
+    // BS-Top-Sachgebiet «4 Erziehung Wissenschafts- und Kulturpflege» kommt in der
+    // Quelle OHNE «·»-Trenner, während die übrigen Roots (1/2/5/6/7) ihn führen.
+    // Das ist eine reine Quell-Eigenheit (clex-Daten-Inkonsistenz), kein Lesefehler
+    // — ein hier eingefügter «·» wäre eine zweite Wahrheit (§5/§7). Darum belassen
+    // und dokumentiert; eine Korrektur müsste bei der amtlichen Stelle erfolgen.
     roots.push({ nummer, name: String(c.name).trim(), kinder });
     const schluessel = systematikSchluessel(nummer);
     if (schluessel) index[schluessel] = [nummer, ''];

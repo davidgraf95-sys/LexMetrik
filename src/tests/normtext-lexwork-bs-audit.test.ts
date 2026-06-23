@@ -19,6 +19,10 @@ import {
   LEXWORK_BS_834410_S8A_XHTML,
   LEXWORK_BS_640100_S35_XHTML,
   LEXWORK_BS_832710_S14_XHTML,
+  LEXWORK_BS_640100_S50_XHTML,
+  LEXWORK_BS_640100_S131_XHTML,
+  LEXWORK_BS_772430_S3_XHTML,
+  LEXWORK_BS_154810_S29_XHTML,
 } from './fixtures/lexwork-bs-audit';
 
 describe('S1 — aufgehobene, umnummerierte Artikel werden NICHT mehr verschluckt', () => {
@@ -144,5 +148,71 @@ describe('S9 — Volltitel statt degradiertes «KÜRZEL (SR-Nr.)»', () => {
 
   it('fehlender Titel → Abkürzung als Notbehelf (keine leere Bezeichnung)', () => {
     expect(erlassBezeichnung('', 'XYZ', '999.9')).toBe('XYZ (999.9)');
+  });
+});
+
+// ─── T3/S4 — Tarif-Tabellen aus enumeration_tabular sauber rendern ──────────
+describe('T3 — label-lose Tarif-Tabellen positionsbasiert (StG §50/§131)', () => {
+  it('§50: 3-spaltige Tabelle, Caption als EIGENER Block, leere Mittelzelle erhalten', () => {
+    const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_640100_S50_XHTML);
+    const b = artikel['50'].bloecke;
+    // Block 0: Caption-Absatz (eigener Block, KEINE Tabelle) — kein Phantom-Gluing.
+    expect(b[0].absatz).toBe('1');
+    expect(b[0].text).toContain('nach folgendem Tarif (Tarif A) berechnet:');
+    expect(b[0].mehrspaltig).toBeUndefined();
+    // Block 1: reine positions-basierte Tabelle (kein kopf, label-los).
+    expect(b[1].mehrspaltig).toBeDefined();
+    expect(b[1].mehrspaltig!.kopf).toEqual([]); // label-los: keine Kopfzeile
+    expect(b[1].mehrspaltig!.zeilen[0]).toEqual([
+      'Von Fr. 0', "bis Fr. 250'000:", "Fr. 4.50 je Fr. 1'000",
+    ]);
+    // «Über …»-Zeile: leere Mittelzelle bleibt positionsgetreu erhalten (Spalte 1 = '').
+    expect(b[1].mehrspaltig!.zeilen[2]).toEqual([
+      "Über Fr. 750'000:", '', "Fr. 7.90 je Fr. 1'000",
+    ]);
+  });
+
+  it('§131: 4-spaltige Zuschlags-Tabelle, alle Zeilen positionsgetreu', () => {
+    const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_640100_S131_XHTML);
+    const b = artikel['131'].bloecke;
+    const tab = b.find((x) => x.mehrspaltig)!;
+    expect(tab.mehrspaltig!.kopf).toEqual([]); // label-los: keine Kopfzeile
+    expect(tab.mehrspaltig!.zeilen[0]).toEqual([
+      '25%', 'bei einem Empfange', 'bis zu', "CHF 100'000",
+    ]);
+    // Jede Zeile hat exakt 4 Spalten (STABIL) — sonst wäre der Block §1-konservativ
+    // Fliesstext geblieben.
+    expect(tab.mehrspaltig!.zeilen.every((z) => z.length === 4)).toBe(true);
+  });
+});
+
+describe('S4 — IWB §3: Tarif-Nr. in Spalte 0, keine Phantom-Spalte', () => {
+  it('Caption getrennt, Tarif-Nr. in Spalte 0, Schwellen-Entities aufgelöst', () => {
+    const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_772430_S3_XHTML);
+    const b = artikel['3'].bloecke;
+    // Caption als eigener Block (nicht in die Tabelle gemischt).
+    expect(b[0].text).toContain('unterscheidet zwischen folgenden Kundensegmenten');
+    expect(b[0].mehrspaltig).toBeUndefined();
+    const tab = b.find((x) => x.mehrspaltig)!;
+    // Kopf: leere erste <th> → «Tarif-Nr.» in Spalte 0; Caption ist KEINE Spalte.
+    expect(tab.mehrspaltig!.kopf).toEqual(['Tarif-Nr.', 'Segment', 'Zuordnungskriterium']);
+    expect(tab.mehrspaltig!.zeilen[0][0]).toBe('1'); // Tarif-Nr. korrekt in Spalte 0
+    expect(tab.mehrspaltig!.zeilen[1][0]).toBe('2'); // KEIN Versatz mehr
+    // T1: &ge;/&lt; sind inhaltliche Schwellen — müssen aufgelöst sein.
+    expect(tab.mehrspaltig!.zeilen[1][2]).toContain('≥13 MWh');
+    expect(tab.mehrspaltig!.zeilen[1][2]).toContain('<50 MWh');
+    expect(tab.mehrspaltig!.zeilen[1][2]).not.toContain('&ge;');
+  });
+});
+
+describe('T3 — buchstaben-suffigierte Positions-Nr. «4.a)» (GerGebV §29)', () => {
+  it('«4.a)» wird als Tarif-Nr. in Spalte 0 erkannt (nicht als Wert verworfen)', () => {
+    const { artikel } = extrahiereAlleLexWorkArtikel(LEXWORK_BS_154810_S29_XHTML);
+    const tab = artikel['29'].bloecke.find((x) => x.mehrspaltig)!;
+    expect(tab.mehrspaltig!.kopf).toEqual(['Tarif-Nr.', 'Gegenstand', 'Gebühren']);
+    const spalte0 = tab.mehrspaltig!.zeilen.map((z) => z[0]);
+    expect(spalte0).toContain('4.a)');
+    // Reihenfolge der Positions-Nrn. bleibt erhalten.
+    expect(spalte0.slice(0, 4)).toEqual(['1.', '2.', '3.', '4.a)']);
   });
 });

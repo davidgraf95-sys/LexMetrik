@@ -204,7 +204,7 @@
             },
             {
               "marke": "m",
-              "text": "«Beheizte Freiluftbäder»: Wasserbecken ausserhalb von geschlossenen Räumen mit einem Inhalt von mehr als 8m&sup3;."
+              "text": "«Beheizte Freiluftbäder»: Wasserbecken ausserhalb von geschlossenen Räumen mit einem Inhalt von mehr als 8m³."
             }
           ]
         }
@@ -213,7 +213,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "43729800f98270f83eebbec1114d530e8a973b28b73bb6d403c5991a07277124"
+      "sha": "f467d41bb7dc2718e83cf09a5f83bb1f71cd6385b91df2e8c77fbb94f2a16fd8"
     },
     {
       "id": "kanton/BS/772.110/art_5",
@@ -358,18 +358,18 @@
         },
         {
           "absatz": "5",
-          "text": "Unabhängig vom gewählten Verfahren darf in Bauten mit neuen Flächenheizungen (Boden- und Deckenheizungen), für welche die verbrauchsabhängige Heizkostenabrechnung vorgeschrieben ist, der U-Wert in den Zwischendecken höchstens 0,7 W/m&sup2;K betragen."
+          "text": "Unabhängig vom gewählten Verfahren darf in Bauten mit neuen Flächenheizungen (Boden- und Deckenheizungen), für welche die verbrauchsabhängige Heizkostenabrechnung vorgeschrieben ist, der U-Wert in den Zwischendecken höchstens 0,7 W/m²K betragen."
         },
         {
           "absatz": "6",
-          "text": "Fassadenteile, welche zum Verkauf von Waren temporär geöffnet werden können, dürfen eine maximale Grösse von 2 m&sup2; aufweisen."
+          "text": "Fassadenteile, welche zum Verkauf von Waren temporär geöffnet werden können, dürfen eine maximale Grösse von 2 m² aufweisen."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "b759240501ee04a7e63f47c04ab4222846a058e3abbe46b77e5dc512ea477f66"
+      "sha": "2fe7d09114b9641c68d495923714d58d59c8470623a6bf8a707773853a7fb9b8"
     },
     {
       "id": "kanton/BS/772.110/art_10",
@@ -466,7 +466,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei Kühlräumen, die auf weniger als 8°C gekühlt werden, darf der mittlere Wärmezufluss durch die umschliessenden Bauteile pro Temperaturzone 5 W/m&sup2; nicht überschreiten. Für die entsprechende Berechnung ist von der Auslegungstemperatur des Kühlraums einerseits und den folgenden Umgebungstemperaturen andererseits auszugehen:",
+          "text": "Bei Kühlräumen, die auf weniger als 8°C gekühlt werden, darf der mittlere Wärmezufluss durch die umschliessenden Bauteile pro Temperaturzone 5 W/m² nicht überschreiten. Für die entsprechende Berechnung ist von der Auslegungstemperatur des Kühlraums einerseits und den folgenden Umgebungstemperaturen andererseits auszugehen:",
           "items": [
             {
               "marke": "a",
@@ -484,14 +484,14 @@
         },
         {
           "absatz": "2",
-          "text": "Für Kühlräume mit weniger als 30 m&sup3; Nutzvolumen sind die Anforderungen auch erfüllt, wenn die umschliessenden Bauteile einen mittleren U-Wert von U &le; 0,15 W/m&sup2;K einhalten."
+          "text": "Für Kühlräume mit weniger als 30 m³ Nutzvolumen sind die Anforderungen auch erfüllt, wenn die umschliessenden Bauteile einen mittleren U-Wert von U ≤ 0,15 W/m²K einhalten."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "ec7c43f078f5791e2aa6e337273d0e762afffb089820c965bd4f954d74660d89"
+      "sha": "8f6ab444a798f17612e8ac387e7134525d07b2892af6f9dfd75759cb9ffbf39b"
     },
     {
       "id": "kanton/BS/772.110/art_14",
@@ -585,7 +585,7 @@
         },
         {
           "absatz": "3",
-          "text": "Von den Anforderungen gemäss Abs. 1 befreit sind Erweiterungen von bestehenden Gebäuden, wenn die neu geschaffene Energiebezugsfläche weniger als 200 m&sup2; beträgt, oder maximal 20 Prozent der Energiebezugsfläche des bestehenden Gebäudeteiles und nicht mehr als 1'000 m&sup2; beträgt."
+          "text": "Von den Anforderungen gemäss Abs. 1 befreit sind Erweiterungen von bestehenden Gebäuden, wenn die neu geschaffene Energiebezugsfläche weniger als 200 m² beträgt, oder maximal 20 Prozent der Energiebezugsfläche des bestehenden Gebäudeteiles und nicht mehr als 1'000 m² beträgt."
         },
         {
           "absatz": "4",
@@ -608,7 +608,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "f2e43548e3dd1b280e6f610673d17d39a4401745e118d7d6a3eb1ff7676b931c"
+      "sha": "398a99d16352f6f2a2fbbface1d3db3aeb6e37975e4f6a058c3e5567a3abcd9f"
     },
     {
       "id": "kanton/BS/772.110/art_17",
@@ -624,11 +624,11 @@
         },
         {
           "absatz": "2",
-          "text": "Die Leistung der im, auf oder am Gebäude installierten Elektrizitätserzeugungsanlage bei Neubauten muss mindestens 10 W pro m&sup2; Energiebezugsfläche betragen, wobei nie 30 kW oder mehr verlangt werden."
+          "text": "Die Leistung der im, auf oder am Gebäude installierten Elektrizitätserzeugungsanlage bei Neubauten muss mindestens 10 W pro m² Energiebezugsfläche betragen, wobei nie 30 kW oder mehr verlangt werden."
         },
         {
           "absatz": "3",
-          "text": "Von den Anforderungen gemäss Abs. 2 befreit sind Neubauten und Erweiterungen von bestehenden Gebäuden, wenn die neu geschaffene Energiebezugsfläche weniger als 200 m&sup2; beträgt, oder maximal 20 Prozent der Energiebezugsfläche des bestehenden Gebäudeteiles und nicht mehr als 1'000 m&sup2; beträgt."
+          "text": "Von den Anforderungen gemäss Abs. 2 befreit sind Neubauten und Erweiterungen von bestehenden Gebäuden, wenn die neu geschaffene Energiebezugsfläche weniger als 200 m² beträgt, oder maximal 20 Prozent der Energiebezugsfläche des bestehenden Gebäudeteiles und nicht mehr als 1'000 m² beträgt."
         },
         {
           "absatz": "4",
@@ -647,7 +647,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "d2a6eb727a5365ac14604b1772acfea49b8095e0943776bbc6ce3cd0da11a376"
+      "sha": "58eff77d4666149205c53c7d0eeca312cb0644b3da6da9b5dc29a1e982a99ff3"
     },
     {
       "id": "kanton/BS/772.110/art_18",
@@ -692,7 +692,7 @@
             },
             {
               "marke": "b",
-              "text": "Erbringung eines MINERGIE&reg;-Zertifikats;"
+              "text": "Erbringung eines MINERGIE®-Zertifikats;"
             },
             {
               "marke": "c",
@@ -739,7 +739,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "90691711f91b00dff4cfe7ac4cd6996f04dc322c651dea3386145d257d0e3018"
+      "sha": "6a8684ccafcfaa7cd2bad056c98f195054057d26bd1e90eb3a1d73773c7bad3a"
     },
     {
       "id": "kanton/BS/772.110/art_20",
@@ -752,7 +752,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Neubauten sowie umgebaute und umgenutzte Gebäude mit einer Energiebezugsfläche von mehr als 1'000 m&sup2; müssen den Grenzwert für Beleuchtung gemäss der Norm SIA 387/4 «Elektrizität in Gebäuden - Beleuchtung» einhalten. Davon ausgenommen sind Gebäude oder Teile davon der Gebäudekategorien I und II (Wohnen MFH und Wohnen EFH)."
+          "text": "Neubauten sowie umgebaute und umgenutzte Gebäude mit einer Energiebezugsfläche von mehr als 1'000 m² müssen den Grenzwert für Beleuchtung gemäss der Norm SIA 387/4 «Elektrizität in Gebäuden - Beleuchtung» einhalten. Davon ausgenommen sind Gebäude oder Teile davon der Gebäudekategorien I und II (Wohnen MFH und Wohnen EFH)."
         },
         {
           "absatz": "2",
@@ -764,7 +764,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "der elektrische Leistungsbedarf für die Medienförderung und die Medienaufbereitung inklusive allfälliger Kühlung, Befeuchtung, Entfeuchtung und Wasseraufbereitung 12 W/m&sup2; nicht überschreitet, oder"
+              "text": "der elektrische Leistungsbedarf für die Medienförderung und die Medienaufbereitung inklusive allfälliger Kühlung, Befeuchtung, Entfeuchtung und Wasseraufbereitung 12 W/m² nicht überschreitet, oder"
             },
             {
               "marke": "b",
@@ -815,7 +815,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "d270bf20d2774aed10ac2c04d19a43b0e8f6bef6fe3926fc35e43e4617ca3b9d"
+      "sha": "ab8fb7bf1dec5e55f5379f687440a65ee3ff9358f716603f5f8c389bfdfcc2a9"
     },
     {
       "id": "kanton/BS/772.110/art_21",
@@ -880,14 +880,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei Bädern, die auch im Winter beheizt werden, darf der mittlere U-Wert des Beckens inkl. Abdeckung höchstens 0,6 W/m&sup2;K betragen."
+          "text": "Bei Bädern, die auch im Winter beheizt werden, darf der mittlere U-Wert des Beckens inkl. Abdeckung höchstens 0,6 W/m²K betragen."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "d81f1de4c55a24a24447db8654723db0fcd190178e34b2c5d6b9703773b95e31"
+      "sha": "add2673d5dcaa91e2b45f3aef91f2243b8987d528d0028ae76f5f077e079e4b6"
     },
     {
       "id": "kanton/BS/772.110/art_23",
@@ -1092,7 +1092,7 @@
         },
         {
           "absatz": "4",
-          "text": "Einfache Abluftanlagen von beheizten Räumen sind entweder mit einer kontrollierten Zuführung der Ersatzluft und einer Wärmerückgewinnung oder einer Nutzung der Wärme der Abluft auszurüsten, sofern der Abluftvolumenstrom mehr als 1'000 m&sup3;/h und die Betriebsdauer mehr als 500h/Jahr beträgt. Dabei gelten mehrere getrennte einfache Abluftanlagen im gleichen Gebäude als eine Anlage. Andere Lösungen sind zulässig, wenn mit einer fachgerechten Energieverbrauchsrechnung nachgewiesen wird, dass kein erhöhter Energieverbrauch eintritt. Abluftanlagen für WC und Nasszellen müssen bedarfsgerecht (z.B. zeitgesteuert) betrieben werden."
+          "text": "Einfache Abluftanlagen von beheizten Räumen sind entweder mit einer kontrollierten Zuführung der Ersatzluft und einer Wärmerückgewinnung oder einer Nutzung der Wärme der Abluft auszurüsten, sofern der Abluftvolumenstrom mehr als 1'000 m³/h und die Betriebsdauer mehr als 500h/Jahr beträgt. Dabei gelten mehrere getrennte einfache Abluftanlagen im gleichen Gebäude als eine Anlage. Andere Lösungen sind zulässig, wenn mit einer fachgerechten Energieverbrauchsrechnung nachgewiesen wird, dass kein erhöhter Energieverbrauch eintritt. Abluftanlagen für WC und Nasszellen müssen bedarfsgerecht (z.B. zeitgesteuert) betrieben werden."
         },
         {
           "absatz": "5",
@@ -1104,23 +1104,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "bis 1000 m&sup3;/h 3 m/s;"
+              "text": "bis 1000 m³/h 3 m/s;"
             },
             {
               "marke": "b",
-              "text": "bis 2000 m&sup3;/h 4 m/s;"
+              "text": "bis 2000 m³/h 4 m/s;"
             },
             {
               "marke": "c",
-              "text": "bis 4000 m&sup3;/h 5 m/s;"
+              "text": "bis 4000 m³/h 5 m/s;"
             },
             {
               "marke": "d",
-              "text": "bis 10'000 m&sup3;/h 6 m/s;"
+              "text": "bis 10'000 m³/h 6 m/s;"
             },
             {
               "marke": "e",
-              "text": "über 10'000 m&sup3;/h 7 m/s."
+              "text": "über 10'000 m³/h 7 m/s."
             }
           ]
         },
@@ -1151,7 +1151,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "4f8cb0c30e2b136efcb40e5bfab95d532e3382f50b863bf96eaeba538ebfa4ee"
+      "sha": "77533218d856942b3eb5c9b5a196d232efd88c9dcb6951faa7f148aab131e06b"
     },
     {
       "id": "kanton/BS/772.110/art_28",
@@ -1798,7 +1798,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von der Ausrüstungs- und Abrechnungspflicht für den Heizwärmebedarf befreit sind Neubauten und wesentliche Gebäudeerneuerungen, deren installierte Wärmeerzeugerleistung (inkl. Warmwasser) weniger als 20 W pro m&sup2; Energiebezugsfläche beträgt."
+          "text": "Von der Ausrüstungs- und Abrechnungspflicht für den Heizwärmebedarf befreit sind Neubauten und wesentliche Gebäudeerneuerungen, deren installierte Wärmeerzeugerleistung (inkl. Warmwasser) weniger als 20 W pro m² Energiebezugsfläche beträgt."
         },
         {
           "absatz": "2",
@@ -1818,7 +1818,7 @@
             },
             {
               "marke": "d",
-              "text": "wenn die installierte Wärmeerzeugerleistung (inkl. Warmwasser) weniger als 30 W pro m&sup2; Energiebezugsfläche beträgt;"
+              "text": "wenn die installierte Wärmeerzeugerleistung (inkl. Warmwasser) weniger als 30 W pro m² Energiebezugsfläche beträgt;"
             },
             {
               "marke": "e",
@@ -1826,11 +1826,11 @@
             },
             {
               "marke": "f",
-              "text": "bei Gebäuden mit einem nachgewiesenen tiefen spezifischen Energieverbrauch für Heizung und Warmwasser von weniger als 90 kWh/m&sup2; Jahr (klimabereinigt);"
+              "text": "bei Gebäuden mit einem nachgewiesenen tiefen spezifischen Energieverbrauch für Heizung und Warmwasser von weniger als 90 kWh/m² Jahr (klimabereinigt);"
             },
             {
               "marke": "g",
-              "text": "bei Gebäuden mit MINERGIE&reg;-Label."
+              "text": "bei Gebäuden mit MINERGIE®-Label."
             }
           ]
         }
@@ -1839,7 +1839,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "8ebd8aad774994042bcd8385903a6a61c1ff379e26b53c797ae901d435ab31fe"
+      "sha": "00640a7d4656ee37d1ec403caa4bc2f59a136d7f284bfc8bb29396932604dffa"
     },
     {
       "id": "kanton/BS/772.110/art_51",
@@ -1982,7 +1982,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für besonders energiesparende Neubauten wird ein Förderbeitrag pro m&sup2; Energiebezugsfläche (EBF) gewährt. Die Förderbedingungen und die Beitragshöhe sind in Anhang 11 festgelegt."
+          "text": "Für besonders energiesparende Neubauten wird ein Förderbeitrag pro m² Energiebezugsfläche (EBF) gewährt. Die Förderbedingungen und die Beitragshöhe sind in Anhang 11 festgelegt."
         },
         {
           "absatz": "2",
@@ -2001,7 +2001,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "7c3b5d2bdf3233bd8e276d05bd44794da3c3e05590a765606e50b45cd1047cb8"
+      "sha": "4f325b54180e5c0c03d4e818502d49207af100661febfbf17065654baebaaf96"
     },
     {
       "id": "kanton/BS/772.110/art_57",
@@ -2034,14 +2034,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für Altbauten, die gesamthaft saniert werden, wird ein Förderbeitrag pro m&sup2; Energiebezugsfläche gewährt, wenn sie nach der Sanierung den Gebäudeenergiestandard für Neubauten erfüllen. Die Förderbedingungen und die Beitragshöhe sind in Anhang 11 festgelegt."
+          "text": "Für Altbauten, die gesamthaft saniert werden, wird ein Förderbeitrag pro m² Energiebezugsfläche gewährt, wenn sie nach der Sanierung den Gebäudeenergiestandard für Neubauten erfüllen. Die Förderbedingungen und die Beitragshöhe sind in Anhang 11 festgelegt."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.110",
       "abgerufen": "2026-06-23",
       "fassungsToken": "592cbbfcfcc854886c3a791eaf2333d5",
-      "sha": "07f4841345e33d14fba2cc34916f78fbe64f6892d1842e072733cf2d43f840f8"
+      "sha": "d814e5262e31ed9a6f0da399227767cabbfd255f73e3d138f8c1a56fc916842d"
     },
     {
       "id": "kanton/BS/772.110/art_59",

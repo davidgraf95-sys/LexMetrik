@@ -4,6 +4,8 @@
  * Systematik-Baum). Deckt abweichende Schemata ab (AI Hunderter, UR 10/40).
  */
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import {
   sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang,
   systematikSchluessel, srVergleich,
@@ -130,5 +132,23 @@ describe('sachgruppe', () => {
     const ru = untergruppeRang(BS, '6');
     expect(ru('')).toBeLessThan(ru('64')); // direkte (ohne Untergruppe) zuerst
     expect(ru('64')).toBeLessThan(ru('61')); // Baum-Reihenfolge: 64 vor 61
+  });
+});
+
+// S8 (BS-Audit 23.6.2026, §7-Verdikt) — Systematik-Namen werden VERBATIM aus der
+// amtlichen clex-Quelle übernommen; ein fehlender «·»-Trenner ist eine reine
+// Quell-Eigenheit und wird NICHT fabriziert (sonst zweite Wahrheit, §5/§7).
+// Dieser Guard scheitert, falls jemand den Trenner in die committete JSON einsetzt
+// (per Hand oder durch eine namens-"normalisierende" Generator-Änderung).
+describe('S8 — Systematik-Name verbatim (kein fabrizierter Trenner, §7)', () => {
+  it('BS-Root 4 bleibt «Erziehung Wissenschafts- und Kulturpflege» (Quell-Eigenheit)', () => {
+    const j = JSON.parse(
+      readFileSync(join('public', 'normtext', 'kanton-systematik.json'), 'utf8'),
+    ) as Record<string, KantonSystematik>;
+    const root4 = j.BS?.roots.find((r) => r.nummer === '4');
+    expect(root4).toBeDefined();
+    // Verbatim aus der amtlichen Quelle (verifiziert 23.6.2026): KEIN «·» eingefügt.
+    expect(root4!.name).toBe('Erziehung Wissenschafts- und Kulturpflege');
+    expect(root4!.name).not.toContain('·');
   });
 });

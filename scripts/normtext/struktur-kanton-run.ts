@@ -25,11 +25,19 @@ mkdirSync(ZIEL, { recursive: true });
 
 const LEXWORK = /\/app\/(de|fr|it)\/texts_of_law\//;
 
+// Optionaler Kanton-Filter (z.B. --kanton=BS), um die Gliederung gezielt für
+// einen Kanton (re-)zu erzeugen statt alle ~1200 Dateien neu zu fetchen.
+const kantonArg = process.argv.find((a) => a.startsWith('--kanton='));
+const nurKantone = kantonArg
+  ? new Set(kantonArg.slice('--kanton='.length).split(',').map((s) => s.trim().toUpperCase()).filter(Boolean))
+  : null;
+
 interface Aufgabe { key: string; api: string; tokens: Set<string> }
 
 const aufgaben: Aufgabe[] = [];
 let nichtLexwork = 0;
 for (const f of readdirSync(KANTON_DIR).filter((x) => x.endsWith('.json') && x !== 'index.json')) {
+  if (nurKantone && !nurKantone.has(f.split('-')[0]?.toUpperCase())) continue;
   const datei = JSON.parse(readFileSync(join(KANTON_DIR, f), 'utf8')) as NormSnapshotDatei;
   const url = datei.eintraege?.[0]?.quelleUrl ?? '';
   if (!LEXWORK.test(url)) { nichtLexwork++; continue; }

@@ -2016,7 +2016,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In den E-Zug (sowie den A-Zug) können die Schülerinnen und Schüler übertreten, die im Zeugnis des 8. Schuljahres die folgende Voraussetzung erfüllen: Die Summe der dreifach gezählten Zeugnisnoten in den Fächern Deutsch, Mathematik und Natur/Mensch/Gesellschaft und der eineinhalbfach gezählten Zeugnisnoten in den Fächern Französisch und Englisch und der einfach gezählten Zeugnisnoten in den Fächern Gestalten, Musik und Bewegung/Sport ergibt mindestens den Wert 67,5 (3 · D + 3 · M + 3 · NMG + 1,5 · F + 1,5 · E + G + Mu + B / Sp &ge; 67,5)."
+          "text": "In den E-Zug (sowie den A-Zug) können die Schülerinnen und Schüler übertreten, die im Zeugnis des 8. Schuljahres die folgende Voraussetzung erfüllen: Die Summe der dreifach gezählten Zeugnisnoten in den Fächern Deutsch, Mathematik und Natur/Mensch/Gesellschaft und der eineinhalbfach gezählten Zeugnisnoten in den Fächern Französisch und Englisch und der einfach gezählten Zeugnisnoten in den Fächern Gestalten, Musik und Bewegung/Sport ergibt mindestens den Wert 67,5 (3 · D + 3 · M + 3 · NMG + 1,5 · F + 1,5 · E + G + Mu + B / Sp ≥ 67,5)."
         },
         {
           "absatz": "2",
@@ -2027,7 +2027,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.700",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d16a74dd34c664829261a01802a9438b",
-      "sha": "cfe63b1d26b4083b3153fdadb4cb6117586bb92c790319b8fcb42f1a7dcebb47"
+      "sha": "3e7da9fbca3dc56ba2541bdfa2c4834e1960f94cbae93a8ebcedcb61bf3b6876"
     },
     {
       "id": "kanton/BS/410.700/art_58",
@@ -2040,7 +2040,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In den P-Zug (sowie den E-Zug und den A-Zug) können die Schülerinnen und Schüler übertreten, die im Zeugnis des 8. Schuljahres die folgende Voraussetzung erfüllen: Die Summe der dreifach gezählten Zeugnisnoten in den Fächern Deutsch, Mathematik und Natur/Mensch/Gesellschaft und der eineinhalbfach gezählten Zeugnisnoten in den Fächern Französisch und Englisch und der einfach gezählten Zeugnisnoten in den Fächern Gestalten, Musik und Bewegung/Sport ergibt mindestens den Wert 78,75 (3 · D + 3 · M + 3 · NMG + 1,5 · F + 1,5 · E + G + Mu + B/Sp &ge; 78,75)."
+          "text": "In den P-Zug (sowie den E-Zug und den A-Zug) können die Schülerinnen und Schüler übertreten, die im Zeugnis des 8. Schuljahres die folgende Voraussetzung erfüllen: Die Summe der dreifach gezählten Zeugnisnoten in den Fächern Deutsch, Mathematik und Natur/Mensch/Gesellschaft und der eineinhalbfach gezählten Zeugnisnoten in den Fächern Französisch und Englisch und der einfach gezählten Zeugnisnoten in den Fächern Gestalten, Musik und Bewegung/Sport ergibt mindestens den Wert 78,75 (3 · D + 3 · M + 3 · NMG + 1,5 · F + 1,5 · E + G + Mu + B/Sp ≥ 78,75)."
         },
         {
           "absatz": "2",
@@ -2051,7 +2051,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.700",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d16a74dd34c664829261a01802a9438b",
-      "sha": "cd37fda71ec8d1409879095139f1d5f87a7e7ed5ad86f72db2f2400c7e16326b"
+      "sha": "73cb25a2cb9ead3dda9397ad5a25e47969f48225a689a2de6d5c488512725e78"
     },
     {
       "id": "kanton/BS/410.700/art_59",
@@ -2347,11 +2347,11 @@
             },
             {
               "marke": "b",
-              "text": "für Schülerinnen und Schüler des P-Zugs mindestens den Wert 34 (2 · D + 2 · M + NT + RZG + F + E &ge; 34);"
+              "text": "für Schülerinnen und Schüler des P-Zugs mindestens den Wert 34 (2 · D + 2 · M + NT + RZG + F + E ≥ 34);"
             },
             {
               "marke": "b",
-              "text": "für Schülerinnen und Schüler des E-Zugs mindestens den Wert 40 (2 · D + 2 · M + NT + RZG + F + E &ge; 40)."
+              "text": "für Schülerinnen und Schüler des E-Zugs mindestens den Wert 40 (2 · D + 2 · M + NT + RZG + F + E ≥ 40)."
             }
           ]
         },
@@ -2364,7 +2364,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.700",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d16a74dd34c664829261a01802a9438b",
-      "sha": "9d2d28be38e117f573da3faeaa8f286221fa5afdf2ce67b4b077f78661215a66"
+      "sha": "56da5fa415137ceef65ec8b3c7a0a6388643fe870d8844e694f8276a39c6637e"
     },
     {
       "id": "kanton/BS/410.700/art_70",
@@ -2401,15 +2401,15 @@
             },
             {
               "marke": "b",
-              "text": "für Schülerinnen und Schüler des P-Zugs mindestens den Wert 32 (2 · D + 2 · M + NT + RZG + F + E &ge; 32)"
+              "text": "für Schülerinnen und Schüler des P-Zugs mindestens den Wert 32 (2 · D + 2 · M + NT + RZG + F + E ≥ 32)"
             },
             {
               "marke": "b",
-              "text": "für Schülerinnen und Schüler des E-Zugs mindestens den Wert 36 (2 · D + 2 · M + NT + RZG + F + E &ge; 36);"
+              "text": "für Schülerinnen und Schüler des E-Zugs mindestens den Wert 36 (2 · D + 2 · M + NT + RZG + F + E ≥ 36);"
             },
             {
               "marke": "b",
-              "text": "für Schülerinnen und Schüler des A-Zugs mindestens den Wert 42 (2 · D + 2 · M + NT + RZG + F + E &ge; 42)."
+              "text": "für Schülerinnen und Schüler des A-Zugs mindestens den Wert 42 (2 · D + 2 · M + NT + RZG + F + E ≥ 42)."
             }
           ]
         },
@@ -2422,7 +2422,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/410.700",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d16a74dd34c664829261a01802a9438b",
-      "sha": "07120cc3c4e8eaa3e35651ed1bf3e932b1590caeeb29881a86cb2bc7d7a6995f"
+      "sha": "b6bf0dd4dcafe07bf8c163c9c00920ebf0352447d93872a1ad1e97376b7b2b6e"
     },
     {
       "id": "kanton/BS/410.700/art_70_a",

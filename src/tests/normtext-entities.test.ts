@@ -105,6 +105,51 @@ describe('dekodiereEntities', () => {
     expect(dekodiereEntities('&radic;')).toBe('√');
   });
 
+  // ── BS-Audit 23.6.2026 (T1/S1) — empirisch im Korpus gefundene Entities ────
+
+  it('dekodiert Hochzahlen &sup1; &sup2; &sup3; → ¹ ² ³', () => {
+    expect(dekodiereEntities('&sup1;&sup2;&sup3;')).toBe('¹²³');
+  });
+
+  it('dekodiert &ge; → ≥ und &le; → ≤ (Tarif-/Grenzwert-SCHWELLEN, inhaltlich)', () => {
+    // BS-772.110 «U &le; 0,15», BS-772.430 «Vorjahresverbrauch &ge;13 MWh».
+    expect(dekodiereEntities('U &le; 0,15')).toBe('U ≤ 0,15');
+    expect(dekodiereEntities('Vorjahresverbrauch &ge;13 MWh')).toBe('Vorjahresverbrauch ≥13 MWh');
+  });
+
+  it('dekodiert &mu; → µ (BS-781.500 «&mu;g/m&sup2;»)', () => {
+    expect(dekodiereEntities('75 &mu;g/m&sup2;')).toBe('75 µg/m²');
+  });
+
+  it('dekodiert &eta; → η (AR-750.11 Nutzungsgrad)', () => {
+    expect(dekodiereEntities('Nutzungsgraden &eta; der')).toBe('Nutzungsgraden η der');
+  });
+
+  it('dekodiert &plusmn; → ± (BS-563.210 Toleranz «&plusmn;10»)', () => {
+    expect(dekodiereEntities('550 cm&sup2; &plusmn;10')).toBe('550 cm² ±10');
+  });
+
+  it('dekodiert &divide; → ÷ (BS-650.510 Formel)', () => {
+    expect(dekodiereEntities('H = L &divide; 0')).toBe('H = L ÷ 0');
+  });
+
+  it('dekodiert &not; → ¬ (RiE 162.110, Quell-Eigenheit)', () => {
+    expect(dekodiereEntities('Mitarbei&not;ter')).toBe('Mitarbei¬ter');
+  });
+
+  it('dekodiert &reg; → ® (BS-772.110 «MINERGIE&reg;»)', () => {
+    expect(dekodiereEntities('MINERGIE&reg;-Zertifikat')).toBe('MINERGIE®-Zertifikat');
+  });
+
+  it('dekodiert &frasl; → ⁄ (ZG-641.1 Bruchstrich «1&frasl;2»)', () => {
+    expect(dekodiereEntities('über 1&frasl;2 Stunde')).toBe('über 1⁄2 Stunde');
+  });
+
+  it('dekodiert &acirc; → â und &Acirc; → Â (Bâle, FR-Korpus)', () => {
+    expect(dekodiereEntities('B&acirc;le-Ville')).toBe('Bâle-Ville');
+    expect(dekodiereEntities('&Acirc;')).toBe('Â');
+  });
+
   // ── Deutsche Umlaute ──────────────────────────────────────────────────────
 
   it('dekodiert &auml; &ouml; &uuml; &szlig;', () => {

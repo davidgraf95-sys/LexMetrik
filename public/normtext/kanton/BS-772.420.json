@@ -59,7 +59,11 @@
         },
         {
           "absatz": "3",
-          "text": "Die Netzanschlussbeiträge der Netzebene 7 betragen:",
+          "text": "Die Netzanschlussbeiträge der Netzebene 7 betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
@@ -246,7 +250,11 @@
         },
         {
           "absatz": "5",
-          "text": "Die Netzanschlussbeiträge der Netzebene 5 betragen:",
+          "text": "Die Netzanschlussbeiträge der Netzebene 5 betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Leitungsquerschnitt der Anschlussleitung",
@@ -256,37 +264,37 @@
             ],
             "zeilen": [
               [
-                "95 mm&sup2;",
+                "95 mm²",
                 "ohne",
                 "Fr. 6’000",
                 "Fr. 100"
               ],
               [
-                "95 mm&sup2;",
+                "95 mm²",
                 "mit",
                 "Fr. 11’000",
                 "Fr. 250"
               ],
               [
-                "150 mm&sup2;",
+                "150 mm²",
                 "ohne",
                 "Fr. 7’000",
                 "Fr. 125"
               ],
               [
-                "150 mm&sup2;",
+                "150 mm²",
                 "mit",
                 "Fr. 12’500",
                 "Fr. 300"
               ],
               [
-                "240 mm&sup2;",
+                "240 mm²",
                 "ohne",
                 "Fr. 8’000",
                 "Fr. 150"
               ],
               [
-                "240 mm&sup2;",
+                "240 mm²",
                 "mit",
                 "Fr. 14’000",
                 "Fr. 400"
@@ -303,7 +311,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "500c2717b048a75df431dc2ca5877450c7aa65975d6f81d7ab93e4a916fa4fce"
+      "sha": "b8ebd79492bcf61440d6931687b779668921b8f827c21c06c7e491deb95eb800"
     },
     {
       "id": "kanton/BS/772.420/art_4",
@@ -316,14 +324,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Netzkostenbeitrag richtet sich nach der Netzebene und der Anschlussleistung und wird in Fr. pro kVA wie folgt erhoben: Netzebene 3 · Netzkostenbeitrag: Fr. 40/kVA — Netzebene 5 · Netzkostenbeitrag: Fr. 150/kVA — Netzebene 7, Anschluss ab IWB-Trafostation auf dem angeschlossenen Grundstück · Netzkostenbeitrag: Fr. 160/kVA — Netzebene 7, Anschluss ab Allmend · Netzkostenbeitrag: Fr. 200/kVA"
+          "text": "Der Netzkostenbeitrag richtet sich nach der Netzebene und der Anschlussleistung und wird in Fr. pro kVA wie folgt erhoben:"
+        },
+        {
+          "absatz": null,
+          "text": "Netzebene 3 · Netzkostenbeitrag: Fr. 40/kVA — Netzebene 5 · Netzkostenbeitrag: Fr. 150/kVA — Netzebene 7, Anschluss ab IWB-Trafostation auf dem angeschlossenen Grundstück · Netzkostenbeitrag: Fr. 160/kVA — Netzebene 7, Anschluss ab Allmend · Netzkostenbeitrag: Fr. 200/kVA"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "f27ac3c8d603d643844117486c0a89d6e84a8ce91a47c6408720d4a452fd57bf"
+      "sha": "9e454a1bc0846e8274e47cfe41a10074a3e162edde84e8383d241c1ccb50d7bb"
     },
     {
       "id": "kanton/BS/772.420/art_5",
@@ -356,7 +368,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für temporäre Netzanschlüsse für Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen erhebt IWB eine Gebühr. Die Gebühr richtet sich nach der Anschlussgrösse und umfasst die Kosten für die Erstellung und die Demontage von Netzanschlüssen mit einer Anschlussleitung von bis zu 10 Metern und ohne Tiefbauarbeiten. Die Gebühr beträgt:",
+          "text": "Für temporäre Netzanschlüsse für Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen erhebt IWB eine Gebühr. Die Gebühr richtet sich nach der Anschlussgrösse und umfasst die Kosten für die Erstellung und die Demontage von Netzanschlüssen mit einer Anschlussleitung von bis zu 10 Metern und ohne Tiefbauarbeiten. Die Gebühr beträgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Anschlussgrösse",
@@ -364,23 +380,23 @@
             ],
             "zeilen": [
               [
-                "A1 (&le; 5 kW/16 A)",
+                "A1 (≤ 5 kW/16 A)",
                 "Fr. 100"
               ],
               [
-                "A2 (> 5 kW/16 A &le; 20 kW/32 A)",
+                "A2 (> 5 kW/16 A ≤ 20 kW/32 A)",
                 "Fr. 200"
               ],
               [
-                "B (> 20 kW/32 A &le; 40 kW/63 A)",
+                "B (> 20 kW/32 A ≤ 40 kW/63 A)",
                 "Fr. 540"
               ],
               [
-                "C (> 40 kW/63 A &le; 80 kW/125 A)",
+                "C (> 40 kW/63 A ≤ 80 kW/125 A)",
                 "Fr. 960"
               ],
               [
-                "D (> 80 kW/125 A &le; 120 kW/160 A)",
+                "D (> 80 kW/125 A ≤ 120 kW/160 A)",
                 "Fr. 1’080"
               ],
               [
@@ -396,7 +412,11 @@
         },
         {
           "absatz": "3",
-          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:",
+          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Zusatzleistung",
@@ -419,7 +439,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "01114f217cbcd307eb3637486fc401c5144479bbc0b497907bdbeb2d81fe12b3"
+      "sha": "49a87b52af7b030a61b7aa2608c56a061eed7815359977ebb64e8a615077482d"
     },
     {
       "id": "kanton/BS/772.420/art_7",
@@ -444,7 +464,11 @@
         },
         {
           "absatz": "4",
-          "text": "Die Anschluss- und Bereitstellungsgebühren betragen wie folgt:",
+          "text": "Die Anschluss- und Bereitstellungsgebühren betragen wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Grösse des Baustromanschlusses",
@@ -487,7 +511,11 @@
         },
         {
           "absatz": "5",
-          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:",
+          "text": "Darüber hinaus erhebt IWB Gebühren für Zusatzleistungen bei temporären Netzanschlüssen wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Zusatzleistung",
@@ -551,7 +579,11 @@
         },
         {
           "absatz": "2",
-          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 7:",
+          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 7:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
@@ -635,7 +667,11 @@
         },
         {
           "absatz": "4",
-          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 5:",
+          "text": "Die Anschlussersatzgebühren im koordinierten Netzersatz betragen auf Netzebene 5:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Leitungsquerschnitt der Anschlussleitung",
@@ -644,17 +680,17 @@
             ],
             "zeilen": [
               [
-                "95 mm&sup2;",
+                "95 mm²",
                 "Fr. 8’800",
                 "Fr. 200"
               ],
               [
-                "150 mm&sup2;",
+                "150 mm²",
                 "Fr. 10’000",
                 "Fr. 240"
               ],
               [
-                "240 mm&sup2;",
+                "240 mm²",
                 "Fr. 11’200",
                 "Fr. 320"
               ]
@@ -670,7 +706,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "54c6323847c7ed57b01a92309cfc96de04c77b40920182fa1b592ddefe294129"
+      "sha": "5deca1820d378dc35906d2d6285d1442291d0f3be6fd390e0ca370efeae027b9"
     },
     {
       "id": "kanton/BS/772.420/art_10",
@@ -687,7 +723,11 @@
         },
         {
           "absatz": "2",
-          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 7:",
+          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 7:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Maximale Sicherungsgrösse des Anschlussüberstromunterbrechers",
@@ -771,7 +811,11 @@
         },
         {
           "absatz": "4",
-          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 5:",
+          "text": "Die Anschlussersatzgebühren im Einzelersatz betragen auf Netzebene 5:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Leitungsquerschnitt der Anschlussleitung",
@@ -780,17 +824,17 @@
             ],
             "zeilen": [
               [
-                "95 mm&sup2;",
+                "95 mm²",
                 "Fr. 11’000",
                 "Fr. 250"
               ],
               [
-                "150 mm&sup2;",
+                "150 mm²",
                 "Fr. 12’500",
                 "Fr. 300"
               ],
               [
-                "240 mm&sup2;",
+                "240 mm²",
                 "Fr. 14’000",
                 "Fr. 400"
               ]
@@ -806,7 +850,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "ccda96b05569940f7514e2f10e5fe1c18b09a18bd39c678b47c1c843894ba13f"
+      "sha": "65ed447ae6d8a207f33113de3a429b770b9d04608bca0d193b04397f59c6a8d0"
     },
     {
       "id": "kanton/BS/772.420/art_11",
@@ -917,14 +961,18 @@
         },
         {
           "absatz": "2",
-          "text": "Für den Basistarif in Form eines Arbeitstarifs pro kWh (verbrauchsabhängiges Netznutzungsentgelt) beträgt das Netznutzungsentgelt wie folgt: Netznutzungsentgelt · Einfachtarif (Basistarif): Rp. 13.20/kWh"
+          "text": "Für den Basistarif in Form eines Arbeitstarifs pro kWh (verbrauchsabhängiges Netznutzungsentgelt) beträgt das Netznutzungsentgelt wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Einfachtarif (Basistarif): Rp. 13.20/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "a853470aea03b5e417597aeb704a42e22775198c2e465753cad0b1cecfa2de8c"
+      "sha": "43c428f8465517f65049ac379371d8429b43bbf54a8e49371859a3fc3940cff3"
     },
     {
       "id": "kanton/BS/772.420/art_15",
@@ -937,14 +985,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Doppeltarif ist ein Arbeitstarif und wird pro kWh (verbrauchsabhängiges Netznutzungsentgelt) erhoben. Bei Netzanschlüssen auf Netzebene 7 ohne Einfachtarif (Basistarif) gemäss §§ 9 und 10 und mit einer Bezügersicherung kleiner 100 A (Netzanschlüsse ohne Leistungsmessung) gilt der Doppeltarif wie folgt: Netznutzungsentgelt · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 13.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 8.20/kWh"
+          "text": "Der Doppeltarif ist ein Arbeitstarif und wird pro kWh (verbrauchsabhängiges Netznutzungsentgelt) erhoben. Bei Netzanschlüssen auf Netzebene 7 ohne Einfachtarif (Basistarif) gemäss §§ 9 und 10 und mit einer Bezügersicherung kleiner 100 A (Netzanschlüsse ohne Leistungsmessung) gilt der Doppeltarif wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 13.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 8.20/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "40b26c7d63159ad328860d92d6c66ea1d7412279e325a35cc67ee329d261ac6b"
+      "sha": "c1a78d4854da230f6a0ffad4a211d7834eddfa3fed3bb9b22da071fef3b9f6f4"
     },
     {
       "id": "kanton/BS/772.420/art_16",
@@ -961,14 +1013,18 @@
         },
         {
           "absatz": "2",
-          "text": "Die Entgelte sind wie folgt festgelegt: Netznutzungsentgelt · Tarifzone: Zone 1 (&le; 27 kW/Monat und &le; 50’000 kWh/Jahr) · Leistungstarif: Fr. 16.20/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 9.50/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 6.45/kWh — Netznutzungsentgelt · Tarifzone: Zone 2 (> 27 kW/Monat und > 50’000 kWh/Jahr) · Leistungstarif: Fr. 11.80/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 5.85/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 4.10/kWh"
+          "text": "Die Entgelte sind wie folgt festgelegt:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Tarifzone: Zone 1 (≤ 27 kW/Monat und ≤ 50’000 kWh/Jahr) · Leistungstarif: Fr. 16.20/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 9.50/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 6.45/kWh — Netznutzungsentgelt · Tarifzone: Zone 2 (> 27 kW/Monat und > 50’000 kWh/Jahr) · Leistungstarif: Fr. 11.80/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 5.85/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 4.10/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "1ab0bad1736bd3c9d3eb814fd573fbc6ecc08aa0463e198b01ebb2f91fe6b77a"
+      "sha": "c1a5f362b0b5581ed6ea334d7f3ef10c0fc011b53136d23bda1521b4dfc65e1a"
     },
     {
       "id": "kanton/BS/772.420/art_17",
@@ -985,18 +1041,26 @@
         },
         {
           "absatz": "2",
-          "text": "Für Netzebene 5 gelten die Ansätze: Netznutzungsentgelt · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
+          "text": "Für Netzebene 5 gelten die Ansätze:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
         },
         {
           "absatz": "3",
-          "text": "Für Netzebene 3 gelten die Ansätze: Netznutzungsentgelt · Leistungstarif: Fr. 7.40/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 3.70/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 2.50/kWh"
+          "text": "Für Netzebene 3 gelten die Ansätze:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Leistungstarif: Fr. 7.40/kW · Normaltarif (Mo – Fr von 6 – 20 Uhr): Rp. 3.70/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 2.50/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "2b14cd3b7bb817675401f097d7cf37af733db2545f01d91d6ffb09f574e37e53"
+      "sha": "be85bc5e213b3e30ca78adcfdcb64f938e19a47b02696c0e4e20064b408cb675"
     },
     {
       "id": "kanton/BS/772.420/art_18",
@@ -1041,14 +1105,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Tarife betragen: Netznutzungsentgelt · Einfachtarif: Rp. 8.20/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird) · Einfachtarif: Rp. 40.20/kWh"
+          "text": "Die Tarife betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Einfachtarif: Rp. 8.20/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird) · Einfachtarif: Rp. 40.20/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "e3dc4bf71af12923e94072d81a3a1b45f43d83491ecfa17a128a7dea1def433c"
+      "sha": "213b6fa3d79834652b22b1a0169fa2d56e15848b4912aee9658db9bc2845df55"
     },
     {
       "id": "kanton/BS/772.420/art_20",
@@ -1061,14 +1129,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Tarife betragen: Netznutzungsentgelt · Leistungstarif: - · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird, gilt zusätzlich der Leistungstarif) · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
+          "text": "Die Tarife betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Leistungstarif: - · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh — Erhöhtes Netznutzungsentgelt (falls im Notfall die Unterbrechung der Stromlieferung aufgehoben wird, gilt zusätzlich der Leistungstarif) · Leistungstarif: Fr. 11.00/kW · Normaltarif (Mo – Fr von 6 –20 Uhr): Rp. 4.40/kWh · Spartarif (Mo – Fr von 20 – 6 Uhr, Sa und So): Rp. 3.00/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "f7a6d7e506765b18c34adbaffd48d8b21199389a5759b673415e7b4446ca8921"
+      "sha": "5ef5b2ac5ff0ed04fdce8933f5ec1058132a354dc23482061b76f014b5659be8"
     },
     {
       "id": "kanton/BS/772.420/art_21",
@@ -1124,14 +1196,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für temporäre Netzanschlüsse mit einer Bezügersicherung kleiner 100 A gilt der Einfachtarif (verbrauchsabhängiges Netznutzungsentgelt) wie folgt: Netznutzungsentgelt · Einfachtarif: Rp. 13.20/kWh"
+          "text": "Für temporäre Netzanschlüsse mit einer Bezügersicherung kleiner 100 A gilt der Einfachtarif (verbrauchsabhängiges Netznutzungsentgelt) wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Netznutzungsentgelt · Einfachtarif: Rp. 13.20/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "47794cf6d211f5eac78bdea78d664ecef3eb61056892ca680525d189d0101bb3"
+      "sha": "ac0be43cce326c43f6545cf216d6c16c60f4e5cac646b5cb83d681a9d6e873f8"
     },
     {
       "id": "kanton/BS/772.420/art_24",
@@ -1192,7 +1268,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Gestützt auf Art. 14a StromVG sowie Art. 18d – 18i StromVV werden für Speicher mit Endverbrauch sowie Anlagen zur Umwandlung von Elektrizität folgende Rückerstattungstarife festgelegt:",
+          "text": "Gestützt auf Art. 14a StromVG sowie Art. 18d – 18i StromVV werden für Speicher mit Endverbrauch sowie Anlagen zur Umwandlung von Elektrizität folgende Rückerstattungstarife festgelegt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Netzebene",
@@ -1259,7 +1339,11 @@
         },
         {
           "absatz": "3",
-          "text": "Die Messtarife betragen:",
+          "text": "Die Messtarife betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Netzebene",
@@ -1307,14 +1391,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühren für die Sperrung und Entsperrung von Netzanschlüssen betragen: Sperrung / Unterbrechung von Netzanschlüssen gemäss § 26 Abs. 5 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität · Gebühr: Fr. 100 — Entsperrung / Wiederinbetriebnahme von unterbrochenen Netzanschlüssen · Gebühr: Fr. 100"
+          "text": "Die Gebühren für die Sperrung und Entsperrung von Netzanschlüssen betragen:"
+        },
+        {
+          "absatz": null,
+          "text": "Sperrung / Unterbrechung von Netzanschlüssen gemäss § 26 Abs. 5 Ausführungsbestimmungen von IWB Industrielle Werke Basel für Leistungen im Bereich Elektrizität · Gebühr: Fr. 100 — Entsperrung / Wiederinbetriebnahme von unterbrochenen Netzanschlüssen · Gebühr: Fr. 100"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "90872ac4956a286cc66cf69fcc4496c53f4a63d2c312477e0640336b76c8d4c7"
+      "sha": "6bb43964e098f109405235b5ef4f2b2835ad0f4d96e5139c42fff400784c3289"
     },
     {
       "id": "kanton/BS/772.420/art_29",
@@ -1357,7 +1445,11 @@
         },
         {
           "absatz": "3",
-          "text": "Die Abgaben für die öffentliche Beleuchtung und die öffentlichen Uhren sind wie folgt:",
+          "text": "Die Abgaben für die öffentliche Beleuchtung und die öffentlichen Uhren sind wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Netzebene",
@@ -1389,7 +1481,11 @@
         },
         {
           "absatz": "4",
-          "text": "Die Abgaben für die Finanzierung der ungedeckten Kosten der Vergütung von Solarstrom sind wie folgt:",
+          "text": "Die Abgaben für die Finanzierung der ungedeckten Kosten der Vergütung von Solarstrom sind wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Netzebene",
@@ -1413,22 +1509,34 @@
         },
         {
           "absatz": "5",
-          "text": "Der Zuschlag für Systemdienstleistungen ist wie folgt: Zuschlag Systemdienstleistungen · Höhe: Rp. 0.27/kWh"
+          "text": "Der Zuschlag für Systemdienstleistungen ist wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Zuschlag Systemdienstleistungen · Höhe: Rp. 0.27/kWh"
         },
         {
           "absatz": "6",
-          "text": "Der Zuschlag für die Stromreserve ist wie folgt: Stromreserve · Höhe: Rp. 0.41/kWh"
+          "text": "Der Zuschlag für die Stromreserve ist wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Stromreserve · Höhe: Rp. 0.41/kWh"
         },
         {
           "absatz": "7",
-          "text": "Der Zuschlag für die Solidarisierten Kosten über das Übertragungsnetz ist wie folgt: Solidarisierte Kosten über das Übertragungsnetz · Höhe: Rp. 0.05/kWh"
+          "text": "Der Zuschlag für die Solidarisierten Kosten über das Übertragungsnetz ist wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "Solidarisierte Kosten über das Übertragungsnetz · Höhe: Rp. 0.05/kWh"
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.420",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d13733edf3498fe25f3d244e5ac9ab41",
-      "sha": "89189a8b9443c806e8161106c1ec62d99a0d91b9a728fb62524ee072f1beef40"
+      "sha": "49a57c40042451e1c2a593f69d49497efd3a12f3663ec3bc95a886f50a9eb5d5"
     },
     {
       "id": "kanton/BS/772.420/art_30",

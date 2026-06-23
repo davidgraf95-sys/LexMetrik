@@ -1010,7 +1010,7 @@
             },
             {
               "marke": ".",
-              "text": "Ertragsanteil = [1 - ((1 + m)&sup2;&sup2; - 1) / (22 × m × (1 + m)&sup2;&sup3;)] × 100 %"
+              "text": "Ertragsanteil = [1 - ((1 + m)²² - 1) / (22 × m × (1 + m)²³)] × 100 %"
             },
             {
               "marke": "2",
@@ -1030,7 +1030,7 @@
             },
             {
               "marke": ".",
-              "text": "Ertragsanteil = [1 - ((1 + r)&sup2;&sup2; - 1) / (22 × r × (1 + r)&sup2;&sup3;)] × 100 %"
+              "text": "Ertragsanteil = [1 - ((1 + r)²² - 1) / (22 × r × (1 + r)²³)] × 100 %"
             },
             {
               "marke": "2",
@@ -1047,7 +1047,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "a0eedd388e5fd41d3fc01f858e3d0e3370b953b569721961fdb26b585bb7d6b8"
+      "sha": "b2d14263b7358c9b74e7469c6760c46e6ec8fa43f0e63c2a294b0a08d8da62cd"
     },
     {
       "id": "kanton/BS/640.100/art_24",
@@ -1842,7 +1842,32 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Kapitalleistungen nach § 23 Abs. 1 und 2, soweit sie nicht zum Einkauf in eine Einrichtung der beruflichen Vorsorge verwendet werden, Kapitalleistungen des Arbeitgebers oder der Arbeitgeberin nach § 18 Abs. 2 sowie Kapitalzahlungen nach § 24 lit. b werden getrennt vom übrigen Einkommen und ohne Zusammenrechnung unter Ehegatten wie folgt besteuert: die ersten · CHF 25'000 mit 3%, — die nächsten · CHF 25'000 mit 4%, — die nächsten · CHF 50'000 mit 6%, — alle weiteren Beträge · mit 8%."
+          "text": "Kapitalleistungen nach § 23 Abs. 1 und 2, soweit sie nicht zum Einkauf in eine Einrichtung der beruflichen Vorsorge verwendet werden, Kapitalleistungen des Arbeitgebers oder der Arbeitgeberin nach § 18 Abs. 2 sowie Kapitalzahlungen nach § 24 lit. b werden getrennt vom übrigen Einkommen und ohne Zusammenrechnung unter Ehegatten wie folgt besteuert:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "die ersten",
+                "CHF 25'000 mit 3%,"
+              ],
+              [
+                "die nächsten",
+                "CHF 25'000 mit 4%,"
+              ],
+              [
+                "die nächsten",
+                "CHF 50'000 mit 6%,"
+              ],
+              [
+                "alle weiteren Beträge",
+                "mit 8%."
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -1857,7 +1882,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "dc1ff25edfcf30d302da221b631e3c4b87611f113a76ba3937ac3c28104abfbc"
+      "sha": "7cd9e950739871e618b3d6918a7fc905c4d34eb7eaad8301c2863004df952289"
     },
     {
       "id": "kanton/BS/640.100/art_40",
@@ -2144,11 +2169,59 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die jährliche Steuer auf dem steuerbaren Vermögen wird nach folgendem Tarif (Tarif A) berechnet: Von Fr. 0 · bis Fr. 250'000: · Fr. 4.50 je Fr. 1'000 — Von Fr. 250'000 · bis Fr. 750'000: · Fr. 6.50 je Fr. 1'000 — Über Fr. 750'000: · Fr. 7.90 je Fr. 1'000"
+          "text": "Die jährliche Steuer auf dem steuerbaren Vermögen wird nach folgendem Tarif (Tarif A) berechnet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Von Fr. 0",
+                "bis Fr. 250'000:",
+                "Fr. 4.50 je Fr. 1'000"
+              ],
+              [
+                "Von Fr. 250'000",
+                "bis Fr. 750'000:",
+                "Fr. 6.50 je Fr. 1'000"
+              ],
+              [
+                "Über Fr. 750'000:",
+                "",
+                "Fr. 7.90 je Fr. 1'000"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
-          "text": "Für Ehegatten, die in rechtlich und tatsächlich ungetrennter Ehe leben, wird die jährliche Steuer auf dem steuerbaren Vermögen nach folgendem Tarif (Tarif B) berechnet: Von Fr. 0 · bis Fr. 400'000: · Fr. 4.50 je Fr. 1'000 — Von Fr. 400'000 · bis Fr. 1'200'000: · Fr. 6.50 je Fr. 1'000 — Über Fr. 1'200'000 · Fr. 7.90 je Fr. 1'000"
+          "text": "Für Ehegatten, die in rechtlich und tatsächlich ungetrennter Ehe leben, wird die jährliche Steuer auf dem steuerbaren Vermögen nach folgendem Tarif (Tarif B) berechnet:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Von Fr. 0",
+                "bis Fr. 400'000:",
+                "Fr. 4.50 je Fr. 1'000"
+              ],
+              [
+                "Von Fr. 400'000",
+                "bis Fr. 1'200'000:",
+                "Fr. 6.50 je Fr. 1'000"
+              ],
+              [
+                "Über Fr. 1'200'000",
+                "",
+                "Fr. 7.90 je Fr. 1'000"
+              ]
+            ]
+          }
         },
         {
           "absatz": "3",
@@ -2159,7 +2232,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "6bdc409a5ae19951b2ef8edace609464abaa8c07339cd0ee959932919aa41392"
+      "sha": "4f14197617cc6da5aa2064b0f94eeba20f8be53e08758f8b7c161b1f8d626dd1"
     },
     {
       "id": "kanton/BS/640.100/art_51",
@@ -5093,7 +5166,58 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Auf der einfachen Steuer wird ein Zuschlag erhoben. Dieser beträgt: 25% · bei einem Empfange · bis zu · CHF 100'000 — 50% · bei einem Empfange · bis zu · CHF 200'000 — 75% · bei einem Empfange · bis zu · CHF 500'000 — 100% · bei einem Empfange · bis zu · CHF 1'000'000 — 125% · bei einem Empfange · bis zu · CHF 2'000'000 — 150% · bei einem Empfange · bis zu · CHF 3'000'000 — 175% · bei einem Empfange · von über · CHF 3'000'000."
+          "text": "Auf der einfachen Steuer wird ein Zuschlag erhoben. Dieser beträgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "25%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 100'000"
+              ],
+              [
+                "50%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 200'000"
+              ],
+              [
+                "75%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 500'000"
+              ],
+              [
+                "100%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 1'000'000"
+              ],
+              [
+                "125%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 2'000'000"
+              ],
+              [
+                "150%",
+                "bei einem Empfange",
+                "bis zu",
+                "CHF 3'000'000"
+              ],
+              [
+                "175%",
+                "bei einem Empfange",
+                "von über",
+                "CHF 3'000'000."
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -5104,7 +5228,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/640.100",
       "abgerufen": "2026-06-23",
       "fassungsToken": "20958f7e65daaa15c3cf08a7e51a388b",
-      "sha": "942c99ca21743cf86602554bed368df24d2f7f6cb84df231245fc9ceaeaf246d"
+      "sha": "9481ed065a9b45273ba2dc244ba632ed7ada4e61299d84aba19049d1c7d42095"
     },
     {
       "id": "kanton/BS/640.100/art_132",

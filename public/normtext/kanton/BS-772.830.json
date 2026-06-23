@@ -20,11 +20,15 @@
         },
         {
           "absatz": "3",
-          "text": "Einheitspreis Der Einheitspreis beträgt Fr. 1.58/m&sup3;."
+          "text": "Einheitspreis Der Einheitspreis beträgt Fr. 1.58/m³."
         },
         {
           "absatz": "4",
-          "text": "Grundpreis",
+          "text": "Grundpreis"
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Leistungsbereich",
@@ -34,52 +38,52 @@
             "zeilen": [
               [
                 "Leistungsbereich 1",
-                "bis 3.24 m&sup3;/h",
+                "bis 3.24 m³/h",
                 "Fr. 300"
               ],
               [
                 "Leistungsbereich 2",
-                "3.25-4.32 m&sup3;/h",
+                "3.25-4.32 m³/h",
                 "Fr. 420"
               ],
               [
                 "Leistungsbereich 3",
-                "4.33-5.4 m&sup3;/h",
+                "4.33-5.4 m³/h",
                 "Fr. 600"
               ],
               [
                 "Leistungsbereich 4",
-                "5.41-9.00 m&sup3;/h",
+                "5.41-9.00 m³/h",
                 "Fr. 1'200"
               ],
               [
                 "Leistungsbereich 5",
-                "9.01-11.52 m&sup3;/h",
+                "9.01-11.52 m³/h",
                 "Fr. 1'800"
               ],
               [
                 "Leistungsbereich 6",
-                "11.53-19.80 m&sup3;/h",
+                "11.53-19.80 m³/h",
                 "Fr. 2'100"
               ],
               [
                 "Leistungsbereich 7",
-                "19.81-36.00 m&sup3;/h",
+                "19.81-36.00 m³/h",
                 "Fr. 4'200"
               ],
               [
                 "Leistungsbereich 8",
-                "36.01-54 m&sup3;/h",
+                "36.01-54 m³/h",
                 "Fr. 6'600"
               ],
               [
                 "Leistungsbereich 9",
-                "54.01-90.00 m&sup3;/h",
+                "54.01-90.00 m³/h",
                 "Fr. 10'800"
               ],
               [
                 "Leistungsbereich 10",
-                "90.01-252.00 m&sup3;/h",
+                "90.01-252.00 m³/h",
                 "Fr. 21'000"
               ]
             ]
@@ -108,7 +112,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "db1fd4f3bf4ceafd41af7be9c779d50e2507d5142b22aa35c6b9e9c5a73354e8"
+      "sha": "19112dd75a119cfd2b71ee9f4e2a354272512a072a837ccf4ebb49af9bf112e5"
     },
     {
       "id": "kanton/BS/772.830/art_2",
@@ -129,7 +133,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+              "text": "Einheitspreis Fr. 1.58/m³"
             },
             {
               "marke": "b",
@@ -147,7 +151,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+              "text": "Einheitspreis Fr. 1.58/m³"
             },
             {
               "marke": "b",
@@ -169,7 +173,7 @@
             },
             {
               "marke": "b",
-              "text": "Grundpreis (Nach Anschlussleistung der Anlage) Fr. 65.-/(m&sup3;/h)/Jahr"
+              "text": "Grundpreis (Nach Anschlussleistung der Anlage) Fr. 65.-/(m³/h)/Jahr"
             }
           ]
         },
@@ -179,11 +183,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Einheitspreis Fr. 1.58/m&sup3;"
+              "text": "Einheitspreis Fr. 1.58/m³"
             },
             {
               "marke": "b",
-              "text": "Grundpreis Fr. 60.-/(m&sup3;/h)/Jahr"
+              "text": "Grundpreis Fr. 60.-/(m³/h)/Jahr"
             }
           ]
         },
@@ -197,7 +201,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Einheitspreis Fr. 0.65/m&sup3;"
+              "text": "Einheitspreis Fr. 0.65/m³"
             },
             {
               "marke": "b",
@@ -210,7 +214,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "90a14d0150e2a5729a321c66ef7fa1fc79812ac6522dce9414ccecefef2bf2f3"
+      "sha": "ec7fb402c4471e144ef65b7f9ba8efd9de1a62846bcc8ffc7a43d4c10d24303b"
     },
     {
       "id": "kanton/BS/772.830/art_3",
@@ -223,7 +227,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Tarif Sockeltarif für den Mindestbezug von 50'000 m&sup3;: Fr. 57'000 / Jahr · Einheitspreis: ab 50'000 bis 100'000 m&sup3;: Fr. 1.14/m&sup3; · Grundpreis: gemäss § 1 Abs. 4"
+          "text": "Tarif"
+        },
+        {
+          "absatz": null,
+          "text": "Sockeltarif für den Mindestbezug von 50'000 m³: Fr. 57'000 / Jahr · Einheitspreis: ab 50'000 bis 100'000 m³: Fr. 1.14/m³ · Grundpreis: gemäss § 1 Abs. 4"
         },
         {
           "absatz": "2",
@@ -231,7 +239,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Mindestbezug von 50'000 m&sup3;/Jahr;"
+              "text": "Mindestbezug von 50'000 m³/Jahr;"
             },
             {
               "marke": "b",
@@ -256,7 +264,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "9cb5bc9601a4287ffc52807aaec87e494cc54160699eab0f764d4733c0d0cf7f"
+      "sha": "1e879d4d908e99743cc2de6cc71f872e4a83c4d109e5046560c070d1a9633fb1"
     },
     {
       "id": "kanton/BS/772.830/art_4",
@@ -269,18 +277,18 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Bei einem Trinkwasserbezug von mehr als 120'000 m&sup3; pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
+          "text": "Bei einem Trinkwasserbezug von mehr als 120'000 m³ pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
         },
         {
           "absatz": "2",
-          "text": "Bei einem reinen Brauchwasserbezug von mehr als 100'000 m&sup3; pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
+          "text": "Bei einem reinen Brauchwasserbezug von mehr als 100'000 m³ pro Jahr kann der Wasserpreis durch einen Spezialvertrag festgelegt werden."
         }
       ],
       "stand": "2024-04-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "7e29abc189f8c0dd14f2d5e3b7f9d54a4456adafce158c7b229b3e491ea684a7"
+      "sha": "ddae32edfaec11d0224e1e02eb66dd19aa36ba74953c8c029572d7fab8921a61"
     },
     {
       "id": "kanton/BS/772.830/art_5",
@@ -315,7 +323,7 @@
             },
             {
               "marke": "b",
-              "text": "Neben dem Grundpreis nach § 1 Abs. 4 ist in diesem Fall für jeden über 800 m&sup3; (½ Helbling) pro Jahr hinaus bezogenen m&sup3; der Einheitspreis nach § 1 Abs. 3 zu bezahlen."
+              "text": "Neben dem Grundpreis nach § 1 Abs. 4 ist in diesem Fall für jeden über 800 m³ (½ Helbling) pro Jahr hinaus bezogenen m³ der Einheitspreis nach § 1 Abs. 3 zu bezahlen."
             }
           ]
         }
@@ -324,7 +332,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "e4c1234aaa18bc684790077fa6fca117099982e4f22145ce80cbdf70da4d872e"
+      "sha": "7f6fe537af46c58a8d07edb52190c1d1e50937afb829c8d278ec6e8b468cb2f5"
     },
     {
       "id": "kanton/BS/772.830/art_6",
@@ -341,7 +349,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "Der Wasserbezug wird in Kubikmetern (m&sup3;) gemessen und verrechnet."
+              "text": "Der Wasserbezug wird in Kubikmetern (m³) gemessen und verrechnet."
             },
             {
               "marke": "b",
@@ -357,7 +365,7 @@
             },
             {
               "marke": "e",
-              "text": "Es wird zusätzlich ein Zuschlag für die Aufwendungen der öffentlichen Brunnen gemäss § 60 Abs. 4 Ausführungsbestimmungen von IWB Industrielle Werke Basel betreffend die Abgabe von Trinkwasser vom 28. November 2011 in Höhe von Fr. 0.08/m&sup3; erhoben."
+              "text": "Es wird zusätzlich ein Zuschlag für die Aufwendungen der öffentlichen Brunnen gemäss § 60 Abs. 4 Ausführungsbestimmungen von IWB Industrielle Werke Basel betreffend die Abgabe von Trinkwasser vom 28. November 2011 in Höhe von Fr. 0.08/m³ erhoben."
             }
           ]
         }
@@ -366,7 +374,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.830",
       "abgerufen": "2026-06-23",
       "fassungsToken": "056b039093f84f9168d81ffec929adcf",
-      "sha": "677fd0ad0be481c2671ab987d1682f0b456dbb4541da8f663333b6d16ececb10"
+      "sha": "3e535d5db8dff623a6d80fb55c018e7527167876682c9208c0cb66ff12fc4c76"
     },
     {
       "id": "kanton/BS/772.830/art_7",

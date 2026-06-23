@@ -354,11 +354,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei einem Kind in Tagesbetreuung: Modellkosten + 100 – (Einkommen gemäss Abs. 1 : 1'000 – 10)&sup2;;"
+              "text": "bei einem Kind in Tagesbetreuung: Modellkosten + 100 – (Einkommen gemäss Abs. 1 : 1'000 – 10)²;"
             },
             {
               "marke": "b",
-              "text": "bei zwei Kindern in Tagesbetreuung: Modellkosten + 80 – (Einkommen gemäss Abs. 1 : 1'000 – 10)&sup2; * 0.8;"
+              "text": "bei zwei Kindern in Tagesbetreuung: Modellkosten + 80 – (Einkommen gemäss Abs. 1 : 1'000 – 10)² * 0.8;"
             },
             {
               "marke": "c",
@@ -387,7 +387,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/815.120",
       "abgerufen": "2026-06-23",
       "fassungsToken": "b370d627918cf58afebdb7b6ba9143dc",
-      "sha": "7fc68a10463159d8078ae6725427350c60c8742386f94d2f03e5ce85c3f9925b"
+      "sha": "64190b86317fddd1ea3113fcee3ed753c740106b8ccced95defec9a3b6d9a0ca"
     },
     {
       "id": "kanton/BS/815.120/art_10",

@@ -81,11 +81,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Areal an der Riehenstrasse von ca. 7'200 m&sup2; Inhalt mit dem darauf stehenden Wohngebäude samt Dependenzen;"
+              "text": "ein Areal an der Riehenstrasse von ca. 7'200 m² Inhalt mit dem darauf stehenden Wohngebäude samt Dependenzen;"
             },
             {
               "marke": "b",
-              "text": "ein Areal an der Ecke Grenzacherstrasse und Duttliweg von ca. 2'500 m&sup2; Inhalt mit den darauf befindlichen Gebäuden."
+              "text": "ein Areal an der Ecke Grenzacherstrasse und Duttliweg von ca. 2'500 m² Inhalt mit den darauf befindlichen Gebäuden."
             }
           ]
         },
@@ -102,7 +102,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/954.550",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05b0eecac167e61cce8b29a074b60dd6",
-      "sha": "317dcf83c2cc022d8a75a778839e9b307a17d4c760e15657882b527e0986c4b9"
+      "sha": "2d46192e12104360d04b99954cf3d45a33cdd215b5dcc7904d83a2d136c200ec"
     },
     {
       "id": "kanton/BS/954.550/art_4",
@@ -114,7 +114,61 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Eisenbahnverwaltung stellt gleichzeitig mit dem Bahnhofumbau Unterführungen für die nachgenannten Strassen und Wege her: Gesamtbreite — 1. · Grenzacherstrasse · 16 m — 2. · Chrischonastrasse · 16 m — 3. · Riehenstrasse · 18 m — 4. · Maulbeerstrasse · 15 m — 5. · Horburgstrasse · 16 m — 6. · Hochbergerstrasse · 16 m — 7. · Freiburgerstrasse · 16 m — 8. · Neuhausstrasse · 12 m"
+          "text": "Die Eisenbahnverwaltung stellt gleichzeitig mit dem Bahnhofumbau Unterführungen für die nachgenannten Strassen und Wege her:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "",
+                "",
+                "Gesamtbreite"
+              ],
+              [
+                "1.",
+                "Grenzacherstrasse",
+                "16 m"
+              ],
+              [
+                "2.",
+                "Chrischonastrasse",
+                "16 m"
+              ],
+              [
+                "3.",
+                "Riehenstrasse",
+                "18 m"
+              ],
+              [
+                "4.",
+                "Maulbeerstrasse",
+                "15 m"
+              ],
+              [
+                "5.",
+                "Horburgstrasse",
+                "16 m"
+              ],
+              [
+                "6.",
+                "Hochbergerstrasse",
+                "16 m"
+              ],
+              [
+                "7.",
+                "Freiburgerstrasse",
+                "16 m"
+              ],
+              [
+                "8.",
+                "Neuhausstrasse",
+                "12 m"
+              ]
+            ]
+          }
         },
         {
           "absatz": "2",
@@ -137,7 +191,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/954.550",
       "abgerufen": "2026-06-23",
       "fassungsToken": "05b0eecac167e61cce8b29a074b60dd6",
-      "sha": "f596027bae8cc9011e5325f88cda0b177f40053c388885c95b6d9bf8c8208a49"
+      "sha": "adbf1f3a1e262c75a17fcff79f564d61134cb9acb76bbcfb5c8292b5d553e25c"
     },
     {
       "id": "kanton/BS/954.550/art_5",

@@ -11,11 +11,21 @@
 // Unicode-Apostrophe (z.B. NW-Tausendertrenner U+2018 ') werden verbatim
 // durchgereicht.
 
-/** Muster für führende Tarif-/Positions-Nummern ohne `: ` (bare cell). */
-const TARIF_NR_RE = /^\d+(\.\d+)*\.?$/;
+/**
+ * Muster für führende Tarif-/Positions-Nummern ohne `: ` (bare cell).
+ *
+ * T3 (BS-Audit 23.6.2026): um buchstaben-suffigierte Positionen erweitert:
+ *  - rein numerisch / hierarchisch: «1», «0.1», «0.1.1», «1.», «1.1.»
+ *  - mit Buchstaben-Suffix nach Punkt: «4.a)», «4.a», «4.a.»
+ *  - kompakter Buchstaben-Suffix: «ca)», «1a)», «2bis)» (LexWork-Unterpositionen)
+ * Konservativ: höchstens EIN Buchstabenblock, optional in «)» endend; nie ein
+ * ganzes Wort (so bleibt «bis Fr. 250'000:» ein Wert, keine Positionsnummer).
+ */
+const TARIF_NR_RE =
+  /^(?:\d+(?:\.\d+)*\.?(?:[a-z]{1,2}\)?)?|\d*[a-z]{1,3}(?:bis|ter|quater)?\))$/i;
 
 /** Spaltenname für führende bare Tarif-Nummern. */
-const TARIF_NR_LABEL = 'Tarif-Nr.';
+export const TARIF_NR_LABEL = 'Tarif-Nr.';
 
 /**
  * Zerlegt eine einzelne Zelle «Label: Wert» am ERSTEN `: ` (nur erstes Vorkommen).
@@ -69,14 +79,53 @@ function normalisiereTrennzeichen(text: string): string {
 }
 
 /**
+ * T3 (BS-Audit 23.6.2026) — POSITIONS-BASIERTE Zerlegung label-loser Tarifzellen.
+ *
+ * StG §50/§131 u.a. liefern eine `enumeration_tabular` MIT leeren `<th>` → alle
+ * Zellen sind label-los («25% · bei einem Empfange · bis zu · CHF 100'000»). Die
+ * label-basierte Logik scheitert (kein `: `, keine Tarif-Nr.) → früher blieb der
+ * Block ·/—-Fliesstext. Hier positionsbasiert lesen, ABER nur unter strengen
+ * §1-Bedingungen, damit nie ein normaler Absatz zerschnitten wird:
+ *   - ≥2 Zeilen, und JEDE Zeile hat EXAKT die gleiche Zellzahl (STABIL);
+ *   - diese Zellzahl ist ≥2 (eine einzige Spalte ist keine Tabelle);
+ *   - es gibt KEINE label-basierte/Tarif-Nr.-Struktur (sonst greift der saubere
+ *     Pfad oben — gemischte Tabellen bleiben dort).
+ * Liefert eine kopf-lose Tabelle (kopf weggelassen); die Render-Komponente zeigt
+ * sie ohne Kopfzeile (reine Spaltenausrichtung).
+ */
+function extrahierePositional(
+  roheZeilen: string[],
+): { kopf: string[]; zeilen: string[][] } | null {
+  if (roheZeilen.length < 2) return null;
+  const zeilen = roheZeilen.map((z) => z.split(' · ').map((c) => c.trim()));
+  const n = zeilen[0].length;
+  if (n < 2) return null;
+  // STABIL: jede Zeile gleich viele Zellen.
+  if (!zeilen.every((z) => z.length === n)) return null;
+  // §1-Schutz: keine Zeile darf vollständig leer sein (Quell-Artefakt-Zeilen).
+  if (zeilen.some((z) => z.every((c) => c === ''))) return null;
+  // §1-Schutz (konservativer als der Vorzustand nur dort, wo es sicher ist):
+  // der positionsbasierte Pfad greift NUR bei ECHT label-losen Tabellen — enthält
+  // IRGENDEINE Zelle ein «: » (Label-Marker), war es ein gemischter/ambiger Block,
+  // für den der label-basierte Pfad galt; dort bleibt das alte null-Verhalten
+  // (kein normaler Absatz mit einem Streu-«Label: …» wird positionsbasiert zerlegt).
+  if (zeilen.some((z) => z.some((c) => c.includes(': ')))) return null;
+  // kopf=[] → kopf-lose Tabelle (Render zeigt keine Kopfzeile). Bewahrt den
+  // stabilen Rückgabetyp { kopf: string[]; zeilen } für alle bestehenden Aufrufer.
+  return { kopf: [], zeilen };
+}
+
+/**
  * Versucht, `·`/`—`-Flachtext in eine Mehrspalten-Tabelle zu zerlegen.
  *
  * Bedingungen für Erfolg:
  * - Text enthält ` — ` UND ` · `
  * - Split an ` — ` ergibt ≥2 Zeilen
- * - Jede Zelle hat das Format «Label: Wert» oder ist eine bare Tarif-Nr.
+ * - Jede Zelle hat das Format «Label: Wert» oder ist eine bare Tarif-Nr. ODER
+ *   (T3) alle Zeilen sind positionsbasiert stabil gleich breit (label-los).
  *
  * Bei §1-Verletzung (ambige Zelle, < 2 Zeilen, fehlende Marker) → null.
+ * Label-lose (positionsbasierte) Tabellen liefern kopf=[] (keine Kopfzeile).
  *
  * @returns { kopf: string[]; zeilen: string[][] } | null
  */
@@ -96,6 +145,7 @@ export function extrahiereMehrspaltig(
   // Alle Zeilen parsen: [[{label,wert}, …], …]
   const geparsteZeilen: Array<Array<{ label: string; wert: string }>> = [];
 
+  let labelBasiertOk = true;
   for (const roheZeile of roheZeilen) {
     const zellen = roheZeile.split(' · ');
     const geparsteZellen: Array<{ label: string; wert: string }> = [];
@@ -103,13 +153,20 @@ export function extrahiereMehrspaltig(
     for (const zelle of zellen) {
       const parsed = zerlegeZelle(zelle.trim());
       if (parsed === null) {
-        // §1: ambige Zelle → ganzen Block als Text belassen
-        return null;
+        // §1: ambige Zelle → label-basierter Pfad scheitert; T3-Fallback prüfen.
+        labelBasiertOk = false;
+        break;
       }
       geparsteZellen.push(parsed);
     }
-
+    if (!labelBasiertOk) break;
     geparsteZeilen.push(geparsteZellen);
+  }
+
+  if (!labelBasiertOk) {
+    // T3: positionsbasierter Fallback (label-lose, stabil breite Tarif-Tabelle).
+    const pos = extrahierePositional(roheZeilen);
+    return pos; // null, falls auch positionsbasiert §1-unsicher
   }
 
   // Spaltenreihenfolge: erste-Auftritt-Vereinigung aller Labels;

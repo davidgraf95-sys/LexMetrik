@@ -15,11 +15,11 @@
         },
         {
           "absatz": "1bis",
-          "text": "Für Fahrzeugarten, die ausschliesslich durch elektrische Energie angetrieben und nach Hubraum (cm&sup3;) besteuert werden, erfolgt die Berechnung des (theoretischen) Hubraums durch Umwandlung der Leistung (kW) aufgrund nachstehender Formel:  H = L &divide; 0,045  H = Hubraum L = Motorleistung in Kilowatt (kW) 0,045 = Umwandlungskonstante"
+          "text": "Für Fahrzeugarten, die ausschliesslich durch elektrische Energie angetrieben und nach Hubraum (cm³) besteuert werden, erfolgt die Berechnung des (theoretischen) Hubraums durch Umwandlung der Leistung (kW) aufgrund nachstehender Formel:  H = L ÷ 0,045  H = Hubraum L = Motorleistung in Kilowatt (kW) 0,045 = Umwandlungskonstante"
         },
         {
           "absatz": "2",
-          "text": "Für Hybridfahrzeuge, die mit einem Verbrennungs- und einem Elektromotor ausgerüstet sind sowie nach Hubraum (cm&sup3;) besteuert werden, wird für die Bestimmung des zu entrichtenden Steuerbetrags nur der Hubraum des Verbrennungsmotors berücksichtigt."
+          "text": "Für Hybridfahrzeuge, die mit einem Verbrennungs- und einem Elektromotor ausgerüstet sind sowie nach Hubraum (cm³) besteuert werden, wird für die Bestimmung des zu entrichtenden Steuerbetrags nur der Hubraum des Verbrennungsmotors berücksichtigt."
         },
         {
           "absatz": "3",
@@ -30,7 +30,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.510",
       "abgerufen": "2026-06-23",
       "fassungsToken": "1ed3f809c3a36c78adef8478654c6cff",
-      "sha": "8142ecccbf4e393c5516388dd8bc4e75377c191eb39162fcda3e43ef5124b7f9"
+      "sha": "a8ea802e1c210db077ad4f66b8bfe2930e47ee5ba1c05bd83988eaf5ec9667bd"
     },
     {
       "id": "kanton/BS/650.510/art_1_a",

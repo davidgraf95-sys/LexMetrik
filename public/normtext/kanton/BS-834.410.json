@@ -366,7 +366,11 @@
               "marke": "1",
               "text": "Die Höhe der Beiträge richtet sich nach den für die individuelle Prämienverbilligung (IPV) geltenden Einkommensgruppen und entspricht der Differenz zwischen den vom Regierungsrat festgelegten oder in Verträgen zwischen dem Regierungsrat und den Leistungserbringern vereinbarten Spital- und Pflegeheimtaxen und der nachfolgend aufgeführten maximalen Eigenleistung der versicherten Person."
             }
-          ],
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "IPV-Einkommensgruppe",
@@ -560,13 +564,17 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "a) Pflegeheime Pflegeaufwand in Minuten pro Tag: … · Pflegekosten pro Tag in Fr.: … —",
+          "text": "a) Pflegeheime",
           "items": [
             {
               "marke": "1",
               "text": "Die Pflegenormkosten ergeben sich aus der Multiplikation des vom Regierungsrat festgelegten Punktwertes in Franken mit den Indexwerten pro Pflegestufe (Anhang 1 § 2)."
             }
-          ],
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "Pflegeaufwand in Minuten pro Tag: … · Pflegekosten pro Tag in Fr.: … —",
           "mehrspaltig": {
             "kopf": [
               "Pflegestufe",
@@ -679,7 +687,11 @@
               "marke": "1",
               "text": "Für die Berechnung der Restfinanzierung durch den Kanton gelten die nachfolgenden, anerkannten Pflegekosten."
             }
-          ],
+          ]
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Pflegekosten pro Stunde in Fr.",
@@ -733,7 +745,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/834.410",
       "abgerufen": "2026-06-23",
       "fassungsToken": "86c6d416119d77d7a504ac4303d48790",
-      "sha": "428171a5ee0ffe40c603f7681d7cd30fba5849de681d34238f83b71d8d14887a"
+      "sha": "8edf9ad14fdf35d6d14a54d8ba735ee87877853baf7b3634ced2f9503411a599"
     },
     {
       "id": "kanton/BS/834.410/art_8_d_bis",

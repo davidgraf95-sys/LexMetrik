@@ -262,23 +262,23 @@
             },
             {
               "marke": "1",
-              "text": "1-Zimmer-Whg. 37 m&sup2;"
+              "text": "1-Zimmer-Whg. 37 m²"
             },
             {
               "marke": "2",
-              "text": "2-Zimmer-Whg. 61 m&sup2;"
+              "text": "2-Zimmer-Whg. 61 m²"
             },
             {
               "marke": "3",
-              "text": "3-Zimmer-Whg. 83 m&sup2;"
+              "text": "3-Zimmer-Whg. 83 m²"
             },
             {
               "marke": "4",
-              "text": "4-Zimmer-Whg. 110 m&sup2;"
+              "text": "4-Zimmer-Whg. 110 m²"
             },
             {
               "marke": "5",
-              "text": "5-Zimmer-Whg. 142 m&sup2;."
+              "text": "5-Zimmer-Whg. 142 m²."
             }
           ]
         },
@@ -317,7 +317,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/861.520",
       "abgerufen": "2026-06-23",
       "fassungsToken": "02f3d06647d47ad0b8e1f389afea92c0",
-      "sha": "b61fa9e54cccb914f18cee1796c826b8347273654b27794f7edee5e9c8f6b7d3"
+      "sha": "52671d8ed709821bfbd6a5b0a85079ca807e069d0eb5e49692b844821ee51d4c"
     },
     {
       "id": "kanton/BS/861.520/art_11",
@@ -720,7 +720,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Höhe der Beiträge für die Miete einer rollstuhlgängigen Wohnung richtet sich nach dem Anspruch auf Prämienverbilligung der auf einen Rollstuhl angewiesenen Person und wird nach den für die individuelle Prämienverbilligung (IPV) geltenden Prämienverbilligungsstufen gemäss Verordnung über die Krankenversicherung im Kanton Basel-Stadt (KVO) vom 25. November 2008 abgestuft: Prämiengruppe 1 - 6:: Fr. 6'000 pro Jahr · Prämiengruppe 7 - 12:: Fr. 4'500 pro Jahr · Prämiengruppe 13 - 17:: Fr. 3'000 pro Jahr · Prämiengruppe 18 - 22:: Fr. 1'500 pro Jahr"
+          "text": "Die Höhe der Beiträge für die Miete einer rollstuhlgängigen Wohnung richtet sich nach dem Anspruch auf Prämienverbilligung der auf einen Rollstuhl angewiesenen Person und wird nach den für die individuelle Prämienverbilligung (IPV) geltenden Prämienverbilligungsstufen gemäss Verordnung über die Krankenversicherung im Kanton Basel-Stadt (KVO) vom 25. November 2008 abgestuft:"
+        },
+        {
+          "absatz": null,
+          "text": "Prämiengruppe 1 - 6:: Fr. 6'000 pro Jahr · Prämiengruppe 7 - 12:: Fr. 4'500 pro Jahr · Prämiengruppe 13 - 17:: Fr. 3'000 pro Jahr · Prämiengruppe 18 - 22:: Fr. 1'500 pro Jahr"
         },
         {
           "absatz": "2",
@@ -739,7 +743,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/861.520",
       "abgerufen": "2026-06-23",
       "fassungsToken": "02f3d06647d47ad0b8e1f389afea92c0",
-      "sha": "f095d44448581734b53c8b370806b56c96589803da5e18ff90bbba9f08b65113"
+      "sha": "27a6e7295eb710bc8b0b0dc02b0c66fa7d7d1b8f9a99d9916d967971c463f593"
     },
     {
       "id": "kanton/BS/861.520/art_26",

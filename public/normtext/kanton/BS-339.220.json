@@ -104,7 +104,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Diese Gebühren gelten für krankheits- und unfallbedingte Einsätze sowie für Verlegungstransporte zwischen Spitälern.",
+          "text": "Diese Gebühren gelten für krankheits- und unfallbedingte Einsätze sowie für Verlegungstransporte zwischen Spitälern."
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Pos.",
@@ -258,7 +262,11 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": ".",
+          "text": "."
+        },
+        {
+          "absatz": null,
+          "text": "",
           "mehrspaltig": {
             "kopf": [
               "Pos.",

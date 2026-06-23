@@ -294,22 +294,40 @@ function spaltInline(spans: string[]): {
   };
 }
 
+/** Tarif-/Positions-Nummern-Muster für die leere Kopfspalte (S4): «1», «1.1.»,
+ *  «4.a)», «ca)» — synchron zu mehrspaltige-tabelle.ts:TARIF_NR_RE. Eine leere
+ *  Kopfspalte mit solchen Werten ist die POSITIONS-Spalte und wird explizit als
+ *  «Tarif-Nr.» beschriftet, damit sie nicht mit der Caption (eigenes «: »)
+ *  verschmilzt und beim Re-Parse in Spalte 0 landet. */
+const TABELLE_TARIF_NR_RE =
+  /^(?:\d+(?:\.\d+)*\.?(?:[a-z]{1,2}\)?)?|\d*[a-z]{1,3}(?:bis|ter|quater)?\))$/i;
+
 /**
  * Wandelt eine Gebühren-/Staffel-Tabelle (<table class='enumeration_tabular'>,
  * z.B. ZG 161.7 § 11) in lesbaren Text. Die Tabelle hat eine Kopfzeile (<th>)
  * mit Spaltenbeschriftungen und Datenzeilen (<td>). Je Datenzeile werden die
  * nicht-leeren Zellen mit ihrer Spaltenbeschriftung versehen («Spalte: Wert»)
- * und mit « · » getrennt; die Zeilen werden mit « — » verkettet. So bleiben die
- * Zellen sauber getrennt (kein zusammengeklebter Text) und der Bezug Wert↔Spalte
- * geht nicht verloren. Ohne Kopfzeile werden die Zellen ohne Beschriftung
- * verkettet. Liefert '' bei leerer Tabelle.
+ * und mit « · » getrennt; die Zeilen werden mit « — » verkettet.
+ *
+ * S4/T3 (BS-Audit 23.6.2026) — zwei Modi, damit Tarif-Tabellen sauber rendern:
+ *  (a) LABEL-Modus (mind. eine nicht-leere Kopfzelle, IWB §3, GerGebV §10): jede
+ *      Zelle als «Label: Wert». Eine LEERE Kopfspalte, deren Werte Tarif-/Positions-
+ *      Nummern sind, wird explizit «Tarif-Nr.: N» beschriftet — so verschmilzt die
+ *      Tarif-Nr. nicht mit der Caption (die ihr eigenes «: » trägt) und landet beim
+ *      Re-Parse in Spalte 0 (behebt den Phantom-Spalten-Versatz S4). Leere Zellen
+ *      ohne Label werden weggelassen (Label-Lookup rekonstruiert die Spalte).
+ *  (b) POSITIONS-Modus (ALLE Kopfzellen leer, StG §50/§131): label-lose Tabelle.
+ *      ALLE Zellen — auch leere — werden positionsgetreu mit « · » verkettet, damit
+ *      die Spaltenzahl STABIL bleibt (StG §50 «Über …»-Zeile hat eine leere
+ *      Mittelzelle). Der Re-Parser (extrahiereMehrspaltig) liest sie positionsbasiert.
+ * Liefert '' bei leerer Tabelle.
  */
 function tabelleZuText(tabellenInner: string): string {
   const zeilen = [...tabellenInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(
     (r) => r[1],
   );
   let kopf: string[] = [];
-  const zeilenTexte: string[] = [];
+  const datenZeilen: string[][] = [];
   for (const zeile of zeilen) {
     const ths = [...zeile.matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) =>
       bereinige(c[1]),
@@ -321,11 +339,30 @@ function tabelleZuText(tabellenInner: string): string {
     const tds = [...zeile.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
       bereinige(c[1]),
     );
+    if (tds.length > 0) datenZeilen.push(tds);
+  }
+  if (datenZeilen.length === 0) return '';
+
+  const hatLabel = kopf.some((k) => k.trim() !== '');
+  // (b) POSITIONS-Modus: keine Kopf-Labels → alle Zellen positionsgetreu erhalten.
+  if (!hatLabel) {
+    return datenZeilen
+      .filter((tds) => tds.some((w) => w !== '')) // ganz leere Quell-Zeilen weg
+      .map((tds) => tds.join(' · '))
+      .join(' — ');
+  }
+  // (a) LABEL-Modus.
+  const zeilenTexte: string[] = [];
+  for (const tds of datenZeilen) {
     const zellen = tds
       .map((wert, i) => {
         if (!wert) return '';
-        const label = kopf[i];
-        return label ? `${label}: ${wert}` : wert;
+        const label = (kopf[i] ?? '').trim();
+        if (label) return `${label}: ${wert}`;
+        // Leere Kopfspalte: Positions-Nummer explizit als Tarif-Nr. beschriften,
+        // sonst bleibt der Wert label-los und verschmilzt beim Re-Parse mit der
+        // Caption (S4). Nicht-numerische label-lose Werte bleiben unbeschriftet.
+        return TABELLE_TARIF_NR_RE.test(wert) ? `Tarif-Nr.: ${wert}` : wert;
       })
       .filter(Boolean);
     if (zellen.length > 0) zeilenTexte.push(zellen.join(' · '));
@@ -415,19 +452,17 @@ function parseSegment(segment: string): LexArtikel {
         }
       }
     } else if (m[3] !== undefined) {
-      // enumeration_tabular: Gebühren-/Staffeltabelle. Ihre Zeilen werden als
-      // lesbarer Text an den vorangehenden Einleitungs-Absatz («… beträgt die
-      // Entscheidgebühr:») gehängt, damit die Bestimmung nicht unvollständig wirkt.
+      // enumeration_tabular: Gebühren-/Staffeltabelle als EIGENER Block.
+      // S4/T3 (BS-Audit 23.6.2026): die Tabelle wird NICHT mehr in den Text des
+      // vorangehenden Caption-Absatzes («… beträgt die Entscheidgebühr:») gehängt.
+      // Die alte Verschmelzung klebte die Caption an die erste Tabellenzelle und
+      // erzeugte eine Phantom-Spalte bzw. einen Tarif-Nr.-Versatz (IWB §3) und
+      // verhinderte die positionsbasierte Zerlegung (StG §50/§131). Die Caption
+      // bleibt als eigener (vorangehender) Absatz-Block stehen — visuell identisch
+      // (Einleitungszeile über der Tabelle), aber der Tabellenkörper ist sauber.
+      // reichereMehrspaltig() wandelt diesen reinen Tabellen-Block in `mehrspaltig`.
       const tabelleText = tabelleZuText(m[3]);
-      if (tabelleText) {
-        if (bloecke.length > 0) {
-          const last = bloecke[bloecke.length - 1];
-          last.text = last.text ? `${last.text} ${tabelleText}` : tabelleText;
-        } else {
-          // Tabelle ohne vorangehenden Absatz (selten) → eigener Block.
-          bloecke.push({ absatz: null, text: tabelleText });
-        }
-      }
+      if (tabelleText) bloecke.push({ absatz: null, text: tabelleText });
     } else if (m[4] !== undefined) {
       // S2 (BS-Audit 23.6.2026) — paragraph_post / text_content_post: LexWork
       // hängt substantiellen Normtext als FORTSETZUNG hinter eine Tabelle/einen

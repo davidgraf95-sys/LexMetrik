@@ -98,7 +98,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Emissionskonzentration von Stickoxiden, angegeben als Stickstoffdioxid, darf bei einer Fracht von mehr als 5 t/Jahr 100 mg/m&sup3; nicht übersteigen."
+          "text": "Die Emissionskonzentration von Stickoxiden, angegeben als Stickstoffdioxid, darf bei einer Fracht von mehr als 5 t/Jahr 100 mg/m³ nicht übersteigen."
         },
         {
           "absatz": "2",
@@ -109,7 +109,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2269482e5a59268d789669034c406d8c",
-      "sha": "a8d14fd5aa90cb617930ba8bca3b67cbd00dac6bdf64587e1fdb3e22c8c1f0c2"
+      "sha": "1bdd8c356bea58353fce2d0518a75a12365cecb8506945d3300cd93e63154f88"
     },
     {
       "id": "kanton/BS/781.220/art_6",
@@ -130,11 +130,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei einer Fracht von 5 bis 10 t/Jahr sowie einem Massenstrom von 1,5 kg/h oder mehr 75 mg/m&sup3;"
+              "text": "bei einer Fracht von 5 bis 10 t/Jahr sowie einem Massenstrom von 1,5 kg/h oder mehr 75 mg/m³"
             },
             {
               "marke": "b",
-              "text": "bei einer Fracht über 10 t/Jahr 50 mg/m&sup3;"
+              "text": "bei einer Fracht über 10 t/Jahr 50 mg/m³"
             }
           ]
         },
@@ -151,7 +151,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2269482e5a59268d789669034c406d8c",
-      "sha": "d879d0b2cc766a10aa083ee8a359d3106bb80657582d27e9c93f30141aa3838b"
+      "sha": "6e948c6082e1baabed4dbf5863b81ae347fa163910016844268729a2ad3452d2"
     },
     {
       "id": "kanton/BS/781.220/art_6_a",
@@ -356,15 +356,15 @@
           "items": [
             {
               "marke": "a",
-              "text": "Kohlenmonoxid 150 mg/m&sup3;"
+              "text": "Kohlenmonoxid 150 mg/m³"
             },
             {
               "marke": "b",
-              "text": "Stickoxide 150 mg/m&sup3;"
+              "text": "Stickoxide 150 mg/m³"
             },
             {
               "marke": "c",
-              "text": "Feststoffe 10 mg/m&sup3;"
+              "text": "Feststoffe 10 mg/m³"
             }
           ]
         },
@@ -377,7 +377,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2269482e5a59268d789669034c406d8c",
-      "sha": "6bd52a523ee98ae5b3cd36eae09dc32f29f841932d033c1d6141db6e3a952b83"
+      "sha": "1c93d0b65d0b27e191a11f6427378630a8d093eaa8d276ead8210d9bc6f78c8e"
     },
     {
       "id": "kanton/BS/781.220/art_10",
@@ -406,15 +406,15 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei Verwendung von Gasbrennstoffen 70 mg/m&sup3;"
+              "text": "bei Verwendung von Gasbrennstoffen 70 mg/m³"
             },
             {
               "marke": "b",
-              "text": "bei Verwendung von Dieselöl 110 mg/m&sup3;"
+              "text": "bei Verwendung von Dieselöl 110 mg/m³"
             },
             {
               "marke": "c",
-              "text": "bei Verwendung von Bio-, Holz- und Klärgas in der Regel 100 mg/m&sup3;"
+              "text": "bei Verwendung von Bio-, Holz- und Klärgas in der Regel 100 mg/m³"
             }
           ]
         },
@@ -424,11 +424,11 @@
           "items": [
             {
               "marke": "a",
-              "text": "Kohlenmonoxid 650 mg/m&sup3;"
+              "text": "Kohlenmonoxid 650 mg/m³"
             },
             {
               "marke": "b",
-              "text": "Stickoxide 2000 mg/m&sup3;"
+              "text": "Stickoxide 2000 mg/m³"
             }
           ]
         },
@@ -449,7 +449,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2269482e5a59268d789669034c406d8c",
-      "sha": "5ffaa3bbb2ae7468bbaf72d0d08f06334564410cb1c20bc22dc13daf02edfe39"
+      "sha": "f05b8f0a6b5b7e0a83696056d07b5351597ee733906c43dac6e660fad2ef2413"
     },
     {
       "id": "kanton/BS/781.220/art_11",
@@ -611,17 +611,17 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Anlagen mit einer FWL von 350 kW bis 1 MW: 200 mg/m&sup3;"
+              "text": "für Anlagen mit einer FWL von 350 kW bis 1 MW: 200 mg/m³"
             },
             {
               "marke": "b",
-              "text": "für Anlagen mit einer FWL über 1 MW in der Regel: 150 mg/m&sup3;. Die Bezugswerte des Sauerstoffgehaltes im Abgas richten sich nach der Luftreinhalte-Verordnung."
+              "text": "für Anlagen mit einer FWL über 1 MW in der Regel: 150 mg/m³. Die Bezugswerte des Sauerstoffgehaltes im Abgas richten sich nach der Luftreinhalte-Verordnung."
             }
           ]
         },
         {
           "absatz": "3",
-          "text": "Die Emissionen für Feststoffe dürfen bei Neuanlagen mit einer FWL ab 70 kW bis 500 kW den Wert von 20 mg/m&sup3; nicht überschreiten."
+          "text": "Die Emissionen für Feststoffe dürfen bei Neuanlagen mit einer FWL ab 70 kW bis 500 kW den Wert von 20 mg/m³ nicht überschreiten."
         },
         {
           "absatz": "4",
@@ -632,7 +632,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/781.220",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2269482e5a59268d789669034c406d8c",
-      "sha": "9815b76306ecfa8e8a9b7df077c852d4e4e60cd62db116760770886a09a60cda"
+      "sha": "92c1e4ba5f05ea045d86830f8eb74823273b0417249d22d5e025413d9c003203"
     },
     {
       "id": "kanton/BS/781.220/art_15",

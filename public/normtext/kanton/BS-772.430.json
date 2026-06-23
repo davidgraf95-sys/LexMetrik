@@ -56,60 +56,55 @@
       "bloecke": [
         {
           "absatz": "1",
+          "text": "Der Gebührentarif unterscheidet zwischen folgenden Kundensegmenten:"
+        },
+        {
+          "absatz": null,
           "text": "",
           "mehrspaltig": {
             "kopf": [
               "Tarif-Nr.",
-              "Der Gebührentarif unterscheidet zwischen folgenden Kundensegmenten",
               "Segment",
               "Zuordnungskriterium"
             ],
             "zeilen": [
               [
-                "",
                 "1",
                 "Small",
                 "Vorjahresverbrauch <13 MWh oder temporäre Netzanschlüsse (Messen, Märkte, öffentliche Beleuchtung und sonstige Veranstaltungen sowie Baustromanschlüsse)"
               ],
               [
                 "2",
-                "",
                 "Small plus",
-                "Vorjahresverbrauch &ge;13 MWh bis <50 MWh"
+                "Vorjahresverbrauch ≥13 MWh bis <50 MWh"
               ],
               [
                 "3",
-                "",
                 "Medium",
-                "Vorjahresverbrauch &ge;50 MWh bis <100 MWh"
+                "Vorjahresverbrauch ≥50 MWh bis <100 MWh"
               ],
               [
                 "4",
-                "",
                 "Medium plus",
-                "Vorjahresverbrauch &ge;100 MWh bis <1 GWh"
+                "Vorjahresverbrauch ≥100 MWh bis <1 GWh"
               ],
               [
                 "5",
-                "",
                 "Big",
-                "Vorjahresverbrauch &ge;1 GWh bis <10 GWh"
+                "Vorjahresverbrauch ≥1 GWh bis <10 GWh"
               ],
               [
                 "6",
-                "",
                 "Big plus",
-                "Vorjahresverbrauch &ge;10 GWh"
+                "Vorjahresverbrauch ≥10 GWh"
               ],
               [
                 "7",
-                "",
                 "Switch",
                 "Kundinnen und Kunden mit Wahltarif unterbrechbare Verbraucher gemäss § 13 Gebührentarif von IWB Industrielle Werke Basel für den Anschluss und die Nutzung des Netzes für elektrische Energie"
               ],
               [
                 "8",
-                "",
                 "Crowd",
                 "Kundinnen und Kunden mit Wahltarif IWB Sonnenbox Crowd"
               ]
@@ -137,7 +132,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
       "abgerufen": "2026-06-23",
       "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
-      "sha": "dc447fba532327144aae2a34b40b18d9b96fe700eb024025523647d9a274b043"
+      "sha": "dffbb6f09629c02fee903774fed3bf9b28e5bb1ef946d1debe0799f9a01080fa"
     },
     {
       "id": "kanton/BS/772.430/art_4",
@@ -150,11 +145,14 @@
       "bloecke": [
         {
           "absatz": "1",
+          "text": "Pro Kundensegment gelten folgende Tarife:"
+        },
+        {
+          "absatz": null,
           "text": "",
           "mehrspaltig": {
             "kopf": [
               "Tarif-Nr.",
-              "Pro Kundensegment gelten folgende Tarife",
               "Segment",
               "Tarifbezeichnung",
               "Einfachtarif (Rp./kWh)",
@@ -163,7 +161,6 @@
             ],
             "zeilen": [
               [
-                "",
                 "1",
                 "Small",
                 "IWB Strom small",
@@ -173,7 +170,6 @@
               ],
               [
                 "2",
-                "",
                 "Small plus",
                 "IWB Strom small plus",
                 "9.40",
@@ -182,7 +178,6 @@
               ],
               [
                 "3",
-                "",
                 "Medium",
                 "IWB Strom medium",
                 "9.20",
@@ -191,7 +186,6 @@
               ],
               [
                 "4",
-                "",
                 "Medium plus",
                 "IWB Strom medium plus",
                 "8.60",
@@ -200,7 +194,6 @@
               ],
               [
                 "5",
-                "",
                 "Big",
                 "IWB Strom big",
                 "–",
@@ -209,7 +202,6 @@
               ],
               [
                 "6",
-                "",
                 "Big plus",
                 "IWB Strom big plus",
                 "–",
@@ -218,7 +210,6 @@
               ],
               [
                 "7",
-                "",
                 "Switch",
                 "IWB Strom switch",
                 "8.70",
@@ -227,7 +218,6 @@
               ],
               [
                 "8",
-                "",
                 "Crowd",
                 "IWB Sonnenbox Crowd",
                 "14.85",
@@ -272,7 +262,7 @@
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/772.430",
       "abgerufen": "2026-06-23",
       "fassungsToken": "c1a2881d44df4cd1eebf3e639e80f226",
-      "sha": "233480f99fc62fe530247e7a06fbed29db8d7ea42e11f7a59753f494180416a5"
+      "sha": "2314d7770da3cc51d3f813680eedf83b36acd71c79a19923266ff2c5eb6f642b"
     },
     {
       "id": "kanton/BS/772.430/art_5",

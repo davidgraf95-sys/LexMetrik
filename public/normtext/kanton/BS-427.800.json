@@ -359,14 +359,58 @@
         },
         {
           "absatz": "2",
-          "text": "Notenskala Note · Bezeichnung · Eigenschaften — 1 · sehr gut · Die Leistung entspricht den Anforderungen in besonderem Masse. — 2 · gut · Die Leistung entspricht voll den Anforderungen. — 3 · befriedigend · Die Leistung entspricht im Allgemeinen den Anforderungen. — 4 · ausreichend · Die Leistung weist zwar Mängel auf, aber sie entspricht im Ganzen den Anforderungen. — 5 · mangelhaft · Die Leistung entspricht nicht den Anforderungen, jedoch lässt sich erkennen, dass die notwendigen Grundkenntnisse vorhanden sind und die Mängel in absehbarer Zeit behoben werden können. — 6 · ungenügend · Die Leistung entspricht den Anforderungen nicht und selbst die Grundkenntnisse sind so lückenhaft, dass die Mängel in absehbarer Zeit nicht behoben werden können."
+          "text": "Notenskala"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [],
+            "zeilen": [
+              [
+                "Note",
+                "Bezeichnung",
+                "Eigenschaften"
+              ],
+              [
+                "1",
+                "sehr gut",
+                "Die Leistung entspricht den Anforderungen in besonderem Masse."
+              ],
+              [
+                "2",
+                "gut",
+                "Die Leistung entspricht voll den Anforderungen."
+              ],
+              [
+                "3",
+                "befriedigend",
+                "Die Leistung entspricht im Allgemeinen den Anforderungen."
+              ],
+              [
+                "4",
+                "ausreichend",
+                "Die Leistung weist zwar Mängel auf, aber sie entspricht im Ganzen den Anforderungen."
+              ],
+              [
+                "5",
+                "mangelhaft",
+                "Die Leistung entspricht nicht den Anforderungen, jedoch lässt sich erkennen, dass die notwendigen Grundkenntnisse vorhanden sind und die Mängel in absehbarer Zeit behoben werden können."
+              ],
+              [
+                "6",
+                "ungenügend",
+                "Die Leistung entspricht den Anforderungen nicht und selbst die Grundkenntnisse sind so lückenhaft, dass die Mängel in absehbarer Zeit nicht behoben werden können."
+              ]
+            ]
+          }
         }
       ],
       "stand": "2000-08-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/427.800",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3017c55606802c474a3180e7d60045e2",
-      "sha": "2547ea67628c68edf66f3e8d29d43bf6f90ddb8903ba9b9f43d34c1b282eaf8f"
+      "sha": "a3d8d2360801dc8e75335c77570a016e6f5228b9a6cd0735431f938323455dba"
     },
     {
       "id": "kanton/BS/427.800/art_14",

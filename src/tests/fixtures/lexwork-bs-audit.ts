@@ -215,3 +215,381 @@ export const LEXWORK_BS_832710_S14_XHTML = `<div class='article'>
       <td class='left_col last' colspan='3'>Der Eintritt des Todes einer im gemeinsamen Haushalt lebenden Ehegattin.</td>
     </tr>
   </table>`;
+
+/**
+ * T3/S4 (BS-Audit 23.6.2026) — Tarif-Tabellen aus echter LexWork-API, verbatim.
+ * Abgerufen 23.6.2026, GET .../api/de/texts_of_law/{nr}, Feld xhtml_tol.
+ *  - STG_50  640.100 § 50: label-lose enumeration_tabular (leere <th>), 3 Spalten,
+ *            «Über …»-Zeile mit leerer Mittelzelle → positionsbasiert (T3).
+ *  - STG_131 640.100 § 131: label-lose enumeration_tabular, 4 Spalten (T3).
+ *  - IWB_3   772.430 § 3: erste <th> leer (Tarif-Nr.), Rest beschriftet → Tarif-Nr.
+ *            in Spalte 0, kein Phantom-Spalten-Versatz (S4); &ge;/&lt; im Text.
+ *  - GER_29  154.810 § 29 (auf Kopf + 4 Datenzeilen gekürzt): Positions-Nr. «4.a)»
+ *            mit Buchstaben-Suffix muss als Tarif-Nr. erkannt werden (T3).
+ */
+export const LEXWORK_BS_640100_S50_XHTML = `<div class='article'>
+    <div class='article_number'>
+      <span class='article_symbol'>&sect;</span> <span class='number'>50</span>
+    </div>
+    <div class='article_title'>
+      <span class='title_text'>&nbsp;</span>
+    </div>
+  </div>
+  <div class='paragraph'>
+    <span class='number'>1</span>
+    <p>
+      <span class='text_content'>Die j&auml;hrliche Steuer auf dem steuerbaren Verm&ouml;gen wird nach folgendem Tarif (Tarif A) berechnet:&nbsp;<strong>*</strong></span>
+    </p>
+  </div>
+  <table class='enumeration_tabular'>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        Von Fr. 0&nbsp;<strong>*</strong>
+      </td>
+      <td>
+        bis Fr. 250'000:&nbsp;<strong>*</strong>
+      </td>
+      <td>
+        Fr. 4.50 je Fr. 1'000&nbsp;<strong>*</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Von Fr. 250'000&nbsp;<strong>*</strong>
+      </td>
+      <td>
+        bis Fr. 750'000:&nbsp;<strong>*</strong>
+      </td>
+      <td>
+        Fr. 6.50 je Fr. 1'000&nbsp;<strong>*</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &Uuml;ber Fr. 750'000:&nbsp;<strong>*</strong>
+      </td>
+      <td></td>
+      <td>
+        Fr. 7.90 je Fr. 1'000&nbsp;<strong>*</strong>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  `;
+
+export const LEXWORK_BS_640100_S131_XHTML = `<div class='article'>
+    <div class='article_number'>
+      <span class='article_symbol'>&sect;</span> <span class='number'>131</span>
+    </div>
+    <div class='article_title'>
+      <span class='title_text'>b) Zuschl&auml;ge</span>
+    </div>
+  </div>
+  <div class='paragraph'>
+    <span class='number'>1</span>
+    <p>
+      <span class='text_content'>Auf der einfachen Steuer wird ein Zuschlag erhoben. Dieser betr&auml;gt:</span>
+    </p>
+  </div>
+  <table class='enumeration_tabular'>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        25%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 100'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        50%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 200'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        75%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 500'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        100%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 1'000'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        125%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 2'000'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        150%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        bis zu
+      </td>
+      <td>
+        CHF 3'000'000
+      </td>
+    </tr>
+    <tr>
+      <td>
+        175%
+      </td>
+      <td>
+        bei einem Empfange
+      </td>
+      <td>
+        von &uuml;ber
+      </td>
+      <td>
+        CHF 3'000'000.
+      </td>
+    </tr>
+  </table>
+  `;
+
+export const LEXWORK_BS_772430_S3_XHTML = `<div class='article'>
+    <div class='article_number'>
+      <span class='article_symbol'>&sect;</span> <span class='number'>3</span>
+    </div>
+    <div class='article_title'>
+      <span class='title_text'>Kundensegmente und Zuteilungskriterien</span>
+    </div>
+  </div>
+  <div class='paragraph'>
+    <span class='number'>1</span>
+    <p>
+      <span class='text_content'>Der Geb&uuml;hrentarif unterscheidet zwischen folgenden Kundensegmenten:</span>
+    </p>
+  </div>
+  <table class='enumeration_tabular'>
+    <tr>
+      <th></th>
+      <th>
+        Segment
+      </th>
+      <th>
+        Zuordnungskriterium
+      </th>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Small
+      </td>
+      <td>
+        Vorjahresverbrauch &lt;13 MWh oder tempor&auml;re Netzanschl&uuml;sse (Messen, M&auml;rkte, &ouml;ffentliche Beleuchtung und sonstige Veranstaltungen sowie Baustromanschl&uuml;sse)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Small plus
+      </td>
+      <td>
+        Vorjahresverbrauch &ge;13 MWh bis &lt;50 MWh
+      </td>
+    </tr>
+    <tr>
+      <td>
+        3
+      </td>
+      <td>
+        Medium
+      </td>
+      <td>
+        Vorjahresverbrauch &ge;50 MWh bis &lt;100 MWh
+      </td>
+    </tr>
+    <tr>
+      <td>
+        4
+      </td>
+      <td>
+        Medium plus
+      </td>
+      <td>
+        Vorjahresverbrauch &ge;100 MWh bis &lt;1 GWh
+      </td>
+    </tr>
+    <tr>
+      <td>
+        5
+      </td>
+      <td>
+        Big
+      </td>
+      <td>
+        Vorjahresverbrauch &ge;1 GWh bis &lt;10 GWh
+      </td>
+    </tr>
+    <tr>
+      <td>
+        6
+      </td>
+      <td>
+        Big plus
+      </td>
+      <td>
+        Vorjahresverbrauch &ge;10 GWh
+      </td>
+    </tr>
+    <tr>
+      <td>
+        7
+      </td>
+      <td>
+        Switch
+      </td>
+      <td>
+        Kundinnen und Kunden mit Wahltarif unterbrechbare Verbraucher gem&auml;ss &sect; 13 Geb&uuml;hrentarif von IWB Industrielle Werke Basel f&uuml;r den Anschluss und die Nutzung des Netzes f&uuml;r elektrische Energie
+      </td>
+    </tr>
+    <tr>
+      <td>
+        8
+      </td>
+      <td>
+        Crowd
+      </td>
+      <td>
+        Kundinnen und Kunden mit Wahltarif IWB Sonnenbox Crowd
+      </td>
+    </tr>
+  </table>
+  `;
+
+export const LEXWORK_BS_154810_S29_XHTML = `<div class='article'>
+    <div class='article_number'>
+      <span class='article_symbol'>&sect;</span> <span class='number'>29</span>
+    </div>
+    <div class='article_title'>
+      <span class='title_text'>Geb&uuml;hren des Erbschaftsamtes</span>
+    </div>
+  </div>
+  <div class='paragraph'>
+    <span class='number'>1</span>
+    <p>
+      <span class='text_content'>F&uuml;r Verrichtungen des Erbschaftsamtes werden folgende Geb&uuml;hren erhoben.</span>
+    </p>
+  </div>
+  <table class='enumeration_tabular'>
+    <tr>
+      <th></th>
+      <th>
+        Gegenstand
+      </th>
+      <th>
+        Geb&uuml;hren
+      </th>
+    </tr>
+    <tr>
+      <td>
+        1.
+      </td>
+      <td>
+        Ausk&uuml;ndungen (Rechnungsruf und dergleichen)
+      </td>
+      <td>
+        Fr. 25
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2.
+      </td>
+      <td>
+        Einschreibung einer Gl&auml;ubigerin oder eines Gl&auml;ubigers beim &ouml;ffentlichen Inventar und bei der amtlichen Liquidation
+      </td>
+      <td>
+        Fr. 6
+      </td>
+    </tr>
+    <tr>
+      <td>
+        3.
+      </td>
+      <td>
+        Vorladungen und Anzeigen
+      </td>
+      <td>
+        Fr. 6
+      </td>
+    </tr>
+    <tr>
+      <td>
+        4.a)
+      </td>
+      <td>
+        Auskunfts- und Erkundigungsschreiben, Korrespondenz, Vernehmlassungen, Berichte und Begutachtungen, Abfragen im Internet&nbsp;<strong>*</strong>
+      </td>
+      <td>
+        Fr. 20 bis Fr. 600&nbsp;<strong>*</strong>
+      </td>
+    </tr>
+  </table>
+  `;
