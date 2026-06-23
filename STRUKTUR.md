@@ -71,6 +71,8 @@ render_mode-UI-Badge; (d) Kreuzdiff-Gate C (Netz); (e) Regressionstest für den 
 kompletter Bund-Ausbau live verifiziert — 40 Bund-Volltexte (IPRG 236/PartG 42/JStG 45/BetmG 70/
 VStrR 109 Art.), Asset-Hash live=lokal, Kernrouten 200.
 
+**Bund Batch 2 (main 2f715fe, NACH dem Deploy — noch NICHT in Prod):** +10 Volltexte (ATSG/BVG/UVG/AVIG/RPG/USG/VGG/BGFA/KKG/GwG) → 50 Bund-Volltexte. LEKTION: ELI-Resolver liefert teils VERALTETE Konsolidierungen — `check:fedlex-versionen` ist das maßgebliche §7-Currency-Gate; es fing 6 Stale-Pins ab (BVG/RPG/VGG/GwG + die bereits deployten IPRG/VStrR), alle re-gepinnt auf geltend. Test-Fixture «unbekanntes Gesetz» ATSG→ZZG.
+
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
 Auftrag David: alle bestehenden Gesetze (Bund + Kantone) EINZELN reviewen (1 Agent/Gesetz),
