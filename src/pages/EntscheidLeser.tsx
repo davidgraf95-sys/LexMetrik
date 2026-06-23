@@ -195,7 +195,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
           <p className="text-micro text-ink-500">
             {snap.regesteAmtlich
               ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'
-              : 'Automatisch erstellte Zusammenfassung — keine amtliche Regeste · Quelle: OpenCaseLaw'}
+              : 'Quelle: OpenCaseLaw — automatisch übernommen; Herkunft (amtliche Regeste oder maschinelle Zusammenfassung) nicht abschliessend geprüft'}
           </p>
         </section>
       )}

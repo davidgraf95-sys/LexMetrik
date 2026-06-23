@@ -107,14 +107,26 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
     const rest = ft.slice(a.index + a[0].length);
     const b = bis.exec(rest);
     const roh = (b ? rest.slice(0, b.index) : rest.slice(0, max)).trim();
-    // Rubrum-Felder sind kurze Kopfangaben → Absatzumbrüche zu einer Zeile glätten.
     const t = bereinigeFliesstext(roh.slice(0, max)).replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
     return t || null;
   };
-  const besetzung = cut(/\bBesetzung\b[\s:]*/, /\b(Verfahrensbeteiligte|Partei|Gegenstand|Sachverhalt)\b/);
-  const parteien = cut(/\b(?:Verfahrensbeteiligte|Parteien)\b[\s:]*/, /\bGegenstand\b/, 800);
-  const gegenstand = cut(/\bGegenstand\b[\s:]*/, /\b(Beschwerde|Berufung|Rekurs|Klage|Gesuch|Sachverhalt|In Erwägung|Erwägung)\b/, 300);
-  const vorinstanz = cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 300);
+  // Defensiv (Abnahme P1/P2): eingestreute Verfahrensnummern strippen; bei Antrags-
+  // Markern (Vorinstanz) abschneiden; bei SV-/Erwägungs-Text das Feld VERWERFEN
+  // (lieber leer als falsch — ein falsches Rubrum ist ein Vertrauenskiller).
+  const sauber = (s: string | null, opts: { salvage?: boolean } = {}): string | null => {
+    if (!s) return null;
+    let t = s.replace(/\b\d[A-Z]_\d+\/\d{4}\b/g, ' ').replace(/\s{2,}/g, ' ').replace(/^[\s,;:.–-]+/, '').trim();
+    if (opts.salvage) {
+      const m = /\b(und beantragt|mit dem Antrag|Eventualiter|Subeventualiter|stellt? den Antrag)\b/i.exec(t);
+      if (m && m.index > 15) t = t.slice(0, m.index).trim();
+    }
+    if (/(geboren am|Mit (?:Urteil|Verfügung|Entscheid|Eingabe) vom|Erw[aä]gung(?:en)?\s*:|In Erwägung|Sachverhalt|und beantragt|Eventualiter)/i.test(t)) return null;
+    return t.replace(/[\s,;:.–-]+$/, '').trim() || null;
+  };
+  const besetzung = sauber(cut(/\bBesetzung\b[\s:]*/, /\b(Verfahrensbeteiligte|Partei|Gegenstand|Sachverhalt)\b/));
+  const parteien = sauber(cut(/\b(?:Verfahrensbeteiligte|Parteien)\b[\s:]*/, /\bGegenstand\b/, 800));
+  const gegenstand = sauber(cut(/\bGegenstand\b[\s:]*/, /\b(Beschwerde|Berufung|Rekurs|Klage|Gesuch|Sachverhalt|In Erwägung|Erwägung)\b/, 300));
+  const vorinstanz = sauber(cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 400), { salvage: true });
   if (!besetzung && !parteien && !gegenstand && !vorinstanz) return null;
   return { besetzung, parteien, gegenstand, vorinstanz };
 }
@@ -273,7 +285,8 @@ export function mappeEntscheidOCL(
 
   const court = String(det.court ?? 'bger');
   const canton = String(det.canton ?? 'CH');
-  const docket = String(det.docket_number ?? det.decision_id);
+  // Aktenzeichen-Normalisierung (Abnahme P3): „5A 229/2017" → „5A_229/2017".
+  const docket = String(det.docket_number ?? det.decision_id).replace(/^(\d[A-Z])\s+(?=\d)/, '$1_');
   const sachgebiet: Rechtsgebiet =
     opts.sachgebietHint
     ?? abteilungZuSachgebiet(docket)        // BGer-Abteilung (z.B. 5A→privat) ist präziser …
