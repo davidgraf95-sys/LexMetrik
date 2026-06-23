@@ -39,9 +39,16 @@ export const LEXFIND_ENTITY: Readonly<Record<string, number>> = {
   GR: 10, AG: 1, TG: 20, TI: 21, VD: 23, VS: 24, NE: 13, GE: 8, JU: 11,
 };
 
-/** LexWork/clex-Strukturhosts (Tier A): Host → API-Sprache. Aus inventar-kanton
- *  (olexHosts/LEXWORK) + Phase-0-Verifikation (ar.clex.ch). Generisch *.clex.ch. */
-const STRUKTUR_HOST = /(?:^|\.)clex\.ch$|^www\.gr-lex\.gr\.ch$|^www\.gesetzessammlung\.sg\.ch$|^srl\.lu\.ch$|^bdlf\.fr\.ch$|^lex\.vs\.ch$|^belex\.sites\.be\.ch$|^www\.rechtsbuch\.tg\.ch$/i;
+/**
+ * Tier A wird PRIMÄR an der PFAD-Signatur der LexWork/clex/OrdoLex-Plattform
+ * erkannt, NICHT an einer Host-Whitelist (Bug K2/K3: ~10 reale LexWork-Hosts wie
+ * bgs.so.ch/gesetze.nw.ch/www.belex.sites.be.ch fielen sonst durchs Raster). Nur
+ * diese Plattform-Familie erzeugt die Pfade `/data/{sn}/{lang}` (LexFind-
+ * original_url, Phase-0 ar.clex.ch) bzw. `/app/{lang}/texts_of_law/{lawId}` (im
+ * Repo durchgängig genutzte Form) — beide werden unterstützt (Bug K1).
+ */
+const STRUKTUR_DATA = /^\/data\/(.+?)\/(de|fr|it)\/?$/i;
+const STRUKTUR_APP = /^\/app\/(de|fr|it)\/texts_of_law\/(.+?)\/?$/i;
 
 /** PDF/HTM-Hosts ohne strukturierte API (Tier C, eingebettetes Original). */
 const PDF_EMBED_HOST = /(?:^|\.)zh\.ch$|^m3\.ti\.ch$|(?:^|\.)silgeneve\.ch$|^rsn\.ne\.ch$|(?:^|\.)rsju\.jura\.ch$|^www\.sz\.ch$/i;
@@ -55,9 +62,11 @@ export interface QuellKlassifikation {
 /**
  * Leitet aus einer LexFind-`original_url` die Quell-Klassifikation ab. Rein.
  *
- * clex/LexWork-`original_url` hat die Form `https://{host}/data/{sn}/{lang}`
- * (z.B. https://ar.clex.ch/data/146.1/de). Daraus wird der Strukturzugriff
- * holeLexWork(host, lang, sn) (clex nutzt die Systematiknummer als lawId).
+ * Beide LexWork/clex-Pfadformen liefern die Bausteine für
+ * holeLexWork(host, lang, lawId) (clex nutzt die Systematiknummer als lawId):
+ *   - `https://{host}/data/{sn}/{lang}`              (LexFind-original_url)
+ *   - `https://{host}/app/{lang}/texts_of_law/{id}`  (Repo-übliche Form)
+ * Der lawId-Teil wird URL-dekodiert (Bug M1: Systematiknummern mit %2F/%20).
  */
 export function klassifiziereQuelle(originalUrl: string): QuellKlassifikation {
   let host: string;
@@ -69,18 +78,32 @@ export function klassifiziereQuelle(originalUrl: string): QuellKlassifikation {
   } catch {
     return { tier: 'unbekannt' };
   }
-  if (STRUKTUR_HOST.test(host)) {
-    // /data/{sn}/{lang}  → lawId = sn, lang aus dem Pfad (Fallback 'de').
-    const m = pfad.match(/\/data\/(.+)\/(de|fr|it)\/?$/i);
-    if (m) {
+  const dekodiere = (s: string): string => {
+    try {
+      return decodeURIComponent(s);
+    } catch {
+      return s;
+    }
+  };
+  // Vertrauensgrenze: Tier A nur für .ch-Hosts. Alle realen kantonalen LexWork/
+  // clex-Plattformen sind .ch (ar.clex.ch, bgs.so.ch, srl.lu.ch, lex.vs.ch, …);
+  // so bleibt die Pfad-Signatur host-agnostisch (Bug K2/K3), ohne dass ein
+  // fremder Host (evil.com/data/1/de) als Strukturquelle durchrutscht.
+  if (/\.ch$/i.test(host)) {
+    const mData = pfad.match(STRUKTUR_DATA);
+    if (mData) {
       return {
         tier: 'A-struktur',
-        struktur: { host, lawId: m[1], lang: m[2].toLowerCase() as 'de' | 'fr' | 'it' },
+        struktur: { host, lawId: dekodiere(mData[1]), lang: mData[2].toLowerCase() as 'de' | 'fr' | 'it' },
       };
     }
-    // Strukturhost, aber unerwarteter Pfad → trotzdem Tier A, ohne Bausteine
-    // (der Aufrufer muss lawId anders bestimmen). Sichtbar statt still (§8).
-    return { tier: 'A-struktur' };
+    const mApp = pfad.match(STRUKTUR_APP);
+    if (mApp) {
+      return {
+        tier: 'A-struktur',
+        struktur: { host, lang: mApp[1].toLowerCase() as 'de' | 'fr' | 'it', lawId: dekodiere(mApp[2]) },
+      };
+    }
   }
   if (PDF_EMBED_HOST.test(host)) return { tier: 'C-pdf-embed' };
   return { tier: 'unbekannt' };
@@ -136,9 +159,13 @@ export async function enumeriereKanton(
     }),
   });
   if (!start.ok) throw new Error(`LexFind fulltext-search ${kanton}: HTTP ${start.status}`);
-  const { id, session_id } = (await start.json()) as { id: number; session_id: string };
+  const { id, session_id } = (await start.json()) as { id?: number; session_id?: string };
+  if (id == null || !session_id) {
+    throw new Error(`LexFind fulltext-search ${kanton}: unerwartete Antwort (id/session_id fehlt)`);
+  }
 
   const proSeite = opt.proSeite ?? 50;
+  const HARD_CAP = 500; // Sicherung gegen Endlos-/Fehlerschleife (§8: nie still)
   const erlasse: EntdeckterErlass[] = [];
   const gesehen = new Set<string>();
   let seite = 1;
@@ -150,8 +177,11 @@ export async function enumeriereKanton(
       number_of_pages?: number;
       texts_of_law_with_matches?: LexFindTreffer[];
     };
-    const seitenTotal = data.number_of_pages ?? 1;
-    for (const t of data.texts_of_law_with_matches ?? []) {
+    const treffer = data.texts_of_law_with_matches ?? [];
+    // KL1: number_of_pages kann fehlen → NICHT vorschnell nach Seite 1 abbrechen.
+    // Fehlt es, blättern wir weiter, bis eine Seite leer ist (Hard-Cap als Schutz).
+    const seitenTotal = data.number_of_pages ?? HARD_CAP;
+    for (const t of treffer) {
       const sn = t.systematic_number ?? '';
       const originalUrl = t.dta_urls?.find((d) => d.original_url)?.original_url ?? '';
       const schluessel = `${sn}|${originalUrl}`;
@@ -165,7 +195,9 @@ export async function enumeriereKanton(
         klassifikation: klassifiziereQuelle(originalUrl),
       });
     }
-    if (seite >= seitenTotal) break;
+    // Abbruch: Seite ohne Treffer (Ende erreicht), bekannte Seitenzahl erreicht,
+    // oder Hard-Cap (Schutz). So keine stille Kürzung bei fehlendem number_of_pages.
+    if (treffer.length === 0 || seite >= seitenTotal || seite >= HARD_CAP) break;
     seite++;
   }
 

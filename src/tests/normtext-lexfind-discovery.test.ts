@@ -17,16 +17,32 @@ describe('klassifiziereQuelle', () => {
     expect(k.struktur).toEqual({ host: 'ar.clex.ch', lang: 'de', lawId: '146.1' });
   });
 
-  it('erkennt die übrigen LexWork-Hosts als Tier A', () => {
+  it('erkennt die /app/{lang}/texts_of_law/-Form als Tier A mit Bausteinen', () => {
+    const k = klassifiziereQuelle('https://ar.clex.ch/app/de/texts_of_law/146.1');
+    expect(k.tier).toBe('A-struktur');
+    expect(k.struktur).toEqual({ host: 'ar.clex.ch', lang: 'de', lawId: '146.1' });
+  });
+
+  it('ist host-AGNOSTISCH: erkennt alle LexWork-Hosts an der Pfad-Signatur (Bug K2/K3)', () => {
+    // Hosts, die eine frühere Whitelist verfehlt hätte (bgs.so.ch, gesetze.nw.ch,
+    // www.belex.sites.be.ch mit www-Präfix, …) — jetzt über die Pfad-Signatur.
     for (const url of [
-      'https://www.gr-lex.gr.ch/data/170.100/de',
+      'https://bgs.so.ch/app/de/texts_of_law/614.11',
+      'https://gesetze.nw.ch/app/de/texts_of_law/261.2',
+      'https://gesetzessammlungen.ag.ch/app/de/texts_of_law/291.150',
+      'https://www.belex.sites.be.ch/app/de/texts_of_law/161.12',
+      'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110',
       'https://srl.lu.ch/data/40/de',
-      'https://bdlf.fr.ch/data/10.1/fr',
       'https://lex.vs.ch/data/170.1/fr',
-      'https://belex.sites.be.ch/data/161.1/de',
     ]) {
       expect(klassifiziereQuelle(url).tier).toBe('A-struktur');
+      expect(klassifiziereQuelle(url).struktur).toBeDefined();
     }
+  });
+
+  it('dekodiert URL-kodierte Systematiknummern im lawId (Bug M1)', () => {
+    const k = klassifiziereQuelle('https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F7%2F1');
+    expect(k.struktur?.lawId).toBe('III B/7/1');
   });
 
   it('klassifiziert zhlex/m3.ti/silgeneve als PDF-embed (Tier C)', () => {
@@ -40,10 +56,14 @@ describe('klassifiziereQuelle', () => {
     expect(klassifiziereQuelle('keine-url').tier).toBe('unbekannt');
   });
 
-  it('bleibt Tier A bei Strukturhost mit unerwartetem Pfad, aber ohne Bausteine', () => {
-    const k = klassifiziereQuelle('https://ar.clex.ch/app/de/texts_of_law/146.1');
-    expect(k.tier).toBe('A-struktur');
-    expect(k.struktur).toBeUndefined();
+  it('matcht KEINEN fremden Nicht-.ch-Host als Strukturquelle (Vertrauensgrenze)', () => {
+    expect(klassifiziereQuelle('https://evil.com/data/1/de').tier).not.toBe('A-struktur');
+    expect(klassifiziereQuelle('https://attacker.org/app/de/texts_of_law/1').tier).not.toBe('A-struktur');
+  });
+
+  it('behandelt einen clex-PDF-Pfad NICHT als Tier-A-Struktur', () => {
+    // /api/.../versions/N/pdf_file ist der PDF-Link, keine strukturierte Quelle.
+    expect(klassifiziereQuelle('https://ar.clex.ch/api/de/versions/1547/pdf_file').tier).not.toBe('A-struktur');
   });
 });
 

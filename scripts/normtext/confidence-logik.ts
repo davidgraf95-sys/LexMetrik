@@ -78,9 +78,16 @@ function artikelText(a: SnapArtikel): string {
 // die eindeutige Klammerform «[N]» — sie ist nie legitimer Normtext.
 const FUSSNOTEN_MARKER = /\[\d{1,3}\]/;
 
-// Replacement-/Mojibake-Indikatoren: U+FFFD (�) oder die typischen latin-1↔utf-8-
-// Doppelkodierungen «Ã¤ Ã¶ Ã¼ Ã© Â§ Â».
-const MOJIBAKE = /�|Ã[¤¶¼©Ÿ]|Â[§°»«]/;
+// Replacement-/Mojibake-Indikatoren: U+FFFD (�) oder eine als latin-1/cp-1252
+// fehldekodierte UTF-8-Doppelbyte-Sequenz. Das erste Byte erscheint als «Ã»/«Â»
+// (bzw. «â» für 3-Byte-Sequenzen), das zweite als Latin-1-Folgezeichen
+// (U+0080–U+00BF) ODER als cp-1252-Sonderzeichen (€™Ÿ–—'""… etc.). Beide
+// Dekodierungen sind abgedeckt; «Ã»/«Â» gefolgt von einem dieser Zeichen ist in
+// sauberem de/fr/it-Normtext praktisch nie legitim (§1: niedrige Falsch-Positiv-
+// Rate trotz Veto). Reine «Ã»/«Â» ohne solches Folgezeichen wird NICHT geflaggt.
+const MJ_FOLGE =
+  '\\u0080-\\u00BF\\u20AC\\u201A\\u0192\\u201E\\u2026\\u2020\\u2021\\u02C6\\u2030\\u0160\\u2039\\u0152\\u017D\\u2018\\u2019\\u201C\\u201D\\u2022\\u2013\\u2014\\u02DC\\u2122\\u0161\\u203A\\u0153\\u017E\\u0178';
+const MOJIBAKE = new RegExp(`\\uFFFD|[ÃÂ][${MJ_FOLGE}]|â€`);
 
 /**
  * Treue-Invarianten je Artikel. Liefert alle Befunde (leer = sauber). Rein.
@@ -118,12 +125,21 @@ export function pruefeTreue(artikel: SnapArtikel[]): TreueFlag[] {
         schwere: 'hart',
       });
     }
-    // (4) Verklebter Token: ein «Wort» > 40 Zeichen ohne Leerzeichen deutet auf
-    //     verschmolzene Spalten/Zahlen (Tarif-Verschmelzung). WEICH. URLs/Anker
-    //     ausgenommen (kommen in sauberem Normtext nicht vor, aber defensiv).
+    // (4) Verklebter Token: ein «Wort» > 40 Zeichen deutet auf verschmolzene
+    //     Spalten/Zahlen (Tarif-Verschmelzung). WEICH. Aber NUR flaggen, wenn der
+    //     Token eine Ziffer enthält ODER eine Klein→Gross-Grenze hat (camelCase =
+    //     verschmolzene Wörter «…rechtlicheBetriebs…») — denn lange REINE Klein-
+    //     Komposita («Grundstückgewinnsteuerveranlagungsverfügung», 43 Z.) sind
+    //     legitimer deutscher Normtext und dürfen nicht geflaggt werden (§1, kein
+    //     Falsch-Positiv). URLs/Anker ausgenommen.
     const verklebt = text
       .split(/\s+/)
-      .find((w) => w.length > 40 && !/^https?:|^#/.test(w));
+      .find(
+        (w) =>
+          w.length > 40 &&
+          !/^https?:|^#/.test(w) &&
+          (/\d/.test(w) || /\p{Ll}\p{Lu}/u.test(w)),
+      );
     if (verklebt) {
       flags.push({
         artikel: a.artikel,
@@ -151,12 +167,17 @@ export function pruefeTreue(artikel: SnapArtikel[]): TreueFlag[] {
  */
 export function normalisiereVolltext(s: string): string[] {
   const norm = s
+    // Tausendertrenner ZUERST — VOR NFKC, solange NBSP/schmales NBSP/Thin-Space
+    // noch nicht zu regulärem Space normalisiert sind (NFKC würde sie zu U+0020
+    // machen, der Trenner-Match ginge verloren — Bug K1). Lookahead statt
+    // verbrauchender Zifferngruppe, damit auch Mehrfachgruppen «1'000'000»
+    // vollständig zusammengezogen werden (Bug K2).
+    .replace(/(\d)['’.\u00A0\u202F\u2009](?=\d{3}(?:\D|$))/g, '$1')
+    .replace(/­/g, '') // Soft-Hyphen
     .normalize('NFKC')
     .toLowerCase()
-    .replace(/­/g, '') // Soft-Hyphen
-    .replace(/[\u00A0\u202F\u2009]/g, ' ') // NBSP/schmal
+    .replace(/[\u00A0\u202F\u2009]/g, ' ') // verbliebene NBSP/schmale Spaces → Space
     .replace(/\[\d{1,3}\]/g, ' ') // Fussnoten-Marker
-    .replace(/(\d)['\u2019.\u00A0\u202F\u2009](\d{3}\b)/g, '$1$2') // Tausendertrenner
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
     .trim();
   return norm === '' ? [] : norm.split(' ');

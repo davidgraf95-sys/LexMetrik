@@ -49,14 +49,41 @@ describe('pruefeTreue', () => {
     expect(flags.find((f) => f.klasse === 'fussnoten-marker-im-text')!.schwere).toBe('weich');
   });
 
-  it('flaggt Mojibake HART', () => {
+  it('flaggt Mojibake HART (Replacement-Zeichen)', () => {
     const a = art('6', [{ absatz: '1', text: 'Grunds�tze der Bearbeitung.' }]);
     expect(pruefeTreue([a]).some((f) => f.klasse === 'mojibake' && f.schwere === 'hart')).toBe(true);
   });
 
-  it('flaggt verklebte Tokens WEICH', () => {
-    const a = art('8', [{ absatz: '1', text: 'Tarif ' + 'x'.repeat(45) }]);
+  it('flaggt verbreitete Doppelkodierungen HART (Ö, ™, ß, â€-Familie — Bug M2)', () => {
+    for (const txt of [
+      'GeschÃ–ftsfÃ¼hrung', // "GeschÃ–ftsfÃ¼hrung" (Ö/ü-Mojibake)
+      'VerfÃŸgung', // "VerfÃŸgung" (ß-Mojibake)
+      'Datenâ€™schutz', // "Datenâ€™schutz" (typografischer Apostroph-Mojibake)
+      'WertÂ 100', // "WertÂ 100" (NBSP-Mojibake)
+    ]) {
+      const a = art('m', [{ absatz: '1', text: txt }]);
+      expect(pruefeTreue([a]).some((f) => f.klasse === 'mojibake')).toBe(true);
+    }
+  });
+
+  it('flaggt legitimen Umlaut-/Akzent-Text NICHT als Mojibake', () => {
+    const a = art('m2', [{ absatz: '1', text: 'Geschäftsführung über Grundstücke; à la carte; città.' }]);
+    expect(pruefeTreue([a]).some((f) => f.klasse === 'mojibake')).toBe(false);
+  });
+
+  it('flaggt verklebte Tokens mit Ziffern (verschmolzene Tarif-Spalte) WEICH', () => {
+    const a = art('8', [{ absatz: '1', text: 'Tarif 250000251000252000253000254000255000256000' }]);
     expect(pruefeTreue([a]).some((f) => f.klasse === 'verklebter-token')).toBe(true);
+  });
+
+  it('flaggt verklebte Wörter mit camelCase-Grenze WEICH', () => {
+    const a = art('8b', [{ absatz: '1', text: 'AbfallrechtlicheBetriebsbewilligungNachArtikelAchtundvierzig' }]);
+    expect(pruefeTreue([a]).some((f) => f.klasse === 'verklebter-token')).toBe(true);
+  });
+
+  it('flaggt lange REINE Klein-Komposita NICHT (legitimer Normtext, Bug M1)', () => {
+    const a = art('8c', [{ absatz: '1', text: 'die grundstückgewinnsteuerveranlagungsverfügung ergeht schriftlich' }]);
+    expect(pruefeTreue([a]).some((f) => f.klasse === 'verklebter-token')).toBe(false);
   });
 
   it('flaggt Absatz-Lücken NICHT (legitim bei aufgehobenen Absätzen, §1)', () => {
@@ -74,6 +101,16 @@ describe('normalisiereVolltext', () => {
     expect(normalisiereVolltext("Die Gebühr beträgt 1'000 Franken[3].")).toEqual([
       'die', 'gebühr', 'beträgt', '1000', 'franken',
     ]);
+  });
+
+  it('zieht NBSP-getrennte Tausender zusammen (Bug K1)', () => {
+    expect(normalisiereVolltext('Betrag 1 000 Franken')).toEqual(['betrag', '1000', 'franken']);
+    expect(normalisiereVolltext('Betrag 1 000 Franken')).toEqual(['betrag', '1000', 'franken']);
+  });
+
+  it('zieht Mehrfach-Tausendergruppen vollständig zusammen (Bug K2)', () => {
+    expect(normalisiereVolltext("1'000'000")).toEqual(['1000000']);
+    expect(normalisiereVolltext("12'345'678 Franken")).toEqual(['12345678', 'franken']);
   });
 
   it('ist layout-invariant gegen Mehrfach-Whitespace und Zeilenumbrüche', () => {

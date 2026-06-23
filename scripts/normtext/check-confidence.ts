@@ -39,7 +39,13 @@ function ladeErlasse(basis: string, ebene: 'bund' | 'kanton'): ErlassBefund[] {
   const befunde: ErlassBefund[] = [];
   for (const name of readdirSync(dir).filter((n) => n.endsWith('.json') && n !== 'index.json').sort()) {
     const datei = join(dir, name);
-    const inhalt = JSON.parse(readFileSync(datei, 'utf-8')) as SnapshotDatei;
+    let inhalt: SnapshotDatei;
+    try {
+      inhalt = JSON.parse(readFileSync(datei, 'utf-8')) as SnapshotDatei;
+    } catch (e) {
+      console.warn(`  WARN unparsebar, übersprungen: ${ebene}/${name} (${(e as Error).message})`);
+      continue;
+    }
     if (!Array.isArray(inhalt.eintraege)) continue; // Manifest/Nicht-Snapshot überspringen
     const artikel: SnapArtikel[] = inhalt.eintraege.map((e) => ({
       artikel: e.artikel,
@@ -68,6 +74,9 @@ function arg(name: string): string | undefined {
 
 const basis = join(process.cwd(), 'public', 'normtext');
 const schwelle = Number(arg('schwelle') ?? '0.95');
+if (!Number.isFinite(schwelle) || schwelle < 0 || schwelle > 1) {
+  throw new Error(`Ungültige --schwelle: "${arg('schwelle')}" — erwartet Zahl in [0,1]`);
+}
 const befunde = [...ladeErlasse(basis, 'bund'), ...ladeErlasse(basis, 'kanton')];
 
 // Aggregation
