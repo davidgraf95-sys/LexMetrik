@@ -40,11 +40,19 @@ neuen Parser** (§10). Tier-A-Pilot AR 146.1: 35 Artikel sauber, Confidence 1.00
 - `scripts/normtext/lexfind-discovery.ts` (LexFind-Enumeration + Host→Tier-Klassifikation +
   clex-URL-Ableitung) — `src/tests/normtext-lexfind-discovery.test.ts` (7).
 - Recherche `bibliothek/recherche/lexfind-clex-quellen.md` (+ INDEX, §11).
+- Generator `--discovery`: `scripts/normtext/kanton-discovery-quellen.ts` (Routing Discovery→
+  KantonInventarGruppe) + `erzeugeKantonsSnapshots(inventarOverride)` in normtext-snapshot.ts.
 
-**Bewusst NICHT (§6/§7/§8 + Abnahme-Zeitsperre):** keine Massen-Snapshots regeneriert, keine
-golden-Render-Komponenten geändert, kein gate.sh-Netz-Wiring, kein render_mode im Live-Pfad.
-Nächste, von David freizugebende Schritte = FAHRPLAN Phase 1 (AR voll durch Generator + render_mode
-additiv + Confidence-Gate + Kreuzdiff). Ehrliches Verdikt: ~25–40 % Rest-Review bleibt (kein 0-Check).
+**Bug-Check (2 adversariale Review-Agenten):** kritische Befunde behoben — Kreuzdiff-Tausender-
+trenner vor NFKC (Falsch-Vetos), Mojibake Ö/™/ß/â€, verklebter-token nur Ziffer/camelCase;
+Discovery host-AGNOSTISCH über Pfad-Signatur (verfehlte ~10 LexWork-Hosts) + .ch-Grenze; Decode;
+Pagination/Validierung. 40 Tests grün.
+
+**Phase 1 AUSGEFÜHRT für AR:** `npm run normtext -- --nur=kanton --kanton=AR --discovery` →
+**266 Gesetze / 6327 Artikel** strukturiert (Tier A, bestehender adapter-lexwork), 0 Fetch-Fehler.
+Register 150→491 Erlasse. Confidence: 410/412 Auto-Akzept (100%), 2 Quarantäne. Status entwurf
+(§8). Gate grün. Offen: weitere clex-Kantone (gleicher Befehl), render_mode-UI-Badge, Kreuzdiff-
+Gate (Netz). Ehrliches Verdikt unverändert: ~25–40 % Rest-Review über alle Tiers (kein 0-Check).
 
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 

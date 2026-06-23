@@ -65,11 +65,17 @@ bisher nur auf PDF, weil seine Tarif-Zitate auf clex-PDF-URLs zeigen — über
   Flags, **Confidence 1.000** → auto-live-fähig (entwurf).
 - Discovery AR: **331 Erlasse in Kraft, alle 331 Tier A** (0 PDF-only).
 
-**Bewusst NICHT getan (Grenze §6/§7/§8 + Abnahme-Zeitsperre):** keine Massen-
-Snapshots in `public/normtext/` regeneriert, keine golden-gegateten Render-
-Komponenten geändert, kein `gate.sh` mit Netz/neuer Logik verdrahtet, kein
-`render_mode` in den Live-Render-Pfad gelegt. Das sind die nächsten, von David
-freizugebenden Schritte.
+**Phase 1 AUSGEFÜHRT für AR (23.6.2026):**
+`npm run normtext -- --nur=kanton --kanton=AR --discovery --datum=$(date +%F)` →
+**266 Gesetze / 6327 Artikel** strukturiert (Tier A, bestehender `adapter-lexwork`),
+0 Fetch-Fehler; Register 150→491 Erlasse; Confidence 410/412 Auto-Akzept (100%),
+2 Quarantäne; Status entwurf (§8); Gate grün. Generator-Wiring: `--discovery` +
+`erzeugeKantonsSnapshots(inventarOverride)` + `kanton-discovery-quellen.ts`.
+
+**NOCH offen (nächste Schritte):** weitere clex-Kantone (gleicher Befehl je Kanton);
+`render_mode`/Tier-Badge im UI (golden-gegatet → §6-Protokoll); Kreuzdiff-Gate C
+(Netz, `normalisiereVolltext`+`tokenRecall` gegen amtliches PDF); Tier B/C (PDF/embed)
+für Nicht-clex-Kantone. Keine golden-Render-Komponente wurde geändert.
 
 ---
 
