@@ -121,8 +121,8 @@ export const NAVIGATION: NavAbschnitt[] = [
   // «Recherche» bewusst entfernt (Auftrag David 19.6.2026): das Browsen läuft
   // über die Kategorie-Drilldowns (Fristen · Gebühren & Beträge · Vorlagen).
   { titel: null, kinder: [link('Start', '/')] },
-  { titel: 'Rechner', ziel: '/recherche', kinder: RECHNER_KINDER },
-  { titel: 'Vorlagen', ziel: '/recherche?kategorie=vorlagen', kinder: VORLAGEN_KINDER },
+  { titel: 'Rechner', ziel: '/rechner', kinder: RECHNER_KINDER },
+  { titel: 'Vorlagen', ziel: '/vorlagen', kinder: VORLAGEN_KINDER },
   { titel: 'Gesetze', ziel: '/gesetze', kinder: GESETZE_KINDER },
   { titel: 'Rechtsprechung', ziel: '/rechtsprechung', kinder: RECHTSPRECHUNG_KINDER },
 ];

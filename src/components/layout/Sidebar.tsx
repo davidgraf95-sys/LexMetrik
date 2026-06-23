@@ -35,15 +35,6 @@ function istAktiv(ziel: string, loc: Location): boolean {
   if (pfad === '/gesetze') {
     return (zielP.get('ebene') ?? 'bund') === (curP.get('ebene') ?? 'bund');
   }
-  if (pfad === '/recherche') {
-    // Bereichs-Überschriften: «Vorlagen» (?kategorie=vorlagen) vs. «Rechner»
-    // (?bereich=rechner) param-weise unterscheiden, robust gegen Zusatz-Filter
-    // (?rg=, ?q=, …). Nacktes /recherche nur als solches aktiv.
-    const kat = zielP.get('kategorie'); const ber = zielP.get('bereich');
-    if (kat) return curP.get('kategorie') === kat;
-    if (ber) return curP.get('bereich') === ber && !curP.get('kategorie');
-    return !curP.get('kategorie') && !curP.get('bereich');
-  }
   return true; // Meta-Seiten: Pfad-Treffer genügt.
 }
 

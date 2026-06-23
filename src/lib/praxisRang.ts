@@ -1,6 +1,4 @@
 // Dossier: KATALOG-ROADMAP.md
-import type { CalculatorCard } from './startseiteConfig';
-import { kategorieFuer, type OberkategorieId } from './oberkategorien';
 
 // ─── Praxis-Rang der Werkzeuge (Auftrag David 10.6.2026) ─────────────────────
 //
@@ -39,20 +37,4 @@ export function praxisRang(id: string): 1 | 2 | 3 {
   if (RANG_1_ALLTAG.has(id)) return 1;
   if (RANG_3_GELEGENTLICH.has(id)) return 3;
   return 2;
-}
-
-/** Die Top-Direktlinks je Einstiegskachel (verfügbare Alltags-Werkzeuge in
- *  kuratierter Reihenfolge) — ersetzt die separate «Häufig gebraucht»-Rubrik
- *  (Versimplung 10.6.2026: gleiche Funktion, ein Apparat weniger). */
-const KACHEL_LINKS: Record<OberkategorieId, string[]> = {
-  zustaendigkeiten: ['zustaendigkeit', 'schkg-zustaendigkeit'],
-  fristen: ['tagerechner', 'zpo-fristen'],
-  gebuehren: ['verzugszins', 'betreibungskosten'],
-  vorlagen: ['vollmacht', 'kuendigung-vertrag'],
-};
-
-export function kachelDirektlinks(kategorie: OberkategorieId, karten: CalculatorCard[]): CalculatorCard[] {
-  return KACHEL_LINKS[kategorie]
-    .map((id) => karten.find((k) => k.id === id))
-    .filter((k): k is CalculatorCard => !!k && !!k.href && kategorieFuer(k) === kategorie);
 }

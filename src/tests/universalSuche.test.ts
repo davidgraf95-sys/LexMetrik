@@ -22,10 +22,10 @@ describe('universalSuche: Katalog-Gruppe', () => {
     }
   });
 
-  it('kappt auf die Kappung und setzt mehrHref auf /recherche', () => {
+  it('kappt auf die Kappung; KEIN mehrHref (Katalog ist auf /rechner+/vorlagen aufgeteilt)', () => {
     const g = katalogGruppe('frist', 2);
     expect(g.treffer.length).toBeLessThanOrEqual(2);
-    if (g.gesamt > 2) expect(g.mehrHref).toBe('/recherche?q=frist');
+    expect(g.mehrHref).toBeUndefined();
   });
 
   it('leere Suche → keine Treffer', () => {

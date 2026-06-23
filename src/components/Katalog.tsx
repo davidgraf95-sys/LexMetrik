@@ -1,91 +1,29 @@
-import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, VORLAGE_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard, type VorlageCard } from '../lib/startseiteConfig';
 import { EINGABE_RUBRIKEN, VERTRAG_RUBRIKEN, formGateText, istVorlage } from '../lib/vorlagenKategorie';
 import { GEBUEHREN_RUBRIKEN, gebuehrenRubrik, type GebuehrenRubrik } from '../lib/gebuehrenKategorie';
-import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
-import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
+import { type Oberkategorie } from '../lib/oberkategorien';
+import { praxisRang } from '../lib/praxisRang';
 import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_PROZESSUAL, FRISTEN_MATERIELL, fristenEinstiegArt, type FristenRegimeZeile as FristenRegimeZeileDef } from '../lib/fristenKategorie';
 import { ZUSTAENDIGKEIT_FELDER, ZUSTAENDIGKEIT_FELD_IDS } from '../lib/zustaendigkeitKategorie';
-import { kartePasst, sucheRang, LEERER_FILTER } from '../lib/katalogSuche';
+import { kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
 
-// Katalog der Hauptseite «/» — NEU STRUKTURIERT (Auftrag David 10.6.2026):
-// Vier OBERKATEGORIEN als Primärachse (Zuständigkeiten · Fristen ·
-// Gebühren & Beträge · Vorlagen), römisch nummerierte Registerteile wie die
-// Hauptabschnitte eines Kanzlei-Handbuchs. Praxistauglichkeits-Leitsätze:
-//  1. AUFGABENDENKEN: Die Kanzlei kommt mit einer Aufgabe («wer ist
-//     zuständig?», «wann läuft die Frist ab?», «was kostet es?», «ich
-//     brauche ein Schreiben») — die Startseite zeigt NUR die vier
-//     Kategorien als Deckblatt (Präzisierung David 10.6.2026); die
-//     Unterthemen erscheinen erst beim Klick als eigene Ansicht
-//     (?kategorie=, teilbar, Zurück-Taste funktioniert).
-//  2. KLICKTIEFE 1: Verfügbare Werkzeuge stehen DIREKT als Link-Zeilen in
+// Register-Bausteine der Rubrik-Übersichten (Auftrag David 10.6.2026, Struktur;
+// UI-Welle: neuer Ort /rechner + /vorlagen). Eine Oberkategorie wird als
+// vollständige Sektion gerendert (KategorieSektion, unten exportiert); die
+// Übersichtsseiten reihen die für sie passenden Kategorien aneinander.
+// Praxistauglichkeits-Leitsätze:
+//  1. KLICKTIEFE 1: Verfügbare Werkzeuge stehen DIREKT als Link-Zeilen in
 //     ihrer Kategorie (vorher Gebiets-Kachel → Panel → Karte).
-//  3. PRAXIS-RANG STATT GEBIETS-GRUPPEN (Versimplung, Auftrag David
-//     10.6.2026 «teile das UI weiter nach dem Praxis-Gebrauch auf»):
-//     je Kategorie EINE flache Liste, Alltags-Werkzeuge zuoberst
-//     (lib/praxisRang.ts, kuratiert aus der Abdeckungskarte); das
-//     Rechtsgebiet steht als dezentes Sub-Label IN der Zeile.
-//  4. EHRLICH OHNE BALLAST (§8): Geplante Karten je Kategorie hinter einer
-//     kompakten «In Vorbereitung (N)»-Aufklappzeile; Entwurf-Badges an
-//     jeder Zeile.
-//  5. SUBTRAKTION: Die separate «Häufig gebraucht»-Rubrik ist aufgegangen
-//     in den Top-DIREKTLINKS der vier Einstiegskacheln (gleiche Funktion,
-//     ein Apparat weniger); Header-Suche (?q=) unverändert.
-// Die Suche-Mechanik (lib/katalogSuche.ts, Goldliste) ist unverändert (§5).
-
-const KATEGORIE_VON = new Map<string, OberkategorieId>();
-const kategorieVon = (k: CalculatorCard): OberkategorieId => {
-  if (!KATEGORIE_VON.has(k.id)) KATEGORIE_VON.set(k.id, kategorieFuer(k) ?? 'vorlagen');
-  return KATEGORIE_VON.get(k.id)!;
-};
-const KATEGORIE_TITEL = new Map(OBERKATEGORIEN.map((k) => [k.id, k.titel]));
-
-// ─── Einstiegskachel: eine der vier Aufgaben-Fragen, springt zur Sektion ────
-
-function KategorieEinstieg({ kat, karten, onOeffnen }: {
-  kat: Oberkategorie; karten: CalculatorCard[]; onOeffnen: () => void;
-}) {
-  const verf = karten.filter(istVerfuegbar).length;
-  const geplant = karten.length - verf;
-  const links = kachelDirektlinks(kat.id, karten);
-  return (
-    <div className="relative group lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
-      {/* Gestreckter Klickbereich: die GANZE Kachel öffnet die Kategorie
-          (Auftrag David 10.6.2026 — vorher war nur die Titelzeile ein
-          Button); Muster RechnerKarte. Die Direktlinks darunter liegen als
-          positionierte Elemente später im DOM und bleiben klickbar. */}
-      <button type="button" onClick={onOeffnen} aria-label={`${kat.titel} öffnen`}
-        className="absolute inset-0 rounded-lg cursor-pointer" />
-      <span className="flex items-baseline gap-3 text-left">
-        <span aria-hidden className="font-display text-h2 leading-none text-brass-700">{kat.numeral}</span>
-        <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{kat.titel}</span>
-        <span aria-hidden className="ml-auto text-ink-400 group-hover:text-brass-700 transition-colors">▸</span>
-      </span>
-      <span className="lc-overline text-ink-500">
-        <span className="num text-brass-700">{verf}</span> verfügbar
-        {geplant > 0 && <> · <span className="num">{geplant}</span> in Vorbereitung</>}
-      </span>
-      <span className="text-body-s text-ink-500 leading-relaxed">{kat.lede}</span>
-      {/* Top-Direktlinks: der «Häufig gebraucht»-Schnellzugriff — ein Klick
-          ins Alltags-Werkzeug, ohne die Kategorie zu öffnen. Bug-Check §9
-          10.6.2026 (Code-Lupe, NIEDRIG): pointer-events-none auf dem
-          Container — die Lücken NEBEN den Links gehören dem gestreckten
-          Kachel-Button, nur die Links selbst fangen Klicks. */}
-      {links.length > 0 && (
-        <span className="relative pointer-events-none flex flex-col gap-1 pt-2 border-t border-line mt-1">
-          {links.map((k) => (
-            <Link key={k.id} to={k.href!}
-              className="pointer-events-auto text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate self-start max-w-full">
-              {sansAmp(k.title)} <span aria-hidden>→</span>
-            </Link>
-          ))}
-        </span>
-      )}
-    </div>
-  );
-}
+//  2. PRAXIS-RANG STATT GEBIETS-GRUPPEN (Auftrag David 10.6.2026 «teile das
+//     UI weiter nach dem Praxis-Gebrauch auf»): je Kategorie eine geordnete
+//     Liste, Alltags-Werkzeuge zuoberst (lib/praxisRang.ts); das Rechtsgebiet
+//     als dezentes Sub-Label IN der Zeile.
+//  3. EHRLICH OHNE BALLAST (§8): Geplante Karten je Kategorie hinter einer
+//     kompakten «In Vorbereitung (N)»-Aufklappzeile; Entwurf-Badges an jeder
+//     Zeile. Die Suche liegt seit der UI-Welle im Header-Dropdown.
+// Die Kategorie-Zuordnung liegt in lib/katalogKategorie.ts (§3/§5).
 
 // ─── Werkzeug-Zeile: Direktlink (Klicktiefe 1); Status ehrlich als Badge ────
 
@@ -415,7 +353,7 @@ const pillKlasse = (aktiv: boolean) =>
       ? 'bg-brass-100 text-brass-700 border border-brass-500'
       : 'bg-surface text-ink-600 border border-line hover:border-brass-400 hover:text-brass-700'}`;
 
-function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
+export function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck?: () => void }) {
   const [params, setParams] = useSearchParams();
   // Übersichtlichkeits-Politur (Auftrag David 10.6.2026): ZWEI ruhige
   // Gebrauchs-Ebenen statt einer Mischliste — «Alltag» (Praxis-Rang 1)
@@ -471,10 +409,12 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
       <div className="space-y-1.5 pt-2">
-        <button type="button" onClick={onZurueck}
-          className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
-          ← Alle Kategorien
-        </button>
+        {onZurueck && (
+          <button type="button" onClick={onZurueck}
+            className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
+            ← Alle Kategorien
+          </button>
+        )}
         <div className="flex items-baseline gap-4">
           <h2 id={`register-titel-${kat.id}`} className="flex items-baseline gap-2.5 whitespace-nowrap">
             <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
@@ -570,143 +510,3 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   );
 }
 
-// ─── Treffer-Zeile der flachen Suchergebnis-Liste (mit Kategorie-Label) ─────
-
-function TrefferZeile({ k }: { k: CalculatorCard }) {
-  const aktiv = istAktiv(k.status) && !!k.href;
-  const inhalt = (
-    <>
-      <span className="min-w-0 flex-1">
-        <span className="block font-sans font-medium text-ink-900 text-body-l leading-snug">{sansAmp(k.title)}</span>
-        {/* EIN Template-Literal: SSR setzt sonst Kommentar-Marker zwischen
-            die Segmente (Lektion 7.6.2026) */}
-        <span className="block text-body-s text-ink-500 truncate">
-          {`${KATEGORIE_TITEL.get(kategorieVon(k))} · ${k.rechtsgebiet}`}
-        </span>
-      </span>
-      <span className="flex items-center gap-3 shrink-0">
-        {k.status === 'entwurf' && <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>}
-        {k.status === 'geplant' && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
-        {aktiv && <span className="text-body-s font-medium text-brass-700 whitespace-nowrap">{k.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}</span>}
-      </span>
-    </>
-  );
-  // Konsistenz (Redesign #1): gleiche lc-card-Anatomie + Hover-Lift wie die
-  // übrigen Zeilen, nur grösser (gap-4, body-l-Titel) — kein zweiter Hover-Dialekt.
-  const klasse = 'lc-card text-left flex items-center justify-between gap-4 px-4 py-3 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none';
-  return aktiv ? (
-    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>
-      {inhalt}
-    </Link>
-  ) : (
-    <div className={klasse}>{inhalt}</div>
-  );
-}
-
-// ─── Katalog: vier Registerteile + Trefferliste bei ?q= ─────────────────────
-
-export function Katalog({ karten }: { karten: CalculatorCard[] }) {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  // Suche kommt aus der URL (?q=, geschrieben von der Header-Suche).
-  const suche = searchParams.get('q') ?? '';
-  const sucheZuruecksetzen = () => {
-    const p = new URLSearchParams(searchParams);
-    p.delete('q');
-    setSearchParams(p, { replace: true });
-  };
-
-  // Ansichts-Weiche (Präzisierung David 10.6.2026): ?kategorie=<id> öffnet
-  // die Unterthemen-Ansicht; ohne Parameter zeigt die Seite NUR das
-  // Vier-Kategorien-Deckblatt. Teilbar, Zurück-Taste funktioniert.
-  const offenId = searchParams.get('kategorie');
-  const offen = OBERKATEGORIEN.find((k) => k.id === offenId) ?? null;
-  const oeffnen = (id: OberkategorieId | null) => {
-    const p = new URLSearchParams(searchParams);
-    if (id === null) p.delete('kategorie'); else p.set('kategorie', id);
-    setSearchParams(p);
-  };
-
-  // Link-Erbe: Alte ?gebiet=-Links (Kachel/Panel-Register bis 10.6.2026)
-  // öffnen die erste Kategorie, die Karten dieses Gebiets führt.
-  const altGebiet = searchParams.get('gebiet');
-  useEffect(() => {
-    if (!altGebiet || offenId) return;
-    const treffer = karten.find((k) => k.rechtsgebiet.toLowerCase().includes(altGebiet) || altGebiet === k.rechtsgebiet);
-    if (treffer) oeffnen(kategorieVon(treffer));
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- nur beim Mount (Link-Erbe)
-  }, []);
-
-  const q = suche.trim();
-  const passt = (k: CalculatorCard) =>
-    kartePasst(k, { gebiete: new Set<string>(), bereiche: new Set<string>(), arten: new Set<string>(), nurVerfuegbar: false, suche });
-  const treffer = karten.filter(passt);
-  const trefferSortiert = q === '' ? treffer : treffer
-    .map((k) => [k, sucheRang(k, suche) ?? 9] as const)
-    .sort((a, b) => a[1] - b[1])
-    .map(([k]) => k);
-
-  const proKategorie = OBERKATEGORIEN
-    .map((kat) => ({ kat, karten: karten.filter((k) => kategorieVon(k) === kat.id) }))
-    .filter((x) => x.karten.length > 0);
-
-  return (
-    <div className="space-y-8">
-      {q !== '' ? (
-        <>
-        {/* Trefferzahl als Live-Region (E11): die Suche liegt im Header, das
-            Ergebnis erscheint weit darunter — ohne Ansage bleibt der Erfolg
-            für Screenreader/Tastatur stumm. */}
-        <p className="sr-only" aria-live="polite" aria-atomic="true">
-          {trefferSortiert.length === 0 ? `Keine Treffer für ${q}.` : `${trefferSortiert.length} Treffer für ${q}.`}
-        </p>
-        {trefferSortiert.length === 0 ? (
-          /* Leerer Zustand: kein stilles Verschwinden */
-          <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
-            <p className="lc-overline">Keine Treffer</p>
-            <h2 className="font-display font-semibold text-ink-900 text-h2">
-              Nichts gefunden für «{q}».
-            </h2>
-            <p className="text-body-s text-ink-500 max-w-reading mx-auto">
-              Versuchen Sie einen anderen Begriff (z. B. einen Gesetzesartikel wie «Art. 336c»)
-              oder setzen Sie die Suche zurück.
-            </p>
-            <button type="button" onClick={sucheZuruecksetzen} className="lc-btn-outline mt-2">
-              Suche zurücksetzen
-            </button>
-          </section>
-        ) : (
-          /* Flache, gerankte Trefferliste — Suchen-und-Öffnen ohne Umweg */
-          <section aria-label="Suchtreffer" className="space-y-3">
-            <div className="flex items-center justify-between gap-4">
-              <p className="lc-overline text-ink-500"><span className="num">{trefferSortiert.length}</span> Treffer</p>
-              <button type="button" onClick={sucheZuruecksetzen}
-                className="text-body-s text-ink-500 hover:text-brass-700 transition-colors">
-                Zurücksetzen
-              </button>
-            </div>
-            <div className="space-y-2">
-              {trefferSortiert.map((k) => <TrefferZeile key={k.id} k={k} />)}
-            </div>
-          </section>
-        )}
-        </>
-      ) : (
-        offen ? (
-          /* Unterthemen-Ansicht EINER Kategorie (erst nach Klick) */
-          <KategorieSektion kat={offen}
-            karten={proKategorie.find((x) => x.kat.id === offen.id)?.karten ?? []}
-            onZurueck={() => oeffnen(null)} />
-        ) : (
-          /* Deckblatt: NUR die vier Oberkategorien (Präzisierung David) */
-          <nav aria-label="Oberkategorien" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {proKategorie.map((x) => (
-              <KategorieEinstieg key={x.kat.id} kat={x.kat} karten={x.karten}
-                onOeffnen={() => oeffnen(x.kat.id)} />
-            ))}
-          </nav>
-        )
-      )}
-    </div>
-  );
-}

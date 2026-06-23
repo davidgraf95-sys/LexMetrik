@@ -49,9 +49,11 @@ const redirectZiel = (url: string): { ziel: string; replace: string } | null => 
   return m ? { ziel: m[1].replace(/&amp;/g, '&'), replace: m[2] } : null;
 };
 
-describe('Alt-Routen-Redirects /pro, /fachpersonen, /rechner → «/» (App.tsx)', () => {
-  it('alle drei Alt-Pfade sind verdrahtet und ersetzen den History-Eintrag', () => {
-    for (const pfad of ['/pro', '/fachpersonen', '/rechner']) {
+describe('Alt-Routen-Redirects /pro, /fachpersonen → «/» (App.tsx)', () => {
+  // UI-Welle: /rechner ist neu die Rechner-Übersicht (kein Redirect mehr); die
+  // Free/Pro-Alt-Pfade /pro + /fachpersonen leiten weiter auf «/».
+  it('beide Alt-Pfade sind verdrahtet und ersetzen den History-Eintrag', () => {
+    for (const pfad of ['/pro', '/fachpersonen']) {
       const r = redirectZiel(pfad);
       expect(r, `${pfad} muss auf einen Redirect treffen`).not.toBeNull();
       expect(r!.ziel).toBe('/');
@@ -62,6 +64,12 @@ describe('Alt-Routen-Redirects /pro, /fachpersonen, /rechner → «/» (App.tsx)
   it('Suchstring bleibt erhalten (.ics-Links/Permalinks im Umlauf)', () => {
     expect(redirectZiel('/pro?gebiet=arbeit&q=zpo')!.ziel).toBe('/?gebiet=arbeit&q=zpo');
     expect(redirectZiel('/fachpersonen?modus=pro')!.ziel).toBe('/?modus=pro');
-    expect(redirectZiel('/rechner?q=frist')!.ziel).toBe('/?q=frist');
+  });
+
+  it('/recherche leitet (aufgelöst) auf die Rechner-Übersicht /rechner', () => {
+    const r = redirectZiel('/recherche');
+    expect(r).not.toBeNull();
+    expect(r!.ziel).toBe('/rechner');
+    expect(r!.replace).toBe('true');
   });
 });

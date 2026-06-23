@@ -16,8 +16,11 @@ import { lazyRetry } from './lazyRetry';
 // Thema B, §5). Hier stehen nur die Sonderrouten, die bewusst NICHT im
 // Katalog sind.
 const Startseite = lazyRetry(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
-// Recherche (App-Shell Phase 4): schlanke Such-Seite, nutzt die Katalog-Suche.
-const Recherche = lazyRetry(() => import('./pages/Recherche').then((m) => ({ default: m.Recherche })));
+// Rubrik-Übersichten (UI-Welle): /rechner und /vorlagen lösen die frühere
+// /recherche-Such-Seite ab — eigene Browse-Übersichten analog /gesetze; die
+// Suche lebt seither im Header-Dropdown.
+const RechnerUebersicht = lazyRetry(() => import('./pages/RechnerUebersicht').then((m) => ({ default: m.RechnerUebersicht })));
+const VorlagenUebersicht = lazyRetry(() => import('./pages/VorlagenUebersicht').then((m) => ({ default: m.VorlagenUebersicht })));
 // S-5c: Fristenspiegel AUFGELÖST (Auftrag David 10.6.2026 abends) — Link-Erbe
 // alter Teilen-/.ics-Links übernimmt der Redirect auf die Fach-Rechner.
 const FristenspiegelRedirect = lazyRetry(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
@@ -107,11 +110,14 @@ export default function App() {
       <div key={pathname} className="lc-route">
       <Routes>
         <Route path="/" element={<Startseite />} />
-        <Route path="/recherche" element={<Recherche />} />
+        {/* Rubrik-Übersichten (UI-Welle): Rechner + Vorlagen je eigene Seite. */}
+        <Route path="/rechner" element={<RechnerUebersicht />} />
+        <Route path="/vorlagen" element={<VorlagenUebersicht />} />
+        {/* /recherche aufgelöst → auf die Rechner-Übersicht (alte Permalinks). */}
+        <Route path="/recherche" element={<Navigate to="/rechner" replace />} />
         {/* Alt-Routen (Free/Pro aufgehoben): alle auf die eine Hauptseite */}
         <Route path="/pro" element={<AltRouteRedirect />} />
         <Route path="/fachpersonen" element={<AltRouteRedirect />} />
-        <Route path="/rechner" element={<AltRouteRedirect />} />
         {/* Karten-Routen (Rechner + Vorlagen) datengetrieben aus dem
             katalog-gegateten ROUTEN_MANIFEST — Reihenfolge wie zuvor
             (Rechner, dann Vorlagen); react-router v6 rankt konkrete vor

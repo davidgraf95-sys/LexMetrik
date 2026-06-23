@@ -61,10 +61,10 @@ export function katalogGruppe(q: string, kappung = KAPPUNG): SuchGruppe {
     href: k.href!,
   }));
 
-  return {
-    id: 'katalog', titel: 'Rechner & Vorlagen', treffer, gesamt: getroffen.length,
-    mehrHref: getroffen.length > kappung ? `/recherche?q=${encodeURIComponent(q)}` : undefined,
-  };
+  // Kein «alle N»-Link mehr: /recherche ist aufgelöst, Rechner und Vorlagen
+  // liegen in getrennten Übersichten (/rechner, /vorlagen) — eine kombinierte
+  // Katalog-Trefferseite gibt es nicht. Bei >Kappung verfeinert man die Suche.
+  return { id: 'katalog', titel: 'Rechner & Vorlagen', treffer, gesamt: getroffen.length };
 }
 
 export function presetGruppe(eintraege: PresetIndexEintrag[] | null, kappung = KAPPUNG): SuchGruppe {

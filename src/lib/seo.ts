@@ -53,7 +53,8 @@ const DOPPELKARTEN_OVERRIDE: Record<string, string> = {
 // als Entwurf gekennzeichnet.
 const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; ogBeschreibung?: string }> = {
   '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION, ogBeschreibung: SITE_OG_DESCRIPTION },
-  '/recherche': { titel: 'Recherche — LexMetrik', beschreibung: 'Rechner und Vorlagen von LexMetrik im Volltext durchsuchen — feste Rechenregeln, jede Norm direkt verlinkt. Ergebnisse erscheinen sofort, ganz im Browser.' },
+  '/rechner': { titel: 'Rechner & Werkzeuge — LexMetrik', beschreibung: 'Alle Rechner von LexMetrik nach Aufgabe gegliedert — Zuständigkeiten, Fristen und Gebühren. Feste Rechenregeln, jede Norm direkt verlinkt, Ergebnisse sofort im Browser.' },
+  '/vorlagen': { titel: 'Vorlagen & Dokumente — LexMetrik', beschreibung: 'Rechtsdokumente von LexMetrik aus geprüften Textbausteinen — Verträge, Eingaben, Erklärungen und Dokumentmappen, regelbasiert aufgesetzt mit ehrlichen Form-Grenzen.' },
   '/gesetze': { titel: 'Schweizer Gesetzessammlung — LexMetrik', beschreibung: 'Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link. Schnelle Navigation zwischen und innerhalb der Gesetze.' },
   '/rechtsprechung': { titel: 'Rechtsprechung — LexMetrik', beschreibung: 'Ausgewählte Bundesgerichtsentscheide im Volltext, nach Sachgebiet erschlossen und mit den Gesetzen verzahnt. Daten: OpenCaseLaw — massgeblich bleibt die amtliche Fassung. Keine Rechtsberatung.' },
   '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: 'Wie LexMetrik Fristen, Beträge und Quoten herleitet: feste Regeln statt Sprachmodell, jeder Schritt nachvollziehbar, jede Norm mit der amtlichen Sammlung verlinkt.' },

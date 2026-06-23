@@ -9,8 +9,10 @@ import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../lib/
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 
 const ROUTEN = prerenderRouten();
-// Redirect-Routen (App.tsx) und Stub dürfen nie prerendered/gesitemapped werden
-const VERBOTEN = ['/pro', '/fachpersonen', '/rechner', '/rechner/fristenspiegel'];
+// Redirect-Routen (App.tsx) und Stub dürfen nie prerendered/gesitemapped werden.
+// /rechner ist seit der UI-Welle KEINE Redirect-, sondern eine Übersichtsseite
+// (prerendered) — daher hier NICHT mehr verboten. /recherche ist aufgelöst.
+const VERBOTEN = ['/pro', '/fachpersonen', '/recherche', '/rechner/fristenspiegel'];
 
 describe('prerenderRouten()', () => {
   it('liefert alle Pfade verfügbarer Karten plus die statischen Seiten', () => {
@@ -21,13 +23,13 @@ describe('prerenderRouten()', () => {
         .map((h) => h.split('#')[0]),
     );
     for (const p of kartenPfade) expect(ROUTEN).toContain(p);
-    // 8 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
-    // /recherche (App-Shell-Umbau 19.6.2026) und /rechtsprechung (Rubrik
-    // Rechtsprechung, 23.6.2026 — eigene Browse-Sektion, NICHT im Katalog).
-    for (const p of ['/', '/recherche', '/gesetze', '/rechtsprechung', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+    // 9 statische Seiten inkl. /gesetze (Rubrik V Gesetzessammlung, 17.6.2026),
+    // /rechtsprechung (Rubrik Rechtsprechung, 23.6.2026) und — seit der UI-Welle —
+    // /rechner + /vorlagen (Rubrik-Übersichten, lösen /recherche ab).
+    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/methodik', '/ueber', '/kontakt', '/datenschutz']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 8);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 9);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {
