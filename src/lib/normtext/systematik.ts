@@ -106,46 +106,66 @@ export const SYSTEMATIK: SystematikKategorie[] = [
 // (§8). Kantone ohne Dezimalschema (z.B. GL: römisch «III B/7/1») bekommen bei
 // Bedarf eine eigene Extraktionsregel; ohne Regel greift der neutrale Fallback.
 
-/** Ein Top-Level-Sachgebiet (Wurzel des amtlichen Systematik-Baums). */
-export interface SachgebietTop { nummer: string; name: string; }
+/** Ein Sachgebiet (Knoten des amtlichen Systematik-Baums). */
+export interface Sachgebiet { nummer: string; name: string; }
 
 /** Amtliche Systematik eines Kantons (aus /normtext/kanton-systematik.json,
- *  erzeugt von scripts/normtext/kanton-systematik-run.ts): Anzeige-Wurzeln +
- *  Index jedes Baum-Knotens (nur Ziffern) → Nummer seiner Wurzel. */
-export interface KantonSystematik { roots: SachgebietTop[]; index: Record<string, string>; }
+ *  erzeugt von scripts/normtext/kanton-systematik-run.ts): Top-Sachgebiete mit
+ *  ihren Untergruppen (2. Ebene) + Index jedes Baum-Knotens (nur Ziffern) →
+ *  [Top-Nummer, Untergruppe-Nummer] seiner Vorfahren. */
+export interface KantonSystematik {
+  roots: Array<Sachgebiet & { kinder: Sachgebiet[] }>;
+  index: Record<string, [string, string]>;
+}
 
 const nurZiffern = (s: string): string => s.replace(/\D/g, '');
 
 /**
  * Ordnet einen Erlass über Längster-Präfix-Match im amtlichen Systematik-Baum
- * seinem Top-Level-Sachgebiet zu. Deterministisch (§2). Korrekt auch bei
- * abweichenden Schemata (AI Hunderter, UR 10/20/…, ZG +10), weil der Baum die
- * echte Hierarchie liefert. Neutraler, ehrlicher Fallback (§8), wenn keine
- * Systematik-Daten vorliegen oder die Nummer (z. B. GL römisch) nicht greift.
+ * seinem Top-Sachgebiet UND seiner Untergruppe (2. Ebene) zu. Deterministisch
+ * (§2). Korrekt auch bei abweichenden Schemata (AI Hunderter, UR 10/20/…, ZG
+ * +10), weil der Baum die echte Hierarchie liefert. Neutraler Fallback (§8) auf
+ * die führende Ziffer, wenn keine Daten vorliegen oder die Nummer nicht greift.
  */
 export function sachgruppe(
   sys: KantonSystematik | undefined,
   sr: string | null | undefined,
-): { schluessel: string; titel: string } {
+): { top: string; sub: string } {
   const d = nurZiffern(sr ?? '');
   if (sys && d) {
     for (let l = d.length; l >= 1; l--) {
-      const root = sys.index[d.slice(0, l)];
-      if (root !== undefined) {
-        const r = sys.roots.find((x) => x.nummer === root);
-        if (r) return { schluessel: r.nummer, titel: r.name };
-      }
+      const treffer = sys.index[d.slice(0, l)];
+      if (treffer !== undefined) return { top: treffer[0], sub: treffer[1] };
     }
   }
-  if (!d) return { schluessel: '~', titel: 'Ohne Systematik-Nummer' };
-  return { schluessel: d[0], titel: `Bereich ${d[0]}` };
+  return { top: d ? d[0] : '~', sub: '' };
 }
 
-/** Vergleichsfunktion für die Anzeige-Reihenfolge der Sachgebiete (amtliche
+/** Anzeige-Titel eines Top-Sachgebiets (amtlich, sonst ehrlicher Fallback, §8). */
+export function topTitel(sys: KantonSystematik | undefined, top: string): string {
+  const r = sys?.roots.find((x) => x.nummer === top);
+  if (r) return r.name;
+  return top === '~' ? 'Ohne Systematik-Nummer' : `Bereich ${top}`;
+}
+
+/** Anzeige-Titel einer Untergruppe (innerhalb eines Top-Sachgebiets). */
+export function subTitel(sys: KantonSystematik | undefined, top: string, sub: string): string {
+  const k = sys?.roots.find((x) => x.nummer === top)?.kinder.find((c) => c.nummer === sub);
+  return k ? k.name : '';
+}
+
+/** Vergleichsfunktion für die Anzeige-Reihenfolge der Top-Sachgebiete (amtliche
  *  Baum-Reihenfolge; unbekannte/neutrale Schlüssel hinten). */
-export function sachgebietRang(sys: KantonSystematik | undefined): (schluessel: string) => number {
+export function sachgebietRang(sys: KantonSystematik | undefined): (top: string) => number {
   const order = new Map((sys?.roots ?? []).map((r, i) => [r.nummer, i]));
   return (s) => order.get(s) ?? 999;
+}
+
+/** Vergleichsfunktion für die Reihenfolge der Untergruppen eines Top-Sachgebiets. */
+export function untergruppeRang(sys: KantonSystematik | undefined, top: string): (sub: string) => number {
+  const kinder = sys?.roots.find((x) => x.nummer === top)?.kinder ?? [];
+  const order = new Map(kinder.map((k, i) => [k.nummer, i]));
+  return (s) => (s === '' ? -1 : order.get(s) ?? 998);
 }
 
 /** Key → [Kategorie-id, Gruppen-id] für schnelle Zuordnung; mehrfach genannte

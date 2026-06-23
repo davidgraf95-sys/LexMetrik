@@ -18,17 +18,15 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { fetchMitWiederholung } from './netz-retry.ts';
 
-interface SachgebietTop {
-  nummer: string;
-  name: string;
-}
-/** Pro Kanton: Top-Level-Sachgebiete (Anzeige) + Index jedes Baum-Knotens (nur
- *  Ziffern seiner Nummer) → Nummer seines Top-Level-Vorfahren. So ordnet die UI
- *  einen Erlass über Längster-Präfix-Match seinem Sachgebiet zu — korrekt auch
- *  bei AI (Hunderter), UR (10/20/…), ZG (+10). */
+interface Sachgebiet { nummer: string; name: string; }
+/** Pro Kanton: Top-Level-Sachgebiete mit ihren Untergruppen (2. Ebene) für die
+ *  Anzeige + Index jedes Baum-Knotens (nur Ziffern) → [Top-Nummer, Untergruppe-
+ *  Nummer] seiner Vorfahren. So ordnet die UI einen Erlass über Längster-Präfix-
+ *  Match seinem Sachgebiet UND seiner Untergruppe zu — korrekt auch bei AI
+ *  (Hunderter), UR (10/20/…), ZG (+10). */
 interface KantonSystematik {
-  roots: SachgebietTop[];
-  index: Record<string, string>;
+  roots: Array<Sachgebiet & { kinder: Sachgebiet[] }>;
+  index: Record<string, [string, string]>;
 }
 
 type ApiKnoten = {
@@ -50,27 +48,34 @@ async function holeSystematik(host: string): Promise<KantonSystematik> {
   if (!res.ok) throw new Error(`systematic_categories ${host}: HTTP ${res.status}`);
   const roh = (await res.json()) as ApiKnoten[];
 
-  const roots: SachgebietTop[] = [];
-  const index: Record<string, string> = {};
-  // Jeden Knoten auf seinen Top-Level-Vorfahren (rootNummer) abbilden.
-  const lauf = (knoten: ApiKnoten[], rootNummer: string): void => {
+  const roots: Array<Sachgebiet & { kinder: Sachgebiet[] }> = [];
+  const index: Record<string, [string, string]> = {};
+  // Jeden Knoten auf [Top-Vorfahr, Untergruppe-Vorfahr] abbilden. top = Wurzel,
+  // sub = Knoten der 2. Ebene (bleibt für tiefere Knoten konstant).
+  const lauf = (knoten: ApiKnoten[], top: string, parentSub: string): void => {
     for (const k of knoten) {
       const c = k.systematic_category;
       if (!c?.systematic_number) continue;
+      // Untergruppe = der Knoten der 2. Ebene. parentSub leer → ich BIN die 2.
+      // Ebene (meine eigene Nummer); sonst erbe ich die Untergruppe meines Vorfahren.
+      const meinSub = parentSub || String(c.systematic_number);
       const d = nurZiffern(String(c.systematic_number));
-      // Längster gewinnt: nur setzen, wenn neu oder genauer (sollte eindeutig sein).
-      if (d && !(d in index)) index[d] = rootNummer;
-      if (Array.isArray(c.children)) lauf(c.children, rootNummer);
+      if (d && !(d in index)) index[d] = [top, meinSub];
+      if (Array.isArray(c.children)) lauf(c.children, top, meinSub);
     }
   };
   for (const k of roh) {
     const c = k.systematic_category;
     if (!c?.systematic_number || !c?.name) continue;
     const nummer = String(c.systematic_number);
-    roots.push({ nummer, name: String(c.name).trim() });
+    const kinder: Sachgebiet[] = (c.children ?? [])
+      .map((ch) => ch.systematic_category)
+      .filter((cc): cc is NonNullable<typeof cc> => !!cc?.systematic_number && !!cc?.name)
+      .map((cc) => ({ nummer: String(cc.systematic_number), name: String(cc.name).trim() }));
+    roots.push({ nummer, name: String(c.name).trim(), kinder });
     const d = nurZiffern(nummer);
-    if (d) index[d] = nummer;
-    if (Array.isArray(c.children)) lauf(c.children, nummer);
+    if (d) index[d] = [nummer, ''];
+    if (Array.isArray(c.children)) lauf(c.children, nummer, '');
   }
   return { roots, index };
 }

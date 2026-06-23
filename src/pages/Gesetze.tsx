@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import {
   ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
-import { SYSTEMATIK, sachgruppe, sachgebietRang, type KantonSystematik } from '../lib/normtext/systematik';
+import { SYSTEMATIK, sachgruppe, topTitel, subTitel, sachgebietRang, untergruppeRang, type KantonSystematik } from '../lib/normtext/systematik';
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
 
@@ -160,32 +160,59 @@ const KANTON_NAMEN: Record<string, string> = {
   TI: 'Tessin', VD: 'Waadt', VS: 'Wallis', NE: 'Neuenburg', GE: 'Genf', JU: 'Jura',
 };
 
-// Ein gewählter Kanton, gegliedert nach der OFFIZIELLEN Systematik (Sachgebiet =
-// führende Ziffer der systematischen Nummer, systematik.ts). Übersicht zuerst:
-// alle Sektionen eingeklappt (so sieht man die Sachgebiete des Kantons auf einen
-// Blick), Klick öffnet eine; «Alle auf-/zuklappen». Im Inneren kompakte, nach
-// SR-Nr sortierte Zeilen (amtliche Reihenfolge). Die Seiten-Suche liefert die
+// Kompakte, überlaufsichere Erlass-Zeile für die Kanton-Systematik: SR-Nr fix
+// links (tabellarisch), Titel einzeilig gekürzt. Bewusst NICHT ErlassZeile —
+// kantonale «kuerzel» sind oft der ganze (bis 276 Z.) Titel und würden als
+// shrink-0 die Zeile sprengen (Auftrag David: «überschnitten» bei BS).
+function SysZeile({ e }: { e: BrowseErlass }) {
+  const inhalt = (
+    <>
+      <span className="num text-xs text-ink-400 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
+      <span className="text-ink-700 truncate group-hover/z:text-brass-700">{e.titel}</span>
+      {e.status !== 'snapshot' && <span aria-hidden className="text-xs text-brass-700 shrink-0 ml-auto">↗</span>}
+    </>
+  );
+  const cls = 'group/z flex items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
+  return e.status !== 'snapshot'
+    ? <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer" className={cls}>{inhalt}</a>
+    : <Link to={`/gesetze/${e.ebene}/${encodeURIComponent(e.key)}`} className={cls}>{inhalt}</Link>;
+}
+
+// Ein gewählter Kanton, gegliedert nach der OFFIZIELLEN Systematik (systematik.ts:
+// Top-Sachgebiet + Untergruppe aus dem amtlichen clex-Baum). Übersicht zuerst:
+// alle Top-Sektionen eingeklappt (Sachgebiete des Kantons auf einen Blick), Klick
+// öffnet eine; «Alle auf-/zuklappen». Im Inneren je Untergruppe ein Zwischen-
+// titel, darunter nach SR-Nr sortierte Zeilen. Die Seiten-Suche liefert die
 // flache Trefferliste — diese gegliederte Ansicht zeigt sich nur ohne Suche.
 function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: KantonSystematik }) {
   const gruppen = useMemo(() => {
     const srNum = (e: BrowseErlass) => parseFloat((e.sr ?? '').replace(/[^\d.]/g, '')) || 0;
-    const rang = sachgebietRang(sys);
-    const map = new Map<string, { titel: string; items: BrowseErlass[] }>();
+    const rangTop = sachgebietRang(sys);
+    const tops = new Map<string, Map<string, BrowseErlass[]>>();
     for (const e of erlasse) {
-      const { schluessel, titel } = sachgruppe(sys, e.sr);
-      if (!map.has(schluessel)) map.set(schluessel, { titel, items: [] });
-      map.get(schluessel)!.items.push(e);
+      const { top, sub } = sachgruppe(sys, e.sr);
+      if (!tops.has(top)) tops.set(top, new Map());
+      const subs = tops.get(top)!;
+      if (!subs.has(sub)) subs.set(sub, []);
+      subs.get(sub)!.push(e);
     }
-    return [...map.entries()]
-      .sort((a, b) => rang(a[0]) - rang(b[0]) || a[0].localeCompare(b[0], 'de', { numeric: true }))
-      .map(([schluessel, g]) => ({
-        schluessel,
-        titel: g.titel,
-        items: g.items.sort((a, b) => srNum(a) - srNum(b) || a.kuerzel.localeCompare(b.kuerzel, 'de')),
-      }));
+    return [...tops.entries()]
+      .sort((a, b) => rangTop(a[0]) - rangTop(b[0]) || a[0].localeCompare(b[0], 'de', { numeric: true }))
+      .map(([top, subs]) => {
+        const rangSub = untergruppeRang(sys, top);
+        const anzahl = [...subs.values()].reduce((n, arr) => n + arr.length, 0);
+        const untergruppen = [...subs.entries()]
+          .sort((a, b) => rangSub(a[0]) - rangSub(b[0]) || a[0].localeCompare(b[0], 'de', { numeric: true }))
+          .map(([sub, items]) => ({
+            sub,
+            titel: subTitel(sys, top, sub),
+            items: items.sort((a, b) => srNum(a) - srNum(b) || a.titel.localeCompare(b.titel, 'de')),
+          }));
+        return { top, titel: topTitel(sys, top), anzahl, untergruppen };
+      });
   }, [erlasse, sys]);
 
-  const alleIds = gruppen.map((g) => g.schluessel);
+  const alleIds = gruppen.map((g) => g.top);
   const [offen, setOffen] = useState<Set<string>>(() => new Set());
   const alleOffen = alleIds.length > 0 && offen.size >= alleIds.length;
   const toggle = (id: string) => setOffen((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
@@ -200,15 +227,29 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
         </button>
       </div>
       {gruppen.map((g) => (
-        <Kategorie key={g.schluessel} offen={offen.has(g.schluessel)} onToggle={() => toggle(g.schluessel)} anzahl={g.items.length}
+        <Kategorie key={g.top} offen={offen.has(g.top)} onToggle={() => toggle(g.top)} anzahl={g.anzahl}
           kopf={
-            <span className="flex items-baseline gap-2.5">
-              <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{g.schluessel}</span>
-              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{g.titel}</span>
+            <span className="flex items-baseline gap-2.5 min-w-0">
+              <span aria-hidden className="num font-display text-h3 leading-none text-brass-700 shrink-0">{g.top}</span>
+              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight truncate">{g.titel}</span>
             </span>
           }>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
-            {g.items.map((e) => <ErlassZeile key={e.key} e={e} />)}
+          <div className="space-y-4">
+            {g.untergruppen.map((u) => (
+              <section key={u.sub || '_'} className="space-y-1.5">
+                {u.titel && (
+                  <div className="flex items-baseline gap-2">
+                    <span aria-hidden className="num text-xs text-brass-700 shrink-0">{u.sub}</span>
+                    <h4 className="lc-overline text-brass-700">{u.titel}</h4>
+                    <span className="text-ink-400 text-xs">· {u.items.length}</span>
+                    <span aria-hidden className="flex-1 h-px bg-line/70" />
+                  </div>
+                )}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5">
+                  {u.items.map((e) => <SysZeile key={e.key} e={e} />)}
+                </div>
+              </section>
+            ))}
           </div>
         </Kategorie>
       ))}
