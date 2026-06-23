@@ -22,7 +22,7 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
-## Session 23.6.2026 — Gesetze-Import 3-Tier: Discovery + Confidence-Maschinerie (Branch `feat/gesetze-import-3tier`, NICHT in main)
+## Session 23.6.2026 — Gesetze-Import 3-Tier: Discovery + Confidence + AR-Vollkorpus (main `aac411a` → PROD-DEPLOY, lexmetrik.vercel.app, dpl_5EKAuYZG)
 
 Auftrag David: alle kantonalen Gesetze sauber + klickbar abbilden OHNE jedes einzeln zu prüfen,
 besser als reines PDF. Vorarbeit: Reverse-Engineering lexfind.ch + clex/LexWork-APIs (Memory
