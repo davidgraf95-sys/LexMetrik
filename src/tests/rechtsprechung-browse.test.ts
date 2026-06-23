@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  themaText, synthThema, istSynth, normLabel,
+  themaText, synthThema, istSynth, normLabel, istBge, hauptIdentitaet,
   nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit,
   zaehleSachgebiete, normHaeufigkeit, filterEntscheide, filterNachNorm,
 } from '../lib/rechtsprechung/browse';
@@ -50,6 +50,19 @@ describe('themaText / synthThema / istSynth', () => {
   });
 });
 
+describe('istBge / hauptIdentitaet', () => {
+  it('führt mit der BGE-Referenz, wenn vorhanden (zitierbarer Anker)', () => {
+    const e = be({ bgeReferenz: '150 III 137', nummer: '5A_242/2025' });
+    expect(istBge(e)).toBe(true);
+    expect(hauptIdentitaet(e)).toBe('BGE 150 III 137');
+  });
+  it('fällt ohne BGE-Referenz auf das Aktenzeichen zurück', () => {
+    const e = be({ bgeReferenz: null, nummer: '5A_242/2025' });
+    expect(istBge(e)).toBe(false);
+    expect(hauptIdentitaet(e)).toBe('5A_242/2025');
+  });
+});
+
 describe('Sortierung — deterministisch, key-stabil', () => {
   const a = be({ key: 'a', leitcharakter: 'routine', datum: '2025-05-01' });
   const b = be({ key: 'b', leitcharakter: 'leitentscheid', datum: '2020-01-01' });
@@ -58,6 +71,11 @@ describe('Sortierung — deterministisch, key-stabil', () => {
 
   it('nachRelevanz: Leitentscheide zuerst, dann neueste, dann key', () => {
     expect(nachRelevanz([a, b, c]).map((e) => e.key)).toEqual(['c', 'b', 'a']);
+  });
+  it('nachRelevanz: unter Leitentscheiden amtlich publizierte (BGE) zuerst — auch wenn älter', () => {
+    const bge = be({ key: 'bge', leitcharakter: 'leitentscheid', datum: '2019-01-01', bgeReferenz: '150 III 1' });
+    const neu = be({ key: 'neu', leitcharakter: 'leitentscheid', datum: '2026-01-01', bgeReferenz: null });
+    expect(nachRelevanz([neu, bge]).map((e) => e.key)).toEqual(['bge', 'neu']);
   });
   it('Tiebreak auf key bei gleichem leit+datum', () => {
     expect(nachRelevanz([d, a]).map((e) => e.key)).toEqual(['a', 'd']);

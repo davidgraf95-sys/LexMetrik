@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
-import { themaText, istSynth } from '../../lib/rechtsprechung/browse';
+import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
 import { formatiereDatum } from './format';
@@ -37,8 +37,8 @@ export function EntscheidZeile({ e, onNorm }: {
           <span>{e.gerichtName}</span>
           <span className="text-ink-300" aria-hidden>·</span>
           <span className="text-brass-700">{GEBIET_LABEL[e.sachgebiet]}</span>
-          {/* Nummer/Datum auf Mobil hier mit, auf Desktop rechts in Zone 3. */}
-          <span className="num text-ink-400 sm:hidden" aria-hidden>· {e.nummer} · {formatiereDatum(e.datum)}</span>
+          {/* Identität/Datum auf Mobil hier mit, auf Desktop rechts in Zone 3. */}
+          <span className="num text-ink-400 sm:hidden" aria-hidden>· {hauptIdentitaet(e)} · {formatiereDatum(e.datum)}</span>
           {e.normKeys.slice(0, 3).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
           {e.normKeys.length > 3 && <span className="num text-micro text-ink-400">+{e.normKeys.length - 3}</span>}
           {e.kuratierung === 'maschinell' && (
@@ -48,9 +48,9 @@ export function EntscheidZeile({ e, onNorm }: {
         </div>
       </div>
 
-      {/* Zone 3 — Identität gedämpft, rechtsbündig (ab sm). */}
+      {/* Zone 3 — Identität rechtsbündig (ab sm): BGE-Zitierung hervorgehoben, sonst Aktenzeichen. */}
       <div className="hidden shrink-0 text-right sm:block">
-        <span className="num block text-xs text-ink-400">{e.nummer}</span>
+        <span className={`num block text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-400'}`}>{hauptIdentitaet(e)}</span>
         <span className="num block text-micro text-ink-300">{formatiereDatum(e.datum)}</span>
       </div>
     </Link>

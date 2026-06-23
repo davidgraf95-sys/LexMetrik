@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
-import { themaText, istSynth } from '../../lib/rechtsprechung/browse';
+import { themaText, istSynth, istBge, hauptIdentitaet } from '../../lib/rechtsprechung/browse';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
-import { formatiereDatum, kantonLabel } from './format';
+import { formatiereDatum } from './format';
 
 // Karte eines Entscheids (Dichte 'karten'). Hierarchie-Umkehr ggü. der alten
 // Karte: das THEMA führt (Scent), das Aktenzeichen wandert in die gedämpfte
@@ -55,13 +55,14 @@ export function EntscheidKarte({ e, onNorm }: {
       {/* Metazeile (gedämpft) + amtliche Fassung. */}
       <div className="mt-2.5 flex items-end justify-between gap-3">
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-ink-500">
+          {/* Identität führend: amtliche BGE-Zitierung (erkannt/zitierbar) hervorgehoben,
+              sonst das Aktenzeichen gedämpft. */}
+          <span className={`num ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-400'}`}>{hauptIdentitaet(e)}</span>
+          <span className="text-ink-300" aria-hidden>·</span>
           <span>{e.gerichtName}</span>
           <span className="text-ink-300" aria-hidden>·</span>
-          <span>{kantonLabel(e.kanton)}</span>
-          <span className="text-ink-300" aria-hidden>·</span>
           <span className="num">{formatiereDatum(e.datum)}</span>
-          <span className="text-ink-300" aria-hidden>·</span>
-          <span className="num text-ink-400">{e.nummer}</span>
+          {istBge(e) && <span className="num text-ink-400" title="Aktenzeichen">({e.nummer})</span>}
           {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase">{e.sprache}</span>}
         </div>
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"

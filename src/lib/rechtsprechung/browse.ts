@@ -78,6 +78,20 @@ export interface EntscheidFilterWerte {
 // echten Strukturfeldern — KEIN gefakter Regestentext (§8). istSynth() lässt die
 // Darstellung den Ersatz visuell kenntlich machen (andere Schrift + Marker).
 
+/** true, wenn der Entscheid amtlich in der BGE-Sammlung publiziert ist (höchste Autorität). */
+export function istBge(e: BrowseEntscheid): boolean {
+  return !!e.bgeReferenz;
+}
+
+/**
+ * Haupt-Identität (der scanbare/zitierbare Anker): die amtliche BGE-Referenz
+ * ('BGE 150 III 137'), sonst das Aktenzeichen. Anwältinnen erkennen und zitieren
+ * die BGE-Nummer — sie ist, wo vorhanden, wertvoller als das Aktenzeichen.
+ */
+export function hauptIdentitaet(e: BrowseEntscheid): string {
+  return e.bgeReferenz ? `BGE ${e.bgeReferenz}` : e.nummer;
+}
+
 /** Erlass-/Norm-Key lesbar machen: 'OR' → 'OR', 'OR-336' → 'OR Art. 336'. Rein, kein Normtext. */
 export function normLabel(key: string): string {
   const m = /^([A-Za-zÄÖÜäöü]+)[-_](\d+\w*)$/.exec(key);
@@ -155,11 +169,12 @@ function cmpDatum(a: BrowseEntscheid, b: BrowseEntscheid): number {
   return a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : 0;
 }
 
-/** Default: Leitentscheide zuerst → neueste zuerst → key. Der kuratierte Block oben. */
+/** Default: Leitentscheide → amtlich publiziert (BGE) → neueste → key. Autorität zuerst. */
 export function nachRelevanz(liste: BrowseEntscheid[]): BrowseEntscheid[] {
   const leit = (e: BrowseEntscheid) => (e.leitcharakter === 'leitentscheid' ? 0 : 1);
+  const bge = (e: BrowseEntscheid) => (e.bgeReferenz ? 0 : 1);
   return [...liste].sort((a, b) =>
-    leit(a) - leit(b) || -cmpDatum(a, b) || cmpKey(a, b));
+    leit(a) - leit(b) || bge(a) - bge(b) || -cmpDatum(a, b) || cmpKey(a, b));
 }
 
 /** Nach Datum (Default absteigend = neueste zuerst), key-Tiebreak. */
