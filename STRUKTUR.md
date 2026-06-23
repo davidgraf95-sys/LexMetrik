@@ -22,6 +22,57 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 23.6.2026 — BS-VORBILDKANTON: Vollimport + Darstellung + 2× Ultra-Check + Rechtsprechung-Merge (main, PROD-Deploy)
+
+Auftrag David: Gesetze ausbauen (freie Wahl) → BS als Vorbildkanton «beste Gesetzesseite im Netz». Abgearbeitet, alles auf `main`, gate-grün, render-verifiziert:
+- **Retry-Härtung** `scripts/normtext/netz-retry.ts` (fetch Timeout+Wiederholung) → behob GR-ETIMEDOUT-Discovery-Crash; `enumeriereKanton` verdrahtet (Tests). **Kantons-Tier-Karte** (`bibliothek/recherche/kantons-tier-karte.md`): 19 Kantone voll Tier A.
+- **BS-Vollimport** 910→859 Erlasse (17'688 Artikel-Snapshots, 0 Fetch-Fehler).
+- **Darstellung** (`Gesetze.tsx`): Kanton-Ansicht nach amtlicher clex-Systematik (`kanton-systematik.json`, Generator `kanton-systematik-run.ts`), 2-Ebenen-Akkordeon (Top-Sachgebiet + Untergruppe), Längster-Präfix-Match `sachgruppe()` (handhabt AI-Hunderter/UR/ZG/Gemeinderecht-Namespace `BaB#…`); überlaufsichere Zeilen.
+- **Cluster A** (Extraktor `adapter-lexwork.ts`, korpusweit): aufgehobene Artikel/lit. nicht mehr verschluckt (§-Reihe lückenlos, «aufgehoben»), `paragraph_post`, Randtitel (`titel`-Feld), S9 Titel-Heilung, S5 Gemeinderecht 162/162. Fix: `main()`-Guard (`!process.env.VITEST`).
+- **Cluster B**: WCAG-Kontrast, Artikelzahl+Stand, Suche-auf-Kanton, Karte schlanker, Mobile, Reader-Sachgebiet, axe-Tor; Bund-`standardOffen` wiederhergestellt.
+- **2× Ultracode-Audit** (je ~50 Agenten, adversarial): `FAHRPLAN-BS-VORBILDKANTON.md`. → **C1** Tarif-Tabellen (StG-Steuertarife jetzt Tabellen), HTML-Entities (≥/≤ Schwellen), Titel, IWB, Absatz-Marker. → **C2** Gliederung/TOC: `struktur-kanton-run.ts --kanton`-Filter; BS-Sidecars 5→849 (StG 312 TOC-Knoten). C3 (Kopf-Suche/§-Links/«SR»-Label) = offener Backlog im FAHRPLAN.
+- **Rechtsprechung gemergt** (`merge ad009b8`, Branch `worktree-rechtsprechung-p0`): P0–P2 BGer+kantonale Rubrik, eigener Baum `public/rechtsprechung/`+`src/lib/rechtsprechung/`, Norm↔Entscheid-Verzahnung im Reader (golden-schonend; einziger Konflikt GesetzLeser.tsx additiv gelöst).
+
+Memorys ergänzt: `regelmaessig-aufraeumen`. Offen (Backlog): C3-Reader/Suche-Feinschliff; weitere Kantone (Tier-A-Pipeline steht); GL/LU-Sondersystematik beim Import.
+
+## Session 23.6.2026 — RECHTSPRECHUNG-INTEGRATION: Machbarkeit + konsolidierter Fahrplan (jetzt IMPLEMENTIERT + via ad009b8 in main/Prod)
+
+Auftrag David: untersuchen, wie einfach Bundesgerichtsentscheide/Entscheid-DBs in
+LexMetrik integrierbar wären → dann konkreter Umsetzungs-Fahrplan (ultracode), mit
+2 geschärften Zielen: **(1) bessere Übersicht als entscheidsuche.ch**, **(2) Kantone
+von Anfang an mittragen**. Ergebnis als aktive Direktive verankert.
+
+**Geliefert: `FAHRPLAN-RECHTSPRECHUNG.md`** (Multi-Agenten-Workflow: Live-Recon →
+5 Design-Stränge → adversariale Review → Synthese). Reiner Plan — nichts gebaut,
+nichts deployt (§9). Kernpunkte:
+- **Verdikt:** Datenpfad technisch günstig (OCL liefert Struktur/Regeste/Citations als
+  JSON, kein Browser/OCR; CORS offen, kein Auth, Daten CC0). Eigentlicher Aufwand =
+  Kuratierung (Sachgebiet/Leitentscheid), Excerpt-Auflösung, Verzahnungs-Veredelung.
+- **Quellen:** OpenCaseLaw (`mcp.opencaselaw.ch/api`) primär, entscheidsuche.ch
+  Fallback; HF-Parquet `voilaj/swiss-caselaw` (CC0) als Backfill. Recht = **Art. 5 URG**
+  (Urteilstext gemeinfrei; Regeste Graustufe; keine De-Anonymisierung).
+- **Architektur-Kernentscheid (golden-schonend):** eigener Baum `public/rechtsprechung/`
+  + `src/lib/rechtsprechung/`, NICHT ins Gesetzes-Register quetschen — `baueBrowseManifest`
+  scannt nur `bund/`+`kanton/`, also bleiben alle Gesetzes-Snapshots/Typen byte-gleich.
+  Eigener Inhaltstyp (`gericht`+`kanton`, Bund=`'CH'`), **zwei Status-Achsen** `bestand`
+  (snapshot/nur-live-link) × `kuratierung` (maschinell/geprüft, Default maschinell), eigene
+  `sha256EntscheidBloecke`, Route `/rechtsprechung`, Flag `--nur=entscheide`.
+- **Burggraben:** Norm↔Entscheid↔Werkzeug build-time deterministisch (norm-index.json aus
+  `statutes[]`; «Rechtsprechung zu Art. X» im GesetzLeser; `NormText` 1:1 wiederverwendet).
+- **Etappen:** P0 Fundament + ~50–150 BGE-Leitentscheide (OHNE Davids Fachzeit, gemeinfreier
+  Text) → P1 Verzahnung breit + Regeste-Index → P2 jüngste aza + Suche → P3+ Kantone.
+- **Top-Risiken:** R2 `statutes`-Qualität (Burggraben-Achillesferse, nie «verifiziert»),
+  R3 **GELÖST (Preflight 23.6.: entscheidsuche `_search.php` CORS offen — OPTIONS→200
+  allow-origin:* , POST liefert ES-JSON ~18ms; OCL /courts+/atom ebenfalls offen → Live-
+  Volltextsuche im statischen FE baubar, kein Backend)**, R4 `/structure` Bund-only (Kanton-
+  Reader einfacher), R5 Excerpt-Request-Last zwingt P0 klein, R7 Regeste-Lizenz nicht zweifelsfrei.
+
+**Pass zu Direktiven:** dient Ausbau-Direktive (Burggraben) + respektiert Abnahme-
+Zeitsperre (P0/P1 ohne Fachzeit via `kuratierung:'maschinell'`; Präjudiz-Veredelung in
+Fristen-Warteschlange). **Offen/nächster Schritt:** Entscheid (a) STRUKTUR/Memory verankern
+[erledigt], (b) CORS/API-Live-Preflight (R3) als Proof, (c) P0 starten. Zeilen-Anker im
+Fahrplan gegen Code 23.6. verifiziert, beim Bau via Tore nochmals bestätigen.
+
 ## Session 23.6.2026 — Gesetze-Import 3-Tier: Discovery + Confidence + AR-Vollkorpus (main `aac411a` → PROD-DEPLOY, lexmetrik.vercel.app, dpl_5EKAuYZG)
 
 Auftrag David: alle kantonalen Gesetze sauber + klickbar abbilden OHNE jedes einzeln zu prüfen,
