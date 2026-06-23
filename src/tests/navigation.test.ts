@@ -35,7 +35,6 @@ describe('Navigations-SSoT', () => {
         .filter((k) => istVerfuegbar(k) && !!k.href && !istVorlage(k) && katVon(k) === kat.id)
         .map((k) => ({ label: k.title, ziel: k.href! }));
       expect(g.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null))).toEqual(erwartet);
-      expect(g.anzahl).toBe(erwartet.length);
     });
   });
 
@@ -48,7 +47,6 @@ describe('Navigations-SSoT', () => {
         .filter((k) => istVerfuegbar(k) && !!k.href && istVorlage(k) && k.art === s.art)
         .map((k) => ({ label: k.title, ziel: k.href! }));
       expect(g.kinder.map((k) => (k.art === 'link' ? { label: k.label, ziel: k.ziel } : null))).toEqual(erwartet);
-      expect(g.anzahl).toBe(erwartet.length);
     });
   });
 

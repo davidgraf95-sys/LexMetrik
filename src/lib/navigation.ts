@@ -30,9 +30,6 @@ export interface NavLink {
   label: string;
   /** Voller Pfad inkl. ?query/#hash — wird unverändert an react-router <Link to> gegeben. */
   ziel: string;
-  /** Optional: Anzahl SOFORT verfügbarer Werkzeuge hinter dem Eintrag (aus dem
-   *  Katalog abgeleitet, §5) — als dezenter Zähler in der Seitenleiste. */
-  anzahl?: number;
 }
 
 /** Knoten mit Kindern: entweder ein Abschnitt mit Überschrift oder eine
@@ -44,8 +41,6 @@ export interface NavGruppe {
   aufklappbar?: boolean;
   /** Bei aufklappbar: Anfangszustand. Bund startet eingeklappt (Build-Plan). */
   standardOffen?: boolean;
-  /** Optional: Anzahl verfügbarer Werkzeuge hinter der Gruppe (dezenter Zähler). */
-  anzahl?: number;
   kinder: NavKnoten[];
 }
 
@@ -79,7 +74,7 @@ const werkzeugeFuer = (pruefen: (k: typeof KATALOG_KARTEN[number]) => boolean): 
   KATALOG_KARTEN.filter((k) => istVerfuegbar(k) && !!k.href && pruefen(k)).map((k) => link(k.title, k.href!));
 
 const werkzeugGruppe = (label: string, kinder: NavLink[]): NavGruppe =>
-  ({ art: 'gruppe', label, aufklappbar: true, standardOffen: false, anzahl: kinder.length, kinder });
+  ({ art: 'gruppe', label, aufklappbar: true, standardOffen: false, kinder });
 
 // Rechner: die drei Aufgaben-Oberkategorien ausser «Vorlagen» — je als
 // aufklappbare Gruppe mit ihren Rechnern.
@@ -102,7 +97,6 @@ const GESETZE_KINDER: NavKnoten[] = [
     label: 'Bund',
     aufklappbar: true,
     standardOffen: false,
-    anzahl: SYSTEMATIK.length,
     kinder: SYSTEMATIK.map((k) => link(k.titel, `/gesetze?ebene=bund#sys-${k.id}`)),
   },
   {
@@ -110,7 +104,6 @@ const GESETZE_KINDER: NavKnoten[] = [
     label: 'Kantone',
     aufklappbar: true,
     standardOffen: false,
-    anzahl: KANTONE.length,
     kinder: KANTONE.map((kt) => link(kt, `/gesetze?ebene=kanton&kt=${kt}`)),
   },
 ];

@@ -5,6 +5,48 @@ import { Topbar } from './Topbar';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { useLocale } from '../locale';
+import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSeitenleiste';
+
+// Ziehgriff am rechten Rand der Desktop-Seitenleiste: Breite per Maus/Touch
+// ziehen ODER per Tastatur (Pfeil ←/→) verstellen. role="separator" mit
+// aria-valuenow/min/max macht die Geste WCAG-zugänglich (axe-Tor). Reine
+// Darstellung (§3).
+function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: number) => void }) {
+  const ziehen = (e: React.PointerEvent) => {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startB = breite;
+    const move = (ev: PointerEvent) => setBreite(startB + (ev.clientX - startX));
+    const auf = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', auf);
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    };
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', auf);
+  };
+  const taste = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); setBreite(breite - BREITE_SCHRITT); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); setBreite(breite + BREITE_SCHRITT); }
+  };
+  return (
+    <div
+      role="separator"
+      aria-orientation="vertical"
+      aria-label="Breite der Seitenleiste anpassen"
+      aria-valuenow={breite}
+      aria-valuemin={BREITE_MIN}
+      aria-valuemax={BREITE_MAX}
+      tabIndex={0}
+      onPointerDown={ziehen}
+      onKeyDown={taste}
+      className="hidden lg:block shrink-0 sticky top-0 h-screen w-1.5 -ml-1.5 cursor-col-resize bg-transparent transition-colors hover:bg-brass-300/60 focus:bg-brass-400 focus:outline-none"
+    />
+  );
+}
 
 // ─── App-Shell (Build-Plan App-Shell, Phase 3) ─────────────────────────────
 //
@@ -18,6 +60,7 @@ export function Shell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   const [schubladeOffen, setSchubladeOffen] = useState(false);
   const schubladeRef = useRef<HTMLDivElement>(null);
+  const seitenleiste = useSeitenleiste();
 
   // Schublade bei Routenwechsel schliessen — Render-Phasen-Abgleich statt Effect
   // (React-Muster «adjusting state when props change»).
@@ -42,15 +85,27 @@ export function Shell({ children }: { children: ReactNode }) {
       </a>
 
       <div className="lg:flex">
-        {/* Persistente Desktop-Seitenleiste: sticky, eigene Scrollachse. */}
-        <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 sticky top-0 h-screen overflow-y-auto border-r border-line"
-          style={{ background: 'color-mix(in srgb, var(--paper-sunken) 35%, var(--paper))' }}>
-          <Sidebar />
-        </aside>
+        {/* Persistente Desktop-Seitenleiste: sticky, eigene Scrollachse, Breite
+            per Ziehgriff verstellbar, per Topbar-Schalter einklappbar. */}
+        {!seitenleiste.eingeklappt && (
+          <>
+            <aside
+              className="hidden lg:flex lg:flex-col shrink-0 sticky top-0 h-screen overflow-y-auto border-r border-line"
+              style={{ width: seitenleiste.breite, background: 'color-mix(in srgb, var(--paper-sunken) 35%, var(--paper))' }}
+            >
+              <Sidebar />
+            </aside>
+            <ZiehGriff breite={seitenleiste.breite} setBreite={seitenleiste.setBreite} />
+          </>
+        )}
 
         {/* Rechte Spalte: Top-Streifen + Inhalt + Footer. */}
         <div className="flex-1 min-w-0 flex flex-col min-h-screen">
-          <Topbar onMenu={() => setSchubladeOffen(true)} />
+          <Topbar
+            onMenu={() => setSchubladeOffen(true)}
+            seitenleisteEingeklappt={seitenleiste.eingeklappt}
+            onSeitenleisteUmschalten={seitenleiste.umschalten}
+          />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (

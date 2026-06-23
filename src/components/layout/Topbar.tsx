@@ -8,8 +8,13 @@ import { ThemaUmschalter } from './ThemaUmschalter';
 //
 // NUR Werkzeuge, KEINE Navigationsziele (die liegen in der Seitenleiste):
 // Logo/Wortmarke · globale Katalog-Suche · Sprachumschalter. Auf Mobil zusätzlich
-// der ☰-Schalter, der die Seitenleisten-Schublade öffnet (onMenu, von Shell).
-export function Topbar({ onMenu }: { onMenu: () => void }) {
+// der ☰-Schalter, der die Seitenleisten-Schublade öffnet (onMenu, von Shell);
+// auf Desktop ein Schalter, der die persistente Seitenleiste ein-/ausklappt.
+export function Topbar({ onMenu, seitenleisteEingeklappt, onSeitenleisteUmschalten }: {
+  onMenu: () => void;
+  seitenleisteEingeklappt: boolean;
+  onSeitenleisteUmschalten: () => void;
+}) {
   return (
     <header
       className="sticky top-0 z-20 border-b border-line"
@@ -25,6 +30,21 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
           onClick={onMenu}
         >
           <span aria-hidden className="text-[1.1rem] leading-none">☰</span>
+        </button>
+
+        {/* Desktop: persistente Seitenleiste ein-/ausklappen. */}
+        <button
+          type="button"
+          className="lc-btn lc-btn-ghost lc-btn-sm hidden lg:inline-flex shrink-0"
+          aria-label={seitenleisteEingeklappt ? 'Seitenleiste einblenden' : 'Seitenleiste ausblenden'}
+          aria-pressed={!seitenleisteEingeklappt}
+          onClick={onSeitenleisteUmschalten}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.7" />
+            <line x1="9" y1="4" x2="9" y2="20" stroke="currentColor" strokeWidth="1.7" />
+            {seitenleisteEingeklappt && <line x1="5.5" y1="9" x2="6.5" y2="9" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />}
+          </svg>
         </button>
 
         {/* Logo nur unterhalb lg — ab lg trägt die Seitenleiste die Marke. */}

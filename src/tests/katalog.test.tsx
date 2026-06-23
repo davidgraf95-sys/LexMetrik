@@ -144,25 +144,26 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
   });
 });
 
-describe('Katalog-Suche im Top-Streifen (Auftrag David 7.6.2026: «die suchfunktion in den header»; seit App-Shell im Topbar)', () => {
-  // Deklarierte fachliche Änderung (§6.3, Startseiten-Überarbeitung): Das
-  // Topbar-Feld spiegelt ?q= nur noch auf /recherche live. Auf der Startseite
-  // «/» besitzt die prominente Universal-Suche den ?q=-Parameter allein (sonst
-  // schrieben zwei Felder in denselben Parameter) — das Topbar-Feld ist dort
-  // wie auf jeder anderen Seite leer und sammelt lokal.
-  it('das Suchfeld trägt auf /recherche den ?q=-Wert', () => {
-    const html = sucheHtml('/recherche?q=Rechtsvorschlag');
-    expect(html.match(/type="search"/g)?.length).toBe(1);
-    expect(html).toContain('value="Rechtsvorschlag"');
-    expect(html).toContain('aria-keyshortcuts="/"');
+describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', () => {
+  // Deklarierte fachliche Änderung (§6.3, UI-Welle): Das Topbar-Feld führt nicht
+  // mehr über ?q=/«/recherche», sondern zeigt Treffer als Dropdown direkt unter
+  // dem Feld — auf JEDER Seite gleich. Beim ersten Render (SSR, leeres Feld) ist
+  // genau ein leeres Suchfeld da; das Dropdown erscheint erst clientseitig beim
+  // Tippen (Lazy-Daten).
+  it('rendert genau ein leeres Suchfeld mit «/»-Kürzel — unabhängig vom Pfad', () => {
+    for (const url of ['/', '/rechner/verzugszins', '/gesetze', '/rechtsprechung']) {
+      const html = sucheHtml(url);
+      expect(html.match(/type="search"/g)?.length, url).toBe(1);
+      expect(html, url).toContain('value=""');
+      expect(html, url).toContain('aria-keyshortcuts="/"');
+    }
   });
 
-  it('auf «/» und anderen Seiten ist das Feld leer (sammelt lokal, Enter führt zu «/»)', () => {
-    for (const url of ['/?q=Rechtsvorschlag', '/rechner/verzugszins']) {
-      const html = sucheHtml(url);
-      expect(html.match(/type="search"/g)?.length).toBe(1);
-      expect(html).toContain('value=""');
-    }
+  it('trägt die Such-Landmark (role="search") und kein ?q=-gebundenes Vorbefüllen mehr', () => {
+    const html = sucheHtml('/?q=Rechtsvorschlag');
+    expect(html).toContain('role="search"');
+    // Kein Spiegeln von ?q= ins Feld (Dropdown-Suche ist URL-unabhängig).
+    expect(html).toContain('value=""');
   });
 });
 
