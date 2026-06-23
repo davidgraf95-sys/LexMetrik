@@ -109,6 +109,10 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('GLG', 'GlG', 'Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)', '151.1', 'oeffentlich', 25),
   bund('FINMAG', 'FINMAG', 'Bundesgesetz über die Eidgenössische Finanzmarktaufsicht (Finanzmarktaufsichtsgesetz, FINMAG)', '956.1', 'oeffentlich', 26),
   bund('BGBB', 'BGBB', 'Bundesgesetz über das bäuerliche Bodenrecht (BGBB)', '211.412.11', 'privat', 24),
+  // ── Volltext-Ausbau Bund Batch 4 (23.6.2026, Promotion aus Stubs) ──
+  bund('AHVG', 'AHVG', 'Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)', '831.10', 'sozial-abgaben', 27),
+  bund('BANKG', 'BankG', 'Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)', '952.0', 'oeffentlich', 27),
+  bund('HMG', 'HMG', 'Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)', '812.21', 'oeffentlich', 28),
   // Verfahrensrecht
   bund('ZPO', 'ZPO', 'Schweizerische Zivilprozessordnung', '272', 'prozess', 1),
   bund('STPO', 'StPO', 'Schweizerische Strafprozessordnung', '312.0', 'prozess', 2, 'StPO'),

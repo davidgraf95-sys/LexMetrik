@@ -145,6 +145,11 @@ EINTRAEGE=(
   "glg|cc/1996/1498_1498_1498|20200701|0|art_1"
   "finmag|cc/2008/736|20250401|0|art_1"
   "bgbb|cc/1993/1410_1410_1410|20140101|0|art_1"
+  # ── Batch 4 (23.6.2026) — korrekte Konsolidierung via Filestore-HTML-Sonde
+  #    (ELI-Resolver gab hier veraltete/HTML-lose Daten; neueste MIT HTML gepinnt). ──
+  "ahvg|cc/63/837_843_843|20260101|0|art_1"
+  "bankg|cc/51/117_121_129|20240101|0|art_1"
+  "hmg|cc/2001/422|20250101|0|art_1"
 )
 
 fehler=0

@@ -38,7 +38,6 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['170.32', 'VG', 'prozess'],
   ['152.3', 'BGÖ', 'oeffentlich'],
   // Sozialversicherung
-  ['831.10', 'AHVG', 'sozial-abgaben'],
   ['831.30', 'ELG', 'sozial-abgaben'],
   ['833.1', 'MVG', 'sozial-abgaben'],
   // Migration & Gleichstellung
@@ -50,13 +49,11 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['730.0', 'EnG', 'oeffentlich'],
   ['641.71', 'CO2-Gesetz', 'oeffentlich'],
   // Wirtschaft & Finanzmarkt
-  ['952.0', 'BankG', 'oeffentlich'],
   ['951.31', 'KAG', 'oeffentlich'],
   ['954.1', 'FINIG', 'oeffentlich'],
   ['961.01', 'VAG', 'oeffentlich'],
   ['950.1', 'FIDLEG', 'oeffentlich'],
   // Gesundheit, Sicherheit & Infrastruktur
-  ['812.21', 'HMG', 'oeffentlich'],
   ['818.101', 'EpG', 'oeffentlich'],
   ['810.21', 'TxG', 'oeffentlich'],
   ['817.0', 'LMG', 'oeffentlich'],

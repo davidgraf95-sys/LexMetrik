@@ -141,6 +141,10 @@ export const FEDLEX = {
   GLG:    'https://www.fedlex.admin.ch/eli/cc/1996/1498_1498_1498/de', // SR 151.1
   FINMAG: 'https://www.fedlex.admin.ch/eli/cc/2008/736/de', // SR 956.1
   BGBB:   'https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410/de', // SR 211.412.11
+  // Batch 4 (23.6.2026) — Konsolidierung via Filestore-HTML-Inhalts-Sonde gepinnt.
+  AHVG:   'https://www.fedlex.admin.ch/eli/cc/63/837_843_843/de', // SR 831.10, Kons. 20260101
+  BANKG:  'https://www.fedlex.admin.ch/eli/cc/51/117_121_129/de', // SR 952.0, Kons. 20240101
+  HMG:    'https://www.fedlex.admin.ch/eli/cc/2001/422/de', // SR 812.21, Kons. 20250101
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
