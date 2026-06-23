@@ -73,7 +73,9 @@ VStrR 109 Art.), Asset-Hash live=lokal, Kernrouten 200.
 
 **Bund Batch 2 (PROD-DEPLOY 23.6.2026, dpl …81ledgjhy):** +10 Volltexte (ATSG/BVG/UVG/AVIG/RPG/USG/VGG/BGFA/KKG/GwG) → 50 Bund-Volltexte. LEKTION: ELI-Resolver liefert teils VERALTETE Konsolidierungen — `check:fedlex-versionen` ist das maßgebliche §7-Currency-Gate; es fing 6 Stale-Pins ab (BVG/RPG/VGG/GwG + die bereits deployten IPRG/VStrR), alle re-gepinnt auf geltend. Test-Fixture «unbekanntes Gesetz» ATSG→ZZG.
 
-**Bund Batch 3 (main 1a7e906, NOCH NICHT in Prod):** +8 Volltexte (IVG/FamZG/StHG/AIG/AsylG/GlG/FINMAG/BGBB) → 58 Bund-Volltexte, Stubs 64→56. Currency-Gate fing 4 Stale-Pins (IVG/StHG/AIG/AsylG → geltend re-gepinnt). 7 Stubs (AHVG/ELG/GSchG/EnG/BankG/HMG/EpG) zurückgestellt: Resolver-Datum ohne Filestore-HTML → separate Konsolidierungs-Recherche nötig.
+**Bund Batch 3 (PROD-DEPLOY 23.6.2026, dpl …3ss9uueqt):** +8 Volltexte (IVG/FamZG/StHG/AIG/AsylG/GlG/FINMAG/BGBB) → 58 Bund-Volltexte, Stubs 64→56. Currency-Gate fing 4 Stale-Pins (IVG/StHG/AIG/AsylG → geltend re-gepinnt). 7 Stubs (AHVG/ELG/GSchG/EnG/BankG/HMG/EpG) zurückgestellt: Resolver-Datum ohne Filestore-HTML → separate Konsolidierungs-Recherche nötig.
+
+**Bund Batch 4 (main e91aca2, NOCH NICHT in Prod):** +3 Volltexte AHVG (169 Art.)/BankG (109)/HMG (141) → **61 Bund-Volltexte**. Korrektes Konsolidierungsdatum per Filestore-INHALTS-Sonde (ELI-Resolver lag grob daneben: AHVG 2019→2026, BankG 2011→2024, HMG 2019→2025). VERBLEIBEND zurückgestellt (4): ELG/GSchG/EnG/EpG — Fedlex serviert nur SPA-Shell, kein Filestore-Inhalts-HTML → bleiben nur-live-link (§8). Bund-Volltext-Bilanz Session: 35→61.
 
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
