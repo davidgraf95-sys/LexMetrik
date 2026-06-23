@@ -89,6 +89,17 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('JSTG', 'JStG', 'Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)', '311.1', 'straf', 11),
   bund('BETMG', 'BetmG', 'Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)', '812.121', 'straf', 12),
   bund('VSTRR', 'VStrR', 'Bundesgesetz über das Verwaltungsstrafrecht (VStrR)', '313.0', 'straf', 13),
+  // ── Volltext-Ausbau Bund Batch 2 (23.6.2026, Promotion aus Stubs) ──
+  bund('KKG', 'KKG', 'Bundesgesetz über den Konsumkredit (KKG)', '221.214.1', 'privat', 23),
+  bund('VGG', 'VGG', 'Bundesgesetz über das Bundesverwaltungsgericht (Verwaltungsgerichtsgesetz, VGG)', '173.32', 'prozess', 20),
+  bund('BGFA', 'BGFA', 'Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)', '935.61', 'prozess', 21),
+  bund('RPG', 'RPG', 'Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)', '700', 'oeffentlich', 20),
+  bund('USG', 'USG', 'Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)', '814.01', 'oeffentlich', 21),
+  bund('GWG', 'GwG', 'Bundesgesetz über die Bekämpfung der Geldwäscherei und der Terrorismusfinanzierung (Geldwäschereigesetz, GwG)', '955.0', 'oeffentlich', 22),
+  bund('ATSG', 'ATSG', 'Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)', '830.1', 'sozial-abgaben', 20),
+  bund('BVG', 'BVG', 'Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)', '831.40', 'sozial-abgaben', 21),
+  bund('UVG', 'UVG', 'Bundesgesetz über die Unfallversicherung (UVG)', '832.20', 'sozial-abgaben', 22),
+  bund('AVIG', 'AVIG', 'Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)', '837.0', 'sozial-abgaben', 23),
   // Verfahrensrecht
   bund('ZPO', 'ZPO', 'Schweizerische Zivilprozessordnung', '272', 'prozess', 1),
   bund('STPO', 'StPO', 'Schweizerische Strafprozessordnung', '312.0', 'prozess', 2, 'StPO'),

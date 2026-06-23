@@ -118,9 +118,20 @@ export const FEDLEX = {
   PARTG: 'https://www.fedlex.admin.ch/eli/cc/2005/782/de', // SR 211.231, Kons. 20250101
   JSTG:  'https://www.fedlex.admin.ch/eli/cc/2006/551/de', // SR 311.1, Kons. 20250701
   // Ältere plain-<p><sup>-Markup-Erlasse — entsperrt durch den Extraktor-Fix 23.6.2026.
-  IPRG:  'https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/de', // SR 291, Kons. 20210201
+  IPRG:  'https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/de', // SR 291, Kons. 20260101
   BETMG: 'https://www.fedlex.admin.ch/eli/cc/1952/241_241_245/de', // SR 812.121, Kons. 20230901
-  VSTRR: 'https://www.fedlex.admin.ch/eli/cc/1974/1857_1857_1857/de', // SR 313.0, Kons. 20230701
+  VSTRR: 'https://www.fedlex.admin.ch/eli/cc/1974/1857_1857_1857/de', // SR 313.0, Kons. 20230901
+  // Batch 2 (23.6.2026) — klar aktuelle Konsolidierungen (Currency via check:fedlex-versionen).
+  ATSG:  'https://www.fedlex.admin.ch/eli/cc/2002/510/de', // SR 830.1, Kons. 20240101
+  BVG:   'https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/de', // SR 831.40, Kons. 20250101
+  UVG:   'https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/de', // SR 832.20, Kons. 20260101
+  AVIG:  'https://www.fedlex.admin.ch/eli/cc/1982/2184_2184_2184/de', // SR 837.0, Kons. 20260101
+  RPG:   'https://www.fedlex.admin.ch/eli/cc/1979/1573_1573_1573/de', // SR 700, Kons. 20260401
+  USG:   'https://www.fedlex.admin.ch/eli/cc/1984/1122_1122_1122/de', // SR 814.01, Kons. 20260401
+  VGG:   'https://www.fedlex.admin.ch/eli/cc/2006/352/de', // SR 173.32, Kons. 20260612
+  BGFA:  'https://www.fedlex.admin.ch/eli/cc/2002/153/de', // SR 935.61, Kons. 20250701
+  KKG:   'https://www.fedlex.admin.ch/eli/cc/2002/593/de', // SR 221.214.1, Kons. 20230901
+  GWG:   'https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/de', // SR 955.0, Kons. 20240301
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

@@ -29,7 +29,7 @@ describe('NormLink — SSR/Prerender unverändert', () => {
   });
 
   it('unbekanntes Gesetz → reiner span-Chip wie bisher (kein Link)', () => {
-    const out = ssr(<NormLink artikel="Art. 8 ATSG" />);
+    const out = ssr(<NormLink artikel="Art. 8 ZZG" />);
     expect(out).toContain('lc-chip');
     expect(out).not.toContain('<a');
     expect(out).not.toContain('role="dialog"');

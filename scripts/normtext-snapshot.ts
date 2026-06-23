@@ -83,6 +83,17 @@ const ERLASS_MAP: Record<string, string> = {
   iprg: 'IPRG',
   betmg: 'BetmG',
   vstrr: 'VStrR',
+  // Batch 2 (23.6.2026)
+  atsg: 'ATSG',
+  bvg: 'BVG',
+  uvg: 'UVG',
+  avig: 'AVIG',
+  rpg: 'RPG',
+  usg: 'USG',
+  vgg: 'VGG',
+  bgfa: 'BGFA',
+  kkg: 'KKG',
+  gwg: 'GwG',
 };
 
 // ── Konsolidierungsdatum YYYYMMDD → ISO YYYY-MM-DD ───────────────────────────

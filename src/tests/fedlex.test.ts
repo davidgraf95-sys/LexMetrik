@@ -45,7 +45,7 @@ describe('fedlexLinkFuerArtikel', () => {
   });
 
   it('unbekanntes Gesetz → kein Link', () => {
-    expect(fedlexLinkFuerArtikel('Art. 8 ATSG')).toBeNull();
+    expect(fedlexLinkFuerArtikel('Art. 8 ZZG')).toBeNull();
     expect(fedlexLinkFuerArtikel('§ 12 GebV')).toBeNull();
   });
 
@@ -71,7 +71,7 @@ describe('erkenneFedlexGesetz (wiederverwendbarer Helfer)', () => {
     expect(erkenneFedlexGesetz('Art. 16 SchKG')).toBe('SchKG');
   });
   it('unbekanntes Gesetz → null', () => {
-    expect(erkenneFedlexGesetz('Art. 8 ATSG')).toBeNull();
+    expect(erkenneFedlexGesetz('Art. 8 ZZG')).toBeNull();
     expect(erkenneFedlexGesetz('siehe oben')).toBeNull();
   });
   // StGB/StG erschlossen (16.6.2026): die Snapshots STGB.json/STG.json waren

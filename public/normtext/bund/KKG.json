@@ -1,0 +1,1427 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "bund/KKG/art_1",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Konsumkreditvertrag ist ein Vertrag, durch den einer Konsumentin oder einem Konsumenten ein Kredit in Form eines Zahlungsaufschubs, eines Darlehens oder einer ähnlichen Finanzierungshilfe gewährt oder versprochen wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Konsumkreditverträge gelten auch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leasingverträge über bewegliche, dem privaten Gebrauch des Leasingneh­mers dienende Sachen, die vorsehen, dass die vereinbarten Leasingraten erhöht werden, falls der Leasingvertrag vorzeitig aufgelöst wird;"
+            },
+            {
+              "marke": "b",
+              "text": "Kredit- und Kundenkarten sowie Überziehungskredite, wenn sie mit einer Kreditoption verbunden sind; als Kreditoption gilt die Möglichkeit, den Saldo einer Kredit- oder Kundenkarte in Raten zu begleichen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Konsumkreditvertrag wird abge­schlossen zwischen der Konsumentin oder dem Konsumenten und einer Kreditgeberin nach Artikel 2."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "b6da857779bd6ea5c1b65457f4d6e16cbe7ddf9a7b3ce571d8017527d310754b"
+    },
+    {
+      "id": "bund/KKG/art_2",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als Kreditgeberin gilt jede natürliche oder juristische Person, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gewerbsmässig Konsumkredite ge­währt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "unter Mitwirkung einer Schwarmkredit-Vermittlerin nicht gewerbsmässig Kon­sumkredite gewährt."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "2bafc0ce91f94bcf96101468687f0dcfb7495067b5408c7740c138174750422c"
+    },
+    {
+      "id": "bund/KKG/art_3",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Konsumentin oder Konsument Als Konsumentin oder Konsument gilt jede natürliche Person, die einen Konsum­kreditvertrag zu einem Zweck abschliesst, der nicht ihrer beruflichen oder gewerb­lichen Tätigkeit zugerechnet werden kann."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_3",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "ee535995f272a2971174fba187cbdf7c001949efc55d3e88717690984282b59e"
+    },
+    {
+      "id": "bund/KKG/art_4",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Kreditvermittlerin gilt jede natürliche oder juristische Person, die gewerbs­mässig Konsumkreditverträge vermittelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Schwarmkredit-Vermittlerin gilt jede natürliche oder juristische Person, die für einzelne Konsumentinnen und Konsu­menten gewerbsmässig eine koordinierte Konsumkreditvergabe organisiert, an der sich mehrere nicht gewerbsmässig tätige Kreditgeberinnen beteiligen können."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_4",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "551499f1430ee5f96d12c4b940b13241e7c02449df869cd35b325bc20ced1d6d"
+    },
+    {
+      "id": "bund/KKG/art_5",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gesamtkosten des Kredits für die Konsumentin oder den Konsumenten Als Gesamtkosten des Kredits für die Konsumentin oder den Konsumenten gelten sämtliche Kosten, einschliesslich der Zinsen und sonstigen Kosten, welche die Konsumentin oder der Konsument für den Kredit zu bezahlen hat."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_5",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "ecc7d2f061514f294ed6fc1046218a8ac58357c079d46baf66d91ef61ea91a71"
+    },
+    {
+      "id": "bund/KKG/art_6",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Effektiver Jahreszins Der effektive Jahreszins drückt die Gesamtkosten des Kredits für die Konsumentin oder den Konsumenten in Jahresprozenten des gewährten Kredits aus."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_6",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "034112726025654af4a175f55fd01baa9dfe230bf1ff89e62b25eb9efa24615d"
+    },
+    {
+      "id": "bund/KKG/art_7",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kreditverträge oder Kreditversprechen, die direkt oder indirekt grundpfand­gesichert sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Kreditverträge oder Kreditversprechen, die durch hinterlegte bankübliche Sicherheiten oder durch ausreichende Vermögenswerte, welche die Konsu­mentin oder der Konsument bei der Kreditgeberin hält, gedeckt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Kredite, die zins- und gebührenfrei gewährt oder zur Verfügung gestellt wer­den;"
+            },
+            {
+              "marke": "d",
+              "text": "Kreditverträge, nach denen keine Zinsen in Rechnung gestellt werden, sofern die Konsumentin oder der Konsument sich bereit erklärt, den Kredit auf einmal zurückzuzahlen;"
+            },
+            {
+              "marke": "e",
+              "text": "Verträge über Kredite von weniger als 500 Franken oder mehr als 80 000 Franken, wobei die koordiniert an die gleiche Konsumentin oder den gleichen Konsumenten vermittelten Konsumkredite zusammengezählt werden;"
+            },
+            {
+              "marke": "f",
+              "text": "Kreditverträge, nach denen die Konsumentin oder der Konsument den Kredit innert höchstens drei Monaten zurückzahlen muss;"
+            },
+            {
+              "marke": "g",
+              "text": "Verträge über die fortgesetzte Erbringung von Dienstleistungen oder Leis­tun­gen von Versorgungsbetrieben, nach denen die Konsumentin oder der Konsument berechtigt ist, während der Dauer der Erbringung Teilzahlungen zu leisten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann die Beträge gemäss Absatz 1 Buchstabe e den veränderten Ver­­hältnissen anpassen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_7",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "8a5565c13995fde508d062ae0b7a4cb192c4a614ba0a5c275649c0f602d2b154"
+    },
+    {
+      "id": "bund/KKG/art_8",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leasingverträge im Sinne von Artikel 1 Absatz 2 Buchstabe a unterstehen nur den Artikeln 11, 13–16, 17 Absatz 3, 18 Absätze 2 und 3, 19–24, 25 Absätze 1 und 3, 26, 29 und 31–40."
+        },
+        {
+          "absatz": "2",
+          "text": "Konti für Kredit- und Kundenkarten mit Kreditoption sowie Überziehungskredite auf laufendem Konto unterstehen nur den Artikeln 12–16, 17 Absätze 1 und 2, 18 Absätze 1 und 3, 19–24, 25 Absätze 1 und 3, 27, 30–40."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_8",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "a4eb8a8f8d6cbf77a315450eb6e2ca68ef2b2b801ca15025664736e28b216e3a"
+    },
+    {
+      "id": "bund/KKG/art_9",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Konsumkreditverträge sind schriftlich abzuschliessen; die Konsumentin oder der Konsument erhält eine Kopie des Vertrags."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vertrag muss angeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Nettobetrag des Kredits;"
+            },
+            {
+              "marke": "b",
+              "text": "den effektiven Jahreszins oder, wenn dies nicht möglich ist, den Jahreszins und die bei Vertragsschluss in Rechnung gestellten Kosten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bedingungen, unter denen der Zinssatz und die Kosten nach Buchstabe b geändert werden können;"
+            },
+            {
+              "marke": "d",
+              "text": "die Elemente der Gesamtkosten des Kredits, die für die Berechnung des effek­tiven Jahreszinses nicht berücksichtigt worden sind (Art. 34), mit Aus­nahme der bei Nichterfüllung der vertraglichen Verpflichtungen entstehen­den Kosten; ist der genaue Betrag dieser Kostenelemente bekannt, so ist er anzugeben; andernfalls ist, soweit möglich, entweder eine Berechnungs­me­thode oder eine realistische Schätzung aufzuführen;"
+            },
+            {
+              "marke": "e",
+              "text": "die allfällige Höchstgrenze des Kreditbetrags;"
+            },
+            {
+              "marke": "f",
+              "text": "die Rückzahlungsmodalitäten, insbesondere den Betrag, die Anzahl und die zeit­lichen Abstände oder den Zeitpunkt der Zahlungen, welche die Konsu­mentin oder der Konsument zur Tilgung des Kredits und zur Entrichtung der Zinsen und sonstigen Kosten vornehmen muss, sowie, wenn möglich, den Gesamtbetrag dieser Zahlungen;"
+            },
+            {
+              "marke": "g",
+              "text": "dass die Konsumentin oder der Konsument bei vorzeitiger Rückzahlung Anspruch auf Erlass der Zinsen und auf eine angemessene Ermässigung der Kosten hat, die auf die nicht beanspruchte Kreditdauer entfallen;"
+            },
+            {
+              "marke": "h",
+              "text": "das Widerrufsrecht und die Widerrufsfrist (Art. 16);"
+            },
+            {
+              "marke": "i",
+              "text": "die allfällig verlangten Sicherheiten;"
+            },
+            {
+              "marke": "j",
+              "text": "den pfändbaren Teil des Einkommens, der der Kreditfähigkeitsprüfung zu Grunde gelegt worden ist (Art. 28 Abs. 2 und 3); Einzelheiten können in einem vom Konsumkreditvertrag getrennten Schriftstück festgehalten wer­den; die­ses bildet einen integrierenden Bestandteil des Vertrags."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_9",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "43ffa9cbddfbfa00734c238aa7e896a038aff20918b4aa2be35000a855ce64bf"
+    },
+    {
+      "id": "bund/KKG/art_10",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dient der Kreditvertrag der Finanzierung des Erwerbs von Waren oder Dienst­leis­tungen, so muss er auch folgende Angaben enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beschreibung der Waren oder Dienstleistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Barzahlungspreis und den Preis, der im Rahmen des Kreditvertrags zu bezahlen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Höhe der allfälligen Anzahlung, die Anzahl, die Höhe und die Fälligkeit der Teilzahlungen oder das Verfahren, nach dem diese Elemente bestimmt werden können, falls sie bei Vertragsschluss noch nicht bekannt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "den Namen der Eigentümerin oder des Eigentümers der Waren, falls das Eigentum daran nicht unmittelbar auf die Konsumentin oder den Konsu­menten übergeht, und die Bedingungen, unter denen die Ware in das Eigen­tum der Konsumentin oder des Konsumenten übergeht;"
+            },
+            {
+              "marke": "e",
+              "text": "den Hinweis auf die allfällig verlangte Versicherung und, falls die Wahl des Ver­sicherers nicht der Konsumentin oder dem Konsumenten überlassen ist, die Versicherungskosten."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "37a60336c74dbb85d73c440a1349ff5a28d37de400b8861b2706fa2c65f2011e"
+    },
+    {
+      "id": "bund/KKG/art_11",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leasingverträge sind schriftlich abzuschliessen; der Leasingnehmer erhält eine Kopie des Vertrags."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vertrag muss angeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beschreibung der Leasingsache und ihren Barkaufpreis im Zeitpunkt des Vertragsabschlusses;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anzahl, die Höhe und die Fälligkeit der Leasingraten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Höhe einer allfälligen Kaution;"
+            },
+            {
+              "marke": "d",
+              "text": "den Hinweis auf die allfällig verlangte Versicherung und, falls die Wahl des Versi­cherers nicht dem Leasingnehmer überlassen ist, die Versicherungskosten;"
+            },
+            {
+              "marke": "e",
+              "text": "den effektiven Jahreszins;"
+            },
+            {
+              "marke": "f",
+              "text": "den Hinweis auf das Widerrufsrecht und die Widerrufsfrist;"
+            },
+            {
+              "marke": "g",
+              "text": "eine nach anerkannten Grundsätzen erstellte Tabelle, aus der hervorgeht, was der Leasingnehmer bei einer vorzeitigen Beendigung des Leasingver­trags zusätzlich zu den bereits entrichteten Leasingraten zu bezahlen hat und welchen Restwert die Leasingsache zu diesem Zeitpunkt hat;"
+            },
+            {
+              "marke": "h",
+              "text": "die Elemente, die der Kreditfähigkeitsprüfung zu Grunde gelegt worden sind (Art. 29 Abs. 2); Einzelheiten können in einem vom Leasingvertrag getrenn­ten Schriftstück festgehalten werden; dieses bildet einen integrierenden Bestandteil des Vertrags."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "9efb019f0965314cd3afc60b88e2f9191c9709291b061cfec08b4364e534ff9a"
+    },
+    {
+      "id": "bund/KKG/art_12",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verträge, mit denen eine Kreditgeberin einen Kredit in Form eines Überzie­hungs­kredits auf laufendem Konto oder auf einem Kredit- und Kundenkartenkonto mit Kreditoption gewährt, sind schriftlich abzuschliessen; die Konsumentin oder der Kon­sument erhält eine Kopie des Vertrags."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vertrag muss angeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Höchstgrenze des Kreditbetrags;"
+            },
+            {
+              "marke": "b",
+              "text": "den Jahreszins und die bei Vertragsabschluss in Rechnung gestellten Kosten sowie die Bedingungen, unter denen diese geändert werden können;"
+            },
+            {
+              "marke": "c",
+              "text": "die Modalitäten einer Beendigung des Vertrags;"
+            },
+            {
+              "marke": "d",
+              "text": "die Elemente, die der Kreditfähigkeitsprüfung zu Grunde gelegt worden sind (Art. 30 Abs. 1); Einzelheiten können in einem vom Kredit- oder Kunden­kartenvertrag getrennten Schriftstück festgehalten werden; dieses bildet einen integrierenden Bestandteil des Vertrags."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Während der Vertragsdauer ist die Konsumentin oder der Konsument über jede Änderung des Jahreszinses oder der in Rechnung gestellten Kosten unverzüglich zu informieren; diese Information kann in Form eines Kontoauszugs erfolgen."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird eine Kontoüberziehung stillschweigend akzeptiert und das Konto länger als drei Monate überzogen, so ist die Konsumentin oder der Konsument zu informieren über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Jahreszins und die in Rechnung gestellten Kosten;"
+            },
+            {
+              "marke": "b",
+              "text": "alle diesbezüglichen Änderungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "6365b24f8224b4a860974d2449129014a1271c661f6a4c48cd8f8820180546d4"
+    },
+    {
+      "id": "bund/KKG/art_13",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Konsumentin oder der Konsument minderjährig, so bedarf der Konsum­kre­ditvertrag zu seiner Gültigkeit der schriftlichen Zustimmung der gesetzlichen Ver­tre­terin oder des gesetzlichen Vertreters."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zustimmung ist spätestens abzugeben, wenn die Konsu­mentin oder der Kon­sument den Vertrag unterzeichnet."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "c62aea97f71d9816900d54243fa20a052ce1f227ba3e045b9e736cf0ae7db80b"
+    },
+    {
+      "id": "bund/KKG/art_14",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Höchstzinssatz Der Bundesrat legt den höchstens zulässigen Zinssatz nach Artikel 9 Absatz 2 Buch­stabe b fest. Er berücksichtigt dabei die von der Nationalbank ermittelten, für die Refinanzierung des Konsumkreditgeschäftes massgeblichen Zinssätze. Der Höchst­zinssatz soll in der Regel 15 Prozent nicht überschreiten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_14",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "ff3b002907eaa48ff9e32147d34be3621fc76234dd531379ba489c5bf7d65853"
+    },
+    {
+      "id": "bund/KKG/art_15",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nichteinhaltung der Artikel 9–11, 12 Absätze 1, 2 und 4 Buchstabe a, 13 und 14 bewirkt die Nichtigkeit des Konsumkreditver­trags."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Konsumkreditver­trag nichtig, so hat die Konsumentin oder der Konsument die bereits empfangene oder beanspruchte Kreditsumme bis zum Ablauf der Kredit­dauer zurückzuzahlen, schuldet aber weder Zinsen noch Kosten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kreditsumme ist in gleich hohen Teilzahlungen zurückzuzahlen. Wenn der Vertrag keine längeren Zeitabstände vorsieht, liegen die Teilzahlungen jeweils einen Monat auseinander."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei einem Leasingvertrag hat die Konsumentin oder der Konsument den ihr oder ihm überlassenen Gegenstand zurückzugeben und die Raten zu zahlen, die bis zu diesem Zeitpunkt geschuldet sind. Ein damit nicht abgedeckter Wertverlust geht zu Lasten der Leasinggeberin."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_15",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "99c1b4e4e929ac930ff61ead4297428ebbe8bbad7979606cebdde83f45074d91"
+    },
+    {
+      "id": "bund/KKG/art_16",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konsumentin oder der Konsument kann den Antrag zum Vertragsschluss oder die Annahmeerklärung innerhalb von 14 Tagen schriftlich widerrufen. Kein Widerrufsrecht besteht im Falle von Artikel 12 Absatz 4."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Konsumkreditverträge mit einer Kreditgeberin nach Artikel 2 Buchstabe b können widerrufen werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegenüber jeder einzelnen Kreditge­berin; oder"
+            },
+            {
+              "marke": "b",
+              "text": "mittels einer einzigen Erklärung gegenüber der Schwarmkredit-Vermittlerin mit Wirkung für alle beteiligten Kreditgebe­rinnen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Widerrufsfrist beginnt zu laufen, sobald die Konsumentin oder der Konsu­ment nach den Artikeln 9 Absatz 1, 11 Absatz 1 oder 12 Absatz 1 eine Kopie des Vertrags erhalten hat. Die Frist ist eingehalten, wenn die Konsumentin oder der Konsument die Widerrufserklärung am letzten Tag der Widerrufsfrist der Kreditgeberin oder der Post übergibt."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Im Fall des Widerrufs nach Absatz 1 bis Buchstabe b beginnt die Frist zu laufen, sobald die Konsumentin oder der Kon­sument eine Kopie des letzten mit einer Kreditgeberin abgeschlossenen Vertrags erhalten hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist das Darlehen bereits vor dem Widerruf des Vertrags ausbezahlt worden, so gilt Artikel 15 Absätze 2 und 3. Im Falle eines Abzahlungskaufs, einer auf Kredit bean­spruchten Dienstleistung oder eines Leasingvertrags gilt Artikel 40 f des Obliga­tio­nen­­rechts. Bei missbräuchlichem Gebrauch oder missbräuchlicher Nutzung der Sache während der Widerrufsfrist schuldet die Konsumentin oder der Konsument eine angemessene Entschädigung, die sich am Wertverlust der Sache bemisst."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_16",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "29ca87a9f752d4e5d6c379c236d7fadec2cb32b298e61cec0b0d0fe571c500a8"
+    },
+    {
+      "id": "bund/KKG/art_17",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konsumentin oder der Konsument kann die Pflichten aus dem Konsumkredit­vertrag vorzeitig erfüllen."
+        },
+        {
+          "absatz": "2",
+          "text": "In diesem Fall besteht ein Anspruch auf Erlass der Zinsen und auf eine angemes­sene Ermässigung der Kosten, die auf die nicht beanspruchte Kreditdauer entfallen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Leasingnehmer kann mit einer Frist von mindestens 30 Tagen auf Ende einer dreimonatigen Leasingdauer kündigen. Der Anspruch des Leasinggebers auf Ent­­schädigung richtet sich nach der Tabelle gemäss Artikel 11 Absatz 2 Buchstabe g."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_17",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "aeadea4f7e966b01c8188c181acead9f84fa51af371c30d8f74695fd11aac9e1"
+    },
+    {
+      "id": "bund/KKG/art_18",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kreditgeberin kann vom Vertrag zurücktreten, wenn Teilzahlungen ausste­hend sind, die mindestens 10 Prozent des Nettobetrags des Kredits beziehungsweise des Barzahlungspreises ausmachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Leasinggeber kann vom Vertrag zurücktreten, wenn Teilzahlungen ausste­hend sind, die mehr als drei monatlich geschuldete Leasingraten ausmachen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verzugszins darf den für den Konsumkredit oder Leasingvertrag vereinbarten Zinssatz (Art. 9 Abs. 2 Bst. b) nicht übersteigen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_18",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "bbb82fb94377f919b369ec2cb39f44e8b014df05663cdc7940d652933f800923"
+    },
+    {
+      "id": "bund/KKG/art_19",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Einreden Die Konsumentin oder der Konsument hat das unabdingbare Recht, die Einreden aus dem Konsumkreditvertrag gegenüber jedem Abtretungsgläubiger geltend zu machen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_19",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "63b76fcc6592aba6640ec50bb188ede9215b6b37aa8da7a4adf14555417b357f"
+    },
+    {
+      "id": "bund/KKG/art_20",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kreditgeberin darf weder Zahlungen in Form von Wechseln, einschliesslich Eigenwechseln, noch Sicherheiten in Form von Wechseln, einschliesslich Eigen­wechseln und Checks, annehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist ein Wechsel oder ein Check entgegen Absatz 1 angenommen worden, so kann ihn die Konsumentin oder der Konsument jederzeit von der Kreditgeberin zurück­verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kreditgeberin haftet für den Schaden, welcher der Konsumentin oder dem Konsumenten aus der Begebung des Wechsels oder Checks entstanden ist."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_20",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "53fba067f07b4711e08b227fb03a12707b654bef7ecbaa4507ef7ffcf95bd34d"
+    },
+    {
+      "id": "bund/KKG/art_21",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer im Hinblick auf den Erwerb von Waren oder Dienstleistungen einen Konsum­kreditvertrag mit einer anderen Person als dem Lieferanten abschliesst, kann gegen­über der Kreditgeberin alle Rechte geltend machen, die ihm gegenüber dem Liefe­ranten zustehen, wenn folgende Bedingungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zwischen der Kreditgeberin und dem Lieferanten besteht eine Abmachung, wonach Kredite an Kunden dieses Lieferanten ausschliesslich von der Kre­ditgeberin gewährt werden."
+            },
+            {
+              "marke": "b",
+              "text": "Die Konsumentin oder der Konsument erhält den Kredit im Rahmen dieser Abmachung."
+            },
+            {
+              "marke": "c",
+              "text": "Die unter den Konsumkreditvertrag fallenden Waren oder Dienstleistungen werden nicht oder nur teilweise geliefert oder entsprechen nicht dem Liefer­vertrag."
+            },
+            {
+              "marke": "d",
+              "text": "Die Konsumentin oder der Konsument hat die Rechte gegenüber dem Liefe­ranten erfolglos geltend gemacht."
+            },
+            {
+              "marke": "e",
+              "text": "Der Betrag des betreffenden Einzelgeschäfts liegt über 500 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann den Betrag gemäss Absatz 1 Buchstabe e den veränderten Ver­­hältnissen anpassen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_21",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "4e7674d4641127ac8a74932304c9615ed334b8f740cabd7252bfa1bcdbb063c1"
+    },
+    {
+      "id": "bund/KKG/art_22",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Grundsatz Die Kreditfähigkeitsprüfung bezweckt die Vermeidung einer Überschuldung der Kon­sumentin oder des Konsumenten infolge eines Konsumkreditvertrags."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "94ce4dbed51d3aa48a0554dd5e05521ecce761cbad9d5e1652d91a5b5b98626a"
+    },
+    {
+      "id": "bund/KKG/art_23",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gewerbsmässig tätigen Kreditgeberinnen gründen eine Informations­stelle für Konsumkredit (Informa­tions­stelle). Diese gemeinsame Einrichtung bearbeitet die Daten, die im Rahmen der Artikel 25–27 an­fallen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Statuten der Informationsstelle müssen vom zuständigen Departement geneh­migt werden. Sie regeln insbeson­dere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verantwortung für die Datenbearbeitung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kategorien der zu erfassenden Daten sowie deren Aufbewahrungsdauer, Archivierung und Löschung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zugriffs- und Bearbeitungsberechtigungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Zusammenarbeit mit beteiligten Dritten;"
+            },
+            {
+              "marke": "e",
+              "text": "die Datensicherheit."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationsstelle gilt als Bundes­organ im Sinne von Artikel 5 Buchstabe i des Datenschutzgesetzes vom 25. September 2020. Der Bundesrat erlässt die Vollzugsbestimmungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehältlich der Zuständigkeit gemäss dem Datenschutzgesetz untersteht die Informationsstelle der Aufsicht des Departements."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Bundesrat kann den gewerbsmässig tätigen Kreditgeberinnen eine Frist setzen, binnen der die gemein­same Einrichtung errichtet sein muss. Kommt die Gründung der gemein­samen Einrichtung nicht zu Stande oder wird diese später aufgelöst, so richtet der Bundesrat die Informationsstelle ein."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_23",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "a6e1572bb855c7ff07cd8d17a0984d70c7cb0f38d5d602581838ff8c5b4e6fd7"
+    },
+    {
+      "id": "bund/KKG/art_24",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zugang zu den von der Informationsstelle gesammelten Daten haben aus­schliesslich die gewerbsmässig tätigen Kreditgeberinnen und die Schwarmkredit- Vermittlerinnen, soweit sie die Daten zur Erfüllung ihrer Pflichten nach diesem Gesetz benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Einzelfall haben auch die von den Kantonen bezeichneten und unterstützten Institutionen der Schuldensanierung Zugang, sofern der Schuldner zustimmt."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_24",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "c7f6fa4f65854f7ee2f0d2e1ad43f0499aa2cc9efbf8a78fa8f4c00c1f6f2e12"
+    },
+    {
+      "id": "bund/KKG/art_25",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit- Vermittlerin muss der Informationsstelle melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den von ihr gewährten beziehungswei­se vermittelten Konsumkredit;"
+            },
+            {
+              "marke": "b",
+              "text": "ausstehende Teilzahlungen, die min­destens 10 Prozent des Nettobetrags des Kredits beziehungsweise des Barzah­lungspreises ausmachen (Art. 18 Abs. 1)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit die Konsumentin oder der Kon­sument die Teilzahlungen nicht über die Schwarmkredit-Vermittlerin leistet, sorgt diese dafür, dass ihr die Kreditgeberinnen allfällige Zahlungsausstände melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationsstelle bestimmt in ihren Statuten oder einem da­rauf gestützten Reglement das Nähere zu Inhalt, Form und Zeitpunkt der Meldung."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_25",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "53e6e4436e30dd4b14da94d2ed80ddf32df97caa4e02e5aedca304a64c4418b2"
+    },
+    {
+      "id": "bund/KKG/art_26",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einem Leasingvertrag meldet die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit- Vermittlerin der Informationsstelle:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Höhe der Leasingverpflichtung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Vertragsdauer;"
+            },
+            {
+              "marke": "c",
+              "text": "die monatlichen Leasingraten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss der Informationsstelle auch melden, wenn drei Leasingraten ausstehen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_26",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "58517c8a4a380e4076d6f5d46a210af35aa0891636b9889a2db21c497371b2df"
+    },
+    {
+      "id": "bund/KKG/art_27",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat die Konsumentin oder der Konsument dreimal hintereinander von der Kredit­option Gebrauch gemacht, so ist der ausstehende Betrag der Informationsstelle zu melden. Keine Pflicht zur Meldung besteht, wenn der ausstehende Betrag unter 3000 Franken liegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat wird ermächtigt, die in Absatz 1 genannte Meldelimite von 3000 Franken mittels Verordnung periodisch der Entwicklung des schweizerischen Indexes der Konsumentenpreise anzupassen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_27",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "3c36bf2b43e4075cd689b3b619ad8b0b5012d8f703a4e6d17f65bb501435ba63"
+    },
+    {
+      "id": "bund/KKG/art_27_a",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "a 27 Pflicht zur Prüfung der Kreditfä­higkeit Die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit- Vermittlerin muss vor Vertragsabschluss die Kreditfähigkeit der Konsumentin oder des Konsumenten prüfen. 27 Eingefügt durch Anhang Ziff. II 2 des Finanzinstitutsgesetzes vom 15. Juni 2018, in Kraft seit 1. April 2019 ( AS 2018 5247 ; BBl 2015 8901 )."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_27_a",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "ec5082de8881258591680cce3f2bd994608b6ee1a149a0f962e3243ca7bc5b60"
+    },
+    {
+      "id": "bund/KKG/art_28",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konsumentin oder der Konsument gilt dann als kreditfähig, wenn sie oder er den Konsumkredit zurückzahlen kann, ohne den nicht pfändbaren Teil des Ein­kommens nach Artikel 93 Absatz 1 des Bundesgesetzes vom 11. April 1889 über Schuld­betrei­bung und Kon­kurs beanspruchen zu müssen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der pfändbare Teil des Einkommens wird nach den Richtlinien über die Berech­nung des Existenzminimums des Wohnsitzkantons der Konsumentin oder des Kon­sumenten ermittelt. Bei der Ermittlung zu berücksichtigen sind in jedem Fall:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der tatsächlich geschuldete Mietzins;"
+            },
+            {
+              "marke": "b",
+              "text": "die nach Quellensteuertabelle geschuldeten Steuern;"
+            },
+            {
+              "marke": "c",
+              "text": "Verpflichtungen, die bei der Informationsstelle gemeldet sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Beurteilung der Kreditfähigkeit muss von einer Amortisation des Kon­sum­kredits innerhalb von 36 Monaten ausgegangen werden, selbst wenn ver­traglich eine längere Laufzeit vereinbart worden ist. Dies gilt auch für frühere Konsum­kre­dite, soweit diese noch nicht zurückbezahlt worden sind."
+        },
+        {
+          "absatz": "5",
+          "text": "Für koordiniert vermittelte Konsumkre­ditverträge wird die Kreditfähigkeit der Konsumentin oder des Konsumenten unter Einbezug aller vermittelten Kredite geprüft."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_28",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "4ef7a80fc0870b05f038d92d905b264a75c2da6e86f25b82fd747771ec633a91"
+    },
+    {
+      "id": "bund/KKG/art_29",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der gewerbsmässig tätige Leasinggeber muss vor Vertragsabschluss die Kreditfähig­keit des Leasingneh­mers prüfen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kreditfähigkeit ist zu bejahen, wenn der Leasingnehmer die Leasingraten ohne Beanspruchung des nicht pfändbaren Teils des Einkommens nach Artikel 28 Ab­sätze 2 und 3 finanzieren kann oder wenn Vermögenswerte, die dem Leasingnehmer gehören, die Zahlung der Leasingraten sicherstellen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_29",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "8285ab360aa0076c9e6b5a6aa55ed11f0b2eb4481962826c70c21f90e39b8656"
+    },
+    {
+      "id": "bund/KKG/art_30",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Räumt die gewerbsmässig tätige Kreditgeberin oder das Kreditkartenunternehmen im Rahmen eines Kredit- oder Kundenkartenkontos mit Kreditoption oder eines Überziehungskredits auf laufendem Konto eine Kreditlimite ein, so prüfen sie zuvor summarisch die Kreditfähigkeit der Antragstellerin oder des Antragstellers. Sie stützen sich dabei auf deren oder dessen Angaben über die Vermögens- und Einkommensverhältnisse. Die Kreditlimite muss den Einkommens- und Vermögens­verhältnissen der Konsumentin oder des Konsumenten Rechnung tragen. Dabei sind die bei der Informationsstelle vermeldeten Kon­sumkredite zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kreditfähigkeitsprüfung nach Absatz 1 ist zu wiederholen, wenn die gewerbsmässig tätige Kreditgeberin oder das Kreditkartenunternehmen über Informationen verfügt, wonach sich die wirtschaftlichen Verhältnisse der Konsumentin oder des Kon­sumenten ver­schlechtert haben."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_30",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "5042bef6d478a7ed610cc9d7c17436fe0af8754ff3ae2f8bcdd803371b0578cf"
+    },
+    {
+      "id": "bund/KKG/art_31",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit- Vermittlerin darf sich auf die Angaben der Konsumentin oder des Konsumenten zu den finanziellen Verhältnissen (Art. 28 Abs. 3 und 4) oder zu den wirtschaftli­chen Verhältnissen (Art. 29 Abs. 2 und 30 Abs. 1) verlassen. Sie kann von der Konsumentin oder dem Konsumenten einen Auszug aus dem Betreibungs­register und einen Lohnnachweis oder, wenn keine unselbstständige Tätigkeit vorliegt, sonstige Dokumente einfordern, die über deren oder dessen Einkommen Auskunft geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben Angaben, die offensichtlich unrichtig sind oder denjenigen der Informationsstelle widersprechen."
+        },
+        {
+          "absatz": "3",
+          "text": "Zweifelt die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit-Vermitt­lerin an der Rich­tigkeit der Angaben einer Konsumentin oder eines Konsumenten, so muss sie deren Richtigkeit anhand einschlägiger amtlicher oder privater Dokumente über­prüfen. Sie darf sich bei der Überprüfung nicht mit den Dokumenten nach Absatz 1 begnügen."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "edc33aa34f7ff327004bdce94d75ae8b0994eefb25e5a0b484a39ddbbb0f6dc1"
+    },
+    {
+      "id": "bund/KKG/art_32",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösst die gewerbsmässig tätige Kreditgeberin in schwerwiegender Weise gegen Artikel 27 a , 28, 29, 30 oder 31, so verliert sie die von ihr gewährte Kredit­summe samt Zinsen und Kosten. Die Konsumentin oder der Konsument kann bereits erbrachte Leistungen nach den Regeln über die ungerechtfertigte Berei­cherung zurückfordern."
+        },
+        {
+          "absatz": "2",
+          "text": "Verstösst die gewerbsmässig tätige Kreditgeberin gegen Artikel 25, 26 oder 27 Absatz 1 oder in geringfügiger Weise gegen Artikel 27 a , 28, 29, 30 oder 31, so verliert sie nur die Zinsen und die Kosten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "b09682662e78441bc0c3398716254035b640f1cf76755d031b54e59933f374c3"
+    },
+    {
+      "id": "bund/KKG/art_32_a",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "32_a",
+      "artikelLabel": "Art. 32a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösst eine Schwarmkredit-Vermittle­rin gegen Artikel 25, 26, 27 Absatz 1, 27 a , 28, 29, 30 oder 31, so wird sie mit Busse bis zu 100 000 Franken bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kreditgeberin verliert nur die Zinsen und die Kosten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_32_a",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "fb608a90343cbb145eb5977f0e6d56f3dde5ad4c595c712b6125b186dd21a488"
+    },
+    {
+      "id": "bund/KKG/art_33",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der effektive Jahreszins ist beim Abschluss des Konsumkreditvertrags nach der im Anhang 1 aufgeführten mathematischen Formel zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Berechnung beruht auf der Annahme, dass der Kreditvertrag für die verein­barte Dauer gültig bleibt und dass die Parteien ihren Verpflichtungen zu den verein­barten Terminen nachkommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Lässt der Kreditvertrag eine Anpassung der Zinsen oder anderer Kosten zu, die in die Berechnung einzubeziehen sind, jedoch zu deren Zeitpunkt nicht beziffert wer­den können, so beruht die Berechnung auf der Annahme, dass der ursprüngliche Zinssatz und die ursprünglichen anderen Kosten bis zum Ende des Kreditvertrags unverändert bleiben."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Leasingverträgen wird der effektive Jahreszins auf der Grundlage des Bar­kaufs­preises der Leasingsache bei Vertragsabschluss (Kalkulationsbasis) und bei Ver­­tragsende (Restwert) sowie der einzelnen Tilgungszahlungen (Leasingraten) berech­net."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_33",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "ed40d3190af97d44ab205eb93fee670fcfa289a97097c5b4f69b6757ebfdc4f0"
+    },
+    {
+      "id": "bund/KKG/art_34",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung des effektiven Jahreszinses sind die Gesamtkosten des Kredits für die Konsumentin oder den Konsumenten im Sinne von Artikel 5, einschliesslich des Kaufpreises, massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht zu berücksichtigen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kosten, welche die Konsumentin oder der Konsument bei Nichterfüllung einer im Vertrag aufgeführten Verpflichtung bezahlen muss;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kosten, welche die Konsumentin oder der Konsument durch den Erwerb von Waren oder Dienstleistungen unabhängig davon zu tragen hat, ob es sich um ein Bar- oder um ein Kreditgeschäft handelt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Mitgliederbeiträge für Vereine oder Gruppen, die aus anderen als den im Kreditvertrag vereinbarten Gründen entstehen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Überweisungskosten sowie Kosten für die Führung eines Kontos, das für die Kreditrückzahlung sowie für die Zahlung der Zinsen oder anderer Kosten dienen soll, sind nur dann zu berücksichtigen, wenn die Konsumentin oder der Konsument nicht über eine angemessene Wahlfreiheit in diesem Bereich verfügt und sie unge­wöhnlich hoch sind. In die Berechnung einzubeziehen sind jedoch die Inkasso­kos­ten dieser Rückzahlungen oder Zahlungen, unabhängig davon, ob sie in bar oder in anderer Weise erhoben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kosten für Versicherungen und Sicherheiten sind so weit zu berücksichti­gen, als sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die gewerbsmässig tätige Kreditgeberin oder die Schwarmkredit-Vermittle­rin für die Kreditgewährung zwingend vor­schreibt; und"
+            },
+            {
+              "marke": "b",
+              "text": "der gewerbsmässig tätigen Kreditge­berin oder der Schwarmkredit-Vermitt­lerin bei Tod, Invalidität, Krankheit oder Arbeitslosigkeit der Konsumentin oder des Konsumenten die Rückzahlung eines Betrags sicherstellen sollen, der gleich hoch oder geringer ist als der Gesamtbe­trag des Kredits, einschliesslich Zinsen und anderer Kosten."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_34",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "5fa554608142266b63b3dc4927b3f88a7647946a0e6df8ccd5977a2d0e769025"
+    },
+    {
+      "id": "bund/KKG/art_35",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konsumentin oder der Konsument schuldet der Kreditvermittlerin für die Ver­mittlung eines Konsumkredits keine Entschädigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufwendungen der Kreditgeberin für die Kreditvermittlung bilden Teil der Gesamtkosten (Art. 5 und 34 Abs. 1); sie dürfen dem Konsumenten oder der Konsu­mentin nicht gesondert in Rechnung gestellt werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_35",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "dca19176028edb26b7f38d85ae39e274c97ce841577d3a268505664d69ffdf72"
+    },
+    {
+      "id": "bund/KKG/art_36",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Grundsatz 39 Die Werbung für Konsumkredite richtet sich nach dem Bundesgesetz vom 19. De­zember 1986 40 gegen den unlauteren Wettbewerb. 39 Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 ( AS 2015 4111 ; BBl 2014 3259 3279 ). 40 SR 241"
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_36",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "c426d28e4526af178c36ba5eee9dba7e4adb47ce8f8ced124af545cc3f7bb074"
+    },
+    {
+      "id": "bund/KKG/art_36_a",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "36_a",
+      "artikelLabel": "Art. 36a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Konsumkredite darf nicht in aggressiver Weise geworben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die gewerbsmässig tätigen Kreditgeberinnen umschreiben in einer privatrechtlichen Vereinbarung in angemessener Weise, welche Werbung als aggressiv gilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt, welche Werbung als aggressiv gilt, wenn innert angemessener Frist keine Vereinbarung zustande gekommen ist oder wenn er diese Vereinbarung für ungenügend erachtet."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_36_a",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "9d7a769c98e260b55faa1ec002102f8aa8b111dcbbc503cdf835193e38c1a13b"
+    },
+    {
+      "id": "bund/KKG/art_36_b",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "36_b",
+      "artikelLabel": "Art. 36b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "b 42 Strafbestimmung Wer vorsätzlich gegen das Verbot der aggressiven Werbung verstösst, wird mit Busse bis zu 100 000 Franken bestraft. 42 Eingefügt durch Ziff. I des BG vom 20. März 2015, in Kraft seit 1. Jan. 2016 ( AS 2015 4111 ; BBl 2014 3259 3279 )."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_36_b",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "b6da7fbcfbf7c9b6096d32f3efc59bcb9e7c0e03640a1405fd675fd01467f3c9"
+    },
+    {
+      "id": "bund/KKG/art_37",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Von den Bestimmungen dieses Gesetzes darf nicht zu Ungunsten der Konsumentin oder des Konsumenten abgewichen werden."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_37",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "f286787c3338022e8d71a9b2047646dcf587c8f616380d017427869da85be5fc"
+    },
+    {
+      "id": "bund/KKG/art_38",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verhältnis zum kantonalen Recht Der Bund regelt die Konsumkreditverträge abschliessend."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_38",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "146cf59f1eb1390c0a99c1df0eec4872f34fcee471985ebc8ef97f5d9b2a4504"
+    },
+    {
+      "id": "bund/KKG/art_39",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone müssen die gewerbsmässi­ge Gewährung und die Vermittlung von Konsumkrediten einer Bewilligungspflicht unterstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig für die Erteilung der Bewilligung ist der Kanton, in dem die gewerbsmässig tätige Kreditgeberin oder die Kreditvermittlerin ihren Sitz hat. Hat die gewerbsmässig tätige Kreditgeberin oder die Kreditvermittlerin ihren Sitz nicht in der Schweiz, so ist der Kanton für die Erteilung der Bewilligung zuständig, auf dessen Gebiet die gewerbsmässig tätige Kreditgeberin oder die Kreditver­mittlerin hauptsächlich tätig zu werden gedenkt. Die von einem Kanton erteilte Bewilligung gilt für die ganze Schweiz."
+        },
+        {
+          "absatz": "3",
+          "text": "Keine Bewilligung nach Absatz 2 ist erforderlich, wenn die gewerbsmässig tätige Kreditgeberin oder die Kreditvermittlerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Bankengesetz vom 8. November 1934 untersteht;"
+            },
+            {
+              "marke": "b",
+              "text": "Konsumkredite zur Finanzierung des Erwerbs ihrer Waren oder der Bean­spruchung ihrer Dienstleistungen gewährt oder vermittelt."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_39",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "98a44f4c6f594d31f08261a81e007d41c020a1f69697a8f0b4e628aede8993b0"
+    },
+    {
+      "id": "bund/KKG/art_40",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung ist zu erteilen, wenn der Gesuchsteller:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gewähr für eine einwandfreie Geschäftstätigkeit bietet und in geordneten Vermögensverhältnissen lebt;"
+            },
+            {
+              "marke": "b",
+              "text": "die allgemeinen kaufmännischen und fachlichen Kenntnisse und Fertigkeiten besitzt, die zur Ausübung der Tätigkeit erforderlich sind;"
+            },
+            {
+              "marke": "c",
+              "text": "über eine ausreichende Berufshaftpflichtversicherung verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gesellschaften und juristischen Personen wird die Bewilligung nur erteilt, wenn alle Mitglieder der Geschäftsleitung die in Absatz 1 Buchstabe b erwähnten Kennt­nisse und Fertigkeiten besitzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt in einer Verordnung das Nähere zu den Bewilligungsvor­aus­setzungen nach Absatz 2."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_40",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "b1d9844b82663b9e5d6dea84639b0f9a2429036cbbd76097322e6af59511a86e"
+    },
+    {
+      "id": "bund/KKG/art_41",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufhebung und Änderung bisherigen Rechts Die Aufhebung und die Änderung bisherigen Rechts werden im Anhang 2 geregelt."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_41",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "2f493eb08728804cf9dabf05cdf048f352ff426884161c43c31747f65a2bd1c6"
+    },
+    {
+      "id": "bund/KKG/art_42",
+      "ebene": "bund",
+      "quelle": "KKG",
+      "erlass": "KKG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2023-09-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de#art_42",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20230901",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

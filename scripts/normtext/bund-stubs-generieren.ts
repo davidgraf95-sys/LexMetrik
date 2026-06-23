@@ -27,7 +27,6 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['211.412.11', 'BGBB', 'privat'],
   ['232.12', 'DesG', 'privat'],
   ['232.16', 'SortG', 'privat'],
-  ['221.214.1', 'KKG', 'privat'],
   ['221.112.944', 'PrHG', 'privat'],
   ['944.3', 'PRG', 'privat'],
   ['957.1', 'BEG', 'privat'],
@@ -37,19 +36,14 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['322.1', 'MStP', 'straf'],
   ['351.1', 'IRSG', 'straf'],
   // Verwaltung: Verfahren & Rechtspflege
-  ['173.32', 'VGG', 'prozess'],
   ['170.32', 'VG', 'prozess'],
   ['152.3', 'BGÖ', 'oeffentlich'],
   // Sozialversicherung
-  ['830.1', 'ATSG', 'sozial-abgaben'],
   ['831.10', 'AHVG', 'sozial-abgaben'],
   ['831.20', 'IVG', 'sozial-abgaben'],
   ['831.30', 'ELG', 'sozial-abgaben'],
-  ['831.40', 'BVG', 'sozial-abgaben'],
-  ['832.20', 'UVG', 'sozial-abgaben'],
   ['833.1', 'MVG', 'sozial-abgaben'],
   ['836.2', 'FamZG', 'sozial-abgaben'],
-  ['837.0', 'AVIG', 'sozial-abgaben'],
   ['642.14', 'StHG', 'sozial-abgaben'],
   // Migration & Gleichstellung
   ['142.20', 'AIG', 'oeffentlich'],
@@ -57,15 +51,12 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['141.0', 'BüG', 'oeffentlich'],
   ['151.1', 'GlG', 'oeffentlich'],
   // Raumplanung, Bau & Umwelt
-  ['700', 'RPG', 'oeffentlich'],
-  ['814.01', 'USG', 'oeffentlich'],
   ['814.20', 'GSchG', 'oeffentlich'],
   ['451', 'NHG', 'oeffentlich'],
   ['921.0', 'WaG', 'oeffentlich'],
   ['730.0', 'EnG', 'oeffentlich'],
   ['641.71', 'CO2-Gesetz', 'oeffentlich'],
   // Wirtschaft & Finanzmarkt
-  ['955.0', 'GwG', 'oeffentlich'],
   ['952.0', 'BankG', 'oeffentlich'],
   ['951.31', 'KAG', 'oeffentlich'],
   ['956.1', 'FINMAG', 'oeffentlich'],
@@ -81,7 +72,6 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['748.0', 'LFG', 'oeffentlich'],
   ['742.101', 'EBG', 'oeffentlich'],
   ['784.10', 'FMG', 'oeffentlich'],
-  ['935.61', 'BGFA', 'prozess'],
   ['510.10', 'MG', 'oeffentlich'],
   // ── Wichtige Verordnungen (Ausführungsrecht zu den Leitgesetzen) ──
   ['831.101', 'AHVV', 'sozial-abgaben'],

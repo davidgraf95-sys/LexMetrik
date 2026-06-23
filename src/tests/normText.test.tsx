@@ -43,7 +43,7 @@ describe('NORM_IM_TEXT — Bund-Normverweise im Fliesstext', () => {
 
   it('greift NICHT auf Art.-Nennung ohne bekanntes Gesetz', () => {
     expect(treffer('Art. 5 Abs. 2 der Verordnung')).toEqual([]);
-    expect(treffer('Art. 8 ATSG')).toEqual([]);
+    expect(treffer('Art. 8 ZZG')).toEqual([]);
   });
 
   it('läuft nicht über einen zweiten «Art.» hinaus', () => {

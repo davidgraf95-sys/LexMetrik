@@ -121,9 +121,21 @@ EINTRAEGE=(
   #    plain-<p>-Intros vor <dl>) brauchen erst einen verifizierten Parser-Fix. ──
   "partg|cc/2005/782|20250101|0|art_1"
   "jstg|cc/2006/551|20250701|0|art_1"
-  "iprg|cc/1988/1776_1776_1776|20210201|0|art_1"
+  "iprg|cc/1988/1776_1776_1776|20260101|0|art_1"
   "betmg|cc/1952/241_241_245|20230901|0|art_1"
-  "vstrr|cc/1974/1857_1857_1857|20230701|0|art_1"
+  "vstrr|cc/1974/1857_1857_1857|20230901|0|art_1"
+  # ── Volltext-Ausbau Bund Batch 2 (23.6.2026) — klar aktuelle Konsolidierungen
+  #    (≥2023, SPARQL-geltend); Currency zusätzlich via check:fedlex-versionen. ──
+  "atsg|cc/2002/510|20240101|0|art_1"
+  "bvg|cc/1983/797_797_797|20250101|0|art_1"
+  "uvg|cc/1982/1676_1676_1676|20260101|0|art_1"
+  "avig|cc/1982/2184_2184_2184|20260101|0|art_1"
+  "rpg|cc/1979/1573_1573_1573|20260401|0|art_1"
+  "usg|cc/1984/1122_1122_1122|20260401|0|art_1"
+  "vgg|cc/2006/352|20260612|0|art_1"
+  "bgfa|cc/2002/153|20250701|0|art_1"
+  "kkg|cc/2002/593|20230901|0|art_1"
+  "gwg|cc/1998/892_892_892|20240301|0|art_1"
 )
 
 fehler=0
