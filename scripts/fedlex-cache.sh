@@ -121,6 +121,9 @@ EINTRAEGE=(
   #    plain-<p>-Intros vor <dl>) brauchen erst einen verifizierten Parser-Fix. ──
   "partg|cc/2005/782|20250101|0|art_1"
   "jstg|cc/2006/551|20250701|0|art_1"
+  "iprg|cc/1988/1776_1776_1776|20210201|0|art_1"
+  "betmg|cc/1952/241_241_245|20230901|0|art_1"
+  "vstrr|cc/1974/1857_1857_1857|20230701|0|art_1"
 )
 
 fehler=0

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-23",
   "eintraege": [
     {
       "id": "bund/KVG/art_1",
@@ -42,7 +42,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4d7df10e82710dcc3db49941e7837f994f25bf81c597434c9bf289e200ac0df3"
     },
@@ -79,7 +79,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_1_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "195cb2a70dafca5517b3b6827386c3a8e3f4f8959c036fc7857c9817dab3d291"
     },
@@ -98,7 +98,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "471c19918961d678e02b7438becd770787fa4b55ba93bfbf0e5fe2cb21138607"
     },
@@ -139,7 +139,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_3",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "3f5fcd2d1a64983af10c949f441c13526b2e94fd613e27d85f3e79b623b50875"
     },
@@ -158,7 +158,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_4",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "0d5ea67f403da14cfad8982a0ce99aa68f083488a1f93ca891f764e99c0df579"
     },
@@ -191,7 +191,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_4_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "97b34bad8fd76558668011a4ea355be6f24deadbe717e02edcd2e4df3ff2e383"
     },
@@ -212,8 +212,8 @@
           "text": "Bei verspätetem Beitritt beginnt die Versicherung im Zeitpunkt des Beitritts. Bei nicht entschuldbarer Verspätung entrichtet die versicherte Person einen Prämienzuschlag. Der Bundesrat legt dafür die Richtsätze fest und berücksichtigt dabei die Höhe der Prämien am Wohnort der versicherten Person und die Dauer der Verspätung. Für Versicherte, bei denen die Entrichtung des Beitragszuschlages eine Notlage zur Folge hätte, setzt der Versicherer den Beitragszuschlag herab, wobei er der Lage der Versicherten und den Umständen der Verspätung angemessen Rechnung trägt."
         },
         {
-          "absatz": null,
-          "text": "2bis Bei verspätetem Beitritt eines Kindes ist der Prämienzuschlag von den Eltern solidarisch oder von einem Elternteil geschuldet, soweit sie oder er die Verspätung verschuldet haben."
+          "absatz": "2bis",
+          "text": "Bei verspätetem Beitritt eines Kindes ist der Prämienzuschlag von den Eltern solidarisch oder von einem Elternteil geschuldet, soweit sie oder er die Verspätung verschuldet haben."
         },
         {
           "absatz": "3",
@@ -222,9 +222,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_5",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "c65a17e0bf1b187053b9c35eb4014dfc7ad9a371547f8a9bb0eaec8215e64b20"
+      "sha": "5a382a0bfd6d57e04e42a7d5ce3f4c79ecd0464be85983206d4703a87cfbc0d7"
     },
     {
       "id": "bund/KVG/art_6",
@@ -245,7 +245,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_6",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a4872a700df9c4fe33b3450f5a012d3e14494062ef6b62bb9689fed06abbdde8"
     },
@@ -290,7 +290,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_6_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "aa438310674f5555e53da7c017cff7994202222e2aec0fd124797fe91e74f2b8"
     },
@@ -337,7 +337,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_7",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6815ba847ddc4c814773e7a3a1961784e715338044665d4fa166f89a24c33fb5"
     },
@@ -364,7 +364,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_8",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "9c3ba0028a6466afb97fd32aea1f6b3292a5cfb0c5f4708429a7eeece81aaf42"
     },
@@ -383,7 +383,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_9",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "17a85dcc860858cc587a8fbf4d069767f71139f099d80ec9ef61b754f7e30001"
     },
@@ -406,7 +406,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_10",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d80511025b96498e02a5925b525051d84658992734108c51e081d11ddd74441a"
     },
@@ -425,7 +425,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_11_15",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4cde73ffaa6e506b9d96277699a505b584d855e4bdc5d67103521d277706abbb"
     },
@@ -460,7 +460,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_16",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "b96779e98fb6604492de2a5906d0c94cfac9bffb59753a2b7eee8b1441865dda"
     },
@@ -491,7 +491,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_16_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "97c630592ec614dd71cbb824f89c915f2266e442340c9ddb2e186a2e3f1cd387"
     },
@@ -518,7 +518,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_17",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "f82f05bc40cd5db5a5ffd7203cbe0b7b5373762cb2763ee646e2565a186a4e82"
     },
@@ -559,7 +559,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_17_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "17cad4b37ed344f03a08df310fb02b94aaa315cab8bc7ff92750ba664a378e4e"
     },
@@ -580,20 +580,20 @@
           "text": "Die gemeinsame Einrichtung übernimmt die Kosten für die gesetzlichen Leistungen anstelle von zahlungsunfähigen Versicherern nach Artikel 51 KVAG."
         },
         {
-          "absatz": null,
-          "text": "2bis Die gemeinsame Einrichtung entscheidet über Anträge um Befreiung von der Versicherungspflicht von Rentnern und Rentnerinnen sowie deren Familienangehörigen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen."
+          "absatz": "2bis",
+          "text": "Die gemeinsame Einrichtung entscheidet über Anträge um Befreiung von der Versicherungspflicht von Rentnern und Rentnerinnen sowie deren Familienangehörigen, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen."
         },
         {
-          "absatz": null,
-          "text": "2ter Sie weist Rentner und Rentnerinnen sowie deren Familienangehörige, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und die ihrer Versicherungspflicht nicht rechtzeitig nachkommen, einem Versicherer zu."
+          "absatz": "2ter",
+          "text": "Sie weist Rentner und Rentnerinnen sowie deren Familienangehörige, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und die ihrer Versicherungspflicht nicht rechtzeitig nachkommen, einem Versicherer zu."
         },
         {
-          "absatz": null,
-          "text": "2quater Sie unterstützt die Kantone bei der Durchführung der Prämienverbilligung nach Artikel 65 a für Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen."
+          "absatz": "2quater",
+          "text": "Sie unterstützt die Kantone bei der Durchführung der Prämienverbilligung nach Artikel 65 a für Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen."
         },
         {
-          "absatz": null,
-          "text": "2quinquies Sie führt die Prämienverbilligung nach Artikel 66 a durch."
+          "absatz": "2quinquies",
+          "text": "Sie führt die Prämienverbilligung nach Artikel 66 a durch."
         },
         {
           "absatz": null,
@@ -616,8 +616,8 @@
           "text": "Zur Finanzierung der Aufgaben nach den Absätzen 2 und 4 müssen die Versicherer zu Lasten der sozialen Krankenversicherung Beiträge an die gemeinsame Einrichtung entrichten. Die gemeinsame Einrichtung fordert diese Beiträge ein und erhebt bei verspäteter Zahlung einen Verzugszins. Die Höhe der Beiträge und des Verzugszinses bemisst sich nach den Reglementen der gemeinsamen Einrichtung."
         },
         {
-          "absatz": null,
-          "text": "5bis Der Bund übernimmt die Finanzierung der Aufgaben nach den Absätzen 2 bis –2 quinquies ."
+          "absatz": "5bis",
+          "text": "Der Bund übernimmt die Finanzierung der Aufgaben nach den Absätzen 2 bis –2 quinquies ."
         },
         {
           "absatz": "6",
@@ -634,9 +634,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_18",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "ad779a6aaee4f7e739e6d57e0ac3bfd01e1cd1a45ec4f5b3115574a1100dbc21"
+      "sha": "17e3d0c4aeef38a89b7aae93463c468e8cfc59403e9ee096a3eb863173bb22c3"
     },
     {
       "id": "bund/KVG/art_19",
@@ -661,7 +661,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_19",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "2f5d270c9f6a990bb187c47f8ece88cfc026886269a9aab53a1ef56969214798"
     },
@@ -688,7 +688,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_20",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "53b63aa80dcf8435116d4e8e6401524a8e2f2b51b4c4e2721dffa43cb4a579ea"
     },
@@ -733,7 +733,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_21",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7af06334d67517b35572a5fcb22e523dacbd3292bf2450b3a5ce9be41bfff81a"
     },
@@ -752,7 +752,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_21_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "72e8e31ba108fb49b7d9ef1153b203cffd22c3de3cc55f3df2b5f3ca803a4727"
     },
@@ -771,7 +771,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_22",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "70d5209367074d89b6438f4cee61922459ad3b19c143ae7654f92d83b3619176"
     },
@@ -790,7 +790,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_22_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "0285c8a0e6725e04244759f1a0ecc902b7542f5151bb23a0620b5495ca6aada9"
     },
@@ -817,7 +817,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_23",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e866d0a2ab70ab66e2036ad6ebc0c9a75aa81cf133b054c6eb85369fa51f545e"
     },
@@ -840,7 +840,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_24",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d0451f46d7eb26258958ce12ee370e4dd49e3880998de6b5e276def43cdbf355"
     },
@@ -881,7 +881,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_25",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "ce101f110326d1b09f229d26a246fa610736e3d22cf57fb99a0cf1e6fd17548b"
     },
@@ -912,8 +912,8 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "1bis Für die Vergütung der der Untersuchung oder Behandlung dienenden Mittel und Gegenstände, die für Pflegeleistungen verwendet werden, gilt Artikel 52."
+          "absatz": "1bis",
+          "text": "Für die Vergütung der der Untersuchung oder Behandlung dienenden Mittel und Gegenstände, die für Pflegeleistungen verwendet werden, gilt Artikel 52."
         },
         {
           "absatz": "2",
@@ -924,16 +924,16 @@
           "text": "Der Bundesrat bezeichnet die Pflegeleistungen, die auf Anordnung oder im Auftrag eines Arztes oder einer Ärztin erbracht werden können. Er bestimmt, welche Pflegeleistungen ohne Anordnung oder Auftrag eines Arztes oder einer Ärztin erbracht werden können."
         },
         {
-          "absatz": null,
-          "text": "3bis Die Verbände der Leistungserbringer und der Versicherer schliessen gesamt-schweizerisch geltende Verträge zur Überwachung der mengenmässigen Entwicklung der Pflegeleistungen ab, die ohne ärztliche Anordnung oder ärztlichen Auftrag erbracht werden. Sie vereinbaren Massnahmen zur Korrektur bei ungerechtfertigtem Mengenwachstum. Können sich die Verbände der Leistungserbringer und der Versicherer nicht einigen, so regelt der Bundesrat die Einzelheiten."
+          "absatz": "3bis",
+          "text": "Die Verbände der Leistungserbringer und der Versicherer schliessen gesamt-schweizerisch geltende Verträge zur Überwachung der mengenmässigen Entwicklung der Pflegeleistungen ab, die ohne ärztliche Anordnung oder ärztlichen Auftrag erbracht werden. Sie vereinbaren Massnahmen zur Korrektur bei ungerechtfertigtem Mengenwachstum. Können sich die Verbände der Leistungserbringer und der Versicherer nicht einigen, so regelt der Bundesrat die Einzelheiten."
         },
         {
-          "absatz": null,
-          "text": "3ter Bei der Bezeichnung der Leistungen nach Absatz 3 berücksichtigt der Bundesrat den Pflegebedarf von Personen mit komplexen Erkrankungen und von Personen, die palliative Pflege benötigen."
+          "absatz": "3ter",
+          "text": "Bei der Bezeichnung der Leistungen nach Absatz 3 berücksichtigt der Bundesrat den Pflegebedarf von Personen mit komplexen Erkrankungen und von Personen, die palliative Pflege benötigen."
         },
         {
-          "absatz": null,
-          "text": "3quater Der Bundesrat regelt das Verfahren der Ermittlung des Pflegebedarfs und die Koordination zwischen den behandelnden Ärzten und Ärztinnen und den Pflegefachpersonen."
+          "absatz": "3quater",
+          "text": "Der Bundesrat regelt das Verfahren der Ermittlung des Pflegebedarfs und die Koordination zwischen den behandelnden Ärzten und Ärztinnen und den Pflegefachpersonen."
         },
         {
           "absatz": "4",
@@ -946,9 +946,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_25_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "e07bf9259f03f2305d58a4628953ff765bbf2d56444a5e4ee31d4f09fd8d204b"
+      "sha": "f524a482228343803ddf5f88a2ce2f0f7f07091499cf815173c171f6daa6fb8d"
     },
     {
       "id": "bund/KVG/art_26",
@@ -965,7 +965,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_26",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "83682953e324e0d813e874bd1f37fcbdcb5c76557c9feecd22ab74677931b048"
     },
@@ -984,7 +984,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_27",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "dd453b1232d40efed803cda3bda0fb1d98c84190265b0eff17b207d960055a99"
     },
@@ -1003,7 +1003,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_28",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "8bfbfc35a1ccb7969ce21318eefb634edcabf407d816b8037ddf9ef2387cda4f"
     },
@@ -1044,7 +1044,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_29",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a1ed6b8277526a5cc4007dc992a11bf6402bd010beaaf02eb5552141c4f9a2ff"
     },
@@ -1063,7 +1063,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_30",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "486fd8d83a7a2a4e42cc9532dc2fb290a91f204c55d66ffc6d0a5734e9907748"
     },
@@ -1100,7 +1100,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "afd981938e76ef81ed7304a7ef42ee4c51ca09d97d4836653d9143cb8436d2cb"
     },
@@ -1123,7 +1123,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_32",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "fcbb78d3b8b7729a925774f4b7b636c5f7bc9d7dee4a7efcca5611da2a4f46a5"
     },
@@ -1158,7 +1158,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_33",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "393ce12bcbe6de97662a58bfe708da560a2dedd3ce1896fb7fcdc6c17967496e"
     },
@@ -1195,7 +1195,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_34",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "c48a82c452a420cc602b113e4157b670ceb553fb82dda1a976f51b179e2cc77c"
     },
@@ -1276,7 +1276,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_35",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d44b63264d49181ca956938ceade54cec800059dadff2aaa935f8b4de5d16a4a"
     },
@@ -1295,7 +1295,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_36",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "0970393c7423b075020a3d4b835318ba021107c6f4542b904f2ff35313064c29"
     },
@@ -1322,7 +1322,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_36_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "72830d8c109ac98013f97a2d3b9bfa3b98b25f033d80e7a0e59eccb25130aa97"
     },
@@ -1353,8 +1353,8 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "1bis Die Kantone können Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a, die über einen der folgenden eidgenössischen Weiterbildungstitel oder einen als gleichwertig anerkannten ausländischen Weiterbildungstitel (Art. 21 des Medizinalberufegesetzes vom 23. Juni 2006) verfügen, von der Anforderung, während mindestens drei Jahren an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet zu haben, ausnehmen, wenn auf dem Kantonsgebiet in den betroffenen Bereichen eine Unterversorgung besteht:",
+          "absatz": "1bis",
+          "text": "Die Kantone können Leistungserbringer nach Artikel 35 Absatz 2 Buchstabe a, die über einen der folgenden eidgenössischen Weiterbildungstitel oder einen als gleichwertig anerkannten ausländischen Weiterbildungstitel (Art. 21 des Medizinalberufegesetzes vom 23. Juni 2006) verfügen, von der Anforderung, während mindestens drei Jahren an einer anerkannten schweizerischen Weiterbildungsstätte gearbeitet zu haben, ausnehmen, wenn auf dem Kantonsgebiet in den betroffenen Bereichen eine Unterversorgung besteht:",
           "items": [
             {
               "marke": "a",
@@ -1385,9 +1385,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_37",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "63bad60f9e2d9a6a3c014eb43b9ebb74f081bd846045b4477329f67befec461a"
+      "sha": "817fa5b41cbfc1b5e26efab56f3b8bbe16ce6ab936366535da7c9c1a7e7f0b3c"
     },
     {
       "id": "bund/KVG/art_38",
@@ -1430,7 +1430,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_38",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "8c92838236e7775c35f131852ebf1e714bf7dccab0a72c76943fc50fa41f34f1"
     },
@@ -1473,20 +1473,20 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "1bis Der Kanton legt im Leistungsauftrag nach Absatz 1 Buchstabe e insbesondere die zu erbringenden Ausbildungsleistungen im Bereich der praktischen Ausbildung von Pflegefachpersonen fest. Er berücksichtigt dabei die Kriterien nach Artikel 3 des Bundesgesetzes vom 16. Dezember 2022 über die Förderung der Ausbildung im Bereich der Pflege und das Ausbildungskonzept nach Artikel 4 des genannten Gesetzes."
+          "absatz": "1bis",
+          "text": "Der Kanton legt im Leistungsauftrag nach Absatz 1 Buchstabe e insbesondere die zu erbringenden Ausbildungsleistungen im Bereich der praktischen Ausbildung von Pflegefachpersonen fest. Er berücksichtigt dabei die Kriterien nach Artikel 3 des Bundesgesetzes vom 16. Dezember 2022 über die Förderung der Ausbildung im Bereich der Pflege und das Ausbildungskonzept nach Artikel 4 des genannten Gesetzes."
         },
         {
           "absatz": "2",
           "text": "Die Kantone koordinieren ihre Planung."
         },
         {
-          "absatz": null,
-          "text": "2bis Im Bereich der hochspezialisierten Medizin beschliessen die Kantone gemeinsam eine gesamtschweizerische Planung. Kommen sie dieser Aufgabe nicht zeitgerecht nach, so legt der Bundesrat fest, welche Spitäler für welche Leistungen auf den kantonalen Spitallisten aufzuführen sind."
+          "absatz": "2bis",
+          "text": "Im Bereich der hochspezialisierten Medizin beschliessen die Kantone gemeinsam eine gesamtschweizerische Planung. Kommen sie dieser Aufgabe nicht zeitgerecht nach, so legt der Bundesrat fest, welche Spitäler für welche Leistungen auf den kantonalen Spitallisten aufzuführen sind."
         },
         {
-          "absatz": null,
-          "text": "2ter Der Bundesrat erlässt einheitliche Planungskriterien auf der Grundlage von Qualität und Wirtschaftlichkeit. Er hört zuvor die Kantone, die Leistungserbringer und die Versicherer an."
+          "absatz": "2ter",
+          "text": "Der Bundesrat erlässt einheitliche Planungskriterien auf der Grundlage von Qualität und Wirtschaftlichkeit. Er hört zuvor die Kantone, die Leistungserbringer und die Versicherer an."
         },
         {
           "absatz": "3",
@@ -1495,9 +1495,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_39",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "57961456150b1ecebb0dad4ce935bab46ba33466d4c79748527431213c749448"
+      "sha": "9442f49b4bbcaaa56a99c925408596fcdb74c6e9428bd22a7fbae992e62407e8"
     },
     {
       "id": "bund/KVG/art_40",
@@ -1518,7 +1518,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_40",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "ed07b53b52a7564d599afc4037c7ca130268a18b76b037f0520240c5a13c6229"
     },
@@ -1535,20 +1535,20 @@
           "text": "Die Versicherten können für die ambulante Behandlung unter den zugelassenen Leistungserbringern, die für die Behandlung ihrer Krankheit geeignet sind, frei wählen. Der Versicherer übernimmt die Kosten nach dem Tarif, der für den gewählten Leistungserbringer gilt."
         },
         {
-          "absatz": null,
-          "text": "1bis Die versicherte Person kann für die stationäre Behandlung unter den Spitälern frei wählen, die auf der Spitalliste ihres Wohnkantons oder jener des Standortkantons aufgeführt sind (Listenspital). Der Versicherer und der Wohnkanton übernehmen bei stationärer Behandlung in einem Listenspital die Vergütung anteilsmässig nach Artikel 49 a höchstens nach dem Tarif, der in einem Listenspital des Wohnkantons für die betreffende Behandlung gilt."
+          "absatz": "1bis",
+          "text": "Die versicherte Person kann für die stationäre Behandlung unter den Spitälern frei wählen, die auf der Spitalliste ihres Wohnkantons oder jener des Standortkantons aufgeführt sind (Listenspital). Der Versicherer und der Wohnkanton übernehmen bei stationärer Behandlung in einem Listenspital die Vergütung anteilsmässig nach Artikel 49 a höchstens nach dem Tarif, der in einem Listenspital des Wohnkantons für die betreffende Behandlung gilt."
         },
         {
-          "absatz": null,
-          "text": "1ter Absatz 1 bis gilt sinngemäss für Geburtshäuser."
+          "absatz": "1ter",
+          "text": "Absatz 1 bis gilt sinngemäss für Geburtshäuser."
         },
         {
           "absatz": "2",
           "text": "Versicherte, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, können für die stationäre Behandlung in der Schweiz unter den Listenspitälern frei wählen."
         },
         {
-          "absatz": null,
-          "text": "2bis Bei folgenden Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, übernehmen der Versicherer und der Kanton, an den die Versicherten einen Anknüpfungspunkt haben, bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif, der in einem Listenspital dieses Kantons für die betreffende Behandlung gilt:",
+          "absatz": "2bis",
+          "text": "Bei folgenden Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen, übernehmen der Versicherer und der Kanton, an den die Versicherten einen Anknüpfungspunkt haben, bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif, der in einem Listenspital dieses Kantons für die betreffende Behandlung gilt:",
           "items": [
             {
               "marke": "a",
@@ -1565,16 +1565,16 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "2ter Bei Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und eine schweizerische Rente beziehen, sowie bei deren Familienangehörigen, übernehmen der Versicherer und die Kantone gemeinsam bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif für die betreffende Behandlung, der in einem Listenspital des Referenzkantons gilt. Der Bundesrat legt den Referenzkanton fest."
+          "absatz": "2ter",
+          "text": "Bei Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und eine schweizerische Rente beziehen, sowie bei deren Familienangehörigen, übernehmen der Versicherer und die Kantone gemeinsam bei stationärer Behandlung in einem Listenspital die Vergütung höchstens nach dem Tarif für die betreffende Behandlung, der in einem Listenspital des Referenzkantons gilt. Der Bundesrat legt den Referenzkanton fest."
         },
         {
           "absatz": "3",
           "text": "Beansprucht die versicherte Person bei einer stationären Behandlung aus medizinischen Gründen ein nicht auf der Spitalliste des Wohnkantons aufgeführtes Spital, so übernehmen der Versicherer und der Wohnkanton die Vergütung anteilsmässig nach Artikel 49 a . Mit Ausnahme des Notfalls ist dafür eine Bewilligung des Wohnkantons notwendig."
         },
         {
-          "absatz": null,
-          "text": "3bis Medizinische Gründe nach den Absätzen 2 und 3 liegen bei einem Notfall vor oder wenn die erforderlichen Leistungen nicht angeboten werden:",
+          "absatz": "3bis",
+          "text": "Medizinische Gründe nach den Absätzen 2 und 3 liegen bei einem Notfall vor oder wenn die erforderlichen Leistungen nicht angeboten werden:",
           "items": [
             {
               "marke": "a",
@@ -1593,9 +1593,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_41",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "dd22fbaafbc1c92fed860449c2f47126222ec69a68e7848477b5f4a42956f9cd"
+      "sha": "118966b679249e05d0832c92ff18562d450f4084be2461954e18023ef234d97d"
     },
     {
       "id": "bund/KVG/art_41_a",
@@ -1620,7 +1620,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_41_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "af4a44cbd5bc6af9ae2ca3afa5936c10c7a4778f5650e17ac178f1038bd66bc2"
     },
@@ -1645,8 +1645,8 @@
           "text": "Der Leistungserbringer muss dem Schuldner eine detaillierte und verständliche Rechnung zustellen. Er muss ihm auch alle Angaben machen, die er benötigt, um die Berechnung der Vergütung und die Wirtschaftlichkeit der Leistung überprüfen zu können. Im System des Tiers payant muss der Leistungserbringer der versicherten Person unaufgefordert eine Kopie der Rechnung übermitteln, die an den Versicherer geht. Versicherer und Leistungserbringer können vereinbaren, dass der Versicherer die Rechnungskopie zustellt. Die Übermittlung der Rechnung an den Versicherten kann auch elektronisch erfolgen. Bei stationärer Behandlung weist das Spital die auf Kanton und Versicherer entfallenden Anteile je gesondert aus. Der Bundesrat regelt die Einzelheiten."
         },
         {
-          "absatz": null,
-          "text": "3bis Die Leistungserbringer haben auf der Rechnung nach Absatz 3 die Diagnosen und Prozeduren nach den Klassifikationen in den jeweiligen vom zuständigen Departement herausgegebenen schweizerischen Fassungen codiert aufzuführen. Der Bundesrat erlässt ausführende Bestimmungen zur Erhebung, Bearbeitung und Weitergabe der Daten unter Wahrung des Verhältnismässigkeitsprinzips."
+          "absatz": "3bis",
+          "text": "Die Leistungserbringer haben auf der Rechnung nach Absatz 3 die Diagnosen und Prozeduren nach den Klassifikationen in den jeweiligen vom zuständigen Departement herausgegebenen schweizerischen Fassungen codiert aufzuführen. Der Bundesrat erlässt ausführende Bestimmungen zur Erhebung, Bearbeitung und Weitergabe der Daten unter Wahrung des Verhältnismässigkeitsprinzips."
         },
         {
           "absatz": "4",
@@ -1663,9 +1663,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_42",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "4d92fd175f3b01e1888bcd7fe69e30831b61cf6b5d65ac4ca8bd4f7ac38ee0c8"
+      "sha": "74032454f41a6b826da3d3ea48db05683b3f2d927adc315f69333519ce7990b9"
     },
     {
       "id": "bund/KVG/art_42_a",
@@ -1684,8 +1684,8 @@
           "text": "Diese Karte mit Benutzerschnittstelle wird für die Rechnungsstellung der Leistungen nach diesem Gesetz verwendet."
         },
         {
-          "absatz": null,
-          "text": "2bis Sie kann als Identifikationsmittel nach Artikel 7 Absatz 2 EPDG verwendet werden ."
+          "absatz": "2bis",
+          "text": "Sie kann als Identifikationsmittel nach Artikel 7 Absatz 2 EPDG verwendet werden ."
         },
         {
           "absatz": "3",
@@ -1698,9 +1698,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_42_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "c0b2d6332b625161e8c4b45dc64dc869e9bda3b73c7bd4d7e5bb9b9b8fdc3c2f"
+      "sha": "90c85ac85f3d93a79438609cb74cacc51fa38ffed7cdaf0cf829d75f7fc9c280"
     },
     {
       "id": "bund/KVG/art_43",
@@ -1745,24 +1745,24 @@
           "text": "Tarife und Preise werden in Verträgen zwischen Versicherern und Leistungserbringern (Tarifvertrag) vereinbart oder in den vom Gesetz bestimmten Fällen von der zuständigen Behörde festgesetzt. Dabei ist auf eine betriebswirtschaftliche Bemessung und eine sachgerechte Struktur der Tarife zu achten. Bei Tarifverträgen zwischen Verbänden sind vor dem Abschluss die Organisationen anzuhören, welche die Interessen der Versicherten auf kantonaler oder auf Bundesebene vertreten."
         },
         {
-          "absatz": null,
-          "text": "4bis Die Tarife und Preise orientieren sich an der Entschädigung jener Leistungserbringer, welche die tarifierte obligatorisch versicherte Leistung in der notwendigen Qualität effizient und günstig erbringen."
+          "absatz": "4bis",
+          "text": "Die Tarife und Preise orientieren sich an der Entschädigung jener Leistungserbringer, welche die tarifierte obligatorisch versicherte Leistung in der notwendigen Qualität effizient und günstig erbringen."
         },
         {
           "absatz": "5",
           "text": "Einzelleistungstarife sowie auf ambulante Behandlungen bezogene Patientenpauschaltarife müssen je auf einer einzigen gesamtschweizerisch vereinbarten einheitlichen Tarifstruktur beruhen. Können sich die Tarifpartner nicht einigen, so legt der Bundesrat diese Tarifstruktur fest."
         },
         {
-          "absatz": null,
-          "text": "5bis Der Bundesrat kann Anpassungen an der Tarifstruktur vornehmen, wenn sie sich als nicht mehr sachgerecht erweist und sich die Parteien nicht auf eine Revision einigen können."
+          "absatz": "5bis",
+          "text": "Der Bundesrat kann Anpassungen an der Tarifstruktur vornehmen, wenn sie sich als nicht mehr sachgerecht erweist und sich die Parteien nicht auf eine Revision einigen können."
         },
         {
-          "absatz": null,
-          "text": "5ter Gibt es in einem Bereich eine vom Bundesrat genehmigte oder festgelegte Tarifstruktur für auf ambulante Behandlungen bezogene Patientenpauschaltarife, so muss diese von allen Leistungserbringern für die entsprechenden Behandlungen angewandt werden."
+          "absatz": "5ter",
+          "text": "Gibt es in einem Bereich eine vom Bundesrat genehmigte oder festgelegte Tarifstruktur für auf ambulante Behandlungen bezogene Patientenpauschaltarife, so muss diese von allen Leistungserbringern für die entsprechenden Behandlungen angewandt werden."
         },
         {
-          "absatz": null,
-          "text": "5quater Die Tarifpartner können für bestimmte ambulante Behandlungen regional geltende Patientenpauschaltarife vereinbaren, die nicht auf einer gesamtschweizerisch einheitlichen Tarifstruktur beruhen, sofern dies insbesondere regionale Gegebenheiten erfordern. Gesamtschweizerisch einheitliche Tarifstrukturen nach Absatz 5 gehen vor."
+          "absatz": "5quater",
+          "text": "Die Tarifpartner können für bestimmte ambulante Behandlungen regional geltende Patientenpauschaltarife vereinbaren, die nicht auf einer gesamtschweizerisch einheitlichen Tarifstruktur beruhen, sofern dies insbesondere regionale Gegebenheiten erfordern. Gesamtschweizerisch einheitliche Tarifstrukturen nach Absatz 5 gehen vor."
         },
         {
           "absatz": "6",
@@ -1775,9 +1775,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_43",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "165e34f1046328826b73ec56e765ce49db68e3198e935fd93c42a7d21cdc65eb"
+      "sha": "b617a1fbc182960d5571a2cf2ab9602592b41c9d408f51b799c320f9e695c7a3"
     },
     {
       "id": "bund/KVG/art_44",
@@ -1798,7 +1798,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_44",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a4920dee910371a7a64387387b6e2d276177f500ff1f06a35039ad08d70898e2"
     },
@@ -1817,7 +1817,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_45",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "5bfb01ec72681cf167adf7ab993fe476446d8fec11c6cdb33a7c8e06d0e19335"
     },
@@ -1834,8 +1834,8 @@
           "text": "Parteien eines Tarifvertrages sind einzelne oder mehrere Leistungserbringer oder deren Verbände einerseits sowie einzelne oder mehrere Versicherer oder deren Verbände anderseits."
         },
         {
-          "absatz": null,
-          "text": "1bis Parteien eines Tarifvertrages können auch Kantone sein, wenn es sich um Massnahmen der medizinischen Prävention nach Artikel 26 handelt, die im Rahmen von national oder kantonal organisierten Programmen nach Artikel 64 Absatz 6 Buchstabe d durchgeführt werden."
+          "absatz": "1bis",
+          "text": "Parteien eines Tarifvertrages können auch Kantone sein, wenn es sich um Massnahmen der medizinischen Prävention nach Artikel 26 handelt, die im Rahmen von national oder kantonal organisierten Programmen nach Artikel 64 Absatz 6 Buchstabe d durchgeführt werden."
         },
         {
           "absatz": "2",
@@ -1874,9 +1874,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_46",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "8a3cfab9d05e497f1b79edd54bc30eeb0a1e015131d08cd0fe88421a8a0bf71d"
+      "sha": "a470d0891c6a1e8a435c31fcdeb7254aa19e084b27923a1cfcdce23d44b0317c"
     },
     {
       "id": "bund/KVG/art_47",
@@ -1901,7 +1901,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "af8ad42b72141d9796002a51a691cdcb609d5039fd3d6d536e287fb5db0b34b1"
     },
@@ -1954,7 +1954,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "17d6086631c75b56b8b3f429a3635f35147f883b4b140273fb3332fc245bc7c6"
     },
@@ -1987,7 +1987,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "3e27ee35392d7704921e76c37c2b7312da38a9cf9b853a863c5270efb8398ecb"
     },
@@ -2046,7 +2046,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_47_c",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "62c052273886890cb3181ad79e6f9a497db584c1e0e3a409e490191698b2ef64"
     },
@@ -2077,7 +2077,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_48",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "64f312691bd4b1d88d817d99e559d7971b8861f17877fe5a98b15f97ccc36d86"
     },
@@ -2134,7 +2134,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_49",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "8adcff57136e193c98879e59882546c7942269e39698f5966f55d24e6fdef813"
     },
@@ -2173,20 +2173,20 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "2bis Der Kanton, der für die Versicherten nach Absatz 2 Buchstabe b den kantonalen Anteil übernimmt, gilt als Wohnkanton im Sinne dieses Gesetzes."
+          "absatz": "2bis",
+          "text": "Der Kanton, der für die Versicherten nach Absatz 2 Buchstabe b den kantonalen Anteil übernimmt, gilt als Wohnkanton im Sinne dieses Gesetzes."
         },
         {
-          "absatz": null,
-          "text": "2ter Jeder Kanton setzt jeweils für das Kalenderjahr spätestens neun Monate vor dessen Beginn den kantonalen Anteil fest. Dieser muss mindestens 55 Prozent betragen."
+          "absatz": "2ter",
+          "text": "Jeder Kanton setzt jeweils für das Kalenderjahr spätestens neun Monate vor dessen Beginn den kantonalen Anteil fest. Dieser muss mindestens 55 Prozent betragen."
         },
         {
           "absatz": "3",
           "text": "Der Wohnkanton entrichtet seinen Anteil direkt dem Spital. Die Modalitäten werden zwischen Spital und Kanton vereinbart. Versicherer und Kanton können vereinbaren, dass der Kanton seinen Anteil dem Versicherer leistet und dieser dem Spital beide Anteile überweist. Die Rechnungsstellung zwischen Spital und Versicherer richtet sich nach Artikel 42."
         },
         {
-          "absatz": null,
-          "text": "3bis Bei Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und die eine schweizerische Rente beziehen, sowie bei deren Familienangehörigen, übernehmen die Kantone bei stationärer Behandlung in der Schweiz gemeinsam den vom Standortkanton festgelegten kantonalen Anteil. Dieser kantonale Anteil wird auf die einzelnen Kantone im Verhältnis zu ihrer Wohnbevölkerung aufgeteilt."
+          "absatz": "3bis",
+          "text": "Bei Versicherten, die in einem Mitgliedstaat der Europäischen Union, in Island, in Norwegen oder im Vereinigten Königreich wohnen und die eine schweizerische Rente beziehen, sowie bei deren Familienangehörigen, übernehmen die Kantone bei stationärer Behandlung in der Schweiz gemeinsam den vom Standortkanton festgelegten kantonalen Anteil. Dieser kantonale Anteil wird auf die einzelnen Kantone im Verhältnis zu ihrer Wohnbevölkerung aufgeteilt."
         },
         {
           "absatz": "4",
@@ -2195,9 +2195,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_49_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "e3f071819e213b7ecf8bf14fe427b6ca2de8036ab7f162c93765122eb47e70bf"
+      "sha": "18375e78a7686e0624c35c1851228db10fc2ad2b006c2ff5b91b34e30e948500"
     },
     {
       "id": "bund/KVG/art_50",
@@ -2214,7 +2214,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_50",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6ac6117fb01d5febf5d4f7e583196eee0ce2c2fa9244c2a0654752a13c2d1bb1"
     },
@@ -2237,7 +2237,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_51",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "88ce54896b221b9a676e25a0eb76a0782a07a91dc38a461eabea1c1f307a0ecc"
     },
@@ -2278,7 +2278,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_52",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e580c942bcdb67c96e9d80393378de69c3af66d0ff82f67a35f2a86caef6fd9a"
     },
@@ -2305,7 +2305,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_52_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "58dcefdfc9d5e5308141c718011c5d083b4c0d3622db1beea5560fcf19679787"
     },
@@ -2322,8 +2322,8 @@
           "text": "Gegen Beschlüsse der Kantonsregierungen nach den Artikeln 39, 45, 46 Absatz 4, 47, 47 b Absatz 2, 48 Absätze 1–3, 51, 54 und 55 kann beim Bundesverwaltungsgericht Beschwerde geführt werden."
         },
         {
-          "absatz": null,
-          "text": "1bis Organisationen der Versicherer von nationaler oder regionaler Bedeutung, die sich gemäss ihren Statuten dem Schutz der Interessen ihrer Mitglieder im Rahmen der Anwendung dieses Gesetzes widmen, steht das Beschwerderecht gegen Beschlüsse der Kantonsregierungen nach Artikel 39 zu."
+          "absatz": "1bis",
+          "text": "Organisationen der Versicherer von nationaler oder regionaler Bedeutung, die sich gemäss ihren Statuten dem Schutz der Interessen ihrer Mitglieder im Rahmen der Anwendung dieses Gesetzes widmen, steht das Beschwerderecht gegen Beschlüsse der Kantonsregierungen nach Artikel 39 zu."
         },
         {
           "absatz": "2",
@@ -2354,9 +2354,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_53",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "9dc1f9c9b31618c779f79b8be3201fa1ae919c6b76bd7f5abf94ec2e39a2fa1d"
+      "sha": "25eedad891b762417fd2f4e8940df89580b37d9bf3b58a9963000b1b74c9dced"
     },
     {
       "id": "bund/KVG/art_54",
@@ -2377,7 +2377,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_54",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d0aadfb14ce281e0c9935e1443151fabfd38876ee1325e76121851ce4728cfec"
     },
@@ -2414,7 +2414,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "c3f40d1b5728ee39cfbef2a69d559b99ae4208e7b6b345f1b06b6ceacb007737"
     },
@@ -2477,7 +2477,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "968a75ce3030bb73c3141390f3206b2e8a3ae4f31949e4127bb89e1cbe3a94ef"
     },
@@ -2496,7 +2496,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_55_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "ad855f67999227e906bed05036cd903dff8476d1e187346e45abb2decdec29c5"
     },
@@ -2541,8 +2541,8 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "3bis Versicherer und Leistungserbringer können vereinbaren, dass Vergünstigungen gemäss Absatz 3 Buchstabe b nicht vollumfänglich weitergegeben werden müssen. Diese Vereinbarung ist den zuständigen Behörden auf Verlangen offenzulegen. Sie hat sicherzustellen, dass Vergünstigungen mehrheitlich weitergegeben werden und dass nicht weitergegebene Vergünstigungen nachweislich zur Verbesserung der Qualität der Behandlung eingesetzt werden."
+          "absatz": "3bis",
+          "text": "Versicherer und Leistungserbringer können vereinbaren, dass Vergünstigungen gemäss Absatz 3 Buchstabe b nicht vollumfänglich weitergegeben werden müssen. Diese Vereinbarung ist den zuständigen Behörden auf Verlangen offenzulegen. Sie hat sicherzustellen, dass Vergünstigungen mehrheitlich weitergegeben werden und dass nicht weitergegebene Vergünstigungen nachweislich zur Verbesserung der Qualität der Behandlung eingesetzt werden."
         },
         {
           "absatz": "4",
@@ -2559,9 +2559,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_56",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "33b9336f877eda665618ef56416654ed1f3e48b0f0b282ed4e6583680fc3cddf"
+      "sha": "cd18d10226b98f9b736dfbc0a5b977a1eed2871f1a758996cceb8f073c7aa577"
     },
     {
       "id": "bund/KVG/art_57",
@@ -2606,7 +2606,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_57",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "99e4077d3ed2b5b75d7395929d3793104c6a2659aae6228e9149550ef2e73f91"
     },
@@ -2625,7 +2625,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "1bc2a30f849c8ee88c5019842ab3bb3c3e2ddd59ebd42cc9e57d0fcb47d8d3f2"
     },
@@ -2698,7 +2698,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "c2c3f7aba3537005104fb5395e15ace039285876920cf13c9d1924f80384a0ba"
     },
@@ -2733,7 +2733,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "66a89b622d6088e0b8e12dd93d217083bdd0718455983a2d70fef74a22c48142"
     },
@@ -2802,7 +2802,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_c",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a6c87b54af6e37efc111f85f2719aa894aca91092c1b76ddfaf91e7c878568fd"
     },
@@ -2829,7 +2829,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_d",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "069c56324b12a03ff3d7a07d8670ccc8326fb44da1d08cc5529739d5486a045e"
     },
@@ -2856,7 +2856,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_e",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "f839203ff2d6312383c9bf0938aaac71ad18cc500b946b84b1560c37351df722"
     },
@@ -2903,7 +2903,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_f",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "fb578cd9ee577d34d7110e60c07af0b602f65fb2a4b6b4ff3232c273981cd0d4"
     },
@@ -2922,7 +2922,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_g",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "f1ae6a9659490e22ee6e3df35b55bf2b4b00617a82d931161986f1220c5e74af"
     },
@@ -2955,7 +2955,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_58_h",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e567fc86b5b870fa33d5f4320168bb185315ace506afd1ace9a5b25b51a21d2d"
     },
@@ -3038,7 +3038,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "3c5fd2841c5da59fbbee624f1ec5f3ef2560e020618c712396dab2ad9c637fcc"
     },
@@ -3095,7 +3095,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "b2162ecd99f61a832106145393f1053051ea6355cb81e2049626ef47c1840aee"
     },
@@ -3124,7 +3124,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_a_bis",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "ebb11eb067cf7ab5afd950789cd4e3a0fd64cccee0c00b77a902f4bb4cdfa620"
     },
@@ -3197,7 +3197,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_59_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "55ccd947e0a3a385b1dcf15070fffced94cd769591f72a524f1ccce54e7a819b"
     },
@@ -3216,7 +3216,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_60",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "3ca94b3e04379a1f5b8c8d2b254cd68d68481453f315d36e96dad6d2cde6895a"
     },
@@ -3237,16 +3237,16 @@
           "text": "Der Versicherer stuft die Prämien gemäss den kantonalen Kostenunterschieden ab. Für sehr kleine kantonale Versichertenbestände kann davon abgewichen werden. Massgebend ist der Wohnort der versicherten Person."
         },
         {
-          "absatz": null,
-          "text": "2bis Der Versicherer kann die Prämien regional abstufen. Das EDI legt die Regionen sowie die basierend auf den Kostenunterschieden zwischen den Regionen maximal zulässigen Prämienunterschiede einheitlich fest."
+          "absatz": "2bis",
+          "text": "Der Versicherer kann die Prämien regional abstufen. Das EDI legt die Regionen sowie die basierend auf den Kostenunterschieden zwischen den Regionen maximal zulässigen Prämienunterschiede einheitlich fest."
         },
         {
           "absatz": "3",
           "text": "Für Kinder und für junge Erwachsene setzt der Versicherer eine tiefere Prämie fest als für die übrigen Versicherten; die Prämie für Kinder muss tiefer sein als diejenige für junge Erwachsene."
         },
         {
-          "absatz": null,
-          "text": "3bis Der Bundesrat kann die Prämienermässigungen nach Absatz 3 festlegen."
+          "absatz": "3bis",
+          "text": "Der Bundesrat kann die Prämienermässigungen nach Absatz 3 festlegen."
         },
         {
           "absatz": "4",
@@ -3259,9 +3259,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_61",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "51e2e304d73d09e854aebe38b77bd54dc4a6f745664307293b744a14301044bb"
+      "sha": "9228ad7bf77d416772805046ac63feb3a86ca4766191d0b76d81796c92d61649"
     },
     {
       "id": "bund/KVG/art_61_a",
@@ -3296,7 +3296,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_61_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "63d35c85412d5054b4ece7752b508cbdd40a75c35127b03b9ed2af204d8df260"
     },
@@ -3315,7 +3315,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_61_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d08ea498f0911df1248cb418100cb8af3222842a0bd2456e4bb794c4a2d881f4"
     },
@@ -3346,8 +3346,8 @@
           ]
         },
         {
-          "absatz": null,
-          "text": "2bis Die Kostenbeteiligung wie auch der Verlust der Prämienermässigung bei Versicherungsformen nach Absatz 2 dürfen weder bei einer Krankenkasse noch bei einer privaten Versicherungseinrichtung versichert werden. Ebenso ist es Vereinen, Stiftungen oder anderen Institutionen verboten, die Übernahme der Kosten, die sich aus diesen Versicherungsformen ergeben, vorzusehen. Von diesem Verbot ausgenommen ist die Übernahme von Kostenbeteiligungen auf Grund öffentlich-rechtlicher Vorschriften des Bundes oder der Kantone."
+          "absatz": "2bis",
+          "text": "Die Kostenbeteiligung wie auch der Verlust der Prämienermässigung bei Versicherungsformen nach Absatz 2 dürfen weder bei einer Krankenkasse noch bei einer privaten Versicherungseinrichtung versichert werden. Ebenso ist es Vereinen, Stiftungen oder anderen Institutionen verboten, die Übernahme der Kosten, die sich aus diesen Versicherungsformen ergeben, vorzusehen. Von diesem Verbot ausgenommen ist die Übernahme von Kostenbeteiligungen auf Grund öffentlich-rechtlicher Vorschriften des Bundes oder der Kantone."
         },
         {
           "absatz": "3",
@@ -3356,9 +3356,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_62",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "9f4713c0aaa05c3ba01f8e2623fc54eb31777cb014a6bbf055be4a814976ad97"
+      "sha": "5ac24b6d9806ca03d7adf54fdd58229558cde09847e3ce2fd435fcf3512aa306"
     },
     {
       "id": "bund/KVG/art_63",
@@ -3379,7 +3379,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_63",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "36abb2045bd2cbe7487ea37c63a933398ad863f7f8e66cd8b5c3e691fd6051d8"
     },
@@ -3396,8 +3396,8 @@
           "text": "Die Versicherten beteiligen sich an den Kosten der für sie erbrachten Leistungen."
         },
         {
-          "absatz": null,
-          "text": "1bis Die Kostenbeteiligung für das Kind ist bis zum Ende des Monats, in dem dieses volljährig wird, ausschliesslich von den Personen geschuldet, die die Prämien schulden. Das Kind kann für diese Kostenbeteiligung auch nach Eintritt der Volljährigkeit nicht belangt werden; eine dazu eingeleitete Betreibung ist nichtig."
+          "absatz": "1bis",
+          "text": "Die Kostenbeteiligung für das Kind ist bis zum Ende des Monats, in dem dieses volljährig wird, ausschliesslich von den Personen geschuldet, die die Prämien schulden. Das Kind kann für diese Kostenbeteiligung auch nach Eintritt der Volljährigkeit nicht belangt werden; eine dazu eingeleitete Betreibung ist nichtig."
         },
         {
           "absatz": "2",
@@ -3468,9 +3468,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_64",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "720695dc704945569ca5e3eb9fd2d9bca6446ae60059445bd48e634ef8572b42"
+      "sha": "defa1e301efff8d0036191f4802c35bdcc6fb52f90ba5cce636faa00884d6c42"
     },
     {
       "id": "bund/KVG/art_64_a",
@@ -3485,8 +3485,8 @@
           "text": "Bezahlt die versicherte Person fällige Prämien oder Kostenbeteiligungen nicht, so hat der Versicherer ihr, nach mindestens einer schriftlichen Mahnung, eine Zahlungsaufforderung zuzustellen, ihr eine Nachfrist von 30 Tagen einzuräumen und sie auf die Folgen des Zahlungsverzuges (Abs. 2) hinzuweisen."
         },
         {
-          "absatz": null,
-          "text": "1bis Ist die versicherte Person minderjährig, so sind die Bestimmungen über die Nichtbezahlung von Prämien und Kostenbeteiligungen auf ihre Eltern oder den Elternteil, der die Prämien schuldet, anzuwenden."
+          "absatz": "1bis",
+          "text": "Ist die versicherte Person minderjährig, so sind die Bestimmungen über die Nichtbezahlung von Prämien und Kostenbeteiligungen auf ihre Eltern oder den Elternteil, der die Prämien schuldet, anzuwenden."
         },
         {
           "absatz": "2",
@@ -3497,8 +3497,8 @@
           "text": "Der Versicherer gibt der zuständigen kantonalen Behörde die betroffenen Versicherten sowie, pro Schuldner und Schuldnerin, den Gesamtbetrag der Forderungen aus der obligatorischen Krankenpflegeversicherung (ausstehende Prämien und Kostenbeteiligungen sowie Verzugszinse und Betreibungskosten) bekannt, die während des berücksichtigten Zeitraumes zur Ausstellung eines Verlustscheines oder eines gleichwertigen Rechtstitels geführt haben. Er ersucht die vom Kanton bezeichnete Revisionsstelle, die Richtigkeit der Daten, die er dem Kanton bekannt gegeben hat, zu bestätigen und übermittelt die Bestätigung dem Kanton."
         },
         {
-          "absatz": null,
-          "text": "3bis Kann der Versicherer bei den Eltern oder dem Elternteil, der die Prämien schuldet, für ein Kind zu den in Absatz 3 erwähnten Forderungen keinen Verlustschein oder keinen gleichwertigen Rechtstitel erwirken, kann er diese Forderungen dem Kanton dennoch bekannt geben."
+          "absatz": "3bis",
+          "text": "Kann der Versicherer bei den Eltern oder dem Elternteil, der die Prämien schuldet, für ein Kind zu den in Absatz 3 erwähnten Forderungen keinen Verlustschein oder keinen gleichwertigen Rechtstitel erwirken, kann er diese Forderungen dem Kanton dennoch bekannt geben."
         },
         {
           "absatz": "4",
@@ -3517,12 +3517,12 @@
           "text": "Die Kantone können versicherte Personen, die ihrer Prämienpflicht trotz Betreibung nicht nachkommen, auf einer Liste erfassen, welche nur den Leistungserbringern, der Gemeinde und dem Kanton zugänglich ist. Die Versicherer schieben für diese Versicherten auf Meldung des Kantons die Übernahme der Kosten für Leistungen mit Ausnahme der Notfallbehandlungen auf und erstatten der zuständigen kantonalen Behörde Meldung über den Leistungsaufschub und dessen Aufhebung nach Begleichung der ausstehenden Forderungen. Eine Notfallbehandlung liegt vor, wenn die Behandlung nicht aufgeschoben werden kann. Dies ist der Fall, wenn die versicherte Person ohne sofortige Behandlung gesundheitliche Schäden oder den Tod befürchten muss oder die Gesundheit anderer Personen gefährden kann."
         },
         {
-          "absatz": null,
-          "text": "7bis Versicherte, die volljährig geworden sind, können den Versicherer in Abweichung von Absatz 6 auf das Ende des Kalenderjahres auch wechseln, wenn Prämien, Kostenbeteiligungen, Verzugszinse oder Betreibungskosten aus der Zeit ihrer Minderjährigkeit ausstehen. Bei versicherungspflichtigen Familienangehörigen mit Wohnort in einem Mitgliedstaat der Europäischen Union, in Island, Norwegen oder im Vereinigten Königreich geht Artikel 4 a vor."
+          "absatz": "7bis",
+          "text": "Versicherte, die volljährig geworden sind, können den Versicherer in Abweichung von Absatz 6 auf das Ende des Kalenderjahres auch wechseln, wenn Prämien, Kostenbeteiligungen, Verzugszinse oder Betreibungskosten aus der Zeit ihrer Minderjährigkeit ausstehen. Bei versicherungspflichtigen Familienangehörigen mit Wohnort in einem Mitgliedstaat der Europäischen Union, in Island, Norwegen oder im Vereinigten Königreich geht Artikel 4 a vor."
         },
         {
-          "absatz": null,
-          "text": "7ter Die Kantone und die Versicherer tauschen ihre Daten nach einem einheitlichen Standard aus. Der Bundesrat regelt die Einzelheiten, nachdem er die Kantone und die Versicherer angehört hat."
+          "absatz": "7ter",
+          "text": "Die Kantone und die Versicherer tauschen ihre Daten nach einem einheitlichen Standard aus. Der Bundesrat regelt die Einzelheiten, nachdem er die Kantone und die Versicherer angehört hat."
         },
         {
           "absatz": "8",
@@ -3535,9 +3535,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_64_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "3ade0ea27c1bb6d641672385322a73193e22c3a018bf5ad08820856dcdab7313"
+      "sha": "96417d3e59bd77717751dd7abc886f0c82acb1d3b9242a3629368e6cf9cfc178"
     },
     {
       "id": "bund/KVG/art_65",
@@ -3552,20 +3552,20 @@
           "text": "Die Kantone gewähren den Versicherten in bescheidenen wirtschaftlichen Verhältnissen Prämienverbilligungen. Sie bezahlen den Beitrag für die Prämienverbilligung direkt an die Versicherer, bei denen diese Personen versichert sind. Der Bundesrat kann die Anspruchsberechtigung auf versicherungspflichtige Personen ohne Wohnsitz in der Schweiz ausdehnen, die sich längere Zeit in der Schweiz aufhalten."
         },
         {
-          "absatz": null,
-          "text": "1bis Für untere und mittlere Einkommen verbilligen die Kantone die Prämien der Kinder um mindestens 80 Prozent und die Prämien der jungen Erwachsenen in Ausbildung um mindestens 50 Prozent."
+          "absatz": "1bis",
+          "text": "Für untere und mittlere Einkommen verbilligen die Kantone die Prämien der Kinder um mindestens 80 Prozent und die Prämien der jungen Erwachsenen in Ausbildung um mindestens 50 Prozent."
         },
         {
-          "absatz": null,
-          "text": "1ter Jeder Kanton legt fest, welchen Anteil die Prämie am verfügbaren Einkommen der Versicherten mit Wohnort im Kanton höchstens ausmachen darf."
+          "absatz": "1ter",
+          "text": "Jeder Kanton legt fest, welchen Anteil die Prämie am verfügbaren Einkommen der Versicherten mit Wohnort im Kanton höchstens ausmachen darf."
         },
         {
-          "absatz": null,
-          "text": "1quater Jeder Kanton regelt die Prämienverbilligung so, dass diese pro Kalenderjahr gesamthaft einem bestimmten Mindestanteil der Bruttokosten der obligatorischen Krankenpflegeversicherung der Versicherten, die ihren Wohnort im Kanton haben, entspricht."
+          "absatz": "1quater",
+          "text": "Jeder Kanton regelt die Prämienverbilligung so, dass diese pro Kalenderjahr gesamthaft einem bestimmten Mindestanteil der Bruttokosten der obligatorischen Krankenpflegeversicherung der Versicherten, die ihren Wohnort im Kanton haben, entspricht."
         },
         {
-          "absatz": null,
-          "text": "1quinquies Der Mindestanteil wird nach demjenigen Anteil berechnet, den die Prämien am Einkommen der 40 Prozent einkommensschwächsten Versicherten mit Wohnort im Kanton durchschnittlich ausmachen; dabei gilt Folgendes:",
+          "absatz": "1quinquies",
+          "text": "Der Mindestanteil wird nach demjenigen Anteil berechnet, den die Prämien am Einkommen der 40 Prozent einkommensschwächsten Versicherten mit Wohnort im Kanton durchschnittlich ausmachen; dabei gilt Folgendes:",
           "items": [
             {
               "marke": "a",
@@ -3616,8 +3616,8 @@
           "text": "Die Kantone informieren die Versicherten regelmässig über das Recht auf Prämienverbilligung."
         },
         {
-          "absatz": null,
-          "text": "4bis Der Kanton meldet dem Versicherer die Versicherten, die Anspruch auf eine Prämienverbilligung haben, und die Höhe der Verbilligung so früh, dass der Versicherer die Prämienverbilligung bei der Prämienfakturierung berücksichtigen kann. Der Versicherer informiert die anspruchsberechtigte Person spätestens bei der nächsten Fakturierung über die tatsächliche Prämienverbilligung."
+          "absatz": "4bis",
+          "text": "Der Kanton meldet dem Versicherer die Versicherten, die Anspruch auf eine Prämienverbilligung haben, und die Höhe der Verbilligung so früh, dass der Versicherer die Prämienverbilligung bei der Prämienfakturierung berücksichtigen kann. Der Versicherer informiert die anspruchsberechtigte Person spätestens bei der nächsten Fakturierung über die tatsächliche Prämienverbilligung."
         },
         {
           "absatz": "5",
@@ -3630,9 +3630,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_65",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "8a36a35cd1faa51047d3c8b9da76fa9708dddd4af15662c8d0a12c105556cef9"
+      "sha": "5d0fa24399c088e914761c575ceab9902d24715fe6ca1e7c3b7125a678a3b0cc"
     },
     {
       "id": "bund/KVG/art_65_a",
@@ -3663,7 +3663,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_65_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a277c3d2423e4b049e043d2c2cfa322ae71fc286d78ce09818f59112f0038c8f"
     },
@@ -3690,7 +3690,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_66",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "f3383171c51e64c3f92c40e6475a52848b8abd96ec08c1f365639b75a66e7843"
     },
@@ -3717,7 +3717,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_66_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d20952d1cb3fdf47203ee2ee76d63b45c7a9206801bb2259e7d83ad50ce729ad"
     },
@@ -3758,7 +3758,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_67",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6724d08601967e1e1353928ff1d8d606a54210c3279bd2da6d8d8fd4d36d060e"
     },
@@ -3777,7 +3777,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_68",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "5e21c2e6dc3e1484d09787b20c07605b2f416b5291e1bed78c5bc508b9ccf854"
     },
@@ -3808,7 +3808,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_69",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "412f2a654cfbd816d49eb6b4700a83cab504c3ef889b8b67738947d592c67f66"
     },
@@ -3853,7 +3853,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_70",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "991041e86a935e8b0df49cf753027432c43d665f0f78bd3cb533c6e39e1e699c"
     },
@@ -3876,7 +3876,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_71",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "2f77d940a540685ce881c42770656864e84c585bfd40028785e3a068eb04a7bf"
     },
@@ -3893,8 +3893,8 @@
           "text": "Der Versicherer vereinbart mit dem Versicherungsnehmer das versicherte Taggeld. Sie können die Deckung auf Krankheit und Mutterschaft beschränken."
         },
         {
-          "absatz": null,
-          "text": "1bis Die übernommenen Leistungen werden der Periode der Arbeitsunfähigkeit zugeordnet."
+          "absatz": "1bis",
+          "text": "Die übernommenen Leistungen werden der Periode der Arbeitsunfähigkeit zugeordnet."
         },
         {
           "absatz": "2",
@@ -3919,9 +3919,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_72",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
-      "sha": "d53deb6e001ea11a266d497ace577c0d0bc83fab65adcc2e4ca59eefda54a3be"
+      "sha": "5590d8dbe185891e18175f6e4f2bfec082f950a12bdcc2cf5f4c3cd096dad73c"
     },
     {
       "id": "bund/KVG/art_73",
@@ -3942,7 +3942,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_73",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "973177727e057882cd67483b4e058a4790cd3bc847646461bca8f8fd860dbcce"
     },
@@ -3965,7 +3965,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_74",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "1872f42c9df7884df769e11ade3c53ae4a8e650e6356e209404c87a48ce790c0"
     },
@@ -3984,7 +3984,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_75",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6d2a72943beab5d63458ded3b4de8965ee8a4eb906aea650350dc2a4b15e120a"
     },
@@ -4019,7 +4019,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_76",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "5bae953f13dcb31bb46ea162f2d8970946acdde0d33f91638286c437c6efc847"
     },
@@ -4038,7 +4038,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_77",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7501c5f82f8902769adcbd82f9b826fbdc2ac9ebb919183386bca5dcca39036f"
     },
@@ -4057,7 +4057,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_78",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "96d3f4aad3e0c17ca5f13559836117be9d5137982bcc0fddac745bf42f4d1e30"
     },
@@ -4076,7 +4076,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_78_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "933651119d26fff392f1c700e53bc1b8fcc707f9278c66028d68d201262e2357"
     },
@@ -4095,7 +4095,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_79",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a99b5413e111e18f12b8db33941026d4d4d6c7e52def845edf61b2c3191be44f"
     },
@@ -4128,7 +4128,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_79_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "65cb3e024363ce88546f3687959001fbe1cef6427e19894ba66173dea49bc91d"
     },
@@ -4155,7 +4155,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_80",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "9ea21033987372fe505d04f49ab83370f7716fc3974505a9acae41f82f2f5e23"
     },
@@ -4174,7 +4174,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_81",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "5ee6bb21515a818eedd5ecf41e54e292945179badec92e85daef1329f0e7d248"
     },
@@ -4203,7 +4203,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_82",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7ba0aa5b6ecf0cfefaf33f9a1739cfa5e48649dc166aa813e7bd42adfb79990f"
     },
@@ -4222,7 +4222,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_82_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "1530784a39e5d3fb04e5a265ba12c8c3992c9f0f2be05b589f98eb53a0f35b07"
     },
@@ -4241,7 +4241,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_83",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "d6cf55ebcad316c0a408682014dd7388b8c0e62b379857e051b397de07335ee4"
     },
@@ -4302,7 +4302,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e1918f96bbff0d88516db87aa7d9f512272dc6dc8bbae2a63072a4abe03afefe"
     },
@@ -4421,7 +4421,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "328effc3e312707d6f1209529c0c152b91b2f55f73cccc5815c1613231add3f5"
     },
@@ -4440,7 +4440,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_84_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4be44849b7043428db1187071b81d7676cbc77e1d1227b5000ce06c00dfa58a3"
     },
@@ -4459,7 +4459,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_85",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7701f8c9eb8456eae6a11837b08cc99bae756be5888dae93545eac8fc9a515ce"
     },
@@ -4478,7 +4478,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_86",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "3402daee2bb243fef746c03129700c01cf4c2d1a6f2ce1fd407266a8e36454d0"
     },
@@ -4497,7 +4497,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_87",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7787256f0a1e3a59541ed5bbcd583a5ef03c81b79296b778e7cccc5a58724b1b"
     },
@@ -4516,7 +4516,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_88",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "cddc599d1bbdfadb2def383249c416c16ccd5222d4007d32671abbb00dd55382"
     },
@@ -4555,7 +4555,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_89",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "c10ada8897f087256995f5aac414bf22f877625d8752d631f0786cb8925df635"
     },
@@ -4574,7 +4574,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_90",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4ac387930a78d3f3f091888b660f0b23cc9f0679ccc53af2450e226714769bd2"
     },
@@ -4597,7 +4597,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_90_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "a925ccce5de480d72d8241071c2b9d6f235da8ce7048587776ed0fd825186e5a"
     },
@@ -4616,7 +4616,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_91",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "7aac537255d64d50ca6d3128e9fd40215dd5b170bdb0d3c13a77f786d6d8022d"
     },
@@ -4657,7 +4657,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_92",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "2520087c674cc45718118b2c1240885b236f38f00f23003316941b9ea84690cc"
     },
@@ -4676,7 +4676,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_93",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e7442e5961bee5186851b4c8aebd2c6277eadd275865dc287d0bd444ae91b327"
     },
@@ -4695,7 +4695,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_93_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "05c1ee11c72f8f087b2999b314fa4c065cec8e54fbe4760d965fec2fbbb8a59e"
     },
@@ -4714,7 +4714,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_94",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "90f1f1265ccee83b6e2ddcc4dff69faeded242c090d4f6a17e9704c18c24ac90"
     },
@@ -4733,7 +4733,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_95",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "595e51205d596987dd44c1d3e2611354c5379c3227107c46059ce3c1d4bf4092"
     },
@@ -4800,7 +4800,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_95_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "29635ba8da82b4eab36969958f34ca2832694cfa91371413477f356d65509319"
     },
@@ -4819,7 +4819,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_96",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "51e408cc55d667148bf34d2a925892c7cc259874a527507cc864b6437d965241"
     },
@@ -4842,7 +4842,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_97",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "bb527c462f53b865de192a8363e21950cfa904a08bf76287ebecae6a562f1ed2"
     },
@@ -4869,7 +4869,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_98",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "0b3737b4fd2e77c3ad4b9c05adca5fa459718fc678d2c946ad0cc8b02523cad0"
     },
@@ -4896,7 +4896,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_99",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6334568ec1fbeb7a35b2e69e6ee00a6602a505b96cf8a01496fba620de903f39"
     },
@@ -4915,7 +4915,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_100",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "ad8268ea190cdf11d63b909a9c64d89a77e74df61405e693cfcde1dca34045b9"
     },
@@ -4942,7 +4942,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_101",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "e5e4b3d2c37d52b304538bb77029f3043802e4c0949b6e01ae80fede5de80a71"
     },
@@ -4977,7 +4977,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_102",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6c89d58ac24f4df2ea506d94ae0cab92621e16c909af4bb47ed6c72a4f6e939f"
     },
@@ -5000,7 +5000,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_103",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "6336065d1b2b21a5363a7893cbdb59d565bf82c86de251a21f6e9d63d10ab3db"
     },
@@ -5027,7 +5027,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_104",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "cd46728820a3f1cc5e957142cd1ef36a5152944cea767fe23068f39e1235b6ca"
     },
@@ -5046,7 +5046,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_104_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "fcd132118295848fda314650a8a5e5f4671550f01387eba1e91a5aad4af9d8dd"
     },
@@ -5065,7 +5065,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_105",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "66da27959a174fef21b71865cd57bcb6c9f2fbbffa0f31889a3470c7d4ea0a8e"
     },
@@ -5092,7 +5092,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_105_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "488c2c4d2d87d3677c83860953ce7bda61f5af855866e50ed4147e9c08c2ed74"
     },
@@ -5111,7 +5111,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_106",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "1d54849ffbc0280897d5b78ef624e28f63e9dcec6a45cea0a186908599c23db5"
     },
@@ -5130,7 +5130,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_106_a_106_c",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4c04d675ab15c9e34f40d00ef5bdfba1a612add9115e749662269a0e180e9492"
     },
@@ -5153,7 +5153,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de#art_107",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20260101",
       "sha": "4b8a057522a628032c3251ffec2f202a524f84f60b212c836905dbad7e7fb6af"
     }

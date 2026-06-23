@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-23",
   "eintraege": [
     {
       "id": "bund/FUSG/art_1",
@@ -10,15 +10,27 @@
       "artikelLabel": "Art. 1",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Gegenstand 1 Dieses Gesetz regelt die Anpassung der rechtlichen Strukturen von Kapital­gesell­schaften, Kollektiv- und Kommanditgesellschaften, Genossenschaften, Verei­nen, Stiftungen und Einzelunternehmen im Zusammenhang mit Fusion, Spaltung, Umwandlung und Vermögensübertragung. 3 2 Es gewährleistet dabei die Rechtssicherheit und Transparenz und schützt Gläubi­ge­rinnen und Gläubiger, Arbeitnehmerinnen und Arbeitnehmer sowie Personen mit Minderheitsbeteiligungen. 3 Ferner legt es die privatrechtlichen Voraussetzungen fest, unter welchen Institute des öffentlichen Rechts mit privatrechtlichen Rechtsträgern fusionieren, sich in pri­vatrechtliche Rechtsträger umwandeln oder sich an Vermögensübertragungen betei­ligen können. 4 Die Vorschriften des Kartellgesetzes vom 6. Oktober 1995 4 betreffend die Beurteilung von Unternehmens­zu­sammenschlüssen bleiben vorbehalten. 3 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 ). 4 SR 251"
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Anpassung der rechtlichen Strukturen von Kapital­gesell­schaften, Kollektiv- und Kommanditgesellschaften, Genossenschaften, Verei­nen, Stiftungen und Einzelunternehmen im Zusammenhang mit Fusion, Spaltung, Umwandlung und Vermögensübertragung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gewährleistet dabei die Rechtssicherheit und Transparenz und schützt Gläubi­ge­rinnen und Gläubiger, Arbeitnehmerinnen und Arbeitnehmer sowie Personen mit Minderheitsbeteiligungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ferner legt es die privatrechtlichen Voraussetzungen fest, unter welchen Institute des öffentlichen Rechts mit privatrechtlichen Rechtsträgern fusionieren, sich in pri­vatrechtliche Rechtsträger umwandeln oder sich an Vermögensübertragungen betei­ligen können."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Vorschriften des Kartellgesetzes vom 6. Oktober 1995 betreffend die Beurteilung von Unternehmens­zu­sammenschlüssen bleiben vorbehalten."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "ac5c8eb58c1f00e099c48745fb45dfe64003c42965857326c861ebb4b878b753"
+      "sha": "6c115225839fd6cf54ecf8595f6da71136f0a405c5fe2199c69f19079875a81f"
     },
     {
       "id": "bund/FUSG/art_2",
@@ -30,7 +42,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "In diesem Gesetz gelten als:",
           "items": [
             {
               "marke": "a",
@@ -65,9 +77,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "27b963c6b9c2fadeedd025c49f5f35642ab34b3024e411e99c34dd91a85f0d2b"
+      "sha": "5a983c5bb2cc83874d2166861f3da4543781713d725491bab3768279bbcb5c6b"
     },
     {
       "id": "bund/FUSG/art_3",
@@ -78,8 +90,8 @@
       "artikelLabel": "Art. 3",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Gesellschaften können fusionieren, indem:",
           "items": [
             {
               "marke": "a",
@@ -90,13 +102,17 @@
               "text": "sie sich zu einer neuen Gesellschaft zusammenschliessen (Kombinations­fusion)."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Mit der Fusion wird die übertragende Gesellschaft aufgelöst und im Handelsregis­ter gelöscht."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_3",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "336ba325c33757f27500cfaab6e8c64341cb80832d36c0746209217d071ceb1e"
+      "sha": "5d5c2d2e5cffc2e385a7f5afbd43e49cfb5af61ca6ec89c7efe8be491a336395"
     },
     {
       "id": "bund/FUSG/art_4",
@@ -107,8 +123,74 @@
       "artikelLabel": "Art. 4",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Kapitalgesellschaften können fusionieren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit Kapitalgesellschaften;"
+            },
+            {
+              "marke": "b",
+              "text": "mit Genossenschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "als übernehmende Gesellschaften mit Kollektiv- und Kommanditgesellschaften;"
+            },
+            {
+              "marke": "d",
+              "text": "als übernehmende Gesellschaften mit Vereinen, die im Handelsregister eingetragen sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Kollektiv- und Kommanditgesellschaften können fusionieren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit Kollektiv- und Kommanditgesellschaften;"
+            },
+            {
+              "marke": "b",
+              "text": "als übertragende Gesellschaften mit Kapitalgesellschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "als übertragende Gesellschaften mit Genossenschaften."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Genossenschaften können fusionieren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit Genossenschaften;"
+            },
+            {
+              "marke": "b",
+              "text": "mit Kapitalgesellschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "als übernehmende Gesellschaften mit Kollektiv- und Kommanditgesellschaften;"
+            },
+            {
+              "marke": "d",
+              "text": "als übernehmende Gesellschaften mit Vereinen, die im Handelsregister eingetragen sind;"
+            },
+            {
+              "marke": "e",
+              "text": "falls keine Anteilscheine bestehen, als übertragende Gesellschaften mit Vereinen, die im Handelsregister eingetragen sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Vereine können mit Vereinen fusionieren. Im Handelsregister eingetragene Vereine können überdies fusionieren:",
           "items": [
             {
               "marke": "a",
@@ -127,9 +209,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_4",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "306802731a63f9eb04f5f321de247f160dac9c8b896ec413ba52fec53143bd9c"
+      "sha": "84790df76b96bbe4c44516566b26ce36332a8c7a0433926d462330f2ae06e2ff"
     },
     {
       "id": "bund/FUSG/art_5",
@@ -140,15 +222,19 @@
       "artikelLabel": "Art. 5",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Fusion einer Gesellschaft in Liquidation 1 Eine Gesellschaft in Liquidation kann sich als übertragende Gesellschaft an einer Fusion beteiligen, wenn mit der Vermögensverteilung noch nicht begonnen wurde. 2 Das oberste Leitungs- oder Verwaltungsorgan muss gegenüber dem Handelsregis­teramt bestätigen, dass die Voraussetzung nach Absatz 1 erfüllt ist."
+          "absatz": "1",
+          "text": "Eine Gesellschaft in Liquidation kann sich als übertragende Gesellschaft an einer Fusion beteiligen, wenn mit der Vermögensverteilung noch nicht begonnen wurde."
+        },
+        {
+          "absatz": "2",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan muss gegenüber dem Handelsregis­teramt bestätigen, dass die Voraussetzung nach Absatz 1 erfüllt ist."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_5",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "622f68539a7d04fd739226d32c8bd5f921922f250dfbd34369f78b861f3a3c40"
+      "sha": "ac59dfe7ee5e3c78213364ec2e362da30d0ca6a4c412777532831cd40295631b"
     },
     {
       "id": "bund/FUSG/art_6",
@@ -159,15 +245,23 @@
       "artikelLabel": "Art. 6",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Fusion von Gesellschaften im Fall von Kapitalverlust oder Überschuldung 1 Eine Gesellschaft, deren Aktiven abzüglich der Verbindlichkeiten die Hälfte der Summe aus Aktien-, Stamm- oder Genossenschaftskapital, nicht an die Aktionäre zurückzahlbarer gesetzlicher Kapitalreserve und gesetzlicher Gewinnreserve nicht mehr decken oder die überschuldet ist, kann mit einer anderen Gesellschaft nur fusionieren, wenn diese über frei verwendbares Eigenkapital im Umfang der Unterdeckung und gegebenenfalls der Überschuldung verfügt. 8 1bis Diese Voraussetzung entfällt, soweit Gläubigerinnen und Gläubiger der an der Fusion beteiligten Gesellschaften im Ausmass der Unterdeckung und gegebenenfalls der Überschuldung im Rang hinter alle ande­ren Gläubigerinnen und Gläubiger zurücktreten und ihre Forderungen stunden, sofern der ge­schuldete Betrag und die Zinsforderungen während der Dauer der Überschuldung vom Rangrücktritt umfasst sind. 9 2 Das oberste Leitungs- oder Verwaltungsorgan muss dem Handels­registeramt eine Bestätigung einer zugelassenen Revisionsexpertin oder eines zugelassenen Revi­sions­experten einreichen, wonach die Voraussetzungen nach Absatz 1 erfüllt sind. 10 8 Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 ). 9 Eingefügt durch Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 ). 10 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Eine Gesellschaft, deren Aktiven abzüglich der Verbindlichkeiten die Hälfte der Summe aus Aktien-, Stamm- oder Genossenschaftskapital, nicht an die Aktionäre zurückzahlbarer gesetzlicher Kapitalreserve und gesetzlicher Gewinnreserve nicht mehr decken oder die überschuldet ist, kann mit einer anderen Gesellschaft nur fusionieren, wenn diese über frei verwendbares Eigenkapital im Umfang der Unterdeckung und gegebenenfalls der Überschuldung verfügt."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Diese Voraussetzung entfällt, soweit Gläubigerinnen und Gläubiger der an der Fusion beteiligten Gesellschaften im Ausmass der Unterdeckung und gegebenenfalls der Überschuldung im Rang hinter alle ande­ren Gläubigerinnen und Gläubiger zurücktreten und ihre Forderungen stunden, sofern der ge­schuldete Betrag und die Zinsforderungen während der Dauer der Überschuldung vom Rangrücktritt umfasst sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan muss dem Handels­registeramt eine Bestätigung einer zugelassenen Revisionsexpertin oder eines zugelassenen Revi­sions­experten einreichen, wonach die Voraussetzungen nach Absatz 1 erfüllt sind."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_6",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "75063992136751f1da68608e74e0f0fc5b9e4960a0b88c4f9b12887436c5b8f0"
+      "sha": "daaae9077d2986ac900f9dc914c308a6e4a56c30bf101c0da6b95d2f3e9180b8"
     },
     {
       "id": "bund/FUSG/art_7",
@@ -178,15 +272,35 @@
       "artikelLabel": "Art. 7",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Wahrung der Anteils- und Mitgliedschaftsrechte 1 Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft haben Anspruch auf Anteils- oder Mitgliedschaftsrechte an der übernehmenden Gesellschaft, die unter Berücksichtigung des Vermögens der beteiligten Gesellschaften, der Verteilung der Stimmrechte sowie aller anderen relevanten Umstände ihren bisherigen Anteils- oder Mitgliedschaftsrechten entsprechen. 2 Bei der Festlegung des Umtauschverhältnisses für Anteile kann eine Ausgleichszahlung vorgesehen werden, die den zehnten Teil des wirklichen Werts der gewährten Anteile nicht übersteigen darf. 3 Gesellschafterinnen und Gesellschafter ohne Anteilscheine haben bei der Übernahme ih­rer Gesellschaft durch eine Kapitalgesellschaft Anspruch auf mindestens einen Anteil. 4 Für Anteile ohne Stimmrecht an der übertragenden Gesellschaft muss die übernehmende Gesellschaft gleichwertige Anteile oder Anteile mit Stimmrecht gewähren. 5 Für Sonderrechte an der übertragenden Gesellschaft, die mit Anteils- oder Mitgliedschafts­rechten verbunden sind, muss die übernehmende Gesellschaft gleichwertige Rechte oder eine angemessene Abgeltung gewähren. 6 Die übernehmende Gesellschaft muss den Inhaberinnen und Inhabern von Genussschei­nen der übertragenden Gesellschaft gleichwertige Rechte gewähren oder ihre Genuss­scheine zum wirklichen Wert im Zeitpunkt des Abschlusses des Fusionsvertrags zurückkaufen."
+          "absatz": "1",
+          "text": "Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft haben Anspruch auf Anteils- oder Mitgliedschaftsrechte an der übernehmenden Gesellschaft, die unter Berücksichtigung des Vermögens der beteiligten Gesellschaften, der Verteilung der Stimmrechte sowie aller anderen relevanten Umstände ihren bisherigen Anteils- oder Mitgliedschaftsrechten entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Festlegung des Umtauschverhältnisses für Anteile kann eine Ausgleichszahlung vorgesehen werden, die den zehnten Teil des wirklichen Werts der gewährten Anteile nicht übersteigen darf."
+        },
+        {
+          "absatz": "3",
+          "text": "Gesellschafterinnen und Gesellschafter ohne Anteilscheine haben bei der Übernahme ih­rer Gesellschaft durch eine Kapitalgesellschaft Anspruch auf mindestens einen Anteil."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Anteile ohne Stimmrecht an der übertragenden Gesellschaft muss die übernehmende Gesellschaft gleichwertige Anteile oder Anteile mit Stimmrecht gewähren."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Sonderrechte an der übertragenden Gesellschaft, die mit Anteils- oder Mitgliedschafts­rechten verbunden sind, muss die übernehmende Gesellschaft gleichwertige Rechte oder eine angemessene Abgeltung gewähren."
+        },
+        {
+          "absatz": "6",
+          "text": "Die übernehmende Gesellschaft muss den Inhaberinnen und Inhabern von Genussschei­nen der übertragenden Gesellschaft gleichwertige Rechte gewähren oder ihre Genuss­scheine zum wirklichen Wert im Zeitpunkt des Abschlusses des Fusionsvertrags zurückkaufen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_7",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "7dc7314aea3711177430f2e7fe8ed0de2deee3cd9f61a66044cbe8074aa0f436"
+      "sha": "2f93a4cfb5ca9d5d4a6969e17ecd031a55ab45d3d5f5d40561cab5f35bbb7a0c"
     },
     {
       "id": "bund/FUSG/art_8",
@@ -197,15 +311,19 @@
       "artikelLabel": "Art. 8",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Abfindung 1 Die an der Fusion beteiligten Gesellschaften können im Fusionsvertrag vorsehen, dass die Gesellschafterinnen und Gesellschafter zwischen Anteils- oder Mitgliedschaftsrechten und einer Abfindung wählen können. 2 Die an der Fusion beteiligten Gesellschaften können im Fusionsvertrag auch vorsehen, dass nur eine Abfindung ausgerichtet wird."
+          "absatz": "1",
+          "text": "Die an der Fusion beteiligten Gesellschaften können im Fusionsvertrag vorsehen, dass die Gesellschafterinnen und Gesellschafter zwischen Anteils- oder Mitgliedschaftsrechten und einer Abfindung wählen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die an der Fusion beteiligten Gesellschaften können im Fusionsvertrag auch vorsehen, dass nur eine Abfindung ausgerichtet wird."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_8",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "06b8b8c0240f7b4851bcfa2e4ad726872bb60ab279ed468251b4b43e4f64b4e4"
+      "sha": "50e514dbb6e5e2831f6a0b6df05f3efd96a41868cef3ba5c064748225d57962b"
     },
     {
       "id": "bund/FUSG/art_9",
@@ -216,15 +334,19 @@
       "artikelLabel": "Art. 9",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Kapitalerhöhung bei der Absorptionsfusion 1 Bei der Absorptionsfusion muss die übernehmende Gesellschaft das Kapital erhöhen, soweit es zur Wahrung der Rechte der Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft erforderlich ist. 2 Die Vorschriften des Obligationenrechts (OR) 12 über die Sacheinlage (Art. 634 OR) und über den maximalen Umfang des Kapitalbands (Art. 653 s Abs. 2 OR) finden bei der Fusion keine Anwendung. 13 12 SR 220 13 Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Bei der Absorptionsfusion muss die übernehmende Gesellschaft das Kapital erhöhen, soweit es zur Wahrung der Rechte der Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vorschriften des Obligationenrechts (OR) über die Sacheinlage (Art. 634 OR) und über den maximalen Umfang des Kapitalbands (Art. 653 s Abs. 2 OR) finden bei der Fusion keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_9",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "827882c84d13214cc929f924b14fca66634909ebf93e9401d2d5ca40d8e3e521"
+      "sha": "7b0b7ac440e7e424d4a3fb9d9dd58651a95b558d4345df9d26c00ab01fd01d4e"
     },
     {
       "id": "bund/FUSG/art_10",
@@ -241,7 +363,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_10",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "009d2926df7a701e9eb06b8afde79514a941c19a3654631b91fbf599437da7b1"
     },
@@ -254,15 +376,19 @@
       "artikelLabel": "Art. 11",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Zwischenabschluss 1 Liegt der Bilanzstichtag bei Abschluss des Fusionsvertrags mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der an der Fusion beteiligten Gesellschaften eingetreten, so müssen diese einen Zwischenabschluss erstellen. 2 … 16 16 Aufgehoben durch Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), mit Wirkung seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Liegt der Bilanzstichtag bei Abschluss des Fusionsvertrags mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der an der Fusion beteiligten Gesellschaften eingetreten, so müssen diese einen Zwischenabschluss erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_11",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "6e03f9464584cce3d40006ac3e8804e9076acf08f49a61ba99f12ebd139a9024"
+      "sha": "f5b68c9bc3a62e9b376d53640773e2136ac6ed32e96b85632721179d09e35d32"
     },
     {
       "id": "bund/FUSG/art_12",
@@ -273,15 +399,19 @@
       "artikelLabel": "Art. 12",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Abschluss des Fusionsvertrags 1 Der Fusionsvertrag muss von den obersten Leitungs- oder Verwaltungsorganen der an der Fusion beteiligten Gesellschaften abgeschlossen werden. 2 Er bedarf der schriftlichen Form und der Zustimmung der Generalversammlung beziehungsweise der Gesellschafterinnen und Gesellschafter der beteiligten Gesellschaften (Art. 18)."
+          "absatz": "1",
+          "text": "Der Fusionsvertrag muss von den obersten Leitungs- oder Verwaltungsorganen der an der Fusion beteiligten Gesellschaften abgeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Er bedarf der schriftlichen Form und der Zustimmung der Generalversammlung beziehungsweise der Gesellschafterinnen und Gesellschafter der beteiligten Gesellschaften (Art. 18)."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_12",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "883e1ef646a467d024b87ea089480da51b7328dd89e13ce403a0c9f6644c8fcf"
+      "sha": "414a0bfa7dc09d8f8f6951682303e6e37cefff74e036045c9a130db93b0b3c2d"
     },
     {
       "id": "bund/FUSG/art_13",
@@ -293,7 +423,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "1 Der Fusionsvertrag enthält:",
           "items": [
             {
               "marke": "a",
@@ -332,13 +462,17 @@
               "text": "gegebenenfalls die Bezeichnung der Gesellschafterinnen und Gesellschafter mit unbeschränkter Haftung."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Fusion zwischen Vereinen finden Absatz 1 Buchstaben c–f keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_13",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "ab29b41e310a46ece409bfa93c5beea5b390106d04e201b13ba774228ac97506"
+      "sha": "1e3ad4115c2c13670f1cfa9d01d9850cfd7c05dd8ca0771925cee7908b5cfaea"
     },
     {
       "id": "bund/FUSG/art_14",
@@ -349,8 +483,16 @@
       "artikelLabel": "Art. 14",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften müssen einen schriftlichen Bericht über die Fusion erstellen. Sie können den Bericht auch gemeinsam verfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf die Erstellung eines Fusionsberichts verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Bericht sind rechtlich und wirtschaftlich zu erläutern und zu begründen:",
           "items": [
             {
               "marke": "a",
@@ -397,13 +539,21 @@
               "text": "gegebenenfalls Hinweise auf erteilte und ausstehende behördliche Bewilligungen."
             }
           ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Kombinationsfusion ist dem Fusionsbericht der Entwurf der Statuten der neuen Gesellschaft beizufügen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der Fusion zwischen Vereinen findet diese Bestimmung keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_14",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "f1c6609815177fece29b42fa8b23c18bca0b987e44d3449edc90918433c26f54"
+      "sha": "56527aa13ef98f4e11e2b3ee2922c181b2c8772f37632219f75156ad6c9e9e5b"
     },
     {
       "id": "bund/FUSG/art_15",
@@ -414,8 +564,20 @@
       "artikelLabel": "Art. 15",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die an der Fusion beteiligten Gesellschaften müssen den Fusionsvertrag, den Fusionsbericht und die der Fusion zu Grunde liegende Bilanz von einer zuge­lassenen Revisionsexpertin oder einem zugelassenen Revisionsexperten prüfen lassen, falls die übernehmende Gesellschaft eine Kapitalgesellschaft oder eine Genossenschaft mit Anteilscheinen ist. Sie können eine gemeinsame Revisions­expertin oder einen gemeinsamen Revisionsexperten bestimmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf die Prüfung verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die beteiligten Gesellschaften müssen der Revisionsexpertin oder dem Revisions­experten alle zweckdienlichen Auskünfte und Unterlagen geben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Revisionsexpertin oder der Revisionsexperte legt in einem schriftlichen Prüfungsbericht dar:",
           "items": [
             {
               "marke": "a",
@@ -442,9 +604,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_15",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "7e8d7d43f3bc6a1d4c43546664bb33fb39d0b37ff765864c397a140243d6cc86"
+      "sha": "ef4ec9d2e13544081993a167aaf2b38706b0b975e453bd5640b5149a58630cb9"
     },
     {
       "id": "bund/FUSG/art_16",
@@ -455,8 +617,8 @@
       "artikelLabel": "Art. 16",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Jede der an der Fusion beteiligten Gesellschaften muss an ihrem Sitz den Gesellschafterinnen und Gesellschaftern während der 30 Tage vor der Beschlussfassung Einsicht in folgende Unterlagen aller an der Fusion beteiligten Gesellschaften gewähren:",
           "items": [
             {
               "marke": "a",
@@ -475,13 +637,25 @@
               "text": "die Jahresrechnungen und Jahresberichte der letzten drei Geschäftsjahre sowie gegebe­nenfalls den Zwischenabschluss."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf das Einsichtsverfahren nach Absatz 1 verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesellschafterinnen und Gesellschafter können von den beteiligten Gesellschaften Ko­pien der Unterlagen nach Absatz 1 verlangen. Diese müssen ihnen unentgeltlich zur Verfü­gung gestellt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Jede der an der Fusion beteiligten Gesellschaften muss die Gesellschafterinnen und Gesellschafter in geeigneter Form auf die Möglichkeit zur Einsichtnahme hinweisen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_16",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "c1ed0bc9081a7dfcccbb52d3bd47a79015018489aa812a8b977a8db9912f3502"
+      "sha": "252847f44781d6183d3606d6742cecdf76c7c6564b9659c359c7c4659f81582c"
     },
     {
       "id": "bund/FUSG/art_17",
@@ -492,15 +666,19 @@
       "artikelLabel": "Art. 17",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Veränderungen im Vermögen 1 Treten bei einer der an der Fusion beteiligten Gesellschaften zwischen dem Abschluss des Fusionsvertrags und der Beschlussfassung durch die Generalversammlung wesentliche Än­derungen im Aktiv- oder im Passivvermögen ein, so muss deren oberstes Leitungs- oder Ver­waltungsorgan die obersten Leitungs- oder Verwaltungsorgane der anderen beteiligten Gesellschaften darüber informieren. 2 Die obersten Leitungs- oder Verwaltungsorgane aller beteiligten Gesellschaften prüfen, ob der Fusionsvertrag abgeändert werden muss oder ob auf die Fusion zu verzichten ist; trifft dies zu, so müssen sie den Antrag auf Genehmigung zurückziehen. Andernfalls müssen sie in der Generalversammlung begründen, warum der Fusionsvertrag keiner Anpassung bedarf."
+          "absatz": "1",
+          "text": "Treten bei einer der an der Fusion beteiligten Gesellschaften zwischen dem Abschluss des Fusionsvertrags und der Beschlussfassung durch die Generalversammlung wesentliche Än­derungen im Aktiv- oder im Passivvermögen ein, so muss deren oberstes Leitungs- oder Ver­waltungsorgan die obersten Leitungs- oder Verwaltungsorgane der anderen beteiligten Gesellschaften darüber informieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die obersten Leitungs- oder Verwaltungsorgane aller beteiligten Gesellschaften prüfen, ob der Fusionsvertrag abgeändert werden muss oder ob auf die Fusion zu verzichten ist; trifft dies zu, so müssen sie den Antrag auf Genehmigung zurückziehen. Andernfalls müssen sie in der Generalversammlung begründen, warum der Fusionsvertrag keiner Anpassung bedarf."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_17",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "281fe0c459e66e082fc389327ebe31c41e0ef5c2cbeb5b65e9c1f783e9f41efc"
+      "sha": "f137e222149f427a84433b8cfbc10c89f99fd82532e7b60852e4d7d7f39bb686"
     },
     {
       "id": "bund/FUSG/art_18",
@@ -511,8 +689,8 @@
       "artikelLabel": "Art. 18",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Bei den Kapitalgesellschaften, den Genossenschaften und den Vereinen muss das oberste Leitungs- oder Verwaltungsorgan den Fusionsvertrag der Generalversammlung zur Beschlussfassung unterbreiten. Folgende Mehrheiten sind erfor­derlich:",
           "items": [
             {
               "marke": "a",
@@ -535,13 +713,33 @@
               "text": "bei Vereinen mindestens drei Viertel der an der Generalversammlung anwesenden Mitglieder."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Kollektiv- und bei Kommanditgesellschaften bedarf der Fusionsvertrag der Zustimmung aller Gesellschafterinnen und Gesellschafter. Der Gesellschaftsvertrag kann jedoch vorse­hen, dass die Zustimmung von mindestens drei Vierteln der Gesellschafterinnen und Gesell­schafter genügt."
+        },
+        {
+          "absatz": "3",
+          "text": "Übernimmt eine Kommanditaktiengesellschaft eine andere Gesellschaft, so bedarf es zusätzlich zu den Mehrheiten nach Absatz 1 Buchstabe a der schriftlichen Zustimmung aller Gesellschafterinnen und Gesellschafter, die unbeschränkt haften."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Aktiengesellschaften oder Kommanditaktiengesellschaften, die von einer Gesellschaft mit beschränkter Haftung übernommen werden und bei denen durch diese Übernahme eine Nachschusspflicht oder eine andere persönliche Leistungspflicht eingeführt wird, bedarf es der Zustimmung aller Aktionärinnen und Aktio­näre, die davon betroffen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Sieht der Fusionsvertrag nur eine Abfindung vor, so bedarf der Fusionsbeschluss der Zustimmung von mindestens 90 Prozent der stimmberechtigten Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft."
+        },
+        {
+          "absatz": "6",
+          "text": "Ergibt sich für die Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft aus der Fusion eine ä nderung des Zwecks der Gesellschaft und ist dafür auf Grund gesetzlicher oder statutarischer Vorschriften eine andere Mehrheit erforderlich als für den Fusionsbeschluss, so gelten für diesen beide Mehrheitserfordernisse."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_18",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "332188a261160c1db7bad14860e24746c598d698e844ac2f6ba758e5e6ba41a6"
+      "sha": "e14ab1b46539b9ace0161ed8200f32de46a1b1e8039a08be35c0bd2b4454cf07"
     },
     {
       "id": "bund/FUSG/art_19",
@@ -552,15 +750,19 @@
       "artikelLabel": "Art. 19",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Austrittsrecht bei der Fusion von Vereinen 1 Vereinsmitglieder können innerhalb von zwei Monaten nach dem Fusions­beschluss frei aus dem Verein austreten. 2 Der Austritt gilt rückwirkend auf das Datum des Fusionsbeschlusses."
+          "absatz": "1",
+          "text": "Vereinsmitglieder können innerhalb von zwei Monaten nach dem Fusions­beschluss frei aus dem Verein austreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Austritt gilt rückwirkend auf das Datum des Fusionsbeschlusses."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_19",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "012ddd72ec974f9c06be2717139b45ce42a86f677d9cbd1941c6855d02ef0f53"
+      "sha": "61627192f877e27e2ab4febdb8267b280dd9498b30827019285797ec7490fba8"
     },
     {
       "id": "bund/FUSG/art_20",
@@ -571,15 +773,19 @@
       "artikelLabel": "Art. 20",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Öffentliche Beurkundung 1 Der Fusionsbeschluss bedarf der öffentlichen Beurkundung. 2 Bei der Fusion zwischen Vereinen findet diese Bestimmung keine Anwendung."
+          "absatz": "1",
+          "text": "Der Fusionsbeschluss bedarf der öffentlichen Beurkundung."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Fusion zwischen Vereinen findet diese Bestimmung keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_20",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "fbf8831a0f8d22cab954ce6742573b5398dcad7afca692495d46ea9d9f6b9b18"
+      "sha": "54a4f830615de317cfcf1a46ff9fbc6bcee97467f7bc209a1b540de3c4bfb684"
     },
     {
       "id": "bund/FUSG/art_21",
@@ -590,15 +796,27 @@
       "artikelLabel": "Art. 21",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Eintragung ins Handelsregister 1 Sobald der Fusionsbeschluss aller an der Fusion beteiligten Gesellschaften vorliegt, müssen deren oberste Leitungs- oder Verwaltungsorgane dem Handelsregisteramt die Fusion zur Eintragung anmelden. 2 Muss die übernehmende Gesellschaft infolge der Fusion ihr Kapital erhöhen, so sind dem Handelsregisteramt zusätzlich die geänderten Statuten und die erforder­lichen Feststellungen über die Kapitalerhöhung (Art. 652 g OR 21 ) zu unterbreiten. 3 Die übertragende Gesellschaft wird mit der Eintragung der Fusion im Handels­register gelöscht. 4 Diese Bestimmung findet keine Anwendung auf Vereine, die im Handelsregister nicht eingetragen sind. 21 SR 220"
+          "absatz": "1",
+          "text": "Sobald der Fusionsbeschluss aller an der Fusion beteiligten Gesellschaften vorliegt, müssen deren oberste Leitungs- oder Verwaltungsorgane dem Handelsregisteramt die Fusion zur Eintragung anmelden."
+        },
+        {
+          "absatz": "2",
+          "text": "Muss die übernehmende Gesellschaft infolge der Fusion ihr Kapital erhöhen, so sind dem Handelsregisteramt zusätzlich die geänderten Statuten und die erforder­lichen Feststellungen über die Kapitalerhöhung (Art. 652 g OR) zu unterbreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die übertragende Gesellschaft wird mit der Eintragung der Fusion im Handels­register gelöscht."
+        },
+        {
+          "absatz": "4",
+          "text": "Diese Bestimmung findet keine Anwendung auf Vereine, die im Handelsregister nicht eingetragen sind."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_21",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "dff1c31de97b5ce1827a2e75336577113461986e2884d0a200a614047eb3ba98"
+      "sha": "05427411641debc7f87510dfad1bc1b5532ea24fd30d8dfbeafdfab0ceecd325"
     },
     {
       "id": "bund/FUSG/art_22",
@@ -609,15 +827,19 @@
       "artikelLabel": "Art. 22",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Rechtswirksamkeit 1 Die Fusion wird mit der Eintragung ins Handelsregister rechtswirksam. In diesem Zeitpunkt gehen alle Aktiven und Passiven der übertragenden Gesellschaft von Gesetzes wegen auf die übernehmende Gesellschaft über. Artikel 34 des Kartell­gesetzes vom 6. Oktober 1995 22 bleibt vorbehalten. 2 Die Fusion von Vereinen, die im Handelsregister nicht eingetragen sind, wird mit dem Vorliegen des Fusionsbeschlusses aller beteiligten Vereine rechtswirksam. 22 SR 251"
+          "absatz": "1",
+          "text": "Die Fusion wird mit der Eintragung ins Handelsregister rechtswirksam. In diesem Zeitpunkt gehen alle Aktiven und Passiven der übertragenden Gesellschaft von Gesetzes wegen auf die übernehmende Gesellschaft über. Artikel 34 des Kartell­gesetzes vom 6. Oktober 1995 bleibt vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fusion von Vereinen, die im Handelsregister nicht eingetragen sind, wird mit dem Vorliegen des Fusionsbeschlusses aller beteiligten Vereine rechtswirksam."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_22",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "949e496205bcac056a2c1626793c27566d521ea517da033d9b8d1e9c9e07cd6f"
+      "sha": "e6be24627f7b177c1f9a989ae18a2d997b37ee6e6d4e9ed362f16aed63ad6104"
     },
     {
       "id": "bund/FUSG/art_23",
@@ -628,8 +850,22 @@
       "artikelLabel": "Art. 23",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Kapitalgesellschaften können unter erleichterten Voraussetzungen fusionieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die übernehmende Kapitalgesellschaft alle Anteile der übertragenden Kapitalgesellschaft besitzt, die ein Stimmrecht gewähren; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein Rechtsträger, eine natürliche Person oder eine gesetzlich oder vertraglich verbundene Personengruppe, alle Anteile der an der Fusion beteiligten Kapitalgesellschaften besitzt, die ein Stimmrecht gewähren."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besitzt die übernehmende Kapitalgesellschaft nicht alle, jedoch mindestens 90 Pro­­zent der Anteile der übertragenden Kapitalgesellschaft, die ein Stimmrecht gewähren, so kann die Fusion unter erleichterten Voraussetzungen erfolgen, wenn den Inhaberinnen und Inhabern von Minderheitsanteilen:",
           "items": [
             {
               "marke": "a",
@@ -644,9 +880,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_23",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "20ab9737a8e2b21ad0e7bfa24d2ef38163339985ccbdc90166c72aea76f48484"
+      "sha": "2cad8eff615fb1f7c89b84019b578a775196af0b36749bea382b9d7d2b868bbe"
     },
     {
       "id": "bund/FUSG/art_24",
@@ -657,15 +893,19 @@
       "artikelLabel": "Art. 24",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Erleichterungen 1 Die an der Fusion beteiligten Kapitalgesellschaften, welche die Voraussetzungen nach Artikel 23 Absatz 1 erfüllen, müssen im Fusionsvertrag nur die Angaben nach Artikel 13 Absatz 1 Buchstaben a und f–i machen. Sie müssen weder einen Fusionsbericht (Art. 14) erstellen noch den Fusionsvertrag prüfen lassen (Art. 15) noch das Einsichtsrecht gewähren (Art. 16) noch den Vertrag der Generalversammlung zur Beschlussfassung unterbreiten (Art. 18). 2 Die an der Fusion beteiligten Kapitalgesellschaften, die die Voraussetzungen nach Artikel 23 Absatz 2 erfüllen, müssen im Fusionsvertrag nur die Angaben nach Artikel 13 Absatz 1 Buchstaben a, b und f–i machen. Sie müssen weder einen Fusionsbericht (Art. 14) erstellen noch den Fusionsvertrag der Generalversammlung zur Beschluss­fassung unterbreiten (Art. 18). Das Einsichtsrecht nach Artikel 16 muss mindestens 30 Tage vor der Anmeldung der Fusion zur Eintragung ins Handelsregister gewährt werden."
+          "absatz": "1",
+          "text": "Die an der Fusion beteiligten Kapitalgesellschaften, welche die Voraussetzungen nach Artikel 23 Absatz 1 erfüllen, müssen im Fusionsvertrag nur die Angaben nach Artikel 13 Absatz 1 Buchstaben a und f–i machen. Sie müssen weder einen Fusionsbericht (Art. 14) erstellen noch den Fusionsvertrag prüfen lassen (Art. 15) noch das Einsichtsrecht gewähren (Art. 16) noch den Vertrag der Generalversammlung zur Beschlussfassung unterbreiten (Art. 18)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die an der Fusion beteiligten Kapitalgesellschaften, die die Voraussetzungen nach Artikel 23 Absatz 2 erfüllen, müssen im Fusionsvertrag nur die Angaben nach Artikel 13 Absatz 1 Buchstaben a, b und f–i machen. Sie müssen weder einen Fusionsbericht (Art. 14) erstellen noch den Fusionsvertrag der Generalversammlung zur Beschluss­fassung unterbreiten (Art. 18). Das Einsichtsrecht nach Artikel 16 muss mindestens 30 Tage vor der Anmeldung der Fusion zur Eintragung ins Handelsregister gewährt werden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_24",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "cf23f043d37ba13e6887fb6a67bab2befe5af39e94612064a0e5efa0d8ed76e6"
+      "sha": "1f4153310e4a639edd8bf58288eb47f368423e99c4531daebbb52d98f998c83d"
     },
     {
       "id": "bund/FUSG/art_25",
@@ -676,15 +916,27 @@
       "artikelLabel": "Art. 25",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Sicherstellung der Forderungen 1 Die übernehmende Gesellschaft muss die Forderungen der Gläubigerinnen und Gläubiger der an der Fusion beteiligten Gesellschaften sicherstellen, wenn diese es innerhalb von drei Monaten nach der Rechtswirksamkeit der Fusion verlangen. 2 Die an der Fusion beteiligten Gesellschaften müssen ihre Gläubigerinnen und Gläubiger im Schweizerischen Handelsamtsblatt dreimal auf ihre Rechte hinweisen. Sie können von einer Publikation absehen, wenn eine zugelassene Revi­sionsexpertin oder ein zugelassener Revisionsexperte bestätigt, dass keine For­derungen bekannt oder zu erwarten sind, zu deren Befriedigung das freie Vermögen der beteiligten Gesellschaften nicht ausreicht. 23 3 Die Pflicht zur Sicherstellung entfällt, wenn die Gesellschaft nachweist, dass die Erfüllung der Forderung durch die Fusion nicht gefährdet wird. 4 Anstatt eine Sicherheit zu leisten, kann die Gesellschaft die Forderung erfüllen, sofern die anderen Gläubigerinnen und Gläubiger nicht geschädigt werden. 23 Fassung des zweiten Satzes gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Die übernehmende Gesellschaft muss die Forderungen der Gläubigerinnen und Gläubiger der an der Fusion beteiligten Gesellschaften sicherstellen, wenn diese es innerhalb von drei Monaten nach der Rechtswirksamkeit der Fusion verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die an der Fusion beteiligten Gesellschaften müssen ihre Gläubigerinnen und Gläubiger im Schweizerischen Handelsamtsblatt dreimal auf ihre Rechte hinweisen. Sie können von einer Publikation absehen, wenn eine zugelassene Revi­sionsexpertin oder ein zugelassener Revisionsexperte bestätigt, dass keine For­derungen bekannt oder zu erwarten sind, zu deren Befriedigung das freie Vermögen der beteiligten Gesellschaften nicht ausreicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Pflicht zur Sicherstellung entfällt, wenn die Gesellschaft nachweist, dass die Erfüllung der Forderung durch die Fusion nicht gefährdet wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Anstatt eine Sicherheit zu leisten, kann die Gesellschaft die Forderung erfüllen, sofern die anderen Gläubigerinnen und Gläubiger nicht geschädigt werden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_25",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "06f54e3ae5cd71672e554eed1e9751938af4b5e86b8396fe991bb8a0461832ec"
+      "sha": "ac1fc23297859b7169decc53b43a985f4805721411f5c677eba9f0cd1dc2978e"
     },
     {
       "id": "bund/FUSG/art_26",
@@ -695,15 +947,23 @@
       "artikelLabel": "Art. 26",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Persönliche Haftung der Gesellschafterinnen und Gesellschafter 1 Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft, die vor der Fusion für deren Verbindlichkeiten hafteten, bleiben dafür haftbar, soweit die Verbindlichkeiten vor der Veröffentlichung des Fusionsbeschlusses begründet wurden oder deren Entstehungsgrund vor diesem Zeitpunkt liegt. 2 Die Ansprüche aus persönlicher Haftung der Gesellschafterinnen und Gesellschafter für die Verbindlichkeiten der übertragenden Gesellschaft verjähren spätes­tens drei Jahre nach Eintritt der Rechtswirksamkeit der Fusion. Wird die Forderung erst nach der Veröffentlichung des Fusionsbeschlusses fällig, so beginnt die Verjährung mit der Fälligkeit. Die Begrenzung der persönlichen Haftung gilt nicht für Gesellschafterinnen und Gesellschafter, die auch für die Verbindlichkeiten der übernehmenden Gesellschaft persönlich haften. 3 Bei Anleihensobligationen und anderen Schuldverschreibungen, die öffentlich aus­gegeben wurden, besteht die Haftung bis zur Rückzahlung, es sei denn, der Prospekt sehe etwas anderes vor. Vorbehalten bleiben die Bestimmungen über die Gläu­bi­gergemeinschaft bei Anleihensobligationen nach den Artikeln 1157 ff. des OR 24 . 24 SR 220"
+          "absatz": "1",
+          "text": "Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft, die vor der Fusion für deren Verbindlichkeiten hafteten, bleiben dafür haftbar, soweit die Verbindlichkeiten vor der Veröffentlichung des Fusionsbeschlusses begründet wurden oder deren Entstehungsgrund vor diesem Zeitpunkt liegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ansprüche aus persönlicher Haftung der Gesellschafterinnen und Gesellschafter für die Verbindlichkeiten der übertragenden Gesellschaft verjähren spätes­tens drei Jahre nach Eintritt der Rechtswirksamkeit der Fusion. Wird die Forderung erst nach der Veröffentlichung des Fusionsbeschlusses fällig, so beginnt die Verjährung mit der Fälligkeit. Die Begrenzung der persönlichen Haftung gilt nicht für Gesellschafterinnen und Gesellschafter, die auch für die Verbindlichkeiten der übernehmenden Gesellschaft persönlich haften."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Anleihensobligationen und anderen Schuldverschreibungen, die öffentlich aus­gegeben wurden, besteht die Haftung bis zur Rückzahlung, es sei denn, der Prospekt sehe etwas anderes vor. Vorbehalten bleiben die Bestimmungen über die Gläu­bi­gergemeinschaft bei Anleihensobligationen nach den Artikeln 1157 ff. des OR."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_26",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "06738cf84008efadd7bf69577f5b1d1b9065829db5df1b1429d0725466a02d12"
+      "sha": "4b016c012681d7bf9b2df9aab2260465fbbdec5d44d0a4527d7b9377e6e1d93b"
     },
     {
       "id": "bund/FUSG/art_27",
@@ -714,15 +974,23 @@
       "artikelLabel": "Art. 27",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Übergang der Arbeitsverhältnisse, Sicherstellung und persönliche Haftung 1 Für den Übergang der Arbeitsverhältnisse auf die übernehmende Gesellschaft findet Artikel 333 des OR 25 Anwendung. 2 Die Arbeitnehmerinnen und Arbeitnehmer der an der Fusion beteiligten Gesellschaften können gemäss Artikel 25 die Sicherstellung ihrer Forderungen aus Arbeitsvertrag verlangen, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Über­gangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird. 3 Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft, die vor der Fusion für deren Verbindlichkeiten hafteten, bleiben für alle Verbindlichkeiten aus Arbeitsvertrag haftbar, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Übergangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird. 25 SR 220"
+          "absatz": "1",
+          "text": "Für den Übergang der Arbeitsverhältnisse auf die übernehmende Gesellschaft findet Artikel 333 des OR Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Arbeitnehmerinnen und Arbeitnehmer der an der Fusion beteiligten Gesellschaften können gemäss Artikel 25 die Sicherstellung ihrer Forderungen aus Arbeitsvertrag verlangen, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Über­gangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft, die vor der Fusion für deren Verbindlichkeiten hafteten, bleiben für alle Verbindlichkeiten aus Arbeitsvertrag haftbar, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Übergangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_27",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "de8ccabc1ca387fcb6f15ffdcc752fb23ab23465c77c1850baa2316e583aff6d"
+      "sha": "dd734238891d7fec52deccd364dc494a9d4286be6e8887680b95599045428e69"
     },
     {
       "id": "bund/FUSG/art_28",
@@ -733,15 +1001,27 @@
       "artikelLabel": "Art. 28",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Konsultation der Arbeitnehmervertretung 1 Für die Konsultation der Arbeitnehmervertretung findet für die übertragende wie auch für die übernehmende Gesellschaft Artikel 333 a des OR 26 Anwendung. 2 Die Konsultation muss vor der Beschlussfassung gemäss Artikel 18 erfolgen. Das oberste Leitungs- oder Verwaltungsorgan muss die Generalversammlung anlässlich der Beschlussfassung über das Ergebnis der Konsultation informieren. 3 Werden die Vorschriften der Absätze 1 und 2 nicht eingehalten, so kann die Arbeitnehmervertretung vom Gericht verlangen, dass es die Eintragung der Fusion ins Handelsregister untersagt. 4 Diese Bestimmung findet auch Anwendung auf übernehmende Gesellschaften mit Sitz im Ausland. 26 SR 220"
+          "absatz": "1",
+          "text": "Für die Konsultation der Arbeitnehmervertretung findet für die übertragende wie auch für die übernehmende Gesellschaft Artikel 333 a des OR Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konsultation muss vor der Beschlussfassung gemäss Artikel 18 erfolgen. Das oberste Leitungs- oder Verwaltungsorgan muss die Generalversammlung anlässlich der Beschlussfassung über das Ergebnis der Konsultation informieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Vorschriften der Absätze 1 und 2 nicht eingehalten, so kann die Arbeitnehmervertretung vom Gericht verlangen, dass es die Eintragung der Fusion ins Handelsregister untersagt."
+        },
+        {
+          "absatz": "4",
+          "text": "Diese Bestimmung findet auch Anwendung auf übernehmende Gesellschaften mit Sitz im Ausland."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_28",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "d361070cd121163c10f0068cfdd47814af62a4b161b7b2f90c6591a76a8d6f17"
+      "sha": "02c2c56534a75d17920586a36cdba51932858c9f16452311d436260aa4ae59bf"
     },
     {
       "id": "bund/FUSG/art_29",
@@ -753,7 +1033,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Eine Gesellschaft kann sich spalten, indem sie:",
           "items": [
             {
               "marke": "a",
@@ -768,9 +1048,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_29",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "48e31ca75ae62859180900c0572c9a1ef485340be79a499b13cbd0dca2e22e26"
+      "sha": "f4c6066baa87ad08df79873ddd08e7f4f5053321451ed5ff0c72cdfec8e3bc2b"
     },
     {
       "id": "bund/FUSG/art_30",
@@ -787,7 +1067,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_30",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "173eec8e4582ebbd87eaddfe7cd32c3e490c7e84cec2712c9326b4989c74eb1e"
     },
@@ -800,8 +1080,12 @@
       "artikelLabel": "Art. 31",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Bei der Spaltung müssen die Anteils- und Mitgliedschaftsrechte gemäss Artikel 7 gewahrt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Den Gesellschafterinnen und Gesellschaftern der übertragenden Gesellschaft können:",
           "items": [
             {
               "marke": "a",
@@ -816,9 +1100,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "55f0505b685f0f8dc76f5f56baa886076cb7ae2759e702d7fb4b19776ff88ecb"
+      "sha": "2aa6c39ebf7a2eb41b668559dfbfd87244c82217e589fd5a41c4c8e1db9c81cc"
     },
     {
       "id": "bund/FUSG/art_32",
@@ -835,7 +1119,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_32",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "8425d9ab7702dcee368594d17e66fb6c7212322e7bb26abb047482f91bc4e1a1"
     },
@@ -848,15 +1132,19 @@
       "artikelLabel": "Art. 33",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Kapitalerhöhung 1 Die übernehmende Gesellschaft muss das Kapital erhöhen, soweit es zur Wahrung der Rechte der Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft erforderlich ist. 2 Die Vorschriften des OR 29 über die Sacheinlage (Art. 634 OR) und über den maximalen Umfang des Kapitalbands (Art. 653 s Abs. 2 OR) finden bei der Spaltung keine Anwendung. 30 29 SR 220 30 Fassung gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Die übernehmende Gesellschaft muss das Kapital erhöhen, soweit es zur Wahrung der Rechte der Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vorschriften des OR über die Sacheinlage (Art. 634 OR) und über den maximalen Umfang des Kapitalbands (Art. 653 s Abs. 2 OR) finden bei der Spaltung keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_33",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "2c0a79ac3162c2971ab266ab30da727cbfcccf0ef471a2ffc1bb2dc96ebd3c6e"
+      "sha": "94878c634934f6577b02253eb5a5ed65d96b84bbb09dbebac9804fa8e6d6b61d"
     },
     {
       "id": "bund/FUSG/art_34",
@@ -873,7 +1161,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_34",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "6a56199de0242d80e6954ac3c695be50a1d76d1955f76bef0de72365a156b35d"
     },
@@ -886,15 +1174,19 @@
       "artikelLabel": "Art. 35",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Zwischenabschluss 1 Liegt der Bilanzstichtag beim Abschluss des Spaltungsvertrags oder bei der Erstellung des Spaltungsplans mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der an der Spaltung beteiligten Gesellschaften eingetreten, so müssen diese einen Zwischenabschluss erstellen. 2 … 32 32 Aufgehoben durch Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), mit Wirkung seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Liegt der Bilanzstichtag beim Abschluss des Spaltungsvertrags oder bei der Erstellung des Spaltungsplans mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der an der Spaltung beteiligten Gesellschaften eingetreten, so müssen diese einen Zwischenabschluss erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_35",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "111ae6107ddc7640e6a49e1c7542931324b3776c73c954c49db18b7ff333616f"
+      "sha": "d412b9237c0de774ee568ddb963d5b90284949981b24d265bd89d85284da066c"
     },
     {
       "id": "bund/FUSG/art_36",
@@ -905,15 +1197,23 @@
       "artikelLabel": "Art. 36",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Spaltungsvertrag und Spaltungsplan 1 Überträgt eine Gesellschaft durch Spaltung Vermögensteile auf bestehende Gesellschaften, so schliessen die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften einen Spaltungsvertrag ab. 2 Will eine Gesellschaft durch Spaltung Vermögensteile auf neu zu gründende Gesellschaften übertragen, so erstellt ihr oberstes Leitungs- oder Verwaltungsorgan einen Spaltungsplan. 3 Der Spaltungsvertrag und der Spaltungsplan bedürfen der schriftlichen Form und der Zustimmung der Generalversammlung (Art. 43)."
+          "absatz": "1",
+          "text": "Überträgt eine Gesellschaft durch Spaltung Vermögensteile auf bestehende Gesellschaften, so schliessen die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften einen Spaltungsvertrag ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Will eine Gesellschaft durch Spaltung Vermögensteile auf neu zu gründende Gesellschaften übertragen, so erstellt ihr oberstes Leitungs- oder Verwaltungsorgan einen Spaltungsplan."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Spaltungsvertrag und der Spaltungsplan bedürfen der schriftlichen Form und der Zustimmung der Generalversammlung (Art. 43)."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_36",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "ca9e9272375b4364112df33b0e70eb0fcc0316b96cd512055809d787fa26cbcc"
+      "sha": "38055027b9a51532997d23b81bbdb2305ab2c2cb2018028ec324f362c681119c"
     },
     {
       "id": "bund/FUSG/art_37",
@@ -925,7 +1225,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Der Spaltungsvertrag oder der Spaltungsplan enthält:",
           "items": [
             {
               "marke": "a",
@@ -968,9 +1268,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_37",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "af68e3c1bb3c4daea8a34a76df15ba1fdfb27f8f8f790f5ec01408e5cbee122b"
+      "sha": "ef26bec0a58f760a9b4d8dc23e80af4abe571d0c2110c428df4ef72b05235b05"
     },
     {
       "id": "bund/FUSG/art_38",
@@ -981,8 +1281,8 @@
       "artikelLabel": "Art. 38",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Ein Gegenstand des Aktivvermögens, der sich auf Grund des Spaltungsvertrags oder des Spaltungsplans nicht zuordnen lässt:",
           "items": [
             {
               "marke": "a",
@@ -993,13 +1293,21 @@
               "text": "verbleibt bei der Abspaltung bei der übertragenden Gesellschaft."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Absatz 1 gilt sinngemäss für Forderungen und immaterielle Rechte."
+        },
+        {
+          "absatz": "3",
+          "text": "Die an einer Aufspaltung beteiligten Gesellschaften haften solidarisch für Verbind­lichkeiten, die sich auf Grund des Spaltungsvertrags oder des Spaltungsplans nicht zuordnen lassen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_38",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "4c730f3d262cff2974d5b0aa0558fefee18b61fb478f0bc2bb809b404714c1c6"
+      "sha": "d93059bebb09a885bcc6be61d5327942df8d73c7c4984c9363beb7ba12ed66b8"
     },
     {
       "id": "bund/FUSG/art_39",
@@ -1010,8 +1318,16 @@
       "artikelLabel": "Art. 39",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften müssen einen schriftlichen Bericht über die Spaltung erstellen. Sie können den Bericht auch ge­meinsam verfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf die Erstellung eines Spaltungs­berichts verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Bericht sind rechtlich und wirtschaftlich zu erläutern und zu begründen:",
           "items": [
             {
               "marke": "a",
@@ -1046,13 +1362,17 @@
               "text": "die Auswirkungen der Spaltung auf die Gläubigerinnen und Gläubiger der an der Spaltung beteiligten Gesellschaften."
             }
           ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Neugründung einer Gesellschaft im Rahmen einer Spaltung ist dem Spaltungsbericht der Entwurf der Statuten der neuen Gesellschaft beizufügen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_39",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "fe2e4c1a8cd0fe7d926c1afe76765eb5f4de7b8facd0610f6cf47925dd6e432f"
+      "sha": "1c8cf388b8f066e568ce01cac9524d74fcf202f24f14b1c553cd98c98a19dfea"
     },
     {
       "id": "bund/FUSG/art_40",
@@ -1069,7 +1389,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_40",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "901b7e2ac02efe10cc4364eae8b899c79a625b7c813a40720c9dd1ce718d1110"
     },
@@ -1082,8 +1402,8 @@
       "artikelLabel": "Art. 41",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Jede der an der Spaltung beteiligten Gesellschaften muss an ihrem Sitz den Gesellschafterinnen und Gesellschaftern während zweier Monate vor der Beschlussfassung Einsicht in folgende Unterlagen aller an der Spaltung beteiligten Gesellschaften gewähren:",
           "items": [
             {
               "marke": "a",
@@ -1102,13 +1422,25 @@
               "text": "die Jahresrechnungen und die Jahresberichte der letzten drei Geschäftsjahre sowie gegebe­nenfalls den Zwischenabschluss."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf das Einsichtsverfahren nach Absatz 1 verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesellschafterinnen und Gesellschafter können von den beteiligten Gesellschaften Ko­pien der Unterlagen nach Absatz 1 verlangen. Diese müssen ihnen unentgeltlich zur Verfü­gung gestellt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Jede der an der Spaltung beteiligten Gesellschaften muss im Schweizerischen Han­delsamts­blatt auf die Möglichkeit zur Einsichtnahme hinweisen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_41",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "413131eb20089eb69ce9fbc409b60784940722f307067c836ae60fc2151c8ebc"
+      "sha": "e7f5d322d274948c7b054d22659a6123b624f68afddf31fc5fec9976ea005ca2"
     },
     {
       "id": "bund/FUSG/art_42",
@@ -1125,7 +1457,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_42",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "8e815baab7c22f878aefccdb10d2b27ec8014d5a4ccddef2e33ed68a735750ce"
     },
@@ -1138,15 +1470,23 @@
       "artikelLabel": "Art. 43",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Spaltungsbeschluss 1 Die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften dürfen den Spaltungsvertrag oder den Spaltungsplan erst der Generalversammlung zur Beschlussfassung unterbreiten, wenn die Sicherstellung nach Artikel 46 erfolgt ist. 2 Für die Beschlussfassung gelten die erforderlichen Mehrheiten nach Artikel 18 Absätze 1, 3, 4 und 6. 3 Bei der asymmetrischen Spaltung müssen mindestens 90 Prozent aller Gesellschaf­terinnen und Gesellschafter der übertragenden Gesellschaft, die über ein Stimm­recht verfügen, zustimmen."
+          "absatz": "1",
+          "text": "Die obersten Leitungs- oder Verwaltungsorgane der beteiligten Gesellschaften dürfen den Spaltungsvertrag oder den Spaltungsplan erst der Generalversammlung zur Beschlussfassung unterbreiten, wenn die Sicherstellung nach Artikel 46 erfolgt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Beschlussfassung gelten die erforderlichen Mehrheiten nach Artikel 18 Absätze 1, 3, 4 und 6."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der asymmetrischen Spaltung müssen mindestens 90 Prozent aller Gesellschaf­terinnen und Gesellschafter der übertragenden Gesellschaft, die über ein Stimm­recht verfügen, zustimmen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_43",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "f1e1ebe51557cf2270414a845f21c15cc8a6e96df8fc3cf9fe9173f2eea56f7c"
+      "sha": "5ad2cab02b1fa166f7188633903795624263185cb02718bc39a70889e02d88d0"
     },
     {
       "id": "bund/FUSG/art_44",
@@ -1163,7 +1503,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_44",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "a92ca6b2e0af078e699b813349da755dab939b38e8991caba45c6ae993fdbc4f"
     },
@@ -1182,7 +1522,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_45",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "82674dd283363cef9a24840b09fed930caf8eb87a700b83eb45f0fea8a19b68f"
     },
@@ -1195,15 +1535,23 @@
       "artikelLabel": "Art. 46",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Sicherstellung der Forderungen 1 Die an der Spaltung beteiligten Gesellschaften müssen die Forderungen der Gläubigerinnen und Gläubiger sicherstellen, wenn diese es innerhalb von zwei Monaten nach der Aufforderung an die Gläubigerinnen und Gläubiger verlangen. 2 Die Pflicht zur Sicherstellung entfällt, wenn die Gesellschaft nachweist, dass die Erfüllung der Forderung durch die Spaltung nicht gefährdet wird. 3 Anstatt eine Sicherheit zu leisten, kann die Gesellschaft die Forderung erfüllen, sofern die anderen Gläubigerinnen und Gläubiger nicht geschädigt werden."
+          "absatz": "1",
+          "text": "Die an der Spaltung beteiligten Gesellschaften müssen die Forderungen der Gläubigerinnen und Gläubiger sicherstellen, wenn diese es innerhalb von zwei Monaten nach der Aufforderung an die Gläubigerinnen und Gläubiger verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Pflicht zur Sicherstellung entfällt, wenn die Gesellschaft nachweist, dass die Erfüllung der Forderung durch die Spaltung nicht gefährdet wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Anstatt eine Sicherheit zu leisten, kann die Gesellschaft die Forderung erfüllen, sofern die anderen Gläubigerinnen und Gläubiger nicht geschädigt werden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_46",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "2da74265c415d68cacea005ffb0b55b55497f389c15597331259b3c01244fafa"
+      "sha": "ab9b6639bc9467ffd6a9e560911abb06d82e35a95c7a429d49aac7f1646cee20"
     },
     {
       "id": "bund/FUSG/art_47",
@@ -1214,8 +1562,12 @@
       "artikelLabel": "Art. 47",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Werden die Forderungen einer Gläubigerin oder eines Gläubigers von der Gesellschaft, der die Verbindlichkeiten durch den Spaltungsvertrag oder den Spaltungsplan zugeordnet wurden (primär haftende Gesellschaft), nicht befriedigt, so haften die übrigen an der Spaltung beteiligten Gesellschaften (subsidiär haftende Gesellschaften) solidarisch."
+        },
+        {
+          "absatz": "2",
+          "text": "Subsidiär haftende Gesellschaften können nur belangt werden, wenn eine Forderung nicht sichergestellt ist und die primär haftende Gesellschaft:",
           "items": [
             {
               "marke": "a",
@@ -1242,9 +1594,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_47",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "245398822700a2f3967b11678a7e62e2d9c9e48a2aa41a89b30403782d2b4e53"
+      "sha": "77bac6f98a65d585fc93324767400877879828dc6b3fd618df7528950d6a3d8b"
     },
     {
       "id": "bund/FUSG/art_48",
@@ -1261,7 +1613,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_48",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "0052718049ff0b54887d4fb41289be3154776adacc2ec45ef440dd3276b88761"
     },
@@ -1274,15 +1626,23 @@
       "artikelLabel": "Art. 49",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Übergang der Arbeitsverhältnisse, Sicherstellung und persönliche Haftung 1 Für den Übergang der Arbeitsverhältnisse findet Artikel 333 des OR 33 Anwendung. 2 Die Arbeitnehmerinnen und Arbeitnehmer der an der Spaltung beteiligten Gesellschaften können gemäss Artikel 46 die Sicherstellung ihrer Forderungen aus Arbeitsvertrag verlangen, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Über­gangs, durch die Arbeitnehmerin oder den Arbeitnehmer beendigt wird. 3 Artikel 27 Absatz 3 findet entsprechende Anwendung. 33 SR 220"
+          "absatz": "1",
+          "text": "Für den Übergang der Arbeitsverhältnisse findet Artikel 333 des OR Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Arbeitnehmerinnen und Arbeitnehmer der an der Spaltung beteiligten Gesellschaften können gemäss Artikel 46 die Sicherstellung ihrer Forderungen aus Arbeitsvertrag verlangen, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Über­gangs, durch die Arbeitnehmerin oder den Arbeitnehmer beendigt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 27 Absatz 3 findet entsprechende Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_49",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "2c5ee9ff690d179a5b4a80b2f8784776d88672574851c5228cbbc89c32b2af19"
+      "sha": "5fb709089045ffe0afdb96784e10d33603a79683ae2d50c0a02b0f061cff192b"
     },
     {
       "id": "bund/FUSG/art_50",
@@ -1299,7 +1659,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_50",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "75a04fc91c54d18ede0dd544d7c0c1c2e35189d0440d09a63e1d9340472a6f2b"
     },
@@ -1312,15 +1672,23 @@
       "artikelLabel": "Art. 51",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Eintragung ins Handelsregister 1 Sobald der Spaltungsbeschluss vorliegt, muss das oberste Leitungs- oder Verwaltungsorgan dem Handelsregisteramt die Spaltung zur Eintragung anmelden. 2 Muss die übertragende Gesellschaft infolge der Abspaltung ihr Kapital herabsetzen, so sind dem Handelsregisteramt zusätzlich die geänderten Statuten zu unterbreiten. 3 Im Falle der Aufspaltung wird die übertragende Gesellschaft mit der Eintragung der Spal­tung im Handelsregister gelöscht."
+          "absatz": "1",
+          "text": "Sobald der Spaltungsbeschluss vorliegt, muss das oberste Leitungs- oder Verwaltungsorgan dem Handelsregisteramt die Spaltung zur Eintragung anmelden."
+        },
+        {
+          "absatz": "2",
+          "text": "Muss die übertragende Gesellschaft infolge der Abspaltung ihr Kapital herabsetzen, so sind dem Handelsregisteramt zusätzlich die geänderten Statuten zu unterbreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Falle der Aufspaltung wird die übertragende Gesellschaft mit der Eintragung der Spal­tung im Handelsregister gelöscht."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_51",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "7b2dd2d1d72ea5f0d61de6ce4d5b05643dfab13bed3d03b00e2eadce6e77af94"
+      "sha": "263cf9cee2e4bca47aabdfe14c537c7cd3b72bc4976e517be5fc7dfc95b8696f"
     },
     {
       "id": "bund/FUSG/art_52",
@@ -1337,7 +1705,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_52",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "7d7d54b88ceceab63476dc3408a099ee7aa3a861399f0499ab3d519aa2532a48"
     },
@@ -1356,7 +1724,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_53",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "bfc06ebbb9212a00f3f98947fd42d5ea56bc3a468426f6d500db64c4822dd404"
     },
@@ -1369,8 +1737,58 @@
       "artikelLabel": "Art. 54",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Eine Kapitalgesellschaft kann sich umwandeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in eine Kapitalgesellschaft mit einer anderen Rechtsform;"
+            },
+            {
+              "marke": "b",
+              "text": "in eine Genossenschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Kollektivgesellschaft kann sich umwandeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in eine Kapitalgesellschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "in eine Genossenschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "in eine Kommanditgesellschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Kommanditgesellschaft kann sich umwandeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in eine Kapitalgesellschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "in eine Genossenschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "in eine Kollektivgesellschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Genossenschaft kann sich umwandeln:",
           "items": [
             {
               "marke": "a",
@@ -1381,13 +1799,17 @@
               "text": "in einen Verein, falls sie über keine Anteilscheine verfügt und der Verein ins Handelsregis­ter eingetragen wird."
             }
           ]
+        },
+        {
+          "absatz": "5",
+          "text": "Ein Verein kann sich in eine Kapitalgesellschaft oder in eine Genossenschaft umwandeln, falls er im Handelsregister eingetragen ist."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_54",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "0741a45082696ee8a5f10fa97d0b56852763d1784a53c0109eea9eb50439f165"
+      "sha": "bef1029c516931950c07aa30f4673907f8bee049a04c22313d02dbd6af0e4462"
     },
     {
       "id": "bund/FUSG/art_55",
@@ -1398,8 +1820,22 @@
       "artikelLabel": "Art. 55",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Eine Kollektivgesellschaft kann sich in eine Kommanditgesellschaft umwandeln, indem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Kommanditärin oder ein Kommanditär in die Kollektivgesellschaft eintritt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Gesellschafterin oder ein Gesellschafter zur Kommanditärin oder zum Kommanditär wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Kommanditgesellschaft kann sich in eine Kollektivgesellschaft umwandeln, indem:",
           "items": [
             {
               "marke": "a",
@@ -1410,13 +1846,21 @@
               "text": "alle Kommanditärinnen und Kommanditäre zu unbeschränkt haftenden Gesellschafterin­nen und Gesellschaftern werden."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fortführung einer Kollektiv- oder Kommanditgesellschaft als Einzel­unter­nehmen nach Artikel 579 des Obligationenrechts bleibt vorbehalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Auf die Umwandlung gemäss diesem Artikel finden die Bestimmungen dieses Kapitels keine Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_55",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "67ed48a7a3a1772aefc8cdd6a06f9c2bf03e4624048f542419c636638eaf7b26"
+      "sha": "9217e141bbbdfb7407c0a14869d3671f70883e045f673b406caa6ef2a028eb88"
     },
     {
       "id": "bund/FUSG/art_56",
@@ -1427,15 +1871,31 @@
       "artikelLabel": "Art. 56",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Wahrung der Anteils- und Mitgliedschaftsrechte 1 Die Anteils- und Mitgliedschaftsrechte der Gesellschafterinnen und Gesellschafter sind bei der Umwandlung zu wahren. 2 Gesellschafterinnen und Gesellschafter ohne Anteilscheine haben bei der Umwandlung ihrer Gesellschaft in eine Kapitalgesellschaft Anspruch auf mindestens einen Anteil. 3 Für Anteile ohne Stimmrecht müssen gleichwertige Anteile oder Anteile mit Stimmrecht gewährt werden. 4 Für Sonderrechte, die mit Anteils- oder Mitgliedschaftsrechten verbunden sind, müssen gleichwertige Rechte oder eine angemessene Abgeltung gewährt werden. 5 Für Genussscheine sind gleichwertige Rechte zu gewähren, oder sie sind zum wirklichen Wert im Zeitpunkt der Erstellung des Umwandlungsplans zurückzu­kaufen."
+          "absatz": "1",
+          "text": "Die Anteils- und Mitgliedschaftsrechte der Gesellschafterinnen und Gesellschafter sind bei der Umwandlung zu wahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Gesellschafterinnen und Gesellschafter ohne Anteilscheine haben bei der Umwandlung ihrer Gesellschaft in eine Kapitalgesellschaft Anspruch auf mindestens einen Anteil."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Anteile ohne Stimmrecht müssen gleichwertige Anteile oder Anteile mit Stimmrecht gewährt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Sonderrechte, die mit Anteils- oder Mitgliedschaftsrechten verbunden sind, müssen gleichwertige Rechte oder eine angemessene Abgeltung gewährt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Genussscheine sind gleichwertige Rechte zu gewähren, oder sie sind zum wirklichen Wert im Zeitpunkt der Erstellung des Umwandlungsplans zurückzu­kaufen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_56",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "d75d7e1f7256e3fc74172f4a6ed25943fede7256f94b0395e0d07eefdcb9a893"
+      "sha": "7d74555ce0e2da2b6d22b1151cd18e63608ed585af03803996d0ae0d00e8cef3"
     },
     {
       "id": "bund/FUSG/art_57",
@@ -1452,7 +1912,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_57",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "29dcd233d42ade69eec164b6e4831f92231a084a83af34376110d929a6c63bba"
     },
@@ -1465,15 +1925,19 @@
       "artikelLabel": "Art. 58",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Zwischenabschluss 1 Liegt der Bilanzstichtag zum Zeitpunkt der Erstattung des Umwandlungsberichts mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der Gesellschaft eingetreten, so muss diese einen Zwischenabschluss erstellen. 2 … 39 39 Aufgehoben durch Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), mit Wirkung seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Liegt der Bilanzstichtag zum Zeitpunkt der Erstattung des Umwandlungsberichts mehr als sechs Monate zurück oder sind seit Abschluss der letzten Bilanz wichtige Änderungen in der Vermögenslage der Gesellschaft eingetreten, so muss diese einen Zwischenabschluss erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_58",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "14628a58f9c96cfda76565702053b024881c8bae2e241f17879f28606cc632db"
+      "sha": "2bc9c9468e0b5896350229186362e22552cd72620996c1be560a9362b74847f8"
     },
     {
       "id": "bund/FUSG/art_59",
@@ -1484,15 +1948,19 @@
       "artikelLabel": "Art. 59",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Erstellung des Umwandlungsplans 1 Das oberste Leitungs- oder Verwaltungsorgan erstellt einen Umwandlungsplan. 2 Der Umwandlungsplan bedarf der schriftlichen Form und der Zustimmung der Generalversammlung beziehungsweise der Gesellschafterinnen und Gesellschafter gemäss Artikel 64."
+          "absatz": "1",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan erstellt einen Umwandlungsplan."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Umwandlungsplan bedarf der schriftlichen Form und der Zustimmung der Generalversammlung beziehungsweise der Gesellschafterinnen und Gesellschafter gemäss Artikel 64."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_59",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "8d1db84563b9f77afbb8132b75d45fb8c01ea43595ef44f61d1261e4fd040c65"
+      "sha": "dd0e50232c4c554e3a01bdc093f955d8f16b8e6563254a014ba1defe154e273f"
     },
     {
       "id": "bund/FUSG/art_60",
@@ -1504,7 +1972,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Der Umwandlungsplan enthält:",
           "items": [
             {
               "marke": "a",
@@ -1523,9 +1991,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_60",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "417c9d5ef1b1ecc281b3022f6408baadc72439129e86493d2873c1a30395e6d3"
+      "sha": "4ca5d4214ec67e81ee47686404340e6effab86228cc7cd35af03310a9b4bba07"
     },
     {
       "id": "bund/FUSG/art_61",
@@ -1536,8 +2004,16 @@
       "artikelLabel": "Art. 61",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan muss einen schriftlichen Bericht über die Umwandlung erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf die Erstellung eines Umwandlungsberichts verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Bericht sind rechtlich und wirtschaftlich zu erläutern und zu begründen:",
           "items": [
             {
               "marke": "a",
@@ -1568,9 +2044,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_61",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "3a5095b40cece739e5c831e5c23c427dfaea11de3993a47c397900196b3b1b38"
+      "sha": "6b7500df2b69349389c85508ea10ea765255f1832746515b73edd6235ad15f2c"
     },
     {
       "id": "bund/FUSG/art_62",
@@ -1581,15 +2057,27 @@
       "artikelLabel": "Art. 62",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Prüfung des Umwandlungsplans und des Umwandlungsberichts 1 Die Gesellschaft muss den Umwandlungsplan, den Umwand­lungsbericht und die der Umwandlung zu Grunde liegende Bilanz von einer zugelassenen Revisions­expertin oder einem zugelassenen Revi­sionsexperten prüfen lassen. 40 2 Kleine und mittlere Unternehmen können auf die Prüfung verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen. 3 Die Gesellschaft muss der Revisionsexpertin oder dem Revisions­experten alle zweckdienlichen Auskünfte und Unterlagen geben. 41 4 Die Revisionsexpertin oder der Revisionsexperte muss prüfen, ob die Voraus­setzungen für die Umwandlung erfüllt sind, insbesondere, ob die Rechtsstellung der Gesellschafterinnen und Gesellschafter nach der Umwandlung gewahrt bleibt. 42 40 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 ). 41 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 ). 42 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Die Gesellschaft muss den Umwandlungsplan, den Umwand­lungsbericht und die der Umwandlung zu Grunde liegende Bilanz von einer zugelassenen Revisions­expertin oder einem zugelassenen Revi­sionsexperten prüfen lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf die Prüfung verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesellschaft muss der Revisionsexpertin oder dem Revisions­experten alle zweckdienlichen Auskünfte und Unterlagen geben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Revisionsexpertin oder der Revisionsexperte muss prüfen, ob die Voraus­setzungen für die Umwandlung erfüllt sind, insbesondere, ob die Rechtsstellung der Gesellschafterinnen und Gesellschafter nach der Umwandlung gewahrt bleibt."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_62",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "8bbd59f16534615d663bc07ae7351c64e0c26a071cfeb730db9c53596c2e91e8"
+      "sha": "71201a9bc9994f70ca3854ab7cf7d74966cf92d48b70242ef2f37924ac53712b"
     },
     {
       "id": "bund/FUSG/art_63",
@@ -1600,8 +2088,8 @@
       "artikelLabel": "Art. 63",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Gesellschaft muss an ihrem Sitz den Gesellschafterinnen und Gesellschaftern während der 30 Tage vor der Beschlussfassung Einsicht in folgende Unterlagen gewähren:",
           "items": [
             {
               "marke": "a",
@@ -1620,13 +2108,25 @@
               "text": "die Jahresrechnungen und Jahresberichte der letzten drei Geschäftsjahre sowie gegebe­nenfalls den Zwischenabschluss."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Kleine und mittlere Unternehmen können auf das Einsichtsverfahren nach Absatz 1 verzichten, sofern alle Gesellschafterinnen und Gesellschafter zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesellschafterinnen und Gesellschafter können von der Gesellschaft Kopien der Unterla­gen nach Absatz 1 verlangen. Diese müssen ihnen unentgeltlich zur Ver­fügung gestellt wer­den."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gesellschaft muss die Gesellschafterinnen und Gesellschafter in geeigneter Form auf die Möglichkeit zur Einsichtnahme hinweisen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_63",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "e1d69d34f3badbc4dae283da3e40d91514519c0a2096b561fdacff93f7a6726b"
+      "sha": "75717caaaf51bd92edcb983406cdd3a6e126050c6e24576e70fc42b3119f3c04"
     },
     {
       "id": "bund/FUSG/art_64",
@@ -1637,8 +2137,8 @@
       "artikelLabel": "Art. 64",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Bei den Kapitalgesellschaften, den Genossenschaften und den Vereinen muss das oberste Leitungs- oder Verwaltungsorgan den Umwandlungsplan der General­ver­sammlung zur Beschlussfassung unterbreiten. Folgende Mehrheiten sind erfor­der­lich:",
           "items": [
             {
               "marke": "a",
@@ -1661,13 +2161,17 @@
               "text": "bei Vereinen mindestens drei Viertel der an der Generalversammlung anwesenden Mit­glieder."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Kollektiv- und bei Kommanditgesellschaften bedarf der Umwandlungsplan der Zustimmung aller Gesellschafterinnen und Gesellschafter. Der Gesellschaftsvertrag kann jedoch vorsehen, dass die Zustimmung von drei Vierteln der Gesellschafterinnen und Gesellschafter genügt."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_64",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "9b015703c6185ef1a67ee648d49603942c6221111f51c58bf12f047a31146cf0"
+      "sha": "80d460984de175c5aee260b0b77ef3221c10e78fb31e5e6fd92b728ef8116416"
     },
     {
       "id": "bund/FUSG/art_65",
@@ -1684,7 +2188,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_65",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "df0e115d0ae6bcf259e4ea77cf1e510a23b1e40dc6337545444e1956d08e670e"
     },
@@ -1703,7 +2207,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_66",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "1549be83d085e88f2cd8bd60d972253eef4cb48d37871ebc9ca77d5f4c804c45"
     },
@@ -1722,7 +2226,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_67",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "aceff2ed358cf15c49754b1a43b18de12a2e9fab76849551b01500d236a582d8"
     },
@@ -1735,15 +2239,19 @@
       "artikelLabel": "Art. 68",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "1 Für die persönliche Haftung der Gesellschafterinnen und Gesellschafter findet Artikel 26 entsprechende Anwendung. 2 Für die Haftung für Verbindlichkeiten aus Arbeitsvertrag findet Artikel 27 Absatz 3 entsprechende Anwendung."
+          "absatz": "1",
+          "text": "Für die persönliche Haftung der Gesellschafterinnen und Gesellschafter findet Artikel 26 entsprechende Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Haftung für Verbindlichkeiten aus Arbeitsvertrag findet Artikel 27 Absatz 3 entsprechende Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_68",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "f447d4b39742893e0c26be1bdc53c86ebd392b877753acd9b1ca7c0b4295aba6"
+      "sha": "b2590d007d678b6915cf37e534c0b01947f1b06d9451d333eee18ca9a1be8f53"
     },
     {
       "id": "bund/FUSG/art_69",
@@ -1754,15 +2262,19 @@
       "artikelLabel": "Art. 69",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "1 Im Handelsregister eingetragene Gesellschaften, Kommanditgesellschaften für kollektive Kapitalanlagen, Investmentgesellschaften mit variablem Kapital und im Handelsregister eingetragene Einzelunternehmen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Rechtsträger des Privatrechts übertragen. 44 Wenn die Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft Anteils- oder Mitgliedschaftsrechte der übernehmenden Gesellschaft erhalten, gilt Kapitel 3. 2 Vorbehalten bleiben die gesetzlichen und statutarischen Bestimmungen über den Kapitalschutz und die Liquidation. 44 Fassung gemäss Anhang Ziff. II 1 des Kollektivanlagengesetzes vom 23. Juni 2006, in Kraft seit 1. Jan. 2007 ( AS 2006 5379 ; BBl 2005 6395 )."
+          "absatz": "1",
+          "text": "Im Handelsregister eingetragene Gesellschaften, Kommanditgesellschaften für kollektive Kapitalanlagen, Investmentgesellschaften mit variablem Kapital und im Handelsregister eingetragene Einzelunternehmen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Rechtsträger des Privatrechts übertragen. Wenn die Gesellschafterinnen und Gesellschafter der übertragenden Gesellschaft Anteils- oder Mitgliedschaftsrechte der übernehmenden Gesellschaft erhalten, gilt Kapitel 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die gesetzlichen und statutarischen Bestimmungen über den Kapitalschutz und die Liquidation."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_69",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "ca59b5c92072d2c00dc7abac4530ee9bb0acd34844ab5ea1df1f0572f5ff6063"
+      "sha": "1a940ce8929f6c985600e3e16f7ecede008c17f7a748bcf8f69d086b8dcb9aa2"
     },
     {
       "id": "bund/FUSG/art_70",
@@ -1773,15 +2285,19 @@
       "artikelLabel": "Art. 70",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Abschluss des Übertragungsvertrags 1 Der Übertragungsvertrag muss von den obersten Leitungs- oder Verwaltungsorganen der an der Vermögensübertragung beteiligten Rechtsträger abgeschlossen werden. 2 Der Übertragungsvertrag bedarf der schriftlichen Form. Werden Grundstücke übertragen, so bedürfen die entsprechenden Teile des Vertrages der öffentlichen Beurkundung. Eine einzige öffentliche Urkunde genügt auch dann, wenn Grundstücke, die Gegenstand einer Vermögensübertragung sind, in verschiedenen Kantonen liegen. 45 Die Urkunde muss durch eine Urkundsperson am Sitz des übertragenden Rechtsträgers errichtet werden. 45 Fassung des dritten Satzes gemäss Anhang Ziff. 2 des BG vom 19. Juni 2020 (Aktienrecht), in Kraft seit 1. Jan. 2023 ( AS 2020 4005 ; 2022 109 ; BBl 2017 399 )."
+          "absatz": "1",
+          "text": "Der Übertragungsvertrag muss von den obersten Leitungs- oder Verwaltungsorganen der an der Vermögensübertragung beteiligten Rechtsträger abgeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Übertragungsvertrag bedarf der schriftlichen Form. Werden Grundstücke übertragen, so bedürfen die entsprechenden Teile des Vertrages der öffentlichen Beurkundung. Eine einzige öffentliche Urkunde genügt auch dann, wenn Grundstücke, die Gegenstand einer Vermögensübertragung sind, in verschiedenen Kantonen liegen. Die Urkunde muss durch eine Urkundsperson am Sitz des übertragenden Rechtsträgers errichtet werden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_70",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "4cb3a34eda7e48a5d40137c36229415fcf0586db5cfbde70ffcc18cc150d8161"
+      "sha": "6d6e51e152585b78afab3cc757e2cd34569ec213959e61497f0dd9f5ab47d887"
     },
     {
       "id": "bund/FUSG/art_71",
@@ -1792,8 +2308,8 @@
       "artikelLabel": "Art. 71",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Übertragungsvertrag enthält:",
           "items": [
             {
               "marke": "a",
@@ -1816,13 +2332,17 @@
               "text": "eine Liste der Arbeitsverhältnisse, die mit der Vermögensübertragung übergehen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vermögensübertragung ist nur zulässig, wenn das Inventar einen Aktivenüberschuss ausweist."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_71",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "64b72ef294e9eef379d04da733f5747e5d7e57cce453b6cc4f8454397ffb9675"
+      "sha": "9d5fe0e39521eb1ca6d29ee61dd8b8510d4c147c0cbb7fb178c205e11f7be714"
     },
     {
       "id": "bund/FUSG/art_72",
@@ -1839,7 +2359,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_72",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "4d7d9a3af2df77c1fda95261157ff0f4e2bf5eb69670bcb1ca12d57f625ed3d2"
     },
@@ -1852,15 +2372,19 @@
       "artikelLabel": "Art. 73",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "1 Das oberste Leitungs- oder Verwaltungsorgan des übertragenden Rechtsträgers muss dem Handelsregisteramt die Vermögensübertragung zur Eintragung anmelden. 2 Die Vermögensübertragung wird mit der Eintragung ins Handelsregister rechtswirksam. In diesem Zeitpunkt gehen alle im Inventar aufgeführten Aktiven und Passiven von Gesetzes wegen auf den übernehmenden Rechtsträger über. Artikel 34 des Kartellgesetzes vom 6. Oktober 1995 46 bleibt vorbehalten. 46 SR 251"
+          "absatz": "1",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan des übertragenden Rechtsträgers muss dem Handelsregisteramt die Vermögensübertragung zur Eintragung anmelden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vermögensübertragung wird mit der Eintragung ins Handelsregister rechtswirksam. In diesem Zeitpunkt gehen alle im Inventar aufgeführten Aktiven und Passiven von Gesetzes wegen auf den übernehmenden Rechtsträger über. Artikel 34 des Kartellgesetzes vom 6. Oktober 1995 bleibt vorbehalten."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_73",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "30dc6290b3ed733ae8109c8206e619c85ea7f7707d140be05e305f89aa0b20e8"
+      "sha": "0369e98c01bc298c1a623429458a1aa68af3710a8038ccac6690be10527c0e59"
     },
     {
       "id": "bund/FUSG/art_74",
@@ -1871,8 +2395,12 @@
       "artikelLabel": "Art. 74",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Das oberste Leitungs- oder Verwaltungsorgan der übertragenden Gesellschaft muss die Gesellschafterinnen und Gesellschafter über die Vermögensübertragung im Anhang zur Jahresrechnung informieren. Ist keine Jahresrechnung zu erstellen, so muss über die Vermögensübertragung an der nächsten Generalversammlung informiert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Anhang beziehungsweise an der Generalversammlung sind rechtlich und wirtschaftlich zu erläutern und zu begründen:",
           "items": [
             {
               "marke": "a",
@@ -1891,13 +2419,17 @@
               "text": "die Folgen für die Arbeitnehmerinnen und Arbeitnehmer und Hinweise auf den Inhalt eines allfälligen Sozialplans."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationspflicht entfällt, falls die übertragenen Aktiven weniger als 5 Pro­zent der Bilanzsumme der übertragenden Gesellschaft ausmachen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_74",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "23428df162076e6fed7f18f7d84a17bf46016110cd0aa10fbacc924c7f1dc7d2"
+      "sha": "16ea790f5f71b433db5d1d5fed6121e59cce9e8d3cb687485caaa2ec008daa0a"
     },
     {
       "id": "bund/FUSG/art_75",
@@ -1908,8 +2440,16 @@
       "artikelLabel": "Art. 75",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die bisherigen Schuldner haften für die vor der Vermögensübertragung begründeten Schulden während dreier Jahre solidarisch mit dem neuen Schuldner."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ansprüche gegen den übertragenden Rechtsträger verjähren spätestens drei Jahre nach der Veröffentlichung der Vermögensübertragung. Wird die Forderung erst nach der Veröffentlichung fällig, so beginnt die Verjährung mit der Fälligkeit."
+        },
+        {
+          "absatz": "3",
+          "text": "Die an der Vermögensübertragung beteiligten Rechtsträger müssen die Forderungen sicherstellen, wenn:",
           "items": [
             {
               "marke": "a",
@@ -1920,13 +2460,17 @@
               "text": "die Gläubigerinnen und Gläubiger glaubhaft machen, dass die solidarische Haftung keinen ausreichenden Schutz bietet."
             }
           ]
+        },
+        {
+          "absatz": "4",
+          "text": "Anstatt eine Sicherheit zu leisten, können an der Vermögensübertragung beteiligte Rechtsträger die Forderung erfüllen, sofern die anderen Gläubigerinnen und Gläubiger nicht geschädigt werden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_75",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "494aa44b2704be97f4d2b12fa22eff96ecadac5b8fe600a8e24ff741b4418312"
+      "sha": "8aa0c93ae2216e4662dcb47cf1cffb34366afb2ab6d657d71f4c190029f60166"
     },
     {
       "id": "bund/FUSG/art_76",
@@ -1937,15 +2481,19 @@
       "artikelLabel": "Art. 76",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Übergang der Arbeitsverhältnisse und solidarische Haftung 1 Für den Übergang der Arbeitsverhältnisse auf den übernehmenden Rechtsträger findet Artikel 333 des OR 47 Anwendung. 2 Artikel 75 findet Anwendung auf alle Verbindlichkeiten aus Arbeitsvertrag, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Übergangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird. 47 SR 220"
+          "absatz": "1",
+          "text": "Für den Übergang der Arbeitsverhältnisse auf den übernehmenden Rechtsträger findet Artikel 333 des OR Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 75 findet Anwendung auf alle Verbindlichkeiten aus Arbeitsvertrag, die bis zum Zeitpunkt fällig werden, auf den das Arbeitsverhältnis ordentlicherweise beendigt werden könnte oder, bei Ablehnung des Übergangs, von der Arbeitnehmerin oder dem Arbeitnehmer beendigt wird."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_76",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "4d1e860ed8f66d8a4f7fe000aba7a95d1df01270f338aaac7d235bace51ef496"
+      "sha": "8243a0737fca2eab76b76212434b2422711760137c1c02861ff6210527c458b2"
     },
     {
       "id": "bund/FUSG/art_77",
@@ -1956,15 +2504,23 @@
       "artikelLabel": "Art. 77",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Konsultation der Arbeitnehmervertretung 1 Für die Konsultation der Arbeitnehmervertretung findet für den übertragenden wie auch für den übernehmenden Rechtsträger Artikel 333 a des OR 48 Anwendung. 2 Werden die Vorschriften von Absatz 1 nicht eingehalten, so kann die Arbeitnehmervertretung vom Gericht verlangen, dass es die Eintragung der Vermögensübertragung im Handelsregister untersagt. 3 Diese Bestimmung findet auch Anwendung auf übernehmende Rechtsträger mit Sitz im Ausland. 48 SR 220"
+          "absatz": "1",
+          "text": "Für die Konsultation der Arbeitnehmervertretung findet für den übertragenden wie auch für den übernehmenden Rechtsträger Artikel 333 a des OR Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden die Vorschriften von Absatz 1 nicht eingehalten, so kann die Arbeitnehmervertretung vom Gericht verlangen, dass es die Eintragung der Vermögensübertragung im Handelsregister untersagt."
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Bestimmung findet auch Anwendung auf übernehmende Rechtsträger mit Sitz im Ausland."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_77",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "2e31526f197c50334a0e806851189cb778a2c6245f6309cad912327b4e7ebdeb"
+      "sha": "83c4cc787c7eff4523a1430ae3000ede676655a4f5be39f10f310815c0c928db"
     },
     {
       "id": "bund/FUSG/art_78",
@@ -1975,15 +2531,19 @@
       "artikelLabel": "Art. 78",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Grundsatz 1 Stiftungen können miteinander fusionieren. 2 Die Fusion ist nur zulässig, wenn sie sachlich gerechtfertigt ist und insbesondere der Wahrung und Durchführung des Stiftungszwecks dient. Allfällige Rechtsansprüche der Destinatäre der beteiligten Stiftungen müssen gewahrt werden. Ist im Hinblick auf eine Fusion eine Zweckänderung erforderlich, so findet Artikel 86 des ZGB 49 Anwendung. 49 SR 210"
+          "absatz": "1",
+          "text": "Stiftungen können miteinander fusionieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fusion ist nur zulässig, wenn sie sachlich gerechtfertigt ist und insbesondere der Wahrung und Durchführung des Stiftungszwecks dient. Allfällige Rechtsansprüche der Destinatäre der beteiligten Stiftungen müssen gewahrt werden. Ist im Hinblick auf eine Fusion eine Zweckänderung erforderlich, so findet Artikel 86 des ZGB Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_78",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "8bc6c78c5db1b7198b848365cde18b4a07af2acec9fa7f837473e554f06f9786"
+      "sha": "cfeb09727e9b76e284f957e58641e04a7a64fd46af8093de5c93e2e32281d4ad"
     },
     {
       "id": "bund/FUSG/art_79",
@@ -1994,8 +2554,12 @@
       "artikelLabel": "Art. 79",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Fusionsvertrag muss von den obersten Organen der Stiftungen abgeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vertrag enthält:",
           "items": [
             {
               "marke": "a",
@@ -2010,13 +2574,17 @@
               "text": "den Zeitpunkt, ab dem die Handlungen der übertragenden Stiftung als für Rechnung der übernehmenden Stiftung vorgenommen gelten."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Fusionsvertrag bedarf der schriftlichen Form. Bei Familienstiftungen und kirchlichen Stiftungen bedarf der Fusionsvertrag der öffentlichen Beurkundung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_79",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "68a7db5b25bfe06e5bd7c76a965d9111da1253ff547657298afc8c286d64b58a"
+      "sha": "0a2beca501ee43b61e9fa88f9c156c1447a953bb58a391dddd874a9e0e582f31"
     },
     {
       "id": "bund/FUSG/art_80",
@@ -2033,7 +2601,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_80",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "d9016d1d274d320a109fc201ef1f47c560a5d70446dff9f01aab5a966782759c"
     },
@@ -2046,15 +2614,23 @@
       "artikelLabel": "Art. 81",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Prüfung des Fusionsvertrags 1 Die Stiftungen müssen den Fusionsvertrag sowie die Bilanzen von einer zugelassenen Revisorin oder einem zugelassenen Revisor prüfen lassen. 50 2 Sie müssen der Revisorin oder dem Revisor alle zweckdienlichen Auskünfte und Unterlagen geben. 3 Die Revisorin oder der Revisor erstellt einen Bericht, in dem insbesondere darzulegen ist, ob die allfälligen Rechtsansprüche der Destinatäre gewahrt sind und ob Forderungen von Gläubigerinnen und Gläubigern bekannt oder zu erwarten sind, zu deren Befriedigung das Vermögen der beteiligten Stiftungen nicht ausreicht. 50 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Die Stiftungen müssen den Fusionsvertrag sowie die Bilanzen von einer zugelassenen Revisorin oder einem zugelassenen Revisor prüfen lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen der Revisorin oder dem Revisor alle zweckdienlichen Auskünfte und Unterlagen geben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Revisorin oder der Revisor erstellt einen Bericht, in dem insbesondere darzulegen ist, ob die allfälligen Rechtsansprüche der Destinatäre gewahrt sind und ob Forderungen von Gläubigerinnen und Gläubigern bekannt oder zu erwarten sind, zu deren Befriedigung das Vermögen der beteiligten Stiftungen nicht ausreicht."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_81",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "f878fb3ffcf582af6b12a3e7d97aa8acf8d24f023d5e40541aa7169b553338ee"
+      "sha": "00a7a179117ac6c5e78b70a319c63054e51a41bc8e38077369b4f29d8ddd702f"
     },
     {
       "id": "bund/FUSG/art_82",
@@ -2071,7 +2647,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_82",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "0216adfbf1ee89b8f3ed084cb15c33590f3938dd35336dd7c9a402ad707726a6"
     },
@@ -2084,15 +2660,27 @@
       "artikelLabel": "Art. 83",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Genehmigung und Vollzug der Fusion 1 Bei Stiftungen, die der Aufsicht des Gemeinwesens unterstehen, beantragen die obersten Stiftungsorgane bei der zuständigen Aufsichtsbehörde die Genehmigung der Fusion. Im Antrag ist schriftlich darzulegen, dass die Voraussetzungen für die Fusion erfüllt sind. Mit dem Antrag sind der Aufsichtsbehörde die von der zugelassenen Revisorin oder dem zugelassenen Revisor geprüften Bilanzen der beteiligten Stiftungen sowie der Revisionsbericht einzureichen. 51 2 Zuständig ist die Aufsichtsbehörde der übertragenden Stiftung. Bei mehreren übertragenden Stiftungen muss jede Aufsichtsbehörde der Fusion zustimmen. 3 Die Aufsichtsbehörde erlässt nach Prüfung des Begehrens die entsprechende Verfügung und meldet im Fall der Zustimmung die Fusion zur Eintragung in das Handelsregister an. 4 Für die Rechtswirksamkeit der Fusion gilt Artikel 22 Absatz 1. 51 Fassung des dritten Satzes gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Bei Stiftungen, die der Aufsicht des Gemeinwesens unterstehen, beantragen die obersten Stiftungsorgane bei der zuständigen Aufsichtsbehörde die Genehmigung der Fusion. Im Antrag ist schriftlich darzulegen, dass die Voraussetzungen für die Fusion erfüllt sind. Mit dem Antrag sind der Aufsichtsbehörde die von der zugelassenen Revisorin oder dem zugelassenen Revisor geprüften Bilanzen der beteiligten Stiftungen sowie der Revisionsbericht einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig ist die Aufsichtsbehörde der übertragenden Stiftung. Bei mehreren übertragenden Stiftungen muss jede Aufsichtsbehörde der Fusion zustimmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde erlässt nach Prüfung des Begehrens die entsprechende Verfügung und meldet im Fall der Zustimmung die Fusion zur Eintragung in das Handelsregister an."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Rechtswirksamkeit der Fusion gilt Artikel 22 Absatz 1."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_83",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "76b2a98a56297dd4a151d4aa5b11e858d0c26dac20ebcbe11c4021310d24e587"
+      "sha": "8e09ef8d0e217e89b7b1f88a086ca19f74833f7bb5a238ba5985cf4e52519454"
     },
     {
       "id": "bund/FUSG/art_84",
@@ -2109,7 +2697,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_84",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "7b92c101682fe070bfb60d6efba82177b6a2a461441e55f7939342859fa138d5"
     },
@@ -2122,15 +2710,27 @@
       "artikelLabel": "Art. 85",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Gläubiger- und Arbeitnehmerschutz 1 Die Aufsichtsbehörde oder, bei Familienstiftungen und kirchlichen Stiftungen, das oberste Stiftungsorgan der übertragenden Stiftung hat vor Erlass der Verfügung beziehungsweise vor dem Beschluss die Gläubigerinnen und Gläubiger der an der Fusion beteiligten Stiftungen im Schweizerischen Handelsamtsblatt dreimal darauf hinzuweisen, dass sie unter Anmeldung ihrer Forderungen Sicherstellung verlangen können. Die Destinatäre mit Rechtsansprüchen haben keinen Anspruch auf Sicherstellung. 2 Die Aufsichtsbehörde oder, bei Familienstiftungen und kirchlichen Stiftungen, das oberste Stiftungsorgan kann von einer Aufforderung an die Gläubigerinnen und Gläubiger absehen, wenn auf Grund des Berichts der zugelassenen Revisorin oder des zugelassenen Revisors keine Forderungen bekannt oder zu erwarten sind, zu deren Befriedigung das Stiftungsvermögen der beteiligten Stiftungen nicht ausreicht. 53 3 Im Falle einer Aufforderung an die Gläubigerinnen und Gläubiger findet Artikel 25 Anwendung. 4 Der Arbeitnehmerschutz richtet sich nach den Artikeln 27 und 28. 53 Fassung gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Die Aufsichtsbehörde oder, bei Familienstiftungen und kirchlichen Stiftungen, das oberste Stiftungsorgan der übertragenden Stiftung hat vor Erlass der Verfügung beziehungsweise vor dem Beschluss die Gläubigerinnen und Gläubiger der an der Fusion beteiligten Stiftungen im Schweizerischen Handelsamtsblatt dreimal darauf hinzuweisen, dass sie unter Anmeldung ihrer Forderungen Sicherstellung verlangen können. Die Destinatäre mit Rechtsansprüchen haben keinen Anspruch auf Sicherstellung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsbehörde oder, bei Familienstiftungen und kirchlichen Stiftungen, das oberste Stiftungsorgan kann von einer Aufforderung an die Gläubigerinnen und Gläubiger absehen, wenn auf Grund des Berichts der zugelassenen Revisorin oder des zugelassenen Revisors keine Forderungen bekannt oder zu erwarten sind, zu deren Befriedigung das Stiftungsvermögen der beteiligten Stiftungen nicht ausreicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Falle einer Aufforderung an die Gläubigerinnen und Gläubiger findet Artikel 25 Anwendung."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Arbeitnehmerschutz richtet sich nach den Artikeln 27 und 28."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_85",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "318e51d8a24055d2fb6164294480d763023ba3b80b38e4b81fc9b88efd89ab50"
+      "sha": "2a21d3edc4a3581541f60b6fbe1535778022e4145f2112e206e2e9f59dcb6803"
     },
     {
       "id": "bund/FUSG/art_86",
@@ -2141,15 +2741,19 @@
       "artikelLabel": "Art. 86",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Grundsatz 1 Die im Handelsregister eingetragenen Stiftungen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Rechtsträger übertragen. 2 Artikel 78 Absatz 2 findet sinngemäss Anwendung. Der Übergangsvertrag richtet sich nach den Artikeln 70–72, der Gläubiger- und Arbeitnehmerschutz nach den Artikeln 75–77."
+          "absatz": "1",
+          "text": "Die im Handelsregister eingetragenen Stiftungen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Rechtsträger übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 78 Absatz 2 findet sinngemäss Anwendung. Der Übergangsvertrag richtet sich nach den Artikeln 70–72, der Gläubiger- und Arbeitnehmerschutz nach den Artikeln 75–77."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_86",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "9ddfa006d4922104de7e22d63d3c0a831910eddf72a191038d9efe826de4854e"
+      "sha": "d9cf96fda44232508361e89d5206863a2c1cbd364ea5bcfadd8f35e336900730"
     },
     {
       "id": "bund/FUSG/art_87",
@@ -2160,15 +2764,27 @@
       "artikelLabel": "Art. 87",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Genehmigung und Vollzug der Vermögensübertragung 1 Bei Stiftungen, die der Aufsicht des Gemeinwesens unterstehen, beantragen die obersten Stiftungsorgane bei der zuständigen Aufsichtsbehörde die Genehmigung der Vermögensübertragung. Im Antrag ist schriftlich darzulegen, dass die Voraussetzungen für die Vermögensübertragung erfüllt sind. 2 Zuständig ist die Aufsichtsbehörde der übertragenden Stiftung. 3 Die Aufsichtsbehörde erlässt nach Prüfung des Begehrens die entsprechende Ver­fügung. Nach Eintritt der Rechtskraft der zustimmenden Verfügung meldet sie die Vermögensübertragung zur Eintragung in das Handelsregister an. 4 Die Eintragung ins Handelsregister und die Rechtswirksamkeit richten sich nach Artikel 73."
+          "absatz": "1",
+          "text": "Bei Stiftungen, die der Aufsicht des Gemeinwesens unterstehen, beantragen die obersten Stiftungsorgane bei der zuständigen Aufsichtsbehörde die Genehmigung der Vermögensübertragung. Im Antrag ist schriftlich darzulegen, dass die Voraussetzungen für die Vermögensübertragung erfüllt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig ist die Aufsichtsbehörde der übertragenden Stiftung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde erlässt nach Prüfung des Begehrens die entsprechende Ver­fügung. Nach Eintritt der Rechtskraft der zustimmenden Verfügung meldet sie die Vermögensübertragung zur Eintragung in das Handelsregister an."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Eintragung ins Handelsregister und die Rechtswirksamkeit richten sich nach Artikel 73."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_87",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "e2d142aa99f88cf680aa6bc69a17544ae8e83e32b9b759f387e50fab74659bad"
+      "sha": "069bb83225bdda8d0cd949ba23bbf2bc4695e39e272bd2441250f009652e5b7d"
     },
     {
       "id": "bund/FUSG/art_88",
@@ -2179,15 +2795,23 @@
       "artikelLabel": "Art. 88",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Grundsatz 1 Vorsorgeeinrichtungen können miteinander fusionieren. 2 Die Fusion von Vorsorgeeinrichtungen ist nur zulässig, wenn der Vorsorgezweck und die Rechte und Ansprüche der Versicherten gewahrt bleiben. 3 Die Bestimmungen des Stiftungsrechts (Art. 80 ff. ZGB 54 ) und des BVG 55 bleiben vorbehalten. 54 SR 210 55 SR 831.40"
+          "absatz": "1",
+          "text": "Vorsorgeeinrichtungen können miteinander fusionieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fusion von Vorsorgeeinrichtungen ist nur zulässig, wenn der Vorsorgezweck und die Rechte und Ansprüche der Versicherten gewahrt bleiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bestimmungen des Stiftungsrechts (Art. 80 ff. ZGB) und des BVG bleiben vorbehalten."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_88",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "6d91986d3c9d0fb4e9c64549aabe6b8efde90707f87a5b1f0385ec02e2003daa"
+      "sha": "1c89b4b1ed7d8b12902ab5761c67e36140548df69aaeb90860ca729ca9679514"
     },
     {
       "id": "bund/FUSG/art_89",
@@ -2204,7 +2828,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_89",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "cf338505f35b26bd30e763bd4f3f2f69dd037da35f981e93a2fec8a3a61aa83e"
     },
@@ -2217,8 +2841,12 @@
       "artikelLabel": "Art. 90",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Fusionsvertrag muss von den obersten Leitungsorganen der beteiligten Vorsorgeeinrichtungen abgeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Fusionsvertrag enthält:",
           "items": [
             {
               "marke": "a",
@@ -2233,13 +2861,17 @@
               "text": "den Zeitpunkt, von dem an die Handlungen der übertragenden Vorsorgeeinrichtung als für Rechnung der übernehmenden Vorsorgeeinrichtung vor­genommen gelten."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Fusionsvertrag bedarf der schriftlichen Form."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_90",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "5c8b6949309265ffddf302e399afb874660ea8e914479b37c5c5faae4ec62c23"
+      "sha": "1b4d19e3e5c05fbc7b4e35649c9941ec2fa6f1ec698da8687ced8b8538ea22c6"
     },
     {
       "id": "bund/FUSG/art_91",
@@ -2250,8 +2882,12 @@
       "artikelLabel": "Art. 91",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die obersten Leitungsorgane der Vorsorgeeinrichtungen müssen einen schrift­lichen Bericht über die Fusion erstellen. Sie können den Bericht auch gemeinsam verfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Bericht sind zu erläutern und zu begründen:",
           "items": [
             {
               "marke": "a",
@@ -2270,9 +2906,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_91",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "70018c31c6897742284ed72980aa2ed9dc226df04d0fc8bb440eb787b138f462"
+      "sha": "79b33b0cc2ca7353b103ac1e10b385b6a1729f2c4233de42cca27fb090d8f880"
     },
     {
       "id": "bund/FUSG/art_92",
@@ -2283,15 +2919,23 @@
       "artikelLabel": "Art. 92",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Prüfung des Fusionsvertrags 1 Die beteiligten Vorsorgeeinrichtungen müssen den Fusionsvertrag, den Fusions­bericht und die Bilanz von ihren Kontrollstellen sowie von einer anerkannten Expertin oder einem anerkannten Experten für die berufliche Vorsorge prüfen lassen. Sie kön­nen eine gemeinsame Expertin oder einen gemeinsamen Experten bestimmen. 2 Die beteiligten Vorsorgeeinrichtungen müssen den mit der Prüfung betrauten Personen alle zweckdienlichen Auskünfte und Unterlagen geben. 3 Die Revisionsstelle und die Expertin oder der Experte für die berufliche Vorsorge erstellen einen Bericht, in dem darzulegen ist, ob die Rechte und Ansprüche der Versicherten gewahrt sind."
+          "absatz": "1",
+          "text": "Die beteiligten Vorsorgeeinrichtungen müssen den Fusionsvertrag, den Fusions­bericht und die Bilanz von ihren Kontrollstellen sowie von einer anerkannten Expertin oder einem anerkannten Experten für die berufliche Vorsorge prüfen lassen. Sie kön­nen eine gemeinsame Expertin oder einen gemeinsamen Experten bestimmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die beteiligten Vorsorgeeinrichtungen müssen den mit der Prüfung betrauten Personen alle zweckdienlichen Auskünfte und Unterlagen geben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Revisionsstelle und die Expertin oder der Experte für die berufliche Vorsorge erstellen einen Bericht, in dem darzulegen ist, ob die Rechte und Ansprüche der Versicherten gewahrt sind."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_92",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "fa0e831439742dcb928338e6c64f93ddd2d5a3e501afd989fdda7e504adb472a"
+      "sha": "98b719ebc509160a2472044428b4656927f5ef55dd322b6270c124e2834f8879"
     },
     {
       "id": "bund/FUSG/art_93",
@@ -2302,15 +2946,19 @@
       "artikelLabel": "Art. 93",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Informationspflicht und Einsichtsrecht 1 Die zuständigen Organe der Vorsorgeeinrichtung haben spätestens bis zum Zeitpunkt der Gewährung des Einsichtsrechts gemäss Absatz 2 die Versicherten über die geplante Fusion und deren Auswirkungen zu informieren. Sie haben die Versicherten in geeigneter Form auf die Möglichkeit der Einsichtnahme hinzuweisen. 2 Die beteiligten Vorsorgeeinrichtungen müssen an ihrem Sitz während der 30 Tage vor dem Antrag an die Aufsichtsbehörde den Versicherten Einsicht in den Fusionsvertrag und in den Fusionsbericht gewähren."
+          "absatz": "1",
+          "text": "Die zuständigen Organe der Vorsorgeeinrichtung haben spätestens bis zum Zeitpunkt der Gewährung des Einsichtsrechts gemäss Absatz 2 die Versicherten über die geplante Fusion und deren Auswirkungen zu informieren. Sie haben die Versicherten in geeigneter Form auf die Möglichkeit der Einsichtnahme hinzuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die beteiligten Vorsorgeeinrichtungen müssen an ihrem Sitz während der 30 Tage vor dem Antrag an die Aufsichtsbehörde den Versicherten Einsicht in den Fusionsvertrag und in den Fusionsbericht gewähren."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_93",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "ca0a2ad567b3a63da7a6886d6a5f2f72922f005f5c82899d2c614c86f57831f3"
+      "sha": "7453b598e90548dbb8ef25c77a1941666204bcff409bb8bdec97ad8c8d6bc2b6"
     },
     {
       "id": "bund/FUSG/art_94",
@@ -2321,15 +2969,19 @@
       "artikelLabel": "Art. 94",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Fusionsbeschluss 1 Die Fusion bedarf der Zustimmung des obersten Leitungsorgans und, bei einer Genossenschaft, überdies der Generalversammlung. Für die erforderlichen Mehrheiten gilt Artikel 18 Absatz 1 Buchstabe d. 2 Bei Vorsorgeeinrichtungen des öffentlichen Rechts bleibt Artikel 100 Absatz 3 vor­behalten."
+          "absatz": "1",
+          "text": "Die Fusion bedarf der Zustimmung des obersten Leitungsorgans und, bei einer Genossenschaft, überdies der Generalversammlung. Für die erforderlichen Mehrheiten gilt Artikel 18 Absatz 1 Buchstabe d."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Vorsorgeeinrichtungen des öffentlichen Rechts bleibt Artikel 100 Absatz 3 vor­behalten."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_94",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "1e9e51bbf5f9a70d3ee869ae6c5f5b2ee7b95646f9abb73b01190ae988c31e2a"
+      "sha": "1553952bc056a9a7ec728a296cb15a6dfbda4cc229cd94d94cba2bd2c9823899"
     },
     {
       "id": "bund/FUSG/art_95",
@@ -2340,15 +2992,31 @@
       "artikelLabel": "Art. 95",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Genehmigung und Vollzug der Fusion 1 Die obersten Leitungsorgane der Vorsorgeeinrichtungen beantragen bei der zuständigen Aufsichtsbehörde die Genehmigung der Fusion. 2 Zuständig ist die Aufsichtsbehörde der übertragenden Vorsorgeeinrichtung. 3 Die Aufsichtsbehörde prüft, ob die Voraussetzungen einer Fusion gegeben sind, und erlässt eine Verfügung. Die Aufsichtsbehörde kann weitere für die Prüfung der Voraussetzungen erforderliche Belege verlangen. 4 Nach Eintritt der Rechtskraft der zustimmenden Verfügung meldet die Aufsichtsbehörde die Fusion zur Eintragung in das Handelsregister an. 5 Für die Rechtswirksamkeit der Fusion gilt Artikel 22 Absatz 1."
+          "absatz": "1",
+          "text": "Die obersten Leitungsorgane der Vorsorgeeinrichtungen beantragen bei der zuständigen Aufsichtsbehörde die Genehmigung der Fusion."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig ist die Aufsichtsbehörde der übertragenden Vorsorgeeinrichtung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde prüft, ob die Voraussetzungen einer Fusion gegeben sind, und erlässt eine Verfügung. Die Aufsichtsbehörde kann weitere für die Prüfung der Voraussetzungen erforderliche Belege verlangen."
+        },
+        {
+          "absatz": "4",
+          "text": "Nach Eintritt der Rechtskraft der zustimmenden Verfügung meldet die Aufsichtsbehörde die Fusion zur Eintragung in das Handelsregister an."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Rechtswirksamkeit der Fusion gilt Artikel 22 Absatz 1."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_95",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "9c3ece2d9043dc52aad32d826f81c34b2e6285f2ae88c5fca3564efb66468d5c"
+      "sha": "524d764df0ae57c4122885ea79f72e51c33f010695783357726f3309f9009042"
     },
     {
       "id": "bund/FUSG/art_96",
@@ -2359,15 +3027,31 @@
       "artikelLabel": "Art. 96",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Gläubiger- und Arbeitnehmerschutz 1 Die Aufsichtsbehörde hat vor Erlass der Verfügung die Gläubigerinnen und Gläubiger der an der Fusion beteiligten Vorsorgeeinrichtungen im Schweizerischen Handelsamtsblatt dreimal darauf hinzuweisen, dass sie unter Anmeldung ihrer Forderungen Sicherstellung verlangen können. 2 Die Aufsichtsbehörde kann von einer Aufforderung an die Gläubigerinnen und Gläubiger absehen, wenn keine Forderungen bekannt oder zu erwarten sind, zu deren Befriedigung das freie Vermögen der beteiligten Vorsorgeeinrichtungen nicht ausreicht. 3 Im Falle einer Aufforderung an die Gläubigerinnen und Gläubiger können diese innerhalb von zwei Monaten nach der Veröffentlichung im Schweizerischen Handelsamtsblatt von der übernehmenden Vorsorgeeinrichtung die Sicherstellung ihrer Forderungen verlangen. Die Versicherten haben keinen Anspruch auf Sicherstellung. 4 Die Pflicht zur Sicherstellung entfällt, wenn die Vorsorgeeinrichtung nachweist, dass die Erfüllung der angemeldeten Forderung durch die Fusion nicht gefährdet ist. Artikel 25 Absatz 4 findet Anwendung. Im Streitfall entscheidet die Aufsichts­behörde. 5 Der Arbeitnehmerschutz richtet sich nach den Artikeln 27 und 28."
+          "absatz": "1",
+          "text": "Die Aufsichtsbehörde hat vor Erlass der Verfügung die Gläubigerinnen und Gläubiger der an der Fusion beteiligten Vorsorgeeinrichtungen im Schweizerischen Handelsamtsblatt dreimal darauf hinzuweisen, dass sie unter Anmeldung ihrer Forderungen Sicherstellung verlangen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsbehörde kann von einer Aufforderung an die Gläubigerinnen und Gläubiger absehen, wenn keine Forderungen bekannt oder zu erwarten sind, zu deren Befriedigung das freie Vermögen der beteiligten Vorsorgeeinrichtungen nicht ausreicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Falle einer Aufforderung an die Gläubigerinnen und Gläubiger können diese innerhalb von zwei Monaten nach der Veröffentlichung im Schweizerischen Handelsamtsblatt von der übernehmenden Vorsorgeeinrichtung die Sicherstellung ihrer Forderungen verlangen. Die Versicherten haben keinen Anspruch auf Sicherstellung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Pflicht zur Sicherstellung entfällt, wenn die Vorsorgeeinrichtung nachweist, dass die Erfüllung der angemeldeten Forderung durch die Fusion nicht gefährdet ist. Artikel 25 Absatz 4 findet Anwendung. Im Streitfall entscheidet die Aufsichts­behörde."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Arbeitnehmerschutz richtet sich nach den Artikeln 27 und 28."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_96",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "f3670056e8c735d636d75a38863121d0a60246aa0a702b15f8a7f2a9349acbbc"
+      "sha": "7a81af85f2c1844d975857772781f31030aaba226bde2abe5b7d5e4f4470c20d"
     },
     {
       "id": "bund/FUSG/art_97",
@@ -2378,15 +3062,23 @@
       "artikelLabel": "Art. 97",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "1 Vorsorgeeinrichtungen können sich in eine Stiftung umwandeln. 56 2 Die Umwandlung von Vorsorgeeinrichtungen ist nur zulässig, wenn der Vorsorgezweck und die Rechte und Ansprüche der Versicherten gewahrt bleiben. 3 Die Artikel 89–95 finden sinngemäss Anwendung. 56 Fassung gemäss Ziff. II 2 des BG vom 17. Dez. 2010 (Finanzierung von Vorsorgeeinrichtungen öffentlich-rechtlicher Körperschaften), in Kraft seit 1. Jan. 2014 ( AS 2011 3385 ; BBl 2008 8411 )."
+          "absatz": "1",
+          "text": "Vorsorgeeinrichtungen können sich in eine Stiftung umwandeln."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Umwandlung von Vorsorgeeinrichtungen ist nur zulässig, wenn der Vorsorgezweck und die Rechte und Ansprüche der Versicherten gewahrt bleiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 89–95 finden sinngemäss Anwendung."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_97",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "df4ac3b043edeaf7752f6f8f80c3dde03f1e284a190f8e5e56c0fbc99887ce07"
+      "sha": "2c831edf9c475a10e0f95c6ea857d1dd685149eed087b7601bf3e5ef7f87e780"
     },
     {
       "id": "bund/FUSG/art_98",
@@ -2397,15 +3089,23 @@
       "artikelLabel": "Art. 98",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "1 Vorsorgeeinrichtungen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Vorsorgeeinrichtungen oder Rechtsträger übertragen. 2 Artikel 88 Absatz 2 findet sinngemäss Anwendung. Die Artikel 70–77 finden Anwendung. 3 Vermögensübertragungen im Rahmen einer Teil- oder Gesamtliquidation bedürfen der Genehmigung der Aufsichtsbehörde, wenn dies im Recht der beruflichen Vorsorge vorgesehen ist."
+          "absatz": "1",
+          "text": "Vorsorgeeinrichtungen können ihr Vermögen oder Teile davon mit Aktiven und Passiven auf andere Vorsorgeeinrichtungen oder Rechtsträger übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 88 Absatz 2 findet sinngemäss Anwendung. Die Artikel 70–77 finden Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Vermögensübertragungen im Rahmen einer Teil- oder Gesamtliquidation bedürfen der Genehmigung der Aufsichtsbehörde, wenn dies im Recht der beruflichen Vorsorge vorgesehen ist."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_98",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "39d76b353fa72f856303f68d8c95d0c73b897fc7e733c4605bc5f8d9460ffbe9"
+      "sha": "4709e11c712abb9ba0370619ae4feb275cc9efce8c0e16ef724db578d7aec106"
     },
     {
       "id": "bund/FUSG/art_99",
@@ -2416,8 +3116,8 @@
       "artikelLabel": "Art. 99",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Institute des öffentlichen Rechts können:",
           "items": [
             {
               "marke": "a",
@@ -2428,13 +3128,17 @@
               "text": "sich in Kapitalgesellschaften, Genossenschaften, Vereine oder Stiftungen umwandeln."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Institute des öffentlichen Rechts können durch Vermögensübertragung ihr Vermögen oder Teile davon auf andere Rechtsträger übertragen oder das Vermögen oder Teile davon von anderen Rechtsträgern übernehmen."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_99",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "57c5fbe04d5f88fd601e4d3a4e6d42f9fa9cc1009f6199064786d8fd25184a31"
+      "sha": "f9bbd3d8fc819ea637e6fde7a5d8078ed260751bd08c8aceccf5a8414622c5ed"
     },
     {
       "id": "bund/FUSG/art_100",
@@ -2445,15 +3149,23 @@
       "artikelLabel": "Art. 100",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Anwendbares Recht 1 Auf die Fusion von privatrechtlichen Rechtsträgern mit Instituten des öffentlichen Rechts, auf die Umwandlung solcher Institute in Rechtsträger des Privatrechts und auf die Vermögensübertragung unter Beteiligung eines Rechtsträgers des öffent­lichen Rechts finden die Vorschriften dieses Gesetzes sinngemäss Anwendung. Bei der Fusion und der Umwandlung nach Artikel 99 Absatz 1 kann das öffentliche Recht für den beteiligten Rechtsträger des öffentlichen Rechts abweichende Vorschriften vorsehen. Die Artikel 99–101 finden jedoch in jedem Fall Anwendung, ausgenommen für konzessionierte Verkehrs- und Infrastrukturunternehmen, soweit das öffentliche Recht eine abweichende Regelung vorsieht. 57 2 Institute des öffentlichen Rechts müssen in einem Inventar die Gegenstände des Aktiv- und des Passivvermögens, die von der Fusion, der Umwandlung oder der Vermögensübertragung erfasst werden, eindeutig bezeichnen und bewerten. Grund­stücke, Wertpapiere und immaterielle Werte sind einzeln aufzuführen. Das Inventar muss von einer zugelassenen Revisionsexpertin oder einem zugelassenen Revisionsexperten geprüft werden, sofern nicht in anderer Weise sichergestellt ist, dass die Erstellung und die Bewertung des Inventars den aner­kannten Rechnungs­legungs­grund­sätzen entsprechen. 58 3 Die Beschlussfassung des Rechtsträgers des öffentlichen Rechts zur Fusion, Umwandlung oder Vermögensübertragung richtet sich nach den öffentlich-recht­lichen Vorschriften und Grundsätzen des Bundes, der Kantone und der Gemeinden. 57 Fassung des Satzes gemäss Ziff. II 4 des BG über die Bahnreform 2 vom 20. März 2009, in Kraft seit 1. Jan. 2010 ( AS 2009 5597 ; BBl 2005 2415 , 2007 2681 ). 58 Fassung des Satzes gemäss Anhang Ziff. 2 des BG vom 16. Dez. 2005 (GmbH-Recht sowie Anpassungen im Aktien-, Genossenschafts-, Handelsregister- und Firmenrecht), in Kraft seit 1. Jan. 2008 ( AS 2007 4791 ; BBl 2002 3148 , 2004 3969 )."
+          "absatz": "1",
+          "text": "Auf die Fusion von privatrechtlichen Rechtsträgern mit Instituten des öffentlichen Rechts, auf die Umwandlung solcher Institute in Rechtsträger des Privatrechts und auf die Vermögensübertragung unter Beteiligung eines Rechtsträgers des öffent­lichen Rechts finden die Vorschriften dieses Gesetzes sinngemäss Anwendung. Bei der Fusion und der Umwandlung nach Artikel 99 Absatz 1 kann das öffentliche Recht für den beteiligten Rechtsträger des öffentlichen Rechts abweichende Vorschriften vorsehen. Die Artikel 99–101 finden jedoch in jedem Fall Anwendung, ausgenommen für konzessionierte Verkehrs- und Infrastrukturunternehmen, soweit das öffentliche Recht eine abweichende Regelung vorsieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Institute des öffentlichen Rechts müssen in einem Inventar die Gegenstände des Aktiv- und des Passivvermögens, die von der Fusion, der Umwandlung oder der Vermögensübertragung erfasst werden, eindeutig bezeichnen und bewerten. Grund­stücke, Wertpapiere und immaterielle Werte sind einzeln aufzuführen. Das Inventar muss von einer zugelassenen Revisionsexpertin oder einem zugelassenen Revisionsexperten geprüft werden, sofern nicht in anderer Weise sichergestellt ist, dass die Erstellung und die Bewertung des Inventars den aner­kannten Rechnungs­legungs­grund­sätzen entsprechen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beschlussfassung des Rechtsträgers des öffentlichen Rechts zur Fusion, Umwandlung oder Vermögensübertragung richtet sich nach den öffentlich-recht­lichen Vorschriften und Grundsätzen des Bundes, der Kantone und der Gemeinden."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_100",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "e143850f132eeaed26c70b538e7a1c1aebff616c09adbbc71f77d200e724dccb"
+      "sha": "051087e8bc6a866a2fb842efdc05fe0642f724280f80395b42e2bb060034ca2f"
     },
     {
       "id": "bund/FUSG/art_101",
@@ -2464,15 +3176,19 @@
       "artikelLabel": "Art. 101",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Verantwortlichkeit von Bund, Kantonen und Gemeinden 1 Durch Fusionen, Umwandlungen und Vermögensübertragungen von Instituten des öffentlichen Rechts dürfen keine Gläubigerinnen und Gläubiger geschädigt werden. Der Bund, die Kantone und die Gemeinden müssen Vorkehrungen treffen, damit Ansprüche im Sinne der Artikel 26, 68 Absatz 1 und 75 erfüllt werden können. 2 Für Schäden, welche auf mangelhafte Vorkehrungen zurückzuführen sind, haften Bund, Kantone und Gemeinden nach den für sie massgebenden Vorschriften."
+          "absatz": "1",
+          "text": "Durch Fusionen, Umwandlungen und Vermögensübertragungen von Instituten des öffentlichen Rechts dürfen keine Gläubigerinnen und Gläubiger geschädigt werden. Der Bund, die Kantone und die Gemeinden müssen Vorkehrungen treffen, damit Ansprüche im Sinne der Artikel 26, 68 Absatz 1 und 75 erfüllt werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Schäden, welche auf mangelhafte Vorkehrungen zurückzuführen sind, haften Bund, Kantone und Gemeinden nach den für sie massgebenden Vorschriften."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_101",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "17a8386f6b8da48578b3df235b1022ddeace50f21eb308c5aa49260683567dac"
+      "sha": "273a199413efa7c2f727a1b5173e2a96a0c0c6a36c6c968b5e49a56ae3a7b6d9"
     },
     {
       "id": "bund/FUSG/art_102",
@@ -2484,7 +3200,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Der Bundesrat erlässt Vorschriften über:",
           "items": [
             {
               "marke": "a",
@@ -2499,9 +3215,9 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_102",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "b6c2f14e1540385e6dae720b3587bfb574b28395719fcba23904b2be25e07539"
+      "sha": "93cef18ada5c689065df55ea369f4813ef47586d90bb1d2902c5a904e17efba8"
     },
     {
       "id": "bund/FUSG/art_103",
@@ -2518,7 +3234,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_103",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "bba76277b3344defc18999d8d476cdd1cfa7aca2d7ac76e830ab6aea7644df01"
     },
@@ -2531,8 +3247,12 @@
       "artikelLabel": "Art. 104",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der übernehmende Rechtsträger oder, im Falle der Umwandlung, der Rechtsträger, der seine Rechtsform ändert, muss alle Änderungen, die sich für das Grundbuch aus der Fusion, der Spaltung oder der Umwandlung ergeben, innert dreier Monate vom Eintritt der Rechtswirksamkeit an beim Grundbuchamt anmelden, sofern nicht die kürzere Frist nach Absatz 2 gilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der übernehmende Rechtsträger muss den Übergang des Eigentums an einem Grundstück umgehend nach Eintritt der Rechtswirksamkeit beim Grundbuchamt anmelden, wenn:",
           "items": [
             {
               "marke": "a",
@@ -2547,13 +3267,21 @@
               "text": "das Grundstück durch Vermögensübertragung auf ihn übergegangen ist."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "In den Fällen nach Absatz 2 Buchstaben a und b bedarf es als Ausweis für die Eigentumsübertragung für das Grundbuch einer öffentlichen Urkunde über die Tatsache, dass das Eigentum an den Grundstücken auf den übernehmenden Rechtsträger übergegangen ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Urkundsperson, welche eine Feststellungsurkunde nach Absatz 3 oder eine öffentliche Urkunde nach Artikel 70 Absatz 2 errichtet, ist namens des übernehmenden Rechtsträgers zur Anmeldung bei den Grundbuchämtern befugt."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_104",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "059929cfc505e00fb5be0465392b10ed4d3dea2a1c75ec49d196400585347849"
+      "sha": "a0b836eb1bc5caaff76871d0341020713dba830c190ddfd7f558645f06e687cb"
     },
     {
       "id": "bund/FUSG/art_105",
@@ -2564,15 +3292,27 @@
       "artikelLabel": "Art. 105",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "5 1 Wenn bei einer Fusion, einer Spaltung oder einer Umwandlung die Anteils- oder Mitgliedschaftsrechte nicht angemessen gewahrt sind oder die Abfindung nicht angemessen ist, kann jede Gesellschafterin und jeder Gesellschafter innerhalb von zwei Monaten nach der Veröffentlichung des Fusions-, des Spaltungs- oder des Umwandlungsbeschlusses verlangen, dass das Gericht eine angemessene Ausgleichszahlung festsetzt. Für die Festsetzung der Ausgleichszahlung gilt Artikel 7 Absatz 2 nicht. 2 Das Urteil hat Wirkung für alle Gesellschafterinnen und Gesellschafter des beteiligten Rechtsträgers, sofern sie sich in der gleichen Rechtsstellung wie die Klägerin oder der Kläger befinden. 3 Die Kosten des Verfahrens trägt der übernehmende Rechtsträger. Wenn besondere Umstände es rechtfertigen, kann das Gericht die Kosten ganz oder teilweise den Klägerinnen und Klägern auferlegen. 4 Die Klage auf Überprüfung der Wahrung der Anteils- oder Mitgliedschaftsrechte hindert die Rechtswirksamkeit des Fusions-, des Spaltungs- oder des Umwandlungs­beschlusses nicht."
+          "absatz": "1",
+          "text": "Wenn bei einer Fusion, einer Spaltung oder einer Umwandlung die Anteils- oder Mitgliedschaftsrechte nicht angemessen gewahrt sind oder die Abfindung nicht angemessen ist, kann jede Gesellschafterin und jeder Gesellschafter innerhalb von zwei Monaten nach der Veröffentlichung des Fusions-, des Spaltungs- oder des Umwandlungsbeschlusses verlangen, dass das Gericht eine angemessene Ausgleichszahlung festsetzt. Für die Festsetzung der Ausgleichszahlung gilt Artikel 7 Absatz 2 nicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Urteil hat Wirkung für alle Gesellschafterinnen und Gesellschafter des beteiligten Rechtsträgers, sofern sie sich in der gleichen Rechtsstellung wie die Klägerin oder der Kläger befinden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten des Verfahrens trägt der übernehmende Rechtsträger. Wenn besondere Umstände es rechtfertigen, kann das Gericht die Kosten ganz oder teilweise den Klägerinnen und Klägern auferlegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Klage auf Überprüfung der Wahrung der Anteils- oder Mitgliedschaftsrechte hindert die Rechtswirksamkeit des Fusions-, des Spaltungs- oder des Umwandlungs­beschlusses nicht."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_105",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "b23835f90c0750fb2ad587b9b71f1802d2bedb82810c5c1276df36f3560c5249"
+      "sha": "6da518357276bc47ed79b2bba67f903f642e4fe29da86ab832b34280d92cb650"
     },
     {
       "id": "bund/FUSG/art_106",
@@ -2583,15 +3323,19 @@
       "artikelLabel": "Art. 106",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Grundsatz 1 Sind die Vorschriften dieses Gesetzes verletzt, so können Gesellschafterinnen und Gesellschafter der beteiligten Rechtsträger, die dem Beschluss über die Fusion, die Spaltung oder die Umwandlung nicht zugestimmt haben, den Beschluss innerhalb von zwei Monaten nach der Veröffentlichung im Schweizerischen Handelsamtsblatt anfechten. Wenn keine Veröffentlichung erforderlich ist, beginnt die Frist mit der Beschlussfassung. 2 Gesellschafterinnen und Gesellschafter können den Beschluss auch anfechten, wenn er vom obersten Leitungs- oder Verwaltungsorgan gefasst wurde."
+          "absatz": "1",
+          "text": "Sind die Vorschriften dieses Gesetzes verletzt, so können Gesellschafterinnen und Gesellschafter der beteiligten Rechtsträger, die dem Beschluss über die Fusion, die Spaltung oder die Umwandlung nicht zugestimmt haben, den Beschluss innerhalb von zwei Monaten nach der Veröffentlichung im Schweizerischen Handelsamtsblatt anfechten. Wenn keine Veröffentlichung erforderlich ist, beginnt die Frist mit der Beschlussfassung."
+        },
+        {
+          "absatz": "2",
+          "text": "Gesellschafterinnen und Gesellschafter können den Beschluss auch anfechten, wenn er vom obersten Leitungs- oder Verwaltungsorgan gefasst wurde."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_106",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "878b9c78bbb3b3dede582dcce86998b5d74544efa925bf1ce65fb7ed2c45ba06"
+      "sha": "0947f4fc2f396b9f0a98f42d04d85bf715d4c1ec8ec958541b15899b4744b010"
     },
     {
       "id": "bund/FUSG/art_107",
@@ -2602,15 +3346,19 @@
       "artikelLabel": "Art. 107",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Folgen eines Mangels 1 Kann ein Mangel behoben werden, so räumt das Gericht den betroffenen Rechtsträgern dazu eine Frist ein. 2 Wird ein Mangel innerhalb der angesetzten Frist nicht behoben oder kann er nicht behoben werden, so hebt das Gericht den Beschluss auf und ordnet die erforder­lichen Massnahmen an."
+          "absatz": "1",
+          "text": "Kann ein Mangel behoben werden, so räumt das Gericht den betroffenen Rechtsträgern dazu eine Frist ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Mangel innerhalb der angesetzten Frist nicht behoben oder kann er nicht behoben werden, so hebt das Gericht den Beschluss auf und ordnet die erforder­lichen Massnahmen an."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_107",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "32b879559cfce7f859f420ca383bff2c0aa0053e505b8ed503f3a15d636a8f5d"
+      "sha": "e61ede6d4da244ea7967d407e75fd45e2af880d5f8e036e0a910cd737aeebbcc"
     },
     {
       "id": "bund/FUSG/art_108",
@@ -2621,15 +3369,27 @@
       "artikelLabel": "Art. 108",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "8 1 Alle mit der Fusion, der Spaltung, der Umwandlung oder der Vermögensübertragung befassten Personen sind sowohl den Rechtsträgern als auch den einzelnen Gesellschafterinnen und Gesellschaftern sowie den Gläubigerinnen und Gläubigern für den Schaden verantwortlich, den sie durch absichtliche oder fahrlässige Verletzung ihrer Pflichten verursachen. Die Verantwortung der Gründerinnen und Gründer bleibt vorbehalten. 2 Alle mit der Prüfung der Fusion, der Spaltung oder der Umwandlung befassten Personen sind sowohl den Rechtsträgern als auch den einzelnen Gesellschafterinnen und Gesellschaftern sowie Gläubigerinnen und Gläubigern für den Schaden verantwortlich, den sie durch absichtliche oder fahrlässige Verletzung ihrer Pflichten verursachen. 3 Die Artikel 756, 759 und 760 des OR 60 finden Anwendung. Im Fall des Konkurses einer Kapitalgesellschaft oder einer Genossenschaft gelten die Artikel 757, 764 Absatz 2, 827 und 920 des OR sinngemäss. 4 Die Verantwortlichkeit der Personen, die für ein Institut des öffentlichen Rechts tätig sind, richtet sich nach dem öffentlichen Recht. 60 SR 220"
+          "absatz": "1",
+          "text": "Alle mit der Fusion, der Spaltung, der Umwandlung oder der Vermögensübertragung befassten Personen sind sowohl den Rechtsträgern als auch den einzelnen Gesellschafterinnen und Gesellschaftern sowie den Gläubigerinnen und Gläubigern für den Schaden verantwortlich, den sie durch absichtliche oder fahrlässige Verletzung ihrer Pflichten verursachen. Die Verantwortung der Gründerinnen und Gründer bleibt vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Alle mit der Prüfung der Fusion, der Spaltung oder der Umwandlung befassten Personen sind sowohl den Rechtsträgern als auch den einzelnen Gesellschafterinnen und Gesellschaftern sowie Gläubigerinnen und Gläubigern für den Schaden verantwortlich, den sie durch absichtliche oder fahrlässige Verletzung ihrer Pflichten verursachen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 756, 759 und 760 des OR finden Anwendung. Im Fall des Konkurses einer Kapitalgesellschaft oder einer Genossenschaft gelten die Artikel 757, 764 Absatz 2, 827 und 920 des OR sinngemäss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verantwortlichkeit der Personen, die für ein Institut des öffentlichen Rechts tätig sind, richtet sich nach dem öffentlichen Recht."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_108",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "75f0767cb69b97ac51e5640dd83a7cc0b553e22272bc28fd26d2e857115491ae"
+      "sha": "87f39f7b9f2c25ffe5c972f5f772ed387748949a38bb101bd92dc2835c331ce5"
     },
     {
       "id": "bund/FUSG/art_109",
@@ -2646,7 +3406,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_109",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "a1d7963f32cec08901b4d78877d54a71afebd635e47b6d0d67efc4225392a3ad"
     },
@@ -2665,7 +3425,7 @@
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_110",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
       "sha": "b0b815b40486f19304ed1522bb20b6bded16bead91f9113ef9da7f7d5bbd96a8"
     },
@@ -2678,15 +3438,23 @@
       "artikelLabel": "Art. 111",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Referendum und Inkrafttreten 1 Dieses Gesetz untersteht dem fakultativen Referendum. 2 Der Bundesrat bestimmt das Inkrafttreten. 3 Artikel 103 tritt fünf Jahre nach den übrigen Bestimmungen dieses Gesetzes in Kraft. Datum des Inkrafttretens: 61 Art. 103: 1. Juli 2009 alle übrigen Bestimmungen: 1. Juli 2004 61 BRB vom 21. April 2004"
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 103 tritt fünf Jahre nach den übrigen Bestimmungen dieses Gesetzes in Kraft."
         }
       ],
       "stand": "2023-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/320/de#art_111",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230101",
-      "sha": "05079f8ab76d06cd6709c9b693d6f05114a6b090ad33ec4e60e81022239c8a67"
+      "sha": "74b1408ee20aa68c570f9117e7db68d11de3c87baf215a07a0884eb8319c16b4"
     }
   ]
 }

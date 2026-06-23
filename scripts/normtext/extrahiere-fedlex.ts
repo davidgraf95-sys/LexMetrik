@@ -42,18 +42,33 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
 
   const inner = articleMatch[1];
 
-  // <p class="...absatz..."> UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE
-  // durchlaufen (Geschwister im collapseable-div). Eine <dl> gehört inhaltlich
-  // zum vorausgehenden Absatz (dessen Einleitungssatz auf «:» endet) → ihre
-  // <dt>/<dd>-Paare werden als items an den letzten Block gehängt.
-  const bloeckeUndListenRe =
-    /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>|<dl[^>]*>([\s\S]*?)<\/dl>/gi;
+  // <p>-Absätze UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE durchlaufen
+  // (Geschwister im collapseable-div). Vier Alternativen:
+  //  (1) <p class="…absatz…">                — Standard-Absatz neuerer Konsolidierungen.
+  //  (2) <p> mit führendem <sup>N</sup>       — ältere Erlasse (IPRG/BetmG/VStrR)
+  //      setzen die Absatznummer als nacktes <sup> OHNE absatz-Klasse.
+  //  (3) <p> UNMITTELBAR vor einer <dl>       — Einleitungssatz/Label einer Liste
+  //      ohne absatz-Klasse («…es sei denn:», «Erste Klasse»). Lookahead konsumiert
+  //      die <dl> nicht → (4) hängt sie an genau diesen Block.
+  //  (4) <dl>                                 — Aufzählung am vorausgehenden Block.
+  // (2)/(3) tragen eine Einzel-<p>-Schranke ((?!</p>)) — sonst spannt der Match
+  // über mehrere Absätze und verschmilzt z.B. SchKG art_219 Abs. 5 (Bug 23.6.2026).
+  // Bestehende Gesetze (class="absatz"-Markup) treffen (1) zuerst → unberührt,
+  // ausser sie tragen echte alte Listen-Labels (dann korrekt verbessert, §6-Re-Baseline).
+  const NICHT_P = '(?:(?!</p>)[\\s\\S])*?';
+  const bloeckeUndListenRe = new RegExp(
+    '<p[^>]*\\bclass="[^"]*\\babsatz\\b[^"]*"[^>]*>([\\s\\S]*?)</p>' +
+      `|<p[^>]*>((?:\\s|&nbsp;)*<sup\\b[^>]*>\\d+(?:bis|ter|quater|quinquies)?[a-z]?</sup>${NICHT_P})</p>` +
+      `|<p[^>]*>(${NICHT_P})</p>(?=\\s*<dl)` +
+      '|<dl[^>]*>([\\s\\S]*?)</dl>',
+    'gi',
+  );
   const bloecke: ArtikelText['bloecke'] = [];
 
   for (const match of inner.matchAll(bloeckeUndListenRe)) {
-    if (match[1] !== undefined) {
-      // ── Absatz (<p class="absatz">) ──────────────────────────────────────
-      const roh = match[1];
+    if (match[1] !== undefined || match[2] !== undefined || match[3] !== undefined) {
+      // ── Absatz (<p class="absatz"> | <p><sup>N</sup> | <p> vor <dl>) ──────
+      const roh = match[1] ?? match[2] ?? match[3]!;
 
       // Absatznummer: erstes <sup>, das KEIN <a>-Kind enthält und nur Ziffern/[a-z] enthält.
       // Fussnoten-<sup> sehen so aus: <sup><a href="...">188</a></sup> → verwerfen.
@@ -62,7 +77,7 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
       if (supMatch) {
         const supInhalt = supMatch[1];
         // Nur akzeptieren wenn kein <a>-Tag drin steckt und der Text nur Ziffern/[a-z] ist
-        if (!/<a[\s>]/i.test(supInhalt) && /^\d+[a-z]?$/.test(supInhalt.trim())) {
+        if (!/<a[\s>]/i.test(supInhalt) && /^\d+(?:bis|ter|quater|quinquies)?[a-z]?$/.test(supInhalt.trim())) {
           absatz = supInhalt.trim();
         }
       }
@@ -74,16 +89,16 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
       // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
       // damit die Ziffer nicht in den sichtbaren Text einfließt.
       const ohneAbsatzNr = absatz
-        ? ohneFootnotes.replace(/^(?:\s|&nbsp;)*<sup[^>]*>\d+[a-z]?<\/sup>(?:&nbsp;|\s)*/i, '')
+        ? ohneFootnotes.replace(/^(?:\s|&nbsp;)*<sup[^>]*>\d+(?:bis|ter|quater|quinquies)?[a-z]?<\/sup>(?:&nbsp;|\s)*/i, '')
         : ohneFootnotes;
 
       const text = entferneTags(ohneAbsatzNr).trim();
       if (text) {
         bloecke.push({ absatz, text });
       }
-    } else if (match[2] !== undefined) {
+    } else if (match[4] !== undefined) {
       // ── Aufzählung (<dl><dt>marke.</dt><dd>text</dd>…</dl>) ───────────────
-      const items = parseDefinitionsListe(match[2]);
+      const items = parseDefinitionsListe(match[4]);
       if (items.length > 0) {
         if (bloecke.length > 0) {
           bloecke[bloecke.length - 1].items = items;

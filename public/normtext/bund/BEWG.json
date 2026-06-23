@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-23",
   "eintraege": [
     {
       "id": "bund/BEWG/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "3e4c8c455a01eed2d538b2b76d7d7a1e37bd58b7e889f317cdc4677383f04708"
     },
@@ -29,8 +29,12 @@
       "artikelLabel": "Art. 2",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Personen im Ausland bedürfen für den Erwerb von Grundstücken einer Bewilligung der zuständigen kantonalen Behörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Keiner Bewilligung bedarf der Erwerb, wenn:",
           "items": [
             {
               "marke": "a",
@@ -45,13 +49,17 @@
               "text": "eine Ausnahme nach Artikel 7 vorliegt."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Beim Erwerb von Grundstücken nach Absatz 2 Buchstabe a können durch Wohnanteilvorschriften vorgeschriebene Wohnungen oder dafür reservierte Flächen miterworben werden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "889ad69a0ce94f0a13251ff03464795838df6dd47e252a401242987e5fbd6e66"
+      "sha": "b9b7c072c148a21006ec0df7b738343a0a4b50790c57d3ee6c3c03f0e17bf463"
     },
     {
       "id": "bund/BEWG/art_3",
@@ -62,15 +70,19 @@
       "artikelLabel": "Art. 3",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Bundesrecht und kantonales Recht 1 Die Bewilligung wird nur aus den Gründen erteilt, die dieses Gesetz vorsieht. 2 Die Kantone können zur Wahrung ihrer unterschiedlichen Interessen zusätzliche Bewilligungsgründe und weitergehende Beschränkungen vorsehen, soweit dieses Gesetz sie dazu ermächtigt."
+          "absatz": "1",
+          "text": "Die Bewilligung wird nur aus den Gründen erteilt, die dieses Gesetz vorsieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone können zur Wahrung ihrer unterschiedlichen Interessen zusätzliche Bewilligungsgründe und weitergehende Beschränkungen vorsehen, soweit dieses Gesetz sie dazu ermächtigt."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_3",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8040efdd8465502b79d49af1fef5f7495df757b2297d58da8110825459b3c86c"
+      "sha": "f3d84d5c0ca8208035925cea5cf82e20bfdf3a67433d1bf540ecf53a395a2561"
     },
     {
       "id": "bund/BEWG/art_4",
@@ -81,8 +93,8 @@
       "artikelLabel": "Art. 4",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Als Erwerb eines Grundstückes gilt:",
           "items": [
             {
               "marke": "a",
@@ -117,13 +129,17 @@
               "text": "der Erwerb anderer Rechte, die dem Erwerber eine ähnliche Stellung wie dem Eigentümer eines Grundstückes verschaffen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Erwerb eines Grundstückes gilt auch, wenn eine juristische Person oder eine vermögensfähige Gesellschaft ohne juristische Persönlichkeit ihren statutarischen oder tatsächlichen Sitz ins Ausland verlegt und Rechte an einem Grundstück beibehält, das nicht nach Artikel 2 Absatz 2 Buchstabe a bewilligungsfrei erworben werden kann."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_4",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "030758c06b45e6cd80a69b7cc1bae9c93652197dfe7e4a4b378b2c4561807b42"
+      "sha": "864b19ae0cba20d295cf4c7c4b9eb4623591afeb0eaf16fff7f36467694dc79b"
     },
     {
       "id": "bund/BEWG/art_5",
@@ -134,8 +150,8 @@
       "artikelLabel": "Art. 5",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Als Personen im Ausland gelten:",
           "items": [
             {
               "marke": "a",
@@ -146,13 +162,17 @@
               "text": "Staatsangehörige des Vereinigten Königreichs von Grossbritannien und Nordirlands, die von Artikel 22 Ziffer 2 des Abkommens vom 25. Februar 2019 zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens erfasst werden;"
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_5",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "87345f481caa0d0399e1b15ebbd7379586c387311925aa5f1d382ca3a47228ce"
+      "sha": "77e674a02e67a016250def1666d2c5edcc19b36e53d1c09e2f364e39292e38a2"
     },
     {
       "id": "bund/BEWG/art_6",
@@ -163,8 +183,56 @@
       "artikelLabel": "Art. 6",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Eine Person im Ausland hat eine beherrschende Stellung inne, wenn sie aufgrund ihrer finanziellen Beteiligung, ihres Stimmrechtes oder aus anderen Gründen allein oder gemeinsam mit anderen Personen im Ausland die Verwaltung oder Geschäftsführung entscheidend beeinflussen kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beherrschung einer juristischen Person durch Personen im Ausland wird vermutet, wenn diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mehr als einen Drittel des Aktien-, Stamm- oder Genossenschaftskapitals besitzen;"
+            },
+            {
+              "marke": "b",
+              "text": "über mehr als einen Drittel der Stimmen in der General- oder Gesellschafterversammlung verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Mehrheit des Stiftungsrates oder der Begünstigten einer Stiftung des privaten Rechts stellen;"
+            },
+            {
+              "marke": "d",
+              "text": "der juristischen Person rückzahlbare Mittel zur Verfügung stellen, die mehr als die Hälfte der Differenz zwischen den Aktiven der juristischen Person und ihren Schulden gegenüber nicht bewilligungspflichtigen Personen ausmachen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beherrschung einer Kollektiv- oder Kommanditgesellschaft durch Personen im Ausland wird vermutet, wenn eine oder mehrere von ihnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unbeschränkt haftende Gesellschafter sind;"
+            },
+            {
+              "marke": "b",
+              "text": "der Gesellschaft als Kommanditäre Mittel zur Verfügung stellen, die einen Drittel der Eigenmittel der Gesellschaft übersteigen;"
+            },
+            {
+              "marke": "c",
+              "text": "der Gesellschaft oder unbeschränkt haftenden Gesellschaftern rückzahlbare Mittel zur Verfügung stellen, die mehr als die Hälfte der Differenz zwischen den Aktiven der Gesellschaft und ihren Schulden gegenüber nicht bewilligungspflichtigen Personen ausmachen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beherrschung eines Immobilienfonds durch Personen im Ausland wird vermutet, wenn dessen Verwaltung im Sinne dieses Gesetzes von einer Person im Ausland wahrgenommen wird und die Fondsleitung eine Person im Ausland ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Beherrschung einer Immobilien-SICAV durch Personen im Ausland wird vermutet, wenn deren Verwaltung im Sinne dieses Gesetzes von einer Person im Ausland wahrgenommen wird und Personen im Ausland:",
           "items": [
             {
               "marke": "a",
@@ -183,9 +251,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_6",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "b6089045b0d7e5ebad5572dbe7271780214040de908738c2d96e6adde20b4763"
+      "sha": "71965c12699acf0be7dcdf44ff8d855da7fc4bdad39739fe4435a6e465edf1e2"
     },
     {
       "id": "bund/BEWG/art_7",
@@ -197,7 +265,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Keiner Bewilligung bedürfen:",
           "items": [
             {
               "marke": "a",
@@ -248,9 +316,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_7",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "eebc335c7bdb6d8e7d85c02ed86e3be9f4e515aa27f35455d893130d34bf230a"
+      "sha": "63569aa3cfeba715ef890b426d52ba7fbd8a5f8a72e534b5a6a289d2a033df04"
     },
     {
       "id": "bund/BEWG/art_7_a",
@@ -267,7 +335,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_7_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "8e6990fcd0b880d4a3d2a1d21784a3e0f2f8b9db7eac935d3fee9e5ad36bf3c0"
     },
@@ -280,8 +348,8 @@
       "artikelLabel": "Art. 8",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Erwerb wird bewilligt, wenn das Grundstück dienen soll:",
           "items": [
             {
               "marke": "a",
@@ -300,13 +368,21 @@
               "text": "zur Deckung pfandgesicherter Forderungen ausländischer und ausländisch beherrschter, in der Schweiz zum Geschäftsbetrieb zugelassener Banken und Versicherungseinrichtungen in Zwangsverwertungen und Liquidationsvergleichen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Einem Erben, welcher der Bewilligung bedarf und keinen Bewilligungsgrund hat, wird der Erwerb mit der Auflage bewilligt, das Grundstück innert zweier Jahre wieder zu veräussern. Weist der Erbe enge, schutzwürdige Beziehungen zum Grundstück nach, so kann die Bewilligung ohne diese Auflage erteilt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Einer natürlichen Person, die von einer anderen eine Haupt‑, Zweit- oder Ferienwohnung oder eine Wohneinheit in einem Apparthotel erwirbt und dafür mangels kantonaler Bestimmungen oder infolge einer örtlichen Bewilligungssperre keinen Bewilligungsgrund hat, wird die Bewilligung erteilt, wenn ein Härtefall für den Veräusserer vorliegt. Als Härtefall gilt eine nachträglich eingetretene, unvorhersehbare Notlage des Veräusserers, die er nur abwenden kann, indem er das Grundstück an eine Person im Ausland veräussert. …."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_8",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "002d6bd4db4bee666700fa1e0270b1ef082198caf36e32ab7e081e353f384714"
+      "sha": "a43f57ebe98833ed849f81833a9547214659a970400f00404b2c6a42d8de450a"
     },
     {
       "id": "bund/BEWG/art_9",
@@ -317,8 +393,34 @@
       "artikelLabel": "Art. 9",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Kantone können durch Gesetz bestimmen, dass der Erwerb bewilligt wird, wenn das Grundstück dient:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem sozialen Wohnungsbau nach kantonalem Recht und ohne Bundeshilfe in Orten, die unter Wohnungsnot leiden, oder wenn sich auf dem Grundstück solche neuerstellten Wohnbauten befinden;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "einer natürlichen Person als Zweitwohnung an einem Ort, zu dem sie aussergewöhnlich enge, schutzwürdige Beziehungen unterhält, solange diese andauern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone können ausserdem durch Gesetz bestimmen, dass einer natürlichen Person der Erwerb als Ferienwohnung oder als Wohneinheit in einem Apparthotel im Rahmen des kantonalen Kontingents bewilligt werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone bestimmen die Orte, die des Erwerbs von Ferienwohnungen oder von Wohneinheiten in Apparthotels durch Personen im Ausland bedürfen, um den Fremdenverkehr zu fördern."
+        },
+        {
+          "absatz": "4",
+          "text": "Nicht an das Kontingent angerechnet wird eine Bewilligung:",
           "items": [
             {
               "marke": "a",
@@ -337,9 +439,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_9",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "0fbdb41fdc0d8c3d1a90198af77b39226cf309b09f67300ffa0e17041503c768"
+      "sha": "9132c48feee42e944bc0caa12611cb72ff80a9c867ee216dbb04cd9786a0da94"
     },
     {
       "id": "bund/BEWG/art_10",
@@ -351,7 +453,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Als Apparthotel gilt ein neues oder zu erneuerndes Hotel im Stockwerkeigentum des Betriebsinhabers, von Personen im Ausland und gegebenenfalls von Drittpersonen, wenn es folgende Voraussetzungen erfüllt:",
           "items": [
             {
               "marke": "a",
@@ -370,9 +472,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_10",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "cc97d537b405fbad4208cc0d55ac2f6b202c07ee87c13fec1463c2d4d4d75680"
+      "sha": "11d02c2feca91342b87404cf8c55e5cffc55596469dc9fe1eafb6f287f467f62"
     },
     {
       "id": "bund/BEWG/art_11",
@@ -383,15 +485,27 @@
       "artikelLabel": "Art. 11",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "38 Bewilligungskontingente 1 Der Bundesrat bestimmt die jährlichen kantonalen Bewilligungskontingente für den Erwerb von Ferienwohnungen und Wohneinheiten in Apparthotels im Rahmen einer gesamtschweizerischen Höchstzahl; er berücksichtigt dabei die staatspolitischen und volkswirtschaftlichen Interessen des Landes. 2 Die Höchstzahl nach Absatz 1 darf 1500 Kontingentseinheiten nicht überschreiten. 3 Der Bundesrat bemisst die kantonalen Kontingente nach der Bedeutung des Fremdenverkehrs für die Kantone, den touristischen Entwicklungsplanungen und dem Anteil an ausländischem Grundeigentum auf ihrem Gebiet. 4 Die Kantone regeln die Verteilung der Bewilligungen aus ihrem Kontingent. 38 Fassung gemäss Ziff. I des BG vom 22. März 2002, in Kraft seit 1. Sept. 2002 ( AS 2002 2467 ; BBl 2002 1052 2748 )."
+          "absatz": "1",
+          "text": "Der Bundesrat bestimmt die jährlichen kantonalen Bewilligungskontingente für den Erwerb von Ferienwohnungen und Wohneinheiten in Apparthotels im Rahmen einer gesamtschweizerischen Höchstzahl; er berücksichtigt dabei die staatspolitischen und volkswirtschaftlichen Interessen des Landes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höchstzahl nach Absatz 1 darf 1500 Kontingentseinheiten nicht überschreiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat bemisst die kantonalen Kontingente nach der Bedeutung des Fremdenverkehrs für die Kantone, den touristischen Entwicklungsplanungen und dem Anteil an ausländischem Grundeigentum auf ihrem Gebiet."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kantone regeln die Verteilung der Bewilligungen aus ihrem Kontingent."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_11",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "a624352e379976f4021addf268a257e517e310690cadcbe6d8524b36b0487f18"
+      "sha": "cc851dcd1df2e17c61086938c2c2c5461a04dedcb58bcf8c108cc0b7fd2fb107"
     },
     {
       "id": "bund/BEWG/art_12",
@@ -403,7 +517,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Die Bewilligung wird auf jeden Fall verweigert, wenn:",
           "items": [
             {
               "marke": "a",
@@ -434,9 +548,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_12",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "79598a299e78b6d5be0e97b9767c53ed414692d14d2d31e46fc339423aa805b4"
+      "sha": "76363aaca0a0e44adec9b2b1838a5f19e923fc70d7fdf97bfb5b4b058b7f1cdd"
     },
     {
       "id": "bund/BEWG/art_13",
@@ -447,8 +561,8 @@
       "artikelLabel": "Art. 13",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Kantone können durch Gesetz den Erwerb von Ferienwohnungen und von Wohneinheiten in Apparthotels weitergehend einschränken, indem sie insbesondere:",
           "items": [
             {
               "marke": "a",
@@ -471,13 +585,17 @@
               "text": "den Erwerb auf das Baurecht, das Wohnrecht oder die Nutzniessung beschränken."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden können diese Einschränkungen von sich aus einführen. Die Kantone regeln das Verfahren."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_13",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "0cddd00ec2e2fd91d9aca7e8dd66830464cee7fddeabb7b9f913dd0e06bc81ee"
+      "sha": "c370045dc57c90101510cf17f829b005638d3df2e1a201dfbaf7f93aeeffbd20"
     },
     {
       "id": "bund/BEWG/art_14",
@@ -488,15 +606,31 @@
       "artikelLabel": "Art. 14",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Bedingungen und Auflagen 1 Die Bewilligung wird unter Bedingungen und Auflagen erteilt, die sicherstellen, dass das Grundstück zu dem vom Erwerber geltend gemachten Zweck verwendet wird. 2 Der Bundesrat regelt die Mindestbedingungen und -auflagen, soweit dieses Gesetz sie nicht regelt, und den Verfall von Bewilligungen. 3 Auflagen sind im Grundbuch anzumerken. 4 Sie können auf Antrag des Erwerbers aus zwingenden Gründen widerrufen werden. 5 Wird die Bewilligungspflicht verneint, weil Personen im Ausland keine beherrschende Stellung innehaben, so ist diese Feststellung an die Auflage zu knüpfen, dass der Erwerber vor jeder Änderung der Verhältnisse, welche die Bewilligungspflicht begründen könnte, erneut um die Feststellung nachzusuchen hat."
+          "absatz": "1",
+          "text": "Die Bewilligung wird unter Bedingungen und Auflagen erteilt, die sicherstellen, dass das Grundstück zu dem vom Erwerber geltend gemachten Zweck verwendet wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Mindestbedingungen und -auflagen, soweit dieses Gesetz sie nicht regelt, und den Verfall von Bewilligungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Auflagen sind im Grundbuch anzumerken."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie können auf Antrag des Erwerbers aus zwingenden Gründen widerrufen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird die Bewilligungspflicht verneint, weil Personen im Ausland keine beherrschende Stellung innehaben, so ist diese Feststellung an die Auflage zu knüpfen, dass der Erwerber vor jeder Änderung der Verhältnisse, welche die Bewilligungspflicht begründen könnte, erneut um die Feststellung nachzusuchen hat."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_14",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "0cf7d104dffd975ed1f4a21efee42c772efe53f9e36f239d10d925744d87dba6"
+      "sha": "28ef18143257127569298111088f733c799736187ea205ab389ec09434c3156e"
     },
     {
       "id": "bund/BEWG/art_15",
@@ -507,8 +641,8 @@
       "artikelLabel": "Art. 15",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Jeder Kanton bezeichnet:",
           "items": [
             {
               "marke": "a",
@@ -523,13 +657,21 @@
               "text": "eine Beschwerdeinstanz."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständig ist die Behörde am Ort des Grundstückes; beim Erwerb von Anteilen an juristischen Personen oder bei der Beteiligung an einer vermögensfähigen Gesellschaft ohne juristische Persönlichkeit ist die Behörde zuständig, in deren Amtsbereich wertmässig der grösste Teil der Grundstücke liegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Eidgenössische Justiz- und Polizeidepartement entscheidet in Kompetenzkonflikten zwischen den Behörden verschiedener Kantone."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_15",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "769e91d60ae22cb87bd14040601151ea26f24796338a366767097e65bd49e8ff"
+      "sha": "1942b39fdcd32385a4105913b9d05567c9dab7d25868776345293347b4d17c2f"
     },
     {
       "id": "bund/BEWG/art_16",
@@ -540,8 +682,8 @@
       "artikelLabel": "Art. 16",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Bundesrat stellt nach Anhören der Kantonsregierung fest, ob:",
           "items": [
             {
               "marke": "a",
@@ -552,13 +694,25 @@
               "text": "der Erwerb staatspolitischen Interessen widerspricht; trifft dies zu, so verweigert er die Bewilligung."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "In den übrigen Fällen sind das Eidgenössische Justiz- und Polizeidepartement und, soweit dieses Gesetz es vorsieht, das Bundesamt für Justiz zuständig."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_16",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "588a6578b31f80e1dadf5b0fcf7a7138d4f62ebb0073fa238931bbf1e5c30eb6"
+      "sha": "37a39edd8225f984c561260e7eedfb9a82e0acf927c951148b8c7c12ec23cdd1"
     },
     {
       "id": "bund/BEWG/art_17",
@@ -569,15 +723,23 @@
       "artikelLabel": "Art. 17",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Bewilligungsverfahren 1 Erwerber, deren Bewilligungspflicht sich nicht ohne weiteres ausschliessen lässt, haben spätestens nach dem Abschluss des Rechtsgeschäftes oder, mangels dessen, nach dem Erwerb um die Bewilligung oder die Feststellung nachzusuchen, dass sie keiner Bewilligung bedürfen. 2 Die Bewilligungsbehörde eröffnet ihre Verfügung mit Begründung und Rechtsmittelbelehrung den Parteien, der Gemeinde, in der das Grundstück liegt, und mit den vollständigen Akten der beschwerdeberechtigten kantonalen Behörde. 3 Verzichtet die beschwerdeberechtigte kantonale Behörde auf eine Beschwerde oder zieht sie diese zurück, so eröffnet sie die Verfügung mit den vollständigen Akten kostenlos dem Bundesamt für Justiz."
+          "absatz": "1",
+          "text": "Erwerber, deren Bewilligungspflicht sich nicht ohne weiteres ausschliessen lässt, haben spätestens nach dem Abschluss des Rechtsgeschäftes oder, mangels dessen, nach dem Erwerb um die Bewilligung oder die Feststellung nachzusuchen, dass sie keiner Bewilligung bedürfen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligungsbehörde eröffnet ihre Verfügung mit Begründung und Rechtsmittelbelehrung den Parteien, der Gemeinde, in der das Grundstück liegt, und mit den vollständigen Akten der beschwerdeberechtigten kantonalen Behörde."
+        },
+        {
+          "absatz": "3",
+          "text": "Verzichtet die beschwerdeberechtigte kantonale Behörde auf eine Beschwerde oder zieht sie diese zurück, so eröffnet sie die Verfügung mit den vollständigen Akten kostenlos dem Bundesamt für Justiz."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_17",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "e4dd75cf5c5347c33f0d9047af15d54bfd15f333782e5ae378fbb03fb2276ed0"
+      "sha": "7bc774d89504f18eef95db519541be6403ba5053e148aac21f43d19bdacd8116"
     },
     {
       "id": "bund/BEWG/art_18",
@@ -588,15 +750,27 @@
       "artikelLabel": "Art. 18",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Grundbuch und Handelsregister 1 Kann der Grundbuchverwalter die Bewilligungspflicht nicht ohne weiteres ausschliessen, so setzt er das Verfahren aus und räumt dem Erwerber eine Frist von 30 Tagen ein, um die Bewilligung oder die Feststellung einzuholen, dass er keiner Bewilligung bedarf; er weist die Anmeldung ab, wenn der Erwerber nicht fristgerecht handelt oder die Bewilligung verweigert wird. 2 Der Handelsregisterführer verfährt wie der Grundbuchverwalter; er verweist jedoch eine juristische Person oder vermögensfähige Gesellschaft ohne juristische Persönlichkeit, die ihren Sitz von der Schweiz ins Ausland verlegt, vor der Löschung in jedem Falle an die Bewilligungsbehörde. 3 Die abweisende Verfügung des Grundbuchverwalters und des Handelsregisterführers unterliegt der Beschwerde an die nach diesem Gesetz zuständige kantonale Beschwerdeinstanz; diese Beschwerde tritt an die Stelle der Beschwerde an die Aufsichtsbehörde für das Grundbuch oder Handelsregister. 4 … 43 43 Aufgehoben durch Ziff. I des BG vom 30. April 1997, mit Wirkung seit 1. Okt. 1997 ( AS 1997 2086 ; BBl 1997 II 1221 )."
+          "absatz": "1",
+          "text": "Kann der Grundbuchverwalter die Bewilligungspflicht nicht ohne weiteres ausschliessen, so setzt er das Verfahren aus und räumt dem Erwerber eine Frist von 30 Tagen ein, um die Bewilligung oder die Feststellung einzuholen, dass er keiner Bewilligung bedarf; er weist die Anmeldung ab, wenn der Erwerber nicht fristgerecht handelt oder die Bewilligung verweigert wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Handelsregisterführer verfährt wie der Grundbuchverwalter; er verweist jedoch eine juristische Person oder vermögensfähige Gesellschaft ohne juristische Persönlichkeit, die ihren Sitz von der Schweiz ins Ausland verlegt, vor der Löschung in jedem Falle an die Bewilligungsbehörde."
+        },
+        {
+          "absatz": "3",
+          "text": "Die abweisende Verfügung des Grundbuchverwalters und des Handelsregisterführers unterliegt der Beschwerde an die nach diesem Gesetz zuständige kantonale Beschwerdeinstanz; diese Beschwerde tritt an die Stelle der Beschwerde an die Aufsichtsbehörde für das Grundbuch oder Handelsregister."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_18",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "b86f6ac8f0b7a5953a914e65fdef43625e6ce772a5147d22257072cc79f250f5"
+      "sha": "2f60a2e7ae3c51f3c777d8c8dbd76ed4973d1390f8047f0033c7c24ce7471ac2"
     },
     {
       "id": "bund/BEWG/art_19",
@@ -607,8 +781,12 @@
       "artikelLabel": "Art. 19",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Ersteigert jemand ein Grundstück in einer Zwangsversteigerung, so hat er der Steigerungsbehörde nach dem Zuschlag schriftlich zu erklären, ob er eine Person im Ausland ist, namentlich ob er auf Rechnung einer Person im Ausland handelt; er ist darauf und auf die Bewilligungspflicht von Personen im Ausland für den Erwerb von Grundstücken in den Steigerungsbedingungen aufmerksam zu machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht Gewissheit über die Bewilligungspflicht und liegt noch keine rechtskräftige Bewilligung vor, oder lässt sich die Bewilligungspflicht ohne nähere Prüfung nicht ausschliessen, so räumt die Steigerungsbehörde dem Erwerber unter Mitteilung an den Grundbuchverwalter eine Frist von zehn Tagen ein, um:",
           "items": [
             {
               "marke": "a",
@@ -623,13 +801,25 @@
               "text": "die Kosten einer erneuten Versteigerung sicherzustellen."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Handelt der Erwerber nicht fristgerecht oder wird die Bewilligung rechtskräftig verweigert, so hebt die Steigerungsbehörde unter Mitteilung an den Grundbuchverwalter den Zuschlag auf und ordnet eine neue Versteigerung an."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Aufhebungsverfügung der Steigerungsbehörde unterliegt der Beschwerde an die nach diesem Gesetz zuständige kantonale Beschwerdeinstanz; diese Beschwerde tritt an die Stelle der Beschwerde an die Aufsichtsbehörde für Schuldbetreibung und Konkurs."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird bei der erneuten Versteigerung ein geringerer Erlös erzielt, so haftet der erste Ersteigerer für den Ausfall und allen weiteren Schaden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_19",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "30f914d54822d2fc2ba1516757ceafaf18233a50ef87d9dcda8577f2165f7aba"
+      "sha": "0c549eed17f29187f4133428141a8ed72dc03277c1a7783ad54ab9510ba3dff3"
     },
     {
       "id": "bund/BEWG/art_20",
@@ -640,8 +830,12 @@
       "artikelLabel": "Art. 20",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Der Beschwerde an die kantonale Beschwerdeinstanz unterliegen die Verfügungen der Bewilligungsbehörde, des Grundbuchverwalters, des Handelsregisterführers und der Steigerungsbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Beschwerderecht steht zu:",
           "items": [
             {
               "marke": "a",
@@ -656,13 +850,21 @@
               "text": "der Gemeinde, in der das Grundstück liegt, gegen eine Bewilligung, gegen die Feststellung, dass der Erwerber keiner Bewilligung bedarf, und gegen den Widerruf einer Auflage."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beschwerdefrist beträgt 30 Tage seit der Eröffnung der Verfügung an die Parteien oder die beschwerdeberechtigte Behörde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die kantonale Beschwerdeinstanz eröffnet ihren Entscheid mit Begründung und Rechtsmittelbelehrung den beschwerdeberechtigten Personen, der Bewilligungsbehörde und, kostenlos, den beschwerdeberechtigten Behörden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_20",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "226df4111c1dca89aeb7473374325ba0cba5b9a80fc1d3882a2bc02dbde74189"
+      "sha": "ba2b0e2798b0506521f1950e0c71c882b1a502a653bf3b421c2330b1b937f7d6"
     },
     {
       "id": "bund/BEWG/art_21",
@@ -673,15 +875,19 @@
       "artikelLabel": "Art. 21",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "44 Beschwerde an Bundesbehörden 1 Für die Beschwerde an Bundesbehörden gelten die allgemeinen Bestimmungen über die Bundesrechtspflege. 2 Die Parteien und Behörden, die zur Beschwerde an die kantonale Beschwerdeinstanz berechtigt sind, können auch bei Bundesbehörden Beschwerde führen. 44 Fassung gemäss Anhang Ziff. 17 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 ; BBl 2001 4202 )."
+          "absatz": "1",
+          "text": "Für die Beschwerde an Bundesbehörden gelten die allgemeinen Bestimmungen über die Bundesrechtspflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Parteien und Behörden, die zur Beschwerde an die kantonale Beschwerdeinstanz berechtigt sind, können auch bei Bundesbehörden Beschwerde führen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_21",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "80bdc66b622bc2fa223a353fb8f97812409904c04b8601dc86e76f4734e56bc6"
+      "sha": "a8146eb21959f00f80cb712d27c5b9fb54fa697217faed89cea172b3264c9c1c"
     },
     {
       "id": "bund/BEWG/art_22",
@@ -692,15 +898,27 @@
       "artikelLabel": "Art. 22",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Beweiserhebung 1 Die Bewilligungsbehörde und die kantonale Beschwerdeinstanz stellen den Sachverhalt von Amtes wegen fest. Sie stellen nur auf Vorbringen ab, die sie geprüft und über die sie nötigenfalls Beweis erhoben haben. 2 Die Bewilligungsbehörde, die kantonale Beschwerdeinstanz, die eidgenössischen Gerichte und, ausserhalb eines Verfahrens dieser Behörden, die beschwerdeberechtigte kantonale Behörde und das Bundesamt für Justiz können Auskunft über alle Tatsachen verlangen, die für die Bewilligungspflicht oder die Bewilligung von Bedeutung sind. 45 3 Auskunftspflichtig ist, wer von Amtes wegen, berufsmässig, vertraglich, als Organ einer juristischen Person oder Gesellschaft ohne juristische Persönlichkeit oder eines Anlagefonds durch Finanzierung oder auf andere Weise an der Vorbereitung, dem Abschluss oder dem Vollzug eines Rechtsgeschäftes über den Erwerb mitwirkt; er hat auf Verlangen auch Einsicht in die Geschäftsbücher, Korrespondenzen oder Belege zu gewähren und sie herauszugeben. 4 Die Behörde kann zu Ungunsten des Erwerbers entscheiden, wenn ein Auskunftspflichtiger die notwendige und zumutbare Mitwirkung verweigert. 45 Fassung gemäss Anhang Ziff. 17 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "absatz": "1",
+          "text": "Die Bewilligungsbehörde und die kantonale Beschwerdeinstanz stellen den Sachverhalt von Amtes wegen fest. Sie stellen nur auf Vorbringen ab, die sie geprüft und über die sie nötigenfalls Beweis erhoben haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligungsbehörde, die kantonale Beschwerdeinstanz, die eidgenössischen Gerichte und, ausserhalb eines Verfahrens dieser Behörden, die beschwerdeberechtigte kantonale Behörde und das Bundesamt für Justiz können Auskunft über alle Tatsachen verlangen, die für die Bewilligungspflicht oder die Bewilligung von Bedeutung sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Auskunftspflichtig ist, wer von Amtes wegen, berufsmässig, vertraglich, als Organ einer juristischen Person oder Gesellschaft ohne juristische Persönlichkeit oder eines Anlagefonds durch Finanzierung oder auf andere Weise an der Vorbereitung, dem Abschluss oder dem Vollzug eines Rechtsgeschäftes über den Erwerb mitwirkt; er hat auf Verlangen auch Einsicht in die Geschäftsbücher, Korrespondenzen oder Belege zu gewähren und sie herauszugeben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Behörde kann zu Ungunsten des Erwerbers entscheiden, wenn ein Auskunftspflichtiger die notwendige und zumutbare Mitwirkung verweigert."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_22",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "266e4a82ab16a9028526a03e05e160ca39644c9a0f5b2a212b5eae5f456fc184"
+      "sha": "021a1eb8a5b32898ccfcaceb3fa4ed95009c7625c219f5ee652b7bad7194fd3d"
     },
     {
       "id": "bund/BEWG/art_23",
@@ -711,15 +929,19 @@
       "artikelLabel": "Art. 23",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Vorsorgliche Massnahmen 1 Die kantonalen Behörden und, ausserhalb eines Verfahrens, auch das Bundesamt für Justiz können vorsorgliche Massnahmen anordnen, um einen rechtlichen oder tatsächlichen Zustand unverändert zu erhalten. 2 Die Beschwerde gegen eine vorsorgliche Verfügung hat keine aufschiebende Wirkung."
+          "absatz": "1",
+          "text": "Die kantonalen Behörden und, ausserhalb eines Verfahrens, auch das Bundesamt für Justiz können vorsorgliche Massnahmen anordnen, um einen rechtlichen oder tatsächlichen Zustand unverändert zu erhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beschwerde gegen eine vorsorgliche Verfügung hat keine aufschiebende Wirkung."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_23",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "7e511aeb48c0ba8d5d3812e289f85ae662b1b14e8df0aa85d2b7f5f85731d549"
+      "sha": "1a9fa584849eb87e946e4b0a15469783f5fc1b6c3060e94aaef2502a606ffb5c"
     },
     {
       "id": "bund/BEWG/art_24",
@@ -730,15 +952,23 @@
       "artikelLabel": "Art. 24",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Rechts- und Amtshilfe 1 Die Verwaltungs- und Gerichtsbehörden des Bundes und der Kantone leisten sich gegenseitig Rechts- und Amtshilfe. 2 Behörden und Beamte, die in ihrer amtlichen Eigenschaft Widerhandlungen wahrnehmen oder Kenntnis davon erhalten, sind verpflichtet, sie sofort der zuständigen kantonalen Strafverfolgungsbehörde, der beschwerdeberechtigten kantonalen Behörde oder dem Bundesamt für Justiz anzuzeigen. 3 Die zuständigen Behörden liefern dem Bundesamt für Justiz die zur Führung und Veröffentlichung einer Statistik über den Erwerb von Grundstücken durch Personen im Ausland notwendigen Angaben; das Bundesamt für Justiz erteilt den zuständigen Behörden Auskunft über Tatsachen, die für die Bewilligungspflicht oder die Bewilligung von Bedeutung sind."
+          "absatz": "1",
+          "text": "Die Verwaltungs- und Gerichtsbehörden des Bundes und der Kantone leisten sich gegenseitig Rechts- und Amtshilfe."
+        },
+        {
+          "absatz": "2",
+          "text": "Behörden und Beamte, die in ihrer amtlichen Eigenschaft Widerhandlungen wahrnehmen oder Kenntnis davon erhalten, sind verpflichtet, sie sofort der zuständigen kantonalen Strafverfolgungsbehörde, der beschwerdeberechtigten kantonalen Behörde oder dem Bundesamt für Justiz anzuzeigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständigen Behörden liefern dem Bundesamt für Justiz die zur Führung und Veröffentlichung einer Statistik über den Erwerb von Grundstücken durch Personen im Ausland notwendigen Angaben; das Bundesamt für Justiz erteilt den zuständigen Behörden Auskunft über Tatsachen, die für die Bewilligungspflicht oder die Bewilligung von Bedeutung sind."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_24",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "258671f39a1fe65f346a9c8f716520694eeede3438615edbe32a240fe7416f08"
+      "sha": "946236f1921fde9f1044db167ebc953bca6238d38b3ebf74dbe589c1e23d0901"
     },
     {
       "id": "bund/BEWG/art_25",
@@ -749,15 +979,23 @@
       "artikelLabel": "Art. 25",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Widerruf der Bewilligung und nachträgliche Feststellung der Bewilligungspflicht 46 1 Die Bewilligung wird von Amtes wegen widerrufen, wenn der Erwerber sie durch unrichtige Angaben erschlichen hat oder eine Auflage trotz Mahnung nicht einhält. 1bis Die Bewilligungspflicht wird von Amtes wegen nachträglich festgestellt, wenn der Erwerber einer zuständigen Behörde, dem Grundbuchverwalter oder dem Handelsregisterführer über Tatsachen, die für die Bewilligungspflicht von Bedeutung sind, unrichtige oder unvollständige Angaben gemacht hat. 47 2 Sanktionen nach dem Ausländerrecht bleiben vorbehalten. 46 Fassung gemäss Ziff. I des BG vom 30. April 1997, in Kraft seit 1. Okt. 1997 ( AS 1997 2086 ; BBl 1997 II 1221 ). 47 Eingefügt durch Ziff. I des BG vom 30. April 1997, in Kraft seit 1. Okt. 1997 ( AS 1997 2086 ; BBl 1997 II 1221 )."
+          "absatz": "1",
+          "text": "Die Bewilligung wird von Amtes wegen widerrufen, wenn der Erwerber sie durch unrichtige Angaben erschlichen hat oder eine Auflage trotz Mahnung nicht einhält."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Bewilligungspflicht wird von Amtes wegen nachträglich festgestellt, wenn der Erwerber einer zuständigen Behörde, dem Grundbuchverwalter oder dem Handelsregisterführer über Tatsachen, die für die Bewilligungspflicht von Bedeutung sind, unrichtige oder unvollständige Angaben gemacht hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Sanktionen nach dem Ausländerrecht bleiben vorbehalten."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_25",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "b40c850df7ddb428bc2115265e22bc7579cf93689b34453a212533640ed07458"
+      "sha": "20a6b3cf23516302988a3ef70ac08f8adbadc66f5d8c74c7a12aeaf54000f5a1"
     },
     {
       "id": "bund/BEWG/art_26",
@@ -768,8 +1006,38 @@
       "artikelLabel": "Art. 26",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Rechtsgeschäfte über einen Erwerb, für den der Erwerber einer Bewilligung bedarf, bleiben ohne rechtskräftige Bewilligung unwirksam."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie werden nichtig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Erwerber das Rechtsgeschäft vollzieht, ohne um die Bewilligung nachzusuchen oder bevor die Bewilligung in Rechtskraft tritt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bewilligungsbehörde die Bewilligung rechtskräftig verweigert oder widerrufen hat;"
+            },
+            {
+              "marke": "c",
+              "text": "der Grundbuchverwalter oder Handelsregisterführer die Anmeldung abweist, ohne dass die Bewilligungsbehörde die Bewilligung vorgängig verweigert hat;"
+            },
+            {
+              "marke": "d",
+              "text": "die Steigerungsbehörde den Zuschlag aufhebt, ohne dass die Bewilligungsbehörde die Bewilligung vorgängig verweigert hat."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Unwirksamkeit und Nichtigkeit sind von Amtes wegen zu beachten."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie haben zur Folge, dass:",
           "items": [
             {
               "marke": "a",
@@ -788,9 +1056,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_26",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "6e9adf2311bf2799b2cffa7bb33c6e15aa7931b3077baafcbb421d81f6c5e9b3"
+      "sha": "588ec2a7deebdad60f9cd9426a66ec02e1c8892caa8e908c2f5e8de25d145df4"
     },
     {
       "id": "bund/BEWG/art_27",
@@ -801,8 +1069,30 @@
       "artikelLabel": "Art. 27",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die beschwerdeberechtigte kantonale Behörde oder, wenn diese nicht handelt, das Bundesamt für Justiz, klagt gegen die Parteien auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wiederherstellung des ursprünglichen Zustandes, wenn ein Grundstück aufgrund eines mangels Bewilligung nichtigen Rechtsgeschäftes erworben wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "Auflösung der juristischen Person mit Verfall ihres Vermögens an das Gemeinwesen im Falle von Artikel 57 Absatz 3 des Schweizerischen Zivilgesetzbuches."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Erweist sich die Wiederherstellung des ursprünglichen Zustandes als unmöglich oder untunlich, so ordnet der Richter die öffentliche Versteigerung nach den Vorschriften über die Zwangsverwertung von Grundstücken an. Der Erwerber kann nur seine Gestehungskosten beanspruchen; ein Mehrerlös fällt dem Kanton zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Klage auf Wiederherstellung des ursprünglichen Zustandes entfällt, wenn die Parteien ihn wieder hergestellt haben oder ein gutgläubiger Dritter das Grundstück erworben hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Beide Klagen sind anzubringen:",
           "items": [
             {
               "marke": "a",
@@ -817,13 +1107,17 @@
               "text": "spätestens bis zur Verjährung der Strafverfolgung, wenn diese länger dauert."
             }
           ]
+        },
+        {
+          "absatz": "5",
+          "text": "Für den Schutz gutgläubig erworbener dinglicher Rechte und die Ersatzpflicht gilt Artikel 975 Absatz 2 des Schweizerischen Zivilgesetzbuches."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_27",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "b46a84ba31531247b5409bd0a4f037ba1f05f5020273db055d2ae0183d03cebb"
+      "sha": "638c8f0ce3431000a06d638d61c5900fcdde4782802fd31480f8baddbf7bbd19"
     },
     {
       "id": "bund/BEWG/art_28",
@@ -834,15 +1128,27 @@
       "artikelLabel": "Art. 28",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Umgehung der Bewilligungspflicht 1 Wer vorsätzlich ein mangels Bewilligung nichtiges Rechtsgeschäft vollzieht oder als Erbe, der für den Erwerb der Bewilligung bedarf, nicht fristgerecht um diese nachsucht, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft. 50 2 Handelt der Täter gewerbsmässig, so ist die Strafe Freiheitsstrafe von sechs Monaten bis zu drei Jahren. 51 3 Handelt der Täter fahrlässig, so ist die Strafe Busse bis zu 50 000 Franken. 4 Stellt der Täter den ursprünglichen Zustand wieder her, so kann der Richter die Strafe mildern. 50 Fassung gemäss Art. 333 des Strafgesetzbuches in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 ( AS 2006 3459 ). 51 Fassung gemäss Ziff. I 2 des BG vom 17. Dez. 2021 über die Anpassung des Nebenstrafrechts an das geänderte Sanktionenrecht, in Kraft seit 1. Juli 2023 ( AS 2023 254 ; BBl 2018 2827 )."
+          "absatz": "1",
+          "text": "Wer vorsätzlich ein mangels Bewilligung nichtiges Rechtsgeschäft vollzieht oder als Erbe, der für den Erwerb der Bewilligung bedarf, nicht fristgerecht um diese nachsucht, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Handelt der Täter gewerbsmässig, so ist die Strafe Freiheitsstrafe von sechs Monaten bis zu drei Jahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Handelt der Täter fahrlässig, so ist die Strafe Busse bis zu 50 000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Stellt der Täter den ursprünglichen Zustand wieder her, so kann der Richter die Strafe mildern."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_28",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f67e6b6f7075146585c447698248aaeb346f79b8b8a5bee39d9af737eb814536"
+      "sha": "0fbb1ca042422e4848d04199c7aa464b609d95012909518d9ff4aecd3bdbba1c"
     },
     {
       "id": "bund/BEWG/art_29",
@@ -853,15 +1159,19 @@
       "artikelLabel": "Art. 29",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Unrichtige Angaben 1 Wer vorsätzlich einer zuständigen Behörde, dem Grundbuchverwalter oder dem Handelsregisterführer über Tatsachen, die für die Bewilligungspflicht oder für die Bewilligung von Bedeutung sind, unrichtige oder unvollständige Angaben macht oder einen Irrtum dieser Behörden arglistig benutzt, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft. 52 2 Wer fahrlässig unrichtige oder unvollständige Angaben macht, wird mit Busse bis zu 50 000 Franken bestraft. 52 Fassung gemäss Art. 333 des Strafgesetzbuches in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 ( AS 2006 3459 )."
+          "absatz": "1",
+          "text": "Wer vorsätzlich einer zuständigen Behörde, dem Grundbuchverwalter oder dem Handelsregisterführer über Tatsachen, die für die Bewilligungspflicht oder für die Bewilligung von Bedeutung sind, unrichtige oder unvollständige Angaben macht oder einen Irrtum dieser Behörden arglistig benutzt, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer fahrlässig unrichtige oder unvollständige Angaben macht, wird mit Busse bis zu 50 000 Franken bestraft."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_29",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f178be2a6e52bde87fdf823e336d5506b32414c2d7260b023524a0fa8d0658e3"
+      "sha": "7632169c564a686806b4a8dbb76d6fca85e8d4e2a89553af6b68efbacab665b1"
     },
     {
       "id": "bund/BEWG/art_30",
@@ -872,15 +1182,27 @@
       "artikelLabel": "Art. 30",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Missachtung von Auflagen 1 Wer vorsätzlich eine Auflage missachtet, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft. 53 2 Handelt der Täter fahrlässig, so ist die Strafe Busse bis zu 50 000 Franken. 3 Wird die Auflage nachträglich widerrufen oder kommt der Täter nachträglich der Auflage nach, so ist die Strafe Busse bis zu 20 000 Franken. 4 Bis zur rechtskräftigen Erledigung eines Verfahrens auf Widerruf der Auflage darf der Strafrichter nicht urteilen. 53 Fassung gemäss Art. 333 des Strafgesetzbuches in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 ( AS 2006 3459 )."
+          "absatz": "1",
+          "text": "Wer vorsätzlich eine Auflage missachtet, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Handelt der Täter fahrlässig, so ist die Strafe Busse bis zu 50 000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Auflage nachträglich widerrufen oder kommt der Täter nachträglich der Auflage nach, so ist die Strafe Busse bis zu 20 000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Bis zur rechtskräftigen Erledigung eines Verfahrens auf Widerruf der Auflage darf der Strafrichter nicht urteilen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_30",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f6020e81c26a26179f711e0c55e6140b4f952a400fa11cd21f3bb1e68585c2fd"
+      "sha": "7d9232c8c1d4e96160548c7663a11ba877ac68188ce4a7b292d149281127ff45"
     },
     {
       "id": "bund/BEWG/art_31",
@@ -897,7 +1219,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "59ef1325fe0253b55b3a7aa49f0d1d1dd61d5dbd049e40956f98e42c4801637a"
     },
@@ -910,8 +1232,8 @@
       "artikelLabel": "Art. 32",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Strafverfolgung verjährt:",
           "items": [
             {
               "marke": "a",
@@ -926,13 +1248,17 @@
               "text": "in zehn Jahren für Vergehen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafe für eine Übertretung verjährt in fünf Jahren."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_32",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "efa36bab30ea6ba987acb3cb70521babc8983694917b5281349d8f9abb34183d"
+      "sha": "25518a940fccfb7379f0101e177100465920d4298f7f00381d8501c56507a376"
     },
     {
       "id": "bund/BEWG/art_33",
@@ -943,15 +1269,19 @@
       "artikelLabel": "Art. 33",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Einziehung unrechtmässiger Vermögensvorteile 1 Wer durch eine Widerhandlung einen unrechtmässigen Vorteil erlangt, der nicht auf Klage hin beseitigt wird, ist bis zur Verjährung der Strafverfolgung ohne Rücksicht auf die Strafbarkeit einer bestimmten Person zu verpflichten, einen entsprechenden Betrag an den Kanton zu zahlen. 2 Geschenke und andere Zuwendungen verfallen nach den Artikeln 70–72 des Strafgesetzbuches 56 . 56 Fassung gemäss Art. 334 des Strafgesetzbuches in der Fassung des BG vom 13. Dez. 2002, in Kraft seit 1. Jan. 2007 ( AS 2006 3459 )."
+          "absatz": "1",
+          "text": "Wer durch eine Widerhandlung einen unrechtmässigen Vorteil erlangt, der nicht auf Klage hin beseitigt wird, ist bis zur Verjährung der Strafverfolgung ohne Rücksicht auf die Strafbarkeit einer bestimmten Person zu verpflichten, einen entsprechenden Betrag an den Kanton zu zahlen."
+        },
+        {
+          "absatz": "2",
+          "text": "Geschenke und andere Zuwendungen verfallen nach den Artikeln 70–72 des Strafgesetzbuches."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_33",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "3c94b8480c253e49eae89d77d4ee42816dd65b8e2353263b1fb684bbbe9b3def"
+      "sha": "029a9f2e59f35afab55a038b10931886779ac58e48259c73ba2325bcef0f686a"
     },
     {
       "id": "bund/BEWG/art_34",
@@ -968,7 +1298,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_34",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "da8db180bd3f245b5745f86b9c7ba5e9e88e4b2941475b7e64c52c02989491bc"
     },
@@ -981,15 +1311,23 @@
       "artikelLabel": "Art. 35",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Strafverfolgung 1 Die Strafverfolgung obliegt den Kantonen. 2 Jede Einleitung eines Strafverfahrens, alle Einstellungsbeschlüsse, Strafbescheide und Strafurteile sind ohne Verzug und unentgeltlich der Bundesanwaltschaft mitzuteilen; diese kann jederzeit Auskunft über den Stand eines hängigen Strafverfahrens verlangen. 3 … 58 58 Aufgehoben durch Anhang 1 Ziff. II 6 der Strafprozessordnung vom 5. Okt. 2007, mit Wirkung seit 1. Jan. 2011 ( AS 2010 1881 ; BBl 2006 1085 )."
+          "absatz": "1",
+          "text": "Die Strafverfolgung obliegt den Kantonen."
+        },
+        {
+          "absatz": "2",
+          "text": "Jede Einleitung eines Strafverfahrens, alle Einstellungsbeschlüsse, Strafbescheide und Strafurteile sind ohne Verzug und unentgeltlich der Bundesanwaltschaft mitzuteilen; diese kann jederzeit Auskunft über den Stand eines hängigen Strafverfahrens verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_35",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "9305ce0ff2409f9035a265b89c38fcfae2c5db2070b9e5d9615567797e14aed3"
+      "sha": "51ca0370f1982841e923f9ca64d97abea008f45ce1155ba709a9a544453fa641"
     },
     {
       "id": "bund/BEWG/art_36",
@@ -1000,15 +1338,23 @@
       "artikelLabel": "Art. 36",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Ausführungsbestimmungen 1 Der Bundesrat und die Kantone erlassen die notwendigen Ausführungsbestimmungen. 2 Die Kantone können ausser ihren notwendigen Ausführungsbestimmungen auch ergänzende gesetzliche Bestimmungen, zu deren Erlass dieses Gesetz sie ermächtigt, vorläufig durch nicht referendumspflichtige Verordnung erlassen; diese Verordnungen bleiben bis zum Erlass gesetzlicher Bestimmungen in Kraft, längstens jedoch für die Dauer von drei Jahren seit dem Inkrafttreten dieses Gesetzes. 3 Die Bestimmungen, welche die Kantone und die Gemeinden erlassen, sind dem Bundesamt für Justiz zur Kenntnis zu bringen. 59 59 Fassung gemäss Ziff. I des BG vom 8. Okt. 2004, in Kraft seit 1. April 2005 ( AS 2005 1337 ; BBl 2003 4357 )."
+          "absatz": "1",
+          "text": "Der Bundesrat und die Kantone erlassen die notwendigen Ausführungsbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone können ausser ihren notwendigen Ausführungsbestimmungen auch ergänzende gesetzliche Bestimmungen, zu deren Erlass dieses Gesetz sie ermächtigt, vorläufig durch nicht referendumspflichtige Verordnung erlassen; diese Verordnungen bleiben bis zum Erlass gesetzlicher Bestimmungen in Kraft, längstens jedoch für die Dauer von drei Jahren seit dem Inkrafttreten dieses Gesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bestimmungen, welche die Kantone und die Gemeinden erlassen, sind dem Bundesamt für Justiz zur Kenntnis zu bringen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_36",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "989a74090e66249515960e3e44bb0ca06dbda050fa23c9da68b83a4de9ac93f8"
+      "sha": "7dda5e64de358be5c3ce663fa9d6a7b1a0aacd4dc6fc4bfeeb5f4e51734d4755"
     },
     {
       "id": "bund/BEWG/art_37",
@@ -1019,15 +1365,19 @@
       "artikelLabel": "Art. 37",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Aufhebung und Änderung anderer Erlasse 1 Der Bundesbeschluss vom 23. März 1961 60 über den Erwerb von Grundstücken durch Personen im Ausland wird aufgehoben. 2 … 61 60 [ AS 1961 203 ; 1965 1239 ; 1970 1199 ; 1974 83 ; 1977 1689 Ziff. II; 1982 1914] 61 Die Änderung kann unter AS 1984 1148 konsultiert werden."
+          "absatz": "1",
+          "text": "Der Bundesbeschluss vom 23. März 1961 über den Erwerb von Grundstücken durch Personen im Ausland wird aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_37",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "de5ded61a179253e894db2f6a083d309ba40f67f83ca439f019472fa17a67b14"
+      "sha": "d33a31b5d788afa1bdeba76dfc7e33de4ddbf0bb3d5cc109b470ef8b75414119"
     },
     {
       "id": "bund/BEWG/art_38",
@@ -1044,7 +1394,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_38",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "c4a6645deab010b3f42e7f54bb9b685c36acbd5998ebf9ebae051c7ffb0a9511"
     },
@@ -1063,7 +1413,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_39",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "5349cff3179dbc937e305385339fd262657781f688ea6de5855ea5dece3aae87"
     },
@@ -1076,15 +1426,19 @@
       "artikelLabel": "Art. 40",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Referendum und Inkrafttreten 1 Dieses Gesetz untersteht dem fakultativen Referendum. 2 Es tritt am 1. Januar 1985 in Kraft, wenn die Volksinitiative «gegen den Ausverkauf der Heimat» vor diesem Zeitpunkt zurückgezogen oder verworfen wird. 63 Andernfalls bestimmt der Bundesrat das Inkrafttreten. 63 Die Initiative wurde am 20. Mai 1984 verworfen ( BBl 1984 II 989 )."
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Es tritt am 1. Januar 1985 in Kraft, wenn die Volksinitiative «gegen den Ausverkauf der Heimat» vor diesem Zeitpunkt zurückgezogen oder verworfen wird. Andernfalls bestimmt der Bundesrat das Inkrafttreten."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1984/1148_1148_1148/de#art_40",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "451fca78b0825eef5d2b083edff2baddf8b0e2f701022feb63a1109e1bdc55ed"
+      "sha": "cd45e96210a292fb7f36ae8bba1a9f5e37668160dd2a3489ade65ebf06dda9d7"
     }
   ]
 }

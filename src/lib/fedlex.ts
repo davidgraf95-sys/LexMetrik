@@ -117,6 +117,10 @@ export const FEDLEX = {
   //    HTML bestätigt, §7). ──
   PARTG: 'https://www.fedlex.admin.ch/eli/cc/2005/782/de', // SR 211.231, Kons. 20250101
   JSTG:  'https://www.fedlex.admin.ch/eli/cc/2006/551/de', // SR 311.1, Kons. 20250701
+  // Ältere plain-<p><sup>-Markup-Erlasse — entsperrt durch den Extraktor-Fix 23.6.2026.
+  IPRG:  'https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/de', // SR 291, Kons. 20210201
+  BETMG: 'https://www.fedlex.admin.ch/eli/cc/1952/241_241_245/de', // SR 812.121, Kons. 20230901
+  VSTRR: 'https://www.fedlex.admin.ch/eli/cc/1974/1857_1857_1857/de', // SR 313.0, Kons. 20230701
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

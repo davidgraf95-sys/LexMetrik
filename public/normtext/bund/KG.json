@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-19",
+  "erzeugt": "2026-06-23",
   "eintraege": [
     {
       "id": "bund/KG/art_1",
@@ -16,7 +16,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_1",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "1f77e0db6611847b3e11754389903fd1cc21afdf68afe5d8c84c01008952e56a"
     },
@@ -29,15 +29,23 @@
       "artikelLabel": "Art. 2",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Geltungsbereich 1 Das Gesetz gilt für Unternehmen des privaten und des öffentlichen Rechts, die Kartell- oder andere Wettbewerbsabreden treffen, Marktmacht ausüben oder sich an Unternehmenszusammenschlüssen beteiligen. 1bis Als Unternehmen gelten sämtliche Nachfrager oder Anbieter von Gütern und Dienstleistungen im Wirtschaftsprozess, unabhängig von ihrer Rechts- oder Organisationsform. 6 2 Das Gesetz ist auf Sachverhalte anwendbar, die sich in der Schweiz auswirken, auch wenn sie im Ausland veranlasst werden. 6 Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 )."
+          "absatz": "1",
+          "text": "Das Gesetz gilt für Unternehmen des privaten und des öffentlichen Rechts, die Kartell- oder andere Wettbewerbsabreden treffen, Marktmacht ausüben oder sich an Unternehmenszusammenschlüssen beteiligen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Als Unternehmen gelten sämtliche Nachfrager oder Anbieter von Gütern und Dienstleistungen im Wirtschaftsprozess, unabhängig von ihrer Rechts- oder Organisationsform."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesetz ist auf Sachverhalte anwendbar, die sich in der Schweiz auswirken, auch wenn sie im Ausland veranlasst werden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_2",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8fef45d4270e39755db82ce8a4dbbc296d772771b6a9a1301244ffe3c7014da5"
+      "sha": "1fcd77b0860cc49d89c2349bc17f4c2091ac6c506a9c967f0f131f6cacc046f4"
     },
     {
       "id": "bund/KG/art_3",
@@ -48,8 +56,8 @@
       "artikelLabel": "Art. 3",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Vorbehalten sind Vorschriften, soweit sie auf einem Markt für bestimmte Waren oder Leistungen Wettbewerb nicht zulassen, insbesondere Vorschriften:",
           "items": [
             {
               "marke": "a",
@@ -60,13 +68,21 @@
               "text": "die einzelne Unternehmen zur Erfüllung öffentlicher Aufgaben mit besonderen Rechten ausstatten."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht unter das Gesetz fallen Wettbewerbswirkungen, die sich ausschliesslich aus der Gesetzgebung über das geistige Eigentum ergeben. Hingegen unterliegen Einfuhrbeschränkungen, die sich auf Rechte des geistigen Eigentums stützen, der Beurteilung nach diesem Gesetz."
+        },
+        {
+          "absatz": "3",
+          "text": "Verfahren zur Beurteilung von Wettbewerbsbeschränkungen nach diesem Gesetz gehen Verfahren nach dem Preisüberwachungsgesetz vom 20. Dezember 1985 vor, es sei denn die Wettbewerbskommission und der Preisüberwacher treffen gemeinsam eine gegenteilige Regelung."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_3",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "fbb2bad16a63ebca57feacb5ba622b3539ec1446a07fe8881a170a2f8d8518ef"
+      "sha": "728fb6c45c19b3b07581f525a69c6d982e8a0f226271fcb1c3a630a5eadf9f49"
     },
     {
       "id": "bund/KG/art_4",
@@ -77,8 +93,20 @@
       "artikelLabel": "Art. 4",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Als Wettbewerbsabreden gelten rechtlich erzwingbare oder nicht erzwingbare Vereinbarungen sowie aufeinander abgestimmte Verhaltensweisen von Unternehmen gleicher oder verschiedener Marktstufen, die eine Wettbewerbsbeschränkung bezwecken oder bewirken."
+        },
+        {
+          "absatz": "2",
+          "text": "Als marktbeherrschende Unternehmen gelten einzelne oder mehrere Unternehmen, die auf einem Markt als Anbieter oder Nachfrager in der Lage sind, sich von andern Marktteilnehmern (Mitbewerbern, Anbietern oder Nachfragern) in wesentlichem Umfang unabhängig zu verhalten."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Als relativ marktmächtiges Unternehmen gilt ein Unternehmen, von dem andere Unternehmen beim Angebot oder bei der Nachfrage einer Ware oder Leistung in einer Weise abhängig sind, dass keine ausreichenden und zumutbaren Möglichkeiten bestehen, auf andere Unternehmen auszuweichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Unternehmenszusammenschluss gilt:",
           "items": [
             {
               "marke": "a",
@@ -93,9 +121,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_4",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "1b6ff2d88c8dcb5d0b1f7efc35b06ae199618554b012aaedd9fa9dca179857f2"
+      "sha": "d70a624d15f50e1e905d9dc9a7de56aff8587e9c35c1d66b180b29e60c7be3bc"
     },
     {
       "id": "bund/KG/art_5",
@@ -106,8 +134,26 @@
       "artikelLabel": "Art. 5",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Abreden, die den Wettbewerb auf einem Markt für bestimmte Waren oder Leistungen erheblich beeinträchtigen und sich nicht durch Gründe der wirtschaftlichen Effizienz rechtfertigen lassen, sowie Abreden, die zur Beseitigung wirksamen Wettbewerbs führen, sind unzulässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Wettbewerbsabreden sind durch Gründe der wirtschaftlichen Effizienz gerechtfertigt, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "notwendig sind, um die Herstellungs- oder Vertriebskosten zu senken, Produkte oder Produktionsverfahren zu verbessern, die Forschung oder die Verbreitung von technischem oder beruflichem Wissen zu fördern oder um Ressourcen rationeller zu nutzen; und"
+            },
+            {
+              "marke": "b",
+              "text": "den beteiligten Unternehmen in keinem Fall Möglichkeiten eröffnen, wirksamen Wettbewerb zu beseitigen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beseitigung wirksamen Wettbewerbs wird bei folgenden Abreden vermutet, sofern sie zwischen Unternehmen getroffen werden, die tatsächlich oder der Möglichkeit nach miteinander im Wettbewerb stehen:",
           "items": [
             {
               "marke": "a",
@@ -122,13 +168,17 @@
               "text": "Abreden über die Aufteilung von Märkten nach Gebieten oder Geschäftspartnern."
             }
           ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beseitigung wirksamen Wettbewerbs wird auch vermutet bei Abreden zwischen Unternehmen verschiedener Marktstufen über Mindest- oder Festpreise sowie bei Abreden in Vertriebsverträgen über die Zuweisung von Gebieten, soweit Verkäufe in diese durch gebietsfremde Vertriebspartner ausgeschlossen werden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_5",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "d1f31b87bbb9bc269b2c1a6a7d7baf1c042a9a9d1899a23092f4ca1fb1c74498"
+      "sha": "b75d3faa520a1fef693ff99b8936c4e3647e92cd4e25684a3b76782798f9abe3"
     },
     {
       "id": "bund/KG/art_6",
@@ -139,8 +189,8 @@
       "artikelLabel": "Art. 6",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "In Verordnungen oder allgemeinen Bekanntmachungen können die Voraussetzungen umschrieben werden, unter denen einzelne Arten von Wettbewerbsabreden aus Gründen der wirtschaftlichen Effizienz in der Regel als gerechtfertigt gelten. Dabei werden insbesondere die folgenden Abreden in Betracht gezogen:",
           "items": [
             {
               "marke": "a",
@@ -163,13 +213,21 @@
               "text": "Abreden mit dem Zweck, die Wettbewerbsfähigkeit kleiner und mittlerer Unternehmen zu verbessern, sofern sie nur eine beschränkte Marktwirkung aufweisen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Verordnungen und allgemeine Bekanntmachungen können auch besondere Kooperationsformen in einzelnen Wirtschaftszweigen, namentlich Abreden über die rationelle Umsetzung von öffentlich-rechtlichen Vorschriften zum Schutze von Kunden oder Anlegern im Bereich der Finanzdienstleistungen, als in der Regel gerechtfertigte Wettbewerbsabreden bezeichnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Allgemeine Bekanntmachungen werden von der Wettbewerbskommission im Bundesblatt veröffentlicht. Verordnungen im Sinne der Absätze 1 und 2 werden vom Bundesrat erlassen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_6",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "838f83077cdc6792f137ee6f8d7ddd1ba9eba5637b4ad9d3d02a0e995b94fdca"
+      "sha": "e3daf1f1a80592c0ae9da1e37a7ed2548f3a0f18564f56ae29c1c9d194e20f87"
     },
     {
       "id": "bund/KG/art_7",
@@ -180,8 +238,12 @@
       "artikelLabel": "Art. 7",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Marktbeherrschende und relativ marktmächtige Unternehmen verhalten sich unzulässig, wenn sie durch den Missbrauch ihrer Stellung auf dem Markt andere Unternehmen in der Aufnahme oder Ausübung des Wettbewerbs behindern oder die Marktgegenseite benachteiligen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als solche Verhaltensweisen fallen insbesondere in Betracht:",
           "items": [
             {
               "marke": "a",
@@ -216,9 +278,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_7",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "287e564c47e7f9d3ab4645f40a9ae67603ce9e858e9a1662c0b2f48b7d0d1ac9"
+      "sha": "b52f65e0920dab799a5e8f907fd1f85964885ffbed2574915b2038479442ce40"
     },
     {
       "id": "bund/KG/art_8",
@@ -235,7 +297,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_8",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "1d05c4ec2739705031795fa0626ea3b0a40cd65e86f951072b67be6f98a943bb"
     },
@@ -248,8 +310,34 @@
       "artikelLabel": "Art. 9",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Vorhaben über Zusammenschlüsse von Unternehmen sind vor ihrem Vollzug der Wettbewerbskommission zu melden, sofern im letzten Geschäftsjahr vor dem Zusammenschluss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die beteiligten Unternehmen einen Umsatz von insgesamt mindestens 2 Milliarden Franken oder einen auf die Schweiz entfallenden Umsatz von insgesamt mindestens 500 Millionen Franken erzielten; und"
+            },
+            {
+              "marke": "b",
+              "text": "mindestens zwei der beteiligten Unternehmen einen Umsatz in der Schweiz von je mindestens 100 Millionen Franken erzielten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Versicherungsgesellschaften treten an die Stelle des Umsatzes die jährlichen Bruttoprämieneinnahmen, bei Banken und übrigen Finanzintermediären die Bruttoerträge, sofern sie den Rechnungslegungsvorschriften gemäss dem Bankengesetz vom 8. November 1934 (BankG) unterstellt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Meldepflicht besteht ungeachtet der Absätze 1–3, wenn am Zusammenschluss ein Unternehmen beteiligt ist, für welches in einem Verfahren nach diesem Gesetz rechtskräftig festgestellt worden ist, dass es in der Schweiz auf einem bestimmten Markt eine beherrschende Stellung hat, und der Zusammenschluss diesen Markt oder einen solchen betrifft, der ihm vor- oder nachgelagert oder benachbart ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Bundesversammlung kann mit allgemeinverbindlichem, nicht referendumspflichtigem Bundesbeschluss:",
           "items": [
             {
               "marke": "a",
@@ -264,9 +352,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_9",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "830feac60d5169c13c5a3de65e91e5575650b1db965d97e5fff12c0ce598b969"
+      "sha": "37464267ef9c0d8ac082806ae468ca024c1f9479df99b235d523bd0efe9746dc"
     },
     {
       "id": "bund/KG/art_10",
@@ -277,8 +365,12 @@
       "artikelLabel": "Art. 10",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Meldepflichtige Zusammenschlüsse unterliegen der Prüfung durch die Wettbewerbskommission, sofern sich in einer vorläufigen Prüfung (Art. 32 Abs. 1) Anhaltspunkte ergeben, dass sie eine marktbeherrschende Stellung begründen oder verstärken."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission kann den Zusammenschluss untersagen oder ihn mit Bedingungen und Auflagen zulassen, wenn die Prüfung ergibt, dass der Zusammenschluss:",
           "items": [
             {
               "marke": "a",
@@ -289,13 +381,21 @@
               "text": "keine Verbesserung der Wettbewerbsverhältnisse in einem anderen Markt bewirkt, welche die Nachteile der marktbeherrschenden Stellung überwiegt."
             }
           ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Zusammenschlüssen von Banken im Sinne des BankG, die der Eidgenössischen Finanzmarktaufsicht (FINMA) aus Gründen des Gläubigerschutzes als notwendig erscheinen, können die Interessen der Gläubiger vorrangig berücksichtigt werden. In diesen Fällen tritt die FINMA an die Stelle der Wettbewerbskommission; sie lädt die Wettbewerbskommission zur Stellungnahme ein."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Beurteilung der Auswirkungen eines Zusammenschlusses auf die Wirksamkeit des Wettbewerbs berücksichtigt die Wettbewerbskommission auch die Marktentwicklung sowie die Stellung der Unternehmen im internationalen Wettbewerb."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_10",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "d1ecea4bad770084198fa0fedf6c81d1ba334b301a25022e1cb8a0edba5cea68"
+      "sha": "ff87ed55dbfdec2a8af63f4d230a21ba006b31ccf0b8fc4f107f7a13ca122986"
     },
     {
       "id": "bund/KG/art_11",
@@ -312,7 +412,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_11",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "15fb7ab69295a84976a4fceb763668ce470faab02c165076561ec7e1b83ebe87"
     },
@@ -325,8 +425,8 @@
       "artikelLabel": "Art. 12",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Wer durch eine unzulässige Wettbewerbsbeschränkung in der Aufnahme oder Ausübung des Wettbewerbs behindert wird, hat Anspruch auf:",
           "items": [
             {
               "marke": "a",
@@ -341,13 +441,21 @@
               "text": "Herausgabe eines unrechtmässig erzielten Gewinns nach Massgabe der Bestimmungen über die Geschäftsführung ohne Auftrag."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Wettbewerbsbehinderung fallen insbesondere die Verweigerung von Geschäftsbeziehungen sowie Diskriminierungsmassnahmen in Betracht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die in Absatz 1 genannten Ansprüche hat auch, wer durch eine zulässige Wettbewerbsbeschränkung über das Mass hinaus behindert wird, das zur Durchsetzung der Wettbewerbsbeschränkung notwendig ist."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_12",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "eea564927f5caa7a0e210edc38002206e1f6107e9c111e093be1dae5b31700f9"
+      "sha": "af4a268ddc3c2189b90b196541adcf133840e8b7eaae8919e95ed25ac9f6a120"
     },
     {
       "id": "bund/KG/art_13",
@@ -359,7 +467,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "Zur Durchsetzung des Beseitigungs- und Unterlassungsanspruchs kann das Gericht auf Antrag des Klägers namentlich anordnen, dass:",
           "items": [
             {
               "marke": "a",
@@ -374,9 +482,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_13",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f1238ed6c20353ec65799e4973cb1988cec172600a375a98fb73765d55bfb44c"
+      "sha": "577ab6d719f00de552c950df5092f5d3978d0961eca220860c053235e5a31248"
     },
     {
       "id": "bund/KG/art_14",
@@ -393,7 +501,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_14",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "3ffe87ed1d4611720f83ff2d325b5af5bb4104f26533aa8ac57c7d4e22335bb9"
     },
@@ -406,15 +514,19 @@
       "artikelLabel": "Art. 15",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Beurteilung der Zulässigkeit einer Wettbewerbsbeschränkung 1 Steht in einem zivilrechtlichen Verfahren die Zulässigkeit einer Wettbewerbsbeschränkung in Frage, so wird die Sache der Wettbewerbskommission zur Begutachtung vorgelegt. 2 Wird geltend gemacht, eine an sich unzulässige Wettbewerbsbeschränkung sei zur Verwirklichung überwiegender öffentlicher Interessen notwendig, so entscheidet der Bundesrat."
+          "absatz": "1",
+          "text": "Steht in einem zivilrechtlichen Verfahren die Zulässigkeit einer Wettbewerbsbeschränkung in Frage, so wird die Sache der Wettbewerbskommission zur Begutachtung vorgelegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird geltend gemacht, eine an sich unzulässige Wettbewerbsbeschränkung sei zur Verwirklichung überwiegender öffentlicher Interessen notwendig, so entscheidet der Bundesrat."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_15",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "5b88e4efb811e34fbf6bd1ce6f1d6a70f1f9067f86f873572d57c5decab201f2"
+      "sha": "eeeb23c86456247807726a10c5e2b0ae11ae3715265f46c25f66d6351d14f369"
     },
     {
       "id": "bund/KG/art_16_17",
@@ -431,7 +543,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_16_17",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "dc29955c82e329eee6c6b08c251fdc28ecbacf824215d5b27f754ee6636dceab"
     },
@@ -444,15 +556,27 @@
       "artikelLabel": "Art. 18",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Wettbewerbskommission 1 Der Bundesrat bestellt die Wettbewerbskommission und bezeichnet die Mitglieder des Präsidiums. 24 2 Die Wettbewerbskommission besteht aus 11–15 Mitgliedern. Die Mehrheit der Mitglieder müssen unabhängige Sachverständige sein. 2bis Die Mitglieder der Wettbewerbskommission legen ihre Interessen in einem Interessenbindungsregister offen. 25 3 Die Wettbewerbskommission trifft die Entscheide und erlässt die Verfügungen, die nicht ausdrücklich einer anderen Behörde vorbehalten sind. Sie gibt Empfehlungen (Art. 45 Abs. 2) und Stellungnahmen (Art. 46 Abs. 2) an die politischen Behörden ab und erstattet Gutachten (Art. 47 Abs. 1). 24 Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 ). 25 Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 )."
+          "absatz": "1",
+          "text": "Der Bundesrat bestellt die Wettbewerbskommission und bezeichnet die Mitglieder des Präsidiums."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission besteht aus 11–15 Mitgliedern. Die Mehrheit der Mitglieder müssen unabhängige Sachverständige sein."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Mitglieder der Wettbewerbskommission legen ihre Interessen in einem Interessenbindungsregister offen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Wettbewerbskommission trifft die Entscheide und erlässt die Verfügungen, die nicht ausdrücklich einer anderen Behörde vorbehalten sind. Sie gibt Empfehlungen (Art. 45 Abs. 2) und Stellungnahmen (Art. 46 Abs. 2) an die politischen Behörden ab und erstattet Gutachten (Art. 47 Abs. 1)."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_18",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8741df402ec7b37c908b61ec5854f1187c120fed7a331d1f8cb16d26e9583aef"
+      "sha": "e64191267b7ef41fde3d1fb1440c2a0651829095a069895c97c4bdb2267a1f14"
     },
     {
       "id": "bund/KG/art_19",
@@ -463,15 +587,19 @@
       "artikelLabel": "Art. 19",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Organisation 1 Die Wettbewerbskommission ist von den Verwaltungsbehörden unabhängig. Sie kann sich in Kammern mit selbständiger Entscheidungsbefugnis gliedern. Sie kann ein Mitglied des Präsidiums im Einzelfall ermächtigen, dringliche Fälle oder Fälle untergeordneter Bedeutung direkt zu erledigen. 2 Die Wettbewerbskommission ist administrativ dem Eidgenössischen Departement für Wirtschaft, Bildung und Forschung (WBF) 26 zugeordnet. 26 Ausdruck gemäss Ziff. I 6 der V vom 15. Juni 2012 (Neugliederung der Departemente), in Kraft seit 1. Jan. 2013 ( AS 2012 3655 ). Diese Änd. wurde im ganzen Erlass berücksichtigt."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission ist von den Verwaltungsbehörden unabhängig. Sie kann sich in Kammern mit selbständiger Entscheidungsbefugnis gliedern. Sie kann ein Mitglied des Präsidiums im Einzelfall ermächtigen, dringliche Fälle oder Fälle untergeordneter Bedeutung direkt zu erledigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission ist administrativ dem Eidgenössischen Departement für Wirtschaft, Bildung und Forschung (WBF) zugeordnet."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_19",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "dae4f666350c35172d490864739612e1494d145ed2323261e5eb7102846d20d9"
+      "sha": "19a81adf7f4b48e797003d509c6d5dbd5263a7284b6b2d16ed0af529b9d46317"
     },
     {
       "id": "bund/KG/art_20",
@@ -482,15 +610,19 @@
       "artikelLabel": "Art. 20",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Geschäftsreglement 1 Die Wettbewerbskommission erlässt ein Geschäftsreglement; darin regelt sie insbesondere die Einzelheiten der Organisation, namentlich die Zuständigkeiten des Präsidiums, der einzelnen Kammern und der Gesamtkommission. 2 Das Geschäftsreglement bedarf der Genehmigung durch den Bundesrat."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission erlässt ein Geschäftsreglement; darin regelt sie insbesondere die Einzelheiten der Organisation, namentlich die Zuständigkeiten des Präsidiums, der einzelnen Kammern und der Gesamtkommission."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Geschäftsreglement bedarf der Genehmigung durch den Bundesrat."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_20",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "0718801bd40b4c64ed4ce9f05ab225b2949da2c9f772ab413f5bd01f94fb00d0"
+      "sha": "92ba253bf1e5f6975fb32f8d692236eae2cfee1102cf365ff27ec2465479684d"
     },
     {
       "id": "bund/KG/art_21",
@@ -501,15 +633,19 @@
       "artikelLabel": "Art. 21",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Beschlussfassung 1 Die Wettbewerbskommission und die Kammern sind beschlussfähig, wenn mindestens die Hälfte der Mitglieder, in jedem Fall aber mindestens drei Mitglieder, anwesend sind. 2 Sie fassen ihre Beschlüsse mit dem einfachen Mehr der anwesenden Mitglieder; bei Stimmengleichheit gibt der Präsident oder die Präsidentin den Stichentscheid."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission und die Kammern sind beschlussfähig, wenn mindestens die Hälfte der Mitglieder, in jedem Fall aber mindestens drei Mitglieder, anwesend sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie fassen ihre Beschlüsse mit dem einfachen Mehr der anwesenden Mitglieder; bei Stimmengleichheit gibt der Präsident oder die Präsidentin den Stichentscheid."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_21",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "1a8811e467c7573303d75386b15033be76d73152bfcb6c247a922c9bad68d80d"
+      "sha": "e4c690246a1e281d2ffde96ee8cb01901a1508d44edf2c543d22d8e6325fe2d0"
     },
     {
       "id": "bund/KG/art_22",
@@ -520,15 +656,23 @@
       "artikelLabel": "Art. 22",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Ausstand von Kommissionsmitgliedern 1 Ein Mitglied der Wettbewerbskommission tritt in den Ausstand, wenn ein Ausstandsgrund nach Artikel 10 des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 27 vorliegt. 2 Ein persönliches Interesse oder ein anderer Grund der Befangenheit ist in der Regel nicht gegeben, wenn ein Mitglied der Wettbewerbskommission einen übergeordneten Verband vertritt. 3 Ist der Ausstand streitig, so entscheidet die Wettbewerbskommission oder die entsprechende Kammer unter Ausschluss des betreffenden Mitgliedes. 27 SR 172.021"
+          "absatz": "1",
+          "text": "Ein Mitglied der Wettbewerbskommission tritt in den Ausstand, wenn ein Ausstandsgrund nach Artikel 10 des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 vorliegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein persönliches Interesse oder ein anderer Grund der Befangenheit ist in der Regel nicht gegeben, wenn ein Mitglied der Wettbewerbskommission einen übergeordneten Verband vertritt."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist der Ausstand streitig, so entscheidet die Wettbewerbskommission oder die entsprechende Kammer unter Ausschluss des betreffenden Mitgliedes."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_22",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "378f248f936246ab10edaa9fdbee00cc5cadc1623df5f09890b7546cc14feba8"
+      "sha": "0de465a84659a09fd536510decc814406a88a023018caa69118a40215f953c7e"
     },
     {
       "id": "bund/KG/art_23",
@@ -539,15 +683,19 @@
       "artikelLabel": "Art. 23",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Aufgaben des Sekretariats 1 Das Sekretariat bereitet die Geschäfte der Wettbewerbskommission vor, führt die Untersuchungen durch und erlässt zusammen mit einem Mitglied des Präsidiums die notwendigen verfahrensleitenden Verfügungen. Es stellt der Wettbewerbskommission Antrag und vollzieht ihre Entscheide. Es verkehrt mit Beteiligten, Dritten und Behörden direkt. 2 Es gibt Stellungnahmen ab (Art. 46 Abs. 1) und berät Amtsstellen und Unternehmen bei Fragen zu diesem Gesetz."
+          "absatz": "1",
+          "text": "Das Sekretariat bereitet die Geschäfte der Wettbewerbskommission vor, führt die Untersuchungen durch und erlässt zusammen mit einem Mitglied des Präsidiums die notwendigen verfahrensleitenden Verfügungen. Es stellt der Wettbewerbskommission Antrag und vollzieht ihre Entscheide. Es verkehrt mit Beteiligten, Dritten und Behörden direkt."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gibt Stellungnahmen ab (Art. 46 Abs. 1) und berät Amtsstellen und Unternehmen bei Fragen zu diesem Gesetz."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_23",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f99f0f009f50533fe1f104d33fc9cc640b2933cbe882ce94830c530b94092f68"
+      "sha": "34dac86ae3d56a2440fb59f5297d8f4fbecd57ac596feef9460ccd68c9ec3206"
     },
     {
       "id": "bund/KG/art_24",
@@ -558,15 +706,19 @@
       "artikelLabel": "Art. 24",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Personal des Sekretariats 1 Der Bundesrat wählt die Direktion, die Wettbewerbskommission wählt das übrige Personal des Sekretariats. 2 Das Dienstverhältnis richtet sich nach der Personalgesetzgebung des Bundes."
+          "absatz": "1",
+          "text": "Der Bundesrat wählt die Direktion, die Wettbewerbskommission wählt das übrige Personal des Sekretariats."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Dienstverhältnis richtet sich nach der Personalgesetzgebung des Bundes."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_24",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "04645d212cc9827b2e90b5316450a028ff4c71d94bdb15ebde4183e2459a2e5f"
+      "sha": "512b531d210919c54f834a7143ef80a0ee319c96478628b34d7538bc839b5577"
     },
     {
       "id": "bund/KG/art_25",
@@ -577,15 +729,27 @@
       "artikelLabel": "Art. 25",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Amts- und Geschäftsgeheimnis 1 Die Wettbewerbsbehörden wahren das Amtsgeheimnis. 2 Sie dürfen Kenntnisse, die sie bei ihrer Tätigkeit erlangen, nur zu dem mit der Auskunft oder dem Verfahren verfolgten Zweck verwerten. 3 Dem Preisüberwacher dürfen die Wettbewerbsbehörden diejenigen Daten weitergeben, die er für die Erfüllung seiner Aufgaben benötigt. 4 Die Veröffentlichungen der Wettbewerbsbehörden dürfen keine Geschäftsgeheimnisse preisgeben."
+          "absatz": "1",
+          "text": "Die Wettbewerbsbehörden wahren das Amtsgeheimnis."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen Kenntnisse, die sie bei ihrer Tätigkeit erlangen, nur zu dem mit der Auskunft oder dem Verfahren verfolgten Zweck verwerten."
+        },
+        {
+          "absatz": "3",
+          "text": "Dem Preisüberwacher dürfen die Wettbewerbsbehörden diejenigen Daten weitergeben, die er für die Erfüllung seiner Aufgaben benötigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Veröffentlichungen der Wettbewerbsbehörden dürfen keine Geschäftsgeheimnisse preisgeben."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_25",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8c5092c74dad4487306cd2156779c9ad265c912dd9822cd57244289a1dc933af"
+      "sha": "19cb14735d57dd237926b9f67fe32f88116dde0120d369611b6d55ea30a74401"
     },
     {
       "id": "bund/KG/art_26",
@@ -596,15 +760,23 @@
       "artikelLabel": "Art. 26",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Vorabklärung 1 Das Sekretariat kann Vorabklärungen von Amtes wegen, auf Begehren von Beteiligten oder auf Anzeige von Dritten hin durchführen. 2 Das Sekretariat kann Massnahmen zur Beseitigung oder Verhinderung von Wettbewerbsbeschränkungen anregen. 3 Im Verfahren der Vorabklärung besteht kein Recht auf Akteneinsicht."
+          "absatz": "1",
+          "text": "Das Sekretariat kann Vorabklärungen von Amtes wegen, auf Begehren von Beteiligten oder auf Anzeige von Dritten hin durchführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Sekretariat kann Massnahmen zur Beseitigung oder Verhinderung von Wettbewerbsbeschränkungen anregen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Verfahren der Vorabklärung besteht kein Recht auf Akteneinsicht."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_26",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "67d21b8bcd4c66c90c06c8f658e1bf4f2055cc9680a2289f88178b4fe78e929b"
+      "sha": "06e43c98bc39fd12944c68211499d5245a6e2348fc8437f002d5f38b15831629"
     },
     {
       "id": "bund/KG/art_27",
@@ -615,15 +787,19 @@
       "artikelLabel": "Art. 27",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Eröffnung einer Untersuchung 1 Bestehen Anhaltspunkte für eine unzulässige Wettbewerbsbeschränkung, so eröffnet das Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums eine Untersuchung. Eine Untersuchung wird in jedem Fall eröffnet, wenn das Sekretariat von der Wettbewerbskommission oder vom WBF damit beauftragt wird. 28 2 Die Wettbewerbskommission entscheidet, welche der eröffneten Untersuchungen vorrangig zu behandeln sind. 28 Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 )."
+          "absatz": "1",
+          "text": "Bestehen Anhaltspunkte für eine unzulässige Wettbewerbsbeschränkung, so eröffnet das Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums eine Untersuchung. Eine Untersuchung wird in jedem Fall eröffnet, wenn das Sekretariat von der Wettbewerbskommission oder vom WBF damit beauftragt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission entscheidet, welche der eröffneten Untersuchungen vorrangig zu behandeln sind."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_27",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "3e5c4d4ffd166a1c1fb5666e8764f327cf47850b495025e3ff0276c7ea3bd912"
+      "sha": "0bc6e964463136206fbf89b60c83c7a1228e69ceabd9b9b9d8980ba45dfe39f0"
     },
     {
       "id": "bund/KG/art_28",
@@ -634,15 +810,23 @@
       "artikelLabel": "Art. 28",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Bekanntgabe 1 Das Sekretariat gibt die Eröffnung einer Untersuchung durch amtliche Publikation bekannt. 2 Die Bekanntmachung nennt den Gegenstand und die Adressaten der Untersuchung. Sie enthält zudem den Hinweis, dass Dritte sich innert 30 Tagen melden können, falls sie sich an der Untersuchung beteiligen wollen. 3 Die fehlende Publikation hindert Untersuchungshandlungen nicht."
+          "absatz": "1",
+          "text": "Das Sekretariat gibt die Eröffnung einer Untersuchung durch amtliche Publikation bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bekanntmachung nennt den Gegenstand und die Adressaten der Untersuchung. Sie enthält zudem den Hinweis, dass Dritte sich innert 30 Tagen melden können, falls sie sich an der Untersuchung beteiligen wollen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die fehlende Publikation hindert Untersuchungshandlungen nicht."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_28",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "212e80b5dabe55639ef409021c337ab9799a4cdc660c3ee5f0e8c1b68f8891b6"
+      "sha": "7c0bf0dd4a6f9a5763cb61a800361084569b899fe48f118b9faad43bdf561be6"
     },
     {
       "id": "bund/KG/art_29",
@@ -653,15 +837,19 @@
       "artikelLabel": "Art. 29",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Einvernehmliche Regelung 1 Erachtet das Sekretariat eine Wettbewerbsbeschränkung für unzulässig, so kann es den Beteiligten eine einvernehmliche Regelung über die Art und Weise ihrer Beseitigung vorschlagen. 2 Die einvernehmliche Regelung wird schriftlich abgefasst und bedarf der Genehmigung durch die Wettbewerbskommission."
+          "absatz": "1",
+          "text": "Erachtet das Sekretariat eine Wettbewerbsbeschränkung für unzulässig, so kann es den Beteiligten eine einvernehmliche Regelung über die Art und Weise ihrer Beseitigung vorschlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die einvernehmliche Regelung wird schriftlich abgefasst und bedarf der Genehmigung durch die Wettbewerbskommission."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_29",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "d3fdcaadb3085fc6d85e7633c3d150c450646d1cc8c0eaf47d8d04ec44d05c27"
+      "sha": "e8e94706f47c12932d5a4ca2699ce06c761d40fb1ed8eef004bd2379c3912938"
     },
     {
       "id": "bund/KG/art_30",
@@ -672,15 +860,23 @@
       "artikelLabel": "Art. 30",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Entscheid 1 Die Wettbewerbskommission entscheidet auf Antrag des Sekretariats mit Verfügung über die zu treffenden Massnahmen oder die Genehmigung einer einvernehmlichen Regelung. 2 Die am Verfahren Beteiligten können schriftlich zum Antrag des Sekretariats Stellung nehmen. Die Wettbewerbskommission kann eine Anhörung beschliessen und das Sekretariat mit zusätzlichen Untersuchungsmassnahmen beauftragen. 3 Haben sich die tatsächlichen oder rechtlichen Verhältnisse wesentlich geändert, so kann die Wettbewerbskommission auf Antrag des Sekretariats oder der Betroffenen den Entscheid widerrufen oder ändern."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission entscheidet auf Antrag des Sekretariats mit Verfügung über die zu treffenden Massnahmen oder die Genehmigung einer einvernehmlichen Regelung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die am Verfahren Beteiligten können schriftlich zum Antrag des Sekretariats Stellung nehmen. Die Wettbewerbskommission kann eine Anhörung beschliessen und das Sekretariat mit zusätzlichen Untersuchungsmassnahmen beauftragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Haben sich die tatsächlichen oder rechtlichen Verhältnisse wesentlich geändert, so kann die Wettbewerbskommission auf Antrag des Sekretariats oder der Betroffenen den Entscheid widerrufen oder ändern."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_30",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "2bdd7e0c6c763edbf727970773608fcb5994907dd4bc2270ec6e537e73f1b44f"
+      "sha": "48985d38f66a6467f7f2564b5ffec6eb54ec0249d0e81c6b9f354a1eeeff1255"
     },
     {
       "id": "bund/KG/art_31",
@@ -691,15 +887,27 @@
       "artikelLabel": "Art. 31",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Ausnahmsweise Zulassung 1 Hat die Wettbewerbskommission entschieden, dass eine Wettbewerbsbeschränkung unzulässig ist, so können die Beteiligten innerhalb von 30 Tagen beim WBF eine ausnahmsweise Zulassung durch den Bundesrat aus überwiegenden öffentlichen Interessen beantragen. Ist ein solcher Antrag gestellt, so beginnt die Frist für die Einreichung einer Beschwerde beim Bundesverwaltungsgericht erst mit der Eröffnung des Entscheides des Bundesrates zu laufen. 29 2 Der Antrag auf ausnahmsweise Zulassung durch den Bundesrat kann auch innerhalb von 30 Tagen nach Eintritt der Rechtskraft eines Entscheides des Bundesverwaltungsgerichts oder des Bundesgerichts gestellt werden. 30 3 Die Zulassung ist zeitlich zu beschränken; sie kann mit Bedingungen und Auflagen verbunden werden. 4 Der Bundesrat kann eine Zulassung auf Gesuch hin verlängern, wenn die Voraussetzungen dafür weiterhin erfüllt sind. 29 Fassung des Satzes gemäss Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 ). 30 Fassung gemäss Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "absatz": "1",
+          "text": "Hat die Wettbewerbskommission entschieden, dass eine Wettbewerbsbeschränkung unzulässig ist, so können die Beteiligten innerhalb von 30 Tagen beim WBF eine ausnahmsweise Zulassung durch den Bundesrat aus überwiegenden öffentlichen Interessen beantragen. Ist ein solcher Antrag gestellt, so beginnt die Frist für die Einreichung einer Beschwerde beim Bundesverwaltungsgericht erst mit der Eröffnung des Entscheides des Bundesrates zu laufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Antrag auf ausnahmsweise Zulassung durch den Bundesrat kann auch innerhalb von 30 Tagen nach Eintritt der Rechtskraft eines Entscheides des Bundesverwaltungsgerichts oder des Bundesgerichts gestellt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zulassung ist zeitlich zu beschränken; sie kann mit Bedingungen und Auflagen verbunden werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat kann eine Zulassung auf Gesuch hin verlängern, wenn die Voraussetzungen dafür weiterhin erfüllt sind."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_31",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "aab2de0f3ebd42c5f80f0ccd4993c92d76b8cdfa7441108bb2e505b585d58cb5"
+      "sha": "2b18e126da7e302866760c2ebf91f463172c790794a6e3cbe62d89ad83899360"
     },
     {
       "id": "bund/KG/art_32",
@@ -710,15 +918,19 @@
       "artikelLabel": "Art. 32",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Einleitung des Prüfungsverfahrens 1 Wird ein Vorhaben über einen Unternehmenszusammenschluss gemeldet (Art. 9), so entscheidet die Wettbewerbskommission, ob eine Prüfung durchzuführen ist. Sie hat die Einleitung dieser Prüfung den beteiligten Unternehmen innerhalb eines Monats seit der Meldung mitzuteilen. Erfolgt innerhalb dieser Frist keine Mitteilung, so kann der Zusammenschluss ohne Vorbehalt vollzogen werden. 2 Die beteiligten Unternehmen dürfen den Zusammenschluss innerhalb eines Monats seit der Meldung des Vorhabens nicht vollziehen, es sei denn, die Wettbewerbskommission habe dies auf Antrag dieser Unternehmen aus wichtigen Gründen bewilligt."
+          "absatz": "1",
+          "text": "Wird ein Vorhaben über einen Unternehmenszusammenschluss gemeldet (Art. 9), so entscheidet die Wettbewerbskommission, ob eine Prüfung durchzuführen ist. Sie hat die Einleitung dieser Prüfung den beteiligten Unternehmen innerhalb eines Monats seit der Meldung mitzuteilen. Erfolgt innerhalb dieser Frist keine Mitteilung, so kann der Zusammenschluss ohne Vorbehalt vollzogen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die beteiligten Unternehmen dürfen den Zusammenschluss innerhalb eines Monats seit der Meldung des Vorhabens nicht vollziehen, es sei denn, die Wettbewerbskommission habe dies auf Antrag dieser Unternehmen aus wichtigen Gründen bewilligt."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_32",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8f5937cc667fcd3730ba4d65d97fc64c2baef957a6d3600ec106c21ac542722f"
+      "sha": "bc8951481fdf5572232a0a031397bf21791167851d431d06f87dbdf08d5c00a1"
     },
     {
       "id": "bund/KG/art_33",
@@ -729,15 +941,23 @@
       "artikelLabel": "Art. 33",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Prüfungsverfahren 1 Beschliesst die Wettbewerbskommission die Durchführung einer Prüfung, so veröffentlicht das Sekretariat den wesentlichen Inhalt der Meldung des Zusammenschlusses und gibt die Frist bekannt, innerhalb welcher Dritte zum gemeldeten Zusammenschluss Stellung nehmen können. 2 Zu Beginn der Prüfung entscheidet die Wettbewerbskommission, ob der Zusammenschluss ausnahmsweise vorläufig vollzogen werden kann oder aufgeschoben bleibt. 3 Sie führt die Prüfung innerhalb von vier Monaten durch, sofern sie nicht durch Umstände gehindert wird, die von den beteiligten Unternehmen zu verantworten sind."
+          "absatz": "1",
+          "text": "Beschliesst die Wettbewerbskommission die Durchführung einer Prüfung, so veröffentlicht das Sekretariat den wesentlichen Inhalt der Meldung des Zusammenschlusses und gibt die Frist bekannt, innerhalb welcher Dritte zum gemeldeten Zusammenschluss Stellung nehmen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Zu Beginn der Prüfung entscheidet die Wettbewerbskommission, ob der Zusammenschluss ausnahmsweise vorläufig vollzogen werden kann oder aufgeschoben bleibt."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie führt die Prüfung innerhalb von vier Monaten durch, sofern sie nicht durch Umstände gehindert wird, die von den beteiligten Unternehmen zu verantworten sind."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_33",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "2abfaf134b1b8315d2f4267b9da55753f11702289b5a2ca1024efcb14a6a5ce5"
+      "sha": "a02458c38e385874f973e3b8ff35edf372ff3c8cc062fd67d4aaabc5c5848d55"
     },
     {
       "id": "bund/KG/art_34",
@@ -754,7 +974,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_34",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "3181cfe2b1d5f3e74dfe31a88857f605a021639472a0c9fe424d122ece71d4dc"
     },
@@ -773,7 +993,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_35",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "67cb5a9f59656259371c936265efc51eab75875b6e2ac477cb9405b01c826105"
     },
@@ -786,15 +1006,23 @@
       "artikelLabel": "Art. 36",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Verfahren der Ausnahmegenehmigung 1 Hat die Wettbewerbskommission den Zusammenschluss untersagt, so können die beteiligten Unternehmen innerhalb von 30 Tagen beim WBF eine ausnahmsweise Zulassung durch den Bundesrat aus überwiegenden öffentlichen Interessen beantragen. Ist ein solcher Antrag gestellt, so beginnt die Frist für die Einreichung einer Beschwerde beim Bundesverwaltungsgericht erst mit der Eröffnung des Entscheides des Bundesrats zu laufen. 31 2 Der Antrag auf ausnahmsweise Zulassung durch den Bundesrat kann auch innerhalb von 30 Tagen nach Eintritt der Rechtskraft eines Entscheides des Bundesverwaltungsgerichts oder des Bundesgerichts gestellt werden. 32 3 Der Bundesrat entscheidet über den Antrag möglichst innerhalb von vier Monaten seit Eingang des Antrages. 31 Fassung des Satzes gemäss Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 ). 32 Fassung gemäss Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "absatz": "1",
+          "text": "Hat die Wettbewerbskommission den Zusammenschluss untersagt, so können die beteiligten Unternehmen innerhalb von 30 Tagen beim WBF eine ausnahmsweise Zulassung durch den Bundesrat aus überwiegenden öffentlichen Interessen beantragen. Ist ein solcher Antrag gestellt, so beginnt die Frist für die Einreichung einer Beschwerde beim Bundesverwaltungsgericht erst mit der Eröffnung des Entscheides des Bundesrats zu laufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Antrag auf ausnahmsweise Zulassung durch den Bundesrat kann auch innerhalb von 30 Tagen nach Eintritt der Rechtskraft eines Entscheides des Bundesverwaltungsgerichts oder des Bundesgerichts gestellt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat entscheidet über den Antrag möglichst innerhalb von vier Monaten seit Eingang des Antrages."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_36",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "a839ba6a3941814c6322bd485de0629343d4a1628442e48a371aafcc10226a62"
+      "sha": "e77c183d977b8de5c60642643729a50b1b278cb1f85011e094eb0b04a8389530"
     },
     {
       "id": "bund/KG/art_37",
@@ -805,8 +1033,20 @@
       "artikelLabel": "Art. 37",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Wird ein untersagter Zusammenschluss vollzogen oder ein vollzogener Zusammenschluss untersagt und für den Zusammenschluss keine ausnahmsweise Zulassung beantragt oder erteilt, so sind die beteiligten Unternehmen verpflichtet, die Massnahmen durchzuführen, die zur Wiederherstellung wirksamen Wettbewerbs erforderlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission kann die beteiligten Unternehmen auffordern, verbindliche Vorschläge darüber zu machen, wie wirksamer Wettbewerb wiederhergestellt wird. Sie setzt dafür eine Frist fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Billigt die Wettbewerbskommission die Vorschläge, so kann sie verfügen, wie und innert welcher Frist die beteiligten Unternehmen die Massnahmen durchführen müssen."
+        },
+        {
+          "absatz": "4",
+          "text": "Machen die beteiligten Unternehmen trotz Aufforderung der Wettbewerbskommission keine Vorschläge oder werden diese von der Wettbewerbskommission nicht gebilligt, so kann die Wettbewerbskommission folgende Massnahmen verfügen:",
           "items": [
             {
               "marke": "a",
@@ -825,9 +1065,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_37",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "e4dc99b7d21dc1876061327b3632b0451159ea74a608a8365d145942af5d59f5"
+      "sha": "58312bbbd9a9a0cc7f7d41a35534e4f5197ff3f8840040fdbc5e48139a3cc8e2"
     },
     {
       "id": "bund/KG/art_38",
@@ -838,8 +1078,8 @@
       "artikelLabel": "Art. 38",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission kann eine Zulassung widerrufen oder die Prüfung eines Zusammenschlusses trotz Ablauf der Frist von Artikel 32 Absatz 1 beschliessen, wenn:",
           "items": [
             {
               "marke": "a",
@@ -854,13 +1094,17 @@
               "text": "die beteiligten Unternehmen einer Auflage zu einer Zulassung in schwerwiegender Weise zuwiderhandeln."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann eine ausnahmsweise Zulassung aus denselben Gründen widerrufen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_38",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "fb59dfb82fdc8b2f238680d42560da3001d68526973c298c202f7a277a2f0fd7"
+      "sha": "05d8a447b0a99b984b4902393e5bcc990de7944336117bd2edef394b7519755a"
     },
     {
       "id": "bund/KG/art_39",
@@ -877,7 +1121,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_39",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "2f086586aae24bcbf4ff366ae6e72c5c1e248dfc6b32946ceb4608896a3d95a0"
     },
@@ -896,7 +1140,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_40",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "6f9cb4def35b0591a871c345e0da1b6d2d909017d40efe517b9fdb43e4fadbb0"
     },
@@ -915,7 +1159,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_41",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "4b58166c2d2f93e6ef0cb3b99df87f5d550f870cfcd74bb19939761b79a1fe44"
     },
@@ -928,15 +1172,19 @@
       "artikelLabel": "Art. 42",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "36 Untersuchungsmassnahmen 1 Die Wettbewerbsbehörden können Dritte als Zeugen einvernehmen und die von einer Untersuchung Betroffenen zur Beweisaussage verpflichten. Artikel 64 des Bundesgesetzes vom 4. Dezember 1947 37 über den Bundeszivilprozess ist sinngemäss anwendbar. 2 Die Wettbewerbsbehörden können Hausdurchsuchungen anordnen und Beweisgegenstände sicherstellen. Für diese Zwangsmassnahmen sind die Artikel 45–50 des Bundesgesetzes vom 22. März 1974 38 über das Verwaltungsstrafrecht sinngemäss anwendbar. Hausdurchsuchungen und Beschlagnahmen werden auf Grund eines Antrages des Sekretariats von einem Mitglied des Präsidiums angeordnet. 36 Fassung gemäss Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 ). 37 SR 273 38 SR 313.0"
+          "absatz": "1",
+          "text": "Die Wettbewerbsbehörden können Dritte als Zeugen einvernehmen und die von einer Untersuchung Betroffenen zur Beweisaussage verpflichten. Artikel 64 des Bundesgesetzes vom 4. Dezember 1947 über den Bundeszivilprozess ist sinngemäss anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbsbehörden können Hausdurchsuchungen anordnen und Beweisgegenstände sicherstellen. Für diese Zwangsmassnahmen sind die Artikel 45–50 des Bundesgesetzes vom 22. März 1974 über das Verwaltungsstrafrecht sinngemäss anwendbar. Hausdurchsuchungen und Beschlagnahmen werden auf Grund eines Antrages des Sekretariats von einem Mitglied des Präsidiums angeordnet."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_42",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "4f67cff2d3dea51dca8c4a2c27e9f99b6aa526fdf9a686e1031bfe36a874203f"
+      "sha": "070cc2dbcadc23d552bd6c5d03a0acaec537b9da13e22098be4f22a5b63fdb1f"
     },
     {
       "id": "bund/KG/art_42_a",
@@ -947,15 +1195,19 @@
       "artikelLabel": "Art. 42a",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "a 39 Untersuchungen in Verfahren nach dem Luftverkehrsabkommen Schweiz–EG 1 Die Wettbewerbskommission ist die schweizerische Behörde, die für die Zusammenarbeit mit den Organen der Europäischen Gemeinschaft nach Artikel 11 des Abkommens zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft vom 21. Juni 1999 40 über den Luftverkehr zuständig ist. 2 Widersetzt sich ein Unternehmen in einem auf Artikel 11 des Abkommens gestützten Verfahren der Nachprüfung, so können auf Ersuchen der Kommission der Europäischen Gemeinschaft Untersuchungsmassnahmen nach Artikel 42 vorgenommen werden; Artikel 44 ist anwendbar. 39 Eingefügt durch Ziff. I des BG vom 20. Juni 2003, in Kraft seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 ). 40 SR 0.748.127.192.68"
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission ist die schweizerische Behörde, die für die Zusammenarbeit mit den Organen der Europäischen Gemeinschaft nach Artikel 11 des Abkommens zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Gemeinschaft vom 21. Juni 1999 über den Luftverkehr zuständig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Widersetzt sich ein Unternehmen in einem auf Artikel 11 des Abkommens gestützten Verfahren der Nachprüfung, so können auf Ersuchen der Kommission der Europäischen Gemeinschaft Untersuchungsmassnahmen nach Artikel 42 vorgenommen werden; Artikel 44 ist anwendbar."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_42_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "0a32aa65d5e181fd9b9a2867c01c71c1e46a80d559ce0d8069c031d682bdf7d4"
+      "sha": "b1ff661ad10a400ad2a9e61c00121b788751eaaed25d562a5616fd8ac74356cf"
     },
     {
       "id": "bund/KG/art_42_b",
@@ -967,7 +1219,7 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "",
+          "text": "2 Ohne Zustimmung der betroffenen Unternehmen können die Wettbewerbsbehörden einer ausländischen Wettbewerbsbehörde vertrauliche Daten, insbesondere Geschäftsgeheimnisse, gestützt auf ein internationales Abkommen nur bekannt geben, wenn:",
           "items": [
             {
               "marke": "a",
@@ -998,9 +1250,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_42_b",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "ef863d4d3e510bc574e00f93b0d6fef47400ef120373dcb1f1e2ef5570208c7f"
+      "sha": "d8ae75584233b2feae78a0e39f8138dd1fb3c6621944deb7f952b4486e9fa252"
     },
     {
       "id": "bund/KG/art_43",
@@ -1011,8 +1263,8 @@
       "artikelLabel": "Art. 43",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Ihre Beteiligung an der Untersuchung einer Wettbewerbsbeschränkung können anmelden:",
           "items": [
             {
               "marke": "a",
@@ -1027,13 +1279,25 @@
               "text": "Organisationen von nationaler oder regionaler Bedeutung, die sich statutengemäss dem Konsumentenschutz widmen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Sekretariat kann verlangen, dass Gruppen von mehr als fünf am Verfahren Beteiligten mit gleichen Interessen eine gemeinsame Vertretung bestellen, falls die Untersuchung sonst übermässig erschwert würde. Es kann in jedem Fall die Beteiligung auf eine Anhörung beschränken; vorbehalten bleiben die Parteirechte nach dem Verwaltungsverfahrensgesetz vom 20. Dezember 1968."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Absätze 1 und 2 gelten sinngemäss auch im Verfahren der ausnahmsweisen Zulassung einer unzulässigen Wettbewerbsbeschränkung durch den Bundesrat (Art. 8)."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Verfahren der Prüfung von Unternehmenszusammenschlüssen haben nur die beteiligten Unternehmen Parteirechte."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_43",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "584e6b8b08fb251904ab9c63b26c64947cd64f931eadf826ecc98754c53baa41"
+      "sha": "a5b88cad751e69326f8fa3907667b372ab6de75381dcb6c00688458a6f849e6e"
     },
     {
       "id": "bund/KG/art_44",
@@ -1050,7 +1314,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_44",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "3be8513d36b06bc27cd3d7585e03d15ea5ff12e3ebae234b610a1e4c24ed258c"
     },
@@ -1063,15 +1327,19 @@
       "artikelLabel": "Art. 45",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Empfehlungen an Behörden 1 Die Wettbewerbskommission beobachtet laufend die Wettbewerbsverhältnisse. 2 Sie kann den Behörden Empfehlungen zur Förderung von wirksamem Wettbewerb unterbreiten, insbesondere hinsichtlich der Schaffung und Handhabung wirtschaftsrechtlicher Vorschriften."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission beobachtet laufend die Wettbewerbsverhältnisse."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann den Behörden Empfehlungen zur Förderung von wirksamem Wettbewerb unterbreiten, insbesondere hinsichtlich der Schaffung und Handhabung wirtschaftsrechtlicher Vorschriften."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_45",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "3f5621a947fca7e9f12013c36803741f6cf0e40e7e3b91e50c12d18846e0bf13"
+      "sha": "bac9e803922fc50f31c306d41d8b9555718e0bbcbd024ba4be858a19c50c482a"
     },
     {
       "id": "bund/KG/art_46",
@@ -1082,15 +1350,19 @@
       "artikelLabel": "Art. 46",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Stellungnahmen 1 Entwürfe von wirtschaftsrechtlichen Erlassen des Bundes oder andern Bundeserlassen, die den Wettbewerb beeinflussen können, sind dem Sekretariat vorzulegen. Es prüft diese auf Wettbewerbsverfälschungen oder übermässige Wettbewerbsbeschränkungen hin. 2 Die Wettbewerbskommission nimmt im Vernehmlassungsverfahren Stellung zu Entwürfen von rechtsetzenden Erlassen des Bundes, die den Wettbewerb beschränken oder auf andere Weise beeinflussen. Sie kann zu kantonalen rechtsetzenden Erlassesentwürfen Stellung nehmen."
+          "absatz": "1",
+          "text": "Entwürfe von wirtschaftsrechtlichen Erlassen des Bundes oder andern Bundeserlassen, die den Wettbewerb beeinflussen können, sind dem Sekretariat vorzulegen. Es prüft diese auf Wettbewerbsverfälschungen oder übermässige Wettbewerbsbeschränkungen hin."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission nimmt im Vernehmlassungsverfahren Stellung zu Entwürfen von rechtsetzenden Erlassen des Bundes, die den Wettbewerb beschränken oder auf andere Weise beeinflussen. Sie kann zu kantonalen rechtsetzenden Erlassesentwürfen Stellung nehmen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_46",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "4959ca41d3ef5e7f79a9e955016310f821b46c1e6d4de1239612b1dac2876117"
+      "sha": "4aeb435fd4b6099e0763917038646130e279fd5294fc81abf6ee76aedbd1da53"
     },
     {
       "id": "bund/KG/art_47",
@@ -1101,15 +1373,19 @@
       "artikelLabel": "Art. 47",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Gutachten 1 Die Wettbewerbskommission verfasst für andere Behörden Gutachten zu Wettbewerbsfragen von grundsätzlicher Bedeutung. Sie kann das Sekretariat in Fällen von untergeordneter Bedeutung beauftragen, an ihrer Stelle Gutachten zu erstatten. 2 … 44 44 Aufgehoben durch Ziff. I des BG vom 20. Juni 2003, mit Wirkung seit 1. April 2004 ( AS 2004 1385 ; BBl 2002 2022 5506 )."
+          "absatz": "1",
+          "text": "Die Wettbewerbskommission verfasst für andere Behörden Gutachten zu Wettbewerbsfragen von grundsätzlicher Bedeutung. Sie kann das Sekretariat in Fällen von untergeordneter Bedeutung beauftragen, an ihrer Stelle Gutachten zu erstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_47",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8ef4d58e33c21e10b2b4534916e63ecf6cff3efe04bea9d40624df7036067700"
+      "sha": "1060daa45d6084a86a2fb29bfea04489af948d70b4ecdb905992ceee7ecedf51"
     },
     {
       "id": "bund/KG/art_48",
@@ -1120,15 +1396,19 @@
       "artikelLabel": "Art. 48",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Veröffentlichung von Entscheiden und Urteilen 1 Die Wettbewerbsbehörden können ihre Entscheide veröffentlichen. 2 Die Gerichte stellen dem Sekretariat die Urteile, die in Anwendung dieses Gesetzes gefällt werden, unaufgefordert und in vollständiger Abschrift zu. Das Sekretariat sammelt diese Urteile und kann sie periodisch veröffentlichen."
+          "absatz": "1",
+          "text": "Die Wettbewerbsbehörden können ihre Entscheide veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte stellen dem Sekretariat die Urteile, die in Anwendung dieses Gesetzes gefällt werden, unaufgefordert und in vollständiger Abschrift zu. Das Sekretariat sammelt diese Urteile und kann sie periodisch veröffentlichen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_48",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "da6400900529e5db1cb1f7cd1c5bb54b1cacb9944d3d2bf7720a268b71e97339"
+      "sha": "0d43f5388cdca6e8a0f06f0fe3b82cc2a815e10b550c60ab61b25b424aecf594"
     },
     {
       "id": "bund/KG/art_49",
@@ -1139,15 +1419,19 @@
       "artikelLabel": "Art. 49",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Informationspflichten 1 Das Sekretariat und die Wettbewerbskommission orientieren die Öffentlichkeit über ihre Tätigkeit. 2 Die Wettbewerbskommission erstattet dem Bundesrat jährlich einen Tätigkeitsbericht."
+          "absatz": "1",
+          "text": "Das Sekretariat und die Wettbewerbskommission orientieren die Öffentlichkeit über ihre Tätigkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Wettbewerbskommission erstattet dem Bundesrat jährlich einen Tätigkeitsbericht."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_49",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "e3b7a46bc97993db018671f9aab3e79cf38664bd7b06259ef48d26b7731171b4"
+      "sha": "2c282e3785678f8d5559ad5e6f997cda08335548bddd0158230940cd92f76cce"
     },
     {
       "id": "bund/KG/art_49_a",
@@ -1158,8 +1442,16 @@
       "artikelLabel": "Art. 49a",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Ein Unternehmen, das an einer unzulässigen Abrede nach Artikel 5 Absätze 3 und 4 beteiligt ist oder marktbeherrschend ist und sich nach Artikel 7 unzulässig verhält, wird mit einem Betrag bis zu 10 Prozent des in den letzten drei Geschäftsjahren in der Schweiz erzielten Umsatzes belastet. Artikel 9 Absatz 3 ist sinngemäss anwendbar. Der Betrag bemisst sich nach der Dauer und der Schwere des unzulässigen Verhaltens. Der mutmassliche Gewinn, den das Unternehmen dadurch erzielt hat, ist angemessen zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn das Unternehmen an der Aufdeckung und der Beseitigung der Wettbewerbsbeschränkung mitwirkt, kann auf eine Belastung ganz oder teilweise verzichtet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Belastung entfällt, wenn:",
           "items": [
             {
               "marke": "a",
@@ -1178,9 +1470,9 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_49_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "8d8d18cc6342151f39ef75dae6a55cd60d82c66fa105b96888a24ada2ec4b08b"
+      "sha": "40835212b81c5bb55d1fc460b24748862dd9093529a67ad11a022058e25274c4"
     },
     {
       "id": "bund/KG/art_50",
@@ -1197,7 +1489,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_50",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "9870cc37e66a5ecabeb9da9f90ab3f8138ec5ca19dfe147092ec35b547a084dd"
     },
@@ -1210,15 +1502,19 @@
       "artikelLabel": "Art. 51",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Verstösse im Zusammenhang mit Unternehmenszusammenschlüssen 1 Ein Unternehmen, das einen meldepflichtigen Zusammenschluss ohne Meldung vollzieht oder das vorläufige Vollzugsverbot missachtet, gegen eine mit der Zulassung erteilte Auflage verstösst, einen untersagten Zusammenschluss vollzieht oder eine Massnahme zur Wiederherstellung wirksamen Wettbewerbs nicht durchführt, wird mit einem Betrag bis zu einer Million Franken belastet. 2 Bei wiederholtem Verstoss gegen eine mit der Zulassung erteilte Auflage wird das Unternehmen mit einem Betrag bis zu 10 Prozent des auf die Schweiz entfallenden Gesamtumsatzes der beteiligten Unternehmen belastet. Artikel 9 Absatz 3 ist sinngemäss anwendbar."
+          "absatz": "1",
+          "text": "Ein Unternehmen, das einen meldepflichtigen Zusammenschluss ohne Meldung vollzieht oder das vorläufige Vollzugsverbot missachtet, gegen eine mit der Zulassung erteilte Auflage verstösst, einen untersagten Zusammenschluss vollzieht oder eine Massnahme zur Wiederherstellung wirksamen Wettbewerbs nicht durchführt, wird mit einem Betrag bis zu einer Million Franken belastet."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei wiederholtem Verstoss gegen eine mit der Zulassung erteilte Auflage wird das Unternehmen mit einem Betrag bis zu 10 Prozent des auf die Schweiz entfallenden Gesamtumsatzes der beteiligten Unternehmen belastet. Artikel 9 Absatz 3 ist sinngemäss anwendbar."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_51",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "b08e4f7b9a0ad9d68c2e8aa615ce62987878fd7b564eecf864483afb969b294c"
+      "sha": "c904e319b8071906f1b249143050756d1fa53c24c849bc8075eeb26912f45dcf"
     },
     {
       "id": "bund/KG/art_52",
@@ -1235,7 +1531,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_52",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "9d76714a88e263187d7c16ddfbc5a192174037dcfac010d0c00c6f8781516419"
     },
@@ -1248,15 +1544,19 @@
       "artikelLabel": "Art. 53",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Verfahren 49 1 Verstösse werden vom Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums untersucht. Sie werden von der Wettbewerbskommission beurteilt. 2 … 50 49 Fassung gemäss Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, in Kraft seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 ). 50 Aufgehoben durch Anhang Ziff. 27 des Verwaltungsgerichtsgesetzes vom 17. Juni 2005, mit Wirkung seit 1. Jan. 2007 ( AS 2006 2197 1069 ; BBl 2001 4202 )."
+          "absatz": "1",
+          "text": "Verstösse werden vom Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums untersucht. Sie werden von der Wettbewerbskommission beurteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_53",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "cc0d00061379511a4497f880a598bbfbb3d4364098620a03725ffaf7f83f9d95"
+      "sha": "5d7d85ace675ee9f733e83004878023881680de24c193e62cdf340109b3e862b"
     },
     {
       "id": "bund/KG/art_53_a",
@@ -1267,8 +1567,8 @@
       "artikelLabel": "Art. 53a",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
+          "absatz": "1",
+          "text": "Die Wettbewerbsbehörden erheben Gebühren für:",
           "items": [
             {
               "marke": "a",
@@ -1283,13 +1583,21 @@
               "text": "Gutachten und sonstige Dienstleistungen."
             }
           ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr bemisst sich nach dem Zeitaufwand."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt die Gebührensätze fest und regelt die Gebührenerhebung. Er kann vorsehen, dass für bestimmte Verfahren oder Dienstleistungen, namentlich bei der Einstellung der Verfahren, keine Gebühren erhoben werden."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_53_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f1a822d1e1f9ad4bc4fc83a8e077ab94bac4f2e722e6d90172dbdb76a804721a"
+      "sha": "d67a09b9e1d3d4d3b46045479f01290553aabb8a50122acc84c842cd134d3bca"
     },
     {
       "id": "bund/KG/art_54",
@@ -1306,7 +1614,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_54",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "cae40040d9c0ea587f8fe51890fe946b04a30d88101af67a7c3337e274bb593d"
     },
@@ -1325,7 +1633,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_55",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "300a7964ae921f3a3fc994073024f9e88f2a36039d447ec4099793eb051cdabc"
     },
@@ -1338,15 +1646,19 @@
       "artikelLabel": "Art. 56",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "52 Verjährung 1 Die Strafverfolgung für Widerhandlungen gegen einvernehmliche Regelungen und behördliche Anordnungen (Art. 54) verjährt nach sieben Jahren. 2 Die Strafverfolgung für andere Widerhandlungen (Art. 55) verjährt nach vier Jahren. 52 Fassung gemäss Ziff. I 3 des BG vom 17. Dez. 2021 über die Anpassung des Nebenstrafrechts an das geänderte Sanktionenrecht, in Kraft seit 1. Juli 2023 ( AS 2023 254 ; BBl 2018 2827 )."
+          "absatz": "1",
+          "text": "Die Strafverfolgung für Widerhandlungen gegen einvernehmliche Regelungen und behördliche Anordnungen (Art. 54) verjährt nach sieben Jahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafverfolgung für andere Widerhandlungen (Art. 55) verjährt nach vier Jahren."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_56",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "f5581a8bd17c6a03c26131d4b8ef315db4b9a837be57d048d9d9e9c645166fe2"
+      "sha": "6e62784f8085a9efa07ec860af785534bbd9e459e9595bb9b8b7ad166faf53df"
     },
     {
       "id": "bund/KG/art_57",
@@ -1357,15 +1669,19 @@
       "artikelLabel": "Art. 57",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Verfahren und Rechtsmittel 1 Für die Verfolgung und die Beurteilung der strafbaren Handlung gilt das Bundesgesetz über das Verwaltungsstrafrecht vom 22. März 1974 53 . 2 Verfolgende Behörde ist das Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums. Urteilende Behörde ist die Wettbewerbskommission. 53 SR 313.0"
+          "absatz": "1",
+          "text": "Für die Verfolgung und die Beurteilung der strafbaren Handlung gilt das Bundesgesetz über das Verwaltungsstrafrecht vom 22. März 1974."
+        },
+        {
+          "absatz": "2",
+          "text": "Verfolgende Behörde ist das Sekretariat im Einvernehmen mit einem Mitglied des Präsidiums. Urteilende Behörde ist die Wettbewerbskommission."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_57",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "71c02144956003f10848076326c32afea0d21d1708507cd085c662b7c97d7ccd"
+      "sha": "41bf3e08470dc8dc04606f8beff55c99a08bc29b5db0bb9620e5d503ac15d9b9"
     },
     {
       "id": "bund/KG/art_58",
@@ -1376,15 +1692,19 @@
       "artikelLabel": "Art. 58",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Feststellung des Sachverhalts 1 Macht eine Vertragspartei eines internationalen Abkommens geltend, eine Wettbewerbsbeschränkung sei mit dem Abkommen unvereinbar, so kann das WBF das Sekretariat mit einer entsprechenden Vorabklärung beauftragen. 2 Das WBF entscheidet auf Antrag des Sekretariats über das weitere Vorgehen. Es hört zuvor die Beteiligten an."
+          "absatz": "1",
+          "text": "Macht eine Vertragspartei eines internationalen Abkommens geltend, eine Wettbewerbsbeschränkung sei mit dem Abkommen unvereinbar, so kann das WBF das Sekretariat mit einer entsprechenden Vorabklärung beauftragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das WBF entscheidet auf Antrag des Sekretariats über das weitere Vorgehen. Es hört zuvor die Beteiligten an."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_58",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "405315710debf55baa468c6904d38d5c6f5f9c83876f349e2d265a138ace215f"
+      "sha": "15c9f673e27129772e9b5c879173220473476496c2d786d178211d98b7bfeceb"
     },
     {
       "id": "bund/KG/art_59",
@@ -1395,15 +1715,19 @@
       "artikelLabel": "Art. 59",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Beseitigung von Unvereinbarkeiten 1 Wird bei der Ausführung eines internationalen Abkommens festgestellt, dass eine Wettbewerbsbeschränkung mit dem Abkommen unvereinbar ist, so kann das WBF im Einvernehmen mit dem Eidgenössischen Departement für auswärtige Angelegenheiten den Beteiligten eine einvernehmliche Regelung über die Beseitigung der Unvereinbarkeit vorschlagen. 2 Kommt eine einvernehmliche Regelung nicht rechtzeitig zustande und drohen der Schweiz von der Vertragspartei Schutzmassnahmen, so kann das WBF im Einvernehmen mit dem Eidgenössischen Departement für auswärtige Angelegenheiten die Massnahmen verfügen, die zur Beseitigung der Wettbewerbsbeschränkung erforderlich sind."
+          "absatz": "1",
+          "text": "Wird bei der Ausführung eines internationalen Abkommens festgestellt, dass eine Wettbewerbsbeschränkung mit dem Abkommen unvereinbar ist, so kann das WBF im Einvernehmen mit dem Eidgenössischen Departement für auswärtige Angelegenheiten den Beteiligten eine einvernehmliche Regelung über die Beseitigung der Unvereinbarkeit vorschlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kommt eine einvernehmliche Regelung nicht rechtzeitig zustande und drohen der Schweiz von der Vertragspartei Schutzmassnahmen, so kann das WBF im Einvernehmen mit dem Eidgenössischen Departement für auswärtige Angelegenheiten die Massnahmen verfügen, die zur Beseitigung der Wettbewerbsbeschränkung erforderlich sind."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_59",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "e8e8352e159975271920c0adfc8e880068c1a29f828b50945b770ab427c0d3b8"
+      "sha": "b91ff1f85bbf53d8de2c62fd6a260060dfaef21448b959df5238391552999fb6"
     },
     {
       "id": "bund/KG/art_59_a",
@@ -1414,15 +1738,19 @@
       "artikelLabel": "Art. 59a",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "a 1 Der Bundesrat sorgt für die Evaluation der Wirksamkeit der Massnahmen und des Vollzugs dieses Gesetzes. 2 Der Bundesrat erstattet nach Abschluss der Evaluation, spätestens aber fünf Jahre nach Inkrafttreten dieser Bestimmung, dem Parlament Bericht und unterbreitet Vorschläge für das weitere Vorgehen."
+          "absatz": "1",
+          "text": "Der Bundesrat sorgt für die Evaluation der Wirksamkeit der Massnahmen und des Vollzugs dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat erstattet nach Abschluss der Evaluation, spätestens aber fünf Jahre nach Inkrafttreten dieser Bestimmung, dem Parlament Bericht und unterbreitet Vorschläge für das weitere Vorgehen."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_59_a",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "72009d176697c1718d20340ef6646a3fedfefaae07294f29d5108966cd884f29"
+      "sha": "3d975a2d1ba2c281c448d4b67cd79c9c72c2ce4754500f7272595319fcabba55"
     },
     {
       "id": "bund/KG/art_60",
@@ -1439,7 +1767,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_60",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "8251f4cfadd21af7ab24cc264cef153c82b329f1ae7aa85673bc0f1a07db4920"
     },
@@ -1458,7 +1786,7 @@
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_61",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
       "sha": "52153c0df5eb74d2baec393849eca42e37a40f15c1aa487e447bd274fd4ecdb0"
     },
@@ -1471,15 +1799,23 @@
       "artikelLabel": "Art. 62",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Übergangsbestimmungen 1 Laufende Verfahren der Kartellkommission über Wettbewerbsabreden werden mit Inkrafttreten dieses Gesetzes sistiert; nötigenfalls werden sie nach Ablauf von sechs Monaten nach neuem Recht weitergeführt. 2 Neue Verfahren der Wettbewerbskommission über Wettbewerbsabreden können frühestens sechs Monate nach Inkrafttreten des Gesetzes eingeleitet werden, es sei denn, mögliche Verfügungsadressaten verlangten eine frühere Untersuchung. Vorabklärungen sind jederzeit möglich. 3 Rechtskräftige Verfügungen und angenommene Empfehlungen nach dem Kartellgesetz vom 20. Dezember 1985 56 unterstehen auch bezüglich der Sanktionen dem bisherigen Recht. 56 [ AS 1986 874 ; 1992 288 Anhang Ziff. 12]"
+          "absatz": "1",
+          "text": "Laufende Verfahren der Kartellkommission über Wettbewerbsabreden werden mit Inkrafttreten dieses Gesetzes sistiert; nötigenfalls werden sie nach Ablauf von sechs Monaten nach neuem Recht weitergeführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Neue Verfahren der Wettbewerbskommission über Wettbewerbsabreden können frühestens sechs Monate nach Inkrafttreten des Gesetzes eingeleitet werden, es sei denn, mögliche Verfügungsadressaten verlangten eine frühere Untersuchung. Vorabklärungen sind jederzeit möglich."
+        },
+        {
+          "absatz": "3",
+          "text": "Rechtskräftige Verfügungen und angenommene Empfehlungen nach dem Kartellgesetz vom 20. Dezember 1985 unterstehen auch bezüglich der Sanktionen dem bisherigen Recht."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_62",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "75243d49d95416a910cbad701597acac29e392152896b23fd74b770ddca20ff2"
+      "sha": "177e5f15d39905c7c088f583e722d9eb71b0b8d57f6dd29cb357f1194ac2530a"
     },
     {
       "id": "bund/KG/art_63",
@@ -1490,15 +1826,19 @@
       "artikelLabel": "Art. 63",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Referendum und Inkrafttreten 1 Dieses Gesetz untersteht dem fakultativen Referendum. 2 Der Bundesrat bestimmt das Inkrafttreten."
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
         }
       ],
       "stand": "2023-07-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/546_546_546/de#art_63",
-      "abgerufen": "2026-06-19",
+      "abgerufen": "2026-06-23",
       "fassungsToken": "20230701",
-      "sha": "15c319b6bade351057cabb66cf6afe656595b98afecd6a6719746a10f5d1646c"
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
     }
   ]
 }
