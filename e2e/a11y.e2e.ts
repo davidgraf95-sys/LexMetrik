@@ -35,7 +35,7 @@ async function oeffnen(page: Page, url: string) {
 //   Hebung = Entscheid David (BERICHT.md B-1).
 const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   'startseite': ['link-in-text-block'],
-  'startseite-register': ['link-in-text-block'],
+  'startseite-suche': ['link-in-text-block'],
   'tagerechner': ['link-in-text-block', 'color-contrast'],
   'tagerechner-kalender': ['link-in-text-block', 'color-contrast'],
   'vorlage-arbeitsvertrag': ['link-in-text-block'],
@@ -82,10 +82,16 @@ test('Startseite', async ({ page }, testInfo) => {
   await axePruefen(page, testInfo, 'startseite')
 })
 
-test('Startseite mit offenem Register-Panel', async ({ page }, testInfo) => {
+test('Startseite mit offener Universal-Suche', async ({ page }, testInfo) => {
+  // Startseiten-Überarbeitung: der frühere Katalog-«Register-Panel»-Zustand
+  // existiert auf «/» nicht mehr (Katalog lebt auf /recherche). Geprüft wird
+  // stattdessen der wichtigste neue interaktive Zustand — die offene Universal-
+  // Suche mit gruppierter Trefferliste (Katalog-Gruppe rendert synchron, ohne
+  // Lazy-Daten, daher sofort sichtbar).
   await oeffnen(page, '/')
-  await page.getByRole('button', { name: /öffnen$/ }).first().click()
-  await axePruefen(page, testInfo, 'startseite-register')
+  await page.locator('section[role="search"] input[type="search"]').fill('kündigung')
+  await page.locator('section[role="search"] .lc-card').waitFor({ state: 'visible' })
+  await axePruefen(page, testInfo, 'startseite-suche')
 })
 
 test('Tagerechner', async ({ page }, testInfo) => {
