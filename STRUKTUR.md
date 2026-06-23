@@ -77,6 +77,8 @@ VStrR 109 Art.), Asset-Hash live=lokal, Kernrouten 200.
 
 **Bund Batch 4 (main e91aca2, NOCH NICHT in Prod):** +3 Volltexte AHVG (169 Art.)/BankG (109)/HMG (141) → **61 Bund-Volltexte**. Korrektes Konsolidierungsdatum per Filestore-INHALTS-Sonde (ELI-Resolver lag grob daneben: AHVG 2019→2026, BankG 2011→2024, HMG 2019→2025). VERBLEIBEND zurückgestellt (4): ELG/GSchG/EnG/EpG — Fedlex serviert nur SPA-Shell, kein Filestore-Inhalts-HTML → bleiben nur-live-link (§8). Bund-Volltext-Bilanz Session: 35→61.
 
+**Bug-Check + Extraktor-Fix (main c410e1d, NOCH NICHT in Prod):** 2 Agenten prüften die 26 neuen Gesetze wort-für-wort gg. Fedlex → 3 substanzielle Klassen gefunden+behoben (extrahiere-fedlex.ts, wirkt korpusweit/52 Gesetze): (1) `<table>` wurde gedroppt → jetzt mehrspaltig (17 Tabellen zurück, inkl. IVG-Renten-/DBG-Steuertarif, inhaltlich verifiziert); (2) Footnote-/Aufhebungs-Leak (auch OR/ZGB/StGB latent!) → <div class=footnotes>+<h6> vor Fallback gestrippt, aufgehobene Art.→«…»; (3) BANKG <inl><sup>-Absätze. Kronjuwelen-Agent: reine Verbesserung, kein Normtext-Verlust. PROD: AR + Bund Batch 1–4 sind live (dpl …8nqzbuamw); der Extraktor-Fix korrigiert die in Prod noch vorhandenen Tabellen-/Leak-Bugs — Deploy ausstehend. OFFEN nicht-substanziell: verschachtelte Unterlisten flach (repo-weit pre-existing).
+
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
 Auftrag David: alle bestehenden Gesetze (Bund + Kantone) EINZELN reviewen (1 Agent/Gesetz),
