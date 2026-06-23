@@ -67,8 +67,9 @@ restauriert (VwVG 20/2bis Zustellfiktion etc.); SchKG art_219 Konkursklassen kor
 **OFFEN/Backlog:** (a) **GR-Discovery-Lauf an LexFind-`ETIMEDOUT` gecrasht** (nichts geschrieben) →
 `enumeriereKanton` braucht Retry-Härtung; (b) weitere clex-Kantone (gleicher Befehl); (c)
 render_mode-UI-Badge; (d) Kreuzdiff-Gate C (Netz); (e) Regressionstest für den bis/ter-Parser-Fix.
-**PROD-Deploy von AR + Bund-Ausbau steht aus** (§9: separates Davids-Ja). AR ist bereits live
-(dpl_5EKAuYZG); Bund-Ausbau + AR-Korrekturen sind auf main, noch nicht in Prod.
+**PROD-DEPLOY 23.6.2026 (main 40f0268 → lexmetrik.vercel.app, dpl …7uwzzamp1):** AR-Korrekturen +
+kompletter Bund-Ausbau live verifiziert — 40 Bund-Volltexte (IPRG 236/PartG 42/JStG 45/BetmG 70/
+VStrR 109 Art.), Asset-Hash live=lokal, Kernrouten 200.
 
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
