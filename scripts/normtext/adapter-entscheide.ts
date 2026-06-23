@@ -267,8 +267,6 @@ export function mappeEntscheidOCL(
     : null;
   // Amtliche Regeste gibt es definitionsgemäss nur beim publizierten BGE; sonst maschinell.
   const regesteAmtlich = !!det.bge_reference;
-  // Rubrum (Besetzung/Parteien/Gegenstand/Vorinstanz) aus full_text (Art. 112 BGG).
-  const rubrum = extrahiereRubrum(det.full_text);
 
   // ── zitierte Entscheide (OCL liefert JSON-STRING) ──
   let zitierteEntscheide: string[] = [];
@@ -294,6 +292,14 @@ export function mappeEntscheidOCL(
     ?? legalAreaZuSachgebiet(det.legal_area) // … als die grobe OCL legal_area (erst Fallback).
     ?? 'oeffentlich';
   const gerichtName = gerichtAnzeigename(court, canton, det.court_name as string | undefined);
+  // Rubrum nur fürs Bundesgericht (full_text-Struktur zuverlässig); kantonal null —
+  // lieber leer als falsch (Abnahme P1: kantonale Extraktion liefert sonst Erwägungstext).
+  const rubrum = canton === 'CH' ? extrahiereRubrum(det.full_text) : null;
+  // Zitierung inkl. Aktenzeichen-Norm „5A 229/2017" → „5A_229/2017" (Abnahme P3: Kopf/Tab/Zitat).
+  const datumDe = fmtDatumDe(String(det.decision_date ?? ''));
+  const zitierung = (canton === 'CH'
+    ? String(det.citation_string_de ?? `BGer ${docket} vom ${datumDe}`)
+    : `${gerichtName} ${docket} vom ${datumDe}`).replace(/\b(\d[A-Z])\s+(\d+\/\d{4})/g, '$1_$2');
 
   // Leitentscheid = amtliche Publikation: marked_for_publication ODER BGE-Fundstelle
   // ODER vorhandene amtliche Regeste (eine Regeste tragen nur publizierte Entscheide).
@@ -313,11 +319,7 @@ export function mappeEntscheidOCL(
     abteilung: det.chamber ? String(det.chamber) : null,
     nummer: docket,
     bgeReferenz: det.bge_reference ? String(det.bge_reference) : null,
-    // Lesbare Zitierung: Bund über OCL-Zitat; Kanton deterministisch aus Anzeigename
-    // (OCL liefert dort nur den rohen Court-Code, Audit P0).
-    zitierung: canton === 'CH'
-      ? String(det.citation_string_de ?? `BGer ${docket} vom ${fmtDatumDe(String(det.decision_date ?? ''))}`)
-      : `${gerichtName} ${docket} vom ${fmtDatumDe(String(det.decision_date ?? ''))}`,
+    zitierung,
     datum: String(det.decision_date ?? ''),
     sprache,
     leitcharakter: leit ? 'leitentscheid' : 'routine',
