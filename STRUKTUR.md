@@ -54,16 +54,21 @@ Register 150→491 Erlasse. Confidence: 410/412 Auto-Akzept (100%), 2 Quarantän
 (§8). Gate grün. Ehrliches Verdikt unverändert: ~25–40 % Rest-Review über alle Tiers (kein 0-Check).
 
 **Bund-Volltext-Ausbau (main 3997635):** PartG (42 Art.) + JStG (45 Art.) aus nur-live-link-Stubs
-zu Volltext promoviert (Fedlex ELI/Konsolidierung SPARQL-verifiziert; Stubs 79→77; bestehende 35
-Bund golden byte-identisch). **IPRG/BetmG/VStrR bewusst NICHT** (§1): ältere Fedlex-Markup (plain
-`<p>`-Intros vor `<dl>`) verliert Einleitungssätze; ein Extraktor-Fix regrediert bestehende
-Gesetze (SchKG art_219 Abs.-Grenze) → eigener verifizierter Task mit Golden-Re-Baseline nötig.
+zu Volltext promoviert. **Dann PERFEKTIONIERT (main 3cd3bc9):** Fedlex-Extraktor-Fix
+(extrahiere-fedlex.ts) erkennt nun (a) plain `<p><sup>N>` ohne absatz-Klasse, (b) Intro-/Label-`<p>`
+vor `<dl>` (Einzel-`<p>`-Schranke), (c) Suffixe bis/ter/quater/quinquies. Behebt 3 Bug-Klassen
+älterer Konsolidierungen (verlorene Intros, Ganztext-Fallback, wegfallende Nbis-Absätze). Damit
+**5 neue Volltexte** (PartG/JStG/IPRG/BetmG/VStrR) + **35 Bund-Gesetze verbessert & adversarial
+verifiziert** (2 Agenten): Kronjuwelen OR/ZGB/StGB/BV reine Label-Verbesserung (Text-Recall
+OLD⊇NEW=1.0000, kein Verlust); ältere Erlasse Fussnoten-gestrippt/strukturiert, 11 bis/ter-Absätze
+restauriert (VwVG 20/2bis Zustellfiktion etc.); SchKG art_219 Konkursklassen korrekt. Globaler Scan:
+0 fehlende Nbis-Absätze (15 Gesetze). Stubs 79→74. Confidence 415 Erlasse: 100% Auto-Akzept.
 
-**OFFEN/Backlog:** (a) GR-Discovery-Lauf an LexFind-`ETIMEDOUT` gecrasht (nichts geschrieben) →
-Discovery-Pfad braucht Retry-Härtung in `enumeriereKanton`; (b) weitere clex-Kantone (gleicher
-Befehl); (c) render_mode-UI-Badge (golden-gegatet); (d) Kreuzdiff-Gate C (Netz); (e) Fedlex-Parser
-für älteres Markup (plain-`<p>`-Intro vor `<dl>`) — entsperrt IPRG/BetmG/VStrR + ältere Bundeserlasse.
-PROD-Deploy des Bund-Ausbaus steht aus (§9: separates Davids-Ja).
+**OFFEN/Backlog:** (a) **GR-Discovery-Lauf an LexFind-`ETIMEDOUT` gecrasht** (nichts geschrieben) →
+`enumeriereKanton` braucht Retry-Härtung; (b) weitere clex-Kantone (gleicher Befehl); (c)
+render_mode-UI-Badge; (d) Kreuzdiff-Gate C (Netz); (e) Regressionstest für den bis/ter-Parser-Fix.
+**PROD-Deploy von AR + Bund-Ausbau steht aus** (§9: separates Davids-Ja). AR ist bereits live
+(dpl_5EKAuYZG); Bund-Ausbau + AR-Korrekturen sind auf main, noch nicht in Prod.
 
 ## Session 22.6.2026 — KORPUS-REVIEW aller Gesetze + systemische Render-Fixes (main, PROD-DEPLOY 5ed0e0a, lexmetrik.vercel.app)
 
