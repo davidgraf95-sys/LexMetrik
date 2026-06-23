@@ -1,0 +1,1339 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "bund/FAMZG/art_1",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestimmungen des Bundesgesetzes vom 6. Oktober 2000 über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) sind auf die Familienzulagen anwendbar, soweit das vorliegende Gesetz nicht ausdrücklich eine Abweichung vom ATSG vorsieht. Nicht anwendbar sind die Artikel 76 Absätze 1 bis und 2 und 78 ATSG."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen des ATSG sind auf die Finanzhilfen an Familienorganisationen nicht anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "f09770c419da33014f910e7efa012742d653abbdb04918eb60367e4eb74f8c75"
+    },
+    {
+      "id": "bund/FAMZG/art_2",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Familienzulagen sind einmalige oder periodische Geldleistungen, die ausgerichtet werden, um die finanzielle Belastung durch ein oder mehrere Kinder teilweise auszugleichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "5838b4b13703da6cf7e25b1ed00f5e9afc14f0e0216d33ebda509809f8f37b91"
+    },
+    {
+      "id": "bund/FAMZG/art_3",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Familienzulagen nach diesem Gesetz umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kinderzulage: sie wird vom Beginn des Geburtsmonats des Kindes bis zum Ende des Monats ausgerichtet, in dem das Kind das 16. Altersjahr vollendet; besteht für das Kind schon vor Vollendung des 16. Altersjahrs ein Anspruch auf eine Ausbildungszulage, so wird diese anstelle der Kinderzulage ausgerichtet; ist das Kind erwerbsunfähig (Art. 7 ATSG), so wird die Kinderzulage bis zum Ende des Monats ausgerichtet, in dem es das 20. Altersjahr vollendet;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ausbildungszulage: sie wird ab dem Beginn des Monats ausgerichtet, in dem das Kind eine nachobligatorische Ausbildung beginnt, jedoch frühestens ab dem Beginn des Monats, in dem es das 15. Altersjahr vollendet; besucht das Kind nach Vollendung des 16. Altersjahrs noch die obligatorische Schule, so wird die Ausbildungszulage ab dem Beginn des darauffolgenden Monats ausgerichtet; die Ausbildungszulage wird bis zum Abschluss der Ausbildung des Kindes gewährt, längstens jedoch bis zum Ende des Monats, in dem es das 25. Altersjahr vollendet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone können in ihren Familienzulagenordnungen höhere Mindestansätze für Kinder- und Ausbildungszulagen als nach Artikel 5 sowie auch Geburts- und Adoptionszulagen vorsehen. Die Bestimmungen dieses Gesetzes gelten auch für diese Familienzulagen. Andere Leistungen müssen ausserhalb der Familienzulagenordnungen geregelt und finanziert werden. Weitere durch Gesamt- oder Einzelarbeitsvertrag oder andere Regelungen vorgesehene Leistungen gelten nicht als Familienzulagen im Sinne dieses Gesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Geburtszulage wird für jedes Kind ausgerichtet, das lebend oder nach mindestens 23 Wochen Schwangerschaft geboren wurde. Der Bundesrat kann weitere Voraussetzungen festlegen. Die Adoptionszulage wird für jedes minderjährige Kind ausgerichtet, das zur späteren Adoption aufgenommen wird. Keinen Anspruch gibt die Adoption eines Kindes nach Artikel 264 c des Zivilgesetzbuches."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_3",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "f1cdc44c2b2db1f06b72fa0ee099cd13d39001dbd5f371dc38e0bca24a237388"
+    },
+    {
+      "id": "bund/FAMZG/art_4",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zum Anspruch auf Familienzulagen berechtigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kinder, zu denen ein Kindesverhältnis im Sinne des Zivilgesetzbuches besteht;"
+            },
+            {
+              "marke": "b",
+              "text": "Stiefkinder;"
+            },
+            {
+              "marke": "c",
+              "text": "Pflegekinder;"
+            },
+            {
+              "marke": "d",
+              "text": "Geschwister und Enkelkinder der bezugsberechtigten Person, wenn diese für deren Unterhalt in überwiegendem Mass aufkommt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Einzelheiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für im Ausland wohnhafte Kinder regelt der Bundesrat die Voraussetzungen für den Anspruch auf Familienzulagen. Deren Höhe richtet sich nach der Kaufkraft im Wohnsitzstaat."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_4",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "034ee58b62bc0feca521020e2511ddc894dd81cc0b9a7f3df20fcdf9e1e540b9"
+    },
+    {
+      "id": "bund/FAMZG/art_5",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kinderzulage beträgt mindestens 215 Franken pro Monat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausbildungszulage beträgt mindestens 268 Franken pro Monat."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat passt die Mindestansätze auf den gleichen Zeitpunkt wie die Renten der Alters- und Hinterlassenenversicherung (AHV) der Teuerung an, sofern der Landesindex der Konsumentenpreise seit der letzten Festsetzung der Ansätze um mindestens 5 Punkte gestiegen ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_5",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "4eef3c744f46a9f3af4f85549563f278e0c852653d734c58648edc5c020dab75"
+    },
+    {
+      "id": "bund/FAMZG/art_6",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für das gleiche Kind wird nur eine Zulage derselben Art ausgerichtet. Die Differenzzahlung nach Artikel 7 Absatz 2 bleibt vorbehalten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_6",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "cd092c7711e26518a5918dac1b3b64d36087a1b367546af6969e5db5abd37060"
+    },
+    {
+      "id": "bund/FAMZG/art_7",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Haben mehrere Personen für das gleiche Kind Anspruch auf Familienzulagen nach eidgenössischem oder kantonalem Recht, so steht der Anspruch in nachstehender Reihenfolge zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der erwerbstätigen Person;"
+            },
+            {
+              "marke": "b",
+              "text": "der Person, welche die elterliche Sorge hat oder bis zur Mündigkeit des Kindes hatte;"
+            },
+            {
+              "marke": "c",
+              "text": "der Person, bei der das Kind überwiegend lebt oder bis zu seiner Mündigkeit lebte;"
+            },
+            {
+              "marke": "d",
+              "text": "der Person, auf welche die Familienzulagenordnung im Wohnsitzkanton des Kindes anwendbar ist;"
+            },
+            {
+              "marke": "e",
+              "text": "der Person mit dem höheren AHV-pflichtigen Einkommen aus unselbstständiger Erwerbstätigkeit;"
+            },
+            {
+              "marke": "f",
+              "text": "der Person mit dem höheren AHV-pflichtigen Einkommen aus selbstständiger Erwerbstätigkeit."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Richten sich die Familienzulagenansprüche der erst- und der zweitanspruchsberechtigten Person nach den Familienzulagenordnungen von zwei verschiedenen Kantonen, so hat die zweitanspruchsberechtigte Person Anspruch auf den Betrag, um den der gesetzliche Mindestansatz in ihrem Kanton höher ist als im anderen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_7",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "5eb5e799d5d76be8af1a5540a1d47f22ac1c9d722a99a55fce100920d7e04cf9"
+    },
+    {
+      "id": "bund/FAMZG/art_8",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Anspruchsberechtigte Personen, die auf Grund eines Gerichtsurteils oder einer Vereinbarung zur Zahlung von Unterhaltsbeiträgen für Kinder verpflichtet sind, müssen die Familienzulagen zusätzlich zu den Unterhaltsbeiträgen entrichten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_8",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "5ed4c99127cc9c72bb3c922b2678a11f4cdbb347db34d40d617a9d9c7cfa5cad"
+    },
+    {
+      "id": "bund/FAMZG/art_9",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden die Familienzulagen nicht für die Bedürfnisse einer Person verwendet, für die sie bestimmt sind, so kann diese Person oder ihr gesetzlicher Vertreter verlangen, dass ihr die Familienzulagen in Abweichung von Artikel 20 Absatz 1 ATSG auch ohne Fürsorgeabhängigkeit ausgerichtet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf begründetes Gesuch hin kann die Ausbildungszulage in Abweichung von Artikel 20 Absatz 1 ATSG direkt dem mündigen Kind ausgerichtet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_9",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "5139e451d4c87c04574b88294abb3eb16d846c7170f14f46941efe529a7d84aa"
+    },
+    {
+      "id": "bund/FAMZG/art_10",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Familienzulagen sind der Zwangsvollstreckung entzogen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "50c7bdf2f1e645e9c120f4ab3355364cd3e7436918fca325169220ace9463051"
+    },
+    {
+      "id": "bund/FAMZG/art_11",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diesem Gesetz unterstehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Arbeitgeber, die nach Artikel 12 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG) beitragspflichtig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Arbeitnehmerinnen und Arbeitnehmer nicht beitragspflichtiger Arbeitgeber nach Artikel 6 AHVG; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Personen, die als Selbstständigerwerbende obligatorisch in der AHV versichert sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Arbeitnehmerin oder Arbeitnehmer gilt, wer nach der Bundesgesetzgebung über die AHV als solche oder als solcher betrachtet wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "d9c5fef9ffd005ae606b3b7b16dd0da9613fa219cabe3b2052452bcfc5df4a6f"
+    },
+    {
+      "id": "bund/FAMZG/art_12",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die diesem Gesetz unterstellten Personen sind verpflichtet, sich einer Familienausgleichskasse in dem Kanton anzuschliessen, dessen Familienzulagenordnung auf sie anwendbar ist. Für die Selbstständigerwerbenden gelten für die Kassenzugehörigkeit nach Artikel 17 Absatz 2 Buchstabe b die gleichen Regeln wie für die Arbeitgeber."
+        },
+        {
+          "absatz": "2",
+          "text": "Arbeitgeber und Selbstständigerwerbende unterstehen der Familienzulagenordnung des Kantons, in dem das Unternehmen seinen rechtlichen Sitz hat, oder, wenn ein solcher fehlt, ihres Wohnsitzkantons. Zweigniederlassungen von Arbeitgebern unterstehen der Familienzulagenordnung des Kantons, in dem sie sich befinden. Die Kantone können abweichende Regelungen vereinbaren."
+        },
+        {
+          "absatz": "3",
+          "text": "Arbeitnehmerinnen und Arbeitnehmer nicht beitragspflichtiger Arbeitgeber unterstehen der Familienzulagenordnung im Kanton, in dem sie für die AHV erfasst sind."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "5a101e956618ae086cb495e9028ea215022305c8aa7d01a468663a11055c9bbe"
+    },
+    {
+      "id": "bund/FAMZG/art_13",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die als Arbeitnehmerinnen oder Arbeitnehmer in der AHV obligatorisch versicherten Personen, die von einem diesem Gesetz unterstellten Arbeitgeber beschäftigt werden, haben Anspruch auf Familienzulagen. Die Leistungen richten sich nach der Familienzulagenordnung des Kantons gemäss Artikel 12 Absatz 2. Der Anspruch entsteht und erlischt mit dem Lohnanspruch. Der Bundesrat regelt den Anspruch nach dem Erlöschen des Lohnanspruchs."
+        },
+        {
+          "absatz": "2",
+          "text": "Arbeitnehmerinnen und Arbeitnehmer nicht beitragspflichtiger Arbeitgeber haben Anspruch auf Familienzulagen. Die Leistungen richten sich nach der Familienzulagenordnung des Kantons gemäss Artikel 12 Absatz 3. Der Anspruch entsteht und erlischt mit dem Lohnanspruch. Der Bundesrat regelt den Anspruch nach dem Erlöschen des Lohnanspruchs."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die als Selbstständigerwerbende in der AHV obligatorisch versicherten Personen haben Anspruch auf Familienzulagen. Die Leistungen richten sich nach der Familienzulagenordnung des Kantons gemäss Artikel 12 Absatz 2. Der Bundesrat regelt die Einzelheiten betreffend Entstehen und Erlöschen des Anspruchs."
+        },
+        {
+          "absatz": "3",
+          "text": "Es werden nur ganze Zulagen ausgerichtet. Anspruch auf Zulagen hat, wer auf einem jährlichen Erwerbseinkommen, das mindestens dem halben jährlichen Betrag der minimalen vollen Altersrente der AHV entspricht, AHV-Beiträge entrichtet."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Anspruch auf Familienzulagen und die Koordination mit anderen Leistungen bei Arbeitsunfähigkeit und Arbeitsverhinderung;"
+            },
+            {
+              "marke": "b",
+              "text": "das Verfahren und die Zuständigkeit der Familienausgleichskassen für Personen, die mehrere Arbeitgeber haben, und für Personen, die gleichzeitig selbstständig und unselbstständig erwerbstätig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "537ad95576c9220958d0d619e2bb75791fd1d3348cc5521cb5c9fa7680117da7"
+    },
+    {
+      "id": "bund/FAMZG/art_14",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Durchführungsorgane sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die von den Kantonen anerkannten beruflichen und zwischenberuflichen Familienausgleichskassen;"
+            },
+            {
+              "marke": "b",
+              "text": "die kantonalen Familienausgleichskassen;"
+            },
+            {
+              "marke": "c",
+              "text": "die von den AHV-Ausgleichskassen geführten Familienausgleichskassen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_14",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "c4692503ce38133984ff22b913c75b10824d60448d611837abc7399b6edb9979"
+    },
+    {
+      "id": "bund/FAMZG/art_15",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Familienausgleichskassen obliegen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Festsetzung und Ausrichtung der Familienzulagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Festsetzung und Erhebung der Beiträge;"
+            },
+            {
+              "marke": "c",
+              "text": "der Erlass und die Eröffnung der Verfügungen und der Einspracheentscheide."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Familienzulagen werden den anspruchsberechtigten Arbeitnehmerinnen und Arbeitnehmern in der Regel durch den Arbeitgeber ausbezahlt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Familienausgleichskassen sorgen für das finanzielle Gleichgewicht durch Äufnung einer angemessenen Schwankungsreserve."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_15",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "ef624867c01c9e320212cfc629f10df58a8143b8815de65561b7e6cc36b200af"
+    },
+    {
+      "id": "bund/FAMZG/art_16",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone regeln die Finanzierung der Familienzulagen und der Verwaltungskosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beiträge werden in Prozent des AHV-pflichtigen Einkommens berechnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone bestimmen, ob innerhalb einer Familienausgleichskasse auf den AHV-pflichtigen Einkommen der Arbeitnehmerinnen und Arbeitnehmer und auf denjenigen der Selbstständigerwerbenden der gleiche Beitragssatz erhoben werden muss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beiträge der Selbstständigerwerbenden werden nur auf dem Teil des Einkommens erhoben, der dem in der obligatorischen Unfallversicherung höchstens versicherten Verdienst entspricht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_16",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "ff9c3e6fd806393e84483daa2770c1dc36226238a2eba6c317661e74c97e89c8"
+    },
+    {
+      "id": "bund/FAMZG/art_17",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone errichten eine kantonale Familienausgleichskasse und übertragen deren Geschäftsführung der kantonalen AHV-Ausgleichskasse."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Familienausgleichskassen stehen unter der Aufsicht der Kantone. Unter Vorbehalt dieses Gesetzes und in Ergänzung dazu sowie unter Berücksichtigung der Organisationsstrukturen und des Verfahrens für die AHV erlassen die Kantone die erforderlichen Bestimmungen. Sie regeln insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die obligatorische Errichtung einer kantonalen Familienausgleichskasse;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kassenzugehörigkeit und die Erfassung der nach Artikel 11 Absatz 1 unterstellten Personen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Voraussetzungen und das Verfahren für die Anerkennung von Familienausgleichskassen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Entzug der Anerkennung;"
+            },
+            {
+              "marke": "e",
+              "text": "den Zusammenschluss und die Auflösung von Kassen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Aufgaben und Pflichten der Kassen und der Arbeitgeber;"
+            },
+            {
+              "marke": "g",
+              "text": "die Voraussetzungen für den Wechsel der Kasse;"
+            },
+            {
+              "marke": "h",
+              "text": "das Statut und die Aufgaben der kantonalen Familienausgleichskasse;"
+            },
+            {
+              "marke": "i",
+              "text": "die Revision der Kassen und die Arbeitgeberkontrolle;"
+            },
+            {
+              "marke": "j",
+              "text": "die Finanzierung, insbesondere den allfälligen Verteilschlüssel für die Beiträge der Arbeitgeber sowie der Arbeitnehmerinnen und Arbeitnehmer;"
+            },
+            {
+              "marke": "k",
+              "text": "den vollen Lastenausgleich zwischen den Kassen;"
+            },
+            {
+              "marke": "l",
+              "text": "die allfällige Übertragung weiterer Aufgaben an die Familienausgleichskassen, insbesondere von Aufgaben zur Unterstützung von Angehörigen der Armee und des Familienschutzes."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_17",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "1a3e36254b80983fca0c288b8c18ed81c6663c8e484404c99a64649b0d5b2d20"
+    },
+    {
+      "id": "bund/FAMZG/art_18",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die landwirtschaftlichen Arbeitnehmerinnen und Arbeitnehmer sowie die selbständigerwerbenden Landwirtinnen und Landwirte haben Anspruch auf Familienzulagen nach dem Bundesgesetz vom 20. Juni 1952 über die Familienzulagen in der Landwirtschaft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_18",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "61971f6971ca733fe8d45ca79d64b7646f4a054a350f03c0b0e4568d9115930d"
+    },
+    {
+      "id": "bund/FAMZG/art_19",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der AHV obligatorisch versicherte Personen, die bei der AHV als nichterwerbstätige Personen erfasst sind, gelten als Nichterwerbstätige. Sie haben Anspruch auf Familienzulagen nach den Artikeln 3 und 5. Artikel 7 Absatz 2 ist nicht anwendbar. Zuständig ist der Wohnsitzkanton."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Personen, die als Arbeitnehmerinnen oder Arbeitnehmer oder als Selbstständigerwerbende in der AHV obligatorisch versichert sind und das Mindesteinkommen nach Artikel 13 Absatz 3 nicht erreichen, gelten ebenfalls als Nichterwerbstätige."
+        },
+        {
+          "absatz": "1ter",
+          "text": "Arbeitslose Mütter, die Anspruch auf eine Mutterschaftsentschädigung nach dem Erwerbsersatzgesetz vom 25. September 1952 haben, gelten während der Dauer dieses Anspruchs ebenfalls als Nichterwerbstätige. Absatz 2 ist nicht anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anspruch auf Familienzulagen ist an die Voraussetzung geknüpft, dass das steuerbare Einkommen den anderthalbfachen Betrag einer maximalen vollen Altersrente der AHV nicht übersteigt und keine Ergänzungsleistungen zur AHV/IV bezogen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_19",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "ef357f833e6aeeabe0d45d29880987b15973af4e695ce9d49cdba0b7ffc66565"
+    },
+    {
+      "id": "bund/FAMZG/art_20",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Familienzulagen für Nichterwerbstätige werden von den Kantonen finanziert."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone können vorsehen, dass Nichterwerbstätige einen in Prozenten ihrer AHV-Beiträge zu berechnenden Beitrag leisten müssen, sofern diese Beiträge den Mindestbeitrag nach Artikel 10 AHVG übersteigen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_20",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "3a8a657a83dea415deca24e2faf6e057514dd5c5d53f63bcb66fbd48628feb62"
+    },
+    {
+      "id": "bund/FAMZG/art_21",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Unter Vorbehalt dieses Gesetzes und in Ergänzung dazu erlassen die Kantone die erforderlichen Bestimmungen betreffend die übrigen Voraussetzungen für den Bezug von Familienzulagen, die Organisation und die Finanzierung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "7c05f46bf9b3caa63b9e6b3e8a2e575497b3c5b65707adc3fbc33aba56dabae5"
+    },
+    {
+      "id": "bund/FAMZG/art_21_a",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_a",
+      "artikelLabel": "Art. 21a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zentrale Ausgleichsstelle führt ein Familienzulagenregister, um:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Doppelbezug von Familienzulagen nach Artikel 6 zu verhindern;"
+            },
+            {
+              "marke": "b",
+              "text": "Transparenz über bezogene Familienzulagen herzustellen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Stellen nach Artikel 21 c beim Vollzug dieses Gesetzes zu unterstützen;"
+            },
+            {
+              "marke": "d",
+              "text": "dem Bund und den Kantonen als Auskunftsstelle zu dienen, sowie die für die statistischen Erhebungen benötigten Daten zu liefern;"
+            },
+            {
+              "marke": "e",
+              "text": "die zuständigen Stellen von Bund und Kantonen im Falle der Geltendmachung von Leistungsansprüchen zu informieren, wenn der Informationsanspruch in einem Bundesgesetz vorgesehen ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_a",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "cf1929da435b522fff2de954daea33ba0a09f091bf07113b7be5a77221795dea"
+    },
+    {
+      "id": "bund/FAMZG/art_21_b",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_b",
+      "artikelLabel": "Art. 21b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat bezeichnet die Stellen, denen das Familienzulagenregister durch Abrufverfahren zugänglich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Öffentlich zugänglich sind die Informationen darüber, ob für ein Kind eine Familienzulage bezogen wird und welche Stelle diese ausrichtet. Für die Abfrage sind die AHV-Nummer und das Geburtsdatum des Kindes anzugeben. Zur Wahrung des Kindeswohls kann der Bundesrat Ausnahmen von der öffentlichen Zugänglichkeit festlegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_b",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "0b8c3dfc9955a8a6772c2cbd9d97b5545b18ac69d0939e27f0d8fe653fdb4f1e"
+    },
+    {
+      "id": "bund/FAMZG/art_21_c",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_c",
+      "artikelLabel": "Art. 21c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die folgenden Stellen melden der Zentralen Ausgleichsstelle unverzüglich die für die Führung des Familienzulagenregisters notwendigen Daten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Familienausgleichskassen nach Artikel 14;"
+            },
+            {
+              "marke": "b",
+              "text": "die Arbeitslosenkassen nach den Artikeln 77 und 78 des Arbeitslosenversicherungsgesetzes vom 25. Juni 1982;"
+            },
+            {
+              "marke": "c",
+              "text": "die AHV-Ausgleichskassen für die Erfüllung ihrer Aufgaben nach Artikel 13 des Bundesgesetzes vom 20. Juni 1952 über die Familienzulagen in der Landwirtschaft und nach Artikel 60 Absatz 1 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung;"
+            },
+            {
+              "marke": "d",
+              "text": "die kantonalen Stellen, die für die Durchführung der Familienzulagen für Nichterwerbstätige zuständig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_c",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "b0f4419fcd7f6555a2fa4bfb15130dc9933631d4eb3738d155ec731ec7e6f654"
+    },
+    {
+      "id": "bund/FAMZG/art_21_d",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_d",
+      "artikelLabel": "Art. 21d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Familienzulagenregister wird durch den Bund finanziert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_d",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "1b9775ca14c2ee6c76acd9652cc8d1f5f59ad1c18779a90195bc1c9e953077b2"
+    },
+    {
+      "id": "bund/FAMZG/art_21_e",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_e",
+      "artikelLabel": "Art. 21e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt in Zusammenarbeit mit den Stellen nach Artikel 21 c die Ausführungsbestimmungen. Dazu gehören insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zu erfassenden Daten und deren Bearbeitung;"
+            },
+            {
+              "marke": "b",
+              "text": "der Zugriff auf die Daten;"
+            },
+            {
+              "marke": "c",
+              "text": "die zur Sicherstellung des Datenschutzes und der Datensicherheit erforderlichen organisatorischen und technischen Massnahmen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Aufbewahrungsdauer der Daten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_e",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "a38ec946519b0eee2fd4e66c1d00784a59045216a00f16618787843f316a0790"
+    },
+    {
+      "id": "bund/FAMZG/art_21_e_bis",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_e_bis",
+      "artikelLabel": "Art. 21ebis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen kantonalen Stellen können für die Durchführung der individuellen Prämienverbilligung nach Artikel 65 Absatz 1 des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung auf die dafür erforderlichen Daten des Familienzulagenregisters zugreifen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie melden sich für den Zugriff auf das Register beim Bundesamt für Sozialversicherungen (BSV) an."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für den Zugriff auf die Daten werden von den Kantonen getragen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_e_bis",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "331fcf476ac4d6e61ed80bf18fccfa0561dcbf7cfb2ccf8c7187fa6afc9df9c7"
+    },
+    {
+      "id": "bund/FAMZG/art_21_f",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_f",
+      "artikelLabel": "Art. 21f",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bund kann Familienorganisationen im Rahmen der bewilligten Kredite Finanzhilfen für ihre Tätigkeiten zur Förderung von Familien in den folgenden Bereichen gewähren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Begleitung und Beratung von Familien sowie Elternbildung;"
+            },
+            {
+              "marke": "b",
+              "text": "Vereinbarkeit von Familie und Erwerbstätigkeit oder Ausbildung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_f",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "cb72a201ffed573c64c130f0443ad15651a483e701ef50ab54358d9d0f10bc1e"
+    },
+    {
+      "id": "bund/FAMZG/art_21_g",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_g",
+      "artikelLabel": "Art. 21g",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Um Finanzhilfen ersuchen können Familienorganisationen, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der ganzen Schweiz oder im ganzen Gebiet einer Sprachregion tätig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "in ihren Statuten oder ihrer Stiftungsurkunde festhalten, dass: 1. ihr Sitz in der Schweiz liegt,"
+            },
+            {
+              "marke": "2",
+              "text": "ihr Zweck mit mindestens einem der beiden Förderbereiche übereinstimmt,"
+            },
+            {
+              "marke": "3",
+              "text": "sie gemeinnützig sind,"
+            },
+            {
+              "marke": "4",
+              "text": "sie konfessionell neutral sind,"
+            },
+            {
+              "marke": "5",
+              "text": "sie parteipolitisch unabhängig sind, und"
+            },
+            {
+              "marke": "6",
+              "text": "ihr Vermögen im Falle der Auflösung oder Fusion an eine andere gemeinnützige Familienorganisation übergeht."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_g",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "f242d86fcdc0a90c846c53718aee07a35fdcbed7c6cc3e80ccb4ace989346cad"
+    },
+    {
+      "id": "bund/FAMZG/art_21_h",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_h",
+      "artikelLabel": "Art. 21h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Finanzhilfen können einer Familienorganisation gewährt werden, wenn sie im jeweiligen Förderbereich ein umfassendes Angebot bereitstellt. Umfassend ist das Angebot, wenn es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich an mehrere Zielgruppen richtet und von diesen genutzt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "thematisch breit und fachlich fundiert ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "die ganze Schweiz abdeckt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Beurteilung, wie umfassend das Angebot der Familienorganisation ist, werden die Angebote ihrer Mitgliederorganisationen, welche die Voraussetzungen nach Artikel 21 g erfüllen, ebenfalls berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Finanzhilfen können einer im ganzen Gebiet einer Sprachregion tätigen Familienorganisation gewährt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Förderbereich keine in der ganzen Schweiz tätige Familienorganisation aktiv ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Angebot die Anforderungen nach Absatz 1 Buchstaben a und b erfüllt und in der Sprachregion umfassender ist als jenes der in der ganzen Schweiz tätigen Familienorganisation."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ersuchen die Familienorganisationen insgesamt um mehr Mittel, als zur Verfügung stehen, so erlässt das Eidgenössische Departement des Innern eine Prioritätenordnung; dabei strebt es insbesondere die Förderung nachhaltiger Tätigkeiten und ein günstiges Kosten-Nutzen-Verhältnis an."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_h",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "c4cde59191b54cb91621a0891b7a648518d5e7d98e3fced7d6f2a6e901706e39"
+    },
+    {
+      "id": "bund/FAMZG/art_21_i",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "21_i",
+      "artikelLabel": "Art. 21i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche um Finanzhilfen sind beim BSV einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzhilfen werden auf der Grundlage eines öffentlich-rechtlichen Vertrags ausgerichtet."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie decken höchstens 50 Prozent der anrechenbaren Ausgaben (Höchstsatz)."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Einzelheiten des Verfahrens und der anrechenbaren Ausgaben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_21_i",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "2afeeba3ddbac38b2ab79ed34da513c02140923b589620328a551db0d8b6e475"
+    },
+    {
+      "id": "bund/FAMZG/art_22",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Über Beschwerden gegen Entscheide der Familienausgleichskassen entscheidet in Abweichung von Artikel 58 Absätze 1 und 2 ATSG das Versicherungsgericht des Kantons, dessen Familienzulagenordnung anwendbar ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "faa18f22ea62b82538955f217699cf4b9f1f1f73ffddfb39977db83235146dcf"
+    },
+    {
+      "id": "bund/FAMZG/art_23",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 87–91 AHVG sind anwendbar auf Personen, die in einer in diesen Bestimmungen umschriebenen Weise die Vorschriften des vorliegenden Gesetzes verletzen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_23",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "fd9dc4bb382ff78c3fe61c5e524d63d2bf20be60e5fa53228753faad21a41aa4"
+    },
+    {
+      "id": "bund/FAMZG/art_24",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz oder eines oder mehrerer EU-Mitgliedstaaten gelten oder galten und die Staatsangehörige der Schweiz oder eines EU-Mitgliedstaates sind, auf Flüchtlinge oder Staatenlose mit Wohnort in der Schweiz oder einem EU-Mitgliedstaat sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anhang II, Abschnitt A, des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit (Freizügigkeitsabkommen) anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung (EG) Nr. 883/2004;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung (EG) Nr. 987/2009;"
+            },
+            {
+              "marke": "c",
+              "text": "Verordnung (EWG) Nr. 1408/71;"
+            },
+            {
+              "marke": "d",
+              "text": "Verordnung (EWG) Nr. 574/72."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In Bezug auf Personen, für die die Rechtsvorschriften der sozialen Sicherheit der Schweiz, Islands, Norwegens oder Liechtensteins gelten oder galten und die Staatsangehörige der Schweiz, Islands, Norwegens oder Liechtensteins sind oder die als Flüchtlinge oder Staatenlose Wohnort in der Schweiz oder auf dem Gebiet Islands, Norwegens oder Liechtensteins haben, sowie auf die Familienangehörigen und Hinterlassenen dieser Personen sind auf die Leistungen im Geltungsbereich des vorliegenden Gesetzes folgende Erlasse in der für die Schweiz verbindlichen Fassung von Anlage 2 zu Anhang K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA-Übereinkommen) anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung (EG) Nr. 883/2004;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung (EG) Nr. 987/2009;"
+            },
+            {
+              "marke": "c",
+              "text": "Verordnung (EWG) Nr. 1408/71;"
+            },
+            {
+              "marke": "d",
+              "text": "Verordnung (EWG) Nr. 574/72."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat passt die Verweise auf die in den Absätzen 1 und 2 aufgeführten Rechtsakte der Europäischen Union jeweils an, wenn eine Anpassung des Anhangs II des Freizügigkeitsabkommens und der Anlage 2 zu Anhang K des EFTA-Übereinkommens beschlossen wurde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Ausdrücke «Mitgliedstaaten der Europäischen Union», «Mitgliedstaaten der Europäischen Gemeinschaft», «Staaten der Europäischen Union» und «Staaten der Europäischen Gemeinschaft» im vorliegenden Gesetz bezeichnen die Staaten, für die das Freizügigkeitsabkommen gilt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_24",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "9f33aeb9b184f3d512dfc7be0cfc54ca3af763904c51a3b1061d702604181796"
+    },
+    {
+      "id": "bund/FAMZG/art_25",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bestimmungen der AHV-Gesetzgebung mit ihren allfälligen Abweichungen vom ATSG gelten sinngemäss für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Informationssysteme (Art. 49 a Abs. 1 und 2, 49 b und 72 a Abs. 2 Bst. b AHVG);"
+            },
+            {
+              "marke": "abis",
+              "text": "das Bearbeiten von Personendaten (Art. 49 f AHVG);"
+            },
+            {
+              "marke": "b",
+              "text": "die Datenbekanntgabe (Art. 50 a AHVG);"
+            },
+            {
+              "marke": "c",
+              "text": "die Haftung der Arbeitgeber (Art. 52 AHVG);"
+            },
+            {
+              "marke": "d",
+              "text": "die Verrechnung (Art. 20 AHVG);"
+            },
+            {
+              "marke": "e",
+              "text": "die Höhe der Verzugs- und Vergütungszinsen;"
+            },
+            {
+              "marke": "ebis",
+              "text": "die Herabsetzung und den Erlass von Beiträgen (Art. 11 AHVG);"
+            },
+            {
+              "marke": "eter",
+              "text": "den Bezug der Beiträge (Art. 14–16 AHVG);"
+            },
+            {
+              "marke": "f",
+              "text": "die AHV-Nummer (Art. 50 c AHVG);"
+            },
+            {
+              "marke": "g",
+              "text": "die systematische Verwendung der AHV-Nummer (Art. 153 b –153 i AHVG)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_25",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "8ee1c22c608e0384d61a542221be5a67cb1009b78b983addf64cebf729d5ff6f"
+    },
+    {
+      "id": "bund/FAMZG/art_26",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone passen ihre Familienzulagenordnungen bis zum Inkrafttreten dieses Gesetzes an und erlassen die Ausführungsbestimmungen nach Artikel 17."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Erlass der definitiven Regelung nicht fristgerecht möglich, so kann die Kantonsregierung eine provisorische Regelung treffen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die kantonalen Ausführungsbestimmungen sind den Bundesbehörden zur Kenntnisnahme zuzustellen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_26",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "69e3402b3a95ac4606b13ffa9bd53653bd2664cca4decbd4429f6d16031de675"
+    },
+    {
+      "id": "bund/FAMZG/art_27",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat wird mit dem Vollzug beauftragt. Er erlässt die für eine einheitliche Anwendung nötigen Ausführungsbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann zur Wahrnehmung seiner Aufsichtsfunktion nach Artikel 76 Absatz 1 ATSG das BSV beauftragen, den mit der Durchführung dieses Gesetzes betrauten Stellen Weisungen zu erteilen und einheitliche Statistiken zu erstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann das Bundesamt für Sozialversicherungen beauftragen, die Aufgaben nach Artikel 72 a Absatz 2 Buchstabe b AHVG und Artikel 76 a Absatz 2 ATSG wahrzunehmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_27",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "6d680424c7479f2d172be3737fe0063cd1a0582d0dc4f3fd1c4b486899a23e4e"
+    },
+    {
+      "id": "bund/FAMZG/art_28",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung bisherigen Rechts wird im Anhang geregelt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_28",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "04b72ef2b9e140cdac1a886a6117816e152d482153b4fd42e962f7aa019f0a9a"
+    },
+    {
+      "id": "bund/FAMZG/art_28_a",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Stellen nach Artikel 21 c müssen die für die Inbetriebnahme des Familienzulagenregisters notwendigen Daten spätestens drei Monate nach Inkrafttreten der vorliegenden Änderung für die Meldung an die Zentrale Ausgleichsstelle aufbereitet haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt die Einzelheiten der erstmaligen Datenlieferung an die Zentrale Ausgleichsstelle."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_28_a",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "b4dc2a48bcf6df08270b1f28650aefd1c76f5b1dc64f3105dad9c16d7f4aff3c"
+    },
+    {
+      "id": "bund/FAMZG/art_28_b",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "28_b",
+      "artikelLabel": "Art. 28b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone passen ihre Familienzulagenordnungen bis zum Inkrafttreten dieser Änderung an."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_28_b",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "fb7bf8f6e6e9b773b5afcda6aa12589b929690a7023753caebc00eb032f9adf1"
+    },
+    {
+      "id": "bund/FAMZG/art_28_c",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "28_c",
+      "artikelLabel": "Art. 28c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Innert drei Jahren nach Inkrafttreten dieser Änderung passen die Kantone ihre Gesetzgebung an Artikel 17 Absatz 2 Buchstabe k an und treffen Begleitmassnahmen, damit die Effizienz und die Effektivität der Familienausgleichskassen gesteigert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_28_c",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "cebe3490205747cf50edf8abf6d7b33f09a21d40f86a1ed099cc94279b29dbe2"
+    },
+    {
+      "id": "bund/FAMZG/art_29",
+      "ebene": "bund",
+      "quelle": "FAMZG",
+      "erlass": "FamZG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt unter Vorbehalt von Absatz 3 das Inkrafttreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 17 und 26 treten am ersten Tag des zweiten Monats nach dem unbenützten Ablauf der Referendumsfrist oder am ersten Tag des vierten Monats nach Annahme des Gesetzes in der Volksabstimmung in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/51/de#art_29",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "20260101",
+      "sha": "3398a359b774684f59ecdf52acf6229a3904ddbc71f431cf557ca084d3c6f26f"
+    }
+  ]
+}

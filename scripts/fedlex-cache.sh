@@ -136,6 +136,15 @@ EINTRAEGE=(
   "bgfa|cc/2002/153|20250701|0|art_1"
   "kkg|cc/2002/593|20230901|0|art_1"
   "gwg|cc/1998/892_892_892|20240301|0|art_1"
+  # ── Batch 3 (23.6.2026) — Resolver-Daten; Currency via check:fedlex-versionen korrigiert. ──
+  "ivg|cc/1959/827_857_845|20260101|0|art_1"
+  "famzg|cc/2008/51|20260101|0|art_1"
+  "sthg|cc/1991/1256_1256_1256|20250101|0|art_1"
+  "aig|cc/2007/758|20260612|0|art_1"
+  "asylg|cc/1999/358|20260612|0|art_1"
+  "glg|cc/1996/1498_1498_1498|20200701|0|art_1"
+  "finmag|cc/2008/736|20250401|0|art_1"
+  "bgbb|cc/1993/1410_1410_1410|20140101|0|art_1"
 )
 
 fehler=0

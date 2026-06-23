@@ -24,7 +24,6 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['161.1', 'BPR', 'oeffentlich'],
   // Privatrecht & Nebenerlasse
   // (PartG 211.231, IPRG 291 → Volltext-Snapshot 23.6.2026, im ERLASS_REGISTER)
-  ['211.412.11', 'BGBB', 'privat'],
   ['232.12', 'DesG', 'privat'],
   ['232.16', 'SortG', 'privat'],
   ['221.112.944', 'PrHG', 'privat'],
@@ -40,16 +39,10 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['152.3', 'BGÖ', 'oeffentlich'],
   // Sozialversicherung
   ['831.10', 'AHVG', 'sozial-abgaben'],
-  ['831.20', 'IVG', 'sozial-abgaben'],
   ['831.30', 'ELG', 'sozial-abgaben'],
   ['833.1', 'MVG', 'sozial-abgaben'],
-  ['836.2', 'FamZG', 'sozial-abgaben'],
-  ['642.14', 'StHG', 'sozial-abgaben'],
   // Migration & Gleichstellung
-  ['142.20', 'AIG', 'oeffentlich'],
-  ['142.31', 'AsylG', 'oeffentlich'],
   ['141.0', 'BüG', 'oeffentlich'],
-  ['151.1', 'GlG', 'oeffentlich'],
   // Raumplanung, Bau & Umwelt
   ['814.20', 'GSchG', 'oeffentlich'],
   ['451', 'NHG', 'oeffentlich'],
@@ -59,7 +52,6 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   // Wirtschaft & Finanzmarkt
   ['952.0', 'BankG', 'oeffentlich'],
   ['951.31', 'KAG', 'oeffentlich'],
-  ['956.1', 'FINMAG', 'oeffentlich'],
   ['954.1', 'FINIG', 'oeffentlich'],
   ['961.01', 'VAG', 'oeffentlich'],
   ['950.1', 'FIDLEG', 'oeffentlich'],

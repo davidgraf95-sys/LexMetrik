@@ -100,6 +100,15 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('BVG', 'BVG', 'Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)', '831.40', 'sozial-abgaben', 21),
   bund('UVG', 'UVG', 'Bundesgesetz über die Unfallversicherung (UVG)', '832.20', 'sozial-abgaben', 22),
   bund('AVIG', 'AVIG', 'Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)', '837.0', 'sozial-abgaben', 23),
+  // ── Volltext-Ausbau Bund Batch 3 (23.6.2026, Promotion aus Stubs) ──
+  bund('IVG', 'IVG', 'Bundesgesetz über die Invalidenversicherung (IVG)', '831.20', 'sozial-abgaben', 24),
+  bund('FAMZG', 'FamZG', 'Bundesgesetz über die Familienzulagen und Finanzhilfen an Familienorganisationen (Familienzulagengesetz, FamZG)', '836.2', 'sozial-abgaben', 25),
+  bund('STHG', 'StHG', 'Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (Steuerharmonisierungsgesetz, StHG)', '642.14', 'sozial-abgaben', 26),
+  bund('AIG', 'AIG', 'Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG)', '142.20', 'oeffentlich', 23),
+  bund('ASYLG', 'AsylG', 'Asylgesetz (AsylG)', '142.31', 'oeffentlich', 24),
+  bund('GLG', 'GlG', 'Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)', '151.1', 'oeffentlich', 25),
+  bund('FINMAG', 'FINMAG', 'Bundesgesetz über die Eidgenössische Finanzmarktaufsicht (Finanzmarktaufsichtsgesetz, FINMAG)', '956.1', 'oeffentlich', 26),
+  bund('BGBB', 'BGBB', 'Bundesgesetz über das bäuerliche Bodenrecht (BGBB)', '211.412.11', 'privat', 24),
   // Verfahrensrecht
   bund('ZPO', 'ZPO', 'Schweizerische Zivilprozessordnung', '272', 'prozess', 1),
   bund('STPO', 'StPO', 'Schweizerische Strafprozessordnung', '312.0', 'prozess', 2, 'StPO'),
