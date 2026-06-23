@@ -18,7 +18,7 @@ describe('discoveryZuInventar', () => {
       kanton: 'AR', host: 'ar.clex.ch', lang: 'de', lawId: '146.1',
       erlassName: 'Datenschutzgesetz', erlassNr: '146.1', artikel: [],
     });
-    expect(gruppen[0].quelleUrl).toBe('https://ar.clex.ch/data/146.1/de');
+    expect(gruppen[0].quelleUrl).toBe('https://ar.clex.ch/app/de/texts_of_law/146.1');
   });
 
   it('überspringt Tier-B/C/unbekannt sichtbar (§8)', () => {

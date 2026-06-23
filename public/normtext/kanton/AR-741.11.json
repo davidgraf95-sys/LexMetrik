@@ -1,0 +1,508 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/741.11/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gewässerkataster bildet den Verlauf der öffentlichen Gewässer ab; die Darstellung entspricht jener in den Grundbuchplänen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Gewässerkataster enthaltene Gewässer gelten, soweit die Rechtsnatur noch nicht rechtskräftig festgelegt worden ist, vermutungsweise als öffentliche Gewässer."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "abae30c13237f1a46edd0d30f0147a95c0b9d9fb179128429c0c484a1ff535d8"
+    },
+    {
+      "id": "kanton/AR/741.11/art_1_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Volkswirtschaft ist zuständig für die Fortschreibung von Programmvereinbarungen mit dem Bund, soweit sie nicht zusätzliche Leistungen des Kantons zur Folge haben."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "8795f91199db900c73a6ee8db5e9a3436ff67a0ea76166952de4decc9d92ebbd"
+    },
+    {
+      "id": "kanton/AR/741.11/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundeigentümerinnen und Grundeigentümer werden über bevorstehende Unterhaltsmassnahmen auf ihren Grundstücken rechtzeitig informiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Kontrollaufgaben ist die vorübergehende Nutzung privater Grundstücke, Strassen und Wege jederzeit auch ohne vorgängige Information gestattet."
+        },
+        {
+          "absatz": "3",
+          "text": "Schäden aus der vorübergehenden Nutzung privater Grundstücke sind vollumfänglich zu beheben oder zu entschädigen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "afd5787d08cbfec17bc79f1792eb4071fe521155ae6e71c367b71ef9b402103c"
+    },
+    {
+      "id": "kanton/AR/741.11/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Periodisch anfallende, kleinere Unterhaltsmassnahmen wie Bestockungspflege oder Geschieberäumungen können durch die Fachstelle ohne die gemäss Perimeterverordnung vorgesehenen Meldungen erfolgen. Der Kostenverteiler wird dadurch nicht tangiert."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "0a5e56ede8dcf506fd21eaa62f4e9ae403b67e13d9031f2a5acb1fb32af8ce82"
+    },
+    {
+      "id": "kanton/AR/741.11/art_3_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Umwelt beschliesst Wasserbauprojekte mit neuen Ausgaben bis 250'000 Franken sowie mit gebundenen Ausgaben bis 1'000'000 Franken."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "582ecfda47bf3418f7acdb7e45ceb7f8b1c5651a4a47ab6a724d76f8fd05f820"
+    },
+    {
+      "id": "kanton/AR/741.11/art_3_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "3_b",
+      "artikelLabel": "Art. 3b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Projektunterlagen für die öffentliche Auflage enthalten in der Regel:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen technischen Bericht;"
+            },
+            {
+              "marke": "b",
+              "text": "Situationsplan, Bepflanzungsplan, Längen-, Quer- und Normalprofile;"
+            },
+            {
+              "marke": "c",
+              "text": "einen Kostenvoranschlag;"
+            },
+            {
+              "marke": "d",
+              "text": "aktualisierte Gefahrengrundlagen mit der Gefahrensituation vor und nach der Ausführung des Projekts (informativ);"
+            },
+            {
+              "marke": "e",
+              "text": "aktualisierte Gewässerraumlinien (informativ);"
+            },
+            {
+              "marke": "f",
+              "text": "Pläne über die dauernde und vorübergehende Beanspruchung von privaten Rechten."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "7bb3e8e7c445b3f07cf1341b537357fce1d057a83a0d3c631e7811f5a3b60bc2"
+    },
+    {
+      "id": "kanton/AR/741.11/art_3_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "3_c",
+      "artikelLabel": "Art. 3c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Projekt wird während der öffentlichen Auflage im Gelände abgesteckt bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Änderung der Linienführung eines Gewässers;"
+            },
+            {
+              "marke": "b",
+              "text": "Offenlegung eines Gewässers;"
+            },
+            {
+              "marke": "c",
+              "text": "Änderung des Ufers."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "5101d65186136a6c1c47acb7f5d40b629f27ccd4748d5568ac1a755577579672"
+    },
+    {
+      "id": "kanton/AR/741.11/art_3_d",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "3_d",
+      "artikelLabel": "Art. 3d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verwaltungsrechtliche Verträge mit Eigentümerinnen und Eigentümern der an die Gewässer angrenzenden Grundstücke können im Grundbuch angemerkt werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "8e0449173cde203bcf97ee087283168ea9b6d326811b71582ad4df0d136317f6"
+    },
+    {
+      "id": "kanton/AR/741.11/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf die öffentliche Auflage und die Visierung kann verzichtet werden bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kleineren Ausbaumassnahmen und Offenlegungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Behebung von grösseren Schäden an Schutzbauten;"
+            },
+            {
+              "marke": "c",
+              "text": "Ersatz von bestehenden Schutzbauten;"
+            },
+            {
+              "marke": "d",
+              "text": "Sofortmassnahmen zur Schadensbegrenzung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Erklären sich alle Einspracheberechtigten damit einverstanden, kann vor Ablauf der Einsprachefristen mit dem Projekt begonnen werden."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "9f07c982385cc03acd6c2155169cf647f39cc9a5864a3d48206fb145b9328cc5"
+    },
+    {
+      "id": "kanton/AR/741.11/art_4_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "4_b",
+      "artikelLabel": "Art. 4b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keiner wasserbaupolizeilichen Bewilligung bedürfen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "geringfügige Unterhaltsarbeiten an bestehenden Werkanlagen (z.B. Werkleitungen, Mauern, Durchlässe, Brücken);"
+            },
+            {
+              "marke": "b",
+              "text": "geringfügige Bauvorhaben, die dem normalen Unterhalt dienen, wie Reparaturen oder Renovationen;"
+            },
+            {
+              "marke": "c",
+              "text": "Bauvorhaben in Gefahrengebieten mit geringer Gefährdung, die nicht gefahrensensible Objekte betreffen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "741ecffaacd2991aee61d846f8c0b90f07048453bb474aa89b7860f0365ff108"
+    },
+    {
+      "id": "kanton/AR/741.11/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Konzessionsgesuch sind folgende Unterlagen einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschrieb aller wesentlichen Teile des Werks;"
+            },
+            {
+              "marke": "b",
+              "text": "Übersichtskarte 1:25'000;"
+            },
+            {
+              "marke": "c",
+              "text": "Situationsplan 1:5'000;"
+            },
+            {
+              "marke": "d",
+              "text": "Längenprofil 1:10'000/1'000;"
+            },
+            {
+              "marke": "e",
+              "text": "Hydrologisches Gutachten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fachstelle kann zusätzliche Unterlagen wie Detailpläne oder geologische Gutachten verlangen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "185f133234d3aead63a76177c4a59c2d2af0650fc6268bfed82cc2159ec535e3"
+    },
+    {
+      "id": "kanton/AR/741.11/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Konzessionsgesuch wird während 30 Tagen öffentlich aufgelegt. Während dieser Frist kann beim Regierungsrat Einsprache erheben, wer vom Konzessionsprojekt berührt ist und ein schutzwürdiges Interesse an dessen Realisierung, Verhinderung oder Änderung hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Bau und Volkswirtschaft versucht, die Einsprachen auf dem Wege der Verständigung zu erledigen. Bei wesentlichen Änderungen ist die öffentliche Auflage zu wiederholen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "0d1bc9f7f4de771dc4e7a6585f6831e7cdeeac2a653b0565c6ac5f85fcc52bec"
+    },
+    {
+      "id": "kanton/AR/741.11/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über unerledigte Einsprachen öffentlich-rechtlichen Inhalts entscheidet der Regierungsrat im Rahmen des Entscheides über die Konzessionserteilung."
+        },
+        {
+          "absatz": "2",
+          "text": "Einsprachen privatrechtlichen Inhalts werden auf den Zivilweg verwiesen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "4dde588c5f496b5ccf5ee0c36742fd31b221d7da0261fd34f735e80ad0d77447"
+    },
+    {
+      "id": "kanton/AR/741.11/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Recht zur Enteignung nach Art. 26 Abs. 5 des Gesetzes bezieht sich auf das zur Ausführung des Projekts unentbehrliche Grundeigentum, auf notwendige beschränkte dingliche Rechte sowie auf bestehende privatrechtliche und verliehene Nutzungsrechte, welche der Ausübung der Konzession entgegenstehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Streitigkeiten über die Abtretungspflicht entscheidet der Regierungsrat. Vorbehalten bleibt die Zuständigkeit des Bundesgerichts."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Übrigen ist die Enteignung nach dem Bundesgesetz über die Enteignung durchzuführen."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "51afb9ae36db4dac70c8135daab4414f3ac19979a1530548cbc969bfc4884aa6"
+    },
+    {
+      "id": "kanton/AR/741.11/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Konzessionsbestimmungen wie Inhalt, Dauer, Erneuerung, Verwirkung und Folgen des Erlöschens der Konzession werden unter Beachtung der Bestimmungen der Bundesgesetzgebung durch den Regierungsrat im Einzelfall festgelegt."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "7e41cc0fc8a6fcf8170575f4166620d675ac5e283a06d5574d593b4a19c6a5ba"
+    },
+    {
+      "id": "kanton/AR/741.11/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit den Bauarbeiten darf erst begonnen werden, wenn die Baubewilligung rechtskräftig vorliegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Zuständigkeit und Verfahren zur Erteilung der Baubewilligung richten sich nach dem Gesetz über die Raumplanung und das Baurecht."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Konzessionierungs- und das Baubewilligungsverfahren sind inhaltlich zu koordinieren. Die Bauentscheide von Gemeinde und Kanton werden gleichzeitig mit dem Konzessionsentscheid des Regierungsrats eröffnet. Einheitliche Rechtsmittelinstanz für alle Verfahren ist das Obergericht."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "5f191675faa13de18c52f77979ec6c125be71fba2f02b43fd690ad4f5705bb0f"
+    },
+    {
+      "id": "kanton/AR/741.11/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe für bewilligungspflichtige Wasserentnahmen aus Gewässern beträgt Fr. 0.40/m&sup3;."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "21ae0ebb7f996affba0179e059762d964a512157aa0e71ede7df11753e93008c"
+    },
+    {
+      "id": "kanton/AR/741.11/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche gemäss Art. 26 Abs. 2 des Gesetzes werden nur öffentlich aufgelegt, wenn Dritte betroffen sind. In diesen Fällen gilt eine Einsprachefrist von 20 Tagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen sind die Bestimmungen über das Konzessionierungsverfahren sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "f273d799c7d5b1a57155c71d45f5341d4aa2342a2f375e90bff96dec869aa25d"
+    },
+    {
+      "id": "kanton/AR/741.11/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "WBauV (741.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt mit dem Gesetz in Kraft."
+        }
+      ],
+      "stand": "2025-10-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/741.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "c84e10e47178f5fe882549705dae5c68",
+      "sha": "92fd7c074db83fbd510a06d3e0c40eed2c4d701000b7b75c32ea4a6e3a4f4138"
+    }
+  ]
+}

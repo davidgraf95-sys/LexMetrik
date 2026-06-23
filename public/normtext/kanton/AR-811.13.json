@@ -1,0 +1,720 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/811.13/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Voraussetzungen der Berufsausübung im Gesundheitswesen. Sie findet Anwendung auf Gesundheitsfachpersonen, die gemäss Art. 34 ff. Gesundheitsgesetz selbständig oder eigenverantwortlich tätig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bestimmt, für welche Tätigkeiten eine Bewilligung einzuholen ist."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "51c726fcfc346ad8a25940fc34cdc9be2ae023d75bfd5f2516e6cf7ee965eb36"
+    },
+    {
+      "id": "kanton/AR/811.13/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bewilligungen zur Berufsausübung im Gesundheitswesen sind beim Departement Gesundheit und Soziales einzuholen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales bezeichnet die intern zuständige Amts- bzw. Fachstelle."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "cebd2bdce0c32f8e7615445ec6a34746a1d03abd28ce04c2709be1f27fd16200"
+    },
+    {
+      "id": "kanton/AR/811.13/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einer Berufsausübungsbewilligung bedürfen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Apothekerinnen und Apotheker;"
+            },
+            {
+              "marke": "b",
+              "text": "Ärztinnen und Ärzte;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "Chiropraktorinnen und Chiropraktoren;"
+            },
+            {
+              "marke": "e",
+              "text": "Dentalhygienikerinnen und Dentalhygieniker;"
+            },
+            {
+              "marke": "f",
+              "text": "Drogistinnen und Drogisten;"
+            },
+            {
+              "marke": "g",
+              "text": "Ergotherapeutinnen und Ergotherapeuten;"
+            },
+            {
+              "marke": "h",
+              "text": "Ernährungsberaterinnen und Ernährungsberater;"
+            },
+            {
+              "marke": "i",
+              "text": "Hebammen;"
+            },
+            {
+              "marke": "j",
+              "text": "Heilpraktikerinnen und Heilpraktiker;"
+            },
+            {
+              "marke": "k",
+              "text": "Hörakustikerinnen und Hörakustiker;"
+            },
+            {
+              "marke": "kbis",
+              "text": "Komplementärtherapeutinnen und Komplementärtherapeuten;"
+            },
+            {
+              "marke": "l",
+              "text": "Logopädinnen und Logopäden;"
+            },
+            {
+              "marke": "m",
+              "text": "medizinische Masseurinnen und Masseure;"
+            },
+            {
+              "marke": "mbis",
+              "text": "Optometristinnen und Optometristen;"
+            },
+            {
+              "marke": "n",
+              "text": "Orthoptistinnen und Orthoptisten;"
+            },
+            {
+              "marke": "o",
+              "text": "Osteopathinnen und Osteopathen;"
+            },
+            {
+              "marke": "p",
+              "text": "Pflegefachfrauen und Pflegefachmänner;"
+            },
+            {
+              "marke": "q",
+              "text": "Physiotherapeutinnen und Physiotherapeuten;"
+            },
+            {
+              "marke": "r",
+              "text": "Podologinnen und Podologen;"
+            },
+            {
+              "marke": "s",
+              "text": "Psychologinnen und Psychologen;"
+            },
+            {
+              "marke": "sbis",
+              "text": "Psychotherapeutinnen und Psychotherapeuten;"
+            },
+            {
+              "marke": "ster",
+              "text": "Rettungssanitäterinnen und Rettungssanitäter;"
+            },
+            {
+              "marke": "t",
+              "text": "Tierärztinnen und Tierärzte;"
+            },
+            {
+              "marke": "u",
+              "text": "…"
+            },
+            {
+              "marke": "ubis",
+              "text": "Tierphysiotherapeutinnen und Tierphysiotherapeuten;"
+            },
+            {
+              "marke": "v",
+              "text": "Zahnärztinnen und Zahnärzte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales führt eine Liste der nicht unter die Bewilligungspflicht fallenden Berufe und Tätigkeiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berufsausübungsbewilligung kann nur einer natürlichen Person erteilt werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "e514f3beff5fd0efe8aa10d572759c78991f4874f3c37e8d03aae2aca07ac9a4"
+    },
+    {
+      "id": "kanton/AR/811.13/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Berufsausübungsbewilligung erlangen will, hat dem Departement Gesundheit und Soziales die in Art. 36 Abs. 1 lit. a bis lit. e Gesundheitsgesetz erwähnten Unterlagen einzureichen. Nicht in einer Amtssprache verfasste Dokumente sind mit einer beglaubigten Übersetzung zu versehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Amts- bzw. Fachstelle kann darüber hinaus weitere Unterlagen verlangen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "c06e6fb62c2000a3a168f055c5fa5129a85a83309dfbfa31d475da0ec71c88f6"
+    },
+    {
+      "id": "kanton/AR/811.13/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als anerkannte Ausweise gelten insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eidgenössische Diplome;"
+            },
+            {
+              "marke": "b",
+              "text": "den eidgenössischen Diplomen gleichgestellte ausländische Diplome."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales kann weitere Ausweise anerkennen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "9d0eaa30b9f1165ef6ae4ebc3dcc4266fd028b89bac191fa2d68f549068ec9e1"
+    },
+    {
+      "id": "kanton/AR/811.13/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen die Verweigerung einer Berufsausübungsbewilligung kann innert 20 Tagen Rekurs an das Departement Gesundheit und Soziales erhoben werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "d2f18a39726b07a36adc07007e45c075bb270b934248673b6b610fea0ef97ada"
+    },
+    {
+      "id": "kanton/AR/811.13/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Berufsausübungsbewilligung besitzt, darf keine über die Bewilligung hinausgehenden Tätigkeiten ausüben und nur die zur Tätigkeit gehörenden Medikamente besitzen und abgeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit der Berufsausübungsbewilligung können Auflagen, z.B. bezüglich Weiterbildung, verbunden werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "1cbee1c33fe4789ee6a2c762caa92d3ce660edc39cd16eaf781de54f42bfc262"
+    },
+    {
+      "id": "kanton/AR/811.13/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Berufsausübungsbewilligung verfällt, wenn die Berufstätigkeit innert sechs Monaten nach Bewilligungserteilung nicht aufgenommen wird. Dasselbe gilt bei einem Unterbruch der Tätigkeit von mehr als zwei Jahren. In beiden Fällen ist zur Wiederaufnahme der Tätigkeit um eine neue Berufsausübungsbewilligung nachzusuchen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "498681b751d6398d2c27587343acd93aa99aefbe95fef2d04750cd3497e0f899"
+    },
+    {
+      "id": "kanton/AR/811.13/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Praxis- und Geschäftsräume haben namentlich hinsichtlich der Hygiene dem jeweils üblichen Stand der Technik zu entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie werden vom Departement Gesundheit und Soziales in regelmässigen Abständen kontrolliert."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "2df7c98aa4b815cc644e4185e2ad475944040e7fb28557d2bcb4fc0ac3637bf7"
+    },
+    {
+      "id": "kanton/AR/811.13/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die in Art. 3 Abs. 1 lit. b und v erwähnten Personen haben für einen Notfalldienst zu sorgen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "32d4aed8f82cd102401f67312f61607b74ca79f6b2b2248e326f58316a0bba92"
+    },
+    {
+      "id": "kanton/AR/811.13/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Berufsausübungsbewilligung besitzt, ist berechtigt, sich bei vorübergehender Verhinderung in der Berufsausübung wegen Krankheit, Ferien, Militärdienst, Schwangerschaft oder aus anderen wichtigen Gründen vertreten zu lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Vertretung werden Personen zugelassen, die über eine vergleichbare Ausbildung verfügen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verantwortung liegt bei der vertretenen Person."
+        },
+        {
+          "absatz": "4",
+          "text": "Wer sich länger als für drei aufeinander folgende Monate vertreten lässt, hat dies vorgängig dem Departement Gesundheit und Soziales unter Nennung der Vertretung und unter Einreichung der entsprechenden Unterlagen mitzuteilen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "5016ebb07daf3834b9b8c5f29a0b36bcbd513652c4ef31fc639314c251a84975"
+    },
+    {
+      "id": "kanton/AR/811.13/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Berufsausübungsbewilligung besitzt, ist berechtigt, Assistentinnen oder Assistenten zu beschäftigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Assistentinnen und Assistenten sind Gesundheitsfachpersonen in Ausbildung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anstellung einer Assistentin oder eines Assistenten gemäss Art. 3 Abs.1 lit. b, j, s, t, u und v ist vorgängig dem Departement Gesundheit und Soziales unter Einreichung der entsprechenden Unterlagen mitzuteilen. Die Beendigung eines Anstellungsverhältnisses ist dem Departement Gesundheit und Soziales zu melden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verantwortung liegt bei der Person, die im Besitz der Bewilligung ist."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "faeae5552d018777df95627782f1812681d32e49eddb9c0df153808b64276849"
+    },
+    {
+      "id": "kanton/AR/811.13/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Gemeinschaftspraxen tätige Gesundheitsfachpersonen sind bei Auskündungen in für Dritte erkennbarer Weise zu bezeichnen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "ea52263a2bc6e454fcb0f0b4cdd92a91eb27b501bc0853b1b88f5fe06b4f0e5f"
+    },
+    {
+      "id": "kanton/AR/811.13/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Spitäler und Kuranstalten findet Art. 13 keine Anwendung."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "574bdc9f9d776a01ecd41d6377b47d21c81a3eae94e01173d7a6cb7644686255"
+    },
+    {
+      "id": "kanton/AR/811.13/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer nach Inkrafttreten dieser Verordnung die Tätigkeit als Heilpraktikerin oder Heilpraktiker aufnimmt, hat sich über eine bestandene Prüfung auszuweisen. Deren Umfang wird in einem vom Departement Gesundheit und Soziales zu erlassenden Reglement festgelegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Heilpraktikerinnen und Heilpraktiker sind berechtigt, die in Art. 54 Abs. 2 lit. d Gesundheitsgesetz umschriebenen Arzneimittel berufsmässig an ihren Patientinnen und Patienten anzuwenden und ihnen abzugeben; mit besonderer Bewilligung des Departements Gesundheit und Soziales sind Heilpraktikerinnen und Heilpraktiker zudem berechtigt, nach Art. 54 Abs. 2 lit. a Gesundheitsgesetz gewisse Arzneimittel in ihrer Praxis herzustellen bzw. für ihre Praxis herstellen zu lassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie sind berechtigt, ihren Patientinnen und Patienten Heilmittel gemäss Abs. 2 während längstens eines Jahres seit der letzten Konsultation in der Praxis nachzusenden, wenn dies für die Fortführung der angeordneten Therapie notwendig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Mischungen von Arzneimitteln sind in der die Patientin oder den Patienten betreffenden Kartei mit ihrer genauen Zusammensetzung festzuhalten."
+        },
+        {
+          "absatz": "5",
+          "text": "Bezüglich der Hausspezialitäten ist Art. 10 lit. c der Verordnung zum Gesundheitsgesetz massgebend."
+        },
+        {
+          "absatz": "6",
+          "text": "Heilpraktikerinnen oder Heilpraktikern kann die Bewilligung zur Verwendung von rezeptpflichtigen Heilmitteln erteilt werden, wenn sie sich über ausreichende Kenntnisse der Präparate ausweisen können."
+        },
+        {
+          "absatz": "7",
+          "text": "Heilpraktikerinnen und Heilpraktiker dürfen ausschliesslich subkutane und intrakutane Injektionen ausführen. Dazu bedürfen sie einer Bewilligung des Departements Gesundheit und Soziales. Die Bewilligung wird erteilt, wenn die betreffende Person sich darüber ausweist, dass sie die Injektionstechnik beherrscht und sich in der Asepsis auskennt."
+        },
+        {
+          "absatz": "8",
+          "text": "Für die zu injizierenden Präparate bedarf es neben der in Abs. 7 erwähnten Bewilligung einer Spezialbewilligung des Departements Gesundheit und Soziales."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "940d5051210af1be2dcaac21b96f389be0cddbfa35904c6794c40058fffac6c1"
+    },
+    {
+      "id": "kanton/AR/811.13/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Tierheilpraktikerinnen und Tierheilpraktikern ist es untersagt,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "chirurgische und geburtshilfliche Verrichtungen vorzunehmen,"
+            },
+            {
+              "marke": "b",
+              "text": "anzeigepflichtige Krankheiten zu behandeln,"
+            },
+            {
+              "marke": "c",
+              "text": "Blutentnahmen, Injektionen sowie andere invasive Massnahmen oder Untersuchungen vorzunehmen,"
+            },
+            {
+              "marke": "d",
+              "text": "amtliche Gutachten, Zeugnisse und Bescheinigungen auszustellen."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "c8b1a074e4617375f783e799df67c9b60fffe046b628127dd5c203d2b5c0ce96"
+    },
+    {
+      "id": "kanton/AR/811.13/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Drogerie betreiben will, bedarf einer Bewilligung des Departements Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung lautet auf die verantwortliche Drogistin oder den verantwortlichen Drogisten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement Gesundheit und Soziales erlässt die Bedingungen bezüglich Anforderungen an den Betrieb."
+        },
+        {
+          "absatz": "4",
+          "text": "Drogistinnen und Drogisten ohne eidgenössisches Diplom (HF) können gemäss Art. 44 lit. c Arzneimittelverordnung weiterhin zur Abgabe von Arzneimitteln ermächtigt werden. Gesuche sind an das Departement Gesundheit und Soziales zu richten."
+        },
+        {
+          "absatz": "5",
+          "text": "Zusätzlich zur Bewilligung nach Abs. 1 benötigt die fachtechnisch verantwortliche Person eine Bewilligung zur Herstellung von Arzneimitteln nach Art. 5 Abs. 2 lit. a Heilmittelgesetz; diese Bewilligung wird durch das Departement Gesundheit und Soziales erteilt."
+        },
+        {
+          "absatz": "6",
+          "text": "In Drogerien ist die Abgabe von Arzneimitteln der Kategorie D erlaubt; mit besonderer Bewilligung des Departements Gesundheit und Soziales kann die Abgabe aller nicht verschreibungspflichtigen Arzneimittel gestattet werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "0e9b3829de08a2529caf3c59c7365129f95fddb96659f29b9d186edbd91a52a5"
+    },
+    {
+      "id": "kanton/AR/811.13/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine öffentliche Apotheke betreiben will, bedarf einer Bewilligung des Departements Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung lautet auf die verantwortliche Apothekerin oder den verantwortlichen Apotheker."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement Gesundheit und Soziales erlässt die Bedingungen bezüglich Anforderungen an den Betrieb."
+        },
+        {
+          "absatz": "4",
+          "text": "Zusätzlich zur Bewilligung nach Abs. 1 benötigt die fachtechnisch verantwortliche Person eine Bewilligung zur Herstellung von Arzneimitteln nach Art. 5 Abs. 2 lit. a Heilmittelgesetz; diese Bewilligung wird durch das Departement Gesundheit und Soziales erteilt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "c837bb3f1535b3f4dd21223867436d3266a6adc5e63f226e587516f01212edd8"
+    },
+    {
+      "id": "kanton/AR/811.13/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Privatapotheke betreiben will, bedarf einer Bewilligung des Departements Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung lautet auf die verantwortliche Ärztin oder den verantwortlichen Arzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement Gesundheit und Soziales erlässt die Bedingungen bezüglich Anforderungen an den Betrieb."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "6544919404ae444097bfd8acc9f8b9ac1cc74b8dd8c8c7e4563daec5291d955e"
+    },
+    {
+      "id": "kanton/AR/811.13/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Bewilligung beantragt, hat eine Gebühr zu entrichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Deren Höhe richtet sich nach dem Gesetz über die Gebühren in Verwaltungssachen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "1cada3dcb237ebecb502103d3247163b3d3e28858273045db515e8fed8b0f962"
+    },
+    {
+      "id": "kanton/AR/811.13/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vor Inkrafttreten dieser Verordnung erteilten Bewilligungen bleiben gültig. Art. 8 Satz 2 dieser Verordnung bleibt auch auf diese Bewilligungen anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Vor Inkrafttreten dieser Verordnung erlangte Bewilligungen zur Führung einer Drogerie, einer öffentlichen oder einer Privatapotheke gemäss Art. 17, 18 und 19 behalten ihre Gültigkeit."
+        },
+        {
+          "absatz": "3",
+          "text": "Hinsichtlich der Anforderungen an den jeweiligen Betrieb gelten die neuen Bestimmungen; die jeweils verantwortliche Person hat innert sechs Monaten nach Inkrafttreten dieser Verordnung ein entsprechendes Gesuch an das Departement Gesundheit und Soziales zu richten."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "3ed5b52510a77eb6f77fea188f438bb4c1ff8ae6998373411ffb993f950d6bee"
+    },
+    {
+      "id": "kanton/AR/811.13/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen neu der Bewilligungspflicht unterstellten Beruf weiterhin ausüben will, hat innert einer Frist von sechs Monaten nach Inkrafttreten dieser Verordnung beim Departement Gesundheit und Soziales um die Bewilligung nachzusuchen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales kann die Bewilligung bei langjähriger und klagloser Berufsausübung auch dann erteilen, wenn die Ausbildung den Vorschriften dieser Verordnung nicht entspricht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "7bf6081980e0848dfaf553d94585ad8aa914d2ba11805f43ddf5bfd9704e2320"
+    },
+    {
+      "id": "kanton/AR/811.13/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Gesundheitsfachpersonen (811.13)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt am 1. Januar 2008 in Kraft."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "60f4811147c9af599e1bbdc45f2649ed",
+      "sha": "5316ab77e2cff66570456cdefdc454d01e757fc830015123b7454bd06970ce46"
+    }
+  ]
+}

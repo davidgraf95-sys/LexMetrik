@@ -1,0 +1,77 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/761.114/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Organisation des Strassenverkehrsamtes (761.114)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Strassenverkehrsamt steht unter der Aufsicht des Departementes Inneres und Sicherheit."
+        }
+      ],
+      "stand": "2025-09-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.114",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d016fa7d27caa51174d6a63532ce22ea",
+      "sha": "5c6e5a4f7b7b1762d66df1b573f5577171b7609528fdfec0e99de7b9398cd014"
+    },
+    {
+      "id": "kanton/AR/761.114/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die Organisation des Strassenverkehrsamtes (761.114)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Strassenverkehrsamt kann bei geeigneten Dritten externe Kundenschalter eröffnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Externe Kundenschalter können mit folgenden Geschäften beauftragt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Deponierung, Austausch und Vernichtung von Kontrollschildern;"
+            },
+            {
+              "marke": "b",
+              "text": "Wechselschilderöffnung;"
+            },
+            {
+              "marke": "c",
+              "text": "Annullierung von Fahrzeugausweisen;"
+            },
+            {
+              "marke": "d",
+              "text": "Fahrzeugwechsel;"
+            },
+            {
+              "marke": "e",
+              "text": "(Wieder-)Inverkehrsetzung von Motorfahrzeugen und Anhängern."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Externe Kundenschalter werden mit einer Leistungsvereinbarung geführt, die der Genehmigung des Departementes bedarf. Die Vollzugsaufsicht muss sichergestellt sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Dienstleistungen, die an externen Kundenschaltern erbracht werden, kann eine Zusatzgebühr von 20 Franken erhoben werden."
+        }
+      ],
+      "stand": "2025-09-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.114",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "d016fa7d27caa51174d6a63532ce22ea",
+      "sha": "23852e8b44466323c0c56de080bc1e6cc080c40152b88e92e10e36074e2ccd38"
+    }
+  ]
+}

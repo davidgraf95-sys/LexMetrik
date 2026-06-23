@@ -1,0 +1,1122 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/146.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz dient dem Schutz der Grundrechte von Personen, über welche öffentliche Organe Daten bearbeiten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "f6adffcc996d8490d1b869459f0535755b18441b4dde80c9ed1ae52ace79bdd8"
+    },
+    {
+      "id": "kanton/AR/146.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliches Organ (Organ) ist, wer öffentliche Aufgaben des Kantons, der Gemeinden oder von Körperschaften und Anstalten des öffentlichen Rechts erfüllt."
+        },
+        {
+          "absatz": "2",
+          "text": "Personendaten (Daten) sind Angaben über eine natürliche Person oder über eine Personenvereinigung (betroffene Person), soweit diese bestimmt oder bestimmbar ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Besonders schützenswerte Personendaten sind Daten über",
+          "items": [
+            {
+              "marke": "a",
+              "text": "religiöse, weltanschauliche oder politische Ansichten und Tätigkeiten,"
+            },
+            {
+              "marke": "b",
+              "text": "die Intimsphäre, die Gesundheit, die ethnische Herkunft sowie genetische oder biometrische Daten,"
+            },
+            {
+              "marke": "c",
+              "text": "Verfahren und Massnahmen im Bereich des Kindes- und Erwachsenenschutzes, der Sozialhilfe und des Strafrechts."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ein Persönlichkeitsprofil ist eine Zusammenstellung von Daten, die eine Beurteilung wesentlicher Aspekte der Persönlichkeit einer natürlichen Person erlaubt."
+        },
+        {
+          "absatz": "5",
+          "text": "Eine Bearbeitung von Personendaten ist jeder Umgang mit Daten, wie die Beschaffung, Aufbewahrung, Verwendung, Veränderung, Bekanntgabe oder Vernichtung."
+        },
+        {
+          "absatz": "5bis",
+          "text": "Profiling ist die automatisierte Bearbeitung von Daten zur Bewertung wesentlicher Aspekte einer natürlichen Person, insbesondere um ihre Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönlichen Vorlieben, Interessen, Zuverlässigkeit, ihr Verhalten, ihren Aufenthaltsort oder Ortswechsel zu analysieren oder vorherzusagen."
+        },
+        {
+          "absatz": "6",
+          "text": "Eine Datensammlung ist eine Sammlung von Daten, die nach der betroffenen Person erschlossen oder erschliessbar ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "75fc6a8e703c7b1d86a23df83e011a3e2bd0cdab3f4254dc77066f4008015495"
+    },
+    {
+      "id": "kanton/AR/146.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt, soweit nicht eidgenössisches oder besonderes kantonales Recht vorgeht, für jede Bearbeitung von Daten, unabhängig von den dabei angewandten Mitteln und Verfahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Gesetz unterstehen alle Organe mit Ausnahme derjenigen der kirchlichen Körperschaften; vorbehalten bleiben Art. 8 Abs. 3 und Art. 15."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "b807a6b3724bb624fa8b52aae34592a57cc403564fe94cd6646b8c412a866c9b"
+    },
+    {
+      "id": "kanton/AR/146.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Organe dürfen Daten bearbeiten, wenn und solange dies für die Erfüllung einer gesetzlichen Aufgabe erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Besonders schützenswerte Daten und Persönlichkeitsprofile dürfen nur bearbeitet werden, wenn es für die in einem formellen Gesetz klar umschriebene Aufgabe unentbehrlich ist. Sinngemäss gilt dies auch für jedes Profiling."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Daten dürfen nicht wider Treu und Glauben und nur zu dem bei der Beschaffung angegebenen, aus den Umständen ersichtlichen oder gesetzlich vorgeschriebenen Zweck bearbeitet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehalten bleiben die besonderen Bestimmungen über das Archivwesen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "61f39978c3930889cf6abd0c9a15ac01f651aa92fd1a4140898122932719a8ad"
+    },
+    {
+      "id": "kanton/AR/146.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten müssen richtig sein."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "092cb32b444052a3ad520a6375eba55ba1a24e8510df6f62c28c05e4a3eadd3d"
+    },
+    {
+      "id": "kanton/AR/146.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Datenschutz ist das Organ verantwortlich, welches die Daten zur Erfüllung seiner Aufgabe bearbeitet oder bearbeiten lässt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bearbeiten mehrere Organe Daten einer Datensammlung, so ist ein Organ zu bezeichnen, welches die Hauptverantwortung trägt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "31e1ebd5077549a573fc4bed4ca152789a7690b044707c6a4ea27861eb447f85"
+    },
+    {
+      "id": "kanton/AR/146.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche Organ ist verpflichtet, die betroffenen Personen in geeigneter Form über die Beschaffung von Daten zu informieren; die Informationspflicht besteht auch dann, wenn die Daten bei Dritten beschafft werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Informationspflicht umfasst die Angaben, die erforderlich sind, um die Rechte nach diesem Gesetz ausüben zu können. Dazu gehören mindestens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Identität und die Kontaktdaten des verantwortlichen Organs;"
+            },
+            {
+              "marke": "b",
+              "text": "die Rechtsgrundlage und der Zweck der Datenbearbeitung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kategorien der bearbeiteten Daten;"
+            },
+            {
+              "marke": "d",
+              "text": "der Empfängerkreis, falls Daten weitergegeben werden;"
+            },
+            {
+              "marke": "e",
+              "text": "die Kontaktdaten des Datenschutz-Kontrollorgans."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationspflicht entfällt, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die betroffene Person bereits über die entsprechenden Angaben verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "aus der Rechtsgrundlage der Datenbearbeitung klar hervorgeht, welche Daten zu welchem Zweck bearbeitet werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Information einen unverhältnismässigen Aufwand erfordert oder sonst überwiegende öffentliche Interessen dagegen sprechen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "c83e7e45633625671ee5ef77aeb5cbb2e169d208ba7d9636fff16e3e7a17b635"
+    },
+    {
+      "id": "kanton/AR/146.1/art_7_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "7_a",
+      "artikelLabel": "Art. 7a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor jeder systematischen Bearbeitung von Personendaten prüft das verantwortliche Organ das Risiko für eine damit verbundene Beeinträchtigung von Grundrechten der betroffenen Personen und beschränkt es soweit möglich und zumutbar durch technische und organisatorische Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist das Risiko für eine Beeinträchtigung von Grundrechten hoch, insbesondere nach Art, Umfang, Umständen oder Zweck der Bearbeitung, so sind Folgenabschätzung und Massnahmen zu dokumentieren und dem Datenschutz-Kontrollorgan zur Vorabkonsultation vorzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dokumentation enthält wenigstens eine allgemeine Beschreibung der geplanten Bearbeitungsvorgänge, eine Bewertung der Risiken und eine Darstellung und Bewertung der Massnahmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "9b008f3cb4a8ac5e514417cdfe5477a894a2a3f5ddf7e1355c492c9a22cb1985"
+    },
+    {
+      "id": "kanton/AR/146.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten können anderen Organen bekannt gegeben werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche Organ dazu rechtlich verpflichtet oder ermächtigt ist,"
+            },
+            {
+              "marke": "b",
+              "text": "die Empfängerin oder der Empfänger die Daten im Einzelfall zur Erfüllung der gesetzlichen Aufgaben benötigt oder"
+            },
+            {
+              "marke": "c",
+              "text": "die betroffene Person ausdrücklich zugestimmt hat oder ihre Zustimmung nach den Umständen vorausgesetzt werden darf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besonders schützenswerte Daten dürfen nur bekannt gegeben werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche Organ aufgrund einer klaren Rechtsgrundlage dazu verpflichtet oder ermächtigt ist,"
+            },
+            {
+              "marke": "b",
+              "text": "für die Empfängerin oder den Empfänger die Daten im Einzelfall zur Erfüllung einer rechtlichen klar umschriebenen Aufgabe unentbehrlich sind oder"
+            },
+            {
+              "marke": "c",
+              "text": "die betroffene Person ausdrücklich zugestimmt hat."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Untersteht die Empfängerin oder der Empfänger nicht diesem Gesetz, so werden die Daten nur bekannt gegeben, wenn sichergestellt ist, dass die Bearbeitung nach den Grundsätzen dieses Gesetzes erfolgt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "c120cba5b25da0edffcbb954aedc96026bbfac3fb040b51d421996a2b898b451"
+    },
+    {
+      "id": "kanton/AR/146.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten können Privaten bekannt gegeben werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche Organ dazu rechtlich verpflichtet oder ermächtigt ist oder"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person ausdrücklich zugestimmt hat oder ihre Zustimmung nach den Umständen vorausgesetzt werden darf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besonders schützenswerte Daten dürfen nur bekannt gegeben werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche Organ aufgrund einer klaren Rechtsgrundlage dazu verpflichtet oder ermächtigt ist oder"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person ausdrücklich zugestimmt hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "5a6c48cb2a98e3bec2b131d2be8c54839b9a71c6b3f23ffb183eac92184f3001"
+    },
+    {
+      "id": "kanton/AR/146.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwohnerkontrolle gibt Privaten im Einzelfall auf Gesuch Name, Vorname, Adresse sowie Zu- und Wegzug einer Person bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gibt im Einzelfall auf Gesuch Geburtsdatum, Zivilstand, Bürgerort und Beruf bekannt, wenn die Gesuchstellerin oder der Gesuchsteller ein schutzwürdiges Interesse glaubhaft macht."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann diese Daten systematisch geordnet bekannt geben, wenn sichergestellt ist, dass sie ausschliesslich für schutzwürdige ideelle Zwecke verwendet und nicht an Drittpersonen weitergegeben werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "735caa3c7f3419106b790176476c6eedaa68a1554ae31d567c6f633cd6948fe1"
+    },
+    {
+      "id": "kanton/AR/146.1/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die betroffene Person kann die Bekanntgabe ihrer Daten an Dritte sperren lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bekanntgabe ist trotz Sperrung zulässig, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das verantwortliche Organ dazu rechtlich verpflichtet ist oder"
+            },
+            {
+              "marke": "b",
+              "text": "im Gesuch glaubhaft gemacht wird, dass die Sperrung rechtsmissbräuchlich erfolgte."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "64ddd9305bc382874121a22fdba27e63300936129b9e27eb70db6d307a004313"
+    },
+    {
+      "id": "kanton/AR/146.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten können in allgemein zugänglichen Veröffentlichungen bekannt gegeben werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kein schutzwürdiges Interesse der betroffenen Person beeinträchtigt wird und diese nach vorausgegangener Information nicht zum Voraus gegen die Veröffentlichung Einsprache erhoben hat oder"
+            },
+            {
+              "marke": "b",
+              "text": "das verantwortliche Organ dazu rechtlich verpflichtet oder ermächtigt ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "f25a23eb9f9cb0c261499fd25f808c19d333da943bc608ec921535075ead0221"
+    },
+    {
+      "id": "kanton/AR/146.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bekanntgabe von Daten kann aus überwiegenden öffentlichen oder aus schutzwürdigen Interessen der betroffenen Person eingeschränkt, mit Auflagen verbunden oder verweigert werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "2080152bef97623426f8492f178fc183c3f3b8447362c682d3de5f8cebd8ba47"
+    },
+    {
+      "id": "kanton/AR/146.1/art_13_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personendaten dürfen nicht ins Ausland bekannt gegeben werden, wenn dadurch die Persönlichkeit der betroffenen Personen schwerwiegend gefährdet würde, namentlich weil eine Gesetzgebung fehlt, die einen angemessenen Schutz gewährleistet."
+        },
+        {
+          "absatz": "2",
+          "text": "Fehlt eine Gesetzgebung, die einen angemessenen Schutz gewährleistet, so können Personendaten ins Ausland nur bekannt gegeben werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "hinreichende Garantien, insbesondere durch Vertrag, einen angemessenen Schutz im Ausland gewährleisten;"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person im Einzelfall eingewilligt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bekanntgabe im Einzelfall für die Wahrung eines überwiegenden öffentlichen Interesses oder für die Feststellung, Ausübung oder Durchsetzung von Rechtsansprüchen vor Gericht unerlässlich ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bekanntgabe im Einzelfall erforderlich ist, um das Leben oder die körperliche Integrität der betroffenen Person zu schützen;"
+            },
+            {
+              "marke": "e",
+              "text": "die betroffene Person die Daten allgemein zugänglich gemacht und eine Bearbeitung nicht ausdrücklich untersagt hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "bf657ba804d46f5da439a6a29a2fba55f60248800541124a706045dd355f9f56"
+    },
+    {
+      "id": "kanton/AR/146.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Organ kann ungeachtet von Art. 4 Abs. 2 und 4 sowie Art. 8 bis 11 Daten für einen nicht personenbezogenen Zweck, namentlich für Statistik, Planung und Forschung, bearbeiten, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Daten anonymisiert werden, sobald der Stand der Bearbeitung es erlaubt, und"
+            },
+            {
+              "marke": "b",
+              "text": "die Ergebnisse der Bearbeitung so bekannt gegeben werden, dass Rückschlüsse auf die betroffene Person nicht möglich sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "f402fd82972f7792c2145f1b9e2e801240d76b517022f4a5b001defb09b459c2"
+    },
+    {
+      "id": "kanton/AR/146.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Datenbearbeitung kann, sofern keine gesetzliche oder vertragliche Regelung entgegensteht, einer Drittperson übertragen werden. Die Drittperson darf die Daten nur so bearbeiten, wie das auftraggebende Organ selbst es tun dürfte."
+        },
+        {
+          "absatz": "2",
+          "text": "Das auftraggebende Organ vergewissert sich vor der Übertragung, dass die Drittperson in der Lage ist, die Datensicherheit zu gewährleisten. Es stellt den Datenschutz durch Auflagen, Vereinbarungen oder auf andere Weise sicher."
+        },
+        {
+          "absatz": "3",
+          "text": "Die weitere Übertragung durch die Drittperson bedarf der vorgängigen schriftlichen Zustimmung des auftraggebenden Organs."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "81bf3383172552ec8a613cd8951b5b36aa5ad1676d51814f2dcae9fc45fd335c"
+    },
+    {
+      "id": "kanton/AR/146.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Daten bearbeitet, sichert sie durch technische und organisatorische Vorkehrungen vor Verlust, Entwendung sowie unbefugter Kenntnisnahme und Bearbeitung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "8ae279768118c8e4b101c9988b10a1ed6f8dd47b268e4f503bf507136f93a7e0"
+    },
+    {
+      "id": "kanton/AR/146.1/art_16_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "16_a",
+      "artikelLabel": "Art. 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn eine Verletzung der Datensicherheit dazu führt, dass Daten verlorengehen, vernichtet oder verändert oder Unbefugten zugänglich gemacht werden, meldet das verantwortliche Organ dies unverzüglich dem Datenschutz-Kontrollorgan und orientiert mitbetroffene Datenempfänger. Besteht kein Risiko für eine Beeinträchtigung von Grundrechten, entfällt die Meldepflicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Das verantwortliche Organ informiert in Absprache mit dem Datenschutz-Kontrollorgan die betroffene Person, wenn es zu ihrem Schutz erforderlich ist oder anderweitig zur Wahrung der Grundrechte angezeigt erscheint."
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann die Information an die betroffene Person einschränken oder darauf verzichten, wenn öffentliche oder private Geheimhaltungsinteressen überwiegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Geschieht die Verletzung der Datensicherheit bei einer Bearbeitung durch eine Drittperson, hat diese unverzüglich das auftraggebende Organ zu benachrichtigen. Dieses hat sodann gemäss Abs. 1 bis 3 vorzugehen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "d404e28d08b39a855a76815d9a38ab7d7b7af87dd0765ec28e942be883c64ba4"
+    },
+    {
+      "id": "kanton/AR/146.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organe überprüfen jährlich ihre Daten. Nicht mehr benötigte Daten werden dem zuständigen Archiv zur Archivierung angeboten. Verzichtet dieses nach den Vorschriften des Archivwesens auf eine Aufbewahrung, sind die Daten innert Jahresfrist zu vernichten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "4297a2d56803f9de81cf1b0cb8f59876d1521303cafbb4906a80bcb010b8f63c"
+    },
+    {
+      "id": "kanton/AR/146.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton, die Gemeinden und die öffentlich-rechtlichen Körperschaften und Anstalten führen je ein zentrales Register ihrer Datensammlungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Organe des Kantons führen ein Register der in ihrem Verantwortungsbereich bestehenden Datensammlungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Register sind öffentlich und enthalten für jede Datensammlung Angaben über",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Art und die Herkunft der Daten,"
+            },
+            {
+              "marke": "b",
+              "text": "die Rechtsgrundlage, den Zweck und die Mittel der Bearbeitung,"
+            },
+            {
+              "marke": "c",
+              "text": "das verantwortliche Organ,"
+            },
+            {
+              "marke": "d",
+              "text": "die regelmässigen Empfängerinnen und Empfänger der Daten oder von Kopien sowie"
+            },
+            {
+              "marke": "e",
+              "text": "die Zugriffsberechtigung auf Datensammlungen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Hinweis auf die Öffentlichkeit der zentralen Register des Kantons und der Gemeinden sowie der Ort, wo sie eingesehen werden können, ist durch die Organe jährlich in ihren amtlichen Publikationsorganen zu veröffentlichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "86c43221dde9cc3878685622b9c101a8e8cbca1e4426120a03a2d71211d05fc9"
+    },
+    {
+      "id": "kanton/AR/146.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nicht registriert werden Datensammlungen, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht auf Dauer angelegt sind,"
+            },
+            {
+              "marke": "b",
+              "text": "nur Kopien oder Bearbeitungsmittel sind oder"
+            },
+            {
+              "marke": "c",
+              "text": "von einzelnen Personen ausschliesslich als persönliche Arbeitsmittel verwendet werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "5b43a8af087e4e6afae9ecaa3a9f665ba84692598fff57901bd2eeada4600cb7"
+    },
+    {
+      "id": "kanton/AR/146.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person kann Einsicht in die Register der Datensammlungen nehmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "2cd1bfe50d58c4f1e14f65db1275dbbe696e67eedd7277946f327e853f4e8492"
+    },
+    {
+      "id": "kanton/AR/146.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche Organ erteilt jeder Person Auskunft darüber, welche Daten über sie in einer bestimmten Datensammlung bearbeitet werden und gewährt ihr Einsicht in diese Daten."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer um Auskunft oder Einsicht ersucht, hat sich über seine Identität auszuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Auskunft wird in allgemeinverständlicher Form und auf Gesuch hin schriftlich erteilt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "1f77ace3315afd0e027da36441201ba7995f61fddd788e6d4bbbd133216cf9fa"
+    },
+    {
+      "id": "kanton/AR/146.1/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auskunft und Einsicht können eingeschränkt oder verweigert werden, wenn überwiegende öffentliche Interessen oder schutzwürdige Interessen einer Drittperson dies erfordern."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Auskunft an die betroffene Person dieser zu schwerem Nachteil gereichen könnte, kann sie einer dazu bevollmächtigten Person erteilt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einschränkung oder Verweigerung von Auskunft und Einsicht ist zu begründen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "4775f2bc4637dc965c5e201194e9b43d5cee6485366734a2c3f8a3456bb5c851"
+    },
+    {
+      "id": "kanton/AR/146.1/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die betroffene Person und wer sonst ein schutzwürdiges Interesse glaubhaft macht, kann die Berichtigung unrichtiger Daten verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestreitet das Organ die Unrichtigkeit der Daten, so obliegt ihm der Beweis der Richtigkeit. Die betroffene Person hat soweit zumutbar bei der Abklärung mitzuwirken."
+        },
+        {
+          "absatz": "3",
+          "text": "Kann weder die Richtigkeit noch die Unrichtigkeit bewiesen werden, so bringt das Organ bei den Daten einen entsprechenden Vermerk an."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "c46559943076695b0afc97cd98e66a99ba3e9d03254caec6811ff084019307c4"
+    },
+    {
+      "id": "kanton/AR/146.1/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die betroffene Person und wer sonst ein schutzwürdiges Interesse glaubhaft macht, kann verlangen, dass",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die widerrechtliche Bearbeitung von Daten unterlassen wird,"
+            },
+            {
+              "marke": "b",
+              "text": "widerrechtlich erhobene, aufbewahrte oder verwendete Daten vernichtet oder die Folgen der widerrechtlichen Bearbeitung anderswie beseitigt werden oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Widerrechtlichkeit einer Bearbeitung festgestellt wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "8baeadd7d995bed708e9051407ec4d81a27a9ce81054b58960ddb67283d878a0"
+    },
+    {
+      "id": "kanton/AR/146.1/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche Organ entscheidet über Gesuche gemäss Art. 21 bis 24. Die Verfügungen sind dem Datenschutz-Kontrollorgan zuzustellen. Mitbetroffene Datenempfänger sind über Berichtigungen und andere Massnahmen zu informieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Verfahren und Rechtsschutz richten sich nach dem Gesetz über die Verwaltungsrechtspflege. Das Datenschutz-Kontrollorgan ist zur Erhebung von Rechtmitteln berechtigt."
+        },
+        {
+          "absatz": "3–4",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "b142cdea66dcf2f27059a4e1492f39abe2a05a5b3627869329f05220967aac9e"
+    },
+    {
+      "id": "kanton/AR/146.1/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat wählt eine in Datenschutzfragen ausgewiesene Fachperson als unabhängiges und nicht weisungsgebundenes kantonales Datenschutz-Kontrollorgan. Die Wahl erfolgt auf eine Amtsdauer von vier Jahren; Wiederwahl ist zulässig."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Das Datenschutz-Kontrollorgan darf keine andere öffentliche oder private Tätigkeit ausüben, welche die Unabhängigkeit oder das Ansehen des Amtes beeinträchtigen könnte."
+        },
+        {
+          "absatz": "2",
+          "text": "Das kantonale Datenschutz-Kontrollorgan übt die Aufsicht über die Anwendung dieses Gesetzes durch den Kanton, die Gemeinden und die öffentlich-rechtlichen Körperschaften und Anstalten aus. Die Kosten trägt der Kanton."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Der Kantonsrat regelt die Entschädigung des Datenschutz-Kontrollorgans mit einer Leistungsvereinbarung. Er kann anstelle der Leistungsvereinbarung eine Unterstellung unter das Personalrecht des Kantons vorsehen; die Unabhängigkeit des Datenschutz-Kontrollorgans darf dadurch nicht beeinträchtigt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kantonsrat ist befugt, die Aufgabe des Datenschutz-Kontrollorgans einer kantonsübergreifenden Datenschutzstelle zu übertragen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "d13f15e36e42759cbb9e31550135e49339e98ae054015d178d0618819eefb6cb"
+    },
+    {
+      "id": "kanton/AR/146.1/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Datenschutz-Kontrollorgan",
+          "items": [
+            {
+              "marke": "a",
+              "text": "überwacht die Einhaltung der Vorschriften über den Datenschutz,"
+            },
+            {
+              "marke": "b",
+              "text": "informiert die Öffentlichkeit über den Datenschutz und berät betroffene Personen über ihre Rechte,"
+            },
+            {
+              "marke": "c",
+              "text": "behandelt Anzeigen betreffend die Verletzung von Datenschutzvorschriften,"
+            },
+            {
+              "marke": "d",
+              "text": "berät die öffentlichen Organe in Fragen des Datenschutzes und kann allgemeine Empfehlungen über den Umgang mit Personendaten erlassen,"
+            },
+            {
+              "marke": "e",
+              "text": "prüft Bearbeitungsmethoden vorab, wenn ein hohes Risiko für eine Beeinträchtigung von Grundrechten besteht,"
+            },
+            {
+              "marke": "ebis",
+              "text": "nimmt Stellung zu Erlassen, die für den Datenschutz erheblich sind,"
+            },
+            {
+              "marke": "f",
+              "text": "arbeitet zur Erfüllung der Kontrollaufgaben mit den Kontrollorganen der anderen Kantone, des Bundes und des Auslandes zusammen und verfolgt die für den Schutz von Personendaten massgeblichen technischen und rechtlichen Entwicklungen,"
+            },
+            {
+              "marke": "g",
+              "text": "ermittelt die erforderlichen Personal- und Sachressourcen und beantragt dem Kantonsrat im Rahmen des Voranschlags die notwendigen Kredite,"
+            },
+            {
+              "marke": "h",
+              "text": "erstattet dem Kantonsrat jährlich Bericht über seine Tätigkeit."
+            }
+          ]
+        },
+        {
+          "absatz": "2–4",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "8d69fdae3ce170436ff9629a843a9ada40d6bcd9e57f9cde6b1d60ed7dd1c5e4"
+    },
+    {
+      "id": "kanton/AR/146.1/art_27_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Datenschutz-Kontrollorgan eröffnet von Amtes wegen oder auf Anzeige hin eine Untersuchung, wenn Anzeichen für eine Verletzung von Datenschutzvorschriften bestehen. Es kann eine Datenbearbeitung für die Dauer der Untersuchung vorsorglich untersagen oder einschränken."
+        },
+        {
+          "absatz": "2",
+          "text": "Die verantwortlichen Organe und ihre Beauftragten sind dem Datenschutz-Kontrollorgan gegenüber zur Auskunft verpflichtet und gewähren ihm den Zugang zu allen Unterlagen und Daten, die für die Untersuchung erforderlich sind. Das Datenschutz-Kontrollorgan kann sich Datenbearbeitungen vorführen lassen und Auskünfte bei Empfängern von Daten einholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Datenschutz-Kontrollorgan informiert den Anzeiger innerhalb von drei Monaten über das Ergebnis oder den Stand der Untersuchung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "dd0f10a94a27e3141b30a7bf3672fafe0507596f8d9853622dcd988b33f96e99"
+    },
+    {
+      "id": "kanton/AR/146.1/art_27_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "27_b",
+      "artikelLabel": "Art. 27b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt das Datenschutz-Kontrollorgan eine wesentliche Verletzung von Datenschutzvorschriften fest, entscheidet es verbindlich über geeignete Abhilfemassnahmen und setzt dem verantwortlichen Organ eine angemessene Frist für deren Umsetzung. Es kann insbesondere anordnen, dass Personendaten gelöscht oder vernichtet oder Datenbearbeitungen angepasst oder eingestellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Datenschutz-Kontrollorgan orientiert die Aufsichtsbehörde des verantwortlichen Organs über die angeordneten Abhilfemassnahmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Verfügungen über Abhilfemassnahmen können nach Massgabe des VRPG mit Beschwerde beim Obergericht angefochten werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "c67615b3a24e735d5d54778283f8aaca2dc6535eb559e1f31e1059afabdafea2"
+    },
+    {
+      "id": "kanton/AR/146.1/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Auskunft, die Gewährung von Einsicht, die Berichtigung und die Sperrung von Daten erfolgen kostenlos."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Gebühr kann verlangt werden, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Behandlung eines Gesuches einen unverhältnismässigen Aufwand erfordert oder"
+            },
+            {
+              "marke": "b",
+              "text": "das Gesuch mutwillig gestellt wurde."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anwendung besonderer Gebührentarife auf andere Verrichtungen bleibt vorbehalten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "d8d8575a6f7981bf1bd0c586ad2c27d7a615bce3cf613a6196d691ed970e9ab4"
+    },
+    {
+      "id": "kanton/AR/146.1/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden und die öffentlich-rechtlichen Körperschaften und Anstalten haben ihre zentralen Register bis spätestens ein Jahr nach Inkrafttreten dieses Gesetzes zu erstellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "759579794fea8d7794a6b5be3bee2f9ab873d0813f5468fd5e704080f411414c"
+    },
+    {
+      "id": "kanton/AR/146.1/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Datenschutzgesetz (146.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Inkrafttreten wird Art. 9 der Verordnung über die Niederlassung und den Aufenthalt von Schweizern aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/146.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5f943b504fb0cb838afbebd1813116f9",
+      "sha": "259941dc56eda9ed1fe13fa0c06ce94b3d160f1ee1701b8fe32495147ab99f9a"
+    }
+  ]
+}

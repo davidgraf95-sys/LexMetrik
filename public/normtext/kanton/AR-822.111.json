@@ -1,0 +1,81 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/822.111/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (822.111)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Genehmigungs- und Bewilligungsverfahren aufgrund des Arbeitsgesetzes werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Plangenehmigung für die Errichtung oder Umgestaltung von Betrieben (Art. 7 und 8):"
+            },
+            {
+              "marke": "a",
+              "text": "umbauter Raum bis 1 000 m&sup3;: Fr. 200.–"
+            },
+            {
+              "marke": "b",
+              "text": "je weitere 1 000 m&sup3;: Fr. 75.–"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "2",
+              "text": "Betriebsbewilligung (Art. 7), nach Aufwand: Fr. 100.– bis Fr. 2'000.–"
+            },
+            {
+              "marke": "3",
+              "text": "Arbeitszeitbewilligung (Nachtarbeit Art. 17, Sonntagsarbeit Art. 19, vorübergehender ununterbrochener Betrieb Art. 24), nach Aufwand: Fr. 50.– bis Fr. 300.–"
+            },
+            {
+              "marke": "4",
+              "text": "Bewilligung für die Beschäftigung von Jugendlichen (Art. 30), wobei unter besonderen Voraussetzungen (insbesondere bei administrativen Massnahmen) von der Erhebung der Gebühr abgesehen werden kann: Fr. 50.–"
+            },
+            {
+              "marke": "5",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2018-07-06",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/822.111",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef344fdcb2da5f4c90eb29bf148f74ee",
+      "sha": "1f7bbc8c1d16a1b42a566e11eebcf59aadf79d6a7dd3c3948042726172622a39"
+    },
+    {
+      "id": "kanton/AR/822.111/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz) (822.111)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 1985 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit ihrem Inkrafttreten wird die Verordnung vom 30. Dezember 1966 über die aufgrund des Arbeitsgesetzes vom 13. März 1964 zu erhebenden Gebühren aufgehoben."
+        }
+      ],
+      "stand": "2018-07-06",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/822.111",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef344fdcb2da5f4c90eb29bf148f74ee",
+      "sha": "7a6100f8d2ff69a4983f6ef1d0218f69f2483b53cad16d169e14a923bc2c47fb"
+    }
+  ]
+}

@@ -1,0 +1,819 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/521.12/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die elektronische Bearbeitung von polizeilichen Datensammlungen der Kantonspolizei."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "5e6e5cf3f4c9c87d77599f90bfcf8830e901139414ea5d4a850e5899f9ae0488"
+    },
+    {
+      "id": "kanton/AR/521.12/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Daten werden losgelöst vom einzelnen Fall in einer elektronischen Datenbank bearbeitet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen- und tatbestandsbezogene Daten der Kriminalpolizei;"
+            },
+            {
+              "marke": "b",
+              "text": "die Hotelkontrolle;"
+            },
+            {
+              "marke": "c",
+              "text": "die Waffenregistratur;"
+            },
+            {
+              "marke": "d",
+              "text": "das Register abgelegter Akten;"
+            },
+            {
+              "marke": "e",
+              "text": "die Geschäftskontrolle."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "7b99756614e79c21b5491447160d9ac650549faf92c00290716f514747b008e7"
+    },
+    {
+      "id": "kanton/AR/521.12/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Datensammlung der Kriminalpolizei enthält folgende personenbezogene Daten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Grunddaten;"
+            },
+            {
+              "marke": "b",
+              "text": "erkennungsdienstliche Daten;"
+            },
+            {
+              "marke": "c",
+              "text": "Haftdaten;"
+            },
+            {
+              "marke": "d",
+              "text": "Fahndungsdaten;"
+            },
+            {
+              "marke": "e",
+              "text": "Anzeigedaten."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "3fc52ee0ac60d60a3cbba44208d527ccb4493eb62e3fb991602112bd0da753ce"
+    },
+    {
+      "id": "kanton/AR/521.12/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grunddaten werden über Personen gespeichert, über die erkennungsdienstliche Daten, Haftdaten, Fahndungsdaten oder Anzeigedaten vorliegen oder die in der Waffenregistratur verzeichnet sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Grunddaten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Namen und Vornamen;"
+            },
+            {
+              "marke": "b",
+              "text": "Geburtsdatum und Geburtsort;"
+            },
+            {
+              "marke": "c",
+              "text": "Heimatort oder Heimatland;"
+            },
+            {
+              "marke": "d",
+              "text": "Geschlecht;"
+            },
+            {
+              "marke": "e",
+              "text": "Wohnort;"
+            },
+            {
+              "marke": "f",
+              "text": "Namen und Vornamen der Eltern;"
+            },
+            {
+              "marke": "g",
+              "text": "Zivilstand sowie Namen und Vornamen der Ehegattin oder des Ehegatten;"
+            },
+            {
+              "marke": "h",
+              "text": "Beruf;"
+            },
+            {
+              "marke": "i",
+              "text": "Verbindungen;"
+            },
+            {
+              "marke": "j",
+              "text": "Personenhinweise."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "3d4a6cb0cb37b24481ba256ed55c78eaece786763414904a87e87ba1148d55a5"
+    },
+    {
+      "id": "kanton/AR/521.12/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erkennungsdienstliche Daten sind Angaben über erkennungsdienstliche Unterlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende erkennungsdienstliche Daten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Abnahmestelle, Abnahmedatum und Abnahmegrund;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausweisdaten;"
+            },
+            {
+              "marke": "c",
+              "text": "Foto, Fotodatum und Fotonummer;"
+            },
+            {
+              "marke": "d",
+              "text": "Signalement und besondere Merkmale;"
+            },
+            {
+              "marke": "e",
+              "text": "Vorhandensein eines DNA-Profils;"
+            },
+            {
+              "marke": "f",
+              "text": "Hinweise auf Fingerabdrücke, Schriftproben und Spurenvergleiche."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "9783d740fa7f7e2defd939f98bcec735afd07b93080e26afe14bc99506db2600"
+    },
+    {
+      "id": "kanton/AR/521.12/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Haftdaten sind Angaben über Personen, die verhaftet oder vorläufig festgenommen wurden."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Haftdaten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Eintrittsdaten;"
+            },
+            {
+              "marke": "b",
+              "text": "Haftorte und Haftgründe;"
+            },
+            {
+              "marke": "c",
+              "text": "Entlassungsdaten;"
+            },
+            {
+              "marke": "d",
+              "text": "zuständige Stelle;"
+            },
+            {
+              "marke": "e",
+              "text": "Transporte;"
+            },
+            {
+              "marke": "f",
+              "text": "administrative Hinweise."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "0f8b824e6ba04936cbd0917cafb6352ac6554f6bcf8ea99798a17760902c0447"
+    },
+    {
+      "id": "kanton/AR/521.12/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fahndungsdaten sind Angaben über Personen, die zur Fahndung ausgeschrieben sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Fahndungsdaten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fahndungsauftrag und Fahndungsgrund;"
+            },
+            {
+              "marke": "b",
+              "text": "Fahndungshinweise;"
+            },
+            {
+              "marke": "c",
+              "text": "Auftraggeberin oder Auftraggeber;"
+            },
+            {
+              "marke": "d",
+              "text": "Ausschreibungsdaten und Verfalldaten."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "847942ca70a53c49e6d902a6d0f2d095d8c1c17b59a5301cdea19f65cec1b308"
+    },
+    {
+      "id": "kanton/AR/521.12/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anzeigedaten sind Angaben über den Inhalt von Strafanzeigen der Polizei."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Anzeigedaten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art des Ereignisses;"
+            },
+            {
+              "marke": "b",
+              "text": "Örtlichkeit und Zeit;"
+            },
+            {
+              "marke": "c",
+              "text": "Namen der Geschädigten;"
+            },
+            {
+              "marke": "d",
+              "text": "Tatvorgehen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Verletzungen der Verkehrsregeln werden mittels Aktennachweis erfasst."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "f966a8ad0e4c77eed6c36c7a417360b2f36afbecdb8e9576627acc19cb29eade"
+    },
+    {
+      "id": "kanton/AR/521.12/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende tatbestandsbezogene Daten können gespeichert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art des Ereignisses;"
+            },
+            {
+              "marke": "b",
+              "text": "Örtlichkeit und Zeit;"
+            },
+            {
+              "marke": "c",
+              "text": "Geschädigte;"
+            },
+            {
+              "marke": "d",
+              "text": "Finderin oder Finder;"
+            },
+            {
+              "marke": "e",
+              "text": "Tatvorgehen;"
+            },
+            {
+              "marke": "f",
+              "text": "Spuren;"
+            },
+            {
+              "marke": "g",
+              "text": "Deliktsgut und Fundgut;"
+            },
+            {
+              "marke": "h",
+              "text": "Hinweise auf die Täterschaft;"
+            },
+            {
+              "marke": "i",
+              "text": "Verbindungen zu artgleichen Ereignissen;"
+            },
+            {
+              "marke": "j",
+              "text": "Ausschreibungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "60160423e96fc45000a12195bb8bfbb7c9927643e7fef914a7483398bddacfd1"
+    },
+    {
+      "id": "kanton/AR/521.12/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erkennungsdienstliche Daten werden zwanzig Jahre nach der Beschaffung gelöscht."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn zu diesem Zeitpunkt noch Haftdaten, Fahndungsdaten oder Anzeigedaten gespeichert sind, verlängert sich die Aufbewahrungsdauer bis zur Löschung dieser Daten."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleibt die vorzeitige Löschung, wenn erkennungsdienstliche Unterlagen nach Art. 131 des Gesetzes über den Strafprozess vernichtet werden."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "98ff3bc222c1696125ede9dcf9ca8bc15f5eab2c6615ed0902ab05a5d8049ed1"
+    },
+    {
+      "id": "kanton/AR/521.12/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Haftdaten werden zehn Jahre nach der Entlassung der betroffenen Person aus dem Gefängnis oder aus der Anstalt gelöscht."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "85345e40200ca61d887d6f09851f43aef41ea745d1b775f855c1ed83c60dabb1"
+    },
+    {
+      "id": "kanton/AR/521.12/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fahndungsdaten werden drei Monate nach dem Widerruf des Fahndungsauftrags, spätestens mit Eintritt der Verfolgungs- oder Vollstreckungsverjährung gelöscht."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "02a95143c0bb2b02d250010f07d57c502270d59d01435cc860c648924b211fcf"
+    },
+    {
+      "id": "kanton/AR/521.12/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anzeigedaten werden gelöscht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "fünf Jahre nach der Anzeige bei Kindern und Jugendlichen im Sinn des StGB;"
+            },
+            {
+              "marke": "b",
+              "text": "zwanzig Jahre nach der Anzeige bei Tötungsdelikten, bei schweren Raub und Sittlichkeitsdelikten sowie bei Brandstiftungen;"
+            },
+            {
+              "marke": "c",
+              "text": "zehn Jahre nach der Anzeige in den übrigen Fällen."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "3226b0c2f397864bb026e2cdb8b743e51ad332bdcbbf1f79dd349d8052366455"
+    },
+    {
+      "id": "kanton/AR/521.12/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tatbestandsbezogene Daten werden mit Eintritt der Verfolgungsverjährung gelöscht."
+        },
+        {
+          "absatz": "2",
+          "text": "Daten über Deliktsgut und Fundgut können solange aufbewahrt werden, als ein polizeiliches Interesse daran besteht."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "4396e3770613a10b2214bd73bafd30cc6e9cdaa5913b97c611aca19562278c8c"
+    },
+    {
+      "id": "kanton/AR/521.12/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personenbezogene Daten werden gelöscht und Registraturhinweise entfernt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich nachträglich ergibt, dass die rechtlichen Voraussetzungen zur erkennungsdienstlichen Behandlung fehlen, oder dass kein hinlänglicher Grund für die Registrierung des erkennungsdienstlichen Materials vorliegt;"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person rechtskräftig freigesprochen oder ein Strafverfahren definitiv eingestellt worden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Löschung erfolgt von Amtes wegen oder auf Antrag der betroffenen Person."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "703a92e3f964da8f55548185d56605f8d1c9b58e2a763bff977b69f2849b2716"
+    },
+    {
+      "id": "kanton/AR/521.12/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Meldescheine der Beherbergungsbetriebe können elektronisch registriert werden. Sie werden nach 5 Jahren automatisch gelöscht; dabei sind die Meldescheine zu vernichten."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "6cf013ca206b035b5e0d530b1b61d1f7e62c45220aa404e1d6087ab7f70a966d"
+    },
+    {
+      "id": "kanton/AR/521.12/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Waffenregistratur enthält die Daten des Waffenerwerbsscheines sowie eines allfällig ausgestellten Waffentragscheines."
+        },
+        {
+          "absatz": "2",
+          "text": "Die persönlichen Daten der waffenerwerbenden oder waffentragenden Person werden in der Personenregistratur festgehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Daten der Waffenregistratur werden grundsätzlich nicht gelöscht, es sei denn, es bestehe kein polizeiliches Interesse mehr an diesen Daten."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "c11f7a23bace63c22be3b2c056a46e64dad324dcfbb022752c5cb84d5af7a552"
+    },
+    {
+      "id": "kanton/AR/521.12/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abgelegte Akten können elektronisch registriert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Register dient ausschliesslich dem Aktennachweis."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "c5a6c84e981682ea1ada88ce30e8df3c3dce6e9a4372f2f0d945a14d9eb087a4"
+    },
+    {
+      "id": "kanton/AR/521.12/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei führt eine elektronische Geschäftskontrolle."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "9df118e5120ff9acc45c859348f742314f8bce98a907463076c6f1bf8a92aa70"
+    },
+    {
+      "id": "kanton/AR/521.12/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zugriff auf die Daten haben Mitarbeiterinnen oder Mitarbeiter der Kantonspolizei, die sie zur Erfüllung ihrer Aufgaben benötigen."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "20e6caff30fcd49a53ce33c023abef14032c3e188025e70084050c045d6d964d"
+    },
+    {
+      "id": "kanton/AR/521.12/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei sichert die Daten durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Regelung der Zugriffs- und Eingabeberechtigung;"
+            },
+            {
+              "marke": "b",
+              "text": "Schutz der Räume, in denen sich Datenstationen befinden, gegen den Zutritt Unbefugter;"
+            },
+            {
+              "marke": "c",
+              "text": "technische Massnahmen zum Schutz der Daten gegen unbefugte Kenntnisnahme, Bearbeitung und Entwendung."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "2cc6473ba92d96212702c3d72a47b274fff4efdbeae9215acf49873ad15b88ea"
+    },
+    {
+      "id": "kanton/AR/521.12/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei entscheidet über Auskunfts-, Berichtigungs- und Löschungsbegehren."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "845d3b73f69bac5af87062eea0848ff3cae4b6a845645e2b991a7ade94ddf29f"
+    },
+    {
+      "id": "kanton/AR/521.12/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer ein Auskunftsbegehren stellt, hat sich über seine Identität auszuweisen."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "7f958709bb01858631bae06305d8b99a9b2cea42c8939f45e28345bc5df09a61"
+    },
+    {
+      "id": "kanton/AR/521.12/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren richtet sich nach dem Gesetz über die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "12e09ef586bd43e26ecd8562f459494c7ea91c0d06ccc220de853b874765eecd"
+    },
+    {
+      "id": "kanton/AR/521.12/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auskunft, Berichtigung und Löschung erfolgen kostenlos."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Gebühr kann verlangt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Berichtigungs- oder das Löschungsbegehren abgewiesen wird;"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person während der letzten zwölf Monate schon die gleiche Auskunft erhalten hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "9f544cf624cf66ec79baf53706e72721ed5cd1eb04932431a227e578013a9745"
+    },
+    {
+      "id": "kanton/AR/521.12/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die elektronische Bearbeitung von polizeilichen Datensammlungen (521.12)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2003 in Kraft."
+        }
+      ],
+      "stand": "2003-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/521.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "88872263c981ae5a13d6235beea8f226",
+      "sha": "be6acde2a44aa8b50f865960cc3fbf50960ce0c9067d8b095f6ab79aec117e0f"
+    }
+  ]
+}

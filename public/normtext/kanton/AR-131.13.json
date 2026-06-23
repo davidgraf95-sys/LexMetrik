@@ -1,0 +1,61 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/131.13/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die eidpflichtigen Behördenmitglieder der Gemeinden (131.13)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eidpflichtig sind folgende Behördenmitglieder der Gemeinden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gemeindepräsidentin oder der Gemeindepräsident;"
+            },
+            {
+              "marke": "b",
+              "text": "die Mitglieder des Gemeinderates;"
+            },
+            {
+              "marke": "c",
+              "text": "die Mitglieder der Geschäftsprüfungskommission, einschliesslich der Präsidentin oder des Präsidenten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Mitglieder des Gemeindeparlaments."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/131.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "09397f8b6f3a16c56f829ef44447aa7a",
+      "sha": "68f8cc6c100ddc7b39c6f4a80b850773573a4f623317d2c7d50f5c5aa7901a04"
+    },
+    {
+      "id": "kanton/AR/131.13/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über die eidpflichtigen Behördenmitglieder der Gemeinden (131.13)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eidpflichtig ist, wer in ein eidpflichtiges Amt gewählt worden ist. Ausgenommen ist die unmittelbare Wiederwahl in dasselbe Amt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/131.13",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "09397f8b6f3a16c56f829ef44447aa7a",
+      "sha": "eafba898742845fe35b634283fab5f6f5ebba7865001290ea3ceb25744f32a24"
+    }
+  ]
+}

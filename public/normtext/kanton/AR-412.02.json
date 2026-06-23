@@ -1,0 +1,382 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/412.02/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lehrpersonen der Volksschule werden aufgrund ihrer Anstellung in folgende Lohnkategorien eingeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Lehrpersonen im 1. und 2. Zyklus Lohnkategorie I"
+            },
+            {
+              "marke": "b",
+              "text": "Lehrpersonen im 3. Zyklus Lohnkategorie II"
+            },
+            {
+              "marke": "c",
+              "text": "Förderlehrpersonen aller Zyklen Lohnkategorie II"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "bdfd2406dcb99d72bd5c7701d67263364d3c345edff7a1ad332bbf8216685668"
+    },
+    {
+      "id": "kanton/AR/412.02/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Innerhalb der Lohnkategorie richtet sich der Lohnanspruch nach Lohnstufe. Der Jahreslohn beträgt bei einem Vollpensum:",
+          "mehrspaltig": {
+            "kopf": [
+              "Lohnstufe",
+              "Lohnkategorie I (in Franken)",
+              "Lohnkategorie II (in Franken)"
+            ],
+            "zeilen": [
+              [
+                "1",
+                "78'800",
+                "94'500"
+              ],
+              [
+                "2",
+                "81'600",
+                "97'300"
+              ],
+              [
+                "3",
+                "82'000",
+                "101'300"
+              ],
+              [
+                "4",
+                "82'600",
+                "103'300"
+              ],
+              [
+                "5",
+                "85'000",
+                "105'300"
+              ],
+              [
+                "6",
+                "86'536",
+                "109'319"
+              ],
+              [
+                "7",
+                "89'951",
+                "113'346"
+              ],
+              [
+                "8",
+                "93'369",
+                "117'492"
+              ],
+              [
+                "9",
+                "96'881",
+                "118'321"
+              ],
+              [
+                "10",
+                "96'976",
+                "119'150"
+              ],
+              [
+                "11",
+                "97'736",
+                "119'979"
+              ],
+              [
+                "12",
+                "98'496",
+                "120'808"
+              ],
+              [
+                "13",
+                "99'258",
+                "121'641"
+              ],
+              [
+                "14",
+                "102'109",
+                "125'677"
+              ],
+              [
+                "15",
+                "104'962",
+                "129'712"
+              ],
+              [
+                "16",
+                "107'813",
+                "133'748"
+              ],
+              [
+                "17",
+                "110'776",
+                "137'783"
+              ],
+              [
+                "18",
+                "111'255",
+                "138'053"
+              ],
+              [
+                "19",
+                "111'734",
+                "138'339"
+              ],
+              [
+                "20",
+                "112'213",
+                "138'625"
+              ],
+              [
+                "21",
+                "112'692",
+                "138'911"
+              ],
+              [
+                "22",
+                "113'172",
+                "139'197"
+              ],
+              [
+                "23",
+                "115'000",
+                "139'485"
+              ],
+              [
+                "24",
+                "116'715",
+                "140'063"
+              ],
+              [
+                "25",
+                "118'782",
+                "140'917"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann die Lohnwerte jeweils auf den 1. Januar der Entwicklung der Lebenshaltungskosten anpassen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "1f68db3769bd69bec015f654df2d12f4092a1d1ffeda522ff792715de06a533c"
+    },
+    {
+      "id": "kanton/AR/412.02/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Diensteintritt erfolgt die Lohneinstufung nach anrechenbaren Dienstjahren. Eintretende Lehrpersonen ohne anrechenbare Dienstjahre werden nach Lohnstufe 1 entlöhnt. Für jedes anrechenbare ganze Dienstjahr wird der Jahreslohn um eine Lohnstufe erhöht."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Tätigkeiten sind als Dienstjahre anrechenbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schuljahre mit einer Unterrichtstätigkeit von mehr als 50 Prozent: 1 Dienstjahr pro Schuljahr; Schuljahre mit einer Unterrichtstätigkeit von weniger als 50 Prozent: 1/2 Dienstjahr pro Schuljahr;"
+            },
+            {
+              "marke": "b",
+              "text": "andere hauptberufliche Erwerbstätigkeit ab dem 21. Lebensjahr: 1/2 Dienstjahr pro Jahr der Erwerbstätigkeit;"
+            },
+            {
+              "marke": "c",
+              "text": "Kindererziehung in der Familie ab dem 21. Lebensjahr: 1/2 Dienstjahr pro Jahr der Kindererziehung."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "2811faa2aa34932f32315921a49d13ac9c8d5e5245eabee45f3cb7b7c7f9eb3e"
+    },
+    {
+      "id": "kanton/AR/412.02/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lehrpersonen werden im folgenden Kalenderjahr auf der nächsten Lohnstufe entlöhnt, sofern sie eine gute Leistung erbringen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erbringt eine Lehrperson eine aussergewöhnlich gute Leistung, kann ihr ein zusätzlicher Lohnstufenanstieg bewilligt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Erbringt eine Lehrperson höchstens eine genügende Leistung, wird sie im folgenden Kalenderjahr auf der gleichen Lohnstufe entlöhnt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Schulleitung beurteilt die Leistungen der Lehrpersonen und stellt dem zuständigen Schulorgan die erforderlichen Anträge für die Lohneinstufung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "1a278a48efd45a47d4be5a9eb9d0357c7408ea96dedabbafe42fbb9cd842fed0"
+    },
+    {
+      "id": "kanton/AR/412.02/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lehrpersonen ohne Lehrdiplom haben Anspruch auf 90 Prozent des Jahreslohnes der jeweiligen Lohnkategorie. Die höchste Lohneinstufung entspricht Lohnstufe 4."
+        },
+        {
+          "absatz": "2",
+          "text": "Lehrpersonen im 3. Zyklus, die nur über ein Lehrdiplom für einen tieferen Zyklus verfügen, haben Anspruch auf 90 Prozent des Jahreslohnes der Lohnkategorie II."
+        },
+        {
+          "absatz": "3",
+          "text": "Förderlehrpersonen ohne Masterabschluss in Schulischer Heilpädagogik oder gleichwertigen Abschluss haben Anspruch auf 90 Prozent des Jahreslohnes der Lohnkategorie II."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "a1bbbd3360ba470ab3b8b780da178784091cb8ab0d0982329c6c464540f7fc9b"
+    },
+    {
+      "id": "kanton/AR/412.02/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Lohnanspruch für das 1. Semester eines Schuljahres erstreckt sich vom 1. August bis zum 31. Januar, derjenige für das 2. Semester vom 1. Februar bis zum 31. Juli."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Lohn kann in 12 oder 13 Teilen ausbezahlt werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "267227ebbe2544ebb959df97d2dab595a42a49bea5188dc4e43635057ca8af35"
+    },
+    {
+      "id": "kanton/AR/412.02/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für besondere Leistungen können Anerkennungsprämien ausgerichtet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prämie beträgt maximal 3‘000 Franken pro Lehrperson und Jahr."
+        },
+        {
+          "absatz": "3",
+          "text": "Der jährliche Gesamtbetrag der Anerkennungsprämien darf höchstens ein halbes Prozent der Lohnsumme aller Lehrpersonen desselben Schulträgers betragen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "2723679fc3a327e0cde380c85c43de71ade7a7f9847ae25f325f503d46bc7b69"
+    },
+    {
+      "id": "kanton/AR/412.02/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lehrpersonen erhalten als Anerkennung nach Vollendung des 10., 20., 30. und 40. Dienstjahres beim gleichen Schulträger ein Dienstaltersgeschenk von je einem Monatslohn. Das zuständige Schulorgan kann anstelle des Geldbetrags einen Urlaub von vier Wochen während der Unterrichtszeit bewilligen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die individuelle Höhe des Dienstaltersgeschenkes bemisst sich nach dem durchschnittlichen Beschäftigungsgrad der letzten zehn Jahre."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "395a73d534c4f5b8be662af16dbf430ced116fd190c95f985ed37ac1f752d593"
+    },
+    {
+      "id": "kanton/AR/412.02/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BLV (412.02)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schulträger regeln den Anspruch auf Ersatz der berufsbedingten Auslagen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/412.02",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "1c6a84d3dfe380b6b1da5bcc936188e9",
+      "sha": "147c76128cfdaa83151fcd65b1dc33097f6f480476a1a34d0a006b5b45b7b5f1"
+    }
+  ]
+}

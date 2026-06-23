@@ -1,0 +1,715 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/421.10/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Sicherung von archivwürdigen Dokumenten, den Zugang zum kantonalen und kommunalen Archivgut sowie Organisation und Tätigkeit der Archive von Kanton und Gemeinden."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gilt nicht für öffentlich-rechtliche Religionsgemeinschaften im Sinne von Art. 109 ff. KV."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "f6ec358a1e7d4b8dedb0b3d66a0c5a02e0a186d5a02f76f380b97b5125eee85b"
+    },
+    {
+      "id": "kanton/AR/421.10/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Archive von Kanton und Gemeinden dienen den Dokumentationsansprüchen der Behörden und den Informationsbedürfnissen der Allgemeinheit."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Archivierung soll die Nachvollziehbarkeit staatlichen Handelns gewährleisten, eine authentische Überlieferung zur Geschichte von Kanton und Gemeinden dauerhaft sichern und kulturelles Erbe von Appenzell Ausserrhoden bewahren."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "4abbf93189dc049f05ed56b03f4858cd1025e20f6e9f09c8e818bfdbfbc013c8"
+    },
+    {
+      "id": "kanton/AR/421.10/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dokumente sind aufgezeichnete Informationen, unabhängig von der Art des Informationsträgers. Dazu gehören auch alle Hilfsmittel, die für deren Verständnis und Nutzung nötig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Archivwürdig sind Dokumente, die auf Grund ihrer rechtlichen, administrativen, politischen, wirtschaftlichen, gesellschaftlichen, wissenschaftlichen oder kulturellen Bedeutung für eine authentische Überlieferung wichtig sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Archivgut sind die vom zuständigen Archiv zur dauernden Aufbewahrung bestimmten Dokumente."
+        },
+        {
+          "absatz": "4",
+          "text": "Öffentliches Organ ist, wer als Behörde, Amts- oder Funktionsträger öffentliche Aufgaben des Kantons, der Gemeinden oder von Körperschaften und Anstalten des öffentlichen Rechts erfüllt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "85e92e07b24ed46f997dd49fe47a334729690915d725d47dde457d33c828d323"
+    },
+    {
+      "id": "kanton/AR/421.10/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Organe berücksichtigen bei der Dokumentenverwaltung und insbesondere bei der Beschaffung und beim Betrieb von elektronischen Datenbearbeitungssystemen die Erfordernisse der Archivierung."
+        },
+        {
+          "absatz": "2",
+          "text": "Dokumente sind systematisch geordnet und sicher aufzubewahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Sofern keine besondere gesetzliche Vorschrift besteht, dürfen Dokumente nur vernichtet werden, wenn das zuständige Archiv sie als nicht archivwürdig bezeichnet hat."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "9a93c52e244e0bc5e3252936b9c0a166f945ee67cdcacb7049592a84faa13970"
+    },
+    {
+      "id": "kanton/AR/421.10/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Organe überprüfen regelmässig, welche Dokumente sie zur Erfüllung ihrer Aufgaben nicht mehr benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sämtliche Dokumente, die nicht mehr benötigt werden, sind dem zuständigen Archiv zur Übernahme anzubieten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Archiv bestimmt über Ausnahmen von der Anbietepflicht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "56351c42cac5bdbaee3e67574a5b6bdcacf27335a44c0e61be1a61e0c6bd0d50"
+    },
+    {
+      "id": "kanton/AR/421.10/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anbietepflichtig sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Kantonsrat und seine Organe, ausgenommen die Fraktionen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Regierungsrat, seine Kommissionen und seine Vertretungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die kantonale Verwaltung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Gerichte, die Schlichtungsbehörden und die Staatsanwaltschaft;"
+            },
+            {
+              "marke": "e",
+              "text": "die Betreibungsämter und die Konkursämter;"
+            },
+            {
+              "marke": "f",
+              "text": "das Gemeindeparlament und die Geschäftsprüfungskommission;"
+            },
+            {
+              "marke": "g",
+              "text": "der Gemeinderat, seine Kommissionen und die Gemeindeverwaltung;"
+            },
+            {
+              "marke": "h",
+              "text": "die kommunalen Zweckverbände;"
+            },
+            {
+              "marke": "i",
+              "text": "die Körperschaften und Anstalten des öffentlichen Rechts;"
+            },
+            {
+              "marke": "j",
+              "text": "alle natürlichen und juristischen Personen, soweit sie öffentliche Aufgaben des Kantons oder der Gemeinden wahrnehmen."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "71a9ff1c2011bb997eaf6c34e7c3ebad67582fa6a3415ea795c80b730d2ee434"
+    },
+    {
+      "id": "kanton/AR/421.10/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Archiv beurteilt unter Anhörung der anbietenden Stelle die Archivwürdigkeit der Dokumente und entscheidet abschliessend darüber, welche Dokumente es zur dauernden Aufbewahrung übernimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Über Dokumente, die vom Archiv nicht übernommen werden, verfügen die anbietenden Stellen nach den für sie geltenden Vorschriften."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "3dee03cddfb768bed3abe94565dd87a4f8dd9880bf9a5d9cc7053e013339d263"
+    },
+    {
+      "id": "kanton/AR/421.10/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch technische, konservatorische und organisatorische Massnahmen ist die langfristige Erhaltung und Benutzbarkeit des Archivguts sicherzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Archivgut ist in separaten und geeigneten Räumlichkeiten zu verwahren."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "68e5093bfc7add073f886e39b42aa7a4f6ac1be1a34723635b6bec728960ae18"
+    },
+    {
+      "id": "kanton/AR/421.10/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Archivgut ist unveräusserliches kulturelles Erbe. Es können daran weder privates Eigentum noch andere dingliche Rechte begründet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehende Rechte an Archivgut nichtstaatlicher Herkunft bleiben gewahrt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "c417571bfa4cf8cb78a712cbb5a009a25642393216037c224acdffc4444ed356"
+    },
+    {
+      "id": "kanton/AR/421.10/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dokumente, an denen weder öffentliche noch private Schutzinteressen bestehen, sind im Rahmen der Benützungsbestimmungen für die Allgemeinheit zugänglich."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "9364454be2933acc14815424cdc67fce6e343eac93802fce16757d0e2017ff65"
+    },
+    {
+      "id": "kanton/AR/421.10/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einsichtnahme in Dokumente, an denen öffentliche oder private Schutzinteressen bestehen, richtet sich nach dem Informationsgesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Archiv entscheidet, ob und inwieweit Einsicht in schützwürdige Dokumente gegeben werden kann. Im Zweifelsfall holt es die Meinung der abliefernden Stelle und des Datenschutz-Kontrollorgans ein."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "540ef26d4dcc82a63dd010b501e0013a78f25d54398d1432d655829cb85c20b6"
+    },
+    {
+      "id": "kanton/AR/421.10/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Schutzinteressen gelten spätestens nach 30 Jahren seit Erstellung eines Dokumentes als erloschen."
+        },
+        {
+          "absatz": "2",
+          "text": "Private Schutzinteressen gelten spätestens nach 120 Jahren seit Erstellung eines Dokumentes als erloschen."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben besondere Vorschriften des übergeordneten Rechts und abweichende Bestimmungen in Übernahmevereinbarungen zu nichtstaatlichem Archivgut."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "f64b9ebd4dc3d0b203cab4f3060f68a1245adcb5a2a892add4e54ad273126c54"
+    },
+    {
+      "id": "kanton/AR/421.10/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abliefernde Stellen können im Rahmen ihrer Aufgabenerfüllung auf das von ihnen abgelieferte Archivgut zurückgreifen, dürfen dieses aber nicht verändern."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "24fa9f1f07c0d579f886f5a5c1cee9c8dc8d7f20d0367c2188e7d82248360152"
+    },
+    {
+      "id": "kanton/AR/421.10/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird die Unrichtigkeit von Personendaten glaubhaft gemacht, kann die betroffene Person verlangen, dass ihre Gegendarstellung dem Archivgut beigefügt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Es besteht kein Anspruch auf Berichtigung oder Vernichtung von Archivgut."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "f774a56506ef9c02c193a1932296f9c3e89d35919e35e1dbb01afe854e82ac76"
+    },
+    {
+      "id": "kanton/AR/421.10/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einsichtnahme in Archivgut ist unentgeltlich. Besondere Dienstleistungen sind kostenpflichtig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Benützung von Archivgut kann aus konservatorischen oder urheberrechtlichen Gründen im Einzelfall mit besonderen Auflagen und Bedingungen verbunden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Benützer haften gegenüber dem Gemeinwesen für allen Schaden, den sie bei der Benützung der Archive und des Archivgutes verursachen."
+        },
+        {
+          "absatz": "4",
+          "text": "Wer in grober Weise oder wiederholt gegen die Benützungsbestimmungen verstösst, kann von der weiteren Archivbenützung ausgeschlossen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Nähere regelt das Benützungsreglement."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "be2282708d1785da7a081b72780d61c4ebbf4f4ae97097dc7492edb531025d80"
+    },
+    {
+      "id": "kanton/AR/421.10/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv ist das zuständige Archiv für Dokumente der kantonalen Organe und ihrer Rechtsvorgänger. Es dient nach Vereinbarung als Archiv für interkantonale Institutionen mit ausserrhodischer Beteiligung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es setzt sich für die Erhaltung privaten Archivguts und des Archivguts der öffentlich-rechtlichen Religionsgemeinschaften ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Es sorgt für die langfristige Bewahrung, die wissenschaftliche Bearbeitung und die Vermittlung des Archivgutes."
+        },
+        {
+          "absatz": "4",
+          "text": "Es stellt in Zusammenarbeit mit der Kantonsbibliothek eine koordinierte dokumentarische Überlieferung für Appenzell Ausserrhoden sicher."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "da33e0a7b5f0619191b29bd46348580a7736491d070b0c69e0d4e1e757859627"
+    },
+    {
+      "id": "kanton/AR/421.10/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv wird von der Staatsarchivarin oder dem Staatsarchivar geleitet. Es ist organisatorisch der Kantonskanzlei angegliedert."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt ein Benützungsreglement."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "a96730ff6e989f1e43fc3a414ebc1bcbd2cbf164402a5cdd4215dd052089806b"
+    },
+    {
+      "id": "kanton/AR/421.10/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unterstützt die kantonalen Organe in der Dokumentenverwaltung;"
+            },
+            {
+              "marke": "b",
+              "text": "entscheidet über die Archivwürdigkeit von Dokumenten der kantonalen Organe;"
+            },
+            {
+              "marke": "c",
+              "text": "sorgt für sichere Aufbewahrung und fachgerechte Verzeichnung seines Archivguts;"
+            },
+            {
+              "marke": "d",
+              "text": "betreibt ein elektronisches Archivsystem;"
+            },
+            {
+              "marke": "e",
+              "text": "führt eine Handbibliothek und unterhält landeskundliche Sammlungen;"
+            },
+            {
+              "marke": "f",
+              "text": "kann von Dritten wichtiges Archivgut von kantonaler Bedeutung übernehmen;"
+            },
+            {
+              "marke": "g",
+              "text": "ist Auskunftsstelle und macht Archivgut in geeigneter Form zugänglich;"
+            },
+            {
+              "marke": "h",
+              "text": "berät die Gemeinden in Belangen der Archivierung;"
+            },
+            {
+              "marke": "i",
+              "text": "führt und begleitet landeskundliche Forschungs-, Publikations- und Vermittlungsprojekte;"
+            },
+            {
+              "marke": "j",
+              "text": "arbeitet fachtechnisch mit andern Archiven und Institutionen zusammen."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "16887e976a09eadd0c978f0d0fd6b4c328272d84e2975389527db2a3d4579d53"
+    },
+    {
+      "id": "kanton/AR/421.10/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Staatsarchiv hat im Rahmen seiner Aufgaben Zugang zu allen Dokumenten der anbietepflichtigen Stellen. Es erlässt Weisungen über die Aufbewahrung und Ablieferung archivwürdiger Dokumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann zu Forschungs- und Auskunftszwecken auf kommunales Archivgut zugreifen."
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann mit öffentlichen und privaten Partnern archivbezogene Vereinbarungen abschliessen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "863e953c499b2e001f0f13cb10fb5472bec5fa14e660159deb3f2fcd66d824af"
+    },
+    {
+      "id": "kanton/AR/421.10/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen des Staatsarchivs können mit Rekurs beim Regierungsrat angefochten werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "2ec87521ddd1fd3d530335363f591863cfeba9a73208676e82d25e27f9f37eee"
+    },
+    {
+      "id": "kanton/AR/421.10/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gemeindearchiv ist das zuständige Archiv für Dokumente der kommunalen Organe und ihrer Rechtsvorgänger. Es kann weiteres für die Gemeindegeschichte wichtiges Archivgut übernehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gemeindearchiv steht unter der Aufsicht des Gemeinderates. Dieser erlässt ein Benützungsreglement und bestimmt eine Person, die für alle im Gesetz dem Archiv übertragenen Aufgaben verantwortlich ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die für das Archiv verantwortliche Person hat im Rahmen ihrer Aufgaben Zugang zu allen Dokumenten der anbietepflichtigen Stellen. Sie erlässt Weisungen über die Aufbewahrung und Ablieferung archivwürdiger Dokumente."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Zweckverbänden und anderen interkommunalen Organen bestimmen die beteiligten Gemeinden durch Vereinbarung, welches Gemeindearchiv zuständig ist."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "7595c4a9afbe9a109a52981c2f3d8ec27e13dce87dd7ae2a6167ef304b6cb1ef"
+    },
+    {
+      "id": "kanton/AR/421.10/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gemeindearchive und Staatsarchiv sorgen für eine koordinierte Archivierung."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Staatsarchiv unterstützt die Gemeinden in Belangen der Dokumentenbewertung und der Verzeichnung von Archivgut."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "04741fe2cd7954df419ff7ca5a76e5bbcf9f7c6dfd6261b3a5f0b95bff7aa89d"
+    },
+    {
+      "id": "kanton/AR/421.10/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Rechtsschutz in Angelegenheiten der Gemeindearchive bestimmt sich nach dem Gemeindegesetz."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "e7ece6b2bdd3231893fde30f034063d6e27068f37acaf211c0c6a0edcd5f6c80"
+    },
+    {
+      "id": "kanton/AR/421.10/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer vorsätzlich als archivwürdig bezeichnete Dokumente beschädigt, verheimlicht, veräussert oder auf andere Weise der geordneten Archivierung entzieht, wird mit Busse bestraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer vorsätzlich oder grobfahrlässig gegen das Benützungsreglement oder gegen im Einzelfall getroffene Anordnungen über die Benützung von Archivgut verstösst, wird mit Busse bestraft."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "2e5c75cddbaf9b3236ee0e43739c9522d43fbcd097a3a2a1f7fbf149d1203f59"
+    },
+    {
+      "id": "kanton/AR/421.10/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gemeindegesetz vom 7. Juni 1998 wird wie folgt geändert:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verordnung vom 14. November 1988 über das Archivwesen wird aufgehoben."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "b34f5813e61e3e2cd8f7cdee49208d0f37b60ddc76e1c7915c58144da5bd0645"
+    },
+    {
+      "id": "kanton/AR/421.10/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Archivgesetz (421.10)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/421.10",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ef51cd58bb4eb382cbbc070a52a301f0",
+      "sha": "7ffd37838bc0de0b0080ca62a27bcedfe25c1858858eb3afb2d3b05b8d1e0b4b"
+    }
+  ]
+}

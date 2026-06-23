@@ -1,0 +1,47 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/222.31/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Bundesgesetz vom 10. Dezember 1941 über die Revision des XX. Titels des Obligationenrechts (Die Bürgschaft) (222.31)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zuständig für die öffentliche Beurkundung von Bürgschaftserklärungen (Art. 493 OR) ist der Gemeindeschreiber, nach den Bestimmungen von Art. 18 ff. EG zum ZGB sowie von Art. 15 der Verordnung für die Gemeindekanzleien."
+        }
+      ],
+      "stand": "1957-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/222.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "164969e43f6efa685022eaff529af809",
+      "sha": "cb26abb99cf939bef2e605fe18b2522062be278e37c8c60b2deadbf81c43c77b"
+    },
+    {
+      "id": "kanton/AR/222.31/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Bundesgesetz vom 10. Dezember 1941 über die Revision des XX. Titels des Obligationenrechts (Die Bürgschaft) (222.31)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Formel für die öffentliche Beurkundung von Bürgschaftserklärungen lautet:"
+        },
+        {
+          "absatz": "2",
+          "text": "«Vorstehende Urkunde (eventuell Solidarbürgschaftsverpflichtung) enthält die der unterzeichneten Urkundsperson mitgeteilte Willenserklärung von ............................. Sie wurde von diesem in Gegenwart der Urkundsperson auf eigenes Verlangen selbst gelesen, daraufhin in allen Teilen genehmigt und mit derselben unterzeichnet. Ort und Zeit ..................... Die Urkundsperson: .....................(pers. Unterschrift), Gemeindeschreiber.»"
+        }
+      ],
+      "stand": "1957-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/222.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "164969e43f6efa685022eaff529af809",
+      "sha": "3082d4ea289ffdfc8bee9cea01b4806abd3660101a5ada094225b36cb54825e0"
+    }
+  ]
+}

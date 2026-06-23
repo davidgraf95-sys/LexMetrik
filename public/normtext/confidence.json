@@ -1,0 +1,1416 @@
+{
+  "erzeugt": "2026-06-23",
+  "schwelle": 0.95,
+  "zusammenfassung": {
+    "erlasse": 150,
+    "autoAkzept": 148,
+    "quarantaene": 2,
+    "klassen": {
+      "verklebter-token": 5,
+      "fussnoten-marker-im-text": 3
+    }
+  },
+  "erlasse": [
+    {
+      "datei": "bund/ARG.json",
+      "ebene": "bund",
+      "key": "ARG",
+      "artikelTotal": 83,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/BBG.json",
+      "ebene": "bund",
+      "key": "BBG",
+      "artikelTotal": 76,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/BEWG.json",
+      "ebene": "bund",
+      "key": "BEWG",
+      "artikelTotal": 41,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/BGERR.json",
+      "ebene": "bund",
+      "key": "BGERR",
+      "artikelTotal": 69,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/BGG.json",
+      "ebene": "bund",
+      "key": "BGG",
+      "artikelTotal": 139,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/BV.json",
+      "ebene": "bund",
+      "key": "BV",
+      "artikelTotal": 232,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/DBG.json",
+      "ebene": "bund",
+      "key": "DBG",
+      "artikelTotal": 240,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/DSG.json",
+      "ebene": "bund",
+      "key": "DSG",
+      "artikelTotal": 77,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/EOG.json",
+      "ebene": "bund",
+      "key": "EOG",
+      "artikelTotal": 66,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/FUSG.json",
+      "ebene": "bund",
+      "key": "FUSG",
+      "artikelTotal": 111,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/GBV.json",
+      "ebene": "bund",
+      "key": "GBV",
+      "artikelTotal": 186,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/GEBV_HREG.json",
+      "ebene": "bund",
+      "key": "GEBV_HREG",
+      "artikelTotal": 11,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/GEBV_SCHKG.json",
+      "ebene": "bund",
+      "key": "GEBV_SCHKG",
+      "artikelTotal": 66,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/HREGV.json",
+      "ebene": "bund",
+      "key": "HREGV",
+      "artikelTotal": 203,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/JSTPO.json",
+      "ebene": "bund",
+      "key": "JSTPO",
+      "artikelTotal": 54,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/KG.json",
+      "ebene": "bund",
+      "key": "KG",
+      "artikelTotal": 67,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/KVG.json",
+      "ebene": "bund",
+      "key": "KVG",
+      "artikelTotal": 148,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/KVV.json",
+      "ebene": "bund",
+      "key": "KVV",
+      "artikelTotal": 261,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/MSCHG.json",
+      "ebene": "bund",
+      "key": "MSCHG",
+      "artikelTotal": 112,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/MWSTG.json",
+      "ebene": "bund",
+      "key": "MWSTG",
+      "artikelTotal": 132,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/OR.json",
+      "ebene": "bund",
+      "key": "OR",
+      "artikelTotal": 1603,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/PATG.json",
+      "ebene": "bund",
+      "key": "PATG",
+      "artikelTotal": 190,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/SCHKG.json",
+      "ebene": "bund",
+      "key": "SCHKG",
+      "artikelTotal": 400,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/STG.json",
+      "ebene": "bund",
+      "key": "STG",
+      "artikelTotal": 61,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/STGB.json",
+      "ebene": "bund",
+      "key": "STGB",
+      "artikelTotal": 477,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/STPO.json",
+      "ebene": "bund",
+      "key": "STPO",
+      "artikelTotal": 478,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/SVG.json",
+      "ebene": "bund",
+      "key": "SVG",
+      "artikelTotal": 159,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/URG.json",
+      "ebene": "bund",
+      "key": "URG",
+      "artikelTotal": 113,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/UWG.json",
+      "ebene": "bund",
+      "key": "UWG",
+      "artikelTotal": 33,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/VMWG.json",
+      "ebene": "bund",
+      "key": "VMWG",
+      "artikelTotal": 32,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/VSTG.json",
+      "ebene": "bund",
+      "key": "VSTG",
+      "artikelTotal": 83,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/VVG.json",
+      "ebene": "bund",
+      "key": "VVG",
+      "artikelTotal": 112,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/VWVG.json",
+      "ebene": "bund",
+      "key": "VWVG",
+      "artikelTotal": 92,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/ZGB.json",
+      "ebene": "bund",
+      "key": "ZGB",
+      "artikelTotal": 1099,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "bund/ZPO.json",
+      "ebene": "bund",
+      "key": "ZPO",
+      "artikelTotal": 426,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AG-291.150.json",
+      "ebene": "kanton",
+      "key": "AG-291.150",
+      "artikelTotal": 19,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AG-295.250.json",
+      "ebene": "kanton",
+      "key": "AG-295.250",
+      "artikelTotal": 13,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AG-662.110.json",
+      "ebene": "kanton",
+      "key": "AG-662.110",
+      "artikelTotal": 30,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AG-725.100.json",
+      "ebene": "kanton",
+      "key": "AG-725.100",
+      "artikelTotal": 33,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AI-172.513.json",
+      "ebene": "kanton",
+      "key": "AI-172.513",
+      "artikelTotal": 38,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AI-173.810.json",
+      "ebene": "kanton",
+      "key": "AI-173.810",
+      "artikelTotal": 27,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AI-177.410.json",
+      "ebene": "kanton",
+      "key": "AI-177.410",
+      "artikelTotal": 32,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AI-640.000.json",
+      "ebene": "kanton",
+      "key": "AI-640.000",
+      "artikelTotal": 230,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AR-1203.json",
+      "ebene": "kanton",
+      "key": "AR-1203",
+      "artikelTotal": 59,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AR-145.53.json",
+      "ebene": "kanton",
+      "key": "AR-145.53",
+      "artikelTotal": 28,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AR-233.3.json",
+      "ebene": "kanton",
+      "key": "AR-233.3",
+      "artikelTotal": 34,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/AR-621.11.json",
+      "ebene": "kanton",
+      "key": "AR-621.11",
+      "artikelTotal": 320,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BE-154.21.json",
+      "ebene": "kanton",
+      "key": "BE-154.21",
+      "artikelTotal": 49,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BE-161.12.json",
+      "ebene": "kanton",
+      "key": "BE-161.12",
+      "artikelTotal": 63,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BE-168.811.json",
+      "ebene": "kanton",
+      "key": "BE-168.811",
+      "artikelTotal": 21,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BE-169.81.json",
+      "ebene": "kanton",
+      "key": "BE-169.81",
+      "artikelTotal": 38,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BE-215.326.2.json",
+      "ebene": "kanton",
+      "key": "BE-215.326.2",
+      "artikelTotal": 38,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BL-170.31.json",
+      "ebene": "kanton",
+      "key": "BL-170.31",
+      "artikelTotal": 23,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BL-178.112.json",
+      "ebene": "kanton",
+      "key": "BL-178.112",
+      "artikelTotal": 20,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BL-211.71.json",
+      "ebene": "kanton",
+      "key": "BL-211.71",
+      "artikelTotal": 31,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BL-217.13.json",
+      "ebene": "kanton",
+      "key": "BL-217.13",
+      "artikelTotal": 16,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BL-331.json",
+      "ebene": "kanton",
+      "key": "BL-331",
+      "artikelTotal": 231,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BS-154.810.json",
+      "ebene": "kanton",
+      "key": "BS-154.810",
+      "artikelTotal": 42,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BS-211.110.json",
+      "ebene": "kanton",
+      "key": "BS-211.110",
+      "artikelTotal": 14,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BS-291.400.json",
+      "ebene": "kanton",
+      "key": "BS-291.400",
+      "artikelTotal": 27,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BS-292.400.json",
+      "ebene": "kanton",
+      "key": "BS-292.400",
+      "artikelTotal": 13,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/BS-650.100.json",
+      "ebene": "kanton",
+      "key": "BS-650.100",
+      "artikelTotal": 17,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-130.11-de.json",
+      "ebene": "kanton",
+      "key": "FR-130.11-de",
+      "artikelTotal": 85,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-130.11-fr.json",
+      "ebene": "kanton",
+      "key": "FR-130.11-fr",
+      "artikelTotal": 85,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-214.5.16.json",
+      "ebene": "kanton",
+      "key": "FR-214.5.16",
+      "artikelTotal": 8,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-261.16.json",
+      "ebene": "kanton",
+      "key": "FR-261.16",
+      "artikelTotal": 8,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-635.1.1.json",
+      "ebene": "kanton",
+      "key": "FR-635.1.1",
+      "artikelTotal": 81,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/FR-8428.json",
+      "ebene": "kanton",
+      "key": "FR-8428",
+      "artikelTotal": 8,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GE-rsg_d3_30.json",
+      "ebene": "kanton",
+      "key": "GE-rsg_d3_30",
+      "artikelTotal": 194,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GE-rsg_e1_05p10.json",
+      "ebene": "kanton",
+      "key": "GE-rsg_e1_05p10",
+      "artikelTotal": 91,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GE-rsg_e1_50p06.json",
+      "ebene": "kanton",
+      "key": "GE-rsg_e1_50p06",
+      "artikelTotal": 13,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GE-rsg_e6_05p03.json",
+      "ebene": "kanton",
+      "key": "GE-rsg_e6_05p03",
+      "artikelTotal": 32,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GL-III%20B%2F3%2F2.json",
+      "ebene": "kanton",
+      "key": "GL-III%20B%2F3%2F2",
+      "artikelTotal": 29,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GL-III%20B%2F7%2F1.json",
+      "ebene": "kanton",
+      "key": "GL-III%20B%2F7%2F1",
+      "artikelTotal": 14,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GL-III%20B_7_1.json",
+      "ebene": "kanton",
+      "key": "GL-III%20B_7_1",
+      "artikelTotal": 14,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GL-III-A.5.json",
+      "ebene": "kanton",
+      "key": "GL-III-A.5",
+      "artikelTotal": 16,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GL-III-C.1.json",
+      "ebene": "kanton",
+      "key": "GL-III-C.1",
+      "artikelTotal": 14,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-210.370.json",
+      "ebene": "kanton",
+      "key": "GR-210.370",
+      "artikelTotal": 23,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-217.200.json",
+      "ebene": "kanton",
+      "key": "GR-217.200",
+      "artikelTotal": 19,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-310.250.json",
+      "ebene": "kanton",
+      "key": "GR-310.250",
+      "artikelTotal": 8,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-320.210.json",
+      "ebene": "kanton",
+      "key": "GR-320.210",
+      "artikelTotal": 19,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-3348.json",
+      "ebene": "kanton",
+      "key": "GR-3348",
+      "artikelTotal": 23,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/GR-720.200.json",
+      "ebene": "kanton",
+      "key": "GR-720.200",
+      "artikelTotal": 35,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20021-30030.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20021-30030",
+      "artikelTotal": 33,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20021-34172-dl.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20021-34172-dl",
+      "artikelTotal": 36,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20021-34172.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20021-34172",
+      "artikelTotal": 36,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20021-37773-dl.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20021-37773-dl",
+      "artikelTotal": 12,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20028-27021-dl.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20028-27021-dl",
+      "artikelTotal": 17,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20029-37829-dl.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20029-37829-dl",
+      "artikelTotal": 21,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/JU-ju-20037-33943-dl.json",
+      "ebene": "kanton",
+      "key": "JU-ju-20037-33943-dl",
+      "artikelTotal": 27,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/LU-228.json",
+      "ebene": "kanton",
+      "key": "LU-228",
+      "artikelTotal": 20,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/LU-258.json",
+      "ebene": "kanton",
+      "key": "LU-258",
+      "artikelTotal": 53,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/LU-265.json",
+      "ebene": "kanton",
+      "key": "LU-265",
+      "artikelTotal": 41,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/LU-3870.json",
+      "ebene": "kanton",
+      "key": "LU-3870",
+      "artikelTotal": 56,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/LU-645.json",
+      "ebene": "kanton",
+      "key": "LU-645",
+      "artikelTotal": 29,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NE-164.1.json",
+      "ebene": "kanton",
+      "key": "NE-164.1",
+      "artikelTotal": 68,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NE-16631.json",
+      "ebene": "kanton",
+      "key": "NE-16631",
+      "artikelTotal": 17,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NE-2154116.json",
+      "ebene": "kanton",
+      "key": "NE-2154116",
+      "artikelTotal": 11,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NE-6350.json",
+      "ebene": "kanton",
+      "key": "NE-6350",
+      "artikelTotal": 21,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NW-261.2.json",
+      "ebene": "kanton",
+      "key": "NW-261.2",
+      "artikelTotal": 57,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NW-265.51.json",
+      "ebene": "kanton",
+      "key": "NW-265.51",
+      "artikelTotal": 14,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NW-268.12.json",
+      "ebene": "kanton",
+      "key": "NW-268.12",
+      "artikelTotal": 59,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/NW-521.1.json",
+      "ebene": "kanton",
+      "key": "NW-521.1",
+      "artikelTotal": 302,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/OW-134.15.json",
+      "ebene": "kanton",
+      "key": "OW-134.15",
+      "artikelTotal": 50,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/OW-213.61.json",
+      "ebene": "kanton",
+      "key": "OW-213.61",
+      "artikelTotal": 18,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/OW-641.4.json",
+      "ebene": "kanton",
+      "key": "OW-641.4",
+      "artikelTotal": 324,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SG-2808.json",
+      "ebene": "kanton",
+      "key": "SG-2808",
+      "artikelTotal": 34,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SG-2935.json",
+      "ebene": "kanton",
+      "key": "SG-2935",
+      "artikelTotal": 83,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SG-3849.json",
+      "ebene": "kanton",
+      "key": "SG-3849",
+      "artikelTotal": 611,
+      "score": 0.8,
+      "vetos": 0,
+      "flags": [
+        {
+          "artikel": "26.38",
+          "klasse": "verklebter-token",
+          "schwere": "weich",
+          "detail": "Anhang Ziff. 26.38: Token «AbfallrechtlicheBetriebsbewilligung(Art.48)…» (43 Z.)"
+        },
+        {
+          "artikel": "30.24",
+          "klasse": "verklebter-token",
+          "schwere": "weich",
+          "detail": "Anhang Ziff. 30.24: Token «HinterlegungeinesVorsorgeauftrags(Art.361…» (41 Z.)"
+        },
+        {
+          "artikel": "80",
+          "klasse": "verklebter-token",
+          "schwere": "weich",
+          "detail": "Art. 80: Token «AbfallrechtlicheBetriebsbewilligung(Art.48)…» (43 Z.)"
+        },
+        {
+          "artikel": "84",
+          "klasse": "verklebter-token",
+          "schwere": "weich",
+          "detail": "Art. 84: Token «HinterlegungeinesVorsorgeauftrags(Art.361…» (41 Z.)"
+        }
+      ]
+    },
+    {
+      "datei": "kanton/SG-811.1.json",
+      "ebene": "kanton",
+      "key": "SG-811.1",
+      "artikelTotal": 304,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SG-963.75.json",
+      "ebene": "kanton",
+      "key": "SG-963.75",
+      "artikelTotal": 36,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SH-173.200.json",
+      "ebene": "kanton",
+      "key": "SH-173.200",
+      "artikelTotal": 120,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SH-211.433.json",
+      "ebene": "kanton",
+      "key": "SH-211.433",
+      "artikelTotal": 21,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SH-221.101.json",
+      "ebene": "kanton",
+      "key": "SH-221.101",
+      "artikelTotal": 7,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SO-614.11.json",
+      "ebene": "kanton",
+      "key": "SO-614.11",
+      "artikelTotal": 324,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SO-615.11.json",
+      "ebene": "kanton",
+      "key": "SO-615.11",
+      "artikelTotal": 175,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SZ-173.111.json",
+      "ebene": "kanton",
+      "key": "SZ-173.111",
+      "artikelTotal": 40,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SZ-213.512.json",
+      "ebene": "kanton",
+      "key": "SZ-213.512",
+      "artikelTotal": 7,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SZ-280.411.json",
+      "ebene": "kanton",
+      "key": "SZ-280.411",
+      "artikelTotal": 15,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/SZ-82040.json",
+      "ebene": "kanton",
+      "key": "SZ-82040",
+      "artikelTotal": 24,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TG-176.31.json",
+      "ebene": "kanton",
+      "key": "TG-176.31",
+      "artikelTotal": 17,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TG-632.1.json",
+      "ebene": "kanton",
+      "key": "TG-632.1",
+      "artikelTotal": 21,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TG-638.1.json",
+      "ebene": "kanton",
+      "key": "TG-638.1",
+      "artikelTotal": 16,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TG-640.1.json",
+      "ebene": "kanton",
+      "key": "TG-640.1",
+      "artikelTotal": 268,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TI-ti-125101.json",
+      "ebene": "kanton",
+      "key": "TI-ti-125101",
+      "artikelTotal": 34,
+      "score": 0.85,
+      "vetos": 0,
+      "flags": [
+        {
+          "artikel": "9",
+          "klasse": "fussnoten-marker-im-text",
+          "schwere": "weich",
+          "detail": "Art. 9: Verweismarker «[1]» im Text"
+        },
+        {
+          "artikel": "24",
+          "klasse": "fussnoten-marker-im-text",
+          "schwere": "weich",
+          "detail": "Art. 24: Verweismarker «[2]» im Text"
+        },
+        {
+          "artikel": "34",
+          "klasse": "fussnoten-marker-im-text",
+          "schwere": "weich",
+          "detail": "Art. 34: Verweismarker «[1]» im Text"
+        }
+      ]
+    },
+    {
+      "datei": "kanton/TI-ti-137.json",
+      "ebene": "kanton",
+      "key": "TI-ti-137",
+      "artikelTotal": 35,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TI-ti-141.json",
+      "ebene": "kanton",
+      "key": "TI-ti-141",
+      "artikelTotal": 18,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TI-ti-148.json",
+      "ebene": "kanton",
+      "key": "TI-ti-148",
+      "artikelTotal": 29,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/TI-ti-181.json",
+      "ebene": "kanton",
+      "key": "TI-ti-181",
+      "artikelTotal": 46,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/UR-2.3232.json",
+      "ebene": "kanton",
+      "key": "UR-2.3232",
+      "artikelTotal": 39,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-105539.json",
+      "ebene": "kanton",
+      "key": "VD-vd-105539",
+      "artikelTotal": 118,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-106879.json",
+      "ebene": "kanton",
+      "key": "VD-vd-106879",
+      "artikelTotal": 94,
+      "score": 0.95,
+      "vetos": 0,
+      "flags": [
+        {
+          "artikel": "81",
+          "klasse": "verklebter-token",
+          "schwere": "weich",
+          "detail": "Art. 81: Token «250’000251’000252’000253’000254’000255’000256’0002…» (287 Z.)"
+        }
+      ]
+    },
+    {
+      "datei": "kanton/VD-vd-128150.json",
+      "ebene": "kanton",
+      "key": "VD-vd-128150",
+      "artikelTotal": 34,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-135783.json",
+      "ebene": "kanton",
+      "key": "VD-vd-135783",
+      "artikelTotal": 26,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-200292.json",
+      "ebene": "kanton",
+      "key": "VD-vd-200292",
+      "artikelTotal": 34,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-210344.json",
+      "ebene": "kanton",
+      "key": "VD-vd-210344",
+      "artikelTotal": 32,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VD-vd-210360.json",
+      "ebene": "kanton",
+      "key": "VD-vd-210360",
+      "artikelTotal": 34,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-1413.json",
+      "ebene": "kanton",
+      "key": "VS-1413",
+      "artikelTotal": 26,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-173.8-de.json",
+      "ebene": "kanton",
+      "key": "VS-173.8-de",
+      "artikelTotal": 47,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-173.8-fr.json",
+      "ebene": "kanton",
+      "key": "VS-173.8-fr",
+      "artikelTotal": 47,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-178.104.json",
+      "ebene": "kanton",
+      "key": "VS-178.104",
+      "artikelTotal": 25,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-211.611.json",
+      "ebene": "kanton",
+      "key": "VS-211.611",
+      "artikelTotal": 42,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/VS-643.1.json",
+      "ebene": "kanton",
+      "key": "VS-643.1",
+      "artikelTotal": 44,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZG-161.7.json",
+      "ebene": "kanton",
+      "key": "ZG-161.7",
+      "artikelTotal": 36,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZG-163.4.json",
+      "ebene": "kanton",
+      "key": "ZG-163.4",
+      "artikelTotal": 27,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZG-215.35.json",
+      "ebene": "kanton",
+      "key": "ZG-215.35",
+      "artikelTotal": 18,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZG-641.1.json",
+      "ebene": "kanton",
+      "key": "ZG-641.1",
+      "artikelTotal": 13,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZH-211.11.json",
+      "ebene": "kanton",
+      "key": "ZH-211.11",
+      "artikelTotal": 23,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZH-215.3.json",
+      "ebene": "kanton",
+      "key": "ZH-215.3",
+      "artikelTotal": 25,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    },
+    {
+      "datei": "kanton/ZH-243.json",
+      "ebene": "kanton",
+      "key": "ZH-243",
+      "artikelTotal": 150,
+      "score": 1,
+      "vetos": 0,
+      "flags": []
+    }
+  ]
+}

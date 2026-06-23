@@ -1,0 +1,494 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/955.11/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine wirtschaftspolizeiliche Bewilligung ist erforderlich für die entgeltliche Abgabe alkoholhaltiger Getränke zum Konsum an Ort und Stelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung entbindet nicht davon, die Vorschriften aus anderen Rechtsgebieten zu beachten und namentlich die nach Raumplanungs-, Feuerpolizei-, Bau- und Lebensmittelrecht notwendigen Bewilligungen einzuholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Gelegenheitsanlässe genügt eine Anmeldung bei der Gemeinde."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "b13c394603e08aa315cd098de91cd06c5b2295037f53f97a310da193f1a02007"
+    },
+    {
+      "id": "kanton/AR/955.11/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung bezieht sich auf einen bestimmten Betrieb oder Anlass."
+        },
+        {
+          "absatz": "2",
+          "text": "Die für Betriebe geltenden Vorschriften dieses Gesetzes sind sinngemäss auch auf Anlässe anwendbar."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "64566977cd244c8320d0d48721fe8f6110c3ce68b8e334e539e38e963988aed8"
+    },
+    {
+      "id": "kanton/AR/955.11/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung wird einer Person erteilt, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "handlungsfähig und"
+            },
+            {
+              "marke": "b",
+              "text": "gut beleumdet ist."
+            }
+          ]
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "955ceb961626b872b220ae004eb4a5cb2c15d13e6cd070ec25fd7e777ef30a61"
+    },
+    {
+      "id": "kanton/AR/955.11/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde wird vor der Bewilligungserteilung angehört."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "65524fbb9d4d2ddfe0bc9fcb53774dc06b727be7e287198731ea91508baa6517"
+    },
+    {
+      "id": "kanton/AR/955.11/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor der Erteilung der Bewilligung darf ein Betrieb nicht eröffnet werden."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "e910308473b0addaecb39cf6febd5e060be89a7d0d60dfdf1d6b670cf84408d6"
+    },
+    {
+      "id": "kanton/AR/955.11/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Bewilligung kann entzogen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Voraussetzungen, unter denen sie erteilt worden ist, nicht mehr bestehen oder sich wesentlich geändert haben,"
+            },
+            {
+              "marke": "b",
+              "text": "die wirtschaftspolizeilichen Vorschriften wiederholt verletzt wurden,"
+            },
+            {
+              "marke": "c",
+              "text": "im Betrieb die Missachtung des Betäubungsmittelrechts toleriert wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vor dem Entzug ergeht in der Regel eine schriftliche Verwarnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinde wird angehört."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "ee194c911ac2bb6f1fbfb2b5c533d2d4617cc2603dbf99ccabf05117f07f7f21"
+    },
+    {
+      "id": "kanton/AR/955.11/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Polizeiorganen des Kantons ist jederzeit Zutritt zu allen öffentlich zugänglichen und betrieblich notwendigen Räumen zu gestatten."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "724a46055a3204fee6f213c80e353b18d7c6dd69b68403fff823e69a0268419e"
+    },
+    {
+      "id": "kanton/AR/955.11/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Bewilligung besitzt, hat den Betrieb persönlich zu führen und ist für eine Stellvertretung, die bei Abwesenheit eingesetzt wird, verantwortlich."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "4cdf79ea663629eddfc61cc64256d02ddc9e6056cd171c0d2810fff1c6c13432"
+    },
+    {
+      "id": "kanton/AR/955.11/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen Betrieb führt, sorgt für Ruhe und Ordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Durch den Betrieb darf die Nachbarschaft namentlich während der Nachtzeit nicht übergebührlich gestört oder belästigt werden."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "c428f86499b185d206cfa2c91c66b90267e21aa3467eda62d77f9fa6d3a47a07"
+    },
+    {
+      "id": "kanton/AR/955.11/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alkoholische Getränke dürfen an Jugendliche unter 16 Jahren, Spirituosen an Jugendliche unter 18 Jahren, nicht abgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "In Betrieben mit Alkoholausschank sind mindestens drei alkoholfreie Getränke preisgünstiger anzubieten als die gleiche Menge des billigsten alkoholhaltigen Getränks."
+        },
+        {
+          "absatz": "3",
+          "text": "Jugendlichen unter 18 Jahren kann der Zutritt zu bestimmten Lokalen durch den Inhaber oder die Inhaberin untersagt werden."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "afebac6aa662dbcb2ebfcb70fc71b3a409c32f3b50d22a9b3bdf3c2a234c1179"
+    },
+    {
+      "id": "kanton/AR/955.11/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Spielen um hohe Geldbeträge oder Sachwerte ist untersagt und darf auch nicht geduldet werden."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "5ef09d87be08c8614bead7807f27faffa5e1dde191f982378c7750a96c557a11"
+    },
+    {
+      "id": "kanton/AR/955.11/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen Beherbergungsbetrieb führt, sorgt dafür, dass die Gäste bei der Ankunft die Meldescheine vollständig ausfüllen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldescheine sind der Polizei zur Verfügung zu stellen."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "31370f7f83498c54113bc4290fe892005569d70c6e1fb0c9372ac05a994782d6"
+    },
+    {
+      "id": "kanton/AR/955.11/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Betriebe dürfen ab 05.00 Uhr geöffnet werden und sind in der Regel um 24.00 Uhr zu schliessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verordnung regelt das Nähere."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "8ab243256c58dc782c8ccfda00028a994f23cac68d32247adb79c283d7cdebe4"
+    },
+    {
+      "id": "kanton/AR/955.11/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit einer Busse bis zu 20 000 Franken wird bestraft, wer",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ohne Bewilligung eine unter diese Gesetzgebung fallende Tätigkeit ausübt,"
+            },
+            {
+              "marke": "b",
+              "text": "die in einer Bewilligung enthaltenen Beschränkungen, Auflagen und Bedingungen nicht einhält."
+            }
+          ]
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "119abb9666b12ef1cd3f8ad8ab1c5f314eba6742d5bc954be59c6a172bf8f9cf"
+    },
+    {
+      "id": "kanton/AR/955.11/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer im Betrieb die Vorschriften der Artikel 8–13 verletzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Übertretungen einer Hilfsperson werden dem Inhaber oder der Inhaberin der Bewilligung angerechnet."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "34363664d0eac55c6b9aec9caf962d2c02a5c4353f3fa97d5a820ad6df6e7271"
+    },
+    {
+      "id": "kanton/AR/955.11/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse werden Gäste bestraft, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "um hohe Geldbeträge oder Sachwerte spielen,"
+            },
+            {
+              "marke": "b",
+              "text": "sich nicht ordnungsgemäss in die Gästekontrolle eintragen."
+            }
+          ]
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "9938e853b587cad73b9f96db5b225c43a3108f8b76fd369051caf4cdae605ce2"
+    },
+    {
+      "id": "kanton/AR/955.11/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungspolizei vollzieht dieses Gesetz, soweit keine anderen Zuständigkeiten bestehen."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "9898dd5326422666355d722d0f9b3163baddd22aecac7324c9ab9df0cfbd2dd3"
+    },
+    {
+      "id": "kanton/AR/955.11/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat erlässt die zum Vollzug dieses Gesetzes und des eidgenössischen Alkoholgesetzes erforderlichen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er erlässt namentlich Vorschriften über",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Bewilligungsverfahren,"
+            },
+            {
+              "marke": "b",
+              "text": "die Verlegung der Polizeistunde,"
+            },
+            {
+              "marke": "c",
+              "text": "Gebühren für Erteilung, Änderung und Ergänzung von Bewilligungen bis 500 Franken, in besonderen Fällen bis 3000 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann den Gebührenrahmen gemäss Abs. 2 lit. c veränderten Verhältnissen anpassen."
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "d41dc682d2b502ac368770196fc9868dd989615ff80647d6486702cb07250906"
+    },
+    {
+      "id": "kanton/AR/955.11/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über das Gastgewerbe (955.11)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten des Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit seinem Inkrafttreten werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Gesetz über das Gastgewerbe vom 30. April 1989;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verordnung zum Gesetz vom 30. April 1989 über das Gastgewerbe (Gastgewerbeverordnung) vom 20. November 1989;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verordnung über den gastgewerblichen Fähigkeitsausweis vom 19. Dezember 1989."
+            }
+          ]
+        }
+      ],
+      "stand": "1999-05-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/955.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4295beac9c780ad224a593b1c314d276",
+      "sha": "19194688e9f00e7acfeb3ca8d837f9c9d46b16d809e5f2e9fcfe72e97428c0ef"
+    }
+  ]
+}

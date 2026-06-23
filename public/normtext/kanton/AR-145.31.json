@@ -1,0 +1,2612 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/145.31/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt Organisation und Zuständigkeiten der Gerichte und der Strafverfolgungsbehörden und enthält die ergänzenden Vorschriften zur ZPO, zur StPO und zur JStPO."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die Bestimmungen des Gesetzes über die Verwaltungsrechtspflege im Verfahren vor dem Obergericht in Verwaltungssachen sowie die Bestimmungen des Bundesgesetzes über den Allgemeinen Teil des Sozialversicherungsrechts im Verfahren vor dem Obergericht als kantonalem Versicherungsgericht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c325f88430e7110ca3cf9d334e7033d5ede98ae065da43e62f24f1457ec7e38c"
+    },
+    {
+      "id": "kanton/AR/145.31/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Appenzell Ausserrhoden bestehen folgende Vermittleramtskreise:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kreis 1 umfassend die Gemeinden Herisau, Urnäsch, Schwellbrunn, Hundwil, Stein, Schönengrund und Waldstatt;"
+            },
+            {
+              "marke": "b",
+              "text": "Kreis 2 umfassend die Gemeinden Teufen, Bühler, Gais, Speicher und Trogen;"
+            },
+            {
+              "marke": "c",
+              "text": "Kreis 3 umfassend die Gemeinden Rehetobel, Wald, Grub, Heiden, Wolfhalden, Lutzenberg, Walzenhausen und Reute."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vermittlerämter erfüllen die ihnen in Art. 197 ff. ZPO zugewiesenen Aufgaben."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c487e308bd9555cb4bd8f45ce9a03df5c5490b64c488f0f6d5ebc96c6af0b123"
+    },
+    {
+      "id": "kanton/AR/145.31/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat wählt für jeden Vermittleramtskreis einen Vermittler oder eine Vermittlerin und deren Stellvertretung."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann eine Person als Vermittler oder Vermittlerin und Stellvertreter oder Stellvertreterin für mehrere Kreise wählen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "fdb95b888cd2ab00303cc5481bce36e604d1aaa628a58abf34db7d386315d6de"
+    },
+    {
+      "id": "kanton/AR/145.31/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind der Vermittler oder die Vermittlerin sowie deren Stellvertretung an der Ausübung ihres Amtes verhindert, so besorgen die Vermittler und Vermittlerinnen der andern Kreise die ausserordentliche Stellvertretung."
+        },
+        {
+          "absatz": "2",
+          "text": "Einzelheiten regelt das Obergericht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "eaa590c14fbe65c056e686bd688f5e63600e00cbcbc1765ca8a343044dd00bd0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat wählt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Präsidenten oder die Präsidentinnen und deren Stellvertreter oder Stellvertreterinnen der kantonalen Schlichtungsstellen für Verfahren bei Miete und nichtlandwirtschaftlicher Pacht sowie bei Diskriminierung im Erwerbsleben;"
+            },
+            {
+              "marke": "b",
+              "text": "je drei Vertreter oder Vertreterinnen der Mieter und Vermieter, resp. der Pächter und Verpächter als Mitglieder der Schlichtungsstelle für Miete und nichtlandwirtschaftliche Pacht;"
+            },
+            {
+              "marke": "c",
+              "text": "je drei Vertreter oder Vertreterinnen der Arbeitnehmer und Arbeitgeber der Schlichtungsstelle bei Diskriminierung im Erwerbsleben."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5241ccd1f4417cfe8992d620d9a3b7a378821cab4320ad92df07d0bb660288a4"
+    },
+    {
+      "id": "kanton/AR/145.31/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsstellen erfüllen die ihnen vom Bundesrecht zugewiesenen Aufgaben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind auch Rechtsberatungsstellen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "0e041cb81b1f3f5f3fbadce66b2528eb377859b57a03078de86c194d1f123ec0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsstellen erledigen die ihnen übertragenen Aufgaben in folgender Besetzung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Verfahren bei Miete und nichtlandwirtschaftlicher Pacht mit Präsident oder Präsidentin und je einem Vertreter oder einer Vertreterin von Mietern und Vermietern, resp. Pächtern und Verpächtern;"
+            },
+            {
+              "marke": "b",
+              "text": "in Verfahren bei Diskriminierung im Erwerbsleben mit Präsident oder Präsidentin und je einem Vertreter oder einer Vertreterin von Arbeitnehmern und Arbeitgebern, wobei beide Geschlechter vertreten sein müssen."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "922eda8db17c00c69442f1cd957652470c649efeeef57bca5fb54787bad45b31"
+    },
+    {
+      "id": "kanton/AR/145.31/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsstellen führen die Schlichtungsverhandlungen in der Regel an ihrem Sitz durch."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "80753f5df24eed653bed64986a24ec53dbd07dea10502b1f6aede1d82f16cf1a"
+    },
+    {
+      "id": "kanton/AR/145.31/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht besteht aus dem Präsidenten oder der Präsidentin, zwei Vizepräsidenten oder Vizepräsidentinnen und mindestens sechs weiteren Mitgliedern. Der Kantonsrat kann die Zahl der Vizepräsidenten oder Vizepräsidentinnen und der weiteren Mitglieder erhöhen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Kantonsgericht führt zu Beginn einer neuen Amtsdauer eine konstituierende Sitzung durch und nimmt Wahlen vor. Es bestellt aus seiner Mitte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Vizepräsidenten als Stellvertreter oder eine Vizepräsidentin als Stellvertreterin des Präsidenten oder der Präsidentin des Gesamtgerichtes;"
+            },
+            {
+              "marke": "b",
+              "text": "die Abteilungen, bestehend aus dem Präsidenten oder der Präsidentin oder einem Vizepräsidenten oder einer Vizepräsidentin als Vorsitzendem oder Vorsitzender und vier weiteren Richtern und Richterinnen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Stellvertreter oder Stellvertreterinnen der Vorsitzenden der einzelnen Abteilungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Ersatzmitglieder der einzelnen Abteilungen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Einzelrichter und Einzelrichterinnen und deren Stellvertreter und Stellvertreterinnen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Kantonsgericht bestimmt den Zuständigkeitsbereich der einzelnen Abteilungen und der Einzelrichter und Einzelrichterinnen. Die Wahlen und die Zuständigkeitsordnung sind zu veröffentlichen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "ca4727e3b777c657360d6be8747b0cd08368ad28541dcc78f92245dcbd33acf0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht entscheidet in Fünferbesetzung."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "74c288c09cb649a69de96696537dc89fe45c7b21145483e8421071a0012ff378"
+    },
+    {
+      "id": "kanton/AR/145.31/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Präsident oder die Präsidentin des Kantonsgerichtes besorgt die Geschäftsleitung des Gesamtgerichtes. Er oder sie ist zuständig für alle Angelegenheiten, die administrativ nicht einem anderen Organ zugewiesen sind, insbesondere für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufsicht über die Gerichtskanzlei,"
+            },
+            {
+              "marke": "b",
+              "text": "die Erstellung des Voranschlages,"
+            },
+            {
+              "marke": "c",
+              "text": "die jährliche Erstattung des Rechenschaftsberichts und der Jahresstatistik an das Obergericht,"
+            },
+            {
+              "marke": "d",
+              "text": "die Ausübung der Funktion des Arbeitgebers im Sinne von Art. 9 Abs. 2 des Personalgesetzes,"
+            },
+            {
+              "marke": "e",
+              "text": "die Zuweisung der Geschäfte an die Abteilungen und die Einzelrichter und Einzelrichterinnen zur Sicherstellung einer ausgeglichenen Arbeitslast,"
+            },
+            {
+              "marke": "f",
+              "text": "die Leitung der Gesamtgerichtssitzungen,"
+            },
+            {
+              "marke": "g",
+              "text": "die Aus-, Fort- und Weiterbildung,"
+            },
+            {
+              "marke": "h",
+              "text": "die Vertretung des Kantonsgerichtes nach aussen,"
+            },
+            {
+              "marke": "i",
+              "text": "die Organisation von Archiv und Bibliothek."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Präsident oder die Präsidentin kann einzelne Geschäftsleitungsaufgaben an Richter oder Richterinnen oder an Gerichtsschreiber oder Gerichtsschreiberinnen delegieren."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "a1070c9f668aa68e397d53a0e74322506456d549e5e03f4f5e76c62967dc55db"
+    },
+    {
+      "id": "kanton/AR/145.31/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wählbar als Präsident oder Präsidentin sowie als Vizepräsident oder Vizepräsidentin ist, wer über eine abgeschlossene juristische Ausbildung an einer schweizerischen Universität (Lizentiat, Master) oder über eine gleichwertige Ausbildung verfügt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "6c5e86f32edef374cc6675fa8c76e2e26c39eba75f7b220d89db46dc27f0f980"
+    },
+    {
+      "id": "kanton/AR/145.31/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht entscheidet unter Vorbehalt der Befugnisse der Einzelrichter und Einzelrichterinnen als erste Instanz in Zivilsachen, soweit nicht das Obergericht als einzige kantonale Instanz zuständig ist."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c74842a275f4245d537cc5f25f57a501ed3f3bb4a866ea9014d00a6915f29e92"
+    },
+    {
+      "id": "kanton/AR/145.31/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin entscheidet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle nach der ZPO im vereinfachten Verfahren zu erledigenden Streitigkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "Ehetrennungen, Ehescheidungen, Abänderungsverfahren samt umfassender Einigung beim nachehelichen Unterhalt oder bei Kinderbelangen sowie Auflösung eingetragener Partnerschaften auf gemeinsames Begehren bei umfassender Einigung;"
+            },
+            {
+              "marke": "c",
+              "text": "alle nach der ZPO im summarischen Verfahren zu erledigenden Streitigkeiten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Vollstreckungssachen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Einzelrichter oder die Einzelrichterin entscheidet zusätzlich über folgende Begehren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art. 348 Abs. 2 ZGB: Einweisung in die Wirtschaft bei Ertragsgemeinschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "Art. 651 Abs. 2 und Art. 651a Abs.1 ZGB: Anordnung über die Art der Aufhebung des Miteigentums;"
+            },
+            {
+              "marke": "c",
+              "text": "Art. 202 Abs. 1 OR: Vorverfahren bei Gewährleistung im Viehhandel;"
+            },
+            {
+              "marke": "d",
+              "text": "Art. 204 Abs. 2 und 3 OR: Feststellung des Tatbestands und Mitwirkung beim Verkauf übersandter Sachen;"
+            },
+            {
+              "marke": "e",
+              "text": "Art. 427 Abs. 1 und 3 OR: Feststellung des Zustands und Mitwirkung beim Verkauf übersandter Kommissionsgüter;"
+            },
+            {
+              "marke": "f",
+              "text": "Art. 435 Abs. 1 OR: Anordnung der Versteigerung von Kommissionsgütern;"
+            },
+            {
+              "marke": "g",
+              "text": "Art. 444 Abs. 2 und Art. 445 Abs 1 OR: Feststellung des Zustands und Mitwirkung beim Verkauf von Frachtgut;"
+            },
+            {
+              "marke": "h",
+              "text": "Art. 167 Abs. 1 des Bundesgesetzes über das internationale Privatrecht: Begehren um Anerkennung eines ausländischen Konkursdekrets."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Einzelrichter oder die Einzelrichterin ist in Schiedsgerichtssachen zuständiges Gericht im Sinne von Art. 356 Abs. 2 ZPO."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "3c7994e101602d16d55b28e00a4515974a76ec59fcf3672ee9ca908f4694bdd7"
+    },
+    {
+      "id": "kanton/AR/145.31/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht ist erstinstanzliches Gericht in Strafsachen, unter Vorbehalt der Zuständigkeit des Einzelrichters oder der Einzelrichterin."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "2ce659b2cd8f859874a8ba94f733e9cc77a21e17cd39c7c143b613acd2c5916a"
+    },
+    {
+      "id": "kanton/AR/145.31/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht ist Jugendgericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Es bezeichnet eine seiner Abteilungen zur Beurteilung der Jugendstrafsachen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "b66fc35fd5e370484c9373c88885f13ac6ba2c8eecaadcff713f46b4c8787a0e"
+    },
+    {
+      "id": "kanton/AR/145.31/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "übt die Funktion des Zwangsmassnahmengerichtes in Erwachsenen- und Jugendstrafsachen aus;"
+            },
+            {
+              "marke": "b",
+              "text": "beurteilt Übertretungen sowie Verbrechen und Vergehen, mit Ausnahme derer, für welche die Staatsanwaltschaft eine Freiheitsstrafe von mehr als einem Jahr, eine Verwahrung nach Art. 64 StGB, eine Behandlung nach Art. 59 Abs. 3 StGB oder, bei gleichzeitig zu widerrufenden bedingten Sanktionen, einen Freiheitsentzug von mehr als einem Jahr beantragt;"
+            },
+            {
+              "marke": "c",
+              "text": "leitet die Aussonderung von Informationen im Sinne von Art. 271 Abs. 1 StPO."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "db6535762b84b92ac720439d5415107f36042d96136897db29bb36136eb1ddc7"
+    },
+    {
+      "id": "kanton/AR/145.31/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht besteht aus dem Präsidenten oder der Präsidentin, dem Vizepräsidenten oder der Vizepräsidentin und mindestens acht weiteren Mitgliedern. Der Kantonsrat kann die Zahl der Vizepräsidenten oder Vizepräsidentinnen und der weiteren Mitglieder erhöhen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht führt zu Beginn einer neuen Amtsdauer eine konstituierende Sitzung durch und nimmt die Wahlen vor. Es bestellt aus seiner Mitte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Abteilungen, bestehend aus Präsident oder Präsidentin resp. Vizepräsident oder Vizepräsidentin als Vorsitzendem oder Vorsitzender und vier weiteren Richtern und Richterinnen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Stellvertreter oder Stellvertreterinnen der Vorsitzenden der einzelnen Abteilungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Ersatzmitglieder der einzelnen Abteilungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einzelrichter und Einzelrichterinnen und deren Stellvertreter und Stellvertreterinnen;"
+            },
+            {
+              "marke": "e",
+              "text": "den Präsidenten oder die Präsidentin, zwei weitere Mitglieder und zwei Ersatzmitglieder der Aufsichtsbehörde für Schuldbetreibung und Konkurs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Obergericht bestimmt den Zuständigkeitsbereich der einzelnen Abteilungen und der Einzelrichter und Einzelrichterinnen. Die Wahlen und die Zuständigkeitsordnung sind zu veröffentlichen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "663996b827218edf2f1eb285014244b24f4d8a689f3d08d776fb0d433e2b0d81"
+    },
+    {
+      "id": "kanton/AR/145.31/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht entscheidet, soweit das Gesetz nichts anderes vorsieht, in Fünferbesetzung."
+        },
+        {
+          "absatz": "2",
+          "text": "Präsident oder Präsidentin bzw. Vizepräsident oder Vizepräsidentin führen den Vorsitz in den Abteilungen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "4840f4b6621c84e65a7b00dce27edd8f7f28b84a7e15e17e7edec39ca0129e4b"
+    },
+    {
+      "id": "kanton/AR/145.31/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Geschäftsleitung durch den Präsidenten oder die Präsidentin des Obergerichtes gilt Art. 11 sinngemäss."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "56bdb4e1efe45f9ecd6058dd5ca656328fb2e800d4d6f16cf2567945ef683653"
+    },
+    {
+      "id": "kanton/AR/145.31/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht entscheidet in jedem Falle als oberes Gericht im Sinne von Art. 75 Abs. 2, Art. 80 Abs. 2 und Art. 86 Abs. 2 des Bundesgerichtsgesetzes."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c179afca406f83396d7ffe53ce4f65361a19b04bcdb9188dcb36eb4b10c88f61"
+    },
+    {
+      "id": "kanton/AR/145.31/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht übt die Aufsicht in der Zivil- und Strafrechtspflege aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Es sorgt für die ordnungsgemässe Abwicklung der Amtsübergaben bei den von ihm beaufsichtigten Behörden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "429217d09bad2aef1e662672bac5e855be44afa720a5529aaf552d00203796b6"
+    },
+    {
+      "id": "kanton/AR/145.31/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wählbar als Präsident oder Präsidentin sowie Vizepräsident oder Vizepräsidentin ist, wer über eine abgeschlossene juristische Ausbildung an einer schweizerischen Universität (Lizentiat, Master) oder über eine gleichwertige Ausbildung sowie über das Anwaltspatent verfügt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c5b12aefa7dba29a822b2b89032f03decfc82cf849f7eb731c0355a33f828bca"
+    },
+    {
+      "id": "kanton/AR/145.31/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entscheidet in zivilrechtlichen Angelegenheiten, für die eine einzige kantonale Instanz zuständig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "ist unter Vorbehalt der Befugnisse des Einzelrichters oder der Einzelrichterin Berufungs- und Beschwerdeinstanz in der Zivilrechtspflege;"
+            },
+            {
+              "marke": "c",
+              "text": "ist Beschwerde- und Revisionsinstanz in der Schiedsgerichtsbarkeit;"
+            },
+            {
+              "marke": "d",
+              "text": "behandelt als Aufsichtsbehörde Beschwerden gemäss SchKG und gemäss dem Bundesgesetz über die Schuldbetreibung gegen Gemeinden und andere Körperschaften des kantonalen öffentlichen Rechts."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5570789ee068916763c8f8114cd8221381767fcaba71b4e5428c1c5464fa73b0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin des Obergerichtes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ist Berufungs- und Beschwerdeinstanz gegenüber dem Einzelrichter oder der Einzelrichterin des Kantonsgerichtes;"
+            },
+            {
+              "marke": "b",
+              "text": "erlässt vorsorgliche Massnahmen und entscheidet über den Rechtsschutz in klaren Fällen in den Streitsachen, für die das Bundesrecht eine einzige kantonale Instanz vorschreibt;"
+            },
+            {
+              "marke": "c",
+              "text": "ist zuständig für die Entgegennahme des Schiedsspruchs zur Hinterlegung und die Bescheinigung der Vollstreckbarkeit."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "83448542c65237a2864bbfacf424db1a53cddad8277003265518d0934f764124"
+    },
+    {
+      "id": "kanton/AR/145.31/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht ist Berufungs- und Beschwerdeinstanz in der allgemeinen Strafrechtspflege und in Jugendstrafsachen, unter Vorbehalt der Befugnisse des Einzelrichters oder der Einzelrichterin."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "be1eb20219b4be44fe81b2c6ff4be37a15278376fa8cae2759a2354ca2d1bde7"
+    },
+    {
+      "id": "kanton/AR/145.31/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin des Obergerichtes ist Beschwerdeinstanz gegenüber dem Einzelrichter oder der Einzelrichterin des Kantonsgerichtes als Zwangsmassnahmegericht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "110f45208db42b8650ccc43c21cea77d9f55e28d88aaf1d8211a85c1f9d35aa2"
+    },
+    {
+      "id": "kanton/AR/145.31/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entscheidet verwaltungs- und staatsrechtliche Streitigkeiten in letzter Instanz;"
+            },
+            {
+              "marke": "b",
+              "text": "ist kantonales Versicherungsgericht als einzige Instanz zur Beurteilung von Beschwerden aus dem Bereiche der Sozialversicherungen;"
+            },
+            {
+              "marke": "c",
+              "text": "ist einzige kantonale Instanz für Streitigkeiten aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem Bundesgesetz über die Krankenversicherung."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "df1ca752d6e67084be1da80774b5e04f6fc22aa723cce3f9b2d4ccdcadbf59af"
+    },
+    {
+      "id": "kanton/AR/145.31/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin des Obergerichtes entscheidet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über Beschwerden und Klagen in vermögensrechtlichen Streitigkeiten bis zu einem Streitwert von Fr. 15 000.--, ausgenommen in Steuersachen;"
+            },
+            {
+              "marke": "b",
+              "text": "über Beschwerden gegen die Anordnung einer fürsorgerischen Unterbringung, gegen die Zurückbehaltung in einer Einrichtung und die Abweisung von Entlassungsgesuchen, gegen die Behandlung einer psychischen Störung ohne Zustimmung sowie gegen Massnahmen zur Einschränkung der Bewegungsfreiheit (Art. 439 ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "über Zwangsmassnahmen im Ausländerrecht;"
+            },
+            {
+              "marke": "d",
+              "text": "über Beschwerden im öffentlichen Beschaffungswesen."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "68e3b79ee1d6e9faa249183b700f4a9f26a8f1970011a1b19de8e5b8b09ee702"
+    },
+    {
+      "id": "kanton/AR/145.31/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der oder die Vorsitzende des Kollegialgerichtes sowie der Einzelrichter oder die Einzelrichterin sorgen für den ungestörten Gang der Verhandlungen. Sie können Dritte, und im Falle grober oder wiederholter Ordnungsstörungen auch Verfahrensbeteiligte oder ihre Vertreter oder Vertreterinnen aus der Verhandlung wegweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erscheint die Sicherheit von Personen oder Sachen gefährdet, so veranlassen sie polizeilichen Schutz und wenn nötig die Durchsuchung von Personen und Sachen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5562294e7e3fb5a0d397e71ca1b108641822d0469212080338aef0c08dd31791"
+    },
+    {
+      "id": "kanton/AR/145.31/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer als Verfahrensbeteiligter oder Verfahrensbeteiligte oder Dritter oder Dritte in einem Verfahren gesetzliche Vorschriften, Anordnungen des Gerichtes oder den gebotenen Anstand schuldhaft verletzt oder mutwillig den Geschäftsgang stört, kann vom Gericht mit Verweis oder mit Ordnungsbusse bis zu Fr. 2 000.-- und bei Wiederholung bis zu Fr. 5 000.-- bestraft werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "1d61b8b6402399a4e58d16c1457e2316a19b266d2a14206d23bfc47600f96c1b"
+    },
+    {
+      "id": "kanton/AR/145.31/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin des Kantons- und Obergerichtes entscheidet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über die Abschreibung des Verfahrens;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Voraussetzungen für das Eintreten offensichtlich nicht erfüllt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er oder sie beurteilt in diesen Fällen auch die Kosten- und Entschädigungsfolgen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "73fdb7de18782f52385814365351702f3e3d51d7e78b8f9edab0d15bc10d6186"
+    },
+    {
+      "id": "kanton/AR/145.31/art_33",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gerichtsschreiber und Gerichtsschreiberinnen sind Aktuare und Aktuarinnen der Gerichtsabteilungen und Kommissionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führen an Abteilungssitzungen, Augenscheinen und Beweisabnahmen das Protokoll, bereiten die Gerichtsentscheide vor und nehmen mit beratender Stimme und Antragsrecht an den Urteilsberatungen teil."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie unterzeichnen die von ihnen verfassten Entscheide zusammen mit dem oder der Abteilungsvorsitzenden."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie können zur Unterstützung der Einzelrichter und Einzelrichterinnen beigezogen werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "aee38706931b781de512a22e8f499dce06601e34884a55c5b221ea607f1e4ec3"
+    },
+    {
+      "id": "kanton/AR/145.31/art_34",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei erfüllt in der Strafverfolgung die Aufgaben der Polizei."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie untersteht dabei in fachlicher Hinsicht der Aufsicht und Weisungsbefugnis der Staatsanwaltschaft."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "71f2eeb61eeffa1c3690135adce51da193d6f950f1c0a267068d04674cc4fc5d"
+    },
+    {
+      "id": "kanton/AR/145.31/art_35",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Strafverfolgungsbehörden und Gerichte können jederzeit die Unterstützung durch die Polizei beanspruchen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "91db58b867726c4e9f7aaf9c4a19dc1edfc5d5387acc04c22f55c1829b8ee620"
+    },
+    {
+      "id": "kanton/AR/145.31/art_36",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwalltschaft besteht aus dem leitenden Staatsanwalt oder der leitenden Staatsanwältin, der erforderlichen Anzahl Staatsanwälten oder Staatsanwältinnen, der erforderlichen Anzahl Jugendanwälten oder Jugendanwältinnen, der erforderlichen Anzahl Sachbearbeitern oder Sachbearbeiterinnen mit staatsanwaltlichen und jugendanwaltlichen Befugnissen sowie dem Fach- und Kanzleipersonal."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "aad6c26e0a26178024c11558fa6bbf922954e77ddab0049995b2e43ef3325eb2"
+    },
+    {
+      "id": "kanton/AR/145.31/art_37",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft ist für die Strafverfolgung verantwortlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Strafverfahren gegen Jugendliche ist die Jugendanwaltschaft Untersuchungs- Anklage- und Vollzugsbehörde."
+        },
+        {
+          "absatz": "3",
+          "text": "Jugendanwälte und Jugendanwältinnen können auch Verfahren gegen Erwachsene führen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sachbearbeiter und Sachbearbeiterinnen mit staatsanwaltlichen und jugendanwaltlichen Befugnissen können gestützt auf ihre persönlichen Pflichtenhefte sowie unter der Verantwortung eines Staatsanwalts oder einer Staatsanwältin Strafbefehle für Übertretungen erlassen, soweit sich die Höhe der ausgefällten Busse aus einem Bussenkatalog oder aus vom leitenden Staatsanwalt oder von der leitenden Staatsanwältin festgelegten Richtlinien ergibt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "118d347f20d45a4520a7a551be75b539a341a2e5561d732dcaeaedcaf3354014"
+    },
+    {
+      "id": "kanton/AR/145.31/art_38",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist zuständig für die Anstellung und Kündigung des leitenden Staatsanwaltes oder der leitenden Staatsanwältin."
+        },
+        {
+          "absatz": "2",
+          "text": "Angestellt werden kann, wer über eine abgeschlossene juristische Ausbildung an einer schweizerischen Universität (Lizentiat, Master) oder über eine gleichwertige Ausbildung sowie über das Anwaltspatent verfügt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d04bd0c5794fa70bdf95d41d1104b3ac4b671206be6c9a0cefb59106d2a9a2a5"
+    },
+    {
+      "id": "kanton/AR/145.31/art_39",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der leitende Staatsanwalt oder die leitende Staatsanwältin ist für die fachliche Führung der Staatsanwaltschaft verantwortlich. Er oder sie sorgt für die gleichmässige Durchsetzung des staatlichen Strafanspruches im Kanton."
+        },
+        {
+          "absatz": "2",
+          "text": "Er oder sie hat gegenüber den übrigen Staats- und Jugendanwälten resp. Staats- und Jugendanwältinnen ein fallbezogenes Weisungsrecht."
+        },
+        {
+          "absatz": "3",
+          "text": "Ihm oder ihr obliegt auch die Einlegung von Rechtsmitteln beim Schweizerischen Bundesgericht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "b5902654b3fd5fe3244be6d2c8fe72bf508a2c4de18e94705a3401e7e30446f1"
+    },
+    {
+      "id": "kanton/AR/145.31/art_40",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwälte und Staatsanwältinnen sind befugt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschwerden einzulegen,"
+            },
+            {
+              "marke": "b",
+              "text": "Berufungen anzumelden,"
+            },
+            {
+              "marke": "c",
+              "text": "Revisionsgesuche einzureichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Befugnisse stehen demjenigen Staats- oder Jugendanwalt oder derjenigen Staats- oder Jugendanwältin zu, der oder die mit dem Fall befasst ist oder zuletzt befasst war."
+        },
+        {
+          "absatz": "3",
+          "text": "Der leitende Staatsanwalt oder die leitende Staatsanwältin kann den übrigen Staats- und Jugendanwälten oder Staats- und Jugendanwältinnen Weisungen in Bezug auf die Einlegung von Rechtsmitteln erteilen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "b8e198413c26a6ea21fa7ebf1bcccdbdb9e8196050fee86d6b21401cfbc9b326"
+    },
+    {
+      "id": "kanton/AR/145.31/art_41",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist Aufsichtsinstanz über die Staatsanwaltschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "Er nimmt keinen Einfluss auf laufende Strafverfahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann der Staatsanwaltschaft die Weisung erteilen, eine Strafverfolgung an die Hand zu nehmen, nicht aber sie zu unterlassen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "8661773f7bf409c7e1b4d78e8f58022b921bff8750dc04e6115cf1e750d93670"
+    },
+    {
+      "id": "kanton/AR/145.31/art_42",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Präsident oder Präsidentin, Vizepräsident oder Vizepräsidentin und Mitglied einer Gerichts- oder Schlichtungsbehörde ist auch wählbar, wer noch keinen Wohnsitz im Kanton hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach ihrer Wahl hat die Gerichtsperson spätestens auf den Zeitpunkt des Amtsantrittes im Kanton Wohnsitz zu nehmen. Andernfalls kann sie ihr Amt nicht antreten."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "0fe32a7d7cc32935c41b8f824f3f93dda2720b3937ba18ec317e53450265a8d3"
+    },
+    {
+      "id": "kanton/AR/145.31/art_43",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Will der Präsident oder die Präsidentin des Kantonsgerichts, ein Vizepräsident oder eine Vizepräsidentin des Kantonsgerichts sowie ein Vermittler oder eine Vermittlerin vor Ablauf der Amtsdauer zurücktreten, so gilt eine Rücktrittsfrist von sechs Monaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Personen nach Abs. 1 treten unabhängig von der Amtsdauer am Ende jenes Monats in den Ruhestand, in dem sie das ordentliche Rentenalter erreicht haben."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d29d91ac91af52e995fe308cb41ab91e8a7f7300a54f2b385bcf9fe106adb615"
+    },
+    {
+      "id": "kanton/AR/145.31/art_44",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beabsichtigt das zuständige Organ des Kantonsrates, den Verzicht auf eine Wiederwahl vorzuschlagen, so teilt es dies dem Gerichtspräsidenten oder der Gerichtspräsidentin, dem Vizepräsidenten oder der Vizepräsidentin sowie dem Vermittler oder der Vermittlerin bis zwei Monate vor dem Rücktrittstermin schriftlich mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Der oder die Betroffene ist vom zuständigen Organ des Kantonsrates anzuhören."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "f663845290085ebf6ee36e57784228236591ea73c1a1c27583dcf57c3fe27d2a"
+    },
+    {
+      "id": "kanton/AR/145.31/art_45",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat setzt nach Anhörung des Obergerichtes die Stellenprozente der Vizepräsidenten und Vizepräsidentinnen der Gerichte fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidien des Kantons- und des Obergerichtes werden mit Vollpensen ausgeübt."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Teilpensum bei den Vizepräsidien umfasst mindestens 50 Stellenprozente."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "6fd4c4fad8c5d9de70d168ef33d434039472586bcf3b22c769f059664afc35d4"
+    },
+    {
+      "id": "kanton/AR/145.31/art_46",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Präsidenten, Präsidentinnen, Vizepräsidenten und Vizepräsidentinnen der Gerichte, die Präsidenten oder die Präsidentinnen der Schlichtungsstellen und deren Stellvertreter oder Stellvertreterinnen sowie die Vermittler und Vermittlerinnen dürfen in Appenzell Ausserrhoden nicht als Anwalt oder Anwältin tätig sein."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c4a9c70aaefde028f2af37e4c57f72fb4af3b6992d55d70f8091a7b13c1125a8"
+    },
+    {
+      "id": "kanton/AR/145.31/art_47",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist ein Ausstandsgrund streitig, so entscheidet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegenüber einem Vermittler oder einer Vermittlerin und einem Einzelrichter oder einer Einzelrichterin des Kantonsgerichtes der Präsident oder die Präsidentin des Obergerichtes;"
+            },
+            {
+              "marke": "b",
+              "text": "gegenüber einem Mitglied einer Schlichtungsstelle die Schlichtungsstelle unter Beizug eines Ersatzmitgliedes;"
+            },
+            {
+              "marke": "c",
+              "text": "gegenüber Mitgliedern und Gerichtsschreibern oder Gerichtsschreiberinnen des Kantons- und Obergerichtes die betreffende Abteilung unter Beizug eines Ersatzmitgliedes;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Beschlussunfähigkeit der Schlichtungsstellen und des Kantonsgerichtes das Obergericht;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Beschlussunfähigkeit des Obergerichtes die von der Justizkommission des Kantonsrates zu wählende Anzahl ausserordentlicher Oberrichterinnen und Oberrichter."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "371d11386ee049fc37d78ccb45f1a3dbd0d43a0987836199b13fb8c121ab9a13"
+    },
+    {
+      "id": "kanton/AR/145.31/art_48",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Rückweisungsentscheid bindet die untere Instanz."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5d5ceec9795a0e138989527230b061985c85d49fa5c63e535b3d9f3a95d1cb27"
+    },
+    {
+      "id": "kanton/AR/145.31/art_49",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte haben in der ordentlichen Zusammensetzung Recht zu sprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Lässt sich eine Abteilung mit den ihr zugeteilten Mitgliedern und Ersatzmitgliedern nicht oder nicht vollständig besetzen, so wird sie aus der Zahl der übrigen Richter oder Richterinnen bestellt oder ergänzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zusammensetzung des Gerichtes ist den Parteien nach Einleitung des Verfahrens mitzuteilen; ebenso jede Änderung der Zusammensetzung während des Verfahrens."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d173613b3b994f576c4e65378d0c881ce675edf29f886bd5d94e5dd1d7c836c9"
+    },
+    {
+      "id": "kanton/AR/145.31/art_50",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Kollegialgerichten ist der oder die Vorsitzende der Gerichtsabteilung oder ein von diesem oder dieser beauftragtes Mitglied Instruktionsrichter oder Instruktionsrichterin."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Schlichtungsverfahren ist der Präsident oder die Präsidentin der Schlichtungsstelle Instruktionsrichter oder Instruktionsrichterin."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "fbc53d54207e729fb1695d26ebcc89254c86a95976930d4556e7fd5db020311a"
+    },
+    {
+      "id": "kanton/AR/145.31/art_51",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Beschlussfähigkeit eines Gesamtgerichtes ist die Anwesenheit der Mehrheit der Mitglieder notwendig. Für die Beschlussfähigkeit von Abteilungen und Kommissionen ist Vollzähligkeit notwendig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte fassen ihre Beschlüsse mit einfachem Mehr der Stimmenden. Bei Stimmengleichheit ist der Antrag angenommen, für den der oder die Vorsitzende gestimmt hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Jedes Gerichtsmitglied hat seine Stimme abzugeben. Stimmenthaltung ist nicht zulässig."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5cba85b1fb5c7f65099d181ced5751024ddb695aaa764828a94b9c1af62cceb6"
+    },
+    {
+      "id": "kanton/AR/145.31/art_52",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichte können in einfachen Fällen auf dem Zirkularweg entscheiden, wenn das Gesetz keine Verhandlung vorschreibt."
+        },
+        {
+          "absatz": "2",
+          "text": "Zirkularbeschlüsse bedürfen der Einstimmigkeit und sind als solche zu bezeichnen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "e52caabd6e38c869536e999d4f5c7c5427de3f3304f4dacbe7e6f8068a754929"
+    },
+    {
+      "id": "kanton/AR/145.31/art_53",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eingaben an ein unzuständiges Gericht werden an die zuständige Behörde überwiesen, sofern diese bekannt ist. Der Absender ist zu benachrichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat das Gericht Zweifel an seiner Zuständigkeit, so kann es einen Meinungsaustausch mit jenem Gericht oder jener Behörde pflegen, dessen oder deren Zuständigkeit in Frage kommen kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Bleibt die Zuständigkeit unklar, tritt das Gericht auf die Streitsache nicht ein."
+        },
+        {
+          "absatz": "4",
+          "text": "Für das Verfahren vor dem Obergericht in Verwaltungssachen gilt das Gesetz über die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5b6b047c5b226f78ee5c4db9ea86271d8f40b59339d90757df670ad3acd8dcaa"
+    },
+    {
+      "id": "kanton/AR/145.31/art_54",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrenssprache ist Deutsch."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Übersetzungen und den Beizug eines Dolmetschers oder einer Dolmetscherin gelten die bundesrechtlichen Bestimmungen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "3f7abc088c7e494bdbbb6373d1fa9629cad65003bb3530327ba52eac1f6263b9"
+    },
+    {
+      "id": "kanton/AR/145.31/art_55",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verhandlungen vor den Gerichten sind öffentlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Öffentlichkeit ist ausgeschlossen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor den Schlichtungsbehörden mit Ausnahme von Art. 203 Abs. 3 ZPO;"
+            },
+            {
+              "marke": "b",
+              "text": "in Prozessen aus Ehe-, Verwandtschafts-, Erwachsenenschutz- und Partnerschaftsrecht;"
+            },
+            {
+              "marke": "c",
+              "text": "vor dem Zwangsmassnahmegericht;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Sexualdelikten auf Antrag des Opfers;"
+            },
+            {
+              "marke": "e",
+              "text": "in der Jugendstrafrechtspflege; vorbehalten bleibt Art. 39 Abs. 2 des Jugendstrafgesetzes;"
+            },
+            {
+              "marke": "f",
+              "text": "wenn ein überwiegendes öffentliches Interesse oder schutzwürdige Privatinteressen es erfordern."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Parteien können auf eine mündliche öffentliche Verhandlung verzichten."
+        },
+        {
+          "absatz": "4",
+          "text": "Der oder die Vorsitzende kann im Falle des Ausschlusses der Öffentlichkeit einzelne Personen zulassen, wenn ein begründetes Interesse geltend gemacht wird und aus ihrer Anwesenheit keine Nachteile erwachsen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c1100c4b50f88c90a125f1f2ae4ff263fb6d11928764c46f7c16baa73f7335bc"
+    },
+    {
+      "id": "kanton/AR/145.31/art_56",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urteilsberatung der Gerichte erfolgt unter Ausschluss der Parteien und der Öffentlichkeit."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d85458b5f0b7612de88d5ac47647bd75fd790f3ab2c6eeda719c5181acdaf25f"
+    },
+    {
+      "id": "kanton/AR/145.31/art_57",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Einverständnis der Parteien kann auf Begründung und Weiterzug des Entscheids verzichtet werden; die Kosten werden angemessen reduziert."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "1e9daf5058d3f3fb83ca9f7773ef982f0ba948f98749a58bf79dd1e361aa1401"
+    },
+    {
+      "id": "kanton/AR/145.31/art_58",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Urteile, gegen die ein Rechtsmittel angemeldet worden ist, sind spätestens innert 90 Tagen seit der Eröffnung zu begründen und den Parteien zuzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für komplizierte Fälle kann der oder die zuständige Vorsitzende diese Frist erstrecken."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleibt Art. 84 Abs. 4 StPO."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "4e970d25c1728b574fe0d7c1145b91f69b6415560d2cba77a08fabe1df68f56b"
+    },
+    {
+      "id": "kanton/AR/145.31/art_59",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht kann für die Gerichte eine Akkreditierung von Pressevertretern oder Pressevertreterinnen vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte können den Medien besondere Plätze zuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gerichte können akkreditierten Gerichtsberichterstattern oder Gerichtsberichterstatterinnen beschränkte Akteneinsicht gewähren. Das Obergericht erlässt dazu Weisungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gerichte können akkreditierte Gerichtsberichterstatter oder Gerichtsberichterstatterinnen zu nicht öffentlichen Verhandlungen zulassen, wenn öffentliche und schutzwürdige private Interessen nicht beeinträchtigt werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "7a05f0ce99b5a3bb7eb8dcadce9940a7d2d717b394142a77f5e2c110f860e0d4"
+    },
+    {
+      "id": "kanton/AR/145.31/art_60",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Entscheiddispositive, mit Ausnahme jener in Summarsachen, werden von den Gerichten während vier Wochen für alle interessierten Personen aufgelegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte machen Entscheide von allgemeinem Interesse in geeigneter Weise bekannt. Das Obergericht veröffentlicht jährlich Entscheide von grundsätzlicher Bedeutung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Veröffentlichung eines Entscheids in Strafsachen obliegt der Behörde, die ihn angeordnet hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Namen der Beteiligten werden in der Regel nicht genannt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "876c97ef8beb7e5cfa0729c7fb5314d623b3eac3adb036f019db20d05bb7cb35"
+    },
+    {
+      "id": "kanton/AR/145.31/art_61",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Bekanntmachungen erfolgen im kantonalen Amtsblatt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "3f72140d54176371f72299ef953843de8d21436acc529bccf2e3f4495b8ede40"
+    },
+    {
+      "id": "kanton/AR/145.31/art_62",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Parteien, Geschädigte und Privatklägerschaft haben Anspruch auf unentgeltliche Rechtspflege und unentgeltliche Verbeiständung nach Massgabe der Art. 117 ff. ZPO sowie Art. 136 ff. StPO. Die beschuldigte Person hat Anspruch auf amtliche Verteidigung im Sinne von Art. 132 ff. StPO."
+        },
+        {
+          "absatz": "2",
+          "text": "Für das Verfahren vor dem Obergericht in Verwaltungssachen gelten Art. 25 des Gesetzes über die Verwaltungsrechtspflege und Art. 61 des Bundesgesetzes über den Allgemeinen Teil des Sozialversicherungsrechts."
+        },
+        {
+          "absatz": "3",
+          "text": "Zuständig für deren Gewährung ist die jeweilige Verfahrensleitung."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "a7276574dc0c59ed43781ef2217df57da7faa10e63b64c6a53341b9d4e4f75d5"
+    },
+    {
+      "id": "kanton/AR/145.31/art_63",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Nachzahlungsverfahren sind die Parteien, die beschuldigte Person, der oder die Geschädigte, die Privatklägerschaft und die Eltern des oder der Jugendlichen zur Mitwirkung verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Über die Nachzahlung entscheidet die Amtsstelle oder der Einzelrichter resp. die Einzelrichterin, welcher oder welche die unentgeltliche Rechtspflege, die unentgeltliche Verbeiständung oder die amtliche Verteidigung bewilligt hat. Wurde die unentgeltliche Rechtspflege, die unentgeltliche Verbeiständung oder die amtliche Verteidigung auch für das Beschwerde- oder Berufungsverfahren bewilligt, entscheidet der Einzelrichter oder die Einzelrichterin des Obergerichtes über die Rückerstattungsforderung in allen Instanzen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "0e61f786797d5278e30144a461876463bb2c80beab8c128b57cc13964155b6c1"
+    },
+    {
+      "id": "kanton/AR/145.31/art_64",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Verfahrenskosten gilt die Verordnung über die Rechtskosten und Entschädigungen in der Zivil- und Strafrechtspflege. Vorbehalten bleibt in der Verwaltungsrechtspflege vor Obergericht die Anwendung des Gesetzes über die Gebühren in Verwaltungssachen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d8002de1bad016df846095baa9cb0662f4bb19d5f5d664a6249cf84a1763e545"
+    },
+    {
+      "id": "kanton/AR/145.31/art_65",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Inkasso von finanziellen Leistungen, namentlich von Verfahrenskosten, Geldstrafen und Bussen obliegt der Gerichtskasse."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "90988a3d0fe1f51e66cf92613447c24f0abb834c82b2820ee52ba25ee83cb0f0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_66",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über das Gesuch um unentgeltliche Mediation in kindesrechtlichen Angelegenheiten nicht vermögensrechtlicher Art entscheidet das mit dem Verfahren befasste Gericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Das mit dem Verfahren befasste Gericht oder der Einzelrichter oder die Einzelrichterin des Kantonsgerichtes bei Einreichung des Gesuchs vor Eintritt der Rechtshängigkeit können in anderen Angelegenheiten den Parteien auf gemeinsamen Antrag eine unentgeltliche Mediation bewilligen. Die Art. 117 ff. ZPO sind sinngemäss anwendbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Die beauftragten Mediatoren oder Mediatorinnen haben über eine genügende Ausbildung zu verfügen. Das Obergericht legt die Kriterien der genügenden Ausbildung fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Nachzahlung gilt Art. 63."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5b3df1f6c26f71bc32c75a53a6a644a3e637f4116f8383d464d2d3029abfb65e"
+    },
+    {
+      "id": "kanton/AR/145.31/art_67",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Einzelrichter oder die Einzelrichterin des Kantonsgerichtes leistet unter Vorbehalt anderer Regelung nationale und internationale Rechtshilfe in Zivilsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Rechtshilfe zwischen der Schweiz und ausländischen Staaten richtet sich nach Art. 11 des Bundesgesetzes über das Internationale Privatrecht."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "6aa851fdb61a8c9496fb140b8dc7fd05d4fe3e81be6ad7144c577b4a17b5dde0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_68",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kraftloserklärung von altrechtlichen kantonalen Zedeln erfolgt nach den Bestimmungen über die Kraftloserklärung von Schuldbrief und Gült."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Gläubiger oder die Gläubigerin eines solchen Titels seit mindestens zehn Jahren unbekannt und sind während dieser Zeit keine Zinsen gefordert worden, so richtet sich die Auskündigung nach den Bestimmungen über die Verschollenerklärung."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "ae30a74deb1db5f868a7901fca1174a78b00a010147ec1f9fa6170d5aabdb664"
+    },
+    {
+      "id": "kanton/AR/145.31/art_69",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Vollstreckungsverfahren kann für Zwangsmassnahmen die Hilfe der Kantonspolizei in Anspruch genommen werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "9693f2bab2fca841676b85b81bcef6b68e34ff2f9fc2c21f4cf0d1269a22af87"
+    },
+    {
+      "id": "kanton/AR/145.31/art_70",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit das Bundesrecht nichts anderes vorsieht, behandelt diejenige Behörde Rechtshilfegesuche, die zur Durchführung der anbegehrten Amtshandlung zuständig ist."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "f6a69f2987ea5ef61ac0915b2e4b749d02c405fed28aad9a32e483b723bf3abd"
+    },
+    {
+      "id": "kanton/AR/145.31/art_71",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrenssprache vor den Strafverfolgungsbehörden ist Deutsch."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Übersetzungen und den Beizug eines Dolmetschers oder einer Dolmetscherin gelten die bundesrechtlichen Bestimmungen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "ae785d86d47dcc394f348209e635c86b5e401399295491027fc264625e321aee"
+    },
+    {
+      "id": "kanton/AR/145.31/art_72",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Strafbehörden können andere Behörden von Bund, Kantonen oder Gemeinden über Strafverfahren informieren, soweit diese zur Erfüllung einer gesetzlichen Aufgabe auf die Information angewiesen sind und das Interesse an der Information gegenüber den Persönlichkeitsrechten der Parteien überwiegt. Unter denselben Voraussetzungen können sie diesen Behörden rechtskräftige Strafentscheide zustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ergibt ein Strafverfahren, dass andere als strafrechtliche Massnahmen notwendig sind, ist den zuständigen Behörden Mitteilung zu machen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "e60495fea15682635c8abb6bab3640a46e73b96654e2ee6531887e195731489e"
+    },
+    {
+      "id": "kanton/AR/145.31/art_73",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einvernahmen werden von den Staatsanwälten und Staatsanwältinnen, den Jugendanwälten und Jugendanwältinnen und den Gerichten durchgeführt. Das zuständige Departement kann auf Antrag der Staatsanwaltschaft weitere Mitarbeiter und Mitarbeiterinnen der Staatsanwaltschaft bezeichnen, die Einvernahmen durchführen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement kann auf Antrag der Staatsanwaltschaft Angehörige der Kriminalpolizei bestimmen, die Zeugen und Zeuginnen einvernehmen können."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Abklärung von Übertretungen sowie von Nebenumständen eines Verbrechens oder Vergehens genügt eine polizeiliche Befragung zu Protokoll."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "20da7bae5f24a673f8492d85e86ef19eeb5f6ab03c47f22292b005b4a860d501"
+    },
+    {
+      "id": "kanton/AR/145.31/art_74",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement trifft für Personen im Sinne von Art. 149 Abs. 1 StPO, die nach Abschluss des Verfahrens noch gefährdet erscheinen, die geeigneten Schutzmassnahmen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "dc76e55adf7b37674a80d5e055a3b1af6cca4b53d08a6759f6501966ff3af879"
+    },
+    {
+      "id": "kanton/AR/145.31/art_75",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Departement kann auf Antrag der Staatsanwaltschaft Privatpersonen für die erfolgreiche Mitwirkung bei der Aufklärung von Straftaten Belohnungen ausrichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Soll die Belohnung mehr als Fr. 10 000.-- betragen, ist die Zustimmung des Regierungsrates einzuholen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "83ee0fc0ea186759c8421f77c58d44694f0f6a1572a94606617e30752de25518"
+    },
+    {
+      "id": "kanton/AR/145.31/art_76",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soll eine im Sinne von Art. 217 Abs. 3 StPO vorläufig festgenommene Person länger als drei Stunden festgehalten werden, ist dies vom Kommandopikett anzuordnen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "6cd27684c45558355fe9beb51ed535792b65898ed15ec1d1756385d689cac864"
+    },
+    {
+      "id": "kanton/AR/145.31/art_77",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt Ausführungsbestimmungen zum Vollzug der Untersuchungs- und Sicherheitshaft."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "dbce9c7c0a6cac5b46737b77df1fc647ca89ba6b29dbd8eb54bf650e4a269bb4"
+    },
+    {
+      "id": "kanton/AR/145.31/art_78",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei ist zuständig für die Durchführung von Vortests und Atem-Alkoholproben sowie die Anordnung von Blut- und Urinuntersuchungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Verweigert die betroffene Person die Durchführung des Vortests, der Atem-Alkoholprobe, die Blut- oder Urinuntersuchung oder die ärztliche Untersuchung, entscheidet die Staatsanwaltschaft über die zwangsweise Durchsetzung."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "0eaa8cb61c701f107ceae005a39a46e8a1717e55679c323813bcfaaa03a45b65"
+    },
+    {
+      "id": "kanton/AR/145.31/art_79",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Behörden und Angestellte des Kantons und der Gemeinden sind zur Anzeige an die Staatsanwaltschaft berechtigt, wenn ihnen in ihrer amtlichen Tätigkeit konkrete Verdachtsgründe für eine von Amtes wegen zu verfolgende strafbare Handlung bekannt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind zur Anzeige verpflichtet, wenn sie Kenntnis von einer schwerwiegenden Straftat haben. Von dieser Pflicht ausgenommen, aber zur Anzeige berechtigt, sind Personen, deren Aufgaben ein besonderes Vertrauensverhältnis zu einem Beteiligten oder einer Beteiligten voraussetzen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "98a4f2fc6bdf6c71b3341df2ef7031b5c992693762ee06707064fe564c99795b"
+    },
+    {
+      "id": "kanton/AR/145.31/art_80",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sozialhilfe- und weitere Behörden, welche Berechtigte unterstützen, und die Behörden des Erwachsenen- und Kindesschutzes sind zum Strafantrag wegen Vernachlässigung der Unterhaltspflichten im Sinne von Art. 217 Abs. 2 StGB befugt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "7e6300fb7ca5393420aadd3a6d4dc141804f2e24bd109bab3dbd298b88e5893e"
+    },
+    {
+      "id": "kanton/AR/145.31/art_81",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für nachträgliche Entscheide, die nicht den Gerichten zustehen, sind Sache des zuständigen Departementes."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "4e852e8f63bcebd7f63645029c85356c9d741da38d77e1b1cdac11bc41d0a6c3"
+    },
+    {
+      "id": "kanton/AR/145.31/art_82",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In den durch die Gesetzgebung des Bundes vorgesehenen Fällen ist die Kantonspolizei befugt, selber eine Busse zu verhängen und einzuziehen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "41ab20a98a1a8fd889949939048bf36def4215b30ad6d1bd88d9c9b9612af66d"
+    },
+    {
+      "id": "kanton/AR/145.31/art_83",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt die geringfügigen Übertretungen, bei denen eine feste Busse auf der Stelle erhoben werden kann, wenn der Fehlbare damit einverstanden ist. Die Busse darf nicht erhoben werden, wenn eine höhere Busse in Betracht kommt oder wenn der Fall rechtlich oder tatsächlich nicht klar ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Bussenerhebung sind die Polizeibeamten des Kantons und die vom zuständigen Departement ermächtigten Personen befugt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "4f707e362bbd3f76fdb9ad988aa842ea4bb009b428ca7ecc2c372dcf7e8f7b87"
+    },
+    {
+      "id": "kanton/AR/145.31/art_84",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anerkennt die betroffene Person die strafbare Handlung nicht oder ist sie mit dem Ordnungsbussenverfahren nicht einverstanden, ist Anzeige zu erstatten."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "9f07a6001e89a6bf092a015f0c76424237dc37381ae2c7d5596d0d0536e32d1c"
+    },
+    {
+      "id": "kanton/AR/145.31/art_85",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt des übergeordneten Rechts und der nachfolgenden Bestimmungen gelten die Verfahrensregeln in der Erwachsenenstrafrechtspflege."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "97d42bcdfedd83fd6aff15b392f660245365942c835fe58fc18579b72d51c9ce"
+    },
+    {
+      "id": "kanton/AR/145.31/art_86",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die polizeilichen Ermittlungen beschränken sich auf jene Massnahmen, die nötig sind, um die Spuren und Merkmale begangener strafbarer Handlungen unverändert zu erhalten und die ohne offensichtliche Nachteile für das Verfahren nicht verschoben werden können. Weitere Ermittlungen werden nur im Auftrag der Jugendanwaltschaft vorgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Amtshandlungen gegen Kinder und Jugendliche sind Angehörige der Kantonspolizei einzusetzen, die für diesen Dienst ausgebildet und geeignet sind."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "684551dfe6665e56bd3d25b9a46b485e77e9243516cfef94b504b7ccc30322be"
+    },
+    {
+      "id": "kanton/AR/145.31/art_91",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch ist dem zuständigen Departement einzureichen. Es muss mit einer schriftlichen Begründung und geeigneten Unterlagen versehen sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Erweist sich das Gesuch nicht als offensichtlich unzulässig oder unbegründet, führt das zuständige Departement die notwendigen Erhebungen und Vernehmlassungen durch. Es überweist hierauf das Gesuch mit seinem Antrag dem Kantonsrat."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement kann den Strafvollzug bis zum Entscheid des Kantonsrates aufschieben oder unterbrechen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "6f03e3539bbd429d2c0fa64b3703a460b97df9040fd20f56335cc94dde39fb5f"
+    },
+    {
+      "id": "kanton/AR/145.31/art_92",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat unterbreitet dem Kantonsrat nach Rücksprache mit dem Obergericht im Rahmen des Voranschlages den Stellenplan und die erforderlichen Kredite für die Gerichte. Die Budgetvorgaben des Regierungsrates sind für die Gerichte bindend."
+        },
+        {
+          "absatz": "2",
+          "text": "Können sich Regierungsrat und Obergericht nicht auf einen gemeinsamen Antrag einigen, hat der Präsident oder die Präsidentin des Obergerichtes das Recht, an den Sitzungen des zuständigen vorbereitenden Organs des Kantonsrates sowie an den Sitzungen des Kantonsrates zum Voranschlag teilzunehmen. Er oder sie hat dabei das Recht, Anträge zu stellen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "dfad4dc790685cf99c0bc54f3f0f70c8fac63a59b234c7b78354f4a268b747a4"
+    },
+    {
+      "id": "kanton/AR/145.31/art_93",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Staatsrechnung wird für die Gerichte ein separater Rechnungsabschnitt geführt."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "c44b1b8582f42d138a345567280676afc14203a08639374f84da349a73ff31f8"
+    },
+    {
+      "id": "kanton/AR/145.31/art_94",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht kann in einem Reglement Ausführungsbestimmungen in Bezug auf seine Organisation sowie die Organisation des Kantonsgerichtes und der Schlichtungsbehörden erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Obergericht steht ein Weisungsrecht zu. In hängige Verfahren darf jedoch nicht eingegriffen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Obergericht führt ein Verzeichnis seiner Weisungen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "190d21f0b356fbb482280baef6128d567578c79720964f82ae22e80a17d79b89"
+    },
+    {
+      "id": "kanton/AR/145.31/art_95",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat sorgt durch das zuständige Departement für die Errichtung einer oder mehrerer Beratungsstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann zu diesem Zwecke Vereinbarungen mit andern Kantonen oder mit öffentlichen und privaten Institutionen treffen."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "4e331865ba1a3d6414f2b4bdf4a620e976e564c77d1954710c4c8b3d22587b34"
+    },
+    {
+      "id": "kanton/AR/145.31/art_96",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Vollzug der Vorschriften über die Entschädigung und Genugtuung obliegt dem zuständigen Departement."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gewährt Vorschüsse,"
+            },
+            {
+              "marke": "b",
+              "text": "führt die erforderlichen Abklärungen durch,"
+            },
+            {
+              "marke": "c",
+              "text": "trifft den erstinstanzlichen Entscheid,"
+            },
+            {
+              "marke": "d",
+              "text": "macht gegenüber der Täterschaft und gegenüber Dritten die Ansprüche des Staates geltend."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "d28beb2b6d8d003140125737ad736e5b2f2e4472efbd7b8528ca394c6f5808e2"
+    },
+    {
+      "id": "kanton/AR/145.31/art_97",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "97",
+      "artikelLabel": "Art. 97",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche um Entschädigung und Genugtuung sind innert fünf Jahren nach der Straftat schriftlich beim zuständigen Departement einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit dieses Gesetz nichts anderes bestimmt, richtet sich das Verfahren nach den Vorschriften des Gesetzes über die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "97ea59ad5bfddc35db3bbbfa53d9931937ed774f42b31d407001951eb88e5834"
+    },
+    {
+      "id": "kanton/AR/145.31/art_98",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "98",
+      "artikelLabel": "Art. 98",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheide des zuständigen Departementes können innert 30 Tagen an das Obergericht weitergezogen werden."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "5c0f38522fc3f22053eab90320e402ae97afe3b431303e39449cd8e44747f2c5"
+    },
+    {
+      "id": "kanton/AR/145.31/art_99",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "99",
+      "artikelLabel": "Art. 99",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die nachstehenden Erlasse werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zivilprozessordnung für den Kanton Appenzell A.Rh. vom 27. April 1980;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesetz über den Strafprozess vom 30. April 1978."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "b54cf79c492f36989589d64c497ff54f1ff615a0aee655b560c8bb7d5b175eb0"
+    },
+    {
+      "id": "kanton/AR/145.31/art_100",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "100",
+      "artikelLabel": "Art. 100",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Ausserrhodischen Gesetzessammlung wird folgende begriffliche Änderung vorgenommen: Obergericht ersetzt Verwaltungsgericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die nachstehenden Erlasse werden wie folgt geändert:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Gesetz vom 24. April 1988 über die politischen Rechte;"
+            },
+            {
+              "marke": "2",
+              "text": "Gesetz vom 9. September 2002 über die Verwaltungsrechtspflege;"
+            },
+            {
+              "marke": "3",
+              "text": "Gesetz vom 11. April 2005 über die Ausübung des Anwaltsberufs;"
+            },
+            {
+              "marke": "4",
+              "text": "Gemeindegesetz vom 7. Juni 1998;"
+            },
+            {
+              "marke": "5",
+              "text": "Gesetz vom 27. April 1969 über die Einführung des Schweizerischen Zivilgesetzbuches;"
+            },
+            {
+              "marke": "6",
+              "text": "Gesetz vom 26. April 1987 über die Einführung des Bundesgesetzes vom 16. Dezember 1983 über den Erwerb von Grundstücken durch Personen im Ausland;"
+            },
+            {
+              "marke": "7",
+              "text": "Gesetz vom 27. April 1997 über die Einführung des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs;"
+            },
+            {
+              "marke": "8",
+              "text": "Gesetz vom 25. April 1982 über das kantonale Strafrecht;"
+            },
+            {
+              "marke": "9",
+              "text": "Polizeigesetz vom 13. Mai 2002;"
+            },
+            {
+              "marke": "10",
+              "text": "Finanzhaushaltsgesetz vom 30. April 1995;"
+            },
+            {
+              "marke": "11",
+              "text": "Steuergesetz vom 21. Mai 2000;"
+            },
+            {
+              "marke": "12",
+              "text": "Gesetz vom 24. September 2000 über das öffentliche Beschaffungswesen;"
+            },
+            {
+              "marke": "13",
+              "text": "Gesetz vom 12. Mai 2003 über die Raumplanung und das Baurecht;"
+            },
+            {
+              "marke": "14",
+              "text": "Gesetz vom 25. September 2006 über den Wasserbau und die Gewässernutzung;"
+            },
+            {
+              "marke": "15",
+              "text": "Energiegesetz vom 24. September 2001;"
+            },
+            {
+              "marke": "16",
+              "text": "Gesundheitsgesetz vom 25. November 2007;"
+            },
+            {
+              "marke": "17",
+              "text": "Gesetz vom 14. September 2009 über die Einführung des Bundesgesetzes über die Krankenversicherung;"
+            },
+            {
+              "marke": "18",
+              "text": "Gesetz vom 24. September 2007 über die öffentliche Sozialhilfe;"
+            },
+            {
+              "marke": "19",
+              "text": "Gesetz über den Feuerschutz vom 30. April 1995."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "1be51f3a795e50c804de68c196b4f38b9c55cc342112ca2f19f571e936fd1ca6"
+    },
+    {
+      "id": "kanton/AR/145.31/art_101",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Justizgesetz (145.31)",
+      "artikel": "101",
+      "artikelLabel": "Art. 101",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz untersteht dem fakultativen Referendum.;"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2019-06-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/145.31",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f6bb08a0317761d9c3c26e231eaa2f32",
+      "sha": "3dc461ab691d6a3ab206eda9c5d8f5b4690bdc908c797f0b8ad0cc0ff94dda37"
+    }
+  ]
+}

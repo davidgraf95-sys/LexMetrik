@@ -1,0 +1,824 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/142.211/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung regelt das Nähere zu folgenden Bestimmungen des Personalgesetzes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Lohn nach Art. 34 (Lohnbestimmung) und 35 (Lohnanpassung);"
+            },
+            {
+              "marke": "b",
+              "text": "Entschädigungen nach Art. 36 (Zulagen) und 37 (Spesen);"
+            },
+            {
+              "marke": "c",
+              "text": "weitere Leistungen nach Art. 46 (Anerkennungsprämie) und 47 (Dienstaltersgeschenk);"
+            },
+            {
+              "marke": "d",
+              "text": "Pikettdienst und ausserordentliche Arbeitszeit nach Art. 61."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat legt die Abgeltung von Zulagen, Spesen, Pikettdienst und ausserordentlicher Arbeitszeit in Ergänzung zu dieser Verordnung fest."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "9f35eef8c57d9179410cb0b88d4f62b76f73a1ac729e68429a1c6a9efd163285"
+    },
+    {
+      "id": "kanton/AR/142.211/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt für die Angestellten des Kantons einschliesslich seiner unselbständigen Anstalten und Betriebe sowie der Gerichte."
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern keine besondere Regelung besteht, gilt diese Verordnung auch für die Angestellten von selbständigen Anstalten und Betrieben des Kantons."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "6fc8b1bd122bd80ae9e327180b784a48285c70187c703e3dd98d0b1786d611b8"
+    },
+    {
+      "id": "kanton/AR/142.211/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lohntabelle im Anhang 1 mit den minimalen und maximalen Werten einer Gehaltsklasse und den zugeordneten Funktionswerten ist ein integrierter Bestandteil der Verordnung. Die Gehaltsklassen beinhalten Jahreslöhne. Die Lohntabelle wird bei generellen Lohnanpassungen entsprechend nachgeführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Jede Stelle wird mittels einer Funktionsbewertung einer Gehaltsklasse zugeordnet (funktionelle Lohnbestimmung). Der Lohn innerhalb der bestimmten Gehaltsklasse wird aufgrund der individuellen Lohnbestimmung festgelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Der ordentliche Stundenlohn wird aus dem Jahreslohn geteilt durch 2184 Jahresarbeitsstunden berechnet."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die ausnahmsweise Auszahlung von Überstunden nach Art. 62 Abs. 3 PG werden die Stundenteiler nach Abs. 4 angewendet. Bei den Lehrenden ist die Anzahl der Lektionen massgebend: 40 Wochen mal Lektionenzahl pro Woche. Der Betrag ergibt sich, indem der Jahreslohn durch die Anzahl der Lektionen pro Jahr geteilt wird und davon 80 % berechnet werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Erhalten Angestellte von Dritten oder vom Bund Lohnzahlungen, Honorare, Sitzungsgelder oder dergleichen im Rahmen ihrer dienstlichen Aufgabenerfüllung oder Tätigkeit im Auftrag des Arbeitgebers, stehen diese dem Arbeitgeber zu. Ausgenommen sind Spesenvergütungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "a69179cd6e679c6c66a6d35c7a22bcc15ee04a8f65aecb1a9ae68b714d7464f5"
+    },
+    {
+      "id": "kanton/AR/142.211/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Funktionsbewertungskommission erstellt für jede Stelle eine Bewertung, abgestützt auf den Stellenbeschrieb. Im Rahmen der Funktionsbewertung werden die stellenbezogenen Anforderungen, insbesondere die fachlichen Voraussetzungen, die Prozessanforderungen, die beruflichen Rahmenbedingungen und die Ergebnisverantwortung nach einem einheitlichen System (Anhang 2) bewertet."
+        },
+        {
+          "absatz": "2",
+          "text": "Aus der Bewertung einer Stelle ergibt sich ein Funktionswert, der die Zuordnung der Stelle zu einer Gehaltsklasse bestimmt (funktionelle Lohnbestimmung). Die Anstellungsbehörde sowie die oder der Angestellte können bei der Funktionsbewertungskommission Antrag auf eine Überprüfung stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei einer Änderung des Stellenbeschriebs aufgrund wesentlich veränderter Anforderungen ist die Funktionsbewertung zu überprüfen und gegebenenfalls anzupassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat bestimmt die Mitglieder der Funktionsbewertungskommission. Ihr gehören an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 Arbeitgeber-Vertretungen"
+            },
+            {
+              "marke": "b",
+              "text": "2 Angestellten-Vertretungen"
+            },
+            {
+              "marke": "c",
+              "text": "eine Vertretung des Personalamtes sowie eine externe Fachperson; beide mit beratender Stimme."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die externe Fachperson führt den Vorsitz."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "ee6b1c469ff0cb13fc11be22206b76ef84bb47fcee8b0f0ca95898439409b860"
+    },
+    {
+      "id": "kanton/AR/142.211/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anstellungsbehörde legt nach Rücksprache mit dem Personalamt im Rahmen der Anstellungsbedingungen den konkreten Lohn innerhalb einer funktionell bestimmten Gehaltsklasse fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höhe des Lohnes richtet sich nach den individuellen Eigenschaften (Art. 34 PG) wie Qualifikation und Leistung der oder des Angestellten (individuelle Lohnbestimmung). Als Basis gilt der Mittelwert innerhalb einer Gehaltsklasse gemäss Lohntabelle."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Jahreslöhne werden in 13 Teilen ausbezahlt, im Monat November zwei Teile. Die Stundenlöhne werden monatlich ausbezahlt und enthalten die Anteile für Ferien, Feier- und Freitage sowie den 13. Monatslohn. Beiträge der Angestellten an die gesetzlich vorgeschriebenen Vorsorgeeinrichtungen sowie Sozial- und andere Abgaben werden vom Lohn abgezogen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Auflösung des Arbeitsverhältnisses wird der 13. Monatslohn pro rata temporis ausbezahlt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "3e115d4bfba5780f9aea655d22c139dbc0de3df3e33a322c4976bd79045adc04"
+    },
+    {
+      "id": "kanton/AR/142.211/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In begründeten Fällen kann die Anstellungsbehörde für die Zeit der Einarbeitung oder der Entwicklung der individuellen Eigenschaften einen Anfangslohn von bis zu 5 % unterhalb des Minimums einer Gehaltsklasse festlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anstellungsbehörde kann mit Zustimmung des Personalamtes zur Gewinnung oder Erhaltung von besonders qualifizierten Angestellten in begründeten Ausnahmefällen einen bis zu 10 % über dem Maximum einer Gehaltsklasse liegenden Lohn gewähren."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "684b9b6dfd5fa33b12f4effaab2b0ac69dfe0e5e5aa476eb3aaae36def0e1a99"
+    },
+    {
+      "id": "kanton/AR/142.211/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Individuelle Lohnerhöhungen setzen eine gute Leistung voraus. Grundlage ist die Beurteilung der oder des Angestellten durch die vorgesetzte Stelle. Die Beurteilung ist schriftlich festzuhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die vorgesetzte Stelle orientiert die Anstellungsbehörde auf dem Dienstweg über die Beurteilung und kann eine individuelle Lohnerhöhung für die oder den Angestellten beantragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anstellungsbehörde entscheidet im Rahmen der zur Verfügung stehenden Lohnsumme über die individuellen Lohnerhöhungen der Angestellten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "954c9130d1e77d888e7689b611d10703077b2071387ac26e49dbe43846e5535a"
+    },
+    {
+      "id": "kanton/AR/142.211/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anspruch auf Abgeltungen ist im Arbeitsvertrag festzuhalten und ergibt sich aus dieser Verordnung und den Ausführungsvorschriften. Er beginnt mit dem Monat, in dem der massgebende Sachverhalt erfüllt ist, und endet mit dem Monat, in dem die Voraussetzungen nicht mehr gegeben sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Abgeltungen werden einzeln nach den tatsächlichen Umständen monatlich berechnet. Die Ausführungsvorschriften können monatliche Pauschalen festlegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Arbeitsverhinderung oder -unfähigkeit gilt Art. 44 PG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "184cb9d52c24ea437b6ec49471a1600517f6cccc8c4ef8d114822cedbe67b672"
+    },
+    {
+      "id": "kanton/AR/142.211/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pikettdienst wird als Präsenzdienst oder Bereitschaftsdienst geleistet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Präsenzdienst liegt vor, wenn Angestellte bei Abruf sofort am Arbeitsplatz zur Verfügung zu stehen und sich darum in unmittelbarer Nähe des Arbeitsplatzes aufzuhalten haben."
+            },
+            {
+              "marke": "b",
+              "text": "Bereitschaftsdienst liegt vor, wenn sich Angestellte auf Abruf bereit zu halten haben, um innert einer vorgegebenen Frist am Arbeitsplatz zu erscheinen und die Arbeit aufzunehmen."
+            },
+            {
+              "marke": "c",
+              "text": "Bei Abruf der Arbeitsleistung während des Pikettdienstes wird für die nun beginnende Arbeitszeit keine Pikettdienst-Entschädigung oder keine Pikettdienst-Zeitgutschrift mehr gewährt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Angeordnete Arbeit ausserhalb der ordentlichen Arbeitszeit (Überstunden), das heisst in der Nacht von 19.00 bis 07.00 Uhr sowie an Samstagen, Sonn- und Feiertagen, wird branchenüblich entschädigt. Die Ausführungsvorschriften können zusätzlich eine Zeitgutschrift von bis zu 20 % der geleisteten Arbeitszeit vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Angestellte, die aufgrund des Arbeitsvertrages zeitverschoben, in Schicht oder an Samstagen, Sonn- und Feiertagen arbeiten, erhalten keine Entschädigung, wenn sie bereits im Lohn berücksichtigt ist."
+        },
+        {
+          "absatz": "4–5",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "18d3299f619a524cbbce5f9fac09cee50bda52475f8ce65f15b9a26bb642dac8"
+    },
+    {
+      "id": "kanton/AR/142.211/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Übernahme einer zeitlich befristeten Zusatzfunktion kann die Anstellungsbehörde einer oder einem Angestellten eine Zulage von bis zu 15 % des Lohnes gewähren, solange die Zusatzfunktion ausgeübt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausführungsvorschriften können monatliche Pauschalen festlegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "4705de6f7ecc793a6085a5991813849d33a65ccdd5f5918bd5f942b13e3640d4"
+    },
+    {
+      "id": "kanton/AR/142.211/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Angestellte mit einem oder mehreren Kindern, für die sie die elterliche Sorge nach Art. 296 ff. ZGB tragen oder für die ein bewilligtes Pflegeverhältnis im Hinblick auf eine Adoption besteht, erhalten unter folgenden Voraussetzungen eine Zulage von Fr. 200.-- pro Monat und Kind bis zum 12. Altersjahr für die ausserfamiliäre Kinderbetreuung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Der Beschäftigungsgrad beträgt mindestens die Hälfte eines vollen Pensums;"
+            },
+            {
+              "marke": "b",
+              "text": "die Betreuung eines Kindes während der Arbeitszeit kann nicht anders sichergestellt werden als durch eine ausserfamiliäre Kinderbetreuung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Betreuung erfolgt durch eine dazu spezialisierte Einrichtung oder Person;"
+            },
+            {
+              "marke": "d",
+              "text": "der Kanton stellt kein eigenes oder entsprechend vergünstigtes Betreuungsangebot zur Verfügung;"
+            },
+            {
+              "marke": "e",
+              "text": "es werden anderweitig keine Beiträge ausgerichtet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Pro Kind wird nur eine Zulage gewährt. Sie wird halbjährlich gegen Nachweis der Betreuungskosten ausbezahlt. Die Anspruchsberechtigung ist von der oder dem Angestellten nachzuweisen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "d086c450b88e93e34262a5c1ae9c02909c82d8cabf65b66ed31c167b83964109"
+    },
+    {
+      "id": "kanton/AR/142.211/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Spesen sind Auslagen, die bei der Erfüllung dienstlicher Aufgaben anfallen wie für Reisen, Verpflegung und Unterkunft. Sie werden aufgrund der tatsächlichen Auslagen vergütet, soweit sie angemessen sind. In besonderen Fällen kann die Anstellungsbehörde im Arbeitsvertrag oder im Einzelfall eine pauschale Spesenentschädigung festlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Dienstreisen werden in der Regel die Kosten für die Benützung öffentlicher Verkehrsmittel entschädigt. Sofern von der zuständigen Stelle bewilligt, werden die Kosten für die Benützung privater Motorfahrzeuge entschädigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für Mahlzeiten werden entschädigt, wenn sie wegen einer dienstlichen Verpflichtung auswärts eingenommen werden müssen. Für eine auswärtige Übernachtung werden die effektiven Kosten eines Mittelklassehotels vergütet, wenn eine Rückkehr zum Wohnort entweder nicht zumutbar oder teurer ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Spesenrechnungen sind durch die vorgesetzte Stelle zu visieren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "1e1c4fe0204e5a6e3f6cbc776be24053ca4a981bdc720d6a86c9570be482fa20"
+    },
+    {
+      "id": "kanton/AR/142.211/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesamtbetrag für Anerkennungsprämien darf 0.5 % der gesamten Lohnsumme nicht übersteigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt jährlich den Betrag, welcher der Kantonskanzlei, den Departementen und den Gerichten für die Ausrichtung von Anerkennungsprämien zur Verfügung gestellt wird. Die selbständigen Anstalten und Betriebe regeln die Zuständigkeit für die Ausrichtung von Anerkennungsprämien."
+        },
+        {
+          "absatz": "3",
+          "text": "Über die Ausrichtung der Anerkennungsprämie an einzelne Angestellte entscheidet die Anstellungsbehörde. Die Prämie beträgt maximal Fr. 3 000.- pro Jahr und Person."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "9511ea003324c8930d09d6c82074d305ecaa5893a29c1faeac2163ae7fb7980f"
+    },
+    {
+      "id": "kanton/AR/142.211/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung des Dienstalters werden alle Dienstjahre beim Kanton berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Arbeitsverhinderung wegen Krankheit, Unfall, militärischen und ähnlichen Dienstleistungen von weniger als 24 Monaten sowie bezahltem Urlaub von weniger als sechs Monaten wird diese Zeit für die Berechnung der Dienstjahre mitgezählt. Bei Mutterschaft besteht keine zeitliche Einschränkung."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Beendigung des Arbeitsverhältnisses nach Art. 18 PG werden keine Leistungen pro rata temporis gewährt."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "2e4ea96840f4ef3337314505e44af21fdda0a0cb0e84ae72943c459ac0d0aa88"
+    },
+    {
+      "id": "kanton/AR/142.211/art_14_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton fördert die Nutzung des öffentlichen Verkehrs durch vergünstigte Abonnemente für seine Angestellten."
+        },
+        {
+          "absatz": "2",
+          "text": "Angestellte, die über vom Arbeitgeber vergünstigte Abonnemente verfügen, sind verpflichtet, diese für Dienstfahrten einzusetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt das Nähere."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "85b6938808d7bf3976c3798b64f79826e99567248d7f79d13413d03b3d6e400a"
+    },
+    {
+      "id": "kanton/AR/142.211/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ohne Funktionsbewertung werden in folgende Gehaltsklassen eingeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ratschreiberin / Ratschreiber Klasse 20"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "Ratschreiber-Stellvertreter/in Klasse 18"
+            },
+            {
+              "marke": "d",
+              "text": "Leiterin / Leiter Staatsanwaltschaft Klasse 19"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "e4681c7c22b1c69b561da162685260a508a1823de25fbe73a93ac9bf29d4090f"
+    },
+    {
+      "id": "kanton/AR/142.211/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lehrenden werden ohne Funktionsbewertung folgenden Kategorien zugeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kategorie A: Lehrende mit akademischer und pädagogischer Ausbildung, diplomierte Lehrende an Berufsschulen und Lehrende für Bildnerisches Gestalten, Musik und Sport, die Klassenunterricht erteilen und eine anerkannte pädagogische Ausbildung für die Sekundarstufe II vorweisen können."
+            },
+            {
+              "marke": "b",
+              "text": "Kategorie B: Lehrende mit akademischer Ausbildung, die nicht über eine entsprechende pädagogische Ausbildung verfügen."
+            },
+            {
+              "marke": "c",
+              "text": "Kategorie C: Lehrende mit Lehrbefähigung für die Sekundarstufe I, Lehrende mit Fachhochschul- und pädagogischer Ausbildung, Lehrende mit Meisterprüfung bzw. höherer Fachprüfung und pädagogischer Ausbildung und Lehrende, welche Einzelunterricht erteilen."
+            },
+            {
+              "marke": "d",
+              "text": "Kategorie D: alle übrigen Lehrenden"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie werden wie folgt in die Gehaltsklassen eingeteilt (funktionelle Lohnbestimmung):",
+          "mehrspaltig": {
+            "kopf": [
+              "Kategorie",
+              "1. – 10. Dienstjahr"
+            ],
+            "zeilen": [
+              [
+                "A",
+                "Gehaltsklasse 11: 100%"
+              ],
+              [
+                "B",
+                "Gehaltsklasse 11: 97,5 %"
+              ],
+              [
+                "C",
+                "Gehaltsklasse 11: 95 %"
+              ],
+              [
+                "D",
+                "Gehaltsklasse 11: 90 %"
+              ]
+            ]
+          }
+        },
+        {
+          "absatz": "3",
+          "text": "Die individuelle Lohnbestimmung richtet sich sinngemäss nach Art. 5. Der Lohn für Studienabgängerinnen und Studienabgänger einer Kategorie entspricht dem jeweiligen Minimum der Gehaltsklasse 11. Beim Wechsel in die Gehaltsklasse 15 ist der jeweilige Minimallohn oder ein bestehender höherer Lohn garantiert."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Gehaltsanspruch für das 1. Semester eines Schuljahres erstreckt sich vom 1. August bis zum 31. Januar, derjenige für das 2. Semester vom 1. Februar bis zum 31. Juli."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat erlässt Weisungen über weitere Kriterien für die individuelle Lohnbestimmung sowie die Entschädigung von Stellvertretungen und besonderen Aufgaben."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Besoldung von Lehrpersonen an Volksschulabteilungen kantonaler Schulen richtet sich nach der Besoldungsverordnung für die Lehrpersonen der Volksschule."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "c19e7c6ac74f07f55d8b44354230dd0053cd4546b06300ab0f18a831d79db109"
+    },
+    {
+      "id": "kanton/AR/142.211/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fachpersonen mit einem von der Erziehungsdirektorenkonferenz (EDK) anerkannten oder einem von ihr äquivalent beurteilten Diplomabschluss werden ohne Funktionsbewertung wie folgt in die Gehaltsklassen eingeteilt (funktionelle Lohnbestimmung):",
+          "items": [
+            {
+              "marke": "a",
+              "text": "1. – 10. Dienstjahr zu 90 % der Gehaltsklasse 11"
+            },
+            {
+              "marke": "b",
+              "text": "11. – 20. Dienstjahr zu 90 % der Gehaltsklasse 14"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Weiteren ist Art. 18 anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "b17d1dfb98f51c5566663691c7d2ef72cdd2c7da4fd35e59062543e5930709c7"
+    },
+    {
+      "id": "kanton/AR/142.211/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizeiangehörigen werden in folgende Gehaltsklassen eingeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Aspirantin/Aspirant Klasse 4"
+            },
+            {
+              "marke": "abis",
+              "text": "Polizistin/Polizist in Ausbildung Klasse 5"
+            },
+            {
+              "marke": "b",
+              "text": "Polizistin/Polizist Klasse 6"
+            },
+            {
+              "marke": "c",
+              "text": "Gefreite Klasse 7"
+            },
+            {
+              "marke": "d",
+              "text": "Korporalin/Korporal Klasse 8"
+            },
+            {
+              "marke": "e",
+              "text": "Wachtmeisterin/Wachtmeister Klasse 9"
+            },
+            {
+              "marke": "f",
+              "text": "Feldweibelin/Feldweibel Klasse 10"
+            },
+            {
+              "marke": "g",
+              "text": "Adjutantin/Adjutant Klasse 12"
+            },
+            {
+              "marke": "h",
+              "text": "Polizeioffizierin/ Polizeioffizier (gemäss Funktionswert) Klasse 13–17"
+            },
+            {
+              "marke": "i",
+              "text": "Polizeikommandantin/ Polizeikommandant Klasse 19"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einem Wechsel in eine Funktion, die einem tieferen Dienstgrad entspricht, ist der Lohn nach der entsprechenden Gehaltsklasse neu zu bestimmen. In der Regel ist damit keine Änderung im Dienstgrad verbunden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "bd2cf9bf330f7ec4722924678b7248e44cd7e3cea4a92677363934d8215277c1"
+    },
+    {
+      "id": "kanton/AR/142.211/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Inkrafttreten dieser Verordnung werden alle ihr widersprechenden Erlasse, Bestimmungen, Regelungen, Vereinbarungen und Abmachungen aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere wird die Verordnung über Taggelder und Spesen aufgehoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Insbesondere werden geändert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verordnung zum Polizeigesetz"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung über die Anstellungsbedingungen der Chef- und Leitenden Ärzte an den kantonalen Spitälern"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "ff3b4b26bfbe3dbd135e2f7d2b18779b4dd7756ad1c4418d00766d2f1229c9fe"
+    },
+    {
+      "id": "kanton/AR/142.211/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Überführung wird die bestehende Besoldung aufgeteilt in den Lohn und allfällige Abgeltungen nach Art. 8 ff."
+        },
+        {
+          "absatz": "2",
+          "text": "Es besteht bei der Überführung ins neue Lohnsystem grundsätzlich kein Anspruch auf eine Lohnanpassung aufgrund des Funktionswertes in die entsprechende Gehaltsklasse."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein im Spitalverbund bereits bezogener Anteil des Dienstaltersgeschenks von 1 Woche nach 5 Dienstjahren wird angerechnet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "681c8ed3279580ae08082acfa01fee5e67452180cde80cc3a5b30d4b803ab026"
+    },
+    {
+      "id": "kanton/AR/142.211/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lohnbestimmung für Lehrende nach Art. 18 Abs. 2 und 3 wird erstmals für die Löhne, die ab dem 1. August 2010 gelten, angewendet. In der Zwischenzeit werden die Löhne gemäss Anhang 3 als integrierter Bestandteil dieser Verordnung bestimmt. Die Lohntabelle wird bei generellen Lohnanpassungen entsprechend nachgeführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Löhne 2009 werden bei der Überführung ins neue Besoldungssystem gemäss Anhang 1 auf den 1. August 2010 garantiert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "e3dabf3b0be7a2c70a0da039f9ddfcc690b511013aba0bd12acc39d9511cd8ac"
+    },
+    {
+      "id": "kanton/AR/142.211/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BVO (142.211)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt gleichzeitig mit dem Personalgesetz in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.211",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "dd0837851511c5972204e5f9e503e3da",
+      "sha": "104ef4870c01fb68dcb102ba08edf1719cf9022e49f6fc66aec8f7904927d3fe"
+    }
+  ]
+}

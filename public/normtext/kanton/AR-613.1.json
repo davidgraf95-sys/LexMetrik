@@ -1,0 +1,897 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/613.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt den Finanzausgleich zwischen dem Kanton und den Gemeinden."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "6c193cdb58e50507481dbe145c8d0f638896a9ad24b6d1946040c1ba80e837f9"
+    },
+    {
+      "id": "kanton/AR/613.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch einen Finanzausgleich ist ein ausgewogenes Verhältnis der Steuerbelastung unter den Gemeinden anzustreben."
+        },
+        {
+          "absatz": "2",
+          "text": "Gemeinden mit einer unterdurchschnittlichen Steuerkraft erhalten aus dem Finanzausgleich Mittel für eine Mindestausstattung."
+        },
+        {
+          "absatz": "3",
+          "text": "Gemeinden mit einer überdurchschnittlichen Anzahl Lernender erhalten aus dem Finanzausgleich Mittel für einen Schulkostenausgleich."
+        },
+        {
+          "absatz": "3bis",
+          "text": "Gemeinden mit überdurchschnittlichen Nettoaufwendungen bei den Geldleistungen für die wirtschaftliche Sozialhilfe erhalten aus dem Finanzausgleich Mittel für einen Soziallastenausgleich."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Finanzausgleich wird durch den Kanton sowie von Gemeinden mit überdurchschnittlicher Steuerkraft oder mit unterdurchschnittlichen Nettoaufwendungen bei den Geldleistungen für die wirtschaftliche Sozialhilfe finanziert."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Durchführung des Finanzausgleichs obliegt dem Kanton."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "9c741bf406e3a640db65b57ce0ad5d3be5c3092e91486aab4265d340097c25e7"
+    },
+    {
+      "id": "kanton/AR/613.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuerkraft der Gemeinden wird in Franken pro Einwohnerin bzw. Einwohner bestimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Basis für die Berechnung der Steuerkraft einer Gemeinde bildet die Summe aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Ertrag einer Steuereinheit der ordentlichen Steuern;"
+            },
+            {
+              "marke": "abis",
+              "text": "dem Gemeindeanteil am Kantonsertrag der Gewinnsteuern der Kapitalgesellschaften und Genossenschaften dividiert durch den Steuerfuss des Kantons;"
+            },
+            {
+              "marke": "b",
+              "text": "dem durch den mittleren Steuerfuss der natürlichen Personen aller Gemeinden dividierten Ertrag der Spezialsteuern."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die ordentlichen Steuern umfassen die Einkommens- und Vermögenssteuern einschliesslich den Quellensteuern der natürlichen Personen sowie die Gewinn- und Kapitalsteuern der juristischen Personen. Eingeschlossen sind ebenfalls die Nach- und Strafsteuern."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Berechnung des Ertrages einer Steuereinheit basiert auf dem Nettosteuerertrag. Dieser errechnet sich ausgehend vom Total der während eines Jahres in Rechnung gestellten Steuern für das laufende Jahr und die Vorjahre durch die Berücksichtigung der verbuchten Zinsen, Erlasse und Verluste sowie Skonti."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Spezialsteuern umfassen die Erbschafts- und Schenkungssteuern, die Grundstückgewinn- sowie die Handänderungssteuern."
+        },
+        {
+          "absatz": "6",
+          "text": "Die massgebende Steuerkraft einer Gemeinde entspricht dem gesamten Steuerertrag gemäss Abs. 2 dividiert durch die Anzahl Einwohnerinnen und Einwohner."
+        },
+        {
+          "absatz": "7",
+          "text": "Das Mittel der Steuerkraft aller Gemeinden entspricht der Summe des gesamten Steuerertrages gemäss Abs. 2 aller Gemeinden dividiert durch die Anzahl Einwohnerinnen und Einwohner aller Gemeinden."
+        },
+        {
+          "absatz": "8",
+          "text": "Das Mittel des Steuerfusses mehrerer oder aller Gemeinden wird nach der Anzahl Einwohnerinnen und Einwohner gewichtet."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "d685a0c71d18edf01219d0251ae2de8a89c6bee8a2d098f7be830b4dab1cd4bd"
+    },
+    {
+      "id": "kanton/AR/613.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Gemeinde hat zur Erfüllung ihrer Aufgaben Anrecht auf eine Mindestausstattung an Steuerkraft. Diese wird in einem Minimalanteil am Mittel der Steuerkraft aller Gemeinden festgelegt."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "bd64cb47d59b986829b744e3b5bfd68fc2e3c171865ad566a9ebc1a2962df279"
+    },
+    {
+      "id": "kanton/AR/613.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gemeinden, deren Steuerkraft über dem Mittel aller Gemeinden liegt, leisten finanzielle Beiträge an den Finanzausgleich. Diese Beiträge werden in einem Anteil an der über dem Mittel aller Gemeinden liegenden Steuerkraft bestimmt."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "0daf3216f529eba33e5bba07b46ab73504c2834ae08a2dc78e1973297797d5f4"
+    },
+    {
+      "id": "kanton/AR/613.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gemeinden, deren Anteil Lernende pro Einwohnerin bzw. Einwohner über dem Mittel aller Gemeinden liegt, erhalten Beiträge aus dem Finanzausgleich. Der Beitragsanspruch richtet sich nach ihrer Steuerkraft."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "7d7b3aba36129e4f9cdea47b1afd7463fa616870953695708893ae89d806b871"
+    },
+    {
+      "id": "kanton/AR/613.1/art_6_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gemeinden, deren Nettoaufwendungen bei den Geldleistungen für die wirtschaftliche Sozialhilfe über dem Mittel aller Gemeinden liegen, erhalten Beiträge aus dem Finanzausgleich. Der Beitragsanspruch richtet sich nach ihrer Steuerkraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Gemeinden, deren Nettoaufwendungen bei den Geldleistungen für die wirtschaftliche Sozialhilfe unter dem Mittel aller Gemeinden liegen, leisten Beiträge an den Finanzausgleich."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "5b1c4af22bd1b36edfe7a41962511f4da086664400b71c920e1f4878d815064f"
+    },
+    {
+      "id": "kanton/AR/613.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundlage für alle Berechnungen und Bemessungen ist das Mittel der drei Vorjahre."
+        },
+        {
+          "absatz": "2",
+          "text": "Grundlage für die Festlegung der Mindestausstattung sowie des Disparitätenabbaus ist die Steuerkraft pro Einwohnerin bzw. Einwohner der Gemeinde."
+        },
+        {
+          "absatz": "3",
+          "text": "Grundlage für die Festlegung des Schulkostenausgleichs ist die Gesamtzahl der Lernenden, die Zahl der Einwohnerinnen und Einwohner und die Steuerkraft der Gemeinde."
+        },
+        {
+          "absatz": "4",
+          "text": "Grundlage für den Soziallastenausgleich bilden die Nettoaufwendungen aus den Geldleistungen für die wirtschaftliche Sozialhilfe, die Zahl der Einwohnerinnen und Einwohner und die Steuerkraft der Gemeinde."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "499c81a640c51e9d0b72b3fc18035ae0010da0b0c7150095bb18f37c8d4fa455"
+    },
+    {
+      "id": "kanton/AR/613.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unterschreitet die Steuerkraft pro Einwohnerin bzw. Einwohner einer Gemeinde die in Art. 9 festgelegte Mindestausstattung, hat sie Anspruch auf Beiträge aus dem Finanzausgleich."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betrag der Unterschreitung der Mindestausstattung gemäss Art. 9, multipliziert mit der Anzahl der Einwohnerinnen und Einwohner der Gemeinde und dem Steuerfuss für die Mindestausstattung, ergibt den Beitrag aus dem Finanzausgleich."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anspruch der Gemeinde wird um 7,5% gekürzt, um einen Anreiz für eigene Anstrengungen zur Steuerkraftverstärkung zu setzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Steuerfuss für die Mindestausstattung entspricht dem Mittel der Steuerfüsse für natürliche Personen aller anspruchsberechtigten Gemeinden, abgerundet auf den nächsten Zehntel."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "f8931e6f065fa6d518087378a41232c50ea49eea524785991eeb35109d59a070"
+    },
+    {
+      "id": "kanton/AR/613.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mindestausstattung wird für jede Gemeinde aufgrund ihrer Anzahl Einwohnerinnen und Einwohner in Prozent der mittleren Steuerkraft aller Gemeinden festgelegt.",
+          "mehrspaltig": {
+            "kopf": [
+              "Einwohnerinnen/Einwohner in der Gemeinde",
+              "Mindestausstattung"
+            ],
+            "zeilen": [
+              [
+                "bis 500",
+                "95.00%"
+              ],
+              [
+                "501 bis 625",
+                "94.00%"
+              ],
+              [
+                "626 bis 750",
+                "93.00%"
+              ],
+              [
+                "751 bis 875",
+                "92.00%"
+              ],
+              [
+                "876 bis 1000",
+                "91.00%"
+              ],
+              [
+                "1001 bis 1250",
+                "90.00%"
+              ],
+              [
+                "1251 bis 1500",
+                "88.75%"
+              ],
+              [
+                "1501 bis 1750",
+                "87.50%"
+              ],
+              [
+                "1751 bis 2000",
+                "86.25%"
+              ],
+              [
+                "über 2000",
+                "85.00%"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "ab42f97f1a93f863e1a1ca0fa81dcd441f8ad32dc8bb240384b8378c06bdc57f"
+    },
+    {
+      "id": "kanton/AR/613.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegt die Steuerkraft pro Einwohnerin bzw. Einwohner einer Gemeinde über dem Mittel aller Gemeinden, leistet sie von dem das Mittel übersteigenden Betrag gemäss Art. 11 einen Beitrag an den Finanzausgleich."
+        },
+        {
+          "absatz": "2",
+          "text": "Der das Mittel übersteigende Betrag, multipliziert mit dem Abschöpfungsgrad gemäss Art. 11, der Anzahl der Einwohnerinnen und Einwohner der Gemeinde und dem Steuerfuss für den Disparitätenabbau, ergibt den Beitrag an den Finanzausgleich."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Steuerfuss für den Disparitätenabbau entspricht dem Mittel der Steuerfüsse für natürliche Personen aller beitragenden Gemeinden, abgerundet auf den nächsten Zehntel."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "6f6430209ae59083ea987de90e819e048685ae8efa5040238ac2f16f70ef0195"
+    },
+    {
+      "id": "kanton/AR/613.1/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuerkraftabschöpfung wird für jede Gemeinde in Prozent ihres Anteils über der mittleren Steuerkraft aller Gemeinden festgelegt.",
+          "mehrspaltig": {
+            "kopf": [
+              "Steuerkraftanteil am Mittelwert",
+              "Abschöpfungsgrad (Progression)"
+            ],
+            "zeilen": [
+              [
+                "100.01 bis 105.00%",
+                "15.00%"
+              ],
+              [
+                "105.01 bis 110.00%",
+                "16.00%"
+              ],
+              [
+                "110.01 bis 115.00%",
+                "17.00%"
+              ],
+              [
+                "115.01 bis 120.00%",
+                "18.00%"
+              ],
+              [
+                "120.01 bis 125.00%",
+                "19.00%"
+              ],
+              [
+                "125.01 bis 130.00%",
+                "20.00%"
+              ],
+              [
+                "130.01 bis 135.00%",
+                "21.00%"
+              ],
+              [
+                "135.01 bis 140.00%",
+                "22.00%"
+              ],
+              [
+                "140.01 bis 150.00%",
+                "23.00%"
+              ],
+              [
+                "über 150.00%",
+                "25.00%"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "e50bc4035dd325778edcdffd97592ba521f2850e522b24f7958b9bbf6908c422"
+    },
+    {
+      "id": "kanton/AR/613.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gemeinden, deren Anzahl Lernende über dem Mittel aller Gemeinden liegt, haben Anspruch auf einen Schulkostenausgleich gemäss Art. 13."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "f8bb868f06cd882756d0664e588bc57cb86478b24b57e6ec01c266be38b223ae"
+    },
+    {
+      "id": "kanton/AR/613.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Schulkostenausgleich wird für jede Gemeinde aufgrund der Anzahl Lernender pro Einwohnerin bzw. Einwohner über dem Mittel aller Gemeinden sowie aufgrund der Steuerkraft der Gemeinde, gemessen am Mittel aller Gemeinden, festgelegt.",
+          "mehrspaltig": {
+            "kopf": [
+              "Anteil Lernender pro Einwohnerin / Einwohner, gemessen am Mittel",
+              "Ausgleichsgrundbetrag pro Lernende / Lernenden über dem Mittel",
+              "Ausgleichsanspruch in % des Grundbetrags",
+              "Steuerkraft gemessen am Mittel aller Gemeinden"
+            ],
+            "zeilen": [
+              [
+                "100.01 bis 102.50%",
+                "3 000 Fr.",
+                "",
+                ""
+              ],
+              [
+                "102.51 bis 105.00%",
+                "3 500 Fr.",
+                "",
+                ""
+              ],
+              [
+                "105.01 bis 107.50%",
+                "4 000 Fr.",
+                "",
+                ""
+              ],
+              [
+                "107.51 bis 110.00%",
+                "4 500 Fr.",
+                "",
+                ""
+              ],
+              [
+                "110.01 bis 112.50%",
+                "5 000 Fr.",
+                "",
+                ""
+              ],
+              [
+                "112.51 bis 115.00%",
+                "5 500 Fr.",
+                "",
+                ""
+              ],
+              [
+                "115.01 bis 117.50%",
+                "6 000 Fr.",
+                "",
+                ""
+              ],
+              [
+                "117.51 bis 120.00%",
+                "6 500 Fr.",
+                "",
+                ""
+              ],
+              [
+                "120.01 bis 122.50%",
+                "7 000 Fr.",
+                "",
+                ""
+              ],
+              [
+                "über 122.50%",
+                "7 500 Fr. Steuerkraft gemessen am Mittel aller Gemeinden: bis 85.00%",
+                "100%",
+                ""
+              ],
+              [
+                "",
+                "",
+                "70%",
+                "85.01 bis 100.00%"
+              ],
+              [
+                "",
+                "",
+                "40%",
+                "100.01 bis 115.00%"
+              ],
+              [
+                "",
+                "",
+                "10%",
+                "über 115.00%"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "730ef6a0253839774c7d5443d09cd7572ebd3332bb8c7f64488ffbec3a2ba3e1"
+    },
+    {
+      "id": "kanton/AR/613.1/art_13_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Überschreiten die Nettoaufwendungen aus den Geldleistungen für die wirtschaftliche Sozialhilfe pro Einwohnerin und Einwohner einer Gemeinde das Mittel aller Gemeinden, hat die Gemeinde Anspruch auf Leistungen aus dem Finanzausgleich gemäss Art. 13b. Das Mittel aller Gemeinden entspricht dem Faktor 1.00."
+        },
+        {
+          "absatz": "2",
+          "text": "Unterschreiten die Nettoaufwendungen aus den Geldleistungen für die wirtschaftliche Sozialhilfe einer Gemeinde das Mittel aller Gemeinden, leistet die Gemeinde einen Beitrag an den Finanzausgleich gemäss Art. 13b."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "de4f7da7a3e5fcf14dd0289d70a250182e9e8b70dda95a4af2d39c264402082a"
+    },
+    {
+      "id": "kanton/AR/613.1/art_13_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "13_b",
+      "artikelLabel": "Art. 13b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anspruch aus dem Soziallastenausgleich wird für jede Gemeinde aufgrund ihrer Nettoaufwendungen aus den Geldleistungen für die wirtschaftliche Sozialhilfe über dem Mittel aller Gemeinden (grösser Faktor 1.00) sowie aufgrund der Steuerkraft, gemessen am Mittel aller Gemeinden, festgelegt."
+        },
+        {
+          "absatz": "1a",
+          "text": "Diejenigen Gemeinden, deren Nettoaufwendungen für die wirtschaftliche Sozialhilfe unter dem Mittel aller Gemeinden liegen (kleiner Faktor 1.00), leisten einen Beitrag an den Finanzausgleich. Massgebend für die Leistungspflicht einer Gemeinde ist die Summe der Ansprüche gemäss Abs. 1 im Verhältnis ihrer Anzahl Einwohnerinnen und Einwohner. Die Leistungspflicht einer Gemeinde endet in jedem Fall beim Faktor 1.00."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "8b6a1da2b449bec3ac9a3d030dbaca43abff8dc45fd9c42b1efcf4b3b19ec211"
+    },
+    {
+      "id": "kanton/AR/613.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die zum Vollzug notwendigen Bestimmungen und beaufsichtigt den Vollzug dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Er orientiert den Kantonsrat jährlich über die Wirksamkeit des Finanzausgleichs sowie den Stand der Aufgabenentflechtung zwischen Kanton und Gemeinden. Er zeigt gleichzeitig Lösungsmöglichkeiten für Verbesserungen auf."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "0c43636d0538efa0d8f07ec758b94aa294d8ece90cfce5ddb20db71b1646df54"
+    },
+    {
+      "id": "kanton/AR/613.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Finanzen vollzieht dieses Gesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Es erstattet dem Regierungsrat regelmässig Bericht über die Wirksamkeit des Finanzausgleichs und des Vollzuges."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "ca7a99547b30c752c6576cae8c9dbf0207d35ad689f91313a0abe74c30085642"
+    },
+    {
+      "id": "kanton/AR/613.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat setzt zur Überprüfung der Wirksamkeit des Finanzausgleichs und des Vollzuges eine beratende Kommission ein."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "41712db6e2e11330dffa66ff58e20db8378d505018a11983d0c46081223ce187"
+    },
+    {
+      "id": "kanton/AR/613.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Auszahlung der Leistungen des Kantons an die anspruchsberechtigten Gemeinden sowie die Verrechnung der geschuldeten Beiträge der Gemeinden mit der Steuerablieferung des Kantons erfolgen in der Regel per 30. Juni des laufenden Jahres."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "89a8324f4c6f841a36465ee254aca78e090195c3b51363cb76661ef5041a632e"
+    },
+    {
+      "id": "kanton/AR/613.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungen des Kantons dürfen 30 % und jene einer Gemeinde 45 % des Ertrags einer Steuereinheit nicht überschreiten. Sobald diese Bemessungsgrenzen überschritten werden, sind die Leistungen an die anspruchsberechtigten Gemeinden entsprechend zu kürzen."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "44b08ffb06f469944aa5e3900878cd3dff5dbc4d3a450d5df5d41e184a8cfad1"
+    },
+    {
+      "id": "kanton/AR/613.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Daten für die ordentlichen Steuern, die Erbschafts- und Schenkungssteuern sowie die Grundstückgewinnsteuern werden durch die Kantonale Steuerverwaltung ermittelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Daten für die Handänderungssteuern sowie die Anzahl Einwohnerinnen und Einwohner werden bei den Gemeinden erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anzahl Einwohnerinnen und Einwohner entspricht der Wohnbevölkerung am 31. Dezember und umfasst alle Personen mit zivilrechtlichem Wohnsitz in der Gemeinde ohne Aufenthalterinnen und Aufenthalter mit zivilrechtlichem Wohnsitz in einer anderen Gemeinde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anzahl der Lernenden richtet sich nach den Erhebungen des Kantons für die Beiträge an die öffentlichen Volksschulen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Nettoaufwendungen aus den Geldleistungen für die wirtschaftliche Sozialhilfe basieren auf den Jahresrechnungen der Gemeinden. Es werden nur die ausbezahlten und die zurückerstatteten Geldleistungen angerechnet. Nicht angerechnet werden insbesondere die Alimentenbevorschussung, die Aufwendungen für das Asyl- und Flüchtlingswesen und die Verwaltungskosten. Der Kanton erstellt in Zusammenarbeit mit den Gemeinden Richtlinien für den Kontenplan im Bereich Sozialhilfe."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "4180d0388ec0e696369be4086a3f54180e0df96e67f24450dce5ff363aba5944"
+    },
+    {
+      "id": "kanton/AR/613.1/art_19_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "An die Mehrbelastung der Gemeinden, die sich per Saldo aus der Revision von Gesetzen und Verordnungen infolge der NFA/KFA-Umsetzung sowie des Steuergesetzes, des Nationalbankgoldgesetzes, des Gesundheitsgesetzes,des Einführungsgesetzes zum Bundesgesetz über die Berufsbildung und des Soziallastenausgleichs ergibt, leistet der Kanton während vier Jahren nach Inkrafttreten der NFA fixe Beiträge in der Art eines Härteausgleichs."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Härteausgleich erhalten diese Gemeinden folgende Zahlungen:",
+          "mehrspaltig": {
+            "kopf": [
+              "Gemeinde",
+              "2008",
+              "2009",
+              "2010",
+              "2011"
+            ],
+            "zeilen": [
+              [
+                "Bühler",
+                "88 000",
+                "53 000",
+                "19 000",
+                "0"
+              ],
+              [
+                "Heiden",
+                "434 000",
+                "299 000",
+                "165 000",
+                "30 000"
+              ],
+              [
+                "Herisau",
+                "567 000",
+                "109 000",
+                "0",
+                "0"
+              ],
+              [
+                "Reute",
+                "7 000",
+                "3 000",
+                "0",
+                "0"
+              ],
+              [
+                "Schönengrund",
+                "52 000",
+                "47 000",
+                "43 000",
+                "38 000"
+              ],
+              [
+                "Speicher",
+                "98 000",
+                "44 000",
+                "0",
+                "0"
+              ],
+              [
+                "Teufen",
+                "109 000",
+                "0",
+                "0",
+                "0"
+              ],
+              [
+                "Trogen",
+                "170 000",
+                "127 000",
+                "84 000",
+                "40 000"
+              ],
+              [
+                "Urnäsch",
+                "80 000",
+                "46 000",
+                "13 000",
+                "0"
+              ],
+              [
+                "Waldstatt",
+                "279 000",
+                "197 000",
+                "115 000",
+                "33 000"
+              ],
+              [
+                "Walzenhausen",
+                "146 000",
+                "90 000",
+                "35 000",
+                "0"
+              ],
+              [
+                "Wolfhalden",
+                "62 000",
+                "31 000",
+                "0",
+                "0"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "8cee00e71bd2d55024783d3649d9d580b234dee4758eb478ef8c1024e5c254dc"
+    },
+    {
+      "id": "kanton/AR/613.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung zu Art. 29 der Kantonsverfassung vom 17. Juni 1985 (Finanzausgleichsverordnung) wird aufgehoben."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "57232c7e9218de2c8a96e959546ef761ee098e87c314508e794c3605c1381f53"
+    },
+    {
+      "id": "kanton/AR/613.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Finanzausgleichsgesetz (613.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2008-06-09",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/613.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4714cd4d992bbd650499af4ec33aee3c",
+      "sha": "2aa3bca6b40e7b43bfc9d4906496b359afb1f329c2d40de0bebd571a8aa2d4b4"
+    }
+  ]
+}

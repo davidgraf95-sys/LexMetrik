@@ -1,0 +1,1542 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/142.12/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erfüllt die ihm durch Verfassung und Gesetz zugewiesenen Aufgaben. Er leitet, plant und koordiniert das dazu erforderliche staatliche Handeln, sorgt für den Vollzug und trägt dafür die politische Gesamtverantwortung."
+        },
+        {
+          "absatz": "2",
+          "text": "Er sorgt für eine rechtmässige, leistungsfähige, koordinierte, effiziente und zweckmässig organisierte kantonale Verwaltung. Er übt die ständige und systematische Aufsicht über die kantonale Verwaltung aus."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "58c0ac9f7179074f8e6023b5a3b6ac659c807e70a2e94be2b5d02db8a587e299"
+    },
+    {
+      "id": "kanton/AR/142.12/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Verwaltung einschliesslich der unselbständigen kantonalen Anstalten und Betriebe unterstützt den Regierungsrat und erledigt die ihr übertragenen Geschäfte."
+        },
+        {
+          "absatz": "2",
+          "text": "Durch die kantonale Gesetzgebung können andere Organisationen des öffentlichen sowie natürliche und juristische Personen des privaten Rechts mit öffentlichen Aufgaben betraut werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "10034cc6dd86a4c768f461c15b689833e9cc657f8642f8d173d7bd752ede9813"
+    },
+    {
+      "id": "kanton/AR/142.12/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat und die kantonale Verwaltung handeln auf der Grundlage von Verfassung und Gesetz, insbesondere nach den Grundsätzen der Verhältnismässigkeit, Wirksamkeit, Wirtschaftlichkeit und Nachhaltigkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie arbeiten mit den Gemeinden, anderen Kantonen, dem Bund und dem benachbarten Ausland zusammen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat fördert die gemeinsame Erfüllung öffentlicher Aufgaben."
+        },
+        {
+          "absatz": "4",
+          "text": "Er informiert die Öffentlichkeit und den Kantonsrat über die Regierungs- und Verwaltungstätigkeit."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "f8e753b0621ed9bb1fd9fa9b8a7b46da7e6f679bee363ba5a887de0843568aa2"
+    },
+    {
+      "id": "kanton/AR/142.12/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat fasst seine Beschlüsse als Kollegialbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes Mitglied trägt die gefassten Beschlüsse mit und vertritt sie."
+        },
+        {
+          "absatz": "3",
+          "text": "Ausnahmsweise kann ein Mitglied gegen einen gefassten Beschluss die Verwahrung erklären, wenn es diesen aus schwerwiegenden Gründen nicht mittragen kann."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "32b9a656949ede13a67ed96717babe7957249b520d85c135232850d73b66f77a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat besorgt seine Aufgaben, indem er insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die für den Kanton bedeutsamen Entwicklungen laufend beobachtet, beurteilt und rechtzeitig zweckmässige Massnahmen anordnet;"
+            },
+            {
+              "marke": "b",
+              "text": "sich mit langfristigen und grundsätzlichen Fragen befasst und zukunftsgerichtete Lösungen für staatliches Handeln entwickelt;"
+            },
+            {
+              "marke": "c",
+              "text": "klare Zielsetzungen und Strategien für seine Regierungspolitik festlegt, diese auf die verfügbaren Mittel abstimmt sowie für eine wirkungsvolle und zeitgerechte Durchsetzung sorgt;"
+            },
+            {
+              "marke": "d",
+              "text": "die wesentlichen Tätigkeiten des Kantons plant und koordiniert;"
+            },
+            {
+              "marke": "e",
+              "text": "den Umfang und die Erfüllung der Staatsaufgaben periodisch überprüft;"
+            },
+            {
+              "marke": "f",
+              "text": "die Beziehungen zur Öffentlichkeit pflegt und sich über die in der öffentlichen Diskussion vorgebrachten Meinungen und Anliegen informiert;"
+            },
+            {
+              "marke": "g",
+              "text": "in der Rechtsetzung des Bundes mitwirkt;"
+            },
+            {
+              "marke": "h",
+              "text": "in der kantonalen Rechtsetzung nach Massgabe der Verfassung tätig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geschäfte des Regierungsrates als Kollegialbehörde gehen den Verpflichtungen der einzelnen Mitglieder in ihren Departementen vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat ist verpflichtet, die Regierungstätigkeit jederzeit sicherzustellen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "258bb1652f301a9ae2c1da3e7a59665a21c11796169c6ec148d34bbc8ecbf8f5"
+    },
+    {
+      "id": "kanton/AR/142.12/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erarbeitet jeweils für eine Amtsdauer ein Regierungsprogramm. Es enthält die Ziele, Mittel und Strategien der Regierungspolitik."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt das Regierungsprogramm dem Kantonsrat zur Beratung vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Er berichtet dem Kantonsrat jährlich über den Stand der Umsetzung und Zielerreichung und erstellt am Ende der Amtsdauer einen Schlussbericht."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8f4adce44841e67a238ca65aa0dfac7c4a2be7eb18aeb39e71d67fb239b3462b"
+    },
+    {
+      "id": "kanton/AR/142.12/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Regierungsrates orientieren die Kantonskanzlei über sämtliche Interessenbindungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantonskanzlei führt ein öffentliches Register. Änderungen werden zu Beginn jedes Amtsjahres erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Register gibt insbesondere Auskunft über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beteiligungen an Unternehmen des privaten Rechts, die mindestens 30 % des Kapitals oder des Stimmrechts ausmachen;"
+            },
+            {
+              "marke": "b",
+              "text": "Tätigkeiten für gemeinnützige Stiftungen und Organisationen;"
+            },
+            {
+              "marke": "c",
+              "text": "Mitgliedschaften in kommunalen, kantonalen, nationalen und internationalen Interessengruppen;"
+            },
+            {
+              "marke": "d",
+              "text": "Vertretungen des Kantons in Organisationen des öffentlichen und privaten Rechts."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Mitglieder des Regierungsrates legen die konkrete Interessenbindung offen, wenn sie sich zu einem Geschäft äussern, das ihre Interessen oder jene Dritter, zu denen sie eine wesentliche persönliche oder rechtliche Beziehung haben, unmittelbar berührt. Vorbehalten bleibt der Ausstand."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "18ad09312ceba3961fb3eef55e07b9126498dddc111e1e64ff0ec34df7912594"
+    },
+    {
+      "id": "kanton/AR/142.12/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Regierungsrates stellen ihre Arbeitskraft und ihre Arbeitszeit vollumfänglich dem Regierungsamt zur Verfügung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen keine Aufgaben übernehmen, die mit den Aufgaben oder der Stellung des Amts nicht vereinbar sind. Mit dem Regierungsamt unvereinbar sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "andere Erwerbstätigkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "Verwaltungsrats-, Geschäftsführungs- und Kontrollstellenmandate in Organisationen mit wirtschaftlicher Zwecksetzung;"
+            },
+            {
+              "marke": "c",
+              "text": "andere Tätigkeiten, die zu Interessenkollisionen mit dem Amt führen können;"
+            },
+            {
+              "marke": "d",
+              "text": "ein Mandat als National- oder Ständerat, sofern nicht auf Ende des Amtsjahres der Rücktritt aus dem Regierungsrat erfolgt."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Mit dem Regierungsamt vereinbar sind Vertretungen des Kantons in Organisationen des öffentlichen oder privaten Rechts, wenn das Gesetz oder eine Vereinbarung solche Vertretungen vorsieht oder der Regierungsrat eine Vertretung aus wichtigen öffentlichen Interessen beschliesst."
+        },
+        {
+          "absatz": "2ter",
+          "text": "Nicht mit dem Regierungsamt vereinbare Aufgaben sind ohne Verzug, spätestens jedoch zwölf Monate nach Amtsantritt abzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist unklar, ob eine Tätigkeit mit dem Vollamt vereinbar ist, entscheidet der Regierungsrat unter Ausschluss des betreffenden Mitglieds. Der Entscheid ist endgültig."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "cdc7df8a60fe62563d864a2cb75bdcbc19034d5547097186ecb52afa8df7d22e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Beginn jeder Amtsdauer beschliesst der Regierungsrat über die Zuteilung der Departemente und Stellvertretungen der Departementsvorsteherinnen und Departementsvorsteher. Zudem legt er die ständigen Vertretungen des Regierungsrates fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Zuteilung der Departemente, Stellvertretungen und übrigen Aufgaben ist eine möglichst gleichmässige Belastung anzustreben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mitglieder des Regierungsrates sind verpflichtet, das ihnen übertragene Departement, die Stellvertretung und die ständigen Vertretungen zu übernehmen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "b699e87d962a82ec4f3dfa484c4ccde56d8e68ad9286073c0d7a9b0ac745f80d"
+    },
+    {
+      "id": "kanton/AR/142.12/art_9_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "9_a",
+      "artikelLabel": "Art. 9a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Beginn jedes Amtsjahres, das der Wahl des Landammanns folgt, wählt der Regierungsrat die Landammann-Stellvertreterin oder den Landammann-Stellvertreter."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "e7eb9610fcb66dd85851deb0bffdba14c5c50add0d874300ae5155a2299e582f"
+    },
+    {
+      "id": "kanton/AR/142.12/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat während der Amtsdauer eine Ersatzwahl stattgefunden oder beantragt ein Mitglied eine Neuzuteilung, entscheidet der Regierungsrat erneut über die Zuteilung der Departemente und Stellvertretungen. Gleiches gilt für die ständigen Vertretungen des Regierungsrates."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "c39e194944db639aa9056f60661b235783c9b4fe0460c19a65d8bb1de043180a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat versammelt sich so oft es die Geschäfte erfordern."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt die ordentlichen Sitzungstermine fest. Ausserordentliche Zusammenkünfte finden auf Anordnung des Landammanns oder auf Verlangen eines Mitglieds statt; der Landammann legt die Art der Zusammenkunft, Ort und Termin fest."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "d0e54cea1fd87c44d0e14ce237dfeefda40fb2772ad468e01ed7b309856fa27a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Landammann leitet die Verhandlungen des Regierungsrates."
+        },
+        {
+          "absatz": "2",
+          "text": "Neben den Mitgliedern des Regierungsrates nimmt die Ratschreiberin oder der Ratschreiber mit beratender Stimme an den Verhandlungen teil und führt das Protokoll. Sie oder er hat das Recht, Anträge zu stellen."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Der Regierungsrat kann die Leiterin oder den Leiter Information und Kommunikation mit beratender Stimme zu den Verhandlungen beiziehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann verwaltungsinterne oder -externe Fachpersonen beiziehen. Im Beisein dieser Personen fällt er keine Beschlüsse."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "c9c91c386c56f5a799d8d2d62280a4915307bd909c4f8c93667797ab15ef5b37"
+    },
+    {
+      "id": "kanton/AR/142.12/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Um gültig verhandeln zu können, müssen mindestens drei Mitglieder des Regierungsrates anwesend sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat fasst Beschlüsse von wesentlicher Bedeutung oder von politischer Tragweite nach gemeinsamer und gleichzeitiger Beratung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die übrigen Beschlüsse kann er in vereinfachten Verfahren fassen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "58a067be2039c7b5becde30a2c0614ca88608b4692637956e98da8f1cb232499"
+    },
+    {
+      "id": "kanton/AR/142.12/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es wird offen abgestimmt und gewählt. Alle Mitglieder des Regierungsrates sind zur Stimmabgabe verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Beschluss bedarf zu seiner Gültigkeit der Stimmenmehrheit der anwesenden Mitglieder. Bei Stimmengleichheit gibt die oder der Vorsitzende den Stichentscheid."
+        },
+        {
+          "absatz": "3",
+          "text": "Bleibt ein Antrag unbestritten, gilt er ohne Abstimmung als angenommen."
+        },
+        {
+          "absatz": "4",
+          "text": "In dringlichen Fällen können Beschlüsse auf dem Zirkulationsweg gefasst werden. Sie sind gültig, wenn alle erreichbaren Mitglieder des Regierungsrates, mindestens aber drei, zugestimmt haben."
+        },
+        {
+          "absatz": "5",
+          "text": "Für ein Rückkommen auf einen Beschluss ist die Zustimmung von mindestens zwei Mitgliedern erforderlich. Vorbehalten bleibt das Gesetz über die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "a7f5c754ccb55fcf086d7ec0424c849fbf79c4cac5f833e83ac87b517920e2cf"
+    },
+    {
+      "id": "kanton/AR/142.12/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über die Verhandlungen wird ein Protokoll geführt. Es enthält die Beschlüsse samt Erwägungen und die Diskussionen von grundsätzlicher Bedeutung, die zu keinem Beschluss geführt haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Stimmenverhältnis bei Abstimmungen und Wahlen darf nicht angegeben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8ddf62656a44607b2580b061911d7f5b912b80bb6c61877cae5402238eb9b173"
+    },
+    {
+      "id": "kanton/AR/142.12/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vom Regierungsrat ausgehende Schreiben von besonderer Tragweite werden vom Landammann und von der Ratschreiberin oder vom Ratschreiber im Namen des Regierungsrates unterzeichnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Vertragsabschlüsse kann der Regierungsrat besondere Vollmachten erteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die übrigen Schreiben sowie die Protokollauszüge werden von der Ratschreiberin oder vom Ratschreiber im Auftrag des Regierungsrates unterzeichnet. Zulässig ist die Wiedergabe der Unterschrift mittels Stempel oder auf elektronische Art."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "7cf47531be38346f86084b96076bf271da0f17814cf40126f2e03d79b3007657"
+    },
+    {
+      "id": "kanton/AR/142.12/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Landammann sorgt in Zusammenarbeit mit der Kantonskanzlei dafür, dass die Aufgaben des Regierungsrates zeitgerecht, zweckmässig und koordiniert aufgenommen und abgeschlossen werden, indem er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geschäfte des Regierungsrates leitet und überwacht;"
+            },
+            {
+              "marke": "b",
+              "text": "für eine optimale Zusammenarbeit innerhalb der kantonalen Verwaltung sorgt;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verhandlungen des Regierungsrates vorbereitet;"
+            },
+            {
+              "marke": "d",
+              "text": "darüber wacht, dass die Aufsicht des Regierungsrates über die Kantonsverwaltung zweckmässig organisiert und ausgeübt wird;"
+            },
+            {
+              "marke": "e",
+              "text": "in strittigen Fragen schlichtet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er vertritt den Regierungsrat gegen aussen, sofern nichts anderes beschlossen wird."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "c9cac9edbe67e3100e2688cd0f24f8ff7b5d87bc580e5ffb4744bdc42ad7677c"
+    },
+    {
+      "id": "kanton/AR/142.12/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In dringlichen Fällen ist der Landammann berechtigt, ausnahmsweise Entscheide des Regierungsrates zu fällen. Sie sind dem Regierungsrat an der nächsten Sitzung zur Kenntnisnahme vorzulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Landammann kann Abklärungen anordnen und dem Regierungsrat Massnahmen vorschlagen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8ba847d4b8dd5a53b76b65f2929b49ecb9ac4d830cf7d12a74c5fd03b08de112"
+    },
+    {
+      "id": "kanton/AR/142.12/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist der Landammann an der Amtsführung verhindert, übernimmt die Landammann-Stellvertreterin oder der Landammann-Stellvertreter die präsidialen Befugnisse."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist auch sie oder er verhindert, übernimmt das an Jahren älteste Mitglied die Stellvertretung."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "f983536bf17a15ace8dc7474b85d659299cbae5250bfdf16428457692424e154"
+    },
+    {
+      "id": "kanton/AR/142.12/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann zur Planung, Koordination, Vorbereitung und Durchführung bestimmter Geschäfte aus seiner Mitte Delegationen bestimmen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "07024f2b992b9e370e256b73ca4d31e2c77e755e033c9c0dfca71ecb69a4f43b"
+    },
+    {
+      "id": "kanton/AR/142.12/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann den Delegationen Entscheidungsbefugnisse übertragen. Jedes Delegationsmitglied kann indessen verlangen, dass das Geschäft dem Regierungsrat zum Entscheid vorgelegt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Mitglieder des Regierungsrates werden über die Beratungen und Entscheidungen der Delegation informiert."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "79845e13fa21a54435d171be0ab0263e18408327dcbb32fa6d8cddc884e53025"
+    },
+    {
+      "id": "kanton/AR/142.12/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann für bestimmte Aufgaben Delegierte einsetzen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "2ce446b69e921e24d211c2c507cfac36bae218f181b4074c96261624efbd98c6"
+    },
+    {
+      "id": "kanton/AR/142.12/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn nicht übergeordnetes Recht entgegensteht, kann der Regierungsrat durch Beschluss Befugnisse ohne besondere Tragweite einem Departement oder der Kantonskanzlei zur selbständigen Erledigung übertragen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "26a2c6da9644e7a836fd0f53fdbcf5edfd5e3827e0427388e27a5875c679e65e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommissionen haben beratende Funktion. Die Gesetzgebung kann den ständigen beratenden Kommissionen weitere Aufgaben übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie konstituieren sich selbst, soweit nichts anderes bestimmt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie führen über ihre Beratungen Protokoll. Der Regierungsrat kann jederzeit in die Protokolle Einsicht nehmen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "a080d5b5cd3a8b54a55248c9775bc0557d9794a346d3d5806f40424df5b08441"
+    },
+    {
+      "id": "kanton/AR/142.12/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ständige beratende Kommissionen werden zu Beginn einer Amtsdauer für die jeweilige Amtsdauer gewählt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Rücktritt kann bis Ende Januar eines Amtsjahres erklärt werden. Zurücktretende Mitglieder bleiben bis zum Ende des entsprechenden Amtsjahres im Amt."
+        },
+        {
+          "absatz": "3",
+          "text": "Mitglieder, welche von Amtes wegen einer Kommission angehören, scheiden mit dem Ende der Amtszeit aus der Kommission aus."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "ae0f29ef8813f6be2a8d16819b8d9835bd0783accd2144beefce1ba1ea9c403d"
+    },
+    {
+      "id": "kanton/AR/142.12/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besondere Kommissionen werden für die Dauer des Auftrages bestellt. Der Regierungsrat bestimmt die Mitgliederzahl, den Vorsitz sowie das Aktuariat."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "fe902ddbce5646a5af03bf05f01455bab18e24e713dbc2461811568c7505ef4e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_26_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "26_a",
+      "artikelLabel": "Art. 26a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Entschädigung der Kommissionsmitglieder."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "45409bd402b9f1d55d75a8299346027983a90935a3d57a45e8b771363eecf40a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Verwaltung gliedert sich in Departemente und die Kantonskanzlei. Sie können durch Organisationseinheiten weiter unterteilt werden, wobei im Regelfall nicht mehr als zwei Hierarchiestufen vorzusehen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bezeichnung der Organisationseinheit ist unbeachtlich für ihre Stellung in der Verwaltung. In Gesetzen verwendete Organisationsbezeichnungen sind nicht bindend und können durch Verordnung geändert werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Jedes Departement verfügt über ein Departementssekretariat."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "23b15282436bbc0b3dcf9b870b6956ca9ec6f34f7f0434cda249bfa29e0d16ee"
+    },
+    {
+      "id": "kanton/AR/142.12/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt durch Verordnung die Organisationsstruktur und weist den Organisationseinheiten die Aufgaben zu."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "9f033df73f816eebc5929289ca8434095a253154ab6d1c81704b449470b64837"
+    },
+    {
+      "id": "kanton/AR/142.12/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Departemente sowie die Kantonskanzlei haben insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Regierungsrat bei der Erfüllung seiner Regierungsaufgaben zu unterstützen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Geschäfte des Regierungsrates vorzubereiten;"
+            },
+            {
+              "marke": "c",
+              "text": "die ihr durch die Rechtsordnung oder Beschlüsse übertragenen Geschäfte selbständig zu erledigen;"
+            },
+            {
+              "marke": "d",
+              "text": "bei der Vorbereitung der Rechtsetzung mitzuwirken;"
+            },
+            {
+              "marke": "e",
+              "text": "im Rahmen des gesetzlichen Auftrags weitere Dienstleistungen zu erbringen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie planen ihre Tätigkeiten im Rahmen der Gesamtplanungen des Regierungsrates und orientieren ihn regelmässig."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "0546b7278e093c8db9b90508a6f7b266e587cdadeced64c797f20e451e47e58e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann Organisationseinheiten mit Leistungsaufträgen führen und den dafür erforderlichen Grad der Eigenständigkeit bestimmen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8fc0073f55bb4f87d6c86c33b0891b10ac3c52d83e41a0f82fe445f203174bad"
+    },
+    {
+      "id": "kanton/AR/142.12/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat sowie die Departementsvorsteherinnen und Departementsvorsteher führen die kantonale Verwaltung."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedes Mitglied des Regierungsrates führt das ihm übertragene Departement und trägt dafür die politische Verantwortung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantonskanzlei ist organisatorisch dem Landammann unterstellt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "f0c902a44af3a6508f5443dce6995e5b7c8aa3cc4c2529864861071fb13355b3"
+    },
+    {
+      "id": "kanton/AR/142.12/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat sowie die Departementsvorsteherinnen und Departementsvorsteher erfüllen ihre Führungsaufgaben, indem sie namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Leitlinien, Ziele, Prioritäten, Aufgaben sowie die Planung und Budgetierung festlegen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erreichung der Ziele, die Erfüllung der Aufgaben, der Planung und der Budgetierung durch geeignete, zeitgemässe interne Kontrollsysteme und Controllinginstrumente überwachen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Tätigkeiten der einzelnen Organisationseinheiten koordinieren;"
+            },
+            {
+              "marke": "d",
+              "text": "zeitgemässe Führungs- und Organisationsinstrumente verwenden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Departementsvorsteherinnen und Departementsvorsteher haben in ihren Departementen grundsätzlich uneingeschränkte Weisungs- und Kontrollrechte."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "994dc711613f1d7709400018de0c49442b1098375ddfaffd7b0deda18c37bc71"
+    },
+    {
+      "id": "kanton/AR/142.12/art_33",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jedes Mitglied orientiert den Regierungsrat regelmässig über alle wichtigen Vorgänge in seinem Zuständigkeitsbereich."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "f51ba01d9a5831ad91c3c0bb980d765ea0c4789d3b2bf53cd79ae12de5ee0002"
+    },
+    {
+      "id": "kanton/AR/142.12/art_34",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist befugt, zur Weiterentwicklung der Methoden der Verwaltungsführung versuchsweise neue Formen einzuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er orientiert den Kantonsrat über Verlauf und Auswirkungen der Versuche und die daraus gewonnenen Erkenntnisse."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "544bddedd166bd1bc589c833bc33c6e0d84e3bf8c055fac8e45dc81a0d2c90ad"
+    },
+    {
+      "id": "kanton/AR/142.12/art_35",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die einzelnen Stellen der kantonalen Verwaltung arbeiten zusammen, koordinieren ihre Arbeit und unterstützen sowie informieren sich gegenseitig."
+        },
+        {
+          "absatz": "2",
+          "text": "Berührt ein Geschäft andere Departemente oder die Kantonskanzlei, wird in der Regel ein Mitberichtsverfahren durchgeführt."
+        },
+        {
+          "absatz": "3",
+          "text": "Überschreitet ein Geschäft den Zuständigkeitsbereich eines Departements oder der Kantonskanzlei, bezeichnet die Kantonskanzlei eine federführende Stelle; falls nötig legt der Regierungsrat das weitere Vorgehen fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat kann für die Behandlung von Geschäften besondere Koordinationsstellen, Konferenzen, Arbeitsgruppen oder Projektorganisationen einsetzen. Darin können auch Mitglieder berufen werden, die der kantonalen Verwaltung nicht angehören."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "9947a2a033a302e32c957e8f1309345c052fd6c48df8823f432663bcd891a23d"
+    },
+    {
+      "id": "kanton/AR/142.12/art_36",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über Kompetenzkonflikte zwischen den Departementen oder zwischen den Departementen und der Kantonskanzlei entscheidet der Regierungsrat endgültig."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8d5d9a4515997a0476f8087ad379e1f48379e762f7739728ff01d98f39253b96"
+    },
+    {
+      "id": "kanton/AR/142.12/art_37",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonskanzlei ist die allgemeine Stabsstelle des Regierungsrates und des Kantonsrates. Sie erfüllt namentlich Aufgaben auf dem Gebiete der politischen Planung, der politischen Rechte, der politischen, rechtlichen und administrativen Unterstützung von Regierungsrat und Kantonsrat, der Publikation von Amtsdruckschriften, der Information und der Archivierung. Der Regierungsrat kann der Kantonskanzlei weitere Aufgaben zuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantonskanzlei wird von der Ratschreiberin oder vom Ratschreiber geführt. Sie oder er hat insbesondere",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Landammann und den Regierungsrat bei der Erfüllung seiner Aufgaben zu beraten und unterstützen,"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Vorbereitung und Durchführung der Verhandlungen des Regierungsrates und Kantonsrates mitzuwirken,"
+            },
+            {
+              "marke": "c",
+              "text": "die Verbindung und Koordination zwischen Regierungsrat, Kantonsrat und seinen Organen sowie der Konferenz der Departementssekretärinnen und Departementssekretäre wahrzunehmen,"
+            },
+            {
+              "marke": "d",
+              "text": "für die departementsübergreifende Koordination sowie für die interne und externe Information zu sorgen,"
+            },
+            {
+              "marke": "e",
+              "text": "für Regierungsrat und Kantonsrat die notwendige Infrastruktur zur Verfügung zu stellen und"
+            },
+            {
+              "marke": "f",
+              "text": "Wahlen und Abstimmungen durchzuführen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat bezeichnet eine Stellvertreterin oder einen Stellvertreter. Sie oder er unterstützt und entlastet die Ratschreiberin oder den Ratschreiber in allen Funktionen und vertritt sie oder ihn im Verhinderungsfall."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "b3569a6530b7f86a64b0c11f325da05446d341faa9c652bd36eecc529fc29d32"
+    },
+    {
+      "id": "kanton/AR/142.12/art_39",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Verwaltung umfasst die folgenden Departemente:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Finanzen"
+            },
+            {
+              "marke": "b",
+              "text": "Bildung und Kultur"
+            },
+            {
+              "marke": "c",
+              "text": "Gesundheit und Soziales"
+            },
+            {
+              "marke": "d",
+              "text": "Bau und Volkswirtschaft"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            },
+            {
+              "marke": "f",
+              "text": "Inneres und Sicherheit"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "538b7914307b94eb45652f0f6bc3fe81636f06de5ba69e9a129c7ebc3f33f22c"
+    },
+    {
+      "id": "kanton/AR/142.12/art_40",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departementssekretariat ist die allgemeine Stabsstelle des Departements."
+        },
+        {
+          "absatz": "2",
+          "text": "Es wird von einer Departementssekretärin oder einem Departementssekretär geführt."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "4df549d2952137387633d33229ccb6744e8fcd1d9bf6612864719191e12eb73f"
+    },
+    {
+      "id": "kanton/AR/142.12/art_41",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Departementssekretariate haben insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die allgemeinen Geschäfte des Departements zu führen und die ihnen zugewiesenen Aufgaben selbständig und in eigenem Namen zu besorgen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Departementsvorsteherin oder den Departementsvorsteher bei der Planung, Organisation und Koordination der Tätigkeit des Departements sowie bei der Vorbereitung der Regierungsratssitzungen zu unterstützen und sie oder ihn bei Entscheidungen zu beraten;"
+            },
+            {
+              "marke": "c",
+              "text": "nach den Anordnungen der Departementsvorsteherin oder des Departementsvorstehers Aufsichtsfunktionen wahrzunehmen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Den Departementssekretariaten können auch andere als Stabsaufgaben übertragen werden, und sie können zu diesem Zweck unterteilt werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "ca9d180c96bdfb0817479b0ef3f254c3e14f53327564adaaa727ef2667ccced4"
+    },
+    {
+      "id": "kanton/AR/142.12/art_42",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organisationseinheiten besorgen die Aufgaben, welche ihnen durch die Gesetzgebung oder Beschluss des Regierungsrates zugewiesen werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "986d133a538d0d2a4d6bd5afecc9a5d12590f344705831dd1dda482ae4bd7b3a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_43",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organisationseinheiten werden durch Leiterinnen oder Leiter geführt."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "21d0a90eeeab593b1e84e6f84fc854a54c3e9705eff85a7a632d4ec00527387e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_44",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leiterinnen und Leiter der Departementssekretariate und Organisationseinheiten sind gegenüber ihren Vorgesetzen für die Führung ihres Bereichs sowie die Erfüllung der zugewiesenen Aufgaben verantwortlich."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "8b1faf7d4ec325453272182c2f2723a7e390a2d552d05364e6404dd5ff9c666e"
+    },
+    {
+      "id": "kanton/AR/142.12/art_45",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Unterschriftsberechtigungen für die Departemente, die Kantonskanzlei und die Organisationseinheiten. Er kann die Regelung der Unterschriftsberechtigung für die Organisationseinheiten an die Departementsvorsteherinnen und Departementsvorsteher bzw. an die Ratschreiberin oder den Ratschreiber delegieren."
+        },
+        {
+          "absatz": "2–3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kantonskanzlei führt ein öffentliches Register über die Unterschriftsberechtigung."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "35f03d60de3f87cc00dd0fc8906b83ad29c4a73c261e37e050643df340753a86"
+    },
+    {
+      "id": "kanton/AR/142.12/art_46",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mitglieder der DSK sind die Ratschreiberin oder der Ratschreiber sowie die Departementssekretärinnen und Departementssekretäre."
+        },
+        {
+          "absatz": "2",
+          "text": "Die DSK steht unter der Leitung der Ratschreiberin oder des Ratschreibers."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mithilfe bei der Planung und Koordination der Regierungs-, Verwaltungs- und Kantonsratstätigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "Informationsforum für Projekte, welche die kantonale Verwaltung betreffen;"
+            },
+            {
+              "marke": "c",
+              "text": "gegenseitiger Informationsaustausch;"
+            },
+            {
+              "marke": "d",
+              "text": "allgemeine Fragen der Koordination;"
+            },
+            {
+              "marke": "e",
+              "text": "allenfalls Festlegung einer einheitlichen Position in Sachfragen."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "b923e9073dfa99e1b004f48c682042b854f496dcf22d40dbe84d3baecf0cf96a"
+    },
+    {
+      "id": "kanton/AR/142.12/art_47",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Regierungsrates und der Kommissionen sowie die kantonalen Angestellten und Dritte, die zur Aufgabenerfüllung beigezogen oder denen eine Aufgabe übertragen worden ist, sind in amtlichen Angelegenheiten, die ihrer Natur nach oder gemäss besonderer Vorschrift geheim sind, zur Verschwiegenheit verpflichtet. Das Amtsgeheimnis ist auch nach dem Ausscheiden aus dem Amt, einer Kommission oder Beendigung des Angestelltenverhältnisses oder des Auftrags zu wahren."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "1bfb479796f62da9d34bfb7497c053f6a4fba3e5fa860d082276af4702964852"
+    },
+    {
+      "id": "kanton/AR/142.12/art_48",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ausstand richtet sich nach den Bestimmungen des Gesetzes über die Verwaltungsrechtspflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer im Ausstand ist, bleibt der Beratung und der Beschlussfassung fern."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mitglieder des Regierungsrates haben sich bei der Behandlung von Angelegenheiten von juristischen Personen, deren Verwaltungsrat sie von Amtes wegen angehören, nicht in den Ausstand zu begeben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "cc3be7eeff864890a1f4a57db3385d85c87d27deb63064d6c41aed1deda0481d"
+    },
+    {
+      "id": "kanton/AR/142.12/art_49",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Regierungsrates oder der Kommissionen sowie die Angestellten des Kantons und Dritte, welchen die Erfüllung einer Aufgabe übertragen worden ist, dürfen im Rahmen ihrer amtlichen Tätigkeit keine Geschenke oder andere Vorteile beanspruchen, annehmen oder sich versprechen lassen. Ausgenommen sind übliche Gelegenheits- und Höflichkeitsgeschenke von geringem Wert."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "00635e928ca8f63831feb5accc83eeb996b76e394cd78d7badfd80d6578eb840"
+    },
+    {
+      "id": "kanton/AR/142.12/art_50",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat und die kantonale Verwaltung, die DSK sowie die Kommissionen können verwaltungsinterne oder -externe Fachpersonen beiziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "9e36a11571262e244079cd2d05125793197ea3d0df84285570ca6ee61bb33954"
+    },
+    {
+      "id": "kanton/AR/142.12/art_51",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern der Regierungsrat im Einzelfall keine andere Regelung trifft, wird der Kanton vor kantonalen und eidgenössischen Gerichten und Rechtsmittelinstanzen durch dasjenige Departement, in dessen Aufgabenbereich der Streitgegenstand fällt, oder durch die Kantonskanzlei, vertreten. Der Regierungsrat ist regelmässig zu informieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Annahme eines Vergleichs oder die Erklärung des Abstands bedürfen der Zustimmung des Regierungsrates."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "b706cb5e4390818068cca6f2d9f74074a4044981a5ab0f944070bcb913a7dc12"
+    },
+    {
+      "id": "kanton/AR/142.12/art_52",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die notwendigen Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "e72934555b5126743ec896c4964a6dc41adf937bc94ea5e6c10b2c43120e1141"
+    },
+    {
+      "id": "kanton/AR/142.12/art_54",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geschäftsordnung des Regierungsrates vom 14. November 1988 wird aufgehoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "40bc539571a61478ecba5f62fdc502acc753d7fe620db41e8e1f8433cf89b0e1"
+    },
+    {
+      "id": "kanton/AR/142.12/art_55",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Organisationsgesetz; OrG (142.12)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.12",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2cb6da6d9eda5f4618673382389641c4",
+      "sha": "7ffd37838bc0de0b0080ca62a27bcedfe25c1858858eb3afb2d3b05b8d1e0b4b"
+    }
+  ]
+}

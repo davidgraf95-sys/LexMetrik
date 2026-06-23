@@ -1,0 +1,43 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/323.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kOBV (323.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Übertretung von Straftatbeständen des kantonalen Rechts, die rechtlich und tatsächlich klar sind und für die keine höhere Busse in Betracht kommt, kann die Kantonspolizei eine Ordnungsbusse gemäss Anhang erheben."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/323.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ee0ca076044034da17650ea0b525e1ec",
+      "sha": "f3b6186b7514b9b8c635d8e5aa6394269315e87ffe1a3961544c35ad23264123"
+    },
+    {
+      "id": "kanton/AR/323.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kOBV (323.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorschriften des Ordnungsbussengesetzes vom 18. März 2016 finden im kantonalrechtlichen Ordnungsbussenverfahren sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/323.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "ee0ca076044034da17650ea0b525e1ec",
+      "sha": "32c68785bf406cc7e954bdc0fb5bc97399222ec9a07a9c6346d2558fcbe090ee"
+    }
+  ]
+}

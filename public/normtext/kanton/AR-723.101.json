@@ -1,0 +1,1320 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/723.101/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt für die Geobasisdaten des kantonalen und kommunalen Rechts."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anhang 1 enthält den Katalog der Geobasisdaten des Bundesrechts in der Zuständigkeit des Kantons."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anhang 2 enthält den Katalog der Geobasisdaten des kantonalen Rechts."
+        },
+        {
+          "absatz": "4",
+          "text": "Besondere fachgesetzliche Regelungen des kantonalen Rechts bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "79e9821bcaf2487c581de03433916dd3a921a3bbd156076c8718f19d856d7f7f"
+    },
+    {
+      "id": "kanton/AR/723.101/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mindestanforderungen an die Qualität von Geobasisdaten und Geometadaten entsprechen den vom Bund und Kanton anerkannten Normen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Qualität von Geodaten misst sich an den Kriterien: Vollständigkeit, logische Konsistenz, Lagegenauigkeit, Aktualität und inhaltliche Richtigkeit."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "8c95bf069fab8350c45363bd415c503c04a9815bb31dd3277928d31b4b16d3aa"
+    },
+    {
+      "id": "kanton/AR/723.101/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der GIS-Ausschuss ist das Koordinationsorgan des Kantons und der Gemeinden im Bereich der Geoinformation. Er hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Planung und Koordination der Tätigkeiten des Kantons und der Gemeinden im Bereich der GDI und der Geoinformationen;"
+            },
+            {
+              "marke": "b",
+              "text": "Entwicklung von gemeinsamen Strategien des Kantons und der Gemeinden im Bereich der GDI und der Geoinformationen;"
+            },
+            {
+              "marke": "c",
+              "text": "Mitwirkung bei der Entwicklung von technischen Normen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der GIS-Ausschuss setzt sich aus Vertretern des Kantons und der Gemeinden zusammen. Wird der Betrieb des GIS einem Unternehmen übertragen, nimmt dieses mit einer Vertreterin oder einem Vertreter Einsitz in den Ausschuss."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat wählt die Mitglieder, wobei den Gemeinden für ihre Vertretung ein Vorschlagsrecht zusteht. Er bestimmt die Leitung des GIS-Ausschusses."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "3bba5d4ff40be78ad619c0843eb018305358d9101931c352558d8dfced253b4a"
+    },
+    {
+      "id": "kanton/AR/723.101/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Raum und Wald führt eine GIS-Fachstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GIS-Fachstelle ist das kantonale Kompetenzzentrum für Geoinformationen. Sie hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Festlegung von Geodatenmodellen zusammen mit den zuständigen Fachstellen des Kantons und der Gemeinden;"
+            },
+            {
+              "marke": "b",
+              "text": "Festlegung von technischen Normen und Richtlinien für Geometadaten, Geodatenmodelle und für den Datenaustausch;"
+            },
+            {
+              "marke": "c",
+              "text": "Betrieb der sachbereichsübergreifenden Geodienste;"
+            },
+            {
+              "marke": "d",
+              "text": "Beratung und Unterstützung der zuständigen Stellen der kantonalen und kommunalen Verwaltung bei der Erarbeitung von Geodatenmodellen, Projekten und Schulungen im Geoinformationsbereich;"
+            },
+            {
+              "marke": "e",
+              "text": "Kontakte zu Dritten, insbesondere zu Bund, Kantonen, Gemeinden, Fach- und Benutzergruppen sowie Herstellerfirmen von Software;"
+            },
+            {
+              "marke": "f",
+              "text": "Meldung von Befliegungen durch den Kanton an die zuständige Stelle des Bundes für Luftaufnahmen im Sinne von Art. 27 der Landesvermessungsverordnung;"
+            },
+            {
+              "marke": "g",
+              "text": "Zusammenarbeit mit den zuständigen kantonalen Stellen im Bereich E-Government."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann einzelne Aufgaben an Dritte übertragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie kann fachtechnische und administrative Weisungen erlassen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "f069c6282eef418c54f4993a5fe06f1add82e93dd1650df3c820146bc62089b6"
+    },
+    {
+      "id": "kanton/AR/723.101/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Allen Geobasidaten wird ein eindeutiger numerischer Identifikator zugeordnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GIS-Fachstelle erlässt Weisungen über die Erarbeitung und Ausgestaltung der Geobasisdatenkataloge von Kanton und Gemeinden sowie die Vergabe der eindeutigen numerischen Identifikatoren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "c00685a1e7809a4277024996a1b3562fbb81e352bd4b0b5d35fb1ea66d353fc0"
+    },
+    {
+      "id": "kanton/AR/723.101/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jedem Geobasisdatensatz ist mindestens ein Geodatenmodell zugeordnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht für einen Sachbereich ein vom Bund festgelegtes minimales oder durch die Kantone harmonisiertes oder von Fachverbänden normiertes Geodatenmodell, so ist dieses als Grundlage zu verwenden. Dieses Geodatenmodell kann zur Erfüllung der kantonalen und kommunalen Mehranforderungen erweitert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "c81b7a96b0f900f6fc1a42a7856c6bb6933d2cb0d24d72d32b913dc4701dcd38"
+    },
+    {
+      "id": "kanton/AR/723.101/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geodatenmodelle von Geobasisdaten werden gemeinsam durch die jeweils zuständige Fachstelle des Kantons resp. der Gemeinde mit der GIS-Fachstelle festgelegt und geändert."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Geodatenmodell wird innerhalb des fachgesetzlichen Rahmens bestimmt durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die fachlichen Anforderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Stand der Technik."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "40756a40cbebc86356aea82019091a1edbb984c9936f6576913c4722675f73b6"
+    },
+    {
+      "id": "kanton/AR/723.101/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschreibungssprache für Geodatenmodelle muss einer anerkannten Norm entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GIS-Fachstelle legt die allgemeine Beschreibungssprache und die Datentransfermethode fest. Sie berücksichtigt dabei den Stand der Technik und die Normierung auf internationaler und nationaler Ebene."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "d6d89c8d893543fb3fa1616e3ce6b300df20fe2d845c3fac959b2bf14b227420"
+    },
+    {
+      "id": "kanton/AR/723.101/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jeweils zuständige Fachstelle des Kantons resp. der Gemeinde kann in ihrem Fachbereich ein oder mehrere Darstellungsmodelle vorgeben und beschreibt diese. Die Beschreibung legt insbesondere den Detaillierungsgrad, die Signaturen und die Legenden fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Darstellungsmodell wird innerhalb des fachgesetzlichen Rahmens bestimmt durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Geodatenmodell;"
+            },
+            {
+              "marke": "b",
+              "text": "die fachlichen Anforderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Stand der Technik."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "b0861e2eb61f6f9e05ed0bae704ebc14fd5319f4c697fd97a98367f0c87851d6"
+    },
+    {
+      "id": "kanton/AR/723.101/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Enthalten die fachgesetzlichen Vorschriften keine Bestimmungen über Zeitpunkt und Art der Nachführung der Geobasisdaten, so gibt die jeweils zuständige Fachstelle des Kantons resp. der Gemeinde ein minimales Nachführungskonzept vor. Dieses berücksichtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die fachlichen Anforderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bedürfnisse der Nutzerinnen und Nutzer;"
+            },
+            {
+              "marke": "c",
+              "text": "den Stand der Technik;"
+            },
+            {
+              "marke": "d",
+              "text": "die Kosten der Nachführung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "2c8e0fee098be59ad3f19913761852282350afb4dc12a019e6e0774f025fdba2"
+    },
+    {
+      "id": "kanton/AR/723.101/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geobasisdaten, die eigentümer- oder behördenverbindliche Beschlüsse abbilden, werden so historisiert, dass jeder Rechtszustand mit hinreichender Sicherheit und vertretbarem Aufwand innert nützlicher Frist rekonstruiert werden kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Methode der Historisierung wird dokumentiert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "5c6816eed69c5f93f4ac365fdcb78585d8c7d0ceead551a312c46566cd4a5bc2"
+    },
+    {
+      "id": "kanton/AR/723.101/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes bewahrt Geobasisdaten so auf, dass sie in Bestand und Qualität erhalten bleiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sichert die Geobasisdaten nach anerkannten Normen und nach dem Stand der Technik. Insbesondere lagert sie die Daten periodisch in geeignete Datenformate aus und bewahrt die ausgelagerten Daten sicher auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Die GIS-Fachstelle kann die Mindestdauer der Verwaltung der Geobasisdaten durch die zuständige Stelle nach Art. 8 des Gesetzes festlegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "057e10e5b0aa7d50624230418482a823df97e6e3066ff31d11200d9a4085167d"
+    },
+    {
+      "id": "kanton/AR/723.101/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Archivierung der Geobasisdaten in der Zuständigkeit des Kantons und der Gemeinden richtet sich nach dem Archivgesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Staatsarchiv erstellt für alle betroffenen Geobasisdaten ein Archivierungskonzept. Dieses hält mindestens Folgendes fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zeitpunkt der Archivierung;"
+            },
+            {
+              "marke": "b",
+              "text": "den Ort der Archivierung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Modalitäten des Datentransfers zur Archivierungsstelle;"
+            },
+            {
+              "marke": "d",
+              "text": "die Methode und Periodizität der Datensicherung;"
+            },
+            {
+              "marke": "e",
+              "text": "die periodische Auslagerung in geeignete Datenformate;"
+            },
+            {
+              "marke": "f",
+              "text": "die Nutzungs- und Verwertungsrechte an den Daten;"
+            },
+            {
+              "marke": "g",
+              "text": "die Modalitäten der Löschung und Vernichtung von Daten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "093f767f1db16972296a660502cc6e89cfd23cf9ac268a015b23bc7517176181"
+    },
+    {
+      "id": "kanton/AR/723.101/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes transferiert ihre aktualisierten Geobasisdaten zu vereinbarten Zeitpunkten in vereinbarter Qualität an die GIS-Fachstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GIS-Fachstelle prüft die eingehenden Geobasisdaten und speichert sie zentral. Sie kann diese Aufgaben für bestimmte Geobasisdaten an andere Stellen delegieren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "77d463003761f51c7a30a42003741d91b1ce79b8390134b5f09c1dcc13dd68b9"
+    },
+    {
+      "id": "kanton/AR/723.101/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Geobasisdaten werden durch Geometadaten beschrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GIS-Fachstelle legt die Norm für die Geometadaten der Geobasisdaten fest. Sie berücksichtigt dabei den Stand der Technik und die Normierung auf internationaler und nationaler Ebene."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "6f8b9845c63e0a5df2c559a0392d444774313a88938fd20f1b597dfe567c420d"
+    },
+    {
+      "id": "kanton/AR/723.101/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geometadaten werden zusammen mit den Geobasisdaten, die sie beschreiben, öffentlich zugänglich gemacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugang kann nur beschränkt werden, wenn eine regierungsrätliche Verordnung dies vorsieht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes gewährleistet den Zugriff auf die Geometadaten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die GIS-Fachstelle gewährleistet die Vernetzung der Geometadaten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "da40ef70cb3714a9d3b20e87468511b58c62114d04ba5e03a7b1678f8ba0f2e5"
+    },
+    {
+      "id": "kanton/AR/723.101/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zuständig für die Erhebung und Nachführung der Geometadaten ist die zuständige Stelle nach Art. 8 des Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geometadaten werden zusammen mit den Geobasisdaten, die sie beschreiben, nachgeführt und archiviert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "704eed03b2f4aba6be0da99bc4c3e7b7b612f3b89e2ff21b56a09e49c87a68d4"
+    },
+    {
+      "id": "kanton/AR/723.101/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geobasisdaten werden folgenden Zugangsberechtigungsstufen zugewiesen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "öffentlich zugängliche Geobasisdaten: Zugangsberechtigungsstufe A;"
+            },
+            {
+              "marke": "b",
+              "text": "beschränkt öffentlich zugängliche Geobasisdaten: Zugangsberechtigungsstufe B;"
+            },
+            {
+              "marke": "c",
+              "text": "nicht öffentlich zugängliche Geobasisdaten: Zugangsberechtigungsstufe C."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zugangsberechtigungsstufen der Geobasisdaten des kantonalen Rechts sind im Anhang 2 festgelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Zugang zu Geobasisdaten der Zugangsberechtigungsstufe A, B und C gelten die Bestimmungen nach Art. 22-24 der Geoinformationsverordnung sinngemäss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "55a8c8833d12772190056eee42f414f3ff8c9172a095c1c85f1fd2cb4911b13e"
+    },
+    {
+      "id": "kanton/AR/723.101/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwilligung zur Nutzung zum Eigengebrauch wird erteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zugang gewährt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nutzerin oder der Nutzer deklariert hat, dass die Nutzung ausschliesslich dem Eigengebrauch dient;"
+            },
+            {
+              "marke": "c",
+              "text": "die Gebühr durch Verfügung oder Vertrag festgelegt oder vorab bezogen wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwilligung zur gewerblichen Nutzung wird erteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zugang gewährt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nutzerin oder der Nutzer registriert ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nutzerin oder der Nutzer Zweck, Intensität und Dauer der gewerblichen Nutzung deklariert hat;"
+            },
+            {
+              "marke": "d",
+              "text": "die Gebühr durch Verfügung oder Vertrag festgelegt oder vorab bezogen wird;"
+            },
+            {
+              "marke": "e",
+              "text": "Daten der Zugangsberechtigungsstufe B auch Dritten zugänglich gemacht werden dürfen, an welche die Weitergabe vorgesehen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einwilligung zur Nutzung kann befristet werden, wenn der Verlust der Aktualität der Daten zu einer Gefährdung führen kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Einwilligung kann hinsichtlich Zweck, Intensität oder Dauer der Nutzung beschränkt werden, wenn die Höhe der Gebühr von diesen Faktoren abhängt."
+        },
+        {
+          "absatz": "5",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes kann für bestimmte Geobasisdaten die Nutzung ohne Einwilligung generell zulassen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "bfeaa97c7de85541b523e39e7593eafdb1466d643fcca557e0a633738907ba72"
+    },
+    {
+      "id": "kanton/AR/723.101/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einwilligung wird durch Verfügung verweigert."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Vertragsabschluss oder die Einwilligung mittels organisatorischer oder technischer Zugangskontrollen verweigert, so kann die betroffene Person eine Verfügung verlangen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "617bc9d21a8ae800beb086bdee2bef7aeb438a48946082472a72e61c80452298"
+    },
+    {
+      "id": "kanton/AR/723.101/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden Geobasisdaten widerrechtlich genutzt, so wird das Verfahren zur Erteilung der Einwilligung nachträglich von Amtes wegen durchgeführt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "102cf433e2292736b5cc2c20933875a8000cb35c97b887b46fcfcb9b7988561f"
+    },
+    {
+      "id": "kanton/AR/723.101/art_21_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "21_a",
+      "artikelLabel": "Art. 21a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Geobasisdaten der Zugangsberechtigungsstufe A gilt die Einwilligung zur Nutzung als erteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei übermässiger, unangemessener oder missbräuchlicher Nutzung kann der Zugang eingeschränkt oder verweigert werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Verhinderung von übermässiger, unangemessener und missbräuchlicher Nutzung kann die GIS-Fachstelle den freien Zugang durch geeignete Instrumente, einschliesslich der Erfassung von IP-Adressen, überwachen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "c3391b31e0a1790773c029c7c55ce873edaca92bc868d21ff3c0d5e507e96707"
+    },
+    {
+      "id": "kanton/AR/723.101/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Nutzung zum Eigengebrauch gelten die entsprechenden Bestimmungen des Urheberrechtsgesetzes sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Nutzerinnen und Nutzer sind für die Einhaltung der Vorschriften über den Datenschutz verantwortlich."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "74d9c9f9cbc377bb6cfc637aa3f392348c3cf63e4ded1e27cad4964a3d2dfecd"
+    },
+    {
+      "id": "kanton/AR/723.101/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden Geobasisdaten weitergegeben, so gelten die Pflichten der Nutzerinnen und Nutzer auch für die empfangenden Dritten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "453eb6e8ab16205e0b9b879c91c83c19d7fa2311d99dd29787888b580ce35f1a"
+    },
+    {
+      "id": "kanton/AR/723.101/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vertragliche Regelungen des Zugangs zu Geobasisdaten sowie von deren Nutzung und Weitergabe dürfen von den Bestimmungen der Art. 22-23 abweichen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schutzvorschriften enthalten, die mindestens gleichwertig sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Gleichbehandlung der Wettbewerbsteilnehmerinnen und -teilnehmer gewährleisten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "66b2a84df0f1f38dfb6c074ee86647567f55aec823466dd0240ac46e385b2f97"
+    },
+    {
+      "id": "kanton/AR/723.101/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden Geobasisdaten widerrechtlich genutzt und kann die nachträgliche Einwilligung nicht erteilt werden, so ordnet die zuständige Stelle nach Art. 8 des Gesetzes die Vernichtung der Daten oder die Einziehung der Datenträger bei der Nutzerin oder dem Nutzer an."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie verfügt die Vernichtung oder Einziehung unabhängig von einer allfälligen strafrechtlichen Verfolgung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "2dfe6f239b5402ea0a40b6fc85514fe016f9b9c0e731a65fd30b6c6a4a939b25"
+    },
+    {
+      "id": "kanton/AR/723.101/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geobasisdaten werden durch folgende Geodienste zugänglich und nutzbar gemacht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch Darstellungsdienste: alle Geobasisdaten der Zugangsberechtigungsstufe A;"
+            },
+            {
+              "marke": "b",
+              "text": "durch Download-Dienste: die im Anhang 2 entsprechend bezeichneten Geobasisdaten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geometadaten der Geobasisdaten werden durch Suchdienste zugänglich gemacht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die GIS-Fachstelle kann für diese Geodienste Vorschriften über die qualitativen und technischen Anforderungen im Hinblick auf eine optimale Vernetzung erlassen. Sie berücksichtigt dabei den Stand der Technik und die Normierung auf internationaler und nationaler Ebene."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "0f9d86bb95e83e8b72b3aab7236482be4a0814330d445faafce15f3b1b18b339"
+    },
+    {
+      "id": "kanton/AR/723.101/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die GIS-Fachstelle betreibt folgende sachbereichsübergreifende Geodienste:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vernetzter Suchdienst für die Geometadaten aller Geobasisdaten;"
+            },
+            {
+              "marke": "b",
+              "text": "vernetzter Suchdienst für Geodienste nach Art. 26;"
+            },
+            {
+              "marke": "c",
+              "text": "vernetzter Zugang zu den Geobasisdaten;"
+            },
+            {
+              "marke": "d",
+              "text": "vernetzter Download-Dienst für die im Anhang 2 entsprechend bezeichneten Geobasisdaten;"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Weitere Geodienste können vom Kanton nach Bedarf angeboten werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "7fd30d21e35077b73a018532bb90690302ddc1de103e79ac20eb4dd808496c14"
+    },
+    {
+      "id": "kanton/AR/723.101/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die sachbereichsübergreifende Geodienste dürfen mit dem EDV-Grundbuch verknüpft werden, sofern die entsprechenden Zugriffsberechtigungen des Grundbuchs eingehalten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geodienste des Kantons dürfen mit Zustimmung der GIS-Fachstelle mit Geoportalen und Geodiensten anderer staatlicher und privater Institutionen vernetzt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "368d56de34af45ef58d4e92a870fca80be6190b62a45da8edb994ac6228e32cc"
+    },
+    {
+      "id": "kanton/AR/723.101/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufschaltung der Geobasisdaten im GIS erfolgt ohne Gewähr und hat keinerlei Rechtswirkung. Verbindlich sind einzig die von den zuständigen Stellen beglaubigten Dokumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Abweichende spezialgesetzliche Vorschriften bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "7516d61d3c3bf151335b6188949fdceceef0c06c240a2a593cf0f7a651fc544d"
+    },
+    {
+      "id": "kanton/AR/723.101/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes gewährt anderen Stellen von Bund, Kantonen oder Gemeinden auf Anfrage hin Zugang zu Geobasisdaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellt den Zugang durch einen Download-Dienst sicher. Wo dies nicht möglich ist, übermittelt sie die Daten in einer anderen Form."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "ba0bd5e3f2f6a1452ae3472e77a9e0d03cae14966f4d0a04f4863c31efe850bf"
+    },
+    {
+      "id": "kanton/AR/723.101/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 des Gesetzes verweigert den Zugang zu Geobasisdaten, wenn die Geobasisdaten der Zugangsberechtigungsstufe B oder C zugewiesen sind und die anfragende Stelle kein öffentliches Interesse am Zugang geltend machen kann."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "3113e2e0865742fecf3ffd6618cbeb9b9a907df2bd380b44da9e0a4d4acf1838"
+    },
+    {
+      "id": "kanton/AR/723.101/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die empfangende Stelle ist für die Einhaltung der Vorschriften über den Datenschutz und die Geheimhaltung verantwortlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Die abgebende Stelle weist die empfangende Stelle auf das Bestehen von besonderen Vorschriften hin."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "c3a5eb1b323377cd15f681aa89b306f801e7f5a9d86bcba210d87e6bfc7960ad"
+    },
+    {
+      "id": "kanton/AR/723.101/art_33",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Behörde kann für Geobasisdaten, zu denen sie nach dem 6. Abschnitt Zugang hat, unabhängig davon, ob diese bearbeitet werden, Dritten Zugang gewähren und die Nutzung erlauben, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Regelung von Zugang und Nutzung die gleichen Vorschriften anwendet, wie die nach Art. 8 des Gesetzes zuständige Stelle;"
+            },
+            {
+              "marke": "b",
+              "text": "auf den Stand der Aktualität hinweist;"
+            },
+            {
+              "marke": "c",
+              "text": "die vorgeschriebenen Gebühren erhebt und an die zuständige Stelle weiterleitet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gibt sie die Geobasisdaten kostenlos weiter, so trägt sie die vorgeschriebenen Gebühren selber."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "a7f9527622bb32785b4c2fce6fe0f27fe31bf7190e931ebb9ff031f41a0686e2"
+    },
+    {
+      "id": "kanton/AR/723.101/art_34",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Volkswirtschaft ist zuständig für die Regelung der Modalitäten und der Bemessung der Ausgleichszahlungen mit dem Bund im Sinne von Art. 14 Abs. 3 des Geoinformationsgesetzes."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "cf848e194d51fcbf9f51510c94df3acff16eb39a12947d09328ce1ca53f9f409"
+    },
+    {
+      "id": "kanton/AR/723.101/art_35",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde bestimmt eine Datenverwaltungsstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Datenverwaltungsstelle ist zuständig für das Erheben, Nachführen und Verwalten des Leitungskatasters."
+        },
+        {
+          "absatz": "3",
+          "text": "Dabei nimmt sie insbesondere die aktuellen Werkleitungsdaten der Werke entgegen, überprüft diese auf die qualitativen und technischen Anforderungen hin und integriert sie in den Leitungskataster."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "029ce222999df728365d90dd8c7bf2c6baa02d9899ac3f0bd24e00c78baaac4d"
+    },
+    {
+      "id": "kanton/AR/723.101/art_36",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Werkeigentümer sind bei der Anlage und Nachführung des Leitungskatasters zur Mitwirkung verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Werkeigentümer sind zuständig für das Erheben, Nachführen und Verwalten der Werkleitungsdaten in ihrem Eigentum. Die Erhebung der erdverlegten Leitungen und Objekte hat am offenen Graben zu erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie transferieren die aktualisierten Werkleitungsdaten in bestimmter Qualität an die Datenverwaltungsstelle."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Datentransfer erfolgt mindestens einmal pro Quartal."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "0df0f29e24360959cb6e13907105236d889120ba9334e3ffc0067f46c7d1e62d"
+    },
+    {
+      "id": "kanton/AR/723.101/art_37",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Leitungskataster umfasst folgende Medien:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Abwasser;"
+            },
+            {
+              "marke": "b",
+              "text": "Wasser;"
+            },
+            {
+              "marke": "c",
+              "text": "Gas;"
+            },
+            {
+              "marke": "d",
+              "text": "Elekritzität;"
+            },
+            {
+              "marke": "e",
+              "text": "Beleuchtung;"
+            },
+            {
+              "marke": "f",
+              "text": "Kommunikation;"
+            },
+            {
+              "marke": "g",
+              "text": "Fernwärme;"
+            },
+            {
+              "marke": "h",
+              "text": "Diverse."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bereits erfasste und neue Hausanschlüsse sind Bestandteil des Leitungskatasters."
+        },
+        {
+          "absatz": "3",
+          "text": "Die GIS-Fachstelle bestimmt die qualitativen und technischen Anforderungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "d5037efb7a4db6c7959c4a40f6a9d3573b6d1cd94b94613a2438d7e7a4d3dbe4"
+    },
+    {
+      "id": "kanton/AR/723.101/art_38",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Stellen erheben für ihre Leistungen und Amtshandlungen nach Zeitaufwand bemessene Gebühren. Vorbehalten bleiben Art. 39 und 40."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr nach Zeitaufwand beträgt 160 Franken pro Stunde, höchstens aber 800 Franken pro Fall."
+        },
+        {
+          "absatz": "3",
+          "text": "Allfällige Material- und Transportkosten werden zusätzlich in Rechnung gestellt."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Inkasso der Gebühren kann an Dritte übertragen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "fa53f0cacd1b8149b93ad8556f93df9bd53cc4f498538cade43c7566d15afd75"
+    },
+    {
+      "id": "kanton/AR/723.101/art_39",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keine Gebühren werden erhoben für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zugang zu offenen Verwaltungsdaten nach Art. 21a;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zugang zu den Geodiensten nach Art. 27 und deren Nutzung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nutzung von Geobasisdaten, unabhängig von der Art des Zugangs und der Art der Nutzung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "32a3dbdbc92a4ed2cc798c03981f26faccb888bcb93a0f9c73659078d0b81a00"
+    },
+    {
+      "id": "kanton/AR/723.101/art_40",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIV (723.101)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Datenlieferung in Kopie oder im Format PDF:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Katasterplan amtliche Vermessung bis DIN A3 (exkl. Beglaubigung) 20 Franken"
+            },
+            {
+              "marke": "b",
+              "text": "Planauszug Leitungskataster bis DIN A3 50 Franken"
+            },
+            {
+              "marke": "c",
+              "text": "Plot bis DIN A0 80 Franken"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Beglaubigung von analogen oder digitalen Datenauszügen der amtlichen Vermessung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erstellung des Datenauszugs 50 Franken"
+            },
+            {
+              "marke": "b",
+              "text": "nachträglich 80 Franken"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Exemplare desselben Ausschnitts, sofern gleichzeitig bezogen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis DIN A3 5 Franken"
+            },
+            {
+              "marke": "b",
+              "text": "bis DIN A0 20 Franken"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Allfällige Material- und Transportkosten werden zusätzlich in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.101",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "075464e185a6870c6251d6c721835e35",
+      "sha": "6c037b176989d7f7fdaca8f2e30634e1c3e6c02abf88a79aa05310c1d9878c78"
+    }
+  ]
+}

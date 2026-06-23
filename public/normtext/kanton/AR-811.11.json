@@ -1,0 +1,620 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/811.11/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die dem Departement Gesundheit und Soziales und seinen Organen zugewiesenen Aufgaben."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die in anderen Verordnungen zum Gesundheitsgesetz umschriebenen Bereiche."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "f90f20295985b70638c3ab4d7a759e884c49502f7f1df6a6dcd1aa3ac88327f3"
+    },
+    {
+      "id": "kanton/AR/811.11/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesundheitsrat besorgt die Geschäfte, die ihm durch die Gesetzgebung oder durch Beschluss des Regierungsrates oder des Departements Gesundheit und Soziales zugewiesen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Er wird vom Departement Gesundheit und Soziales einberufen, so oft dies notwendig ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Er tagt jährlich mindestens einmal."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "798230e997e8d6d6cd5dd10af8412c6821b127f2281300d52616873cba3ae852"
+    },
+    {
+      "id": "kanton/AR/811.11/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Gesundheit hat insbesondere die folgenden Aufgaben: Es",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bereitet den Gesundheitsbericht vor,"
+            },
+            {
+              "marke": "b",
+              "text": "erarbeitet die Grundlagen für die Gesundheitsplanung,"
+            },
+            {
+              "marke": "c",
+              "text": "koordiniert die Massnahmen auf dem Gebiet der Gesundheitsförderung und Prävention."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "f34124f572e436b31a43695367cbb2c3a1a0c83981ef85639a65c56344403982"
+    },
+    {
+      "id": "kanton/AR/811.11/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Soziales hat insbesondere folgende Aufgaben: Es",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vollzieht die eidgenössische und kantonale Gesetzgebung im Bereich der Sozialen Einrichtungen, insbesondere der Heime gemäss Heimverordnung,"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "entscheidet bei Beschwerden."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "c8e20ffb83f57bf7b196d85f1baac39246e81a2644c7d793d47d9e07005050f2"
+    },
+    {
+      "id": "kanton/AR/811.11/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem kantonsärztlichen Dienst obliegen insbesondere die folgenden Aufgaben: Er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ist zuständig für das Kostengutsprachewesen gemäss Art. 41 Abs. 3 des Bundesgesetzes über die Krankenversicherung,"
+            },
+            {
+              "marke": "b",
+              "text": "übt die Aufsicht über den schulärztlichen Dienst aus und organisiert diesen,"
+            },
+            {
+              "marke": "c",
+              "text": "ist im Rahmen der Substitutionsbehandlungen zuständig für die Erteilung von Bewilligungen und den Vollzug des Betäubungsmittelgesetzes,"
+            },
+            {
+              "marke": "d",
+              "text": "vollzieht die eidgenössische und kantonale Gesetzgebung im Bereich der ansteckenden Krankheiten (Epidemiengesetz,),"
+            },
+            {
+              "marke": "e",
+              "text": "ist Mitglied des kantonalen Führungsstabes und koordiniert den Sanitätsdienst in ausserordentlichen Lagen,"
+            },
+            {
+              "marke": "f",
+              "text": "überwacht den Vollzug des legalisierten Schwangerschaftsabbruchs."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "82b4a566e9dfeec0b78092593cbffad0bdf06ead1af4b4a42ee1ac636eb2e906"
+    },
+    {
+      "id": "kanton/AR/811.11/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Veterinärdienst obliegen insbesondere die folgenden Aufgaben: Er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vollzieht das Lebensmittelgesetz in den Bereichen Tierhaltung, Primärproduktion Milch, Schlachtung und Teilen der Fleischproduktion,"
+            },
+            {
+              "marke": "b",
+              "text": "vollzieht das Landwirtschaftsgesetz im Bereich Primärproduktion Milch,"
+            },
+            {
+              "marke": "c",
+              "text": "vollzieht das Heilmittelgesetz im Bereich Tierarzneimittel,"
+            },
+            {
+              "marke": "d",
+              "text": "ist zuständig für die Erteilung der Berufsausübungsbewilligungen und die Überwachung der Praxen von Tierärztinnen und Tierärzten sowie von Tierheilpraktikerinnen und Tierheilpraktikern,"
+            },
+            {
+              "marke": "e",
+              "text": "erteilt Bewilligungen und überwacht bestehende Privatapotheken von Tierärztinnen und Tierärzten sowie von Tierheilpraktikerinnen und Tierheilpraktikern,"
+            },
+            {
+              "marke": "f",
+              "text": "erteilt Betriebsbewilligungen für weitere tierarzneimittelführende Betriebe, vorbehältlich der Zuständigkeit von Bundesstellen und der Fachstelle Gesundheitsfachpersonen und Heilmittelkontrolle."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "9c647d9b371961bc1538476e237a5950b441b5207012ef5409a0f91894264c9a"
+    },
+    {
+      "id": "kanton/AR/811.11/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Fachstelle Gesundheitsfachpersonen und Heilmittelkontrolle obliegen insbesondere die folgenden Aufgaben: Sie",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sorgt für die Arzneimittelsicherheit und setzt die amtlichen und gesundheitspolizeilichen Belange gemäss eidgenössischer und kantonaler Gesetzgebung um,"
+            },
+            {
+              "marke": "b",
+              "text": "erteilt Bewilligungen für Apotheken, Drogerien, Praxen, Blutlager in den Bereichen der Heilmittel und Zulassung von Spezialitäten in kleinen Mengen; sie erteilt und entzieht im Weiteren in ihrem Bereich Sonderbewilligungen für die Abgabe bzw. Anwendung von Heilmitteln,"
+            },
+            {
+              "marke": "c",
+              "text": "regelt die Zulassung von Hausspezialitäten in kleinen Mengen gemäss Art. 9 Abs. 2 Heilmittelgesetz,"
+            },
+            {
+              "marke": "d",
+              "text": "überwacht die Herstellung, den Vertrieb und die Inverkehrbringung von Arzneimitteln, Medizinprodukten, Blutlagern und Betäubungsmitteln, die der Arzneimittelgesetzgebung unterstellt sind,"
+            },
+            {
+              "marke": "e",
+              "text": "ist gemäss Art. 66 Abs. 3 HMG für Verwaltungsmassnahmen zuständig und ist mit dem Vollzug desselben nach Art. 58 betraut,"
+            },
+            {
+              "marke": "f",
+              "text": "vollzieht die Verordnung über die Gesundheitsfachpersonen in ihrem Bereich,"
+            },
+            {
+              "marke": "g",
+              "text": "vollzieht das Prüfungsreglement über die Heilpraktiker,"
+            },
+            {
+              "marke": "h",
+              "text": "vollzieht das eidgenössische Medizinalberufegesetz."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Veterinärdienst ist für Betriebe zuständig, deren Sortiment überwiegend aus Tierarzneimitteln besteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement bezeichnet eine zentrale Stelle für die Administration und Verwaltung der Dossiers aller Gesundheitsfachpersonen gemäss Gesundheitsgesetz."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "b58cae5b8cb4dbd7d2e1132908ffd080b93aac6fad4519ef324a9ef6880dc419"
+    },
+    {
+      "id": "kanton/AR/811.11/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Beratungsstelle für Suchtfragen obliegen insbesondere die folgenden Aufgaben: Sie",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vollzieht die Aufgaben in den Bereichen Beratung, Früherkennung und Prävention gemäss Einführungsgesetz zum Bundesgesetz über die Betäubungsmittel,"
+            },
+            {
+              "marke": "b",
+              "text": "ist zuständig für die Beratung von Personen mit Alkoholproblemen und anderen substanzgebundenen und substanzungebundenen Suchtformen,"
+            },
+            {
+              "marke": "c",
+              "text": "koordiniert, plant, organisiert und begleitet Aktionen, Projekte, Veranstaltungen und Anlässe im Bereich Prävention und Gesundheitsförderung in Gemeinden, Schulen, Betrieben und Vereinen."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "4106246d9440bb5907f432c8dc30b88ae09295b6d6a37e91f13e856bc57ae99d"
+    },
+    {
+      "id": "kanton/AR/811.11/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem kantonszahnärztlichen Dienst obliegen insbesondere die folgenden Aufgaben: Er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "übt die Aufsicht über den schulzahnärztlichen Dienst aus und organisiert diesen,"
+            },
+            {
+              "marke": "b",
+              "text": "übt die Aufsicht über die Zahnprophylaxe aus."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "6aebed9a22820d7b4798d75e12a57dfd22eb6704eed745d98b79e5b96338991f"
+    },
+    {
+      "id": "kanton/AR/811.11/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufgaben der Heimaufsicht und -beratung sind in der Heimverordnung festgelegt."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "f02eabb1d7baa5b45923140f411037fb32986247675e0b8cecae50ec367da296"
+    },
+    {
+      "id": "kanton/AR/811.11/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat und das Departement Gesundheit und Soziales können Leistungsaufträge erteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Leistungsauftrag weist insbesondere die folgenden Merkmale auf: Er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bezeichnet die Vertragsparteien,"
+            },
+            {
+              "marke": "b",
+              "text": "umschreibt den Zweck und die Ziele des Auftrages,"
+            },
+            {
+              "marke": "c",
+              "text": "nennt die gesetzlichen und weiteren Grundlagen des Auftrages,"
+            },
+            {
+              "marke": "d",
+              "text": "umschreibt die Aufträge und Leistungen der Vertragsparteien,"
+            },
+            {
+              "marke": "e",
+              "text": "regelt die Verantwortlichkeiten,"
+            },
+            {
+              "marke": "f",
+              "text": "umschreibt die Zusammenarbeit zwischen den Vertragsparteien und zwischen den einzelnen Parteien und Dritten,"
+            },
+            {
+              "marke": "g",
+              "text": "zeigt die Berechnung der Kontraktsumme auf und regelt die Finanzierung und den Auszahlungsmodus,"
+            },
+            {
+              "marke": "h",
+              "text": "legt die Indikatoren für das Reporting und Controlling fest,"
+            },
+            {
+              "marke": "i",
+              "text": "regelt die Qualitätssicherung,"
+            },
+            {
+              "marke": "j",
+              "text": "umschreibt die Auflagen,"
+            },
+            {
+              "marke": "k",
+              "text": "regelt die Vertragsänderungen und die Vertragsauflösung,"
+            },
+            {
+              "marke": "l",
+              "text": "legt die Konsequenzen bei Nicht- oder Schlechterfüllung fest,"
+            },
+            {
+              "marke": "m",
+              "text": "regelt die Art der Leistungsüberprüfung (z.B. Selbstevaluation, externe QM-Firma),"
+            },
+            {
+              "marke": "n",
+              "text": "bestimmt die Vertragsdauer,"
+            },
+            {
+              "marke": "o",
+              "text": "bestimmt den Gerichtsstand."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "0d6614045c0d69abf73aabbd25667ff7be7a9b443b11c2f8dc4264b4dedc3224"
+    },
+    {
+      "id": "kanton/AR/811.11/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausgenommen vom Werbeverbot gemäss Art. 16 Abs. 2 Gesundheitsgesetz sind insbesondere Logos auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wirtshausschildern;"
+            },
+            {
+              "marke": "b",
+              "text": "Fahrzeugen;"
+            },
+            {
+              "marke": "c",
+              "text": "Bekleidungsstücken;"
+            },
+            {
+              "marke": "d",
+              "text": "Sonnenschirmen;"
+            },
+            {
+              "marke": "e",
+              "text": "Getränkekühlgeräten;"
+            },
+            {
+              "marke": "f",
+              "text": "Verkaufstheken;"
+            },
+            {
+              "marke": "g",
+              "text": "Tischgedecke."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann weitere Ausnahmen bewilligen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Fest-, Kultur- und Sportanlässen auf Schularealen, die ausserhalb der Schulzeit stattfinden, können die Veranstaltenden abgegrenzte Raucherareale im Freien bezeichnen."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "ceb617464c698b0d5f41ee734a1a0e3c4880b4f857b920b1f2f2a58ec1d1e9a2"
+    },
+    {
+      "id": "kanton/AR/811.11/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Lebensmittelinspektorat prüft bei den ordentlichen Kontrollen von Gastgewerbebetrieben, die mit einem Raucherraum geführt werden, ob die Voraussetzungen an die Zulassung erfüllt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt das kantonale Lebensmittelinspektorat Mängel fest, erstattet es der Gemeinde Meldung."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Arbeitsinspektorat kontrolliert die übrigen Raucherräume auf Einhaltung der Vorschriften über die Passivraucherschutzgesetzgebung. Die Kontrolle der Raucherräume erfolgt nach Massgabe der Gesetzgebung über die Arbeit in Industrie, Gewerbe und Handel."
+        },
+        {
+          "absatz": "4",
+          "text": "Stellt das Arbeitsinspektorat bei der Kontrolle Mängel fest, erstattet es der Gemeinde Meldung."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "6eecb96418c6ac771a90dfb657a7373d1453ff2a42e4212af9dcfcdbb9429b77"
+    },
+    {
+      "id": "kanton/AR/811.11/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesundheitsunterricht gemäss Art. 18 Gesundheitsgesetz umfasst namentlich den Unterricht über gesunde Ernährungs- und Lebensweise, Bewegung, natürliche Heilmethoden, psychische Gesundheit, Sexualkunde, Zahnhygiene sowie Ursachen und Folgen des Suchtmittelkonsums."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "8edcaf02f2507fdd1b66d10a142791ca954a7c62a6867a5fc66fdedf3764b05b"
+    },
+    {
+      "id": "kanton/AR/811.11/art_18_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "18_a",
+      "artikelLabel": "Art. 18a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales vergütet Todesbescheinigungen von ambulant tätigen Ärztinnen und Ärzten mit Fr. 50.-."
+        },
+        {
+          "absatz": "2",
+          "text": "Ärztinnen und Ärzte sind ambulant tätig, wenn sie",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Leistungserbringer nach Art. 36 des Bundesgesetzes über die Krankenversicherung zugelassen sind,"
+            },
+            {
+              "marke": "b",
+              "text": "in nach Art. 36a des Bundesgesetzes über die Krankenversicherung zugelassenen Einrichtungen arbeiten."
+            }
+          ]
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "36817d0ee5ed1a8427d125ec40837e79d2af2003f89d5761dcd8202500d9de18"
+    },
+    {
+      "id": "kanton/AR/811.11/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche gemäss Art. 68 Abs. 1 Gesundheitsgesetz sind bis spätestens 31. Dezember 2012 an das Departement Gesundheit und Soziales einzureichen."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "062633bb5f4de657f84331159d9873d6765e3eddfad74fcd4304239bac076049"
+    },
+    {
+      "id": "kanton/AR/811.11/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zum Gesundheitsgesetz (811.11)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt am 1. Januar 2008 in Kraft."
+        }
+      ],
+      "stand": "2017-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "108513cff4a020e081ffb7ff45dc9a63",
+      "sha": "5316ab77e2cff66570456cdefdc454d01e757fc830015123b7454bd06970ce46"
+    }
+  ]
+}

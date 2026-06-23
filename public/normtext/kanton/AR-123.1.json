@@ -1,0 +1,211 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/123.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Passbüro ist die ausstellende Behörde nach Art. 4 Abs. 1 AwG."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "b907f9ed4fea5a7ffa3ea8ba8b6ed36b875185c40d79cc8dc7c5881ec44bcb19"
+    },
+    {
+      "id": "kanton/AR/123.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Passbüro fertigt die digitalen Gesichtsbilder an. Mitgebrachte Fotografien werden nicht angenommen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "a3db423908124419a4e0f9f59d90de76837ec573463cd76e87388601efa20999"
+    },
+    {
+      "id": "kanton/AR/123.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantonspolizei kann zur Identitätsabklärung und zur Aufnahme von Verlustmeldungen Daten aus dem Informationssystem im Abrufverfahren abfragen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "0478de154450442e0fcab25c873e60fd1e9f0ac9e73c14342c4c9703289475ba"
+    },
+    {
+      "id": "kanton/AR/123.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Ausländerinnen und Ausländer erfasst das kantonale Passbüro die Daten für die biometrischen und nicht biometrischen Ausländerausweise sowie für die Ausstellung von Reisedokumenten für ausländische Personen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "899fc5170e2cc61232ad7745bf67e8596a6b42f984c2e195b29d6716606e4c47"
+    },
+    {
+      "id": "kanton/AR/123.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Ausweise richten sich nach dem AwG und der VAwG."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die folgenden weiteren Dienstleistungen wird eine Gebühr gemäss Art. 46 VAwG erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nachträgliche Eintragungen bei einer ausstellenden Behörde Fr. 20.--"
+            },
+            {
+              "marke": "b",
+              "text": "Ausstellung eines provisorischen Passes"
+            },
+            {
+              "marke": "1",
+              "text": "ausserhalb der ordentlichen Bürozeiten Fr. 25.--"
+            },
+            {
+              "marke": "2",
+              "text": "an Samstagen, Sonntagen, gesetzlichen Feiertagen Fr. 50.--"
+            },
+            {
+              "marke": "c",
+              "text": "besondere Abklärungen im Zusammenhang mit der Ausstellung eines ordentlichen Ausweises oder provisorischen Passes Arbeitszeit Stundenansatz Fr. 80.--"
+            },
+            {
+              "marke": "d",
+              "text": "Entzug eines Ausweises Fr. 40.--"
+            },
+            {
+              "marke": "e",
+              "text": "Rückgabe eines Ausweises Fr. 40.--"
+            },
+            {
+              "marke": "f",
+              "text": "Einholung von Unterlagen und Übermittlung von Dokumenten"
+            },
+            {
+              "marke": "1",
+              "text": "Grundgebühr Fr. 20.--"
+            },
+            {
+              "marke": "2",
+              "text": "Auslagen gemäss Art. 49 VAwG nach effektiven Kosten"
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "95d3389f15b25f0959f25d5ecdd9bb812b4060de6fd596a2a0d2ed7adc99bb9d"
+    },
+    {
+      "id": "kanton/AR/123.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügungen des kantonalen Passbüros können innert 20 Tagen mit Rekurs an die Kantonskanzlei weitergezogen werden."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "079b2724c6f01c0eedd06ae6423723a223a3c2cd25f84a4e90cbe31433356719"
+    },
+    {
+      "id": "kanton/AR/123.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Identitätskarten können auch bei der Wohnsitzgemeinde beantragt werden. Das Verfahren richtet sich nach den Art. 14c und 14d VAwG."
+        },
+        {
+          "absatz": "2",
+          "text": "Der dem Kanton zufallende Anteil an den Gebühren beträgt 70 Prozent, derjenige der Gemeinde 30 Prozent. Das Passbüro stellt den Gemeinden monatlich Rechnung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "96fff5dc9f8437e3090616b576b5d0be076977990a387e57ce653f1abec8c525"
+    },
+    {
+      "id": "kanton/AR/123.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Ausweisverordnung (123.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung vom 17. Dezember 2002 zur Bundesgesetzgebung über die Ausstellung von Ausweisen für Schweizer Staatsangehörige wird aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Verordnung tritt am 1. März 2010 in Kraft."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/123.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "5989fb5139530fa28ded6302d5819b02",
+      "sha": "bb3fec83532bca989f98b059431fcbb1c3f99807e0a59ec7c4b59f7373e401d3"
+    }
+  ]
+}

@@ -1,0 +1,1102 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/723.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Vollzug der Bundesgesetzgebung im Bereich der Geoinformation;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erhebung, Nachführung, Verwaltung und Verwendung von Geodaten des Kantons und der Gemeinden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Schaffung der Voraussetzungen für eine kantonale und kommunale Geodaten-Infrastruktur;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anlage und Nachführung des digitalen Leitungskatasters."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "6e0e88b17e219503a9661a56c282fa4d42511ebf70f4718ed4f52f6c75b03d8c"
+    },
+    {
+      "id": "kanton/AR/723.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt, dass Geodaten auf dem Gebiet des Kantons Appenzell Ausserrhoden den Behörden von Bund, Kantonen und Gemeinden sowie der Wirtschaft, der Gesellschaft und der Wissenschaft für eine breite Nutzung, in der erforderlichen Qualität und zu angemessenen Kosten zur Verfügung stehen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "78416f612dc56b2a6dfc82bf775f718eaad7d265073b7c5158a920e4351870ea"
+    },
+    {
+      "id": "kanton/AR/723.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz gilt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geobasisdaten des kantonalen Rechts und andere Geodaten des Kantons;"
+            },
+            {
+              "marke": "b",
+              "text": "die Geobasisdaten des kommunalen Rechts und andere Geodaten der Gemeinden, wenn die Daten mit den Behörden des Kantons ausgetauscht werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen für die Geobasisdaten nach diesem Gesetz gelten auch für die Geobasisdaten des Bundesrechts, sofern das Bundesrecht oder das übrige kantonale Recht keine abweichenden Bestimmungen enthält."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "fc3645099865f577c4cb9cb51fbedeb679356db1a1aea243636398586e05b41e"
+    },
+    {
+      "id": "kanton/AR/723.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es gelten die Begriffsbestimmungen gemäss Art. 3 Abs. 1 GeoIG, Art. 2 der Geoinformationsverordnung und Art. 3 der Verordnung über die geografischen Namen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Ergänzung dazu bedeuten in diesem Gesetz und seinen Ausführungsbestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Geobasisdaten des kantonalen Rechts: Geodaten, die auf einem rechtsetzenden Erlass des Kantons beruhen;"
+            },
+            {
+              "marke": "b",
+              "text": "Geobasisdaten des kommunalen Rechts: Geodaten, die auf einem rechtsetzenden Erlass der Gemeinde beruhen;"
+            },
+            {
+              "marke": "c",
+              "text": "Geodaten-Infrastruktur (GDI): allgemein verfügbares System von Verfahren, Einrichtungen, Technologien, Daten und Personen, das den gemeinsamen Austausch und die effiziente Nutzung von Geodaten ermöglicht;"
+            },
+            {
+              "marke": "d",
+              "text": "Geografisches Informationssystem (GIS): rechnergestütztes Informationssystem als Teil der GDI, das Geodaten und Geometadaten mittels Geodiensten zugänglich und nutzbar macht."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "d725a9a06f1a60c1bedfe5cd0e70bb114291e7746a7cd2356ac78f6dca3ac093"
+    },
+    {
+      "id": "kanton/AR/723.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet in einem Katalog die Geobasisdaten des kantonalen Rechts und legt die jeweilige Zugangsberechtigung fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Behörden des Kantons können Geodaten, die nicht auf einem rechtsetzenden Erlass des Kantons beruhen, erheben, nachführen und verwalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als zeitlich befristete Grundlagendaten oder als Ergebnis eines Projekts;"
+            },
+            {
+              "marke": "b",
+              "text": "als Auswertungen von Geobasisdaten des Bundesrechts oder des kantonalen Rechts zu Zwecken der Erfüllung kantonaler Aufgaben;"
+            },
+            {
+              "marke": "c",
+              "text": "als Hilfsdaten zur Unterstützung der Erfüllung kantonaler Aufgaben."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "40bfbcc2cf424556da1a43e5d642d69eb156f3e96955558ab005ee6d3f43cfac"
+    },
+    {
+      "id": "kanton/AR/723.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden bezeichnen in einem Katalog die Geobasisdaten des kommunalen und interkommunalen Rechts und legen die jeweilige Zugangsberechtigung fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kataloge der Gemeinden sind möglichst einheitlich auszugestalten und inhaltlich zu harmonisieren."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "eb156f8d3e914622d58f9d26a38b7156d5a792fcadfa897bc606176aa829722d"
+    },
+    {
+      "id": "kanton/AR/723.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt Vorschriften über die qualitativen und technischen Anforderungen an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Geobasisdaten des kantonalen und kommunalen Rechts;"
+            },
+            {
+              "marke": "b",
+              "text": "Geometadaten, die sich auf Geobasisdaten beziehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er strebt dabei eine Harmonisierung mit den Anforderungen an die Geobasisdaten des Bundesrechts an und übernimmt soweit möglich und sinnvoll die Regelungen des Bundesrechts."
+        },
+        {
+          "absatz": "3",
+          "text": "Die qualitativen und technischen Anforderungen gelten grundsätzlich auch für die übrigen Geodaten gemäss Art. 5 Abs. 2. Der Regierungsrat kann abweichende Vorschriften erlassen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "e192ac68cbf0e398a5acf57546e08268b0e0fe6edc25c00c45bddf0c281fa3c6"
+    },
+    {
+      "id": "kanton/AR/723.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Stellen für das Erheben, Nachführen und Verwalten der Geobasisdaten ergeben sich aus der Spezialgesetzgebung."
+        },
+        {
+          "absatz": "2",
+          "text": "Fehlen entsprechende Vorschriften, so liegt die Zuständigkeit bei der Stelle des Kantons oder der Gemeinden, die für den Sachbereich zuständig ist, auf den sich die Geobasisdaten beziehen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "00b2bbfe3c8fa274dafd51d176bb14b16d4141c6388a7df6ead2611f77b50b9f"
+    },
+    {
+      "id": "kanton/AR/723.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 gewährleistet die nachhaltige Verfügbarkeit der Geobasisdaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Archivierung und die Historisierung der Geobasisdaten des kantonalen und kommunalen Rechts."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "0c5a129f1db9de47e1474ac0f80156431e7bf2b463561a953cd82f0e51d3f52d"
+    },
+    {
+      "id": "kanton/AR/723.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geobasisdaten des kantonalen und kommunalen Rechts sowie die anderen Geodaten nach Art. 5 Abs. 2 sind öffentlich zugänglich und können von jeder Person genutzt werden, sofern keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "c3d3bf876b347efb9cbf3b31a86cd6da8f86ed4cd20eedfbdcbd3188b8713918"
+    },
+    {
+      "id": "kanton/AR/723.1/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit dieses Gesetz keine abweichenden Regelungen enthält, gelten die Vorgaben des Datenschutzgesetzes."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "9ebb80ff74a3f29eb929eb52a5ce201e4fc328e97480346588900fd30e5cc148"
+    },
+    {
+      "id": "kanton/AR/723.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Stelle nach Art. 8 kann den Zugang zu Geodaten des Kantons und der Gemeinden sowie deren Nutzung und Weitergabe von einer Einwilligung abhängig machen. Die Einwilligung wird erteilt durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verfügung;"
+            },
+            {
+              "marke": "b",
+              "text": "Vertrag;"
+            },
+            {
+              "marke": "c",
+              "text": "organisatorische oder technische Zugangskontrollen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt nähere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulässige Nutzung und Weitergabe;"
+            },
+            {
+              "marke": "b",
+              "text": "das Verfahren zur Gewährung von Zugang und Nutzung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Pflichten der Nutzerinnen und Nutzer, namentlich hinsichtlich des Zugangs und des Datenschutzes bei der Nutzung und Weitergabe der Daten;"
+            },
+            {
+              "marke": "d",
+              "text": "das Anbringen von Quellenangaben, Warnhinweisen und Hinweisen auf den Stand der Aktualität;"
+            },
+            {
+              "marke": "e",
+              "text": "die Ausnahmen vom Erfordernis der Einwilligung."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "3b69e4fd2d29e8b37bf48df14a72edb3e586d623ef26003a4bf2ca49513660bc"
+    },
+    {
+      "id": "kanton/AR/723.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt die Geodienste von kantonalem Interesse und legt für die Geobasisdaten des kantonalen Rechts das Angebot dieser Geodienste fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden legen für die Geobasisdaten des kommunalen Rechts das Angebot der Geodienste fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat erlässt für die Geodienste Vorschriften über die qualitativen und technischen Anforderungen im Hinblick auf eine optimale Vernetzung."
+        },
+        {
+          "absatz": "4",
+          "text": "Er regelt die sachbereichsübergreifenden Geodienste."
+        },
+        {
+          "absatz": "5",
+          "text": "Er kann vorschreiben, dass bestimmte Geobasisdaten allein oder in Verbindung mit anderen Daten im Abrufverfahren oder auf andere Weise in elektronischer Form zugänglich gemacht werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Die zuständige Stelle nach Art. 8 ist für den Aufbau und Betrieb dieser Geodienste zuständig."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "7b8b4ca068703ff032e4a76dc940ade8e79ff93f25c2c953e6eece0211cf83ae"
+    },
+    {
+      "id": "kanton/AR/723.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörden des Kantons und der Gemeinden gewähren sich gegenseitig sowie den Behörden von Bund und Kantonen einfachen und direkten Zugang zu Geobasisdaten und den übrigen Geodaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "0b0e0404c742af7322aa6e9232b83e79f21022d7820c56f06add66e1598e4d6e"
+    },
+    {
+      "id": "kanton/AR/723.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Zugang zu den Geodaten des Kantons und der Gemeinden, für deren Nutzung sowie für die Nutzung von Geodiensten können Gebühren erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren setzen sich zusammen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Nutzung zum Eigengebrauch: aus höchstens den Grenzkosten und einem angemessenen Beitrag an die Infrastruktur;"
+            },
+            {
+              "marke": "b",
+              "text": "bei gewerblicher Nutzung: aus den Grenzkosten und einem der Nutzung angemessenen Beitrag an die Infrastruktur sowie an die Investitions- und Nachführungskosten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühren für die Nutzung der Daten der amtlichen Vermessung gehen je zur Hälfte an den Kanton und die Gemeinden, jene für die Nutzung der übrigen Daten an die zuständige Stelle nach Art. 8."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat regelt die Einzelheiten und erlässt einen einheitlichen Gebührentarif für den ganzen Kanton."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "2a66d3bd724a09762d450d018dd3a6e2a4ea08ee19ae572b2cee99242e3d88a2"
+    },
+    {
+      "id": "kanton/AR/723.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Art. 20 GeoIG gilt sinngemäss für Geobasisdaten des kantonalen und kommunalen Rechts."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "d8e27680e51f918b3dda8a33551b149ee1875543282a1ae352e52184599a2147"
+    },
+    {
+      "id": "kanton/AR/723.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton und die Gemeinden betreiben gemeinsam ein Geografisches Informationssystem (GIS)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton und die Gemeinden können zu diesem Zweck eine privatrechtliche oder öffentlich-rechtliche Trägerschaft gründen oder sich an einer solchen beteiligen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "98d4e09b5af670ba7c48b849e232e38baf3fbf128039520b5a0bad96df7024de"
+    },
+    {
+      "id": "kanton/AR/723.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton und die Gemeinden tragen die Kosten für Aufbau und Weiterentwicklung des GIS gemeinsam."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton und die Gemeinden tragen die Kosten für den Betrieb des GIS verursachergerecht bezogen auf die Geodaten und Geodienste in ihrer Zuständigkeit."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "b2ee449a07450770413859c0d576584193dd6feffe3e2ef20155323668fd0ba0"
+    },
+    {
+      "id": "kanton/AR/723.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zuständige kantonale Fachstelle für Geoinformation (GIS-Fachstelle);"
+            },
+            {
+              "marke": "b",
+              "text": "das zuständige kantonale-kommunale Koordinationsorgan (GIS-Ausschuss)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Einzelheiten von Organisation und Aufgaben."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "2c7a37452fdd447dfd5e507a26c219ba8d797185a8c75c3440cd678d52c6ead3"
+    },
+    {
+      "id": "kanton/AR/723.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden führen einen digitalen Leitungskataster, aus dem die geografische Lage der Leitungen mit ihren ober- und unterirdischen baulichen Anlagen zur Versorgung und Entsorgung hervorgeht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Eigentümerinnen und Eigentümer der Leitungen oder Werke stellen der Gemeinde die Daten in digitaler Form unentgeltlich zur Verfügung. Sie haben im Gegenzug das Recht zur kostenlosen Nutzung des Katasters."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat erlässt nähere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Inhalt des Katasters;"
+            },
+            {
+              "marke": "b",
+              "text": "die qualitativen und technischen Anforderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Zugang und die Nutzung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Gebühren."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "5078bd2f1086ce241f39ecc3fcaaba460297e75e6e4a4822425c2c423eaf1651"
+    },
+    {
+      "id": "kanton/AR/723.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton führt den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen (ÖREB-Kataster)."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann diese Aufgabe an Dritte übertragen oder mit anderen Kantonen die gemeinsame Erfüllung dieser Aufgabe vereinbaren."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt die Einzelheiten der Organisation, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zuständige Stelle für die Führung des ÖREB-Katasters;"
+            },
+            {
+              "marke": "b",
+              "text": "die zuständigen Stellen für die Erstellung und Abgabe beglaubigter Auszüge."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat schliesst mehrjährige Programmvereinbarungen mit dem Bund ab. Beträgt der Kantonsanteil an den Programmkosten mehr als 2 Mio. Franken, ist die Genehmigung des Kantonsrates erforderlich."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "53c338806af0f132a593988d84b6ead1b20b12fc85d35dbed9e74641659cd32e"
+    },
+    {
+      "id": "kanton/AR/723.1/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet die zum Bestand des Katasters gehörenden eigentümerverbindlichen Geobasisdaten des kantonalen und - in Absprache mit den Gemeinden - des kommunalen Rechts."
+        },
+        {
+          "absatz": "2",
+          "text": "Er bezeichnet die Zusatzinformationen über laufende Änderungen von öffentlich-rechtlichen Eigentumsbeschränkungen, die mit dem Inhalt des Katasters verknüpft werden."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "4fe41c111962660c6a12def7d9f3454ba35507c4085fbfd710891e634e3681ca"
+    },
+    {
+      "id": "kanton/AR/723.1/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann vorschreiben, dass dem ÖREB-Kataster für bestimmte öffentlich-rechtliche Eigentumsbeschränkungen die Funktion als amtliches Publikationsorgan zukommt."
+        },
+        {
+          "absatz": "2",
+          "text": "Er regelt die Einzelheiten von Zuständigkeit und Verfahren."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "f633fa5f0f93b5df8ea85a90fe837df11f2d73a99c12f47c1915f0893533355b"
+    },
+    {
+      "id": "kanton/AR/723.1/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Einzelheiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Aufnahmeverfahrens;"
+            },
+            {
+              "marke": "b",
+              "text": "des Zugangs;"
+            },
+            {
+              "marke": "c",
+              "text": "des Beglaubigungsverfahrens;"
+            },
+            {
+              "marke": "d",
+              "text": "der nachträglichen Beglaubigung;"
+            },
+            {
+              "marke": "e",
+              "text": "der Kostentragung."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "6a5958b9453ca40e2d3f551d0d50b366f9613bbae401ef69195c60895478be50"
+    },
+    {
+      "id": "kanton/AR/723.1/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat schliesst mehrjährige Programmvereinbarungen mit dem Bund ab. Beträgt der Kantonsanteil an den Programmkosten mehr als 2 Mio. Franken, ist die Genehmigung des Kantonsrates erforderlich. Die Gemeinden sind vorgängig anzuhören."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement schliesst mit dem Bund Detailvereinbarungen in Ausführung der Programmvereinbarungen ab."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat genehmigt die Daten der amtlichen Vermessung und die daraus erstellten Auszüge, insbesondere den Plan für das Grundbuch."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "e07fe51f6d22d697b0aba68682354335c581807a13abcfd53d3d726bddd1fbd4"
+    },
+    {
+      "id": "kanton/AR/723.1/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann nach Anhörung der Gemeinden den durch das Bundesrecht vorgeschriebenen Inhalt der amtlichen Vermessung erweitern und weitergehende Anforderungen an die Vermessung vorschreiben."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "55c07ab77da7f5f0bc202954d24f38c62cbc5f15c45d3d9cfacff59a6c9a1d74"
+    },
+    {
+      "id": "kanton/AR/723.1/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die kantonale Vermessungsaufsicht nach Art. 42 der Verordnung über die amtliche Vermessung;"
+            },
+            {
+              "marke": "b",
+              "text": "die zuständige Stelle für die amtliche Vermessung (Fachstelle für Vermessung)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fachstelle für Vermessung ist zuständig für die Durchführung der amtlichen Vermessung, soweit dieses Gesetz und seine Ausführungsbestimmungen keine abweichenden Bestimmungen enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat regelt die Einzelheiten von Organisation und Aufgaben."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "bc74bb36385598f01e2d40a2566855a4bc71aa51081e7196e17b079163b853ee"
+    },
+    {
+      "id": "kanton/AR/723.1/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten für die Ersterhebung, die Erneuerung, die periodische Nachführung und für besondere Anpassungen sind, soweit sie nicht vom Bund getragen werden, vom Kanton und den betreffenden Gemeinden je zur Hälfte zu übernehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten der laufenden Nachführung trägt die natürliche oder juristische Person, die sie verursacht. Kann eine Verursacherin oder ein Verursacher nicht festgestellt werden, trägt die Grundeigentümerin oder der Grundeigentümer die Kosten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für die Verwaltung der Bestandteile der amtlichen Vermessung sind vom Kanton und den betreffenden Gemeinden je zur Hälfte zu übernehmen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "bedebd815af9539b190a9c00b80fdd91c95e9f8c6ba212976fbf6a4800c681b3"
+    },
+    {
+      "id": "kanton/AR/723.1/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt insbesondere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die rechtsgültige Vermarkung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nachführung und das Meldewesen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Geschäftsverkehr zwischen amtlicher Vermessung und Grundbuch;"
+            },
+            {
+              "marke": "d",
+              "text": "die öffentliche Auflage und das Genehmigungsverfahren;"
+            },
+            {
+              "marke": "e",
+              "text": "den Zugang und die Nutzung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Gebühren für die laufende Nachführung und das Inkasso."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "c4d5117f8705283097ee7b7acb3aeb9713392e46a06010b36828643a18f00a5c"
+    },
+    {
+      "id": "kanton/AR/723.1/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bezeichnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zuständige kantonale Stelle für die Festlegung der geografischen Namen der amtlichen Vermessung;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Nomenklaturkommission (Fachstelle für die geografischen Namen der amtlichen Vermessung);"
+            },
+            {
+              "marke": "c",
+              "text": "die zuständige kantonale Stelle für die Festlegung und Änderung der Gemeinde- und Ortschaftsnamen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden bezeichnen die Namen aller Strassen, Wege, Gassen, Plätze und benannten Gebiete, die als Strassenbezeichnungen für Adressen dienen, auf ihrem Gemeindegebiet. Sie regeln die Zuständigkeit für die Festlegung der Strassennamen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat erlässt nähere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Verfahren für die Festlegung der Strassennamen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Schreibweise der Strassennamen."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "b1f710702530b6ee0252421a4e2fc793334ba717d437c42ae96d015701ad0753"
+    },
+    {
+      "id": "kanton/AR/723.1/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden sind zuständig für die Nummerierung der Gebäude (Hausnummern) nach Strassen, Wegen, Gassen, Plätzen und benannten Gebieten auf ihrem Gemeindegebiet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt nähere Vorschriften über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Erheben, Nachführen und Verwalten der Gebäudeadressen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nummerierung und Signalisation der Gebäude;"
+            },
+            {
+              "marke": "c",
+              "text": "das Meldewesen."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "c26c15dbcf8def66b1bf464c7ec8e8cfd971678c37782e19e39c57653247f47e"
+    },
+    {
+      "id": "kanton/AR/723.1/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit keine abweichenden Regelungen bestehen, tragen der Kanton resp. die Gemeinden die Kosten jener Aufgaben, für die sie zuständig sind."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "fb53b88fd15c81053664ecb334cfa5a03ec84c29764775c1f9c27bb5cc222efd"
+    },
+    {
+      "id": "kanton/AR/723.1/art_33",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich oder Dritten widerrechtlich Zugang zu Geodaten gemäss Art. 3 Abs. 1 verschafft, ohne Einwilligung nutzt oder weitergibt,"
+            },
+            {
+              "marke": "b",
+              "text": "Geodienste ohne Einwilligung nutzt,"
+            },
+            {
+              "marke": "c",
+              "text": "Vorschriften über die Nutzung, namentlich über die Quellenangabe, missachtet."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "c9976738b2e5f40566eec3ec234447ae4e159924805ffafff0eb50a576587652"
+    },
+    {
+      "id": "kanton/AR/723.1/art_34",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt im gesamten Kantonsgebiet für die amtliche Vermessung sowie die übrigen Geobasisdaten ein einheitliches Lagebezugssystem mit Lagebezugsrahmen fest und bestimmt den Zeitpunkt der Einführung im Kantonsgebiet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat legt den Zeitpunkt für die Einführung des Katasters der öffentlich-rechtlichen Eigentumsbeschränkungen fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinden erstellen den digitalen Leitungskataster innerhalb von fünf Jahren seit dem Inkrafttreten dieses Gesetzes."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann eine Verursacherin oder ein Verursacher im Sinne von Art. 28 Abs. 2 nicht festgestellt werden, tragen der Kanton und die betreffende Gemeinde die Kosten der laufenden Nachführung je zur Hälfte, bis die erstmalige periodische Nachführung in der betreffenden Gemeinde abgeschlossen ist."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "417c57a981b723e552bc44c3cec6a837aa2dc59acffa4ca993d6f82552c4d52b"
+    },
+    {
+      "id": "kanton/AR/723.1/art_35",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "kGeoIG (723.1)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten ."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/723.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "66771572d1446ee4d30df4c22ff6382c",
+      "sha": "617e7b0cd7bf31bc85e37613ea6cce83e9d3a5f969653861aec44d6b22e22f75"
+    }
+  ]
+}

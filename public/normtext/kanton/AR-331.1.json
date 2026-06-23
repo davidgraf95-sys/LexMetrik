@@ -1,0 +1,70 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/331.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über das Strafregister (331.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Justizvollzug betreibt unter Aufsicht des Departementes Inneres und Sicherheit die kantonale Koordinationsstelle für das Strafregister."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/331.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4ceafeb9826a7ee429cdd6d38bcac51a",
+      "sha": "2a9a51b9fc2c557346cf44232904c9d73cad49fb62cff442ad1d02bcee9d16fb"
+    },
+    {
+      "id": "kanton/AR/331.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über das Strafregister (331.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Koordinationsstelle erfüllt die Aufgaben gemäss Art. 14 Abs. 1 der VOSTRA-Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterstützt die beteiligten Behörden beim Vollzug der Gesetzgebung über das Strafregister."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/331.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4ceafeb9826a7ee429cdd6d38bcac51a",
+      "sha": "5b4d95bbf912667f3f951928804851c21ef80f2f5d49486769c0ae1fff5badcd"
+    },
+    {
+      "id": "kanton/AR/331.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung über das Strafregister (331.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Inneres und Sicherheit entscheidet nach Rücksprache mit den anschlussberechtigten Behörden, ob sie an VOSTRA angeschlossen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonale Koordinationsstelle übernimmt für Behörden, die nicht an VOSTRA angeschlossen sind, die Aufgaben nach Art. 14 Abs. 2 der VOSTRA-Verordnung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/331.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4ceafeb9826a7ee429cdd6d38bcac51a",
+      "sha": "807fa5eeea704cf66c7fbbb062251385d3ad863a319fed58320f40e7403ce3d8"
+    }
+  ]
+}

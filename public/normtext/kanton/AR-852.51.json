@@ -1,0 +1,544 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/852.51/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt den Vollzug der Interkantonalen Vereinbarung für Soziale Einrichtungen (IVSE)."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit keine besondere Regelung besteht, finden die Bestimmungen der IVSE sinngemäss auch Anwendung für die Aufnahme von Personen mit besonderen Betreuungs- und Förderungsbedürfnissen in geeigneten Einrichtungen im innerkantonalen Verhältnis."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "1fcca5460a3f4bf61f6be3961bb17194e3b4d55fe85c3700cd5820a2f5103103"
+    },
+    {
+      "id": "kanton/AR/852.51/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Amt für Soziales führt eine Verbindungsstelle nach Art. 10 IVSE."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Anwendungsbereich von Art. 1 Abs. 2 melden die Einrichtungen die Aufnahme von Personen der Verbindungsstelle."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "f1efc9a4162dd5a59be320217d53311d908f5dbf70c76992ee807410bfb0d522"
+    },
+    {
+      "id": "kanton/AR/852.51/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Appenzell Ausserrhoder Einrichtungen nach IVSE können anerkannt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kinder- und Jugendheime, Justizheime, heilpädagogische Gross- und Pflegefamilien sowie Sonderschulen mit Internat;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "Stationäre Therapie- und Rehabilitationsangebote im Suchtbereich;"
+            },
+            {
+              "marke": "d",
+              "text": "Einrichtungen der externen Sonderschulung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anerkennung von Einrichtungen für erwachsene, invalide Personen oder Einheiten solcher Einrichtungen richtet sich nach dem Behindertenfinanzierungsgesetz und seinen Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "1fe0b241ae5d8a4b9bea02c6c941b7f67032c4e194cfdbaef6398160dea51988"
+    },
+    {
+      "id": "kanton/AR/852.51/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales ist zuständig für den Entscheid über die Anerkennung. Für Einrichtungen gemäss Art. 3 lit. a und d erfolgt der Entscheid über die Anerkennung auf Antrag des für die fachliche Aufsicht zuständigen Departements."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "c7c531ec50f00bc99a098dd91025d3e07ae524acbcae695ecb9c398949277a72"
+    },
+    {
+      "id": "kanton/AR/852.51/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einrichtungen, die über eine rechtsgültige Betriebsbewilligung verfügen, können anerkannt werden, wenn sie",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Bedarf entsprechen und gemeinnützig sind,"
+            },
+            {
+              "marke": "b",
+              "text": "fachgerecht im Sinne von Art. 6 und wirtschaftlich im Sinne von Art. 7 geführt werden, und"
+            },
+            {
+              "marke": "c",
+              "text": "eine angemessene Leistungsabgeltung verlangen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anerkennung kann widerrufen werden, wenn die Voraussetzungen für die Anerkennung nicht mehr erfüllt sind."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "7cfffd15f18279ee3cb22ac3ff5fde531f18853b919be4ed33b393a4d8d10bbb"
+    },
+    {
+      "id": "kanton/AR/852.51/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die fachliche Aufsicht richtet sich nach den spezialrechtlichen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Richtlinien zu den Qualitätsanforderungen gemäss Art. 33 Abs. 2 IVSE gelten als Mindeststandards."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "d7ca3653d98034b6eb1e865429241da02a97a013ab17180ecf92847d3931fa27"
+    },
+    {
+      "id": "kanton/AR/852.51/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die wirtschaftliche Aufsicht übt aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Departement Gesundheit und Soziales über die Einrichtungen nach Art. 3 lit. a – c mit Ausnahme des Teils Sonderschule der Sonderschulen mit Internat;"
+            },
+            {
+              "marke": "b",
+              "text": "das Departement Bildung und Kultur über die Einrichtungen nach Art. 3 lit. d sowie über den Teil Sonderschule der Sonderschulen mit Internat; Art. 4 bleibt vorbehalten. Das Departement Bildung und Kultur informiert das Departement Gesundheit und Soziales über die Ergebnisse."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dem zuständigen Departement sind insbesondere einzureichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Voranschlag und Jahresrechnung;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben zur Berechnung der Leistungsabgeltung;"
+            },
+            {
+              "marke": "c",
+              "text": "Investitionsvorhaben;"
+            },
+            {
+              "marke": "d",
+              "text": "Beschlüsse über unvorhergesehene Ausgaben;"
+            },
+            {
+              "marke": "e",
+              "text": "Stellenplan;"
+            },
+            {
+              "marke": "f",
+              "text": "Verzeichnis der Angestellten mit Angaben zu Stellenumfang und Besoldung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Voranschlag, Stellenplan, Besoldungsansätze und Berechnung der Leistungsabgeltung sind in der Regel bis spätestens Ende des Vorjahres einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Erfolgt die Leistungsabgeltung nach der Methode P (Pauschalen) der IVSE, gelten die Vorgaben der Leistungsvereinbarung."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "d40bed78359fb35376b8fc2de607407e01fb6dac85424928860834c309b239de"
+    },
+    {
+      "id": "kanton/AR/852.51/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Departemente gemäss Art. 7 Abs. 1 legen die anrechenbaren Kosten fest."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "1ebd9a0a522ed7c70f52ae645ecd78918accb2e810bbca8573bfc53358bdb8f9"
+    },
+    {
+      "id": "kanton/AR/852.51/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Leistungsabgeltung übernimmt als zahlungspflichtige Stelle gemäss Art. 19 IVSE:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Im Bereich A gemäss IVSE (Stationäre Einrichtungen für Kinder und Jugendliche):"
+            },
+            {
+              "marke": "1",
+              "text": "die Jugendanwaltschaft, soweit der Aufenthalt von ihr angeordnet worden ist;"
+            },
+            {
+              "marke": "2",
+              "text": "das Amt für Volksschule und Sport für Sonderschulen mit Internat, soweit der Aufenthalt von ihm angeordnet oder bewilligt worden ist;"
+            },
+            {
+              "marke": "3",
+              "text": "die betroffene Gemeinde, soweit der Aufenthalt aus kindes- oder erwachsenenschutzrechtlichen Gründen angeordnet ist;"
+            },
+            {
+              "marke": "b",
+              "text": "im Bereich B gemäss IVSE (Einrichtungen für erwachsene Personen mit Behinderung) das Amt für Soziales;"
+            },
+            {
+              "marke": "c",
+              "text": "im Bereich C gemäss IVSE (Stationäre Therapie- und Rehabilitationsangebote im Suchtbereich) die betreffende Gemeinde;"
+            },
+            {
+              "marke": "d",
+              "text": "im Bereich D gemäss IVSE (Sonderschulen) das Amt für Volksschule und Sport, soweit der Aufenthalt von ihm angeordnet oder bewilligt worden ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "e6edcac656d9ad25da1b01e745327be50f1bfab2efd6ea54a0031d192f63ef5b"
+    },
+    {
+      "id": "kanton/AR/852.51/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sämtliche Gesuche sind der Verbindungsstelle einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verbindungsstelle prüft die Gesuche. Die gesuchstellenden Einrichtungen und die betroffenen Personen haben die erforderlichen Unterlagen zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit die Verbindungsstelle nicht selber entscheidet (Art. 11 Abs. 2), leitet sie die Gesuche an die zuständige Stelle weiter."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "bbbeec554abf4b494bd27e5b81043eed828584f17b2684a46ff66e986fbf5834"
+    },
+    {
+      "id": "kanton/AR/852.51/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verbindungsstelle entscheidet über Gesuche um Kostenübernahmegarantien gemäss Art. 19 IVSE. Vorbehalten bleibt Abs. 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Zahlungspflicht einer anderen kantonalen Stelle (Art. 9) geltend gemacht, entscheidet diese Stelle über die Kostenübernahmegarantie."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abgabe der Kostenübernahmegarantie verpflichtet die zahlungspflichtige Stelle. Soweit eine Gemeinde zahlungspflichtige Stelle ist, wird sie zur Stellungnahme eingeladen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kostenübernahmegarantie kann befristet oder mit Auflagen verbunden werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "9fc796dd8f3152bbc3395b53057fb8a3f1fd0d07df27720a5ed98384e0343d18"
+    },
+    {
+      "id": "kanton/AR/852.51/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kostenübernahmegarantie wird in der Regel für die Aufenthaltsdauer erteilt. Dauert eine vor dem Eintritt der Volljährigkeit begonnene Ausbildung der Sekundarstufe II länger, gilt die Kostenübernahmegarantie grundsätzlich bis zum Abschluss dieser Ausbildung."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Bereich Sonderschulung wird die Kostenübernahmegarantie in der Regel befristet und kann maximal bis zum 20. Altersjahr erteilt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kostenübernahmegarantie für Kinder- und Jugendheime kann erteilt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bei der Unterbringung, wenn die Kindes- und Erwachsenenschutzbehörde die Unterbringung beschlossen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "ausnahmsweise bei der Unterbringung durch die Eltern, wenn die zuständige Behörde der Wohnsitzgemeinde Richtigkeit, Notwendigkeit sowie Dringlichkeit bestätigt hat."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kostenbeteiligung beim Aufenthalt in Behinderteneinrichtungen nach Art. 28 IVSE umfasst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anrechenbare Einnahmen nach den Vorschriften über die Ergänzungsleistungen zur eidgenössischen Alters-, Hinterlassenen- und Invalidenversicherung. Die Renten aus gesetzlich vorgeschriebenen Versicherungen werden in der Regel zu 80 % angerechnet;"
+            },
+            {
+              "marke": "b",
+              "text": "Ergänzungsleistungen, soweit sie für die Deckung der Heimkosten bestimmt sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "44e222ceb6a49b39b045ba6ba0a55f0408278b1d93e29662d4b613de9e9291b6"
+    },
+    {
+      "id": "kanton/AR/852.51/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kostenübernahmegarantie kann insbesondere verweigert werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zwischen Leistung und Leistungsabgeltung ein erkennbares Missverhältnis besteht;"
+            },
+            {
+              "marke": "b",
+              "text": "die Taxordnung nicht den tatsächlichen Betriebskosten angepasst ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "dd0434e50bc66a38fa09bc487b5ccade64101208e17b9740d14497477193e1d4"
+    },
+    {
+      "id": "kanton/AR/852.51/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die aufnehmende Einrichtung im Kanton Appenzell Ausserrhoden reicht der Verbindungsstelle vor der Aufnahme ein Gesuch um Kostenübernahmegarantie ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch hat alle für die Beurteilung notwendigen Angaben zu enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verbindungsstelle prüft das Gesuch auf Vollständigkeit und Richtigkeit, lädt ein allfällig zuständiges Departement gemäss Art. 7 zur Stellungnahme ein und leitet das Gesuch an die Verbindungsstelle des Wohnsitzkantons weiter."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Aufnahme der betreffenden Person darf erst nach Erteilen der Kostenübernahmegarantie erfolgen, ansonsten trägt die Einrichtung das Inkassorisiko. Vorbehalten bleibt Art. 26 Abs. 2 IVSE."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Einrichtung meldet der Verbindungsstelle Wohnsitzwechsel und Austritte von aufgenommenen Personen. Die Verbindungsstelle informiert ein allfällig zuständiges Departement gemäss Art. 7."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "e92dc388999756f78c1d6b576e7efc45687cfec7f6c5d188c24c9f2e99f744b8"
+    },
+    {
+      "id": "kanton/AR/852.51/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Beitrag der oder des Unterhaltspflichtigen nach Art. 22 IVSE beträgt Fr. 25.– je Tag. Für die Sonderschulen mit Internat sowie für Einrichtungen der externen Sonderschulung gelten spezielle Vorschriften. Diese werden durch das Departement Bildung und Kultur erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Von der Sozialhilfe übernommene Beiträge der Unterhaltspflichtigen werden nach dem Bundesgesetz über die Zuständigkeit für die Unterstützung Bedürftiger weiterverrechnet. Abweichende Vereinbarungen über gegenseitige Rückerstattungspflichten bleiben vorbehalten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "43382a4e10abbf921494ddd89bc163fcf9475a25a211a2de6130c2405be5f2ef"
+    },
+    {
+      "id": "kanton/AR/852.51/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Unrecht bezogene Beiträge sind samt Zins zu 5 % zurückzuerstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Rückerstattungsansprüche verjähren mit Ablauf von fünf Jahren seit Kenntnisnahme, in jedem Fall aber mit Ablauf von 10 Jahren seit der letzten Zahlung."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "74647353a93092a16dd808cf7b4af5b5949447860768090360101c6df849082c"
+    },
+    {
+      "id": "kanton/AR/852.51/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Verordnung zur Interkantonalen Vereinbarung für Soziale Einrichtungen (852.51)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt am 1. Januar 2008 in Kraft."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/852.51",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "4493f0a01106fae8d93bb151ad0284b3",
+      "sha": "5316ab77e2cff66570456cdefdc454d01e757fc830015123b7454bd06970ce46"
+    }
+  ]
+}

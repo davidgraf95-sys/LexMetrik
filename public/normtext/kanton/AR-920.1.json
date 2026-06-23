@@ -1,0 +1,820 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/920.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz dient der Erhaltung und der Förderung der Landwirtschaft. Es regelt den Vollzug der Bundesgesetzgebung über die Landwirtschaft und schafft die Grundlagen für eigenständige kantonale Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es begünstigt eine auf den Markt ausgerichtete Landwirtschaft, welche die natürlichen Lebensgrundlagen im Einklang mit Umwelt, Gesellschaft und Wirtschaft nachhaltig nutzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton fördert die Ausbildung, die Eigeninitiative und die Lebens- und Arbeitsbedingungen der bäuerlichen Familie. Er bewahrt regionale Besonderheiten, unterstützt Strukturverbesserungen sowie den Aufbau und die Erhaltung gesunder Nutztierbestände."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "a06555a13c9955390e2b3e65669c7a0a1772839228827f212de1aa2a39b5829a"
+    },
+    {
+      "id": "kanton/AR/920.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat wählt eine Kommission für Landwirtschaft mit mindestens sieben Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommission berät das Departement Bau und Volkswirtschaft in Grundsatzfragen und bei der Umsetzung der kantonalen Landwirtschaftspolitik."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "e8ca26dfb5f44b19572738402fc8350d82cd4a4e713d208cd9d1a9fe9e7fa8b4"
+    },
+    {
+      "id": "kanton/AR/920.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt die Grundzüge der kantonalen Landwirtschaftspolitik fest."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "b235099069ec4f02d191ddeb8cb10e2a1eaf9e093c7bf2e23a61061f9de8d9a9"
+    },
+    {
+      "id": "kanton/AR/920.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Volkswirtschaft beaufsichtigt den Vollzug des Bundesrechts und dieses Gesetzes vorbehältlich Absatz 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales beaufsichtigt das Veterinärwesen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "7589410ef6a8dcb492f2c5bb8f431f51172f8ccfc7f2ab54d1826bc0fdbf74f0"
+    },
+    {
+      "id": "kanton/AR/920.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Landwirtschaftsamt vollzieht das Landwirtschaftsrecht des Bundes und dieses Gesetz, soweit keine anderen Zuständigkeiten vorgesehen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist namentlich zuständig für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die landwirtschaftliche Beratung;"
+            },
+            {
+              "marke": "b",
+              "text": "den Vollzug der Direktzahlungen und anderer Beiträge,"
+            },
+            {
+              "marke": "c",
+              "text": "die qualitative Förderung der Viehzucht und der Pflanzenproduktion;"
+            },
+            {
+              "marke": "d",
+              "text": "die Unterstützung von Strukturverbesserungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Information und Öffentlichkeitsarbeit."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "7f04a060e077d1309ea9ccf42c89d13ed5bcf9fdf56d8fc59c628f13f2839b25"
+    },
+    {
+      "id": "kanton/AR/920.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Veterinäramt vollzieht das Tierschutzgesetz, das Tierseuchengesetz und das Viehhandelskonkordat."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "5df96a5a2f73d628c30bec1ea8078e9cef5c9762d6990953aae92073b70bb391"
+    },
+    {
+      "id": "kanton/AR/920.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das bäuerliche Bodenrecht, das landwirtschaftliche Pachtrecht und das Bundesgesetz über Investitionskredite und Betriebshilfen werden von speziellen Kommissionen vollzogen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "299076ad9e43a8bbf3faf05a9e01d5768e5562144cf0da55280ef1b44af731bd"
+    },
+    {
+      "id": "kanton/AR/920.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden",
+          "items": [
+            {
+              "marke": "a",
+              "text": "stellen die Infrastruktur für Viehschauen zur Verfügung;"
+            },
+            {
+              "marke": "b",
+              "text": "stellen Notschlachtanlagen und Sammelstellen für tierische Abfälle bereit;"
+            },
+            {
+              "marke": "c",
+              "text": "erheben und kontrollieren die landwirtschaftlichen Betriebsdaten;"
+            },
+            {
+              "marke": "d",
+              "text": "wirken bei Massnahmen für die Tiergesundheit und den Tierschutz mit."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Durch Verordnung können ihnen weitere Aufgaben übertragen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinden können bestimmte Aufgaben mit Zustimmung des zuständigen Departements auf Zweckverbände oder Private übertragen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "9c3970a6f75f19c91ad6141af71ab8a023033e7058d979b0b0509d1fb1cd0dc5"
+    },
+    {
+      "id": "kanton/AR/920.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton sorgt für Aus-, Weiter- und Fortbildungsmöglichkeiten in den landwirtschaftlichen und bäuerlich-hauswirtschaftlichen Berufen und in den landwirtschaftlichen Spezialberufen. Der Regierungsrat regelt die Einzelheiten."
+        },
+        {
+          "absatz": "2–3",
+          "text": "…"
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "3d2650e256a6f921b2a1c9a1dbe14c408a249407c610ab2b51373e9eafd61c3e"
+    },
+    {
+      "id": "kanton/AR/920.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton sorgt für eine landwirtschaftliche und bäuerlich-hauswirtschaftliche Beratung. Er kann diese Aufgabe Dritten übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Beratung kann eine nach Zeit- und Sachaufwand bemessene Gebühr erhoben werden. Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "85d041fda395e46435c5154c70c5abb4d1decd8e681bb11202a7da28d127073a"
+    },
+    {
+      "id": "kanton/AR/920.1/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton fördert Strukturverbesserungen. Der Regierungsrat kann mit dem Bund mehrjährige Programmvereinbarungen im Bereich der Landwirtschaft abschliessen. Beträgt der Kantonsanteil an den Programmkosten mehr als 1,2 Mio. Franken, ist die Genehmigung des Kantonsrates erforderlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann weitere Strukturverbesserungen unterstützen. Die Kantonsbeiträge können von Beiträgen der Standortgemeinde abhängig gemacht werden. Der Kantonsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "6da7131b195ef6421c78a12395a7861d14c9dfeccf02d00644292e9efd775bc3"
+    },
+    {
+      "id": "kanton/AR/920.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton führt eine landwirtschaftliche Kreditkasse."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gewährt Darlehen und übernimmt Bürgschaften für Investitionen und Betriebshilfen. Der Kanton stellt ihr im Bedarfsfall die Mittel zur Verfügung, welche zur Auslösung von Bundesbeiträgen erforderlich sind."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "396c18f9cc7671709ab2f5c8689bfca97e67a9e95fc1269584fe03d9a9e4c7f4"
+    },
+    {
+      "id": "kanton/AR/920.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton kann einen Agrarfonds einrichten. Dieser wird aus Mitteln gespiesen, die im Rahmen der Betriebshilfe frei verfügbar sind oder vom Kantonsrat zusätzlich bewilligt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Agrarfonds kann zinslose oder zinsverbilligte Darlehen zur Förderung landwirtschaftlicher Vorhaben bewilligen, für welche der Bund keine Mittel zur Verfügung stellt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "25c7d4a225ddcf8d970ba0bc0e08c4195e6352302872100c9adc3a31b54b67cc"
+    },
+    {
+      "id": "kanton/AR/920.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton kann landwirtschaftliche Selbsthilfemassnahmen unterstützen. Er beschränkt sich dabei in der Regel auf Starthilfen und Überbrückungsmassnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "In ausserordentlichen Lagen kann der Kantonsrat Subventionen für befristete Massnahmen zugunsten der Landwirtschaft sprechen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "b37a8d81725b8662998bac2ac5986d85f4766136bd541f7a741af873f911b909"
+    },
+    {
+      "id": "kanton/AR/920.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton fördert eine naturnahe, tier- und umweltgerechte Landwirtschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann bei erschwerten Produktionsbedingungen Beiträge leisten, wenn die Bewirtschaftung im öffentlichen Interesse liegt und anders nicht sichergestellt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton richtet Beiträge nach der Öko-Qualitätsverordnung des Bundes aus. Der Regierungsrat regelt die Einzelheiten auf dem Verordnungswege."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "642bc5beffef6677c50f931779ce8a45c29c8c9ac149d4241688c1d29be8f9ac"
+    },
+    {
+      "id": "kanton/AR/920.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton sorgt für die Qualitätssicherung von Milch und Milchprodukten."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann Massnahmen zur Sicherung der Qualität von weiteren landwirtschaftlichen Produkten treffen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann die Kennzeichnung regionaler Produkte fördern."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "3294a10143fe3e72d94eaac6bc31931feee695217b585125fd54b37206e186d2"
+    },
+    {
+      "id": "kanton/AR/920.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann Vorschriften zur Bekämpfung und Überwachung regional bedeutsamer Tier- und Pflanzenkrankheiten erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann darin ein Pflanzverbot und die Entfernung von Wirtspflanzen vorsehen, die eine Pflanzenkrankheit übertragen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "1ddffe6e1e70674f23a8facaa8121495e506a7e2ce2eeb7b83d2ab6b700a8f9a"
+    },
+    {
+      "id": "kanton/AR/920.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton kann Beiträge gewähren, namentlich für gezielte Zuchtmassnahmen und an die Durchführung von Viehschauen und -ausstellungen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "cc8ce3cc3cf99f430c9c8c36b1a9ed8e9636796f9f37fab086a348742dd96f67"
+    },
+    {
+      "id": "kanton/AR/920.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Alpen sind nach ökologischen Grundsätzen zu bewirtschaften."
+        },
+        {
+          "absatz": "2",
+          "text": "Standorttypische Pflanzengesellschaften sind zu erhalten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "a5dcd75a949d2b568c4c21dd5245dc6e84bb28c8c6df5ac7ba5ebdc269e38c24"
+    },
+    {
+      "id": "kanton/AR/920.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Volkswirtschaft erlässt Alpfahrtsvorschriften, welche die zulässige Düngung, die Bestossung und andere Einzelheiten der Bewirtschaftung festlegen. Die Vorschriften regeln zudem die Massnahmen gegen Tierseuchen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Auftrieb einzelner Tierarten kann beschränkt oder verboten werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "d35ef60ff259bd6cc12414ef8d3a3603cdf3656124f7fa2224b332960aee2270"
+    },
+    {
+      "id": "kanton/AR/920.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein kantonales Vorpachtrecht an Alpen besitzt in nachstehender Rangfolge:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wer angrenzend selbst Alpen bewirtschaftet und im Kanton oder einer angrenzenden Gemeinde wohnt;"
+            },
+            {
+              "marke": "b",
+              "text": "wer selbst Land bewirtschaftet und in der gleichen oder einer angrenzenden Gemeinde wohnt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Vorpachtrecht steht nur Personen zu, die für eine sachgerechte Bewirtschaftung Gewähr bieten."
+        },
+        {
+          "absatz": "3",
+          "text": "Beanspruchen mehrere das Vorpachtrecht, so entscheidet der Verpachter über die Vergabe."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "bbee80369a09a86e472fc1f6b2841273a78aac58ed93c2c09de3b560ff9f6671"
+    },
+    {
+      "id": "kanton/AR/920.1/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein kantonales Vorkaufsrecht an den Alpen steht in nachstehender Rangfolge zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Gemeinde, in deren Bann die Alp mehrheitlich liegt;"
+            },
+            {
+              "marke": "b",
+              "text": "den Alpgenossenschaften und ähnlichen Körperschaften mit Sitz im Kanton."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "e42f2cd4612a93ea2328577500ec9340e97548c283e3b4e46398714774abea62"
+    },
+    {
+      "id": "kanton/AR/920.1/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alpen dürfen nicht in Einheiten unter zwanzig Hektaren aufgeteilt werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "9af74797b092196eb6cf9e69caf82ee2e59507c5d8b468487cd76da3a00d7ba9"
+    },
+    {
+      "id": "kanton/AR/920.1/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Tiergesundheitskasse",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entschädigt den Verlust landwirtschaftlicher Nutztiere;"
+            },
+            {
+              "marke": "b",
+              "text": "finanziert die tierseuchenpolizeilichen Massnahmen;"
+            },
+            {
+              "marke": "c",
+              "text": "trägt die Kosten der Entsorgung von Tierkörpern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterstützt die Tiergesundheitsdienste, präventive Massnahmen gegen Tierseuchen und Forschungsprojekte über Tiergesundheit und Tierhaltung."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "5e2798087629195c8f9a999f205b0878e6621b5eb179d76791316c6bfb07c79d"
+    },
+    {
+      "id": "kanton/AR/920.1/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kasse wird als Separatfonds vom Veterinäramt geführt. Sie wird finanziert durch",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beiträge der Tierhalterinnen und Tierhalter;"
+            },
+            {
+              "marke": "b",
+              "text": "Beiträge des Kantons und der Gemeinden;"
+            },
+            {
+              "marke": "c",
+              "text": "veterinärpolizeiliche Gebühren."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Vermögensziel der Kasse. Er setzt die Halterbeiträge nach Tiergattungen fest und bemisst sie an Hand des versicherten Risikos und der Entsorgungskosten. Die Beiträge für die Hunde sind in der Hundesteuer enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beiträge des Kantons und der Gemeinden entsprechen je der Summe der Halterbeiträge. Die einzelnen Gemeindebeiträge bemessen sich nach den Einwohnerzahlen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "3adab24e811979a76908dffd5fbce17d60701778344b18b02f535c8cf69a5554"
+    },
+    {
+      "id": "kanton/AR/920.1/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden stellen Notschlachtanlagen und Sammelstellen für tierische Abfälle bereit."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können für die Benützung der Notschlachtanlagen Gebühren erheben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "5119562374f5d553f8028f1553e8b2aa9bd338594d68880108a2439e1073c5be"
+    },
+    {
+      "id": "kanton/AR/920.1/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton organisiert die Entsorgung der gesammelten tierischen Abfälle."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entsorgung von Tierkörpern geht dabei zulasten der Tiergesundheitskasse."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Entsorgung der übrigen tierischen Abfälle werden von den Einliefernden Gebühren erhoben, die nach der Art und Menge der Abfälle bemessen werden. Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "35a78feb372dab5a43257068f4a5235f291fafdece410f62c0bbd4648969abae"
+    },
+    {
+      "id": "kanton/AR/920.1/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt einen Normalarbeitsvertrag für landwirtschaftliche Angestellte."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "e9ddf9516504cfd7ffa2fcf3c1d8b36725f06a473180096dfbdce9dcfafb727c"
+    },
+    {
+      "id": "kanton/AR/920.1/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu Unrecht bezogene Beiträge oder Vermögensvorteile sind dem Kanton zurückzuerstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Voraussetzungen, unter denen ein Beitrag an eine Strukturverbesserung gewährt wurde, nicht mehr erfüllt oder werden Auflagen oder Bedingungen nicht eingehalten, kann der Kanton die Beiträge zurückverlangen. Der Anspruch verjährt zwanzig Jahre nach der Auszahlung der Beiträge."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "96a6d87f73637b2b7645d53127322f08569b0ccfb15cf4edc985a60f63283adb"
+    },
+    {
+      "id": "kanton/AR/920.1/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat erlässt die zum Vollzug dieses Gesetzes erforderlichen Vorschriften."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann das Gesetz an neues, übergeordnetes Recht anpassen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "22e7cd02a0695ae00dc150f381d39b06e95e14f3662c378ce3f8e5eb57327f19"
+    },
+    {
+      "id": "kanton/AR/920.1/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesetz über die Landwirtschaft (920.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz wird gestaffelt in Kraft gesetzt. Der Regierungsrat bestimmt den Zeitpunkt."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit dem Inkrafttreten sind aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gesetz vom 28. April 1957 über die Beitragsleistung an die Verbesserung landwirtschaftlicher Heimwesen (Bodenverbesserungsgesetz);"
+            },
+            {
+              "marke": "b",
+              "text": "das Gesetz vom 24. April 1955 über die kantonale Tierseuchenkasse."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/920.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "b86d2fb48822a2d85f7f64d7c13a29b7",
+      "sha": "a08742006914cbc08ba21f55147d576551f377a23990a07f603fe8a2b42e5697"
+    }
+  ]
+}

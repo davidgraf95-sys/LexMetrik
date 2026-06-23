@@ -1,0 +1,1135 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/761.32/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Prüfungen, Verfügungen, Bewilligungen und andere amtliche Verrichtungen auf dem Gebiete des Strassenverkehrs werden Gebühren nach den nachfolgenden Bestimmungen erhoben."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "132e0b3b8b6ac089121152901b0347cf5e159a98a0623e2b68ae7d87f4b449ce"
+    },
+    {
+      "id": "kanton/AR/761.32/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfung von Transportmotorfahrzeugen werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personenwagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "b",
+              "text": "Kleinbus"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "c",
+              "text": "Gesellschaftswagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 150.-"
+            },
+            {
+              "marke": "d",
+              "text": "Lieferwagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "e",
+              "text": "Lieferwagen nicht karossiert"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "f",
+              "text": "Lastwagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 150.-"
+            },
+            {
+              "marke": "g",
+              "text": "Gewerblicher Motorkarren leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "h",
+              "text": "Gewerblicher Motorkarren schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "i",
+              "text": "Gewerblicher Traktor leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "j",
+              "text": "Gewerblicher Traktor schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "k",
+              "text": "Sattelschlepper leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "l",
+              "text": "Sattelschlepper schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 180.-"
+            },
+            {
+              "marke": "m",
+              "text": "Sattelmotorfahrzeug leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 210.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 180.-"
+            },
+            {
+              "marke": "n",
+              "text": "Sattelmotorfahrzeug schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 300.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 240.-"
+            },
+            {
+              "marke": "o",
+              "text": "Gelenkmotorwagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 300.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 240.-"
+            },
+            {
+              "marke": "p",
+              "text": "Übrige Motorwagen leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 90.-"
+            },
+            {
+              "marke": "q",
+              "text": "Übrige Motorwagen schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 150.-"
+            },
+            {
+              "marke": "r",
+              "text": "Leicht-, Klein- und dreirädrige Motorfahrzeuge"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "45dc7d3659dab5958b2ca161f325eb70202d6c140f4d6c3ddf9973a87053a51a"
+    },
+    {
+      "id": "kanton/AR/761.32/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfung von Arbeitsmotorwagen und gewerblichen Motoreinachsern mit Anhängern werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Arbeitskarren leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "b",
+              "text": "Arbeitskarren schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 90.-"
+            },
+            {
+              "marke": "c",
+              "text": "Arbeitsmaschine leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 90.-"
+            },
+            {
+              "marke": "d",
+              "text": "Arbeitsmaschine schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 150.-"
+            },
+            {
+              "marke": "e",
+              "text": "Gewerbliche Motoreinachser mit Anhänger"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "bd964036dc57ff1973027770fdc9c125c82329a031bf25426c81a339d01a4111"
+    },
+    {
+      "id": "kanton/AR/761.32/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfung von Motorrädern und Motorfahrrädern werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Motorräder"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 50.-"
+            },
+            {
+              "marke": "b",
+              "text": "Motorräder mit Seitenwagen"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "c",
+              "text": "Dreirädrige Motorräder"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "d",
+              "text": "Kleinmotorräder"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 50.-"
+            },
+            {
+              "marke": "e",
+              "text": "Motorfahrräder"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Nach Polizeirapport Fr. 60.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "9f6b1c90b88482c939b7bf0e990868023d7077328958b992c277995b244aad28"
+    },
+    {
+      "id": "kanton/AR/761.32/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfung von Anhängern werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anhänger bis 3500 kg"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "b",
+              "text": "Anhänger über 3500 kg"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 90.-"
+            },
+            {
+              "marke": "c",
+              "text": "Sattelanhänger"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 90.-"
+            },
+            {
+              "marke": "d",
+              "text": "Anhänger an Motorrad"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "840a42cf6c1951f0ede454733f9a7fc713509612c360851a594e37ff452e5876"
+    },
+    {
+      "id": "kanton/AR/761.32/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die technische oder administrative Prüfung von Anhängervorrichtungen werden Gebühren in der Höhe von Fr. 30.- erhoben."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "0841f8ca6da6e105b28330a9d91a6293849c6b2124f1a49dcfaa6ddcdf6aa3f9"
+    },
+    {
+      "id": "kanton/AR/761.32/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfung von landwirtschaftlichen Motorfahrzeugen werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Motorkarren leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "b",
+              "text": "Motorkarren schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "c",
+              "text": "Traktoren leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "d",
+              "text": "Traktoren schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "e",
+              "text": "Arbeitskarren leicht"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 90.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "f",
+              "text": "Arbeitskarren schwer"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            },
+            {
+              "marke": "g",
+              "text": "Motoreinachser mit Anhänger"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 60.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "98fac10bc840ae3f40fa757528778fd1e54bb2b38ca79fc526f4a2320794d356"
+    },
+    {
+      "id": "kanton/AR/761.32/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zu den Gebühren werden folgende Zuschläge erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Für Ausnahmefahrzeuge"
+            },
+            {
+              "marke": "1",
+              "text": "Erste Inverkehrssetzung Fr. 50.-"
+            },
+            {
+              "marke": "2",
+              "text": "Periodische Nachprüfung Fr. 50.-"
+            },
+            {
+              "marke": "b",
+              "text": "Für nicht typengeprüfte Fahrzeuge bei der ersten Inverkehrssetzung 50 bis 100%"
+            },
+            {
+              "marke": "c",
+              "text": "Für Behindertenfahrzeuge, Abklärung und Überprüfung der Anpassung an die Behinderung kostenlos"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "56ccb0d9d9ec804e8346888df772731e76c420aaee12d189f528c459e24cecc2"
+    },
+    {
+      "id": "kanton/AR/761.32/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Lärm-, Rauch-, Abgasmessung wird eine Gebühr zwischen Fr. 30.- und Fr. 300.- erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Prüfungen von technischen Änderungen wird eine Gebühr zwischen Fr. 15.- und Fr. 300.- erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Prüfung aller nicht aufgeführten Fahrzeuge werden Gebühren nach Aufwand in der Höhe von Fr. 120.- pro Stunde erhoben."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "e574a67fddd276c7f56fdda7902176c4b9cb1ea1138a86db1ed9cbfa968995ff"
+    },
+    {
+      "id": "kanton/AR/761.32/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Abnahme der Führerprüfungen werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Theoretische Führerprüfungen"
+            },
+            {
+              "marke": "1",
+              "text": "Basis-Theorie, Mofa Theorie Fr. 30.-"
+            },
+            {
+              "marke": "2",
+              "text": "Zusatztheorie Fr. 45.-"
+            },
+            {
+              "marke": "3",
+              "text": "CZV-Theorie Fr. 45.-"
+            },
+            {
+              "marke": "4",
+              "text": "Einzelprüfung Fr. 120.-"
+            },
+            {
+              "marke": "5",
+              "text": "CZV E-Prüfung, je Teilprüfung Fr. 30.-"
+            },
+            {
+              "marke": "b",
+              "text": "Praktische Führerprüfungen"
+            },
+            {
+              "marke": "1",
+              "text": "Kategorien A1, A Fr. 120.-"
+            },
+            {
+              "marke": "2",
+              "text": "Kategorien B, B1, BE, C1, C1E, DE, D1, D1E, F Fr. 120.-"
+            },
+            {
+              "marke": "3",
+              "text": "Kategorie CE Fr. 170.-"
+            },
+            {
+              "marke": "4",
+              "text": "Kategorien C, D Fr. 220.-"
+            },
+            {
+              "marke": "5",
+              "text": "Berufsmässiger Personentransport (Code 121, 122) Fr. 170.-"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nach einem Ausweisentzug wird die Gebühr der Führerprüfung der entsprechenden Kategorie erneut erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Kontrollfahrt wird die Gebühr der praktischen Führerprüfung der entsprechenden Kategorie erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei besonderen Prüfungen wird eine Gebühr nach Aufwand von Fr. 120.- pro Stunde erhoben."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "aa6584f6343c093dc2683c954b0238436a78649c3b7c857957ac17a7a4c5514a"
+    },
+    {
+      "id": "kanton/AR/761.32/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren gemäss Art. 2 bis Art. 10 werden auch erhoben bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Nachprüfungen von Führern und Fahrzeugen infolge ungenügenden Prüfungsbefundes bis zu 100% der Gebühren"
+            },
+            {
+              "marke": "b",
+              "text": "Nichterscheinen oder Abmeldung später als 5 Arbeitstage vor der Führer- oder Fahrzeugprüfung"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "a4c2c93b7f0e0cad4eda84eff5062c7b95b8e5b6deb680259141b1e58d4f8a64"
+    },
+    {
+      "id": "kanton/AR/761.32/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Ausstellung oder Änderung von Ausweisen und Kontrollschilder werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fahrzeugausweise"
+            },
+            {
+              "marke": "1",
+              "text": "Fahrzeugausweis / Fahrzeugausweis umschreiben Fr. 50.-"
+            },
+            {
+              "marke": "2",
+              "text": "Ersatzfahrzeugausweis Fr. 60.-"
+            },
+            {
+              "marke": "3",
+              "text": "Tagesausweis Fr. 50.-"
+            },
+            {
+              "marke": "4",
+              "text": "Kollektivfahrzeugausweis (Händler) Fr. 50.-"
+            },
+            {
+              "marke": "5",
+              "text": "Motorfahrrad-Fahrzeugausweis (Mofa) Fr. 50.-"
+            },
+            {
+              "marke": "6",
+              "text": "Duplikat Fahrzeugausweis Fr. 60.-"
+            },
+            {
+              "marke": "7",
+              "text": "Änderung von Daten, Namensänderung, Adressänderung Fr. 30.-"
+            },
+            {
+              "marke": "8",
+              "text": "Versicherungswechsel Fr. 30.-"
+            },
+            {
+              "marke": "9",
+              "text": "Fahrzeugausweis befristet (Art. 16 ff. der Verkehrsversicherungsverordnung) Fr. 60.-"
+            },
+            {
+              "marke": "10",
+              "text": "Verlängerung befristeter Ausweis Fr. 50.-"
+            },
+            {
+              "marke": "11",
+              "text": "Eintrag und Löschung Code 178 (Leasingfahrzeuge) Fr. 50.-"
+            },
+            {
+              "marke": "b",
+              "text": "Lernfahrausweis"
+            },
+            {
+              "marke": "1",
+              "text": "Lernfahrausweis (inkl. Prüfung des Gesuches) Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Verlängerung der Gültigkeitsdauer Fr. 40.-"
+            },
+            {
+              "marke": "3",
+              "text": "Umschrieb von einem anderen Kanton Fr. 30.-"
+            },
+            {
+              "marke": "4",
+              "text": "Änderung von Daten, Namenänderung, Adressänderung Fr. 30.-"
+            },
+            {
+              "marke": "5",
+              "text": "Duplikat Fr. 70.-"
+            },
+            {
+              "marke": "6",
+              "text": "Duplikat von Zulassungsbewilligung für Theorieprüfungen Fr. 20.-"
+            },
+            {
+              "marke": "7",
+              "text": "Duplikat Anmeldekarte zur praktischen Führerprüfung Fr. 20.-"
+            },
+            {
+              "marke": "c",
+              "text": "Führerausweis"
+            },
+            {
+              "marke": "1",
+              "text": "Erstmalige Ausstellung im Kreditkartenformat Fr. 60.-"
+            },
+            {
+              "marke": "2",
+              "text": "Duplikat Fr. 70.-"
+            },
+            {
+              "marke": "3",
+              "text": "Jede weitere Ausstellung im Kreditkartenformat Fr. 40.-"
+            },
+            {
+              "marke": "4",
+              "text": "Internationaler Führerausweis Fr. 40.-"
+            },
+            {
+              "marke": "d",
+              "text": "Kontrollschilder"
+            },
+            {
+              "marke": "1",
+              "text": "Abgabe Einzelschild Fr. 30.-"
+            },
+            {
+              "marke": "2",
+              "text": "Abgabe Schilderpaar Fr. 45.-"
+            },
+            {
+              "marke": "3",
+              "text": "Übertragung auf neuen Halter Fr. 150.-"
+            },
+            {
+              "marke": "4",
+              "text": "Sammelübertragung mehrerer Kontrollschilder Fr. 180.-"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Übertragungsgebühren nach Abs. 1 lit. d Ziff. 3 und 4 entfallen, wenn die Kontrollschilder nach dem Tod der Halterin oder des Halters auf den überlebenden Ehegatten oder den eingetragenen Partner übertragen werden."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "2e7c0a34a899073b7248d35770c77bb191c020e49d08ce24956bc58dcec9f16b"
+    },
+    {
+      "id": "kanton/AR/761.32/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für jede Bewilligung werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Führer- oder Fahrzeugprüfungen ausserkantonal Fr. 35.-"
+            },
+            {
+              "marke": "b",
+              "text": "Provisorische Fahrberechtigung (2-Phasenausbildung pro Tag) Fr. 20.-"
+            },
+            {
+              "marke": "c",
+              "text": "Besondere Einrichtung, besondere Verwendung Fr. 50.-"
+            },
+            {
+              "marke": "d",
+              "text": "Ausbildungsbewilligung für Lastwagenchauffeusen und -chauffeure Fr. 70.-"
+            },
+            {
+              "marke": "e",
+              "text": "Verlängerung der Ausbildungsbewilligung für Lastwagenchauffeusen und -chauffeure Fr. 50.-"
+            },
+            {
+              "marke": "f",
+              "text": "Bestellung Ausweis 95 Fr. 35.-"
+            },
+            {
+              "marke": "g",
+              "text": "Garage-Selbstabnahme Fr. 200.-"
+            },
+            {
+              "marke": "h",
+              "text": "Nachkontrolle bei Selbstabnehmern Fr. 120.-"
+            },
+            {
+              "marke": "i",
+              "text": "Abklärung Kollektivfahrzeugausweise (Händlerschilder) Fr. 200.-"
+            },
+            {
+              "marke": "j",
+              "text": "Periodische Nachkontrolle bei Inhabern von Kollektivfahrzeugausweisen (Händlerschilder) Fr. 150.-"
+            },
+            {
+              "marke": "k",
+              "text": "Werkinterner Verkehr:"
+            },
+            {
+              "marke": "1",
+              "text": "Prüfung des Gesuches Fr. 180.-"
+            },
+            {
+              "marke": "2",
+              "text": "Jährliche Erneuerung Fr. 60.-"
+            },
+            {
+              "marke": "l",
+              "text": "Sonderbewilligungen (vgl. verwaltungsinterner Tarif)"
+            },
+            {
+              "marke": "1",
+              "text": "Einzelbewilligungen Fr. 50.- bis Fr. 300.-"
+            },
+            {
+              "marke": "2",
+              "text": "Jahresbewilligungen Fr. 150.- bis Fr. 1 200.-"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "6d17ec23fdd2e7f7d5c5e97b618ca98caf635764221c0f259b656c9714c39b8c"
+    },
+    {
+      "id": "kanton/AR/761.32/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für amtliche Verrichtungen werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Deponierung von Kontrollschildern Fr. 20.-"
+            },
+            {
+              "marke": "b",
+              "text": "Wiederausgabe von deponierten Kontrollschildern (WIK) Fr. 20.-"
+            },
+            {
+              "marke": "c",
+              "text": "Verlängerung der Hinterlegungsdauer von Kontrollschildern Fr. 50.-"
+            },
+            {
+              "marke": "d",
+              "text": "Ausschreibungen im Ripol Fr. 50.-"
+            },
+            {
+              "marke": "e",
+              "text": "Verweigerung von Ausweisen oder Bewilligungen Fr. 40.- bis Fr. 100.-"
+            },
+            {
+              "marke": "f",
+              "text": "Bestätigung \"Bewilligte Änderung\" Fr. 40.-"
+            },
+            {
+              "marke": "g",
+              "text": "Bestätigung für Italienischen Zoll (Zulassung) Fr. 100.-"
+            },
+            {
+              "marke": "h",
+              "text": "Bestätigung über bestandene Führerprüfungen Fr. 35.-"
+            },
+            {
+              "marke": "i",
+              "text": "Verfügung über den Entzug von Fahrzeugausweisen und Kontrollschildern infolge Nichtbezahlens von Steuern oder Gebühren, fehlendem Versicherungsschutz oder Nichtvorführens von Fahrzeugen Fr. 150.-"
+            },
+            {
+              "marke": "j",
+              "text": "Verfügung / Auftrag über den Einzug von Ausweisen und Schildern Fr. 150.-"
+            },
+            {
+              "marke": "k",
+              "text": "Mahnung bei Nichterfüllen von Auflagen im Führerausweis Fr. 50.-"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei irrtümlicher oder unberechtigter Meldung über das Aufhören der Haftpflichtversicherung werden die entsprechenden Gebühren der Versicherungsgesellschaft belastet."
+        },
+        {
+          "absatz": "3",
+          "text": "Für besondere Amtshandlungen, Abklärungen, Nachforschungen und Bestätigungen, die noch nicht beschrieben wurden (z.B. technische Daten, Zahlungsverkehr etc.), wird ein Betrag von Fr. 60.- pro angebrochene halbe Stunde verrechnet."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "a4514cfac7554dc253f968daf8cd7a4fb050f44028b2ef0dca2c8f8014c0d0b2"
+    },
+    {
+      "id": "kanton/AR/761.32/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Änderung tritt am 1. Juni 2016 in Kraft."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "f01522a0db93b768e45d365ef26577f29e729b603770bc8b6673335f034b0e7e"
+    },
+    {
+      "id": "kanton/AR/761.32/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif zum EG SVG (761.32)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gebührentarif zum EG SVG vom 28. November 1995 mit den Änderungen wird aufgehoben."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.32",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "df761e3c45fd6c1a7c9cab1be7b51605",
+      "sha": "94544469f63021dc9538f51358cfc372e6731fbb77128240b3f2b38313f1599c"
+    }
+  ]
+}

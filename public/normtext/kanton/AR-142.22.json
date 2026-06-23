@@ -1,0 +1,668 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/142.22/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter dem Namen Pensionskasse AR besteht im Sinne von Art. 108 KV eine nach versicherungstechnischen Grundsätzen geführte öffentlich-rechtliche Vorsorgeeinrichtung mit eigener Rechtspersönlichkeit. Ihr Sitz ist in Herisau."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "27b4f8612d6d9977bb8a7045a03d3ce45e2a97a0c384f315bc04700f644937b3"
+    },
+    {
+      "id": "kanton/AR/142.22/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Pensionskasse AR dient der beruflichen Vorsorge der Versicherten gegen die wirtschaftlichen Folgen von Alter, Tod und Invalidität."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "c0ec44b06899249d4068cb49b4e086d13686fadac0b8fafcb772967425b786b0"
+    },
+    {
+      "id": "kanton/AR/142.22/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Pensionskasse AR sind von Gesetzes wegen angeschlossen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Angestellten und Behördenmitglieder des Kantons;"
+            },
+            {
+              "marke": "b",
+              "text": "das Personal der selbständigen öffentlichen Anstalten des Kantons einschliesslich Spitalverbund Appenzell Ausserrhoden und AR Informatik AG;"
+            },
+            {
+              "marke": "c",
+              "text": "die Lehrenden an den Volksschulen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Durch Vertrag kann weiteres Personal der Pensionskasse AR angeschlossen werden. Voraussetzung ist, dass der jeweilige Arbeitgeber vorwiegend öffentliche Aufgaben im Kanton wahrnimmt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "b1afd1f6fe6e46211a3cf470c25e385349d1b460e93f4f8c988da2000573e94c"
+    },
+    {
+      "id": "kanton/AR/142.22/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Pensionskasse AR wird nach dem Grundsatz der Vollkapitalisierung geführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erbringt Altersleistungen auf der Grundlage des Sparguthabens (Beitragsprimat)."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erbringt Leistungen bei Invalidität und Tod vor der Pensionierung auf der Grundlage des versicherten Lohns (Leistungsprimat)."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Versicherte, die von Gesetzes wegen der Pensionskasse AR angeschlossen sind, gilt die Standardversicherung. In Anschlussverträgen können davon abweichende Versicherungen angeboten werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "4a69f129801f4be2eae48547690d3439b1e401b237c69d4b002d989a204b907c"
+    },
+    {
+      "id": "kanton/AR/142.22/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Standardversicherung beruht auf einem Beitragsplan, der gesamthaft zu 44 % mit Beiträgen der Versicherten und zu 56 % mit Beiträgen der Arbeitgeber finanziert wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "5aa294d7cabd105aac9c8c46b2676042781d509abf4bacc3066c43924f2852e6"
+    },
+    {
+      "id": "kanton/AR/142.22/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der versicherte Jahreslohn ist die Grundlage für die Bemessung der Jahresbeiträge und der Sanierungsbeiträge."
+        },
+        {
+          "absatz": "2",
+          "text": "Er entspricht dem Jahreslohn gemäss Bundesgesetz über die Alters- und Hinterlassenenversicherung, vermindert um gelegentlich anfallende Lohnbestandteile und um den Koordinationsabzug gemäss BVG. Für Teilzeitbeschäftigte vermindert sich der Koordinationsabzug anteilmässig."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwaltungskommission bestimmt, welche gelegentlich anfallenden Lohnbestandteile vom Jahreslohn in Abzug gebracht werden können."
+        },
+        {
+          "absatz": "4",
+          "text": "Der maximal versicherbare Jahreslohn entspricht dem Maximum der Gehaltsklasse 20 gemäss Besoldungsverordnung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "9d48584788f09068bfc0f4633b4ded8af7eda493de7bf8e5a0ed3bedf66a8358"
+    },
+    {
+      "id": "kanton/AR/142.22/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Jahresbeiträge setzen sich aus den Spar-, Risiko- und Verwaltungskostenbeiträgen zusammen."
+        },
+        {
+          "absatz": "2–3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verwaltungskommission legt die Jahresbeiträge im Rahmen der gesetzlichen Vorgaben im Vorsorgereglement fest. Neufestlegungen können nur auf den Beginn eines Jahres erfolgen und sind spätestens sechs Monate bevor sie wirksam werden zu veröffentlichen."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "f49c764ed8f829f7196bf251180bb5b6898f62ba6135edc76d1e80d4e765bdaa"
+    },
+    {
+      "id": "kanton/AR/142.22/art_7_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "7_a",
+      "artikelLabel": "Art. 7a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sparbeiträge dienen der Äufnung des Sparguthabens."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Standardversicherung betragen die Sparbeiträge in Prozent des versicherten Jahreslohnes:",
+          "mehrspaltig": {
+            "kopf": [
+              "Alter",
+              "Versicherte",
+              "Arbeitgeber"
+            ],
+            "zeilen": [
+              [
+                "18 - 19",
+                "2.8 - 5.2 %",
+                "4.2 - 7.8 %"
+              ],
+              [
+                "20 - 24",
+                "3.8 - 6.2 %",
+                "5.7 - 9.3 %"
+              ],
+              [
+                "25 - 29",
+                "4.8 - 7.2 %",
+                "7.2 - 10.8 %"
+              ],
+              [
+                "30 - 34",
+                "5.8 - 8.2 %",
+                "8.7 - 12.3 %"
+              ],
+              [
+                "35 - 39",
+                "6.8 - 9.2 %",
+                "10.2 - 13.8 %"
+              ],
+              [
+                "40 - 44",
+                "7.6 - 10.0 %",
+                "11.4 - 15.0 %"
+              ],
+              [
+                "45 - 49",
+                "8.6 - 10.6 %",
+                "12.9 - 15.9 %"
+              ],
+              [
+                "50 - 54",
+                "9.2 - 11.2 %",
+                "13.8 - 16.8 %"
+              ],
+              [
+                "55 - 59",
+                "9.8 - 11.8 %",
+                "14.7 - 17.7 %"
+              ],
+              [
+                "60 - 65",
+                "10.4 -12.4 %",
+                "15.6 - 18.6 %"
+              ],
+              [
+                "66 - 70",
+                "5.6 - 8.8 %",
+                "8.4 - 13.2 %"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "51fe399c6a9ce7896cfe4c91a68ad135d5ac52eff910593434c2070b8d906945"
+    },
+    {
+      "id": "kanton/AR/142.22/art_7_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "7_b",
+      "artikelLabel": "Art. 7b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Risikobeiträge dienen zur Finanzierung der Leistungen bei Invalidität und Tod. Sie können einen Anteil zur Finanzierung eines höheren Umwandlungssatzes enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Standardversicherung beträgt der Risikobeitrag für Versicherte und Arbeitgeber gesamthaft maximal 4 % des versicherten Jahreslohnes."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "de6b31c951faef8ab6324bebe6e1db77f8e9f6da7ae882507c5e9d3a929d618f"
+    },
+    {
+      "id": "kanton/AR/142.22/art_7_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "7_c",
+      "artikelLabel": "Art. 7c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Pensionskasse AR erhebt einen angemessenen Beitrag zur Deckung der Verwaltungskosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höhe des Beitrags wird auf der Grundlage der Verwaltungskosten der letzten Betriebsrechnung und unter Berücksichtigung des Voranschlags des Erhebungsjahrs festgelegt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "821374bc7b6681af26c92a10aa6cc49ff3bb7a2a85c5ab1677d01d1793034b4e"
+    },
+    {
+      "id": "kanton/AR/142.22/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Sanierungsfall kann die Pensionskasse AR aufgrund eines Sanierungskonzeptes des Experten für berufliche Vorsorge einen befristeten Sanierungsbeitrag festlegen und erheben. Die Arbeitgeber tragen mindestens 50 % der gesamten Sanierungsmassnahmen, unter Einbezug einer allfälligen Minder- bzw. Nichtverzinsung der Sparguthaben der Versicherten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Sanierungskonzept ist den Arbeitgebern und den Versicherten mindestens sechs Monate vor der erstmaligen Erhebung der Sanierungsbeiträge zur Kenntnis zu bringen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "44ad4434336eb1237ba36054fc89a7c1d50bafd1dbea8d1f7fb626dead555073"
+    },
+    {
+      "id": "kanton/AR/142.22/art_8_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ändern sich die bundesrechtlichen Grundlagen für die Beitragsbemessung, so ergreift die Verwaltungskommission angemessene Massnahmen, um unmittelbare Härten für die Versicherten oder die Arbeitgeber zu vermeiden oder abzuschwächen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwaltungskommission kann zu diesem Zweck insbesondere vom Koordinationsabzug gemäss Art. 6 Abs. 2 und vom Beitragsrahmen gemäss Art. 7a Abs. 2 abweichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "677ce724b6a1aed03a11444e6c5b6033b5e1fb9e2a780bf47998b42a499651c4"
+    },
+    {
+      "id": "kanton/AR/142.22/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission legt die Leistungen im Vorsorgereglement fest. Es ist sicherzustellen, dass die BVG-Mindestleistungen in jedem Fall erbracht werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "71aef0026dce617df3f9238db88d4c13088183476403f80f7e1928be2be01118"
+    },
+    {
+      "id": "kanton/AR/142.22/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Organe der Pensionskasse AR sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verwaltungskommission"
+            },
+            {
+              "marke": "b",
+              "text": "die Geschäftsführung"
+            },
+            {
+              "marke": "c",
+              "text": "die Revisionsstelle"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "1265911dfc2eed7e3e38c37ac5edc151047935299197c3d85af1fcb6c9ea02c7"
+    },
+    {
+      "id": "kanton/AR/142.22/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission ist das oberste Organ der Pensionskasse AR. Sie nimmt die Gesamtleitung wahr, sorgt für die Erfüllung der gesetzlichen Aufgaben, bestimmt die strategischen Ziele und Grundsätze sowie die im Rahmen dieses Gesetzes erforderlichen Mittel zu deren Erfüllung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwaltungskommission legt die Organisation der Pensionskasse AR fest, sorgt für ihre finanzielle Stabilität und überwacht die Geschäftsführung. Sie erlässt die erforderlichen Reglemente, namentlich über Vorsorge, Anlagen, technische Rückstellungen, Organisation sowie Wahl der Kommissionsmitglieder."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "f9db3a8b8efa3096f0195493dceb91611e6d32745293d2d0406fd7ab52ebbfac"
+    },
+    {
+      "id": "kanton/AR/142.22/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission besteht aus acht oder zehn Mitgliedern, die in der Pensionskasse AR versichert sein müssen. Sie setzt sich je zur Hälfte aus Arbeitnehmervertretern und Arbeitgebervertretern zusammen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Finanzdirektor oder die Finanzdirektorin gehört der Verwaltungskommission als Arbeitgebervertreter von Amtes wegen an."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwaltungskommission konstituiert sich selbst. Wird das Präsidium von einem Arbeitnehmervertreter besetzt, ist das Vizepräsidium einem Arbeitgebervertreter vorbehalten und umgekehrt."
+        },
+        {
+          "absatz": "4",
+          "text": "Beschlüsse werden mit einfachem Mehr der Anwesenden gefasst. Der Stichentscheid wechselt jedes Amtsjahr zwischen der Arbeitgeber- und Arbeitnehmerseite. Zirkulationsentscheide sind zulässig."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "d8d8c38d8b9fd6e4cbd93e219be30e65b89921bbca6bfc898d09e3e7e63129dc"
+    },
+    {
+      "id": "kanton/AR/142.22/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Wahl der Arbeitgebervertreter und Arbeitnehmervertreter teilt die Verwaltungskommission die Versicherten in Wahlkreise ein. Dabei achtet sie auf eine möglichst ausgewogene Aufteilung der Versicherten auf die Wahlkreise."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Wahlreglement legt sie die Modalitäten für die Wahl der Arbeitnehmervertreter und der Arbeitgebervertreter in den einzelnen Wahlkreisen fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Amtsdauer beträgt vier Jahre."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "351e28fdc1d2624f725735de54e19ef7862b4d6c58a418e77a1c95ff442d50e9"
+    },
+    {
+      "id": "kanton/AR/142.22/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Geschäftsführer oder die Geschäftsführerin trägt die Verantwortung für die laufenden Geschäfte der Pensionskasse AR. Er oder sie ist der Verwaltungskommission unterstellt und nimmt an deren Sitzungen mit beratender Stimme teil."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anstellungsverhältnisse des Geschäftsführers oder der Geschäftsführerin und des übrigen Personals der Pensionskasse AR richten sich nach dem kantonalen Personalrecht. Die Verwaltungskommission kann in durch das BVG gebotenen Fällen abweichende Vorschriften erlassen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "76ebc9cfdad494029cffa6cfa946c843f1e58f54f8d23261223d8b7173a16d8a"
+    },
+    {
+      "id": "kanton/AR/142.22/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission beauftragt eine anerkannte Revisionsstelle mit der jährlichen Prüfung der Geschäftsführung, des Rechnungswesens und der Vermögensanlagen nach den Vorschriften des BVG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "0b537b8b2f47d7335375d359156369c27b00430116ee111f3b38fde2c761621c"
+    },
+    {
+      "id": "kanton/AR/142.22/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat nimmt im Rahmen seiner Oberaufsicht den Jahresbericht und die Jahresrechnung jährlich zur Kenntnis."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "ffa71145ab1312530bf9e8497d712b1c4a556c70bbd3342192fa42bd2ec7be13"
+    },
+    {
+      "id": "kanton/AR/142.22/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die bis 31. Dezember 1993 vom Regierungsrat zulasten der Arbeitgeber bewilligten, lebenslänglich auszurichtenden Teuerungszulagen werden von den Arbeitgebern mit einer vom Experten für berufliche Vorsorge nach versicherungstechnischen Grundsätzen berechneten Einmaleinlage per 31. Dezember 2014 abgegolten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "305776cb9c4244273dbf7f1c52ddb322a76a1ba51ca23ebdaea34753decea394"
+    },
+    {
+      "id": "kanton/AR/142.22/art_17_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die angeschlossenen Arbeitgeber leisten per 1. Januar 2018 eine einmalige Einlage zur Minderung von Leistungseinbussen bei künftigen Altersrenten. Die Einlage beträgt maximal 15‘000 Franken pro versicherte Person."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "ac9dd39ec0b8d3ec5ed240efdd86a20b4e0883c040446d6d50d1d581508bc9ea"
+    },
+    {
+      "id": "kanton/AR/142.22/art_17_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "17_b",
+      "artikelLabel": "Art. 17b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungskommission passt die Finanzierung der Standardversicherung schrittweise an den neuen Beitragsplan an."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Erreichung des Finanzierungsverhältnisses nach Art. 5 gilt eine Umsetzungsfrist von zwei Jahren ab Inkrafttreten der Teilrevision."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "24661569478c7874a85135dac86d4ae0654f1228accfe6c508c15df135cde873"
+    },
+    {
+      "id": "kanton/AR/142.22/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Streitigkeiten zwischen der Pensionskasse AR, Arbeitgebern und anspruchsberechtigten Personen werden vom Obergericht entschieden. Auf Begehren der anspruchsberechtigten Person hat die Pensionskasse AR ihren Standpunkt schriftlich festzuhalten und zu begründen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verfahren richtet sich nach dem BVG und dem Gesetz über die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "dd711f3d51574221a09debe48234cec0068ed1ed4a71a9b4ce8119282e54874e"
+    },
+    {
+      "id": "kanton/AR/142.22/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "PKG (142.22)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz tritt am 1. Januar 2014 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/142.22",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "44057a1b3d4ed893995c556bdd5123d4",
+      "sha": "6ab4cd7ba24e02afe1cd85a297d29a9256a8162b3cfdc9a93824c63848bfc8c0"
+    }
+  ]
+}

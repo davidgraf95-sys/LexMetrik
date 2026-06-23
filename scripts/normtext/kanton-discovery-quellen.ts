@@ -57,7 +57,11 @@ export function discoveryZuInventar(
       lawId: s.lawId,
       erlassName: e.titel,
       erlassNr: e.systematischeNummer,
-      quelleUrl: e.originalUrl,
+      // Kanonische LexWork-Live-/Manifest-Form `/app/{lang}/texts_of_law/{id}` —
+      // NICHT die LexFind-`/data/`-original_url. Sonst weicht der Manifest-Key von
+      // der Form ab, die Tarif-Zitate + check-vollstaendigkeit auflösen, und die
+      // Zitat-Abdeckung schlägt fehl (verifiziert AR 233.3, 23.6.2026).
+      quelleUrl: `https://${s.host}/app/${s.lang}/texts_of_law/${s.lawId}`,
       artikel: [], // Tokens nicht nötig — der Adapter holt alle Artikel (§7)
     });
   }

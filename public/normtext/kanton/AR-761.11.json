@@ -1,0 +1,284 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/761.11/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat bezeichnet die Behörden, die für den Vollzug des Bundesgesetzes über den Strassenverkehr und dieses Gesetzes zuständig sind."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "976a0d303cbbd629ba10ca0bfa15b072756fd08c620aba8f020001a1b520fbd8"
+    },
+    {
+      "id": "kanton/AR/761.11/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Motorfahrzeuge, Motorfahrzeuganhänger und Motorfahrräder hält, die im Kanton Appenzell A.Rh. ihren Standort haben und auf öffentlichen Strassen verkehren, hat eine Steuer zu bezahlen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "144cc7bf034f78118034083511ec551f5d91a47f0f51cc1bda3f921857dfd3ef"
+    },
+    {
+      "id": "kanton/AR/761.11/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Strassenverkehrssteuer sind befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Bund, soweit das Bundesrecht es vorschreibt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Kanton für alle seine Fahrzeuge;"
+            },
+            {
+              "marke": "c",
+              "text": "die Gemeinden und Gemeindeverbände für Fahrzeuge, die ausschliesslich der Feuerwehr, dem Krankentransport oder dem Strassenunterhalt dienen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat ist ermächtigt, weitere Personen von der Steuerpflicht ganz oder teilweise zu befreien."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat ist ermächtigt, emissionsarme Fahrzeuge und solche mit niedrigem Energieverbrauch teilweise von der Strassenverkehrssteuer zu befreien."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat kann die Strassenverkehrssteuern für Fahrzeuge, die an einen anderen Halter oder an eine andere Halterin übergehen und anerkannte Emissionsnormen nicht erfüllen, um höchstens 30% heraufsetzen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "11e26491e8a8f1e296f06aa3c34572d09ba04d34f97f270682ef868f64076865"
+    },
+    {
+      "id": "kanton/AR/761.11/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Inneres und Sicherheit kann einer behinderten Person, die wegen ihrer Behinderung auf ein Fahrzeug angewiesen ist, die Verkehrssteuer ganz oder teilweise erlassen. Es berücksichtigt ihre wirtschaftliche Lage."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "8a156e69a2e8d4dbedc8639a8a2347cb2805ec24bfa0f657d780d35a3c03af61"
+    },
+    {
+      "id": "kanton/AR/761.11/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bemessung der Strassenverkehrssteuer erfolgt aufgrund des Gesamtgewichtes."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erfolgt pauschal für",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fahrzeuge mit Kollektivschildern"
+            },
+            {
+              "marke": "b",
+              "text": "Motorfahrräder"
+            },
+            {
+              "marke": "c",
+              "text": "Fahrzeugarten mit geringer Besteuerung"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kantonsrat erlässt einen Tarif, in dem die Steueransätze festgelegtwerden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "b18dd882c25a22fbc905de8a2f0c8b77b8aab681a99e94e5b6e02082f8ece710"
+    },
+    {
+      "id": "kanton/AR/761.11/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuerpflicht beginnt mit dem Tag, an dem das Kontrollschild ausgegeben wird und endet mit dem Tag seiner Rückgabe. Die Verkehrssteuer ist jeweils bis Ende des Jahres im voraus zu bezahlen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "94a8a3a21df4ea59bfb021df01dae70381493bcd155b6789c95fbb1554bdeef3"
+    },
+    {
+      "id": "kanton/AR/761.11/art_6_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "25 % des Ertrages der kantonalen Strassenverkehrssteuern des vorangegangenen Rechnungsjahres wird an die Gemeinden für den Bau und Unterhalt der dem allgemeinen Verkehr geöffneten Strassen mit ihren Nebenanlagen ausgerichtet. Die Bestimmung der Anteile der Gemeinden richtet sich nach den gewichteten Längen und Flächen der Strassen und Nebenanlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "40 % des Ertrages der kantonalen Strassenverkehrssteuern des vorangegangenen Rechnungsjahres wird der Staatsstrassenrechnung zugewiesen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der nach der Verwendung gemäss Abs. 1 und Abs. 2 verbleibende Ertrag der kantonalen Strassenverkehrssteuern verbleibt in der laufenden Rechnung des Kantons zugunsten der verkehrsbezogenen Aufwendungen der Kantonspolizei und der übrigen verkehrsbezogenen kantonalen Aufgaben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "0fa053a3ebb5f0042046a464413f10fa23bc55e5f3ba95542fcf0798d0e8d6df"
+    },
+    {
+      "id": "kanton/AR/761.11/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton erhebt Gebühren für amtliche Verrichtungen im Zusammenhang mit dem Strassenverkehr wie die Durchführung von Prüfungen, die Erteilung von Bewilligungen und den Erlass von Verfügungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt einen Gebührentarif."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "1c87289310d4351f7064ca683366d570572528cda8c2ad8e1f9f6d78b08b1d9d"
+    },
+    {
+      "id": "kanton/AR/761.11/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat erlässt eine Vollziehungsverordnung. Er ist ermächtigt, ergänzende Bestimmungen zu erlassen und dieses Gesetz Änderungen des Bundesrechts anzupassen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "5175d15a768503812642991b306adb097b7d9a0092f9b98d46b4c4c411385c0c"
+    },
+    {
+      "id": "kanton/AR/761.11/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat bestimmt den Zeitpunkt des Inkrafttretens dieses Gesetzes."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "353f1f757d8d32dcd08d6af35b10e85d6923e1c795e0cf25e56741404512762a"
+    },
+    {
+      "id": "kanton/AR/761.11/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "EG SVG (761.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Inkrafttreten dieses Gesetzes sind die damit in Widerspruch stehenden Bestimmungen des kantonalen Rechts aufgehoben. Insbesondere sind aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Gesetz über die Einführung des Bundesgesetzes vom 15. März 1932 über den Motorfahrzeug- und Fahrradverkehr (EG zum MFG) vom 30. April 1933;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verordnung zu den gesetzlichen Vorschriften über den Motorfahrzeug- und Fahrradverkehr (MFG-Verordnung) vom 1. Juni 1933."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/761.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "631d4484807e9d63141ca2c67a89a70f",
+      "sha": "57dbc4088a4f44c235b621dfe09eb416ea464b5c6bd2cb6765e52a31e3b957b1"
+    }
+  ]
+}

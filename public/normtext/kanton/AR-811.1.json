@@ -1,0 +1,2779 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/811.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt den Schutz, die Förderung und die Wiederherstellung der Gesundheit sowie die Sicherstellung der medizinischen und pflegerischen Versorgung der Bevölkerung unter Wahrung der Persönlichkeitsrechte aller Menschen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es regelt die gesundheitsrelevanten Tätigkeiten der natürlichen und juristischen Personen des privaten und des öffentlichen Rechts."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Es legt die Grundsätze für die Planung und die Gewährleistung der Versorgung der Bevölkerung durch Spitäler und ähnliche Institutionen des Gesundheitswesens fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit nicht besondere Vorschriften bestehen, gilt es für den gesamten Gesundheitsbereich des Kantons und der Gemeinden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "4a95b3efe3a6f137a906911e72e177c5f636d19a3f83e31c4d656e5188c29847"
+    },
+    {
+      "id": "kanton/AR/811.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person trägt im Umfang ihrer Fähigkeiten und Möglichkeiten Verantwortung für die eigene Gesundheit. Das öffentliche Gesundheitswesen unterstützt die Selbstverantwortung."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "4df8fdd1f8bf8bb64ae39f0aba5a05b27cdfda079c15f82bee88ecea232b5a88"
+    },
+    {
+      "id": "kanton/AR/811.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden schaffen zusammen die Voraussetzungen für eine ausreichende und kostenbewusste medizinische und pflegerische Versorgung der Bevölkerung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie tragen bei der Erfüllung ihrer Aufgaben der Gesundheit der Bevölkerung Rechnung und unterstützen die Schaffung von Lebensbedingungen, die der Gesundheit zuträglich sind."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "6abca2d79c1600ca0b52e881c081f03c9eea1960e59e8ae1d3e84415abbb56b5"
+    },
+    {
+      "id": "kanton/AR/811.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Stellt die ambulante und stationäre Gesundheitsversorgung einschliesslich der Rettungsdienste sicher, soweit nicht die Gemeinden zuständig sind;"
+            },
+            {
+              "marke": "abis",
+              "text": "finanziert insbesondere die stationäre medizinische Versorgung sowie die Akut- und Übergangspflege;"
+            },
+            {
+              "marke": "ater",
+              "text": "kann sich an den Kosten des ambulanten Notfalldienstes finanziell beteiligen;"
+            },
+            {
+              "marke": "b",
+              "text": "sorgt für die Gesundheitsförderung und Prävention;"
+            },
+            {
+              "marke": "c",
+              "text": "fördert die Zusammenarbeit zwischen öffentlichen und privaten Einrichtungen im Kanton und in der Region und koordiniert die Tätigkeiten auf dem Gebiet des Gesundheitswesens;"
+            },
+            {
+              "marke": "d",
+              "text": "regelt die Rechte der Patientinnen und Patienten;"
+            },
+            {
+              "marke": "e",
+              "text": "beaufsichtigt die Gesundheitsfachpersonen;"
+            },
+            {
+              "marke": "f",
+              "text": "legt die Rechte und Pflichten der Gesundheitsfachpersonen fest;"
+            },
+            {
+              "marke": "g",
+              "text": "beaufsichtigt die Institutionen des Gesundheitswesens;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "hbis",
+              "text": "plant und regelt nach den Vorgaben des Bundes die Leistungen der Spitäler und ähnlicher Institutionen stationärer medizinischer und pflegerischer Versorgung."
+            },
+            {
+              "marke": "i",
+              "text": "fördert im Bereich der spitalexternen Kranken- und Gesundheitspflege die Aus-, Fort- und Weiterbildung und unterstützt kantonale Dachorganisationen. Das Nähere regelt die Verordnung;"
+            },
+            {
+              "marke": "j",
+              "text": "überwacht das Heilmittelwesen;"
+            },
+            {
+              "marke": "k",
+              "text": "nimmt die gesundheitspolizeilichen Aufgaben wahr;"
+            },
+            {
+              "marke": "l",
+              "text": "koordiniert und beaufsichtigt den schulärztlichen und schulzahnärztlichen Dienst."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann im Rahmen seiner Aufgaben Vorgaben zur Sicherstellung der Versorgung erlassen und Qualitätsvorgaben machen; dabei arbeitet er mit den Berufsverbänden zusammen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er finanziert und unterstützt in der Regel nur Tätigkeiten und Institutionen, die den Zielen der Gesundheitsplanung entsprechen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "978114a7059f51218b368819baa30adb11ef31f8fdbe7b7075da15b3a92b5c7d"
+    },
+    {
+      "id": "kanton/AR/811.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden erfüllen die Aufgaben, die ihnen durch die Gesetzgebung auf dem Gebiet des Gesundheitswesens zugewiesen sind, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sicherstellung der Versorgung mit Alters- und Pflegeheimen;"
+            },
+            {
+              "marke": "b",
+              "text": "Sicherstellung der Versorgung mit Diensten der spitalexternen Kranken- und Gesundheitspflege;"
+            },
+            {
+              "marke": "c",
+              "text": "Überwachung der allgemeinen Hygiene;"
+            },
+            {
+              "marke": "d",
+              "text": "Organisation und Durchführung des schulärztlichen und schulzahnärztlichen Dienstes;"
+            },
+            {
+              "marke": "e",
+              "text": "Bestattungswesen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie wählen die Organisation zur Erfüllung ihrer Aufgaben auf dem Gebiet des Gesundheitswesens selbständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie können die Aufgaben selber lösen, sich zusammenschliessen, gemeinsame Organe schaffen oder Aufträge an Dritte erteilen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gemeinden regeln im Rahmen der Vorgaben des übergeordneten Rechts die Finanzierung der Alters- und Pflegeheime, der spitalexternen Kranken- und Gesundheitspflege und des Bestattungswesens."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "3d75c17db621bbf3a0f467d066c9ab899382e726eb2cf95d7d2830075edff242"
+    },
+    {
+      "id": "kanton/AR/811.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "genehmigt den Gesundheitsbericht;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "nimmt Kenntnis von der Spitalplanung und der Pflegeheimplanung;"
+            },
+            {
+              "marke": "e",
+              "text": "bewilligt im Voranschlag oder durch besondere Beschlüsse, unter Vorbehalt der Finanzkompetenzen der Stimmberechtigten, Kredite für die Leistungen, den Betrieb oder die Investitionen der Spitäler und ähnlicher Institutionen des Gesundheitswesens, die Spital- und Pflegeleistungen erbringen;"
+            },
+            {
+              "marke": "f",
+              "text": "nimmt im Rechenschaftsbericht Kenntnis von den Berichten der Spitäler und ähnlicher Institutionen des Gesundheitswesens, soweit sie vereinbarte Leistungen erbringen;"
+            },
+            {
+              "marke": "g",
+              "text": "hat die Oberaufsicht über die Gesundheitsversorgung, die Gesundheitsförderung und die Prävention."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "d09b6d7607e7b79c5faaaeef282fd5ea122f1b6e67543f7a9a417d01a4991359"
+    },
+    {
+      "id": "kanton/AR/811.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Übt die Aufsicht über das Gesundheitswesen aus;"
+            },
+            {
+              "marke": "b",
+              "text": "erlässt im Rahmen seiner verfassungsmässigen Zuständigkeiten Verordnungen und schliesst Vereinbarungen ab;"
+            },
+            {
+              "marke": "c",
+              "text": "befindet über die Gesundheitsplanung und den Gesundheitsbericht;"
+            },
+            {
+              "marke": "cbis",
+              "text": "bestimmt über die Spital- und die Pflegeheimplanung sowie über die Spitalliste und die Pflegeheimliste;"
+            },
+            {
+              "marke": "d",
+              "text": "erteilt Leistungsaufträge an Spitäler und ähnliche Institutionen des Gesundheitswesens und regelt deren Finanzierung;"
+            },
+            {
+              "marke": "e",
+              "text": "wählt den Gesundheitsrat sowie den Ethikrat;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "bezeichnet Amtsärztinnen oder Amtsärzte;"
+            },
+            {
+              "marke": "h",
+              "text": "kann im Rahmen der Aufgaben des Kantons Organisations- und Qualitätsvorschriften erlassen oder entsprechende Verbandsrichtlinien verbindlich erklären."
+            },
+            {
+              "marke": "i",
+              "text": "legt nach Massgabe des Bundesgesetzes über die Krankenversicherung den für die Kantonseinwohnerinnen und -einwohner geltenden kantonalen Anteil zur Abgeltung der stationären Leistungen und der Leistungen in der Akut- und Übergangspflege fest;"
+            },
+            {
+              "marke": "j",
+              "text": "bestimmt die Vorgaben für die Finanzierung der spitalexternen Kranken- und Gesundheitspflege."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "c495946481f5e2333b9e9e23171738f3ab2e75d348589788b42aba516b4f0be8"
+    },
+    {
+      "id": "kanton/AR/811.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales vollzieht das Gesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf dem Gebiet des Gesundheitswesens erfüllt es alle Aufgaben, die nicht ausdrücklich einem anderen Organ zugewiesen sind, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Vollzug der internationalen Vereinbarungen, des Bundesrechts, der interkantonalen Vereinbarungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erstellung der Gesundheitsplanung zuhanden von Regierungsrat und Kantonsrat;"
+            },
+            {
+              "marke": "c",
+              "text": "die Koordination sämtlicher Tätigkeiten auf dem Gebiet des Gesundheitswesens;"
+            },
+            {
+              "marke": "d",
+              "text": "die Aufsicht über die Spitäler und ähnliche Institutionen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Aufsicht und Beratung im Bereich der Alters- und Pflegeheime und der spitalexternen Kranken- und Gesundheitspflege;"
+            },
+            {
+              "marke": "ebis",
+              "text": "die Aufsicht über die Gesundheitsfachpersonen und die übrigen Institutionen des Gesundheitswesens;"
+            },
+            {
+              "marke": "f",
+              "text": "die Bezeichnung der Praxen und Spitäler, die zu Schwangerschaftsabbrüchen im Sinn des Schweizerischen Strafgesetzbuches berechtigt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Im Bereich der stationären Versorgung durch Spitäler und ähnliche Institutionen des Gesundheitswesens obliegt dem Departement zudem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Spital- und Pflegeheimplanung sowie die Spital- und Pflegeheimliste nach dem Bundesgesetz über die Krankenversicherung zuhanden des Regierungsrates zu erstellen;"
+            },
+            {
+              "marke": "b",
+              "text": "Leistungsaufträge an Spitäler und ähnliche Institutionen des Gesundheitswesens zu erteilen, soweit der Regierungsrat das Departement damit beauftragt;"
+            },
+            {
+              "marke": "c",
+              "text": "regelmässig zu überprüfen, wie die Spitäler und ähnlichen Institutionen des Gesundheitswesens die vereinbarten Leistungen erbringen, und darüber dem Regierungsrat Bericht zu erstatten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Sicherheit und Wirksamkeit der stationären medizinischen Versorgung und Pflege zu überprüfen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Einhaltung der Regeln über das Controlling bei den Leistungserbringern zu überwachen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Festlegung des für ausserkantonale Behandlungen nach Art. 41 Abs. 1bis des Bundesgesetzes über die Krankenversicherung geltenden Referenztarifs."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Mittels Leistungsvereinbarungen kann das Departement Gesundheit und Soziales Vollzugsaufgaben an öffentliche oder private Leistungserbringer übertragen. Näheres dazu regelt die Verordnung."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "04ade95372c83e693eff616d4d55b1336056496ee583cfe493d7bdab98ff633b"
+    },
+    {
+      "id": "kanton/AR/811.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesundheitsrat berät das Departement Gesundheit und Soziales in Belangen des Gesundheitswesens und nimmt zu Fragen der Gesundheitspolitik Stellung."
+        },
+        {
+          "absatz": "2",
+          "text": "Zu wichtigen Vorhaben des Departements Gesundheit und Soziales ist er anzuhören. Dazu zählen namentlich Gesetzes- und Verordnungsentwürfe, die Gesundheitsplanung und der Gesundheitsbericht sowie Massnahmen der Gesundheitsförderung und der Prävention."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Gesundheitsrat besteht aus höchstens elf Mitgliedern. Die verschiedenen Bereiche des Gesundheitswesens sollen darin ausgewogen vertreten sein. Den Vorsitz führt die Departementsvorsteherin oder der Departementsvorsteher."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Gesundheitsrat kann weitere Fachleute beiziehen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "283daa06552e5f6168379dd7532f86571ad179b7b0a92c3d040d8314eab997cf"
+    },
+    {
+      "id": "kanton/AR/811.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ethikrat behandelt die Geschäfte, die ihm durch dieses Gesetz und die gestützt darauf erlassenen Verordnungen zugewiesen werden. Er kann ethische Fragen des Gesundheitsbereichs auch aus eigener Initiative aufgreifen und gegenüber dem Regierungsrat Stellung nehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere",
+          "items": [
+            {
+              "marke": "a",
+              "text": "berät er Patientinnen und Patienten, deren Angehörige sowie Gesundheitsfachpersonen, namentlich im Zusammenhang mit lebensverlängernden Massnahmen und Zwangsmassnahmen,"
+            },
+            {
+              "marke": "b",
+              "text": "nimmt er Stellung, wenn Zweifel über die Tragweite einer Patientenverfügung bestehen,"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Er besteht aus höchstens sieben Mitgliedern."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bevölkerung, Gesundheitsfachpersonen sowie Vertretungen der Institutionen des Gesundheitswesens sollen angemessen vertreten sein."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Ethikrat kann weitere Fachleute beiziehen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "7fd4543ca16d7bb2a3ebade62117a06697fa45bd2abdf50368593309c41b989c"
+    },
+    {
+      "id": "kanton/AR/811.1/art_10_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufgaben aus dem Bereich des eidgenössischen Humanforschungsgesetzes und des eidgenössischen Stammzellenforschungsgesetzes werden der Ethikkommission Ostschweiz übertragen. Der Regierungsrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "546ce96264ceb61e9892cc73448b158a9de39a1bb187a48220088d6d37c87afe"
+    },
+    {
+      "id": "kanton/AR/811.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat plant die Gesundheitspolitik und erstattet dem Kantonsrat alle vier Jahre Bericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gesundheitsbericht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Formuliert die Ziele der Gesundheitspolitik;"
+            },
+            {
+              "marke": "b",
+              "text": "enthält die Grundsätze zur Gesundheitsförderung und zur Verhütung von Krankheiten und Unfällen;"
+            },
+            {
+              "marke": "c",
+              "text": "koordiniert die Tätigkeiten der verschiedenen Bereiche des Gesundheitswesens;"
+            },
+            {
+              "marke": "d",
+              "text": "evaluiert Qualität und Wirksamkeit der erbrachten Leistungen hinsichtlich der Gesundheitsbedürfnisse und der Ziele der Gesundheitspolitik."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat koordiniert die Spital- und Pflegeheimplanung nach Art. 52b mit der Gesundheitsplanung und dem Gesundheitsbericht."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "8b6aa0b24beb3380b4f598c3fea905247afb6f5ae60910d3a78ab9fe69cca2b4"
+    },
+    {
+      "id": "kanton/AR/811.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales erhebt die Daten und die weiteren Angaben, die zur Erstellung und Evaluation der Gesundheitsplanung erforderlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gesundheitsfachpersonen und die Institutionen des Gesundheitswesens sind verpflichtet, bei der Erhebung der Daten und der weiteren Angaben gemäss Abs. 1 mitzuwirken."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b0a8a1cf28bb4b4e0f8ab2741e6ac0be9bc609cf47f56ec9cb8c72d7221784bd"
+    },
+    {
+      "id": "kanton/AR/811.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanton und Gemeinden unterstützen Massnahmen zur Erhaltung und Verbesserung des Gesundheitszustandes der Bevölkerung, zur Früherkennung von Risikofaktoren und zur Verhütung von Krankheiten und Süchten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie veranlassen und beteiligen sich an Projekten, Aktionen und Kampagnen, die zur Entwicklung gesundheitsbezogener Handlungskompetenzen in der Bevölkerung beitragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie leisten Unterstützung und Beratung an Personen und Personengruppen und fördern die Aus-, Weiter - und Fortbildung von Personen, die sich mit der Förderung der Gesundheit und der Verhütung von Krankheiten befassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie bemühen sich um die Gestaltung gesundheitsfördernder Lebensbedingungen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "fe61deaba59d6aa73285ccaf8a84e4ce43f34447b5eb563db9e971220eea69ba"
+    },
+    {
+      "id": "kanton/AR/811.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fördert die sexuelle Selbstbestimmung und Selbstverantwortung namentlich von Jugendlichen und jungen Erwachsenen und unterstützt Massnahmen der Familienplanung;"
+            },
+            {
+              "marke": "b",
+              "text": "unterstützt Projekte und Massnahmen zur Förderung der psychischen Gesundheit und zur Vorbeugung gegen psychische Erkrankungen;"
+            },
+            {
+              "marke": "c",
+              "text": "unterstützt alters- und geschlechtsspezifische Massnahmen der Gesundheitsförderung und Prävention;"
+            },
+            {
+              "marke": "d",
+              "text": "trifft Massnahmen zur Prävention respektive Verhütung von übertragbaren Krankheiten im Allgemeinen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden stellen die Beratung der Eltern von Säuglingen und Kleinkindern sicher."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "fd98a35c14478373d905f54dec39de2be11796a93f030450fd286437493ab41b"
+    },
+    {
+      "id": "kanton/AR/811.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton unterstützt Projekte öffentlicher und privater Organisationen zur Vorbeugung gegen Alkohol- und Tabakmissbrauch sowie anderer Formen der Suchtmittelabhängigkeit. Er betreibt eine oder mehrere Beratungsstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf öffentlichem Grund und in dessen Sichtbereich, in öffentlichen Gebäuden und auf Sportstätten ist Werbung für alkoholische Getränke, für Tabakerzeugnisse und für Raucherwaren mit Tabakersatzstoffen sowie für andere gesundheitsschädliche Substanzen verboten. Ausnahmen regelt der Regierungsrat."
+        },
+        {
+          "absatz": "3",
+          "text": "Es ist verboten, Tabakerzeugnisse und Raucherwaren mit Tabakersatzstoffen an Personen unter 16 Jahren abzugeben oder in Automaten anzubieten."
+        },
+        {
+          "absatz": "4",
+          "text": "Auf Schularealen gilt ein generelles Rauchverbot. Ausnahmen regelt der Regierungsrat."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "d902b51f582c219fc077bcb1cf9886860402e85e14106afbee78cbed239c980a"
+    },
+    {
+      "id": "kanton/AR/811.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In geschlossenen Räumen, die der Öffentlichkeit zugänglich sind, insbesondere in Gebäuden der öffentlichen Verwaltung, in Spitälern, Heimen, Bildungs-, Kultur- und Sportstätten und in allen Bereichen der Gastronomie ist das Rauchen verboten."
+        },
+        {
+          "absatz": "2",
+          "text": "Abgetrennte und entsprechend gekennzeichnete Räume mit ausreichender Belüftung können für Rauchende vorgesehen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Ausnahmen regelt der Regierungsrat."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "dd84659fce490c8dce7cb5380f3a3d212a0558f73acf15d6a938262deb45ee06"
+    },
+    {
+      "id": "kanton/AR/811.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Trägerinnen und Träger der öffentlichen und privaten Schulen bis und mit Sekundarstufe II sorgen dafür, dass die Lernenden zu einer zweckmässigen Pflege der Gesundheit angeleitet werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "acc3d8e200e74d5245c140aba431cd64140f5bcdde4f24b269e96472616492ba"
+    },
+    {
+      "id": "kanton/AR/811.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Träger der öffentlichen und privaten Schulen, Kindergärten und Heime sorgen für einen schulärztlichen und schulzahnärztlichen Dienst. Die Aufsicht liegt beim Departement Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Der schulärztliche und der schulzahnärztliche Dienst beraten Eltern, Behörden und Lehrende in Fragen der Gesundheitserziehung und Prävention."
+        },
+        {
+          "absatz": "3",
+          "text": "Einzelheiten sowie die Kostentragung regelt der Regierungsrat auf dem Verordnungsweg."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "9593c0b40ba22b522ba77e09d85ee3d136a155a49ff33cde50a33aa47a1ebd13"
+    },
+    {
+      "id": "kanton/AR/811.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Patientinnen oder Patienten im Sinn dieses Abschnittes gelten Personen, die bei Gesundheitsfachpersonen sowie in öffentlichen oder privaten Institutionen des Gesundheitswesens in Pflege oder Behandlung stehen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b45a024bd0f8aaaf94697ae7ca4802539e1f0f154d4184fa08746bb204caf0c8"
+    },
+    {
+      "id": "kanton/AR/811.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Wille der Patientinnen und Patienten ist massgebend. Ihm wird im Rahmen der medizinischen, pflegerischen und betrieblichen Möglichkeiten Rechnung getragen. Dasselbe gilt hinsichtlich berechtigter Wünsche der Angehörigen und anderer nahestehender Personen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "94fdc0f801c3da5956ad743b74f9fd2ee6278219d7055c034eb9e0159d729afa"
+    },
+    {
+      "id": "kanton/AR/811.1/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Patientinnen und Patienten haben Anspruch auf Beratung und Untersuchung, Behandlung und Pflege nach medizinischen Grundsätzen und, wenn möglich, in ihrer gewohnten Umgebung. Ihre persönliche Freiheit und Privatsphäre ist zu respektieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Unheilbar Kranke und Sterbende haben Anspruch auf angemessene Pflege und auf Linderung ihrer Leiden."
+        },
+        {
+          "absatz": "3",
+          "text": "Sterbenden soll eine würdevolle Sterbebegleitung zukommen und ein würdevolles Abschiednehmen ermöglicht werden. Spitäler und Heime sorgen dafür, dass Sterbende von ihren Angehörigen begleitet werden können."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "c8ff1a7be6876a9ee87f6f338573b15456e59fc3b3832a4eb9e05ed5743061e2"
+    },
+    {
+      "id": "kanton/AR/811.1/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Patientinnen und Patienten haben Anspruch darauf, in einer geeigneten, verständlichen und der Situation angepassten Weise über ihren Gesundheitszustand informiert zu werden. Die Information umfasst den Befund, die Art, den Zweck, die Modalitäten, die Risiken der in Frage kommenden diagnostischen oder therapeutischen Massnahmen und der Unterlassung einer derartigen Massnahme sowie die Übernahme der Kosten durch die Versicherung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben das Recht, das sie betreffende Dossier einzusehen und Erklärungen dazu zu verlangen. Vorbehalten bleiben Daten, die Dritte betreffen und dem Berufsgeheimnis unterstehen. Die Patientinnen und Patienten können verlangen, dass ihnen das Dossier oder eine Kopie davon ausgehändigt oder an eine andere Gesundheitsfachperson weitergeleitet wird. Sie können die Information, das Einsichtsrecht und die Weitergabe an Dritte auch untersagen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Einsichtsrecht steht auch Personen zu, die die Patientinnen und Patienten gesetzlich vertreten. Vorbehalten bleibt eine andere Instruktion von urteilsfähigen Patientinnen und Patienten."
+        },
+        {
+          "absatz": "4",
+          "text": "Musste in einer Notfallsituation eine genügende Information unterbleiben, wird sie so bald als möglich nachgeholt."
+        },
+        {
+          "absatz": "5",
+          "text": "Im Übrigen gilt für die Bearbeitung von Daten von Patientinnen und Patienten durch öffentliche Institutionen des Gesundheitswesens das Datenschutzgesetz. Für die Datenbearbeitung durch private Institutionen des Gesundheitswesens und private Gesundheitsfachpersonen gilt das Bundesgesetz über den Datenschutz."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "6678b500342017b58d9c9209579bfd5a8e18e00647ee06da345b8c80df2aa425"
+    },
+    {
+      "id": "kanton/AR/811.1/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Medizinische und pflegerische Massnahmen dürfen nur vorgenommen werden, wenn die urteilsfähige Patientin oder der urteilsfähige Patient – ob volljährig oder nicht – zugestimmt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist mit der Massnahme kein Eingriff in den Körper verbunden, genügt eine stillschweigende Zustimmung; Eingriffe sind nur zulässig, wenn die betroffene Person ausdrücklich zugestimmt hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Vor grösseren oder mit erheblichen Risiken verbundenen Eingriffen holt die betreffende Gesundheitsfachperson oder Institution eine schriftliche Zustimmungserklärung ein, auf welcher der wesentliche Inhalt der Aufklärung zu vermerken ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Verweigert die berechtigte Person ihre Zustimmung zu einer vorgeschlagenen Massnahme, hat sie dies auf Verlangen schriftlich zu bestätigen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "ad87b6eb2ba87502b24cd4a6e9dca454d208fa7719caad0cc0b79402419228a0"
+    },
+    {
+      "id": "kanton/AR/811.1/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einer urteilsunfähigen Person dürfen medizinische und pflegerische Massnahmen nur mit Zustimmung des gesetzlichen Vertreters getroffen werden, sofern nicht in einer Patientenverfügung eine vertretungsberechtigte Person bezeichnet ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die folgenden Personen sind der Reihe nach berechtigt, für eine urteilsunfähige erwachsene Person, die keine Vertretung gemäss Abs. 1 hat, die Zustimmung zu erteilen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wer als Ehegatte, eingetragene Partnerin oder eingetragener Partner einen gemeinsamen Haushalt mit der urteilsunfähigen Person führt oder ihr regelmässig und persönlich Beistand leistet;"
+            },
+            {
+              "marke": "b",
+              "text": "die Person, die mit der urteilsunfähigen Person einen gemeinsamen Haushalt führt und ihr regelmässig und persönlich Beistand leistet;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nachkommen, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Eltern, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten;"
+            },
+            {
+              "marke": "e",
+              "text": "die Geschwister, wenn sie der urteilsunfähigen Person regelmässig und persönlich Beistand leisten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sind mehrere Personen vertretungsberechtigt, so dürfen die gutgläubige Ärztin oder der gutgläubige Arzt voraussetzen, dass jede im Einverständnis mit den anderen handelt."
+        },
+        {
+          "absatz": "4",
+          "text": "Fehlen in einer Patientenverfügung Weisungen, so entscheidet die vertretungsberechtigte Person nach dem mutmasslichen Willen und den Interessen der urteilsunfähigen Person."
+        },
+        {
+          "absatz": "5",
+          "text": "In dringenden Fällen ergreift die Ärztin oder der Arzt medizinische Massnahmen nach dem mutmasslichen Willen und den Interessen der urteilsunfähigen Person."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Arzt oder die Ärztin erstattet der Kindes- und Erwachsenenschutzbehörde Meldung, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine vertretungsberechtigte Person vorhanden ist oder das Vertretungsrecht ausüben will;"
+            },
+            {
+              "marke": "b",
+              "text": "unklar ist, wer vertretungsberechtigt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die vertretungsberechtigten Personen unterschiedliche Auffassungen haben;"
+            },
+            {
+              "marke": "d",
+              "text": "die Interessen der urteilsunfähigen Person gefährdet oder nicht mehr gewahrt sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "5f6d5d62d0f9c39d1ebc50d80a0b6794e4fbd0e4affd7e5b48f20d5da103e25b"
+    },
+    {
+      "id": "kanton/AR/811.1/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ausdehnung eines Eingriffs über das Mass hinaus, dem die Patientin oder der Patient zugestimmt hat, ist zulässig, wenn sie dringlich und unaufschiebbar ist sowie im Interesse und mit mutmasslicher Zustimmung der betreffenden Person erfolgt."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "3120f83eb6aa2561f44e115d5faf51303b79c28d73012860209a63dd04affe62"
+    },
+    {
+      "id": "kanton/AR/811.1/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede urteilsfähige Person kann im Voraus in einer Patientenverfügung bestimmen, welchen medizinischen Massnahmen sie im Fall ihrer Urteilsunfähigkeit zustimmt oder nicht zustimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann auch eine natürliche Person bezeichnen, die im Fall ihrer Urteilsunfähigkeit mit der behandelnden Ärztin oder dem behandelnden Arzt die Massnahmen besprechen und in ihrem Namen entscheiden soll. Sie kann dieser Person Weisungen erteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Patientenverfügung ist schriftlich zu errichten, zu datieren und zu unterzeichnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Patientenverfügung kann jederzeit geändert oder aufgehoben werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b135836bc114da2a8cf7e12b0f8e9fd22a6df29d1ef9c5aa019dafd99a355d6f"
+    },
+    {
+      "id": "kanton/AR/811.1/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ärztin oder der Arzt handelt gemäss der Patientenverfügung. Diese bleibt unberücksichtigt, wenn sie gegen gesetzliche Vorschriften verstösst oder wenn begründete Zweifel bestehen, dass die Patientenverfügung auf freiem Willen beruht oder noch dem mutmasslichen Willen der Patientin oder des Patienten entspricht. Die Ärztin oder der Arzt kann im Zweifel den Ethikrat anhören."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Patientendossier ist festzuhalten, aus welchen Gründen der Patientenverfügung nicht entsprochen wird."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "fed0779c2e7b62d44be67be3d3d871f1138e778ff9be785f2c031447362dc04c"
+    },
+    {
+      "id": "kanton/AR/811.1/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Sicherung der medizinischen Qualität kann an verstorbenen Spitalpatientinnen und Spitalpatienten eine Obduktion durchgeführt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Obduktion ist nur zulässig, wenn ihr die verstorbene Person oder deren Angehörige ausdrücklich zugestimmt haben. Der Wille der verstorbenen Person ist stets zu befolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Interesse der öffentlichen Gesundheit kann das Departement Gesundheit und Soziales auch gegen den Willen der verstorbenen Person und deren Angehörigen eine Obduktion anordnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bestimmungen der Schweizerischen Strafprozessordnung bleiben vorbehalten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "a0cb2555b45434aea62f10631e26a757ee0488b48a70909e1219917a57a14008"
+    },
+    {
+      "id": "kanton/AR/811.1/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entnahme von Organen, Geweben und Zellen zu Transplantationszwecken richtet sich nach dem eidgenössischen Transplantationsgesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei urteilsunfähigen oder minderjährigen Personen ist vor der Entnahme die Zustimmung des Ethikrats einzuholen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b41a15c6feca7d131f5fd09b694bdf4aaae99e4411713104066e7526481b30af"
+    },
+    {
+      "id": "kanton/AR/811.1/art_34",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Gesundheitsfachpersonen gelten Personen, die in unmittelbarem Kontakt mit ihren Patientinnen und Patienten Leistungen (Untersuchung, Pflege, Therapie) erbringen, und deren Tätigkeit im Interesse der öffentlichen Gesundheit der Kontrolle bedarf."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Gesundheitsfachpersonen gelten auch Personen, die Untersuchungen und Therapien an Tieren vornehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat legt auf dem Verordnungsweg fest, welche Berufe unter dieses Gesetz fallen und unter welchen Bedingungen sie ausgeübt werden dürfen. Er umschreibt insbesondere die für die Berufsausübung erforderlichen Fähigkeitsausweise und Ausbildungsgänge. Er kann Regelungen schweizerischer oder kantonaler Behörden und Fachorganisationen allgemeinverbindlich erklären."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "85d0f0be454861ab9615f1b525b1502179152e2ec48ee81054b0ec7a3e95e31d"
+    },
+    {
+      "id": "kanton/AR/811.1/art_35",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesundheitsfachpersonen benötigen eine Bewilligung des Departements Gesundheit und Soziales, wenn sie selbständig und berufsmässig oder sonstwie gegen Entgelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Krankheiten, Verletzungen und andere krankhafte Störungen der körperlichen und psychischen Gesundheit feststellen und behandeln sowie Untersuchungen an Patientinnen und Patienten vornehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "Krankheiten und Verletzungen von Tieren behandeln;"
+            },
+            {
+              "marke": "c",
+              "text": "medizinische Leistungen zu Lasten der Sozialversicherung erbringen;"
+            },
+            {
+              "marke": "d",
+              "text": "Geburtshilfe ausüben;"
+            },
+            {
+              "marke": "e",
+              "text": "Verrichtungen zur Veränderung der Empfängnis- und Zeugungsfähigkeit vornehmen;"
+            },
+            {
+              "marke": "f",
+              "text": "im Bereich der kantonalen Zuständigkeit Arzneimittel herstellen, weiterverarbeiten, abgeben oder anwenden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer unselbständig, d.h. unter der Verantwortung und direkten Aufsicht einer zur Berufsausübung berechtigten Gesundheitsfachperson tätig ist, bedarf keiner Bewilligung, darf den Beruf aber nur ausüben, wenn alle übrigen Erfordernisse des Gesetzes erfüllt sind. Die verantwortliche Person hat eine Meldepflicht an das Departement Gesundheit und Soziales."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Gesundheitsfachperson darf nur solche Tätigkeiten ausüben, für die sie die Bewilligung erhalten hat."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "2c473428f17669076d7f1f286603de0a063b5aaea1c0d187f14e8de4ce0254cf"
+    },
+    {
+      "id": "kanton/AR/811.1/art_36",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berufsausübungsbewilligung wird unter Vorbehalt bundesrechtlicher Bestimmungen erteilt, wenn die betreffende Person",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die fachlichen Voraussetzungen erfüllt bzw. die je nach Beruf erforderliche Ausbildung oder Prüfung erfolgreich abgeschlossen hat,"
+            },
+            {
+              "marke": "b",
+              "text": "handlungsfähig ist,"
+            },
+            {
+              "marke": "c",
+              "text": "über zweckmässige Räume und Einrichtungen verfügt,"
+            },
+            {
+              "marke": "d",
+              "text": "kein Gesundheitsproblem hat, das mit der Berufsausübung nicht vereinbar ist,"
+            },
+            {
+              "marke": "e",
+              "text": "eine ausreichende Berufshaftpflichtversicherung abgeschlossen hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Personen, denen in einem anderen Kanton aus gesundheitspolizeilichen Gründen die Bewilligung verweigert oder entzogen wurde, darf keine Berufsausübungsbewilligung erteilt werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "9f71e69c06b35ad293fdb22345dfa3e589cc9c98357f880d1b812cfdddc2ec68"
+    },
+    {
+      "id": "kanton/AR/811.1/art_37",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung kann befristet oder mit Bedingungen und Auflagen verbunden werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung erlischt, wenn die betreffende Person die Tätigkeit aufgibt; bei vorübergehender Einstellung der Tätigkeit erlischt sie nach zwei Jahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Stellt eine Gesundheitsfachperson ihre Tätigkeit ganz oder vorübergehend ein, hat sie dies dem Departement Gesundheit und Soziales zu melden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "24ea33f52b8a55f7e430d96c6cf76bcb18d271150fa2c82b237ada2871a84e61"
+    },
+    {
+      "id": "kanton/AR/811.1/art_38",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung ist ganz oder teilweise zu entziehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wenn die Voraussetzungen nicht mehr vorhanden sind oder nachträglich Verweigerungsgründe bekannt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "wegen schwerwiegender oder trotz Verwarnung wiederholter Verletzung der Berufspflichten;"
+            },
+            {
+              "marke": "c",
+              "text": "wegen missbräuchlicher Ausnutzung der beruflichen Stellung;"
+            },
+            {
+              "marke": "d",
+              "text": "wegen wiederholter missbräuchlicher Rechnungsstellung gegenüber Patientinnen und Patienten oder deren Kostenträgerinnen und Kostenträgern;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Verhängung einer Verwaltungsstrafe wegen schwerwiegender oder wiederholter Verletzung der Berufspflichten oder wegen des Berufes unwürdigen Verhaltens sowie wegen vorsätzlich begangener strafbarer Handlungen oder schwerwiegender oder trotz Verwarnung wiederholter Verstösse gegen die Gesundheitsgesetzgebung sowie bei Gesundheitsfachpersonen, welche Tiere behandeln, auch gegen die Tierschutz- und Tierseuchengesetzgebung."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "3fc8ce01a713128d003e2650ba17dae7af2f5027e08cccd027128b8aef5a30d7"
+    },
+    {
+      "id": "kanton/AR/811.1/art_39",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales regelt die Voraussetzungen, unter denen Stellvertretungen, Assistenztätigkeit und die Weiterführung einer Praxis im Fall der Verhinderung oder des Todes einer Gesundheitsfachperson zulässig sind."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b271e496d7953c7463897e37baf0f68cfc2a7fd6bdf673b7bf8366be421e66c7"
+    },
+    {
+      "id": "kanton/AR/811.1/art_40",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesundheitsfachpersonen sind verpflichtet",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihren Beruf sorgfältig und den berufsethischen Richtlinien entsprechend auszuüben,"
+            },
+            {
+              "marke": "b",
+              "text": "die erforderlichen Weiter- und Fortbildungen zu betreiben,"
+            },
+            {
+              "marke": "c",
+              "text": "die Rechte und Pflichten der Patientinnen und Patienten nach Massgabe der Art. 20 ff. zu beachten,"
+            },
+            {
+              "marke": "d",
+              "text": "sich an die Grenzen ihrer Kompetenzen zu halten,"
+            },
+            {
+              "marke": "e",
+              "text": "mit anderen Gesundheitsfachpersonen zusammenzuarbeiten, wenn es die Interessen einer Patientin oder eines Patienten erfordern."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "d457ec504e6a16c1c268e3688a87b324a699cf90eac5bd64643b6c6d5cd6f4e3"
+    },
+    {
+      "id": "kanton/AR/811.1/art_41",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesundheitsfachpersonen und ihren Mitarbeitenden ist es untersagt, Informationen weiterzugeben, von denen sie in Ausübung ihres Berufes Kenntnis erlangt haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gesundheitsfachperson kann durch die Patientin oder den Patienten oder durch das Departement Gesundheit und Soziales von ihrer Schweigepflicht entbunden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die gesetzlichen Bestimmungen über die Auskunftspflicht gegenüber Behörden oder die Pflicht zur Aussage vor Gericht sowie das Berufsgeheimnis in der medizinischen Forschung nach Art. 321bis Abs. 2 des Schweizerischen Strafgesetzbuches."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "6639c40676ff24065c2bddf70771cae85fbafd85ded08cdf4c9208e6ce9f1ba2"
+    },
+    {
+      "id": "kanton/AR/811.1/art_42",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte sowie Zahnärztinnen und Zahnärzte mit einer Berufsausübungsbewilligung sind verpflichtet, in ambulanten Notfalldiensten mitzuwirken. Sie können aus wichtigem Grund von dieser Pflicht ganz oder teilweise befreit werden."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Organisation der ambulanten Notfalldienste ist Aufgabe der Berufsverbände. Das Departement Gesundheit und Soziales gibt ihnen die dafür notwendigen Informationen von sich aus bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann Organisationsvorgaben machen. Ist die Gesundheitsversorgung durch die Organisation nicht gewährleistet, trifft er die erforderlichen Massnahmen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "aca641428b79a9a630a6785e82797b14db7b342204e54ad279c29ef94f0b0319"
+    },
+    {
+      "id": "kanton/AR/811.1/art_42_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "42_a",
+      "artikelLabel": "Art. 42a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berufsverbände erheben von den Ärztinnen und Ärzten sowie den Zahnärztinnen und Zahnärzten, die von ihrer Mitwirkungspflicht befreit werden, eine Ersatzabgabe."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ersatzabgabe beträgt Fr. 4‘000.– pro Jahr. Sie ist angemessen zu reduzieren, wenn die Ärztinnen und Ärzte sowie die Zahnärztinnen und Zahnärzte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihre Mitwirkungspflicht während eines Teils des Jahres erfüllen;"
+            },
+            {
+              "marke": "b",
+              "text": "ein AHV-pflichtiges Einkommen aus ärztlicher oder zahnärztlicher Tätigkeit erzielen, das im betreffenden Jahr weniger als Fr. 100'000.– beträgt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "wegen Krankheit, Unfall, Schwangerschaft oder anderen triftigen Gründen von ihrer Mitwirkungspflicht befreit werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Ersatzabgabe ist zweckgebunden für die Deckung der Kosten des ambulanten Notfalldienstes zu verwenden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "ba230bf51e84a112b7d47e5736d14cc2ba90ddb0638485d23c689604a8b34ec0"
+    },
+    {
+      "id": "kanton/AR/811.1/art_43",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesundheitsfachpersonen sind verpflichtet, in dringenden Fällen Beistand zu leisten. Darüber hinaus besteht keine Verpflichtung zur Annahme von Patientinnen oder Patienten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "3d0775d9da95684a8ee6ed7c23d58d2d9f866db49d2b16c593f2645f7d8b9430"
+    },
+    {
+      "id": "kanton/AR/811.1/art_44",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesundheitsfachpersonen mit einer eigenen Praxis sind verpflichtet, über jede Patientin und jeden Patienten ein eigenes Dossier anzulegen. In diesem sind insbesondere die Anamnese, die erhobenen Befunde, die vorgeschlagenen und die tatsächlich durchgeführten Massnahmen zu vermerken. Jede Änderung sowie ihre Urheberin oder ihr Urheber muss erkennbar sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Dossier kann elektronisch geführt werden, wenn Gewähr für die Einhaltung des Datenschutzes besteht und jede Änderung sowie ihre Urheberin oder ihr Urheber identifizierbar bleiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dossiers sind, sofern das Bundesrecht keine anderen Vorschriften enthält, so lange aufzubewahren, als es die Interessen der betroffenen Person und ihrer Angehörigen erfordern, mindestens aber zehn Jahre."
+        },
+        {
+          "absatz": "4",
+          "text": "Wer seine Tätigkeit als Gesundheitsfachperson vorübergehend oder endgültig einstellt, teilt dies den Patientinnen und Patienten mit. Auf Verlangen werden ihnen ihre Dossiers ausgehändigt oder an eine von ihnen bezeichnete Gesundheitsfachperson weitergeleitet."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "6f44ba5ea9fd88aa1e358f3c0d7dbffe1adfcf3c9d149a0914e4eae0cd67cd69"
+    },
+    {
+      "id": "kanton/AR/811.1/art_45",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesundheitsfachpersonen sind verpflichtet, der Polizei alle nicht natürlichen Todesfälle sowie die vorsätzliche Verbreitung gefährlicher übertragbarer Krankheiten unverzüglich zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Verdacht auf Tierseuchen ist dem Veterinärdienst zu melden. Die tiermedizinischen Fachpersonen sind im Weiteren verpflichtet, den Verdacht auf grobe Missachtung der Tierschutzgesetzgebung dem Veterinärdienst bekannt zu geben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesundheitsfachpersonen sind auch ohne Entbindung von der Schweigepflicht berechtigt, den zuständigen Behörden Beobachtungen zu melden, die auf ein Verbrechen oder Vergehen gegen Leib und Leben, die öffentliche Gesundheit oder die sexuelle Integrität schliessen lassen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b6b4af79730038b163ab63b693f8cf5bb8fa6170d1d901bfd96e33b80fbc188c"
+    },
+    {
+      "id": "kanton/AR/811.1/art_46",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werbung für eigene Dienstleistungen auf dem Gebiet des Gesundheitswesens darf nur machen, wer die zur Berufsausübung erforderliche Bewilligung besitzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Werbung darf nicht aufdringlich, übertrieben oder anstössig sein und nicht zu Täuschungen Anlass geben."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "a663d6904e6e19d828562891ad665a656e7186bc107c1422a7657f8b34d04938"
+    },
+    {
+      "id": "kanton/AR/811.1/art_47",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Überprüfung von Honoraren ist grundsätzlich Sache der Berufsverbände."
+        },
+        {
+          "absatz": "2",
+          "text": "Gewährleisten diese keine wirksame und neutrale Überprüfung, setzt der Regierungsrat auf dem Verordnungsweg eine aus mindestens drei Mitgliedern bestehende Honorarprüfungskommission ein und regelt das Verfahren."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "30179eaa4889cba4f140b6d44db40358c206dea2870dedf11905ec385f4aa036"
+    },
+    {
+      "id": "kanton/AR/811.1/art_48",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Institution des Gesundheitswesens gilt jede Einrichtung, zu deren Aufgaben die Förderung, die Verbesserung, der Schutz, die Beurteilung, die Überwachung, die Rettung, der Transport, die Erhaltung oder die Wiederherstellung der Gesundheit sowie die Betreuung regelmässig pflegebedürftiger Personen gehören."
+        },
+        {
+          "absatz": "2",
+          "text": "Darunter fallen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Spitäler und Kliniken;"
+            },
+            {
+              "marke": "b",
+              "text": "Alters- und Pflegeheime;"
+            },
+            {
+              "marke": "c",
+              "text": "Einrichtungen der spitalexternen Gesundheits- und Krankenpflege;"
+            },
+            {
+              "marke": "d",
+              "text": "medizinische Laboratorien;"
+            },
+            {
+              "marke": "e",
+              "text": "Einrichtungen zur Bekämpfung der Suchtmittelabhängigkeit;"
+            },
+            {
+              "marke": "f",
+              "text": "Einrichtungen für Gesundheitsförderung, Prävention und Rehabilitation;"
+            },
+            {
+              "marke": "g",
+              "text": "Einrichtungen für Menschen mit Behinderung, namentlich Wohnheime, Werkstätten und Tagesstätten."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "36ebfb7fc13627ab27342da0edeff1da193aeb37ccb9175a5569cfb8f9bd1a9a"
+    },
+    {
+      "id": "kanton/AR/811.1/art_49",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Institutionen des Gesundheitswesens bedürfen einer Betriebsbewilligung des Departements Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewilligung wird erteilt, wenn die Institution",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über eine Leitung mit der erforderlichen Ausbildung und über qualifiziertes Personal in genügender Zahl verfügt,"
+            },
+            {
+              "marke": "b",
+              "text": "zweckmässig organisiert ist,"
+            },
+            {
+              "marke": "c",
+              "text": "über geeignete Räumlichkeiten und die erforderliche Ausrüstung verfügt sowie den Anforderungen an Hygiene und Sicherheit der Patientinnen und Patienten genügt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Jede Änderung der Voraussetzungen, unter denen die Bewilligung erteilt wurde, ist dem Departement Gesundheit und Soziales unverzüglich zu melden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bezüglich Werbung unterliegen die Institutionen des Gesundheitswesens den nämlichen Bestimmungen wie die Berufe des Gesundheitswesens."
+        },
+        {
+          "absatz": "5",
+          "text": "Mit der Bewilligung kann die Auflage verbunden werden, dass sich die Institution im Rahmen ihrer Möglichkeiten an beruflichen Aus-, Fort- und Weiterbildungen beteiligt."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Regierungsrat kann in der Verordnung Einzelheiten regeln."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "9f3f85c36002dc40228701aba8b90dcca0a9fe0a5ef83ef147ffff31ec5e1230"
+    },
+    {
+      "id": "kanton/AR/811.1/art_50",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung ist einzuschränken oder zu entziehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn nicht mehr alle Voraussetzungen für die Erteilung erfüllt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "bei schwerwiegenden oder trotz Verwarnung wiederholten Verstössen der verantwortlichen Personen gegen die Berufspflichten;"
+            },
+            {
+              "marke": "c",
+              "text": "wegen wiederholter missbräuchlicher Rechnungsstellung gegenüber Patientinnen und Patienten oder deren Kostenträgerinnen und Kostenträgern;"
+            },
+            {
+              "marke": "d",
+              "text": "bei schwerwiegenden Mängeln in der Organisation oder der angebotenen Leistungen;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Missachtung von Auflagen oder Bedingungen, die im Zusammenhang mit der Bewilligung verfügt wurden."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "19a59fdeb2b94d9711500499e69e9184be7fd6ffb1b751a7ab81a9f5d77fc4d0"
+    },
+    {
+      "id": "kanton/AR/811.1/art_51",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Institutionen des Gesundheitswesens sind verpflichtet, Personen aufzunehmen, die notfallmässig einer Behandlung bedürfen."
+        },
+        {
+          "absatz": "2",
+          "text": "Spitäler und ähnliche Einrichtungen stationärer medizinischer und pflegerischer Versorgung sind im Rahmen des Leistungsauftrags und ihrer Kapazitäten verpflichtet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Patientinnen und Patienten mit Wohnsitz im Kanton ambulant oder stationär zu versorgen oder aufzunehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "Patientinnen und Patienten von ausserhalb des Kantons ambulant oder stationär zu versorgen oder aufzunehmen, soweit eine interkantonale oder internationale Vereinbarung dies vorsieht."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "83ff9ab046bb964309769edbf1978d8ca948191d45efed0f59ec5f85dc57d72f"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_a",
+      "artikelLabel": "Art. 52a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Spital, eine Klinik, ein Geburtshaus oder ein Pflegeheim erbringt folgende Leistungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "stationäre und ambulante Leistungen, die durch die obligatorische Krankenversicherung und andere Sozialversicherungen gedeckt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "stationäre und ambulante Zusatzleistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "weitere Leistungen, die durch Gesetz, interkantonaler oder internationaler Vereinbarung oder Leistungsauftrag übertragen werden, wie insbesondere gemeinwirtschaftliche Leistungen sowie Leistungen in der Aus- und Weiterbildung von in Spitälern, Kliniken, Geburtshäusern und Pflegeheimen tätigen Berufsleuten."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "e378052a5bfcbeea76d17b318eafbacd2d7abcf0544c453cd8df030a6d37278d"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_b",
+      "artikelLabel": "Art. 52b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton erstellt nach dem Bundesgesetz über die Krankenversicherung eine mittel- und langfristige, jährlich fortgeschriebene Planung der stationären medizinischen und pflegerischen Versorgung der Einwohnerinnen und Einwohner. Er koordiniert nach dem Bundesgesetz über die Krankenversicherung die Planung mit den anderen Kantonen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Planung umfasst insbesondere die Bereiche Untersuchung, Behandlung und Pflege von Kranken einschliesslich medizinische Prävention und Rehabilitation."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Planungsgrundlage dienen insbesondere der aktuelle Stand der Versorgung, der absehbare Bedarf, die voraussichtlichen Angebote und die Entwicklungsziele."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Planung werden die Leistungsanbieter evaluiert, wobei namentlich die Standards und die Qualität der medizinischen Versorgung, die Wirtschaftlichkeit und Zweckmässigkeit des Angebots, der Zugänglichkeit der Leistungen für die Bevölkerung sowie die langfristige Sicherung der Leistungen berücksichtigt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "In Bereichen, wo Bedarf oder Kapazitäten innerhalb des Kantons gering oder nicht vorhanden sind, kann auf spezifische kantonale Planungsaussagen verzichtet und auf ausserkantonale Angebote und die Koordination mit diesen verwiesen werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "8066e1f4ad9fb6c4109ea8cb8a38f85f6efc10e820dea11fe7140fad4515f95d"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_c",
+      "artikelLabel": "Art. 52c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt auf der Grundlage der Spitalplanung nach dem Bundesgesetz über die Krankenversicherung periodisch die Spitalliste fest. Diese umfasst die Spitäler, Kliniken und Geburtshäuser, die einen Leistungsauftrag für die stationäre medizinische Versorgung erhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt entsprechend die Liste der Pflegeheime fest, die einen Leistungsauftrag für die Pflege und medizinische Betreuung sowie der Rehabilitation von Langzeitpatientinnen und -patienten erhalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Er fordert periodisch die Spitäler und ähnliche Einrichtungen stationärer Gesundheitsversorgung im Kanton öffentlich auf, ihre Leistungsangebote und entsprechenden Kostenberechnungen dem Departement Gesundheit und Soziales innert Frist einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Regierungsrat kann bei Bedarf für bestimmte Leistungen ausserkantonale Spitäler und ähnliche Institutionen des Gesundheitswesens zum Angebot einladen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Spital- und die Pflegeheimliste wird veröffentlicht."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "17b446ebb261e51d60848146adfaa60eb7f1c4b9b50193b52c1618f0b6cce07f"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_d",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_d",
+      "artikelLabel": "Art. 52d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In die Spitalliste aufgenommen werden Leistungserbringer im Kanton, die",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach der Evaluation der beanspruchten Leistungen einen entsprechenden Leistungsauftrag bekommen (Art. 52e);"
+            },
+            {
+              "marke": "b",
+              "text": "die Aufnahmepflichten nach Art. 51 erfüllen;"
+            },
+            {
+              "marke": "c",
+              "text": "für bestimmte medizinische Behandlungen und Pflegeleistungen eine Mindestfallzahl vorweisen oder Qualitätskriterien der Behandlungen erfüllen, soweit solche Mindestfallzahlen oder Qualitätskriterien einheitlich vereinbart werden oder allgemein anerkannt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "ihre Leistungsaufträge wirtschaftlich und wirksam erfüllen sowie über eine medizinisch und technisch zeitgemässe Infrastruktur verfügen;"
+            },
+            {
+              "marke": "e",
+              "text": "für die vereinbarten Leistungen über eine ausreichende Zahl von entsprechend qualifizierten Mitarbeiterinnen und Mitarbeitern verfügen und deren Arbeitsbedingungen allgemeingültigen Gesamtarbeitsverträgen oder beim Fehlen solcher Verträge den orts- und berufsüblichen Bedingungen entsprechen;"
+            },
+            {
+              "marke": "f",
+              "text": "eine im Verhältnis zur Betriebsgrösse und zum kantonalen Bedarf angemessene Zahl an Ausbildungsplätzen oder Weiterbildungsmöglichkeiten auf verschiedenen Bildungsstufen in für Spitäler und Pflegeheimen wichtigen Berufen nach Massgabe des Berufsbildungsrechts anbieten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann die Aufnahme in die Spitalliste mit besonderen Auflagen verbinden, namentlich indem er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von einem Leistungserbringer ein bestimmtes, integrales Leistungsspektrum zur Sicherstellung der Grundversorgung einer Region fordert;"
+            },
+            {
+              "marke": "b",
+              "text": "von einem Leistungserbringer zur Sicherstellung der akutstationären Versorgung ausnahmsweise auch eine besondere Leistung verlangt, die nicht angeboten wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "die Sicherstellung des ärztlichen Dienstes im Haus während 24 Stunden fordert;"
+            },
+            {
+              "marke": "d",
+              "text": "einen Leistungserbringer verpflichtet, mit einem oder mehreren anderen Leistungserbringern im Kanton oder ausserhalb des Kantons Leistungen in Kooperation zu erbringen;"
+            },
+            {
+              "marke": "e",
+              "text": "einen Leistungserbringer verpflichtet, einen Seelsorgedienst anzubieten;"
+            },
+            {
+              "marke": "f",
+              "text": "einen Leistungserbringer verpflichtet, einen Sozialdienst für die Beratung der Patientinnen und Patienten anzubieten;"
+            },
+            {
+              "marke": "g",
+              "text": "einen Leistungserbringer verpflichten, die Rechte der Patientinnen und Patienten sowie den Datenschutz sicherzustellen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat bestimmt die Voraussetzungen und allfälligen Auflagen für die Aufnahme in die Pflegeheimliste im Einzelnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Er kann bei Bedarf ausserkantonale Leistungserbringer in die Spital- oder die Pflegeheimliste aufnehmen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "c530a46c7f4f42dca094acc4b88559ccf47f8cdce5437c1488b2baeda402d451"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_e",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_e",
+      "artikelLabel": "Art. 52e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Leistungsauftrag umfasst insbesondere folgende Regelungen: Er",
+          "items": [
+            {
+              "marke": "a",
+              "text": "umschreibt den Zweck und die Ziele des Auftrages sowie dessen rechtliche Grundlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "bestimmt die einzelnen Leistungen der Vertragsparteien und deren Verantwortlichkeiten, einschliesslich der Modalitäten des Entgelts der medizinischen und pflegerischen Leistungen sowie besondere Bedingungen und Auflagen für diese Leistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "legt die Zusammenarbeit zwischen den Vertragsparteien sowie von diesen mit Dritten fest;"
+            },
+            {
+              "marke": "d",
+              "text": "bestimmt die massgeblichen Indikatoren für das Reporting und Controlling sowie die Anforderungen an die Qualitätssicherung seitens der Leistungserbringer; dabei wirkt der Kanton auf einheitliche Kriterien hin;"
+            },
+            {
+              "marke": "e",
+              "text": "regelt die Vertragsdauer, die möglichen Vertragsänderungen und die Vertragsauflösung;"
+            },
+            {
+              "marke": "f",
+              "text": "bestimmt die Folgen einer Schlecht- oder Nichterfüllung;"
+            },
+            {
+              "marke": "g",
+              "text": "bestimmt den Gerichtsstand, das anwendbare Recht und die Wege der Streitschlichtung und -entscheidung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann mit ausserkantonalen Leistungserbringern Vereinbarungen abschliessen und ihnen darin Leistungsaufträge erteilen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "b7ae0b506d0cc90a2ba646c42bc5020f31ad1afc769b57b117bfbbc70b806546"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_f",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_f",
+      "artikelLabel": "Art. 52f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann, soweit dies zur Sicherstellung der Gesundheitsversorgung nötig ist, Institutionen des Gesundheitswesens im Kanton verpflichten, bestimmte Leistungen zu erbringen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "72f6a16d245d6920bc39ca12ea5c99f3622390de2a463378b4b4f602b54ca504"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_g",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_g",
+      "artikelLabel": "Art. 52g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann in begründeten Fällen nach vorausgehender Mahnung an den Leistungserbringer einen laufenden Leistungsauftrag einschränken oder mit sofortiger Wirkung aufheben."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "95607e8bc141c3075b3261b9836cca8d2f783525e930c658bc1095f5963c4818"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_h",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_h",
+      "artikelLabel": "Art. 52h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verantwortlichen kantonalen Organe und, soweit nötig, die Versicherer haben Einsicht in die Daten, insbesondere medizinische Leistungsdaten, Qualitätsdaten, Daten des Rechnungswesens und der Kostenrechnung, die für die Erteilung eines Leistungsauftrags und die Kontrolle der Auftragserfüllung relevant sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungserbringer der Spitalliste und der Pflegeheimliste des Kantons sind verpflichtet, zeitgerecht und vollständig die Daten der medizinischen Statistik und der Krankenhausstatistik bzw. der Statistik der sozialmedizinischen Institutionen dem Bundesamt für Statistik und dem Departement Gesundheit und Soziales zu liefern."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton und die Versicherer wahren die Geschäftsgeheimnisse der Leistungserbringer sowie den Persönlichkeitsschutz der Patientinnen und Patienten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "f484820ee3008aa583d5e47cd919414f4b0e6d120f5eb2a3725a6001d6fdfd45"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_i",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_i",
+      "artikelLabel": "Art. 52i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungserbringer der Spitalliste und der Pflegeheimliste erstellen bezüglich der vereinbarten Leistungen jedes Jahr einen Bericht über die Geschäftstätigkeit zuhanden des Regierungsrates."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Spitäler und anderen Einrichtungen mit Leistungsauftrag liefern periodisch Daten an das Departement Gesundheit und Soziales zur Evaluation des Leistungsauftrages."
+        },
+        {
+          "absatz": "3",
+          "text": "Rechtsstreitigkeiten mit Patientinnen und Patienten sowie Haftungsklagen von diesen oder Dritten sind dem Departement Gesundheit und Soziales mitzuteilen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Informationen der Leistungserbringer werden soweit möglich anonymisiert übermittelt. Besonders schützenswerte Personendaten dürfen nur soweit nötig bearbeitet und nicht Dritten bekannt gegeben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Departement Gesundheit und Soziales evaluiert periodisch die erbrachten Leistungen und erstattet dem Regierungsrat darüber Bericht."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "f4fed597a504fa7fa16775155287504dae3d32361407bf06d83d6e442613f665"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_j",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_j",
+      "artikelLabel": "Art. 52j",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Finanzierung von Leistungen der Spitäler und Pflegeheime, welche auf der kantonalen Spital- und Pflegeheimliste stehen, gelten die Bestimmungen des Bundesgesetzes über die Krankenversicherung sowie weiterer Sozialversicherungsgesetze des Bundes."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben besondere Vereinbarungen zwischen dem Kanton und den Leistungserbringern, soweit sie das Bundesrecht vorsieht oder zulässt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton kann gemeinwirtschaftliche Leistungen finanzieren. Der Regierungsrat bestimmt in den Leistungsaufträgen die Aufgaben der Leistungserbringer und deren Entschädigung. Die Entschädigung für gemeinwirtschaftliche Leistungen in Form von universitärer Lehre und Forschung wird in interkantonalen Vereinbarungen geregelt."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Kanton kann zur Sicherstellung einer ausreichenden Versorgung der Wohnbevölkerung den Leistungserbringern Beiträge an Investitionen und ausserordentliche Betriebsbeiträge gewähren."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "16477af3da52320f27b05320c84ea2e39efd387419e2f4aa263d489edc5152d3"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_k",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_k",
+      "artikelLabel": "Art. 52k",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungserbringer der kantonalen Spitalliste weisen für die stationären Leistungen die vereinnahmten Beiträge zur Abgeltung der Investitions- und Kapitalkosten und deren Abschreibungen in der Ertragsrechnung und der Bilanz separat aus und legen darüber Rechenschaft ab."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "4c62fcc17b237b79551eef43947928576da186c59cbf73d81d172c089679746c"
+    },
+    {
+      "id": "kanton/AR/811.1/art_52_l",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "52_l",
+      "artikelLabel": "Art. 52l",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Decken die Tarife die Kosten einer wirtschaftlichen Leistungserbringung nicht und können die ungedeckten Kosten nicht durch Gewinne aus Zusatzleistungen gedeckt werden, kann der Kanton Listenspitälern Beiträge an die ungedeckten Kosten gewähren für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "versorgungspolitisch sinnvolle ambulante Pflichtleistungen der obligatorischen Krankenversicherung in der Pädiatrie und der Psychiatrie;"
+            },
+            {
+              "marke": "b",
+              "text": "versorgungspolitisch sinnvolle ambulante oder stationäre Pflichtleistungen der Unfall-, Invaliden- und Militärversicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "Leistungen innovativer Versorgungsmodelle der Pädiatrie und Psychiatrie;"
+            },
+            {
+              "marke": "d",
+              "text": "Nichtpflichtleistungen im Rahmen neuer Untersuchungs- und Behandlungsmethoden."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "3581326b8486a79e3a518044efdda72b71bd646b32f92ceeac452abf70849380"
+    },
+    {
+      "id": "kanton/AR/811.1/art_53",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Umgang mit Heilmitteln (Arzneimittel und Medizinprodukte), namentlich die Herstellung und das Inverkehrbringen, richtet sich nach dem eidgenössischen Heilmittelgesetz."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "04db6422c7504974b0d99e491b4505d055a7c597302ce9a9ccbd45a04609a80e"
+    },
+    {
+      "id": "kanton/AR/811.1/art_54",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Voraussetzungen und das Verfahren für die Erteilung der Betriebsbewilligungen (Art. 30 und Art. 34 Abs. 4 HMG)."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales erteilt die im Heilmittelgesetz vorgesehenen kantonalen Bewilligungen, insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Herstellung von Arzneimitteln im Sinn von Art. 5 Abs. 2 lit. a HMG;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anwendung von verschreibungspflichtigen Arzneimitteln durch entsprechend ausgebildete Fachpersonen (Art. 24 Abs. 3 i.V.m. Art. 25 Abs. 1 lit. c HMG);"
+            },
+            {
+              "marke": "c",
+              "text": "die Abgabe aller nicht verschreibungspflichtigen Arzneimittel durch eidgenössisch diplomierte Drogistinnen und Drogisten (Art. 25 Abs. 4 HMG);"
+            },
+            {
+              "marke": "d",
+              "text": "die Abgabe bestimmter Arzneimittelgruppen wie ganzheitsmedizinischer Arzneimittel durch Personen, die über eine kantonal anerkannte Ausbildung verfügen (Art. 25 Abs. 5 HMG);"
+            },
+            {
+              "marke": "e",
+              "text": "den Versandhandel (Art. 27 Abs. 4 HMG);"
+            },
+            {
+              "marke": "f",
+              "text": "den Detailhandel (Art. 30 HMG);"
+            },
+            {
+              "marke": "g",
+              "text": "Betriebe, welche Blut oder Blutprodukte nur lagern (Art. 34 Abs. 4 HMG)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement Gesundheit und Soziales ist für die Durchführung der periodischen Betriebskontrollen zuständig."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "d12d720d9cfd82898cb1ed8cb98d6b606f81397282f400325ea8981dca4f5e52"
+    },
+    {
+      "id": "kanton/AR/811.1/art_55",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Überwachung des Marktes und die Durchführung von Inspektionen im Sinn von Art. 58 und Art. 60 HMG sind Sache des Departements Gesundheit und Soziales."
+        },
+        {
+          "absatz": "2",
+          "text": "Dieses erstattet die Meldungen gemäss Art. 58 Abs. 5 HMG und trifft die in seinen Zuständigkeitsbereich fallenden Verwaltungsmassnahmen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "4a3dd98c78465271769cb79fe48d4ccad1bc2c90a69330772aa2297537bc762a"
+    },
+    {
+      "id": "kanton/AR/811.1/art_56",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Bewilligungen, Kontrollen, Verfügungen und Dienstleistungen werden Gebühren nach Massgabe des Gesetzes über die Gebühren in Verwaltungssachen erhoben."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "f7e45bd5a78a1ad2456b01d28b821309287266da480cad27252c9e11a9e09768"
+    },
+    {
+      "id": "kanton/AR/811.1/art_57",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales trifft die zum Vollzug erforderlichen Verwaltungsmassnahmen nach Art. 66 Abs. 3 HMG."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "e33ffa35053b46ce04621a6740c356054e01641de1bbb35d048e004bd37af9be"
+    },
+    {
+      "id": "kanton/AR/811.1/art_58",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzten, Zahnärztinnen und Zahnärzten sowie Tierärztinnen und Tierärzten ist es gestattet, im Rahmen ihrer bewilligten Tätigkeit eine Privatapotheke zu führen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "e6402fec3d9cdc65ebab6a3b5a46f2294d186268d53be7d2c733030729655fe4"
+    },
+    {
+      "id": "kanton/AR/811.1/art_59",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die erforderlichen Vorschriften zum Vollzug der gesundheitspolizeilichen Bestimmungen des Bundes, insbesondere in folgenden Bereichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Übertragbare Krankheiten;"
+            },
+            {
+              "marke": "b",
+              "text": "Betäubungsmittel;"
+            },
+            {
+              "marke": "c",
+              "text": "Lebensmittel und Gebrauchsgegenstände;"
+            },
+            {
+              "marke": "d",
+              "text": "Tierseuchen;"
+            },
+            {
+              "marke": "e",
+              "text": "Heilmittel."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "f24545bacbd455df5e04d23d4d26b7f5fbbd7463d70aa545915f62cc4828e416"
+    },
+    {
+      "id": "kanton/AR/811.1/art_60",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Katastrophen und anderen besonderen Vorkommnissen trifft der Regierungsrat alle Massnahmen, die zur Sicherstellung der medizinischen Versorgung der Bevölkerung erforderlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bevölkerungsschutzgesetz und das Zivilschutzgesetz finden sinngemäss Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Angehörigen aller Berufe und alle Institutionen des Gesundheitswesens zum Einsatz verpflichten;"
+            },
+            {
+              "marke": "b",
+              "text": "die freie Wahl der Gesundheitsfachpersonen und der Institutionen des Gesundheitswesens aufheben;"
+            },
+            {
+              "marke": "c",
+              "text": "Impfungen obligatorisch erklären."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "87ca695d7a3bf2e2509153102872ad7388dfecd76d967b92e55a9f8c0acf9760"
+    },
+    {
+      "id": "kanton/AR/811.1/art_61",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Sicherstellung des Rettungswesens und des Transportes von Kranken und Verwundeten erteilt der Regierungsrat den Spitälern oder anderen geeigneten Institutionen oder Organisationen des Gesundheitswesens Leistungsaufträge."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "a5b5af5892b697c386b5fa4bc440f6c955bd2700994978593495d538e7d138d7"
+    },
+    {
+      "id": "kanton/AR/811.1/art_62",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bestattungswesen ist, unter Vorbehalt der nachstehenden Bestimmungen, Sache der Gemeinden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann nähere Bestimmungen erlassen."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "dd6daabaf1d9b7f19c10ea016cc893479949114d20a53a02e9d5374e6568b785"
+    },
+    {
+      "id": "kanton/AR/811.1/art_63",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestattung erfolgt in der Regel auf dem Friedhof der Gemeinde, in welcher die oder der Verstorbene den letzten Wohnsitz hatte."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Wunsch der oder des Verstorbenen oder der nächsten Angehörigen kann die Bestattung auch in einer anderen Gemeinde erfolgen, sofern diese hiezu die Bewilligung erteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Hatte die oder der Verstorbene keinen festen Wohnsitz oder kommt niemand für die Kosten des Rücktransportes in die Wohnsitzgemeinde auf, findet die Bestattung in jener Gemeinde statt, in welcher der Tod eingetreten oder der Leichnam gefunden worden ist."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "ae90e24268629857358d2303b196c8a1efa8dbf616e9c9c8d8911eeddee96059"
+    },
+    {
+      "id": "kanton/AR/811.1/art_64",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestattung in der Wohngemeinde ist unentgeltlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Bestattungen ausserhalb der Wohngemeinde kann den Personen, die darum ersucht haben, oder den Erbberechtigten Rechnung gestellt werden."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "9f4ed45809176719b7e0d2e1cd5d0396f6f4449095ce6f4867cb8038d1dc7f3d"
+    },
+    {
+      "id": "kanton/AR/811.1/art_65",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Gesundheit und Soziales kann jederzeit Inspektionen und Kontrollen durchführen oder durchführen lassen. Ihren Organen ist der unbeschränkte Zutritt zu Praxis- und Geschäftsräumen zu gewähren. Das Amtsgeheimnis und die Bestimmungen des Datenschutzes sind dabei zu beachten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Gesundheit und Soziales kann im Bereich des Gesundheitswesens alle zur Beseitigung eines rechtswidrigen Zustandes erforderlichen Massnahmen anordnen. Insbesondere kann es die Schliessung von Räumlichkeiten oder die Beschlagnahme, Einziehung oder Vernichtung von Gegenständen verfügen, die zur Begehung einer rechtswidrigen Handlung dienen, gedient haben oder das Ergebnis einer solchen Handlung sind."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "2d77d1f17810c4f8b2cf04623b5b5bd726573981eac5c8b28d7c50c8bc2f14c0"
+    },
+    {
+      "id": "kanton/AR/811.1/art_66",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer vorsätzlich oder fahrlässig dieses Gesetz oder die gestützt darauf erlassenen Verordnungen und Verfügungen übertritt oder bei deren Übertretung mitwirkt, wird, soweit nicht besondere Strafbestimmungen anwendbar sind, mit Busse bis 20 000 Franken bestraft."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "db5c2415dd6bc21c1e805b1b226ae457224be8d6b4efff7d586c1f9179c41594"
+    },
+    {
+      "id": "kanton/AR/811.1/art_66_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "66_a",
+      "artikelLabel": "Art. 66a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Patientinnen und Patienten, ihnen nahestehende Personen oder nächste Angehörige sowie gegebenenfalls die gesetzliche Vertretung können wegen der Verletzung der Patientenrechte eine beschwerdefähige Verfügung verlangen. Sie haben sich dazu an die Leitung der Institutionen des Gesundheitswesens zu wenden. Ist die Verletzung durch eine Gesundheitsfachperson ausserhalb einer Institution des Gesundheitswesens zu verantworten, ist das Departement Gesundheit und Soziales anzurufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leitung der Institution oder die Aufsichtsbehörde versucht eine gütliche Einigung. Kann innert 30 Tagen keine gütliche Einigung erreicht werden, erlässt sie eine schriftliche, begründete Verfügung mit einer Rechtsmittelbelehrung."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "29a4ecc4949526c2682cc30c9885c9b5175574a2d962f0fb8047b4bef7fc1161"
+    },
+    {
+      "id": "kanton/AR/811.1/art_66_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "66_b",
+      "artikelLabel": "Art. 66b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheide der Gesundheitsbehörden gegenüber Gesundheitsfachpersonen, Institutionen des Gesundheitswesens oder betroffenen Dritten unterliegen dem Rekurs an das Departement, oder, wenn dieses entscheidet, an den Regierungsrat."
+        },
+        {
+          "absatz": "2",
+          "text": "Streitigkeiten aus Leistungsaufträgen sind mittels verwaltungsgerichtlicher Klage nach Art. 57 des Gesetzes über die Verwaltungsrechtspflege vor Obergericht zu bringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Entscheide der Ethikkommission Ostschweiz sind nach Massgabe der interkantonalen Vereinbarung mit Beschwerde beim Obergericht anfechtbar."
+        },
+        {
+          "absatz": "4",
+          "text": "Verfügungen der Berufsverbände im Rahmen von Art. 42 und Art. 42a sind mit Rekurs beim Departement anfechtbar."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "379099fa79a450ac6933321aac0262e01a7de0802164dccfd47faebe08812328"
+    },
+    {
+      "id": "kanton/AR/811.1/art_66_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "66_c",
+      "artikelLabel": "Art. 66c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Ergänzung der bundesrechtlichen Ermächtigungen kann das Departement Gesundheit und Soziales die AHV-Versichertennummer für folgende Aufgaben systematisch verwenden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Prüfung der Kostengutsprachen und Spitalrechnungen;"
+            },
+            {
+              "marke": "2",
+              "text": "den Vollzug der Bestimmungen des Schutzes der Bevölkerung bei übertragbaren Krankheiten;"
+            },
+            {
+              "marke": "3",
+              "text": "für Berufsausübungsbewilligungen von Gesundheitsfachpersonen."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "908d1406736c612589cf2bc8a5dde0c2d0dbb1d7572ddd55693d4acbc7760751"
+    },
+    {
+      "id": "kanton/AR/811.1/art_67",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer nach bisherigem Recht befugt war, im Kanton Appenzell Ausserrhoden einen Beruf oder eine Institution des Gesundheitswesens zu betreiben, ist berechtigt, diese Tätigkeit weiter auszuüben. Dies gilt auch für Zusatz- und Sonderbewilligungen, soweit sie dem neuen Recht nicht widersprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer von dieser Befugnis Gebrauch machen will, hat dies innert einer Frist von sechs Monaten seit Inkrafttreten dieses Gesetzes dem Departement Gesundheit und Soziales schriftlich mitzuteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Rechte und Pflichten der Gesundheitsfachpersonen und der Institutionen des Gesundheitswesens sowie die Abgabe und Anwendung von Heilmitteln richten sich nach neuem Recht."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "5130247e2586dff2708b718ab0aa30c3b09965b74c6fd5d88f40233e34440a59"
+    },
+    {
+      "id": "kanton/AR/811.1/art_68",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton leistet bis ins Jahr 2015 an Neu-, Um- und Erweiterungsbauten von Pflegeheimen und Pflegeabteilungen Beiträge von maximal 50 Prozent der anerkannten Kosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verbot gemäss Art. 16 Abs. 3 tritt für Automaten, die frei zugänglich sind, ein Jahr nach Inkrafttreten des Gesundheitsgesetzes in Kraft."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vorschrift gemäss Art. 17 Abs. 1 tritt für alle Bereiche der Gastronomie drei Jahre nach Inkrafttreten des Gesundheitsgesetzes in Kraft."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "40d97ec4c1c2e0dda91cbb98e3705982e7c5aaf5cb0a4f95918b0547383c8dfb"
+    },
+    {
+      "id": "kanton/AR/811.1/art_69",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Inkrafttreten dieses Gesetzes werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesetz vom 24. April 1965 über das Gesundheitswesen;"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung vom 8. Dezember 1986 zum Gesundheitsgesetz;"
+            },
+            {
+              "marke": "c",
+              "text": "Prüfungsreglement für kantonal approbierte Zahnärzte vom 8. Juni 1993;"
+            },
+            {
+              "marke": "d",
+              "text": "Verordnung vom 9. September 1996 über die Heimaufsicht (Heimverordnung);"
+            },
+            {
+              "marke": "e",
+              "text": "Gesetz vom 12. März 2000 über die öffentliche Krankenpflege;"
+            },
+            {
+              "marke": "f",
+              "text": "Verordnung vom 6. Dezember 1993 über die Rechtsstellung der Patienten und Patientinnen der kantonalen Spitäler;"
+            },
+            {
+              "marke": "g",
+              "text": "Verordnung vom 14. Juni 2004 über die Unterstützung der spitalexternen Kranken- und Gesundheitspflege (Spitex-Verordnung);"
+            },
+            {
+              "marke": "h",
+              "text": "Verordnung vom 6. Dezember 1965 über den Verkehr mit Heilmitteln;"
+            },
+            {
+              "marke": "i",
+              "text": "Art. 7 des Einführungsgesetzes vom 30. April 1989 zum Bundesgesetz über die Betäubungsmittel;"
+            },
+            {
+              "marke": "j",
+              "text": "Art. 5 der Verordnung vom 19. Juni 1995 über das Bestattungswesen."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "1e67f4742ddb2d08b6ca728181cd73686793cff8cffe35635c9243e64e3637b0"
+    },
+    {
+      "id": "kanton/AR/811.1/art_70",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gesundheitsgesetz (811.1)",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem obligatorischen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2022-01-14",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/811.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "f5e46d58d6fc027b9cb0764457ab560e",
+      "sha": "78c487d1f11f8beef0fa2d77395b7ff7ab933d90f928e69b470eaeb0689faaff"
+    }
+  ]
+}

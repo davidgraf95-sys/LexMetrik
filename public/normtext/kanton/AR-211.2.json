@@ -1,0 +1,803 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/211.2/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die öffentliche Beurkundung im Sinne von Art. 55 SchlT ZGB."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "099d8a449aa6048fd19aefbb582b159bbe5c7495d1eb286facb416a9dc40d4f9"
+    },
+    {
+      "id": "kanton/AR/211.2/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die öffentliche Beurkundung sind zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gemeindeschreiberin oder der Gemeindeschreiber, ausgenommen für Beurkundungen in Grundbuchsachen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Leiterin oder der Leiter des Erbschaftsamtes im Bereich des Ehegüter- und Erbrechts;"
+            },
+            {
+              "marke": "c",
+              "text": "die Grundbuchverwalterin oder der Grundbuchverwalter in Grundbuchsachen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Handelsregisterführerin oder der Handelregisterführer in Handelsregistersachen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Den im Anwaltsregister des Kantons Appenzell Ausserrhoden eingetragenen Anwältinnen und Anwälten stehen die Beurkundungsbefugnisse gemäss Abs. 1 lit. a zu, sofern sie bei der Aufsichtsbehörde als öffentliche Urkundsperson registriert sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die genannten Personen bezeichnen sich als «Öffentliche Urkundsperson»."
+        },
+        {
+          "absatz": "4",
+          "text": "Zur öffentlichen Beurkundung zuständig ist auch die Stellvertreterin oder der Stellvertreter der öffentlichen Urkundsperson nach Abs. 1."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Gemeinderat kann die Beglaubigungskompetenz nach Art. 20 einer qualifizierten Sekretariatsperson übertragen."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "b8806c42b4c59442619b79d5013415cbc4535a97bbc0a2d3fba921c5d4fd4453"
+    },
+    {
+      "id": "kanton/AR/211.2/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeindeschreiberin oder der Gemeindeschreiber sowie die Leiterin oder der Leiter des Erbschaftsamtes nehmen die öffentlichen Beurkundungen auf ihrem Gemeindegebiet vor. Ausnahmsweise können sie diese auch in einer anderen Gemeinde vornehmen, sofern die Gemeindepräsidentin oder der Gemeindepräsident dieser Gemeinde es bewilligt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Handelsregisterführerin oder der Handelsregisterführer sowie die Anwältin oder der Anwalt sind für öffentliche Beurkundungen auf dem ganzen Kantonsgebiet zuständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Grundbuchverwalterin oder der Grundbuchverwalter ist in Grundbuchsachen der Gemeinde zuständig, für die sie oder er gewählt ist. Ausnahmsweise können Beurkundungen des eigenen Zuständigkeitsbereiches auch in einer anderen Gemeinde vorgenommen werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Beurkundung von Verträgen über mehrere in verschiedenen Gemeinden gelegene Grundstücke kann von jeder Grundbuchverwalterin oder jedem Grundbuchverwalter vorgenommen werden, in deren oder dessen Gemeinde eines der betreffenden Grundstücke liegt."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "7e2f73b07e615762fbea997b06897bd3ece447e456fc1dab6f6dd980fcc2e581"
+    },
+    {
+      "id": "kanton/AR/211.2/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Begehren um Vornahme einer öffentlichen Beurkundung hat die öffentliche Urkundsperson innert angemessener Frist zu entsprechen, sofern sie dafür zuständig ist."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "34bf401f8262063751466cee29bc79878ebd44aded19aa5dfe1b36e1b22667a7"
+    },
+    {
+      "id": "kanton/AR/211.2/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentliche Urkundsperson prüft die Identität sowie die Rechts- und Handlungsfähigkeit der Parteien und der mitwirkenden Personen. Sie lässt sich die entsprechenden Ausweise vorlegen. Bei Stellvertretung verlangt sie eine schriftliche Vollmacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen Zweifel über die Identität, die Urteilsfähigkeit oder die Vollmacht, ist die Beurkundung zu verweigern."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "feff3d085926c0add931f9448862450be03ea7bc6fcf67e464fb1a3f6432b40a"
+    },
+    {
+      "id": "kanton/AR/211.2/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentliche Urkundsperson ermittelt den Erklärungsinhalt sowie die bestehenden Tatsachen. Sie sorgt dafür, dass der wirkliche Wille der Parteien klar und vollständig zum Ausdruck kommt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie klärt die Parteien über den Inhalt und die rechtliche Bedeutung der Urkunde auf."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "21d7159211129f54d01e553f537962649e4c264dcd9db85df83fb3c67dc9c68e"
+    },
+    {
+      "id": "kanton/AR/211.2/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beurkundungen sind mit aller Sorgfalt vorzubereiten und auszuführen."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "0fcf7482d8f11ae3c429be3c342dd0d9ce234173e22e1af894c0150f2c2ea0c4"
+    },
+    {
+      "id": "kanton/AR/211.2/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentliche Urkundsperson bewahrt eine Ausfertigung der von ihr erstellten Urkunde an einem sicheren Ort auf."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führt ein Register, aus dem die von ihr vorgenommenen Beurkundungen und deren Datierung ersichtlich sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Anwältinnen und Anwälte liefern Register und Urkundensammlung innert sechs Monaten nach Erlöschen der Beurkundungsbefugnis zur Aufbewahrung der Aufsichtsbehörde ab. Vorbehalten bleibt die Übergabe an eine Nachfolgerin oder einen Nachfolger."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "7475c394eeb92d68d993a59d6682a36bb2e73326e9b1e6f6fa61a4b61cf40da1"
+    },
+    {
+      "id": "kanton/AR/211.2/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Urkundspersonen, ihre Hilfskräfte, die Aufsichtsbehörden und alle anderen im Beurkundungsbereich tätigen Behörden und Personen haben über ihre Tätigkeiten und Wahrnehmungen bei Ausübung ihres Amtes Verschwiegenheit zu bewahren."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "2ede5cdcafd7f0d53fec2a7c0870713fa5cc12c04df25f34d519135094a4058a"
+    },
+    {
+      "id": "kanton/AR/211.2/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ausstand richtet sich sinngemäss nach Bundesrecht und nach Art. 8 des Gesetzes über die Verwaltungsrechtspflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die übrigen mitwirkenden Personen gelten die gleichen Ausstandsgründe wie für die öffentliche Urkundsperson."
+        },
+        {
+          "absatz": "3",
+          "text": "Büropartner- und Angestelltenverhältnisse in der Kanzlei der öffentlichen Urkundsperson sowie ein Anwaltsmandat zwischen einer Partei und der öffentlichen Urkundsperson stellen keinen Ausstandsgrund dar."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "752e40cd89c8fbe6380cc7ce4e429f9be22c9b4b379358de0eb2d29384233c32"
+    },
+    {
+      "id": "kanton/AR/211.2/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nebst der zu beurkundenden Erklärung hat die Urkunde folgende Elemente zu enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die genaue Bezeichnung der Parteien und der mitwirkenden Personen;"
+            },
+            {
+              "marke": "b",
+              "text": "Name und Vorname der öffentlichen Urkundsperson;"
+            },
+            {
+              "marke": "c",
+              "text": "Ort, Datum und Uhrzeit der Errichtung der Urkunde;"
+            },
+            {
+              "marke": "d",
+              "text": "die Unterschrift der Parteien und der mitwirkenden Personen;"
+            },
+            {
+              "marke": "e",
+              "text": "die öffentliche Beurkundung der öffentlichen Urkundsperson."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "0315a452ec98ee8feac0214902f9fc802e7213a1819c3d9406c5cbe7bb9c7dc9"
+    },
+    {
+      "id": "kanton/AR/211.2/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentliche Urkundsperson hat den Parteien die Urkunde vollumfänglich zur Kenntnis zu bringen. Sie liest sie ihnen vor oder legt sie ihnen zum Lesen vor und belehrt sie."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Parteien unterzeichnen die Urkunde, nachdem sie ihren Inhalt vorbehaltlos genehmigt haben."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "6b6c08d2c89b344acba89de856fdbf94822cbbd7bd3d3d4b842eeadc427175ea"
+    },
+    {
+      "id": "kanton/AR/211.2/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Anschluss an die Unterzeichnung durch die Parteien bestätigt die öffentliche Urkundsperson mit ihrer Unterschrift, dass",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Urkunde den wirklichen Parteiwillen enthält;"
+            },
+            {
+              "marke": "b",
+              "text": "die Parteien die Urkunde selbst gelesen haben oder sie ihnen vorgelesen wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "die Parteien den Inhalt der Urkunde vorbehaltlos genehmigt haben;"
+            },
+            {
+              "marke": "d",
+              "text": "die Parteien urteilsfähig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "0bce5f21844c3a34b9a9c4c8a61f1439e23ab09ad07eceae96bbba0ce5a46119"
+    },
+    {
+      "id": "kanton/AR/211.2/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien müssen während des ganzen Verfahrens nach Art. 12 und 13 anwesend sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt eine Ausnahmeregelung in Grundbuchsachen."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "748c4f6b7609c4efd16003c2c375dc980d2dbdb1ee2e5d317a934d7a8cd9a5bf"
+    },
+    {
+      "id": "kanton/AR/211.2/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentliche Urkundsperson nimmt im Rahmen ihrer Zuständigkeit auch eine nicht vorgeschriebene Beurkundung vor. Sie lehnt die Beurkundung ab, wenn eine missbräuchliche Verwendung der Urkunde zu befürchten ist."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "e04cfc8e2ba5e258219c9e1decb9fa36f139343ec60a0dc06326fd8004ad5c1a"
+    },
+    {
+      "id": "kanton/AR/211.2/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urkunde muss in einer Sprache abgefasst sein, welche alle Mitwirkenden verstehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Verstehen nicht alle Mitwirkenden die Sprache, ist eine Übersetzerin oder ein Übersetzer beizuziehen, die oder der auf der Urkunde unterschriftlich bestätigt, dass die Übersetzung gewissenhaft erfolgt ist."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "e6fe6dd64881e9795a5110e31e51c2bc00e3fc29ce60912d24346d7464b52d0b"
+    },
+    {
+      "id": "kanton/AR/211.2/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erklärt eine Partei, dass sie weder mit ihrem Namen unterschreiben noch ein Handzeichen setzen könne, hat die öffentliche Urkundsperson den Grund in der Beurkundungsformel festzuhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Partei stumm oder taub oder sonst in ihrer sinnlichen Wahrnehmung oder Ausdrucksfähigkeit eingeschränkt, darf die öffentliche Beurkundung nur vorgenommen werden, wenn sich die öffentliche Urkundsperson davon überzeugt hat, dass die Partei den Inhalt der Urkunde zu erfassen vermag."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "56ae150484192d4e0442019789dee3f41842f1c69242d623e29832191e83a02b"
+    },
+    {
+      "id": "kanton/AR/211.2/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die öffentliche Beurkundung der übrigen Rechtshandlungen, wie Versammlungsbeschlüsse und dergleichen, kommen die vorstehenden Regeln sinngemäss zur Anwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die öffentliche Beurkundung erfolgt in der Weise, dass die öffentliche Urkundsperson unter Angabe ihres Namens auf der Urkunde erklärt, sie beurkunde öffentlich, die Urkunde stimme mit den von ihr gemachten Wahrnehmungen überein."
+        },
+        {
+          "absatz": "3",
+          "text": "Die öffentliche Urkundsperson hat diese Erklärung unter Angabe von Ort, Datum und Uhrzeit zu unterzeichnen."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "46e33337d8a345a00dfa5c25da5e78c49232bae3c0da67c709166012f6d54f91"
+    },
+    {
+      "id": "kanton/AR/211.2/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urkunde über die Beurkundung bestehender Tatsachen hat zu enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Vorname, Funktion und Geschäftsadresse der öffentlichen Urkundsperson sowie die Personalien der Partei, welche die Beurkundung verlangt;"
+            },
+            {
+              "marke": "b",
+              "text": "die genaue Beschreibung der festgestellten Tatsachen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Beurkundungserklärung, das Datum sowie die Unterschrift der öffentlichen Urkundsperson."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "299d84e99ec72a8c82be6ca42d7c34649cfb87f4ecfb31954b59ea9e326254c0"
+    },
+    {
+      "id": "kanton/AR/211.2/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beglaubigung besteht in der Feststellung und Bestätigung der öffentlichen Urkundsperson über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Echtheit einer Unterschrift oder eines Handzeichens;"
+            },
+            {
+              "marke": "b",
+              "text": "die Übereinstimmung einer Abschrift, eines Auszuges oder einer anderen schriftlichen Wiedergabe mit einem der öffentlichen Urkundsperson vorgelegten Schriftstück."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "abbdf34149ba2ef32edfc9f28f9ab971439e77cce75acad08952075ea4e6f8f0"
+    },
+    {
+      "id": "kanton/AR/211.2/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Urkundspersonen sind ermächtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "elektronische Ausfertigungen der von ihnen errichteten Urkunden zu erstellen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Übereinstimmung der von ihnen erstellten elektronischen Kopien mit den Originaldokumenten auf Papier zu beglaubigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Echtheit von Unterschriften elektronisch zu beglaubigen."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "8b7d3af39665f0978f4c70b4d9b1bfcd09f400f7075993fc34a3d4a4cc2f0806"
+    },
+    {
+      "id": "kanton/AR/211.2/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die öffentlichen Urkundspersonen erheben für ihre Amtshandlungen eine Gebühr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr richtet sich nach dem Gebührentarif für die Gemeinden."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "55ff02e7c463e26e178a12f63bbae72dd337bded524d711cd1d737a5007d6790"
+    },
+    {
+      "id": "kanton/AR/211.2/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsicht über die Beurkundungstätigkeit der Anwältinnen und Anwälte wird von der Anwaltsaufsichtskommission im Auftrag des Obergerichts ausgeübt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen öffentlichen Urkundspersonen unterstehen der Aufsicht des zuständigen Departements."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "b0d13a657223b84e90b56e3f5d1c0ab2eb2e29b2eb85a23e6de7c7cef0fbc412"
+    },
+    {
+      "id": "kanton/AR/211.2/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsichtsbehörden haben die Tätigkeit der öffentlichen Urkundspersonen zu überwachen und nötigenfalls Sanktionen zu ergreifen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsbehörden stimmen ihre Tätigkeiten ab."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "92a107bf8408fdc3b5e36cc047186ae6414a7abfa6aab110d83e6a2a3160eb10"
+    },
+    {
+      "id": "kanton/AR/211.2/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Haftung richtet sich nach den Art. 262 ff. des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches."
+        },
+        {
+          "absatz": "2",
+          "text": "Anwältinnen und Anwälte haften für ihre Beurkundungstätigkeit gemäss den Bestimmungen des Bundeszivilrechts. Sie haben für ihre Tätigkeit als öffentliche Urkundsperson eine Haftpflichtversicherung im Sinne von Art. 12 lit. f des Bundesgesetzes über die Freizügigkeit der Anwältinnen und Anwälte abzuschliessen."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "5a43267f80463d95a16a64f7ca2440e29c7a97bbbec5ef4cce7900aae475d0f0"
+    },
+    {
+      "id": "kanton/AR/211.2/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn eine öffentliche Urkundsperson ihre Pflicht verletzt, kann die Aufsichtsbehörde folgende Sanktionen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verwarnung;"
+            },
+            {
+              "marke": "b",
+              "text": "schriftlicher Verweis;"
+            },
+            {
+              "marke": "c",
+              "text": "Busse bis zu Fr. 20 000.–;"
+            },
+            {
+              "marke": "d",
+              "text": "befristeter Entzug der Beurkundungsbefugnis für längstens 2 Jahre;"
+            },
+            {
+              "marke": "e",
+              "text": "dauernder Entzug der Beurkundungsbefugnis."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Anwältinnen und Anwälte gelten sinngemäss die Disziplinarmassnahmen des Bundesgesetzes über die Freizügigkeit der Anwältinnen und Anwälte."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "06a8d1cd0f39519c322ad06e24c71617e37ac5c499fdab042d64ace28689edbf"
+    },
+    {
+      "id": "kanton/AR/211.2/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer sich unbefugterweise als öffentliche Urkundsperson bezeichnet oder einen gleichwertigen Titel verwendet, wird mit Busse bis zu Fr. 20 000.– bestraft."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "5988121497a24c5c358344a84332eb59b172956905137c04fb801193019f5ae1"
+    },
+    {
+      "id": "kanton/AR/211.2/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die zum Vollzug erforderlichen Vorschriften."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "f76b26ce38d6d3952427937ea0d1454cd11751b1ec1a16114d7384c32224b0e7"
+    },
+    {
+      "id": "kanton/AR/211.2/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die nachstehenden Erlasse werden geändert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesetz vom 27. April 1969 über die Einführung des Schweizerischen Zivilgesetzbuches:"
+            },
+            {
+              "marke": "b",
+              "text": "Gesetz vom 26. Februar 2001 über die Gebühren der Gemeinden:"
+            }
+          ]
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "9a71f997925ba3d61e912c06f4d9c0feb056a543052680b85b1d7775abb6aad0"
+    },
+    {
+      "id": "kanton/AR/211.2/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "BeurkG (211.2)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2010-02-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/211.2",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "97fbf8f2aec74976dba3347b21c0de83",
+      "sha": "7ffd37838bc0de0b0080ca62a27bcedfe25c1858858eb3afb2d3b05b8d1e0b4b"
+    }
+  ]
+}

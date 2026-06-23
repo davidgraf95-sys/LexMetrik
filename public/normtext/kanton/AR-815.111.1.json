@@ -1,0 +1,225 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/815.111.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Kontrolle von Lebensmitteln und Gebrauchsgegenständen werden auf der Basis von Aufwandpunkten erhoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "a8641a97b0b15292657d917deb12cd7a5a18c495b61353754320e85e32feb761"
+    },
+    {
+      "id": "kanton/AR/815.111.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die technischen Untersuchungen gelten die Bestimmungen des Gebührentarifs des Verbandes der Kantonschemiker der Schweiz, Buchstabe A sowie Buchstabe B2 bis B5."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "b0f8ef711e4a3d088480f6913df53754cebc3aeaa60d1371affdfdfb67f18269"
+    },
+    {
+      "id": "kanton/AR/815.111.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Aussendienst (Lebensmittelinspektorat) und für das Sekretariat gelten folgende Ansätze:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Inspektionen: Aufwandpunkte (AP)"
+            },
+            {
+              "marke": "1",
+              "text": "Für die erste angebrochene Stunde Lebensmittelinspektor 80"
+            },
+            {
+              "marke": "2",
+              "text": "Für die erste angebrochene Stunde Lebensmittelkontrolleur 50"
+            },
+            {
+              "marke": "3",
+              "text": "Für jede weitere angebrochene 1/2 Stunde Lebensmittelinspektor 40"
+            },
+            {
+              "marke": "4",
+              "text": "Für jede weitere angebrochene ½ Stunde Lebensmittelkontrolleur 25"
+            },
+            {
+              "marke": "b",
+              "text": "Wegpauschale:"
+            },
+            {
+              "marke": "1",
+              "text": "Lebensmittelinspektor 30"
+            },
+            {
+              "marke": "2",
+              "text": "Lebensmittelkontrolleur 15"
+            },
+            {
+              "marke": "c",
+              "text": "Einzelne Inspektionskriterien, die wiederholt nicht der «Guten Praxis» entsprechen: 50"
+            },
+            {
+              "marke": "d",
+              "text": "Inspektionsberichte, Gutachten usw.: Im Büro, pro ½ Stunde"
+            },
+            {
+              "marke": "1",
+              "text": "Lebensmittelinspektor 40"
+            },
+            {
+              "marke": "2",
+              "text": "Lebensmittelkontrolleur 25"
+            },
+            {
+              "marke": "e",
+              "text": "Baugesuche:"
+            },
+            {
+              "marke": "1",
+              "text": "Beurteilung einfache Baugesuche: 50"
+            },
+            {
+              "marke": "2",
+              "text": "Beurteilung komplexe Baugesuche: nach Aufwand"
+            },
+            {
+              "marke": "f",
+              "text": "Fotos: pro Foto 2"
+            },
+            {
+              "marke": "g",
+              "text": "Beschlagnahme: Aufwandpunkte gemäss Inspektionen lit. a"
+            },
+            {
+              "marke": "h",
+              "text": "Probenahmen:"
+            },
+            {
+              "marke": "1",
+              "text": "Lebensmittel Pro Betrieb, inkl. Wegpauschale 50"
+            },
+            {
+              "marke": "2",
+              "text": "Trinkwasser – Einzelprobe 15"
+            },
+            {
+              "marke": "3",
+              "text": "Trinkwasser – Mehrfachproben, Stufenkontrollen etc.: nach Aufwand"
+            },
+            {
+              "marke": "i",
+              "text": "Dienstleistungen, Bauabnahmen usw.:"
+            },
+            {
+              "marke": "1",
+              "text": "Aufwand kleiner als 1 Stunde (VGLek Art. 5 Abs. 2) –"
+            },
+            {
+              "marke": "2",
+              "text": "Aufwand grösser als 1 Stunde, nach Zeitaufwand, 1/2 Stunde Lebensmittelinspektor 40"
+            },
+            {
+              "marke": "3",
+              "text": "Aufwand grösser als 1 Stunde, nach Zeitaufwand, 1/2 Stunde Lebensmittelkontrolleur 25"
+            },
+            {
+              "marke": "k",
+              "text": "Sekretariat: pro Stunde 40"
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "5224d0ccfc2030b344a87acd1d676205d6b78e3eeb677e74a7c79be9259f96ad"
+    },
+    {
+      "id": "kanton/AR/815.111.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Wert eines Aufwandpunktes beträgt Fr. 1.90. Das Departement Gesundheit und Soziales passt diesen Wert in Absprache mit den Partnerkantonen der Teuerung an (LIKP von 103,0 Punkten, Stand September 1995/Basis Mai 1993 = 100)."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "56f956d7dcde05a21ac90a5113b06e37208ee46ff08334d77f5354272d1b7cf1"
+    },
+    {
+      "id": "kanton/AR/815.111.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelpositionen für die technischen Untersuchungen können beim Kantonschemiker und beim Lebensmittelinspektorat beider Appenzell eingesehen werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "50d0b636dde9ca427ba2a14c8164d849ee29f70141c866e6ff1b42f4f6fa81ca"
+    },
+    {
+      "id": "kanton/AR/815.111.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Gebührentarif für die Lebensmittelkontrolle (815.111.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieser Gebührentarif tritt sofort in Kraft."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/815.111.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "2dedda3916d2e83ed0b9a999b2fdea9b",
+      "sha": "c0a9e99fb4804f085909505f9edf7fd8e1034878444a1e0e0fc7576b40e8ba3b"
+    }
+  ]
+}

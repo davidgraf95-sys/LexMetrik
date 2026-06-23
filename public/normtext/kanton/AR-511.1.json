@@ -1,0 +1,832 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/511.1/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Vorbereitung, Durchführung und Finanzierung der erforderlichen Massnahmen bei besonderen und ausserordentlichen Lagen oder bei Katastrophen und Notlagen sowie die Organisation der zuständigen Stellen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "3129e200deafc5089f4e309a96ee5c8c23698f56a068c0456768af92105dd581"
+    },
+    {
+      "id": "kanton/AR/511.1/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz bezweckt namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Tätigkeit und den Betrieb der politischen Institutionen und der öffentlichen Dienste sicherzustellen sowie die gegenseitige grenzüberschreitende Hilfeleistung zu gewährleisten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Regierungstätigkeit, die Sicherheit und Ordnung, die Alarmierung und die Information von Behörden und Bevölkerung sowie den Vollzug der vom Bund delegierten Aufgaben zu garantieren."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "aa7da49ba9b2efc9705346fd38eb1e866bf2489982e044e2965aca75abe85880"
+    },
+    {
+      "id": "kanton/AR/511.1/art_3",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besondere Lagen sind Situationen, in denen sektoriell gewisse Aufgaben mit den ordentlichen Abläufen nicht mehr bewältigt werden können und eine rasche Konzentration der Mittel und Straffung der Verfahren notwendig machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausserordentliche Lagen sind Situationen, in denen in zahlreichen Bereichen und Sektoren die ordentlichen Abläufe nicht genügen, um die anstehenden Aufgaben zu bewältigen und eine rasche Konzentration der Mittel und Straffung der Verfahren notwendig machen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Notorganisation umfasst alle für die Bewältigung von besonderen und ausserordentlichen Lagen notwendigen Führungsstäbe und Mittel des Kantons, der Gemeinden und Dritter."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Katastrophe ist ein natur- oder zivilisationsbedingtes Schadenereignis, bzw. schwerer Unglücksfall, der so viele Schäden oder Unfälle verursacht, dass die personellen und materiellen Mittel der betroffenen Gemeinschaft überfordert sind."
+        },
+        {
+          "absatz": "5",
+          "text": "Eine Notlage ist eine Situation, die aus einer gesellschaftlichen Entwicklung oder einem technischen Ereignis entsteht und mit den ordentlichen Abläufen nicht wirkungsvoll bewältigt werden kann, weil sie die personellen und materiellen Mittel der betroffenen Gemeinschaft überfordert."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "1aaa5ce2c83a455710ac555299713eccd53ab03c521b149e579dacaca2ba5b6a"
+    },
+    {
+      "id": "kanton/AR/511.1/art_4",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat ist für die Vorbereitung und den Vollzug der in Art. 2 genannten Aufgaben und Massnahmen verantwortlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Er arbeitet mit den Gemeinden, anderen Kantonen, dem Bund und dem benachbarten Ausland zusammen. Er kann dazu Vorschriften erlassen und die erforderlichen Verträge abschliessen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat ist für die Erklärung der Katastrophe oder Notlage zuständig und bezeichnet das betroffene Gebiet. Er orientiert unverzüglich die Öffentlichkeit und erstattet dem Kantonsrat Bericht."
+        },
+        {
+          "absatz": "4",
+          "text": "Er ist im Weiteren insbesondere zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Entscheid über den Einsatz der Notorganisation auf kantonaler Ebene;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bezeichnung der Stabschefin oder des Stabschefs des kantonalen Führungsstabes (KFS) und ihrer oder seiner Stellvertretung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Wahl der Mitglieder des Kernstabes des kantonalen Führungsstabes;"
+            },
+            {
+              "marke": "d",
+              "text": "den Erlass des Gefahrenkatasters."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "93e7dbafd01178d55849b23c800ae669f6b36c578a57f23a434d4ed1636fca18"
+    },
+    {
+      "id": "kanton/AR/511.1/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Inneres und Sicherheit vollzieht dieses Gesetz, soweit die Zuständigkeit in diesem Erlass nicht anders geregelt oder vom Regierungsrat nicht einer anderen Instanz zugewiesen ist. Es bezeichnet insbesondere die Mitglieder des erweiterten Stabes des KFS."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "8a306ed2a972836d02c61154635f1f6ea86873be9f324738a901f71379e415e1"
+    },
+    {
+      "id": "kanton/AR/511.1/art_6",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden sind in ihrem Bereich zuständig für die Bewältigung von besonderen und ausserordentlichen Lagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie planen Massnahmen zum Schutz der Bevölkerung, treffen Massnahmen zur Bewältigung von Schadenereignissen und halten ihre Mittel für die überörtliche Hilfe zur Verfügung."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie vollziehen dieses Gesetz, soweit die Zuständigkeit in diesem Erlass den Gemeinden übertragen ist. Sie entscheiden insbesondere über den Einsatz der Notorganisation auf kommunaler Ebene."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "2c0ec381d2fe19c0d9b8451f64fa57957017ab2912d19433e678546fef17b9ab"
+    },
+    {
+      "id": "kanton/AR/511.1/art_7",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton bestellt den kantonalen Führungsstab (KFS), und die Gemeinden bestellen die Gemeindeführungsstäbe (GFS)."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "d0d80323d2dde5745537c396d049ebf42ff1bfc7f90641ce4f774d7471903c19"
+    },
+    {
+      "id": "kanton/AR/511.1/art_8",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Vorbereitungsphase planen die Führungsstäbe die Massnahmen für besondere und ausserordentliche Lagen."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Einsatzphase obliegt den Führungsstäben die Bewältigung der besonderen und ausserordentlichen Lagen. Sie beraten die Behörden, setzen die angeordneten Massnahmen um und koordinieren den Einsatz aller Mittel."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton unterstützt die Gemeinden mit Einsatzkoordinatorinnen oder Einsatzkoordinatoren."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "9da167b6221431a427f6fc0fe70b1a302c6e2c2a7cf021542f2c972e99743f3c"
+    },
+    {
+      "id": "kanton/AR/511.1/art_9",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton und die Gemeinden stellen ihren Führungsstäben die notwendigen Räumlichkeiten und Mittel zur Verfügung."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "649255f0270fff18e677930e430c53a9433a921540dae34f8f49c7f98f2e5433"
+    },
+    {
+      "id": "kanton/AR/511.1/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit der Bundesrat nicht anders verfügt, bestimmt der Regierungsrat, nach welchen Grundsätzen Bereiche und Aufgaben zu koordinieren sind. Er bezeichnet ferner das Gebiet sowie Beginn und Dauer der Anwendung der entsprechenden Grundsätze."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "ac5ff9c5f58a546a775259adbda1363135e209ac05a6569a94465feebb83a7bc"
+    },
+    {
+      "id": "kanton/AR/511.1/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Polizei, Feuerwehr, Organisationen des Gesundheitswesens, technische Werke und Zivilschutz arbeiten zusammen, wo es der Schutz der Bevölkerung erfordert."
+        },
+        {
+          "absatz": "2",
+          "text": "Gemeinsame Führungsorgane koordinieren die Zusammenarbeit."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "9fb86e5a42d900bbb0dada344842933fe7e66b7f25f7e6fd2cd8e8beefaf706c"
+    },
+    {
+      "id": "kanton/AR/511.1/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Partnerorganisationen arbeiten im Verbund zusammen, wenn besondere und ausserordentliche Lagen sowie bewaffnete Konflikte nach Ausmass und Dauer der Gefährdung der Bevölkerung und ihrer Lebensgrundlagen den gemeinsamen Einsatz erfordern."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind in Organisation, Ausbildung, Ausrüstung und Einsatzplanung vorbereitet, im Verbund zusammenzuarbeiten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "e692ad31ee2306f340e3c39071e8368e41cd296a404e2ed32f3b658de0e2c8b9"
+    },
+    {
+      "id": "kanton/AR/511.1/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Partnerorganisationen erfüllen ihre Aufgaben nach Massgabe der besonderen Gesetzgebung bzw. von Leistungsvereinbarungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellen nach Massgabe ihrer Zuständigkeit die Führung im Einsatzgebiet sicher."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "3f28e8c6193ac092471ba7ed6b9565e68658c16289d86ebff1638ac2bc1c0671"
+    },
+    {
+      "id": "kanton/AR/511.1/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die technischen Werke sind im Verbund mit den anderen Partnerorganisationen zur Zusammenarbeit verpflichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die örtliche Korporation, die Aufgaben der technischen Werke erfüllt, sorgt für die Zusammenarbeit im Verbund mit den anderen Partnerorganisationen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinden üben die Aufsicht aus und können Weisungen erlassen. Erstreckt sich eine örtliche Korporation über mehrere Gemeinden, obliegen der Erlass von Weisungen und die Aufsicht derjenigen Gemeinde, welche die meisten Einwohnerinnen und Einwohner im Korporationsgebiet aufweist."
+        },
+        {
+          "absatz": "4",
+          "text": "Das privatrechtliche Unternehmen, das Aufgaben der technischen Werke erfüllt, gewährleistet nach Massgabe der Leistungsvereinbarung mit den Gemeinden oder dem Kanton die Zusammenarbeit mit den anderen Partnerorganisationen im Verbund."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "eb6e070e319a737e4f39380ac6b28dc86508f5129ce8faa8800606d1101942b8"
+    },
+    {
+      "id": "kanton/AR/511.1/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton ist zuständig für die Durchführung der Orientierungstage, der Grund- und Kaderausbildung der Führungsstäbe und des Personals für die Führungsunterstützung. Er kann das für die Notorganisation erforderliche Fachpersonal zu Kursen und Übungen aufbieten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kanton und die Gemeinden führen regelmässig Übungen für ihre Führungsstäbe sowie gemeinsame Übungen mit den Partnerorganisationen durch."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "90bd300abf73d4458df648527ccaa8a7436f4db4ed16f9bb5d3346e04281828b"
+    },
+    {
+      "id": "kanton/AR/511.1/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Aufgebote der Führungsstäbe richten sich nach den vier Führungsstufen Alltagsereignisse, Grossereignisse, längerdauernde Einsätze und Kriegsfall."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Stabschefin oder dem Stabschef KFS im Einsatz sind unterstellt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Führungsstäbe;"
+            },
+            {
+              "marke": "b",
+              "text": "Verwaltungsstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "Partnerorganisationen"
+            },
+            {
+              "marke": "d",
+              "text": "sowie weitere vom Regierungsrat bezeichnete Stellen."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "aeaab47a982ca6eee7ad9bd20e692a36a3cdf94f11b47125edee126e8bf39c4f"
+    },
+    {
+      "id": "kanton/AR/511.1/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton und die Gemeinden unterstützen auf Begehren andere Kantone im Rahmen ihrer Möglichkeiten, insbesondere durch Mittel des Bevölkerungsschutzes. Die Koordination obliegt dem Kanton."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann die Hilfe des Bundes, anderer Kantone und Dritter anfordern."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann mit dem Bund, anderen Kantonen und Dritten Vereinbarungen über die Hilfeleistung treffen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "bee2ab30c4ee170bbd284ca868d6938a2f013d7e28cb0947523c621dadec21a0"
+    },
+    {
+      "id": "kanton/AR/511.1/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden können durch Vereinbarung Aufgaben im Bevölkerungsschutz gemeinsam erfüllen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat kann Gemeinden verpflichten, Aufgaben im Bevölkerungsschutz gemeinsam zu erfüllen, wenn eine wirksame Aufgabenerfüllung und ein wirtschaftlicher Mitteleinsatz es verlangen. Er kann seine finanzielle Beteiligung vom Grad der Zusammenarbeit abhängig machen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "00e49a36f9e112608387929a68a5169b6337eee4dfefe0532d827713abb54865"
+    },
+    {
+      "id": "kanton/AR/511.1/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Um die vom Bund übertragenen Aufgaben der wirtschaftlichen Landesversorgung zu erfüllen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "führt der Kanton eine Zentralstelle für wirtschaftliche Landesversorgung;"
+            },
+            {
+              "marke": "b",
+              "text": "führen die Gemeinden eine Stelle für wirtschaftliche Landesversorgung und bezeichnen eine verantwortliche Leiterin oder einen verantwortlichen Leiter und eine Stellvertretung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen Verfügungen der kantonalen Zentralstelle für wirtschaftliche Landesversorgung kann beim Departement Inneres und Sicherheit Rekurs erhoben werden. Dieses entscheidet abschliessend."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "e8327970e3b97e6ca4b5428d1aa9d730fbe1d9e65ca0fe529ccd48baf85de324"
+    },
+    {
+      "id": "kanton/AR/511.1/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton trifft die nötigen Massnahmen für die Unterbringung und angemessene Betreuung von obdachlosen und Schutz suchenden Personen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "46c6d3b141e02402e42baf140660fb869740eff85371275f395cd4314a3d11f4"
+    },
+    {
+      "id": "kanton/AR/511.1/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Reichen die ordentlichen Organe nicht mehr aus, können die Führungsstäbe alle für die Hilfeleistungen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "geeigneten Personen, Betriebe und Organisationen aufbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "erforderlichen Mittel requirieren. Das Verfahren richtet sich sinngemäss nach den bundesrechtlichen Vorschriften."
+            }
+          ]
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "ca53903770aa6c383a10f31335230d9105d8ddbf781ce2d654658939db2e1a2d"
+    },
+    {
+      "id": "kanton/AR/511.1/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In besonderen und ausserordentlichen Lagen trifft der Regierungsrat die notwendigen Massnahmen zur Sicherstellung der erforderlichen Behandlung, Betreuung und Pflege von Patientinnen und Patienten."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Institutionen des Gesundheitswesens zur Aufnahme, Behandlung und Pflege von Patientinnen und Patienten verpflichten;"
+            },
+            {
+              "marke": "b",
+              "text": "die freie Arzt- und Spitalwahl einschränken oder aufheben."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In allen Institutionen des Gesundheitswesens sind im Rahmen des koordinierten Sanitätsdienstes für besondere und ausserordentliche Lagen Notfallorganisationen vorzubereiten und zu unterhalten. Der Regierungsrat legt nach den Vorgaben des Departements Gesundheit und Soziales deren Umfang fest."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "acf7b50d2d9e36439a127939eb908ea3274ad17e49b973886d596368854a6f18"
+    },
+    {
+      "id": "kanton/AR/511.1/art_23",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Institutionen des Gesundheitswesens können verpflichtet werden, für besondere und ausserordentliche Lagen nach den Vorgaben des Departements Gesundheit und Soziales Vorräte an Medizinalprodukten und Arzneimitteln bereitzuhalten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "4481b0db427eb9dc9594ccc5133163a13379dd82ae55f5b63b4da7b1a1cfa57f"
+    },
+    {
+      "id": "kanton/AR/511.1/art_24",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inbetriebnahme des geschützten Spitals wird vom Bundesrat oder vom Regierungsrat angeordnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Betreiberin oder der Betreiber des Akutspitals führt das geschützte Spital."
+        },
+        {
+          "absatz": "3",
+          "text": "Die kantonale Zivilschutzorganisation unterstützt den Betrieb und den Unterhalt des geschützten Spitals."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "31e3735da0bffa6db88803f63afa1f23d2d065aaa026a32f8f6f5e1b8bc51ff1"
+    },
+    {
+      "id": "kanton/AR/511.1/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton trägt die Kosten, die nicht von den Gemeinden oder den Partnerorganisationen getragen werden müssen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden tragen insbesondere die Kosten für Arbeiten, die in ihrer Zuständigkeit stehen sowie für die Einsatzbereitschaft und den Einsatz ihrer Führungsstäbe, des Personals der Führungsunterstützung und den Unterhalt und Betrieb der Alarmierungssysteme."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Finanzierung von Gemeindeübungen und Einsätzen kann der Kanton Beiträge leisten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "cc3d9a763ede872a587c574ff10822a72effa31d03b9e5bc513e0fd983ed5390"
+    },
+    {
+      "id": "kanton/AR/511.1/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Träger der Partnerorganisationen finanzieren die durch diese verursachten Kosten nach Massgabe der besonderen Gesetzgebung."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "227657e3626176c10a620aeac3d0d43031c480ae74a989382247aa984ccfcff9"
+    },
+    {
+      "id": "kanton/AR/511.1/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton trägt die Kosten der Grund- und der Kaderausbildung der Angehörigen der Führungsstäbe und des Personals der kantonalen Führungsunterstützung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten werden nicht übernommen, wenn eine nach Art. 12 Abs. 2 gebotene Mitwirkung der Gemeinde in einem gemeinsamen Führungsorgan unterbleibt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "b4b3e42cf26a5fa953295751567fcedcc28c6659fd0d70ef1b50d7a534f7e28f"
+    },
+    {
+      "id": "kanton/AR/511.1/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton und die Gemeinden können für die Kosten, die ihnen im Zusammenhang mit besonderen und ausserordentlichen Lagen entstehen, auf die Verursacherinnen oder Verursacher Rückgriff nehmen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "3b28191a9fd45f7f9cfe4832254bd97961b43b0ee3a7011ee23e50237a4607e7"
+    },
+    {
+      "id": "kanton/AR/511.1/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung Dritter wird in der Verordnung geregelt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "942b4552a67a7a99fd8fbdc7e40b7050a63f96d26ef07f9e0a8e314b443fc673"
+    },
+    {
+      "id": "kanton/AR/511.1/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer vorsätzlich oder fahrlässig den Verfügungen oder Anordnungen der nach diesem Gesetz oder den Ausführungsbestimmungen zuständigen Behörden zuwiderhandelt, wird mit Busse bis Fr. 40 000.– bestraft."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "c78017ae58b105bb10c8a2407acdefbf46f5dfcb0d5ff70602aad3299128a081"
+    },
+    {
+      "id": "kanton/AR/511.1/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die erforderlichen Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "ce757af957897ed7f8623afb0d950fe74e2c15b90c64e7a3626b62395496ddc1"
+    },
+    {
+      "id": "kanton/AR/511.1/art_32",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung vom 5. April 1983 über die Organisation der kantonalen Zivilverteidigung und Katastrophenhilfe und die vorläufige Verordnung vom 16. Dezember 2003 zum Bevölkerungs- und Zivilschutzgesetz werden aufgehoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "182dfdb985b7dbb3ab4287f26ecb6be96132bdc0a88a283a4bd9279f9f19d95a"
+    },
+    {
+      "id": "kanton/AR/511.1/art_33",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Bevölkerungsschutzgesetz (511.1)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/511.1",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "8c484703b2493c6faa9bccec54048522",
+      "sha": "7ffd37838bc0de0b0080ca62a27bcedfe25c1858858eb3afb2d3b05b8d1e0b4b"
+    }
+  ]
+}

@@ -1,0 +1,1647 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AR/750.11/art_1",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit nichts anderes bestimmt ist, gelten als Stand der Technik:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Norm SIA 180 «Wärmeschutz, Feuchteschutz und Raumklima in Gebäuden», Ausgabe 2014;"
+            },
+            {
+              "marke": "b",
+              "text": "Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016;"
+            },
+            {
+              "marke": "c",
+              "text": "Norm SIA 380 «Grundlagen für energetische Berechnungen von Gebäuden», Ausgabe 2015;"
+            },
+            {
+              "marke": "d",
+              "text": "Norm SIA 382/1 «Lüftungs- und Klimaanlagen – Allgemeine Grundlagen und Anforderungen», Ausgabe 2014;"
+            },
+            {
+              "marke": "e",
+              "text": "Norm SIA 384/1 «Heizungsanlagen in Gebäuden – Grundlagen und Anforderungen», Ausgabe 2009;"
+            },
+            {
+              "marke": "f",
+              "text": "Norm SIA 384/2 «Heizungsanlagen in Gebäuden – Leistungsbedarf», Ausgabe 2020;"
+            },
+            {
+              "marke": "g",
+              "text": "Merkblatt SIA 2024 «Raumnutzungsdaten für Energie- und Gebäudetechnik», Ausgabe 2021;"
+            },
+            {
+              "marke": "h",
+              "text": "EnFK Vollzugshilfe EN-131 «Beheizte Gewächshäuser», Ausgabe 2017;"
+            },
+            {
+              "marke": "i",
+              "text": "EnFK Vollzugshilfe EN-132 «Beheizte Traglufthallen», Ausgabe 2017;"
+            },
+            {
+              "marke": "j",
+              "text": "Norm SIA 387/4 «Elektrizität in Gebäuden – Beleuchtung: Berechnung und Anforderungen», Ausgabe 2017;"
+            },
+            {
+              "marke": "k",
+              "text": "Merkblatt SIA 2028 «Klimadaten für Bauphysik, Energie- und Gebäudetechnik», Ausgabe 2010, mit Berücksichtigung der Korrigenda C1, Ausgabe 2015;"
+            },
+            {
+              "marke": "l",
+              "text": "EnFK Vollzugshilfe EN-121 «Sanierungspflicht zentrale Elektroheizungen», Ausgabe 2017;"
+            },
+            {
+              "marke": "m",
+              "text": "EnFK Vollzugshilfe EN-122 «Sanierungspflicht zentrale Elektro-Wassererwärmer», Ausgabe 2017;"
+            },
+            {
+              "marke": "n",
+              "text": "EnFK Vollzugshilfe EN-123 «Sanierungspflicht dezentrale Elektroheizungen», Ausgabe 2017."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "578994c30680ae759ed367a34de98a50c49e55e7a30e53ab240508cb03e99f02"
+    },
+    {
+      "id": "kanton/AR/750.11/art_2",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Begriffsdefinitionen von Art. 1 der Energieverordnung sowie von Ziff. 1 («Verständigung») der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016, gelten analog."
+        },
+        {
+          "absatz": "2",
+          "text": "Darüber hinaus bedeuten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bauten/Gebäude: Im Erdboden eingelassene oder darauf stehende, künstlich geschaffene, auf Dauer angelegte bauliche Einrichtungen, die einen Raum zum Schutze von Menschen und Sachen gegen äussere, namentlich atmosphärische Einflüsse mehr oder weniger vollständig abschliessen. Darunter fallen auch Fahrnisbauten, sofern sie nach der Baugesetzgebung eine Baubewilligung benötigen."
+            },
+            {
+              "marke": "b",
+              "text": "Einem Neubau gleichzustellende Umbauten und Anbauten: Darunter fallen insbesondere Auskernungen von Gebäuden und dergleichen sowie das Anfügen von Gebäuden an bestehende Gebäude."
+            },
+            {
+              "marke": "c",
+              "text": "Anlagen: Künstlich geschaffene und auf Dauer angelegte Einrichtungen, die in fester Beziehung zum Erdboden stehen und keine Baute darstellen."
+            },
+            {
+              "marke": "d",
+              "text": "Ausstattungen und Ausrüstungen (Haustechnik): Energierelevante Installationen, die in Zusammenhang mit einer Baute oder Anlage stehen."
+            },
+            {
+              "marke": "e",
+              "text": "Energierelevante Umbauten: Ein energierelevanter Umbau liegt vor, wenn bauliche Änderungen am Wärmedämmperimeter vorgenommen werden. Oberflächenauffrischungs- oder Reparaturarbeiten sind ausgenommen."
+            },
+            {
+              "marke": "f",
+              "text": "Energierelevante Umnutzungen: Eine energierelevante Umnutzung liegt vor, wenn durch sie die Temperaturdifferenz aufgrund der Standardnutzung verändert wird."
+            },
+            {
+              "marke": "g",
+              "text": "Probelauf von geringer Dauer: Als Probelauf von geringer Dauer gilt ein Zeitraum von höchstens 50 Stunden pro Jahr."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "7d3bf72bde717ba38d7f0558e0720da376658f725eedd3df1e601eaff17c95e9"
+    },
+    {
+      "id": "kanton/AR/750.11/art_2_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "2_a",
+      "artikelLabel": "Art. 2a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anforderungen nach dieser Verordnung gelten für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Neubauten, die beheizt, belüftet, gekühlt oder befeuchtet werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Umbauten und Umnutzungen von bestehenden Bauten, die beheizt, belüftet, gekühlt oder befeuchtet werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Neuinstallationen haustechnischer Anlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "Erneuerung, Umbau oder Änderung haustechnischer Anlagen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Einem Neubau gleichzustellende Umbauten und Anbauten gelten ausser in Bagatellfällen als Neubauten und haben die Anforderungen für Neubauten zu erfüllen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anforderungen nach dieser Verordnung gelten auch dann, wenn die Massnahmen baurechtlich nicht bewilligungspflichtig sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zuständige Behörde kann die Anforderungen in den Fällen von Abs. 1 lit. b-d reduzieren, wenn dadurch ein öffentliches Interesse besser geschützt werden kann."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "b5e527799dc95558d7e2aee0148fe8550a09f20546270209c2225de698ca4072"
+    },
+    {
+      "id": "kanton/AR/750.11/art_2_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "2_b",
+      "artikelLabel": "Art. 2b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für jede geplante energierelevante Massnahme ist der zuständigen Behörde ein Projektnachweis einzureichen, mit dem belegt wird, dass die energierelevanten Vorschriften von Bund und Kanton eingehalten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Kein Nachweis ist erforderlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn das Amt für Umwelt bestätigt, dass der Minergie-Standard eingehalten wird;"
+            },
+            {
+              "marke": "b",
+              "text": "bei baurechtlich nicht bewilligungspflichtigen Massnahmen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "e8acdac460dd96190897954d6014d090cd907824c6c07ddbca532fe48bc60796"
+    },
+    {
+      "id": "kanton/AR/750.11/art_5",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer zur Privaten Kontrolle befugt ist, bestätigt der Gemeinde schriftlich auf dem Nachweis oder durch einen separaten Bericht, dass ein Vorhaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den massgebenden Bestimmungen entspricht (Projektkontrolle);"
+            },
+            {
+              "marke": "b",
+              "text": "nach den bewilligten Plänen ausgeführt worden ist und nach Fertigstellung vorschriftsgemäss betrieben werden kann (Ausführungskontrolle)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinde überprüft wenigstens zehn Prozent der Nachweise und der Bestätigungen auf deren Rechtmässigkeit. Sie meldet Unregelmässigkeiten unverzüglich dem Amt für Umwelt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "9b5e5358b03bc958e81926c264da1b579bea77f7de633f6b7fb26e4762c8812d"
+    },
+    {
+      "id": "kanton/AR/750.11/art_10",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anforderungen an den winterlichen Wärmeschutz von Bauten richten sich nach der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016. Für Kühlräume, Gewächshäuser und Traglufthallen bleiben die Anforderungen nach Art. 12 und 13 vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nachweis eines ausreichenden winterlichen Wärmeschutzes kann alternativ erbracht werden durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einhaltung der Einzelanforderungen (Einzelbauteilnachweis) an die Wärmedämmung der einzelnen Teile der Gebäudehülle:"
+            },
+            {
+              "marke": "1",
+              "text": "für Neubauten und für neue Bauteile bei Umbauten und Umnutzungen gelten die Anforderungen gemäss den Tabellen 2 und 5 der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016;"
+            },
+            {
+              "marke": "2",
+              "text": "für alle vom Umbau oder von der Umnutzung betroffenen Bauteile gelten die Anforderungen gemäss Tabelle 3 der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016;"
+            },
+            {
+              "marke": "b",
+              "text": "Einhaltung einer Systemanforderung (Systemnachweis) in Form eines spezifischen Heizwärmebedarfs und einer spezifischen Heizleistung gemäss Tabelle 6 der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016. Die Grenzwerte für Umbauten und Umnutzungen QH,li,re betragen 150 Prozent der Grenzwerte für Neubauten. Zusätzlich darf bei Neubauten ein spezifischer Heizleistungsbedarf von 20 W/m&sup2; bei den Gebäudekategorien l und IV respektive 25 W/m&sup2; bei den Gebäudekategorien ll und lll nicht überschritten werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Systemnachweis für Umbauten und Umnutzungen hat alle Räume zu umfassen, die Bauteile aufweisen, die vom Umbau oder von der Umnutzung betroffen sind. Die vom Umbau oder der Umnutzung nicht betroffenen Räume können in den Systemnachweis einbezogen werden. Der Heizwärmebedarf darf den in früher erteilten Baubewilligungen direkt oder indirekt über Einzelanforderungen geforderten Grenzwert nicht überschreiten."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "ca17610dec74a155cc561046b18a4b3369a6ac934d3f91c6ec89f78d63bc3c2a"
+    },
+    {
+      "id": "kanton/AR/750.11/art_10_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einhaltung der Anforderungen an den sommerlichen Wärmeschutz von Gebäuden ist nachzuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei gekühlten Räumen oder bei Räumen, bei welchen eine Kühlung notwendig oder erwünscht ist, sind die Anforderungen an den g-Wert, die Steuerung und die Windfestigkeit des Sonnenschutzes nach dem Stand der Technik einzuhalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei den übrigen Räumen sind die Anforderungen an den g-Wert des Sonnenschutzes nach dem Stand der Technik einzuhalten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "13e5818070a05ad9eb8c886df1d75b8a26d479230139d7f1e65a189d54430b6a"
+    },
+    {
+      "id": "kanton/AR/750.11/art_10_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "10_b",
+      "artikelLabel": "Art. 10b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Systemnachweis sind die Daten der Klimastation St. Gallen zu verwenden. Das Verfahren zur Anpassung der Grenzwerte ist in der Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016, geregelt. Die Anpassung des Grenzwerts pH,li erfolgt entsprechend der Abweichung der Auslegungstemperatur zu -8 °C."
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Einzelbauteilnachweis wird auf eine Klimakorrektur der Grenzwerte bei den Einzelanforderungen verzichtet."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "d2c5fb69f25669d537784bbdb70a41beaedfd67b11a4aed23aa23e35409e4179"
+    },
+    {
+      "id": "kanton/AR/750.11/art_11",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erleichterungen von den Anforderungen an den winterlichen Wärmeschutz nach Art. 10 können gewährt werden bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bauten, die auf weniger als 10 °C aktiv beheizt werden, ausgenommen Kühlräume;"
+            },
+            {
+              "marke": "b",
+              "text": "Kühlräume, die nicht auf unter 8 °C aktiv gekühlt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Bauten, deren Baubewilligung auf maximal 3 Jahre befristet ist (provisorische Bauten);"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Von den Anforderungen an den winterlichen Wärmeschutz nach Art. 10 befreit sind Umnutzungen, wenn damit keine Erhöhung oder Absenkung der Raumlufttemperaturen verbunden ist und somit keine höhere Temperaturdifferenz bei der thermischen Gebäudehülle entsteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Von den Anforderungen an den sommerlichen Wärmeschutz nach Art. 10a sind befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bauten, deren Baubewilligung auf maximal 3 Jahre befristet ist (provisorische Bauten);"
+            },
+            {
+              "marke": "b",
+              "text": "Umnutzungen, wenn damit keine Räume geschaffen werden, deren Kühlung notwendig oder erwünscht ist;"
+            },
+            {
+              "marke": "c",
+              "text": "Vorhaben, für die mit einem anerkannten Rechenverfahren nachgewiesen wird, dass kein erhöhter Energieverbrauch auftreten wird und die Behaglichkeit gewährleistet ist;"
+            },
+            {
+              "marke": "d",
+              "text": "Gebäude der Kategorie XII und Räume, welche nicht dem längeren Aufenthalt von Personen dienen (unter einer Stunde pro Tag);"
+            },
+            {
+              "marke": "e",
+              "text": "Bauteile, die aus betrieblichen Gründen nicht ausgerüstet werden können."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das Gesuch um Befreiung oder Erleichterung von den Anforderungen haben die Bauenden vor Baubeginn der zuständigen Behörde einzureichen. Das Gesuch ist zu begründen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "7a7f4d33e2c5a549e8a80c688461eca1700be22c7e2bf011bb7670d137829fde"
+    },
+    {
+      "id": "kanton/AR/750.11/art_12",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Raum auf unter 8 °C gekühlt, darf der mittlere Wärmezufluss durch die umschliessenden Bauteile pro Temperaturzone 5 W/m&sup2; nicht überschreiten. Für die Berechnung massgebend sind die Auslegungstemperatur des gekühlten Raums und die Umgebungstemperaturen. Als Umgebungstemperatur gilt gegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beheizte Räume: Auslegungstemperatur für die Beheizung;"
+            },
+            {
+              "marke": "b",
+              "text": "Aussenklima: 20 °C;"
+            },
+            {
+              "marke": "c",
+              "text": "Erdreich oder unbeheizte Räume: 10 °C."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anforderungen nach Abs. 1 gelten nicht für gekühlte Räume mit weniger als 30 m&sup3; Nutzvolumen, deren umschliessende Bauteile einen mittleren U-Wert von höchstens 0.15 W/m&sup2;K einhalten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "18952b602d279937d2b429d7b881d87f336e8a8135b8137b89fa5ec568f9c3f9"
+    },
+    {
+      "id": "kanton/AR/750.11/art_13",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für gewerbliche und landwirtschaftliche Gewächshäuser, in denen für die Aufzucht, Produktion oder Vermarktung von Pflanzen vorgegebene Wachstumsbedingungen aufrecht erhalten werden müssen, gelten die Anforderungen gemäss der EnFK Vollzugshilfe EN-131 «Beheizte Gewächshäuser», Ausgabe 2017."
+        },
+        {
+          "absatz": "2",
+          "text": "Für beheizte Traglufthallen gelten die Anforderungen gemäss der EnFK Vollzugshilfe EN-132 «Beheizte Traglufthallen», Ausgabe 2017."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "8eab3cd215f3948a944a9020a76e4dcc8c28309679522c6f62c5b6dd8ddeb747"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wassererwärmer sowie Warmwasser- und Wärmespeicher, für die nach Bundesrecht keine energetischen Anforderungen bestehen, dürfen hinsichtlich allseitiger Wärmedämmung die Dämmstärken gemäss Tabelle 1 «Minimale Dämmstärken bei vor Ort gedämmten Speichern» des Kapitels 8 der EnFK Vollzugshilfe EN-103 «Heizung und Warmwasser», Ausgabe 2020, nicht unterschreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Wassererwärmer sind für eine Betriebstemperatur von maximal 60 °C auszulegen. Ausgenommen sind Wassererwärmer, deren Temperatur aus betrieblichen oder hygienischen Gründen höher sein muss."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Neuinstallation oder der Ersatz eines direkt-elektrischen Wassererwärmers in Wohnbauten ist zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Brauchwarmwasser während der Heizperiode mit dem Wärmeerzeuger für die Raumheizung erwärmt oder vorgewärmt wird; oder"
+            },
+            {
+              "marke": "b",
+              "text": "das Brauchwarmwasser zu mindestens 50 Prozent mittels erneuerbaren Energien oder nicht anders nutzbarer Abwärme erwärmt wird. Elektrizität aus Photovoltaikanlagen wird nicht dem Anteil an erneuerbaren Energien angerechnet."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Ersatz eines einzelnen defekten dezentralen direkt-elektrischen Wassererwärmers in bestehenden Gebäuden der Kategorie l (Wohnen MFH) ist zulässig."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "56ba1f0d6ca2a6a32ccbcf716d9f2376720f7ec3b401ad5fcfa0a98141b0df58"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neu installierte mit fossilen Brennstoffen betriebene Heizkessel mit einer Absicherungstemperatur von weniger als 110 °C müssen die Kondensationswärme ausnützen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Davon ausgenommen ist der Anlagenersatz, soweit die Ausnutzung der Kondensationswärme technisch nicht möglich oder wirtschaftlich nicht tragbar ist."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "d3149dfe815e2ff9fac8ea57a5ea42f8fd3abd9217b388121ba7da178685892f"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_a_bis",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_a_bis",
+      "artikelLabel": "Art. 14abis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Ersatz des Wärmeerzeugers in Wohnbauten gemäss Art. 10b Abs. 1 des Gesetzes muss die Gesuchstellerin oder der Gesuchsteller nachweisen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die fachgerechte Umsetzung einer Hauptstandardlösung gemäss Anhang 8 gewährleistet ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die fachgerechte Umsetzung zweier Kombinationsstandardlösungen gemäss Anhang 8 gewährleistet ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Zertifizierung des Gebäudes nach Minergie ausgewiesen ist; oder"
+            },
+            {
+              "marke": "d",
+              "text": "die Klasse C bei der GEAK-Gesamtenergieeffizienz erreicht ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anforderungen müssen mit Massnahmen am Standort erfüllt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist eine der Standardlösungen zum Zeitpunkt des Ersatzes des Wärmeerzeugers bereits erfüllt (z.B. Solaranlage in entsprechender Grösse bereits installiert), kann diese deklariert und angerechnet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Einzelne Massnahmen (Solaranlagen, Wärmedämmung etc.) müssen innerhalb von drei Jahren nach dem Ersatz des Wärmeerzeugers ausgeführt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Von den Anforderungen befreit sind Bauten mit gemischter Nutzung, wenn der Wohnanteil 150 m&sup2; EBF nicht überschreitet."
+        },
+        {
+          "absatz": "6",
+          "text": "Werden ausserordentliche Verhältnisse geltend gemacht, ist zuhanden der zuständigen Behörde aufzuzeigen, dass sowohl keine der sechs Hauptstandardlösungen als auch nicht zwei der sechs Kombinationsstandardlösungen realisiert werden können."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "2412da1027cf8e3b7f3b020e4a5df7a212a27167439ea4411aef0af882ee7fb6"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_b",
+      "artikelLabel": "Art. 14b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neuinstallationen ortsfester elektrischer Widerstandsheizungen können bewilligt werden als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ersatz einer einzelnen defekten ortsfesten elektrischen Widerstandsheizung ohne Wasserverteilsystem;"
+            },
+            {
+              "marke": "b",
+              "text": "Notheizungen bei Wärmepumpen für Aussentemperaturen unter der nach dem Stand der Technik massgebenden Auslegetemperatur;"
+            },
+            {
+              "marke": "c",
+              "text": "Notheizungen bei handbeschickten Holzheizungen bis zu einer Leistung von 50 Prozent des nach dem Stand der Technik berechneten Leistungsbedarfs."
+            },
+            {
+              "marke": "d",
+              "text": "Handtuchradiatoren oder Heizstrahler in Badezimmern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Auf begründetes Gesuch hin kann ausnahmsweise die Neuinstallation einer ortsfesten elektrischen Widerstandsheizung oder der Ersatz bestehender ortsfester elektrischer Widerstandsheizungen bewilligt werden, wenn die betroffene Baute abgelegen oder schlecht zugänglich ist und die Installation eines anderen Heizsystems technisch nicht möglich, wirtschaftlich nicht zumutbar oder in Anbetracht der Gesamtumstände unverhältnismässig ist. Solche Ausnahmen können gewährt werden für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bergbahnstationen;"
+            },
+            {
+              "marke": "b",
+              "text": "Alphütten;"
+            },
+            {
+              "marke": "c",
+              "text": "Bergrestaurants;"
+            },
+            {
+              "marke": "d",
+              "text": "Schutzbauten;"
+            },
+            {
+              "marke": "e",
+              "text": "provisorische Bauten;"
+            },
+            {
+              "marke": "f",
+              "text": "die Beheizung einzelner Arbeitsplätze in ungenügend oder nicht beheizten Räumen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "e1c1bd109e41a71040e4dd679c39c9f4d095e8fa444e49753bdf89a9535dbde6"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_c",
+      "artikelLabel": "Art. 14c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keine Frist besteht für zentrale elektrische Widerstandsheizungen, die als Zusatzheizungen zu Wärmepumpen oder als Notheizungen eingebaut sind. Beim Ersatz der ganzen Systeme oder wesentlicher Teile davon, insbesondere der Wärmepumpe oder der zentralen elektrischen Widerstandsheizung, ist die Anlage an die Anforderungen des Gesetzes anzupassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf begründetes Gesuch hin können zusätzlich Ausnahmen gewährt werden, wenn eine Sanierungspflicht nicht zumutbar ist."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "3ad7de42a74b84ca602affa05a379248f07cd2c67d645091038f1d1453d98a13"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_d",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_d",
+      "artikelLabel": "Art. 14d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Sanierungspflicht sind folgende Anwendungen befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dezentrale elektrische Widerstandsheizungen gemäss Art. 14b Abs. 1 lit. b bis d und Abs. 2;"
+            },
+            {
+              "marke": "b",
+              "text": "Nasszellen und WC-Anlagen;"
+            },
+            {
+              "marke": "c",
+              "text": "Gebäude, die entweder eine installierte Leistung von höchstens 3 kW haben oder deren elektrisch beheizte Fläche kleiner als 50 m&sup2; EBF ist;"
+            },
+            {
+              "marke": "d",
+              "text": "Kirchen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Auf begründetes Gesuch hin können zusätzlich Ausnahmen gewährt werden, wenn eine Sanierungspflicht nicht zumutbar ist."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "ebc2512a3c315a785666e10e53cc11b24ba1cdc474f6e911be50699a19dd564b"
+    },
+    {
+      "id": "kanton/AR/750.11/art_14_e",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "14_e",
+      "artikelLabel": "Art. 14e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Sanierungspflicht sind folgende Anwendungen befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wärmepumpenboiler;"
+            },
+            {
+              "marke": "b",
+              "text": "zentrale direkt-elektrische Wassererwärmer, welche mit mindestens 50 Prozent erneuerbaren Energien oder Abwärme versorgt werden, z.B. mit einer thermischen Solaranlage."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "5e87c7a85d5e8f657762434a3e2e5c45a9318a86288d89751755c60816833ea4"
+    },
+    {
+      "id": "kanton/AR/750.11/art_15",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorlauftemperaturen für neue oder ersetzte Wärmeabgabesysteme dürfen bei der massgebenden Auslegetemperatur höchstens 50 °C, bei Fussbodenheizungen höchstens 35 °C betragen. Ausgenommen sind Hallenheizungen mittels Bandstrahler sowie Heizungssysteme für Gewächshäuser und dergleichen, sofern diese nachgewiesenermassen eine höhere Vorlauftemperatur benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende neuen oder im Rahmen eines Umbaus neu erstellten Installationen inklusive Armaturen und Pumpen sind durchgehend mindestens mit den Dämmstärken gemäss Tabelle 2 «Minimale Dämmstärken bei Verteilleitungen der Heizung sowie bei Warmwasserleitungen» des Kapitels 9 der EnFK Vollzugshilfe EN-103 «Heizung und Warmwasser», Ausgabe 2020, gegen Wärmeverluste zu dämmen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verteilleitungen der Heizung in unbeheizten Räumen und im Freien;"
+            },
+            {
+              "marke": "b",
+              "text": "alle warmgehaltenen Teile des Warmwasserverteilsystems, in beheizten oder unbeheizten Räumen und im Freien;"
+            },
+            {
+              "marke": "c",
+              "text": "Warmwasserleitungen von Zirkulationssystemen oder Warmwasserleitungen mit Begleitheizungen in beheizten Räumen;"
+            },
+            {
+              "marke": "d",
+              "text": "Warmwasserleitungen vom Speicher bis zum Verteiler (inkl. Verteiler)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In begründeten Fällen wie etwa bei Kreuzungen, Wand- und Deckendurchbrüchen, bei maximalen Vorlauftemperaturen von 30 °C und bei Armaturen, Pumpen etc. können die Dämmstärken reduziert werden. Die angegebenen Dämmstärken gelten für Betriebstemperaturen bis 90 °C, bei höheren Betriebstemperaturen sind die Dämmstärken angemessen zu erhöhen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei erdverlegten Leitungen dürfen die UR-Werte gemäss Tabelle 3 «Zulässige UR-Werte für erdverlegte Leitungen» des Kapitels 9 der EnFK Vollzugshilfe EN-103 «Heizung und Warmwasser», Ausgabe 2020, nicht überschritten werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Beim Ersatz des Wärmeerzeugers sind frei zugängliche Leitungen den Anforderungen gemäss Abs. 2 anzupassen, soweit es die örtlichen Platzverhältnisse zulassen."
+        },
+        {
+          "absatz": "6",
+          "text": "In beheizten Räumen sind Einrichtungen zu installieren, die es ermöglichen, die Raumlufttemperatur einzeln einzustellen und selbsttätig zu regeln. Ausgenommen sind Räume, die überwiegend mittels träger Flächenheizungen mit einer Vorlauftemperatur von höchstens 30 °C beheizt werden. In diesem Fall ist mindestens eine Referenzraumregelung pro Wohn- oder Nutzeinheit zu installieren."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "53d81aade4cf77c6b86a303bc95a2fd08d757282ee3530173c63dd9e07df9d24"
+    },
+    {
+      "id": "kanton/AR/750.11/art_16",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Gebäude anfallende Abwärme, insbesondere jene aus Kälteerzeugung sowie aus gewerblichen und industriellen Prozessen, ist zu nutzen, soweit dies technisch und betrieblich möglich und wirtschaftlich tragbar ist."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "022d4d573852de16ffc87301b2415df8f7cebc107c4e8dbba3727d1b3baab50e"
+    },
+    {
+      "id": "kanton/AR/750.11/art_17",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lüftungstechnische Anlagen mit Aussenluft und Fortluft sind mit einer Wärmerückgewinnung auszurüsten. Der Temperatur-Änderungsgrad muss dem Stand der Technik entsprechen; vorbehalten bleiben Anforderungen gemäss der Energieeffizienzverordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Einfache Abluftanlagen von beheizten Räumen sind entweder mit einer kontrollierten Zuführung der Ersatzluft und einer Wärmerückgewinnung oder einer Nutzung der Wärme der Abluft auszurüsten, sofern der Abluftvolumenstrom mehr als 1 000 m&sup3;/h und die Betriebsdauer mehr als 500 h/a beträgt. Dabei gelten mehrere getrennte einfache Abluftanlagen im gleichen Gebäude als eine Anlage. Andere Lösungen sind zulässig, wenn mit einer fachgerechten Energieverbrauchsrechnung nachgewiesen wird, dass kein erhöhter Energieverbrauch eintritt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Luftgeschwindigkeiten dürfen in Apparaten, bezogen auf die Nettofläche, 2 m/s und im massgebenden Strang der Kanäle folgende Werte nicht überschreiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis 1 000 m&sup3;/h 3 m/s;"
+            },
+            {
+              "marke": "b",
+              "text": "bis 2 000 m&sup3;/h 4 m/s;"
+            },
+            {
+              "marke": "c",
+              "text": "bis 4 000 m&sup3;/h 5 m/s;"
+            },
+            {
+              "marke": "d",
+              "text": "bis 10 000 m&sup3;/h 6 m/s;"
+            },
+            {
+              "marke": "e",
+              "text": "über 10 000 m&sup3;/h 7 m/s."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Lufttechnische Anlagen für Räume oder Raumgruppen mit wesentlich abweichenden Nutzungen oder Betriebszeiten sind Einrichtungen zu installieren, die einen individuellen Betrieb ermöglichen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "a56a64a4f5e84a3693ca24338759868c3cd58b96c25c9ea8023c8266276882af"
+    },
+    {
+      "id": "kanton/AR/750.11/art_17_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Luftkanäle, Rohre und Geräte von Lüftungs- und Klimaanlagen sind je nach Temperaturdifferenz im Auslegungsfall und nach Wärmeleitfähigkeitswert des Dämmmaterials gemäss Ziffer 5.9 der Norm SIA 382/1 «Lüftungs- und Klimaanlagen – Allgemeine Grundlagen und Anforderungen», Ausgabe 2014, gegen Wärmeübertragung (Wärmeverlust und Wärmeaufnahme) zu schützen."
+        },
+        {
+          "absatz": "2",
+          "text": "In begründeten Fällen, wie bei Kreuzungen, Wand- und Deckendurchbrüchen, wenig benutzten Leitungen mit Klappen im Bereich der thermischen Hülle sowie bei Platzproblemen bei Ersatz und Erneuerungen, können die Dämmstärken reduziert werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "9fa66f04a899d7b890a58d8e023c8695fa4bf0a0817babde2f9eb73027377cad"
+    },
+    {
+      "id": "kanton/AR/750.11/art_17_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "17_b",
+      "artikelLabel": "Art. 17b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Klimaanlagen für die Aufrechterhaltung des Komforts sind in bestehenden Bauten so zu erstellen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der elektrische Leistungsbedarf für die Medienförderung und die Medienaufbereitung inklusive allfälliger Kühlung, Befeuchtung, Entfeuchtung und Wasseraufbereitung 12 W/m&sup2; nicht überschreitet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Kaltwassertemperaturen und die Leistungszahlen für die Kälteerzeugung nach dem Stand der Technik ausgelegt sind, sowie die Planung und der Betrieb einer allfälligen Befeuchtung nach dem Stand der Technik erfolgt."
+            }
+          ]
+        },
+        {
+          "absatz": "2–4",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "b14fed57e41df814677f1525b4438e473eb4731dad667d7139bdc36777a2be6d"
+    },
+    {
+      "id": "kanton/AR/750.11/art_17_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "17_c",
+      "artikelLabel": "Art. 17c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der gewichtete Energiebedarf pro Jahr für Heizung, Warmwasser, Lüftung und Klimatisierung in Neubauten darf den Wert gemäss Tabelle 3 «Grenzwerte des gewichteten Energiebedarfs für die Gebäudekategorien I bis XII» der EnFK Vollzugshilfe EN-101 «Anforderungen an die Deckung des Wärmebedarfes von Neubauten», Ausgabe 2018, nicht überschreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei den Gebäudekategorien VI und XI gilt die Anforderung ohne Berücksichtigung des Bedarfs für Warmwasser. Bei Vorhaben der Gebäudekategorien VI, XI und XII sind mindestens 20 Prozent der Energie für die Wassererwärmung aus erneuerbaren Energien zu decken. Bei Vorhaben der Gebäudekategorien XII sind die Nutzung der Abwärme aus Fortluft, Bade- und Duschwasser zu optimieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anforderungen müssen mit Massnahmen am Standort erfüllt werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "a2b19df22613fd757869beb3f88a69e7b83be5251499900a4631cb45cb417f3a"
+    },
+    {
+      "id": "kanton/AR/750.11/art_18",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Berechnung des gewichteten Energiebedarfs für Heizung, Warmwasser, Lüftung und Klimatisierung EHWLK in Neubauten wird der Nutzwärmebedarf für Heizung Qh,eff und Warmwasser QWW mit den Nutzungsgraden &eta; der gewählten Wärmeerzeugungen dividiert und mit dem Gewichtungsfaktor g der eingesetzten Energieträger multipliziert sowie der ebenfalls mit dem entsprechenden Gewichtungsfaktor g gewichtete Elektrizitätsaufwand für Lüftung und Klimatisierung ELK addiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Gewichtung der Energieträger gelten die von der EnDK definierten nationalen Gewichtungsfaktoren."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Bei Räumen mit Raumhöhen von über drei Metern in Gebäuden der Kategorien III-XII kann eine Raumhöhenkorrektur mit Bezugshöhe von drei Metern angewendet werden."
+        },
+        {
+          "absatz": "2ter",
+          "text": "In der Regel wird nur die dem Gebäude zugeführte hochwertige Energie für Raumheizung, Warmwasser, Lüftung und Raumklimatisierung in den Energiebedarf eingerechnet. Die nutzungsabhängigen Prozessenergien werden nicht in den Energiebedarf eingerechnet."
+        },
+        {
+          "absatz": "2quater",
+          "text": "Elektrizität aus Eigenstromerzeugung wird nicht in die Berechnung des gewichteten Energiebedarfs einbezogen. Ausgenommen ist Elektrizität aus WKK-Anlagen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Bauten mit mechanischen Lüftungsanlagen kann bei der Berechnung des Heizwärmebedarfs der effektive Energiebedarf für Lüftung einschliesslich des Energiebedarfs für Luftförderung eingesetzt werden. Der hygienisch notwendige Aussenluftvolumenstrom ist dabei zu gewährleisten (siehe z.B. Norm SIA 382/1 «Lüftungs- und Klimaanlagen – Allgemeine Grundlagen und Anforderungen», Ausgabe 2014). Bei grösseren Lüftungsanlagen siehe EnFK Vollzugshilfe EN-105 «Lüftungstechnische Anlagen», Ausgabe 2018."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "359297af2bf7ee01fab05986ac293b2b8aed08647d96802b245b1edcec4e81d8"
+    },
+    {
+      "id": "kanton/AR/750.11/art_19",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anforderung nach Art. 10 des Gesetzes gilt als erfüllt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine der im Anhang 4 aufgeführten Standardlösungskombinationen aus Gebäudehülle und Wärmeerzeugung fachgerecht umgesetzt wird; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahmen gemäss Nachweis mit dem Energienachweistool für einfache Bauten fachgerecht umgesetzt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "966a3ba0c397d38539286aae45e071fad6861394f02011e16cdabd1e75d55a10"
+    },
+    {
+      "id": "kanton/AR/750.11/art_19_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Anforderungen gemäss Art. 10 des Gesetzes befreit sind einem Neubau gleichzustellende Umbauten und Anbauten, wenn die neu geschaffene EBF:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "weniger als 50 m&sup2; beträgt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "höchstens 20 Prozent der EBF des bestehenden Gebäudeteils entspricht und nicht mehr als 1 000 m&sup2; beträgt."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "5956dd02805315054352dbbd9da9aa5060d97dacf69097ab04776d9ee4c8e3ff"
+    },
+    {
+      "id": "kanton/AR/750.11/art_19_a_bis",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "19_a_bis",
+      "artikelLabel": "Art. 19abis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die in, auf oder an der Baute installierte Eigenstromerzeugungsanlage bei Neubauten muss mindestens 10 W pro m&sup2; EBF betragen, wobei nie 30 kW oder mehr verlangt werden. Bei Beteiligung an einer gemeinschaftlichen Stromerzeugungsanlage wird mindestens 30 W pro m&sup2; EBF gefordert; die Limitierung auf 30 kW entfällt."
+        },
+        {
+          "absatz": "2",
+          "text": "Von den Anforderungen gemäss Abs. 1 befreit sind Erweiterungen von bestehenden Gebäuden, wenn die neu geschaffene EBF:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "weniger als 50 m&sup2; beträgt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "höchstens 20 Prozent der EBF des bestehenden Gebäudeteils entspricht und nicht mehr als 1 000 m&sup2; beträgt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Elektrizität aus WKK-Anlagen kann nur berücksichtigt werden, wenn sie nicht zur Erfüllung der Anforderungen an die Deckung des Wärmebedarfs gemäss Tabelle 3 «Grenzwerte des gewichteten Energiebedarfs für die Gebäudekategorien I bis XII» des Kapitels 4 der EnFK Vollzugshilfe EN-101 «Anforderungen an die Deckung des Wärmebedarfs von Neubauten», Ausgabe 2018, eingerechnet wird."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "c970feee0800b286c933a5992e7b55011b3412743eee9768a95db0f9111a6f99"
+    },
+    {
+      "id": "kanton/AR/750.11/art_19_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Neubauten, Umbauten und Umnutzungen mit einer EBF von mehr als 1 000 m&sup2; sind die Grenzwerte für den jährlichen Elektrizitätsbedarf für Beleuchtung nach der Norm SIA 387/4 «Elektrizität in Gebäuden – Beleuchtung: Berechnung und Anforderungen», Ausgabe 2017, nachzuweisen. Davon ausgenommen sind Wohnbauten und Teile davon."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nachweis nach Abs. 1 entfällt, wenn mit dem Hilfsprogramm Beleuchtung der EnFK nachgewiesen wird, dass die Vorgabe an die spezifische Leistung pL, bestimmt aus Grenz- respektive Zielwert gemäss Tabelle 13 der Norm SIA 387/4 «Elektrizität in Gebäuden – Beleuchtung: Berechnung und Anforderungen», Ausgabe 2017, eingehalten wird."
+        },
+        {
+          "absatz": "3–4",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "48190db5f04a92eedcb9b5c61e8c5bd147224da42836ea25349e35d014ff1adb"
+    },
+    {
+      "id": "kanton/AR/750.11/art_20",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Flächenheizungen in Neubauten gemäss Art. 11 des Gesetzes ist für den beheizten Bauteil zwischen der Wärmeabgabe und der angrenzenden Nutzeinheit ein U-Wert von höchstens 0.7 W/m&sup2;K einzuhalten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "798f793ca11996922282dcaa49382762c300167984a03b9b98de1ebc701ad028"
+    },
+    {
+      "id": "kanton/AR/750.11/art_21",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Gebäuden und Gebäudegruppen, für welche eine Ausrüstungspflicht besteht, sind die Kosten für den Wärmeverbrauch (Heizenergie und evtl. Warmwasser) zum überwiegenden Teil anhand des gemessenen Verbrauchs der einzelnen Nutzeinheiten abzurechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "e1d47b0aea126a4453031941cc921a6d576576dab30eb42e417137004941a679"
+    },
+    {
+      "id": "kanton/AR/750.11/art_22",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Ausrüstungs- und Abrechnungspflicht des Heizwärmeverbrauchs befreit sind Bauten und Gebäudegruppen, deren installierte Wärmeerzeugerleistung (inkl. Warmwasser) weniger als 20 W/m&sup2; EBF beträgt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "6c9b15f69f5b0e7abe1fc4c5dbb9a8eab8aa92774209ce2e3b860c0faf226dd1"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Keiner Bewilligung nach Art. 12a des Gesetzes bedürfen Elektrizitätserzeugungsanlagen, wenn sie zur Notstromerzeugung einschliesslich Probeläufe von geringer Dauer betrieben werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "32f5c37cc99c6d6e6afc8614728210a7cf6e8dc4a84b8e5efc48b1558be0f913"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_b",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_b",
+      "artikelLabel": "Art. 24b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Anforderungen nach Art. 12b des Gesetzes sind befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Elektrizitätserzeugungsanlagen, wenn sie zur Notstromerzeugung einschliesslich Probeläufe von geringer Dauer betrieben werden;"
+            },
+            {
+              "marke": "b",
+              "text": "mit fossilen Brennstoffen betriebene Elektrizitätserzeugungsanlagen, wenn eine Verbindung zum öffentlichen Elektrizitätsverteilnetz weder besteht, noch mit verhältnismässigem Aufwand hergestellt werden kann;"
+            },
+            {
+              "marke": "c",
+              "text": "mit erneuerbaren gasförmigen Brennstoffen betriebene Elektrizitätserzeugungsanlagen, wenn nur ein beschränkter Anteil nichtlandwirtschaftliches Grüngut verwertet wird und eine Verbindung zum öffentlichen Gasverteilnetz weder besteht, noch mit verhältnismässigem Aufwand hergestellt werden kann."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "09baf5402d5ad8d4c76848a450caa47c6e836804578fa1ddf61ee680a26ab23a"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_c",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_c",
+      "artikelLabel": "Art. 24c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die aufgrund einer Verbrauchsanalyse zu realisierenden Massnahmen sind zumutbar, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Stand der Technik entsprechen;"
+            },
+            {
+              "marke": "b",
+              "text": "über die Nutzungsdauer der Investition wirtschaftlich sind;"
+            },
+            {
+              "marke": "c",
+              "text": "nicht mit wesentlichen betrieblichen Nachteilen verbunden sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "c6eeaa1b8a1113771a0e7a1f05b51b30ade00403cb4eac4aba5c252b5a98655b"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_d",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_d",
+      "artikelLabel": "Art. 24d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde kann im Rahmen der vorgegebenen Ziele im Sinne von Art. 12f Abs. 1 des Gesetzes mit einzelnen oder mit Gruppen von Grossverbrauchern mittel- und langfristige Verbrauchsziele vereinbaren. Dabei werden die Effizienz des Energieeinsatzes zum Zeitpunkt der Zielfestlegung und die absehbare technische und wirtschaftliche Entwicklung der Verbraucher mitberücksichtigt. Die zuständige Behörde kann die Vereinbarung aufheben, wenn die Verbrauchsziele nicht eingehalten werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "cdea2db1c26a952898475dd05cff3061dd6fdf521b896bdc7f6be73e8ea71981"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_e",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_e",
+      "artikelLabel": "Art. 24e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grossverbraucher können für die Dauer der Vereinbarung von den auf folgende Bereiche bezogenen Vorschriften dieser Verordnung und des Gesetzes entbunden werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ortsfeste elektrische Widerstandsheizungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Wassererwärmer und Wärmespeicher;"
+            },
+            {
+              "marke": "c",
+              "text": "Wärmeverteilung und -abgabe;"
+            },
+            {
+              "marke": "d",
+              "text": "Abwärmenutzung;"
+            },
+            {
+              "marke": "e",
+              "text": "lüftungstechnische Anlagen und deren Wärmedämmung;"
+            },
+            {
+              "marke": "f",
+              "text": "Anlagen zur Kühlung, Befeuchtung oder Entfeuchtung;"
+            },
+            {
+              "marke": "g",
+              "text": "Deckung des Energiebedarfs;"
+            },
+            {
+              "marke": "g",
+              "text": "Eigenstromerzeugung;"
+            },
+            {
+              "marke": "h",
+              "text": "Wärmenutzung bei mit fossilen Brennstoffen betriebenen Elektrizitätserzeugungsanlagen;"
+            },
+            {
+              "marke": "i",
+              "text": "Grenzwerte für den Elektrizitätsbedarf;"
+            },
+            {
+              "marke": "j",
+              "text": "ortsfeste Heizung im Freien;"
+            },
+            {
+              "marke": "k",
+              "text": "beheizte Freiluftbäder."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "54de97cd0f866ef81b4020968bc236cbdf09ea2b90a401bd6670c2c4a9095b40"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_f",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_f",
+      "artikelLabel": "Art. 24f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grossverbraucher können sich zu Gruppen zusammenschliessen. Sie organisieren sich selber und regeln die Aufnahme und den Ausschluss von Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Schliessen sich Grossverbraucher zusammen, bezeichnen sie eine gemeinsame Vertretung."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Austritt oder Ausschluss bedarf der Zustimmung des Amtes für Umwelt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "23981ab19aef948d75db60fb803b924475dc53cadfb499e006f0e8aa48eacaa8"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_g",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_g",
+      "artikelLabel": "Art. 24g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ausstellung von Gebäudeenergieausweisen richtet sich nach den Vorgaben der von der EnDK erlassenen Normen in der jeweils geltenden Fassung."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "896061040d23579e9d929dc6b247faf5b0d55c510b3e6d4e18842f37da5b519d"
+    },
+    {
+      "id": "kanton/AR/750.11/art_24_h",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "24_h",
+      "artikelLabel": "Art. 24h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Neubauten der Kategorien III bis XII (Norm SIA 380/1 «Heizwärmebedarf», Ausgabe 2016) mit mindestens 5 000 m&sup2; EBF sind mit Einrichtungen zur Gebäudeautomation auszurüsten, die Überwachungsfunktionen aufweisen. Der Vollzug obliegt dem Kanton."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "0e1f8d29f97561aec49cb91032a6c09b381886167c24119e51f75d3f3b6d8a6c"
+    },
+    {
+      "id": "kanton/AR/750.11/art_25",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Förderungsprogramme enthalten mindestens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zielsetzungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Förderungsmassnahmen;"
+            },
+            {
+              "marke": "c",
+              "text": "Adressatenkreis;"
+            },
+            {
+              "marke": "d",
+              "text": "Voraussetzungen für die Gewährung von Beiträgen;"
+            },
+            {
+              "marke": "e",
+              "text": "Anforderungen an die Gesuchsunterlagen;"
+            },
+            {
+              "marke": "f",
+              "text": "Höhe der bereitzustellenden finanziellen Mittel;"
+            },
+            {
+              "marke": "g",
+              "text": "Bemessungskriterien für deren Verteilung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement Bau und Volkswirtschaft orientiert in geeigneter Form über die vom Regierungsrat beschlossenen Förderungsprogramme."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "6e0af09efbffcf0ba9c6a42cb18e97f4d017bffaf379a85fac22b0725b25582f"
+    },
+    {
+      "id": "kanton/AR/750.11/art_25_a",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird für Sanierungsmassnahmen an der Gebäudehülle eine Finanzhilfe von mehr als Fr. 10 000.- beantragt, ist mit dem Beitragsgesuch ein gültiger GEAK Plus der betreffenden Gebäudekategorie (sofern verfügbar) einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Befreit sind Bauvorhaben mit Minergie-Zertifikat."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "8fbc11760242bcfd5a4406ac87d64f87067ba9affdcad9bfb3e139832e40f5ac"
+    },
+    {
+      "id": "kanton/AR/750.11/art_26",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche sind vor Inangriffnahme eines Vorhabens zusammen mit den notwendigen Unterlagen dem Amt für Umwelt einzureichen. Auf Gesuche, welche erst später eingereicht werden, wird nicht eingetreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Amt für Umwelt entscheidet über die Gesuche in Form einer anfechtbaren Beitragszusicherung. Es kann die Zusicherung an Auflagen und Bedingungen knüpfen."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden auch Förderungsbeiträge durch Dritte ausgerichtet, wird der kantonale Beitrag entsprechend gekürzt. Davon ausgenommen sind Förderungsbeiträge der Gemeinden. Die gesuchstellende Person ist verpflichtet, auf allfällige Förderungsbeiträge von Dritten hinzuweisen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "f06749e7380b7884bcaf2a7752282bafc6812048878237722580df4477d2c74c"
+    },
+    {
+      "id": "kanton/AR/750.11/art_27",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Förderungsbeiträge werden nur im Rahmen der zur Verfügung stehenden Mittel ausgerichtet. Sie werden erst ausbezahlt, wenn das Vorhaben dem Gesuch entsprechend sowie ordnungsgemäss ausgeführt und abgenommen ist und die im Einzelfall verlangten Unterlagen eingereicht sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Stellt sich heraus, dass bei der Realisierung des Vorhabens geringfügig vom Gesuch abgewichen wurde, wird der zugesicherte Förderungsbeitrag entsprechend angepasst. Bei weitergehenden Abweichungen entfällt der Beitrag."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "a251a23d2c2fb6dc0302bc1cc250ba64ea670f0e4d0a8e3a9fb64d7e1b479f1d"
+    },
+    {
+      "id": "kanton/AR/750.11/art_28",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fallen innerhalb von fünf Jahren nach Auszahlung des Beitrages eine oder mehrere Voraussetzungen für die Gewährung von Beiträgen weg, oder wird die Anlage oder Einrichtung innert dieser Frist entfernt, zweckentfremdet oder ausser Betrieb gesetzt, kann das Amt für Umwelt von der jeweiligen Eigentümerin oder dem jeweiligen Eigentümer die Rückzahlung des Beitrages verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Förderungsbeitrag ist durch die jeweilige Eigentümerin oder den jeweiligen Eigentümer in jedem Fall dann zurückzubezahlen, wenn er durch falsche Angaben erschlichen worden ist oder wenn sie oder er Förderungsbeiträge von Dritten verschwiegen hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Rückzahlungsverpflichtung kann im Grundbuch angemerkt werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "08214048f22f6a2eb839ffd12ee67d85fd25a17f58d87fc721d4b0b36bb02f71"
+    },
+    {
+      "id": "kanton/AR/750.11/art_29",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Förderungsbeiträge erhält, ist zur Zusammenarbeit mit dem Kanton verpflichtet und hat insbesondere die für eine allfällige Berichterstattung notwendigen Unterlagen zur Verfügung zu stellen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "40a93f4d3f2fc846c124abb6434fa4e1bf1b845b04a4f695dbd05ba48e16a1b9"
+    },
+    {
+      "id": "kanton/AR/750.11/art_30",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement Bau und Volkswirtschaft erstattet dem zuständigen Bundesamt über die durchgeführten Förderungsprogramme Bericht."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "4703aab7d106d52303253f342cb02208d6b5f238409b29fff688f2764c09d7c0"
+    },
+    {
+      "id": "kanton/AR/750.11/art_31",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Energieverordnung; kEnV (750.11)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt gleichzeitig mit dem Energiegesetz in Kraft."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/750.11",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "258b0378f70624f2ba6cadcf4bb41695",
+      "sha": "c240b49903f7b5db7d66fcac588aaa97fe1da1cf9b74bdd2d8c1fa18e4be8eef"
+    }
+  ]
+}
