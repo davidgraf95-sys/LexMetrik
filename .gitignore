@@ -46,3 +46,7 @@ bibliothek/quellen/*
 
 # Lokale Rechtsprechung-Screenshots (P0-Verifikation)
 e2e-shots/
+
+# Recherche-/MCP-Artefakte (nicht versionieren)
+.playwright-mcp/
+*.jpeg
