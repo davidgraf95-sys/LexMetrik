@@ -31,6 +31,14 @@ test.describe('/rechtsprechung — Übersicht', () => {
   })
 })
 
+test.describe('Verzahnung im Gesetzes-Reader', () => {
+  test('BGG zeigt «Bundesgerichtsentscheide zu diesem Erlass»', async ({ page }) => {
+    await page.goto('/gesetze/bund/BGG')
+    await expect(page.getByText('Bundesgerichtsentscheide zu diesem Erlass', { exact: false })).toBeVisible()
+    await page.screenshot({ path: 'e2e-shots/verzahnung-bgg.png', fullPage: false })
+  })
+})
+
 test.describe('Reader (über Klick aus der Übersicht)', () => {
   test('öffnet einen Entscheid mit Kopf, Abschnitten und Provenienz', async ({ page }) => {
     const fehler = fehlerSammeln(page)
