@@ -1,0 +1,53 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/SG/sg_gerichte/UV2025_14",
+      "gericht": "sg_gerichte",
+      "gerichtName": "Verwaltungs-/Versicherungsgericht SG",
+      "gerichtstyp": "kantonal",
+      "kanton": "SG",
+      "abteilung": null,
+      "nummer": "UV 2025/14",
+      "bgeReferenz": null,
+      "zitierung": "Verwaltungs-/Versicherungsgericht SG UV 2025/14 vom 23.10.2025",
+      "datum": "2025-10-23",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": null,
+      "regeste": {
+        "text": "Art. 6 Abs. 1 UVG; Art. 11 UVV; Leistungspflicht der Unfallversicherung für Rückfall/Spätfolge einer Handgelenksverletzung; es bestehen mindestens geringe Zweifel an der versicherungsmedizinischen Beurteilung, sodass der Sachverhalt als nicht rechtsgenüglich abgeklärt zu betrachten ist; Rückweisung der Streitsache zu ergänzenden Abklärungen; keine Verletzung des Devolutiveffekts durch lite pendente eingeholte versicherungsmedizinische Beurteilung (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 21. Oktober 2025, UV 2025/14).",
+        "quelle": "opencaselaw"
+      },
+      "regesteAmtlich": false,
+      "abschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "St.Gallen Versicherungsgericht 23.10.2025 UV 2025/14 Saint-Gall Versicherungsgericht 23.10.2025 UV 2025/14 San Gallo Versicherungsgericht 23.10.2025 UV 2025/14\n\nArt. 6 Abs. 1 UVG; Art. 11 UVV; Leistungspflicht der Unfallversicherung für Rückfall/Spätfolge einer Handgelenksverletzung; es bestehen mindestens geringe Zweifel an der versicherungsmedizinischen Beurteilung, sodass der Sachverhalt als nicht rechtsgenüglich abgeklärt zu betrachten ist; Rückweisung der Streitsache zu ergänzenden Abklärungen; keine Verletzung des Devolutiveffekts durch lite pendente eingeholte versicherungsmedizinische Beurteilung (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 21. Oktober 2025, UV 2025/14).\n\nSt.Gallen Versicherungsgericht Saint-Gall Versicherungsgericht San Gallo Versicherungsgericht UV - Unfallversicherung"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [],
+      "zitierteNormen": [
+        "Art. 11 UVV",
+        "Art. 6 Abs. 1 UVG"
+      ],
+      "normKeys": [
+        "UVG"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://publikationen.sg.ch/rechtsprechung-gerichte?tx_diamjudicalsg_judicalpublicationpdf%5Bcontroller%5D=DownloadPdf&tx_diamjudicalsg_judicalpublicationpdf%5Bpublication%5D=14102&type=1563347022&cHash=b557dcc63ac3556f9bf1d29f05486b6f",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "056ccd8c9e87da83814cc78d670e5930e12e779295b4aecda44130f512529b76",
+      "sha": "4252d2d0f8e416a1f53208505469091dc316e3e86d3e02964b7ec7678e076883"
+    }
+  ]
+}
