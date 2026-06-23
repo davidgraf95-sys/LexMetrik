@@ -206,6 +206,23 @@
       "fassungsToken": "20250701"
     },
     {
+      "key": "PARTG",
+      "ebene": "bund",
+      "kanton": null,
+      "kuerzel": "PartG",
+      "titel": "Bundesgesetz über die eingetragene Partnerschaft gleichgeschlechtlicher Paare (Partnerschaftsgesetz, PartG)",
+      "sr": "211.231",
+      "rechtsgebiet": "privat",
+      "sprache": "de",
+      "rang": 21,
+      "status": "snapshot",
+      "datei": "bund/PARTG.json",
+      "artikelAnzahl": 42,
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/782/de",
+      "fassungsToken": "20250101"
+    },
+    {
       "key": "BEG",
       "ebene": "bund",
       "kanton": null,
@@ -288,23 +305,6 @@
       "artikelAnzahl": 0,
       "stand": "2023-09-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/593/de",
-      "fassungsToken": ""
-    },
-    {
-      "key": "PARTG",
-      "ebene": "bund",
-      "kanton": null,
-      "kuerzel": "PartG",
-      "titel": "Bundesgesetz vom 18. Juni 2004 über die eingetragene Partnerschaft gleichgeschlechtlicher Paare (Partnerschaftsgesetz, PartG)",
-      "sr": "211.231",
-      "rechtsgebiet": "privat",
-      "sprache": "de",
-      "rang": 90,
-      "status": "nur-live-link",
-      "datei": null,
-      "artikelAnzahl": 0,
-      "stand": "2025-01-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/782/de",
       "fassungsToken": ""
     },
     {
@@ -393,6 +393,23 @@
       "fassungsToken": "20260612"
     },
     {
+      "key": "JSTG",
+      "ebene": "bund",
+      "kanton": null,
+      "kuerzel": "JStG",
+      "titel": "Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)",
+      "sr": "311.1",
+      "rechtsgebiet": "straf",
+      "sprache": "de",
+      "rang": 11,
+      "status": "snapshot",
+      "datei": "bund/JSTG.json",
+      "artikelAnzahl": 45,
+      "stand": "2025-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de",
+      "fassungsToken": "20250701"
+    },
+    {
       "key": "BETMG",
       "ebene": "bund",
       "kanton": null,
@@ -424,23 +441,6 @@
       "artikelAnzahl": 0,
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1982/846_846_846/de",
-      "fassungsToken": ""
-    },
-    {
-      "key": "JSTG",
-      "ebene": "bund",
-      "kanton": null,
-      "kuerzel": "JStG",
-      "titel": "Bundesgesetz vom 20. Juni 2003 über das Jugendstrafrecht (Jugendstrafgesetz, JStG)",
-      "sr": "311.1",
-      "rechtsgebiet": "straf",
-      "sprache": "de",
-      "rang": 90,
-      "status": "nur-live-link",
-      "datei": null,
-      "artikelAnzahl": 0,
-      "stand": "2025-07-01",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/551/de",
       "fassungsToken": ""
     },
     {

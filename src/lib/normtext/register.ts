@@ -80,8 +80,12 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = [
   bund('UWG', 'UWG', 'Bundesgesetz gegen den unlauteren Wettbewerb', '241', 'privat', 10),
   bund('MSCHG', 'MSchG', 'Bundesgesetz über den Schutz von Marken und Herkunftsangaben (Markenschutzgesetz)', '232.11', 'privat', 11, 'MSchG'),
   bund('PATG', 'PatG', 'Bundesgesetz über die Erfindungspatente (Patentgesetz)', '232.14', 'privat', 12, 'PatG'),
+  // Privatrecht — Volltext-Ausbau 23.6.2026 (Promotion aus nur-live-link-Stubs)
+  bund('PARTG', 'PartG', 'Bundesgesetz über die eingetragene Partnerschaft gleichgeschlechtlicher Paare (Partnerschaftsgesetz, PartG)', '211.231', 'privat', 21),
   // Strafrecht
   bund('STGB', 'StGB', 'Schweizerisches Strafgesetzbuch', '311.0', 'straf', 1, 'StGB'),
+  // Strafrecht — Volltext-Ausbau 23.6.2026 (Promotion aus nur-live-link-Stubs)
+  bund('JSTG', 'JStG', 'Bundesgesetz über das Jugendstrafrecht (Jugendstrafgesetz, JStG)', '311.1', 'straf', 11),
   // Verfahrensrecht
   bund('ZPO', 'ZPO', 'Schweizerische Zivilprozessordnung', '272', 'prozess', 1),
   bund('STPO', 'StPO', 'Schweizerische Strafprozessordnung', '312.0', 'prozess', 2, 'StPO'),

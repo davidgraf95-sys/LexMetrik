@@ -77,6 +77,9 @@ const ERLASS_MAP: Record<string, string> = {
   bbg: 'BBG',
   gbv: 'GBV',
   jstpo: 'JStPO',
+  // Volltext-Ausbau Bund 23.6.2026 (Promotion aus nur-live-link-Stubs)
+  partg: 'PartG',
+  jstg: 'JStG',
 };
 
 // ── Konsolidierungsdatum YYYYMMDD → ISO YYYY-MM-DD ───────────────────────────

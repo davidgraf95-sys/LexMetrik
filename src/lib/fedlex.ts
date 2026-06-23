@@ -112,6 +112,11 @@ export const FEDLEX = {
   MSchG: 'https://www.fedlex.admin.ch/eli/cc/1993/274_274_274/de', // SR 232.11, Kons. 20250701
   UWG:   'https://www.fedlex.admin.ch/eli/cc/1988/223_223_223/de', // SR 241, Kons. 20250101
   PatG:  'https://www.fedlex.admin.ch/eli/cc/1955/871_893_899/de', // SR 232.14, Kons. 20250701
+  // ── Volltext-Ausbau Bund 23.6.2026 (Promotion aus nur-live-link-Stubs; ELI/
+  //    Konsolidierung via Fedlex-SPARQL geltend-verifiziert, art_1 am Filestore-
+  //    HTML bestätigt, §7). ──
+  PARTG: 'https://www.fedlex.admin.ch/eli/cc/2005/782/de', // SR 211.231, Kons. 20250101
+  JSTG:  'https://www.fedlex.admin.ch/eli/cc/2006/551/de', // SR 311.1, Kons. 20250701
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

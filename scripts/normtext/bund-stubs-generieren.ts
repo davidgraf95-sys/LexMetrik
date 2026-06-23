@@ -23,8 +23,8 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['172.010', 'RVOG', 'oeffentlich'],
   ['161.1', 'BPR', 'oeffentlich'],
   // Privatrecht & Nebenerlasse
+  // (PartG 211.231 → Volltext-Snapshot 23.6.2026, jetzt im ERLASS_REGISTER)
   ['291', 'IPRG', 'privat'],
-  ['211.231', 'PartG', 'privat'],
   ['211.412.11', 'BGBB', 'privat'],
   ['232.12', 'DesG', 'privat'],
   ['232.16', 'SortG', 'privat'],
@@ -33,7 +33,7 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['944.3', 'PRG', 'privat'],
   ['957.1', 'BEG', 'privat'],
   // Strafrecht & Strafverfahren
-  ['311.1', 'JStG', 'straf'],
+  // (JStG 311.1 → Volltext-Snapshot 23.6.2026, jetzt im ERLASS_REGISTER)
   ['812.121', 'BetmG', 'straf'],
   ['313.0', 'VStrR', 'straf'],
   ['321.0', 'MStG', 'straf'],

@@ -114,6 +114,13 @@ EINTRAEGE=(
   "mschg|cc/1993/274_274_274|20250701|0|art_1,art_3,art_13,art_30"
   "uwg|cc/1988/223_223_223|20250101|0|art_1,art_2,art_3,art_23"
   "patg|cc/1955/871_893_899|20250701|0|art_1,art_3,art_8,art_66"
+  # ── Volltext-Ausbau Bund 23.6.2026 (Promotion aus nur-live-link-Stubs;
+  #    Konsolidierung via ELI-Resolver/SPARQL geltend-verifiziert, art_1 am
+  #    Filestore-HTML bestätigt, §7). NUR Erlasse, die der bestehende Extraktor
+  #    (class="absatz"-Markup) sauber erfasst — IPRG/BetmG/VStrR (ältere
+  #    plain-<p>-Intros vor <dl>) brauchen erst einen verifizierten Parser-Fix. ──
+  "partg|cc/2005/782|20250101|0|art_1"
+  "jstg|cc/2006/551|20250701|0|art_1"
 )
 
 fehler=0
