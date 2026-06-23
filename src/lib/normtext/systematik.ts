@@ -91,29 +91,61 @@ export const SYSTEMATIK: SystematikKategorie[] = [
   },
 ];
 
-// ─── Kantonale Systematik (Auftrag David 20.6.2026) ─────────────────────────
+// ─── Kantonale Systematik (Sachgebiets-Gliederung nach systematischer Nummer) ──
 //
-// Die kantonalen Erlasse in LexMetrik sind fast durchwegs Gebühren-/Tarif-/
-// Kosten- und Abgabe-Erlasse (für die Kostenrechner). Statt sie alle unter
-// «Öffentliches Recht» zu zeigen, gliedert diese funktionale Systematik sie nach
-// KOSTEN-/ABGABE-ART — anhand des Titels/Kürzels (reine Anzeige-Ordnung, §3; kein
-// Norminhalt). Reihenfolge = Priorität: das erste passende Muster gewinnt, die
-// Auffang-Rubrik «Gerichts- & Verfahrenskosten» nimmt den Rest.
-export interface KantonRubrik { id: string; titel: string; test: RegExp }
+// Ein kantonaler Vollkorpus (z.B. BS 859 Erlasse) wird nach der OFFIZIELLEN
+// systematischen Nummer gegliedert — so, wie die amtliche Systematische
+// Rechtssammlung des Kantons aufgebaut ist. Top-Level = führende Ziffer der
+// Nummer («640.100»→'6', «BSG 154.21»→'1'). Das ist deterministisch (§2; aus der
+// Nummer abgeleitet, KEINE Titel-Heuristik) und vollständig (jeder Erlass trägt
+// eine Nummer). Reine Anzeige-Ordnung (§3), kein Norminhalt.
+//
+// Die Sachgebiets-TITEL je Kanton stammen aus der amtlichen Systematik und sind
+// verifiziert (bibliothek/recherche/kantons-systematik-labels.md, §1/§7). Fehlt
+// ein Titel, zeigt die UI ehrlich «Bereich N» statt eines geratenen Sachgebiets
+// (§8). Kantone ohne Dezimalschema (z.B. GL: römisch «III B/7/1») bekommen bei
+// Bedarf eine eigene Extraktionsregel; ohne Regel greift der neutrale Fallback.
 
-export const KANTON_RUBRIKEN: KantonRubrik[] = [
-  { id: 'abgaben', titel: 'Handänderungssteuern & Abgaben', test: /handänder|mutation|enregistr|\blods\b|grundbuchabgab|\bgbag\b|lods et droits|\bhstg\b|\bldmg?\b|\bldmi\b/i },
-  { id: 'steuern', titel: 'Kantonale Steuergesetze', test: /steuergesetz|\bstg\b/i },
-  { id: 'anwalt', titel: 'Anwaltstarife', test: /anwält|anwalt|avocat|honorar|\bhono\b|\bhor\b|\banwt\b|\banwhv\b|rechtsanwält|ordine degli avvocati|tariffa.*avvocat/i },
-  { id: 'notariat', titel: 'Notariats- & Beurkundungskosten', test: /notar|notgeb|beurk|notaire|notarile/i },
-  { id: 'grundbuch', titel: 'Grundbuchgebühren', test: /grundbuch|registre fonci|registro fondiario|\bocrf\b|\bgbgt\b|eg zgb|registre foncier/i },
-  { id: 'gericht', titel: 'Gerichts- & Verfahrenskosten', test: /.*/ },
-];
+/** Ein Top-Level-Sachgebiet (Wurzel des amtlichen Systematik-Baums). */
+export interface SachgebietTop { nummer: string; name: string; }
 
-/** Kantonalen Erlass einer Kosten-/Abgabe-Rubrik zuordnen (erstes Muster gewinnt). */
-export function kantonRubrik(titel: string, kuerzel: string): string {
-  const s = `${titel} ${kuerzel}`;
-  return (KANTON_RUBRIKEN.find((r) => r.test.test(s)) ?? KANTON_RUBRIKEN[KANTON_RUBRIKEN.length - 1]).id;
+/** Amtliche Systematik eines Kantons (aus /normtext/kanton-systematik.json,
+ *  erzeugt von scripts/normtext/kanton-systematik-run.ts): Anzeige-Wurzeln +
+ *  Index jedes Baum-Knotens (nur Ziffern) → Nummer seiner Wurzel. */
+export interface KantonSystematik { roots: SachgebietTop[]; index: Record<string, string>; }
+
+const nurZiffern = (s: string): string => s.replace(/\D/g, '');
+
+/**
+ * Ordnet einen Erlass über Längster-Präfix-Match im amtlichen Systematik-Baum
+ * seinem Top-Level-Sachgebiet zu. Deterministisch (§2). Korrekt auch bei
+ * abweichenden Schemata (AI Hunderter, UR 10/20/…, ZG +10), weil der Baum die
+ * echte Hierarchie liefert. Neutraler, ehrlicher Fallback (§8), wenn keine
+ * Systematik-Daten vorliegen oder die Nummer (z. B. GL römisch) nicht greift.
+ */
+export function sachgruppe(
+  sys: KantonSystematik | undefined,
+  sr: string | null | undefined,
+): { schluessel: string; titel: string } {
+  const d = nurZiffern(sr ?? '');
+  if (sys && d) {
+    for (let l = d.length; l >= 1; l--) {
+      const root = sys.index[d.slice(0, l)];
+      if (root !== undefined) {
+        const r = sys.roots.find((x) => x.nummer === root);
+        if (r) return { schluessel: r.nummer, titel: r.name };
+      }
+    }
+  }
+  if (!d) return { schluessel: '~', titel: 'Ohne Systematik-Nummer' };
+  return { schluessel: d[0], titel: `Bereich ${d[0]}` };
+}
+
+/** Vergleichsfunktion für die Anzeige-Reihenfolge der Sachgebiete (amtliche
+ *  Baum-Reihenfolge; unbekannte/neutrale Schlüssel hinten). */
+export function sachgebietRang(sys: KantonSystematik | undefined): (schluessel: string) => number {
+  const order = new Map((sys?.roots ?? []).map((r, i) => [r.nummer, i]));
+  return (s) => order.get(s) ?? 999;
 }
 
 /** Key → [Kategorie-id, Gruppen-id] für schnelle Zuordnung; mehrfach genannte

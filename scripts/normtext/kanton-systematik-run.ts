@@ -1,0 +1,120 @@
+/**
+ * Generator: holt je importiertem Kanton den amtlichen Systematik-Baum (Top-Level-
+ * Sachgebiete) von der clex/LexWork-API und schreibt ihn nach
+ * public/normtext/kanton-systematik.json. Quelle:
+ *   GET https://<host>/api/de/systematic_categories
+ *   → [ { systematic_category: { systematic_number, name, children:[…] } }, … ]
+ *
+ * Damit gruppiert die UI einen kantonalen Vollkorpus nach der ECHTEN amtlichen
+ * Systematik des Kantons (§7: aus der Quelle geholt, nicht hartcodiert/abgetippt;
+ * §2: deterministisch). Die Top-Level-Nummern sind kanton-spezifisch (BS 1–9,
+ * UR 1/2/3/9 + 10/20/…/70, ZG zusätzlich 10) — die UI macht Längster-Präfix-Match.
+ *
+ * Host je Kanton wird aus der quelleUrl der Snapshots (register.json) abgeleitet,
+ * also läuft der Generator automatisch für jeden neu importierten clex-Kanton.
+ * Kantone ohne clex-API (z. B. BE: PDF-Register) erscheinen nicht und fallen in
+ * der UI auf den neutralen «Bereich N» zurück (§8).
+ */
+import { readFileSync, writeFileSync } from 'fs';
+import { fetchMitWiederholung } from './netz-retry.ts';
+
+interface SachgebietTop {
+  nummer: string;
+  name: string;
+}
+/** Pro Kanton: Top-Level-Sachgebiete (Anzeige) + Index jedes Baum-Knotens (nur
+ *  Ziffern seiner Nummer) → Nummer seines Top-Level-Vorfahren. So ordnet die UI
+ *  einen Erlass über Längster-Präfix-Match seinem Sachgebiet zu — korrekt auch
+ *  bei AI (Hunderter), UR (10/20/…), ZG (+10). */
+interface KantonSystematik {
+  roots: SachgebietTop[];
+  index: Record<string, string>;
+}
+
+type ApiKnoten = {
+  systematic_category?: {
+    systematic_number?: string;
+    name?: string;
+    children?: ApiKnoten[];
+  };
+};
+
+const nurZiffern = (s: string): string => s.replace(/\D/g, '');
+
+async function holeSystematik(host: string): Promise<KantonSystematik> {
+  const res = await fetchMitWiederholung(
+    `https://${host}/api/de/systematic_categories`,
+    undefined,
+    { versuche: 4 },
+  );
+  if (!res.ok) throw new Error(`systematic_categories ${host}: HTTP ${res.status}`);
+  const roh = (await res.json()) as ApiKnoten[];
+
+  const roots: SachgebietTop[] = [];
+  const index: Record<string, string> = {};
+  // Jeden Knoten auf seinen Top-Level-Vorfahren (rootNummer) abbilden.
+  const lauf = (knoten: ApiKnoten[], rootNummer: string): void => {
+    for (const k of knoten) {
+      const c = k.systematic_category;
+      if (!c?.systematic_number) continue;
+      const d = nurZiffern(String(c.systematic_number));
+      // Längster gewinnt: nur setzen, wenn neu oder genauer (sollte eindeutig sein).
+      if (d && !(d in index)) index[d] = rootNummer;
+      if (Array.isArray(c.children)) lauf(c.children, rootNummer);
+    }
+  };
+  for (const k of roh) {
+    const c = k.systematic_category;
+    if (!c?.systematic_number || !c?.name) continue;
+    const nummer = String(c.systematic_number);
+    roots.push({ nummer, name: String(c.name).trim() });
+    const d = nurZiffern(nummer);
+    if (d) index[d] = nummer;
+    if (Array.isArray(c.children)) lauf(c.children, nummer);
+  }
+  return { roots, index };
+}
+
+const reg = JSON.parse(readFileSync('public/normtext/register.json', 'utf8')) as {
+  erlasse?: Array<{ ebene?: string; kanton?: string; quelleUrl?: string }>;
+};
+const erlasse = reg.erlasse ?? [];
+
+// Host je Kanton aus dem ersten kantonalen Snapshot mit quelleUrl.
+const hostProKanton = new Map<string, string>();
+for (const e of erlasse) {
+  if (e.ebene !== 'kanton' || !e.kanton || !e.quelleUrl) continue;
+  if (hostProKanton.has(e.kanton)) continue;
+  try {
+    hostProKanton.set(e.kanton, new URL(e.quelleUrl).host);
+  } catch {
+    /* defekte URL ignorieren */
+  }
+}
+
+console.log(`[kanton-systematik] ${hostProKanton.size} Kantone mit Snapshots gefunden`);
+const out: Record<string, KantonSystematik> = {};
+for (const [kt, host] of [...hostProKanton].sort()) {
+  try {
+    const sys = await holeSystematik(host);
+    if (sys.roots.length === 0) {
+      console.log(`  ${kt} (${host}): 0 Top-Level — übersprungen`);
+      continue;
+    }
+    out[kt] = sys;
+    console.log(`  ${kt} (${host}): ${sys.roots.length} Top-Level, ${Object.keys(sys.index).length} Knoten`);
+  } catch (e) {
+    console.log(`  ${kt} (${host}): FEHLER ${(e as Error).message} — übersprungen (Fallback neutral)`);
+  }
+}
+
+const sortiert: Record<string, KantonSystematik> = {};
+for (const k of Object.keys(out).sort()) sortiert[k] = out[k];
+writeFileSync(
+  'public/normtext/kanton-systematik.json',
+  JSON.stringify(sortiert, null, 2) + '\n',
+  'utf8',
+);
+console.log(
+  `\n[kanton-systematik] ${Object.keys(sortiert).length} Kantone → public/normtext/kanton-systematik.json`,
+);

@@ -5,9 +5,28 @@
 import type { BrowseManifest, BrowseErlass } from './browse-typen';
 import type { NormSnapshot, NormSnapshotDatei } from './typen';
 import { GEBIETE, type Rechtsgebiet } from './register';
+import type { KantonSystematik } from './systematik';
 
 // ── Manifest (einmal, gecacht als laufende Promise) ──────────────────────────
 let manifestPromise: Promise<BrowseManifest | null> | null = null;
+
+// ── Kantonale Systematik-Bäume (einmal, gecacht) — für die Sachgebiets-Gliederung
+let systematikPromise: Promise<Record<string, KantonSystematik>> | null = null;
+
+export async function ladeKantonSystematik(): Promise<Record<string, KantonSystematik>> {
+  if (!systematikPromise) {
+    systematikPromise = (async () => {
+      try {
+        const res = await fetch('/normtext/kanton-systematik.json');
+        if (!res.ok) return {};
+        return (await res.json()) as Record<string, KantonSystematik>;
+      } catch {
+        return {};
+      }
+    })();
+  }
+  return systematikPromise;
+}
 
 export async function ladeBrowseManifest(): Promise<BrowseManifest | null> {
   if (!manifestPromise) {

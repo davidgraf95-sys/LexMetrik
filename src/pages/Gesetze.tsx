@@ -3,10 +3,10 @@ import { useSearchParams, useLocation } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { ErlassKarte, ErlassZeile } from '../components/normtext/ErlassKarte';
 import {
-  ladeBrowseManifest, gruppiereNachKanton, filtern,
+  ladeBrowseManifest, ladeKantonSystematik, gruppiereNachKanton, filtern,
 } from '../lib/normtext/browse';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
-import { SYSTEMATIK, KANTON_RUBRIKEN, kantonRubrik } from '../lib/normtext/systematik';
+import { SYSTEMATIK, sachgruppe, sachgebietRang, type KantonSystematik } from '../lib/normtext/systematik';
 import { KantonWappen } from '../components/KantonWappen';
 import { SchweizKarte } from '../components/SchweizKarte';
 
@@ -160,23 +160,57 @@ const KANTON_NAMEN: Record<string, string> = {
   TI: 'Tessin', VD: 'Waadt', VS: 'Wallis', NE: 'Neuenburg', GE: 'Genf', JU: 'Jura',
 };
 
-// Ein gewählter Kanton, gegliedert nach Kosten-/Abgabe-Art (KANTON_RUBRIKEN) —
-// das passt zum tatsächlichen Bestand (fast nur Gebühren-/Tarif-/Steuer-Erlasse)
-// und zeigt auf einen Blick, wo der gesuchte Tarif liegt.
-function KantonRubriken({ erlasse }: { erlasse: BrowseErlass[] }) {
-  const proRubrik = KANTON_RUBRIKEN
-    .map((r) => ({ r, items: erlasse.filter((e) => kantonRubrik(e.titel, e.kuerzel) === r.id) }))
-    .filter((x) => x.items.length > 0);
+// Ein gewählter Kanton, gegliedert nach der OFFIZIELLEN Systematik (Sachgebiet =
+// führende Ziffer der systematischen Nummer, systematik.ts). Übersicht zuerst:
+// alle Sektionen eingeklappt (so sieht man die Sachgebiete des Kantons auf einen
+// Blick), Klick öffnet eine; «Alle auf-/zuklappen». Im Inneren kompakte, nach
+// SR-Nr sortierte Zeilen (amtliche Reihenfolge). Die Seiten-Suche liefert die
+// flache Trefferliste — diese gegliederte Ansicht zeigt sich nur ohne Suche.
+function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: KantonSystematik }) {
+  const gruppen = useMemo(() => {
+    const srNum = (e: BrowseErlass) => parseFloat((e.sr ?? '').replace(/[^\d.]/g, '')) || 0;
+    const rang = sachgebietRang(sys);
+    const map = new Map<string, { titel: string; items: BrowseErlass[] }>();
+    for (const e of erlasse) {
+      const { schluessel, titel } = sachgruppe(sys, e.sr);
+      if (!map.has(schluessel)) map.set(schluessel, { titel, items: [] });
+      map.get(schluessel)!.items.push(e);
+    }
+    return [...map.entries()]
+      .sort((a, b) => rang(a[0]) - rang(b[0]) || a[0].localeCompare(b[0], 'de', { numeric: true }))
+      .map(([schluessel, g]) => ({
+        schluessel,
+        titel: g.titel,
+        items: g.items.sort((a, b) => srNum(a) - srNum(b) || a.kuerzel.localeCompare(b.kuerzel, 'de')),
+      }));
+  }, [erlasse, sys]);
+
+  const alleIds = gruppen.map((g) => g.schluessel);
+  const [offen, setOffen] = useState<Set<string>>(() => new Set());
+  const alleOffen = alleIds.length > 0 && offen.size >= alleIds.length;
+  const toggle = (id: string) => setOffen((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
+  const toggleAlle = () => setOffen(alleOffen ? new Set() : new Set(alleIds));
+
   return (
-    <div className="space-y-5">
-      {proRubrik.map(({ r, items }) => (
-        <section key={r.id} className="space-y-2.5">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-brass-700">{r.titel} <span className="text-ink-400">· {items.length}</span></h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
+    <div className="space-y-3">
+      <div className="flex justify-end">
+        <button type="button" onClick={toggleAlle}
+          className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+          {alleOffen ? 'Alle einklappen' : 'Alle aufklappen'}
+        </button>
+      </div>
+      {gruppen.map((g) => (
+        <Kategorie key={g.schluessel} offen={offen.has(g.schluessel)} onToggle={() => toggle(g.schluessel)} anzahl={g.items.length}
+          kopf={
+            <span className="flex items-baseline gap-2.5">
+              <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{g.schluessel}</span>
+              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{g.titel}</span>
+            </span>
+          }>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            {g.items.map((e) => <ErlassZeile key={e.key} e={e} />)}
           </div>
-          <Gitter erlasse={items} />
-        </section>
+        </Kategorie>
       ))}
     </div>
   );
@@ -184,6 +218,7 @@ function KantonRubriken({ erlasse }: { erlasse: BrowseErlass[] }) {
 
 export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
+  const [systematik, setSystematik] = useState<Record<string, KantonSystematik>>({});
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
 
@@ -216,6 +251,8 @@ export function Gesetze() {
       if (!m) { setFehler(true); return; }
       setErlasse(m.erlasse);
     });
+    // Systematik-Bäume parallel; fehlen sie, greift der neutrale Fallback (§8).
+    ladeKantonSystematik().then((s) => { if (lebt) setSystematik(s); });
     return () => { lebt = false; };
   }, []);
 
@@ -340,7 +377,7 @@ export function Gesetze() {
                       </span>
                       <span className="num text-body-s text-ink-400 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
                     </div>
-                    <KantonRubriken erlasse={gefiltert.filter((e) => e.kanton === kanton)} />
+                    <KantonSystematik erlasse={gefiltert.filter((e) => e.kanton === kanton)} sys={systematik[kanton]} />
                   </section>
                 </>
               ) : (
