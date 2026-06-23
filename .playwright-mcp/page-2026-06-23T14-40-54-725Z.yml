@@ -1,0 +1,338 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: /
+    - group [ref=e6]:
+      - 'textbox "Tipp: Entscheidnummer in Anführungszeichen" [ref=e7]'
+      - button "Suchen" [ref=e9] [cursor=pointer]
+      - 'link "Neu: MCP Interface" [ref=e11] [cursor=pointer]':
+        - /url: /mcp
+        - generic [ref=e12]: "Neu: MCP Interface"
+    - generic [ref=e14] [cursor=pointer]: DE
+    - button [ref=e16] [cursor=pointer]
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - paragraph
+    - heading "Wer uns unterstützt:" [level=1] [ref=e22]
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - link "Image":
+            - /url: https://bhlaw.ch/
+            - img "Image" [ref=e27] [cursor=pointer]
+        - generic "Baur Hürlimann AG" [ref=e28]:
+          - paragraph [ref=e30]: Baur Hürlimann AG
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - link "Image":
+            - /url: https://www.stulz-recht.ch/
+            - img "Image" [ref=e34] [cursor=pointer]
+        - generic "Anwaltskanzlei Stulz" [ref=e35]:
+          - paragraph [ref=e37]: Anwaltskanzlei Stulz
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - link "Image":
+            - /url: https://www.cms.law
+            - img "Image" [ref=e41] [cursor=pointer]
+        - generic "CMS von Erlach Partners AG" [ref=e42]:
+          - paragraph [ref=e44]: CMS von Erlach Partners AG
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - link "Image":
+            - /url: https://www.unilu.ch/fakultaeten/rf/
+            - img "Image" [ref=e48] [cursor=pointer]
+        - generic "UNIVERSITÄT LUZERN, Rechtswissenschaftliche Fakultät" [ref=e49]:
+          - paragraph [ref=e51]: Rechtswissenschaftliche Fakultät
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - link "Image":
+            - /url: https://odage.ch/
+            - img "Image" [ref=e55] [cursor=pointer]
+        - generic "Ordre des avocats de Genève" [ref=e56]:
+          - paragraph [ref=e58]: Ordre des avocats de Genève
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - link "Image":
+            - /url: https://obersonabels.com/
+            - img "Image" [ref=e62] [cursor=pointer]
+        - generic "OBERSON ABELS SA" [ref=e63]:
+          - paragraph [ref=e65]: OBERSON ABELS SA
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - link "Image":
+            - /url: https://www.betreibung-konkurs.ch/
+            - img "Image" [ref=e69] [cursor=pointer]
+        - generic "Konferenz der Betreibungs- und Konkursbeamten der Schweiz" [ref=e70]:
+          - paragraph [ref=e72]: Konferenz der Betreibungs- und Konkursbeamten der Schweiz
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - link "Image":
+            - /url: https://good-zuerich.ch/
+            - img "Image" [ref=e76] [cursor=pointer]
+        - generic "Good Rechtsanwälte" [ref=e77]:
+          - paragraph [ref=e79]: Good Rechtsanwälte
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - link "Image":
+            - /url: https://www.homburger.ch/de
+            - img "Image" [ref=e83] [cursor=pointer]
+        - generic "Homburger AG" [ref=e84]:
+          - paragraph [ref=e86]: Homburger AG
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - link "Image":
+            - /url: https://www.zurich.ch/
+            - img "Image" [ref=e90] [cursor=pointer]
+        - generic "Zürich Versicherungs-Gesellschaft AG" [ref=e91]:
+          - paragraph [ref=e93]: Zürich Versicherungs-Gesellschaft AG
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - link "Image":
+            - /url: https://unine.ch/droit
+            - img "Image" [ref=e97] [cursor=pointer]
+        - generic "Université de Neuchâtel, Faculté de droit" [ref=e98]:
+          - paragraph [ref=e100]: Faculté de droit
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - link "Image":
+            - /url: https://www3.unifr.ch/federalism/en/
+            - img "Image" [ref=e104] [cursor=pointer]
+        - generic "Institut für Föderalismus, Universität Freiburg Institut du Fédéralisme, Université de Fribourg" [ref=e105]:
+          - paragraph [ref=e107]: Institut für Föderalismus, Universität Freiburg Institut du Fédéralisme, Université de Fribourg
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - link "Image":
+            - /url: https://www.sportstribunal.ch/
+            - img "Image" [ref=e111] [cursor=pointer]
+        - generic "SWISS SPORTS TRIBUNAL" [ref=e112]:
+          - paragraph [ref=e114]: SWISS SPORTS TRIBUNAL
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - link "Image":
+            - /url: https://www.zav.ch/
+            - img "Image" [ref=e118] [cursor=pointer]
+        - generic "Zürcher Anwaltsverband" [ref=e119]:
+          - paragraph [ref=e121]: Zürcher Anwaltsverband
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - link "Image":
+            - /url: https://pansoft.de/
+            - img "Image" [ref=e125] [cursor=pointer]
+        - generic "Pansoft GmbH" [ref=e126]:
+          - paragraph [ref=e128]: Pansoft GmbH
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - link "Image":
+            - /url: https://my-d.org/index.php/www-my-d-org
+            - img "Image" [ref=e132] [cursor=pointer]
+        - generic "MY-D Foundation, Geneva" [ref=e133]:
+          - paragraph [ref=e135]: MY-D Foundation, Geneva
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - link "Image":
+            - /url: https://www.legalis.ch/de/
+            - img "Image" [ref=e139] [cursor=pointer]
+        - generic "legalis.ch" [ref=e140]:
+          - paragraph [ref=e142]: legalis.ch
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - link "Image":
+            - /url: https://www.domenig.law/
+            - img "Image" [ref=e146] [cursor=pointer]
+        - generic "Domenig & Partner Rechtsanwälte AG" [ref=e147]:
+          - paragraph [ref=e149]: Domenig & Partner Rechtsanwälte AG
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - link "Image":
+            - /url: https://www.bfh.ch/ipst
+            - img "Image" [ref=e153] [cursor=pointer]
+        - generic "Institut Public Sector Transformation, Berner Fachhochschule" [ref=e154]:
+          - paragraph [ref=e156]: Institut Public Sector Transformation
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - link "Image":
+            - /url: https://wickipartners.ch/
+            - img "Image" [ref=e160] [cursor=pointer]
+        - generic "Wicki Partners AG" [ref=e161]:
+          - paragraph [ref=e163]: Wicki Partners AG
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - link "Image":
+            - /url: https://www.unifr.ch/ius/baurecht/de/
+            - img "Image" [ref=e167] [cursor=pointer]
+        - generic "Institut für Schweizerisches und Internationales Baurecht, Universität Freiburg" [ref=e168]:
+          - paragraph [ref=e170]: Institut für Schweizerisches und Internationales Baurecht, Universität Freiburg
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - link "Image":
+            - /url: https://www.cbwm.ch
+            - img "Image" [ref=e174] [cursor=pointer]
+        - generic "CBWM Avocats" [ref=e175]:
+          - paragraph [ref=e177]: CBWM Avocats
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - link "Image":
+            - /url: https://akbs.ch/
+            - img "Image" [ref=e181] [cursor=pointer]
+        - generic "Advokatenkammer Basel" [ref=e182]:
+          - paragraph [ref=e184]: Advokatenkammer Basel
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - link "Image":
+            - /url: https://www.wartmann-merker.ch/
+            - img "Image" [ref=e188] [cursor=pointer]
+        - generic "Wartmann Merker AG" [ref=e189]:
+          - paragraph [ref=e191]: Wartmann Merker AG
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - link "Image":
+            - /url: https://www.mme.ch
+            - img "Image" [ref=e195] [cursor=pointer]
+        - generic "MME Legal | Tax | Compliance" [ref=e196]:
+          - paragraph [ref=e198]: MME Legal | Tax | Compliance
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - link "Image":
+            - /url: https://www.oeffentlichkeitsgesetz.ch/deutsch
+            - img "Image" [ref=e202] [cursor=pointer]
+        - generic "Öffentlichkeitsgesetz" [ref=e203]:
+          - paragraph [ref=e205]: Öffentlichkeitsgesetz
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - link "Image":
+            - /url: https://www.keel-raster.ch
+            - img "Image" [ref=e209] [cursor=pointer]
+        - generic "Keel & Raster Planungs- und Baurecht GmbH" [ref=e210]:
+          - paragraph [ref=e212]: Keel & Raster
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - link "Image":
+            - /url: https://www.schkg-vereinigung.ch/
+            - img "Image" [ref=e216] [cursor=pointer]
+        - generic "SchKG-Vereinigung Association LP" [ref=e217]:
+          - paragraph [ref=e219]: SchKG-Vereinigung Association LP
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - link "Image":
+            - /url: https://www.ub.unibe.ch/teilbibliotheken/rechtswissenschaft/juristische_bibliothek_jbb/index_ger.html
+            - img "Image" [ref=e223] [cursor=pointer]
+        - generic "Universitätsbibliothek Bern, Juristische Bibliothek" [ref=e224]:
+          - paragraph [ref=e226]: Universitätsbibliothek Bern, Juristische Bibliothek
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - link "Image":
+            - /url: https://www.hol-law.ch/
+            - img "Image" [ref=e230] [cursor=pointer]
+        - generic "HOLENSTEIN BRUSA legal & tax" [ref=e231]:
+          - paragraph [ref=e233]: HOLENSTEIN BRUSA legal & tax
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - link "Image":
+            - /url: https://www.cooprecht.ch/
+            - img "Image" [ref=e237] [cursor=pointer]
+        - generic "Coop Rechtsschutz AG" [ref=e238]:
+          - paragraph [ref=e240]: Coop Rechtsschutz AG
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - link "Image":
+            - /url: https://www.lauxlawyers.ch/
+            - img "Image" [ref=e244] [cursor=pointer]
+        - generic "LAUX LAWYERS AG" [ref=e245]:
+          - paragraph [ref=e247]: LAUX LAWYERS AG
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - link "Image":
+            - /url: https://justeco.charity/fonds-aequitas/
+            - img "Image" [ref=e251] [cursor=pointer]
+        - generic "JUSTECO, Fonds ÆQUITAS" [ref=e252]:
+          - paragraph [ref=e254]: JUSTECO, Fonds ÆQUITAS
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - link "Image":
+            - /url: https://www.zhaw.ch/de/hochschule/
+            - img "Image" [ref=e258] [cursor=pointer]
+        - generic "Zürcher Hochschule für Angewandte Wissenschaften" [ref=e259]:
+          - paragraph [ref=e261]: Zürcher Hochschule für Angewandte Wissenschaften
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - link "Image":
+            - /url: https://www.altenburger.ch/
+            - img "Image" [ref=e265] [cursor=pointer]
+        - generic "Altenburger Ltd legal + tax" [ref=e266]:
+          - paragraph [ref=e268]: Altenburger Ltd legal + tax
+      - generic [ref=e270]:
+        - generic [ref=e271]:
+          - link "Image":
+            - /url: https://www.bav-aab.ch/de/
+            - img "Image" [ref=e272] [cursor=pointer]
+        - generic "Bernischer Anwaltsverband Association des avocats bernois" [ref=e273]:
+          - paragraph [ref=e275]: Bernischer Anwaltsverband Association des avocats bernois
+      - generic [ref=e277]:
+        - generic [ref=e278]:
+          - link "Image":
+            - /url: https://www.lenzstaehelin.com
+            - img "Image" [ref=e279] [cursor=pointer]
+        - generic "Lenz & Staehelin" [ref=e280]:
+          - paragraph [ref=e282]: Lenz & Staehelin
+      - generic [ref=e284]:
+        - generic [ref=e285]:
+          - link "Image":
+            - /url: /about#support
+            - img "Image" [ref=e286] [cursor=pointer]
+        - generic "Klicken Sie hier, für weitere Möglichkeiten der Unterstützung" [ref=e287]:
+          - paragraph [ref=e289]: Unterstützen Sie uns per Twint mit 20 CHF
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - link "Image":
+            - /url: https://www.arrestpraxis.ch/
+            - img "Image" [ref=e293] [cursor=pointer]
+        - generic "VISCHER arrestpraxis.ch" [ref=e294]:
+          - paragraph [ref=e296]: VISCHER arrestpraxis.ch
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - link "Image":
+            - /url: https://basler-juristenverein.ch/
+            - img "Image" [ref=e300] [cursor=pointer]
+        - generic "Basler Juristenverein" [ref=e301]:
+          - paragraph [ref=e303]: Basler Juristenverein
+      - generic [ref=e305]:
+        - generic [ref=e306]:
+          - link "Image":
+            - /url: https://www.kellerhals-carrard.ch/de/home/index.php
+            - img "Image" [ref=e307] [cursor=pointer]
+        - generic "Kellerhals Carrard" [ref=e308]:
+          - paragraph [ref=e310]: Kellerhals Carrard
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - link "Image":
+            - /url: https://rechtgpt.ch
+            - img "Image" [ref=e314] [cursor=pointer]
+        - generic "RechtGPT" [ref=e315]:
+          - paragraph [ref=e317]: RechtGPT
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - link "Image":
+            - /url: https://www.schadenanwaelte.ch/
+            - img "Image" [ref=e321] [cursor=pointer]
+        - generic "Schadenanwälte AG, Fachanwaltskanzlei für Haftpflicht und Versichertenrecht" [ref=e322]:
+          - paragraph [ref=e324]: Schadenanwälte AG
+      - generic [ref=e326]:
+        - generic [ref=e327]:
+          - link "Image":
+            - /url: https://www.advo-schreiber.ch/advo/
+            - img "Image" [ref=e328] [cursor=pointer]
+        - generic "Advokatur Schreiber" [ref=e329]:
+          - paragraph [ref=e331]: Advokatur Schreiber
+    - generic [ref=e335]:
+      - heading "Weitere Unterstützung erhalten wir von:" [level=1] [ref=e336]
+      - text: Timur Acemoglu, Olten; Martina Arioli, Zürich; Fatih Aslantas, Weinfelden; Stephan Bernard, Basel; Daniel Boos, Zürich; Harold Bouchex-Bellomie, Bienne; Renato Bucher, Zürich; Simon Canonica, Stadel; Bertil Cottier, Préverenges; deju.re; Philipp do Canto, Zürich; Domizilplus Treuhand, Zürich; Daniel Emch, Bern; Lucien Fluri, Solothurn; Markus Gehrig, Fehraltorf; Patrick Gehrig, Biglen; Daniela Giovanoli, Bern; André Golliez, Zürich; Sven Gretler, Zürich; Angelina Grossenbacher, Burgdorf; Nils Güggi, Bern; J. Haefeli, Gipf-Oberfrick; Ralph Hemsley, Zürich; Mathias Hemsley, Zürich; Ruedi Herzig, Arbon; Elias Hofstetter, Bern; Kanzlei 5, Steffisburg; Pranvera Këllezi, Genève; Daniel Kettiger, Bolligen; Kneubühl Recht, Mühlethurnen; Karola Krell, Foodlex, Bern; Oleg Lavrovsky, Köniz; Simona Liechti, Bern; Kilian Meyer, Schaffhausen; Daniel Moccand, Meggen; Lukas Müller, Zürich; Moritz Müller, Bern; Gregor Münch, Zürich; Elias Nesti, Solothurn; Stefan Oderbolz, Thalwil; Markus Prazeller, Basel; Dario Piececchi, Luzern; Sarah Progin, Granges-Paccot; Luca Ranzoni, St. Gallen; Reinhard Riedl, Effretikon; Stefan Rolli, Rubigen; Nora Scheidegger, Bern; Clemens Schuster, Zürich; Mark Schweizer, Winterthur; Charlotte Sieber-Gasser, Bern; Advokatur Spycher, Bern; Sabine Steiger-Sachmann, Winterthur; Dominique Strebel, Zürich; sui generis Verlag, Zürich; Rolf A. Tobler, Bern; Johannes Wagner, Appenzell;
+      - generic [ref=e337]: sowie vielen weiteren Unterstützerinnen und Unterstützern, die anonym bleiben wollen.
+  - contentinfo [ref=e340]:
+    - link [ref=e341] [cursor=pointer]:
+      - /url: "#"
+    - link "entscheidsuche.ch on Twitter" [ref=e342] [cursor=pointer]:
+      - /url: https://twitter.com/entscheidsuche
+    - text: powered by
+    - link [ref=e343] [cursor=pointer]:
+      - /url: https://pansoft.de
+      - img [ref=e344]

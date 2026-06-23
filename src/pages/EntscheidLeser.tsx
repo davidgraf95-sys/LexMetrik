@@ -142,7 +142,8 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </section>
       )}
 
-      <article className="mx-auto w-full max-w-[56rem]">
+      {/* Lesespalte 60–75 Zeichen (Reglement R1) — schmaler als die amtlichen Anzeigen. */}
+      <article className="mx-auto w-full max-w-reading">
         <EntscheidBody abschnitte={snap.abschnitte} />
       </article>
 

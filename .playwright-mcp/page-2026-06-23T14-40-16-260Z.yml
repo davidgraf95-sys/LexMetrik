@@ -1,0 +1,426 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]: "Webinar:"
+      - text: Kostenloses Webinar zum neuen KI-Assistenten am
+      - generic [ref=e7]: Do. den 25. Juni 2026
+      - text: 13:30 Uhr
+      - link "Unverbindlich anmelden" [ref=e8] [cursor=pointer]:
+        - /url: https://app.livestorm.co/doctrine-deutschland/ready-set-prompt-erste-schritte-mit-legal-ai?s=012631f4-a3c3-4450-a6d9-814fc1826f54&utm_source=dejure&utm_medium=Top_banner
+      - generic "Ausblenden" [ref=e10] [cursor=pointer]: ×
+    - generic:
+      - generic:
+        - generic "Ausblenden": ×
+      - generic:
+        - generic: Doctrine-Webinar
+        - generic:
+          - text: Nicht verpassen
+          - text: Kostenloses Webinar zum neuen KI-Assistenten am Do. den 25. Juni 2026 13:30 - 14:00 Uhr
+        - link "Unverbindlich anmelden":
+          - /url: https://app.livestorm.co/doctrine-deutschland/ready-set-prompt-erste-schritte-mit-legal-ai?s=012631f4-a3c3-4450-a6d9-814fc1826f54&utm_source=dejure&utm_medium=Notification
+    - banner [ref=e11]:
+      - generic [ref=e12]:
+        - link "dejure.org" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e16]:
+          - searchbox [ref=e17]
+          - button "suchen" [ref=e18] [cursor=pointer]
+    - navigation [ref=e19]:
+      - generic [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Gesetze" [ref=e23] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e24]:
+            - link "Bundesgesetzblatt" [ref=e25] [cursor=pointer]:
+              - /url: /BGBl
+          - listitem [ref=e26]:
+            - link "Rechtsprechung" [ref=e27] [cursor=pointer]:
+              - /url: /gerichte
+          - listitem [ref=e28]:
+            - link "Werbefrei" [ref=e29] [cursor=pointer]:
+              - /url: /pur
+          - listitem [ref=e30]:
+            - generic [ref=e31]: neu Rechts-KI
+          - listitem
+          - listitem [ref=e33]:
+            - link "Stellenmarkt" [ref=e34] [cursor=pointer]:
+              - /url: /stellenmarkt
+          - listitem [ref=e35]:
+            - link "Merkliste" [ref=e36] [cursor=pointer]:
+              - /url: /dienste/merkliste
+          - listitem [ref=e37]:
+            - link "Verlauf" [ref=e38] [cursor=pointer]:
+              - /url: /dienste/verlauf
+          - listitem [ref=e39]:
+            - generic [ref=e40]: Benutzer
+        - generic [ref=e41]:
+          - list [ref=e43]:
+            - listitem [ref=e44]:
+              - generic [ref=e45] [cursor=pointer]: Meistgenutzte Gesetze
+            - listitem [ref=e46]:
+              - generic [ref=e47] [cursor=pointer]: Kurzübersicht
+            - listitem [ref=e48]:
+              - generic [ref=e49] [cursor=pointer]: Ausführliche Übersicht
+          - 'link "Siehe auch: Die neuesten Entscheidungen zur COVID-19-Pandemie." [ref=e56] [cursor=pointer]':
+            - /url: /corona-pandemie?s=nach_Einstelldatum#rechtsprechung
+          - list [ref=e58]:
+            - listitem [ref=e59]:
+              - generic [ref=e60] [cursor=pointer]: Alles
+            - listitem [ref=e61]:
+              - generic [ref=e62] [cursor=pointer]: Gesetze
+            - listitem [ref=e63]:
+              - generic [ref=e64] [cursor=pointer]: Rechtsprechung
+            - listitem [ref=e65]:
+              - generic [ref=e66] [cursor=pointer]: Bundesgesetzblatt
+            - listitem [ref=e67]:
+              - generic [ref=e68] [cursor=pointer]: Suchanfragen
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - generic [ref=e75] [cursor=pointer]: Neue Einträge
+            - listitem [ref=e76]:
+              - generic [ref=e77] [cursor=pointer]: Letzte Ereignisse
+            - listitem [ref=e78]:
+              - generic [ref=e79] [cursor=pointer]: Textmarker
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic: Anzeige
+      - generic [ref=e82]:
+        - complementary
+        - generic [ref=e83]:
+          - generic: Anzeige
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - heading "Rechtsprechung BGH, 22.02.2022 - VI ZR 14/21" [level=2] [ref=e86]:
+              - text: Rechtsprechung
+              - table [ref=e87]:
+                - rowgroup [ref=e88]:
+                  - row "BGH, 22.02.2022 - VI ZR 14/21" [ref=e89]:
+                    - cell [ref=e90]
+                    - cell "BGH, 22.02.2022 - VI ZR 14/21" [ref=e91]
+                    - cell [ref=e92]
+            - generic [ref=e94]:
+              - generic "Merkfunktion" [ref=e95] [cursor=pointer]:
+                - generic [ref=e97]: +
+              - generic "Weiterleiten" [ref=e98] [cursor=pointer]
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - heading "Volltextveröffentlichungen (11)" [level=4] [ref=e103]
+                - list [ref=e104]:
+                  - listitem [ref=e105]:
+                    - link "Doctrine" [ref=e106] [cursor=pointer]:
+                      - /url: https://www.doctrine.de/decisions/deudecejgnac0mkc6pq16
+                    - text: (Abodienst, kostenloses Probeabo)
+                    - paragraph
+                    - generic [ref=e107]:
+                      - text: Mit KI-Zusammenfassung und KI-Dialogfeld, um Fragen zur Entscheidung stellen.
+                      - text: Doctrine ist die neue umfassende Rechts-KI-Plattform in Kooperation mit dejure.org.
+                      - link "Mehr Informationen" [ref=e108] [cursor=pointer]:
+                        - /url: https://www.doctrine.de/?utm_source=dejure&utm_medium=rinc
+                    - paragraph
+                  - listitem [ref=e109]:
+                    - link "openjur.de" [ref=e110] [cursor=pointer]:
+                      - /url: /ext/0bd709038f2133db06cbb6ca4de2832a
+                  - listitem [ref=e111]:
+                    - link "bundesgerichtshof.de" [ref=e112] [cursor=pointer]:
+                      - /url: /ext/aef081d0802273cd9de38189921e7463
+                    - img "PDF" [ref=e113]
+                - list [ref=e114]:
+                  - link "mehr anzeigen" [ref=e116] [cursor=pointer]:
+                    - /url: "#"
+                  - listitem [ref=e117]:
+                    - link "rechtsinformationen.bund.de" [ref=e118] [cursor=pointer]:
+                      - /url: /ext/de981140588e197be530e52a6638ba3b
+                    - paragraph [ref=e119]: Beschränkung des Auskunftsrecht über die Herkunft von Daten durch datenschutzrechtlich geschützte Interessen Dritter
+                  - listitem [ref=e120]:
+                    - link "IWW" [ref=e121] [cursor=pointer]:
+                      - /url: /ext/ac352a87b833953ec9ba3e7215e9a7b8
+                  - listitem [ref=e122]:
+                    - link "JurPC" [ref=e123] [cursor=pointer]:
+                      - /url: /ext/6a0edb3d41f4ef15adf327741ec7d59c
+                    - paragraph [ref=e124]: Auskunftsrecht über die Herkunft von Daten
+                  - listitem [ref=e125]:
+                    - link "Wolters Kluwer" [ref=e126] [cursor=pointer]:
+                      - /url: /ext/4c8dc46b95c6853feb9e8d5c85052f32
+                    - paragraph [ref=e127]:
+                      - text: Beschränkung des Auskunftsrechts über die Herkunft von Daten gemäß Art.
+                      - link "15" [ref=e128] [cursor=pointer]:
+                        - /url: /gesetze/DSGVO/15.html
+                      - text: Abs. 1 Halbs. 2 lit. g DS-GVO durch datenschutzrechtlich geschützte Interessen Dritter; Auskunftsanspruch nach der Datenschutz-Grundverordnung (DS-GVO)
+                  - listitem [ref=e129]:
+                    - link "kanzlei.biz" [ref=e130] [cursor=pointer]:
+                      - /url: /ext/08bb4b4fad32a5884c5d4cc265f3bc1a
+                    - paragraph [ref=e131]: Auskunftsanspruch kann sich auch auf Hinweisgeber erstrecken
+                  - listitem [ref=e132]:
+                    - link "grundeigentum-verlag.de" [ref=e133] [cursor=pointer]:
+                      - /url: /ext/2632f8cf75b3a19e414c5167537ca83b
+                    - text: (Abodienst, Leitsatz frei)
+                    - paragraph [ref=e134]:
+                      - text: DSGVO Art.
+                      - link "15" [ref=e135] [cursor=pointer]:
+                        - /url: /gesetze/DSGVO/15.html
+                      - text: Abs. 1 Halbsatz 2 lit. g
+                      - text: Auskunftsanspruch zu Whistleblower-Mieter
+                  - listitem [ref=e136]:
+                    - link "rechtsportal.de" [ref=e137] [cursor=pointer]:
+                      - /url: /ext/a68d3f5767e6d425c4b235726710e864
+                    - text: (Abodienst, kostenloses Probeabo)
+                    - paragraph [ref=e138]: Beschränkung des Auskunftsrechts über die Herkunft von Daten gemäß Art. 15 Abs. 1 Halbs. 2 lit. g DS- GVO durch datenschutzrechtlich geschützte Interessen Dritter; Auskunftsanspruch nach der Datenschutz-Grundverordnung (DS- GVO )
+                  - listitem [ref=e139]:
+                    - link "ibr-online" [ref=e140] [cursor=pointer]:
+                      - /url: /ext/6932df65b9dea3b0f78a0d54f73fab98
+                    - text: (Abodienst, kostenloses Probeabo, Leitsatz frei)
+                    - paragraph [ref=e141]: Hat Messie Anspruch auf Nennung des "Verräters"?
+              - generic [ref=e142]:
+                - heading "Kurzfassungen/Presse (9)" [level=4] [ref=e143]
+                - list [ref=e144]:
+                  - listitem [ref=e145]:
+                    - link "lhr-law.de" [ref=e146] [cursor=pointer]:
+                      - /url: /ext/e2d62f069837752789d90d6cf413818c
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e147]: DSGVO-Auskunftsanspruch erfasst im Zweifel auch Namen eines Tippgebers, der Betroffene anschwärzt
+                  - listitem [ref=e148]:
+                    - link "beckmannundnorda.de" [ref=e149] [cursor=pointer]:
+                      - /url: /ext/ae370223deac9b0adcfb359c6a8d5e13
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e150]:
+                      - text: Auskunftsanspruch aus Art.
+                      - link "15" [ref=e151] [cursor=pointer]:
+                        - /url: /gesetze/DSGVO/15.html
+                      - text: DSGVO kann durch datenschutzrechtlich geschützte Interessen Dritter eingeschränkt sein - Abwägung des Einzelfalls
+                  - listitem [ref=e152]:
+                    - link "beck-aktuell.de" [ref=e153] [cursor=pointer]:
+                      - /url: /ext/c9dca67cf1e756dcf47d370d6f2ef423
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e154]: Datenschutzrechtliches Auskunftsrecht bei Behauptungen Dritter - Datenschutzrechtliches Auskunftsrecht bei Behauptungen Dritter
+                - list [ref=e155]:
+                  - link "mehr anzeigen" [ref=e157] [cursor=pointer]:
+                    - /url: "#"
+                  - listitem [ref=e158]:
+                    - link "haufe.de" [ref=e159] [cursor=pointer]:
+                      - /url: /ext/b98b1caea0b1e86e08850a5af5d1b039
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e160]: Vermieter müssen Hinweisgeber bei Mieterbeschwerde unter Umständen preisgeben
+                  - listitem [ref=e161]:
+                    - link "dr-bahr.com" [ref=e162] [cursor=pointer]:
+                      - /url: /ext/de7bf3154db948de3ebd9cc5316fa222
+                    - text: (Kurzinformation und Auszüge)
+                    - paragraph [ref=e163]: DSGVO-Auskunftsanspruch erfasst im Zweifel auch Namen eines Tippgebers, der Betroffene anschwärzt
+                  - listitem [ref=e164]:
+                    - link "wbs.legal" [ref=e165] [cursor=pointer]:
+                      - /url: /ext/08d7770f21262cd7319d08d017cca51c
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e166]: Auskunftsrecht - Mieter dürfen wissen, wer sich beschwert
+                  - listitem [ref=e167]:
+                    - link "anwalt.de" [ref=e168] [cursor=pointer]:
+                      - /url: /ext/44d04c12f5c9f608647971644daf3b57
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e169]: "Nachbarbeschwerde: Habe ich ein Recht zu erfahren, wer sich über mich beschwert hat?"
+                  - listitem [ref=e170]:
+                    - link "juraforum.de" [ref=e171] [cursor=pointer]:
+                      - /url: /ext/82f1009bbc5aaaf5ebfa11d3d7b549d3
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e172]: Anschwärzen eines Nachbarn muss nicht anonym bleiben
+                  - listitem [ref=e173]:
+                    - link "datenbank.nwb.de" [ref=e174] [cursor=pointer]:
+                      - /url: /ext/a7847becf8ebcd591038a2d2cc1434ce
+                    - text: (Kurzinformation)
+                    - paragraph [ref=e175]: Auskunftsrecht über die Herkunft von Daten
+              - generic [ref=e176]:
+                - heading "Besprechungen u.ä. (2)" [level=4] [ref=e177]
+                - list [ref=e178]:
+                  - listitem [ref=e179]:
+                    - link "ibr-online" [ref=e180] [cursor=pointer]:
+                      - /url: /ext/cbe09506249332d02a8b908d1976a99b
+                    - text: (Abodienst, kostenloses Probeabo) (Entscheidungsbesprechung)
+                    - paragraph [ref=e181]: "Mieter wird \"angeschwärzt\": Hat er Anspruch auf Nennung des Hinweisgebers? (IMR 2022, 176)"
+                  - listitem [ref=e182]:
+                    - link "ibr-online" [ref=e183] [cursor=pointer]:
+                      - /url: /ext/cbe09506249332d02a8b908d1976a99b
+                    - text: (Entscheidungsbesprechung)
+                    - paragraph [ref=e185]: Anspruch auf Benennung des Hinweisgebers im Rahmen eines Auskunftsanspruchs (IVR 2022, 119)
+              - generic [ref=e186]:
+                - generic "Titel anzeigen/verstecken" [ref=e188] [cursor=pointer]:
+                  - text: Titel aus
+                  - text: an
+                - heading "Verfahrensgang" [level=4] [ref=e191]
+                - list [ref=e192]:
+                  - listitem [ref=e193]:
+                    - link "LG Ravensburg, 06.03.2020 - 2 O 363/19" [ref=e194] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=LG Ravensburg&Datum=06.03.2020&Aktenzeichen=2 O 363/19
+                  - listitem [ref=e195]:
+                    - link "OLG Stuttgart, 10.12.2020 - 13 U 278/20" [ref=e196] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=OLG Stuttgart&Datum=10.12.2020&Aktenzeichen=13 U 278/20
+                  - listitem [ref=e197]: BGH, 22.02.2022 - VI ZR 14/21
+              - generic [ref=e198]:
+                - heading "Papierfundstellen" [level=4] [ref=e199]
+                - list [ref=e200]:
+                  - listitem [ref=e201]: NJW-RR 2022, 764
+                  - listitem [ref=e202]: MDR 2022, 639
+                  - listitem [ref=e203]: NZM 2022, 552
+                  - listitem [ref=e204]: VersR 2022, 639
+              - generic [ref=e205]:
+                - generic [ref=e206]:
+                  - generic "Sortierung nach Datum/Relevanz" [ref=e207] [cursor=pointer]:
+                    - text: nach Datum
+                    - text: nach Relevanz
+                  - generic [ref=e210]: "?"
+                - heading "Wird zitiert von ... (17) Zitiert selbst (14)" [level=4] [ref=e212]:
+                  - generic [ref=e213]:
+                    - text: Wird zitiert von
+                    - generic [ref=e214]: ...
+                    - generic [ref=e215]: (17)
+                  - generic [ref=e216]:
+                    - text: Zitiert selbst
+                    - generic [ref=e217]: (14)
+                - list [ref=e218]:
+                  - button "alle Zitatstellen anzeigen" [ref=e220] [cursor=pointer]: alle Zitatstellen anzeigen
+                  - listitem [ref=e222]:
+                    - link "BVerwG, 30.11.2022 - 6 C 10.21" [ref=e223] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=BVerwG&Datum=30.11.2022&Aktenzeichen=6 C 10.21
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e224] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e225]: Datenschutzrecht gibt Anspruch auf unentgeltliche Kopien von Prüfungsarbeiten der …
+                  - listitem [ref=e226]:
+                    - link "ArbG Bonn, 13.08.2025 - 2 Ca 2382/24" [ref=e227] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=ArbG Bonn&Datum=13.08.2025&Aktenzeichen=2 Ca 2382/24
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e228] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - listitem [ref=e229]:
+                    - link "VG Bayreuth, 17.01.2024 - B 6 K 23.133" [ref=e230] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=VG Bayreuth&Datum=17.01.2024&Aktenzeichen=B 6 K 23.133
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e231] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e232]: Auskunftsanspruch hinsichtlich Herkunft der Daten, behördlicher Hinweisgeber, …
+                - list [ref=e233]:
+                  - link "mehr anzeigen" [ref=e235] [cursor=pointer]:
+                    - /url: "#"
+                  - listitem [ref=e236]:
+                    - link "OVG Berlin-Brandenburg, 13.05.2025 - 12 B 14.23" [ref=e237] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=OVG Berlin-Brandenburg&Datum=13.05.2025&Aktenzeichen=12 B 14.23
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e238] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e239]: Kein Rechtsanspruch auf Herausgabe von Videoaufnahmen in der S-Bahn
+                  - listitem [ref=e240]:
+                    - link "LAG Berlin-Brandenburg, 30.03.2023 - 5 Sa 1046/22" [ref=e241] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=LAG Berlin-Brandenburg&Datum=30.03.2023&Aktenzeichen=5 Sa 1046/22
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e242] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e243]: Anspruch auf Zurverfügungstellung von Datenkopien nach Art 15 EUV 2016/679 - …
+                  - listitem [ref=e244]:
+                    - link "BGH, 18.12.2025 - I ZR 115/25" [ref=e245] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=BGH&Datum=18.12.2025&Aktenzeichen=I ZR 115/25
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e246] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e247]: Auskunftsanspruch gegen Versicherer über den Versicherungsverlauf aus …
+                  - listitem [ref=e248]:
+                    - link "BFH, 15.07.2025 - IX R 25/24" [ref=e249] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=BFH&Datum=15.07.2025&Aktenzeichen=IX R 25/24
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e250] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e251]: Akteneinsicht und Auskunft über den Inhalt einer anonymen Anzeige
+                  - listitem [ref=e252]:
+                    - link "BFH, 08.04.2025 - IX R 22/22" [ref=e253] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=BFH&Datum=08.04.2025&Aktenzeichen=IX R 22/22
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e254] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e255]: Umfang des Auskunftsanspruchs nach Art. 15 DSGVO gegenüber dem Finanzamt
+                  - listitem [ref=e256]:
+                    - link "ArbG Dortmund, 16.08.2024 - 10 Ca 754/24" [ref=e257] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=ArbG Dortmund&Datum=16.08.2024&Aktenzeichen=10 Ca 754/24
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e258] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - listitem [ref=e259]:
+                    - link "VG Düsseldorf, 28.02.2024 - 29 K 6009/21" [ref=e260] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=VG Düsseldorf&Datum=28.02.2024&Aktenzeichen=29 K 6009/21
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e261] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e262]: Sozialgeheimnis, Umgangsprotokolle, Jugendamt, Auskunftsanspruch
+                  - listitem [ref=e263]:
+                    - link "OLG Köln, 17.11.2022 - 15 U 159/21" [ref=e264] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=OLG Köln&Datum=17.11.2022&Aktenzeichen=15 U 159/21
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e265] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - listitem [ref=e266]:
+                    - link "VG Berlin, 09.10.2025 - 1 K 463.22" [ref=e267] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=VG Berlin&Datum=09.10.2025&Aktenzeichen=1 K 463.22
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e268] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - listitem [ref=e269]:
+                    - link "OLG Köln, 13.06.2025 - 20 U 176/24" [ref=e270] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=OLG Köln&Datum=13.06.2025&Aktenzeichen=20 U 176/24
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e271] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e272]: Beitragsanpassung; Prämienanpassung; Krankenversicherung; personenbezogene Daten; …
+                  - listitem [ref=e273]:
+                    - link "OLG Frankfurt, 10.12.2024 - 18 U 63/23" [ref=e274] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=OLG Frankfurt&Datum=10.12.2024&Aktenzeichen=18 U 63/23
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e275] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e276]: "Private Krankenversicherung: Auskunftsanspruch des Versicherungsnehmers"
+                  - listitem [ref=e277]:
+                    - link "KG, 12.12.2023 - 10 U 150/21" [ref=e278] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=KG&Datum=12.12.2023&Aktenzeichen=10 U 150/21
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e279] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                  - listitem [ref=e280]:
+                    - link "LG Nürnberg-Fürth, 20.02.2025 - 6 O 1485/24" [ref=e281] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=LG Nürnberg-Fürth&Datum=20.02.2025&Aktenzeichen=6 O 1485/24
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e282] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e283]: Datenschutzgrundverordnung, Auskunftserteilung, Sachlicher Anwendungsbereich, …
+                  - listitem [ref=e284]:
+                    - link "LG Düsseldorf, 11.01.2023 - 12 O 71/21" [ref=e285] [cursor=pointer]:
+                      - /url: /dienste/vernetzung/rechtsprechung?Gericht=LG Düsseldorf&Datum=11.01.2023&Aktenzeichen=12 O 71/21
+                    - link "Hier klicken, um die Kontextvorschau aufzuklappen; doppelt klicken, damit dies für die ganze Liste gilt" [ref=e286] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - paragraph [ref=e287]: "Blogger kritisiert Finanzprodukt: Anspruch auf Unterlassung wegen unwahrer …"
+              - text: ×
+            - generic [ref=e289]:
+              - text: Haben Sie eine Ergänzung? Oder haben Sie einen Fehler gefunden?
+              - link "Schreiben Sie uns." [ref=e290] [cursor=pointer]:
+                - /url: mailto:redaktion@dejure.org?subject=BGH%2C%2022.02.2022%20-%20VI%20ZR%2014%2F21&body=Hallo%2C%0D%0A%0D%0Ahier%20ein%20Hinweis%20zu%20https%3A%2F%2Fdejure.org%2F2022%2C6153%20%28BGH%2C%2022.02.2022%20-%20VI%20ZR%2014%2F21%29%3A%0D%0A%0D%0A%0D%0A%0D%0AMfG%0D%0A
+          - generic [ref=e295]:
+            - link "Titelseite" [ref=e296] [cursor=pointer]:
+              - /url: /
+            - link "Übersicht BGH" [ref=e297] [cursor=pointer]:
+              - /url: /dienste/rechtsprechung?gericht=BGH
+            - text: ×
+            - generic [ref=e298] [cursor=pointer]: Externe Links in einem neuem Tab öffnen lassen
+  - generic [ref=e303]:
+    - generic [ref=e304]:
+      - text: Was ist dejure.org?
+      - link "· Gesetze und Rechtsprechung" [ref=e305] [cursor=pointer]:
+        - /url: /verzahnung
+      - link "· AGB & Datenschutzerklärung" [ref=e306] [cursor=pointer]:
+        - /url: /agb_datenschutz
+      - link "· Kontakt/Impressum" [ref=e307] [cursor=pointer]:
+        - /url: /impressum
+      - link "· Datenschutzeinstellungen" [ref=e308] [cursor=pointer]:
+        - /url: javascript:void(0);
+    - generic [ref=e309]:
+      - text: Funktionen/Sonderseiten
+      - link "· Wird-zitiert-von" [ref=e310] [cursor=pointer]:
+        - /url: /wird-zitiert-von
+      - link "· Merkfunktion" [ref=e311] [cursor=pointer]:
+        - /url: /merkfunktion
+      - link "· \"Lesefreundlicher\"" [ref=e312] [cursor=pointer]:
+        - /url: /lesefreundlicher
+      - link "· Vertrag kündigen" [ref=e313] [cursor=pointer]:
+        - /url: /vertrag-kuendigen/pur
+    - generic [ref=e314]:
+      - link "· Stellenmarkt" [ref=e315] [cursor=pointer]:
+        - /url: /stellenmarkt
+      - link "· Zitierfunktion" [ref=e316] [cursor=pointer]:
+        - /url: /zitiervorschlaege
+      - link "· Erweiterung Multi-Suche" [ref=e317] [cursor=pointer]:
+        - /url: /multi_suche
+      - link "· Vertrag widerrufen" [ref=e318] [cursor=pointer]:
+        - /url: /vertrag-widerrufen/pur
+    - generic [ref=e319]:
+      - link "· COVID-19-Übersichten" [ref=e320] [cursor=pointer]:
+        - /url: /corona-pandemie
+      - link "· Vernetzungsfunktion" [ref=e321] [cursor=pointer]:
+        - /url: /vernetzung.html
+      - link "· Rechtsfenster" [ref=e322] [cursor=pointer]:
+        - /url: /rechtsfenster
