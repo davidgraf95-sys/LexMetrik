@@ -14,18 +14,26 @@
       "datum": "2025-05-09",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "prozess",
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterin Koch, Bundesrichter Kölz, Gerichtsschreiber Caprara.",
+        "parteien": "A.________, Beschwerdeführer, gegen Departement Volkswirtschaft und Inneres, Amt für Justizvollzug, Bahnhofplatz 3c, 5001 Aarau, Beschwerdegegner.",
+        "gegenstand": "Disziplinarmassnahme; unentgeltliche Rechtspflege,",
+        "vorinstanz": "das Urteil des Verwaltungsgerichts des Kantons Aargau, 2. Kammer, vom 13. August 2024 (WBE.2024.40/nw/we)."
+      },
       "regeste": {
         "text": "Disziplinarmassnahme; unentgeltliche Rechtspflege",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ befand sich zwischen April und November 2023 im Rahmen des Vollzugs einer Freiheitsstrafe in der Justizvollzugsanstalt (JVA) Lenzburg. Mit Disziplinarverfügung vom 11. Oktober 2023 der Direktion der JVA Lenzburg wurde A.________ mit fünf Tagen Arrest belegt, weil er einen Vollzugsmitarbeitenden als \"Pfeife\" bezeichnet und anschliessend gedroht habe, diesen bei der nächsten Begegnung zu würgen. Einer allfälligen Beschwerde wurde die aufschiebende Wirkung entzogen. Der Arrest wurde im Oktober 2023 vollzogen. B. Dagegen erhob A.________ Beschwerde beim Departement für Volkswirtschaft und Inneres (DVI), Amt für Justizvollzug, des Kantons Aargau. Mit Entscheid vom 24. November 2023 wies das DVI die Beschwerde und das Gesuch um unentgeltliche Rechtspflege ab, auferlegte A.________ die Verfahrenskosten und richtete keine Parteientschädigung aus. Mit Urteil vom 13. August 2024 wies das Verwaltungsgericht des Kantons Aargau die von A.________ dagegen erhobene Beschwerde ab, soweit…"
+              "text": "A.\n\nA.________ befand sich zwischen April und November 2023 im Rahmen des Vollzugs einer Freiheitsstrafe in der Justizvollzugsanstalt (JVA) Lenzburg.\n\nMit Disziplinarverfügung vom 11. Oktober 2023 der Direktion der JVA Lenzburg wurde A.________ mit fünf Tagen Arrest belegt, weil er einen Vollzugsmitarbeitenden als \"Pfeife\" bezeichnet und anschliessend gedroht habe, diesen bei der nächsten Begegnung zu würgen. Einer allfälligen Beschwerde wurde die aufschiebende Wirkung entzogen. Der Arrest wurde im Oktober 2023 vollzogen.\n\nB.\n\nDagegen erhob A.________ Beschwerde beim Departement für Volkswirtschaft und Inneres (DVI), Amt für Justizvollzug, des Kantons Aargau. Mit Entscheid vom 24. November 2023 wies das DVI die Beschwerde und das Gesuch um unentgeltliche Rechtspflege ab, auferlegte A.________ die Verfahrenskosten und richtete keine Parteientschädigung aus.\n\nMit Urteil vom 13. August 2024 wies das Verwaltungsgericht des Kantons Aargau die von A.________ dagegen erhobene Beschwerde ab, soweit es darauf eintrat. Das Gesuch um unentgeltliche Rechtspflege wies das Verwaltungsgericht ebenfalls ab. Die Verfahrenskosten auferlegte es A.________.\n\nC.\n\nDagegen gelangt A.________ mit \"Bundesgerichtsbeschwerde\" an das Bundesgericht. Er beantragt, der Beschluss [recte: das Urteil] des Verwaltungsgerichts des Kantons Aargau vom 13. August 2024 sei aufzuheben und die Disziplinarverfügung sei \"zu kassieren\". Eventualiter sei der Beschluss [recte: das Urteil] aufzuheben und [die Sache] zur neuen Entscheidung an die Vorinstanz zurückzuweisen. In verfahrensrechtlicher Hinsicht ersucht er für das bundesgerichtliche Verfahren um Gewährung der unentgeltlichen Rechtspflege und um Verbeiständung durch Rechtskonsulent B.________ oder durch einen von diesem bezeichneten Anwalt.\n\nDas Bundesgericht hat die kantonalen Akten beigezogen, jedoch keine Vernehmlassung zur Beschwerde eingeholt."
             }
           ]
         },
@@ -118,8 +126,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird abgewiesen."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 1'200.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Aargau, 2. Kammer, und der Justizvollzugsanstalt Lenzburg schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird. 2. Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird abgewiesen. 3. Die Gerichtskosten von Fr. 1'200.-- werden dem Beschwerdeführer auferlegt. 4. Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Aargau, 2. Kammer, und der Justizvollzugsanstalt Lenzburg schriftlich mitgeteilt. Lausanne, 9. Mai 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Der Gerichtsschreiber: Caprara"
+              "text": "Lausanne, 9. Mai 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Der Gerichtsschreiber: Caprara"
             }
           ]
         }
@@ -182,7 +206,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://09-05-2025-7B_989-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "3ab567c834d5b04686b7d391123f69e035f7d97ea5e9235d7d14e20d7418ca72",
-      "sha": "d3aa498fa2990b0608ea01d2153add923b4bf73dd2fe9a7b3af392e729e8f8a2"
+      "sha": "fdb920dfe26554abe7f4a08a72f3aa3379399edbf4cf47c1143ca1568e8840c6"
     }
   ]
 }

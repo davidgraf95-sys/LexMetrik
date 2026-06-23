@@ -14,18 +14,26 @@
       "datum": "2025-10-10",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "schkg",
+      "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichter Bovey, Präsident, Gerichtsschreiber Möckli.",
+        "parteien": "A.________, Beschwerdeführer, gegen Betreibungsamt Basel-Landschaft, Eichenweg 12, Postfach, 4410 Liestal.",
+        "gegenstand": "Konkursandrohung,",
+        "vorinstanz": "den Entscheid der Aufsichtsbehörde Schuldbetreibung und Konkurs Basel-Landschaft vom 23. September 2025 (420 25 175)."
+      },
       "regeste": {
         "text": "Konkursandrohung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "Am 31. März 2025 erliess das Betreibungsamt Basel-Landschaft in der Betreibung Nr. xxx den Zahlungsbefehl und stellte diesen dem Beschwerdeführer am 2. April 2025 zu. Nach Eingang des Fortsetzungsbegehrens erliess das Betreibungsamt am 1. Juli 2025 die Konkursandrohung und stellte diese am 4. Juli 2025 dem Beschwerdeführer zu. Die hiergegen erhobene Beschwerde wies die Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Basel-Landschaft mit Entscheid vom 23. September 2025 ab, soweit sie darauf eintrat. Mit Eingabe vom 6. Oktober 2025 wendet sich der Beschwerdeführer an das Bundesgericht mit den Begehren um Aufhebung des Entscheides der Aufsichtsbehörde wegen Parteilichkeit und Gesetzeswidrigkeit sowie um Ungültigerklärung der Konkursandrohung, da er seit mehr als sechs Monaten im Handelsregister gelöscht sei. Ferner verlangt er, die wichtigen zusätzlichen Beweismittel seien zu akzeptieren und er sei mit Fr. 2'400.-- zu entschädigen."
+              "text": "Am 31. März 2025 erliess das Betreibungsamt Basel-Landschaft in der Betreibung Nr. xxx den Zahlungsbefehl und stellte diesen dem Beschwerdeführer am 2. April 2025 zu. Nach Eingang des Fortsetzungsbegehrens erliess das Betreibungsamt am 1. Juli 2025 die Konkursandrohung und stellte diese am 4. Juli 2025 dem Beschwerdeführer zu. Die hiergegen erhobene Beschwerde wies die Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Basel-Landschaft mit Entscheid vom 23. September 2025 ab, soweit sie darauf eintrat.\n\nMit Eingabe vom 6. Oktober 2025 wendet sich der Beschwerdeführer an das Bundesgericht mit den Begehren um Aufhebung des Entscheides der Aufsichtsbehörde wegen Parteilichkeit und Gesetzeswidrigkeit sowie um Ungültigerklärung der Konkursandrohung, da er seit mehr als sechs Monaten im Handelsregister gelöscht sei. Ferner verlangt er, die wichtigen zusätzlichen Beweismittel seien zu akzeptieren und er sei mit Fr. 2'400.-- zu entschädigen."
             }
           ]
         },
@@ -68,8 +76,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 1'000.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, dem Betreibungsamt Basel-Landschaft und der Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Basel-Landschaft mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde wird nicht eingetreten. 2. Die Gerichtskosten von Fr. 1'000.-- werden dem Beschwerdeführer auferlegt. 3. Dieses Urteil wird dem Beschwerdeführer, dem Betreibungsamt Basel-Landschaft und der Aufsichtsbehörde für Schuldbetreibung und Konkurs des Kantons Basel-Landschaft mitgeteilt. Lausanne, 10. Oktober 2025 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Der Gerichtsschreiber: Möckli"
+              "text": "Lausanne, 10. Oktober 2025 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Der Gerichtsschreiber: Möckli"
             }
           ]
         }
@@ -104,7 +124,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-10-2025-5A_863-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "b87d76d41f6e32f7ff1a13185e6381cacf1c0acdc022ee17186199ff2dea94d5",
-      "sha": "2d0cdc0a482c6b186ff36a51d442a4511dccc633084fd2d28a0fb91b3123e88b"
+      "sha": "4e742cbdffd8548b22d31983b5624a39dafa05cf4b78dd29de84b0f346340098"
     }
   ]
 }

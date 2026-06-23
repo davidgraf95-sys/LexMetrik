@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichter Kneubühler, Präsident, Bundesrichter Haag, Merz, Gerichtsschreiber Dold.",
+        "parteien": "1. A.________, 2. B.________, 3. C.________, alle drei vertreten durch Rechtsanwalt Pascal Engelberger, Beschwerdeführer, gegen D.________ AG, vertreten durch Rechtsanwalt Armin Durrer, Beschwerdegegnerin, Gemeinderat Stans, Stansstaderstrasse 18, Postfach 442, 6371 Stans, vertreten durch Rechtsanwältin Marlène Bernardi, Regierungsrat des Kantons Nidwalden, vertreten durch den Rechtsdienst, Dorfplatz 2, 6370 Stans.",
+        "gegenstand": "Neubau Lagerung und Aufbereitung von mineralischen Stoffen mit Ausbau der Zufahrtsstrasse,",
+        "vorinstanz": "den Entscheid des Verwaltungsgerichts des Kantons Nidwalden, Verwaltungsabteilung, vom 14. September 2020 (VA 19 26)."
+      },
       "regeste": {
         "text": "Neubau Lagerung und Aufbereitung von mineralischen Stoffen mit Ausbau der Zufahrstrasse",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Am 21. Juni 2016 stellte die D.________ AG bei der Gemeinde Stans ein Baugesuch für die Erstellung einer Anlage zur Lagerung und Aufbereitung von mineralischen Stoffen auf der Parzelle Nr. 877 und den Ausbau der Zufahrtsstrasse auf den Parzellen Nrn. 350 und 44 in Stans. Der geplante Ausbau der Zufahrtsstrasse betrifft ausserhalb der Bauzone gelegenes Land. Das Baugesuch wurde im Amtsblatt Nr. 26 vom 29. Juni 2016 publiziert. Dagegen erhoben mehrere Personen, darunter A.________, B.________ und C.________ sowie E.________ Einwendung. Am 16. April 2018 erteilte der Gemeinderat von Stans die Baubewilligung unter Bedingungen und Auflagen und eröffnete gleichzeitig den kantonalen Gesamtbewilligungsentscheid vom 29. November 2016 und die kantonale Ausnahmebewilligung vom 18. Mai 2017 für Bauvorhaben ausserhalb der Bauzone. Mit separaten Beschlüssen vom gleichen Tag wies er zudem die Einwendungen ab. In der Folge erhoben A.________, B.________ und C.________ sowie E.________ Beschwerde be…"
+              "text": "A. Am 21. Juni 2016 stellte die D.________ AG bei der Gemeinde Stans ein Baugesuch für die Erstellung einer Anlage zur Lagerung und Aufbereitung von mineralischen Stoffen auf der Parzelle Nr. 877 und den Ausbau der Zufahrtsstrasse auf den Parzellen Nrn. 350 und 44 in Stans. Der geplante Ausbau der Zufahrtsstrasse betrifft ausserhalb der Bauzone gelegenes Land. Das Baugesuch wurde im Amtsblatt Nr. 26 vom 29. Juni 2016 publiziert. Dagegen erhoben mehrere Personen, darunter A.________, B.________ und C.________ sowie E.________ Einwendung. Am 16. April 2018 erteilte der Gemeinderat von Stans die Baubewilligung unter Bedingungen und Auflagen und eröffnete gleichzeitig den kantonalen Gesamtbewilligungsentscheid vom 29. November 2016 und die kantonale Ausnahmebewilligung vom 18. Mai 2017 für Bauvorhaben ausserhalb der Bauzone. Mit separaten Beschlüssen vom gleichen Tag wies er zudem die Einwendungen ab. In der Folge erhoben A.________, B.________ und C.________ sowie E.________ Beschwerde beim Regierungsrat des Kantons Nidwalden. Mit Beschluss vom 11. November 2019 wies der Regierungsrat das Rechtsmittel ab. Eine von den genannten Personen dagegen beim Verwaltungsgericht des Kantons Nidwalden eingelegte Beschwerde wies dieses mit Entscheid vom 14. September 2020 ebenfalls ab, soweit es darauf eintrat. B. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten ans Bundesgericht vom 18. März 2021 beantragen A.________ sowie B.________ und C.________, es sei festzustellen, dass die Baubewilligung nichtig sei. Eventualiter sei der Entscheid des Verwaltungsgerichts, der kommunale Baubewilligungs- und Einwendungsentscheid sowie die kantonale Ausnahmebewilligung aufzuheben. Subeventualiter sei die Angelegenheit zur Ergänzung des Sachverhalts und Neubeurteilung an die Baubewilligungsbehörde zurückzuweisen, subsubeventualiter an das Verwaltungsgericht. Eventualiter sei festzustellen, dass die durch den Gemeinderat in sämtlichen Einwendungsentscheiden festgelegte Kosten- und Parteientschädigungspflicht unwirksam sei, bzw. seien die diesbezüglichen Kostenentscheide aufzuheben. Das Verwaltungsgericht verzichtet auf eine Stellungnahme und verweist auf den angefochtenen Entscheid. Der Regierungsrat beantragt, die Beschwerde abzuweisen, soweit darauf einzutreten sei. Eventualiter seien die Ziffern 2 und 3 des Beschlusses des Gemeinderats vom 16. April 2018 aufzuheben und die amtlichen Kosten des Einwendungsverfahrens der Baugesuchstellerin zu überbinden. Die Beschwerdegegnerin beantragt, die Beschwerde sei abzuweisen, soweit darauf einzutreten sei. Der Gemeinderat schliesst auf Abweisung der Beschwerde. Das Bundesamt für Raumentwicklung (ARE) verzichtet auf eine Stellungnahme. Das Bundesamt für Umwelt (BAFU) erachtet den angefochtenen Entscheid als konform mit dem Umweltrecht des Bundes. Die Beschwerdeführer halten in ihrer Replik an ihren Anträgen fest, ebenso die Beschwerdegegnerin in ihrer Duplik."
             }
           ]
         },
@@ -123,8 +131,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen, soweit darauf einzutreten ist, und der Entscheid des Verwaltungsgerichts des Kantons Nidwalden vom 14. September 2020 aufgehoben."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 4'000.-- werden der Beschwerdegegnerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdegegnerin hat die Beschwerdeführer mit Fr. 3'000.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien, dem Gemeinderat Stans, dem Regierungsrat des Kantons Nidwalden, dem Verwaltungsgericht des Kantons Nidwalden, Verwaltungsabteilung, dem Bundesamt für Raumentwicklung und dem Bundesamt für Umwelt schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird gutgeheissen, soweit darauf einzutreten ist, und der Entscheid des Verwaltungsgerichts des Kantons Nidwalden vom 14. September 2020 aufgehoben. 2. Die Gerichtskosten von Fr. 4'000.-- werden der Beschwerdegegnerin auferlegt. 3. Die Beschwerdegegnerin hat die Beschwerdeführer mit Fr. 3'000.-- zu entschädigen. 4. Dieses Urteil wird den Parteien, dem Gemeinderat Stans, dem Regierungsrat des Kantons Nidwalden, dem Verwaltungsgericht des Kantons Nidwalden, Verwaltungsabteilung, dem Bundesamt für Raumentwicklung und dem Bundesamt für Umwelt schriftlich mitgeteilt. Lausanne, 2. Mai 2022 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Kneubühler Der Gerichtsschreiber: Dold"
+              "text": "Lausanne, 2. Mai 2022 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Kneubühler Der Gerichtsschreiber: Dold"
             }
           ]
         }
@@ -156,7 +180,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=7&from_date=01.05.2022&to_date=04.05.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=70&azaclir=aza&highlight_docid=aza%3A%2F%2F02-05-2022-1C_141-2021&number_of_ranks=90",
       "abgerufen": "2026-06-23",
       "fassungsToken": "6aaa72107aefede2e39dcb9944f062a986e1f81062211e33f89865771fe331c5",
-      "sha": "110e8138cbf776f93b823995ee1247e1e103184313c5868c1f9680f702f66204"
+      "sha": "46e9239fad660bef3717e5e0555be5d3ac5e284b1baf116096702fd863a2c385"
     }
   ]
 }

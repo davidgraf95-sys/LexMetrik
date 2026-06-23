@@ -33,6 +33,8 @@ export interface EntscheidBlock {
 
 export interface EntscheidAbschnitt {
   typ: Abschnittstyp;
+  /** false ⇒ Inhalt ist nur ein Auszug (z.B. Sachverhalt-Kappung); UI labelt „Auszug". */
+  vollstaendig?: boolean;
   bloecke: EntscheidBlock[];
 }
 
@@ -40,6 +42,17 @@ export interface EntscheidAbschnitt {
 export interface EntscheidRegeste {
   text: string;
   quelle: Entscheidquelle;
+}
+
+/**
+ * Rubrum/Kopf eines Entscheids (Art. 112 Abs. 1 BGG): Spruchkörper, Parteien,
+ * Gegenstand, Vorinstanz. Aus dem full_text extrahiert; Felder optional (best-effort).
+ */
+export interface EntscheidRubrum {
+  besetzung?: string | null;   // „Bundesrichter Bovey, Präsident, Gerichtsschreiber Zingg"
+  parteien?: string | null;    // „A. … (Beschwerdeführer) gegen B. … (Beschwerdegegner)"
+  gegenstand?: string | null;  // „Konkurseröffnung"
+  vorinstanz?: string | null;  // „Obergericht Appenzell Ausserrhoden, Urteil vom 7. Mai 2026"
 }
 
 // Ein Snapshot = genau EIN Entscheid, mit Provenienz.
@@ -63,7 +76,10 @@ export interface EntscheidSnapshot {
   sachgebiet: Rechtsgebiet;
 
   // ── Inhalt ──
-  regeste: EntscheidRegeste | null;  // null bei Urteilen ohne amtliche Regeste (legitim)
+  rubrum: EntscheidRubrum | null;    // Spruchkörper/Parteien/Gegenstand/Vorinstanz (Art. 112 BGG)
+  regeste: EntscheidRegeste | null;  // null bei Urteilen ohne (amtliche) Regeste
+  /** true nur beim amtlich publizierten BGE; sonst maschinelle Zusammenfassung. */
+  regesteAmtlich: boolean;
   abschnitte: EntscheidAbschnitt[];  // sachverhalt / erwaegung / dispositiv
   dispositivOrders: string[];
 

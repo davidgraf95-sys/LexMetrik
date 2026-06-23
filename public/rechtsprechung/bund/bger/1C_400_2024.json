@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichter Haag, Präsident, Bundesrichter Müller, Merz, Gerichtsschreiberin Dillier.",
+        "parteien": "A.________, Beschwerdeführer, vertreten durch Rechtsanwalt Dr. Stefan Rieder, gegen Generalstaatsanwaltschaft des Kantons Thurgau, Maurerstrasse 8, 8510 Frauenfeld, vertreten durch das Departement für Justiz und Sicherheit des Kantons Thurgau, Generalsekretariat, Regierungsgebäude, 8510 Frauenfeld, Personalrekurskommission des Kantons Thurgau, Konstanzerstrasse 13, 8280 Kreuzlingen.",
+        "gegenstand": "Öffentliches Personalrecht; Arbeitszeugnis,",
+        "vorinstanz": "den Entscheid des Verwaltungsgerichts des Kantons Thurgau vom 27. März 2024 (VG.2023.63/E)."
+      },
       "regeste": {
         "text": "Öffentliches Personalrecht; Arbeitszeugnis",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ war vom 15. September 2013 bis 31. Oktober 2021 als Staatsanwalt mit besonderen Aufgaben (mbA) bei der Generalstaatsanwaltschaft des Kantons Thurgau tätig. Im Hinblick auf die bevorstehende Pensionierung seines damaligen Vorgesetzten, Generalstaatsanwalt B.________, stellte ihm dieser am 31. Mai 2018 ein Zwischenzeugnis aus. Am 23. Juni 2021 kündigte A.________ das Arbeitsverhältnis auf den 30. September 2021. Aufgrund seiner Befassung mit dem Straffall \"C.________\" und mit Blick auf die bevorstehenden Rechtsmittelverfahren erklärte er sich bereit, das Arbeitsverhältnis zumindest in einem Teilpensum noch weiterzuführen. Nachdem sich dies mit der neuen Tätigkeit von A.________ als Präsident der Kinder- und Erwachsenenschutzbehörde U.________ als teilweise unvereinbar erwiesen hatte, stimmte der Regierungsrat des Kantons Thurgau am 16. November 2021 dessen Entlassung aus dem Amt als Staatsanwalt mbA rückwirkend per 31. Oktober 2021 zu. Auf Ersuchen von A.________ stellte de…"
+              "text": "A.\n\nA.________ war vom 15. September 2013 bis 31. Oktober 2021 als Staatsanwalt mit besonderen Aufgaben (mbA) bei der Generalstaatsanwaltschaft des Kantons Thurgau tätig. Im Hinblick auf die bevorstehende Pensionierung seines damaligen Vorgesetzten, Generalstaatsanwalt B.________, stellte ihm dieser am 31. Mai 2018 ein Zwischenzeugnis aus. Am 23. Juni 2021 kündigte A.________ das Arbeitsverhältnis auf den 30. September 2021. Aufgrund seiner Befassung mit dem Straffall \"C.________\" und mit Blick auf die bevorstehenden Rechtsmittelverfahren erklärte er sich bereit, das Arbeitsverhältnis zumindest in einem Teilpensum noch weiterzuführen. Nachdem sich dies mit der neuen Tätigkeit von A.________ als Präsident der Kinder- und Erwachsenenschutzbehörde U.________ als teilweise unvereinbar erwiesen hatte, stimmte der Regierungsrat des Kantons Thurgau am 16. November 2021 dessen Entlassung aus dem Amt als Staatsanwalt mbA rückwirkend per 31. Oktober 2021 zu.\n\nAuf Ersuchen von A.________ stellte der Generalstaatsanwalt ihm am 18. Juli 2022 ein Arbeitszeugnis aus. Nachdem A.________ verschiedene Änderungsvorschläge unterbreitet hatte, erklärte sich die Generalstaatsanwaltschaft nur teilweise mit den Anpassungen einverstanden. Zusammen mit dem Entscheid vom 5. September 2022 betreffend \"Abweisung Zeugnisänderungsantrag\" stellte die Generalstaatsanwaltschaft A.________ das definitive Arbeitszeugnis (datiert vom 31. Oktober 2021) zu.\n\nB.\n\nDen dagegen erhobenen Rekurs von A.________ wies die Personalrekurskommission des Kantons Thurgau mit Entscheid vom 10. März 2023 ab. Das Verwaltungsgericht des Kantons Thurgau wies die dagegen erhobene Beschwerde mit Urteil vom 27. März 2024 (zugestellt am 31. Mai 2024) ebenfalls ab.\n\nC.\n\nAm 1. Juli 2024 gelangt A.________ mit subsidiärer Verfassungsbeschwerde an das Bundesgericht. Er beantragt, das angefochtene Urteil sei aufzuheben und die Generalstaatsanwaltschaft sei zu verpflichten, ihm ein Arbeitszeugnis per 31. Oktober 2021 mit einem von ihm aufgeführten Wortlaut auszustellen. Eventualiter sei das angefochtene Urteil aufzuheben und die Generalstaatsanwaltschaft zu verpflichten, ihm ein Arbeitszeugnis per 31. Oktober 2021 mit geändertem Wortlaut auszustellen. Subeventualiter sei das angefochtene Urteil aufzuheben und zur Neubeurteilung an die Vorinstanz zurückzuweisen.\n\nDie Personalrekurskommission verzichtet auf eine Stellungnahme. Das Verwaltungsgericht stellt unter Verweisung auf das angefochtene Urteil und Verzicht auf eine weitergehende Vernehmlassung den Antrag, die Beschwerde sei abzuweisen. Das Departement für Justiz und Sicherheit des Kantons Thurgau ersucht in Vertretung der Generalstaatsanwaltschaft um Abweisung der Beschwerde, soweit darauf einzutreten sei. Der Beschwerdeführer lässt sich nicht mehr vernehmen."
             }
           ]
         },
@@ -163,8 +171,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 1'000.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, der Generalstaatsanwaltschaft des Kantons Thurgau, der Personalrekurskommission des Kantons Thurgau und dem Verwaltungsgericht des Kantons Thurgau schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist. 2. Die Gerichtskosten von Fr. 1'000.-- werden dem Beschwerdeführer auferlegt. 3. Dieses Urteil wird dem Beschwerdeführer, der Generalstaatsanwaltschaft des Kantons Thurgau, der Personalrekurskommission des Kantons Thurgau und dem Verwaltungsgericht des Kantons Thurgau schriftlich mitgeteilt. Lausanne, 23. April 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Haag Die Gerichtsschreiberin: Dillier"
+              "text": "Lausanne, 23. April 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Haag Die Gerichtsschreiberin: Dillier"
             }
           ]
         }
@@ -218,7 +238,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://23-04-2025-1C_400-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a428b796e7b478734b81ac36019a922c88e1df9d8ae936ce1343d57ef189e302",
-      "sha": "c0f6c61d15b264efa80a4c52e03b21714d771874d13f477237c059a6dd8093ac"
+      "sha": "21828f9e5860c3aa09047367ae249c19aee7caec3f24eb322d8238b65c016359"
     }
   ]
 }

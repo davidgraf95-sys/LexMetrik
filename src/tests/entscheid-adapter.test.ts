@@ -5,7 +5,10 @@ import { normalisiereRegeste, kuerzeRegeste, bereinigeFliesstext } from '../lib/
 import { filterEntscheide, nachDatum } from '../lib/rechtsprechung/browse';
 import type { BrowseEntscheid } from '../lib/rechtsprechung/register';
 import { sha256EntscheidBloecke } from '../../scripts/normtext/sha-entscheide';
-import { citedRefZuId, mappeEntscheidOCL } from '../../scripts/normtext/adapter-entscheide';
+import {
+  citedRefZuId, mappeEntscheidOCL, extrahiereSachverhalt, markenPlausibel,
+  teileDispositivInline, extrahiereRubrum,
+} from '../../scripts/normtext/adapter-entscheide';
 import { statutesZuNormKeys, abteilungZuSachgebiet, legalAreaZuSachgebiet } from '../../scripts/normtext/entscheide-mapping';
 
 const FIX = join(process.cwd(), 'src', 'tests', 'fixtures');
@@ -89,6 +92,59 @@ describe('sha256EntscheidBloecke', () => {
     const b = [{ typ: 'erwaegung' as const, bloecke: [{ marke: 'E. 1', text: 'Hallo!' }] }];
     expect(sha256EntscheidBloecke(a)).toBe(sha256EntscheidBloecke(a));
     expect(sha256EntscheidBloecke(a)).not.toBe(sha256EntscheidBloecke(b));
+  });
+});
+
+describe('extrahiereSachverhalt', () => {
+  it('schneidet den vollen Sachverhalt zwischen den amtlichen Markern', () => {
+    const ft = 'Kopf\nSachverhalt:\nA. Der volle Sachverhalt mit sehr viel Inhalt, der weit über tausend Zeichen lang ist. '
+      + 'x'.repeat(300) + '\nErwägungen:\n1. Zum Recht.';
+    const r = extrahiereSachverhalt(ft, 'kurz …', 350)!;
+    expect(r.text.startsWith('A. Der volle Sachverhalt')).toBe(true);
+    expect(r.vollstaendig).toBe(true);
+  });
+  it('fällt auf Excerpt zurück (ohne Marker) und markiert unvollständig + strippt Ellipse', () => {
+    const r = extrahiereSachverhalt('kein marker hier', 'Nur ein Auszug …', 4000)!;
+    expect(r.vollstaendig).toBe(false);
+    expect(r.text.endsWith('…')).toBe(false);
+  });
+});
+
+describe('markenPlausibel', () => {
+  it('akzeptiert saubere Sequenz', () => {
+    expect(markenPlausibel([{ e_number: '1' }, { e_number: '2' }, { e_number: '2.1' }, { e_number: '3' }])).toBe(true);
+  });
+  it('verwirft Jahreszahl-Sprünge (1→6→11)', () => {
+    expect(markenPlausibel([{ e_number: '1' }, { e_number: '6' }, { e_number: '11' }])).toBe(false);
+  });
+  it('verwirft Block, der mit einem Monat beginnt (Jahreszahl-Fehlparse)', () => {
+    expect(markenPlausibel([{ e_number: '1', text: 'Oktober 2000 erging der Entscheid.' }])).toBe(false);
+  });
+});
+
+describe('teileDispositivInline', () => {
+  it('splittet einzeiligen Blob in aufsteigende Punkte', () => {
+    const r = teileDispositivInline('1. Die Beschwerde wird abgewiesen. 2. Es werden keine Kosten erhoben. 3. Mitteilung.')!;
+    expect(r.map((b) => b.marke)).toEqual(['1.', '2.', '3.']);
+  });
+  it('splittet NICHT an Datumsangaben (kein aufsteigender 1,2,3)', () => {
+    expect(teileDispositivInline('Die Frist lief am 2. Mai 2023 ab und endete am 3. Juni 2023.')).toBeNull();
+  });
+});
+
+describe('extrahiereRubrum', () => {
+  it('extrahiert Besetzung/Parteien/Gegenstand/Vorinstanz aus full_text', () => {
+    const ft = 'Besetzung Bundesrichter Bovey, Präsident, Gerichtsschreiber Zingg. '
+      + 'Verfahrensbeteiligte A. Sàrl, Beschwerdeführerin, gegen Eidgenossenschaft, Beschwerdegegnerin. '
+      + 'Gegenstand Konkurseröffnung, Beschwerde gegen das Urteil des Obergerichts Appenzell Ausserrhoden vom 7. Mai 2026. Sachverhalt: A. …';
+    const r = extrahiereRubrum(ft)!;
+    expect(r.besetzung).toContain('Bovey');
+    expect(r.parteien).toContain('Beschwerdeführerin');
+    expect(r.gegenstand).toContain('Konkurseröffnung');
+    expect(r.vorinstanz).toContain('Obergericht');
+  });
+  it('gibt null ohne Rubrum-Marker', () => {
+    expect(extrahiereRubrum('nur fliesstext ohne marker')).toBeNull();
   });
 });
 

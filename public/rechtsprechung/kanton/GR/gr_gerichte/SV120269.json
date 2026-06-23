@@ -15,14 +15,22 @@
       "sprache": "de",
       "leitcharakter": "routine",
       "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Pedretti, Vorsitz von Salis und Bäder Federspiel Jauch, Aktuarin Parteien A._____ Beschwerdeführerin gegen Gemeinde B._____ Beschwerdegegnerin C._____ Beigeladene",
+        "parteien": "A._____ Beschwerdeführerin gegen Gemeinde B._____ Beschwerdegegnerin C._____ Beigeladene",
+        "gegenstand": "Sozialhilfe 2 / 12",
+        "vorinstanz": null
+      },
       "regeste": null,
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A._____, Jahrgang 1981, wohnte bis zum 31. Oktober 2025 in D._____ und wurde von der C._____ öffentlich-rechtlich unterstützt. Am 1. November 2025 zog sie in das Housing First des Vereins E._____ in B._____. B. Mit Gesuch vom 8. Dezember 2025 ersuchte der Regionale Sozialdienst (RSD) F._____ bei der Gemeinde B._____ für A._____ um sozialhilferechtliche Unterstützung ab dem 1. Dezember 2025 bis auf Weiteres. C. Mit Entscheid vom 23. Dezember 2025 trat die Gemeinde B._____ auf das Gesuch um öffentliche Unterstützung mangels Zuständigkeit nicht ein bzw. lehnte dieses mangels Erfüllung der Anspruchsvoraussetzungen ab. D. Dagegen erhob A._____ (nachfolgend: Beschwerdeführerin) am 20. Januar 2026 Beschwerde beim Obergericht des Kantons Graubünden und beantragte in Aufhebung des Entscheids vom 23. Dezember 2025, ihr sei die ersuchte öffentlichrechtliche Unterstützung zuzusprechen. In prozessualer Hinsicht beantragte sie die Gewährung der unentgeltlichen Rechtspflege. Begründend führte si…"
+              "text": "A. A._____, Jahrgang 1981, wohnte bis zum 31. Oktober 2025 in D._____ und wurde von der C._____ öffentlich-rechtlich unterstützt. Am 1. November 2025 zog sie in das Housing First des Vereins E._____ in B._____. B. Mit Gesuch vom 8. Dezember 2025 ersuchte der Regionale Sozialdienst (RSD) F._____ bei der Gemeinde B._____ für A._____ um sozialhilferechtliche Unterstützung ab dem 1. Dezember 2025 bis auf Weiteres. C. Mit Entscheid vom 23. Dezember 2025 trat die Gemeinde B._____ auf das Gesuch um öffentliche Unterstützung mangels Zuständigkeit nicht ein bzw. lehnte dieses mangels Erfüllung der Anspruchsvoraussetzungen ab. D. Dagegen erhob A._____ (nachfolgend: Beschwerdeführerin) am 20. Januar 2026 Beschwerde beim Obergericht des Kantons Graubünden und beantragte in Aufhebung des Entscheids vom 23. Dezember 2025, ihr sei die ersuchte öffentlichrechtliche Unterstützung zuzusprechen. In prozessualer Hinsicht beantragte sie die Gewährung der unentgeltlichen Rechtspflege. Begründend führte sie im Wesentlichen aus, das in B._____ gemietete Zimmer entspreche ihren Vorstellungen, weshalb sie sich auch künftig dort aufhalten möchte. Sie sei für die Führung ihres Haushalts selbstständig verantwortlich. Der Verein E._____ nehme hier keinen Einfluss und es gebe auch keine gemeinsamen Menüpläne, Aktivitäten etc. Die Unterkunft stelle ein \"Dach über dem Kopf\" sicher und sei an keine Auflagen geknüpft. Ihre Wohnsituation falle nicht unter den Heimbegriff. Sie stelle für sie keine vorübergehende Not- oder Übergangslösung dar. Sie habe diese Wohnung bewusst gewählt und möchte langfristig dort wohnen. E. Die Gemeinde B._____ (nachfolgend: Beschwerdegegnerin) schloss in ihrer Vernehmlassung vom 30. Januar 2026 auf Abweisung der Beschwerde. Die C._____ (nachfolgend: Beigeladene) beantragte mit Eingabe vom 13. Februar 2026 die Gutheissung der Beschwerde. F. Die Beschwerdeführerin reichte trotz der ihr eingeräumten Frist keine Replik ein. G. Mit Editionsverfügung vom 6. März 2026 forderte die Vorsitzende die Beschwerdeführerin auf, dem Gericht allfällige weitere Vereinbarungen zum Housing First mit dem Verein E._____ sowie einen Nachweis der polizeilichen Anmeldung (Wohnsitzbestätigung) zukommen zu lassen. Ergänzend bat die\n\n3 / 12 Vorsitzende die Beschwerdegegnerin, dem Gericht anzugeben, wann sich die Beschwerdeführerin bei ihr polizeilich angemeldet habe. H. Mit Eingabe vom 9. März 2026 teilte die Beschwerdegegnerin unter Beilage der entsprechenden Wohnsitzbestätigung mit, dass sich die Beschwerdeführerin am 1. November 2025 bei ihr polizeilich angemeldet habe. I. Am 17. März 2026 reichte die Beschwerdeführerin namentlich einen Vertrag zum Angebot Housing First zwischen ihr als Begleitungsempfängerin und dem Verein E._____ vom 13. Oktober 2025 ein. J. Mit Eingabe vom 1. April 2026 verzichtete die Beigeladene auf eine Stellungnahme zu den edierten Unterlagen. K. Mit Eingabe vom 8. April 2026 reichte die Beschwerdegegnerin eine Stellungnahme mit unverändertem Rechtsbegehren ein. L. Die Beschwerdeführerin liess sich nicht mehr vernehmen."
             }
           ]
         },
@@ -30,78 +38,63 @@
           "typ": "erwaegung",
           "bloecke": [
             {
-              "marke": "E. 1",
-              "tiefe": 1,
+              "marke": null,
               "text": "Nach Art. 49 Abs. 1 lit. a VRG (BR 370.100) beurteilt das Obergericht des Kantons Graubünden Beschwerden gegen Entscheide von Gemeinden, soweit diese nicht bei einer anderen Instanz angefochten werden können oder nach kantonalem oder eidgenössischem Recht endgültig sind. Der vorliegend angefochtene Entscheid der Beschwerdegegnerin vom 23. Dezember 2025 ist weder endgültig noch kann er bei einer anderen Instanz angefochten werden. Folglich stellt dieser ein taugliches Anfechtungsobjekt für ein Verfahren vor dem Obergericht des Kantons Graubünden dar. Als formelle und materielle Adressatin des angefochtenen Entscheids ist die Beschwerdeführerin davon überdies berührt und sie weist ein schutzwürdiges Interesse an dessen Aufhebung bzw. Änderung auf (Art. 50 VRG). Auf die im Übrigen frist- und formgerecht eingereichte Beschwerde (Art. 38 Abs. 1 und 2, Art. 39 Abs. 1 lit. c sowie Art. 52 Abs. 1 VRG) ist demnach einzutreten."
             },
             {
-              "marke": "E. 2",
-              "tiefe": 1,
+              "marke": null,
               "text": "Der Streitgegenstand erschöpft sich vorliegend in der Frage, ob die Beschwerdegegnerin mangels Zuständigkeit zu Recht nicht auf das Unterstützungsgesuch der Beschwerdeführerin eingetreten ist. 3.1. Gemäss Art. 115 BV werden Bedürftige von ihrem Wohnkanton unterstützt; der Bund regelt die Ausnahmen und Zuständigkeiten. Gestützt darauf hat die Bundesversammlung das Bundesgesetz über die Zuständigkeit für die"
             },
             {
-              "marke": "E. 4",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 Unterstützung Bedürftiger (Zuständigkeitsgesetz [ZUG]; SR 851.1) erlassen. Das ZUG präzisiert in dem durch die Verfassung vorgegebenen Rahmen, welcher Kanton für die Fürsorge zuständig ist, und es regelt den Ersatz von Unterstützungskosten unter den Kantonen (vgl. Art. 1 Abs. 1 und 2 ZUG). Danach obliegt die Unterstützung eines Schweizer Bürgers grundsätzlich dem Wohnkanton (Art. 12 Abs. 1 ZUG). Hat die bedürftige Person keinen Unterstützungswohnsitz, so wird sie vom Aufenthaltskanton unterstützt (Art. 12 Abs. 2 ZUG). Der Wohnkanton unterliegt gegenüber dem Aufenthaltskanton, der einen Bedürftigen im Notfall unterstützt, einer gewissen Ersatzpflicht (vgl. Art. 14 ZUG). Die im ZUG für die Bestimmung der interkantonalen Zuständigkeit geregelten Begriffe des Aufenthalts-, Wohn- und Heimatkantons sind solche des Bundesrechts (vgl. BGE 150 V 297 E. 3.1, 149 V 156 E. 4.1, 143 V 451 E. 9.2 in fine und 139 V 433 E. 3.1 mit Hinweis). Mit der Bestimmung des zuständigen Kantons ist noch nichts über die innerkantonale Zuständigkeit gesagt. Die Kantone sind frei, innerhalb ihres Gebietes vom ZUG abweichende Zuständigkeiten vorzusehen (vgl. Urteil des Bundesgerichts 8C_591/2021 vom 19. Januar 2022 E. 3.1). Insoweit sieht Art. 12 Abs. 3 ZUG vor, dass der Kanton das unterstützungspflichtige Gemeinwesen und die zuständige Fürsorgebehörde bezeichnet. 3.2. Im innerkantonalen Verhältnis kommen im Kanton Graubünden das Kantonale Unterstützungsgesetz (UG; BR 546.250), die weiteren kantonalen Bestimmungen wie auch grundsätzlich die Richtlinien der Schweizerischen Konferenz für Sozialhilfe für die Ausgestaltung und Bemessung der Sozialhilfe (SKOS-Richtlinien; vgl. Art. 1 Ausführungsbestimmungen zum UG [ABzUG; BR 546.270]) zur Anwendung (vgl. BGE 143 V 451 E. 8.2; Urteil des Bundesgerichts 8C_701/2013 vom 14. März 2014 E. 3.2; Urteile des Obergerichts des Kantons Graubünden SV1 25 44 vom 23. Oktober 2025 E. 4.2 und SV1 25 29 vom 9. Juli 2025 E. 3.2; Urteile des Verwaltungsgerichts des Kantons Graubünden U 23 74 vom 5. März 2024 E. 3.2, U 22 9 vom 17. März 2022 E. 2.4 und U 20 107 vom 13. April 2021 E. 3). Gemäss Art. 5 Abs. 1 UG ist diejenige politische Gemeinde unterstützungspflichtig, in welcher die bedürftige Person ihren Wohnsitz hat. Die Begründung und Aufgabe des Wohnsitzes richten sich Kraft des in Art. 6 Abs. 1 UG normierten Verweises nach den Grundsätzen, die gemäss ZUG im interkantonalen Verhältnis gelten (vgl. auch Urteil des Bundesgerichts 8C_79/2010 vom 24. September 2010 E. 5). Diese gelten damit auch im innerkantonalen Verhältnis, wenn auch als kantonales Recht (vgl. BGE 143 V 451 E. 8.2 und 140 I 320 E. 3.3). 3.3. Die unterstützungsbedürftige Person hat ihren Wohnsitz nach dem ZUG (Unterstützungswohnsitz) in dem Kanton, in dem sie sich mit der Absicht des"
             },
             {
-              "marke": "E. 4.1",
-              "tiefe": 2,
+              "marke": null,
               "text": "Unbestritten ist vorliegend, dass die Beschwerdeführerin ihren letzten feststehenden Unterstützungswohnsitz in der C._____ hatte (vgl. act. B.2). Uneinig sind sich die Parteien indes über die Begründung eines Unterstützungswohnsitzes ab dem 1. Dezember 2025 in der Gemeinde B._____ infolge Umzugs der Beschwerdeführerin in das Housing First des Vereins E._____. Während die Beschwerdeführerin der Ansicht ist, sie habe mit dem Umzug in das Housing First einen neuen Unterstützungswohnsitz in B._____ begründet, erachtet die Beschwerdegegnerin ihre Unterstützungszuständigkeit als nicht gegeben, da einerseits die Absicht des dauernden Verbleibens nicht gegeben und andererseits"
             },
             {
-              "marke": "E. 4.3",
-              "tiefe": 2,
+              "marke": null,
               "text": "Zusammenfassend ist festzuhalten, dass die Beschwerdeführerin mit ihrem Umzug in das Housing First des Vereins E._____ einen Unterstützungswohnsitz in der Gemeinde B._____ begründet hat. 5. Im Ergebnis erweist sich die Beschwerde somit als begründet, weshalb sie gutzuheissen und der angefochtene Entscheid der Beschwerdegegnerin vom 23. Dezember 2025 aufzuheben ist. Die Gemeinde B._____ ist für die öffentlichrechtliche Unterstützung der Beschwerdeführerin zuständig und daher anzuweisen, deren Gesuch zu prüfen und mittels Verfügung zu beurteilen.\n\n11 / 12"
             },
             {
-              "marke": "E. 5",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 dauernden Verbleibens aufhält; dieser Kanton wird als Wohnkanton bezeichnet (Art. 4 Abs. 1 ZUG). Der unterstützungsrechtliche Wohnsitz gemäss Art. 4 ZUG ist dem zivilrechtlichen (vgl. Art. 23 Abs. 1 ZGB) angeglichen: Der Wohnsitz befindet sich dort, wo jemand sich mit der Absicht dauernden Verbleibens aufhält. Da sich diese Absicht nach der Rechtsprechung in äusserlich erkennbaren Umständen verwirklichen muss, gilt als Wohnsitz einer Person der Ort, an dem sich faktisch der Mittelpunkt ihrer Lebensinteressen befindet (vgl. Urteil des Bundesgerichts 8C_223/2010 vom 5. Juli 2010 E. 3.1). Die polizeiliche Anmeldung gilt als Wohnsitzbegründung, wenn nicht nachgewiesen ist, dass der Aufenthalt nur vorübergehender Natur ist (vgl. Art. 4 Abs. 2 ZUG). Der Aufenthalt in einem Heim, einem Spital oder einer anderen Einrichtung und die behördliche Unterbringung einer volljährigen Person in Familienpflege begründen gemäss Art. 5 ZUG keinen Unterstützungswohnsitz. Als Gegenstück beendigt ein entsprechender Eintritt einen bestehenden Unterstützungswohnsitz nicht (Art. 9 Abs. 3 ZUG; vgl. auch Art. 6 Abs. 3 UG). 3.4.1. Der Heimbegriff wird in Art. 5 ZUG und Art. 9 Abs. 3 ZUG nicht definiert. Gemäss bundesgerichtlicher Rechtsprechung ergibt sich daraus, dass die Anwendung von Art. 5 ZUG immer mit Bezug auf den zur Diskussion stehenden Sachverhalt zu prüfen ist, um einer zeitgemässen Interpretation des Heimbegriffs gerecht zu werden (vgl. BGE 141 V 255 E. 4.2). Es entsprach dem Willen des Gesetzgebers, den Heimbegriff gerade wegen der sich wandelnden Verhältnisse und wegen trotz gleicher Bezeichnung unterschiedlich ausgestalteter Therapieformen nicht zu definieren (vgl. Urteil des Bundesgerichts 2A.603/1999 vom 7. Juni 2000 E. 3c). 3.4.2. Nach dem Gesetzeswortlaut, der Entstehungsgeschichte sowie dem Sinn und Zweck ist der Begriff \"Heim\" in einem weiten Sinn zu verstehen. Unter einem Heim ist nach der Rechtsprechung und Literatur ein organisierter, von einer oder mehreren Personen geleiteter und von Angestellten besorgter kollektiver Haushalt zu verstehen, der bezweckt, fremden Personen gegen Entgelt und ausnahmsweise unentgeltlich Unterkunft, Verpflegung und gewisse weitere Dienstleistungen zu gewähren. Als Beurteilungskriterium kommen also die Art und das Mass der angebotenen Dienstleistungen, der Grad der feststellbaren Fremdbestimmung sowie der Abhängigkeitsgrad der betroffenen Person in Frage (vgl. Urteil des Bundesgerichts 8C_530/2014 vom 7. November 2014 E. 3.2.1; THOMET, Kommentar zum ZUG, 1994, N. 111). Für die Prüfung der Heimeigenschaft sind u.a. Fragen zu stellen wie, ob die Person in einem kollektiv besorgten Haushalt untergebracht ist, was der Zweck der Unterkunft ist, ob es um Gewährung von"
             },
             {
-              "marke": "E. 6",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 Obdach, Verpflegung und weiteren Dienstleistungen geht und wie hoch Fremdbestimmungs- und Abhängigkeitsgrad sind. In Bezug auf ein begleitetes Wohnen ergibt sich, dass weder der Abhängigkeitsnoch der Fremdbestimmungsgrad besonders hoch sind. Müssen sich die Bewohner jedoch an Hausregeln halten, die über das bei einem normalen Mietverhältnis Übliche hinausgehen, und insbesondere regelmässigen Besuch von einer beim begleiteten Wohnen angestellten Person empfangen, kann auch eine begleitete Wohnform unter den Heimbegriff fallen (vgl. Urteil des Bundesgerichts 2A.603/1999 vom"
             },
             {
-              "marke": "E. 6.1",
-              "tiefe": 2,
+              "marke": null,
               "text": "Bei diesem Ausgang des Verfahrens gehen die Gerichtskosten zulasten der Beschwerdegegnerin (vgl. Art. 73 Abs. 1 VRG), wobei sich vorliegend eine Staatsgebühr von CHF 500.00 (zzgl. Kanzleiauslagen) als angemessen erweist (vgl. Art. 75 Abs. 2 VRG)."
             },
             {
-              "marke": "E. 6.2",
-              "tiefe": 2,
+              "marke": null,
               "text": "Da die Beschwerdeführerin im vorliegenden Beschwerdeverfahren nicht anwaltlich vertreten war, steht ihr praxisgemäss keine Parteientschädigung zu (vgl. Urteil des Verwaltungsgerichts U 24 68 vom 10. März 2024 E. 13.1, U 23 74 vom 5. März 2024 E. 8 und U 23 65 vom 5. Dezember 2023 E. 8.1). Ihr Gesuch um unentgeltliche Rechtspflege wird bei diesem Verfahrensausgang gegenstandslos."
             },
             {
-              "marke": "E. 6.3",
-              "tiefe": 2,
+              "marke": null,
               "text": "Bund, Kanton und Gemeinden sowie mit öffentlich-rechtlichen Aufgaben betrauten Organisationen wird gemäss Art. 78 Abs. 2 VRG in der Regel keine Parteientschädigung zugesprochen, wenn sie in ihrem amtlichen Wirkungskreis obsiegen. Davon abzuweichen besteht vorliegend kein Anlass, weshalb der obsiegenden Beigeladenen keine Parteientschädigung zusteht.\n\n12 / 12 Es wird erkannt:"
             },
             {
-              "marke": "E. 7",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 das Housing First unter den Heimbegriff im Sinne von Art. 5 i.V.m. Art. 9 Abs. 3 ZUG zu subsumieren sei (vgl. act. B.2. S. 2 und act. A.2 S. 3 f.). 4.2.1. Vorab ist anzumerken, dass die Beschwerdegegnerin mit Wohnsitzbestätigung vom 9. März 2026 die polizeiliche Anmeldung und Hinterlegung der Ausweisschriften der Beschwerdeführerin in der Gemeinde B._____ per 1. November 2025 bestätigte (vgl. act. C.1.4). Dies erweist sich als wesentlich. Denn Art. 4 Abs. 2 ZUG stellt die gesetzliche Vermutung auf, dass die polizeiliche Anmeldung den Unterstützungswohnsitz am betreffenden Ort begründet (vgl. THOMET, a.a.O., N. 99 und N. 106). 4.2.2. In Bezug auf die Absicht des dauernden Verbleibens bringt die Beschwerdegegnerin vor, beim Housing First handle es sich um ein Pilotprojekt und somit um eine Übergangslösung, die sich nicht für die Begründung eines Lebensmittelpunktes oder ein dauerhaftes Verbleiben eigne (vgl. act. B.2 S. 2 und act. A.2 S. 4). Dem kann nicht gefolgt werden. Zutreffend ist, dass die Regierung des Kantons Graubünden einen Leistungsauftrag an den Verein E._____ bis zum 31. Dezember 2025 für das Housing First erteilte und dieses als Pilotprojekt galt (vgl. Regierungsmitteilung vom 2. Mai 2024). Gemäss Regierungsmitteilung vom 19. Juni 2025 verlängerte die Regierung des Kantons Graubünden diesen Leistungsauftrag bis zum 31. Dezember 2027 und hielt darin fest, das Angebot Housing First schliesse eine Lücke im Hilfssystem für Personen, welche langjährig obdachlos und von psychischen Problemen und/oder Suchterkrankungen betroffen seien. Das aktuelle Angebot für acht Personen decke die Nachfrage nicht. Entsprechend wurden die Teilnehmerplätze im Rahmen der Verlängerung des Leistungsauftrages ab dem 1. Januar 2026 auf 12 erhöht (vgl. Regierungsmitteilung vom 19. Juni 2025). Daraus erhellt, dass sich das Housing First bewährt hat und damit nicht von einer Übergangslösung gesprochen werden kann. Ein Ziel von Housing First ist es denn auch, wohnungslosen Personen zu einer dauerhaften Wohnung zu verhelfen, und nicht bloss – wie die Beschwerdegegnerin behauptet – zu einer vorübergehenden Lösung, wie Notunterkünfte oder anderweitige vorübergehende Unterbringungen (vgl. Angaben des Vereins E._____ auf dessen Website; vgl. auch Ziff. 1 f. des Konzepts Housing First, abrufbar unter:). Hinzu kommt, dass die Beschwerdeführerin einen unbefristeten Untermietvertrag mit dem Verein E._____ abgeschlossen hat, welcher nur mit einer Kündigungsfrist von drei Monaten kündbar ist (vgl. act. B.1 = B.4). Auch dies unterstreicht die von der"
             },
             {
-              "marke": "E. 8",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 Beschwerdeführerin ausdrücklich geäusserte Absicht des dauernden Verbleibens (vgl. act. A.1), zumal rechtsprechungsgemäss weder an die Absicht noch an die Dauer des Verbleibens zu strenge Anforderungen gestellt werden. Bei unsteten Personen – wie hier – bildet bereits der länger andauernde Aufenthalt an einem Ort ein Indiz für die Wohnsitzbegründung. So ist das Fehlen gefestigter sozialer und ökonomischer Beziehungen insbesondere bei solchen unsteten Personen typisch und kann für sich allein nicht ausschlaggebend sein. Andernfalls könnten solche Personen kaum je einen Unterstützungswohnsitz begründen (vgl. Urteile des Bundesgerichts 8C_530/2014 vom 7. November 2014 E. 3.4, 8C_79/2010 vom 24. September 2010 E. 7.3, 8C_223/2010 vom 5. Juli 2010 E. 4.1). Dass sich das Wohnhaus – wie die Beschwerdegegnerin vorbringt – lediglich zufällig in B._____ befindet, spricht demnach nicht gegen eine (Unterstützungs-)Wohnsitzbegründung. Im Übrigen hat die Beschwerdeführerin gemäss ihren Angaben die Wohnung bewusst gewählt, da diese ihren Vorstellungen entsprochen habe (vgl. act. A.1. S. 1 f.). Zudem lebt gemäss den unbestritten gebliebenen Ausführungen der Beigeladenen der engste familiäre Kreis der Beschwerdeführerin, namentlich ihre Mutter, ihr Bruder und zeitweise eine Schwester, in B._____ und hält sich auch ihr Sohn regelmässig dort auf (act. A.3 Ziff. 8). Weitere Anhaltspunkte, welche gegen die gesetzliche Vermutung der Unterstützungswohnsitzbegründung in der Gemeinde B._____ sprechen würden, sind vorliegend nicht ersichtlich; solche werden von der Beschwerdegegnerin auch nicht dargetan. 4.2.3. Entgegen der Ansicht der Beschwerdegegnerin ist das Housing First auch nicht unter den Heimbegriff zu subsumieren. Das Angebot Housing First des Vereins E._____ richtet sich an Personen, welche langjährig obdachlos sind, begleitet von psychischen Problemen und/oder Suchtthemen. Housing First orientiert sich u.a. am Grundprinzip, wonach Wohnen als Menschenrecht betrachtet werde. Entsprechend habe jede Person ein Recht auf Wohnen, ohne Bedingungen daran zu knüpfen. Ein weiterer zentraler Grundsatz von Housing First ist, dass den Personen, welche das Angebot nutzen, zugehört und deren Meinung respektiert wird. Housing First-Nutzerinnen und -Nutzer sind in der Lage, gültige Entscheidungen darüber zu treffen, wie sie leben wollen und welche Art von Unterstützung sie erhalten möchten. Housing First stellt sicher, dass das Menschenrecht auf Wohnen nicht dadurch beeinträchtigt wird, dass die Nutzerinnen und Nutzer sich zu einer therapeutischen Behandlung verpflichten müssen, um Zugang zu einem Wohnungsangebot zu bekommen oder um in einer bestehenden Wohnung verbleiben zu können. Wohnen ist demnach getrennt von Therapieangeboten zu sehen (vgl. Ziff. 2.3 und 3.1 des Konzepts Housing First, abrufbar unter:). Das Housing First bietet"
             },
             {
-              "marke": "E. 9",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 Betreuungsdienstleistung während des ganzen Jahres in den eigenen vier Wänden der zu begleitenden Personen an, wobei der zeitliche Rahmen bei monatlich maximal 24 Stunden liegt bzw. maximal sechs Stunden pro Woche. Das Betreuungsangebot umfasst soweit als möglich die Gesamtheit aller zu verrichtenden Aufgaben und Themenbereiche, um das selbstständige Wohnen und eine stabile Wohnsituation zu ermöglichen (vgl. Angaben des Vereins E._____ auf dessen Website). Gestützt auf das Ausgeführte ist festzuhalten, dass es im Housing First des Vereins E._____ keine Pflicht zu Abstinenz oder Therapie gibt, um ein Zimmer beziehen zu können. Der Fokus liegt auf dem Wohnen als Menschenrecht. Die Nutzerinnen und Nutzer des Housing First schliessen mit dem Verein E._____ eigenständig einen regulären unbefristeten Untermietvertrag für ein möbliertes Zimmer zur alleinigen Nutzung sowie Wohnzimmer, Küche, Bad/Dusche, Waschküche und Estrich/Keller zur Mitbenützung ab (vgl. act. B.1 = B.4). Insofern handelt es sich nicht um einen organisierten, von Angestellten besorgten kollektiven Haushalt. Vielmehr müssen die Nutzerinnen und Nutzer die Miete, Nebenkosten etc. tragen, wobei diese Kosten von der Ergänzungsleistung oder Sozialhilfe übernommen werden (vgl. Angaben des Vereins E._____ auf dessen Website). Es gelten die normalen Pflichten einer Mieterin bzw. eines Mieters, ergänzt durch die freiwillige, aber geförderte Mitwirkung an der eigenen Genesung und Stabilisierung durch die angebotene, bedingungslose Unterstützung. Die Bewohnerinnen und Bewohner entscheiden selbst, wann und wieviel Hilfe sie möchten. Sie sind explizit nicht verpflichtet, vom Betreuungsangebot Gebrauch zu machen. Vorliegend geht aus dem Vertrag zum Angebot Housing First vom 13. Oktober 2025 (act. B.3) hervor, dass die Beschwerdeführerin offenbar das Betreuungsangebot beansprucht. Dieser Vertrag regelt die Zusammenarbeit zwischen dem Verein E._____ und der Beschwerdeführerin in Bezug auf das Betreuungsangebot. So werden darin im Wesentlichen Beginn, Ende, Umfang und Kosten der Betreuungsleistungen definiert. Hingegen finden sich darin keine Bestimmungen in Bezug auf das Mietverhältnis an sich. Auch die Bekanntgabe hochsensibler Daten erfolgt im Rahmen des freiwillig gewählten Betreuungsangebots und nicht im Rahmen des Mietverhältnisses (vgl. act. B.3 Ziff. 3.2). Zutreffend ist, dass die ersten drei Monate als Probebegleitung gelten und der Vertrag in dieser Zeit unter Einhaltung einer Frist von sieben Tagen auf Ende einer Kalenderwoche gegenseitig wieder aufgelöst werden kann (vgl. act. B.3 Ziff. 1 und Ziff. 5). Das Bestehen der \"Probezeit\" stellt jedoch keine Voraussetzung für den weiteren Verbleib der Beschwerdeführerin im Housing First dar. So geht aus dem Wortlaut des besagten"
             },
             {
-              "marke": "E. 10",
-              "tiefe": 1,
+              "marke": null,
               "text": "/ 12 Vertrages nicht hervor, dass mit Beendigung des Betreuungsangebots auch das Mietverhältnis aufgelöst würde. Dies unterstreicht, dass der Zugang zum Wohnungsangebot grundsätzlich losgelöst von den Betreuungsleistungen ist. Es gibt keine verbindlichen Termine für die Bewohnerinnen und Bewohner, welche Bestandteil des Mietverhältnisses bildeten bzw. wovon Letzteres abhängen würde (vgl. auch Regierungsmitteilung vom 2. Mai 2024, wonach Personen, welche Housing First nutzten, eigenständig lebten, sich an die gewöhnlichen Mietbedingungen halten müssten und zur Unterstützung Betreuung und Beratung angeboten erhielten). Es ist selbstverständlich, dass in jeder Wohngemeinschaft Pflichten und Ämter, welche organisatorische Aspekte des Zusammenlebens betreffen, übernommen bzw. beachtet werden müssen, weshalb eine zusätzliche Vereinbarung bezüglich des Untermietverhältnisses im Sinne einer Hausordnung für sich allein nicht auf einen Heimaufenthalt schliessen lässt. Insofern geht das Housing First nicht weit über das hinaus, was in einer gewöhnlichen Wohngemeinschaft anzutreffen ist (vgl. PVG 2009 Nr. 17 E. 2 f.). Daran ändert auch die von der Beschwerdegegnerin behauptete jederzeitig mögliche Beendigung des Untermietverhältnisses seitens des Vereins E._____ nichts. So ist es jedem Vermieter gestattet, ein Mietverhältnis bei Verstössen der Mieterin bzw. des Mieters gegen Sorgfalts- und Rücksichtnahmepflichten – nach erfolgter schriftlicher Mahnung – fristlos bzw. mit einer Frist von 30 Tagen zu kündigen (vgl. Art. 257f OR). Dass die Untermietverhältnisse grundlos fristlos gekündigt worden wären, wird von der Beschwerdegegnerin alsdann nicht vorgebracht. Demzufolge sind sowohl Fremdbestimmungs- als auch Abhängigkeitsgrad im Housing First sehr gering. Im Weiteren bestätigte auch das kantonale Sozialamt Graubünden mit E-Mail vom"
             },
             {
-              "marke": "E. 13",
-              "tiefe": 1,
+              "marke": null,
               "text": "Januar 2026, dass es sich beim Housing First um kein Wohnheim handle und die Betreuung nur punktuell geleistet werde (vgl. act. B.8 im Verfahren SV1 26 5). Das Housing First des Vereins E._____ ist nach dem Gesagten in seiner Grundkonzeption nicht als Heim im Sinne der Sozialhilfegesetzgebung und - rechtsprechung zu qualifizieren."
             }
           ]
@@ -110,8 +103,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
-              "marke": null,
-              "text": "1. Die Beschwerde wird gutgeheissen und der angefochtene Entscheid vom 23. Dezember 2025 wird aufgehoben. Die Gemeinde B._____ ist für die öffentlich-rechtliche Unterstützung von A._____ zuständig und wird angewiesen, deren Gesuch materiell zu prüfen und mittels Verfügung zu beurteilen. 2. Die Gerichtskosten, bestehend aus – einer Staatsgebühr von CHF 500.00 – und den Kanzleiausgaben von CHF 327.00 Total CHF 827.00 gehen zulasten der Gemeinde B._____. 3. Es wird keine Parteientschädigung zugesprochen. 4. [Rechtsmittelbelehrung] 5. [Mitteilungen]"
+              "marke": "1.",
+              "text": "Die Beschwerde wird gutgeheissen und der angefochtene Entscheid vom 23. Dezember 2025 wird aufgehoben. Die Gemeinde B._____ ist für die öffentlich-rechtliche Unterstützung von A._____ zuständig und wird angewiesen, deren Gesuch materiell zu prüfen und mittels Verfügung zu beurteilen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten, bestehend aus – einer Staatsgebühr von CHF 500.00 – und den Kanzleiausgaben von CHF 327.00 Total CHF 827.00 gehen zulasten der Gemeinde B._____."
+            },
+            {
+              "marke": "3.",
+              "text": "Es wird keine Parteientschädigung zugesprochen."
+            },
+            {
+              "marke": "4.",
+              "text": "[Rechtsmittelbelehrung] 5. [Mitteilungen]"
             }
           ]
         }
@@ -157,7 +162,7 @@
       "quelleUrl": "https://entscheidsuche.gr.ch/tribunavtplus/ServletDownload/SV1_2026_9_ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd60976a2f9f0d97b173961a94990d08d97d18708b1d5e3c91cfe980713c01d0db51c84edc1bc0425c099a9488a18062b80f8de?path=ea3b182beef59b8c349185d9526f43b08ca2264ab0e2c0acca19b59adcd60976a2f9f0d97b173961a94990d08d97d18708b1d5e3c91cfe980713c01d0db51c84edc1bc0425c099a9488a18062b80f8de&pathIsEncrypted=1&dossiernummer=SV1_2026_9",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5371e14760cf7da2f335f1055976200d2215eae6f0f1a9381fe4be61f0871a34",
-      "sha": "008066d55c150f7e6acb6400a01add8a773b135a1ef63e7922bba3128e02ea80"
+      "sha": "947451d732516d918c1bd176c2f48fae44637f6c2a23e1ca5c4db64e463dcadf"
     }
   ]
 }

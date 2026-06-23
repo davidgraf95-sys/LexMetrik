@@ -62,6 +62,15 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // Vollständigkeits-/Plausibilitäts-Warnungen (P4, nicht-blockierend).
+    const sv = snap.abschnitte.find((a) => a.typ === 'sachverhalt');
+    if (sv && sv.vollstaendig === false) warn.push(`${e.key}: Sachverhalt nur Auszug (full_text-Schnitt fehlgeschlagen?)`);
+    for (const a of snap.abschnitte) for (const b of a.bloecke) {
+      if (a.typ === 'dispositiv' && b.text.length > 4000) warn.push(`${e.key}: Dispositiv-Block ${b.text.length} Z. (>4000 — Korruption?)`);
+    }
+    const tops = (snap.abschnitte.find((a) => a.typ === 'erwaegung')?.bloecke ?? [])
+      .map((b) => Number(/(\d+)/.exec(b.marke ?? '')?.[1] ?? NaN)).filter(Number.isFinite);
+    for (let i = 1; i < tops.length; i++) if (tops[i] - tops[i - 1] >= 3) { warn.push(`${e.key}: Erwägungs-Top-Sprung ${tops[i - 1]}→${tops[i]}`); break; }
   }
 
   // Norm-Index: jede referenzierte key ⊆ Manifest

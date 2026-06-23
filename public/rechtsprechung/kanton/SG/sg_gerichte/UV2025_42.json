@@ -15,10 +15,12 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "sozial-abgaben",
+      "rubrum": null,
       "regeste": {
         "text": "Die attestierte Restarbeitsfähigkeit ist nicht verwertbar. Anspruch auf Invalidenrente basierend auf einem Invaliditätsgrad von 100 % (Entscheid des Versicherungsgerichts des Kantons St. Gallen vom 13. Januar 2026, UV 2025/42).",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "erwaegung",

@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichter Müller, präsidierendes Mitglied, Bundesrichter Kneubühler, Merz, Gerichtsschreiber Mösching.",
+        "parteien": "1. A.________, 2. B.________, Gesuchsteller, gegen Gemeinde Zizers, Rathaus, Vialstrasse 2, 7205 Zizers, vertreten durch Rechtsanwalt Christian Fey, Verwaltungsgericht des Kantons Graubünden, 5. Kammer, Einzelrichterin, Obere Plessurstrasse 1, 7000 Chur.",
+        "gegenstand": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts 1C_55/2025, 1C_76/2025 vom 13. Juni 2025,",
+        "vorinstanz": null
+      },
       "regeste": {
         "text": "Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts 1C_55/2025, 1C_76/2025 vom 13. Juni 2025",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ ist Eigentümer der in der Landwirtschaftszone liegenden Parzelle 1313, die seit der Totalrevision der Ortsplanung der Gemeinde Zizers 2011/2012 von der Landschaftsschutzzone (LSZ) überlagert wird. Mit dieser Totalrevision wurde auch der Usser Tschalärweg in den Generellen Erschliessungsplan (GEZ) der Gemeinde Zizers aufgenommen. Dieser wird als Land- und Forstwirtschaftsweg bezeichnet, welcher die Parzelle 1313 mit dem übergeordneten Strassennetz verbindet und bis ins Jahr 2011 ein Privatweg war. Seit 2021 wird erneut eine Gesamtrevision der Ortsplanung durchgeführt. A.a. Mit Schreiben vom 17. Januar 2023 an die Gemeinde Zizers machte A.________ für den Zeitraum von 2012 bis 2022 eine Entschädigung für Unterhaltsaufwendungen in der Höhe von Fr. 37'480.-- geltend. Die Gemeinde wies diese Forderung am 1. Februar 2023 zurück mit der Begründung, es treffe sie keine Unterhaltspflicht für den Weg. Sie habe dies bereits im verwaltungsrechtlichen Verfahren U 22 3 vorgetragen, die…"
+              "text": "A.\n\nA.________ ist Eigentümer der in der Landwirtschaftszone liegenden Parzelle 1313, die seit der Totalrevision der Ortsplanung der Gemeinde Zizers 2011/2012 von der Landschaftsschutzzone (LSZ) überlagert wird. Mit dieser Totalrevision wurde auch der Usser Tschalärweg in den Generellen Erschliessungsplan (GEZ) der Gemeinde Zizers aufgenommen. Dieser wird als Land- und Forstwirtschaftsweg bezeichnet, welcher die Parzelle 1313 mit dem übergeordneten Strassennetz verbindet und bis ins Jahr 2011 ein Privatweg war. Seit 2021 wird erneut eine Gesamtrevision der Ortsplanung durchgeführt.\n\nA.a. Mit Schreiben vom 17. Januar 2023 an die Gemeinde Zizers machte A.________ für den Zeitraum von 2012 bis 2022 eine Entschädigung für Unterhaltsaufwendungen in der Höhe von Fr. 37'480.-- geltend. Die Gemeinde wies diese Forderung am 1. Februar 2023 zurück mit der Begründung, es treffe sie keine Unterhaltspflicht für den Weg. Sie habe dies bereits im verwaltungsrechtlichen Verfahren U 22 3 vorgetragen, die Beschwerde sei abgewiesen worden und das Urteil rechtskräftig. Die von A.________ in dieser Angelegenheit erhobene Beschwerde nahm das Verwaltungsgericht des Kantons Graubünden (seit dem 1. Januar 2025 neu: Obergericht) sinngemäss als Rechtsverweigerungsbeschwerde entgegen und trat mit Urteil vom 17. Dezember 2024 (U 23 50) nicht darauf ein.\n\nA.b. In der Zwischenzeit wandten sich A.________ und B.________ am 29. September 2023 mit einer Eingabe an die Gemeinde Zizers, in welcher sie im Wesentlichen die Aufhebung der LSZ auf der Parzelle 1313 und weiteren Parzellen sowie den Ausstand verschiedener Gemeindevorstandsmitglieder beantragten. Am 15. November 2023 teilte die Gemeinde Zizers A.________ mit, dass sie zur Überprüfung der Eingabe mangels eines Rechtsschutzinteresses nicht zuständig sei. Am 18. Dezember 2023 erhoben A.________ und B.________ Beschwerde an das Verwaltungsgericht des Kantons Graubünden. Dieses nahm die Beschwerde sinngemäss als Rechtsverweigerungsbeschwerde entgegen und trat mit Urteil vom 17. Dezember 2024 (U 23 85) ebenfalls nicht darauf ein.\n\nB.\n\nGegen die beiden separat ergangenen Urteile des Verwaltungsgerichts des Kantons Graubünden erhoben A.________ und B.________ Beschwerde in öffentlich-rechtlichen Angelegenheiten. Das Bundesgericht vereinigte die Verfahren 1C_55/2025 betreffend das Urteil U 23 85 und 1C_76/2025 betreffend das Urteil U 23 50. Streitgegenstand bildete die Frage, ob das Verwaltungsgericht des Kantons Graubünden jeweils zu Recht nicht auf die Eingaben von A.________ und B.________ eingetreten war. Das Bundesgericht wies die Beschwerden mit Urteil vom 13. Juni 2025 ab, soweit es auf diese eintrat.\n\nC.\n\nMit Eingabe vom 14. September 2025 gelangen A.________ und B.________ erneut an das Bundesgericht und beantragen im Wesentlichen die Revision des bundesgerichtlichen Urteils vom 13. Juni 2025. In prozessualer Hinsicht beantragen sie den Ausstand verschiedener Bundesrichter. Zudem sei A.________ die unentgeltliche Rechtspflege zu gewähren.\n\nDas Bundesgericht hat auf die Durchführung eines Schriftenwechsels (Art. 127 BGG) und der Anordnung weiterer Instruktionsmassnahmen verzichtet."
             }
           ]
         },
@@ -108,8 +116,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Das Ausstandsgesuch gegen die Bundesrichter Haag, Müller, Merz, Kneubühler und den Bundesgerichtspräsidenten Chaix wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Das Revisionsgesuch wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 1'000.-- werden den Gesuchstellern unter solidarischer Haftung auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Gesuchstellern, der Gemeinde Zizers und dem Verwaltungsgericht des Kantons Graubünden, 5. Kammer, Einzelrichterin, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Das Ausstandsgesuch gegen die Bundesrichter Haag, Müller, Merz, Kneubühler und den Bundesgerichtspräsidenten Chaix wird abgewiesen. 2. Das Revisionsgesuch wird abgewiesen, soweit darauf einzutreten ist. 3. Die Gerichtskosten von Fr. 1'000.-- werden den Gesuchstellern unter solidarischer Haftung auferlegt. 4. Dieses Urteil wird den Gesuchstellern, der Gemeinde Zizers und dem Verwaltungsgericht des Kantons Graubünden, 5. Kammer, Einzelrichterin, schriftlich mitgeteilt. Lausanne, 3. November 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Das präsidierende Mitglied: Müller Der Gerichtsschreiber: Mösching"
+              "text": "Lausanne, 3. November 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Das präsidierende Mitglied: Müller Der Gerichtsschreiber: Mösching"
             }
           ]
         }
@@ -155,7 +179,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-11-2025-1F_18-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "59590e8fe5e1b5db769e8b0dfde2a6d62cef9f47f5c1c5ce77b6df6177231967",
-      "sha": "bb4edba78aac0f70d28652b1b15f199c5d1e50c0519252b44e8fe71340fa6c21"
+      "sha": "8f234c61b752aade4edeba887025e1fb7f863eab1771edbf3806de3650a4e1df"
     }
   ]
 }

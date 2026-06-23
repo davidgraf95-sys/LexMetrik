@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichter Kneubühler, präsidierendes Mitglied, Bundesrichter Müller, Merz, Gerichtsschreiber Mattle.",
+        "parteien": "This Bürge, Beschwerdeführer, gegen Departement des Innern des Kantons St. Gallen, Regierungsgebäude, 9001 St. Gallen, Politische Gemeinde St. Gallen, Stadtrat, Rathaus, 9001 St. Gallen.",
+        "gegenstand": "Erneuerungswahlen der Mitglieder des Stadtparlaments St. Gallen für die Amtsdauer 2025-2028,",
+        "vorinstanz": "den Entscheid des Verwaltungsgerichts des Kantons St. Gallen, Abteilung III, vom 25. August 2025 (B 2025/70)."
+      },
       "regeste": {
         "text": "Erneuerungswahlen der Mitglieder des Stadtparlaments St. Gallen für die Amtsdauer 2025-2028",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Die Stimm- und Wahlberechtigten der Politischen Gemeinde St. Gallen wählten mit Urnengang vom 22. September 2024 die 63 Mitglieder des Stadtparlaments für die Amtsdauer 2025-2028. Bei der Wahl handelt es sich um eine Proporzwahl im Einheitswahlkreis. This Bürge erhob gegen das Wahlergebnis am 1. Oktober 2024 Abstimmungsbeschwerde beim Departement des Innern des Kantons St. Gallen. Er machte im Wesentlichen geltend, die von der Politischen Gemeinde St. Gallen angewandte Methode zur Verteilung der Mandate im Proporzverfahren nach \"Hagenbach-Bischoff\" verletze den verfassungsmässigen Anspruch der Stimmberechtigten auf gleiche demokratische Rechte. Richtigerweise hätten nach der Methode \"Sainte-Laguë\" einzelne Mandate anderen Listengruppen bzw. Listen zugewiesen werden müssen. B. Das Departement des Innern entzog der Abstimmungsbeschwerde am 5. Dezember 2024 die aufschiebende Wirkung. Die von This Bürge gegen den Entzug der aufschiebenden Wirkung erhobenen Rechtsmittel blieben ohne Erfo…"
+              "text": "A.\n\nDie Stimm- und Wahlberechtigten der Politischen Gemeinde St. Gallen wählten mit Urnengang vom 22. September 2024 die 63 Mitglieder des Stadtparlaments für die Amtsdauer 2025-2028. Bei der Wahl handelt es sich um eine Proporzwahl im Einheitswahlkreis.\n\nThis Bürge erhob gegen das Wahlergebnis am 1. Oktober 2024 Abstimmungsbeschwerde beim Departement des Innern des Kantons St. Gallen. Er machte im Wesentlichen geltend, die von der Politischen Gemeinde St. Gallen angewandte Methode zur Verteilung der Mandate im Proporzverfahren nach \"Hagenbach-Bischoff\" verletze den verfassungsmässigen Anspruch der Stimmberechtigten auf gleiche demokratische Rechte. Richtigerweise hätten nach der Methode \"Sainte-Laguë\" einzelne Mandate anderen Listengruppen bzw. Listen zugewiesen werden müssen.\n\nB.\n\nDas Departement des Innern entzog der Abstimmungsbeschwerde am 5. Dezember 2024 die aufschiebende Wirkung. Die von This Bürge gegen den Entzug der aufschiebenden Wirkung erhobenen Rechtsmittel blieben ohne Erfolg (vgl. Urteil 1C_58/2025 vom 4. Februar 2025). Am 13. März 2025 wies das Departement des Innern die Beschwerde gegen das Wahlergebnis ab, soweit es darauf eintrat. Eine von This Bürge dagegen erhobene Beschwerde wies das Verwaltungsgericht des Kantons St. Gallen am 25. August 2025 ab.\n\nC.\n\nGegen den Entscheid des Verwaltungsgerichts vom 25. August 2025 hat This Bürge am 25. September 2025 Beschwerde in öffentlich-rechtlichen Angelegenheiten an das Bundesgericht erhoben. Er beantragt, der angefochtene Entscheid sei \"unter Rückweisung der Sache zur Neubeurteilung\" aufzuheben. Sinngemäss beantragt er weiter, es sei festzustellen, dass die von der Politischen Gemeinde St. Gallen angewandte Methode zur Verteilung der Mandate im Proporzverfahren Art. 34 Abs. 2 bzw. Art. 136 Abs. 1 Satz 2 BV verletze. Ebenfalls sinngemäss beantragt er ausserdem, es sei anzuordnen, dass einzelne Mandate einer anderen Listengruppe bzw. einer anderen Liste zuzuweisen seien. Das Departement und der Stadtrat für die Politische Gemeinde St. Gallen haben auf Vernehmlassung verzichtet. Die Vorinstanz beantragt unter Verweis auf den angefochtenen Entscheid die Abweisung der Beschwerde. Der Beschwerdeführer hat an der Beschwerde mit Eingabe vom 8. November 2025 sinngemäss festgehalten."
             }
           ]
         },
@@ -63,8 +71,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege wird abgewiesen."
+            },
+            {
+              "marke": "3.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, dem Departement des Innern des Kantons St. Gallen, der Politischen Gemeinde St. Gallen und dem Verwaltungsgericht des Kantons St. Gallen, Abteilung III, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird. 2. Das Gesuch um unentgeltliche Rechtspflege wird abgewiesen. 3. Es werden keine Gerichtskosten erhoben. 4. Dieses Urteil wird dem Beschwerdeführer, dem Departement des Innern des Kantons St. Gallen, der Politischen Gemeinde St. Gallen und dem Verwaltungsgericht des Kantons St. Gallen, Abteilung III, schriftlich mitgeteilt. Lausanne, 6. Januar 2026 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Das präsidierende Mitglied: Kneubühler Der Gerichtsschreiber: Mattle"
+              "text": "Lausanne, 6. Januar 2026 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Das präsidierende Mitglied: Kneubühler Der Gerichtsschreiber: Mattle"
             }
           ]
         }
@@ -101,7 +125,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://06-01-2026-1C_549-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "e4bb91f3751942f47a37c1b0f12e91fa9af5c5e469ed59fdd8af4eef2912a343",
-      "sha": "573196a1a34c3a407909b5494e94f09045f507056fc589f299c7eaf3f5924e32"
+      "sha": "1a7db5c5c18f98151789478a47af264cbf8572f0c93cf22883eb00a00fbe5f9d"
     }
   ]
 }

@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Wirthlin, Präsident, Bundesrichterin Heine, Bundesrichter Métral, Gerichtsschreiber Wüest.",
+        "parteien": "A.________, vertreten durch Rechtsanwältin Alessandra Biondi, Beschwerdeführer, gegen Allianz Suisse Versicherungs-Gesellschaft AG, Beschwerdegegnerin.",
+        "gegenstand": "Unfallversicherung (Kausalzusammenhang),",
+        "vorinstanz": "den Entscheid des Verwaltungsgerichts des Kantons Thurgau vom 13. Dezember 2023 (VV.2023.22/E)."
+      },
       "regeste": {
         "text": "Unfallversicherung (Kausalzusammenhang)",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Der 1977 geborene A.________ war bei der B.________ GmbH, als Pizzaiolo angestellt und dadurch bei der Allianz Suisse Versicherungs-Gesellschaft AG (fortan: Allianz) gegen die Folgen von Unfällen obligatorisch versichert, als er am 17. Juli 2020 einen Verkehrsunfall erlitt. Dabei fuhr ein anderer Personenwagen von hinten in das Heck des von A.________ gelenkten Personenwagens, als dieser bei einem Abbiegemanöver wegen eines Fahrradfahrers anhalten musste. Unmittelbar danach klagte der Versicherte über Nacken- und Kopfschmerzen, im weiteren Verlauf auch über Schulterschmerzen rechts. Die Allianz erbrachte die gesetzlichen Leistungen in Form von Taggeldern und Übernahme der Heilkosten. Mit Mitteilung vom 18. März 2021 informierte sie den Versicherten über den Fallabschluss und die Leistungseinstellung per 1. März 2021, da zwischen dem Unfall vom 17. Juli 2020 und den geltend gemachten Schulterbeschwerden kein natürlicher Kausalzusammenhang bestehe. Dies bekräftigte sie mit Verfügung v…"
+              "text": "A.\n\nDer 1977 geborene A.________ war bei der B.________ GmbH, als Pizzaiolo angestellt und dadurch bei der Allianz Suisse Versicherungs-Gesellschaft AG (fortan: Allianz) gegen die Folgen von Unfällen obligatorisch versichert, als er am 17. Juli 2020 einen Verkehrsunfall erlitt. Dabei fuhr ein anderer Personenwagen von hinten in das Heck des von A.________ gelenkten Personenwagens, als dieser bei einem Abbiegemanöver wegen eines Fahrradfahrers anhalten musste. Unmittelbar danach klagte der Versicherte über Nacken- und Kopfschmerzen, im weiteren Verlauf auch über Schulterschmerzen rechts. Die Allianz erbrachte die gesetzlichen Leistungen in Form von Taggeldern und Übernahme der Heilkosten. Mit Mitteilung vom 18. März 2021 informierte sie den Versicherten über den Fallabschluss und die Leistungseinstellung per 1. März 2021, da zwischen dem Unfall vom 17. Juli 2020 und den geltend gemachten Schulterbeschwerden kein natürlicher Kausalzusammenhang bestehe. Dies bekräftigte sie mit Verfügung vom 30. September 2021. Mit Einspracheentscheid vom 28. Dezember 2022 erkannte sie, bei richtiger Betrachtung hätte nicht eine Leistungsablehnung, sondern eine Leistungseinstellung erfolgen sollen, und zwar (bereits) per 30. November 2020. Auf eine Rückforderung von über diesen Zeitraum hinaus erbrachten Leistungen verzichtete sie. Den von A.________ gestellten Antrag auf Gewährung der unentgeltlichen Rechtsverbeiständung im Verwaltungsverfahren wies sie ab.\n\nB.\n\nDas Verwaltungsgericht des Kantons Thurgau wies die von A.________ gegen die Leistungseinstellung und die Verweigerung der unentgeltlichen Rechtsverbeiständung erhobene Beschwerde mit Entscheid vom 13. Dezember 2023 ab.\n\nC.\n\nMit Beschwerde in öffentlich-rechtlichen Angelegenheiten lässt A.________ beantragen, es sei der Entscheid des Verwaltungsgerichts vom 13. Dezember 2023 aufzuheben und die Allianz zu verpflichten, ihm über den 30. November 2020 hinaus die gesetzlichen Leistungen auszurichten und ihm die unentgeltliche Rechtsverbeiständung im Einspracheverfahren zu gewähren. Eventualiter sei die Sache zu weiteren Abklärungen (insb. Anordnung eines versicherungssexternen Gutachtens) an die Vorinstanz zurückzuweisen. Zudem ersucht er um Gewährung der unentgeltlichen Rechtspflege und Verbeiständung im bundesgerichtlichen Verfahren.\n\nDie Vorinstanz und die Allianz schliessen auf Abweisung der Beschwerde. A.________ hält daraufhin an seinen Anträgen fest."
             }
           ]
         },
@@ -153,8 +161,36 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen. Der Entscheid des Verwaltungsgerichts des Kantons Thurgau vom 13. Dezember 2023 und der Einspracheentscheid der Allianz Suisse Versicherungs-Gesellschaft AG vom 28. Dezember 2022 werden in Bezug auf die Leistungseinstellung aufgehoben. Die Sache wird zu neuer Verfügung an die Allianz Suisse Versicherungs-Gesellschaft AG zurückgewiesen. Im Übrigen wird die Beschwerde abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Dem Beschwerdeführer wird die unentgeltliche Rechtspflege gewährt und Rechtsanwältin Alessandra Biondi wird als unentgeltliche Anwältin bestellt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 800.- werden zu Fr. 600.- der Beschwerdegegnerin und zu Fr. 200.- dem Beschwerdeführer auferlegt. Der Anteil des Beschwerdeführers wird vorläufig auf die Bundesgerichtskasse genommen."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Beschwerdegegnerin hat die Rechtsvertreterin des Beschwerdeführers für das bundesgerichtliche Verfahren mit Fr. 2'100.- zu entschädigen."
+            },
+            {
+              "marke": "5.",
+              "text": "Der Rechtsvertreterin des Beschwerdeführers wird aus der Bundesgerichtskasse eine Entschädigung von Fr. 982.60 ausgerichtet."
+            },
+            {
+              "marke": "6.",
+              "text": "Die Sache wird zur Neuverlegung der Parteientschädigung des vorangegangenen Verfahrens an das Verwaltungsgericht des Kantons Thurgau zurückgewiesen."
+            },
+            {
+              "marke": "7.",
+              "text": "Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Thurgau und dem Bundesamt für Gesundheit schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird teilweise gutgeheissen. Der Entscheid des Verwaltungsgerichts des Kantons Thurgau vom 13. Dezember 2023 und der Einspracheentscheid der Allianz Suisse Versicherungs-Gesellschaft AG vom 28. Dezember 2022 werden in Bezug auf die Leistungseinstellung aufgehoben. Die Sache wird zu neuer Verfügung an die Allianz Suisse Versicherungs-Gesellschaft AG zurückgewiesen. Im Übrigen wird die Beschwerde abgewiesen. 2. Dem Beschwerdeführer wird die unentgeltliche Rechtspflege gewährt und Rechtsanwältin Alessandra Biondi wird als unentgeltliche Anwältin bestellt. 3. Die Gerichtskosten von Fr. 800.- werden zu Fr. 600.- der Beschwerdegegnerin und zu Fr. 200.- dem Beschwerdeführer auferlegt. Der Anteil des Beschwerdeführers wird vorläufig auf die Bundesgerichtskasse genommen. 4. Die Beschwerdegegnerin hat die Rechtsvertreterin des Beschwerdeführers für das bundesgerichtliche Verfahren mit Fr. 2'100.- zu entschädigen. 5. Der Rechtsvertreterin des Beschwerdeführers wird aus der Bundesgerichtskasse eine Entschädigung von Fr. 982.60 ausgerichtet. 6. Die Sache wird zur Neuverlegung der Parteientschädigung des vorangegangenen Verfahrens an das Verwaltungsgericht des Kantons Thurgau zurückgewiesen. 7. Dieses Urteil wird den Parteien, dem Verwaltungsgericht des Kantons Thurgau und dem Bundesamt für Gesundheit schriftlich mitgeteilt. Luzern, 10. Oktober 2024 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Wirthlin Der Gerichtsschreiber: Wüest"
+              "text": "Luzern, 10. Oktober 2024 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Wirthlin Der Gerichtsschreiber: Wüest"
             }
           ]
         }
@@ -214,7 +250,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://10-10-2024-8C_150-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bb648f193e65026362f60914f50d8a5a585946f12733275fe3e056af068156b7",
-      "sha": "b08ea9560e49c7df016f48719826e47b950ac82ddfca0245a2c02bf802b68503"
+      "sha": "28d9286152b4c97f41cb479a37d743856dcef67b4862638c52b8e481936b3812"
     }
   ]
 }

@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichter Haag, Präsident, Bundesrichter Müller, nebenamtliche Bundesrichterin Pont Veuthey, Gerichtsschreiber Vonlanthen.",
+        "parteien": "A.________, Beschwerdeführer, gegen Strassenverkehrsamt des Kantons Luzern, Verkehrsprüfungen Disposition, Arsenalstrasse 45, Postfach 3970, 6002 Luzern, Justiz- und Sicherheitsdepartement des Kantons Luzern, Rechtsdienst, Bahnhofstrasse 15, 6003 Luzern.",
+        "gegenstand": "Strassenverkehrsrecht (Kostenvorschuss),",
+        "vorinstanz": "das Urteil des Kantonsgerichts Luzern, 4. Abteilung, vom 24. Juni 2024 (7H 24 13)."
+      },
       "regeste": {
         "text": "Strassenverkehrsrecht (Kostenvorschuss)",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ absolvierte am 6. und 18. Juli 2023 die praktischen Führerprüfungen für die Kategorie A mit Leistungsbeschränkung (Motorräder, beschränkt auf 35 kW) und die Kategorie B (Personenwagen), welche von den abnehmenden Verkehrsexperten als nicht bestanden gewertet wurden. Mit Verfügung vom 4. September 2023 verweigerte das Strassenverkehrsamt des Kantons Luzern das Gesuch von A.________ um Erteilung der Führerausweise für die entsprechenden Kategorien. Eine gegen die Verfügung des Strassenverkehrsamts erhobene Beschwerde von A.________ wies das Justiz- und Sicherheitsdepartement des Kantons Luzern mit Entscheid vom 3. Januar 2024 ab. A.________ focht den Entscheid des Justiz- und Sicherheitsdepartements mit Beschwerde vom 14. Januar 2024 beim Kantonsgericht Luzern an und beantragte dabei unter anderem die Gewährung der unentgeltlichen Rechtspflege für das Rechtsmittelverfahren. Das Kantonsgericht wies das Gesuch um unentgeltliche Rechtspflege am 19. Februar 2024 ab und forderte…"
+              "text": "A.\n\nA.________ absolvierte am 6. und 18. Juli 2023 die praktischen Führerprüfungen für die Kategorie A mit Leistungsbeschränkung (Motorräder, beschränkt auf 35 kW) und die Kategorie B (Personenwagen), welche von den abnehmenden Verkehrsexperten als nicht bestanden gewertet wurden. Mit Verfügung vom 4. September 2023 verweigerte das Strassenverkehrsamt des Kantons Luzern das Gesuch von A.________ um Erteilung der Führerausweise für die entsprechenden Kategorien.\n\nEine gegen die Verfügung des Strassenverkehrsamts erhobene Beschwerde von A.________ wies das Justiz- und Sicherheitsdepartement des Kantons Luzern mit Entscheid vom 3. Januar 2024 ab.\n\nA.________ focht den Entscheid des Justiz- und Sicherheitsdepartements mit Beschwerde vom 14. Januar 2024 beim Kantonsgericht Luzern an und beantragte dabei unter anderem die Gewährung der unentgeltlichen Rechtspflege für das Rechtsmittelverfahren. Das Kantonsgericht wies das Gesuch um unentgeltliche Rechtspflege am 19. Februar 2024 ab und forderte A.________ mit Verfügung vom 24. April 2024 auf, bis am Freitag, 10. Mai 2024 einen Kostenvorschuss von Fr. 1'500.-- zu bezahlen, ansonsten auf die Beschwerde unter Kostenfolge nicht eingetreten werde. Die Gutschrift des Kostenvorschusses auf dem Konto des Kantonsgerichts erfolgte mit Valuta vom Montag, 13. Mai 2024. Von der anschliessend vom Kantonsgericht gewährten Möglichkeit, sich zum verspätet eingegangenen Kostenvorschuss zu äussern, machte A.________ keinen Gebrauch. Mit Entscheid vom 24. Juni 2024 trat das Kantonsgericht mangels fristgerechter Leistung des Kostenvorschusses auf die Beschwerde nicht ein.\n\nB.\n\nMit als \"Berufung\" bezeichneter Eingabe vom 16. Juli 2024 gelangt A.________ an das Bundesgericht und beantragt, den Entscheid des Kantonsgerichts vom 24. Juni 2024 aufzuheben und die Sache zur Entscheidung an das Kantonsgericht zurückzuweisen. Er ersucht zudem um unentgeltliche Rechtspflege und sinngemäss um Erlass einer vorsorglichen Massnahme, wonach er bis zum Entscheid des Bundesgerichts in der vorliegenden Sache ein Auto führen dürfe.\n\nMit Präsidialverfügung vom 6. August 2024 wies das Bundesgericht das Gesuch um Erlass einer vorsorglichen Massnahme ab.\n\nDas Strassenverkehrsamt und das Kantonsgericht beantragen in ihren Vernehmlassungen die Abweisung der Beschwerde. Diese Eingaben wurden A.________ per Einschreiben zugestellt, von ihm jedoch nicht abgeholt. Zu den anschliessend per A-Post zugestellten Eingaben der Vorinstanzen äusserte sich A.________ nicht mehr."
             }
           ]
         },
@@ -108,8 +116,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, dem Strassenverkehrsamt des Kantons"
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird. 2. Es werden keine Gerichtskosten erhoben. 3. Dieses Urteil wird dem Beschwerdeführer, dem Strassenverkehrsamt des Kantons Luzern, Verkehrsprüfungen Disposition, dem Justiz- und Sicherheitsdepartement des Kantons Luzern, Rechtsdienst, dem Kantonsgericht Luzern, 4. Abteilung, und dem Bundesamt für Strassen schriftlich mitgeteilt. Lausanne, 27. März 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Haag Der Gerichtsschreiber: Vonlanthen"
+              "text": "Luzern, Verkehrsprüfungen Disposition, dem Justiz- und Sicherheitsdepartement des Kantons Luzern, Rechtsdienst, dem Kantonsgericht Luzern, 4. Abteilung, und dem Bundesamt für Strassen schriftlich mitgeteilt. Lausanne, 27. März 2025 Im Namen der I. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Haag Der Gerichtsschreiber: Vonlanthen"
             }
           ]
         }
@@ -164,7 +184,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://27-03-2025-1C_439-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "4989eb0d336ec291590460f451f6a33e4b798222b055bbd15f3dd06d4b2d6c7b",
-      "sha": "294092d82a98e77077d2c0f45f137fcf3f443ea0d94d7fc3b31ba8a35f91f9ad"
+      "sha": "cd6698974c37d283f80f7e709c5eeb5c40c7de8ccf0660495dd745ce7480cdd4"
     }
   ]
 }

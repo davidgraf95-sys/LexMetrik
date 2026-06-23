@@ -14,18 +14,26 @@
       "datum": "2026-01-28",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichter Bovey, Präsident, Bundesrichter Herrmann, Josi, Gerichtsschreiberin Lang.",
+        "parteien": "A.________ GmbH, vertreten durch Rechtsanwältin Dr. Jamie Lee Mancini, Beschwerdeführerin, gegen 1. B.________, 2. C.________, beide vertreten durch Rechtsanwalt Laszlo Georg Séchy, Beschwerdegegner.",
+        "gegenstand": "Nichteintreten bei nicht vollständiger Bezahlung des Kostenvorschusses (definitive Eintragung eines Bauhandwerkerpfandrechts),",
+        "vorinstanz": "das Urteil des Obergerichts des Kantons Zürich, II. Zivilkammer, vom 27. Februar 2025 (LB240055-O/U)."
+      },
       "regeste": {
         "text": "Nichteintreten bei nicht vollständiger Bezahlung des Kostenvorschusses (definitive Eintragung eines Bauhandwerkerpfandrechts)",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.a. Im Zusammenhang mit der Lieferung und dem Einbau eines Parkettbelags in der Liegenschaft von B.________ und C.________ kam es zu Meinungsverschiedenheiten zwischen den Eigentümern und der A.________ GmbH. Letztere erwirkte die vorsorgliche Eintragung eines Bauhandwerkerpfandrechts im Umfang von Fr. 40'092.45 und klagte in der Folge am Bezirksgericht Winterthur auf definitive Eintragung des Bauhandwerkerpfandrechts. A.b. Mit Verfügung vom 23. April 2024 verpflichtete das Bezirksgericht die A.________ GmbH zur Zahlung eines Gerichtskostenvorschusses von Fr. 4'755.-- innert einer nicht erstreckbaren Frist von 20 Tagen ab Zustellung der Verfügung. Die A.________ GmbH leistete den Gerichtskostenvorschuss innert der angesetzten Frist nicht. A.c. Das Bezirksgericht räumte der A.________ GmbH mit Verfügung vom 21. Mai 2024 eine nicht erstreckbare Nachfrist von 5 Tagen ab Zustellung der Verfügung zur Leistung des Kostenvorschusses ein. Die Verfügung enthielt den Hinweis, dass bei Säumni…"
+              "text": "A.\n\nA.a. Im Zusammenhang mit der Lieferung und dem Einbau eines Parkettbelags in der Liegenschaft von B.________ und C.________ kam es zu Meinungsverschiedenheiten zwischen den Eigentümern und der A.________ GmbH. Letztere erwirkte die vorsorgliche Eintragung eines Bauhandwerkerpfandrechts im Umfang von Fr. 40'092.45 und klagte in der Folge am Bezirksgericht Winterthur auf definitive Eintragung des Bauhandwerkerpfandrechts.\n\nA.b. Mit Verfügung vom 23. April 2024 verpflichtete das Bezirksgericht die A.________ GmbH zur Zahlung eines Gerichtskostenvorschusses von Fr. 4'755.-- innert einer nicht erstreckbaren Frist von 20 Tagen ab Zustellung der Verfügung. Die A.________ GmbH leistete den Gerichtskostenvorschuss innert der angesetzten Frist nicht.\n\nA.c. Das Bezirksgericht räumte der A.________ GmbH mit Verfügung vom 21. Mai 2024 eine nicht erstreckbare Nachfrist von 5 Tagen ab Zustellung der Verfügung zur Leistung des Kostenvorschusses ein. Die Verfügung enthielt den Hinweis, dass bei Säumnis auf die Klage nicht eingetreten werde. Sie wurde der Rechtsvertreterin der A.________ GmbH am 22. Mai 2024 zugestellt. Am 23. Mai 2024 ging beim Gericht ein Betrag von Fr. 4'698.72 ein. Aus den Einzelheiten zur aus dem Ausland erfolgten Überweisung, die das Bezirksgericht in seinen Akten in einer \"Eingangsanzeige Prozesskostenvorschuss\" erfasst hat, ergibt sich, dass die A.________ GmbH die Bezahlung von EUR 4'800.-- veranlasst hat (Kurs: 0.9789 = Fr. 4'698.72).\n\nA.d. Am 3. Juni 2024 schickte das Bezirksgericht der A.________ GmbH einen Kurzbrief \"zur Kenntnisnahme\" mit einer Kopie dieser Eingangsanzeige und einer Kopie der Verfügung vom 21. Mai 2024. Der Kurzbrief ging in Kopie auch an B.________ und C.________, die daraufhin unter anderem beantragten, auf die Klage sei nicht einzutreten. Die A.________ GmbH nahm zu diesem Antrag Stellung.\n\nA.e. Mit Entscheid vom 26. September 2024 trat das Bezirksgericht auf die Klage nicht ein.\n\nB.\n\nDie hiergegen von der A.________ GmbHerhobene Berufung wies das Obergericht des Kantons Zürich mit Entscheid vom 27. Februar 2025 ab und auferlegte der A.________ GmbH die Prozesskosten.\n\nC.\n\nGegen diesen Entscheid gelangt die A.________ GmbH (Beschwerdeführerin) mit Beschwerde in Zivilsachen vom 31. März 2025 an das Bundesgericht. Diesem beantragt sie unter Kosten- und Entschädigungsfolge die Aufhebung des angefochtenen Entscheids und die Rückweisung der Angelegenheit zur materiellen Entscheidung an das Bezirksgericht Winterthur.\n\nDie Beschwerdegegner beantragen dem Bundesgericht mit Beschwerdeantwort vom 22. August 2025 unter Kosten- und Entschädigungsfolgen zulasten der Beschwerdeführerin die Abweisung der Beschwerde. Das Obergericht hat auf die Einreichung einer Vernehmlassung verzichtet. Weitere Eingaben sind nicht eingegangen. Das Bundesgericht hat die kantonalen Akten eingeholt."
             }
           ]
         },
@@ -108,8 +116,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdeführerin hat die Beschwerdegegner für das bundesgerichtliche Verfahren mit Fr. 3000.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Zürich, II. Zivilkammer, mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen. 2. Die Gerichtskosten von Fr. 3'000.-- werden der Beschwerdeführerin auferlegt. 3. Die Beschwerdeführerin hat die Beschwerdegegner für das bundesgerichtliche Verfahren mit Fr. 3000.-- zu entschädigen. 4. Dieses Urteil wird den Parteien und dem Obergericht des Kantons Zürich, II. Zivilkammer, mitgeteilt. Lausanne, 28. Januar 2026 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Die Gerichtsschreiberin: Lang"
+              "text": "Lausanne, 28. Januar 2026 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Die Gerichtsschreiberin: Lang"
             }
           ]
         }
@@ -174,7 +198,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://28-01-2026-5A_242-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "9e1218b2de44299f2627346a3596bd55d70a517254a136498203260e5270eaef",
-      "sha": "fc774202ba3953b1307b6df9b01d105410c363d8ce9ee135feb088060a3da920"
+      "sha": "5831785f269a4f6bef11818a562a1f08529070f1530667917caa08bb1a95d365"
     }
   ]
 }

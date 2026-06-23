@@ -14,18 +14,26 @@
       "datum": "2023-08-25",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "prozess",
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichter Kölz, Hofmann, Gerichtsschreiberin Kern.",
+        "parteien": "A.________, Beschwerdeführer, gegen Obergericht Appenzell Ausserrhoden, Vorsitzender der 2. Abteilung, Landsgemeindeplatz 7c, Fünfeckpalast, 9043 Trogen.",
+        "gegenstand": "Strafverfahren; unentgeltliche Rechtspflege,",
+        "vorinstanz": "die Verfügung des Obergerichts Appenzell Ausserrhoden, Vorsitzender der 2. Abteilung, vom 29. März 2022 (ERS 22 12)."
+      },
       "regeste": {
         "text": "Strafverfahren; unentgeltliche Rechtspflege",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Am 13. Dezember 2021 erhob A.________ Strafklage gegen Rechtsanwalt Dr. B.________, C.________ und die \"Verantwortlichen der D.________ AG\" wegen Ehrverletzung. Die Staatsanwaltschaft Appenzell Ausserrhoden verfügte am 4. Januar 2022 die Nichtanhandnahme des Strafverfahrens gegen die \"Verantwortlichen der D.________ AG\". B. Dagegen erhob A.________ Beschwerde beim Obergericht des Kantons Appenzell Ausserrhoden. Nachdem ihn das Obergericht zur Leistung einer Sicherheit in der Höhe von Fr. 800.-- aufgefordert hatte, stellte er ein Gesuch um unentgeltliche Rechtspflege. Der Vorsitzende der 2. Abteilung des Obergerichts wies dieses mit Verfügung vom 29. März 2022 ab (Dispositiv-Ziffer 1). C. Mit eigenhändiger Beschwerde in Strafsachen vom 19. April 2022 beantragt A.________ vor Bundesgericht, Dispositiv-Ziffer 1 der Verfügung vom 29. März 2022 aufzuheben und ihm die unentgeltliche Rechtspflege für das Rechtsmittelverfahren vor der Vorinstanz zu gewähren. Eventualiter sei die Sache zu ne…"
+              "text": "A. Am 13. Dezember 2021 erhob A.________ Strafklage gegen Rechtsanwalt Dr. B.________, C.________ und die \"Verantwortlichen der D.________ AG\" wegen Ehrverletzung. Die Staatsanwaltschaft Appenzell Ausserrhoden verfügte am 4. Januar 2022 die Nichtanhandnahme des Strafverfahrens gegen die \"Verantwortlichen der D.________ AG\". B. Dagegen erhob A.________ Beschwerde beim Obergericht des Kantons Appenzell Ausserrhoden. Nachdem ihn das Obergericht zur Leistung einer Sicherheit in der Höhe von Fr. 800.-- aufgefordert hatte, stellte er ein Gesuch um unentgeltliche Rechtspflege. Der Vorsitzende der 2. Abteilung des Obergerichts wies dieses mit Verfügung vom 29. März 2022 ab (Dispositiv-Ziffer 1). C. Mit eigenhändiger Beschwerde in Strafsachen vom 19. April 2022 beantragt A.________ vor Bundesgericht, Dispositiv-Ziffer 1 der Verfügung vom 29. März 2022 aufzuheben und ihm die unentgeltliche Rechtspflege für das Rechtsmittelverfahren vor der Vorinstanz zu gewähren. Eventualiter sei die Sache zu neuer Beurteilung an die Vorinstanz zurückzuweisen. Zudem sei eine \"Präzisierung der Rechtsprechung zu Art. 136 StPO \" zu prüfen. Ferner sei ihm für das bundesgerichtliche Verfahren die unentgeltliche Rechtspflege zu gewähren. Die Vorinstanz hat ausdrücklich auf Vernehmlassung verzichtet. Die Staatsanwaltschaft hat sich nicht vernehmen lassen."
             }
           ]
         },
@@ -73,8 +81,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege für das bundesgerichtliche Verfahren wird abgewiesen."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 600.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft Appenzell Ausserrhoden und dem Obergericht Appenzell Ausserrhoden, Vorsitzender der 2. Abteilung, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird. 2. Das Gesuch um unentgeltliche Rechtspflege für das bundesgerichtliche Verfahren wird abgewiesen. 3. Die Gerichtskosten von Fr. 600.-- werden dem Beschwerdeführer auferlegt. 4. Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft Appenzell Ausserrhoden und dem Obergericht Appenzell Ausserrhoden, Vorsitzender der 2. Abteilung, schriftlich mitgeteilt. Lausanne, 25. August 2023 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Die Gerichtsschreiberin: Kern"
+              "text": "Lausanne, 25. August 2023 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Die Gerichtsschreiberin: Kern"
             }
           ]
         }
@@ -107,7 +131,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=5&from_date=25.08.2023&to_date=28.08.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=44&azaclir=aza&highlight_docid=aza%3A%2F%2F25-08-2023-7B_198-2022&number_of_ranks=66",
       "abgerufen": "2026-06-23",
       "fassungsToken": "db6afd740edfa552f1f85c815c922a7fa4027e0b1ad31d11dad2ab371da88ec2",
-      "sha": "648f52b888e9c7bfb072e40b94dc6fb8b2c897a7791055ff102fd0b61e2724cc"
+      "sha": "27bf63a68cd2717bea7be7169a507e9eaade1467c5e774dac092a7dc0794d5b2"
     }
   ]
 }

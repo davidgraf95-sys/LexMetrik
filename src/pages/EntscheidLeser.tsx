@@ -110,7 +110,10 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   if (regesteText) vorhandene.add('regeste');
   const navZiele = NAV_TYPEN
     .filter((t) => vorhandene.has(t))
-    .map((t) => ({ anker: t === 'regeste' ? 'abschnitt-regeste' : abschnittAnker(t), label: ABSCHNITT_TITEL[t] }));
+    .map((t) => ({
+      anker: t === 'regeste' ? 'abschnitt-regeste' : abschnittAnker(t),
+      label: t === 'regeste' && !snap.regesteAmtlich ? 'Zusammenfassung' : ABSCHNITT_TITEL[t],
+    }));
 
   // R12 «Kopieren mit Fundstelle»: Zitierung + Permalink in die Zwischenablage.
   const kopiereZitat = () => {
@@ -169,22 +172,37 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         </div>
       </header>
 
+      {/* Rubrum (Art. 112 BGG): Gegenstand / Parteien / Vorinstanz / Besetzung. */}
+      {snap.rubrum && (snap.rubrum.gegenstand || snap.rubrum.parteien || snap.rubrum.vorinstanz || snap.rubrum.besetzung) && (
+        <section aria-label="Rubrum" className="rounded-lg border border-line bg-paper-sunken/40 px-4 py-3">
+          <dl className="grid grid-cols-1 sm:grid-cols-[8rem_minmax(0,1fr)] gap-x-4 gap-y-2 text-body-s">
+            {snap.rubrum.gegenstand && (<><dt className="lc-overline pt-0.5">Gegenstand</dt><dd className="text-ink-800">{snap.rubrum.gegenstand}</dd></>)}
+            {snap.rubrum.parteien && (<><dt className="lc-overline pt-0.5">Parteien</dt><dd className="text-ink-700">{snap.rubrum.parteien}</dd></>)}
+            {snap.rubrum.vorinstanz && (<><dt className="lc-overline pt-0.5">Vorinstanz</dt><dd className="text-ink-700">{snap.rubrum.vorinstanz}</dd></>)}
+            {snap.rubrum.besetzung && (<><dt className="lc-overline pt-0.5">Besetzung</dt><dd className="text-ink-700">{snap.rubrum.besetzung}</dd></>)}
+          </dl>
+        </section>
+      )}
+
       <SprungNavigation ziele={navZiele} />
 
-      {/* Regeste (redaktioneller Leitsatz) — hervorgehoben, mit Quellennennung. */}
+      {/* Regeste nur beim amtlich publizierten BGE; sonst maschinelle Zusammenfassung —
+          ehrlich gekennzeichnet (Abnahme-Kritik: kein Etikettenschwindel). */}
       {regesteText && snap.regeste && (
         <section id="abschnitt-regeste" className="scroll-mt-[7rem] lc-highlight space-y-2">
-          <p className="lc-overline text-brass-700">Regeste</p>
+          <p className="lc-overline text-brass-700">{snap.regesteAmtlich ? 'Regeste' : 'Zusammenfassung'}</p>
           <p className="font-serif text-[1.1rem] leading-[1.7] text-ink-900 whitespace-pre-line">{regesteText}</p>
           <p className="text-micro text-ink-500">
-            Quelle der Regeste: {snap.regeste.quelle === 'opencaselaw' ? 'OpenCaseLaw' : 'entscheidsuche.ch'}
+            {snap.regesteAmtlich
+              ? 'Amtliche Regeste der Sammlung · Quelle: OpenCaseLaw'
+              : 'Automatisch erstellte Zusammenfassung — keine amtliche Regeste · Quelle: OpenCaseLaw'}
           </p>
         </section>
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1) — schmaler als die amtlichen Anzeigen. */}
       <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
-        <EntscheidBody abschnitte={snap.abschnitte} />
+        <EntscheidBody abschnitte={snap.abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
       </article>
 
       {/* Provenienz / Rechtslage (§7/§8) */}

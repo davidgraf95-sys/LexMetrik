@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Klett, Präsidentin, Bundesrichter Kolly, Bundesrichterin Kiss, Gerichtsschreiber Widmer. Parteien X.________ Film Production SA, (vormals Y.________ Film Production SA), Beschwerdeführerin, vertreten durch Rechtsanwalt Christophe Germann, gegen Z.________ AG, Beschwerdegegnerin, vertreten durch Rechtsanwalt Dr. Michael Widmer.",
+        "parteien": "X.________ Film Production SA, (vormals Y.________ Film Production SA), Beschwerdeführerin, vertreten durch Rechtsanwalt Christophe Germann, gegen Z.________ AG, Beschwerdegegnerin, vertreten durch Rechtsanwalt Dr. Michael Widmer.",
+        "gegenstand": "Protokollberichtigungsbegehren,",
+        "vorinstanz": "den Zirkularbeschluss des Obergerichts des Kantons Thurgau vom 11. März 2009."
+      },
       "regeste": {
         "text": "Protokollberichtigungsbegehren",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Das Obergericht des Kantons Thurgau traf am 27. Mai 2008 den Endentscheid im Verfahren Z1.2008.2 zwischen der Y.________ Film Production SA und der Z.________ AG betreffend Lizenzvertrag und URG. Dagegen erhob die Y.________ Film Production SA Beschwerde in Zivilsachen an das Bundesgericht (Verfahren 4A_56/2009). B. Am 19. Januar 2009 ersuchte die Y.________ Film Production SA beim Obergericht um Berichtigung des Protokolls der Hauptverhandlung vom 27. Mai 2008, weil die anlässlich der Hauptverhandlung von ihr eingereichte CD darin fälschlicherweise nicht erwähnt worden sei. Mit Zirkularbeschluss vom 11. März 2009 wies das Obergericht die Protokollberichtigungsbeschwerde ab. Es hielt fest, für eine Protokollberichtigung bestünden keine Gründe. Die von der Gesuchstellerin eingereichte E-Mail samt Beilage sei in Papierform entgegengenommen worden und in den Akten vorhanden. Die Behauptung der Gesuchstellerin, sie habe neben diesen Aktenstücken auch eine CD desselben Inhalts eingereich…"
+              "text": "A. Das Obergericht des Kantons Thurgau traf am 27. Mai 2008 den Endentscheid im Verfahren Z1.2008.2 zwischen der Y.________ Film Production SA und der Z.________ AG betreffend Lizenzvertrag und URG. Dagegen erhob die Y.________ Film Production SA Beschwerde in Zivilsachen an das Bundesgericht (Verfahren 4A_56/2009). B. Am 19. Januar 2009 ersuchte die Y.________ Film Production SA beim Obergericht um Berichtigung des Protokolls der Hauptverhandlung vom 27. Mai 2008, weil die anlässlich der Hauptverhandlung von ihr eingereichte CD darin fälschlicherweise nicht erwähnt worden sei. Mit Zirkularbeschluss vom 11. März 2009 wies das Obergericht die Protokollberichtigungsbeschwerde ab. Es hielt fest, für eine Protokollberichtigung bestünden keine Gründe. Die von der Gesuchstellerin eingereichte E-Mail samt Beilage sei in Papierform entgegengenommen worden und in den Akten vorhanden. Die Behauptung der Gesuchstellerin, sie habe neben diesen Aktenstücken auch eine CD desselben Inhalts eingereicht, treffe nicht zu. Im Übrigen sei nicht leicht nachvollziehbar, was das Beharren auf einer Protokollberichtigung für einen tieferen Sinne habe, nachdem die Gesuchstellerin ausdrücklich geltend mache, die CD habe denselben Inhalt aufgewiesen wie die in Papierform eingereichten und zu den Akten genommenen Papiere. Die X.________ Film Production SA, vormals Y.________ Film Production SA (Beschwerdeführerin) beantragt dem Bundesgericht mit Beschwerde in Zivilsachen, es sei der Zirkularbeschluss des Obergerichts vom 11. März 2009 vollumfänglich aufzuheben und das Obergericht zu veranlassen, das Protokoll der Sitzung vom 27. Mai 2008 zu berichtigen, indem es klar festhalte, dass die Beschwerdeführerin anlässlich der Sitzung vom 27. Mai 2008 dem Obergericht folgende Beweisstücke eingereicht habe: eine CD, worauf die elektronischen Daten gespeichert sind, welche den Inhalt der E-Mail der Beschwerdegegnerin vom 2. Februar 2005 samt deren Beilage bestehend aus dem ersten Vertragsentwurf der Beschwerdegegnerin belegen, sowie eine Kopie auf Papier der E-Mail der Beschwerdegegnerin vom 2. Februar 2005 samt deren Beilage bestehend aus dem ersten Vertragsentwurf der Beschwerdegegnerin. Die Beschwerdegegnerin beantragt, die Beschwerde abzuweisen, soweit überhaupt darauf einzutreten sei. Die Vorinstanz schliesst auf Abweisung der Beschwerde. Die Beschwerdeführerin reichte am 16. Juni 2009 eine Replik ein, wozu die Beschwerdegegnerin am 29. Juni 2009 Stellung nahm. Mit Schreiben vom 7. Juli 2009 bzw. 20. Juli 2009 äusserten sich die Parteien ein drittes Mal in dieser Angelegenheit."
             }
           ]
         },
@@ -58,8 +66,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 1'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Beschwerdeführerin hat die Beschwerdegegnerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Thurgau schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde wird nicht eingetreten. 2. Die Gerichtskosten von Fr. 1'000.-- werden der Beschwerdeführerin auferlegt. 3. Die Beschwerdeführerin hat die Beschwerdegegnerin für das bundesgerichtliche Verfahren mit Fr. 2'500.-- zu entschädigen. 4. Dieses Urteil wird den Parteien und dem Obergericht des Kantons Thurgau schriftlich mitgeteilt. Lausanne, 11. August 2009 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Der Gerichtsschreiber: Klett Widmer"
+              "text": "Lausanne, 11. August 2009 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Der Gerichtsschreiber: Klett Widmer"
             }
           ]
         }
@@ -88,7 +112,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=17&from_date=02.08.2009&to_date=21.08.2009&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=169&azaclir=aza&highlight_docid=aza%3A%2F%2F11-08-2009-4A_184-2009&number_of_ranks=323",
       "abgerufen": "2026-06-23",
       "fassungsToken": "4d0de13ff5293fa25801bdf923754d3cf8840f01261ef70205ff224fd141dde8",
-      "sha": "b4f19c00f9ec3971fbcdb8b44731f2cd41867bfae8d2a47e5fa6b71f0e0c4861"
+      "sha": "fe265c8d2ad25ab6dbc8eb54232f06a49727abf4b05193c12ba4b7f8d39621ab"
     }
   ]
 }

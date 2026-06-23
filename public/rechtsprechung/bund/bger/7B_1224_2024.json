@@ -14,18 +14,26 @@
       "datum": "2025-04-04",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
+      "rubrum": {
+        "besetzung": "Bundesrichter Abrecht, Präsident, Bundesrichterinnen van de Graaf, Koch, Gerichtsschreiber Hahn.",
+        "parteien": "A.________, vertreten durch Jan Berchtold und/oder Dr. Matthias Meier, Rechtsanwälte, Beschwerdeführer, gegen Staatsanwaltschaft des Kantons Schwyz, 3. Abteilung, Bahnhofstrasse 4,",
+        "gegenstand": "Entsiegelung,",
+        "vorinstanz": "die Verfügung des Zwangsmassnahmengerichts Schwyz, Einzelrichter, vom 28. Oktober 2024 (ZME 2024 130)."
+      },
       "regeste": {
         "text": "Entsiegelung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Die Staatsanwaltschaft des Kantons Schwyz führt eine Strafuntersuchung gegen A.________ wegen des Verdachts des Betrugs im Zusammenhang mit dem Betrieb von Datingportalen. Im Rahmen der Strafuntersuchung erfolgte am 26. September 2024 eine Hausdurchsuchung in den Büroräumlichkeiten von A.________, anlässlich welcher diverse Aufzeichnungen und Gegenstände sichergestellt worden sind. A.________ beantragte bei einem Teil der sichergestellten Asservate die Siegelung. B. Die Staatsanwaltschaft stellte beim Zwangsmassnahmengericht des Kantons Schwyz am 15. Oktober 2024 ein Gesuch um Entsiegelung. Mit Verfügung vom 28. Oktober 2024 trat das Zwangsmassnahmengericht auf das Siegelungsbegehren von A.________ nicht ein und gab die am 26. September 2024 sichergestellten und versiegelten Asservate zur Entsiegelung und Durchsuchung durch die Staatsanwaltschaft frei. C. Mit Beschwerde in Strafsachen vom 15. November 2024 beantragt A.________, unter Aufhebung der Verfügung des Zwangsmassnahmengeric…"
+              "text": "A.\n\nDie Staatsanwaltschaft des Kantons Schwyz führt eine Strafuntersuchung gegen A.________ wegen des Verdachts des Betrugs im Zusammenhang mit dem Betrieb von Datingportalen. Im Rahmen der Strafuntersuchung erfolgte am 26. September 2024 eine Hausdurchsuchung in den Büroräumlichkeiten von A.________, anlässlich welcher diverse Aufzeichnungen und Gegenstände sichergestellt worden sind. A.________ beantragte bei einem Teil der sichergestellten Asservate die Siegelung.\n\nB.\n\nDie Staatsanwaltschaft stellte beim Zwangsmassnahmengericht des Kantons Schwyz am 15. Oktober 2024 ein Gesuch um Entsiegelung. Mit Verfügung vom 28. Oktober 2024 trat das Zwangsmassnahmengericht auf das Siegelungsbegehren von A.________ nicht ein und gab die am 26. September 2024 sichergestellten und versiegelten Asservate zur Entsiegelung und Durchsuchung durch die Staatsanwaltschaft frei.\n\nC.\n\nMit Beschwerde in Strafsachen vom 15. November 2024 beantragt A.________, unter Aufhebung der Verfügung des Zwangsmassnahmengerichts vom 28. Oktober 2024 seien ihm die gesiegelten Asservate und Vermögenswerte herauszugeben. Eventualiter sei die Sache zu neuem Entscheid an das Zwangsmassnahmengericht zurückzuweisen.\n\nDie Vorinstanz beantragt die Abweisung der Beschwerde. Die Staatsanwaltschaft beantragt, auf die Beschwerde sei nicht einzutreten. Eventualiter sei sie abzuweisen. Der Beschwerdeführer hat repliziert.\n\nMit Verfügung vom 5. Dezember 2024 untersagte der Präsident der II. Strafrechtlichen Abteilung des Bundesgerichts der Vorinstanz bis zum Abschluss des bundesgerichtlichen Verfahrens die Herausgabe der anlässlich der Hausdurchsuchung vom 26. September 2024 sichergestellten und gesiegelten Gegenstände an die Staatsanwaltschaft."
             }
           ]
         },
@@ -83,8 +91,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 1'200.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft des Kantons Schwyz, 3. Abteilung, und dem Zwangsmassnahmengericht Schwyz, Einzelrichter, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde wird nicht eingetreten. 2. Die Gerichtskosten von Fr. 1'200.-- werden dem Beschwerdeführer auferlegt. 3. Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft des Kantons Schwyz, 3. Abteilung, und dem Zwangsmassnahmengericht Schwyz, Einzelrichter, schriftlich mitgeteilt. Lausanne, 4. April 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Der Gerichtsschreiber: Hahn"
+              "text": "Lausanne, 4. April 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Abrecht Der Gerichtsschreiber: Hahn"
             }
           ]
         }
@@ -130,7 +150,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://04-04-2025-7B_1224-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "c832b3b3b6c0038c5410ba9189959550ac73f72034e981c1571a310560d5e958",
-      "sha": "28c028d264e7d93125bf71777d3206b4e81968ad71035fd1b508cf849a4f9cfa"
+      "sha": "4c9fd6190bc3d85294956bf2ac14b889fc50c3a67fa9c80286a4d867719305d3"
     }
   ]
 }

@@ -14,18 +14,26 @@
       "datum": "2021-02-10",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Seiler, Präsident, Bundesrichterin Hänni, Bundesrichter Beusch, Gerichtsschreiber Hugi Yar.",
+        "parteien": "A.________, Beschwerdeführer, vertreten durch Advokat Dr. Nicolas Roulet, gegen Migrationsamt des Kantons Basel-Stadt, Spiegelgasse 12, 4051 Basel.",
+        "gegenstand": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft,",
+        "vorinstanz": "den Entscheid des Appellationsgerichts des Kantons Basel-Stadt als Verwaltungsgericht, Einzelrichterin für Zwangsmassnahmen im Ausländerrecht, vom 11. Dezember 2020 (AUS.2020.55, AUS.2020.56)."
+      },
       "regeste": {
         "text": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ (geb. 1988) ist tunesischer Staatsangehöriger. Er wurde mit Strafurteil vom 14. Juni 2018 für 20 Jahre des Landes verwiesen (Diebstahl, Hausfriedensbruch, mehrfache Missachtung einer Ausgrenzung usw.). A.________ befand sich vom 9. Februar bis zum 18. März 2020 in Ausschaffungshaft; er wurde aus dieser entlassen, da aufgrund der Pandemiesituation für eine gewisse Zeit nicht absehbar war, wann Ausreisen nach Tunesien wieder möglich sein würden. A.________ wurde vom 1. bis zum 13. September 2020 erneut in Ausschaffungshaft genommen; ab dem 14. September 2020 ist er in die Durchsetzungshaft versetzt worden. Die Einzelrichterin für Zwangsmassnahmen im Ausländerrecht am Appellationsgericht des Kantons Basel-Stadt (als Verwaltungsgericht; im Folgenden: Einzelrichterin) genehmigte deren Verlängerung am 11. Dezember 2020 bis zum 13. Februar 2021; sie wies dabei auch ein am 3. Dezember 2020 gestelltes Haftentlassungsgesuch ab. B. A.________ gelangte am 12. Januar 2021 mit dem Antr…"
+              "text": "A. A.________ (geb. 1988) ist tunesischer Staatsangehöriger. Er wurde mit Strafurteil vom 14. Juni 2018 für 20 Jahre des Landes verwiesen (Diebstahl, Hausfriedensbruch, mehrfache Missachtung einer Ausgrenzung usw.). A.________ befand sich vom 9. Februar bis zum 18. März 2020 in Ausschaffungshaft; er wurde aus dieser entlassen, da aufgrund der Pandemiesituation für eine gewisse Zeit nicht absehbar war, wann Ausreisen nach Tunesien wieder möglich sein würden. A.________ wurde vom 1. bis zum 13. September 2020 erneut in Ausschaffungshaft genommen; ab dem 14. September 2020 ist er in die Durchsetzungshaft versetzt worden. Die Einzelrichterin für Zwangsmassnahmen im Ausländerrecht am Appellationsgericht des Kantons Basel-Stadt (als Verwaltungsgericht; im Folgenden: Einzelrichterin) genehmigte deren Verlängerung am 11. Dezember 2020 bis zum 13. Februar 2021; sie wies dabei auch ein am 3. Dezember 2020 gestelltes Haftentlassungsgesuch ab. B. A.________ gelangte am 12. Januar 2021 mit dem Antrag an das Bundesgericht, den Entscheid der Einzelrichterin \"vollumfänglich aufzuheben\"; er sei aus der Durchsetzungshaft zu entlassen und \"umgehend auf freien Fuss zu setzen\". Eventuell sei die Sache zu neuem Entscheid an die Vorinstanz zurückzuweisen. A.________ weigert sich, den für die Rückreise nach Tunesien nötigen COVID-19-PCR-Test durchführen zu lassen. Es fehle hierfür an der erforderlichen gesetzlichen Grundlage; seine Verbringung in die Heimat sei in absehbarer Zeit nicht möglich; im Übrigen sei er nicht hafterstehungsfähig und seine Festhaltung unverhältnismässig. Der Abteilungspräsident lehnte es am 13. Januar 2021 ab, A.________ im Rahmen einer vorsorglichen Anordnung aus der Haft zu entlassen; gleichzeitig holte er beim Staatssekretariat für Migration (SEM) einen Amtsbericht zur Möglichkeit ein, A.________ nach Tunesien verbringen zu können. Der entsprechende Bericht ging am 28. Januar 2021 ein. Die Einzelrichterin und das Migrationsamt des Kantons Basel-Stadt verzichten unter Hinweis auf ihre jeweiligen Begründungen in den kantonalen Verfahren auf eine Vernehmlassung. A.________ hat in Kenntnis des Amtsberichts an seinen Ausführungen und Anträgen festgehalten."
             }
           ]
         },
@@ -158,8 +166,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird gutgeheissen: 2.1. Es werden keine Gerichtskosten erhoben. 2.2. Dem Beschwerdeführer wird Rechtsanwalt Dr. Nicolas Roulet als unentgeltlicher Rechtsbeistand beigegeben und diesem aus der Bundesgerichtskasse eine Entschädigung von Fr. 1'500.-- ausgerichtet."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Appellationsgericht des Kantons Basel-Stadt als Verwaltungsgericht, Einzelrichterin für Zwangsmassnahmen im Ausländerrecht, und dem Staatssekretariat für Migration schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen. 2. Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird gutgeheissen: 2.1. Es werden keine Gerichtskosten erhoben. 2.2. Dem Beschwerdeführer wird Rechtsanwalt Dr. Nicolas Roulet als unentgeltlicher Rechtsbeistand beigegeben und diesem aus der Bundesgerichtskasse eine Entschädigung von Fr. 1'500.-- ausgerichtet. 3. Dieses Urteil wird den Verfahrensbeteiligten, dem Appellationsgericht des Kantons Basel-Stadt als Verwaltungsgericht, Einzelrichterin für Zwangsmassnahmen im Ausländerrecht, und dem Staatssekretariat für Migration schriftlich mitgeteilt. Lausanne, 10. Februar 2021 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Seiler Der Gerichtsschreiber: Hugi Yar"
+              "text": "Lausanne, 10. Februar 2021 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Seiler Der Gerichtsschreiber: Hugi Yar"
             }
           ]
         }
@@ -190,7 +210,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=7&from_date=10.02.2021&to_date=13.02.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=68&azaclir=aza&highlight_docid=aza%3A%2F%2F10-02-2021-2C_35-2021&number_of_ranks=68",
       "abgerufen": "2026-06-23",
       "fassungsToken": "48282d74446ea40bcdfbbb1c9d1fdc576e8115465583a3fb0c54e936274afc31",
-      "sha": "53a38a6c8f4b22674bd3c85824bcfc14d529570e2e1d03989e16a2560c55c429"
+      "sha": "8b1e27f072614915506f287100aebdf9796ed329055fb22c5c9fbdab7e98eb8f"
     }
   ]
 }

@@ -557,7 +557,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Nichteintreten bei nicht vollständiger Bezahlung des Kostenvorschusses (definitive Eintragung eines Bauhandwerkerpfandrechts)",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "privat",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -942,7 +942,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Konkursandrohung",
-      "sachgebiet": "schkg",
+      "sachgebiet": "privat",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1043,7 +1043,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "unentgeltliche Rechtspflege; Wiedererwägung, Vollzug der Landesverweisung",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1069,7 +1069,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld)",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1097,7 +1097,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Provisorische Nachlassstundung",
-      "sachgebiet": "schkg",
+      "sachgebiet": "privat",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1123,7 +1123,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Disziplinarmassnahme; unentgeltliche Rechtspflege",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1174,7 +1174,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Haftentlassungesuch; Nichteintreten",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
         "BGG"
@@ -1199,7 +1199,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Entsiegelung",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
         "STGB",
@@ -1356,7 +1356,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Feststellung der Rechtswidrigkeit der Haft",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1382,7 +1382,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Strafverfahren; unentgeltliche Rechtspflege",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "prozess",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -1459,7 +1459,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Erteilung einer Aufenthaltsbewilligung",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1536,7 +1536,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschaffungshaft, Haftentlassungsgesuch",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1562,7 +1562,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -1614,7 +1614,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG",
@@ -1715,7 +1715,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Verlängerung der Ausschaffungshaft",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -1741,7 +1741,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschaffungshaft / Haftüberprüfung",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -1767,7 +1767,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Auschaffungshaft",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BV",
@@ -1848,7 +1848,7 @@
       "leitcharakter": "leitentscheid",
       "regesteVorhanden": true,
       "regesteKurz": "Ausschaffungshaft / Haftüberprüfung",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
       "sprache": "de",
       "normKeys": [
         "BGG"

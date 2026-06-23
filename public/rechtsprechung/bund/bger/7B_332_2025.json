@@ -14,11 +14,18 @@
       "datum": "2025-04-16",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "straf",
+      "sachgebiet": "prozess",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Koch, als Einzelrichterin, Gerichtsschreiberin Sauthier.",
+        "parteien": "A.________, Beschwerdeführer, gegen Staatsanwaltschaft des Kantons Basel-Stadt, Binningerstrasse 21, 4051 Basel.",
+        "gegenstand": "Haftentlassungesuch; Nichteintreten,",
+        "vorinstanz": "die Verfügung des Appellationsgerichts Basel-Stadt, Präsident, vom 4. Dezember 2024 (SB.2023.57). Erwägungen: 1. Das Strafgericht des Kantons Basel-Stadt erkannte mit Urteil vom 23. März 2023, dass A.________ die ihm vorgeworfene versuchte vorsätzliche Tötung schuldlos begangen hatte und ordnete"
+      },
       "regeste": {
         "text": "Haftentlassungesuch; Nichteintreten",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "erwaegung",
@@ -54,8 +61,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 500.-- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft des Kantons Basel-Stadt und dem Appellationsgericht Basel-Stadt, Präsident, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde wird nicht eingetreten. 2. Die Gerichtskosten von Fr. 500.-- werden dem Beschwerdeführer auferlegt. 3. Dieses Urteil wird dem Beschwerdeführer, der Staatsanwaltschaft des Kantons Basel-Stadt und dem Appellationsgericht Basel-Stadt, Präsident, schriftlich mitgeteilt. Lausanne, 16. April 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Einzelrichterin: Koch Die Gerichtsschreiberin: Sauthier"
+              "text": "Lausanne, 16. April 2025 Im Namen der II. strafrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Einzelrichterin: Koch Die Gerichtsschreiberin: Sauthier"
             }
           ]
         }
@@ -90,7 +109,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://16-04-2025-7B_332-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "d29238ee8f07f1bddec689f9c3ac451fcbda610c0c2d8d56bab58b48ead00a7f",
-      "sha": "60da83eecd03a5031a039ef9e243c4a1d2381cbaca303b6485b2b73b8483f07d"
+      "sha": "a0b6babd835adaed84d7ea17a7a78656e535c741baf45b5c3b1ec686de71ad8c"
     }
   ]
 }

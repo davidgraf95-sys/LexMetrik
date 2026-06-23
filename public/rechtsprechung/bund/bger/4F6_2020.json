@@ -15,10 +15,17 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Kiss, Präsidentin, Gerichtsschreiber Brugger.",
+        "parteien": "A.________, Gesuchsteller, gegen Regierungsstatthalteramt Seeland, Gesuchsgegner, Obergericht des Kantons Bern, 1. Zivilkammer,",
+        "gegenstand": "Revision, Revisionsgesuch gegen das Urteil 4D_26/2020 des Schweizerischen Bundesgerichts vom 16. Juli 2020. Erwägungen: 1. Mit Urteil 4D_26/2020 vom 16. Juli 2020 ist das Bundesgericht im Verfahren nach Art. 108 BGG auf eine",
+        "vorinstanz": null
+      },
       "regeste": {
         "text": "Revision,",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "erwaegung",
@@ -39,8 +46,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf das Revisionsgesuch wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 500.-- werden dem Gesuchsteller auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, 1. Zivilkammer, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf das Revisionsgesuch wird nicht eingetreten. 2. Die Gerichtskosten von Fr. 500.-- werden dem Gesuchsteller auferlegt. 3. Dieses Urteil wird den Parteien und dem Obergericht des Kantons Bern, 1. Zivilkammer, schriftlich mitgeteilt. Lausanne, 6. Oktober 2020 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Kiss Der Gerichtsschreiber: Brugger"
+              "text": "Lausanne, 6. Oktober 2020 Im Namen der I. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Kiss Der Gerichtsschreiber: Brugger"
             }
           ]
         }
@@ -67,7 +86,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=03.10.2020&to_date=06.10.2020&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=34&azaclir=aza&highlight_docid=aza%3A%2F%2F06-10-2020-4F_6-2020&number_of_ranks=58",
       "abgerufen": "2026-06-23",
       "fassungsToken": "f15cd7c825f784e01158c2dcca70e326d38549b4b61741fe51547b01132b3c14",
-      "sha": "da5ac57d8a30a41b82f5995d58d1997b332667da8d4de1644c2b2e703aee89c9"
+      "sha": "2fb65e4e10f8c7c630a64b3a23ee6bb3c7bf91b3e4e04825578c94f630105176"
     }
   ]
 }

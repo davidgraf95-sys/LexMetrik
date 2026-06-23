@@ -14,18 +14,26 @@
       "datum": "2023-01-31",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Aubry Girardin, Präsidentin, Bundesrichterin Hänni, Bundesrichter Hartmann, Gerichtsschreiberin de Sépibus.",
+        "parteien": "A.________, B.________, Beschwerdeführer, beide vertreten durch Rechtsanwalt Dr. Marc Spescha, gegen Migrationsamt des Kantons Zürich, Berninastrasse 45, 8090 Zürich, Sicherheitsdirektion des Kantons Zürich, Neumühlequai 10, 8090 Zürich.",
+        "gegenstand": "Erteilung einer Aufenthaltsbewilligung,",
+        "vorinstanz": "das Urteil des Verwaltungsgerichts des Kantons Zürich, 2. Abteilung, vom 2. Februar 2022 (VB.2021.00754)."
+      },
       "regeste": {
         "text": "Erteilung einer Aufenthaltsbewilligung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Die ukrainische Staatsangehörige A.________ (geb. 1989) ist Violinistin und besuchte sieben Semester lang einen entsprechenden Studiengang an einer Musikhochschule in Deutschland, welchen sie 2011 erfolgreich abschloss. Am 12. Oktober 2013 setzte sie ihr Musikstudium an verschiedenen Schweizer Fachhochschulen fort, wofür ihr zunächst Kurzaufenthaltsbewilligungen und zuletzt eine bis zum 10. Oktober 2020 gültige Aufenthaltsbewilligung erteilt wurde. B.________ ist slowakischer Staatsangehöriger und in der Schweiz aufenthaltsberechtigt. Gemäss den Angaben von A.________ lebt er seit über acht Jahren im gleichen Haushalt wie diese. B. Nach Abschluss ihres Masterstudiums wurde A.________ am 20. Oktober 2020 eine bis zum 9. März 2021 gültige Kurzaufenthaltsbewilligung zwecks Stellensuche erteilt; ihr Verlängerungsgesuch bzw. Gesuch um Erteilung einer Aufenthaltsbewilligung zur Erwerbstätigkeit vom 17. Februar 2021 wurde jedoch am 28. Juli 2021 abgewiesen. Unter Entzug der aufschiebenden …"
+              "text": "A. Die ukrainische Staatsangehörige A.________ (geb. 1989) ist Violinistin und besuchte sieben Semester lang einen entsprechenden Studiengang an einer Musikhochschule in Deutschland, welchen sie 2011 erfolgreich abschloss. Am 12. Oktober 2013 setzte sie ihr Musikstudium an verschiedenen Schweizer Fachhochschulen fort, wofür ihr zunächst Kurzaufenthaltsbewilligungen und zuletzt eine bis zum 10. Oktober 2020 gültige Aufenthaltsbewilligung erteilt wurde. B.________ ist slowakischer Staatsangehöriger und in der Schweiz aufenthaltsberechtigt. Gemäss den Angaben von A.________ lebt er seit über acht Jahren im gleichen Haushalt wie diese. B. Nach Abschluss ihres Masterstudiums wurde A.________ am 20. Oktober 2020 eine bis zum 9. März 2021 gültige Kurzaufenthaltsbewilligung zwecks Stellensuche erteilt; ihr Verlängerungsgesuch bzw. Gesuch um Erteilung einer Aufenthaltsbewilligung zur Erwerbstätigkeit vom 17. Februar 2021 wurde jedoch am 28. Juli 2021 abgewiesen. Unter Entzug der aufschiebenden Wirkung eines allfälligen Rekurses setzte ihr das Migrationsamt zugleich eine Ausreisefrist bis zum 31. Oktober 2021 an. Den hiergegen erhobenen Rekurs wies die Sicherheitsdirektion des Kantons Zürich am 28. September 2021 ab, soweit sie diesen nicht als gegenstandslos geworden erachtete. Eine von A.________ und B.________ gegen den Rekursentscheid erhobene Beschwerde wurde abgewiesen, soweit darauf eingetreten wurde (Urteil des Verwaltungsgerichts des Kantons Zürich vom 2. Februar 2022). C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 22. März 2022 beantragen A.________ und B.________, der Entscheid des Verwaltungsgerichts des Kantons Zürich vom 2. Februar 2022 sei aufzuheben und das Migrationsamt anzuweisen, A.________ eine Aufenthaltsbewilligung als Lebenspartnerin von B.________ zu erteilen. Mit Verfügung vom 23. März 2022 hat die Präsidentin der II. öffentlich-rechtlichen Abteilung antragsgemäss der Beschwerde aufschiebende Wirkung zuerkannt. Die Rekursabteilung der Sicherheitsdirektion des Kantons Zürich verzichtet auf eine Vernehmlassung. Das Verwaltungsgericht des Kantons Zürich lässt sich vernehmen und beantragt, die Beschwerde abzuweisen, soweit darauf einzutreten sei. Das Migrationsamt des Kantons Zürich und das Staatssekretariat für Migration haben sich nicht vernehmen lassen."
             }
           ]
         },
@@ -128,8 +136,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten des bundesgerichtlichen Verfahrens von Fr. 2'000.-- werden den Beschwerdeführern zu gleichen Teilen unter solidarischer Haftung auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Zürich, 2. Abteilung, und dem Staatssekretariat für Migration mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf eingetreten wird. 2. Die Gerichtskosten des bundesgerichtlichen Verfahrens von Fr. 2'000.-- werden den Beschwerdeführern zu gleichen Teilen unter solidarischer Haftung auferlegt. 3. Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Zürich, 2. Abteilung, und dem Staatssekretariat für Migration mitgeteilt. Lausanne, 31. Januar 2023 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Die Gerichtsschreiberin: J. de Sépibus"
+              "text": "Lausanne, 31. Januar 2023 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Die Gerichtsschreiberin: J. de Sépibus"
             }
           ]
         }
@@ -160,7 +180,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=29.01.2023&to_date=01.02.2023&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=40&azaclir=aza&highlight_docid=aza%3A%2F%2F31-01-2023-2C_246-2022&number_of_ranks=78",
       "abgerufen": "2026-06-23",
       "fassungsToken": "41e0df7f99e6104d5046d9dcb45da7ec9151803afaade4325bca4f64eef242f1",
-      "sha": "937b3709fc57923db9d872a6e11a57b0922af389ae7da03a3502b8bcf4ca17e7"
+      "sha": "323713fd47fab0bf8c6fe7538df2d0102795f9e257937231e80719038e34b6f9"
     }
   ]
 }

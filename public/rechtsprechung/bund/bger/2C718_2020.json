@@ -15,17 +15,25 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Seiler, Präsident, Bundesrichter Donzallaz, Bundesrichterin Hänni, Gerichtsschreiber Zollinger.",
+        "parteien": "A.________ GmbH, Beschwerdeführerin, vertreten durch Rechtsanwalt Peter Kriesi, gegen Regierungsrat des Kantons Schwyz, B.________ AG, Zuschlagsempfängerin, vertreten durch Rechtsanwalt Cornelio Zgraggen.",
+        "gegenstand": "Öffentliches Beschaffungsrecht,",
+        "vorinstanz": "den Zwischenbescheid des Verwaltungsgerichts des Kantons Schwyz, Einzelrichter, vom 5. August 2020 (III 2020 138)."
+      },
       "regeste": {
         "text": "Öffentliches Beschaffungsrecht",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Der Kanton Schwyz hat für den Winterdienst auf den Kantonsstrassen 19 Lose gebildet und die Winterdienstleistungen für die Jahre 2020 bis 2030 in einem offenen Verfahren im kantonalen Amtsblatt Nr. 47 vom 22. November 2019 sowie auf der Internetplattform SIMAP ausgeschrieben. Das Los 210 betraf das Kantonsstrassennetz in der Region Birchli - Gross - Steinbach - Euthal - Unteriberg. Innert Frist gingen zwei Offerten ein. Die B.________ AG offerierte zum Preis von Fr. 145'273.50 pro Jahr, während die A.________ GmbH ein Angebot zum Preis von Fr. 202'050.60 einreichte. B. Mit der Dispositiv-Ziff. 18 des Regierungsratsbeschlusses Nr. 412/2020 vom 26. Mai 2020 vergab der Regierungsrat des Kantons Schwyz die Ausführung der Winterdienstleistungen des Loses 210 an die B.________ AG zum Angebotspreis von Fr. 145'273.50 pro Jahr (nachfolgend: Zuschlagsempfängerin). Mit Schreiben vom 27. Mai 2020 begründete das Tiefbauamt des Kantons Schwyz den beiden Anbieterinnen den Zuschlagsentscheid. Es w…"
+              "text": "A. Der Kanton Schwyz hat für den Winterdienst auf den Kantonsstrassen 19 Lose gebildet und die Winterdienstleistungen für die Jahre 2020 bis 2030 in einem offenen Verfahren im kantonalen Amtsblatt Nr. 47 vom 22. November 2019 sowie auf der Internetplattform SIMAP ausgeschrieben. Das Los 210 betraf das Kantonsstrassennetz in der Region Birchli - Gross - Steinbach - Euthal - Unteriberg. Innert Frist gingen zwei Offerten ein. Die B.________ AG offerierte zum Preis von Fr. 145'273.50 pro Jahr, während die A.________ GmbH ein Angebot zum Preis von Fr. 202'050.60 einreichte. B. Mit der Dispositiv-Ziff. 18 des Regierungsratsbeschlusses Nr. 412/2020 vom 26. Mai 2020 vergab der Regierungsrat des Kantons Schwyz die Ausführung der Winterdienstleistungen des Loses 210 an die B.________ AG zum Angebotspreis von Fr. 145'273.50 pro Jahr (nachfolgend: Zuschlagsempfängerin). Mit Schreiben vom 27. Mai 2020 begründete das Tiefbauamt des Kantons Schwyz den beiden Anbieterinnen den Zuschlagsentscheid. Es wies darauf hin, dass für die Vergabe das Kriterium Preis ausschlaggebend war. Am 8. Juni 2020 erhob die A.________ GmbH gegen den Regierungsratsbeschluss vom 26. Mai 2020 Beschwerde beim Verwaltungsgericht des Kantons Schwyz. Mit Verfügung vom 10. Juni 2020 wurde der Beschwerde einstweilen die aufschiebende Wirkung zuerkannt und die Zuschlagsempfängerin zum verwaltungsgerichtlichen Beschwerdeverfahren beigeladen. Der Regierungsrat beantragte in seiner Vernehmlassung vom 29. Juni 2020 den Entzug der aufschiebenden Wirkung. Nach einer summarischen Prüfung der Angelegenheit entzog der instruierende Einzelrichter des Verwaltungsgerichts mit Dispositiv-Ziff. 1 des Zwischenbescheids vom 5. August 2020 der Beschwerde wieder die aufschiebende Wirkung. C. Mit Beschwerde in öffentlich-rechtlichen Angelegenheiten vom 9. September 2020 gelangt die A.________ GmbH an das Bundesgericht. Sie beantragt die Aufhebung der Dispositiv-Ziff. 1 des Zwischenbescheids vom 5. August 2020. Es sei der Beschwerde vom 8. Juni 2020 die aufschiebende Wirkung zu erteilen. Mit Verfügung vom 6. Oktober 2020 hat der Abteilungspräsident den Antrag auf aufschiebende Wirkung des bundesgerichtlichen Rechtsmittels abgewiesen. Während die Vorinstanz auf eine Vernehmlassung verzichtet, beantragen der Regierungsrat und die Zuschlagsempfängerin die Abweisung der Beschwerde, soweit darauf überhaupt eingetreten werden könne. Die Beschwerdeführerin repliziert."
             }
           ]
         },
@@ -173,8 +181,28 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Die subsidiäre Verfassungsbeschwerde wird abgewiesen."
+            },
+            {
+              "marke": "3.",
+              "text": "Die Gerichtskosten von Fr. 5'500.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Beschwerdeführerin hat der Zuschlagsempfängerin für das bundesgerichtliche Verfahren eine Parteientschädigung von Fr. 5'000.-- auszurichten."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Schwyz, Einzelrichter, schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird nicht eingetreten. 2. Die subsidiäre Verfassungsbeschwerde wird abgewiesen. 3. Die Gerichtskosten von Fr. 5'500.-- werden der Beschwerdeführerin auferlegt. 4. Die Beschwerdeführerin hat der Zuschlagsempfängerin für das bundesgerichtliche Verfahren eine Parteientschädigung von Fr. 5'000.-- auszurichten. 5. Dieses Urteil wird den Verfahrensbeteiligten und dem Verwaltungsgericht des Kantons Schwyz, Einzelrichter, schriftlich mitgeteilt. Lausanne, 11. Januar 2021 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Seiler Der Gerichtsschreiber: Zollinger"
+              "text": "Lausanne, 11. Januar 2021 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Seiler Der Gerichtsschreiber: Zollinger"
             }
           ]
         }
@@ -206,7 +234,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=09.01.2021&to_date=12.01.2021&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=33&azaclir=aza&highlight_docid=aza%3A%2F%2F11-01-2021-2C_718-2020&number_of_ranks=41",
       "abgerufen": "2026-06-23",
       "fassungsToken": "2876612469eb52b4e0d37ebdbbdcebd716421b65ec8e8a8b7e6344f7c901bc5b",
-      "sha": "7bf256fb604625149bae563b5f31b128b991145f7312f1cce9b987363cd4e355"
+      "sha": "b35b0ba7f4432602769f365027136744a523fe89cc6a876ecfe0cc1e687daf3c"
     }
   ]
 }

@@ -15,10 +15,17 @@
       "sprache": "de",
       "leitcharakter": "leitentscheid",
       "sachgebiet": "oeffentlich",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Moser-Szeless, Präsidentin, Bundesrichter Parrino, Beusch, Gerichtsschreiberin Jeker.",
+        "parteien": "A.________, Gesuchsteller, gegen Kantonsgericht St. Gallen, Einzelrichterin im Obligationenrecht, Klosterhof 1, 9001 St. Gallen, Gesuchsgegner.",
+        "gegenstand": "Verwaltungsgebühren des Kantons St. Gallen, Abgabeperiode 2024, Revisionsgesuch gegen das Urteil des Schweizerischen Bundesgerichts vom 4. Juni 2025 (9D_7/2025). Erwägungen: 1. 1.1. A.________ (nachfolgend: der Gesuchsteller) erhob mit Eingabe vom 24. September 2024 beim Kantonsgericht St. Galle",
+        "vorinstanz": null
+      },
       "regeste": {
         "text": "Verwaltungsgebühren des Kantons St. Gallen, Abgabeperiode 2024",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "erwaegung",
@@ -59,8 +66,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf das Revisionsgesuch wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Gerichtskosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf das Revisionsgesuch wird nicht eingetreten. 2. Es werden keine Gerichtskosten erhoben. 3. Dieses Urteil wird den Parteien schriftlich mitgeteilt. Luzern, 30. Juli 2025 Im Namen der III. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Moser-Szeless Die Gerichtsschreiberin: Jeker"
+              "text": "Luzern, 30. Juli 2025 Im Namen der III. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Moser-Szeless Die Gerichtsschreiberin: Jeker"
             }
           ]
         }
@@ -98,7 +117,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://30-07-2025-9F_15-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "948c1f34e37f742868dc82c6d3269ea7b4483b9a829cc67334f04d54e2c42354",
-      "sha": "c75c6cdc83cca64363d7e905ba0be1d2197579e4517fa6a30b03f6b7678f1db4"
+      "sha": "26a433fda542fba08945ce094c5a489555860b942acc2ebe833fda7f26e98ba0"
     }
   ]
 }

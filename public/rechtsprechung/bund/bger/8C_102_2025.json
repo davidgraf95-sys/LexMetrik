@@ -14,18 +14,26 @@
       "datum": "2025-07-03",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Viscione, Präsidentin, Bundesrichterin Scherrer Reber, Bundesrichter Métral, Gerichtsschreiber Jancar.",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Michael Ausfeld, Beschwerdeführer, gegen Schweizerische Unfallversicherungsanstalt (Suva), Rechtsabteilung, Fluhmattstrasse 1, 6002 Luzern, Beschwerdegegnerin.",
+        "gegenstand": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld),",
+        "vorinstanz": "das Urteil des Obergerichts des Kantons Graubünden vom 30. Januar 2025 (SV2 24 29)."
+      },
       "regeste": {
         "text": "Unfallversicherung (Kausalzusammenhang, Heilbehandlung, Taggeld)",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. Der 1961 geborene A.________ war seit 1. März 2019 als Product Quality Engineer bei der B.________ AG, angestellt und dadurch bei der Schweizerischen Unfallversicherungsanstalt (nachfolgend: Suva) obligatorisch unfallversichert. Am 9. Juli 2023 stürzte er beim Fliegenfischen von einem grösseren Stein und führte dabei eine Fehlbewegung des rechten Arms aus. Die radiologischen Untersuchungen am Spital C.________, vom 19. Juli 2023 zeigten eine Rotatorenmanschettenruptur rechts. Am 28. Juli 2023 erfolgte im Spital U.________, eine Schulteroperation rechts. Die Suva kam für die Heilbehandlung und das Taggeld auf. Mit Verfügung vom 27. November 2023 stellte sie die Leistungen per 30. November 2023 ein, da die Schulterbeschwerden rechts nicht mehr unfallkausal seien. Hieran hielt sie mit Einspracheentscheid vom 30. März 2024 fest. B. Die hiergegen von A.________ erhobene Beschwerde wies das Obergericht des Kantons Graubünden mit Urteil vom 30. Januar 2025 ab. C. Mit Beschwerde in öffentli…"
+              "text": "A.\n\nDer 1961 geborene A.________ war seit 1. März 2019 als Product Quality Engineer bei der B.________ AG, angestellt und dadurch bei der Schweizerischen Unfallversicherungsanstalt (nachfolgend: Suva) obligatorisch unfallversichert. Am 9. Juli 2023 stürzte er beim Fliegenfischen von einem grösseren Stein und führte dabei eine Fehlbewegung des rechten Arms aus. Die radiologischen Untersuchungen am Spital C.________, vom 19. Juli 2023 zeigten eine Rotatorenmanschettenruptur rechts. Am 28. Juli 2023 erfolgte im Spital U.________, eine Schulteroperation rechts. Die Suva kam für die Heilbehandlung und das Taggeld auf. Mit Verfügung vom 27. November 2023 stellte sie die Leistungen per 30. November 2023 ein, da die Schulterbeschwerden rechts nicht mehr unfallkausal seien. Hieran hielt sie mit Einspracheentscheid vom 30. März 2024 fest.\n\nB.\n\nDie hiergegen von A.________ erhobene Beschwerde wies das Obergericht des Kantons Graubünden mit Urteil vom 30. Januar 2025 ab.\n\nC.\n\nMit Beschwerde in öffentlich-rechtlichen Angelegenheiten beantragt A.________, in Aufhebung des kantonalen Urteils sei die Suva zu verpflichten, ihm bis zur vollständigen Wiedererlangung seiner Arbeitsfähigkeit die gesetzlichen Leistungen (Taggelder und Behandlungskosten) auszurichten bzw. zu übernehmen.\n\nDas Bundesgericht verzichtet auf einen Schriftenwechsel."
             }
           ]
         },
@@ -93,8 +101,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 800.- werden dem Beschwerdeführer auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird den Parteien, dem Obergericht des Kantons Graubünden und dem Bundesamt für Gesundheit schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen. 2. Die Gerichtskosten von Fr. 800.- werden dem Beschwerdeführer auferlegt. 3. Dieses Urteil wird den Parteien, dem Obergericht des Kantons Graubünden und dem Bundesamt für Gesundheit schriftlich mitgeteilt. Luzern, 3. Juli 2025 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Viscione Der Gerichtsschreiber: Jancar"
+              "text": "Luzern, 3. Juli 2025 Im Namen der IV. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: Viscione Der Gerichtsschreiber: Jancar"
             }
           ]
         }
@@ -143,7 +163,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://03-07-2025-8C_102-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a3cd39e72c85cce1837d5f17853b3a414d98102755fb296537d8ef36fa60c382",
-      "sha": "bc3a80f341c5c645a10c20f05d2c652d5c63dc2442fef4fc5510ed1c00b397dd"
+      "sha": "61422192c2ef31f74445b154171d67f2a13aff013b47cf9e69ab29c171e14ef2"
     }
   ]
 }

@@ -14,18 +14,26 @@
       "datum": "2025-05-19",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "schkg",
+      "sachgebiet": "privat",
+      "rubrum": {
+        "besetzung": "Bundesrichter Bovey, Präsident, Bundesrichter Hartmann, Josi, Gerichtsschreiber Levante.",
+        "parteien": "A.________, vertreten durch Rechtsanwalt Tobias Kazik, Militärstrasse 76, 8004 Zürich, Beschwerdeführerin, gegen Bezirksgericht Bülach, Spitalstrasse 13, 8180 Bülach.",
+        "gegenstand": "Provisorische Nachlassstundung,",
+        "vorinstanz": "das Urteil des Obergerichts des Kantons Zürich, II. Zivilkammer, vom 26. November 2024 (PS240220-O/U)."
+      },
       "regeste": {
         "text": "Provisorische Nachlassstundung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.a. A.________ ist Miteigentümerin je zur Hälfte am Grundstück B.________strasse xxx, U.________ (Einfamilienhaus) und an Stockwerk- bzw. Miteigentumsanteilen mit Sonderrecht an einer 5.5-Zimmer-Wohnung, einem Bastelraum und zwei Parkplätzen an der C.________strasse yyy, U.________. Die andere Hälfte der Miteigentumsanteile steht im Eigentum ihres Ehemannes. Das Einfamilienhaus an der B.________strasse xxx wird von A.________ bewohnt, die 5.5-Zimmer-Wohnung an der C.________strasse yyy von ihrem Ehemann. A.b. Infolge von zwei Betreibungen gegenüber A.________ und sieben Betreibungen gegenüber ihrem Ehemann wurde für den 25. Oktober 2024 die Versteigerung der Miteigentumsanteile angesetzt. A.c. Am 24. Oktober 2024 stellte A.________ beim Bezirksgericht Bülach ein Gesuch um Nachlassstundung. Sie verlangte (bereits superprovisorisch) die provisorische Nachlassstundung für die Dauer von vier Monaten. Zudem seien die auf den Folgetag, 25. Oktober 2024 angeordneten Zwangsversteigerungen …"
+              "text": "A.\n\nA.a. A.________ ist Miteigentümerin je zur Hälfte am Grundstück B.________strasse xxx, U.________ (Einfamilienhaus) und an Stockwerk- bzw. Miteigentumsanteilen mit Sonderrecht an einer 5.5-Zimmer-Wohnung, einem Bastelraum und zwei Parkplätzen an der C.________strasse yyy, U.________. Die andere Hälfte der Miteigentumsanteile steht im Eigentum ihres Ehemannes. Das Einfamilienhaus an der B.________strasse xxx wird von A.________ bewohnt, die 5.5-Zimmer-Wohnung an der C.________strasse yyy von ihrem Ehemann.\n\nA.b. Infolge von zwei Betreibungen gegenüber A.________ und sieben Betreibungen gegenüber ihrem Ehemann wurde für den 25. Oktober 2024 die Versteigerung der Miteigentumsanteile angesetzt.\n\nA.c. Am 24. Oktober 2024 stellte A.________ beim Bezirksgericht Bülach ein Gesuch um Nachlassstundung. Sie verlangte (bereits superprovisorisch) die provisorische Nachlassstundung für die Dauer von vier Monaten. Zudem seien die auf den Folgetag, 25. Oktober 2024 angeordneten Zwangsversteigerungen der Grundstücke C.________strasse yyy sowie B.________strasse xxx superprovisorisch aufzuheben. Weiter beantragte sie, dass von der Einsetzung eines Sachwalters bzw. einer Sachwalterin abzusehen sei.\n\nA.d. Mit Urteil vom 25. Oktober 2024 wies das Bezirksgericht (als Nachlassgericht) den superprovisorischen Antrag auf Aufhebung der Steigerungen (in Urteilserwägung Ziff. 2.4) und das Gesuch von A.________ um provisorische Nachlassstundung ab (Dispositiv-Ziff. 1). Auf eine Konkurseröffnung im Sinne von Art. 293a Abs. 3 SchKG wurde verzichtet (Dispositiv-Ziff. 2).\n\nB.\n\nB.a. Gegen das Urteil des Bezirksgerichts erhob A.________ mit Eingabe vom 4. November 2024 Beschwerde beim Obergericht des Kantons Zürich. Sie beantragte die Aufhebung von Dispositiv-Ziff. 1 des erstinstanzlichen Urteils und die Gewährung der provisorischen Nachlassstundung, wobei von der Einsetzung eines Sachwalters bzw. einer Sachwalterin abzusehen sei.\n\nB.b. Das Obergericht wies die Beschwerde mit Urteil vom 26. November 2024 ab.\n\nC.\n\nMit Eingabe vom 30. Dezember 2024 hat A.________ Beschwerde in Zivilsachen erhoben. Die Beschwerdeführerin verlangt die Aufhebung des obergerichtlichen Urteils und die Gewährung der provisorischen Nachlassstundung, wobei von der Einsetzung eines Sachwalters bzw. einer Sachwalterin abzusehen sei.\n\nEs sind die kantonalen Akten, indes keine Vernehmlassungen eingeholt worden."
             }
           ]
         },
@@ -113,8 +121,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "2.",
+              "text": "Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdeführerin auferlegt."
+            },
+            {
+              "marke": "3.",
+              "text": "Dieses Urteil wird der Beschwerdeführerin, dem Bezirksgericht Bülach und dem Obergericht des Kantons Zürich, II. Zivilkammer, mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird abgewiesen, soweit darauf einzutreten ist. 2. Die Gerichtskosten von Fr. 2'000.-- werden der Beschwerdeführerin auferlegt. 3. Dieses Urteil wird der Beschwerdeführerin, dem Bezirksgericht Bülach und dem Obergericht des Kantons Zürich, II. Zivilkammer, mitgeteilt. Lausanne, 19. Mai 2025 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Der Gerichtsschreiber: Levante"
+              "text": "Lausanne, 19. Mai 2025 Im Namen der II. zivilrechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Bovey Der Gerichtsschreiber: Levante"
             }
           ]
         }
@@ -156,7 +176,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://19-05-2025-5A_898-2024&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "bac2cca70589284b43cfb1fdd396cf8e73002fc326f75aa9d43cbbfd56341905",
-      "sha": "e66c83006059daa780387734f2ba705e2863155078cd26972b1af8732ddc997f"
+      "sha": "1a75955a1a8507a8975f9b1eb4e7bb0ec3a476943af46b9fd589d0846eded87b"
     }
   ]
 }

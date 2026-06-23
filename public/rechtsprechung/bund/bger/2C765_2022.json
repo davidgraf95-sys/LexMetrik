@@ -14,18 +14,26 @@
       "datum": "2022-10-13",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Aubry Girardin, Präsidentin, Bundesrichter Donzallaz, Bundesrichterin Hänni, Bundesrichter Hartmann, Bundesrichterin Ryter, Gerichtsschreiber Hugi Yar.",
+        "parteien": "A.________, alias B.________, Beschwerdeführer, vertreten durch Rechtsanwältin Lea Hungerbühler, diese substituiert durch MLaw Elena Liechti, gegen Amt für Bevölkerungsdienste des Kantons Bern (ABEV), Ostermundigenstrasse 99B, 3006 Bern, Kantonales Zwangsmassnahmengericht des Kantons Bern, Kasernenstrasse 19, 3013 Bern.",
+        "gegenstand": "Ausschaffungshaft (Haftentlassungsgesuch),",
+        "vorinstanz": "das Urteil des Verwaltungsgerichts des Kantons Bern, Verwaltungsrechtliche Abteilung, Einzelrichter, vom 31. August 2022 (100.2022.268U)."
+      },
       "regeste": {
         "text": "Ausschaffungshaft, Haftentlassungsgesuch",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.________ (geb. 1989) stellte am 16. Januar 2012 unter dem Namen B.________ (geb. 6. Februar 1989, von Burkina Faso) in der Schweiz erfolglos ein Asylgesuch. Das Regionalgericht U.________ verurteilte ihn am 6. September 2017 unter anderem wegen qualifizierter Widerhandlung gegen das Betäubungsmittelgesetz zu einer Freiheitsstrafe von 33 Monaten; gleichzeitig verwies es ihn für acht Jahre des Landes. Vom 13. Dezember 2016 bis zum 13. Februar 2021 befand sich A.________ im Strafvollzug. B. B.a. Ab dem 13. September 2021 galt A.________ als unbekannten Aufenthalts. Er wurde am 17. März 2022 im Rahmen eines Dublin-Verfahrens von Frankreich in die Schweiz rücküberstellt, worauf das Amt für Bevölkerungsdienste des Kantons Bern (ABEV) ihn am 21. März 2022 in Ausschaffungshaft nahm. Diese wird im Regionalgefängnis Moutier vollzogen. B.b. Die Festhaltung ist letztmals bis zum 17. November 2022 verlängert worden. Am 22. Juli 2022 ersuchte A.________ darum, aus der Ausschaffungshaft entlasse…"
+              "text": "A. A.________ (geb. 1989) stellte am 16. Januar 2012 unter dem Namen B.________ (geb. 6. Februar 1989, von Burkina Faso) in der Schweiz erfolglos ein Asylgesuch. Das Regionalgericht U.________ verurteilte ihn am 6. September 2017 unter anderem wegen qualifizierter Widerhandlung gegen das Betäubungsmittelgesetz zu einer Freiheitsstrafe von 33 Monaten; gleichzeitig verwies es ihn für acht Jahre des Landes. Vom 13. Dezember 2016 bis zum 13. Februar 2021 befand sich A.________ im Strafvollzug. B. B.a. Ab dem 13. September 2021 galt A.________ als unbekannten Aufenthalts. Er wurde am 17. März 2022 im Rahmen eines Dublin-Verfahrens von Frankreich in die Schweiz rücküberstellt, worauf das Amt für Bevölkerungsdienste des Kantons Bern (ABEV) ihn am 21. März 2022 in Ausschaffungshaft nahm. Diese wird im Regionalgefängnis Moutier vollzogen. B.b. Die Festhaltung ist letztmals bis zum 17. November 2022 verlängert worden. Am 22. Juli 2022 ersuchte A.________ darum, aus der Ausschaffungshaft entlassen zu werden, was die kantonalen Behörden ablehnten. C. A.________ beantragt vor Bundesgericht, das entsprechende Urteil des Verwaltungsgerichts des Kantons Bern vom 31. August 2022 aufzuheben und ihn unverzüglich aus der Haft zu entlassen. Eventuell sei die Rechtswidrigkeit der Haft bzw. der Haftbedingungen festzustellen. Für den Fall des Unterliegens ersucht er um unentgeltliche Rechtspflege und Verbeiständung. Das Zwangsmassnahmengericht, das Verwaltungsgericht und das Amt für Bevölkerungsdienste des Kantons Bern beantragen, die Beschwerde abzuweisen. Das Staatssekretariat für Migration (SEM) hat am 23. September 2022 den bei ihm angeforderten Amtsbericht zu den Rückführungsmöglichkeiten von A.________ eingereicht. A.________ hat in Kenntnis des Amtsberichts und der Vernehmlassungen an seinen Anträgen und Ausführungen festgehalten."
             }
           ]
         },
@@ -178,8 +186,28 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde wird teilweise gutgeheissen und das Urteil des Verwaltungsgerichts des Kantons Bern vom 31. August 2022 aufgehoben. Die Zustimmung zur Ausschaffungshaft wird lediglich mit der Auflage erteilt, dass die Haftbedingungen spätestens innert 5 Tagen seit Zustellung des bundesgerichtlichen Urteils im Sinne der Erwägungen angepasst werden. Wird diese Auflage nicht eingehalten, ist der Beschwerdeführer spätestens auf diesen Zeitpunkt hin aus der Haft zu entlassen."
+            },
+            {
+              "marke": "2.",
+              "text": "Der Kanton Bern hat die Rechtsvertreterin des Beschwerdeführers für das bundesgerichtliche Verfahren mit Fr. 1'600.-- zu entschädigen."
+            },
+            {
+              "marke": "3.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird - soweit nicht gegenstandslos - gutgeheissen: 3.1. Es werden keine Kosten erhoben. 3.2. Dem Beschwerdeführer wird Rechtsanwältin Lea Hungerbühler, Zürich, als unentgeltliche Rechtsbeiständin beigegeben und dieser eine Entschädigung von Fr. 1'000.-- aus der Bundesgerichtskasse aus-gerichtet."
+            },
+            {
+              "marke": "4.",
+              "text": "Die Sache wird zur Regelung der Kosten- und Entschädigungsfrage in den kantonalen Verfahren an die Vorinstanz zurückgewiesen."
+            },
+            {
+              "marke": "5.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Bern, Verwaltungsrechtliche Abteilung, Einzelrichter, und dem Staatssekretariat für Migration mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde wird teilweise gutgeheissen und das Urteil des Verwaltungsgerichts des Kantons Bern vom 31. August 2022 aufgehoben. Die Zustimmung zur Ausschaffungshaft wird lediglich mit der Auflage erteilt, dass die Haftbedingungen spätestens innert 5 Tagen seit Zustellung des bundesgerichtlichen Urteils im Sinne der Erwägungen angepasst werden. Wird diese Auflage nicht eingehalten, ist der Beschwerdeführer spätestens auf diesen Zeitpunkt hin aus der Haft zu entlassen. 2. Der Kanton Bern hat die Rechtsvertreterin des Beschwerdeführers für das bundesgerichtliche Verfahren mit Fr. 1'600.-- zu entschädigen. 3. Das Gesuch um unentgeltliche Rechtspflege und Verbeiständung wird - soweit nicht gegenstandslos - gutgeheissen: 3.1. Es werden keine Kosten erhoben. 3.2. Dem Beschwerdeführer wird Rechtsanwältin Lea Hungerbühler, Zürich, als unentgeltliche Rechtsbeiständin beigegeben und dieser eine Entschädigung von Fr. 1'000.-- aus der Bundesgerichtskasse aus-gerichtet. 4. Die Sache wird zur Regelung der Kosten- und Entschädigungsfrage in den kantonalen Verfahren an die Vorinstanz zurückgewiesen. 5. Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Bern, Verwaltungsrechtliche Abteilung, Einzelrichter, und dem Staatssekretariat für Migration mitgeteilt. Lausanne, 13. Oktober 2022 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Der Gerichtsschreiber: Hugi Yar"
+              "text": "Lausanne, 13. Oktober 2022 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Der Gerichtsschreiber: Hugi Yar"
             }
           ]
         }
@@ -212,7 +240,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=6&from_date=12.10.2022&to_date=15.10.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=52&azaclir=aza&highlight_docid=aza%3A%2F%2F13-10-2022-2C_765-2022&number_of_ranks=79",
       "abgerufen": "2026-06-23",
       "fassungsToken": "a7e75595655aa5068b363953eacb5b090fcc18e5b187abb46c827586d0cac545",
-      "sha": "cb6b0ffc35ce184f8393f52eefc2021695169d3bd22a55c160f935ae9629446b"
+      "sha": "8d1b2ac29954f978f5743e431d2f0a3b948846b29e18133d09f5d5fc28e05760"
     }
   ]
 }

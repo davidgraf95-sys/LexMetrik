@@ -14,18 +14,26 @@
       "datum": "2022-06-23",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichterin Aubry Girardin, Präsidentin, Bundesrichter Donzallaz, Beusch, Hartmann, Bundesrichterin Ryter, Gerichtsschreiber Quinto.",
+        "parteien": "A.________, Beschwerdeführer, vertreten durch Rechtsanwalt Thomas Grossen, gegen Sicherheitsdirektion des Kantons Zürich, Neumühlequai 10, 8090 Zürich, Beschwerdegegnerin, Migrationsamt des Kantons Zürich, Berninastrasse 45, 8090 Zürich.",
+        "gegenstand": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung,",
+        "vorinstanz": "das Urteil des Verwaltungsgerichts des Kantons Zürich, 4. Abteilung, vom 29. April 2021 (VB.2020.00796)."
+      },
       "regeste": {
         "text": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "sachverhalt",
+          "vollstaendig": true,
           "bloecke": [
             {
               "marke": null,
-              "text": "A. A.a. A.________ (geb. 1988), Staatsangehöriger Somalias, reiste im Jahr 2007 in die Schweiz ein und stellte ein Asylgesuch. Mit Verfügung des Bundesamts für Migration (heute: Staatssekretariat für Migration) vom 16. März 2010 wurde das Asylgesuch ab- und A.________ aus der Schweiz weggewiesen; jedoch wurde er aufgrund der Unzumutbarkeit der Wegweisung vorläufig aufgenommen. Am 3. Mai 2016 erhielt er gestützt auf ein Härtefallgesuch eine Aufenthaltsbewilligung für den Kanton Aargau. Am 4. Oktober 2017 ersuchte A.________ das Migrationsamt des Kantons Zürich (nachfolgend: Migrationsamt) um Bewilligung des Kantonswechsels, worauf ihm am 27. Oktober 2017 eine Aufenthaltsbewilligung für den Kanton Zürich erteilt wurde. Letztere wurde regelmässig - zuletzt bis zum 30. April 2020 - verlängert. A.b. Ende 2019 erfuhr das Migrationsamt, dass A.________ im September 2017 in Frankreich erfolglos einen Asylantrag gestellt und vom 1. September 2018 bis am 29. April 2019 sowie in den Jahren 2016 u…"
+              "text": "A. A.a. A.________ (geb. 1988), Staatsangehöriger Somalias, reiste im Jahr 2007 in die Schweiz ein und stellte ein Asylgesuch. Mit Verfügung des Bundesamts für Migration (heute: Staatssekretariat für Migration) vom 16. März 2010 wurde das Asylgesuch ab- und A.________ aus der Schweiz weggewiesen; jedoch wurde er aufgrund der Unzumutbarkeit der Wegweisung vorläufig aufgenommen. Am 3. Mai 2016 erhielt er gestützt auf ein Härtefallgesuch eine Aufenthaltsbewilligung für den Kanton Aargau. Am 4. Oktober 2017 ersuchte A.________ das Migrationsamt des Kantons Zürich (nachfolgend: Migrationsamt) um Bewilligung des Kantonswechsels, worauf ihm am 27. Oktober 2017 eine Aufenthaltsbewilligung für den Kanton Zürich erteilt wurde. Letztere wurde regelmässig - zuletzt bis zum 30. April 2020 - verlängert. A.b. Ende 2019 erfuhr das Migrationsamt, dass A.________ im September 2017 in Frankreich erfolglos einen Asylantrag gestellt und vom 1. September 2018 bis am 29. April 2019 sowie in den Jahren 2016 und 2017 jeweils einen Monat in Somalia geweilt hatte, um seine Ehefrau und seine Familie zu besuchen. B. Mit Verfügung vom 26. Mai 2020 stellte das Migrationsamt fest, dass die Aufenthaltsbewilligung von A.________ gestützt auf Art. 61 Abs. 2 AIG erloschen sei. Zudem verfügte es, dass dessen Aufenthaltsbewilligung \"nicht wiedererteilt bzw. nicht verlängert\" werde und wies ihn an, die Schweiz bis zum 27. August 2020 zu verlassen. Die dagegen erhobenen Rechtsmittel blieben erfolglos (Rekursentscheid der Sicherheitsdirektion des Kantons Zürich vom 13. Oktober 2020; Urteil des Verwaltungsgerichts des Kantons Zürich vom 29. April 2021). Für das kantonale Rechtsmittelverfahren wurde dem Beschwerdeführer die unentgeltliche Rechtspflege gewährt. C. Mit Eingabe vom 30. Juni 2021 an das Bundesgericht erhebt A.________ (Beschwerdeführer) Beschwerde in öffentlich-rechtlichen Angelegenheiten und - sofern Letztere nicht zulässig sei - subsidiäre Verfassungsbeschwerde. Er beantragt die Aufhebung des vorinstanzlichen Urteils; dem Beschwerdeführer sei weiterhin die Aufenthaltsbewilligung zu erteilen. Eventualiter sei in Bezug auf den Beschwerdeführer die vorläufige Aufnahme anzuordnen. Subeventualiter sei die Sache zur ergänzenden Begründung an die Vorinstanz zurückzuweisen. Ausserdem beantragt der Beschwerdeführer für das bundesgerichtliche Verfahren die unentgeltliche Rechtspflege. Mit Präsidialverfügung vom 1. Juli 2021 wurde der Beschwerde antragsgemäss die aufschiebende Wirkung erteilt. Die Vorinstanz beantragt vernehmlassungsweise die Abweisung der Beschwerde, während die Sicherheitsdirektion und das Staatssekretariat für Migration auf eine Vernehmlassung verzichtet haben."
             }
           ]
         },
@@ -168,8 +176,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird abgewiesen."
+            },
+            {
+              "marke": "2.",
+              "text": "Die subsidiäre Verfassungsbeschwerde wird abgewiesen, soweit darauf einzutreten ist."
+            },
+            {
+              "marke": "3.",
+              "text": "3.1. Das Gesuch um unentgeltliche Rechtspflege wird gutgeheissen. 3.2. Für das bundesgerichtliche Verfahren werden keine Gerichtskosten erhoben. 3.3. Rechtsanwalt Thomas Grossen, Zürich, wird dem Beschwerdeführer als unentgeltlicher Rechtsbeistand beigegeben und mit Fr. 2'000.-- aus der Bundesgerichtskasse entschädigt."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Zürich, 4. Abteilung, und dem Staatssekretariat für Migration mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Die Beschwerde in öffentlich-rechtlichen Angelegenheiten wird abgewiesen. 2. Die subsidiäre Verfassungsbeschwerde wird abgewiesen, soweit darauf einzutreten ist. 3. 3.1. Das Gesuch um unentgeltliche Rechtspflege wird gutgeheissen. 3.2. Für das bundesgerichtliche Verfahren werden keine Gerichtskosten erhoben. 3.3. Rechtsanwalt Thomas Grossen, Zürich, wird dem Beschwerdeführer als unentgeltlicher Rechtsbeistand beigegeben und mit Fr. 2'000.-- aus der Bundesgerichtskasse entschädigt. 4. Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Zürich, 4. Abteilung, und dem Staatssekretariat für Migration mitgeteilt. Lausanne, 23. Juni 2022 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Der Gerichtsschreiber: Quinto"
+              "text": "Lausanne, 23. Juni 2022 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Die Präsidentin: F. Aubry Girardin Der Gerichtsschreiber: Quinto"
             }
           ]
         }
@@ -201,7 +225,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=4&from_date=22.06.2022&to_date=25.06.2022&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=31&azaclir=aza&highlight_docid=aza%3A%2F%2F23-06-2022-2C_528-2021&number_of_ranks=75",
       "abgerufen": "2026-06-23",
       "fassungsToken": "5c5c274586d9affc55561c93bd48d8416945f85adef4806d53d9cba50a4ff60e",
-      "sha": "992e70fbe2743e6a66057c0539f9c74d8474aade54085e45b3bbc3bc22952788"
+      "sha": "459034bfd91dfd4dffe56bd1d7d71b1b1adca91403e4aa516a6ace1890918c61"
     }
   ]
 }

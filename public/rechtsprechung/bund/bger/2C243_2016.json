@@ -14,11 +14,18 @@
       "datum": "2016-03-18",
       "sprache": "de",
       "leitcharakter": "leitentscheid",
-      "sachgebiet": "oeffentlich",
+      "sachgebiet": "sozial-abgaben",
+      "rubrum": {
+        "besetzung": "Bundesrichter Zünd, Präsident, Gerichtsschreiber Feller.",
+        "parteien": "A.________, Beschwerdeführer, vertreten durch Rechtsanwalt Julian Burkhalter, gegen Amt für Migration und Integration des Kantons Aargau, Sektion Asyl.",
+        "gegenstand": "Ausschaffungshaft / Haftüberprüfung,",
+        "vorinstanz": "das Urteil des Verwaltungsgerichts des Kantons Aargau, 2. Kammer, vom 4. Februar 2016. Erwägungen: 1. A.________, 1990 geborener Staatsangehöriger des Irak, reiste 2007 als Asylbewerber in die Schweiz ein. Das Bundesamt für Migration (heute: Staatssekretariat für Migration) trat mit rechtskräftig ge"
+      },
       "regeste": {
         "text": "Ausschaffungshaft / Haftüberprüfung",
         "quelle": "opencaselaw"
       },
+      "regesteAmtlich": false,
       "abschnitte": [
         {
           "typ": "erwaegung",
@@ -64,8 +71,24 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Auf die Beschwerde wird nicht eingetreten."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Kosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Das Gesuch um unentgeltliche Rechtspflege wird abgewiesen, soweit es nicht gegenstandslos geworden ist."
+            },
+            {
+              "marke": "4.",
+              "text": "Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Aargau, 2. Kammer, und dem Staatssekretariat für Migration schriftlich mitgeteilt."
+            },
+            {
               "marke": null,
-              "text": "1. Auf die Beschwerde wird nicht eingetreten. 2. Es werden keine Kosten erhoben. 3. Das Gesuch um unentgeltliche Rechtspflege wird abgewiesen, soweit es nicht gegenstandslos geworden ist. 4. Dieses Urteil wird den Verfahrensbeteiligten, dem Verwaltungsgericht des Kantons Aargau, 2. Kammer, und dem Staatssekretariat für Migration schriftlich mitgeteilt. Lausanne, 18. März 2016 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Zünd Der Gerichtsschreiber: Feller"
+              "text": "Lausanne, 18. März 2016 Im Namen der II. öffentlich-rechtlichen Abteilung des Schweizerischen Bundesgerichts Der Präsident: Zünd Der Gerichtsschreiber: Feller"
             }
           ]
         }
@@ -93,7 +116,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=3&from_date=18.03.2016&to_date=18.03.2016&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=26&azaclir=aza&highlight_docid=aza%3A%2F%2F18-03-2016-2C_243-2016&number_of_ranks=30",
       "abgerufen": "2026-06-23",
       "fassungsToken": "04677592f6496786f43a48fb624ea7c1b2bf364a30eccf46368c8691ae74254f",
-      "sha": "aae604065247593838ef8d06c8c5c5f35454b13d04f1ffbf44bbc435971cc258"
+      "sha": "84450599ecaa1c6bff434a54f68edfed2ab3e888214fc95c3a2d2ec0eb689006"
     }
   ]
 }
