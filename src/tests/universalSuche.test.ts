@@ -50,6 +50,13 @@ describe('universalSuche: Preset-Gruppe', () => {
     expect(g.treffer[0].href).toBe('/rechner/tagerechner?presetKey=berufung#zpo');
     expect(g.treffer[1].href).toBe('/rechner/tagerechner?fp=x');
   });
+
+  it('hat KEINEN «alle zeigen»-Link (Tagerechner kennt keine ?q=-Liste, §8) und zählt ehrlich', () => {
+    const g = presetGruppe(presets, 1); // Kappung 1, aber 2 Treffer
+    expect(g.mehrHref).toBeUndefined();
+    expect(g.gesamt).toBe(2);            // echte Zahl, nicht durch Kappung gedeckelt
+    expect(g.treffer.length).toBe(1);
+  });
 });
 
 describe('universalSuche: Gesetze-Gruppe', () => {

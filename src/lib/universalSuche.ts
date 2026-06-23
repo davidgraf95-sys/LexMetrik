@@ -76,10 +76,11 @@ export function presetGruppe(eintraege: PresetIndexEintrag[] | null, kappung = K
     marke: { text: e.regimeLabel, ton: 'soft' as const },
     href: `/rechner/tagerechner${e.query}${e.hash}`,
   }));
-  return {
-    id: 'preset', titel: 'Fristen-Vorlagen', treffer, gesamt: eintraege.length,
-    mehrHref: eintraege.length > kappung ? '/rechner/tagerechner' : undefined,
-  };
+  // Kein «alle N zeigen»-Link: der Tagerechner kennt keine ?q=-Listenansicht,
+  // ein Link dorthin verlöre die Suche (§8). Die Zählung muss EHRLICH sein —
+  // darum übergibt die Komponente die Presets ungekappt (kein 12er-Limit), so
+  // dass `gesamt` die echte Trefferzahl ist. Bei >Kappung verfeinert man die Suche.
+  return { id: 'preset', titel: 'Fristen-Vorlagen', treffer, gesamt: eintraege.length };
 }
 
 export function gesetzGruppe(erlasse: BrowseErlass[] | null, q: string, kappung = KAPPUNG): SuchGruppe {

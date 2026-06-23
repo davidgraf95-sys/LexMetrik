@@ -103,7 +103,7 @@ export function UniversalSuche() {
   }, [wert]);
 
   // Lazy-Daten — erst beim ersten nicht-leeren Tastendruck, dann gecacht.
-  const [presetSucheFn, setPresetSucheFn] = useState<((s: string) => PresetIndexEintrag[]) | null>(null);
+  const [presetSucheFn, setPresetSucheFn] = useState<((s: string, limit?: number) => PresetIndexEintrag[]) | null>(null);
   const [gesetze, setGesetze] = useState<BrowseErlass[] | null>(null);
   const [entscheide, setEntscheide] = useState<BrowseEntscheid[] | null>(null);
   const gestartet = useRef(false);
@@ -117,7 +117,9 @@ export function UniversalSuche() {
   }, [q]);
 
   const gruppen = useMemo(
-    () => sucheAlles(q, { presets: presetSucheFn ? presetSucheFn(q) : null, gesetze, entscheide }),
+    // Presets ungekappt holen (limit 999) — `gesamt` soll die ECHTE Trefferzahl
+    // sein, nicht das Default-Suchlimit (§8). Die Anzeige kappt in der Gruppe.
+    () => sucheAlles(q, { presets: presetSucheFn ? presetSucheFn(q, 999) : null, gesetze, entscheide }),
     [q, presetSucheFn, gesetze, entscheide],
   );
   const allesGeladen = presetSucheFn !== null && gesetze !== null && entscheide !== null;
