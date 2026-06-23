@@ -50,9 +50,12 @@ export function NewsHeader() {
           Alle Entscheide →
         </Link>
       </div>
-      <ul className="flex gap-3 overflow-x-auto pb-1.5 -mx-1 px-1 snap-x snap-mandatory">
+      {/* Block-Scrollcontainer (klippt zuverlässig) + w-max-Flex innen — so
+          verbreitert der Streifen die Seite nicht (Mobil-Overflow-Tor 390px). */}
+      <div className="overflow-x-auto pb-1.5">
+      <ul className="flex gap-3 w-max max-w-full snap-x snap-mandatory">
         {news.map((e) => (
-          <li key={e.key} className="snap-start shrink-0 w-[clamp(15rem,80vw,19rem)]">
+          <li key={e.key} className="snap-start shrink-0 w-[clamp(14rem,78vw,18rem)]">
             <Link to={`/rechtsprechung/${encodeURIComponent(e.key)}`}
               className="group flex h-full flex-col gap-1 lc-card p-3.5 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
               <span className="flex items-center gap-2">
@@ -61,11 +64,12 @@ export function NewsHeader() {
               </span>
               <span className="font-sans font-medium text-ink-900 text-body-s leading-snug group-hover:text-brass-800 transition-colors">{e.zitierung}</span>
               {e.regesteKurz && <span className="text-body-s text-ink-500 leading-snug line-clamp-2">{e.regesteKurz}</span>}
-              <span className="mt-auto pt-1 text-xs text-ink-400 truncate">{e.gerichtName}</span>
+              <span className="mt-auto pt-1 text-xs text-ink-600 truncate">{e.gerichtName}</span>
             </Link>
           </li>
         ))}
       </ul>
+      </div>
     </section>
   );
 }

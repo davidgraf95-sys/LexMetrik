@@ -86,7 +86,7 @@ function ScrollZuHash() {
 
 export default function App() {
   // key={pathname} am Inhalt → dezenter Opacity-Fade beim Routenwechsel
-  // (Redesign E8). Such-/Filter-Parameter (?q=, ?kategorie=) ändern den
+  // (Redesign E8). Der Such-Parameter (?q= der Hero-Suche) ändert den
   // pathname NICHT → kein Remount, der Katalog-Zustand bleibt erhalten.
   const { pathname } = useLocation();
   return (

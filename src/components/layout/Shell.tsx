@@ -12,6 +12,10 @@ import { useSeitenleiste, BREITE_MIN, BREITE_MAX, BREITE_SCHRITT } from './useSe
 // aria-valuenow/min/max macht die Geste WCAG-zugänglich (axe-Tor). Reine
 // Darstellung (§3).
 function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: number) => void }) {
+  // Teardown des laufenden Drags in einer Ref, damit ein Unmount MITTEN im Ziehen
+  // die window-Listener trotzdem löst (kein Leak).
+  const aufRef = useRef<(() => void) | null>(null);
+  useEffect(() => () => aufRef.current?.(), []);
   const ziehen = (e: React.PointerEvent) => {
     e.preventDefault();
     const startX = e.clientX;
@@ -22,7 +26,9 @@ function ZiehGriff({ breite, setBreite }: { breite: number; setBreite: (b: numbe
       window.removeEventListener('pointerup', auf);
       document.body.style.cursor = '';
       document.body.style.userSelect = '';
+      aufRef.current = null;
     };
+    aufRef.current = auf;
     document.body.style.cursor = 'col-resize';
     document.body.style.userSelect = 'none';
     window.addEventListener('pointermove', move);

@@ -72,7 +72,6 @@ export function HeaderSuche() {
         className="lc-input h-9 py-0 text-body-s w-full"
         aria-label="LexMetrik durchsuchen"
         aria-keyshortcuts="/"
-        aria-expanded={zeigtPanel}
         autoComplete="off"
       />
       {zeigtPanel && (

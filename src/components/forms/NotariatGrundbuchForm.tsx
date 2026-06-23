@@ -93,7 +93,10 @@ export function NotariatGrundbuchForm({ minimal = false }: { minimal?: boolean }
 
   const [kanton, setKanton] = useState<KantonCode>((ausLink.kanton as KantonCode) ?? 'ZH');
   const [kp, setKp] = useState<string>(ausLink.kp != null ? String(ausLink.kp) : '');
-  const [pfand, setPfand] = useState<boolean>(ausLink.pfand === true);
+  // Im minimal-Modus (Startseiten-Schnellrechner) bleibt Grundpfand AUS — die
+  // Checkbox ist dort ausgeblendet, ein ?pf=1-Permalink dürfte sonst einen nicht
+  // abschaltbaren Zusatzblock erzwingen.
+  const [pfand, setPfand] = useState<boolean>(!minimal && ausLink.pfand === true);
   const [ps, setPs] = useState<string>(ausLink.ps != null ? String(ausLink.ps) : '');
   const [steuer, setSteuer] = useState<boolean>(ausLink.steuer !== false);
   const [vergleich, setVergleich] = useState(false);

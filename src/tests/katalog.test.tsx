@@ -9,12 +9,12 @@ import { HeaderSuche } from '../components/layout/HeaderSuche';
 import { RechnerKarte } from '../components/RechnerKarte';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 
-// Akzeptanztests Katalog. Stand App-Shell + Startseite V2 (19.6.2026,
-// deklarierte Anpassung §6 Ziff. 3): Der Katalog (vier Oberkategorien, Such-
-// Trefferliste) lebt jetzt auf /recherche; die Startseite «/» ist das
-// «Rechner-zuerst»-Cockpit (Begrüssung, Schnellrechner, Zeiterfassung,
-// Favoriten). Die Katalog-Mechanik (Deckblatt/?kategorie/?q) ist unverändert,
-// wird nur an ihrem neuen Ort (Recherche → Katalog) geprüft.
+// Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
+// §6 Ziff. 3): /recherche ist aufgelöst — die Rechner-/Vorlagen-Register leben
+// auf eigenen Übersichtsseiten (/rechner, /vorlagen), die die bestehende
+// KategorieSektion wiederverwenden; die Suche liegt im Header-Dropdown. Die
+// Startseite «/» ist das Suche-zuerst-Cockpit (Begrüssung, News, Schnellrechner,
+// Zeiterfassung, Favoriten).
 
 // Minimaler localStorage-Mock (Node hat keinen)
 beforeEach(() => {

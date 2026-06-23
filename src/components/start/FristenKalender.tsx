@@ -89,7 +89,7 @@ export function FristenKalender() {
       </div>
 
       {!ergebnis || !zellen ? (
-        <p className="text-body-s text-ink-400 py-6 text-center">Datum und Frist eingeben – der Kalender markiert dann Ereignis und Fristende.</p>
+        <p className="text-body-s text-ink-500 py-6 text-center">Datum und Frist eingeben – der Kalender markiert dann Ereignis und Fristende.</p>
       ) : (
         <div className="space-y-2.5" aria-live="polite">
           <div className="lc-tile lc-akzent-brass flex items-baseline justify-between gap-3 flex-wrap">
@@ -100,7 +100,7 @@ export function FristenKalender() {
           <div>
             <p className="lc-overline text-ink-500 mb-1.5">{MONATSNAMEN[zellen.monat0]} {zellen.jahr}</p>
             <div className="grid grid-cols-7 gap-0.5 text-center">
-              {WOCHENTAGE_KURZ.map((w) => <span key={w} className="text-[0.65rem] font-medium text-ink-400 pb-0.5">{w}</span>)}
+              {WOCHENTAGE_KURZ.map((w) => <span key={w} className="text-[0.65rem] font-medium text-ink-500 pb-0.5">{w}</span>)}
               {zellen.zellen.map((d, i) => {
                 if (!d) return <span key={`l${i}`} aria-hidden />;
                 const iso = isoVon(d);
@@ -115,7 +115,7 @@ export function FristenKalender() {
                     : istBeginn
                       ? 'ring-1 ring-brass-300 text-ink-700'
                       : frei
-                        ? 'text-ink-300 bg-surface-sunken/40'
+                        ? 'text-ink-500 bg-surface-sunken/40'
                         : 'text-ink-700';
                 const titel = istEnde ? 'Fristende' : istEreignis ? 'Ereignistag (zählt nicht)' : istBeginn ? 'erster mitzählender Tag' : frei ? 'arbeitsfreier Tag' : undefined;
                 return (

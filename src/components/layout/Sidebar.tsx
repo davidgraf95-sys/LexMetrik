@@ -27,10 +27,8 @@ function istAktiv(ziel: string, loc: Location): boolean {
   if (hash && loc.hash !== `#${hash}`) return false;
 
   if (pfad === '/') {
-    const kat = zielP.get('kategorie');
-    if (kat) return curP.get('kategorie') === kat;
-    // «Start»: «/» ohne Kategorie und ohne Suche.
-    return !curP.get('kategorie') && !curP.get('q');
+    // «Start» ist aktiv, solange «/» ohne aktive Hero-Suche (?q=) offen ist.
+    return !curP.get('q');
   }
   if (pfad === '/gesetze') {
     return (zielP.get('ebene') ?? 'bund') === (curP.get('ebene') ?? 'bund');
