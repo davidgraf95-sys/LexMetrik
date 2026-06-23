@@ -3,37 +3,192 @@
   "proNorm": {
     "BGG": [
       {
+        "key": "bger_7B109_2022",
+        "zitierung": "BGer 7B 109/2022 vom 4. April 2024",
+        "regesteKurz": "Strafverfahren, Entsiegelung | Strafprozess",
+        "datum": "2024-04-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C793_2022",
+        "zitierung": "BGer 2C 793/2022 vom 9. Oktober 2023",
+        "regesteKurz": "Feststellung der Rechtswidrigkeit der Haft | Bürgerrecht und Ausländerrecht",
+        "datum": "2023-10-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B198_2022",
+        "zitierung": "BGer 7B 198/2022 vom 25. August 2023",
+        "regesteKurz": "Strafverfahren; unentgeltliche Rechtspflege | Strafprozess",
+        "datum": "2023-08-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C576_2022",
+        "zitierung": "BGer 2C 576/2022 vom 3. August 2023",
+        "regesteKurz": "Submission | Grundrecht",
+        "datum": "2023-08-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_8C694_2022",
+        "zitierung": "BGer 8C 694/2022 vom 10. Februar 2023",
+        "regesteKurz": "Sozialhilfe (Prozessvoraussetzung) | Gesundheitswesen & soziale Sicherheit",
+        "datum": "2023-02-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C246_2022",
+        "zitierung": "BGer 2C 246/2022 vom 31. Januar 2023",
+        "regesteKurz": "Erteilung einer Aufenthaltsbewilligung | Bürgerrecht und Ausländerrecht",
+        "datum": "2023-01-31",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B1117_2022",
+        "zitierung": "BGer 6B 1117/2022 vom 5. Dezember 2022",
+        "regesteKurz": "Abschreibung der Berufung (Nichttragen der Schutzmaske in öffentlich zugänglichen Innenräumen); Nichteintreten | Strafprozess",
+        "datum": "2022-12-05",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_6B586_2022",
+        "zitierung": "BGer 6B 586/2022 vom 14. November 2022",
+        "regesteKurz": "Landesverweisung (Art. 66a StGB); Ausschreibung im Schengener Informationssystem; Nichteintreten | Strafrecht (allgemein)",
+        "datum": "2022-11-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C765_2022",
+        "zitierung": "BGer 2C 765/2022 vom 13. Oktober 2022",
+        "regesteKurz": "Ausschaffungshaft, Haftentlassungsgesuch | Bürgerrecht und Ausländerrecht",
+        "datum": "2022-10-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C528_2021",
+        "zitierung": "BGer 2C 528/2021 vom 23. Juni 2022",
+        "regesteKurz": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung | Bürgerrecht und Ausländerrecht",
+        "datum": "2022-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C35_2021",
+        "zitierung": "BGer 2C 35/2021 vom 10. Februar 2021",
+        "regesteKurz": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft | Bürgerrecht und Ausländerrecht",
+        "datum": "2021-02-10",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C717_2020",
+        "zitierung": "BGer 2C 717/2020 vom 11. Januar 2021",
+        "regesteKurz": "Öffentliches Beschaffungsrecht | Grundrecht",
+        "datum": "2021-01-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "BV": [
+      {
+        "key": "bger_2C793_2022",
+        "zitierung": "BGer 2C 793/2022 vom 9. Oktober 2023",
+        "regesteKurz": "Feststellung der Rechtswidrigkeit der Haft | Bürgerrecht und Ausländerrecht",
+        "datum": "2023-10-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_7B198_2022",
+        "zitierung": "BGer 7B 198/2022 vom 25. August 2023",
+        "regesteKurz": "Strafverfahren; unentgeltliche Rechtspflege | Strafprozess",
+        "datum": "2023-08-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C246_2022",
+        "zitierung": "BGer 2C 246/2022 vom 31. Januar 2023",
+        "regesteKurz": "Erteilung einer Aufenthaltsbewilligung | Bürgerrecht und Ausländerrecht",
+        "datum": "2023-01-31",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C765_2022",
+        "zitierung": "BGer 2C 765/2022 vom 13. Oktober 2022",
+        "regesteKurz": "Ausschaffungshaft, Haftentlassungsgesuch | Bürgerrecht und Ausländerrecht",
+        "datum": "2022-10-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C528_2021",
+        "zitierung": "BGer 2C 528/2021 vom 23. Juni 2022",
+        "regesteKurz": "Erlöschen bzw. Wiedererteilung der Aufenthaltsbewilligung | Bürgerrecht und Ausländerrecht",
+        "datum": "2022-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C1106_2018",
+        "zitierung": "BGer 2C 1106/2018 vom 4. Januar 2019",
+        "regesteKurz": "Verlängerung der Ausschaffungshaft | Bürgerrecht und Ausländerrecht",
+        "datum": "2019-01-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C312_2018",
+        "zitierung": "BGer 2C 312/2018 vom 11. Mai 2018",
+        "regesteKurz": "Ausschaffungshaft / Haftüberprüfung | Bürgerrecht und Ausländerrecht",
+        "datum": "2018-05-11",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C260_2018",
+        "zitierung": "BGer 2C 260/2018 vom 9. April 2018",
+        "regesteKurz": "Auschaffungshaft | Bürgerrecht und Ausländerrecht",
+        "datum": "2018-04-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
         "key": "bger_1C_733_2025",
         "zitierung": "BGer 1C_733/2025 vom 17. Juni 2026",
         "regesteKurz": null,
         "datum": "2026-06-17",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_12T_3_2025",
-        "zitierung": "BGer 12T_3/2025 vom 15. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-15",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_12T_4_2025",
-        "zitierung": "BGer 12T_4/2025 vom 15. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-15",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_533_2026",
-        "zitierung": "BGer 5A_533/2026 vom 11. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-11",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
@@ -48,11 +203,62 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_5A_488_2026",
-        "zitierung": "BGer 5A_488/2026 vom 10. Juni 2026",
+        "key": "bger_2C_321_2026",
+        "zitierung": "BGer 2C_321/2026 vom 9. Juni 2026",
         "regesteKurz": null,
-        "datum": "2026-06-10",
+        "datum": "2026-06-09",
         "leitcharakter": "routine",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "STPO": [
+      {
+        "key": "bger_7B198_2022",
+        "zitierung": "BGer 7B 198/2022 vom 25. August 2023",
+        "regesteKurz": "Strafverfahren; unentgeltliche Rechtspflege | Strafprozess",
+        "datum": "2023-08-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "STGB": [
+      {
+        "key": "bger_6B586_2022",
+        "zitierung": "BGer 6B 586/2022 vom 14. November 2022",
+        "regesteKurz": "Landesverweisung (Art. 66a StGB); Ausschreibung im Schengener Informationssystem; Nichteintreten | Strafrecht (allgemein)",
+        "datum": "2022-11-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_2C260_2018",
+        "zitierung": "BGer 2C 260/2018 vom 9. April 2018",
+        "regesteKurz": "Auschaffungshaft | Bürgerrecht und Ausländerrecht",
+        "datum": "2018-04-09",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A229_2017",
+        "zitierung": "BGer 5A 229/2017 vom 13. November 2017",
+        "regesteKurz": "Zuschlag (Versteigerung eines Miteigentumsanteils) | Schuldbetreibungs- und Konkursrecht",
+        "datum": "2017-11-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      }
+    ],
+    "AIG": [
+      {
+        "key": "bger_2C35_2021",
+        "zitierung": "BGer 2C 35/2021 vom 10. Februar 2021",
+        "regesteKurz": "Haftentlassungsgesuch und Verlängerung der Durchsetzungshaft | Bürgerrecht und Ausländerrecht",
+        "datum": "2021-02-10",
+        "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
       },
@@ -64,54 +270,18 @@
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
-      },
-      {
-        "key": "bger_4A_263_2026",
-        "zitierung": "BGer 4A_263/2026 vom 9. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-09",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_439_2026",
-        "zitierung": "BGer 5A_439/2026 vom 8. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-08",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_5A_461_2026",
-        "zitierung": "BGer 5A_461/2026 vom 8. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-08",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_1C_353_2025",
-        "zitierung": "BGer 1C_353/2025 vom 8. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-08",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      },
-      {
-        "key": "bger_7B_587_2026",
-        "zitierung": "BGer 7B_587/2026 vom 8. Juni 2026",
-        "regesteKurz": null,
-        "datum": "2026-06-08",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
       }
     ],
     "SCHKG": [
+      {
+        "key": "bger_5A229_2017",
+        "zitierung": "BGer 5A 229/2017 vom 13. November 2017",
+        "regesteKurz": "Zuschlag (Versteigerung eines Miteigentumsanteils) | Schuldbetreibungs- und Konkursrecht",
+        "datum": "2017-11-13",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
       {
         "key": "bger_5A_488_2026",
         "zitierung": "BGer 5A_488/2026 vom 10. Juni 2026",
@@ -122,10 +292,37 @@
         "kanton": "CH"
       },
       {
-        "key": "bger_5A229_2017",
-        "zitierung": "BGer 5A 229/2017 vom 13. November 2017",
-        "regesteKurz": "Zuschlag (Versteigerung eines Miteigentumsanteils) | Schuldbetreibungs- und Konkursrecht",
-        "datum": "2017-11-13",
+        "key": "bger_5A_353_2026",
+        "zitierung": "BGer 5A_353/2026 vom 5. Juni 2026",
+        "regesteKurz": null,
+        "datum": "2026-06-05",
+        "leitcharakter": "routine",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_354_2026",
+        "zitierung": "BGer 5A_354/2026 vom 5. Juni 2026",
+        "regesteKurz": null,
+        "datum": "2026-06-05",
+        "leitcharakter": "routine",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_355_2026",
+        "zitierung": "BGer 5A_355/2026 vom 5. Juni 2026",
+        "regesteKurz": null,
+        "datum": "2026-06-05",
+        "leitcharakter": "routine",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_356_2026",
+        "zitierung": "BGer 5A_356/2026 vom 5. Juni 2026",
+        "regesteKurz": null,
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
@@ -137,57 +334,42 @@
         "zitierung": "BGer 5A 229/2017 vom 13. November 2017",
         "regesteKurz": "Zuschlag (Versteigerung eines Miteigentumsanteils) | Schuldbetreibungs- und Konkursrecht",
         "datum": "2017-11-13",
-        "leitcharakter": "routine",
+        "leitcharakter": "leitentscheid",
         "gericht": "bger",
         "kanton": "CH"
-      }
-    ],
-    "STGB": [
+      },
       {
-        "key": "bger_5A229_2017",
-        "zitierung": "BGer 5A 229/2017 vom 13. November 2017",
-        "regesteKurz": "Zuschlag (Versteigerung eines Miteigentumsanteils) | Schuldbetreibungs- und Konkursrecht",
-        "datum": "2017-11-13",
-        "leitcharakter": "routine",
-        "gericht": "bger",
-        "kanton": "CH"
-      }
-    ],
-    "BV": [
-      {
-        "key": "bger_1C_733_2025",
-        "zitierung": "BGer 1C_733/2025 vom 17. Juni 2026",
+        "key": "bger_5A_353_2026",
+        "zitierung": "BGer 5A_353/2026 vom 5. Juni 2026",
         "regesteKurz": null,
-        "datum": "2026-06-17",
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_1C_325_2026",
-        "zitierung": "BGer 1C_325/2026 vom 10. Juni 2026",
+        "key": "bger_5A_354_2026",
+        "zitierung": "BGer 5A_354/2026 vom 5. Juni 2026",
         "regesteKurz": null,
-        "datum": "2026-06-10",
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
       },
       {
-        "key": "bger_2C_321_2026",
-        "zitierung": "BGer 2C_321/2026 vom 9. Juni 2026",
+        "key": "bger_5A_355_2026",
+        "zitierung": "BGer 5A_355/2026 vom 5. Juni 2026",
         "regesteKurz": null,
-        "datum": "2026-06-09",
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
-      }
-    ],
-    "AIG": [
+      },
       {
-        "key": "bger_2C_321_2026",
-        "zitierung": "BGer 2C_321/2026 vom 9. Juni 2026",
+        "key": "bger_5A_356_2026",
+        "zitierung": "BGer 5A_356/2026 vom 5. Juni 2026",
         "regesteKurz": null,
-        "datum": "2026-06-09",
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"
@@ -199,6 +381,15 @@
         "zitierung": "BGer 5A_439/2026 vom 8. Juni 2026",
         "regesteKurz": null,
         "datum": "2026-06-08",
+        "leitcharakter": "routine",
+        "gericht": "bger",
+        "kanton": "CH"
+      },
+      {
+        "key": "bger_5A_482_2026",
+        "zitierung": "BGer 5A_482/2026 vom 5. Juni 2026",
+        "regesteKurz": null,
+        "datum": "2026-06-05",
         "leitcharakter": "routine",
         "gericht": "bger",
         "kanton": "CH"

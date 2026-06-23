@@ -43,18 +43,20 @@ async function main() {
   startIds = [...new Set(startIds)];
   console.log(`[entscheide] Seeds: ${startIds.length} → BFS (de, concurrency 3)`);
 
-  const need = limit * 2;                            // Pool > limit, damit Ranking wählen kann
-  const maxFetch = Math.max(70, limit * 6);
+  // Tief genug graben, damit die älteren zitierten Leitentscheide (amtliche
+  // Sammlung, MIT Regeste) in den Pool kommen — nicht beim Erreichen von `limit`
+  // stoppen, sondern bis maxFetch (einmaliger Anreicherungslauf).
+  const maxFetch = Math.max(150, limit * 6);
   const visited = new Set<string>();
   const pool: EntscheidSnapshot[] = [];
   let queue = [...startIds];
   let fetched = 0;
-  while (queue.length && pool.length < need && fetched < maxFetch) {
-    const layer = queue.filter((id) => !visited.has(id)).slice(0, 12);
+  while (queue.length && fetched < maxFetch) {
+    const layer = queue.filter((id) => !visited.has(id)).slice(0, 16);
     layer.forEach((id) => visited.add(id));
     queue = queue.filter((id) => !layer.includes(id));
     fetched += layer.length;
-    const snaps = await mapLimit(layer, 3, async (id) => {
+    const snaps = await mapLimit(layer, 4, async (id) => {
       const s = await holeEntscheidOCL(id, datum, { sprache: null });  // sprach-agnostisch traversieren
       process.stdout.write(s ? (s.sprache === 'de' ? '.' : '·') : 'x');
       return s;

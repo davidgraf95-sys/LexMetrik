@@ -1,0 +1,259 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: /
+    - group [ref=e6]:
+      - 'textbox "Tipp: Entscheidnummer in Anführungszeichen" [ref=e7]': "*"
+      - button "Suchen" [ref=e9] [cursor=pointer]
+      - 'link "Neu: MCP Interface" [ref=e11] [cursor=pointer]':
+        - /url: /mcp
+        - generic [ref=e12]: "Neu: MCP Interface"
+    - generic [ref=e14] [cursor=pointer]: DE
+    - button [ref=e16] [cursor=pointer]
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - img [ref=e23] [cursor=pointer]
+      - generic [ref=e26]:
+        - paragraph [ref=e28]:
+          - link "cloud download" [ref=e30] [cursor=pointer]:
+            - /url: "http://v2202109132150164038.luckysrv.de/api/search?{%22collection%22:%22entscheidsuche%22,%20%22query%22:%22*%22,%20%22filter%22:%22{@terms@:{@hierarchy@:[@CH_BGE_001@]}}%22,%20%22getDocs%22:true,%22getZIP%22:true,%20%22getCSV%22:false,%20%22getHTML%22:true,%20%22getNiceHTML%22:false,%20%22getJSON%22:false,%20%22ui%22:true}"
+            - button "cloud download" [ref=e31]:
+              - img "cloud download" [ref=e32]
+          - text: "Trefferanzahl: 0"
+        - generic [ref=e37] [cursor=pointer]:
+          - paragraph [ref=e38]: Alle Filter
+          - img "x" [ref=e39]
+      - generic [ref=e42]:
+        - paragraph [ref=e44]: "Sortieren nach:"
+        - group [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - radio "Relevanz" [ref=e48]
+              - generic [ref=e49]: Relevanz
+            - generic [ref=e50]:
+              - radio "Entscheiddatum" [checked] [ref=e51]
+              - generic [ref=e52]: Entscheiddatum
+            - generic [ref=e53]:
+              - radio "Scrapedatum" [ref=e54]
+              - generic [ref=e55]: Scrapedatum
+      - generic [ref=e57]:
+        - paragraph [ref=e58]: Jahr
+        - combobox [ref=e59]:
+          - option "Entscheiddatum" [selected]
+          - option "Scrapedatum"
+        - generic [ref=e61]:
+          - img [ref=e62]
+          - generic [ref=e66]:
+            - generic [ref=e68]:
+              - generic [ref=e70] [cursor=pointer]:
+                - text: 1.1.1970
+                - img [ref=e72]
+              - generic [ref=e73] [cursor=pointer]:
+                - text: 1.1.1970
+                - img [ref=e75]
+            - textbox [ref=e79]: 10;100
+      - generic [ref=e80]:
+        - paragraph [ref=e82]: Sprache
+        - group [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - checkbox "DE (0)" [ref=e86]
+              - generic [ref=e88]:
+                - generic [ref=e89]: DE
+                - generic [ref=e90]: (0)
+            - generic [ref=e91]:
+              - checkbox "FR (0)" [ref=e92]
+              - generic [ref=e94]:
+                - generic [ref=e95]: FR
+                - generic [ref=e96]: (0)
+            - generic [ref=e97]:
+              - checkbox "IT (0)" [ref=e98]
+              - generic [ref=e100]:
+                - generic [ref=e101]: IT
+                - generic [ref=e102]: (0)
+      - generic [ref=e103]:
+        - generic [ref=e105] [cursor=pointer]:
+          - paragraph [ref=e106]: Verfasser
+          - img "x" [ref=e107]
+        - group [ref=e110]:
+          - generic [ref=e112]:
+            - generic [ref=e115]:
+              - generic [ref=e117] [cursor=pointer]:
+                - generic [ref=e118]: Teil I
+                - img [ref=e120]
+              - textbox [ref=e123]
+            - generic [ref=e125]:
+              - generic [ref=e127]:
+                - img [ref=e129] [cursor=pointer]
+                - generic [ref=e136] [cursor=pointer]:
+                  - generic [ref=e137]: Eidgenossenschaft
+                  - generic [ref=e138]: (0)
+              - generic [ref=e140]:
+                - img [ref=e142] [cursor=pointer]
+                - generic [ref=e149] [cursor=pointer]:
+                  - generic [ref=e150]: Aargau
+                  - generic [ref=e151]: (0)
+              - generic [ref=e153]:
+                - img [ref=e155] [cursor=pointer]
+                - generic [ref=e162] [cursor=pointer]:
+                  - generic [ref=e163]: Appenzell Innerrhoden
+                  - generic [ref=e164]: (0)
+              - generic [ref=e166]:
+                - img [ref=e168] [cursor=pointer]
+                - generic [ref=e175] [cursor=pointer]:
+                  - generic [ref=e176]: Appenzell Ausserrhoden
+                  - generic [ref=e177]: (0)
+              - generic [ref=e179]:
+                - img [ref=e181] [cursor=pointer]
+                - generic [ref=e188] [cursor=pointer]:
+                  - generic [ref=e189]: Bern
+                  - generic [ref=e190]: (0)
+              - generic [ref=e192]:
+                - img [ref=e194] [cursor=pointer]
+                - generic [ref=e201] [cursor=pointer]:
+                  - generic [ref=e202]: Basel-Land
+                  - generic [ref=e203]: (0)
+              - generic [ref=e205]:
+                - img [ref=e207] [cursor=pointer]
+                - generic [ref=e214] [cursor=pointer]:
+                  - generic [ref=e215]: Basel-Stadt
+                  - generic [ref=e216]: (0)
+              - generic [ref=e218]:
+                - img [ref=e220] [cursor=pointer]
+                - generic [ref=e227] [cursor=pointer]:
+                  - generic [ref=e228]: Freiburg
+                  - generic [ref=e229]: (0)
+              - generic [ref=e231]:
+                - img [ref=e233] [cursor=pointer]
+                - generic [ref=e240] [cursor=pointer]:
+                  - generic [ref=e241]: Genf
+                  - generic [ref=e242]: (0)
+              - generic [ref=e244]:
+                - img [ref=e246] [cursor=pointer]
+                - generic [ref=e253] [cursor=pointer]:
+                  - generic [ref=e254]: Glarus
+                  - generic [ref=e255]: (0)
+              - generic [ref=e257]:
+                - img [ref=e259] [cursor=pointer]
+                - generic [ref=e266] [cursor=pointer]:
+                  - generic [ref=e267]: Graubünden
+                  - generic [ref=e268]: (0)
+              - generic [ref=e270]:
+                - img [ref=e272] [cursor=pointer]
+                - generic [ref=e279] [cursor=pointer]:
+                  - generic [ref=e280]: Jura
+                  - generic [ref=e281]: (0)
+              - generic [ref=e283]:
+                - img [ref=e285] [cursor=pointer]
+                - generic [ref=e292] [cursor=pointer]:
+                  - generic [ref=e293]: Luzern
+                  - generic [ref=e294]: (0)
+              - generic [ref=e296]:
+                - img [ref=e298] [cursor=pointer]
+                - generic [ref=e305] [cursor=pointer]:
+                  - generic [ref=e306]: Neuenburg
+                  - generic [ref=e307]: (0)
+              - generic [ref=e309]:
+                - img [ref=e311] [cursor=pointer]
+                - generic [ref=e318] [cursor=pointer]:
+                  - generic [ref=e319]: Nidwalden
+                  - generic [ref=e320]: (0)
+              - generic [ref=e322]:
+                - img [ref=e324] [cursor=pointer]
+                - generic [ref=e331] [cursor=pointer]:
+                  - generic [ref=e332]: Obwalden
+                  - generic [ref=e333]: (0)
+              - generic [ref=e335]:
+                - img [ref=e337] [cursor=pointer]
+                - generic [ref=e344] [cursor=pointer]:
+                  - generic [ref=e345]: St.Gallen
+                  - generic [ref=e346]: (0)
+              - generic [ref=e348]:
+                - img [ref=e350] [cursor=pointer]
+                - generic [ref=e357] [cursor=pointer]:
+                  - generic [ref=e358]: Schaffhausen
+                  - generic [ref=e359]: (0)
+              - generic [ref=e361]:
+                - img [ref=e363] [cursor=pointer]
+                - generic [ref=e370] [cursor=pointer]:
+                  - generic [ref=e371]: Solothurn
+                  - generic [ref=e372]: (0)
+              - generic [ref=e374]:
+                - img [ref=e376] [cursor=pointer]
+                - generic [ref=e383] [cursor=pointer]:
+                  - generic [ref=e384]: Schwyz
+                  - generic [ref=e385]: (0)
+              - generic [ref=e387]:
+                - img [ref=e389] [cursor=pointer]
+                - generic [ref=e396] [cursor=pointer]:
+                  - generic [ref=e397]: Tessin
+                  - generic [ref=e398]: (0)
+              - generic [ref=e400]:
+                - img [ref=e402] [cursor=pointer]
+                - generic [ref=e409] [cursor=pointer]:
+                  - generic [ref=e410]: Thurgau
+                  - generic [ref=e411]: (0)
+              - generic [ref=e413]:
+                - img [ref=e415] [cursor=pointer]
+                - generic [ref=e422] [cursor=pointer]:
+                  - generic [ref=e423]: Uri
+                  - generic [ref=e424]: (0)
+              - generic [ref=e426]:
+                - img [ref=e428] [cursor=pointer]
+                - generic [ref=e435] [cursor=pointer]:
+                  - generic [ref=e436]: Waadt
+                  - generic [ref=e437]: (0)
+              - generic [ref=e439]:
+                - img [ref=e441] [cursor=pointer]
+                - generic [ref=e448] [cursor=pointer]:
+                  - generic [ref=e449]: Wallis
+                  - generic [ref=e450]: (0)
+              - generic [ref=e452]:
+                - img [ref=e454] [cursor=pointer]
+                - generic [ref=e461] [cursor=pointer]:
+                  - generic [ref=e462]: Zug
+                  - generic [ref=e463]: (0)
+              - generic [ref=e465]:
+                - img [ref=e467] [cursor=pointer]
+                - generic [ref=e474] [cursor=pointer]:
+                  - generic [ref=e475]: Zürich
+                  - generic [ref=e476]: (0)
+              - generic [ref=e478]:
+                - img [ref=e480] [cursor=pointer]
+                - generic [ref=e487] [cursor=pointer]:
+                  - generic [ref=e488]: Schiedsgerichte
+                  - generic [ref=e489]: (0)
+    - generic [ref=e490]:
+      - heading "Wir werden u.a. unterstützt von:" [level=1] [ref=e491]
+      - generic [ref=e492]:
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - link "Image":
+              - /url: https://www.zurich.ch/
+              - img "Image" [ref=e496] [cursor=pointer]
+          - generic "Zürich Versicherungs-Gesellschaft AG" [ref=e497]:
+            - paragraph [ref=e499]: Zürich Versicherungs-Gesellschaft AG
+        - generic [ref=e501]:
+          - generic [ref=e502]:
+            - link "Image":
+              - /url: https://wickipartners.ch/
+              - img "Image" [ref=e503] [cursor=pointer]
+          - generic "Wicki Partners AG" [ref=e504]:
+            - paragraph [ref=e506]: Wicki Partners AG
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - link "Image":
+              - /url: https://www.ub.unibe.ch/teilbibliotheken/rechtswissenschaft/juristische_bibliothek_jbb/index_ger.html
+              - img "Image" [ref=e510] [cursor=pointer]
+          - generic "Universitätsbibliothek Bern, Juristische Bibliothek" [ref=e511]:
+            - paragraph [ref=e513]: Universitätsbibliothek Bern, Juristische Bibliothek
+        - generic [ref=e515]:
+          - generic [ref=e516]:
+            - link "Image":
+              - /url: https://unine.ch/droit
+              - img "Image" [ref=e517] [cursor=pointer]
+          - generic "Université de Neuchâtel, Faculté de droit" [ref=e518]:
+            - paragraph [ref=e520]: Faculté de droit
+      - img [ref=e522] [cursor=pointer]
+      - status [ref=e526]:
+        - generic [ref=e527]: Loading...

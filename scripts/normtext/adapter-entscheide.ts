@@ -131,7 +131,9 @@ export function mappeEntscheidOCL(
     ?? abteilungZuSachgebiet(docket)
     ?? 'oeffentlich';
 
-  const leit = det.marked_for_publication === true || !!det.bge_reference;
+  // Leitentscheid = amtliche Publikation: marked_for_publication ODER BGE-Fundstelle
+  // ODER vorhandene amtliche Regeste (eine Regeste tragen nur publizierte Entscheide).
+  const leit = det.marked_for_publication === true || !!det.bge_reference || !!regeste;
   const idSafe = `bund/${court}/${docket.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_')}`;
 
   return {
