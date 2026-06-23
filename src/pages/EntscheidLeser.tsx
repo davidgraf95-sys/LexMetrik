@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EntscheidBody } from '../components/rechtsprechung/EntscheidBody';
 import { ABSCHNITT_TITEL, abschnittAnker } from '../lib/rechtsprechung/abschnitte';
@@ -25,6 +25,16 @@ const SPRACH_LABEL: Record<EntscheidSprache, string> = {
 // Reihenfolge der Sprung-Ziele (amtliche Gliederung); Regeste vorangestellt.
 const NAV_TYPEN: Abschnittstyp[] = ['regeste', 'sachverhalt', 'erwaegung', 'dispositiv'];
 
+// Lese-Schriftgrössen (R17, A−/A+); Index 1 = Default (1.08rem).
+const FS_STUFEN = [1.0, 1.08, 1.18, 1.3];
+function ladeFsIdx(): number {
+  try {
+    const v = Number(localStorage.getItem('rsp-fs-idx'));
+    if (Number.isInteger(v) && v >= 0 && v < FS_STUFEN.length) return v;
+  } catch { /* localStorage nicht verfügbar */ }
+  return 1;
+}
+
 function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[] }) {
   if (ziele.length === 0) return null;
   return (
@@ -45,6 +55,13 @@ function SprungNavigation({ ziele }: { ziele: { anker: string; label: string }[]
 function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
   const [snap, setSnap] = useState<EntscheidSnapshot | null>(null);
   const [zustand, setZustand] = useState<'laden' | 'fehlt' | 'da'>('laden');
+  const [kopiert, setKopiert] = useState(false);
+  const [fsIdx, setFsIdx] = useState<number>(ladeFsIdx);
+  const setFs = (i: number) => {
+    const x = Math.max(0, Math.min(FS_STUFEN.length - 1, i));
+    setFsIdx(x);
+    try { localStorage.setItem('rsp-fs-idx', String(x)); } catch { /* egal */ }
+  };
 
   useEffect(() => {
     // Zustand startet auf 'laden' (Default); der Wrapper remountet via key={schluessel},
@@ -95,6 +112,15 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
     .filter((t) => vorhandene.has(t))
     .map((t) => ({ anker: t === 'regeste' ? 'abschnitt-regeste' : abschnittAnker(t), label: ABSCHNITT_TITEL[t] }));
 
+  // R12 «Kopieren mit Fundstelle»: Zitierung + Permalink in die Zwischenablage.
+  const kopiereZitat = () => {
+    if (typeof navigator === 'undefined' || !navigator.clipboard) return;
+    const url = typeof location !== 'undefined' ? `${location.origin}${location.pathname}` : '';
+    navigator.clipboard.writeText(url ? `${snap.zitierung}\n${url}` : snap.zitierung)
+      .then(() => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); })
+      .catch(() => { /* Clipboard nicht verfügbar */ });
+  };
+
   return (
     <div className="space-y-5">
       {/* Breadcrumb (scrollt weg; die Sprung-Navigation ist die sticky Kopfzeile) */}
@@ -126,6 +152,20 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
           {snap.kuratierung === 'maschinell' && (
             <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">maschinell erfasst</span>
           )}
+          <span className="ml-auto inline-flex items-center gap-2">
+            {/* R17: Lese-Schriftgrösse */}
+            <span className="inline-flex items-stretch rounded border border-line overflow-hidden" role="group" aria-label="Schriftgrösse">
+              <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
+                className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Schrift kleiner">A−</button>
+              <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
+                className="px-2 py-0.5 text-ink-600 hover:bg-paper-sunken disabled:opacity-40 border-l border-line" title="Schrift grösser">A+</button>
+            </span>
+            <button type="button" onClick={kopiereZitat}
+              className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400"
+              title="Zitierung + Link in die Zwischenablage kopieren">
+              {kopiert ? '✓ kopiert' : '⧉ Zitat kopieren'}
+            </button>
+          </span>
         </div>
       </header>
 
@@ -143,7 +183,7 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
       )}
 
       {/* Lesespalte 60–75 Zeichen (Reglement R1) — schmaler als die amtlichen Anzeigen. */}
-      <article className="mx-auto w-full max-w-reading">
+      <article className="mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
         <EntscheidBody abschnitte={snap.abschnitte} />
       </article>
 

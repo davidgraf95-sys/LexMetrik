@@ -48,6 +48,9 @@ function main() {
       if (!e[f]) fehler.push(`${e.key}: Provenienz-Feld '${f}' fehlt`);
     }
     if (e.kuratierung === 'geprueft') warn.push(`${e.key}: kuratierung 'geprueft' ohne Abnahme? (P0 erwartet 'maschinell')`);
+    if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {
+      warn.push(`${e.key}: Entscheiddatum ${e.datum} liegt nach dem Erzeugungsdatum ${manifest.erzeugt} (OCL-Publikations-/Datumsartefakt prüfen)`);
+    }
     // Datei + sha + Anonymisierung
     if (!e.datei) { if (e.bestand === 'snapshot') fehler.push(`${e.key}: bestand 'snapshot' ohne datei`); continue; }
     const fp = join(PUB, e.datei);

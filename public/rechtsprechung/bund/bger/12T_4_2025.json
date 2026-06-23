@@ -81,8 +81,20 @@
           "typ": "dispositiv",
           "bloecke": [
             {
+              "marke": "1.",
+              "text": "Die lange Verfahrensdauer ist auf strukturelle Mängel organisatorischer oder administrativer Natur zurückzuführen."
+            },
+            {
+              "marke": "2.",
+              "text": "Es werden keine Kosten erhoben."
+            },
+            {
+              "marke": "3.",
+              "text": "Diese Feststellung wird der Verwaltungskommission des Bundesverwaltungsgerichts schriftlich mitgeteilt. Den Anzeigenden wird eine Orientierungskopie zugestellt."
+            },
+            {
               "marke": null,
-              "text": "1.\n\nDie lange Verfahrensdauer ist auf strukturelle Mängel organisatorischer oder administrativer Natur zurückzuführen.\n\n2.\n\nEs werden keine Kosten erhoben.\n\n3.\n\nDiese Feststellung wird der Verwaltungskommission des Bundesverwaltungsgerichts schriftlich mitgeteilt. Den Anzeigenden wird eine Orientierungskopie zugestellt.\n\nLausanne, 15. Juni 2026\n\nIm Namen der Verwaltungskommission des Schweizerischen Bundesgerichts\n\nDer Präsident: Chaix\n\nDer Generalsekretär: Lüscher"
+              "text": "Lausanne, 15. Juni 2026\n\nIm Namen der Verwaltungskommission des Schweizerischen Bundesgerichts\n\nDer Präsident: Chaix\n\nDer Generalsekretär: Lüscher"
             }
           ]
         }
@@ -113,7 +125,7 @@
       "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://15-06-2026-12T_4-2025&lang=de&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "0fd6901ee45586181d4eefcf136c916ba251f5513feb3e37c8454dc2a30c015c",
-      "sha": "89272e01f72a823611162cc8d5246cabec8acaa18a31c6c87eda61c92a91e0b5"
+      "sha": "39c082480bea6ff890072726c52b12415908a928df47c20298ecd386d075258b"
     }
   ]
 }

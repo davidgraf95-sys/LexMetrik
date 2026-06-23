@@ -25,6 +25,13 @@ export function EntscheidFilter({ werte, onChange, bestand }: {
     .map((s) => JSON.parse(s) as { id: string; name: string });
   const kantone = einzigartig(bestand.map((e) => e.kanton)).sort();
   const sprachen = einzigartig(bestand.map((e) => e.sprache)).sort();
+  // Trefferzahl je Facette (verhindert Null-Treffer-Klicks, R15).
+  const gerichtN = (id: string) => bestand.filter((e) => e.gericht === id).length;
+  const kantonN = (k: string) => bestand.filter((e) => e.kanton === k).length;
+  const spracheN = (s: string) => bestand.filter((e) => e.sprache === s).length;
+  const sachgebiete = GEBIETE
+    .map((g) => ({ ...g, n: bestand.filter((e) => e.sachgebiet === g.id).length }))
+    .filter((g) => g.n > 0);
   const aktiv = !!(werte.q?.trim() || werte.sachgebiet || werte.gericht || werte.kanton
     || werte.sprache || werte.nurLeitentscheide || werte.datumVon || werte.datumBis);
 
@@ -45,7 +52,7 @@ export function EntscheidFilter({ werte, onChange, bestand }: {
             value={werte.sachgebiet ?? ''}
             onChange={(e) => setze({ sachgebiet: (e.target.value || null) as Rechtsgebiet | null })}>
             <option value="">Alle</option>
-            {GEBIETE.map((g) => <option key={g.id} value={g.id}>{g.label}</option>)}
+            {sachgebiete.map((g) => <option key={g.id} value={g.id}>{g.label} ({g.n})</option>)}
           </select>
         </label>
         {gerichte.length > 1 && (
@@ -55,7 +62,7 @@ export function EntscheidFilter({ werte, onChange, bestand }: {
               value={werte.gericht ?? ''}
               onChange={(e) => setze({ gericht: e.target.value || null })}>
               <option value="">Alle</option>
-              {gerichte.map((g) => <option key={g.id} value={g.id}>{g.name}</option>)}
+              {gerichte.map((g) => <option key={g.id} value={g.id}>{g.name} ({gerichtN(g.id)})</option>)}
             </select>
           </label>
         )}
@@ -66,7 +73,7 @@ export function EntscheidFilter({ werte, onChange, bestand }: {
               value={werte.kanton ?? ''}
               onChange={(e) => setze({ kanton: e.target.value || null })}>
               <option value="">Alle</option>
-              {kantone.map((k) => <option key={k} value={k}>{k === 'CH' ? 'Bund (CH)' : k}</option>)}
+              {kantone.map((k) => <option key={k} value={k}>{k === 'CH' ? 'Bund (CH)' : k} ({kantonN(k)})</option>)}
             </select>
           </label>
         )}
@@ -77,19 +84,19 @@ export function EntscheidFilter({ werte, onChange, bestand }: {
               value={werte.sprache ?? ''}
               onChange={(e) => setze({ sprache: e.target.value || null })}>
               <option value="">Alle</option>
-              {sprachen.map((s) => <option key={s} value={s}>{SPRACH_LABEL[s] ?? s}</option>)}
+              {sprachen.map((s) => <option key={s} value={s}>{SPRACH_LABEL[s] ?? s} ({spracheN(s)})</option>)}
             </select>
           </label>
         )}
         <label className="flex flex-col gap-1 text-xs text-ink-500">
           <span>Datum von</span>
-          <input type="date" className="lc-input h-9 py-0 text-body-s"
+          <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
             value={werte.datumVon ?? ''}
             onChange={(e) => setze({ datumVon: e.target.value || null })} />
         </label>
         <label className="flex flex-col gap-1 text-xs text-ink-500">
           <span>Datum bis</span>
-          <input type="date" className="lc-input h-9 py-0 text-body-s"
+          <input type="date" lang="de-CH" className="lc-input h-9 py-0 text-body-s"
             value={werte.datumBis ?? ''}
             onChange={(e) => setze({ datumBis: e.target.value || null })} />
         </label>

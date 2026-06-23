@@ -58,6 +58,37 @@ export async function jget<T = unknown>(url: string, tries = 3, timeoutMs = 4500
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+/**
+ * Dispositiv in nummerierte Anordnungen aufteilen — anhand der STANDALONE-Nummern-
+ * Absätze des Rohtexts ("1.\n\nText\n\n2.\n\n…"), nicht inline (sonst Datums-Fehlsplit
+ * an „2. Dezember", §1). Unter-Punkte („2.1. …") bleiben bei ihrer Anordnung; die
+ * Schlussformel (Lausanne/Im Namen/Präsident/Gerichtsschreiber) wird als markenloser
+ * Tail abgetrennt. Gibt null zurück, wenn keine ≥2 sicheren Nummern erkennbar sind.
+ */
+export function teileDispositiv(roh: string): EntscheidBlock[] | null {
+  const paras = String(roh).split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  const istNummer = (p: string) => /^\d{1,2}\.$/.test(p);
+  const istSchluss = (p: string) => /^(Lausanne|Lugano|Luzern|Im Namen|Der Präsident|Die Präsident|Der Gerichtsschreiber|Die Gerichtsschreiber|Versand)\b/.test(p);
+  const items: { marke: string | null; teile: string[] }[] = [];
+  let cur: { marke: string | null; teile: string[] } | null = null;
+  const schluss: string[] = [];
+  let inSchluss = false;
+  for (const p of paras) {
+    if (!inSchluss && istSchluss(p)) inSchluss = true;
+    if (inSchluss) { schluss.push(p); continue; }
+    if (istNummer(p)) { cur = { marke: p, teile: [] }; items.push(cur); }
+    else if (cur) cur.teile.push(p);
+    else { cur = { marke: null, teile: [p] }; items.push(cur); }
+  }
+  const nummeriert = items.filter((i) => i.marke);
+  if (nummeriert.length < 2) return null;
+  const bloecke: EntscheidBlock[] = items
+    .map((i) => ({ marke: i.marke, text: bereinigeFliesstext(i.teile.join('\n\n')) }))
+    .filter((b) => b.text);
+  if (schluss.length) bloecke.push({ marke: null, text: bereinigeFliesstext(schluss.join('\n\n')) });
+  return bloecke;
+}
+
 export interface HoleOpts {
   /** Erzwungenes Sachgebiet (z.B. wenn über law_code gefunden). */
   sachgebietHint?: Rechtsgebiet | null;
@@ -95,10 +126,11 @@ export function mappeEntscheidOCL(
       }))
       .filter((b) => b.text);
     if (ervBloecke.length) abschnitte.push({ typ: 'erwaegung', bloecke: ervBloecke });
-    // Dispositiv als EIN sauberer Block. (OCL dispositiv_orders zerteilt unzuverlässig
-    // an Datumsangaben wie „2. Dezember" → bewusst nicht als Liste, §1: kein Falsch-Split.)
+    // Dispositiv: nummerierte Anordnungen aus den Standalone-Nummern-Absätzen; sonst ein Block.
     if (typeof str.dispositiv === 'string' && str.dispositiv.trim()) {
-      abschnitte.push({ typ: 'dispositiv', bloecke: [{ marke: null, text: bereinigeFliesstext(str.dispositiv) }] });
+      const disp = teileDispositiv(str.dispositiv)
+        ?? [{ marke: null, text: bereinigeFliesstext(str.dispositiv) }];
+      if (disp.length) abschnitte.push({ typ: 'dispositiv', bloecke: disp });
     }
   }
   // Fallback: keine Gliederung → ganzer Volltext als ein Erwägungs-Block (ehrlich markiert in der UI).
