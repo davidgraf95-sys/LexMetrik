@@ -146,6 +146,14 @@ describe('extrahiereRubrum', () => {
   it('gibt null ohne Rubrum-Marker', () => {
     expect(extrahiereRubrum('nur fliesstext ohne marker')).toBeNull();
   });
+  it('entdoppelt Parteien-Block + strippt Klammer-Dossier-Nummern (P2)', () => {
+    const ft = 'Besetzung Richter A. Verfahrensbeteiligte Gemeinde Grenchen, vertreten durch Anwalt Aebi, '
+      + 'Staatskanzlei Solothurn, , Gemeinde Grenchen, vertreten durch Anwalt Aebi, Staatskanzlei Solothurn. '
+      + 'Gegenstand Wahlbeschwerde (VWBES.2025.355; VWBES.2025.460). Sachverhalt: A.';
+    const r = extrahiereRubrum(ft)!;
+    expect((r.parteien!.match(/Staatskanzlei Solothurn/g) ?? []).length).toBe(1);
+    expect(r.gegenstand).not.toMatch(/VWBES/);
+  });
 });
 
 describe('mappeEntscheidOCL (echte Fixture)', () => {

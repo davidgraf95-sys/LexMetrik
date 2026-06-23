@@ -115,7 +115,13 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
   // (lieber leer als falsch — ein falsches Rubrum ist ein Vertrauenskiller).
   const sauber = (s: string | null, opts: { salvage?: boolean } = {}): string | null => {
     if (!s) return null;
-    let t = s.replace(/\b\d[A-Z]_\d+\/\d{4}\b/g, ' ').replace(/\s{2,}/g, ' ').replace(/^[\s,;:.–-]+/, '').trim();
+    let t = s.replace(/\b\d[A-Z]_\d+\/\d{4}\b/g, ' ')                  // eidg. Verfahrensnummern
+      // kantonale Dossier-Nummern in Klammern (Abnahme P2b): „(VWBES.2025.355; …)"
+      .replace(/\s*\([A-Za-zÄÖÜ]{2,}\.\d{4}\.\d+(?:\s*[;,]\s*[A-Za-zÄÖÜ]{2,}\.\d{4}\.\d+)*\)/g, '')
+      .replace(/\s{2,}/g, ' ').replace(/^[\s,;:.–-]+/, '').trim();
+    // Wiederholten Block entdoppeln (Abnahme P2a: vereinigte Verfahren); Trenner
+    // dazwischen (Komma/Semikolon/Whitespace) zulassen; danach Doppel-Kommas räumen.
+    t = t.replace(/(\S.{24,}?)[\s,;]*\1/g, '$1').replace(/(?:,\s*){2,}/g, ', ').replace(/\s{2,}/g, ' ').trim();
     if (opts.salvage) {
       const m = /\b(und beantragt|mit dem Antrag|Eventualiter|Subeventualiter|stellt? den Antrag)\b/i.exec(t);
       if (m && m.index > 15) t = t.slice(0, m.index).trim();
