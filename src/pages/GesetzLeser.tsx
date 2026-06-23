@@ -4,9 +4,10 @@ import { ArtikelBody, FnRef } from '../components/normtext/ArtikelBody';
 import type { InternRefs } from '../components/NormText';
 import { trenneAenderungshistorie, labelMitBereich } from '../lib/normtext/darstellung';
 import {
-  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur,
+  ladeBrowseManifest, ladeErlass, ladeErlassDatei, ladeStruktur, ladeKantonSystematik,
   baueGliederungsbaum, type Sektion, type StrukturMap, type Fussnote,
 } from '../lib/normtext/browse';
+import { sachgruppe, topTitel, type KantonSystematik } from '../lib/normtext/systematik';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { NormChip } from '../components/vorlagen/ui';
@@ -244,12 +245,18 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   const [tocAuf, setTocAuf] = useState(false); // mobil: Gliederung ein-/ausblenden
   const [tocOffen, setTocOffen] = useState(true); // Desktop: Gliederungsspalte ein-/ausklappen
   const [fussnotenAuf, setFussnotenAuf] = useState(false); // Fussnoten nur auf Wunsch
+  // N13: amtliche Kanton-Systematik (lazy) — liefert das echte Sachgebiet eines
+  // kantonalen Erlasses für die Reader-Overline (statt Einheits-«Öffentliches Recht»).
+  const [kantonSys, setKantonSys] = useState<Record<string, KantonSystematik>>({});
   const sekRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
     let lebt = true;
     void ladeBrowseManifest().then((m) => { if (lebt) setManifest(m); });
     void ladeStruktur(ebene, schluessel).then((s) => { if (lebt) setStruktur(s); });
+    // N13: Systematik-Bäume nur für die Kanton-Lesesicht laden; fehlen sie, bleibt
+    // die Overline ohne Sachgebiet (§8 — nichts Erfundenes).
+    if (ebene === 'kanton') void ladeKantonSystematik().then((s) => { if (lebt) setKantonSys(s); });
     void ladeErlass(schluessel).then(async (e) => {
       if (!lebt) return;
       if (!e || !e.datei) { setFehler(true); return; }
@@ -440,6 +447,29 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   };
   const fn = (tok: string) => struktur?.[tok]?.fussnoten;
 
+  // S8 (BS-Audit 23.6.2026): Doppeltitel «Advokaturgesetz — Advokaturgesetz
+  // (291.100)» vermeiden. Trägt der Volltitel (ohne abschliessendes «(…)»-Suffix,
+  // z. B. die SR-Nr.) denselben Wortlaut wie das Kürzel, ist der «— {titel}»-Teil
+  // reine Wiederholung → weglassen. Reine Darstellung (§3); keine Datenänderung.
+  const titelOhneSuffix = erlass.titel.replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const titelRedundant = titelOhneSuffix.toLowerCase() === erlass.kuerzel.trim().toLowerCase();
+
+  // N13 (BS-Audit 23.6.2026): die Reader-Overline zeigte für JEDEN kantonalen
+  // Erlass stur das Einheits-Rechtsgebiet («Öffentliches Recht»). Stattdessen das
+  // echte Sachgebiet aus der amtlichen Kanton-Systematik (sachgruppe→topTitel).
+  // Nur wenn ein verifizierter Titel vorliegt — der neutrale Fallback («Bereich N»,
+  // «Ohne Systematik-Nummer») wird weggelassen (§8, nichts Geratenes). Bund bleibt
+  // beim Rechtsgebiet-Label.
+  const overlineGebiet: string | null = (() => {
+    if (erlass.ebene === 'bund') return GEBIET_LABEL[erlass.rechtsgebiet];
+    const sys = erlass.kanton ? kantonSys[erlass.kanton] : undefined;
+    if (!sys) return null;
+    const { top } = sachgruppe(sys, erlass.sr);
+    if (top === '~') return null;
+    const name = topTitel(sys, top);
+    return /^Bereich /.test(name) ? null : name;
+  })();
+
   // Artikel-Bereich «Art. 1–10» einer Sektion (inkl. Unterabschnitte) — erster und
   // letzter Artikel in Dokument-Reihenfolge. Reine Darstellung (Sektionsüberschrift).
   const sammleArtikel = (s: Sektion): NormSnapshot[] => [...s.artikel, ...s.kinder.flatMap(sammleArtikel)];
@@ -459,7 +489,7 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
   // Erlass als Gesamtheit herunterladen (client-seitig, reiner Text).
   const baueText = (): string => {
     const L: string[] = [
-      `${erlass.kuerzel} — ${erlass.titel}`,
+      titelRedundant ? erlass.kuerzel : `${erlass.kuerzel} — ${erlass.titel}`,
       [erlass.sr ? `SR ${erlass.sr}` : '', erlass.stand ? `Stand ${formatiereDatum(erlass.stand)}` : ''].filter(Boolean).join(' · '),
       `Quelle: ${erlass.quelleUrl}`,
       'Heruntergeladen aus LexMetrik — massgeblich ist die amtliche Fassung (Live-Link).',
@@ -528,9 +558,9 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
       </div>
 
       <header className="space-y-2.5 border-b border-line pb-5">
-        <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`} · {GEBIET_LABEL[erlass.rechtsgebiet]}</p>
+        <p className="lc-overline">{erlass.ebene === 'bund' ? 'Bundesgesetz' : `Kanton ${erlass.kanton}`}{overlineGebiet ? ` · ${overlineGebiet}` : ''}</p>
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">
-          {erlass.kuerzel} <span className="text-ink-400 font-normal">— {erlass.titel}</span>
+          {erlass.kuerzel}{!titelRedundant && <span className="text-ink-400 font-normal"> — {erlass.titel}</span>}
         </h1>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-ink-500">
           {erlass.sr && <span>SR <span className="num">{erlass.sr}</span></span>}

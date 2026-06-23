@@ -426,7 +426,12 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                         : zk
                           ? <ZitierMarke klasse="shrink-0 w-6 text-right !font-medium !text-ink-500" zitat={itemZitat}>{markeAnzeige}</ZitierMarke>
                           : <span className="num shrink-0 font-semibold text-ink-500">{markeAnzeige}</span>}
-                      <span>
+                      <span className="min-w-0 [overflow-wrap:anywhere] hyphens-auto">
+                        {/* S13 (BS-Audit 23.6.2026): lange Komposita in Aufzählungen
+                            sprengten auf schmalem Viewport (~390px) den Reader (≈25px
+                            H-Overflow im Steuergesetz). min-w-0 lässt das Text-Span im
+                            flex-Item schrumpfen, overflow-wrap/hyphens brechen das
+                            Kompositum statt es überlaufen zu lassen. Reine Darstellung (§3). */}
                         {/* S3 (BS-Audit 23.6.2026): aufgehobene lit. werden mit Marke
                             und LEEREM Text gespeichert (kein fabrizierter «Aufgehoben.»-
                             Text, §7). Leeren Item-Text wie eine Aufhebung gedämpft

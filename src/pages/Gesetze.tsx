@@ -59,7 +59,7 @@ function Kategorie({ id, offen, onToggle, kopf, anzahl, children }: {
       className="group lc-card overflow-hidden scroll-mt-24">
       <summary className="flex items-baseline gap-3 cursor-pointer select-none px-5 py-3.5 hover:bg-brass-100/30">
         {kopf}
-        <span className="num text-body-s text-ink-400 ml-auto">{anzahl}</span>
+        <span className="num text-body-s text-ink-500 ml-auto">{anzahl}</span>
       </summary>
       <div className="px-5 pb-5 pt-4 space-y-5 border-t border-line">{children}</div>
     </details>
@@ -111,11 +111,16 @@ function BundSystematik({ erlasse, hashOffen }: { erlasse: BrowseErlass[]; hashO
   const weitere = erlasse.filter((e) => !zugeordnet.has(e.key));
   const alleIds = [...kategorien.map((k) => k.id), ...(weitere.length ? ['weitere'] : [])];
 
-  // Übersicht zuerst: alle Kategorien eingeklappt (6 Karten = die Systematik auf
-  // einen Blick), erst Klick öffnet sie. Ein Sidebar-Deeplink (#sys-<id>) öffnet
+  // Bund (klein, kuratiert): die als standardOffen markierten geläufigen Kategorien
+  // (Privatrecht/Verfahren/Straf) sind anfangs offen — anders als die Kanton-Ansicht
+  // (alle zu, da Vollkorpus). Ein Sidebar-Deeplink (#sys-<id>) öffnet zusätzlich
   // seine Zielkategorie (hashOffen, vom Eltern via key= bei Hash-Wechsel frisch
   // gemountet) und springt sie an (ScrollZuHash in App.tsx).
-  const [offen, setOffen] = useState<Set<string>>(() => new Set(hashOffen ? [hashOffen] : []));
+  const [offen, setOffen] = useState<Set<string>>(() => {
+    const initial = new Set<string>(SYSTEMATIK.filter((k) => k.standardOffen).map((k) => k.id));
+    if (hashOffen) initial.add(hashOffen);
+    return initial;
+  });
   const alleOffen = offen.size >= alleIds.length;
   const toggle = (id: string) => setOffen((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
   const toggleAlle = () => setOffen(alleOffen ? new Set() : new Set(alleIds));
@@ -164,12 +169,28 @@ const KANTON_NAMEN: Record<string, string> = {
 // links (tabellarisch), Titel einzeilig gekürzt. Bewusst NICHT ErlassZeile —
 // kantonale «kuerzel» sind oft der ganze (bis 276 Z.) Titel und würden als
 // shrink-0 die Zeile sprengen (Auftrag David: «überschnitten» bei BS).
+// Stand-Jahr (ISO «YYYY-…») — reine Anzeige. Sehr alte Stände (vor 1990) werden
+// dezent markiert: BS mischt Erlasse von 1826 bis 2026, ein sehr alter Stand ist
+// für die Anwältin ein nützliches Signal, soll aber nicht so laut wie ein
+// frischer wirken. Fixe Schwelle (kein Date.now(), §2 — reine Darstellung).
+const standJahr = (stand: string): string | null => stand.slice(0, 4).match(/^\d{4}$/)?.[0] ?? null;
+
 function SysZeile({ e }: { e: BrowseErlass }) {
+  const jahr = standJahr(e.stand);
+  const altDezent = jahr != null && Number(jahr) < 1990;
   const inhalt = (
     <>
-      <span className="num text-xs text-ink-400 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
+      <span className="num text-xs text-ink-500 shrink-0 w-20 tabular-nums truncate">{e.sr}</span>
       <span className="text-ink-700 truncate group-hover/z:text-brass-700">{e.titel}</span>
-      {e.status !== 'snapshot' && <span aria-hidden className="text-xs text-brass-700 shrink-0 ml-auto">↗</span>}
+      {e.status === 'snapshot' ? (
+        <span className="ml-auto shrink-0 flex items-baseline gap-2 num text-xs tabular-nums">
+          {e.artikelAnzahl > 0 && <span className="text-ink-500">{e.artikelAnzahl} Art.</span>}
+          {/* Sehr alte Stände dezent (italic) statt blass — Kontrast (S10/WCAG) bleibt gewahrt. */}
+          {jahr && <span className={`hidden sm:inline text-ink-500${altDezent ? ' italic' : ''}`}>{jahr}</span>}
+        </span>
+      ) : (
+        <span aria-hidden className="text-xs text-brass-700 shrink-0 ml-auto">↗</span>
+      )}
     </>
   );
   const cls = 'group/z flex items-baseline gap-3 text-body-s no-underline rounded px-2 py-1 hover:bg-brass-100/30 transition-colors min-w-0';
@@ -230,7 +251,9 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
           kopf={
             <span className="flex items-baseline gap-2.5 min-w-0">
               <span aria-hidden className="num font-display text-h3 leading-none text-brass-700 shrink-0">{g.top}</span>
-              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight truncate">{g.titel}</span>
+              {/* N10: nicht hart einzeilig kürzen (lange Sachgebietstitel werden auf
+                  Mobil sonst abgeschnitten) — bis zu zwei Zeilen, dann erst ellipsis. */}
+              <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight line-clamp-2">{g.titel}</span>
             </span>
           }>
           <div className="space-y-4">
@@ -240,7 +263,7 @@ function KantonSystematik({ erlasse, sys }: { erlasse: BrowseErlass[]; sys?: Kan
                   <div className="flex items-baseline gap-2">
                     <span aria-hidden className="num text-xs text-brass-700 shrink-0">{u.sub}</span>
                     <h4 className="lc-overline text-brass-700">{u.titel}</h4>
-                    <span className="text-ink-400 text-xs">· {u.items.length}</span>
+                    <span className="text-ink-500 text-xs">· {u.items.length}</span>
                     <span aria-hidden className="flex-1 h-px bg-line/70" />
                   </div>
                 )}
@@ -261,6 +284,10 @@ export function Gesetze() {
   const [systematik, setSystematik] = useState<Record<string, KantonSystematik>>({});
   const [fehler, setFehler] = useState(false);
   const [suche, setSuche] = useState('');
+  // N6: ist ein einzelner Kanton gewählt, sucht die Trefferliste standardmässig
+  // NUR in diesem Kanton (auf der BS-Seite erwartet man BS-Treffer, nicht Bund +
+  // alle 25 anderen Kantone). Ein sichtbarer Umschalter weitet auf «Alle» aus.
+  const [nurKanton, setNurKanton] = useState(true);
 
   // Ebene (Bund/Kantone) UND der gewählte Kanton liegen in der URL (?ebene= / ?kt=)
   // — so verlinkt die App-Shell-Seitenleiste direkt auf den Kantone-Tab bzw. einen
@@ -342,14 +369,31 @@ export function Gesetze() {
             />
           </div>
 
-          {/* Globale Suche: über Bund UND Kantone gleichzeitig */}
+          {/* Suche: global über Bund UND Kantone — oder (N6) auf den gewählten
+              Kanton eingegrenzt, wenn ein Kanton aktiv ist und «Nur …» gewählt ist. */}
           {suche.trim() && (() => {
-            const treffer = filtern(erlasse, suche);
+            const aufKanton = !!kanton && nurKanton;
+            const basis = aufKanton ? erlasse.filter((e) => e.kanton === kanton) : erlasse;
+            const treffer = filtern(basis, suche);
             const bund = treffer.filter((e) => e.ebene === 'bund');
             const kant = treffer.filter((e) => e.ebene === 'kanton');
             return (
               <div className="space-y-8">
-                <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
+                  <p className="text-body-s text-ink-500"><span className="num">{treffer.length}</span> Treffer für «{suche.trim()}»</p>
+                  {kanton && (
+                    <div role="group" aria-label="Suchbereich" className="inline-flex rounded-md border border-line bg-paper-sunken/50 p-0.5 text-xs">
+                      <button type="button" onClick={() => setNurKanton(true)} aria-pressed={nurKanton}
+                        className={`rounded px-2 py-0.5 font-medium transition-colors ${nurKanton ? 'bg-paper text-ink-900 shadow-sm' : 'text-ink-500 hover:text-ink-800'}`}>
+                        Nur {KANTON_NAMEN[kanton] ?? kanton}
+                      </button>
+                      <button type="button" onClick={() => setNurKanton(false)} aria-pressed={!nurKanton}
+                        className={`rounded px-2 py-0.5 font-medium transition-colors ${!nurKanton ? 'bg-paper text-ink-900 shadow-sm' : 'text-ink-500 hover:text-ink-800'}`}>
+                        Alle
+                      </button>
+                    </div>
+                  )}
+                </div>
                 {bund.length > 0 && (
                   <section className="space-y-3">
                     <h2 className="lc-overline">Bund <span className="text-ink-400">· {bund.length}</span></h2>
@@ -375,21 +419,38 @@ export function Gesetze() {
 
           {!suche.trim() && ebene === 'kanton' && (
             <div className="space-y-6">
-              {/* Klickbare Schweiz-Karte: Kanton direkt auf der Landkarte wählen. */}
-              <div className="lc-card p-4 sm:p-6">
-                <SchweizKarte
-                  aktiv={kanton}
-                  onWaehle={setzeKanton}
-                  nameFuer={(k) => KANTON_NAMEN[k] ?? k}
-                  verfuegbar={(k) => kantone.includes(k as typeof kantone[number])}
-                />
-              </div>
+              {/* N8: Die grosse Schweiz-Karte verdrängte die Gesetzesliste unter den
+                  Fold. Nur im «Alle»-Modus zeigen — und dort kollabierbar (Default
+                  zu), damit die Liste/das Auswahlraster hoch beginnt. Im Einzel-
+                  kanton-Modus trägt der kompakte Wappen-Chip in der Zurück-Leiste
+                  die Identität (Karte dort redundant, da der Kanton schon gewählt ist). */}
+              {!kanton && (
+                <details className="lc-card group overflow-hidden">
+                  <summary className="flex items-center gap-2 cursor-pointer select-none px-4 py-2.5 text-body-s font-medium text-ink-700 hover:bg-brass-100/30">
+                    <span aria-hidden className="text-brass-700">🗺</span>
+                    Kanton auf der Karte wählen
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden
+                      className="ml-auto text-ink-500 transition-transform group-open:rotate-90">
+                      <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </summary>
+                  <div className="border-t border-line p-4 sm:p-6">
+                    <SchweizKarte
+                      aktiv={kanton}
+                      onWaehle={setzeKanton}
+                      nameFuer={(k) => KANTON_NAMEN[k] ?? k}
+                      verfuegbar={(k) => kantone.includes(k as typeof kantone[number])}
+                    />
+                  </div>
+                </details>
+              )}
               {kanton ? (
-                /* Ein Kanton → Zurück-Leiste + nach Kosten-/Abgabe-Art gegliedert. */
+                /* Ein Kanton → Zurück-Leiste (mit Wappen-Chip) + nach Kosten-/Abgabe-Art gegliedert. */
                 <>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
                     <button type="button" onClick={() => setzeKanton(null)}
-                      className="inline-flex items-center gap-1 text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+                      className="inline-flex items-center gap-1.5 text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+                      <KantonWappen kanton={kanton} className="h-5 w-4" />
                       ← Alle Kantone
                     </button>
                     <span aria-hidden className="text-ink-300">·</span>
@@ -397,8 +458,9 @@ export function Gesetze() {
                     <div className="flex flex-wrap gap-1">
                       {kantone.map((k) => (
                         <button type="button" key={k} onClick={() => setzeKanton(k)} aria-pressed={kanton === k}
+                          aria-label={KANTON_NAMEN[k] ?? k}
                           className={`rounded px-1.5 py-0.5 text-xs font-medium num transition-colors ${
-                            kanton === k ? 'bg-brass-100 text-brass-800' : 'text-ink-400 hover:bg-paper-sunken hover:text-brass-700'
+                            kanton === k ? 'bg-brass-100 text-brass-800' : 'text-ink-500 hover:bg-paper-sunken hover:text-brass-700'
                           }`}>
                           {k}
                         </button>
@@ -411,11 +473,11 @@ export function Gesetze() {
                       <span className="flex flex-col">
                         <span className="flex items-baseline gap-2">
                           <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight leading-tight">{KANTON_NAMEN[kanton] ?? 'Kanton'}</span>
-                          <span aria-hidden className="num text-body-s text-ink-400">{kanton}</span>
+                          <span aria-hidden className="num text-body-s text-ink-500">{kanton}</span>
                         </span>
-                        <span className="lc-overline text-ink-400">Kantonale Erlasse</span>
+                        <span className="lc-overline text-ink-500">Kantonale Erlasse</span>
                       </span>
-                      <span className="num text-body-s text-ink-400 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
+                      <span className="num text-body-s text-ink-500 ml-auto self-end">{gefiltert.filter((e) => e.kanton === kanton).length}</span>
                     </div>
                     <KantonSystematik erlasse={gefiltert.filter((e) => e.kanton === kanton)} sys={systematik[kanton]} />
                   </section>
@@ -425,7 +487,7 @@ export function Gesetze() {
                     aller Karten — ein Bildschirm Übersicht statt endlosem Scroll. */
                 <>
                   <p className="text-body-s text-ink-500 max-w-reading">
-                    Kanton wählen — die Erlasse werden dann nach Kosten- und Abgabe-Art (Gerichts-/Anwalts-/Notariats-/Grundbuchkosten, Handänderungssteuern) gegliedert.
+                    Kanton wählen — die Erlasse werden dann nach der amtlichen Systematik des Kantons (Sachgebiete) gegliedert.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
                     {gruppiereNachKanton(gefiltert).map((g) => (

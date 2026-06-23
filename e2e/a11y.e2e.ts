@@ -40,6 +40,15 @@ const BEKANNTE_BEFUNDE: Record<string, string[]> = {
   'tagerechner-kalender': ['link-in-text-block', 'color-contrast'],
   'vorlage-arbeitsvertrag': ['link-in-text-block'],
   'zustaendigkeit-plz-wahl': ['link-in-text-block'],
+  // Gesetze-Seite (BS-Audit 23.6.2026, S11): Inline-SR-Link-Marken ohne
+  // Unterstreichung = derselbe Markenentscheid wie überall (B-2). color-contrast:
+  // zwei vorbestehende, dokumentierte Klassen (BERICHT.md B-3) — brass-Aktionstext
+  // «Alle auf-/einklappen» (B-2-Familie) und gedämpftes «aufgehoben»/Zitiermarke im
+  // Reader (B-1-Familie, bewusste Gestaltungs-Zurücknahme aufgehobener Stellen).
+  // Die echten S10-Ordnungsmerkmale (SR-Nr, Kanton-Meta, Zähler, Pills) sind auf
+  // ink-500 gehoben; alle ÜBRIGEN serious/critical-Regeln (Label/ARIA/Struktur) gaten weiter.
+  'gesetze-kanton-BS': ['link-in-text-block', 'color-contrast'],
+  'gesetze-leser-BS': ['link-in-text-block', 'color-contrast'],
 }
 
 async function axePruefen(page: Page, testInfo: TestInfo, punkt: string) {
@@ -103,4 +112,22 @@ test('Zuständigkeit mit PLZ-Auswahl-Kacheln', async ({ page }, testInfo) => {
   await page.getByLabel('Postleitzahl des Betreibungsortes').fill('1041')
   await expect(page.getByRole('button', { name: /Bottens/ })).toBeVisible()
   await axePruefen(page, testInfo, 'zustaendigkeit-plz-wahl')
+})
+
+// Gesetze-Seite (BS-Audit 23.6.2026, S11): bisher deckte das axe-Tor die Rubrik
+// V gar nicht ab — der SR-Nr-Kontrastfehler (S10) konnte ungebremst deployen.
+// (1) Kanton-Übersicht BS eingeklappt (Systematik-Köpfe, SR-Nr-Zeilen, Pills),
+// (2) ein Reader (BS-640.100) — die beiden Orte der UI-Quick-Wins.
+test('Gesetze — Kanton BS (eingeklappt)', async ({ page }, testInfo) => {
+  await oeffnen(page, '/gesetze?ebene=kanton&kt=BS')
+  await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
+  // Kanton-Header (Wappen + Name) ist da, die Systematik gerendert.
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'gesetze-kanton-BS')
+})
+
+test('Gesetze — Reader BS-640.100', async ({ page }, testInfo) => {
+  await oeffnen(page, '/gesetze/kanton/BS-640.100')
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+  await axePruefen(page, testInfo, 'gesetze-leser-BS')
 })

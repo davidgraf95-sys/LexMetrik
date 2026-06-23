@@ -17,17 +17,21 @@ test.describe('/gesetze — Übersicht', () => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
     await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
-    // Manifest lädt clientseitig → Karten erscheinen (OR-Volltitel als Anker).
-    await expect(page.getByRole('link', { name: /Obligationenrecht/ }).first()).toBeVisible()
-    // Rechtsgebiet-Gruppen
-    await expect(page.getByText('Privatrecht', { exact: false }).first()).toBeVisible()
+    // Auf den Hauptinhalt scopen: die Seitenleiste trägt dieselben Begriffe, ist
+    // aber je nach Breakpoint ausgeblendet → ein ungescoptes .first() träfe ein
+    // hidden-Element. Privatrecht ist standardOffen → OR-Volltitel sichtbar.
+    const inhalt = page.getByRole('main')
+    await expect(inhalt.getByRole('link', { name: /Obligationenrecht/ }).first()).toBeVisible()
+    await expect(inhalt.getByText('Privatrecht', { exact: false }).first()).toBeVisible()
     expect(fehler).toEqual([])
   })
 
   test('Kantone-Tab zeigt das Kantonsraster', async ({ page }) => {
     await page.goto('/gesetze')
     await page.getByRole('tab', { name: 'Kantone' }).click()
-    await expect(page.getByRole('button', { name: 'BE', exact: true })).toBeVisible()
+    // Das Auswahlraster zeigt je Kanton eine Karte (Wappen + Vollname + Zähler);
+    // der frühere reine «BE»-Code-Knopf existiert in dieser Form nicht mehr.
+    await expect(page.getByRole('main').getByRole('button', { name: /Bern/ })).toBeVisible()
   })
 
   test('kein horizontaler Overflow bei 390px', async ({ page }) => {
@@ -46,24 +50,38 @@ test.describe('Lesesicht (über Klick aus der Übersicht)', () => {
   test('OR öffnet mit Volltext, TOC und funktionierender In-Gesetz-Suche', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
-    await page.getByRole('link', { name: /Obligationenrecht/ }).first().click()
+    await page.getByRole('main').getByRole('link', { name: /Obligationenrecht/ }).first().click()
     await expect(page).toHaveURL(/\/gesetze\/bund\/OR/)
     // Kopf + Inhaltsverzeichnis + Artikel 1 (erstes Band offen)
     await expect(page.getByRole('heading', { level: 1 })).toContainText('OR')
     await expect(page.getByText('Gliederung', { exact: true })).toBeVisible()
     await expect(page.locator('#art-1')).toContainText('Willensäusserung')
-    // Standort-Info (amtliche Gliederung + Randtitel) steht jetzt im sticky
-    // Running-Header (ersetzt Marginalspalte + Übertitel im Fliesstext) und folgt
-    // dem Scroll: nach dem Scrollen zeigt er den Gliederungspfad UND den Randtitel
-    // des aktuellen Artikels.
+    // Standort beim Scrollen: der Scroll-Spy markiert die aktive Gliederung im
+    // Inhaltsverzeichnis (data-toc-aktiv); der amtliche Randtitel je Artikel steht
+    // in der Marginalspalte am Artikel. (Frühere Variante zeigte beides im sticky
+    // Running-Header; aktuelles Design = TOC-Markierung + Marginalspalte.)
     await page.evaluate(() => window.scrollTo(0, 1200))
-    const lauf = page.locator('[data-such-bar]')
-    await expect(lauf).toContainText('Erste Abteilung')
-    await expect(lauf).toContainText('Abschluss des Vertrages')
+    await expect(page.locator('[data-toc-aktiv]').first()).toBeVisible()
     // In-Gesetz-Suche filtert
     await page.getByRole('searchbox', { name: 'Im Gesetz suchen' }).fill('Willensäusserung')
     await expect(page.getByText(/Treffer für/)).toBeVisible()
     expect(fehler).toEqual([])
+  })
+
+  // Regression (BS-Audit 23.6.2026, S13): lange Komposita in Aufzählungen
+  // sprengten auf 390px den Reader (~25px H-Overflow im Steuergesetz). Nach dem
+  // min-w-0 + overflow-wrap-Fix darf KEIN horizontaler Overflow mehr auftreten.
+  test('Reader ohne horizontalen Overflow bei 390px', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/gesetze/kanton/BS-640.100')
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    // Erster Artikel-Absatz sichtbar (Inhalt gerendert).
+    await expect(page.locator('article').first()).toBeVisible()
+    const b = await page.evaluate(() => ({
+      scroll: document.documentElement.scrollWidth,
+      client: document.documentElement.clientWidth,
+    }))
+    expect(b.scroll, `scrollWidth ${b.scroll} > ${b.client}`).toBeLessThanOrEqual(b.client + 1)
   })
 
   // Regression: flacher Fallback (Erlass OHNE Gliederung/Struktur) darf die Lese-
