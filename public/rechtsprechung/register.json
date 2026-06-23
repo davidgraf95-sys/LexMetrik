@@ -1,0 +1,28 @@
+{
+  "erzeugt": "2026-06-23",
+  "entscheide": [
+    {
+      "key": "bger_5A_1100_2025",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "5A_1100/2025",
+      "bgeReferenz": null,
+      "datum": "2026-06-05",
+      "zitierung": "BGer 5A_1100/2025 vom 5. Juni 2026",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "privat",
+      "sprache": "fr",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bger/5A_1100_2025.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/php/aza/http/index.php?highlight_docid=aza://05-06-2026-5A_1100-2025&lang=de&type=show_document",
+      "fassungsToken": "b505a59ee0b81229477169fde6ff29ab3460aa29dc529160d85493380fdfca33"
+    }
+  ]
+}

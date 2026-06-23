@@ -31,6 +31,11 @@ const Datenschutz = lazyRetry(() => import('./pages/Datenschutz').then((m) => ({
 // (SPA-Fallback via vercel.json-Rewrite) — die Routenzahl bleibt stabil bei +1.
 const Gesetze = lazyRetry(() => import('./pages/Gesetze').then((m) => ({ default: m.Gesetze })));
 const GesetzLeser = lazyRetry(() => import('./pages/GesetzLeser').then((m) => ({ default: m.GesetzLeser })));
+// Rubrik VI «Rechtsprechung» (Bundesgerichtsentscheide) — analog zu Gesetze:
+// Übersicht /rechtsprechung wird prerendert (seo.ts), der Reader
+// /rechtsprechung/:key ist client-lazy (SPA-Fallback). Routenzahl +1.
+const Rechtsprechung = lazyRetry(() => import('./pages/Rechtsprechung').then((m) => ({ default: m.Rechtsprechung })));
+const EntscheidLeser = lazyRetry(() => import('./pages/EntscheidLeser').then((m) => ({ default: m.EntscheidLeser })));
 const NotFound = lazyRetry(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
@@ -118,6 +123,9 @@ export default function App() {
         {/* Rubrik V «Gesetze»: Übersicht (prerendert) + Lesesicht (SPA-Fallback) */}
         <Route path="/gesetze" element={<Gesetze />} />
         <Route path="/gesetze/:ebene/:key" element={<GesetzLeser />} />
+        {/* Rubrik VI «Rechtsprechung»: Übersicht (prerendert) + Reader (SPA-Fallback) */}
+        <Route path="/rechtsprechung" element={<Rechtsprechung />} />
+        <Route path="/rechtsprechung/:key" element={<EntscheidLeser />} />
         <Route path="/methodik" element={<Methodik />} />
         <Route path="/ueber" element={<Ueber />} />
         <Route path="/kontakt" element={<Kontakt />} />
