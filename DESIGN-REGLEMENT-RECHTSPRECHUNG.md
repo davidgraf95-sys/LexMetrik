@@ -285,3 +285,22 @@ Falls dieses Dokument später formalisiert/erweitert wird, diese Abschnitte:
    Mobile 390 in hell und dunkel.
 8. Kein Push/Deploy ohne Davids ausdrückliches Ja (§9); fachliche Abnahme der
    Optik durch David selbst.
+
+---
+
+## Umsetzungs-Entscheide (Stand 23.6.2026)
+
+- **Erwägungs-Darstellung (R6/R7 — angepasst auf Davids Wunsch):** Statt reiner
+  Randziffer wird die **amtliche BGer-Form** umgesetzt — die Erwägungs-Ziffer
+  (`E. 2.3`) steht als eigene **Kopfzeile** über ihrem Absatz, Erwägungen oberster
+  Ebene sind durch **Haarlinie + Abstand ABGETRENNT**, Unter-Erwägungen nach Tiefe
+  eingerückt. Pin-Cite-Anker/Permalink (`#e-2-3`) + `tabular-nums` bleiben erhalten.
+- **`/structure paragraph_excerpt_chars`:** OCL-Maximum ist **5000** (höher → HTTP
+  422 → kein Strukturtext). Längere Erwägungen werden bei 5000 Zeichen gekappt
+  (selten; ehrliche Minor-Truncation, sonst Fliesstext-Fallback).
+- **Kantonale Gerichte:** `/structure` ist Bund-only → kantonal greift der
+  Fliesstext-Fallback mit sichtbarem §8-Hinweis «Gliederung nicht verfügbar».
+  Eigener Pfad `public/rechtsprechung/kanton/<KT>/`.
+- **Übersicht:** klare **Bund/Kanton-Trennung** — Segment (Alle · Bundesgericht ·
+  Kantone) + beschriftete Abschnitte.
+- **Amtlicher Link** (relevancy.bger.ch) auf JEDER Karte (Fuss) + im Reader.

@@ -16,6 +16,22 @@ import type { Rechtsgebiet } from '../lib/normtext/register';
 // Reine Darstellung (§3): Laden/Gruppieren/Filtern liegen in lib/rechtsprechung,
 // hier nur die Anzeige + URL-gehaltener Sachgebiet-Filter (?rg=).
 
+// Beschrifteter Abschnitt (Bundesgericht / Kantonale Gerichte) mit Karten-Raster.
+function Sektion({ titel, liste }: { titel: string; liste: BrowseEntscheid[] }) {
+  if (!liste.length) return null;
+  return (
+    <section className="space-y-3">
+      <h2 className="lc-overline text-brass-700 flex items-center gap-3">
+        {titel}<span className="num text-ink-400">{liste.length}</span>
+        <span aria-hidden className="flex-1 h-px bg-line" />
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {liste.map((e) => <EntscheidKarte key={e.key} e={e} />)}
+      </div>
+    </section>
+  );
+}
+
 export function Rechtsprechung() {
   const [alle, setAlle] = useState<BrowseEntscheid[] | null>(null);
   const [fehler, setFehler] = useState(false);
@@ -57,6 +73,10 @@ export function Rechtsprechung() {
     () => (alle ? nachDatum(filterEntscheide(alle, werte)) : []),
     [alle, werte],
   );
+  // Klare Trennung Bund ↔ Kantone (Auftrag David).
+  const bundListe = useMemo(() => gefiltert.filter((e) => e.kanton === 'CH'), [gefiltert]);
+  const kantonListe = useMemo(() => gefiltert.filter((e) => e.kanton !== 'CH'), [gefiltert]);
+  const [ebene, setEbene] = useState<'alle' | 'bund' | 'kanton'>('alle');
 
   const onFilter = (w: EntscheidFilterWerte) => {
     // Sachgebiet aus dem Filter geht in die URL, der Rest bleibt lokal.
@@ -70,7 +90,7 @@ export function Rechtsprechung() {
       <SeitenKopf
         overline="Rubrik VI · Rechtsprechung"
         titel="Rechtsprechung"
-        intro="Ausgewählte Entscheide des Bundesgerichts im Volltext, nach Sachgebiet erschlossen und mit den Gesetzen verzahnt. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
+        intro="Ausgewählte Entscheide des Bundesgerichts und kantonaler Gerichte im Volltext, nach Sachgebiet erschlossen und mit den Gesetzen verzahnt. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
       >
         <p className="text-body-s text-ink-400 max-w-reading">
           Keine Rechtsberatung; massgeblich ist die amtliche Fassung.
@@ -102,16 +122,29 @@ export function Rechtsprechung() {
 
           <EntscheidFilter werte={werte} onChange={onFilter} bestand={alle} />
 
-          <div className="space-y-3">
-            <p className="text-body-s text-ink-500">
-              <span className="num">{gefiltert.length}</span> {gefiltert.length === 1 ? 'Entscheid' : 'Entscheide'}
-              {' '}— neueste zuerst
-            </p>
+          <div className="space-y-5">
+            {/* Bund/Kanton-Segment — klare Trennung der Ebenen. */}
+            <div className="flex flex-wrap items-center gap-2 text-body-s">
+              {([
+                ['alle', 'Alle', gefiltert.length],
+                ['bund', 'Bundesgericht', bundListe.length],
+                ['kanton', 'Kantone', kantonListe.length],
+              ] as const).map(([id, label, n]) => (
+                <button key={id} type="button" onClick={() => setEbene(id)}
+                  aria-pressed={ebene === id}
+                  className={`lc-chip ${ebene === id ? 'border-brass-400 text-brass-700' : ''}`}>
+                  {label} <span className="num text-ink-400">{n}</span>
+                </button>
+              ))}
+              <span className="ml-auto text-ink-400">neueste zuerst</span>
+            </div>
+
             {gefiltert.length === 0 ? (
               <p className="text-body-s text-ink-500">Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.</p>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {gefiltert.map((e) => <EntscheidKarte key={e.key} e={e} />)}
+              <div className="space-y-8">
+                {(ebene === 'alle' || ebene === 'bund') && <Sektion titel="Bundesgericht" liste={bundListe} />}
+                {(ebene === 'alle' || ebene === 'kanton') && <Sektion titel="Kantonale Gerichte" liste={kantonListe} />}
               </div>
             )}
           </div>

@@ -124,6 +124,7 @@ export function mappeEntscheidOCL(
   if (opts.normKeyHint) normKeys.add(opts.normKeyHint);
 
   const court = String(det.court ?? 'bger');
+  const canton = String(det.canton ?? 'CH');
   const docket = String(det.docket_number ?? det.decision_id);
   const sachgebiet: Rechtsgebiet =
     opts.sachgebietHint
@@ -134,14 +135,18 @@ export function mappeEntscheidOCL(
   // Leitentscheid = amtliche Publikation: marked_for_publication ODER BGE-Fundstelle
   // ODER vorhandene amtliche Regeste (eine Regeste tragen nur publizierte Entscheide).
   const leit = det.marked_for_publication === true || !!det.bge_reference || !!regeste;
-  const idSafe = `bund/${court}/${docket.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_')}`;
+  const docketSafe = docket.replace(/\s+/g, '').replace(/[^A-Za-z0-9]/g, '_');
+  // Bund unter bund/, kantonale Gerichte unter kanton/<KT>/ (eigener Pfad-Zweig).
+  const idSafe = canton === 'CH'
+    ? `bund/${court}/${docketSafe}`
+    : `kanton/${canton}/${court}/${docketSafe}`;
 
   return {
     id: idSafe,
     gericht: court,
-    gerichtName: String(det.court_name ?? 'Bundesgericht'),
+    gerichtName: String(det.court_name ?? (canton === 'CH' ? 'Bundesgericht' : court)),
     gerichtstyp: gerichtstypFuerCourt(court),
-    kanton: String(det.canton ?? 'CH'),
+    kanton: canton,
     abteilung: det.chamber ? String(det.chamber) : null,
     nummer: docket,
     bgeReferenz: det.bge_reference ? String(det.bge_reference) : null,
@@ -177,7 +182,8 @@ export async function holeEntscheidOCL(
   const sprache = (det.language ?? 'de') as EntscheidSprache;
   const wantSprache = opts.sprache === undefined ? 'de' : opts.sprache;
   if (wantSprache && sprache !== wantSprache) return null;
-  const str = await jget<OclStructure>(`${API}/structure/${decisionId}?paragraph_excerpt_chars=8000`);
+  // paragraph_excerpt_chars: OCL-Maximum ist 5000 (höher → HTTP 422 → kein Strukturtext).
+  const str = await jget<OclStructure>(`${API}/structure/${decisionId}?paragraph_excerpt_chars=5000`);
   return mappeEntscheidOCL(det, str, abgerufen, opts);
 }
 

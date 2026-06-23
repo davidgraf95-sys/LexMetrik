@@ -1,0 +1,62 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "bund/bger/4A641_2016",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "abteilung": null,
+      "nummer": "4A 641/2016",
+      "bgeReferenz": null,
+      "zitierung": "BGer 4A 641/2016 vom 12. Dezember 2016",
+      "datum": "2016-12-12",
+      "sprache": "de",
+      "leitcharakter": "leitentscheid",
+      "sachgebiet": "privat",
+      "regeste": {
+        "text": "Auftrag; Protokollberichtigung | Vertragsrecht",
+        "quelle": "opencaselaw"
+      },
+      "abschnitte": [
+        {
+          "typ": "dispositiv",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "1.\nAuf die Beschwerde wird nicht eingetreten.\n2.\nEs werden keine Gerichtskosten erhoben.\n3.\nDieses Urteil wird der Beschwerdeführerin, dem Obergericht des Kantons Zürich, I. Zivilkammer, und B.________ schriftlich mitgeteilt.\nLausanne, 12. Dezember 2016\nIm Namen der I. zivilrechtlichen Abteilung\ndes Schweizerischen Bundesgerichts\nDie Präsidentin:    Kiss\nDer Gerichtsschreiber:    Widmer"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [
+        "Auf die Beschwerde wird nicht eingetreten.",
+        "Es werden keine Gerichtskosten erhoben.",
+        "Dieses Urteil wird der Beschwerdeführerin, dem Obergericht des Kantons Zürich, I. Zivilkammer, und B.________ schriftlich mitgeteilt."
+      ],
+      "zitierteNormen": [
+        "Art. 108 Abs. 1 BGG",
+        "Art. 235 Abs. 3 ZPO",
+        "Art. 49 BGG",
+        "Art. 68 BGG",
+        "Art. 90 BGG",
+        "Art. 92 BGG",
+        "Art. 93 Abs. 1 BGG",
+        "Art. 93 Abs. 3 BGG"
+      ],
+      "normKeys": [
+        "BGG",
+        "ZPO"
+      ],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=1&from_date=12.12.2016&to_date=12.12.2016&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=5&azaclir=aza&highlight_docid=aza%3A%2F%2F12-12-2016-4A_641-2016&number_of_ranks=25",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "62aaa865e292cd066b2741a6631a54438be9639dfda384d7c127ca0e7a1ce811",
+      "sha": "8591bf15148b8e9d77530c78a531aa23e678bc20c97f5771d5b64c04e95c33a8"
+    }
+  ]
+}

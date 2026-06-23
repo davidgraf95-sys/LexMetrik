@@ -21,6 +21,16 @@ test.describe('/rechtsprechung — Übersicht', () => {
     expect(fehler).toEqual([])
   })
 
+  test('trennt Bund und Kantone (Segment + beschriftete Abschnitte)', async ({ page }) => {
+    await page.goto('/rechtsprechung')
+    // Segment-Schalter mit beiden Ebenen
+    await expect(page.getByRole('button', { name: /Bundesgericht/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: /Kantone/ })).toBeVisible()
+    // Beide beschrifteten Abschnitte erscheinen
+    await expect(page.getByRole('heading', { name: /Bundesgericht/ })).toBeVisible()
+    await expect(page.getByRole('heading', { name: /Kantonale Gerichte/ })).toBeVisible()
+  })
+
   test('kein horizontaler Overflow bei 390px', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/rechtsprechung')

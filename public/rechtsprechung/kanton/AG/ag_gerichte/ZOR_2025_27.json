@@ -1,0 +1,43 @@
+{
+  "erzeugt": "2026-06-23",
+  "eintraege": [
+    {
+      "id": "kanton/AG/ag_gerichte/ZOR_2025_27",
+      "gericht": "ag_gerichte",
+      "gerichtName": "AG Gerichte",
+      "gerichtstyp": "kantonal",
+      "kanton": "AG",
+      "abteilung": null,
+      "nummer": "ZOR.2025.27",
+      "bgeReferenz": null,
+      "zitierung": "AG_GERICHTE ZOR.2025.27 vom 26. Januar 2026",
+      "datum": "2026-01-26",
+      "sprache": "de",
+      "leitcharakter": "routine",
+      "sachgebiet": "oeffentlich",
+      "regeste": null,
+      "abschnitte": [
+        {
+          "typ": "erwaegung",
+          "bloecke": [
+            {
+              "marke": null,
+              "text": "Aargau Obergericht Zivilkammern 26.01.2026 ZOR.2025.27\nArgovie Obergericht Zivilkammern 26.01.2026 ZOR.2025.27\nArgovia Obergericht Zivilkammern 26.01.2026 ZOR.2025.27\n\nAargau Obergericht Zivilkammern\nArgovie Obergericht Zivilkammern\nArgovia Obergericht Zivilkammern\nObergericht / Zivilgericht / 2. Zivilkammer Obergericht / Zivilgericht / 2. Zivilkammer"
+            }
+          ]
+        }
+      ],
+      "dispositivOrders": [],
+      "zitierteNormen": [],
+      "normKeys": [],
+      "zitierteEntscheide": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://decwork.ag.ch/api/main/v1/de/decrees_pdf/12235",
+      "abgerufen": "2026-06-23",
+      "fassungsToken": "0362d8bd7ddea84d027639e9df5e2d30c0245fbfa98e13d815601a622f8d7620",
+      "sha": "5e651e30777342d970f314174cfeb3eeecac9ba921c7191d7abb8d93e6e75b32"
+    }
+  ]
+}
