@@ -1,20 +1,19 @@
 import { Begruessung } from '../components/start/Begruessung';
 import { NewsHeader } from '../components/start/NewsHeader';
-import { Verlauf } from '../components/start/Verlauf';
 import { UniversalSuche } from '../components/start/UniversalSuche';
 import { Schnellrechner } from '../components/start/Schnellrechner';
+import { GesetzeRubrik } from '../components/start/GesetzeRubrik';
 import { Zeiterfassung } from '../components/start/Zeiterfassung';
 import { Favoriten } from '../components/start/Favoriten';
 
 // ─── Startseite — «Suche-zuerst»-Cockpit (Überarbeitung, Auftrag David) ──────
 //
-// Komposition (oben → unten): Kopf (Gruss/Datum) · Verlauf-Schiene «Weiter wo
-// du warst» · Universal-Suche (Held: ein Feld über Rechner/Vorlagen, Fristen-
-// Vorlagen, Gesetze und Rechtsprechung) · Schnellrechner (bleibt sichtbar, der
-// Star — rechnet ohne Seitenwechsel) · Werkzeuge (Favoriten + Zeiterfassung
-// zweispaltig) · Rechtlicher Hinweis (§8). Reine Darstellung (§3); jede Sektion
-// ist eine eigene, schlanke Komponente (§6.6). Vorher: Schnellrechner/
-// Zeiterfassung/Favoriten als drei gestapelte Blöcke ohne Suche/Verlauf.
+// Reihenfolge (Auftrag David, #5): Kopf (Gruss/Datum) · Universal-Suche (zuoberst
+// schnell suchen) · Schnellrechner (schnell rechnen) · Gesetze-Rubrik (#6: Suchfeld
+// + Top-Erlasse) · News aus dem Bundesgericht · Werkzeuge (Favoriten +
+// Zeiterfassung) · Rechtlicher Hinweis (§8). Reine Darstellung (§3); jede Sektion
+// ist eine eigene, schlanke Komponente (§6.6). Der «Weiter wo du warst»-Verlauf
+// entfällt (#10) — die In-App-Tableiste deckt das ab.
 
 function Seclabel({ children }: { children: React.ReactNode }) {
   return (
@@ -39,23 +38,22 @@ export function Startseite() {
         </p>
       </section>
 
-      {/* News-Header: neueste Bundesgerichtsentscheide (rendert nichts in SSR/
-          bei leerem Register; erweiterbar auf weitere amtliche Quellen) */}
-      <div className="mt-8">
-        <NewsHeader />
-      </div>
-
-      {/* Weiter wo du warst (rendert nichts bei leerem Verlauf) */}
-      <div className="mt-8">
-        <Verlauf />
-      </div>
-
-      {/* Universal-Suche — der Held */}
+      {/* Universal-Suche — zuoberst (Auftrag David #5) */}
       <Seclabel>Wonach suchen Sie?</Seclabel>
       <UniversalSuche />
 
       <Seclabel>Schnell rechnen</Seclabel>
       <Schnellrechner />
+
+      {/* Gesetze-Rubrik (#6): Suchfeld + Top-Erlasse */}
+      <Seclabel>Gesetze</Seclabel>
+      <GesetzeRubrik />
+
+      {/* News aus dem Bundesgericht — weiter unten (rendert nichts in SSR/bei
+          leerem Register; bringt eigenen Kopf «Neu aus dem Bundesgericht» mit) */}
+      <div className="mt-9">
+        <NewsHeader />
+      </div>
 
       <Seclabel>Werkzeuge</Seclabel>
       <div className="grid grid-cols-1 gap-x-4 gap-y-5 md:grid-cols-2 md:items-start">

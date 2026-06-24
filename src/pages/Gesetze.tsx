@@ -283,7 +283,10 @@ export function Gesetze() {
   const [erlasse, setErlasse] = useState<BrowseErlass[] | null>(null);
   const [systematik, setSystematik] = useState<Record<string, KantonSystematik>>({});
   const [fehler, setFehler] = useState(false);
-  const [suche, setSuche] = useState('');
+  // ?q= (z.B. aus der Startseiten-Rubrik «Gesetze», #6) füllt die Suche vor —
+  // SSR-sicher als Lazy-Init (Prerender hat keine Query → leer).
+  const [suche, setSuche] = useState(() =>
+    typeof window === 'undefined' ? '' : new URLSearchParams(window.location.search).get('q') ?? '');
   // N6: ist ein einzelner Kanton gewählt, sucht die Trefferliste standardmässig
   // NUR in diesem Kanton (auf der BS-Seite erwartet man BS-Treffer, nicht Bund +
   // alle 25 anderen Kantone). Ein sichtbarer Umschalter weitet auf «Alle» aus.
