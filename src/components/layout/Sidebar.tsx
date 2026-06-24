@@ -30,10 +30,16 @@ function istAktiv(ziel: string, loc: Location): boolean {
     // «Start» ist aktiv, solange «/» ohne aktive Hero-Suche (?q=) offen ist.
     return !curP.get('q');
   }
-  if (pfad === '/gesetze') {
-    return (zielP.get('ebene') ?? 'bund') === (curP.get('ebene') ?? 'bund');
+  // JEDER Query-Diskriminator des Ziels muss zum aktuellen Standort passen,
+  // sonst überstrahlt ein Eintrag seine Geschwister: Gesetze-Kantone tragen
+  // `ebene=kanton&kt=<KT>` (früher nur `ebene` verglichen → ALLE Kantone aktiv),
+  // Rechtsprechung trägt `rg=<gebiet>` (früher `return true` → ALLE aktiv).
+  // `ebene` fehlt ⇒ Default 'bund' (Tab-Vorwahl).
+  for (const [key, val] of zielP) {
+    const cur = key === 'ebene' ? (curP.get('ebene') ?? 'bund') : curP.get(key);
+    if (cur !== val) return false;
   }
-  return true; // Meta-Seiten: Pfad-Treffer genügt.
+  return true; // Pfad (+ Anker + alle Query-Diskriminatoren) treffen.
 }
 
 function Blatt({ k, loc, onNavigate, klein }: {
