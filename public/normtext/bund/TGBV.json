@@ -1,0 +1,1334 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/TGBV/art_1",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Datenmodell für das Grundbuch (eGRISDM; Anhang 1);"
+            },
+            {
+              "marke": "b",
+              "text": "das Datenmodell für den Datenaustausch zwischen der amtlichen Vermessung und dem Grundbuch (AVGBSDM; Anhang 2);"
+            },
+            {
+              "marke": "c",
+              "text": "die Schnittstelle für den Bezug und den Austausch von Grundbuchdaten (GBDBS; Anhang 3);"
+            },
+            {
+              "marke": "d",
+              "text": "die Schnittstelle für den Datenaustausch zwischen der amtlichen Vermessung und dem Grundbuch (AVGBS);"
+            },
+            {
+              "marke": "e",
+              "text": "die eidgenössische Grundstücksidentifikation (E-GRID);"
+            },
+            {
+              "marke": "f",
+              "text": "die Datenformate von Dokumenten für den elektronischen Geschäftsverkehr mit den Grundbuchämtern;"
+            },
+            {
+              "marke": "g",
+              "text": "die alternativen Übermittlungsverfahren für den elektronischen Geschäftsverkehr (Anhang 4);"
+            },
+            {
+              "marke": "h",
+              "text": "die Langzeitsicherung;"
+            },
+            {
+              "marke": "i",
+              "text": "die Schnittstellen zur Zentralen Ausgleichsstelle (ZAS) (Anhang 5);"
+            },
+            {
+              "marke": "j",
+              "text": "das Verfahren der Übernahme und Aktualisierung von Daten im Personenidentifikationsregister;"
+            },
+            {
+              "marke": "k",
+              "text": "die Protokollierung der Übernahme und Aktualisierung von Daten im Personenidentifikationsregister;"
+            },
+            {
+              "marke": "l",
+              "text": "die Schnittstelle für den Zugang des Grundstücksuchdienstes zu den rechtswirksamen Daten des Hauptbuchs und zu den Daten des Personenidentifikationsregisters;"
+            },
+            {
+              "marke": "m",
+              "text": "die Schnittstelle, über die der Grundstücksuchdienst die Inhalte des Suchindexes von den kantonalen Systemen erhält (Anhang 6);"
+            },
+            {
+              "marke": "n",
+              "text": "die Schnittstelle für Abfragen über den Grundstücksuchdienst (Anhang 7)."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "fb192afba367a6d52b38116f73951162da8b0840616c6f41ae597ec793204298"
+    },
+    {
+      "id": "bund/TGBV/art_2",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EJPD definiert für das Grundbuch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das eGRISDM und die Anforderungen an die darin zu haltenden Daten sowie den Geltungsbeginn der jeweils neuen Version;"
+            },
+            {
+              "marke": "b",
+              "text": "die Datenbeschreibungssprache;"
+            },
+            {
+              "marke": "c",
+              "text": "die GBDBS und den Geltungsbeginn der jeweils neuen Version sowie das Ende der Gültigkeit von vorangehenden Versionen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Kriterienkatalog für die Anerkennung von alternativen Plattformen für den elektronischen Geschäftsverkehr mit dem Grundbuchamt;"
+            },
+            {
+              "marke": "e",
+              "text": "die UPI-Schnittstellen (Unique Person Identification) zur ZAS (Anhang 5);"
+            },
+            {
+              "marke": "f",
+              "text": "das Verfahren der Übernahme und Aktualisierung von Daten im Personenidentifikationsregister;"
+            },
+            {
+              "marke": "g",
+              "text": "die Protokollierung der Übernahme und Aktualisierung von Daten im Personenidentifikationsregister;"
+            },
+            {
+              "marke": "h",
+              "text": "die Schnittstelle für den Zugang des Grundstücksuchdienstes zu den rechtswirksamen Daten des Hauptbuchs und zu den Daten des Personenidentifikationsregisters;"
+            },
+            {
+              "marke": "i",
+              "text": "die Schnittstelle, über die der Grundstücksuchdienst die Inhalte des Suchindexes von den kantonalen Systemen erhält (Anhang 6);"
+            },
+            {
+              "marke": "j",
+              "text": "die Schnittstelle für Abfragen über den Grundstücksuchdienst (Anhang 7)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es anerkennt alternative Plattformen für den elektronischen Geschäftsverkehr mit dem Grundbuchamt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "f636b3129a9b848cd64adfcb68190a8331558defde9887619487fe01abfde92c"
+    },
+    {
+      "id": "bund/TGBV/art_3",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EJPD und das VBS definieren für den Datenaustausch zwischen der amtlichen Vermessung und dem Grundbuch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das AVGBSDM und den Geltungsbeginn der jeweils neuen Version;"
+            },
+            {
+              "marke": "b",
+              "text": "die Datenbeschreibungssprache;"
+            },
+            {
+              "marke": "c",
+              "text": "die AVGBS."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie definieren die E-GRID."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "bdedc0f52d5e685b4ddad81c93a6736cffc93a112699e6bba518e4f0d5b5fe24"
+    },
+    {
+      "id": "bund/TGBV/art_4",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eidgenössische Amt für Grundbuch- und Bodenrecht (EGBA) sorgt für die Verbreitung des eGRISDM und der GBDBS sowie der entsprechenden Dokumentation."
+        },
+        {
+          "absatz": "2",
+          "text": "Es erarbeitet unter Mitwirkung der Kantone, der Systemhersteller und weiterer Beteiligter für die Weiterentwicklung des informatisierten Grundbuchs und dessen Vernetzung mit anderen Systemen eine Planung. Es passt die Planung jährlich an."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "2d495a6d36a15bab2974acefacc14ed7c87165ad329d1b9068b848c5ad989268"
+    },
+    {
+      "id": "bund/TGBV/art_5",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EGBA und die Fachstelle Eidgenössische Vermessungsdirektion sorgen für die Verbreitung des AVGBSDM und der AVGBS sowie der entsprechenden Dokumentation."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellen unter Mitwirkung der Kantone und der Systemhersteller die Weiterentwicklung des AVGBSDM sicher."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "eb35e731e84819fd2e30536d93cec024de9fa6785aa533cdc7588c823536d860"
+    },
+    {
+      "id": "bund/TGBV/art_6",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone integrieren die im Anhang 1 als obligatorisch bezeichneten Elemente des eGRISDM in ihre Grundbuchsysteme."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie realisieren die im Anhang 3 als obligatorisch bezeichneten Elemente der GBDBS in ihren Grundbuchsystemen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie stellen den Datenaustausch zwischen dem Grundbuch und der amtlichen Vermessung im Umfang des AVGBSDM sicher."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie realisieren die im Anhang 5 aufgeführten UPI-Schnittstellen, soweit die Grundbuchämter die Angaben für die Zuordnung der AHV-Nummer nicht aus einer Datenquelle nach Artikel 23 b Buchstabe b GBV beziehen."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie stellen den Abruf der rechtswirksamen Daten des Hauptbuchs und der Daten des Personenidentifikationsregisters durch den Grundstücksuchdienst über die GBDBS sicher."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "65d30d0be87f825673866be898e39d32699c71065c3204be13796cc65ebb5074"
+    },
+    {
+      "id": "bund/TGBV/art_7",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das eGRISDM und das AVGBSDM werden in der Beschreibungssprache INTERLIS gemäss Schweizer Norm SN 612031, Ausgabe 2006-05 beschrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die GBDBS wird in XML beschrieben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "7dca509750d67ba7258abd30b9c557704e59556a035c06ece853498c6474b5a9"
+    },
+    {
+      "id": "bund/TGBV/art_7_a",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "7_a",
+      "artikelLabel": "Art. 7a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Plan für das Grundbuch nach Artikel 7 VAV enthält die folgenden Daten der amtlichen Vermessung zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Grenzpunkten und Grenzlinien der Liegenschaften, der flächenmässig ausgeschiedenen selbstständigen und dauernden Rechte an Grundstücken sowie den Bergwerken;"
+            },
+            {
+              "marke": "b",
+              "text": "den Gebieten mit dauernden Bodenverschiebungen (Art. 660 a ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "den Fixpunkten;"
+            },
+            {
+              "marke": "d",
+              "text": "den bestehenden Gebäuden nach den Artikeln 2 Buchstabe b und 7 Absatz 1 Buchstabe b der Verordnung vom 9. Juni 2017 über das eidgenössische Gebäude- und Wohnungsregister (VGWR) sowie den übrigen bestehenden Bauten und Anlagen;"
+            },
+            {
+              "marke": "e",
+              "text": "der Beschaffenheit der Erdoberfläche;"
+            },
+            {
+              "marke": "f",
+              "text": "den Hoheitsgrenzen;"
+            },
+            {
+              "marke": "g",
+              "text": "den Gebäudeadressen nach den Artikeln 26 b und 26 c der Verordnung vom 21. Mai 2008 über die geografischen Namen (GeoNV);"
+            },
+            {
+              "marke": "h",
+              "text": "weiteren Objekten, soweit diese für die Nutzung des Grundstücks von Bedeutung sind;"
+            },
+            {
+              "marke": "i",
+              "text": "den geografischen Namen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "b1324bb56bcebf9b439f7618bbc531146398d1ce0c8fc92a7a81286f17f456d6"
+    },
+    {
+      "id": "bund/TGBV/art_7_b",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "7_b",
+      "artikelLabel": "Art. 7b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das EGBA und die Fachstelle Eidgenössische Vermessungsdirektion legen in einer gemeinsamen Weisung die Genauigkeits- und Zuverlässigkeitsanforderungen an den Plan für das Grundbuch fest für die Grenzen von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Liegenschaften;"
+            },
+            {
+              "marke": "b",
+              "text": "flächenmässig ausgeschiedenen selbstständigen und dauernden Rechten an Grundstücken;"
+            },
+            {
+              "marke": "c",
+              "text": "Bergwerken;"
+            },
+            {
+              "marke": "d",
+              "text": "Gebieten mit dauernden Bodenverschiebungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "60cf360f0c2e7ad8f59b3ca7323365a848ede908ffe0f942362cbb8b98745581"
+    },
+    {
+      "id": "bund/TGBV/art_7_c",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "7_c",
+      "artikelLabel": "Art. 7c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundstückbeschreibung umfasst:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Gemeindenamen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Fläche in Quadratmetern, die Nummer und die E-GRID des Grundstücks oder des selbstständigen und dauernden Rechts;"
+            },
+            {
+              "marke": "c",
+              "text": "eine geeignete Information über die Lokalisierung der betroffenen Objekte wie den Lokalnamen oder Strassennamen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Gebäudeadressen nach den Artikeln 26 b und 26 c GeoNV;"
+            },
+            {
+              "marke": "e",
+              "text": "eine Liste der bestehenden Gebäude nach den Artikeln 2 Buchstabe b und 7 Absatz 1 Buchstabe b VGWR sowie der übrigen bestehenden Bauten und Anlagen;"
+            },
+            {
+              "marke": "f",
+              "text": "Angaben zur Beschaffenheit der Erdoberfläche."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundstückbeschreibung ist zu datieren."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "a8ea122e091c316f55ea43b80feb59d91a2643648335cfd236d29f6cc5823654"
+    },
+    {
+      "id": "bund/TGBV/art_7_d",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "7_d",
+      "artikelLabel": "Art. 7d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mutationsurkunden bestehen aus dem Mutationsplan und der Mutationstabelle. Diese geben Auskunft über Änderungen am Grenzverlauf der Liegenschaften und der selbstständigen und dauernden Rechte an Grundstücken sowie räumliche Veränderungen an Bergwerken."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Mutationsplan enthält insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Gemeindenamen und die Mutationsnummer;"
+            },
+            {
+              "marke": "b",
+              "text": "den alten und neuen Zustand der Grenzlinien mit grafischer Kennzeichnung projektierter Änderungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die alten und neuen Grundstücksnummern;"
+            },
+            {
+              "marke": "d",
+              "text": "eine geeignete Information über die Lokalisierung wie den Lokal- oder Strassennamen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Nordrichtung und den Planmassstab;"
+            },
+            {
+              "marke": "f",
+              "text": "das Erstellungsdatum und die Unterschrift des Ingenieur-Geometers oder der Ingenieur-Geometerin."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mutationstabelle enthält insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Gemeindenamen und die Mutationsnummer;"
+            },
+            {
+              "marke": "b",
+              "text": "die Flächenangaben der Zu- und Abgänge der Liegenschaften oder der selbstständigen und dauernden Rechte in Quadratmetern;"
+            },
+            {
+              "marke": "c",
+              "text": "allfällige Rundungsdifferenzen;"
+            },
+            {
+              "marke": "d",
+              "text": "das Erstellungsdatum und die Unterschrift des Ingenieur-Geometers oder der Ingenieur-Geometerin."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_7_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "b9d5b0bf2a27a69a4823505c8a516fee636145cf4b208c3ce8fc1093a5c796eb"
+    },
+    {
+      "id": "bund/TGBV/art_8",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das eGRISDM legt die Datentypen und den Detaillierungsgrad der Daten des Grundbuchs sowie die Beziehungen unter den Daten fest. Es bildet die Grundlage für die GBDBS."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Detaillierungsgrad der im Anhang 1 als obligatorisch bezeichneten Elemente des eGRISDM darf nicht eingeschränkt werden. Erweiterungen dürfen die vorhandenen obligatorischen Elemente nicht ersetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das eGRISDM umfasst die folgenden Teilmodelle:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Personen-Stamm,"
+            },
+            {
+              "marke": "2",
+              "text": "Notizen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die obligatorischen Teilmodelle des eGRISDM müssen in ihrer jeweils geltenden Version in allen Grundbuchsystemen innerhalb von 24 Monaten ab Geltungsbeginn installiert und verfügbar gemacht werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "2d790cf4d8b63d1d9e8674a7ac60c4b2d4f1074997069941592e44119f47f9f8"
+    },
+    {
+      "id": "bund/TGBV/art_8_a",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale System kann die von der ZAS gemeldeten Aktualisierungen unmittelbar über die UPI-Schnittstelle «Mutationsmeldungen UPI an Dritte» (Anhang 5) oder mittelbar aus einer Datenquelle nach Artikel 23 b Buchstabe b GBV beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit Ausnahme der Annullierung der AHV-Nummern übernimmt es die Aktualisierungen automatisch in das Personenidentifikationsregister."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Vorgehen des Grundbuchamtes im Fall einer Annullierung der AHV-Nummer richtet sich in jedem Fall nach Artikel 23 d Absatz 3 GBV."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "42da4b5e0143d7f626900ed2047d9e19ca4443b2000423b144e2940bea14354e"
+    },
+    {
+      "id": "bund/TGBV/art_8_b",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "8_b",
+      "artikelLabel": "Art. 8b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale System protokolliert die Übernahme und Aktualisierung von Daten des Personenidentifikationsregisters automatisch."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_8_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "dd1fc4cb4bb115ab1e053f33dafdf56036a9404f057f4b51e7d721fd3e825951"
+    },
+    {
+      "id": "bund/TGBV/art_9",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das AVGBSDM beschreibt die zwischen der amtlichen Vermessung und dem Grundbuch auszutauschenden Daten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Detaillierungsgrad des AVGBSDM darf nicht eingeschränkt werden. Erweiterungen dürfen die vorhandenen Elemente nicht ersetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Erweiterungen des AVGBSDM dürfen dem Datenmodell der amtlichen Vermessung (Art. 6 VAV) und dem eGRISDM nicht widersprechen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das AVGBSDM ist in folgende Teilmodelle unterteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Eigentumsverhältnisse;"
+            },
+            {
+              "marke": "b",
+              "text": "Grundstücksbeschreibung;"
+            },
+            {
+              "marke": "c",
+              "text": "Mutationstabelle;"
+            },
+            {
+              "marke": "d",
+              "text": "Vollzugsgegenstände."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Es identifiziert die Grundstücke mittels E-GRID."
+        },
+        {
+          "absatz": "6",
+          "text": "Es muss in seiner jeweils geltenden Version in allen Grundbuchsystemen und in der amtlichen Vermessung innerhalb von 24 Monaten ab Geltungsbeginn installiert und verfügbar gemacht werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "4040c832b3ff9a8a8b6f219afde249be44ee2bc480cec0b8ffa6ef9defa6d1b4"
+    },
+    {
+      "id": "bund/TGBV/art_10",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die GBDBS ermöglicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Übertragung der rechtswirksamen und der gelöschten Daten des Hauptbuchs, des Tagebuchs und der Belege in strukturierter und maschinenlesbarer Form;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erstellung des gesamtschweizerischen Grundstücksindexes nach Artikel 27 Absatz 3 GBV;"
+            },
+            {
+              "marke": "c",
+              "text": "den Export der rechtswirksamen und der gelöschten Daten des Hauptbuchs für die langfristige Sicherung durch den Bund;"
+            },
+            {
+              "marke": "d",
+              "text": "den elektronischen Geschäftsverkehr mit den Grundbuchämtern;"
+            },
+            {
+              "marke": "e",
+              "text": "den Abruf der rechtswirksamen Daten des Hauptbuchs und der Daten des Personenidentifikationsregisters durch den Grundstücksuchdienst;"
+            },
+            {
+              "marke": "f",
+              "text": "die Übertragung der Identifikationsangaben der über den Grundstücksuchdienst abfragenden Behörden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Datenstrukturen richten sich in Inhalt und Detaillierungsgrad nach dem eGRISDM."
+        },
+        {
+          "absatz": "3",
+          "text": "Das EGBA oder eine von ihm beauftragte Organisation ausserhalb der Bundesverwaltung kann unter Mitwirkung der Kantone die GBDBS weiterentwickeln. Es kann zu diesem Zweck eine aus Vertretern der Kantone, der amtlichen Vermessung, der betroffenen Systemhersteller und weiterer Fachkreise bestehende Begleitgruppe einsetzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Systemhersteller nehmen Änderungsanträge entgegen, erstellen eine bereinigte Liste und unterbreiten diese der Begleitgruppe zur Verabschiedung. Nach Umsetzung der verabschiedeten Anträge, Prüfung der neuen Version im praktischen Einsatz und Abnahme durch die Begleitgruppe wird die neue Version dem EJPD zur Genehmigung unterbreitet."
+        },
+        {
+          "absatz": "5",
+          "text": "Die GBDBS muss in ihrer jeweils geltenden Version in allen Grundbuchsystemen innerhalb von 24 Monaten ab Geltungsbeginn installiert und verfügbar gemacht werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "35741f23b2da7cb5d75917d79a641ae78cbc4636b0d67d8d566a382a91304764"
+    },
+    {
+      "id": "bund/TGBV/art_10_a",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Schnittstelle zum Suchindex des Grundstücksuchdienstes ist im Anhang 6 aufgeführt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_10_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "1dcf297195f43a0da68602780bed8c649c92a0cbc913af3408c4c6084fce2f6a"
+    },
+    {
+      "id": "bund/TGBV/art_10_b",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "10_b",
+      "artikelLabel": "Art. 10b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale System übermittelt dem Suchindex des Grundstücksuchdienstes über die Schnittstelle die Daten nach Artikel 34 b Absätze 5 und 6 GBV."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_10_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "c1b0edd9889c315a23ca31125d52932d5a62a1f4de4023c4d916c7b55e50b058"
+    },
+    {
+      "id": "bund/TGBV/art_11",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die AVGBS wird definiert durch das AVGBSDM und das Transferformat, das sich aus dem AVGBSDM und der SN 612031, Ausgabe 2006-05 ergibt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "7b38e5ecdeabcb138b489b5e3c9f11b050e4395797e18acd0157b9c7d0e2e4ae"
+    },
+    {
+      "id": "bund/TGBV/art_12",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die AVGBS muss in ihrer jeweils geltenden Version in allen Grundbuchsystemen und in der amtlichen Vermessung innerhalb von 24 Monaten ab Geltungsbeginn installiert und verfügbar gemacht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Anstelle der AVGBS können die Kantone auf andere Weise dafür sorgen, dass die im AVGBSDM definierten Daten der amtlichen Vermessung im Rahmen des ordentlichen Betriebs vollständig in das Grundbuch übertragen werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "f1cd7dba7547774046951e977998e2c8ea8592ab399c7c6c06e81edfe1100493"
+    },
+    {
+      "id": "bund/TGBV/art_13",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die für die Grundbuchführung eingesetzten Informatiksysteme müssen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Daten über die GBDBS liefern können;"
+            },
+            {
+              "marke": "b",
+              "text": "die rechtswirksamen und die gelöschten Hauptbuchdaten für die langfristige Sicherung in eine GBDBS-Datei exportieren können;"
+            },
+            {
+              "marke": "c",
+              "text": "alle obligatorischen Identifikatoren gemäss eGRISDM erzeugen und zuordnen können."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "0edb23e2312d5378355bd0eb21614b6f5e6105498b2b5c3ec36934478dd07300"
+    },
+    {
+      "id": "bund/TGBV/art_14",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Haltung der Grundbuchdaten richtet sich bezüglich des Inhalts, des Detaillierungsgrades und der Vollständigkeit der Daten nach dem eGRISDM."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Überführung des Papier-Grundbuchs in das informatisierte Grundbuch müssen alle rechtswirksamen Daten der einzelnen Abteilungen übernommen werden. Gelöschte Daten und entsprechende Hinweise auf die Belege müssen nicht erfasst werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "e6d2c9d736bf60815fbe43ded73c551a5138e603adbf5a7785747748e2819ded"
+    },
+    {
+      "id": "bund/TGBV/art_15",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die für die Grundbuchführung und für die amtliche Vermessung eingesetzten Informatiksysteme müssen Daten im Umfang und im Detaillierungsgrad des AVGBSDM beziehen und liefern können."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "5e3bf86a430276a946fb4d3bca05080067cbea438beddff4060aab3edf6957ce"
+    },
+    {
+      "id": "bund/TGBV/art_16",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die E-GRID ist landesweit eindeutig, enthält keine klassifizierenden Merkmale und wird nur einmal vergeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dient als Grundstücksidentifikator im Datenmodell der amtlichen Vermessung, im eGRISDM und im AVGBSDM."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie bildet die Grundlage für den grundstücksbezogenen Datenaustausch."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie muss in grundstücksbezogenen Auskunftssystemen als Suchbegriff verwendet werden können."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "ec3735139b97983a7ecad263e029aa1142cb5ba80e1c5b07b0694425d01c9180"
+    },
+    {
+      "id": "bund/TGBV/art_17",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die E-GRID für die Liegenschaften sowie für die flächenmässig ausgeschiedenen selbstständigen und dauernden Rechte und Bergwerke werden durch die amtliche Vermessung erstellt und vergeben. Für die restlichen Grundstücke wird sie durch das Grundbuchamt erstellt und vergeben. Die Kantone können abweichende Vorschriften erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Veränderungen am Bestand oder am Gebiet der Gemeinden behalten alle betroffenen Grundstücke ihre E-GRID."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Teilung eines Grundstücks behält in der Regel ein Teil die bestehende E‑GRID. Bei der Vereinigung von mehreren Grundstücken wird für das neue Grundstück in der Regel die E-GRID eines der beteiligten Grundstücke weiterverwendet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "4d56bfb12a930d551329f79a83dbf30e29136546d685f45f16e8222ffd1a9c70"
+    },
+    {
+      "id": "bund/TGBV/art_18",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zulässige Datenformate für Eingaben an das Grundbuchamt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Grundbuchanmeldungen, die nicht bereits im Rechtsgrundausweis enthalten sind: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis des Obligationenrechts (OR); die in der Anmeldung enthaltenen Angaben können zusätzlich im Format XML beigefügt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "für öffentlich beurkundete Rechtsgrundausweise: die Formate nach der Verordnung des EJPD vom 8. Dezember 2017 über die Erstellung elektronischer öffentlicher Urkunden und elektronischer Beglaubigungen (EÖBV-EJPD);"
+            },
+            {
+              "marke": "c",
+              "text": "für Rechtsgrundausweise in schriftlicher Form einschliesslich Beilagen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR;"
+            },
+            {
+              "marke": "d",
+              "text": "für Gesuche um Ausstellung eines Grundbuchauszugs oder einer Eintragungsbescheinigung: PDF mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR; vorbehalten bleiben Gesuche von authentifizierten Teilnehmerinnen oder Teilnehmern im Rahmen von alternativen Übermittlungsverfahren und kantonalen Grundbuch-Informationssystemen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "66e23434a8e5d97fcc2fa09df4db8d9b4b19d37d20b195634645a9877f6d81d7"
+    },
+    {
+      "id": "bund/TGBV/art_19",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Formate für Zustellungen des Grundbuchamtes an die Beteiligten sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Eintragungsbescheinigungen und Anzeigen von grundbuchlichen Verfügungen: PDF/A oder XML; auf Verlangen der Empfängerin oder des Empfängers kann das Dokument in PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR versehen werden; zusätzlich können ihm Angaben im Format XML beigefügt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "für Fristansetzungen und Abweisungsverfügungen: PDF/A mit einer qualifizierten elektronischen Signatur nach Artikel 14 Absatz 2 bis OR;"
+            },
+            {
+              "marke": "c",
+              "text": "für elektronische amtliche Auszüge: die Formate nach der EÖBV-EJPD;"
+            },
+            {
+              "marke": "d",
+              "text": "für nichtbeglaubigte Kopien und Auszüge: PDF oder XML; zusätzlich können dem Grundbuchauszug Angaben im Format XML beigefügt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "587afd16fb728f0c843752bdb350e1178a6812df8cc4fc83b3ed8edaf4356c48"
+    },
+    {
+      "id": "bund/TGBV/art_20",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zulässigen Versionen des Datenformats PDF/A richten sich nach dem Anhang der EÖBV-EJPD."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Formate PDF und XML können in jeder gängigen Version verwendet werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "fb74b9ea07574af5a36b53ea706f68fb1fc0a739518b9acd767ba9dd4ebbd8d7"
+    },
+    {
+      "id": "bund/TGBV/art_21",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das EJPD anerkennt eine alternative Plattform für den elektronischen Geschäftsverkehr mit dem Grundbuchamt, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Signatur und Verschlüsselung Maschinenzertifikate (SSL-Zertifikate) einsetzt, die von einer anerkannten Anbieterin von Zertifizierungsdiensten nach dem Bundesgesetz vom 19. Dezember 2003 über die elektronische Signatur (anerkannte Anbieterin) stammen;"
+            },
+            {
+              "marke": "b",
+              "text": "nachweisen kann, welche Dokumente übermittelt beziehungsweise für die Erledigung der spezifizierten Aufgabe verwendet wurden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Eingaben und Zustellungen in geeigneter Weise vor unberechtigtem Zugriff durch Dritte schützt;"
+            },
+            {
+              "marke": "d",
+              "text": "imstande ist, nach anerkannten Regeln bezüglich sicherer Übermittlung zu kommunizieren; dabei wird der Stand der Technik, wie er insbesondere in den eCH-Standards zum Ausdruck kommt, berücksichtigt;"
+            },
+            {
+              "marke": "e",
+              "text": "über ausreichende Finanzmittel oder -garantien verfügt."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "37b3bb2be9c64e7ff47351fc826105cc99cc568df0dcba84f1f88ef6cdeb0308"
+    },
+    {
+      "id": "bund/TGBV/art_22",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Anerkennungsgesuche sind beim EGBA einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch enthält Angaben über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erfüllung des Kriterienkatalogs, namentlich der technischen und organisatorischen Massnahmen zur Gewährleistung der Datenintegrität, des Datenschutzes und der Datensicherheit während der Übermittlung und auf der Plattform;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nachvollziehbarkeit der Übermittlung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verfügbarkeit des Systems."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Dem Gesuch sind beizulegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Beschreibung des Systemaufbaus;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ergebnisse der angewandten Tests und Überprüfungen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das EGBA kann für die Prüfung der Anerkennungsvoraussetzungen verwaltungsexterne Fachpersonen beiziehen. Die Kosten gehen zulasten der Gesuchstellerin."
+        },
+        {
+          "absatz": "5",
+          "text": "Das EJPD entzieht die Anerkennung, wenn es feststellt, dass die Anerkennungsvoraussetzungen nicht mehr erfüllt sind."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Entscheidgebühr wird nach Zeitaufwand berechnet; der Stundenansatz beträgt 250 Franken. Im Übrigen sind die Bestimmungen der Allgemeinen Gebührenverordnung vom 8. September 2004 anwendbar."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "465c3af0dfa310504aa7e88704cb36b6eb4c9ef4789c019bb740cf1a625d9481"
+    },
+    {
+      "id": "bund/TGBV/art_22_a",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die technischen Anforderungen an die Schnittstellen für Abfragen über den Grundstücksuchdienst sind im Anhang 7 aufgeführt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "3935c0826d0324edd38add53ad84acef099781fc8c740f5b42078dde07305132"
+    },
+    {
+      "id": "bund/TGBV/art_22_b",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "22_b",
+      "artikelLabel": "Art. 22b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gesuch um Bewilligung zur Verwendung der Schnittstelle für Abfragen über den Grundstücksuchdienst muss den Nachweis enthalten, dass die technischen Anforderungen nach Artikel 22 a erfüllt sind."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_22_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "dd95baa211034d5d8b0dd90bbdb92957a14fca4694af4ec61bcfe5c101dbd298"
+    },
+    {
+      "id": "bund/TGBV/art_23",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone liefern dem Bundesamt für Justiz (BJ) zum Zweck der Langzeitsicherung mindestens einmal pro Kalenderjahr zu einem frei wählbaren Zeitpunkt den gesamten Bestand der rechtswirksamen und der gelöschten Daten des Hauptbuchs, strukturiert nach den Vorgaben der GBDBS."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Lieferung umfasst entweder eine Datei für das ganze Kantonsgebiet oder mehrere Dateien für je ein Teilgebiet (z.B. Grundbuchkreis)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Übermittlung der Dateien erfolgt über eine gesicherte Verbindung mit einem vom Bund zur Verfügung gestellten Computerprogramm sowie einem qualifizierten Signaturzertifikat nach dem Bundesgesetz vom 19. Dezember 2003 über die elektronische Signatur und einem Authentifizierungszertifikat der gleichen Anbieterin."
+        },
+        {
+          "absatz": "4",
+          "text": "Jeder Kanton bestimmt und meldet dem BJ pro Gebietseinheit eine für die Langzeitsicherung verantwortliche Person, welche dem Bund die von ihr signierte Datei übermittelt und mit ihrer Signatur bestätigt, dass es sich um den zu sichernden Datenbestand seines Grundbuchsystems handelt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "e418f8c4917eb98709c4e5ee08003c61e34b0e80dd254e422fc7de3003254a69"
+    },
+    {
+      "id": "bund/TGBV/art_24",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EJPD erarbeitet zusammen mit einer Vertretung der Kantone auf der Basis einer methodischen Risikobeurteilung einen Kriterienkatalog, der angemessene, wirksame und formal überprüfbare Massnahmen für den sicheren Betrieb eines Grundbuchsystems enthält."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Katalog enthält Anforderungen an die Auditoren, die Häufigkeit und das Vorgehen der Überprüfung."
+        },
+        {
+          "absatz": "3",
+          "text": "Er wird den Kantonen als Empfehlung zur Verfügung gestellt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "107e808a1ef3fcb7d0882332e1c4b38d54e58d31a30431c420360b62150d0f1f"
+    },
+    {
+      "id": "bund/TGBV/art_25",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Technische Verordnung des EJPD und des VBS vom 6. Juni 2007 über das Grundbuch wird aufgehoben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "32f3a2d2a970439e73e3377dfab65023056a2af953f6091c0d29ca08f6c84892"
+    },
+    {
+      "id": "bund/TGBV/art_26",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone machen bis zum 1. Januar 2014 in ihren Informatiksystemen verfügbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für das Grundbuch und für die amtliche Vermessung: die AVGBS oder eine gleichwertige Datenübertragungsmethode und die E-GRID;"
+            },
+            {
+              "marke": "b",
+              "text": "für das Grundbuch: die obligatorischen Elemente des eGRISDM und die GBDBS, Teile Auskunft/Datenbezug und Langzeitsicherung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das EJPD kann die Fristen in begründeten Fällen verlängern."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "83483895ebd6930a81dbeacede18b19964ca9cde5beda3b9a51ce0c77cd4f0ec"
+    },
+    {
+      "id": "bund/TGBV/art_26_a",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "26_a",
+      "artikelLabel": "Art. 26a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Abweichung von Artikel 8 Absatz 4 muss das obligatorische Teilmodell des Personenidentifikationsregisters nach Artikel 8 Absatz 3 Buchstabe a Ziffer 3 im Zeitpunkt des Inkrafttretens der Änderung vom 10. Dezember 2021 installiert und verfügbar sein."
+        },
+        {
+          "absatz": "2",
+          "text": "In Abweichung von Artikel 10 Absatz 5 müssen die Funktionalitäten der GBDBS nach Artikel 10 Absatz 1 Buchstaben e und f im Zeitpunkt des Inkrafttretens der Änderung vom 10. Dezember 2021 installiert und verfügbar sein."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_26_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "1024e0cbb9e43f3c7c399ad04313205e296f171447a4d89f5f60a502c36a5964"
+    },
+    {
+      "id": "bund/TGBV/art_26_b",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "26_b",
+      "artikelLabel": "Art. 26b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EGBA und die Fachstelle Eidgenössische Vermessungsdirektion geben auf den Zeitpunkt des Inkrafttretens der Änderung vom 29. August 2023 im Rahmen des neuen Geodatenmodells der amtlichen Vermessung ein Geodatenmodell des Plans für das Grundbuch vor, welches das Datenmodell der amtlichen Vermessung nach Artikel 7 und Anhang A der Technischen Verordnung des VBS vom 10. Juni 1994 über die amtliche Vermessung ersetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Wechsel zum neuen Geodatenmodell muss bis zum 31. Dezember 2027 vollzogen werden. Der Zeitpunkt des Modellwechsels entspricht dem Zeitpunkt, den der Kanton für den Wechsel zum neuen Geodatenmodell der amtlichen Vermessung festgelegt hat. Der Kanton passt seine gesetzlichen Grundlagen auf diesen Zeitpunkt hin an. Bis zum Zeitpunkt des Modellwechsels gelten die Bestimmungen über das bisherige Datenmodell weiter."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_26_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "6bbdc42d92eeba5c0d6985a2a1a0b9881d49e389e2ff32ed07b1ba5c4ff9da7b"
+    },
+    {
+      "id": "bund/TGBV/art_27",
+      "ebene": "bund",
+      "quelle": "TGBV",
+      "erlass": "TGBV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Februar 2013 in Kraft."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2013/3/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240101",
+      "sha": "c40e0a9e881be4adc99c06bd1d8cfe8657fe7510535fa6b1bc3fea2a059a4316"
+    }
+  ]
+}

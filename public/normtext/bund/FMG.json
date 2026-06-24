@@ -1,0 +1,3384 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/FMG/art_1",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt, dass der Bevölkerung und der Wirtschaft vielfältige, preiswerte, qualitativ hoch stehende sowie national und international konkurrenzfähige Fernmeldedienste angeboten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Es soll insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine zuverlässige und erschwingliche Grundversorgung mit Fernmeldediensten für alle Bevölkerungskreise in allen Landesteilen gewährleisten;"
+            },
+            {
+              "marke": "b",
+              "text": "einen störungsfreien, die Persönlichkeits- und Immaterialgüterrechte achtenden Fernmeldeverkehr sicherstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "einen wirksamen Wettbewerb beim Erbringen von Fernmeldediensten ermöglichen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Benutzerinnen und Benutzer von Fernmeldediensten vor unlauterer Werbung und vor Missbrauch durch Mehrwertdienste schützen;"
+            },
+            {
+              "marke": "e",
+              "text": "Kinder und Jugendliche vor den Gefahren, die sich aus der Nutzung der Fernmeldedienste ergeben, schützen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e740e751a86a9bae45f6bccc3ce5d8f930c3c3c9cd6123dc0e38bb6e8be5d983"
+    },
+    {
+      "id": "bund/FMG/art_2",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Gesetz regelt die fernmeldetechnische Übertragung von Informationen, einschliesslich der Übertragung von Radio- und Fernsehprogrammen, soweit das Bundesgesetz vom 24. März 2006 über Radio und Fernsehen (RTVG) nichts anderes bestimmt."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "44d78a410ceefb90f393b0c2594b0a0d5b613c815cdd8d3d0653e3a024b25011"
+    },
+    {
+      "id": "bund/FMG/art_3",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In diesem Gesetz bedeuten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Informationen: für Menschen, andere Lebewesen oder Maschinen bestimmte Zeichen, Signale, Schriftzeichen, Bilder, Laute und Darstellungen jeder anderen Art;"
+            },
+            {
+              "marke": "b",
+              "text": "Fernmeldedienst: fernmeldetechnische Übertragung von Informationen für Dritte;"
+            },
+            {
+              "marke": "c",
+              "text": "fernmeldetechnische Übertragung: elektrisches, magnetisches, optisches oder anderes elektromagnetisches Senden oder Empfangen von Informationen über Leitungen oder Funk;"
+            },
+            {
+              "marke": "cbis",
+              "text": "öffentlicher Telefondienst: Fernmeldedienst zur Sprachübertragung in Echtzeit mittels eines oder mehrerer Adressierungselemente, die in einem nationalen oder internationalen Nummerierungsplan dafür vorgesehen sind;"
+            },
+            {
+              "marke": "cter",
+              "text": "Mehrwertdienst: Dienstleistung, die über einen Fernmeldedienst erbracht und den Kundinnen und Kunden von ihrer Anbieterin von Fernmeldediensten zusätzlich zu Fernmeldediensten in Rechnung gestellt wird;"
+            },
+            {
+              "marke": "d",
+              "text": "Fernmeldeanlagen: Geräte, Leitungen oder Einrichtungen, die zur fernmeldetechnischen Übertragung von Informationen bestimmt sind oder benutzt werden;"
+            },
+            {
+              "marke": "dbis",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "Interkonnektion: Herstellung des Zugangs durch die Verbindung der Anlagen und Dienste zweier Anbieterinnen von Fernmeldediensten, damit ein fernmeldetechnisches und logisches Zusammenwirken der verbundenen Teile und Dienste sowie der Zugang zu Diensten Dritter ermöglicht wird;"
+            },
+            {
+              "marke": "ebis",
+              "text": "Mietleitungen: Bereitstellung von transparenten Übertragungskapazitäten über Punkt-zu-Punkt-Verbindungen;"
+            },
+            {
+              "marke": "eter",
+              "text": "Kabelkanalisationen: unterirdische Rohre, in welche die Leitungen zur fernmeldetechnischen Übertragung von Informationen eingezogen sind, einschliesslich der Zugangsschächte;"
+            },
+            {
+              "marke": "f",
+              "text": "Adressierungselement: Abfolge von Ziffern, Buchstaben oder Zeichen oder andere Informationen zur Identifikation von Personen, Computerprozessen, Maschinen, Geräten oder Fernmeldeanlagen, die an einem fernmeldetechnischen Kommunikationsvorgang beteiligt sind;"
+            },
+            {
+              "marke": "g",
+              "text": "Verzeichnisdaten: Angaben, die eine Kundin oder einen Kunden in Bezug auf ein individuell zugewiesenes Adressierungselement identifizieren oder kennzeichnen und die für die Veröffentlichung eines Verzeichnisses bestimmt oder für die Erbringung eines Fernmeldedienstes erforderlich sind;"
+            },
+            {
+              "marke": "h",
+              "text": "Radio- und Fernsehprogramm : eine Folge von Sendungen im Sinne von Artikel 2 RTVG."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "00142af14392453776a88c515e25820cedf9c260dc7aa20a005ec950ad0159e7"
+    },
+    {
+      "id": "bund/FMG/art_3_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat erstattet der Bundesversammlung alle drei Jahre Bericht über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Entwicklung der flächendeckenden schweizweiten Investitionen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Entwicklung der Grundversorgung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Qualität und die Preise der angebotenen Fernmeldedienste;"
+            },
+            {
+              "marke": "d",
+              "text": "die Entwicklung des Netzwettbewerbs;"
+            },
+            {
+              "marke": "e",
+              "text": "die Kosten und die Gewährung des Zugangs zu den Teilnehmeranschlüssen, unabhängig von der diesen Anschlüssen zugrunde liegenden Technologie."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Bedarf stellt der Bundesrat der Bundesversammlung Anträge zur Förderung des wirksamen Wettbewerbs."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_3_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e49968b926929a8cd2f0a2419dd4c3ce5766245238b0e4c1479a134d06d8e12f"
+    },
+    {
+      "id": "bund/FMG/art_4",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt für Kommunikation (BAKOM) registriert Anbieterinnen von Fernmeldediensten, die eine der folgenden für die Erbringung von Fernmeldediensten bestimmten Ressourcen nutzen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Funkfrequenzen, deren Nutzung eine Konzession voraussetzt;"
+            },
+            {
+              "marke": "b",
+              "text": "Adressierungselemente, die auf nationaler Ebene verwaltet werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Registrierte Anbieterinnen dürfen die Nutzung von Ressourcen nach Absatz 1 anderen Anbieterinnen von Fernmeldediensten nur dann gestatten, wenn diese sich vorgängig registriert haben."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM führt und veröffentlicht eine Liste der registrierten Anbieterinnen und der von diesen angebotenen Fernmeldedienste."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Einzelheiten der Registrierung."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "bc72448f251a661aa04b26e757d7a9065560b9602b6b1270925fce2ab4a1498c"
+    },
+    {
+      "id": "bund/FMG/art_5",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zuständige Behörde kann nach ausländischem Recht organisierten Anbieterinnen von Fernmeldediensten die Nutzung von Funkfrequenzen oder Adressierungselementen nach Artikel 4 Absatz 1 untersagen, wenn kein Gegenrecht gewährt wird. Vorbehalten bleiben entgegenstehende internationale Verpflichtungen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "60b96622f2a1ae22d8caf80e4659a9693400136f4cbf68d701ddeecff49e4bb1"
+    },
+    {
+      "id": "bund/FMG/art_6",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Anbieterinnen von Fernmeldediensten mit Sitz oder Niederlassung in der Schweiz müssen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die arbeitsrechtlichen Vorschriften einhalten und die branchenüblichen Arbeitsbedingungen gewährleisten;"
+            },
+            {
+              "marke": "b",
+              "text": "eine angemessene Anzahl Ausbildungsplätze für Lernende in der beruflichen Grundbildung anbieten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "0a06fb04fe842e04ba0bfac5f5c8bb26d4b59d0fbbac4a0d91800cf90fb1ea6a"
+    },
+    {
+      "id": "bund/FMG/art_6_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anbieterinnen von Fernmeldediensten müssen den Zugang zu Telefonie und Internet für Personen sperren, welche die Kundenbeziehung nicht über ein Abonnementsverhältnis aufgenommen haben, wenn diese Personen bei der Aufnahme der Kundenbeziehung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Identität einer Person verwendet haben, die nicht existiert oder die der Aufnahme der Kundenbeziehung nicht vorgängig zugestimmt hat; oder"
+            },
+            {
+              "marke": "b",
+              "text": "kein Dokument vorgelegt haben, das die vom Bundesrat nach Artikel 23 Absatz 1 des Bundesgesetzes vom 18. März 2016 betreffend die Überwachung des Post- und Fernmeldeverkehrs aufgestellten Anforderungen erfüllt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e8a1857fc22cf1fe35561be496649bad62a02717eedb77c0401a60d1f030a212"
+    },
+    {
+      "id": "bund/FMG/art_7_10",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "7_10",
+      "artikelLabel": "Art. 710",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_7_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_11",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Marktbeherrschende Anbieterinnen von Fernmeldediensten müssen anderen Anbieterinnen auf transparente und nicht diskriminierende Weise zu kostenorientierten Preisen in folgenden Formen Zugang zu ihren Einrichtungen und Diensten gewähren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den vollständig entbündelten Zugang zum Teilnehmeranschluss zur Nutzung des gesamten Frequenzspektrums der Doppelader-Metallleitung;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "die Interkonnektion;"
+            },
+            {
+              "marke": "e",
+              "text": "Mietleitungen;"
+            },
+            {
+              "marke": "f",
+              "text": "den Zugang zu den Kabelkanalisationen, sofern diese über eine ausreichende Kapazität verfügen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die Bedingungen und Preise für ihre einzelnen Zugangsdienstleistungen gesondert ausweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Einzelheiten."
+        },
+        {
+          "absatz": "4",
+          "text": "Anbieterinnen von Fernmeldediensten stellen dem BAKOM eine Kopie ihrer Vereinbarung über den Zugang zu. Soweit keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen, gewährt das BAKOM Einsicht in die Vereinbarungen."
+        },
+        {
+          "absatz": "5",
+          "text": "Keine Pflicht zum Zugang besteht für die Verbreitung von Radio- und Fernsehprogrammen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b77fa456a59d140f229066a689009e35530121d541512f436d9cb7bf41cb8d18"
+    },
+    {
+      "id": "bund/FMG/art_11_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einigen sich die Anbieterinnen von Fernmeldediensten nicht innerhalb von drei Monaten über die Bedingungen des Zugangs, so verfügt die Eidgenössische Kommunikationskommission (ComCom) diese auf Gesuch einer Partei und auf Antrag des BAKOM. Dabei berücksichtigt sie insbesondere die Bedingungen, die einen wirksamen Wettbewerb fördern, sowie die Auswirkungen ihres Entscheides auf konkurrierende Einrichtungen. Sie kann einstweiligen Rechtsschutz gewähren."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Frage der Marktbeherrschung zu beurteilen, so konsultiert das BAKOM die Wettbewerbskommission. Diese kann ihre Stellungnahme veröffentlichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die ComCom entscheidet innerhalb von sieben Monaten nach Gesuchseingang."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie regelt die Art und die Form der Rechnungslegungs- und Finanzinformationen, die marktbeherrschende Anbieterinnen von Fernmeldediensten im Verfahren nach Absatz 1 vorlegen müssen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "f665007acef84101101d5a9e490b96f8eee00d80c5f2cb98f5a6e8461211e24f"
+    },
+    {
+      "id": "bund/FMG/art_11_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "11_b",
+      "artikelLabel": "Art. 11b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Streitigkeiten aus Vereinbarungen und aus Verfügungen über den Zugang werden durch die Zivilgerichte beurteilt."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_11_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "1c9051c141d6ce3c01533520190ade559742a39aceeaa6ef281bd33ed2697129"
+    },
+    {
+      "id": "bund/FMG/art_12",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Marktbeherrschende Anbieterinnen von Fernmeldediensten dürfen ihre Dienste bündeln, sofern sie die im Bündel enthaltenen Dienste auch einzeln anbieten."
+        },
+        {
+          "absatz": "2",
+          "text": "Dienste müssen nicht einzeln angeboten werden, wenn sie aus technischen, wirtschaftlichen, Qualitäts- oder Sicherheitsgründen nur im Bündel angeboten werden können."
+        },
+        {
+          "absatz": "3",
+          "text": "Bündelt eine Anbieterin von Fernmeldediensten eigene Dienste mit Diensten eines durch sie beherrschten oder sie beherrschenden Drittunternehmens, so sind die Absätze 1 und 2 anwendbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "66911aec69193082f61c6bf5dc2251c68cefd7a6cc83a6e7ad00a3a939101e0c"
+    },
+    {
+      "id": "bund/FMG/art_12_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen von Fernmeldediensten müssen gewährleisten, dass ihre Preise für die Kundinnen und Kunden transparent sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informieren die Öffentlichkeit über die Qualität der von ihnen angebotenen Fernmeldedienste."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt fest, welche Angaben die Anbieterinnen veröffentlichen müssen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM kann die Öffentlichkeit über die verschiedenen Fernmeldedienste der Anbieterinnen informieren."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "3b040796a9f6fd35665ce0c172e1d3ab575df4d9294862d8741e40599d2d10ea"
+    },
+    {
+      "id": "bund/FMG/art_12_a_bis",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_a_bis",
+      "artikelLabel": "Art. 12abis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann für das internationale Roaming Regelungen zur Vermeidung unverhältnismässig hoher Endkundentarife erlassen und Massnahmen zur Förderung des Wettbewerbs treffen. Er kann insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorschriften über die Abrechnungsmodalitäten erlassen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Mobilfunkanbieterinnen verpflichten, ihren Kundinnen und Kunden im Ausland die Nutzung von Roaming-Dienstleistungen von Drittanbieterinnen zu ermöglichen;"
+            },
+            {
+              "marke": "c",
+              "text": "basierend auf internationalen Vereinbarungen Preisobergrenzen festlegen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Mobilfunkanbieterinnen verpflichten, gebündelte Angebote mit eingeschlossenen Roaming-Dienstleistungen sowie Optionen anzubieten, welche die Inanspruchnahme von Roaming-Dienstleistungen zu fixen Preisen oder reduzierten Standardpreisen ermöglichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAKOM führt Marktbeobachtungen durch und analysiert die technischen und preislichen Entwicklungen. Es stützt sich dabei insbesondere auf die nach Artikel 59 Absatz 1 bei den Anbieterinnen erhobenen Auskünfte und arbeitet mit dem Preisüberwacher zusammen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_a_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "fa6d24f84d0bf1ab5fea5cf3f3a7466f035a8e98a8a40cadc4bf086f03440830"
+    },
+    {
+      "id": "bund/FMG/art_12_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_b",
+      "artikelLabel": "Art. 12b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zur Verhinderung von Missbräuchen regelt der Bundesrat die Mehrwertdienste, indem er insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Preisobergrenzen festlegt;"
+            },
+            {
+              "marke": "b",
+              "text": "Vorschriften über die Erkennbarkeit von Mehrwertdiensten erlässt;"
+            },
+            {
+              "marke": "c",
+              "text": "festlegt, ab welchen Beträgen eine Gebühr nur mit dem ausdrücklichen Einverständnis der Benutzerinnen und Benutzer erhoben werden darf;"
+            },
+            {
+              "marke": "d",
+              "text": "unter Beachtung internationaler Verpflichtungen vorschreibt, dass Anbieterinnen von Mehrwertdiensten ihren Sitz oder eine Niederlassung in der Schweiz haben müssen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "20bf47a6ba857e02aadf836eaae3203a3e0093c5006597a4e95ffcf70c3c60ee"
+    },
+    {
+      "id": "bund/FMG/art_12_b_bis",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_b_bis",
+      "artikelLabel": "Art. 12bbis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bestreiten Kundinnen oder Kunden eine Rechnung ihrer Anbieterin von Fernmeldediensten für andere Leistungen als Fernmeldedienste, so darf die Anbieterin aus diesem Grund weder den Zugang zu den Fernmeldediensten sperren noch den Vertrag vor der Beilegung der Streitigkeit kündigen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_b_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "3abcc7d4253e4067f5a3d6559b0d072214956a02b7b3f32eb435bdde3380b255"
+    },
+    {
+      "id": "bund/FMG/art_12_c",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_c",
+      "artikelLabel": "Art. 12c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM richtet eine Schlichtungsstelle ein oder beauftragt Dritte damit. Bei Streitigkeiten zwischen Kundinnen oder Kunden und Anbieterinnen von Fernmelde- oder Mehrwertdiensten kann jede Partei die Schlichtungsstelle anrufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer die Schlichtungsstelle anruft, zahlt eine Behandlungsgebühr. Die Anbieterin von Fernmelde- oder Mehrwertdiensten trägt die Verfahrenskosten abzüglich der Behandlungsgebühr."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Parteien sind durch den Schlichtungsentscheid nicht gebunden."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "70bda382a996c5dfbcf8623b0f027ae19e27ad37cddb50a6a740bab2525b77f3"
+    },
+    {
+      "id": "bund/FMG/art_12_d",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_d",
+      "artikelLabel": "Art. 12d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Den Kundinnen und Kunden von Fernmeldediensten steht es frei, sich in die öffentlichen Verzeichnisse eintragen zu lassen. Sie können im Rahmen der Schranken nach Absatz 2 entscheiden, welche der sie betreffenden Verzeichnisdaten veröffentlicht werden dürfen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann festlegen, welche Daten ein Verzeichniseintrag mindestens enthalten muss. Er kann die Einzelheiten der Veröffentlichung und die Nutzung der Daten regeln."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "5d9a1fd624c6a63f068957f3fe0a99e3e3b4a9bf2c2e888d218ecc78fb7de487"
+    },
+    {
+      "id": "bund/FMG/art_12_e",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "12_e",
+      "artikelLabel": "Art. 12e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen von Internetzugängen übertragen Informationen, ohne dabei zwischen Sendern, Empfängern, Inhalten, Diensten, Diensteklassen, Protokollen, Anwendungen, Programmen oder Endgeräten technisch oder wirtschaftlich zu unterscheiden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen Informationen unterschiedlich übertragen, wenn dies erforderlich ist, um:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine gesetzliche Vorschrift oder einen Gerichtsentscheid zu befolgen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Integrität oder Sicherheit des Netzes, der über dieses Netz erbrachten Dienste oder der angeschlossenen Endgeräte zu gewährleisten;"
+            },
+            {
+              "marke": "c",
+              "text": "einer ausdrücklichen Aufforderung der Kundin oder des Kunden nachzukommen; oder"
+            },
+            {
+              "marke": "d",
+              "text": "vorübergehende und aussergewöhnliche Netzwerküberlastungen zu bekämpfen; dabei sind gleiche Arten von Datenverkehr gleich zu behandeln."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie dürfen neben dem Zugang zum Internet über denselben Anschluss andere Dienste anbieten, die für bestimmte Inhalte, Anwendungen oder Dienste optimiert sein müssen, um die Qualitätsanforderungen der Kundinnen und Kunden zu erfüllen. Die anderen Dienste dürfen nicht als Ersatz für Internetzugangsdienste nutzbar sein oder angeboten werden, und sie dürfen nicht die Qualität der Internetzugangsdienste verschlechtern."
+        },
+        {
+          "absatz": "4",
+          "text": "Behandeln sie Informationen bei der Übertragung technisch oder wirtschaftlich unterschiedlich, so müssen sie die Kundinnen und Kunden sowie die Öffentlichkeit darüber informieren."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_12_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "89f63ed2256df12b3ae15b3282ec6258a23e427311799c1afa8fc03acc3eece1"
+    },
+    {
+      "id": "bund/FMG/art_13",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen, gibt das BAKOM Auskunft über Name und Adresse der Anbieterin von Fernmelde- oder Mehrwertdiensten, über die von ihr erbrachten Dienste und über sie betreffende administrative oder strafrechtliche Verfolgungen und Sanktionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann diese Informationen veröffentlichen und im Abrufverfahren zugänglich machen, wenn hierfür ein öffentliches Interesse besteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Über laufende administrative oder strafrechtliche Verfolgungen kann es nur bei einem überwiegenden öffentlichen oder privaten Interesse Auskunft geben oder diese veröffentlichen und im Abrufverfahren zugänglich machen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "319d737e0a2e0c0054f8aa1fa44d0adf34568949f351294961e79085d2ec2705"
+    },
+    {
+      "id": "bund/FMG/art_13_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kommission und das Bundesamt können Personendaten, einschliesslich Daten über verwaltungs- oder strafrechtliche Verfolgungen und Sanktionen, bearbeiten, sofern dies zur Erfüllung der ihnen durch die Fernmeldegesetzgebung auferlegten Aufgaben unerlässlich ist. Sie können hierzu ein Informationssystem benutzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie treffen die für den Schutz und die Sicherheit der Daten bei der Bearbeitung, insbesondere bei der Übermittlung, nötigen technischen und organisatorischen Massnahmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann ergänzende Bestimmungen erlassen, namentlich über die Organisation und den Betrieb des Informationssystems, über die Kategorien der zu bearbeitenden Daten, über die Zugriffs- und Bearbeitungsberechtigung, über die Aufbewahrungsdauer sowie über die Archivierung und Vernichtung der Daten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_13_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "02accce7502cc7851c661785d07351b09f3538e6e44d6cd9e3c29f56f421b7d3"
+    },
+    {
+      "id": "bund/FMG/art_13_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "13_b",
+      "artikelLabel": "Art. 13b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ComCom und das BAKOM übermitteln anderen schweizerischen Behörden diejenigen Daten, die diese Behörden zur Erfüllung ihrer gesetzlichen Aufgaben benötigen. Zu diesen Daten gehören auch die in Verwaltungs- oder Verwaltungsstrafverfahren beschafften besonders schützenswerten Personendaten. Die Daten werden einzeln, auf Listen oder auf elektronischen Datenträgern zugänglich gemacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Unter Vorbehalt anders lautender internationaler Vereinbarungen dürfen die Kommission und das Bundesamt ausländischen Aufsichtsbehörden im Fernmeldebereich Daten, einschliesslich in Verwaltungs- oder Verwaltungsstrafverfahren beschaffter besonders schützenswerter Personendaten, nur übermitteln, sofern diese Behörden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "solche Daten ausschliesslich zur Ausübung der Aufsicht über Anbieterinnen von Fernmeldediensten und zur Marktbeobachtung verwenden;"
+            },
+            {
+              "marke": "b",
+              "text": "an das Amts- oder Berufsgeheimnis gebunden sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "diese Daten nicht ohne vorgängige Zustimmung der ComCom oder des BAKOM oder auf Grund einer generellen Ermächtigung in einem Staatsvertrag an zuständige Behörden und an Organe weiterleiten, die mit im öffentlichen Interesse liegenden Aufsichtsaufgaben betraut sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die ComCom und das BAKOM dürfen keine Daten an ausländische Strafbehörden weiterleiten, wenn die Rechtshilfe in Strafsachen ausgeschlossen ist. Die ComCom oder das BAKOM entscheidet im Einvernehmen mit dem Bundesamt für Justiz."
+        },
+        {
+          "absatz": "4",
+          "text": "Schweizerische Behörden geben der Kommission und dem Bundesamt kostenlos diejenigen Daten weiter, die für die Durchsetzung der Fernmeldegesetzgebung von Bedeutung sein können, einschliesslich besonders schützenswerter Personendaten. Die Daten werden einzeln, auf Listen oder auf elektronischen Datenträgern zugänglich gemacht."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_13_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "2f0168b0c7266c4bbe71c1d4aa994c7a955c81189cbe054b402f411ca2b6a5d5"
+    },
+    {
+      "id": "bund/FMG/art_14",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ComCom stellt sicher, dass die Grundversorgung für alle Bevölkerungskreise in allen Teilen des Landes gewährleistet wird. Zu diesem Zweck erteilt sie periodisch eine oder mehrere Grundversorgungskonzessionen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konzession ist mit der Auflage verbunden, im Konzessionsgebiet alle oder bestimmte Dienste der Grundversorgung (Art. 16) allen Bevölkerungskreisen anzubieten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Erteilung der Konzession wird eine Ausschreibung durchgeführt. Das Verfahren folgt den Grundsätzen der Objektivität, der Nichtdiskriminierung und der Transparenz. Der Bundesrat regelt die Einzelheiten. Das öffentliche Beschaffungsrecht ist nicht anwendbar."
+        },
+        {
+          "absatz": "4",
+          "text": "Zeigt sich von vornherein, dass die Ausschreibung nicht unter Wettbewerbsbedingungen ablaufen kann, oder führt sie zu keinen geeigneten Bewerbungen, so kann die ComCom eine oder mehrere Anbieterinnen von Fernmeldediensten zur Grundversorgung heranziehen."
+        },
+        {
+          "absatz": "5",
+          "text": "Konzessionen werden in der Regel auf den gleichen Termin befristet."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "d6efb4dc35a16fc002214425338086160579057564707bcbf0f1e7e8d46ab9b1"
+    },
+    {
+      "id": "bund/FMG/art_15",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer eine Grundversorgungskonzession erwerben will, muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über die notwendigen technischen Fähigkeiten verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "glaubhaft darlegen, dass das Dienstleistungsangebot, insbesondere in finanzieller Hinsicht, und der Betrieb während der ganzen Konzessionsdauer sichergestellt sind, und ausweisen, welche finanzielle Abgeltung nach Artikel 19 dafür beansprucht wird;"
+            },
+            {
+              "marke": "c",
+              "text": "dafür Gewähr bieten, dass er das anwendbare Recht, namentlich dieses Gesetz, seine Ausführungsbestimmungen sowie die Konzession einhält;"
+            },
+            {
+              "marke": "d",
+              "text": "dafür Gewähr bieten, dass er die arbeitsrechtlichen Vorschriften einhält und die Arbeitsbedingungen der Branche gewährleistet."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "ae08f50e5a1a3ace9f90e1aa286a90af93b87a5096700f477418cd3dd6c34356"
+    },
+    {
+      "id": "bund/FMG/art_16",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konzessionärin der Grundversorgung erbringt in ihrem Konzessionsgebiet auf dem jeweils aktuellen Stand der Technik und nachfrageorientiert einen oder mehrere der folgenden Dienste:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den öffentlichen Telefondienst, nämlich die fernmeldetechnische Sprachübertragung in Echtzeit, einschliesslich der fernmeldetechnischen Übertragung von Daten mit Datenraten, wie sie über die Übertragungswege für Sprache geleitet werden können, sowie den Anschluss und die Zusatzdienste;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zugang zu Notrufdiensten;"
+            },
+            {
+              "marke": "c",
+              "text": "eine ausreichende Versorgung mit öffentlichen Sprechstellen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Zugang zu den schweizerischen Verzeichnissen der Teilnehmerinnen und Teilnehmer am öffentlichen Telefondienst; der Bundesrat kann vorsehen, dass eine Grundversorgungskonzessionärin ein Verzeichnis aller Kundinnen und Kunden von Diensten der Grundversorgung führt (Universalverzeichnis);"
+            },
+            {
+              "marke": "e",
+              "text": "…."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Dienste der Grundversorgung müssen so angeboten werden, dass Menschen mit Behinderungen sie in qualitativer, quantitativer und wirtschaftlicher Hinsicht unter vergleichbaren Bedingungen wie Menschen ohne Behinderungen beanspruchen können. Zu diesem Zweck hat die Konzessionärin der Grundversorgung insbesondere dafür zu sorgen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die öffentlichen Sprechstellen den Bedürfnissen der sensorisch oder bewegungsbehinderten Menschen entsprechen;"
+            },
+            {
+              "marke": "b",
+              "text": "für Hörbehinderte ein Dienst für die Vermittlung und Umsetzung der Mitteilungen zur Verfügung steht;"
+            },
+            {
+              "marke": "c",
+              "text": "für Sehbehinderte ein Auskunftsdienst und ein Vermittlungsdienst zur Verfügung steht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt die Einzelheiten. Er kann besondere Bestimmungen für Anschlüsse ausserhalb des Siedlungsgebietes vorsehen. Er kann diese Aufgaben dem Eidgenössischen Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK) übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat passt den Inhalt der Grundversorgung periodisch den gesellschaftlichen und wirtschaftlichen Bedürfnissen und dem Stand der Technik an."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "6bfed5d5c8a4523b87c0503022c6eef13f8f7f712cb8ddc30b0b35d92bcc9519"
+    },
+    {
+      "id": "bund/FMG/art_17",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Dienste der Grundversorgung müssen landesweit in einer bestimmten Qualität erhältlich sein. Der Bundesrat legt die Qualitätskriterien fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat strebt distanzunabhängige Tarife an. Er legt periodisch für die Grundversorgung Preisobergrenzen fest. Diese Obergrenzen gelten einheitlich für das ganze Gebiet und richten sich nach der Entwicklung des Marktes."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "9571ce2b4b3c8908a7296736ebf8887f334d896887a5fd3f736349d30933d287"
+    },
+    {
+      "id": "bund/FMG/art_18",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_19",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeigt sich vor der Konzessionserteilung, dass die Kosten für die Erbringung der Grundversorgung in einem bestimmten Gebiet trotz effizienter Betriebsführung nicht gedeckt werden können, so hat die Konzessionärin Anspruch auf eine finanzielle Abgeltung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konzessionärin, die eine finanzielle Abgeltung erhält, muss dem BAKOM jährlich alle für die Kostenevaluation und -kontrolle benötigten Informationen, insbesondere die Rechnungslegungs- und Finanzinformationen, geben."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "413ef6acfeadbd963ff7f0e95609c2a8c41a2bb9f176b779a39aeb3ba6b7dc86"
+    },
+    {
+      "id": "bund/FMG/art_19_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konzession kann nur mit der Genehmigung der ComCom ganz oder teilweise einem Dritten übertragen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Änderung der Konzession gilt Artikel 24 e ."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "fd02097f754012bdd99a1986ecb0e9244cec57c46d5f67218167db69b6006712"
+    },
+    {
+      "id": "bund/FMG/art_19_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Soweit keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen, veröffentlicht das BAKOM den Namen und die Adresse der Konzessionärin, den Konzessionsgegenstand sowie die Rechte und Pflichten aus der Konzession."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_19_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "d5277e7e94a59856a32533683eceea453f8554c0334ec528feecdee3a08a5cf8"
+    },
+    {
+      "id": "bund/FMG/art_20",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen des öffentlichen Telefondienstes müssen einen Dienst anbieten, der es den Benutzerinnen und Benutzern ermöglicht, bei Gefahr für Leib, Leben, Gesundheit oder Eigentum die zuständige Alarmzentrale zu erreichen (Notrufdienst)."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen bei Notrufen die Leitweglenkung und die Standortidentifikation sicherstellen. Der Bundesrat kann, nach Abwägung der Interessen der Bevölkerung und der Anbieterinnen sowie unter Berücksichtigung der technischen Entwicklung und der internationalen Harmonisierung, Ausnahmen festlegen und die Nutzung von Ortungsfunktionen von Endgeräten auch ohne ausdrückliche Zustimmung der Benutzerin oder des Benutzers vorsehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann die Pflicht zur Erbringung des Notrufdienstes auf weitere Fernmeldedienste ausdehnen, die öffentlich zugänglich sind und verbreitet genutzt werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e49b5d38afb8a7822a4aabfd776b03efcebb72c868325428031ea83070ce248d"
+    },
+    {
+      "id": "bund/FMG/art_21",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen des öffentlichen Telefondienstes erheben und aktualisieren die Verzeichnisdaten ihrer Kundinnen und Kunden. Dabei gilt Folgendes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Anbieterinnen des öffentlichen Telefondienstes sind nicht verpflichtet, die Richtigkeit der Daten zu überprüfen."
+            },
+            {
+              "marke": "b",
+              "text": "Sie müssen sicherstellen, dass die Daten den Angaben der Kundinnen und Kunden entsprechen."
+            },
+            {
+              "marke": "c",
+              "text": "Sie können es ablehnen, Angaben in die Verzeichnisdaten aufzunehmen, die offensichtlich unrichtig sind oder einem rechtswidrigen Zweck dienen; sie können solche Angaben aus den Verzeichnisdaten entfernen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ermöglichen den Anbieterinnen von Diensten, die auf den Verzeichnisdaten basieren, den Zugang zum Mindestinhalt der Verzeichnisdaten ihrer Kundinnen und Kunden; sie machen ihnen die Daten elektronisch zugänglich."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie gewähren den Zugang zu den Daten auf transparente und nicht diskriminierende Weise zu Preisen, die sich an den Kosten für das Bereitstellen der Verzeichnisdaten orientieren. Sie berücksichtigen dabei die internationalen technischen Normen. Im Streitfall gelten die Artikel 11 a und 11 b sinngemäss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anbieterinnen von Diensten, die auf den Verzeichnisdaten basieren, müssen die Integrität der Daten wahren. Sie dürfen die Daten nur mit der Zustimmung der für die Erhebung zuständigen Anbieterin des öffentlichen Telefondienstes verändern. Sie müssen die Daten gemäss den von den Anbieterinnen des öffentlichen Telefondienstes übermittelten Änderungen aktualisieren oder löschen. Der Bundesrat kann Vorschriften über die Bearbeitung der Verzeichnisdaten erlassen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anbieterinnen des öffentlichen Telefondienstes können zur Erfüllung ihrer Verpflichtungen Dritte beiziehen."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Bundesrat kann die Anwendung der Vorschriften dieses Artikels auf andere Fernmeldedienste ausdehnen, die öffentlich zugänglich sind und verbreitet genutzt werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "7768da492675980bb176ff510b7cc8436a2ebea1f152194c24df7fcc6abeac0e"
+    },
+    {
+      "id": "bund/FMG/art_21_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "21_a",
+      "artikelLabel": "Art. 21a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen des öffentlichen Telefondienstes müssen sicherstellen, dass alle Benutzerinnen und Benutzer miteinander kommunizieren können (Interoperabilität)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann die Verpflichtung nach Absatz 1 auf andere Fernmeldedienste ausdehnen, die öffentlich zugänglich sind und verbreitet genutzt werden. Er kann Schnittstellen für den Zugang zu den Diensten nach internationalen Normen vorschreiben. Das BAKOM erlässt die nötigen technischen und administrativen Vorschriften."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zur Interoperabilität verpflichteten Anbieterinnen müssen die Interkonnektion auch anbieten, wenn sie nicht marktbeherrschend sind. Für Streitigkeiten über die Bedingungen der Interkonnektion gelten die Artikel 11 a Absätze 1 und 3 sowie 11 b sinngemäss. Der Bundesrat kann den zur Interoperabilität verpflichteten Anbieterinnen weitere Pflichten auferlegen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_21_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "156b2480eace21e1e2aaa32bf85590894935fc034158ba3f8d5ae862c7c5390f"
+    },
+    {
+      "id": "bund/FMG/art_21_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "21_b",
+      "artikelLabel": "Art. 21b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_21_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_22",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Funkfrequenzspektrum darf unter Einhaltung der Nutzungsvorschriften frei genutzt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann vorsehen, dass die Nutzung bestimmter Frequenzen nur zulässig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit einer Konzession des BAKOM oder, in den Fällen nach Artikel 22 a , der ComCom;"
+            },
+            {
+              "marke": "b",
+              "text": "nach einer Meldung an das BAKOM;"
+            },
+            {
+              "marke": "c",
+              "text": "mit einem Fähigkeitszeugnis."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Einschränkungen nach Absatz 2 sieht er nur vor:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Vermeidung funktechnischer Störungen;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Gewährleistung der technischen Qualität von Fernmeldediensten und anderen Funkanwendungen;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Sicherstellung der effizienten Nutzung des Funkfrequenzspektrums; oder"
+            },
+            {
+              "marke": "d",
+              "text": "in Fällen, in denen andere Erlasse oder Staatsverträge vorsehen, dass das Frequenzspektrum nur mit einer Genehmigung der zuständigen Behörde genutzt werden darf."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Für diejenigen Frequenzbereiche, für deren Zuteilung die Armee oder der Zivilschutz gemäss dem nationalen Frequenzzuweisungsplan zuständig ist, sieht der Bundesrat keine Einschränkungen nach Absatz 2 vor."
+        },
+        {
+          "absatz": "5",
+          "text": "Er legt die Nutzungsvorschriften und die Voraussetzungen für die Erteilung der Fähigkeitszeugnisse fest."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "a2c9fb56f2b2ba81f87e12a09b01e27e459f3f3f22b433f6938366dec71f816e"
+    },
+    {
+      "id": "bund/FMG/art_22_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ComCom erteilt die Konzessionen für die Nutzung des Funkfrequenzspektrums, das zur Erbringung von Fernmeldediensten dient."
+        },
+        {
+          "absatz": "2",
+          "text": "Stehen voraussichtlich nicht genügend Frequenzen zur Verfügung, so führt sie in der Regel eine öffentliche Ausschreibung durch."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann die Kompetenz zur Erteilung von Funkkonzessionen, für die keine Knappheit nach Absatz 2 besteht oder droht, im Einzelfall oder generell für ganze Frequenzbänder dem BAKOM übertragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Grundsätze der Erteilung von Funkkonzessionen, die ganz oder teilweise für die Verbreitung von Radio- und Fernsehprogrammen bestimmt sind."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "08a326a7e6eaaeb964b73777d6e205277bbf364054dcc313a4302e15b4e53e03"
+    },
+    {
+      "id": "bund/FMG/art_23",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Funkkonzession erwerben will, muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über die notwendigen technischen Fähigkeiten und, sofern für die Nutzung der entsprechenden Frequenzen vorgeschrieben (Art. 22 Abs. 2 Bst. c), über ein entsprechendes Fähigkeitszeugnis verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "dafür Gewähr bieten, dass er das anwendbare Recht, namentlich dieses Gesetz, das RTVG, die entsprechenden Ausführungsbestimmungen sowie die Konzession einhält."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit keine internationalen Verpflichtungen entgegenstehen, kann die Konzessionsbehörde nach ausländischem Recht organisierten Unternehmen die Konzession verweigern, wenn kein Gegenrecht gewährt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Funkkonzession wird nur erteilt, wenn gestützt auf den nationalen Frequenzzuweisungsplan genügend Frequenzen zur Verfügung stehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erteilung einer Funkkonzession darf wirksamen Wettbewerb weder beseitigen noch erheblich beeinträchtigen, es sei denn, Gründe der wirtschaftlichen Effizienz rechtfertigten eine Ausnahme. Ist die Frage der Beseitigung oder der erheblichen Beeinträchtigung des wirksamen Wettbewerbs zu beurteilen, so konsultiert die Konzessionsbehörde die Wettbewerbskommission."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "5371c41eb55fc01ab9c1c1bf1e18fd79306227723f71dad7aef7326f805967e5"
+    },
+    {
+      "id": "bund/FMG/art_24",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat regelt das Verfahren zur Erteilung der Funkkonzessionen. Dieses folgt den Grundsätzen der Objektivität, der Nichtdiskriminierung und der Transparenz. Die von den Gesuchstellerinnen gemachten Angaben werden vertraulich behandelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das öffentliche Beschaffungsrecht ist nicht anwendbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann für das erstinstanzliche Verfahren betreffend die öffentliche Ausschreibung und für das Beschwerdeverfahren insbesondere zur Beurteilung der Eingaben und zur Wahrung von Geschäftsgeheimnissen von den folgenden Bestimmungen des Bundesgesetzes vom 20. Dezember 1968 über das Verwaltungsverfahren (VwVG) abweichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Feststellung des Sachverhalts (Art. 12 VwVG);"
+            },
+            {
+              "marke": "b",
+              "text": "Mitwirkung der Parteien (Art. 13 VwVG);"
+            },
+            {
+              "marke": "c",
+              "text": "Akteneinsicht (Art. 26–28 VwVG);"
+            },
+            {
+              "marke": "d",
+              "text": "rechtliches Gehör (Art. 30 und 31 VwVG);"
+            },
+            {
+              "marke": "e",
+              "text": "Eröffnung und Begründung von Verfügungen (Art. 34 und 35 VwVG)."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Zwischenverfügungen im Verfahren betreffend die öffentliche Ausschreibung sind nicht selbstständig durch Beschwerde anfechtbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c5ecb5607ff4c147417f86d36c1ad3d8f627405fd266b35b222f743b4aecc832"
+    },
+    {
+      "id": "bund/FMG/art_24_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_24_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_b",
+      "artikelLabel": "Art. 24b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bestehen für einen bestimmten konzessionspflichtigen Sachverhalt keine Konzessionsvorschriften, so legt die Konzessionsbehörde diese im Einzelfall fest."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "8fb3726b794e6a55c562bab5cec667bb709f1a802da0700b3cef312258e7f3ba"
+    },
+    {
+      "id": "bund/FMG/art_24_c",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_c",
+      "artikelLabel": "Art. 24c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Konzession wird auf bestimmte Zeit erteilt. Die Konzessionsbehörde legt die Dauer nach Art und Bedeutung der Konzession fest."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c916eb841a3d2fc504cef7634bb227894f6bc038964c0de16fa4567b910a1d70"
+    },
+    {
+      "id": "bund/FMG/art_24_d",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_d",
+      "artikelLabel": "Art. 24d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Konzessionen sind ganz oder teilweise übertragbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Übertragungen sind nur mit vorgängiger Zustimmung der Konzessionsbehörde zulässig. Die Zustimmung darf nur verweigert werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Konzessionsvoraussetzungen nach Artikel 23 nicht eingehalten werden; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die störungsfreie und effiziente Frequenznutzung nicht gewährleistet ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Konzessionsbehörde kann für einzelne Frequenzbereiche Ausnahmen vom Zustimmungserfordernis vorsehen, wenn eine störungsfreie und effiziente Frequenznutzung voraussichtlich weiterhin gewährleistet ist und wenn der wirksame Wettbewerb dadurch weder beseitigt noch erheblich beeinträchtigt wird. Übertragungen, die keiner Zustimmung bedürfen, müssen der Konzessionsbehörde vorgängig gemeldet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Wurde die Konzession von der ComCom erteilt, so ist Absatz 2 sinngemäss auf den wirtschaftlichen Übergang der Konzession anwendbar. Ein wirtschaftlicher Übergang liegt vor, wenn ein Unternehmen nach den kartellrechtlichen Bestimmungen die Kontrolle über die Konzessionärin erlangt."
+        },
+        {
+          "absatz": "5",
+          "text": "Nutzen Inhaberinnen von Konzessionen, die von der ComCom erteilt wurden, Bestandteile von Funknetzen gemeinsam, so müssen sie dies der ComCom vorgängig melden. Eine gemeinsame Frequenznutzung bedarf der Zustimmung nach Absatz 2."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "554d5474ca8c9bebfd70ae181b24c3f6f79b67212935ee3837be34b61a0da1c0"
+    },
+    {
+      "id": "bund/FMG/art_24_e",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_e",
+      "artikelLabel": "Art. 24e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konzessionsbehörde kann die Konzession veränderten tatsächlichen oder rechtlichen Verhältnissen anpassen oder widerrufen, wenn die Änderung oder der Widerruf zur Wahrung wichtiger öffentlicher Interessen notwendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konzessionärin wird angemessen entschädigt, wenn die übertragenen Rechte widerrufen oder wesentlich geschmälert werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "29f2288d5935d96d94e8d23689b8faf0d207548c969c7f7a4974e77454123ce6"
+    },
+    {
+      "id": "bund/FMG/art_24_f",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "24_f",
+      "artikelLabel": "Art. 24f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit keine überwiegenden öffentlichen oder privaten Interessen entgegenstehen, gibt das BAKOM Auskunft über Name und Adresse der Konzessionärin, den Konzessionsgegenstand, die Rechte und Pflichten aus der Konzession, die Frequenzzuteilungen sowie die Sendestandorte."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann diese Informationen veröffentlichen und im Abrufverfahren zugänglich machen, wenn hierfür ein öffentliches Interesse besteht."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_24_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "930feaabf68a3d7ccf2e6bde25ed2e3f1ebfc51b22c78af5836f3d79cf73a582"
+    },
+    {
+      "id": "bund/FMG/art_25",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM verwaltet das Frequenzspektrum sowie die schweizerischen Nutzungsrechte und Orbitalpositionen von Satelliten unter Beachtung der internationalen Vereinbarungen. Es ergreift die geeigneten Massnahmen zur Gewährleistung einer effizienten und störungsfreien Nutzung sowie zur Sicherung eines gleichberechtigten Zugangs zu diesen Gütern gestützt auf den nationalen Frequenzzuweisungsplan."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Es erlässt den nationalen Frequenzzuweisungsplan. Dabei trägt es in angemessener Weise den Frequenzbedürfnissen Rechnung, die sich aus den Aufgaben der Armee und des Zivilschutzes ergeben; es arbeitet mit der zuständigen Stelle der Armee zusammen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat genehmigt den nationalen Frequenzzuweisungsplan."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann der Armee bei einem Truppenaufgebot für die Dauer des Einsatzes zusätzliche freie oder bereits konzessionierte Frequenzen zuteilen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b878d9eeccf8650d0dfc3c19d7574a90ca6627efe8eaad088d1916fa908463c4"
+    },
+    {
+      "id": "bund/FMG/art_26",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM kontrolliert das Frequenzspektrum zu Planungszwecken und im Rahmen der Aufsicht über die Frequenznutzung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es übt diese Kontrollen allein oder in Zusammenarbeit mit anderen Behörden aus. Der Bundesrat regelt die Zusammenarbeit."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM darf den Inhalt des Funkverkehrs abhören und aufzeichnen, soweit dies zur Gewährleistung eines störungsfreien Fernmeldeverkehrs und Rundfunks erforderlich ist und andere Massnahmen nicht erfolgreich waren oder mit unverhältnismässigem Aufwand verbunden sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die aufgezeichneten Informationen dürfen nur zur Ermittlung von Störenden und Störungsursachen verwendet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Besteht der begründete Verdacht, dass eine nach diesem Gesetz strafbare Handlung begangen wurde, so sind die zum Beweis geeigneten Aufzeichnungen der zuständigen Behörde zu übergeben. Jede andere Aufzeichnung ist unverzüglich zu vernichten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "f980aac6182d93d82b14163438f3b9fa280e360a8f1da0966871938ff34bb40f"
+    },
+    {
+      "id": "bund/FMG/art_27",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 13 a und 13 b über die Datenbearbeitung und die Amtshilfe sind anwendbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "d84c08952f314d14d0551949a7f6cf1ec0a8ec6f0f43a53a1af6facc31895c0d"
+    },
+    {
+      "id": "bund/FMG/art_28",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM verwaltet die Adressierungselemente, deren Verwaltung auf nationaler Ebene zu erfolgen hat. Es sorgt dafür, dass genügend Adressierungselemente vorhanden sind; dabei berücksichtigt es die technische Entwicklung und die internationale Harmonisierung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt, welche Adressierungselemente vom BAKOM verwaltet werden müssen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann zur Beilegung von Streitigkeiten zwischen den Inhaberinnen und Inhabern von Adressierungselementen und Dritten ein zwingendes alternatives Verfahren vorschreiben. Er regelt das Verfahren, seine Folgen und seine Auswirkungen auf das zivilrechtliche Verfahren, insbesondere den Stillstand der Verjährung und die Beweislast. Vorbehalten sind Zivilklagen der Inhaberinnen und Inhaber von Adressierungselementen und Dritter."
+        },
+        {
+          "absatz": "4",
+          "text": "Niemand hat Anspruch auf ein bestimmtes Adressierungselement. Der Bundesrat kann Ausnahmen vorsehen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anbieterinnen von Fernmeldediensten stellen die Nummernportabilität sicher."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Bundesrat erlässt Vorschriften über die Verwaltung von Adressierungselementen, insbesondere über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuteilung, die Nutzung, die Sperrung, die Übertragung und den Widerruf;"
+            },
+            {
+              "marke": "b",
+              "text": "den Erlass der Nummerierungspläne;"
+            },
+            {
+              "marke": "c",
+              "text": "die Übertragung der Verwaltung an Dritte, die Beendigung der delegierten Tätigkeit sowie die Aufsicht über diese;"
+            },
+            {
+              "marke": "d",
+              "text": "die Unterzuteilung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Nummernportabilität."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "adbf31e6f1fa7514a47869d150b3d1dfb2b022033ac1e39e7622b15b2da91fcd"
+    },
+    {
+      "id": "bund/FMG/art_28_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM kann die Verwaltung bestimmter Adressierungselemente in besonderen Fällen Dritten übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es wählt die Dritten aufgrund eines Ausschreibungs- oder eines Einladungsverfahrens aus. Liegen wichtige Gründe vor, so bestimmt es diese direkt."
+        },
+        {
+          "absatz": "3",
+          "text": "Führt das Ausschreibungs- oder das Einladungsverfahren zu keinen geeigneten Bewerbungen oder können die Beauftragten ihre Pflichten nicht mehr erfüllen, so kann das BAKOM Dritte verpflichten, die Aufgabe wahrzunehmen. Diese können für ihre Tätigkeit Preise verlangen, die die relevanten Kosten decken und die Erzielung eines angemessenen Gewinns erlauben."
+        },
+        {
+          "absatz": "4",
+          "text": "Betreffend das Auswahlverfahren gilt Artikel 24 sinngemäss."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b8b1b6ec094fccc6aa73bf2458f893d24594e1818f9eb65453b610e60d759235"
+    },
+    {
+      "id": "bund/FMG/art_28_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28_b",
+      "artikelLabel": "Art. 28b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz gilt für die folgenden Internet-Domains:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die länderspezifische Domain «.ch» und, sofern die Verwaltung der Domain in den Zuständigkeitsbereich des Bundes fällt, alle anderen Internet-Domains, die alphanumerisch die Schweiz bezeichnen, einschliesslich der Umsetzung in anderen Alphabeten oder grafischen Systemen;"
+            },
+            {
+              "marke": "b",
+              "text": "die generischen Domains, für deren Verwaltung schweizerische öffentlich-rechtliche Körperschaften zuständig sind;"
+            },
+            {
+              "marke": "c",
+              "text": "die generischen Domains, für deren Verwaltung Personen mit Wohnsitz oder Sitz in der Schweiz zuständig sind;"
+            },
+            {
+              "marke": "d",
+              "text": "die generischen Domains, die angesichts ihrer Bezeichnung von besonderer politischer, kultureller, geografischer oder religiöser Bedeutung für die Schweiz sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "61d3c2f1f1655813fd3eac8bd9644d8949b2b00195c4a5cbf4068d0567953647"
+    },
+    {
+      "id": "bund/FMG/art_28_c",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28_c",
+      "artikelLabel": "Art. 28c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM verwaltet Internet-Domains, für deren Verwaltung der Bund zuständig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann gewerbliche Dienstleistungen gegenüber Dritten erbringen, soweit dies für die Verwaltung von Domain-Namen nötig ist und die Voraussetzungen nach Artikel 41 a Absätze 2 und 3 des Finanzhaushaltsgesetzes vom 7. Oktober 2005 erfüllt sind."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "70624842288545adae1f3c59b24010d65b1f2539f6c876475d7075a9d78b8821"
+    },
+    {
+      "id": "bund/FMG/art_28_d",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28_d",
+      "artikelLabel": "Art. 28d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verwaltung der Internet-Domains und der diesen untergeordneten Domain-Namen richtet sich nach den folgenden Grundsätzen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Sicherheit und die Verfügbarkeit der Infrastruktur und der für das Funktionieren des Domain-Namen-Systems erforderlichen Dienstleistungen sind gewährleistet."
+            },
+            {
+              "marke": "b",
+              "text": "Die Verwaltung erfolgt auf transparente und nicht diskriminierende Weise, wenn sie in den Zuständigkeitsbereich öffentlich-rechtlicher Körperschaften fällt."
+            },
+            {
+              "marke": "c",
+              "text": "Die Halterinnen und Halter sowie die Gesuchstellerinnen und Gesuchsteller von Domain-Namen werden vor der missbräuchlichen Nutzung ihrer Personendaten geschützt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "fd42a16b1940df6896e14aff97e1d30c1e79135d12f8c2ed22646a9bc27e6f12"
+    },
+    {
+      "id": "bund/FMG/art_28_e",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "28_e",
+      "artikelLabel": "Art. 28e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat regelt die Modalitäten der Verwaltung der Internet-Domains und der diesen untergeordneten Domain-Namen; dabei berücksichtigt er die Regeln, die auf internationaler Ebene angewendet werden. Er kann insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bedingungen für die Zuteilung, die Nutzung, die Sperrung, die Übertragung und den Widerruf von Domain-Namen festlegen, die den in die Kompetenz des Bundes fallenden Domains untergeordnet sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bearbeitung von Personendaten in Zusammenhang mit Domains regeln, die in den Geltungsbereich dieses Gesetzes fallen, einschliesslich des zur Verfügungsstellens einer öffentlich zugänglichen Datenbank, die jeder Person den Zugang zu Angaben über die Halterinnen und Halter von Domain-Namen gewährleistet;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen vorsehen, die eine widerrechtliche Nutzung von Domain-Namen oder eine Nutzung von Domain-Namen verhindern, die gegen die öffentliche Ordnung verstösst, und die Zusammenarbeit mit den spezialisierten privaten oder öffentlichen Stellen in diesem Bereich regeln;"
+            },
+            {
+              "marke": "d",
+              "text": "die institutionelle, funktionelle und operationelle Organisation der Domains, die in den Zuständigkeitsbereich des Bundes fallen, festlegen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Verwaltung von Domains regeln, für die andere öffentlich-rechtliche Körperschaften als der Bund oder in der Schweiz ansässige Privatpersonen zuständig sind;"
+            },
+            {
+              "marke": "f",
+              "text": "Bestimmungen betreffend generische Domains von besonderer politischer, kultureller, geografischer oder religiöser Bedeutung erlassen, sofern dies für die Wahrung der Interessen der Schweiz notwendig ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_28_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "818f13fda91fb6090969aa98f6eb5d4165702473d82b0589dbb35464f4f3e628"
+    },
+    {
+      "id": "bund/FMG/art_29",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Inhaberinnen und Inhaber von Adressierungselementen sind verpflichtet, der zuständigen Behörde die zur Verwaltung der zugeteilten Adressierungselemente notwendigen Auskünfte zu erteilen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "790dcde21877ff38628a0917c9a9cf78ee447680d99fbee8f2d1c0e7c42b2a20"
+    },
+    {
+      "id": "bund/FMG/art_30",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Änderungen der Nummerierungspläne oder der Vorschriften über die Verwaltung der Adressierungselemente durch die Behörden begründen keinen Anspruch auf Entschädigung."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c447646a6681c6820d78e76b21dd42373345ddfd38dd438acf55f567f07d5f0a"
+    },
+    {
+      "id": "bund/FMG/art_30_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "30_a",
+      "artikelLabel": "Art. 30a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 13 a und 13 b über die Datenbearbeitung und die Amtshilfe sind anwendbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_30_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "d84c08952f314d14d0551949a7f6cf1ec0a8ec6f0f43a53a1af6facc31895c0d"
+    },
+    {
+      "id": "bund/FMG/art_31",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann technische Vorschriften über das Importieren, das Anbieten, das Bereitstellen auf dem Markt und die Inbetriebnahme von Fernmeldeanlagen festlegen, insbesondere hinsichtlich grundlegender fernmeldetechnischer Anforderungen sowie der Konformitätsbewertung, der Konformitätsbescheinigung, der Konformitätserklärung, der Kennzeichnung, der Anmeldung und der Nachweispflicht (Art. 3 des Bundesgesetzes vom 6. Oktober 1995 über die technischen Handelshemmnisse)."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat der Bundesrat die grundlegenden fernmeldetechnischen Anforderungen nach Absatz 1 festgelegt, so konkretisiert das BAKOM diese Anforderungen in der Regel, indem es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "technische Normen bezeichnet, bei deren Einhaltung vermutet wird, dass auch die grundlegenden Anforderungen erfüllt sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "technische Normen, Rechtsakte der Europäischen Union oder andere Festlegungen für verbindlich erklärt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Umsetzung von Absatz 2 berücksichtigt das BAKOM die internationalen Normen; Abweichungen bedürfen der Zustimmung des Staatssekretariats für Wirtschaft."
+        },
+        {
+          "absatz": "3bis",
+          "text": "Das BAKOM kann technische Normen erarbeiten und veröffentlichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Hat der Bundesrat keine grundlegenden fernmeldetechnischen Anforderungen nach Absatz 1 festgelegt oder hat das BAKOM diese nicht nach Absatz 2 konkretisiert, so muss die Person, die eine Fernmeldeanlage anbietet, auf dem Markt bereitstellt oder in Betrieb nimmt, dafür sorgen, dass diese den anerkannten Regeln der Fernmeldetechnik entspricht. Als solche Regeln gelten in erster Linie die international harmonisierten technischen Normen. Wo solche fehlen, sind die technischen Spezifikationen des BAKOM und, soweit auch keine solchen bestehen, die nationalen Normen zu beachten."
+        },
+        {
+          "absatz": "5",
+          "text": "Wenn Gründe der fernmeldetechnischen Sicherheit es erfordern, kann das BAKOM vorschreiben, dass Fernmeldeanlagen nur an besonders befähigte Personen abgegeben werden dürfen. Es kann die Einzelheiten dieser Abgabe festlegen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "4973e0dd2c12207dd535de9308b07ee5a68d399fe5ddac4ca8d785fbe6f21562"
+    },
+    {
+      "id": "bund/FMG/art_32",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Fernmeldeanlage darf nur erstellt und betrieben werden, wenn sie zum Zeitpunkt ihres erstmaligen Bereitstellens auf dem Markt, Erstellens oder Inbetriebnehmens den dafür geltenden Vorschriften entsprach und in diesem Zustand erhalten wurde. Der Bundesrat kann Ausnahmen festlegen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "edd262830819937d289aa1ecc4966c88e78b7c2f4ee4f1e2dbcedf16b54b9986"
+    },
+    {
+      "id": "bund/FMG/art_32_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "32_a",
+      "artikelLabel": "Art. 32a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat regelt das Importieren, das Anbieten, das Bereitstellen auf dem Markt, die Inbetriebnahme, das Erstellen und das Betreiben von Fernmeldeanlagen, die von Behörden im Interesse der öffentlichen Sicherheit eingesetzt werden müssen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_32_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "897f369df7c27749d3847cd67fd1e55d17acb0249be41590c4cc2a5f5c992f2a"
+    },
+    {
+      "id": "bund/FMG/art_32_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "32_b",
+      "artikelLabel": "Art. 32b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es ist verboten, Fernmeldeanlagen und andere Vorrichtungen, die dazu bestimmt sind, den Fernmeldeverkehr oder den Rundfunk zu stören oder zu verhindern, herzustellen, zu importieren, anzubieten, auf dem Markt bereitzustellen, zu besitzen, in Betrieb zu nehmen, zu erstellen oder zu betreiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 32 a bleibt vorbehalten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_32_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "19315290713bc7b844ffb387f94171603e0ddef48e42409d468475fe8dde4ffa"
+    },
+    {
+      "id": "bund/FMG/art_33",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Um zu kontrollieren, ob die Vorschriften über das Importieren, das Anbieten, das Bereitstellen auf dem Markt, die Inbetriebnahme, das Erstellen oder das Betreiben von Fernmeldeanlagen eingehalten werden, kann das BAKOM zu den üblichen Arbeitszeiten die Räume betreten, in welchen sich die Anlagen befinden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt das Zutrittsrecht zu Fernmeldeanlagen, die militärischen Geheimhaltungsvorschriften unterstehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Entspricht eine Fernmeldeanlage den Vorschriften nicht, so trifft das BAKOM die nötigen Massnahmen. Es kann insbesondere das Erstellen und das Betreiben sowie das Importieren, das Anbieten und das Bereitstellen auf dem Markt einschränken oder verbieten, die Herstellung des vorschriftsgemässen Zustandes oder den Rückruf anordnen oder die Anlage entschädigungslos beschlagnahmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM kann die Informationen über Massnahmen nach Absatz 3 veröffentlichen und sie im Abrufverfahren zugänglich machen, wenn hierfür ein öffentliches Interesse besteht."
+        },
+        {
+          "absatz": "5",
+          "text": "Über laufende administrative oder strafrechtliche Verfolgungen darf es nur bei einem überwiegenden öffentlichen oder privaten Interesse Auskunft geben oder diese veröffentlichen oder im Abrufverfahren zugänglich machen."
+        },
+        {
+          "absatz": "6",
+          "text": "Es kann sich an internationalen Datenbanken zum Informationsaustausch zwischen Marktüberwachungsbehörden beteiligen. Es darf darin nur Daten erfassen, deren Übermittlung an ausländische Behörden nach Artikel 13 b zulässig wäre."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "3526954fa591d5d4ded34e324cfb1a134f7af8692cba9b26148938f8d8649c6a"
+    },
+    {
+      "id": "bund/FMG/art_34",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stört eine Fernmeldeanlage den Fernmeldeverkehr oder den Rundfunk, so kann das BAKOM die Betreiberin verpflichten, die Anlage auf eigene Kosten zu ändern oder den Betrieb einzustellen, auch wenn sie den Vorschriften über das Importieren, das Anbieten, das Bereitstellen auf dem Markt, die Inbetriebnahme, das Erstellen und das Betreiben entspricht."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Das Bundesamt kann das Anbieten und das Bereitstellen auf dem Markt von Funkanlagen einschränken oder verbieten, wenn diese Störungen von Anwendungen des Frequenzspektrums, die einen erhöhten Schutz erfordern, verursachen oder verursachen können. Dies gilt auch dann, wenn die Funkanlagen den Vorschriften über das Anbieten und das Bereitstellen auf dem Markt entsprechen."
+        },
+        {
+          "absatz": "1ter",
+          "text": "Der Bundesrat regelt, unter welchen Voraussetzungen die folgenden Behörden zu den nachstehenden Zwecken eine störende Fernmeldeanlage erstellen, in Betrieb nehmen oder betreiben können:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Polizei-, Strafverfolgungs- und Strafvollzugsbehörden: zur Gewährleistung der öffentlichen Sicherheit und der Strafrechtspflege;"
+            },
+            {
+              "marke": "b",
+              "text": "Nachrichtendienst des Bundes: zur Gewährleistung des Schutzes und der Sicherheit seiner Mitarbeiterinnen und Mitarbeiter, Informationen und Einrichtungen;"
+            },
+            {
+              "marke": "c",
+              "text": "Armee: zur Gewährleistung der Landesverteidigung;"
+            },
+            {
+              "marke": "d",
+              "text": "die zuständigen Behörden: zur Durchführung von Notsuchen und Fahndungen nach verurteilten Personen."
+            }
+          ]
+        },
+        {
+          "absatz": "1quater",
+          "text": "Beeinträchtigen rechtmässige Störungen andere öffentliche Interessen oder Interessen Dritter übermässig, so wird Absatz 1 angewendet."
+        },
+        {
+          "absatz": "2",
+          "text": "Um den Ursprung von Störungen des Fernmeldeverkehrs und des Rundfunks zu bestimmen, ist dem BAKOM Zutritt zu allen Fernmeldeanlagen zu gewähren."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "37e6d11d69eedec71588a32519b8282d7afbe28cd81a1e8370ba7dde86a990f8"
+    },
+    {
+      "id": "bund/FMG/art_34_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "34_a",
+      "artikelLabel": "Art. 34a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 13 a und 13 b über die Datenbearbeitung und die Amtshilfe sind auf die Artikel 31–34 anwendbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_34_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "dfcbabc061d487b622adeea5a6f5725c75d715868936c61f9f8d4cc5ead2f129"
+    },
+    {
+      "id": "bund/FMG/art_35",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Eigentümerinnen und Eigentümer von Boden im Gemeingebrauch (wie Strassen, Fusswege, öffentliche Plätze, Flüsse, Seen sowie Ufer) sind verpflichtet, den Anbieterinnen von Fernmeldediensten die Benutzung dieses Bodens für Bau und Betrieb von Leitungen und öffentlichen Sprechstellen zu bewilligen, sofern diese Einrichtungen den Gemeingebrauch nicht beeinträchtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Anbieterinnen von Fernmeldediensten nehmen Rücksicht auf den Zweck und die Nutzung des in Anspruch genommenen Grundstücks und tragen die Kosten für die Wiederherstellung des ursprünglichen Zustandes. Sie sind verpflichtet, ihre Leitungen zu verlegen, wenn von der Grundeigentümerin oder vom Grundeigentümer eine Benützung des Grundstücks beabsichtigt ist, die sich mit der Leitungsführung nicht verträgt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Einzelheiten, namentlich die Koordinationspflicht der Anbieterinnen sowie die Voraussetzungen für die Verlegung von Leitungen und öffentlichen Sprechstellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bewilligung ist in einem einfachen und raschen Verfahren zu erteilen. Ausser kostendeckenden Gebühren darf eine Entschädigung für die Inanspruchnahme von Grund und Boden, soweit sie den Gemeingebrauch nicht beeinträchtigt, nicht verlangt werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c2af5aaf2a45544ad90ebe77539ec2bf33bc413dde40194ff4175c861e54705b"
+    },
+    {
+      "id": "bund/FMG/art_35_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "35_a",
+      "artikelLabel": "Art. 35a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegenschaftseigentümerinnen und -eigentümer müssen, soweit zumutbar, nebst dem Anschluss ihrer Wahl weitere Anschlüsse bis in die Wohnungen oder die Geschäftsräume dulden, wenn eine Anbieterin von Fernmeldediensten dies verlangt und die Kosten dafür übernimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anschluss von Liegenschaften nach Massgabe kantonaler Erschliessungsbestimmungen bleibt vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Nutzungsentgelte dürfen nicht erhoben werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Mieterin oder ein Mieter oder eine Pächterin oder ein Pächter einen Neuanschluss von Anfang an nicht benutzen will;"
+            },
+            {
+              "marke": "b",
+              "text": "der Anschluss gekündigt worden ist; die Fernmeldedienstanbieterin oder gegebenenfalls die Vermieterin oder der Vermieter sieht eine angemessene Kündigungsfrist vor."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anbieterin von Fernmeldediensten oder die Vermieterin oder der Vermieter kann unbenutzte Anschlüsse versiegeln und die Versiegelung kontrollieren. Für die Versiegelung und die Entsiegelung dürfen keine Kosten in Rechnung gestellt werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_35_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "34d73dc3848b1f0ff5c0296280048e981f4dd1a07f56cdfd79b93dee9eb81613"
+    },
+    {
+      "id": "bund/FMG/art_35_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "35_b",
+      "artikelLabel": "Art. 35b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Anbieterin von Fernmeldediensten hat das Recht auf Zugang zum Gebäudeeinführungspunkt und auf Mitbenutzung der für die fernmeldetechnische Übertragung bestimmten gebäudeinternen Anlagen, soweit dies technisch vertretbar ist und keine anderen wichtigen Gründe für eine Verweigerung vorliegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Liegenschaftseigentümerinnen und -eigentümer sowie Anbieterinnen von Fernmeldediensten haben die Mitbenutzung der gebäudeinternen Anlagen auf transparente und nicht diskriminierende Weise zu gewähren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Liegenschaftseigentümerinnen und -eigentümer stellen den Anbieterinnen auf Anfrage die erforderlichen Informationen zu den gebäudeinternen Anlagen zur Verfügung."
+        },
+        {
+          "absatz": "4",
+          "text": "Anbieterinnen, die eine Anlage finanziert haben, sind angemessen zu entschädigen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die ComCom entscheidet über Streitigkeiten zwischen Anbieterinnen von Fernmeldediensten betreffend den Zugang zum Gebäudeeinführungspunkt oder die Bedingungen der Mitbenutzung auf Gesuch hin. Artikel 11 b gilt sinngemäss."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_35_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "1b4892d69cb27416be8461fe3a6c5ad90e717b2aeab70b81019c208cb4a27f50"
+    },
+    {
+      "id": "bund/FMG/art_36",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegt die Erstellung einer Fernmeldeanlage im öffentlichen Interesse, so erteilt das UVEK das Enteignungsrecht. Das Verfahren richtet sich nach dem Enteignungsgesetz vom 20. Juni 1930."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAKOM kann auf Antrag aus Gründen des öffentlichen Interesses, namentlich um den Anliegen der Raumplanung, des Landschafts-, Heimat-, Umwelt, Natur- und Tierschutzes oder technischen Schwierigkeiten Rechnung zu tragen, Anbieterinnen von Fernmeldediensten verpflichten, Dritten gegen angemessenes Entgelt die Mitbenutzung ihrer Fernmeldeanlagen und anderen Anlagen, wie Kabelkanäle und Sendestandorte, zu gestatten, wenn die Anlagen über ausreichende Kapazität verfügen."
+        },
+        {
+          "absatz": "3",
+          "text": "Unter denselben Voraussetzungen kann das BAKOM Anbieterinnen von Fernmeldediensten verpflichten, Fernmeldeanlagen und andere Anlagen, wie Kabelkanäle und Sendestandorte, gemeinsam zu installieren und zu nutzen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "d955329c5257f34a3e25c5e15b9b443a09c15d69438237a0e24ffa98e51675a9"
+    },
+    {
+      "id": "bund/FMG/art_36_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "36_a",
+      "artikelLabel": "Art. 36a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Eigentum der Anbieterinnen von Fernmeldediensten stehende Leitungen, die zum Zeitpunkt des Inkrafttretens der Änderung vom 22. März 2019 bestehen und sich in Kanalisationen befinden, die zum Zwecke der raumplanerischen Erschliessung erstellt wurden, dürfen nur aus wichtigen Gründen aus den Kanalisationen verwiesen werden. Den Anbieterinnen von Fernmeldediensten sind, wenn möglich, für ihre Leitungen alternative Kanalisationen anzubieten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_36_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "592ee2dbe26163ecaa67e94a7de5d030d99fbae73711b066fcfb30dc28529ab9"
+    },
+    {
+      "id": "bund/FMG/art_37",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leitungen zur fernmeldetechnischen Übertragung von Informationen und Kabelkanäle stehen im Eigentum der Anbieterinnen von Fernmeldediensten, die sie erstellt oder von Dritten erworben haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Grundeigentümerinnen und Grundeigentümer, die auf dem eigenen Grundstück die Leitung oder den Kabelkanal einer Anbieterin von Fernmeldediensten beschädigen, haften bei Vorsatz oder grober Fahrlässigkeit für den Schaden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "3814fec56db881c2367880d0d25156d640808725b19e6d6f10e23bd5ad9a8db0"
+    },
+    {
+      "id": "bund/FMG/art_37_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "37_a",
+      "artikelLabel": "Art. 37a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörden können für einfache Draht- und Stabantennen sowie für Antennen auf leichten Masten mit ähnlichem Erscheinungsbild wie Fahnenmasten ein vereinfachtes Bewilligungsverfahren vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Unterhalt oder der Ersatz einer Antenne durch eine ähnlich grosse Antenne ist nicht bewilligungspflichtig."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_37_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "30a10a2e9b9ad1db71654143501ba0d9f372c81807d9e6f7b1f9b33bc257fc15"
+    },
+    {
+      "id": "bund/FMG/art_38",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM erhebt bei den Anbieterinnen von Fernmeldediensten eine Abgabe, deren Ertrag ausschliesslich zur Finanzierung der ungedeckten Kosten der Grundversorgung nach Artikel 16 und der Kosten für die Verwaltung des Finanzierungsmechanismus verwendet wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abgabe muss insgesamt die in Absatz 1 aufgeführten Kosten decken und wird proportional zu den Umsätzen aus den angebotenen Fernmeldediensten festgelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann Anbieterinnen, deren Umsatz aus den angebotenen Fernmeldediensten unter einem festgelegten Betrag liegt, von der Abgabe befreien."
+        },
+        {
+          "absatz": "4",
+          "text": "Er regelt die Einzelheiten der Bereitstellung der Informationen, die für die Aufteilung und Kontrolle der in Absatz 1 aufgeführten Kosten benötigt werden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "19e9832a58bb9d2cf958020175bacc0b2d96e7ac3d9abc62091dfea16ead27b5"
+    },
+    {
+      "id": "bund/FMG/art_39",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konzessionsbehörde erhebt für Funkkonzessionen eine Konzessionsgebühr. Keine Konzessionsgebühr wird erhoben auf Funkkonzessionen zur Verbreitung von konzessionierten Radio- und Fernsehprogrammen nach dem RTVG."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höhe der Funkkonzessionsgebühr bemisst sich nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem zugeteilten Frequenzbereich, der Frequenzklasse und dem Wert der Frequenzen;"
+            },
+            {
+              "marke": "b",
+              "text": "der zugeteilten Bandbreite;"
+            },
+            {
+              "marke": "c",
+              "text": "der räumlichen Ausdehnung; und"
+            },
+            {
+              "marke": "d",
+              "text": "der zeitlichen Nutzung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Kann eine Frequenz neben der Verbreitung konzessionierter Radio- und Fernsehprogramme auch für die Übertragung anderer Radio- und Fernsehprogramme und Informationen genutzt werden, so wird dafür anteilsmässig eine Konzessionsgebühr erhoben."
+        },
+        {
+          "absatz": "3bis",
+          "text": "Um die Einführung neuer Verbreitungstechnologien nach Artikel 58 RTVG zu begünstigen, oder zur Wahrung der Angebotsvielfalt in drahtlos-terrestrisch unterversorgten Gebieten, kann der Bundesrat die Konzessionsgebühr für die Verbreitung von Radio- und Fernsehprogrammen reduzieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden die Funkkonzessionen im Versteigerungsverfahren vergeben, so entspricht die Konzessionsgebühr dem angebotenen Betrag abzüglich der Verwaltungsgebühr für die Ausschreibung und die Erteilung der Funkkonzession. Die Konzessionsbehörde kann ein Mindestangebot festlegen."
+        },
+        {
+          "absatz": "5",
+          "text": "Sofern keine Fernmeldedienste erbracht werden, kann der Bundesrat nach Massgabe einer rationellen Frequenznutzung von der Funkkonzessionsgebühr befreien:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Behörden sowie öffentlichrechtliche Körperschaften und Anstalten des Bundes, der Kantone und der Gemeinden, sofern sie das Frequenzspektrum nur für Aufgaben nutzen, die ausschliesslich ihnen zur Erfüllung übertragen wurden;"
+            },
+            {
+              "marke": "b",
+              "text": "Unternehmen des öffentlichen Verkehrs;"
+            },
+            {
+              "marke": "c",
+              "text": "die institutionellen Begünstigten von Vorrechten, Immunitäten und Erleichterungen nach Artikel 2 Absatz 1 Buchstaben a, b und d–l des Gaststaatgesetzes vom 22. Juni 2007;"
+            },
+            {
+              "marke": "d",
+              "text": "juristische Personen des Privatrechts, soweit sie öffentliche Aufgaben von Bund, Kantonen oder Gemeinden wahrnehmen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c1cafbc94980a42d25d22a0e87830c2095848ecee8783db2c773e23c6d25a81e"
+    },
+    {
+      "id": "bund/FMG/art_39_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "39_a",
+      "artikelLabel": "Art. 39a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann einen Teil des Erlöses aus den Konzessionsgebühren nach Artikel 39 für begleitende Massnahmen wie Forschung und Erhebungen im Zusammenhang mit funkbasierten Technologien verwenden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_39_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "0134906f03c90ed7ac4d643e1fb4521866b1420bef525ad0285fe072ca803eb2"
+    },
+    {
+      "id": "bund/FMG/art_40",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde erhebt kostendeckende Verwaltungsgebühren für ihre Verfügungen und Leistungen, insbesondere für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufsicht über die Anbieterinnen von Fernmeldediensten;"
+            },
+            {
+              "marke": "b",
+              "text": "Entscheidungen über den Zugang, die Bereitstellung von Verzeichnisdaten, die Interoperabilität und die Mitbenutzung von Anlagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Schlichtung von Streitigkeiten zwischen Kundinnen oder Kunden und Anbieterinnen von Fernmelde- oder Mehrwertdiensten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Erteilung, Änderung und Aufhebung von Grundversorgungs- und Funkkonzessionen, die Aufsicht darüber sowie die Registrierung zur Frequenznutzung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Verwaltung und technische Kontrolle des Frequenzspektrums und der Orbitalpositionen von Satelliten;"
+            },
+            {
+              "marke": "f",
+              "text": "die Verwaltung, die Zuteilung und den Widerruf von Adressierungselementen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Anmeldung und Kontrolle von Fernmeldeanlagen."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Keine Verwaltungsgebühren im Sinne von Absatz 1 Buchstaben d und e werden erhoben für Funkkonzessionen, die der Armee, dem Zivilschutz, dem Grenzwachtcorps, der Polizei, der Feuerwehr, den ausschliesslich im öffentlichen Interesse tätigen Schutz- und Rettungsdiensten sowie den zivilen Führungsstäben erteilt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Betrifft eine Tätigkeit im Sinne von Absatz 1 Fernmeldedienste oder Funkkonzessionen, die ganz oder teilweise der Verbreitung von Radio- und Fernsehprogrammen dienen, so kann die Behörde der beschränkten wirtschaftlichen Leistungsfähigkeit des zugangsberechtigten Programmveranstalters Rechnung tragen, der durch die Gebühr mittelbar oder unmittelbar belastet wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Wurden in Absatz 1 aufgeführte Tätigkeiten Dritten übertragen, so können diese verpflichtet werden, die Preise ihrer Dienste dem BAKOM zur Genehmigung zu unterbreiten, insbesondere wenn für diese Dienste kein Wettbewerb besteht."
+        },
+        {
+          "absatz": "4",
+          "text": "Das UVEK kann Preisobergrenzen festlegen, namentlich wenn das Preisniveau auf einem bestimmten Markt auf Missbräuche schliessen lässt."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "192b411c8f3228d1ab8eeaae22de92545970625d12ad79f261bdc98244c40f9b"
+    },
+    {
+      "id": "bund/FMG/art_41",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat regelt die Abgabenerhebung; er legt die Einzelheiten der Finanzierung der Grundversorgung, die Funkkonzessionsgebühren und die Verwaltungsgebühren fest."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c4e43a833a43778af357306768ae0ec772af0553f1e06ea1d4ea11b87b2643e3"
+    },
+    {
+      "id": "bund/FMG/art_42",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die für die Erhebung von Abgaben zuständige Behörde kann von Abgabepflichtigen eine angemessene Sicherheit verlangen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "6f905016de8742fcba5a3305feae4351fbd7c11cd80f67a38ee027a4e3f3795b"
+    },
+    {
+      "id": "bund/FMG/art_43",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer mit fernmeldedienstlichen Aufgaben betraut ist oder betraut war, darf Dritten keine Angaben über den Fernmeldeverkehr von Teilnehmerinnen und Teilnehmern machen und niemandem Gelegenheit geben, solche Angaben weiterzugeben."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "165a2aabcabbad9a09768d138809df6e9c8f1a960bb564dfabc702c28e375f3c"
+    },
+    {
+      "id": "bund/FMG/art_44",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_45",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kundin oder der Kunde kann von der Anbieterin von Fernmeldediensten Auskunft über die für die Rechnungsstellung verwendeten Daten verlangen, insbesondere über die Adressierungselemente, den Zeitpunkt der Verbindung und das geschuldete Entgelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer diese Daten zur Ermittlung missbräuchlich hergestellter Verbindungen oder unlauterer Massenwerbung benötigt, kann von der Anbieterin von Fernmeldediensten Auskunft über Namen und Adressen der anrufenden Anschlüsse verlangen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "0b2904d3ceaf38f163696d5f5711f1a244cf2e3f82fa14a8515e71bd15d21679"
+    },
+    {
+      "id": "bund/FMG/art_45_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "45_a",
+      "artikelLabel": "Art. 45a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen von Fernmeldediensten bekämpfen unlautere Werbung nach Artikel 3 Absatz 1 Buchstaben o, u und v des Bundesgesetzes vom 19. Dezember 1986 gegen den unlauteren Wettbewerb."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann die zur Bekämpfung geeigneten und erforderlichen Massnahmen bestimmen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_45_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "592c978058ce3311b9108e75501de06486497259bcf6c6558f3f526a003c90ce"
+    },
+    {
+      "id": "bund/FMG/art_45_b",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "45_b",
+      "artikelLabel": "Art. 45b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anbieterinnen von Fernmeldediensten dürfen Standortdaten von Kundinnen und Kunden nur für die Fernmeldedienste und ihre Abrechnung bearbeiten; für andere Dienste dürfen sie sie nur bearbeiten, wenn sie vorher die Einwilligung der Kundinnen und Kunden eingeholt haben, oder in anonymisierter Form."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_45_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "3542bd09ff8b925278305d91d0b79ff817e7b6ef5a27685fedf169d01f104712"
+    },
+    {
+      "id": "bund/FMG/art_45_c",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "45_c",
+      "artikelLabel": "Art. 45c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bearbeiten von Daten auf fremden Geräten durch fernmeldetechnische Übertragung ist nur erlaubt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Fernmeldedienste und ihre Abrechnung; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Benutzerinnen und Benutzer über die Bearbeitung und ihren Zweck informiert und darauf hingewiesen werden, dass sie die Bearbeitung ablehnen können."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_45_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "08e8d4f57341ebea23b9f938907b18748808fc34f1196186bcb08bd4ad19f1b2"
+    },
+    {
+      "id": "bund/FMG/art_46",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat regelt insbesondere die Identifikation des anrufenden Anschlusses, die Anrufumleitung, die Verwendung von Daten über den Fernmeldeverkehr sowie die Sicherheit der Fernmeldedienste gegen unbefugte Abhörung und Eingriffe. Er trägt dabei dem Persönlichkeitsschutz der Teilnehmerinnen und Teilnehmer am Fernmeldeverkehr sowie den überwiegenden öffentlichen Interessen Rechnung."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "21f1c146b793595ba487aa73c88f10a203560240adfd333dbbcd5d28575330bf"
+    },
+    {
+      "id": "bund/FMG/art_46_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "46_a",
+      "artikelLabel": "Art. 46a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann Vorschriften zum Schutz von Kindern und Jugendlichen vor den Gefahren, die sich aus der Nutzung der Fernmeldedienste ergeben, erlassen. Insbesondere kann er die Anbieterinnen von Internetzugängen verpflichten, ihre Kundinnen und Kunden über die Möglichkeiten im Bereich des Kinder- und Jugendschutzes zu beraten."
+        },
+        {
+          "absatz": "2",
+          "text": "Damit Informationen mit pornografischem Inhalt nach Artikel 197 Absätze 4 und 5 des Strafgesetzbuchs rasch und weltweit gelöscht werden, koordinieren das BAKOM, das Bundesamt für Polizei und die zuständigen Stellen in den Kantonen geeignete Massnahmen. Dazu können von Dritten betriebene Meldestellen sowie Behörden im Ausland beigezogen und unter stützt werden. Der Bundesrat regelt die Einzelheiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anbieterinnen von Fernmeldediensten unterdrücken die Informationen mit pornografischem Inhalt nach Artikel 197 Absätze 4 und 5 des Strafgesetzbuchs, auf die das Bundesamt für Polizei sie hinweist. Die Anbieterinnen von Fernmeldediensten melden dem Bundesamt für Polizei Verdachtsfälle über Informationen mit pornografischem Inhalt nach Artikel 197 Absätze 4 und 5 des Strafgesetzbuchs, auf die sie im Rahmen ihrer Tätigkeit zufällig gestossen sind oder auf die sie von Dritten schriftlich hingewiesen wurden."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_46_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "61c6f4a06c87207eb5e6f8d2750836e56bad4efdcc10811b0a95120264546a6d"
+    },
+    {
+      "id": "bund/FMG/art_47",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat bestimmt, welche Fernmeldedienste die Anbieterinnen von Fernmeldediensten zu erbringen haben, damit Armee, Zivilschutz, Grenzwachtkorps, Polizei, Feuerwehr, Schutz- und Rettungsdienste sowie zi vile Führungsstäbe in allen Lagen ihre Aufgaben erfüllen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann die Anbieterinnen im Hinblick auf und in besonderen und ausserordent lichen Lagen verpflichten, Räumlichkeiten und Anlagen zur Verfügung zu stellen und Übungen zu dulden."
+        },
+        {
+          "absatz": "3",
+          "text": "Er regelt die Abgeltung dieser Leistungen und trägt dabei dem Eigeninteresse der Anbieterinnen angemessen Rechnung."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Vorbehalten bleiben die Bestimmungen des Militärgesetzes vom 3. Februar 1995 über die Requisition und über die Verfügungsgewalt des Generals."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "47164ca8e19b37db58da8de46491d1889bf070037429c9f7ccd407796625ddc2"
+    },
+    {
+      "id": "bund/FMG/art_48",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann die Überwachung, die Einschränkung oder die Unterbrechung des Fernmeldeverkehrs anordnen, wenn eine ausserordentliche Lage oder andere wichtige Landesinteressen es erfordern. Er regelt die Entschädigung für die Umsetzung dieser Massnahmen; dabei berücksichtigt er das Eigeninteresse der Beauftragten angemessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Massnahmen nach Absatz 1 begründen weder einen Anspruch auf Schadenersatz noch auf Rückerstattung von Abgaben."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "adff839c5255e25f83e78218fb69fa47f9d2409339494499053b0faf2e22e440"
+    },
+    {
+      "id": "bund/FMG/art_48_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "48_a",
+      "artikelLabel": "Art. 48a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anbieterinnen von Fernmeldediensten bekämpfen die unbefugte Manipulation von Fernmeldeanlagen durch fernmeldetechnische Übertragungen. Sie sind berechtigt, zum Schutz der Anlagen Verbindungen umzuleiten oder zu verhindern sowie Informationen zu unterdrücken."
+        },
+        {
+          "absatz": "2",
+          "text": "Zum Schutz vor Gefahren, zur Vermeidung von Schäden und zur Minimierung von Risiken kann der Bundesrat Bestimmungen über die Sicherheit von Informationen und von Fernmeldeinfrastrukturen und -diensten erlassen, insbesondere bezüglich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verfügbarkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "Betrieb;"
+            },
+            {
+              "marke": "c",
+              "text": "Sicherstellung von redundanten Infrastrukturen;"
+            },
+            {
+              "marke": "d",
+              "text": "Meldung von Störungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Nachvollziehbarkeit von Vorgängen;"
+            },
+            {
+              "marke": "f",
+              "text": "Umleitung oder Verhinderung von Verbindungen sowie Unterdrückung von Informationen nach Absatz 1."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_48_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "33b9895052c815133c55a564d1146381ed5ee53f2afaeb05031afb50c0ede435"
+    },
+    {
+      "id": "bund/FMG/art_49",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe wird bestraft, wer fernmeldedienstliche Aufgaben erfüllt und dabei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Informationen fälscht oder unterdrückt;"
+            },
+            {
+              "marke": "b",
+              "text": "jemandem Gelegenheit gibt, Informationen zu fälschen oder zu unterdrücken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer eine mit fernmeldedienstlichen Aufgaben betraute Person durch Täuschung veranlasst, Informationen zu fälschen oder zu unterdrücken, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b56f8c30cc66cbcbec6bfeb2ec88ad921a52bf110d1dff2a9d3f52710a009ae9"
+    },
+    {
+      "id": "bund/FMG/art_50",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer mit einer Fernmeldeanlage nichtöffentliche Informationen empfängt, die nicht für sie oder ihn bestimmt sind und sie unbefugt verwendet oder Dritten bekannt gibt, wird mit Freiheitsstrafe bis zu einem Jahr oder mit Geldstrafe bestraft."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "ddd8cf2080697fe8940a234789dcaf2be0e40a14eee36c019e268179525aeccc"
+    },
+    {
+      "id": "bund/FMG/art_51",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_52",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse bis zu 100 000 Franken wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "das Frequenzspektrum benutzt: 1. ohne die erforderliche Konzession,"
+            },
+            {
+              "marke": "2",
+              "text": "ohne die erforderliche vorgängige Meldung,"
+            },
+            {
+              "marke": "3",
+              "text": "ohne Inhaberin oder Inhaber des erforderlichen Fähigkeitszeugnisses zu sein, oder"
+            },
+            {
+              "marke": "4",
+              "text": "im Widerspruch zu den Nutzungsvorschriften oder zur Konzession;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Tat fahrlässig begangen, so ist die Strafe Busse bis zu 50 000 Franken."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c1db1bc403b557a93126a6876294a7a5f24957601fc727e22392a5ed5395272c"
+    },
+    {
+      "id": "bund/FMG/art_53",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer vorsätzlich oder fahrlässig gegen eine andere Bestimmung des Fernmelderechts, eines Staatsvertrages oder einer internationalen Vereinbarung über das Fernmeldewesen oder gegen eine aufgrund einer solchen Bestimmung getroffene und mit einem Hinweis auf die Strafdrohung dieses Artikels versehene Verfügung verstösst, wird mit Busse bis zu 5000 Franken bestraft."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "47aef714db238ef7d881086a4dc6b7f4452710d69bf68bbfe0b15fdec06e1b4d"
+    },
+    {
+      "id": "bund/FMG/art_54",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 14–18 des Verwaltungsstrafrechtsgesetzes vom 22. März 1974 sind anwendbar."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "eb5df9a4f535ede3cd31dfefd256ee1b3c8b7c465625154ac38f89a819a218d7"
+    },
+    {
+      "id": "bund/FMG/art_55",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Widerhandlungen nach den Artikeln 52–54 werden vom UVEK nach den Vorschriften des Verwaltungsstrafrechtsgesetzes vom 22. März 1974 verfolgt und beurteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das UVEK kann die Verfolgung und Beurteilung von Widerhandlungen sowie den Vollzug der Entscheide dem BAKOM übertragen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "15fd5b0a46fdd477ed18db00c1483ee416cc88d4ded4387b7662f0dcd17cc69b"
+    },
+    {
+      "id": "bund/FMG/art_56",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat wählt eine aus fünf bis sieben Mitgliedern bestehende Eidgenössische Kommunikationskommission (ComCom); er bezeichnet die Präsidentin oder den Präsidenten und die Vizepräsidentin oder den Vizepräsidenten. Die Mitglieder müssen unabhängige Sachverständige sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ComCom unterliegt in ihren Entscheiden keinen Weisungen von Bundesrat und UVEK. Sie ist von den Verwaltungsbehörden unabhängig. Sie verfügt über ein eigenes Sekretariat."
+        },
+        {
+          "absatz": "3",
+          "text": "Die ComCom erlässt ein Reglement über ihre Organisation und Geschäftsführung, das der Genehmigung des Bundesrates bedarf."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kosten der ComCom werden durch Verwaltungsgebühren gedeckt. Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "c172dc9b0355c2e1a45cfc52ab1edb534631bb7ca57ce8e642173f30b3cc4500"
+    },
+    {
+      "id": "bund/FMG/art_57",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ComCom trifft die Entscheide und erlässt die Verfügungen, die nach diesem Gesetz und den Ausführungsbestimmungen in ihrer Kompetenz liegen. Sie orientiert die Öffentlichkeit über ihre Tätigkeit und erstattet dem Bundesrat jährlich einen Tätigkeitsbericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die ComCom kann das BAKOM beim Vollzug des Fernmelderechtes beiziehen und ihm Weisungen erteilen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e9092687953737d902751dce69f5a61bb087bfb7153be3df9bf70c628cade0fa"
+    },
+    {
+      "id": "bund/FMG/art_58",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM wacht darüber, dass das internationale Fernmelderecht, dieses Gesetz, die Ausführungsvorschriften und die Konzessionen eingehalten werden. Es kann einzelne Aufsichtsaufgaben privatrechtlichen Organisationen übertragen und mit ihnen zusammenarbeiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt das BAKOM eine Rechtsverletzung fest, so kann es:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von der für die Verletzung verantwortlichen juristischen oder natürlichen Person verlangen, den Mangel zu beheben oder Massnahmen zu treffen, damit die Verletzung sich nicht wiederholt; die für die Verletzung verantwortliche Person muss dem BAKOM mitteilen, was sie unternommen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "von der für die Verletzung verantwortlichen juristischen oder natürlichen Person verlangen, die Einnahmen, die sie bei der Rechtsverletzung erzielt hat, an den Bund abzuliefern;"
+            },
+            {
+              "marke": "c",
+              "text": "die Konzession durch Auflagen ergänzen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Konzession einschränken, suspendieren, widerrufen oder entziehen oder die Tätigkeit der für die Verletzung verantwortlichen juristischen oder natürlichen Person einschränken, suspendieren oder ganz verbieten;"
+            },
+            {
+              "marke": "e",
+              "text": "der Inhaberin oder dem Inhaber das Fähigkeitszeugnis entziehen oder ihr oder ihm Auflagen machen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM entzieht die Konzession, wenn wesentliche Voraussetzungen zu ihrer Erteilung nicht mehr erfüllt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Wenn die Konzession von der ComCom erteilt wurde, trifft diese auf Antrag des BAKOM die entsprechenden Massnahmen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die zuständige Behörde kann vorsorgliche Massnahmen erlassen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "72e84f3f62f711c8818a3a2ce7da082d94d569670e17de22160345ff0d66bca9"
+    },
+    {
+      "id": "bund/FMG/art_59",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die diesem Gesetz unterstellten Personen sind verpflichtet, der zuständigen Behörde die Auskünfte zu erteilen, die für den Vollzug und die Evaluation notwendig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben dem BAKOM regelmässig die zur Erstellung einer amtlichen Fernmeldestatistik erforderlichen Angaben einzureichen."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Zu statistischen Zwecken gesammelte oder eingereichte Daten dürfen nur zu anderen Zwecken genutzt werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Bundesgesetz dies ausdrücklich erlaubt;"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person schriftlich zustimmt;"
+            },
+            {
+              "marke": "c",
+              "text": "dies der Evaluation des Fernmelderechts dient; oder"
+            },
+            {
+              "marke": "d",
+              "text": "dies als Grundlage für notwendige regulierende Entscheide dient."
+            }
+          ]
+        },
+        {
+          "absatz": "2ter",
+          "text": "Das BAKOM kann die Marktanteile veröffentlichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat regelt die Einzelheiten."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e4af318c014323fda67fdd8866bca6f2597fe20229acf87dcb27937f97a8dd44"
+    },
+    {
+      "id": "bund/FMG/art_60",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösst ein Unternehmen gegen anwendbares Recht, die Konzession oder eine rechtskräftige Verfügung, so kann es mit einem Betrag von bis zu 10 Prozent des in den letzten drei Geschäftsjahren durchschnittlich in der Schweiz erzielten Umsatzes belastet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Verstösse werden vom BAKOM untersucht. Es beurteilt die Fälle, die nicht im Zuständigkeitsbereich der ComCom nach Artikel 58 Absatz 4 liegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Bemessung der Sanktion berücksichtigt die zuständige Behörde insbesondere die Schwere des Verstosses und die finanziellen Verhältnisse des Unternehmens."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "dbd574d76175e808af49c6e493114c2a3d22d988930133a535249174bd6290d1"
+    },
+    {
+      "id": "bund/FMG/art_61",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_62",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat vollzieht dieses Gesetz. Vorbehalten bleibt die Zuständigkeit der ComCom."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann den Erlass der notwendigen administrativen und technischen Vorschriften dem BAKOM übertragen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "f4d19f48c8c0bebc6e890d6069e29a335caf102402a333d3b3f1e32b85312f50"
+    },
+    {
+      "id": "bund/FMG/art_63",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_64",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann internationale Vereinbarungen, die in den Anwendungsbereich dieses Gesetzes fallen, abschliessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für internationale Vereinbarungen technischen oder administrativen Inhalts kann er diese Befugnis dem BAKOM übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die ComCom nimmt die in ihrem Zuständigkeitsbereich liegenden Aufgaben im internationalen Bereich wahr und vertritt die Schweiz in den entsprechenden internationalen Organisationen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM vertritt die Interessen der Schweiz in internationalen Foren und Organisationen, namentlich auch im Bereich der Internet-Gouvernanz."
+        },
+        {
+          "absatz": "5",
+          "text": "Zur Stärkung der Schweizer Interessenvertretung kann das BAKOM in seinem Aufgabenbereich Organisationen auf Gesuch hin Finanzhilfen gewähren, die nicht im Rahmen von internationalen Vereinbarungen nach den Absätzen 1 und 2 gewährt werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Bemessung der Finanzhilfe richtet sich nach der Bedeutung der Organisation, des Projekts oder der Massnahme für die Interessenvertretung der Schweiz sowie nach den übrigen Finanzierungsmöglichkeiten der Empfängerin oder des Empfängers. Die Finanzhilfe beträgt höchstens 66 Prozent der Gesamtkosten der geförderten Leistung."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "0a3d0febe60061a06daaa5ce8fb781189775bb9eb395badefeeec710b019b131"
+    },
+    {
+      "id": "bund/FMG/art_65",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Fernmeldegesetz vom 21. Juni 1991 wird aufgehoben."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "045e2e3602a3560c69abf96739626416dbb703dff000f3abca23ea5b117d337b"
+    },
+    {
+      "id": "bund/FMG/art_66_68",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "66_68",
+      "artikelLabel": "Art. 6668",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_66_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_68_a",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "68_a",
+      "artikelLabel": "Art. 68a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die beim Inkrafttreten der Änderung vom 24. März 2006 im Rahmen einer Fernmeldedienstkonzession angebotenen Dienste gelten als gemeldet im Sinne von Artikel 4 Absatz 1. Die Funkkonzessionen, die zu den aufgehobenen Fernmeldedienstekonzessionen gehören, bleiben gültig und übernehmen die mit diesen verbundenen Auflagen und Bedingungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Grundversorgungskonzession nach altem Recht gelten bis zum Ablauf ihrer Dauer die bisherigen Bestimmungen."
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_68_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "e8fa3d33671c34aac934bee4af4def1a1d0a7c028026d5c95afc9b07177bc52d"
+    },
+    {
+      "id": "bund/FMG/art_69",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FMG/art_70",
+      "ebene": "bund",
+      "quelle": "FMG",
+      "erlass": "FMG",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1997/2187_2187_2187/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260601",
+      "sha": "81d266bbc6e594c669696f3046e316e26cf2a91d015c11852e16ba26f6d505fc"
+    }
+  ]
+}

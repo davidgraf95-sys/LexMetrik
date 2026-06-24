@@ -1,0 +1,585 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/VKL/art_1",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die einheitliche Ermittlung der Kosten und Erfassung der Leistungen im Spital- und Pflegeheimbereich."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gilt für die nach Artikel 39 des Gesetzes zugelassenen Spitäler, Geburtshäuser und Pflegeheime."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "d19ecc44403258ec0823806015fe7a57ed177d84206a91f49088cea77518969a"
+    },
+    {
+      "id": "bund/VKL/art_2",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ermittlung der Kosten und die Erfassung der Leistungen muss so erfolgen, dass damit die Grundlagen geschaffen werden für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Unterscheidung der Leistungen und der Kosten zwischen der stationären, der ambulanten und der Langzeitbehandlung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bestimmung der Leistungen und der Kosten der obligatorischen Krankenpflegeversicherung in der stationären Behandlung im Spital und im Geburtshaus;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "die Bestimmung der Leistungen und der Kosten der obligatorischen Krankenpflegeversicherung in der ambulanten Behandlung im Spital und im Geburtshaus;"
+            },
+            {
+              "marke": "e",
+              "text": "die Bestimmung der Leistungen und der Kosten der Krankenpflege sowie der übrigen von der obligatorischen Krankenpflegeversicherung übernommenen Leistungen und deren Kosten in Pflegeheimen und bei Langzeitbehandlung im Spital;"
+            },
+            {
+              "marke": "f",
+              "text": "die Bestimmung der Leistungen und der Kosten der Krankenpflege für jede Pflegebedarfsstufe in Pflegeheimen und bei Langzeitbehandlung im Spital;"
+            },
+            {
+              "marke": "g",
+              "text": "die Ausscheidung der gemeinwirtschaftlichen Leistungen nach Artikel 49 Absatz 3 des Gesetzes und von deren Kosten;"
+            },
+            {
+              "marke": "h",
+              "text": "die Ausscheidung der Kosten, die durch die Beiträge nach Artikel 3 der Ausbildungsförderverordnung Pflege vom 8. Mai 2024 gedeckt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Unterscheidung und Bestimmung der genannten Kosten und Leistungen soll erlauben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bildung von Kennzahlen;"
+            },
+            {
+              "marke": "b",
+              "text": "Betriebsvergleiche auf regionaler, kantonaler und überkantonaler Ebene zur Beurteilung von Kosten und Leistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Berechnung der Tarife;"
+            },
+            {
+              "marke": "d",
+              "text": "die Berechnung von Globalbudgets;"
+            },
+            {
+              "marke": "e",
+              "text": "die Aufstellung von kantonalen Planungen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Beurteilung der Wirtschaftlichkeit und Billigkeit der Leistungserbringung;"
+            },
+            {
+              "marke": "g",
+              "text": "die Überprüfung der Kostenentwicklung und des Kostenniveaus."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "99759ef71d7782814ad30c2817ee3f47894e39d4f753cd02dad8b52db9a1e30a"
+    },
+    {
+      "id": "bund/VKL/art_3",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als stationäre Behandlung nach Artikel 49 Absatz 1 des Gesetzes gelten Aufenthalte zur Untersuchung, Behandlung und Pflege im Spital oder im Geburtshaus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von mindestens 24 Stunden;"
+            },
+            {
+              "marke": "b",
+              "text": "von weniger als 24 Stunden, bei denen während einer Nacht ein Bett belegt wird;"
+            },
+            {
+              "marke": "c",
+              "text": "im Spital bei Überweisung in ein anderes Spital;"
+            },
+            {
+              "marke": "d",
+              "text": "im Geburtshaus bei Überweisung in ein Spital;"
+            },
+            {
+              "marke": "e",
+              "text": "bei Todesfällen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "2dc5ec974a2c7e5c2cf8158b00a0ca8cbbc57bbdcf661079c2f38c54d26620f2"
+    },
+    {
+      "id": "bund/VKL/art_4",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VKL/art_5",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als ambulante Behandlung nach Artikel 49 Absatz 6 des Gesetzes gelten alle Behandlungen, die nicht stationäre Behandlungen sind. Wiederholte Aufenthalte in Tages- oder Nachtkliniken gelten ebenfalls als ambulante Behandlung."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "c385e014a11e16f102143a3728ea3012f12433e6d23d8ac017d6cab258bce6ff"
+    },
+    {
+      "id": "bund/VKL/art_6",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als Langzeitbehandlung nach den Artikeln 49 Absatz 4 und 50 des Gesetzes gelten Aufenthalte im Spital oder im Pflegeheim, ohne dass nach medizinischer Indikation eine Behandlung und Pflege oder eine medizinische Rehabilitation im Spital erforderlich ist."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "c5035117d111f6be5ed4e7e8d99ff44259932d2547e5b55ac4ef5dffa1038879"
+    },
+    {
+      "id": "bund/VKL/art_7",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Kosten für die universitäre Lehre nach Artikel 49 Absatz 3 Buchstabe b des Gesetzes gelten die Aufwendungen für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die theoretische und praktische Ausbildung der Studierenden eines im Bundesgesetz vom 23. Juni 2006 über die Medizinalberufe geregelten Medizinalberufes bis zum Erwerb des eidgenössischen Diploms;"
+            },
+            {
+              "marke": "b",
+              "text": "die Weiterbildung der Studierenden nach Buchstabe a bis zur Erlangung des eidgenössischen Weiterbildungstitels."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Kosten für die Forschung nach Artikel 49 Absatz 3 des Gesetzes gelten die Aufwendungen für systematische schöpferische Arbeiten und experimentelle Entwicklung zwecks Erweiterung des Kenntnisstandes sowie deren Verwendung mit dem Ziel, neue Anwendungsmöglichkeiten zu finden. Darunter fallen Projekte, die zur Gewinnung wissenschaftlicher Erkenntnisse sowie zur Verbesserung der Prävention, der Diagnostik und Behandlung von Krankheiten ausgeführt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Kosten für die universitäre Lehre und für die Forschung gelten auch die indirekten Kosten sowie die Aufwendungen, die durch von Dritten finanzierte Lehr- und Forschungstätigkeiten verursacht werden."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "c22056621870d01ba6ff33693200f1d41908d2a886722e37a6ed5de64547cabe"
+    },
+    {
+      "id": "bund/VKL/art_8",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Investitionen im Sinne von Artikel 49 Absatz 7 des Gesetzes gelten Mobilien, Immobilien und sonstige Anlagen, die zur Erfüllung des Leistungsauftrages nach Artikel 39 Absatz 1 Buchstabe e des Gesetzes notwendig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Kaufgeschäften gleichgestellt sind Miet- und Abzahlungsgeschäfte. Kosten aus Miet- und Abzahlungsgeschäften werden als Anlagenutzungskosten separat ausgewiesen."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "addf481772cc1914406d0618b21e1720088a19d356dc3c99bf7439eeb4f8e7ce"
+    },
+    {
+      "id": "bund/VKL/art_9",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Spitäler, Geburtshäuser und Pflegeheime müssen eine Kostenrechnung führen, in der die Kosten nach dem Leistungsort und dem Leistungsbezug sachgerecht ausgewiesen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kostenrechnung muss insbesondere die Elemente Kostenarten, Kostenstellen, Kostenträger und die Leistungserfassung umfassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kostenrechnung muss den sachgerechten Ausweis der Kosten für die Leistungen erlauben. Die Kosten sind den Leistungen in geeigneter Form zuzuordnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kostenrechnung ist so auszugestalten, dass keine Rückschlüsse auf die behandelte Person gezogen werden können."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Kostenrechnung ist jeweils für das Kalenderjahr zu erstellen und ist ab dem 30. April des auf das Kalenderjahr folgenden Jahres bereitzustellen."
+        },
+        {
+          "absatz": "6",
+          "text": "Das Eidgenössische Departement des Innern (Departement) kann nähere Bestimmungen über die technische Ausgestaltung der Kostenrechnung erlassen. Es hört dabei die Kantone, Leistungserbringer und Versicherer an."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "dc5a7934f20990f95889e211a333d1f30811fe4a3e01e180682d9a510422b581"
+    },
+    {
+      "id": "bund/VKL/art_10",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spitäler und die Geburtshäuser müssen eine Finanzbuchhaltung führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Spitäler müssen die Kosten der Kostenstellen nach der Nomenklatur ermitteln, die im Bearbeitungsreglement nach Artikel 30 c der Krankenversicherungsverordnung vom 27. Juni 1995 festgelegt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Spitäler und Geburtshäuser müssen eine Lohnbuchhaltung führen."
+        },
+        {
+          "absatz": "4",
+          "text": "Es ist eine Kosten- und Leistungsrechnung zu führen."
+        },
+        {
+          "absatz": "5",
+          "text": "Zur Ermittlung der Kosten für Anlagenutzung müssen die Spitäler und Geburtshäuser eine Anlagebuchhaltung führen. Objekte mit einem Anschaffungswert von 10 000 Franken und mehr gelten als Investitionen nach Artikel 8."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "16cfda860fd35b85f7ce85739c3bcf19566c9db9bb9a8d327048c5b827f1f72c"
+    },
+    {
+      "id": "bund/VKL/art_10_a",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anlagebuchhaltung muss für jede Anlage mindestens die Angaben enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Anschaffungsjahr;"
+            },
+            {
+              "marke": "b",
+              "text": "die geplante Nutzungsdauer in Jahren;"
+            },
+            {
+              "marke": "c",
+              "text": "den Anschaffungswert;"
+            },
+            {
+              "marke": "d",
+              "text": "den Buchwert der Anlage am Anfang des Jahres;"
+            },
+            {
+              "marke": "e",
+              "text": "den Abschreibungssatz;"
+            },
+            {
+              "marke": "f",
+              "text": "die jährliche Abschreibung;"
+            },
+            {
+              "marke": "g",
+              "text": "den Buchwert der Anlage am Ende des Jahres;"
+            },
+            {
+              "marke": "h",
+              "text": "den kalkulatorischen Zinssatz;"
+            },
+            {
+              "marke": "i",
+              "text": "den jährlichen kalkulatorischen Zins;"
+            },
+            {
+              "marke": "j",
+              "text": "die jährlichen Anlagenutzungskosten als Summe der jährlichen Abschreibung und der jährlichen kalkulatorischen Zinsen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die zur Erfüllung des Leistungsauftrags der Einrichtung betriebsnotwendigen Anlagen dürfen höchstens mit ihrem Anschaffungswert berücksichtigt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die maximalen jährlichen Abschreibungen berechnen sich bei linearer Abschreibung vom Anschaffungswert über die geplante Nutzungsdauer auf den Restwert Null."
+        },
+        {
+          "absatz": "4",
+          "text": "Die kalkulatorische Verzinsung der für die Erbringung der stationären Leistungen erforderlichen betriebsnotwendigen Anlagen berechnet sich nach der Durchschnittswertmethode. Der Zinssatz beträgt 3,7 Prozent. Er wird periodisch überprüft."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_10_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "dafe4595ad022f7992998b8093af4fde640f508594c3465dbbecd4edbc3c9a5c"
+    },
+    {
+      "id": "bund/VKL/art_11",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Pflegeheime müssen eine Finanzbuchhaltung führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Ermittlung der Kosten für Anlagenutzung ist eine Anlagebuchhaltung zu führen."
+        },
+        {
+          "absatz": "3",
+          "text": "Es ist eine Kosten- und Leistungsrechnung zu führen."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "4aa4decdfc47a5d3447ad55afad06eea3ff78dc07f10a7414f4f22f1b47f2897"
+    },
+    {
+      "id": "bund/VKL/art_12",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spitäler, Geburtshäuser und Pflegeheime müssen eine Leistungsstatistik führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungsstatistik muss den sachgerechten Ausweis der erbrachten Leistungen erlauben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leistungsstatistik ist so auszugestalten, dass keine Rückschlüsse auf die behandelte Person gezogen werden können."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Leistungsstatistik ist jeweils für das Kalenderjahr zu erstellen und ist ab dem 30. April des auf das Kalenderjahr folgenden Jahres bereitzustellen."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Departement kann nähere Bestimmungen über die technische Ausgestaltung der Leistungsstatistik erlassen. Es hört dabei die Kantone, Leistungserbringer und Versicherer an."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "e79b84bca520a1d301d4844e7c508d3bb71fe21e5d5438dc2a202a897f427cc8"
+    },
+    {
+      "id": "bund/VKL/art_13",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungsstatistik der Spitäler muss in Abstimmung mit der nach Anhang 1 Ziffer 05.03. der Bundesstatistikverordnung vom 30. April 2025 erstellten Erhebung für die Statistik der Gesundheitsversorgung erstellt werden. Diese Bestimmung gilt sinngemäss für die Geburtshäuser."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungsstatistik muss namentlich die Elemente Leistungsbezeichnung, Patientenbewegung, Pflegetage, Aufenthaltsdauer und geleistete Taxpunkte umfassen."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "d06f27dc71a240d3f35f7a6f42a3035c06dce003af2e71754fa1a488403236c0"
+    },
+    {
+      "id": "bund/VKL/art_14",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungsstatistik der Pflegeheime muss in Abstimmung mit der nach Anhang 1 Ziffer 05.03. der Bundesstatistikverordnung vom 30. April 2025 erstellten Erhebung für die Statistik der Gesundheitsversorgung erstellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungsstatistik muss namentlich die Elemente Leistungsbezeichnung, Aufenthaltstage und Pflegetage pro Pflegebedarfsstufe umfassen."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "d1720c4f566d0d17bb8c57425edb615da27e76b8cbdf3243e00e1ec4f08d80f0"
+    },
+    {
+      "id": "bund/VKL/art_15",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Spitäler, Geburtshäuser und Pflegeheime sind verpflichtet, die Unterlagen eines Jahres ab dem 1. Mai des Folgejahres zur Einsichtnahme bereitzuhalten. Zur Einsichtnahme berechtigt sind die Genehmigungsbehörden, die fachlich zuständigen Stellen des Bundes sowie die Tarifpartner."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "46e3cace50aacd9602651aee8e8f99ad7291870d0d76f4c315a60fc4823fda7c"
+    },
+    {
+      "id": "bund/VKL/art_16",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VKL/art_17",
+      "ebene": "bund",
+      "quelle": "VKL",
+      "erlass": "VKL",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 2003 in Kraft."
+        }
+      ],
+      "stand": "2025-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2002/418/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250601",
+      "sha": "be6acde2a44aa8b50f865960cc3fbf50960ce0c9067d8b095f6ab79aec117e0f"
+    }
+  ]
+}

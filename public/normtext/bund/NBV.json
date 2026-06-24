@@ -1,0 +1,2160 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/NBV/art_1",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Durchführung statistischer Erhebungen durch die Nationalbank;"
+            },
+            {
+              "marke": "b",
+              "text": "die Pflicht der Banken, Mindestreserven zu halten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "1344377df1b559de89e7246deceb43e29d400aa5d8450901c4534b643f5d7a77"
+    },
+    {
+      "id": "bund/NBV/art_2",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In dieser Verordnung gelten als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bank : jede Person und Gesellschaft, die über eine Bewilligung im Sinne von Artikel 3 des Bankengesetzes vom 8. November 1934 verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "Wertpapierhaus: jede Gesellschaft im Sinne von Artikel 41 des Finanzinstitutsgesetzes vom 15. Juni 2018;"
+            },
+            {
+              "marke": "c",
+              "text": "Fondsleitung: jede Gesellschaft im Sinne von Artikel 32 des Finanzinstitutsgesetzes;"
+            },
+            {
+              "marke": "d",
+              "text": "Vertreter ausländischer kollektiver Kapitalanlagen: jede Person und Gesellschaft im Sinne von Artikel 123 des Kollektivanlagengesetzes vom 23. Juni 2006;"
+            },
+            {
+              "marke": "e",
+              "text": "Versicherung: jede Einrichtung im Sinne von Artikel 2 des Versicherungsaufsichtsgesetzes vom 17. Dezember 2004;"
+            },
+            {
+              "marke": "f",
+              "text": "Einrichtung der beruflichen Vorsorge : jede Vorsorgeeinrichtung, die gemäss Artikel 48 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge bei der Aufsichtsbehörde in das Register über die berufliche Vorsorge eingetragen ist;"
+            },
+            {
+              "marke": "g",
+              "text": "Anlage- und Holdinggesellschaft : jede juristische Person, Gesellschaft und öffentlich-rechtliche Körperschaft, deren Zweck zur Hauptsache in der dauernden Verwaltung von Beteiligungen besteht und welche die im Anhang zu dieser Verordnung festgelegten Voraussetzungen erfüllt;"
+            },
+            {
+              "marke": "h",
+              "text": "systemisch bedeutsame Finanzmarktinfrastruktur: ein Zahlungssystem, ein Zentralverwahrer oder eine zentrale Gegenpartei im Sinne von Artikel 22 Absatz 1 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG);"
+            },
+            {
+              "marke": "i",
+              "text": "Zahlungssystem: eine Einrichtung im Sinne von Artikel 81 FinfraG;"
+            },
+            {
+              "marke": "j",
+              "text": "…"
+            },
+            {
+              "marke": "k",
+              "text": "Zentralverwahrer: ein Betreiber im Sinne von Artikel 61 Absatz 1 FinfraG;"
+            },
+            {
+              "marke": "l",
+              "text": "zentrale Gegenpartei: eine Einrichtung im Sinne von Artikel 48 FinfraG;"
+            },
+            {
+              "marke": "m",
+              "text": "Betreiber: ein Zentralverwahrer sowie jede Person und Gesellschaft, die ein Zahlungssystem oder eine zentrale Gegenpartei betreibt;"
+            },
+            {
+              "marke": "n",
+              "text": "indirekter Teilnehmer: jede Person im Sinne von Artikel 2 Buchstabe e FinfraG;"
+            },
+            {
+              "marke": "o",
+              "text": "operationelles Risiko: das Risiko, dass infolge der Unangemessenheit oder des Versagens von internen Verfahren, Menschen oder Systemen oder infolge von externen Ereignissen die Funktionsweise der Finanzmarktinfrastruktur beeinträchtigt wird oder finanzielle Verluste entstehen;"
+            },
+            {
+              "marke": "p",
+              "text": "allgemeines Geschäftsrisiko: das Risiko, dass ein Betreiber einer Finanzmarktinfrastruktur Verluste erleidet, die nicht in direktem Zusammenhang mit dem Ausfall eines Teilnehmers oder mit anderweitigen Kredit- und Liquiditätsrisiken stehen. Allgemeine Geschäftsrisiken umfassen auch das Risiko, dass aus operationellen oder strategischen Risiken finanzielle Verluste entstehen;"
+            },
+            {
+              "marke": "q",
+              "text": "Eigenmittel: hartes Kernkapital gemäss den Artikeln 21–26 der Eigenmittelverordnung vom 1. Juni 2012;"
+            },
+            {
+              "marke": "r",
+              "text": "Nettoliquidität: kurzfristig verwertbare Vermögenswerte abzüglich kurzfristiger Verbindlichkeiten;"
+            },
+            {
+              "marke": "s",
+              "text": "extreme, aber plausible Marktbedingungen: für deren Ermittlung sind die grössten Preisschwankungen, die in den letzten dreissig Jahren beobachtet wurden oder die künftig als möglich erachtet werden, zu berücksichtigen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Nationalbank definiert weitere Begriffe im Anhang zu dieser Verordnung und im Meldeformular."
+        },
+        {
+          "absatz": "3",
+          "text": "Ergänzend sind die in den Vorschriften der Eidgenössischen Finanzmarktaufsicht (FINMA) über die Rechnungslegung der Banken verwendeten Begriffe massgebend."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "4760d9adeec2cf33f71f35c12cbdbdcb20b35d42b8aac310cacc04b55f71de9b"
+    },
+    {
+      "id": "bund/NBV/art_3",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Schweizerische Nationalbank führt die erforderlichen statistischen Erhebungen durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Erfüllung ihrer geld- und währungspolitischen Aufgaben;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Erfüllung ihrer Aufgaben im Bereich der Überwachung von systemisch bedeutsamen Finanzmarktinfrastrukturen;"
+            },
+            {
+              "marke": "c",
+              "text": "im Rahmen ihres Beitrags zur Stabilität des schweizerischen Finanzsystems;"
+            },
+            {
+              "marke": "d",
+              "text": "für internationale Organisationen, bei denen die Schweiz Mitglied ist;"
+            },
+            {
+              "marke": "e",
+              "text": "für die Erstellung der Zahlungsbilanz und der Statistik über das Auslandvermögen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "ac1649adab36035bbdf5aaf87088b677583c089ea480f017a02c104625e8af5a"
+    },
+    {
+      "id": "bund/NBV/art_4",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nationalbank beschränkt die Zahl und die Art der Befragungen auf das notwendige Mass. Sie achtet insbesondere darauf, dass die Belastung von Personen, die für Erhebungen zu statistischen Zwecken zur Auskunft verpflichtet sind, möglichst gering gehalten wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führt eine Erhebung bei der Gesamtheit der auskunftspflichtigen Personen (Vollerhebung) durch, sofern die Daten, die mit einer Erhebung bei einem Teil dieser Personen (Teilerhebung) gewonnen werden können, nicht repräsentativ und aussagekräftig sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie verzichtet auf die Erhebung von statistischen Daten, wenn sie auf vorhandene Statistiken mit genügender Aussagekraft zurückgreifen oder wenn sie Daten vergleichbarer Qualität zeitgerecht auf anderem Weg beschaffen kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie kann bestimmte Gruppen von Auskunftspflichtigen von den statistischen Auskunftspflichten ganz oder teilweise entbinden."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "5ae24bb55c4ae6acfed779aec4004436c19499bd4dc7761f10276877da24b643"
+    },
+    {
+      "id": "bund/NBV/art_5",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anhang zu dieser Verordnung legt für jede Erhebung fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung;"
+            },
+            {
+              "marke": "b",
+              "text": "den Gegenstand;"
+            },
+            {
+              "marke": "c",
+              "text": "ob sie als Teil- oder als Vollerhebung durchgeführt wird;"
+            },
+            {
+              "marke": "d",
+              "text": "die auskunftspflichtigen Personen;"
+            },
+            {
+              "marke": "e",
+              "text": "ob sie bei einer Person, die in mehrere organisatorisch selbstständige Einheiten gegliedert ist, sich auf die Geschäftsstelle (einschliesslich Filialen im Inland), die ganze Unternehmung (einschliesslich Filialen im Ausland) oder den ganzen Konzern (einschliesslich Filialen und Tochtergesellschaften im Inland und im Ausland) erstreckt;"
+            },
+            {
+              "marke": "f",
+              "text": "die zeitlichen Abstände, in denen sie durchgeführt wird (Periodizität);"
+            },
+            {
+              "marke": "g",
+              "text": "die Frist für das Einreichen der Daten (Einreichefrist); und"
+            },
+            {
+              "marke": "h",
+              "text": "deren weitere Modalitäten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Nationalbank zur Erfüllung einer gesetzlichen Aufgabe dringend auf die Daten einer bestimmten Erhebung angewiesen, so legt sie für diese während eines begrenzten Zeitraums die Einreichefrist und die Periodizität abweichend vom Anhang fest."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "a8d56561e8f5e1778a4a75f5ba4177a6b9bdcd552bfe7bbe74d13e14025835d6"
+    },
+    {
+      "id": "bund/NBV/art_6",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Nationalbank zur Erfüllung einer gesetzlichen Aufgabe dringend auf zusätzliche Daten angewiesen, so führt sie zusätzliche Erhebungen durch oder verlangt sie im Rahmen bestehender Erhebungen Daten, die im Anhang zu dieser Verordnung nicht vorgesehen sind. Die Zusatzerhebungen müssen sachlich und zeitlich auf das notwendige Mass begrenzt sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Nationalbank orientiert die betroffenen auskunftspflichtigen Personen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Gegenstand;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ziele und den Ablauf der Erhebung;"
+            },
+            {
+              "marke": "c",
+              "text": "die vorgesehene Verwendung der Daten;"
+            },
+            {
+              "marke": "d",
+              "text": "die vorgesehenen Massnahmen zum Datenschutz."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erlässt auf Verlangen einer auskunftspflichtigen Person eine Verfügung über die Auskunftspflicht und deren Gegenstand und Umfang gemäss Artikel 52 des Nationalbankgesetzes."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "c38d5cd516158410405245d0fea280d0c6f6457f71cfdda850588d693e4ecf86"
+    },
+    {
+      "id": "bund/NBV/art_7",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Nationalbank gibt den auskunftspflichtigen Personen und ihren Verbänden Gelegenheit zur Stellungnahme, bevor sie mittels Anpassung dieser Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Organisation und das Verfahren einer Erhebung festlegt oder ändert;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Erhebung neu einführt oder eine bestehende Erhebung massgeblich erweitert."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "9efa7a0061fe7cb7c044c3035cc7fdca81c46025eba3ea5dd20f2b13536603cb"
+    },
+    {
+      "id": "bund/NBV/art_8",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die auskunftspflichtigen Personen werden von der Nationalbank zur Teilnahme an der Erhebung eingeladen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die Auskünfte wahrheitsgetreu, fristgemäss, unentgeltlich und in der vorgeschriebenen Form erteilen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "9cfdb7de14d63b2f541c41aa1a5a8ad4de22cf0342302a0acae7c609442f640b"
+    },
+    {
+      "id": "bund/NBV/art_9",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zieht die Nationalbank Dritte zur Durchführung von Erhebungen bei, so werden diese vertraglich insbesondere dazu verpflichtet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Daten, die ihnen mitgeteilt werden oder die sie im Rahmen ihres Auf trages erheben, einzig zur Ausführung dieses Auftrages zu verwenden;"
+            },
+            {
+              "marke": "b",
+              "text": "die für die Nationalbank durchgeführte Erhebung nicht mit anderen Erhe bungen zu verbinden;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Beendigung des Auftrages der Nationalbank alle Daten zurückzugeben und elektronisch gespeicherte Daten zu löschen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für eine Ausnahme von diesen Pflichten bedarf es der schriftlichen Zustimmung der Nationalbank."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dritten haben nachzuweisen, dass sie die erforderlichen technischen und organisatorischen Massnahmen zur Bearbeitung dieser Daten gemäss der Datenschutzverordnung vom 31. August 2022 getroffen haben."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "276b334617d151e86c48d9cee6cbc6eed9127ff16a7e77aa00c322245abb6ae8"
+    },
+    {
+      "id": "bund/NBV/art_10",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nationalbank erlässt technische Weisungen über die Form der Meldungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie legt insbesondere fest, welche Daten ganz oder teilweise in elektronischer Form zu liefern sind."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "fe2c633d25809060d5c951d6603a5b9cee748ae05bdc77e0a2f6449698bf1f57"
+    },
+    {
+      "id": "bund/NBV/art_11",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle mit der Durchführung von Erhebungen betrauten Personen sind verpflichtet, die erhobenen Daten vertraulich zu behandeln. Sie sorgen dafür, dass die erhobenen Daten an einem sicheren Ort aufbewahrt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufbewahrung der Meldungen der auskunftspflichtigen Personen nach ihrer Auswertung bestimmt sich nach dem Bundesgesetz vom 26. Juni 1998 über die Archivierung."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "d1f7e5fd7efa5ad3368f0327f23b378f48b555855cf3013d0a9ab2cc81938879"
+    },
+    {
+      "id": "bund/NBV/art_12",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mindestreservepflichtig sind ausschliesslich Banken."
+        },
+        {
+          "absatz": "2",
+          "text": "Bankengruppen mit kollektiver Liquiditätshaltung erfüllen die Mindestreservepflicht auf Gruppenebene."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "af76728dd8187b4b4e1d70e2d8325f62812bd4115f67cc1c5d7948fd9126fc83"
+    },
+    {
+      "id": "bund/NBV/art_13",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Erfüllung der Mindestreservepflicht anrechenbar sind folgende auf Schweizerfranken lautende Aktiven der Banken:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "zeilen": [
+              [
+                "a. Umlaufmünzen (ohne Gedenk- und Anlagemünzen)",
+                "zu 100 Prozent"
+              ],
+              [
+                "b. Banknoten",
+                "zu 100 Prozent"
+              ],
+              [
+                "c. Giroguthaben bei der Nationalbank",
+                "zu 100 Prozent"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "360a306b98aa1873fec21bbf63bf6eaacd29613967732c08d66fd62f261e38ea"
+    },
+    {
+      "id": "bund/NBV/art_14",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung der Mindestreserven sind folgende auf Schweizerfranken lautende Verbindlichkeiten der Banken massgeblich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verpflichtungen aus Geldmarktpapieren, die weder Banken noch Kunden zuordenbar sind und die innerhalb von drei Monaten fällig werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Verpflichtungen gegenüber Banken, die auf Sicht lauten oder innerhalb von drei Monaten fällig werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Verpflichtungen aus kündbaren Kundeneinlagen, ohne gebundene Vorsorgegelder;"
+            },
+            {
+              "marke": "d",
+              "text": "Verpflichtungen aus Kundeneinlagen, die auf Sicht lauten oder innerhalb von drei Monaten fällig werden (inklusive Callgelder );"
+            },
+            {
+              "marke": "e",
+              "text": "Verpflichtungen aus Kassenobligationen, die innerhalb von drei Monaten fällig werden;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Für die Berechnung nicht massgeblich sind Verpflichtungen gegenüber Banken, die selber aufgrund der Artikel 17 und 18 NBG mindestreservepflichtig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Die in Absatz 1 Buchstaben a–e verwendeten Begriffe beziehen sich auf die Rechnungslegungsvorschriften der FINMA."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Berechnung der Mindestreserven nicht massgeblich sind Verpflichtungen gegenüber der Nationalbank."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "eec8fca5881dd6809c489f771f6089e19c8ead22ed280c00293d7db895267d1e"
+    },
+    {
+      "id": "bund/NBV/art_15",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die erforderliche Mindestreserve beträgt 4 Prozent des Durchschnitts aus den drei der jeweiligen Unterlegungsperiode vorausgegangenen Monatsendwerten der massgeblichen Verbindlichkeiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Mindestreserveerfordernis muss im Durchschnitt der jeweiligen Unterlegungsperiode vom 20. eines Monats bis zum 19. des Folgemonats erfüllt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Durchschnitt gemäss Absatz 2 wird auf Grund des Verhältnisses zwischen der Summe der täglichen, jeweils bei Geschäftsabschluss vorhandenen Bestände an Aktiven gemäss Artikel 13 einerseits und der Anzahl der Kalendertage der Unterlegungsperiode andererseits berechnet. Für Samstage, Sonntage und Feiertage sind die Bestände des letzten vorangegangenen Werktages einzusetzen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "6f484fc1b2be99edee0d680e64130997499cc32819b538aa1ad2a1e6a0731a05"
+    },
+    {
+      "id": "bund/NBV/art_16",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Banken melden der Nationalbank bis zum Ende des Monats der abgeschlossenen Unterlegungsperiode die Einhaltung der Mindestreservepflicht. Die Nationalbank legt Form und Modalitäten der Meldung in Richtlinien fest."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "f14aef78fe3502986fc2ca8d14c1ba27cfc684bae5ab897bcd3f675f2c37bf8e"
+    },
+    {
+      "id": "bund/NBV/art_17",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfüllt eine Bank das Mindestreserveerfordernis für eine abgeschlossene Unterlegungsperiode nicht, so hat sie der Nationalbank den Fehlbetrag für die Anzahl Tage der jeweiligen Unterlegungsperiode zu verzinsen. Der Zinssatz liegt 4 Prozentpunkte über dem Zinssatz für Tagesgeld für Frankenanlagen, der im Durchschnitt der jeweiligen Unterlegungsperiode zu bezahlen war. Als Basis gilt der SARON (Tagesendfixing). Bei Nichterfüllung ist ein Betrag von mindestens 500 Franken geschuldet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Nationalbank fordert die Bank zur Einzahlung des Zinsbetrags bis zum Ende des 2. Monats nach Abschluss der Unterlegungsperiode auf. Ist die Bank mit der Zinszahlung nicht einverstanden, so kann sie innert 30 Tagen den Erlass einer beschwerdefähigen Verfügung im Sinne von Artikel 52 des Nationalbankgesetzes verlangen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "8f90b3d7db9a05785f87299f767d4eebb9987232c3f8157dcb3625fa4791448e"
+    },
+    {
+      "id": "bund/NBV/art_18",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Offenlegungspflicht nach Artikel 20 Absatz 1 NBG gilt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zahlungssysteme, über die Zahlungen im Betrag von mehr als 25 Milliarden Franken (brutto) pro Geschäftsjahr abgewickelt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Zentralverwahrer;"
+            },
+            {
+              "marke": "c",
+              "text": "zentrale Gegenparteien."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Offenlegungspflicht gilt bereits, bevor das Zahlungssystem, der Zentralverwahrer oder die zentrale Gegenpartei ihren Betrieb aufnimmt; für Zahlungssysteme gilt sie jedoch nur, sofern zu erwarten ist, dass im ersten Jahr nach Betriebsaufnahme der Betrag nach Absatz 1 Buchstabe a erreicht wird."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "ea3b113ecc8cab374f914225a03b9e86ad5281c682b55f7a93cf6466e0acaf14"
+    },
+    {
+      "id": "bund/NBV/art_19",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Nationalbank stellt die systemisch bedeutsamen Finanzmarktinfrastrukturen und deren systemisch bedeutsame Geschäftsprozesse im Sinne von Artikel 22 FinfraG durch Verfügung fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie verlangt vom Betreiber die erforderlichen Angaben und Unterlagen, setzt ihm eine Frist zu deren Einreichung und legt das Format der Meldung fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Bevor die Nationalbank eine Finanzmarktinfrastruktur als systemisch bedeutsam und deren systemisch bedeutsamen Geschäftsprozesse feststellt, gibt sie dem Betreiber Gelegenheit zur Stellungnahme. Sofern es sich um eine bewilligungspflichtige Finanzmarktinfrastruktur gemäss Artikel 4 FinfraG handelt, hört die Nationalbank die FINMA an."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "bf6278d035f88becc013ae9be63e48c877a95be9cfc663bc2c456ba827ae87ff"
+    },
+    {
+      "id": "bund/NBV/art_20",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Feststellung, ob ein Zahlungssystem, ein Zentralverwahrer oder eine zentrale Gegenpartei für die Stabilität des schweizerischen Finanzsystems gemäss Artikel 22 Absatz 1 FinfraG bedeutsam ist, berücksichtigt die Nationalbank insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geschäfte, die über die Finanzmarktinfrastruktur abgerechnet oder abgewickelt werden, namentlich ob es sich um Devisen-, Geldmarkt-, Kapitalmarkt- oder Derivatgeschäfte handelt oder um Geschäfte, welche die Umsetzung der Geldpolitik unterstützen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Transaktionsvolumina und -beträge, die über die Finanzmarktinfrastruktur abgerechnet oder abgewickelt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Währungen, in denen Geschäfte über die Finanzmarktinfrastruktur abgerechnet oder abgewickelt werden;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anzahl, der Nominalwert und die Emissionswährung der von der Finanzmarktinfrastruktur zentral verwahrten oder verwalteten Finanzinstrumente;"
+            },
+            {
+              "marke": "e",
+              "text": "die Teilnehmer der Finanzmarktinfrastruktur;"
+            },
+            {
+              "marke": "f",
+              "text": "die Verbindungen der Finanzmarktinfrastruktur mit anderen Finanzmarktinfrastrukturen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Möglichkeit der Teilnehmer der Finanzmarktinfrastruktur, für die Abrechnung und Abwicklung von Geschäften kurzfristig auf eine andere Finanzmarktinfrastruktur oder alternative Abrechnungs- und Abwicklungsverfahren auszuweichen und die damit verbundenen Risiken;"
+            },
+            {
+              "marke": "h",
+              "text": "die mit dem Betrieb der Finanzmarktinfrastruktur verbundenen Kredit- und Liquiditätsrisiken."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "9049a751db99253b16c7750d7371c0bca18457abcec79f271dc850fcc5d9ae28"
+    },
+    {
+      "id": "bund/NBV/art_20_a_21",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "20_a_21",
+      "artikelLabel": "Art. 20a21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_20_a_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "bund/NBV/art_21_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "21_a",
+      "artikelLabel": "Art. 21a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für systemisch bedeutsame Finanzmarktinfrastrukturen, die nicht der Bewilligungspflicht und der Aufsicht durch die FINMA im Sinne von Artikel 4 FinfraG unterstehen, gelten die nachfolgenden besonderen Anforderungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für systemisch bedeutsame Finanzmarktinfrastrukturen, die der Bewilligungspflicht und der Aufsicht durch die FINMA im Sinne von Artikel 4 FinfraG unterstehen, gelten die Anforderungen nach den Artikeln 23, 24 Absätze 4–6, 24 a , 25 c , 27 Absätze 1 und 2, 28–28 d , 29, 30 Absätze 1 und 3, 32–32 c und 34 sowie die Pflichten gemäss dem 3. Abschnitt mit Ausnahme von Artikel 36 Absatz 1 Buchstabe h."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_21_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "cca6cc97f380b4e3e5056f7ca2c2b74ad9d61d88526b648625eb989bcbd5c8fd"
+    },
+    {
+      "id": "bund/NBV/art_22",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über angemessene Regeln und Verfahren zur Unternehmensführung. Dazu zählen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Organisationsstruktur und Organisationsgrundlagen, welche die Aufgaben, Verantwortlichkeiten, Kompetenzen und Rechenschaftspflichten des Verwaltungsrats, der Geschäftsführung sowie der internen Revision regeln;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Risikomanagement zur Identifizierung, Messung, Steuerung und Überwachung der Risiken;"
+            },
+            {
+              "marke": "c",
+              "text": "ein internes Kontrollsystem, welches unter anderem die Einhaltung der gesetzlichen, regulatorischen und unternehmensinternen Vorschriften gewährleistet ( Compliance )."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betreiber verfügt über Mechanismen, die es erlauben, die Bedürfnisse der Teilnehmer in Bezug auf die Dienstleistungen der Finanzmarktinfrastruktur zu erheben."
+        },
+        {
+          "absatz": "3",
+          "text": "und 4 …"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "b63009ea7aea6d9c2acc2b7351bbe809c0674e66abfcc7f4eb7af7ca536424b8"
+    },
+    {
+      "id": "bund/NBV/art_22_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitglieder des Verwaltungsrats und der Geschäftsführung verfügen über einen einwandfreien Ruf und über die Erfahrung und die Fähigkeiten, die nötig sind, um ihre Aufgaben zu erfüllen. Der Verwaltungsrat lässt seine Leistung regelmässig beurteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Verwaltungsrat umfasst auch Mitglieder, die nicht der Geschäftsführung angehören."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verwaltungsrat regelt die Grundzüge des Risikomanagements. Er genehmigt die Pläne nach den Artikeln 26 und 31 Absatz 4 sowie die Geschäftskontinuitätsstrategie und -pläne nach Artikel 32 b Absatz 4."
+        },
+        {
+          "absatz": "4",
+          "text": "Die interne Revision ist von der Geschäftsführung unabhängig und erstattet dem Verwaltungsrat oder einem seiner Ausschüsse Bericht. Sie verfügt über ausreichend Ressourcen und hat ein unbeschränktes Prüfrecht sowie ein uneingeschränktes Recht, auf sämtliche Unterlagen sowie Datenträger und Informationsverarbeitungssysteme zuzugreifen."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "6abc7d7d630dc63dc62aa9bab3881485c2ef9a9fd91f2b15ae2061c1a0691e2d"
+    },
+    {
+      "id": "bund/NBV/art_22_b",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "22_b",
+      "artikelLabel": "Art. 22b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber zeichnet die wesentlichen erbrachten Dienstleistungen und ausgeübten Tätigkeiten auf und bewahrt sämtliche Aufzeichnungen für einen Zeitraum von zehn Jahren auf."
+        },
+        {
+          "absatz": "2",
+          "text": "und 3 …"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_22_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "c886c1305d9c371afe9306cb0b176c8963d0638b3ce7500fd266b12baf5d67d8"
+    },
+    {
+      "id": "bund/NBV/art_23",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vertraglichen Grundlagen der Finanzmarktinfrastruktur legen insbesondere fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Voraussetzungen für die Teilnahme und die Kriterien zur Suspendierung und zum Ausschluss eines Teilnehmers;"
+            },
+            {
+              "marke": "b",
+              "text": "die Rechte und Pflichten des Betreibers und der Teilnehmer;"
+            },
+            {
+              "marke": "c",
+              "text": "die Regeln und Verfahren für den Betrieb der Finanzmarktinfrastruktur;"
+            },
+            {
+              "marke": "d",
+              "text": "die Regeln und Verfahren beim Ausfall eines Teilnehmers;"
+            },
+            {
+              "marke": "e",
+              "text": "die gegenseitigen Rechte und Pflichten bei Verbindungen mit anderen Finanzmarktinfrastrukturen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Verpflichtungen hinsichtlich der Lieferung von physischen Instrumenten oder Rohstoffen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betreiber überprüft periodisch die Wirksamkeit und Durchsetzbarkeit der vertraglichen Grundlagen nach Massgabe der anwendbaren Rechtsordnungen und trifft die Massnahmen, die erforderlich sind, um allfällige rechtliche Risiken zu begrenzen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "1c68869d7c54935f69f89816b8bb8c1e864a86f6de262740102f86ae77a8679f"
+    },
+    {
+      "id": "bund/NBV/art_23_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber veröffentlicht regelmässig in Grundzügen alle wesentlichen die Finanzmarktinfrastruktur betreffenden Informationen, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Funktionsweise der Finanzmarktinfrastruktur;"
+            },
+            {
+              "marke": "b",
+              "text": "die Organisationsstruktur des Betreibers;"
+            },
+            {
+              "marke": "c",
+              "text": "die Rechte und Pflichten der Teilnehmer;"
+            },
+            {
+              "marke": "d",
+              "text": "die Voraussetzungen für die Teilnahme und die Kriterien zur Suspendierung und zum Ausschluss eines Teilnehmers;"
+            },
+            {
+              "marke": "e",
+              "text": "die Regeln und Verfahren beim Ausfall eines Teilnehmers;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "die aggregierten Transaktionsvolumina und -beträge;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "die Preise und Gebühren für die von der Finanzmarktinfrastruktur erbrachten Dienstleistungen, einschliesslich der Bedingungen für die Gewährung von Rabatten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er veröffentlicht Informationen gemäss den Vorgaben der relevanten internationalen Gremien."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "45a49dfb52c0cc2c8517792caf56257a1e57f1d7567849a864acff891bf71269"
+    },
+    {
+      "id": "bund/NBV/art_24",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber gewährt einen diskriminierungsfreien und offenen Zugang zu seinen Dienstleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann den Zugang beschränken, sofern dadurch die Sicherheit oder die Effizienz der Finanzmarktinfrastruktur gesteigert wird und diese Wirkung durch andere Massnahmen nicht erreicht werden kann. Insbesondere kann er die Teilnahme von der Erfüllung operationeller, technischer, finanzieller und rechtlicher Voraussetzungen abhängig machen."
+        },
+        {
+          "absatz": "3",
+          "text": "Macht ein Betreiber eine Zugangsbeschränkung aus Gründen der Effizienz geltend, so hört die Nationalbank im Rahmen ihrer Beurteilung die Wettbewerbskommission an."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Betreiber überwacht laufend die Einhaltung der Teilnahmevoraussetzungen."
+        },
+        {
+          "absatz": "5",
+          "text": "Er legt Kriterien fest und regelt das Verfahren für die Suspendierung und den Ausschluss von Teilnehmern, welche die Teilnahmevoraussetzungen nicht mehr erfüllen."
+        },
+        {
+          "absatz": "6",
+          "text": "Er teilt die Suspendierung oder den Ausschluss eines Teilnehmers diesem unverzüglich mit."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "9eebecfe2f072a79f1a7243ee6713e5903ed3c39e2a480e083f04a03f84c6e90"
+    },
+    {
+      "id": "bund/NBV/art_24_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über Regeln und Verfahren, die geeignet sind, den Ausfall eines Teilnehmers zu bewältigen und die Kredit- und Liquiditätsrisiken für die Finanzmarktinfrastruktur und deren Teilnehmer zu minimieren. Diese Regeln und Verfahren ermöglichen es dem Betreiber, seinen Verpflichtungen bei Fälligkeit nachzukommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Regeln und Verfahren legen insbesondere fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in welcher Reihenfolge der Betreiber Sicherheiten und andere Finanzmittel zur Deckung von Verlusten herbeizieht (Wasserfallprinzip);"
+            },
+            {
+              "marke": "b",
+              "text": "wie der Betreiber Verluste zuordnet, die durch Sicherheiten und andere Finanzmittel nicht gedeckt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "wie der Betreiber mit Liquiditätsengpässen umgeht;"
+            },
+            {
+              "marke": "d",
+              "text": "wie der Betreiber Sicherheiten und andere Finanzmittel wieder aufstockt, die zur Deckung von Verlusten oder von Liquiditätsengpässen nach einem Teilnehmerausfall aufgebraucht wurden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betreiber überprüft und testet diese Regeln und Verfahren mindestens jährlich."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_24_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "0e65a981b0ba8b4aa99f14c06608ce700de57ac0a3a7f18ea61cb3c9c16f1694"
+    },
+    {
+      "id": "bund/NBV/art_24_b",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "24_b",
+      "artikelLabel": "Art. 24b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_24_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/NBV/art_25",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern möglich und praktikabel, wickelt die Finanzmarktinfrastruktur Zahlungen durch die Übertragung von Sichtguthaben bei einer Zentralbank ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Andernfalls verwendet die Finanzmarktinfrastruktur ein Zahlungsmittel, welches keine oder nur geringe Kredit- und Liquiditätsrisiken aufweist. Der Betreiber minimiert und überwacht diese Risiken laufend."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "2275559aca4ecc7034b3d2c7110ae033ca1725c599523da0c12c4f55439781fa"
+    },
+    {
+      "id": "bund/NBV/art_25_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Regeln der Finanzmarktinfrastruktur legen den Zeitpunkt fest, ab welchem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Weisung eines Teilnehmers für eine Zahlung nicht mehr abgeändert oder widerrufen werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Zahlung abgewickelt ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzmarktinfrastruktur wickelt Zahlungen und Effektenüberträge in Echtzeit ab, längstens aber bis zum Ende des Valutatages."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_25_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "076e645d4457299f54040b3723cb785b0135b18cba159c51c1a14ffe25fd1c61"
+    },
+    {
+      "id": "bund/NBV/art_25_b",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "25_b",
+      "artikelLabel": "Art. 25b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Betreiber einer Finanzmarktinfrastruktur ermöglicht den Teilnehmern, ihre Erfüllungsrisiken zu vermeiden, indem er sicherstellt, dass bei wechselseitigen Verpflichtungen die Abwicklung der einen Verpflichtung nur dann erfolgt, wenn auch die Abwicklung der anderen Verpflichtung sichergestellt ist."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_25_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "eed76d79aa83bef5534963cb236bf83deaa11ee2bb89efb0eca0323aa1ddac03"
+    },
+    {
+      "id": "bund/NBV/art_25_c",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "25_c",
+      "artikelLabel": "Art. 25c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Zentralverwahrer verfügt über Regeln, Verfahren und Kontrollen, die geeignet sind, die Risiken aus der Verwahrung und Übertragung von Effekten zu minimieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Zentralverwahrer ermöglicht es seinen Teilnehmern, die Effekten in einer immobilisierten oder dematerialisierten Form durch Verbuchung in einem Effektenkonto zu halten."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_25_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "800c068d1bc013825c854b0471d6f9651cff4d529ac5f15386b155ed3f16320c"
+    },
+    {
+      "id": "bund/NBV/art_26",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert die Szenarien, welche die Geschäftsfortführung gefährden können und erstellt einen Plan, um die systemisch bedeutsamen Geschäftsprozesse:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei drohender Insolvenz oder anderen Szenarien, welche die Geschäftsfortführung gefährden, aufrechtzuerhalten oder geordnet zu beenden;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer freiwilligen Geschäftsaufgabe geordnet zu beenden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Plan umfasst insbesondere eine Beschreibung der vom Betreiber zu treffenden Massnahmen sowie der Ressourcen, die für deren Umsetzung erforderlich sind. Der Plan berücksichtigt die Zeitspanne, die erforderlich ist, damit sich die Teilnehmer an eine alternative Finanzmarktinfrastruktur anbinden können."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "46dfb39fa002cfed3dbcb57c54e91a2d8f16b4e1160f9a2396461bf5215b9a46"
+    },
+    {
+      "id": "bund/NBV/art_27",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über ein Konzept zur integrierten Identifizierung, Messung, Steuerung und Überwachung der wesentlichen Risiken, insbesondere rechtlicher Risiken, der Kredit- und Liquiditätsrisiken, Geschäftsrisiken sowie operationeller Risiken."
+        },
+        {
+          "absatz": "2",
+          "text": "Er berücksichtigt bei der Ausgestaltung der Verfahren und Instrumente zur Steuerung der Kredit- und Liquiditätsrisiken deren Auswirkungen auf die Teilnehmer und das Finanzsystem. Insbesondere zielt er darauf ab, prozyklische Effekte zu vermeiden."
+        },
+        {
+          "absatz": "3",
+          "text": "Er stellt Instrumente zur Verfügung und schafft Anreize, damit die Teilnehmer die Risiken, welche für sie selber oder für die Finanzmarktinfrastruktur entstehen, fortlaufend steuern und begrenzen können."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "3060068bb65fb4a50aafe5b0e8b8ae9dedb695d33b337c190f0ff5ddbaa92cba"
+    },
+    {
+      "id": "bund/NBV/art_28",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht seine Kreditrisiken mittels geeigneter Verfahren und Instrumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Er verfügt über Sicherheiten gemäss Artikel 28 a , die ausreichen, um die laufenden und potenziellen Kreditrisiken gegenüber jedem einzelnen Teilnehmer mit einem hohen Konfidenzniveau zu decken. Er prüft die Einhaltung dieser Anforderung regelmässig."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "088eaf55f21d5e2cecf17f78e43b945d5935521437979e8b194ef5fedcea7abf"
+    },
+    {
+      "id": "bund/NBV/art_28_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber akzeptiert zur Absicherung von Risiken ausschliesslich liquide Sicherheiten, die geringe Kredit- und Marktrisiken aufweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er bewertet die Sicherheiten vorsichtig. Er wendet auch für extreme, aber plausible Marktbedingungen angemessene Sicherheitsabschläge an und validiert diese regelmässig."
+        },
+        {
+          "absatz": "3",
+          "text": "Er vermeidet Klumpenrisiken bei den Sicherheiten. Zur Diversifizierung der Sicherheiten legt er Konzentrationslimiten fest und überwacht deren Einhaltung. Er stellt zudem sicher, dass kein Teilnehmer Sicherheiten liefert, welche bei seinem Ausfall stark an Wert verlieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Er stellt sicher, dass er rechtzeitig über die Sicherheiten verfügen kann. Dies gilt insbesondere auch für Sicherheiten, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Ausland verwahrt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "von ausländischen Emittenten herausgegeben werden; oder"
+            },
+            {
+              "marke": "c",
+              "text": "in einer Fremdwährung denominiert sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_28_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "dbefb0d02c5d82001cdf19f595e9c2e96ee409ce7fd119bb45ddaea8ed2413d9"
+    },
+    {
+      "id": "bund/NBV/art_28_b",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "28_b",
+      "artikelLabel": "Art. 28b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine zentrale Gegenpartei begrenzt ihre Kreditrisiken gegenüber ihren Teilnehmern, indem sie von diesen Sicherheiten gemäss Artikel 28 a in Form von Ersteinschusszahlungen ( Initial Margins ), Nachschusszahlungen ( Variation Margins ) und Ausfallfondsbeiträgen ( Default Fund ) einzieht."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine zentrale Gegenpartei bewertet die Sicherheiten sowie Forderungen und Verpflichtungen der Teilnehmer zu aktuellen Marktpreisen und zieht Ersteinschusszahlungen und Nachschusszahlungen (Einschusszahlungen) mindestens einmal täglich ein, falls zuvor festgelegte Schwellenwerte überschritten werden. Sie ist zudem befugt und in der Lage, Einschusszahlungen auch während des Tages einzufordern."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einschusszahlungen und die Ausfallfondsbeiträge decken die laufenden und potenziellen Kreditrisiken in einer Vielzahl von Szenarien. Diese Szenarien umfassen unter anderem den Ausfall des Teilnehmers oder der Teilnehmergruppe und den Ausfall der zwei Teilnehmer oder der zwei Teilnehmergruppen, gegenüber welchen eine zentrale Gegenpartei die grössten potenziellen Kreditrisiken aufweist, unter extremen, aber plausiblen Marktbedingungen. Eine Teilnehmergruppe umfasst sämtliche Teilnehmer, die demselben Konzern angehören."
+        },
+        {
+          "absatz": "4",
+          "text": "Um beim Ausfall eines Teilnehmers die allfälligen Verluste zu decken, greift eine zentrale Gegenpartei in folgender Reihenfolge auf Sicherheiten und Eigenmittel zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einschusszahlungen des ausgefallenen Teilnehmers;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausfallfondsbeiträge des ausgefallenen Teilnehmers;"
+            },
+            {
+              "marke": "c",
+              "text": "zugeordnete Eigenmittel der zentralen Gegenpartei, wobei diese in einem substanziellen Verhältnis zur Höhe der gesamten Eigenmittel der zentralen Gegenpartei stehen müssen;"
+            },
+            {
+              "marke": "d",
+              "text": "Ausfallfondsbeiträge der nicht ausgefallenen Teilnehmer."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_28_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "415c83ae6fb1fc01799ea33283b567202da8a075c1b3fdd05ca037a71406e34c"
+    },
+    {
+      "id": "bund/NBV/art_28_c",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "28_c",
+      "artikelLabel": "Art. 28c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ersteinschusszahlungen eines Teilnehmers decken die potenziellen Kreditrisiken, die sich bei dessen Ausfall für eine zentrale Gegenpartei aufgrund der erwarteten Marktpreisveränderungen über einen angemessenen Zeithorizont ergeben, mit einem Konfidenzniveau von mindestens 99 Prozent. Für ausserbörslich gehandelte Derivate beträgt das Konfidenzniveau mindestens 99,5 Prozent, es sei denn die ausserbörslich gehandelten Derivate weisen dieselben Risikomerkmale wie börsengehandelte Derivate auf."
+        },
+        {
+          "absatz": "2",
+          "text": "Der angemessene Zeithorizont gemäss Absatz 1 entspricht der Dauer von der letzten Nachschusszahlung bis zur erwarteten Liquidierung oder Absicherung der Forderungen und Verpflichtungen bei einem Teilnehmerausfall. Er beträgt mindestens zwei Arbeitstage. Für ausserbörslich gehandelte Derivate beträgt der Zeithorizont mindestens fünf Arbeitstage, es sei denn die ausserbörslich gehandelten Derivate weisen dieselben Risikomerkmale wie börsengehandelte Derivate auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine zentrale Gegenpartei verwendet für die Berechnung der Ersteinschusszahlungen die Marktpreisveränderungen der den Forderungen und Verpflichtungen zugrunde liegenden Finanzinstrumente über mindestens die letzten zwölf Monate. Sie kann andere und zusätzliche Zeitperioden wählen, falls daraus höhere Ersteinschusszahlungen resultieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine zentrale Gegenpartei, die für die Berechnung der Ersteinschusszahlungen eines Teilnehmers dessen Forderungen und Verpflichtungen verrechnet, trifft auch für extreme, aber plausible Marktbedingungen angemessene Annahmen über die Korrelationen der Finanzinstrumente, die diesen Forderungen und Verpflichtungen zugrunde liegen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Nachschusszahlungen decken die laufenden Kreditrisiken, die sich aufgrund der realisierten Marktpreisveränderungen ergeben, unter Berücksichtigung zuvor festgelegter Schwellenwerte."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_28_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "55bb16d5ff84384b15fca0e22d48c3f296b0afc7fb2086773043d3260fef71d8"
+    },
+    {
+      "id": "bund/NBV/art_28_d",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "28_d",
+      "artikelLabel": "Art. 28d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine zentrale Gegenpartei prüft:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "täglich anhand von Backtests, ob die eingeforderten Ersteinschusszahlungen die Anforderungen gemäss Artikel 28 c Absatz 1 erfüllen;"
+            },
+            {
+              "marke": "b",
+              "text": "täglich anhand von Stresstests, ob die eingeforderten Einschusszahlungen und Ausfallfondsbeiträge die Anforderungen gemäss Artikel 28 b Absatz 3 erfüllen;"
+            },
+            {
+              "marke": "c",
+              "text": "monatlich, wie sich die Ersteinschusszahlungen verändern, wenn die Annahmen und Parameter für deren Berechnung variiert werden;"
+            },
+            {
+              "marke": "d",
+              "text": "monatlich die den Stresstests zugrunde liegenden Szenarien, Modelle, Annahmen und Parameter;"
+            },
+            {
+              "marke": "e",
+              "text": "mindestens jährlich umfassend ihr Modell für das Management der Kreditrisiken und dessen Umsetzung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt sie bei den Prüfungen gemäss Absatz 1 Mängel fest, so nimmt sie Anpassungen vor, um die Anforderungen einzuhalten."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_28_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "e653146dc8079b34544b5b125d49abdd39f050321f78a6184595bca57f8d224e"
+    },
+    {
+      "id": "bund/NBV/art_29",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht seine Liquiditätsrisiken mittels geeigneter Verfahren und Instrumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Er verfügt über ausreichend Liquidität, um seinen Zahlungsverpflichtungen in allen Währungen auch unter verschiedenen Stressszenarien bei Fälligkeit nachzukommen. Er wendet auf die Liquidität Sicherheitsabschläge an, die auch unter extremen, aber plausiblen Marktbedingungen angemessen sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Auswahl der Stressszenarien berücksichtigt der Betreiber insbesondere die nachfolgenden Stressereignisse unter extremen aber plausiblen Marktbedingungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Ausfall des Teilnehmers oder der Teilnehmergruppe, der für die Finanzmarktinfrastruktur die grösste aggregierte Zahlungsverpflichtung auslösen würde;"
+            },
+            {
+              "marke": "b",
+              "text": "für eine zentrale Gegenpartei zusätzlich den Ausfall der zwei Teilnehmer oder der zwei Teilnehmergruppen, der für die zentrale Gegenpartei die grösste aggregierte Zahlungsverpflichtung auslösen würde;"
+            },
+            {
+              "marke": "c",
+              "text": "den Ausfall des jeweils grössten Liquiditätsgebers in den fünf Währungen, in denen die Finanzmarktinfrastruktur die grössten Zahlungsverpflichtungen aufweist."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Als Liquidität in einer Währung nach Absatz 2 gelten Barguthaben, Kreditlinien und Sicherheiten nach den Artikeln 50 Absatz 1 und 58 Absatz 1 der Finanzmarktinfrastrukturverordnung vom 25. November 2015 (FinfraV)."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Betreiber diversifiziert seine Liquiditätsgeber und vermeidet Klumpenrisiken bei Sicherheiten und Vermögenswerten gemäss den Artikeln 50 Absatz 1 Buchstaben d und e sowie 58 Absatz 1 Buchstaben d und e FinfraV."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Betreiber:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "prüft täglich anhand von Stresstests, ob die Anforderung gemäss Absatz 2 erfüllt ist;"
+            },
+            {
+              "marke": "b",
+              "text": "überprüft mindestens quartalsweise die Kreditwürdigkeit und die Fähigkeit der Liquiditätsgeber, ihren Verpflichtungen nachzukommen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "fd416f56309f610896c369db1c5343adc63c7724e9a030552f05bac7faead000"
+    },
+    {
+      "id": "bund/NBV/art_30",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht seine Verwahrungs- und Anlagerisiken mittels geeigneter Verfahren und Instrumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Verwahrt er eigene Vermögenswerte oder Sicherheiten und Vermögenswerte von Teilnehmern bei Dritten, so minimiert er die damit verbundenen Risiken. Insbesondere hält er die Sicherheiten und Vermögenswerte bei kreditwürdigen und wenn möglich beaufsichtigten Finanzinstituten und trifft Massnahmen, damit er bei Bedarf unverzüglich auf die Sicherheiten und Vermögenswerte zugreifen kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anlagestrategie des Betreibers steht im Einklang mit seiner Risikomanagementstrategie und lässt nur liquide Anlagen zu, die geringe Kredit- und Marktrisiken aufweisen. Der Betreiber vermeidet Klumpenrisiken und legt die Anlagestrategie gegenüber seinen Teilnehmern offen, namentlich die allfällige Weiterverwendung der von ihnen geleisteten Sicherheiten."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "2321e9ccc13e1663e5ba241c55cfacc3fbe1640b2b280f761291163e62a7d2ad"
+    },
+    {
+      "id": "bund/NBV/art_31",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht seine allgemeinen Geschäftsrisiken mittels geeigneter Verfahren und Instrumente."
+        },
+        {
+          "absatz": "2",
+          "text": "Um Verluste aus allgemeinen Geschäftsrisiken zu decken, hält der Betreiber Eigenmittel und Nettoliquidität. Diese reichen aus, um den Plan gemäss Artikel 26 umzusetzen, wobei mindestens die laufenden Betriebsausgaben während sechs Monaten zu decken sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Sicherheiten und andere zugeordnete Finanzmittel, welche verwendet werden, um Verluste aus Teilnehmerausfällen oder aus anderweitigen Kredit- und Liquiditätsrisiken gemäss den Artikeln 28 und 29 zu decken, sind für die Erfüllung der Anforderung nach Absatz 2 nicht anrechenbar."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Betreiber verfügt über einen Plan, um zusätzliche Eigenmittel zu beschaffen, falls diese der Anforderung nach Absatz 2 nicht mehr genügen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "04d64abf84fa51c2c623652de36900a05db61a3b8d583619dc108fe896a4b777"
+    },
+    {
+      "id": "bund/NBV/art_32",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht seine operationellen Risiken mittels Verfahren und Instrumente, die geeignet sind, insbesondere die Informationssicherheit und die Aufrechterhaltung der Geschäftsprozesse zu gewährleisten. Er orientiert sich dabei an anerkannten Standards."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "3e6151abdb52d1587c4f723c2ed18f84f25f91114a639cee9063eced50bbc1d9"
+    },
+    {
+      "id": "bund/NBV/art_32_a",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "32_a",
+      "artikelLabel": "Art. 32a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über einen unternehmensweiten Ansatz und eine geeignete Organisationsstruktur, um das Management der auf die Informationssicherheit ausgerichteten Aufgaben und Aktivitäten zu planen, durchzuführen, zu überwachen und zu verbessern (Informationssicherheitsmanagement)."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt angemessene Ziele fest hinsichtlich der Verfügbarkeit, Integrität, Vertraulichkeit, Nachvollziehbarkeit, Authentizität, Zurechenbarkeit und Nichtabstreitbarkeit von Informationen, insbesondere der Daten von Geschäften, die über die Finanzmarktinfrastruktur abgerechnet oder abgewickelt werden (Informationssicherheitsziele)."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betreiber trifft organisatorische und technische Massnahmen, um die Informationssicherheitsziele zu erfüllen, und zwar sowohl im Normalbetrieb als auch während Entwicklungs- und Unterhaltsarbeiten und bei erhöhten Transaktionsvolumen. Insbesondere trifft er Vorkehrungen, um:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unternehmensinterne und externe Bedrohungen für die Informationssicherheit zu identifizieren, zu analysieren und zu bewerten sowie bei Bedarf Schutzmassnahmen umzusetzen;"
+            },
+            {
+              "marke": "b",
+              "text": "die physische Sicherheit der Einrichtungen der Informationsverarbeitung zu gewährleisten;"
+            },
+            {
+              "marke": "c",
+              "text": "den sicheren und kontinuierlichen Betrieb der Einrichtungen der Informationsverarbeitung zu gewährleisten;"
+            },
+            {
+              "marke": "d",
+              "text": "Zugriffe auf Informationen und Einrichtungen der Informationsverarbeitung zu regeln, zu protokollieren und auszuwerten;"
+            },
+            {
+              "marke": "e",
+              "text": "Daten vor Verlust, Abfluss, unautorisiertem Zugriff und anderen Verarbeitungsrisiken wie Unachtsamkeit, Betrug, mangelhafter Verwaltung und unangemessener Aufbewahrung zu schützen;"
+            },
+            {
+              "marke": "f",
+              "text": "die sichere Speicherung und Übermittlung von sensiblen Daten zu gewährleisten;"
+            },
+            {
+              "marke": "g",
+              "text": "die richtige und vollständige Bearbeitung der Geschäfte sicherzustellen;"
+            },
+            {
+              "marke": "h",
+              "text": "Geschäfte auf allen wesentlichen Bearbeitungsstufen, insbesondere bei der Eingabe in das Informationsverarbeitungssystem und bei der Ausgabe aus diesem, aufzuzeichnen und zu prüfen;"
+            },
+            {
+              "marke": "i",
+              "text": "Eingriffe in das Informationsverarbeitungssystem wie Softwareänderungen oder Änderungen der Parameter aufzuzeichnen und zu überwachen;"
+            },
+            {
+              "marke": "j",
+              "text": "Fehler in der Verarbeitung und Störungen des Informationsverarbeitungssystems zeitnah und standardisiert aufzuzeichnen, auszuwerten, zu beheben und eine Wiederholung zu vermeiden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Er überprüft regelmässig die Angemessenheit und die Einhaltung der Informationssicherheitsziele gemäss Absatz 2."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_32_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "6aa6487108270af8d05ab9b67a83f39f916c69a4ab732d9afea26affcc878b8e"
+    },
+    {
+      "id": "bund/NBV/art_32_b",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "32_b",
+      "artikelLabel": "Art. 32b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über einen unternehmensweiten Ansatz, um die Geschäftsprozesse, insbesondere die systemisch bedeutsamen Geschäftsprozesse, bei Eintreten von Schadenereignissen aufrechterhalten oder zeitgerecht wiederherstellen zu können."
+        },
+        {
+          "absatz": "2",
+          "text": "Er bestimmt die notwendigen Ressourcen (Gebäude, Mitarbeitende, technische Einrichtungen, Daten, externe Dienstleister) für die einzelnen Geschäftsbereiche und beurteilt für die Geschäftsprozesse, insbesondere für die systemisch bedeutsamen Geschäftsprozesse, die jeweiligen Auswirkungen eines kompletten oder teilweisen Ausfalls dieser Ressourcen (Geschäftsauswirkungsanalyse). Die Beurteilung schliesst auch gegenseitige Abhängigkeiten zwischen den Geschäftsbereichen und Abhängigkeiten von externen Dienstleistungserbringern mit ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Basierend auf der Geschäftsauswirkungsanalyse bestimmt der Betreiber die bei Eintreten eines Schadenereignisses maximal tolerierbare Zeitspanne bis zur Wiederherstellung der Geschäftsprozesse und den erforderlichen Wiederherstellungsgrad (Wiederherstellungsziele) sowie die dafür notwendigen Ressourcen. Für die systemisch bedeutsamen Geschäftsprozesse beträgt die maximale Zeitspanne bis zur Wiederherstellung auch bei grösseren Schadenereignissen (z. B. Nichtverfügbarkeit eines betriebswichtigen Gebäudes inklusive Mitarbeitende) zwei Stunden."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Betreiber legt das Vorgehen fest, mit dem er die Wiederherstellungsziele gemäss Absatz 3 erreichen will (Geschäftskontinuitätsstrategie) und erstellt Pläne, welche die Vorgehensweise und die Verantwortlichkeiten detailliert beschreiben (Geschäftskontinuitätspläne)."
+        },
+        {
+          "absatz": "5",
+          "text": "Er überprüft und testet die Geschäftskontinuitätspläne hinsichtlich deren Aktualität, Umsetzung und Wirksamkeit im Anschluss an wesentliche Änderungen, mindestens aber jährlich. Für diese Tests bezieht er bei Bedarf Teilnehmer und wichtige Dienstleistungserbringer ein."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_32_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "05f4da4f47f3996e3ea74ecb974dd19f1d29720103f2a8209971324b8409f8b6"
+    },
+    {
+      "id": "bund/NBV/art_32_c",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "32_c",
+      "artikelLabel": "Art. 32c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber verfügt über mindestens zwei Rechenzentren, die hohen Anforderungen genügen, insbesondere in Bezug auf die physische Sicherheit, den Brandschutz, die Energieversorgung, die Kühlungssysteme und die Telekommunikationsinfrastruktur."
+        },
+        {
+          "absatz": "2",
+          "text": "Er bestimmt die Standorte der Rechenzentren anhand einer Risikoanalyse und stellt sicher, dass die Rechenzentren über unterschiedliche Risikoprofile verfügen und auch bei einem grossflächigen Schadenereignis Schutz bieten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Rechenzentren sowie die Vorkehrungen für deren Betrieb sind geeignet, um die Informationssicherheitsziele und Wiederherstellungsziele nach den Artikeln 32 a und 32 b einzuhalten. Fällt ein Rechenzentrum aus, so muss der Betreiber insbesondere die systemisch bedeutsamen Geschäftsprozesse innerhalb von zwei Stunden in einem anderen Rechenzentrum weiterführen können, ohne Verlust von gegenüber den Teilnehmern bestätigten Verarbeitungsschritten."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_32_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "7a7033a56c916344f4b265a1573f3ce12444488ae5d645cd86f4608cc983367a"
+    },
+    {
+      "id": "bund/NBV/art_32_d",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "32_d",
+      "artikelLabel": "Art. 32d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lagert der Betreiber wesentliche Dienstleistungen aus, so wählt er die Dienstleistungserbringer sorgfältig aus und instruiert diese."
+        },
+        {
+          "absatz": "2",
+          "text": "Er integriert die ausgelagerte Dienstleistung in sein internes Kontrollsystem und überwacht die Leistungen des Dienstleistungserbringers fortlaufend."
+        },
+        {
+          "absatz": "3",
+          "text": "Er trägt für die ausgelagerte Dienstleistung weiterhin die Verantwortung für die Einhaltung der besonderen Anforderungen gemäss diesem Kapitel."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Auslagerungsvertrag legt insbesondere fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Leistungen des Dienstleistungserbringers;"
+            },
+            {
+              "marke": "b",
+              "text": "die Möglichkeit für die Nationalbank, für den Betreiber oder für eine beauftragte externe Stelle, die an den Dienstleistungserbringer ausgelagerten Dienstleistung vollumfänglich und ungehindert zu prüfen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_32_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "b63e1e56a2d5c7dca2f991495693f0a4d179a3ac6ba4af8f8a4d60753536a3e0"
+    },
+    {
+      "id": "bund/NBV/art_33",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sofern die Finanzmarktinfrastruktur über indirekte Teilnehmer verfügt und diese für den Betreiber ersichtlich sind, so identifiziert, misst, steuert und überwacht der Betreiber die von indirekten Teilnehmern für die Finanzmarktinfrastruktur ausgehenden Risiken."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "44575dd4b6152af2bffcd1c37b736dc3af7090602ff6f19b42d858aa688f7861"
+    },
+    {
+      "id": "bund/NBV/art_34",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber identifiziert, misst, steuert und überwacht die Risiken, die sich aus Verbindungen mit anderen Finanzmarktinfrastrukturen ergeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Geht ein Zentralverwahrer eine Verbindung mit einem anderen Zentralverwahrer ein, so:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deckt der Zentralverwahrer die Kreditrisiken, die bei einer Kreditgewährung an den anderen Zentralverwahrer entstehen, mit einem hohen Konfidenzniveau durch geeignete Besicherungsmassnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "erlaubt der Zentralverwahrer die Weiterverwendung der vom anderen Zentralverwahrer provisorisch erhaltenen Effekten erst, wenn der ursprüngliche Übertrag nicht mehr abgeändert oder widerrufen werden kann;"
+            },
+            {
+              "marke": "c",
+              "text": "identifiziert, misst, steuert und überwacht der Zentralverwahrer bei indirekten Verbindungen die Risiken, die sich aufgrund zwischengeschalteter Finanzinstitute ergeben;"
+            },
+            {
+              "marke": "d",
+              "text": "gleicht der Zentralverwahrer täglich die bei ihm zwischenverwahrten Bestände mit denjenigen ab, die er bei anderen Zentralverwahrern und Depotstellen hält;"
+            },
+            {
+              "marke": "e",
+              "text": "ermöglicht der Zentralverwahrer die Abwicklung von Geschäften zwischen Teilnehmern der miteinander verbundenen Zentralverwahrer durch «Lieferung gegen Zahlung», sofern dies praktikabel ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Geht eine zentrale Gegenpartei eine Verbindung mit einer anderen zentralen Gegenpartei ein, so deckt sie die daraus entstehenden laufenden und potenziellen Kreditrisiken mit einem hohen Konfidenzniveau durch den Einzug von Sicherheiten gemäss Artikel 28 a von der anderen zentralen Gegenpartei."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "fcc549eb24420fced43f89233aa0d9cbbf3ff64d895b2edf68c88f341017eecd"
+    },
+    {
+      "id": "bund/NBV/art_35",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Betreiber hat der Nationalbank oder von ihr bestimmten Dritten alle Auskünfte zu erteilen und Unterlagen zur Verfügung zu stellen, die diese für die Beurteilung der Einhaltung der besonderen Anforderungen nach diesem Kapitel benötigt."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "8a63ac8fbaefcd880d803ea48e5565577baad3ccf6735e1c802226017b0c2cc7"
+    },
+    {
+      "id": "bund/NBV/art_36",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betreiber reicht der Nationalbank folgende Unterlagen und Informationen ein:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Geschäftsbericht;"
+            },
+            {
+              "marke": "b",
+              "text": "die vertraglichen Grundlagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Organisationsgrundlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Protokolle der Sitzungen des Verwaltungsrats;"
+            },
+            {
+              "marke": "e",
+              "text": "die Berichte der internen und externen Revisionsstellen;"
+            },
+            {
+              "marke": "f",
+              "text": "Angaben über die Teilnehmer;"
+            },
+            {
+              "marke": "g",
+              "text": "Daten über die Abrechnung und Abwicklung von Zahlungen und Finanzinstrumenten sowie die zentrale Verwahrung von Effekten;"
+            },
+            {
+              "marke": "h",
+              "text": "die Pläne gemäss Artikel 26, um systemisch bedeutsame Geschäftsprozesse aufrechtzuerhalten oder geordnet zu beenden, sowie gemäss Artikel 31 Absatz 4, um zusätzliche Eigenmittel zu beschaffen;"
+            },
+            {
+              "marke": "i",
+              "text": "die Risikokontrollergebnisse gemäss den Artikeln 27–32 a, 33 und 34;"
+            },
+            {
+              "marke": "j",
+              "text": "Angaben über die Verfügbarkeit des Informationsverarbeitungssystems sowie über Ausfälle und Störungen einschliesslich der Ursachen und der getroffenen Massnahmen (Betriebsstatistik und Produktionsbericht);"
+            },
+            {
+              "marke": "k",
+              "text": "die Geschäftsauswirkungsanalyse, die Geschäftskontinuitätsstrategie und die Geschäftskontinuitätspläne gemäss Artikel 32 b Absätze 2–4;"
+            },
+            {
+              "marke": "l",
+              "text": "die Ergebnisse der Tests der Geschäftskontinuitätspläne gemäss Artikel 32 b Absatz 5;"
+            },
+            {
+              "marke": "m",
+              "text": "bei einem Ausfall eines Teilnehmers einen Bericht über den Verlauf des Ausschlussverfahrens;"
+            },
+            {
+              "marke": "n",
+              "text": "einen Bericht über die Einhaltung der besonderen Anforderungen nach diesem Kapitel."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betreiber informiert die Nationalbank frühzeitig über geplante wesentliche Änderungen in Bezug auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Eigentumsverhältnisse;"
+            },
+            {
+              "marke": "b",
+              "text": "die Unternehmensziele, die Unternehmensstrategie und die angebotenen Dienstleistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unternehmensführung und Organisation im Sinne von Artikel 22;"
+            },
+            {
+              "marke": "d",
+              "text": "das verwendete Zahlungsmittel;"
+            },
+            {
+              "marke": "e",
+              "text": "die Voraussetzungen für die Teilnahme an der Finanzmarktinfrastruktur;"
+            },
+            {
+              "marke": "f",
+              "text": "das Risikomanagement, insbesondere die Verfahren und Instrumente für das Management der Kredit- und Liquiditätsrisiken;"
+            },
+            {
+              "marke": "g",
+              "text": "das Management operationeller Risiken, insbesondere die Geschäftskontinuitätsstrategie sowie die organisatorischen und technischen Massnahmen zur Erreichung der Informationssicherheitsziele;"
+            },
+            {
+              "marke": "h",
+              "text": "Vereinbarungen mit Dritten, deren Leistungen für den Betrieb der Finanzmarktinfrastruktur wesentlich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betreiber informiert die Nationalbank umgehend über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wesentliche Rechtsstreitigkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "Ereignisse, welche die Erreichung der Informationssicherheitsziele gemäss Artikel 32 a und der Geschäftskontinuitätsziele gemäss Artikel 32 b wesentlich beeinträchtigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Nichteinhaltung der Anforderungen an das Management der Kredit- und Liquiditätsrisiken gemäss den Artikeln 28, 28 b , 28 c , 28 d und 29."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Betreiber informiert die Nationalbank, die FINMA sowie weitere zuständige Aufsichtsbehörden umgehend über die Suspendierung oder den Ausschluss eines Teilnehmers."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Nationalbank legt in Absprache mit dem Betreiber die Frequenzen, die Termine und die Formate für die Einreichung der Unterlagen und die Erstattung der Meldungen gemäss den Absätzen 1–4 fest."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "1fa0d7f0d266c1dd70211be636f50c5c9bc455043593e5bff74c88c7ac62dcdf"
+    },
+    {
+      "id": "bund/NBV/art_37",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Beurteilung der Einhaltung der besonderen Anforderungen nach diesem Kapitel kann die Nationalbank vor Ort Prüfungen bei der Finanzmarktinfrastruktur durchführen oder einen Dritten damit beauftragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betreiber lässt die Zweckmässigkeit und Wirksamkeit des Risikomanagements regelmässig durch eine befähigte interne oder externe Stelle überprüfen. Die Nationalbank kann Vorgaben bezüglich des Prüfumfangs und der Prüftiefe machen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betreiber lässt die Zweckmässigkeit und Wirksamkeit der angewandten Verfahren und Instrumente für das Management der operationellen Risiken jährlich durch eine befähigte externe Stelle überprüfen. Die Nationalbank legt in Absprache mit dem Betreiber den Prüfumfang und die Prüftiefe fest."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "ee0c6c24ffb36e608b8b761fbe0a7b6d0d19b988c713a844fb764e3a8f90b319"
+    },
+    {
+      "id": "bund/NBV/art_38",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Genügt eine Finanzmarktinfrastruktur den besonderen Anforderungen dieses Kapitels nicht, so richtet die Nationalbank eine Empfehlung an den Betreiber."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erlässt eine Verfügung, wenn der Betreiber eine entsprechende Empfehlung nach Absatz 1 nicht befolgt."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie gibt dem Betreiber jeweils Gelegenheit zur Stellungnahme, bevor sie eine Empfehlung nach Absatz 1 an den Betreiber richtet oder eine Verfügung nach Absatz 2 erlässt. Untersteht die Finanzmarktinfrastruktur der Bewilligungspflicht und der Aufsicht durch die FINMA im Sinne von Artikel 4 FinfraG, so hört sie vorgängig die FINMA an."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "c88c9a892440b7253c641ee84adb602dee1222028865a832320148a64daf4216"
+    },
+    {
+      "id": "bund/NBV/art_39",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/NBV/art_40",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfgesellschaften prüfen die Einhaltung der statistischen Meldepflichten und der Mindestreservepflicht und erstatten der Nationalbank darüber gesondert Bericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfung erfolgt in der Regel gleichzeitig mit der Prüfung nach Artikel 24 des Finanzmarktaufsichtsgesetzes vom 22. Juni 2007. Doppelspurigkeiten bei der Prüfung sind soweit möglich zu vermeiden. Der Bericht ist der Nationalbank jedoch spätestens 6 Monate nach Abschluss des Geschäftsjahres einzureichen."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "4ac9b38b38541b6ef7c145016b58b6b5793bd188bbc71bf957f5f9f4bff6d599"
+    },
+    {
+      "id": "bund/NBV/art_41",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die besonderen Anforderungen gemäss den Artikeln 21 a -34 und die Pflichten gemäss Artikel 36 finden für Finanzmarktinfrastrukturen, die der Bewilligungspflicht und der Aufsicht durch die FINMA unterstehen, erstmals Anwendung mit Eintreten der Rechtskraft der Bewilligungsverfügung nach Artikel 25 FinfraG. Bis zu diesem Zeitpunkt gelten die diesbezüglichen Anforderungen und Pflichten nach bisherigem Recht."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Finanzmarktinfrastrukturen, welche nicht der Bewilligungspflicht und der Aufsicht durch die FINMA unterstehen, finden die besonderen Anforderungen gemäss den Artikeln 22–34 und die Pflichten gemäss Artikel 36 mit dem Inkrafttreten der Änderung vom 26. November 2015 Anwendung."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "742c7f42294c16f1ee12aa9a968777868eb176d23bd01f2b6825155978d49329"
+    },
+    {
+      "id": "bund/NBV/art_42",
+      "ebene": "bund",
+      "quelle": "NBV",
+      "erlass": "NBV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Mai 2004 in Kraft."
+        }
+      ],
+      "stand": "2024-07-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2004/233/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240701",
+      "sha": "27ec8c1c3023512161190e4802fc0d510583330ad333858f87bf6480e28e0ce9"
+    }
+  ]
+}

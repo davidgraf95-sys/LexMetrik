@@ -1,0 +1,3933 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/KKV_FINMA/art_1",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Effektenleihe bedeutet: Rechtsgeschäft, durch das die Fondsleitung oder die Investmentgesellschaft mit variablem Kapital (SICAV) als Darleiher vorübergehend das Eigentum an Effekten auf einen Borger überträgt, und bei dem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Borger sich verpflichtet, dem Darleiher bei Fälligkeit Effekten gleicher Art, Menge und Güte sowie die während der Dauer der Effektenleihe anfallenden Erträge zurückzuerstatten und eine Entschädigung zu bezahlen; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Darleiher das Kursrisiko der Effekten während der Dauer der Effektenleihe trägt."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "18e86b330d48f408da4b8f42faadfdb81febc216e28a1c297d3484bbf094c03f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_2",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV kann Effekten im eigenen Namen und auf eigene Rechnung einem Borger ausleihen («Principal»)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung oder die SICAV kann auch einen Vermittler damit beauftragen, die Effekten entweder treuhänderisch in indirekter Stellvertretung («Agent») oder in direkter Stellvertretung («Finder») unter Beachtung der Vor­schriften dieses Abschnitts einem Borger zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV schliesst mit jedem Borger beziehungsweise mit jedem Vermittler einen standardisierten Rahmenvertrag gemäss Artikel 7 über die Effektenleihe ab."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a9d3bc5b1403d65c4d82c3d3c729abcb83bc43a6addfa83a8b13ae6db98a9667"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_3",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV tätigt die Effektenleihe nur mit auf diese Geschäftsart spezialisierten, erstklassigen beaufsichtigten Borgern und Vermittlern wie Banken, Brokern und Versicherungsgesellschaften sowie mit bewilligten und anerkannten zentralen Gegenparteien und Zentralverwahrern, die eine einwandfreie Durchführung der Effektenleihe gewährleisten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung oder die SICAV hat die schriftliche Zustimmung der Depotbank einzuholen, wenn diese weder als Borger noch als Vermittler an der Effektenleihe beteiligt werden soll."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbank kann ihre Zustimmung nur verweigern, wenn nicht sichergestellt ist, dass sie ihren gesetzlichen und vertraglichen Abwicklungs-, Verwahr-, Informations- und Kontrollaufgaben nachkommen kann."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "1a2185da9ebfc9302adfdb04bbc035332d0e0c7f596533344a109a42987037bf"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_4",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV darf sämtliche Arten von Effekten ausleihen, die an einer Börse oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht ausleihen darf sie die Effekten, die sie im Rahmen von Reverse Repos übernommen hat."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "821ac78b58f3cb2faa64c4e9a1122e7a5d7c2d8821e838de8019c371614ebe1d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_5",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Einzelgeschäft wie auch der standardisierte Rahmenvertrag der Effektenleihe müssen jederzeit gekündigt werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Einhaltung einer Kündigungsfrist vereinbart, so darf deren Dauer höchs­tens sieben Bankwerktage betragen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "e56ac88d27fd711c444c73435d16a6088af3b5de559d10abd1f6ac823adc6d47"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_6",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Muss die Fondsleitung oder die SICAV eine Kündigungsfrist einhalten, bevor sie wieder über die ausgeliehenen Effekten rechtlich verfügen kann, so darf sie vom ausleihfähigen Bestand einer Art nicht mehr als 50 Prozent ausleihen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sichert hingegen der Borger oder der Vermittler der Fondsleitung oder der SICAV vertraglich zu, dass diese noch am gleichen oder am nächsten Bank­werktag wieder rechtlich über die ausgeliehenen Effekten verfügen kann, so darf der gesamte ausleihfähige Bestand einer Art ausgeliehen werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "c9fce4d55ccd11845eb28ff64f2d2faafa1884a944b463adc72719b5b7d8f8ee"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_7",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der standardisierte Rahmenvertrag muss einschlägigen internationalen Standards entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im standardisierten Rahmenvertrag sind sowohl die Effektenfonds zu bezeichnen, deren Effekten für die Effektenleihe grundsätzlich zur Verfügung stehen, als auch die Effekten, die von der Effektenleihe ausgeschlossen sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV vereinbart im standardisierten Rahmenvertrag mit dem Borger oder dem Vermittler, dass dieser:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zwecks Sicherstellung des Rückerstattungsanspruchs zugunsten der Fondsleitung oder der SICAV Sicherheiten nach Artikel 51 verpfändet oder zu Eigentum überträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Fondsleitung oder der SICAV haftet für: 1. die pünktliche und uneingeschränkte Vergütung der während der Effek­tenleihe anfallenden Erträge,"
+            },
+            {
+              "marke": "2",
+              "text": "die Geltendmachung anderer Vermögensrechte wie Wandel- und Bezugsrechte, und"
+            },
+            {
+              "marke": "3",
+              "text": "die vertragskonforme Rückerstattung von Effekten gleicher Art, Menge und Güte;"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ebenfalls im Rahmenvertrag zu vereinbaren ist, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Wert der Sicherheiten angemessen ist, jederzeit jedoch mindestens 100 Prozent des Verkehrswerts der ausgeliehenen Effekten beträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "die ausgeliehenen Effekten nicht mit Forderungen des Borgers oder des Vermittlers verrechnet werden dürfen."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "edd06cbedc044759e3bc904b3eb1598e47446c151fc1e4b9d1db8adf0ab607ac"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_8",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Depotbank obliegen im Zusammenhang mit der Abwicklung der Effektenleihe folgende besondere Pflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie informiert die Fondsleitung oder die SICAV regelmässig über die getätig­ten Leihgeschäfte."
+            },
+            {
+              "marke": "b",
+              "text": "Sie rechnet mindestens monatlich über die anfallenden Erträge der Effektenleihe ab."
+            },
+            {
+              "marke": "c",
+              "text": "Sie sorgt für eine sichere und vertragskonforme Abwicklung der Effekten­leihe und überwacht namentlich die Einhaltung der Anforderungen an die Sicherheiten."
+            },
+            {
+              "marke": "d",
+              "text": "Sie besorgt auch während der Dauer der Leihgeschäfte die ihr gemäss Depotreglement obliegenden Verwaltungshandlungen und die Geltendma­chung sämtlicher Rechte auf den ausgeliehenen Effekten, soweit diese nicht gemäss dem standardisierten Rahmenvertrag abgetreten wurden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f5d647f437eed849f037f6aaf2c4cd465b14903d81e4defc359439c4955d2a7d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_9",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausgeliehene Effekten sind mit dem Vermerk «ausgeliehen» im Inventar des Vermögens des Effektenfonds zu belassen und weiterhin in die Vermögensrechnung beziehungsweise in die Bilanz einzubeziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausgeliehene Effekten sind bei der Einhaltung der gesetzlichen und reglementari­schen Anlagebeschränkungen weiterhin zu berücksichtigen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "aed25e9ccaccfc4ce8981c77e5dd3c7cacf707f10bb65f07a031850dddb1b48c"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_10",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die folgenden Begriffe bedeuten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Pensionsgeschäft: Repo oder Sale and Repurchase Agreement und Reverse Repo oder Reverse Sale and Repurchase Agreement;"
+            },
+            {
+              "marke": "b",
+              "text": "Repo: Rechtsgeschäft, durch das eine Partei (Pensionsgeber) das Eigentum an Effekten gegen Bezahlung vorübergehend auf eine andere Partei (Pensionsnehmer) überträgt und bei dem: 1. der Pensionsnehmer sich verpflichtet, dem Pensionsge­ber bei Fälligkeit Effekten gleicher Art, Menge und Güte sowie die während der Dauer des Pensionsgeschäftes anfallenden Erträge zurückzuerstatten,"
+            },
+            {
+              "marke": "2",
+              "text": "der Pensionsgeber das Kursrisiko der Effekten während der Dauer des Pensionsgeschäftes trägt;"
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "489ac948a3a1e2c5926f41643530af61df1f57966740fc249d7de072260d6ef7"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_11",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV kann Pensionsgeschäfte im eigenen Namen und auf eigene Rechnung mit einer Gegenpartei abschliessen («Principal»)."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann auch einen Vermittler damit beauftragen, entweder treuhänderisch in indirekter Stellvertretung («Agent») oder in direkter Stellvertretung («Finder») unter Beachtung der Vor­schriften dieses Abschnitts Pensionsgeschäfte mit einer Gegenpartei zu tätigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV schliesst mit jeder Gegenpartei beziehungsweise mit jedem Vermittler einen standardisierten Rahmenvertrag gemäss Artikel 17 über das Pensionsgeschäft ab."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "eea6f3f3d07c2a825e2abf279b051757d0c5659c2280f9ba9c16cf66c2b5c8b1"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_12",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV tätigt Pensionsgeschäfte nur mit auf diese Geschäftsart spezialisierten, erstklassigen beaufsichtigten Gegenparteien und Vermittlern wie Banken, Brokern und Versicherungsgesellschaften sowie mit bewilligten und anerkannten zentralen Gegenparteien und Zentralverwahrern, die eine einwandfreie Durchführung des Pensionsgeschäfts gewährleisten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fondsleitung oder die SICAV hat die schriftliche Zustimmung der Depotbank einzuholen, wenn diese weder als Gegenpartei noch als Vermittler am Pensions­geschäft beteiligt werden soll."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbank kann ihre Zustimmung nur verweigern, wenn nicht sichergestellt ist, dass sie ihren gesetzlichen und vertraglichen Abwicklungs-, Verwahr-, Informa­tions- und Kontrollaufgaben nachkommen kann."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "41229f01a27e5870887d96332682b8751acef10dd90a24c243cb4cda3162c54d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_13",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV darf für Repos sämtliche Arten von Effekten verwenden, die an einer Börse oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurden die Effekten im Rahmen von Reverse Repos übernommen, so dürfen sie nicht für Repos verwendet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2dbdb82f4ee73e03883446fccfc4a3def4a69c4e857518c1992b98edbab6ecde"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_14",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Einzelgeschäft wie auch der standardisierte Rahmenvertrag des Pensions­geschäfts müssen jederzeit gekündigt werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Einhaltung einer Kündigungsfrist vereinbart, so darf deren Dauer höchs­tens sieben Bankwerktage betragen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "24198ab5e52666c9e58d2cd45ff321afe7439be58364b1f9e7771ca0afd86ab0"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_15",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn die Fondsleitung oder die SICAV eine Kündigungsfrist einhalten muss, bevor sie wieder über die in Pension gegebenen Effekten rechtlich verfügen kann, so darf sie vom repofähigen Bestand einer Art nicht mehr als 50 Prozent für Repos verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sichert hingegen die Gegenpartei beziehungsweise der Vermittler der Fondsleitung oder der SICAV vertraglich zu, dass diese noch am gleichen oder am nächsten Bankwerktag wieder rechtlich über die in Pension gegebenen Effekten verfügen kann, so darf der gesamte repofähige Bestand einer Art für Repos verwendet wer­den."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "7e6c74eba163012ff59188b0e13afdcd361179130484af6e1b075e0c52843feb"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_16",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Sicherstellung der geld- und titelmässigen Forderungen aus Pensionsgeschäf­ten sind die Forderungen und Verpflichtungen unter Berücksichtigung der March­zinsen sowie der anfallenden, dem Pensionsgeber zustehenden Erträge täglich zum aktuellen Marktkurs zu bewerten und die Differenz täglich auszugleichen (mark-to-market)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Ausgleich hat in Geld oder in Effekten zu erfolgen. Letztere müssen bezüglich Art und Güte mit denjenigen vergleichbar sein, die im Pensionsgeschäft verwendet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f60b586be96a95ee53ca3f1363fab1eff9f3361b9ef774b5b41fd5fc2ed2a866"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_17",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der standardisierte Rahmenvertrag muss einschlägigen internationalen Standards entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im standardisierten Rahmenvertrag sind sowohl die Effektenfonds zu bezeichnen, für die Pensionsgeschäfte grundsätzlich abgeschlossen werden dürfen, als auch die Effekten, die vom Pensionsgeschäft ausgeschlossen sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV vereinbart im standardisierten Rahmenvertrag mit der Gegenpartei oder dem Vermittler, dass:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die pünktliche und uneingeschränkte Vergütung der während des Pen­sionsgeschäfts nach Artikel 16 zu erbringenden Ausgleichsleistungen, und"
+            },
+            {
+              "marke": "2",
+              "text": "den vertragskonformen Rückkauf der in Pension gegebenen Effekten;"
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "8b5264dcb122012ddc45bc609ac75e24118dda81f567fff17a2bcadfb06410a8"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_18",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Depotbank obliegen im Zusammenhang mit der Abwicklung des Pensions­geschäfts folgende besondere Pflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie sorgt für eine sichere und vertragskonforme Abwicklung des Pensionsgeschäfts."
+            },
+            {
+              "marke": "b",
+              "text": "Sie sorgt dafür, dass die Wertverände­rungen der im Pensionsgeschäft verwendeten Effekten täglich in Geld oder Effekten ausgeglichen werden (mark-to-market)."
+            },
+            {
+              "marke": "c",
+              "text": "Sie besorgt auch während der Dauer des Pensionsgeschäfts die ihr gemäss Depotreglement obliegenden Verwaltungshandlungen und sie macht sämtliche Rechte auf den im Pensionsgeschäft verwendeten Effekten geltend, soweit diese nicht gemäss dem standardisierten Rahmenvertrag abgetreten wurden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "dc918b12e846810255c6b1e25676bb092c4b6b8cf28439111b8fe8b6f0b0c72c"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_19",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Abschluss von Repos gilt für den Effektenfonds als Kreditaufnahme im Sinn von Artikel 77 Absatz 2 KKV."
+        },
+        {
+          "absatz": "2",
+          "text": "Die geldmässigen Verpflichtungen aus Repos haben zusammen mit den allfälligen anderen aufgenommenen Krediten den gesetzlichen und reglementarischen Beschränkungen der Kreditaufnahme zu entsprechen."
+        },
+        {
+          "absatz": "3",
+          "text": "Verwendet die Fondsleitung oder die SICAV die beim Abschluss eines Repos erhaltenen Mittel für die Übernahme von Effekten gleicher Art, Güte, Bonität und Laufzeit in Verbindung mit dem Abschluss eines Reverse Repos, so gilt dies nicht als Kreditaufnahme."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "c0af255fa58e87e297e1d1c4caee48297750d569a240999a48b29492327c12e1"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_20",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Abschluss von Reverse Repos gilt nicht als Kreditgewährung im Sinn von Artikel 77 Absatz 1 Buchstabe a KKV."
+        },
+        {
+          "absatz": "2",
+          "text": "Die geldmässigen Forderungen im Zusammenhang mit dem Abschluss von Reverse Repos gelten als flüssige Mittel im Sinn von Artikel 75 KKV."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "ed1ad04f3be8139db09ebf227e02e97548377b3e5663a416ecb2518b3d524858"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_21",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch Repos verkaufte Effekten sind bei der Einhaltung der gesetzlichen und reglementarischen Anlagebeschränkungen weiterhin zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Durch Reverse Repos erworbene geldmässige Forderungen sind bei der Einhaltung der gesetzlichen und reglementarischen Anlagebeschränkungen zu berücksichtigen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "3de0cc06061535c108cb1d9f1e9fb6da28ab91cd8348944edfd4cead5254a502"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_22",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Durch Repos verkaufte Effekten sind mit dem Vermerk «pensioniert» im Inventar des Vermögens des Effektenfonds zu belassen und weiterhin in die Vermögensrech­nung beziehungsweise Bilanz einzubeziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Geldmässige Verpflichtungen aus Repos sind in der Vermögensrechnung bezie­hungsweise in der Bilanz unter «Verbindlichkeiten aus Pensionsgeschäften» auszu­weisen zum Wert, der diesen unter der Annahme einer linearen Wertentwicklung im Berechnungszeitpunkt zukommt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Repos ist der Repo-Zins in der Erfolgsrechnung unter «Passivzinsen» auszu­weisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Durch Reverse Repos gekaufte Effekten sind weder ins Inventar des Vermögens des Effektenfonds noch in die Vermögensrechnung beziehungsweise Bilanz einzu­beziehen."
+        },
+        {
+          "absatz": "5",
+          "text": "Geldmässige Forderungen aus Reverse Repos sind in der Vermögensrechnung beziehungsweise Bilanz unter «Forderungen aus Pensionsgeschäften» auszuweisen zum Wert, der diesen unter der Annahme einer linearen Wertentwicklung im Berechnungszeitpunkt zukommt."
+        },
+        {
+          "absatz": "6",
+          "text": "Bei Reverse Repos ist der Repo-Zins in der Erfolgsrechnung unter «Erträge der Reverse Repos» auszuweisen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "cacb1256877971ce714df2bb2eed5e0e3526b3cfa74e6769b7de227b9990c408"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_23",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die folgenden Begriffe bedeuten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bei einem Swap: das Produkt aus dem Nominalwert des Basiswerts und der Kontraktgrösse,"
+            },
+            {
+              "marke": "2",
+              "text": "bei allen anderen Derivaten: das Produkt aus dem Verkehrswert des Basiswerts und der Kontraktgrösse;"
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "61994df09dcb92a4e21a21943e5c5876caacd247a350ddbbace61b32c6b3c7c1"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_24",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Einsatz von Derivaten ist nur erlaubt, wenn er in seiner ökonomischen Wirkung auch unter ausserordentlichen Marktver­hältnissen nicht zu einer Abweichung von den im Fondsreglement, im Pros­pekt und in den wesentlichen Informationen für die Anlegerinnen und Anleger genannten Anlagezielen oder zu einer Veränderung des Anlagecharakters des Effektenfonds führt."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "7d1c02a2fe54a08c79d6f8b1cfd6b823566905cddd0608d41175a1b640370e9a"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_25",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bestimmungen dieses Abschnitts sind auf den einzelnen Effektenfonds oder, im Fall eines Umbrella-Fonds, auf das einzelne Teilvermögen anwendbar."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "6c403952ba65e96f0b2211e932f806b5ee5bd7531bc39a391a6cf098c494025a"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_26",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Einhaltung der gesetzlichen und reglementarischen Risikoverteilungsvor­schriften sind bei einem strukturierten Produkt sowohl dessen Basiswerte als auch dessen Emittent zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Enthält ein strukturiertes Produkt eine oder mehrere Derivat-Komponenten, so sind diese gemäss den Bestimmungen dieses Abschnitts zu behandeln."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Ermittlung des Betrags, der an das Gesamtengagement und die Risikoverteilungsvorschriften angerechnet werden muss, ist das strukturierte Produkt in seine Komponenten zu zerlegen, falls das strukturierte Produkt eine Hebelwirkung aufweist. Die Komponenten sind einzeln zu berücksichtigen. Die Zerlegung ist zu dokumentieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden nicht zerlegbare strukturierte Produkte zu einem nicht vernachlässigbaren Anteil des Fondsvermögens eingesetzt, so ist der Modellansatz als Risikomessverfahren anzuwenden."
+        },
+        {
+          "absatz": "5",
+          "text": "Derivat-Komponenten eines Finanzinstruments sind bei der Einhaltung der gesetzlichen und reglementarischen Risikoverteilungsvorschriften zu berücksichtigen und an das Gesamtengagement aus Derivaten anzurechnen."
+        },
+        {
+          "absatz": "6",
+          "text": "Warrants sind als Derivate gemäss den Bestimmungen dieses Abschnitts zu behan­deln. Die zu einer Optionsanleihe gehörende Option gilt als Warrant."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2ce639d22b31fa5c47b8485e43f71317eb44b519f24e15ce5179249ab1292383"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_27",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein engagementerhöhendes Kreditderivat gilt nicht als Bürgschaft im Sinn von Artikel 77 Absatz 1 Buchstabe a KKV."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Referenzschuldner eines Kreditderivats muss Beteiligungs- oder Forderungs­wertpapiere oder -wertrechte ausstehend haben, die an einer Börse oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "9f2261fc68ddc427655a1e25d64458dd7b6e6228c39aa6e2880176ef568e40f5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_28",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV darf ein exotisches Derivat nur einsetzen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das minimale und das maximale Delta über das gesamte Preis-Spektrum der Basiswerte berechnen kann; und"
+            },
+            {
+              "marke": "b",
+              "text": "seine Wirkungsweise und die Faktoren, die seine Preisbildung beeinflussen, kennt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Effektenfonds, auf die der Commitment-Ansatz II angewendet wird, ist das exotische Derivat für die Umrechnung in sein Basiswertäquivalent nach Artikel 35 Absatz 2 mit seinem maximal möglichen Delta (absoluter Wert) zu gewichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das jeweilige Risikomess-Modell muss in der Lage sein, das exotische Derivat seinem Risiko entsprechend abzubilden."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist das maximale Delta des exotischen Derivats positiv, so muss es bei der Ein­haltung der gesetzlichen und reglementarischen Maximallimiten mit diesem maximalen Delta gewichtet werden. Ist das minimale Delta negativ, so muss es bei der Einhaltung der reglementarischen Minimallimiten mit diesem minimalen Delta gewichtet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "6340efdf2df247eb05c7d6df053197e692b119f88422bbd007bffbae2d530423"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_29",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV schliesst Geschäfte mit Derivaten an einer Börse oder an einem anderen geregelten, dem Publikum offen stehenden Markt ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Geschäfte mit OTC-Derivaten (OTC-Geschäfte) sind zulässig, wenn die Voraussetzungen nach den Artikeln 30 und 31 erfüllt sind."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "853e5e01d62fbaa0868e31c5633bfa88442d5d0dee07e98ce7378eb3604fd1ca"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_30",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "OTC-Geschäfte dürfen nur auf der Grundlage eines standardisierten Rahmenver­trags abgeschlossen werden, der einschlägigen internationalen Standards entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gegenpartei muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein beaufsichtigter und auf diese Geschäftsarten spezialisierter Finanzintermediär sein;"
+            },
+            {
+              "marke": "b",
+              "text": "eine einwandfreie Durchführung des Geschäfts gewährleisten; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Bonitätsanforderungen nach Artikel 31 Absatz 1 erfüllen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ein OTC-Derivat muss täglich zuverlässig und nachvollziehbar bewertet und jederzeit zum Verkehrswert veräussert, liquidiert oder durch ein Gegengeschäft glattgestellt werden können."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist für ein OTC-Derivat kein Marktpreis erhältlich, so muss dessen Preis anhand eines angemessenen und in der Praxis anerkannten Bewertungsmodells gestützt auf den Verkehrswert der Basiswerte, von denen das Derivat abgeleitet ist, jederzeit nachvollziehbar sein."
+        },
+        {
+          "absatz": "5",
+          "text": "Vor dem Abschluss eines Vertrags über ein Derivat nach Absatz 4 sind grundsätzlich konkrete Offerten von mindestens zwei Gegenparteien einzuholen. Der Vertrag ist mit derjenigen Gegenpartei abzuschliessen, welche die preislich beste Offerte unterbreitet. Von diesem Grundsatz kann abgewichen werden aus Gründen der Risikoverteilung oder, wenn weitere Vertragsbestandteilte wie Bonität oder Dienstleistungsangebot der Gegenpartei eine andere Offerte als insgesamt vorteilhafter für die Anlegerinnen und Anleger erscheinen lassen."
+        },
+        {
+          "absatz": "6",
+          "text": "Auf die Einholung von Offerten von mindestens zwei möglichen Gegenparteien kann ausnahmsweise verzichtet werden, wenn dies im besten Interesse der Anlegerinnen und Anleger ist. Die Gründe hierfür sind nachvollziehbar zu dokumentieren."
+        },
+        {
+          "absatz": "7",
+          "text": "Der Vertragsabschluss und die Preisbestimmung sind nachvollziehbar zu doku­mentieren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "61318ae5417f18cf77981cdf98cfb9a100653fe137d8737fb19100c3faf140f5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_31",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei OTC-Geschäften muss die Gegenpartei oder deren Garant eine hohe Bonität aufweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Anforderung gilt nicht für die Depotbank des Effektenfonds."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "e95fdd675b4671f28d4e31f91b175d1470d77ae687bb3c0fcd28f93e4fe2d927"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_32",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Derivate, für die aktuelle Marktpreise erhältlich sind, sind mit den am Hauptmarkt zuletzt bezahlten Kursen zu bewerten. Die Kurse müssen von einer externen, von der Fondsleitung oder der SICAV und ihren Beauftragten unabhängigen und auf diese Geschäftsart spezialisierten Quelle bezogen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind für Derivate keine aktuellen Marktpreise erhältlich, so müssen sie anhand von angemessenen und in der Praxis anerkannten Bewertungsmodellen, gestützt auf den Verkehrswert der Basiswerte, von denen die Derivate abgeleitet sind, bewertet werden. Die Bewertungen müssen dokumentiert werden und nachvollziehbar sein."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f76a52a6eda1a2ce936d9c3366460134ba26fb29a75b8cf89b11c3f569ceced6"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_33",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung oder die SICAV wendet entweder den Commitment-Ansatz I, den Commitment-Ansatz II oder den Modell-Ansatz an."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anwendung des Modell-Ansatzes bedarf der Genehmigung der FINMA."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV stimmt das gewählte Risikomessverfahren auf die Anlageziele und die Anlagepolitik sowie das Risikoprofil des jeweiligen Effektenfonds ab."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Modell-Ansatz ist zwingend anzuwenden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Gesamtengagement des Effektenfonds mit dem Commitment-Ansatz I oder dem Commitment-Ansatz II nicht angemessen erfasst und gemessen werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "zu einem nicht vernachlässigbaren Anteil in exotische Derivate investiert wird; oder"
+            },
+            {
+              "marke": "c",
+              "text": "zu einem nicht vernachlässigbaren Anteil komplexe Anlagestrategien verwendet werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "615edc5fe69299347ec235f6fd0ad88265374067dc748e357fc2e9bab1bb7de5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_34",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Effektenfonds, auf die der Commitment-Ansatz I angewendet wird, ist nur der Einsatz von Derivat-Grundformen zulässig. Diese dürfen nur eingesetzt werden, soweit ihr Einsatz unter Berücksichtigung der nach diesem Artikel notwendigen Deckung weder zu einer Hebelwirkung auf das Fondsvermögen führt noch einem Leerverkauf entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Engagementreduzierende Derivate müssen dauernd mit den ihnen zugrunde liegenden Basiswerten gedeckt sein. Wird das Delta berechnet, so darf es bei der Berechnung der notwendigen Basiswerte berücksichtigt werden. Die Bestimmung nach Artikel 44 Absatz 3 gilt analog."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Deckung mit anderen Anlagen ist zulässig, wenn das engagementreduzie­rende Derivat auf einen Index lautet, welcher von einer externen unabhängigen Stelle berechnet wird. Der Index muss für die als Deckung dienenden Anlagen repräsentativ sein, und zwischen dem Index und diesen Anlagen muss eine adäquate Korrela­tion bestehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei engagementerhöhenden Derivaten muss das Basiswertäquivalent (Art. 35 Abs. 2) dauernd durch geldnahe Mittel gedeckt sein."
+        },
+        {
+          "absatz": "5",
+          "text": "Als geldnahe Mittel gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "flüssige Mittel im Sinn von Artikel 75 KKV;"
+            },
+            {
+              "marke": "b",
+              "text": "Geldmarktinstrumente im Sinn von Artikel 74 KKV;"
+            },
+            {
+              "marke": "c",
+              "text": "kollektive Kapitalanlagen, welche ausschliesslich in flüssigen Mitteln oder Geldmarktinstrumenten anlegen;"
+            },
+            {
+              "marke": "d",
+              "text": "Forderungswertpapiere und -rechte, deren Restlaufzeit höchstens zwölf Monate beträgt und deren Emittent oder Garant eine hohe Bonität aufweist;"
+            },
+            {
+              "marke": "e",
+              "text": "synthetische Liquidität;"
+            },
+            {
+              "marke": "f",
+              "text": "dem Effektenfonds eingeräumte, jedoch nicht beanspruchte Kreditlimiten im Rahmen der gesetzlichen und reglementarischen Maximallimiten;"
+            },
+            {
+              "marke": "g",
+              "text": "Guthaben aus der Verrechnungssteuer bei der Eidgenössischen Steuerverwaltung."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Zulässige Verrechnungsregeln und Absicherungsgeschäfte nach Artikel 36 Absätze 1, 2 und 4 können berücksichtigt werden. Gedeckte Absicherungsgeschäfte durch Zinsderivate sind zulässig. Wandelanleihen dürfen bei der Berechnung des Engagements aus Derivaten unberücksichtigt bleiben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b1e19216a4947e8ecf217f000df3029136191d1755c642912153ac996aa34523"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_35",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Bestimmung des Gesamtengagements eines Effektenfonds mit dem Commitment-Ansatz II hat die Fondsleitung die einzelnen Anrechnungsbeträge der jewei­ligen Derivate und Derivat-Komponenten sowie die Anrechnungsbeträge aus Anlagetechniken zu ermitteln."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Anrechnungsbetrag für das Gesamtengagement aus Derivaten ist bei Grundformen von Derivaten regelmässig jeweils das Basiswertäquivalent unter Zugrundelegung des Verkehrswerts des Basiswerts der Derivate. Die Berechnung der Basiswertäquivalente erfolgt nach Anhang 1. Sofern dies zu einer konservativeren Ermittlung führt, kann der Nominalwert oder der börsentäglich ermittelte Terminpreis bei Finanzterminkontrakten zugrunde gelegt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anrechnungsbetrag für das Gesamtengagement ergibt sich aus dem Grundengagement aus dem Nettofondsvermögen und der Summe der folgenden absoluten Werte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anrechnungsbeträge der einzelnen Derivate sowie Derivat-Komponenten gemäss Anhang 1, welche nicht in Verrechnungen nach Artikel 36 einbe­zogen sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Anrechnungsbeträge nach den zulässigen Verrechnungen nach Artikel 36; und"
+            },
+            {
+              "marke": "c",
+              "text": "Anrechnungsbeträge aus zulässigen Anlagetechniken."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Ermittlung des Anrechnungsbetrages für das Gesamtengagement aus Derivaten nach Absatz 3 dürfen folgende Geschäfte unberücksichtigt bleiben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Swaps, mit denen die Entwicklung der Basiswerte, welche der Effektenfonds direkt hält, gegen die Entwicklung von anderen Basiswerten getauscht wird (Total Return Swaps), sofern: 1. das Marktrisiko der getauschten Basiswerte aus dem Effektenfonds vollständig eliminiert wird, so dass diese Vermögenswerte keinen Einfluss auf die Veränderung des Wertes des Effektenfonds haben, und"
+            },
+            {
+              "marke": "2",
+              "text": "der Swap weder Optionsrechte einräumt noch eine Hebelwirkung oder sonstige zusätzliche Marktrisiken, die über die direkte Investition der relevanten Basiswerte hinausgehen, enthält;"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Effektenleihen und Pensionsgeschäfte sind bei der Berechnung des Gesamtengagements zu berücksichtigen, sofern sie durch Wiederanlage von Sicherheiten eine Hebelwirkung auf das Fondsvermögen zur Folge haben. Im Falle der Wiederanlage von Sicherheiten in Finanzanlagen, die eine höhere Rendite als den risikofreien Zinssatz generieren, muss bei der Berechnung des Gesamtengagements bei Barsicherheiten (cash collateral) der erhaltene Betrag angerechnet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "37d95c2f338a44f235c68f023a2bf6698859ce430fbbe98e33a08119899a1181"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_36",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegenläufige Positionen in Derivaten des gleichen Basiswerts sowie gegenläufige Positionen in Derivaten und in Anlagen des gleichen Basiswerts dürfen miteinander verrechnet werden, ungeachtet des Verfalls der Derivate (Netting), wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Derivat-Geschäft einzig zum Zwecke abgeschlossen wurde, die mit den erworbenen Derivaten oder Anlagen im Zusammenhang stehenden Risiken zu eliminieren;"
+            },
+            {
+              "marke": "b",
+              "text": "dabei wesentliche Risiken nicht vernachlässigt werden; und"
+            },
+            {
+              "marke": "c",
+              "text": "der Anrechnungsbetrag der Derivate nach Artikel 35 ermittelt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Beziehen sich die Derivate bei Absicherungsgeschäften nicht auf den gleichen Basiswert wie der abzusichernde Vermögenswert, so sind für eine Verrechnung zusätzlich folgende Voraussetzungen zu erfüllen (Hedging):",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Das Derivat-Geschäft beruht nicht auf einer Anlagestrategie, die der Gewinnerzielung dient."
+            },
+            {
+              "marke": "b",
+              "text": "Das Derivat führt zu einer nachweisbaren Reduktion des Risikos des Effektenfonds."
+            },
+            {
+              "marke": "c",
+              "text": "Die allgemeinen und besonderen Risiken des Derivats werden ausgeglichen."
+            },
+            {
+              "marke": "d",
+              "text": "Die zu verrechnenden Derivate, Basiswerte oder Vermögensgegenstände beziehen sich auf die gleiche Klasse von Finanzinstrumenten."
+            },
+            {
+              "marke": "e",
+              "text": "Die Absicherungsstrategie ist auch unter aussergewöhnlichen Marktbedingungen effektiv."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei einem überwiegenden Einsatz von Zinsderivaten kann der Betrag, der an das Gesamtengagement aus Derivaten anzurechnen ist, mittels international anerkannten Duration-Netting-Regelungen ermittelt werden, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Regelungen zu einer korrekten Ermittlung des Risikoprofils des Effektenfonds führen;"
+            },
+            {
+              "marke": "b",
+              "text": "die wesentlichen Risiken berücksichtigt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anwendung dieser Regelungen nicht zu einer ungerechtfertigten Hebelwirkung führt;"
+            },
+            {
+              "marke": "d",
+              "text": "keine Zinsarbitrage-Strategien verfolgt werden; und"
+            },
+            {
+              "marke": "e",
+              "text": "die Hebelwirkung des Effektenfonds weder durch Anwendung dieser Regelungen noch durch Investitionen in kurzfristige Positionen gesteigert wird."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Ungeachtet des Absatzes 2 können Derivate, die zur reinen Absicherung von Fremdwährungsrisiken eingesetzt werden und nicht zu einer Hebelwirkung führen oder zusätzliche Marktrisiken beinhalten, bei der Berechnung des Gesamtengagements aus Derivaten verrechnet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "36308b5eaaac6b433934440089c91cbea78dd940cdf99ef98fcd328cabe918f0"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_37",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sämtliche Berechnungen nach den Artikeln 35 und 36 sind nachvollziehbar zu doku­mentieren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "ea86810db7e101b467abe56816c64bf97ae0798c8bb2089cd5e2c8b019f55179"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_38",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach dem Modell-Ansatz schätzt die Fondsleitung oder die SICAV für einen Effektenfonds die Risiken als Value-at-Risk (VaR)."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Modell ist eingehend zu dokumentieren. Die Dokumentation muss insbeson­dere Auskunft geben über die Spezifikation des Risikomess-Modells, das Back­testing und die Stresstests."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV verifiziert periodisch die Angemessenheit des Modells. Die Ergebnisse sind nachvollziehbar zu dokumentieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Der VaR eines Effektenfonds darf das Doppelte des VaR des zu diesem Effekten­fonds gehörenden Vergleichsportefeuilles zu keiner Zeit überschreiten (relative VaR-Limite)."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "31fb57848cc01641653fe241850f7957d3e609a7e7bc287ac1013fde45171532"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_39",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der VaR kann mit Varianz-Kovarianz-Modellen, historischen Simulationen oder Monte-Carlo-Simulationen bestimmt werden. Bei der Wahl des Modells ist die jeweilige Anlagestrategie zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der VaR ist täglich auf der Basis der Positionen des Vortags zu berechnen. Dabei sind folgende Parameter zu verwenden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein einseitiges Konfidenzintervall von 99 Prozent;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Halteperiode von 20 Handelstagen;"
+            },
+            {
+              "marke": "c",
+              "text": "ein effektiver historischer Beobachtungszeitraum von mindestens einem Jahr (250 Bankwerktage)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der VaR berücksichtigt Zinsänderungs-, Währungs-, Aktienkurs- und Rohstoffri­siken. Zusätzlich zu berücksichtigen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Optionspositionen: die Gamma- und Vega-Risiken;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Aktien- und Zinsinstrumenten: die spezifischen Risiken in der Form residu­aler Risiken;"
+            },
+            {
+              "marke": "c",
+              "text": "Ereignis-, Ausfall- und Liquiditätsrisiken im Rahmen von Stresstests."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Berechnungen sind nachvollziehbar zu dokumentieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Eine Abweichung vom Konfidenzintervall, von der Halteperiode oder vom Beobachtungszeitraum ist aufgrund aussergewöhnlicher Marktumstände und nach vorgängiger Zustimmung der FINMA möglich."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "977c20e195673b5642b0e702b4b726957f1c15b6856c71179f93a55d786cf8cc"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_40",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zu einem Effektenfonds gehörende Vergleichsportefeuille ist ein Vermögen, welches keine Hebelwirkung aufweist und grundsätzlich keine Derivate enthält."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zusammensetzung des Vergleichsportefeuilles entspricht den Angaben im Fondsreglement, im Prospekt und in den wesentlichen Informationen für die Anlegerinnen und Anleger des Effektenfonds, namentlich betreffend Anlageziele, Anlagepolitik und Limiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist periodisch, jedoch mindestens quartalsweise zu überprüfen. Die jeweilige Zusammensetzung sowie deren Änderungen sind nachvollziehbar zu dokumentieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist im Fondsreglement oder im Prospekt und in den wesentlichen Informationen für die Anlegerinnen und Anleger ein Ver­gleichsmassstab wie ein Aktienindex als Vergleichsportefeuille definiert, so darf dieser zur Ermittlung des VaR des Vergleichsportefeuilles herangezogen werden. Der Vergleichsmassstab muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "derivatfrei sein und keine Hebelwirkung aufweisen;"
+            },
+            {
+              "marke": "b",
+              "text": "von einer externen unabhängigen Stelle berechnet werden; und"
+            },
+            {
+              "marke": "c",
+              "text": "für die Anlageziele, die Anlagepolitik und die Limiten des Effektenfonds repräsentativ sein."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Das Vergleichsportefeuille darf Derivate enthalten, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Effektenfonds gemäss Fondsreglement oder Prospekt eine Long/Short-Strategie umsetzt und im Vergleichsportefeuille das Short-Exposure durch Derivate dargestellt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "der Effektenfonds gemäss Fondsreglement oder Prospekt eine Anlagepolitik mit Währungsabsicherung umsetzt und als Vergleichsmassstab ein währungsabgesichertes Vergleichsportefeuille herangezogen wird."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Ist es aufgrund der spezifischen Anlageziele und der Anlagepolitik eines Effekten­fonds nicht möglich, ein repräsentatives Vergleichsportefeuille zu bilden, so kann mit der FINMA eine VaR-Limite vereinbart werden (absolute VaR-Limite). Diese ist im Prospekt festzuhalten."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "ebc74f6da1faa69d703157d0502763d6f57045eb508eb8fbc86bbb75977b8150"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_41",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Risikomess-Modell ist in Bezug auf seine Prognosegüte zu überprüfen. Dazu sind für einen Effektenfonds täglich die im Verlauf eines Handelstages tatsächlich eingetretenen Wertveränderungen seines Nettovermögens mit dem jeweils ermittelten 1-Tages-VaR zu vergleichen (Backtesting)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vergleich ist nachvollziehbar zu dokumentieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zu verwendende Stichprobe setzt sich aus den 250 vorangegangenen Beob­achtungen zusammen."
+        },
+        {
+          "absatz": "4",
+          "text": "Erweist sich im Backtesting das Risikomess-Modell als nicht praxistauglich, so sind unverzüglich die Prüfgesellschaft und die FINMA zu informieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Treten im Backtesting mehr als sechs Ausreisser auf, so sind die Praxistauglichkeit des Risikomess-Modells vertieft abzuklären und die Prüfgesellschaft und die FINMA unverzüglich zu informieren."
+        },
+        {
+          "absatz": "6",
+          "text": "Die FINMA kann bei Praxisuntauglichkeit eine rasche Behebung allfälliger Modellmängel verlangen und eine weitere Beschränkung des Risikos anordnen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "4dcd2c7a74b4f69efe7c9f4cfb3be1742e6b587a202de40a0af3cf9624f638dc"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_42",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Effektenfonds sind periodisch, jedoch mindestens monatlich ausserordentliche Marktverhältnisse zu simulieren (Stresstest)."
+        },
+        {
+          "absatz": "2",
+          "text": "Stresstests sind zudem durchzuführen, wenn eine wesentliche Änderung der Ergebnisse der Stresstests durch eine Änderung des Werts oder der Zusammensetzung des Vermögens des Effektenfonds oder durch eine Änderung in den Markt­gegebenheiten nicht ausgeschlossen werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "In die Stresstests sind sämtliche Risikofaktoren einzubeziehen, welche die Wert­haltigkeit des Effektenfonds massgeblich beeinflussen können. Risikofaktoren, welchen das Risikomess-Modell nicht oder nur unvollständig Rechnung trägt, ist besondere Beachtung zu schenken."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Resultate der durchgeführten Stresstests und die daraus resultierenden notwendigen Massnahmen sind nachvollziehbar zu dokumentieren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "c734083a8ff66b2c54e84d9c1e28130d3e309051fd35e112ae1e397e8d09f9a3"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_43",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA kann von den Anforderungen nach den Artikeln 38–42 Abweichungen zulassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann andere Risikomess-Modelle zulassen, wenn damit ein angemessener Schutz gewährleistet ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden Änderungen am Risikomess-Modell, am Backtesting oder an den Stress­tests vorgenommen, so sind diese von der FINMA vorgängig genehmigen zu lassen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "e7839502e7600290051beb2b58169266e41e9031a5fc62c7ddd345a5553ecc4d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_44",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geht die Fondsleitung oder die SICAV mit einem Derivat eine Verpflichtung zur physischen Lieferung eines Basiswerts ein, so muss das Derivat mit den entsprechenden Basiswerten gedeckt sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Deckung einer solchen Verpflichtung mit anderen Anlagen ist zulässig, wenn die Anlagen und die Basiswerte hoch liquide sind und bei einer verlangten Lieferung jederzeit erworben oder verkauft werden können."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fondsleitung oder die SICAV muss jederzeit uneingeschränkt über diese Basiswerte oder Anlagen verfügen können."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "51c5c18c46da2e1811cd4ecc718975e630fee12ec92f1ba3173c859e027eb0f8"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_45",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geht die Fondsleitung oder die SICAV mit einem Derivat eine Zahlungs­verpflichtung ein, so muss diese dauernd durch geldnahe Mittel nach Artikel 34 Absatz 5 gedeckt sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Effektenfonds, auf die der Commitment-Ansatz II oder der Modell-Ansatz angewendet wird, werden zusätzlich als Deckung anerkannt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Forderungswertpapiere und -rechte, deren Restlaufzeit mehr als zwölf Monate beträgt und deren Emittent oder Garant eine hohe Bonität aufweist;"
+            },
+            {
+              "marke": "b",
+              "text": "Aktien, die an einer Börse oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Deckung nach Absatz 2 muss jederzeit innerhalb von sieben Bankwerktagen zu flüssigen Mitteln gemacht werden können."
+        },
+        {
+          "absatz": "4",
+          "text": "Aktien dürfen nur mit einem um eine Sicherheitsmarge reduzierten Verkehrswert an die Deckung angerechnet werden. Die Sicherheitsmarge hat der Volatilität der entsprechenden Aktie Rechnung zu tragen und muss mindestens 15 Prozent betragen."
+        },
+        {
+          "absatz": "5",
+          "text": "Kann bei einer Anlage eine Nachschusszahlung fällig werden, so gilt diese als Zahlungsverpflichtung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a51169a7e1ca7727173e59b2a19b07ffd9df6f87d4eb50b633ebcbe01f469669"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_46",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Einhaltung der in den gesetzlichen und reglementarischen Anlagebeschränkungen festgehaltenen Maximal- und Minimallimiten sind zu berücksichtigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anlagen, einschliesslich Derivate, im Sinn von Artikel 70 KKV;"
+            },
+            {
+              "marke": "b",
+              "text": "die flüssigen Mittel im Sinn von Artikel 75 KKV;"
+            },
+            {
+              "marke": "c",
+              "text": "Forderungen gegen Gegenparteien aus OTC-Geschäften."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben allfällige Ausnahmen für Indexfonds nach Artikel 82 KKV."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird eine Anlagebeschränkung durch die Veränderung des Deltas verletzt, so ist unter Wahrung der Interessen der Anle­gerinnen und Anleger spätestens innerhalb von drei Bankwerktagen der ordnungs­gemässe Zustand wiederherzustellen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "5cec0c62063d8d43d48dbdc1e8e68a12891469780a668aea406a3762a96ed8bd"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_47",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Einhaltung der gesetzlichen und reglementarischen Maxi­mal- und Minimallimiten, namentlich der Risikoverteilungsvorschriften, sind die Basiswertäqui­valente gemäss Anhang 1 massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Minimallimite kann im Rahmen einer Absicherungsstrategie durch Positionen in engagementreduzierenden Derivaten vorübergehend unterschritten werden, wenn die Interessen der Anlegerinnen und Anleger gewahrt bleiben."
+        },
+        {
+          "absatz": "3",
+          "text": "Derivat-Komponenten sind mit dem Anrechnungsbetrag nach Artikel 35 zu berücksichtigen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "d951dc6b30db1f4ac9e238d9042ba7bd41381d5805618a8180757febc6b2e8db"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_48",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Forderungen gegen Gegenparteien aus Geschäften mit Derivaten sind auf der Basis der aktuellen positiven Wiederbeschaffungswerte zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Positive und negative Wiederbeschaffungswerte aus Geschäften mit Derivaten mit derselben Gegenpartei können aufgerechnet werden, wenn mit dieser Gegenpartei eine Vereinbarung (Nettingvertrag) besteht, die den geltenden rechtlichen Anforderungen genügt und rechtlich durchsetzbar ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Forderungen aus Geschäften mit Derivaten gegen eine zentrale Gegenpartei einer Börse oder eines anderen geregelten, dem Publikum offen stehenden Marktes sind nicht zu berücksichtigen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese einer angemessenen Aufsicht untersteht; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Derivate sowie die Deckung einer täglichen Bewertung zu Marktkursen mit täglichem Margenausgleich unterliegen."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "ca842cfcb40dec3809fe8c076e1b169ba7b9e843455a5be15b92526840f61ae1"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_49",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist bei der Verwaltung eines Effektenfonds der Einsatz von Derivaten zulässig, so sind diese im Fondsreglement und im Prospekt zu umschreiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Prospekt ist anzugeben, ob die Derivate als Teil der Anlagestrategie oder lediglich zur Absicherung von Anlagepositionen eingesetzt werden. Zudem ist im Prospekt zu erläutern, wie sich deren Einsatz auf das Risiko­profil des Effektenfonds auswirkt."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Fondsreglement sowie im Prospekt ist festzule­gen, welches Risikomessverfahren für den Effektenfonds angewendet wird. Im Prospekt ist zudem das Risikomessverfahren zu umschreiben. Bei der Verwendung des Modell-Ansatzes ist das erwartete Brutto-Gesamtengagement aus Derivaten darzustellen. Wird der relative VaR-Ansatz angewendet, so ist zudem das Vergleichsportefeuille im Prospekt offenzulegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann ein Effektenfonds aufgrund des Einsatzes von Derivaten eine erhöhte Vola­tilität oder Hebelwirkung aufweisen, so ist auf diese Eigenschaft im Prospekt sowie in den Werbeunterlagen besonders hinzuweisen."
+        },
+        {
+          "absatz": "5",
+          "text": "Im Prospekt ist auf die Gegenparteirisiken von Derivaten hinzuweisen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "9fcc7487b1c7846a51f6a7408ef979be77817047e57d9f0a0d47a6280a8cf47d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_50",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vermögenswerte, die im Rahmen von Anlagetechniken oder bei OTC-Geschäften als Sicherheiten entgegengenommen werden, haben die Anforderungen dieses Abschnitts zu erfüllen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2ec248a580caa3db446862087e6a4629ff5a2a74f468634351296a2bc821e6fa"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_51",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Es dürfen nur Sicherheiten entgegengenommen werden, die folgende Anforderungen erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie sind hoch liquide und werden zu einem transparenten Preis an einer Börse oder einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt. Sie können kurzfristig zu einem Preis veräussert werden, der nahe an der vor dem Verkauf vorgenommenen Bewertung liegt."
+            },
+            {
+              "marke": "b",
+              "text": "Sie werden mindestens börsentäglich bewertet. Bei einer hohen Preisvolati­lität werden geeignete konservative Sicherheitsmargen verwendet."
+            },
+            {
+              "marke": "c",
+              "text": "Sie sind nicht von der Gegenpartei oder von einer dem Konzern der Gegenpartei angehörigen oder davon abhängigen Gesellschaft begeben."
+            },
+            {
+              "marke": "d",
+              "text": "Der Emittent weist eine hohe Bonität auf."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "adc2358e6993b3940442e7872e241a47f55f90f2dede96032a6d0c7900ba7298"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_52",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Fondsleitung, die SICAV oder deren Beauftragte haben bei der Verwaltung der Sicherheiten folgende Pflichten und Anforderungen zu erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie müssen die Sicherheiten in Bezug auf Länder, Märkte und Emittenten angemessen diversifizieren. Eine angemessene Diversifikation der Emittenten gilt als erreicht, wenn die von einem einzelnen Emittenten gehaltenen Sicherheiten nicht mehr als 20 Prozent des Nettoinventarwerts entsprechen. Von dieser Vorgabe darf abgewichen werden, wenn die Sicherheiten die Anforderungen von Artikel 83 Absatz 1 KKV erfüllen oder die Bewilligungsvoraussetzungen von Artikel 83 Absatz 2 KKV vorliegen. Stellen mehrere Gegen­parteien Sicherheiten, so haben sie eine aggregierte Sichtweise sicherzu­stellen."
+            },
+            {
+              "marke": "b",
+              "text": "Sie müssen die Verfügungsmacht und die Verfügungsbefugnis an den erhaltenen Sicherheiten bei Ausfall der Gegenpartei jederzeit und ohne Einbezug der Gegenpartei oder deren Zustimmung erlangen können."
+            },
+            {
+              "marke": "c",
+              "text": "Sie dürfen Sicherheiten, die ihnen verpfändet oder zu Eigentum übertragen wurden, weder ausleihen, weiterverpfänden, verkaufen, neu anlegen noch im Rahmen eines Pensionsgeschäfts oder als Deckung von Verpflichtungen aus derivativen Finanzinstrumenten verwenden. Erhaltene Barsicherheiten (cash collateral) dürfen sie nur in der entsprechenden Währung als flüssige Mittel, in Staatsanleihen von hoher Qualität sowie direkt oder indirekt in Geldmarktinstrumente mit kurzer Laufzeit anlegen oder als Reverse Repo verwenden."
+            },
+            {
+              "marke": "d",
+              "text": "Nehmen sie für mehr als 30 Prozent des Fondsvermögens Sicherheiten entgegen, so müssen sie sicherstellen, dass die Liquiditätsrisiken angemessen erfasst und überwacht werden können. Hierzu sind regelmässige Stresstests durchzuführen, die sowohl normale als auch aussergewöhnliche Liquiditätsbedingungen berücksichtigen. Die entsprechenden Kontrollen sind zu dokumentieren."
+            },
+            {
+              "marke": "e",
+              "text": "Sie müssen die Risiken, die mit der Verwaltung der Sicherheiten zusammenhängen, im Rahmen des Riskmanagements berücksichtigen."
+            },
+            {
+              "marke": "f",
+              "text": "Sie müssen in der Lage sein, allfällige nach Verwertung von Sicherheiten ungedeckte Ansprüche denjenigen Effektenfonds zuzuordnen, deren Vermögenswerte Gegenstand der zugrunde liegenden Geschäfte waren."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "d86d399bb6e334fb4e41743bf4c31a396cc447440c8dc7566baee4d7ebb8a705"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_53",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fondsleitung und die SICAV sowie deren Beauftragte müssen über eine Sicherheitenstrategie verfügen, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "angemessene Sicherheitsmargen vorsieht;"
+            },
+            {
+              "marke": "b",
+              "text": "auf alle als Sicherheiten entgegengenommenen Arten von Vermögenswerten abgestimmt ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "Eigenschaften der Sicherheiten wie Volatilität und Ausfallrisiko des Emittenten berücksichtigt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die Sicherheitenstrategie dokumentieren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "ebcb902224220cc7e6e23756c40b84ff21467cf4c5c8efde4290976f7db5bc6a"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_54",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die erhaltenen Sicherheiten sind bei der Depotbank zu verwahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwahrung durch eine beaufsichtigte Drittverwahrstelle im Auftrag der Fondsleitung ist zulässig, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Eigentum an den Sicherheiten nicht übertragen wird; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Drittverwahrstelle von der Gegenpartei unabhängig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für Sicherheiten, die einer Gegenpartei, einer von dieser beauftragten Verwahr­stelle oder einer zentralen Gegenpartei geliefert werden, sorgt die Depotbank für die sichere und vertragskonforme Abwicklung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "9702e979ad35eaa514a3d11483cc208264a0f4617a93751185088261833c59bc"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_55",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Prospekt des Effektenfonds muss angemessene Informationen zur Sicherheitenstrategie enthalten, insbesondere Angaben über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulässigen Arten von Sicherheiten;"
+            },
+            {
+              "marke": "b",
+              "text": "den erforderlichen Umfang der Besicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Festlegung von Sicherheitsmargen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anlagestrategie und die Risiken für den Fall der Wiederanlage von Barsicherheiten."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "62e4a2be1c3360f55689b08ee01ea9573edf4c070416faffac98651df230a1d0"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_56",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anleger eines Master-Fonds sind grundsätzlich seine Feeder-Fonds. Übrige Anlegerinnen und Anleger können aufgenommen werden, sofern die Fondsleitung oder SICAV diese über die Tatsache, dass sie in einen Master-Fonds investieren, vorgängig informiert und sicherstellt, dass die Gleichbehandlung der übrigen Anlegerinnen und Anleger gegenüber den Feeder-Fonds gewährleistet ist."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b54b27f66b678bcde1c91c9cb5fd7497a3064dc9fbfd21ed4ea766280dcfa75f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_57",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Fondsvertrag oder das Anlagereglement eines Feeder-Fonds oder eines Feeder-Teilvermögens enthalten neben den Angaben nach den Artikeln 35 a und 62 b KKV insbesondere folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Angabe, dass es sich um einen Feeder-Fonds handelt, der zu mindestens 85 Prozent in einen bestimmten Master-Fonds anlegt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bezeichnung des Master-Fonds;"
+            },
+            {
+              "marke": "c",
+              "text": "das Anlageziel und die Anlagepolitik des Master-Fonds;"
+            },
+            {
+              "marke": "d",
+              "text": "die Art, die Höhe und die Berechnung aller Vergütungen sowie der Nebenkosten, die aus der Anlage in den Master-Fonds entstehen und dem Fondsvermögen oder den Anlegerinnen und Anlegern belastet werden dürfen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Information, dass der Fondsvertrag oder das Anlagereglement, der Prospekt, die wesentlichen Informationen für die Anlegerinnen und Anleger sowie der Jahres- und Halbjahresbericht des Master-Fonds kostenlos bezogen werden können;"
+            },
+            {
+              "marke": "f",
+              "text": "die Information, dass der Feeder-Fonds nach der Auflösung des Master-Fonds oder nach Vereinigung, Umwandlung oder Vermögensübertragung des Master-Fonds bis zur Genehmigung des Gesuchs nach Artikel 63 oder 64 weiterbestehen kann."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Prospekt eines Feeder-Fonds enthält neben den Angaben gemäss Artikel 106 KKV insbesondere folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Information, dass es sich um einen Feeder-Fonds handelt, der zu mindestens 85 Prozent in einen bestimmten Master-Fonds anlegt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Beschreibung des Master-Fonds einschliesslich der Anlagestrategie und des Risikoprofils;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Zusammenfassung der wichtigsten Inhalte der gemäss den Artikeln 58, 61 und 62 geschlossenen Vereinbarungen über die Zusammenarbeit und die Informationspflichten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Stelle, bei der weitere Angaben zum Master-Fonds und zu den abgeschlossenen Vereinbarungen über die Zusammenarbeit und die Informa­tionspflichten kostenlos eingeholt werden können."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Jahresbericht des Feeder-Fonds bezeichnet die Stelle, bei welcher der Jahres- und der Halbjahresbericht des Master-Fonds kostenlos bezogen werden kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Marketingdokumente und die wesentlichen Informationen für die Anlegerinnen und Anleger des Feeder-Fonds enthalten den Hinweis, dass es sich um einen Feeder-Fonds handelt, der zu mindestens 85 Prozent seines Vermögens in einen bestimmten Master-Fonds anlegt."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "0e52fa5f6b03a328138804b227a010fb455bb3427f6660711d7d6b3e83387ace"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_58",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Master-Fonds stellt dem Feeder-Fonds alle Dokumente und Informationen zur Verfügung, die zur Erfüllung seiner Pflichten notwendig sind. Dazu schliessen sie eine Vereinbarung über die Zusammenarbeit und über die Informationspflichten ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vereinbarung über die Zusammenarbeit und die Informationspflichten regelt mindestens folgende Punkte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Grundsätze zur Übermittlung der massgebenden Dokumente und weiterer Informationen durch den Master-Fonds an den Feeder-Fonds;"
+            },
+            {
+              "marke": "b",
+              "text": "die Informationspflicht des Master-Fonds gegenüber dem Feeder-Fonds über die Delegation von Aufgaben an Dritte;"
+            },
+            {
+              "marke": "c",
+              "text": "die zu meldenden Verstösse gegen gesetzliche und vertragliche Vorschriften des Master-Fonds an den Feeder-Fonds sowie Form und Zeitpunkt dieser Meldungen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Pflicht zur Meldung des Gesamtengagements aus derivativen Finanzinstrumenten des Master-Fonds an den Feeder-Fonds;"
+            },
+            {
+              "marke": "e",
+              "text": "die Informationspflicht des Master-Fonds gegenüber dem Feeder-Fonds, falls er weitere Vereinbarungen über den Informationsaustausch mit Dritten abschliesst;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anlagemöglichkeiten des Feeder-Fonds in den Master-Fonds sowie die Angaben zu den Kosten und Aufwendungen, die vom Feeder-Fonds zu tragen sind;"
+            },
+            {
+              "marke": "g",
+              "text": "die Grundlagen und Modalitäten zur Umsetzung der Massnahmen gemäss Absatz 4;"
+            },
+            {
+              "marke": "h",
+              "text": "die Modalitäten zur Meldung des Aufschubs der Ausgaben und Rücknahmen sowie die Vorkehrungen für die Meldung von Fehlern bei der Preisfestsetzung des Master-Fonds;"
+            },
+            {
+              "marke": "i",
+              "text": "die Grundsätze zur Abstimmung der Prüfberichte des Master- und Feeder-Fonds."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Werden Master- und Feeder-Fonds von derselben Fondsleitung oder SICAV verwaltet, so kann die Vereinbarung über die Zusammenarbeit und die Informationspflichten durch interne Regelungen ersetzt werden. Diese haben Massnahmen zur Verhinderung von Interessenkonflikten zu enthalten. Im Übrigen haben die internen Regelungen die Anforderungen von Absatz 2 Buchstaben f–i zu erfüllen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Master- und der Feeder-Fonds treffen Massnahmen zur Abstimmung der Zeitpläne für die Berechnung und die Publikation des Nettoinventarwerts, um Markettiming und Arbitragemöglichkeiten zu verhindern."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2e4c62c153b4028ea68d7bcfe152ebf0782a3cc933e782bf0baec1a15595000f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_59",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Master-Fonds informiert die FINMA unverzüglich über die Identität jedes Feeder-Fonds, der Anlagen in seine Anteile tätigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Er erhebt beim Feeder-Fonds für die Anlage in seine Anteile keine Ausgabe- und Rücknahmekommission."
+        },
+        {
+          "absatz": "3",
+          "text": "Er stellt sicher, dass alle gesetzlich oder vertraglich notwendigen Informationen dem Feeder-Fonds, dessen Depotbank und Prüfgesellschaft sowie der FINMA rechtzeitig zur Verfügung gestellt werden. Dabei hält er seine gesetzlichen und vertraglichen Verpflichtungen betreffend die Offenlegung von Daten und den Datenschutz ein."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2a312b25cfcef0f76de089394bc43d2e9e556eb9ac1c38b18fb12aa42bfb1725"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_60",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Feeder-Fonds teilt seiner Depotbank alle notwendigen Informationen betreffend den Master-Fonds mit, welche diese zur Erfüllung ihrer Aufgabe benötigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Er verfolgt wirksam die Tätigkeit des Master-Fonds."
+        },
+        {
+          "absatz": "3",
+          "text": "Er berücksichtigt bei der Berechnung seines Gesamtengagements gemäss Artikel 72 Absatz 3 KKV das Gesamtengagement des Master-Fonds im Verhältnis zu den Anlagen des Feeder-Fonds in den Master-Fonds."
+        },
+        {
+          "absatz": "4",
+          "text": "Erhält der Feeder-Fonds, seine Fondsleitung oder eine andere Person, die im Namen des Feeder-Fonds oder von dessen Fondsleitung handelt, im Zusammenhang mit der Anlage in Anteile des Master-Fonds einen geldwerten Vorteil, so ist dieser dem Vermögen des Feeder-Fonds gutzuschreiben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "de90414246e54177f53b64eeb028e8f3bb44204d4cb53b7c629275550ff9d96f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_61",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die Depotbank des Master-Fonds bei diesem Unregelmässigkeiten fest und können diese negative Auswirkungen auf den Feeder-Fonds haben, so unterrichtet sie ihre Prüfgesellschaft sowie den Feeder-Fonds beziehungsweise dessen Fondsleitung und dessen Depotbank darüber. Darunter fallen unter anderem folgende Ereignisse:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fehler bei der Berechnung des Nettoinventarwerts des Master-Fonds;"
+            },
+            {
+              "marke": "b",
+              "text": "Fehler bei Transaktionen, bei der Abwicklung von Käufen und Verkäufen oder von Aufträgen zur Ausgabe oder Rücknahme von Anteilen des Master-Fonds durch den Feeder-Fonds;"
+            },
+            {
+              "marke": "c",
+              "text": "Fehler bei der Ausschüttung oder Thesaurierung von Erträgen aus dem Master-Fonds;"
+            },
+            {
+              "marke": "d",
+              "text": "Verstösse gegen gesetzliche Bestimmungen sowie in den Fondsverträgen oder Anlagereglementen, dem Prospekt oder den wesentlichen Informationen für die Anlegerinnen und Anleger beschriebene Anlageziele, -grenzen, -politik oder -strategie des Master-Fonds."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Haben der Master-Fonds und der Feeder-Fonds unterschiedliche Depotbanken, so schliessen diese, mit Zustimmung des Master- und des Feeder-Fonds, zur Sicherstellung ihrer Pflichten eine Vereinbarung über die Zusammenarbeit und die Informationspflichten. Diese enthält mindestens folgende Punkte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beschreibung der Unterlagen und Kategorien von Informationen, die die beiden Depotbanken regelmässig austauschen, einschliesslich der Übermittlungsmodalitäten und -fristen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Grundsätze betreffend die Abwicklung operationeller Fragen, einschliesslich der Berechnung des Nettoinventarwerts, Schutz vor Markettiming sowie die Bearbeitung der Aufträge des Feeder-Fonds;"
+            },
+            {
+              "marke": "c",
+              "text": "Modalitäten zur Mitteilung von Verstössen des Master-Fonds gegen gesetzliche und vertragliche Bestimmungen;"
+            },
+            {
+              "marke": "d",
+              "text": "weitere Punkte, die für die Zusammenarbeit der Depotbanken notwendig sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbanken halten im Rahmen des Austauschs von Daten ihre gesetzlichen und vertraglichen Verpflichtungen betreffend die Offenlegung von Daten und den Datenschutz ein."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f1c64364dced6eb7aeb5f09f919fe374f5d7de092849dd0a5c13dbb67e9f74e3"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_62",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfgesellschaft berücksichtigt in ihrem Kurzbericht des Feeder-Fonds den Kurzbericht des Master-Fonds. Haben der Master- und der Feeder-Fonds unterschiedliche Rechnungsjahre, so erstellt der Master-Fonds auf den Abschlusstermin des Feeder-Fonds einen Zwischenabschluss. Die Prüfgesellschaft erstellt für den Master-Fonds gestützt darauf einen Ad-hoc-Kurzbericht auf den Abschlusstermin des Feeder-Fonds."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie nennt im Kurzbericht des Feeder-Fonds jegliche im Kurzbericht des Master-Fonds enthaltenen Abweichungen vom Standardwortlaut und anderen wesentlichen Informationen sowie deren Einfluss auf den Feeder-Fonds."
+        },
+        {
+          "absatz": "3",
+          "text": "Haben Master- und Feeder-Fonds unterschiedliche Prüfgesellschaften, so schliessen diese zur Sicherstellung ihrer Pflichten eine Vereinbarung über die Zusammenarbeit und die Informationspflichten ab. Diese enthält mindestens:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beschreibung der Unterlagen und Kategorien von Informationen, die die beiden Prüfgesellschaften regelmässig austauschen, einschliesslich der Über­mittlungsmodalitäten und -fristen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Koordinierung der Rolle der Prüfgesellschaften in den Verfahren zur Erstellung der Jahresabschlüsse des Master- und des Feeder-Fonds;"
+            },
+            {
+              "marke": "c",
+              "text": "die Angabe der Informationen, die im Prüfbericht des Master-Fonds gemäss Absatz 2 genannt werden müssen;"
+            },
+            {
+              "marke": "d",
+              "text": "weitere Modalitäten zur Regelung der Zusammenarbeit der Prüfgesellschaften und der Erstellung und Übermittlung der Kurzberichte und der Ad-hoc-Berichte."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "df1ef564db3d9bb234394245120e741127248795fe0d96466f370274bd627bc5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_63",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Bekanntgabe der Auflösung des Master-Fonds schiebt der Feeder-Fonds die Rückzahlungen unverzüglich auf. Er reicht innerhalb eines Monats nach der Bekanntgabe der Auflösung des Master-Fonds der FINMA die Meldung beziehungsweise das Gesuch ein zur:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Auflösung des Feeder-Fonds;"
+            },
+            {
+              "marke": "b",
+              "text": "Änderung des Fondsvertrags oder des Anlagereglements aufgrund des Wechsels des Master-Fonds; oder"
+            },
+            {
+              "marke": "c",
+              "text": "Änderung des Fondsvertrags oder des Anlagereglements aufgrund der Umwandlung in einen Nicht-Feeder-Fonds."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Liquidationserlös des Master-Fonds darf nur vor der Genehmigung der Gesuche gemäss Absatz 1 Buchstaben b und c ausbezahlt werden, wenn dieser bis zum Zeitpunkt der Genehmigung ausschliesslich zum Zweck eines effizienten Liqui­ditätsmanagements neu angelegt wird."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "7d1a8fd57e24a4302c623689bd1b3649340503ac7eddc7b78acb1fa9c3ad9607"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_64",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beschliesst der Master-Fonds die Vereinigung, die Umwandlung oder eine Vermögensübertragung, so hat der Feeder-Fonds innerhalb eines Monats nach der Bekanntgabe durch den Master-Fonds der FINMA zu melden, ob er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich auflöst;"
+            },
+            {
+              "marke": "b",
+              "text": "denselben Master-Fonds beibehalten will;"
+            },
+            {
+              "marke": "c",
+              "text": "zu einem anderen Master-Fonds wechselt; oder"
+            },
+            {
+              "marke": "d",
+              "text": "sich in einen Nicht-Feeder-Fonds umwandelt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gleichzeitig mit der Meldung reicht der Feeder-Fonds der FINMA ein allfällig notwendiges Gesuch um Genehmigung der Änderungen des Fondsvertrags oder des Anlagereglements ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Erfolgt die Vereinigung, die Umwandlung oder die Vermögensübertragung des Master-Fonds vor der Genehmigung des Gesuchs nach Absatz 1 Buchstaben c und d, so kann der Feeder-Fonds die Anteile am Master-Fonds nur zurückgeben, wenn der dafür erhaltene Erlös bis zum Inkrafttreten der Änderungen ausschliesslich zum Zwecke eines effizienten Liquiditätsmanagements neu angelegt wird."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "484692a2a2bcd81343af89d306c2584a1dc9019d5c1ff263971d0f494e11fbd0"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_65",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorschriften für Effektenfonds bezüglich Effektenleihe (Art. 1–9), Pensions­geschäft (Art. 10–22), Derivate (Art. 23–49), Sicherheitenverwaltung (Art. 50–55) und Master-Feeder-Strukturen (Art. 56–64) gelten für übrige Fonds sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die Artikel 100 und 101 KKV."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann Abweichungen von diesen Vorschriften zulassen (Art. 101 KKV)."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "7904b0687bd34cf7ce66ed37a8c7a033dc69be4d8671556a1643c3d43a1fb561"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_66",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Vertreter ausländischer kollektiver Kapitalanlagen veröffentlicht Ausgabe- und Rücknahmepreise und gegebenenfalls den Inventarwert mit dem Hinweis «exklusive Kommissionen» zusammen in den im Prospekt genannten Publikationsorganen, und zwar bei jeder Ausgabe und Rücknahme von Anteilen, mindestens aber zweimal im Monat."
+        },
+        {
+          "absatz": "2",
+          "text": "Für kollektive Kapitalanlagen, bei denen das Recht auf jederzeitige Rückgabe im Sinne von Artikel 109 Absatz 3 der KKV eingeschränkt wurde, muss die Veröffentlichung nach Absatz 1 mindestens einmal pro Monat erfolgen. Die Wochen und Wochentage, an denen die Veröffentlichungen stattfinden, sind im Prospekt anzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mitteilung über die Änderungen an den Dokumenten, die im Heimatstaat der ausländischen kollektiven Kapitalanlage an die Anlegerinnen und Anleger geht, muss gleichzeitig auch in der Schweiz veröffentlicht werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "3a41c1c0701a3fbf39a8db356deb7021e2b2902f53ad199178637079670c5fd6"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_66_a",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "66_a",
+      "artikelLabel": "Art. 66a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Vertreter ausländischer kollektiver Kapitalanlagen hat der FINMA insbesondere unverzüglich Meldung zu erstatten, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kollektive Kapitalanlagen oder Teilvermögen zusammengelegt oder liquidiert werden oder deren Rechtsform geändert wird;"
+            },
+            {
+              "marke": "b",
+              "text": "eine kollektive Kapitalanlage oder ein Teilvermögen nicht lanciert oder das Angebot in der Schweiz nicht aufgenommen oder eingestellt wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "die Rückzahlung der Anteile an einer von ihm vertretenen ausländischen kollektiven Kapitalanlage aufgeschoben wird oder wenn die Verwaltungsgesellschaft die anteilige Kürzung von Rücknahmeanträgen (Gating) beschlossen hat;"
+            },
+            {
+              "marke": "d",
+              "text": "eine ausländische Aufsichtsbehörde Massnahmen gegen die kollektive Kapitalanlage ergriffen hat, namentlich wenn sie ihr die Genehmigung entzogen hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einem Zahlstellenwechsel sowie bei der Auflösung von Vertretungsverträgen ist vorgängig die Genehmigung der FINMA zur Beendigung des Mandates einzuholen (Art. 120 Abs. 2 bis KAG)."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_66_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "e9fe1ee9c42a575daf548b1d049e452feb4c3b9c31bdb2a2ddfca93fb1acb38f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_66_b",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "66_b",
+      "artikelLabel": "Art. 66b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vertreter ausländischer kollektiver Kapitalanlagen müssen die Kündigung oder die Änderung der Berufshaftpflichtversicherung der FINMA umgehend melden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_66_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "198f85759250fa59d2b43817a945a1fb17aaf87088861c41ad301ba72ef3e5a0"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_67",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für das Risikomanagement und die Risikokontrolle gelten für die SICAV die Artikel 8–14 der Finanzinstitutsverordnung-FINMA vom 4. November 2020 21 sinngemäss."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "1c596c4642a9e895565f50259a88dfb7fc5caab6b7913331a657c17a3c50898d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_68__71_",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "68__71_",
+      "artikelLabel": "Art. 6871",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_68__71_",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_72",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die selbstverwaltete SICAV stellt sicher, dass die Bewertung der Anlagen funktional und personell von der Funktion der Anlageentscheide (Portfoliomanagement) getrennt ist."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "73cbd8d04d268b9c31ad9c29ecf7e6bc51298588b3f3c27248439d65730b30cd"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_73__76_",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "73__76_",
+      "artikelLabel": "Art. 7376",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_73__76_",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_77",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Depotbank stellt eine räumliche, personelle und funktionale Unabhängigkeit gegenüber der Fondsleitung oder der SICAV sicher."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Delegation von Aufgaben durch die Fondsleitung oder die SICAV an die Depotbank ist sicherzustellen, dass keine Interessenkonflikte entstehen. Dabei ist die gegenseitige Weisungsunabhängigkeit zwischen der delegierenden Fondsleitung oder SICAV beziehungsweise ihren Beauftragten und den mit den Aufgaben der Depotbank gemäss Artikel 73 KAG betrauten Personen sicherzustellen. Lassen sich Interessenkonflikte nicht vermeiden, so sind diese den Anlegerinnen und Anlegern gegenüber offenzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die mit den Aufgaben der Depotbank gemäss Artikel 73 KAG betrauten Personen dürfen nicht gleichzeitig von der Fondsleitung oder SICAV delegierte Aufgaben wahrnehmen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f8680cad45cf93e8ffa404216aa82a1232f8bb8874d5dd7811234edf49fd3191"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_78",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Wahrnehmung ihrer Kontrollaufgaben gemäss Artikel 73 Absatz 3 Buchstaben a und b KAG bewertet die Depotbank die Risiken im Zusammenhang mit Art, Umfang und Komplexität der Strategie der kollektiven Kapitalanlage, um Kontrollverfahren zu entwickeln, die der kollektiven Kapitalanlage und den Vermögenswerten, in die sie anlegt, angemessen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Depotbank erlässt entsprechend angemessene interne Richtlinien und legt darin mindestens fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wie sie ihre Kontrollfunktion organisiert, insbesondere welche Rollen es gibt und wer wofür zuständig ist;"
+            },
+            {
+              "marke": "b",
+              "text": "nach welchem Kontrollverfahren die Kontrollen, einschliesslich der Kontrollen bei der Übertragung der Verwahrung an Dritt- und Sammelverwahrer im Sinne von Artikel 105 a KKV, durchgeführt werden sollen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Kontrollplan und die Kontrollprozesse, insbesondere die Methoden, die Datengrundlagen und die Periodizität der Kontrollen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Eskalationsprozesse, die bei Feststellung von Unregelmässigkeiten ausgelöst werden, insbesondere Verfahrensschritte, Fristen, Kontaktaufnahme mit Fondsleitung oder SICAV und weiteren relevanten Parteien, Vorgehen zur Definition von Massnahmen und Informationspflichten;"
+            },
+            {
+              "marke": "e",
+              "text": "die Berichterstattung der Depotbank über ihre Kontrolltätigkeit an die Organe, insbesondere deren Häufigkeit, Form und Inhalt sowie allenfalls weitere Adressaten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbank besitzt gegenüber der Fondsleitung das Recht und die Pflicht zum Einschreiten gegenüber unzulässigen Anlagen. Erhält sie im Rahmen ihrer Kontrollfunktion Kenntnis von solchen Anlagen, stellt sie den rechtmässigen Zustand wieder her, indem sie beispielsweise die Rückabwicklung der Anlagen veranlasst."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "eaa5784daff357bb0f810aa0c4f1a34ef1c35920d2766a1feb567abae18a4354"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_79",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit das KAG und diese Verordnung nichts anderes vorsehen, gelten für die Buchführung und Rechnungslegung gemäss Artikel 87 KAG die Bestimmungen des Obligationenrechts (OR)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Buchführung ist auf die gesetzlichen Anforderungen an die Jahres- und Halb­jahresberichte (Art. 89 ff. KAG) auszurichten und so vorzunehmen, dass die Rechenschaftsablage ein den tatsächlichen Verhältnissen entsprechendes Bild der Vermögenslage und des Erfolgs vermittelt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Transaktionen sind einschliesslich der Ausserbilanzgeschäfte sofort nach Vertragsabschluss zu erfassen. Die Bilanzierung für abgeschlossene, aber noch nicht erfüllte Transaktionen erfolgt nach dem Abschlusstagprinzip."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Buchhaltung hat den steuerrechtlichen Erfordernissen Rechnung zu tragen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f18f34b972796f355995b8dbc79f66254617dae352acc01c3111a84f8c653d25"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_80",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine fremde Währung kann als Rechnungseinheit bezeichnet werden für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Anlagefonds oder für dessen Teilvermögen: im Fondsreglement;"
+            },
+            {
+              "marke": "b",
+              "text": "die Teilvermögen der SICAV: im Anlagereglement;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kommanditgesellschaft für kollektive Kapitalanlagen: im Gesellschaftsvertrag."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die SICAV legt zudem in ihrem Anlagereglement die für die Gesamtrechnung (Art. 98) massgebende Währung als Rechnungseinheit und das Umrechnungs­verfahren fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird für die Rechnungslegung eine fremde Währung verwendet, so müssen die Werte nicht zusätzlich in der Landeswährung angegeben werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "f771065c14a5ecb38468e3c7239580c88760124a86409c8aaae6a5e38072ccc1"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_81",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei kollektiven Kapitalanlagen mit Teilvermögen sind die Bestimmungen dieses Titels je Teilvermögen einzuhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Teilvermögen sind in den Jahres- und Halbjahresberichten einzeln darzu­stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Rechnungsjahr ist für Teilvermögen auf das gleiche Datum abzuschliessen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Anteilsklassen ist der Nettoinventarwert je Klasse auszuweisen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "0e151007f09aa138ce194fd708762c00c070de3461cc4e1c9e7ae9846a3d6120"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_82",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Depotbank zeichnet die Ausgabe und die Rücknahme der Anteile inklusive Fraktionen fortlaufend auf. Dabei erfasst sie folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Datum der Ausgabe oder der Rücknahme;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anzahl der ausgegebenen oder der zurückgenommenen Anteile;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bruttoeinzahlung der Anlegerin oder des Anlegers oder die Nettoauszahlung an die Anlegerin oder den Anleger;"
+            },
+            {
+              "marke": "d",
+              "text": "die Vergütungen und Nebenkosten bei der Ausgabe oder der Rücknahme;"
+            },
+            {
+              "marke": "e",
+              "text": "den der Kapitalanlage zufliessenden oder belasteten Betrag;"
+            },
+            {
+              "marke": "f",
+              "text": "den Nettoinventarwert des Anteils."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Lauten die Anteile auf den Namen, so ist zusätzlich die Identität der Anlegerin oder des Anlegers separat aufzuzeichnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Depotbank zeichnet die Ausgabe und Rücknahme von Anteilscheinen separat auf."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "2de800039a4549b4f00954138faa3185f7bd828fed3cdbdff0ef0a7a8e1bbe16"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_83",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Immobilienfonds und die zu ihm gehörenden Immobiliengesellschaften haben ihre Rechnung auf den gleichen Tag abzuschliessen. Die FINMA kann Ausnahmen bewilligen, sofern die Erstellung einer konsolidierten Rechnung sichergestellt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung des Nettoinventarwerts sind die bei einer allfälligen Liquida­tion des Immobilienfonds anfallenden Steuern, namentlich die Ertrags-, die Grundstückgewinn- und gegebenenfalls die Handänderungssteuern zu berücksichtigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Abschreibungen auf Bauten und Zugehör zulasten der Erfolgs­rechnung sind im betriebswirtschaftlich angemessenen Rahmen zulässig."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "9a5170a2aa4e3e14b38439fb6a71eab006a12a761e18749ebdadf66d057d4ccb"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_84",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewertung der Anlagen wird zu Verkehrswerten (Art. 88 KAG) vorgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Anhang der Vermögensrechnung beziehungsweise der Bilanz und der Erfolgsrechnung (Art. 94 und 95) sind die Anlagen summarisch in einer Tabelle nach folgenden drei Bewertungskategorien aufgeteilt darzustellen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anlagen, die an einer Börse kotiert oder an einem anderen geregelten, dem Publikum offen stehenden Markt gehandelt werden: bewertet zu den Kursen, die am Hauptmarkt bezahlt werden (Art. 88 Abs. 1 KAG);"
+            },
+            {
+              "marke": "b",
+              "text": "Anlagen, für die keine Kurse gemäss Buchstabe a verfügbar sind: bewertet aufgrund von am Markt beobachtbaren Parametern;"
+            },
+            {
+              "marke": "c",
+              "text": "Anlagen, die aufgrund von am Markt nicht beobachtbaren Parametern mit geeigneten Bewertungsmodellen unter Berücksichtigung der aktuellen Marktgegebenheiten bewertet werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "3b3996cf4738aaca45eb19fa96bbd0e8c65ffa052e958a0aab4f2002701fb80b"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_85",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewertung von Private-Equity-Anlagen ist nach anerkannten internationalen Standards vorzunehmen, soweit sie in dieser Verordnung nicht geregelt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Die angewendeten Standards sind im Prospekt oder im Reglement ausführlich zu umschreiben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "43d76916f1cf37971531e0f35559651efb098c2a7938c1f1e0ed35ac835999a6"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_86",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 88 und 90 KAG) Bauland und angefangene Bauten sind in der Vermögensrechnung zu Verkehrswerten aufzuführen. Die Fondsleitung oder die SICAV lässt die angefangenen Bauten, welche zu Verkehrswerten aufgeführt werden, auf den Abschluss des Rechnungsjahres schätzen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "e7b7a4c0ce9707482af98cb3bfe3483c9b6be78737b743615342cb3f158571e5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_87",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das materielle und immaterielle Anlagevermögen der Unternehmeraktionärinnen und -aktionäre einer SICAV ist zu Anschaffungs- beziehungsweise Herstellungs­kosten unter Abzug der betriebsnotwendigen Abschreibungen zu bewerten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewertungsgrundsätze für das materielle und immaterielle Anlagevermögen sind unter den weiteren Informationen offenzulegen. Werden sie geändert, so sind zusätzlich angepasste Daten zu Informationszwecken für das Vorjahr auszuwei­sen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das übrige Vermögen der SICAV wird gemäss den Artikeln 84–86 bewertet."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "d7c0b17aa6a2a829f02a5b8dbe22e6b9166111f02bb21beb8b416089a8f09823"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_88",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 88 Abs. 2 und 108 KAG) Für die Bewertung gelten die Artikel 84–87 sinngemäss."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "d18515e0f0f8e4ee5183c815a167368f6c9f4ae973cdb9eae2787d69e2269c1c"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_89",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewertung im Einzelabschluss (Art. 109 Abs. 1) erfolgt nach den Bestimmungen der kaufmännischen Buchführung und Rechnungslegung. Zusätzlich sind die Verkehrswerte der Anlagen zu Informationszwecken anzugeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bewertung im konsolidierten Abschluss (Art. 109 Abs. 2) ist nach anerkannten Standards gemäss Verordnung vom 21. November 2012 über die anerkannten Standards zur Rechnungslegung (VASR) vorzunehmen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "48730a0eea874dfd31d3089690351c0cd05d2b9c5c5d265363bc41d8722912f9"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_90",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die angewendeten Bewertungsmethoden (Art. 85) sind im Jahres- und Halbjahresbericht offenzulegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Anlage unter ihrem Anschaffungswert bilanziert, so ist dieser offenzu­legen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei kollektiven Kapitalanlagen, die mehr als 10 Prozent ihres Vermögens in Private Equity anlegen können, sind mindestens folgende Angaben zu den einzelnen nach Art und Entwicklungsphase zu gliedernden Private-Equity-Anlagen zu machen, sofern deren Anteil 2 Prozent des Vermögens der kollektiven Kapitalanlage über­steigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beschrieb der Anlage (Firma, Sitz, Zweck, Kapital und Beteiligungsquote);"
+            },
+            {
+              "marke": "b",
+              "text": "Beschrieb der Geschäftstätigkeit und allenfalls der Entwicklungsfortschritte;"
+            },
+            {
+              "marke": "c",
+              "text": "Angaben über die Verwaltung und die Geschäftsleitung;"
+            },
+            {
+              "marke": "d",
+              "text": "Typisierung nach Entwicklungsphase wie «Seed», «Early Stage», «Buy­out»;"
+            },
+            {
+              "marke": "e",
+              "text": "Umfang eingegangener Verpflichtungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_90",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "625fe04456250fc3a3b63282a36a2868af7ee1f3041f25a8dad1ca75e66fb973"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_91",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden zur Umsetzung der Anlagepolitik Tochtergesellschaften eingesetzt, so ist bei der Rechenschaftsablage, namentlich in der Vermögensrechnung beziehungsweise der Bilanz und der Erfolgsrechnung, im Inventar und in Bezug auf Käufe und Verkäufe eine transparente wirtschaftliche Betrachtung anzuwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gesellschaften sind nach einem anerkannten Standard gemäss der VASR zu konsolidieren. Zu diesem Zweck ist deren Buchführung auf die Konsolidierung auszurichten."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_91",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "8d814a5278244c6d2dd8a8156c65a8412cb67aa943d5e0931397868c442b46da"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_92",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Jahresrechnung der SICAV besteht aus der Jahresrechnung der einzelnen Teilvermögen der Anlegeraktionärinnen und -aktionäre sowie aus der Jahresrechnung des Teilvermögens der Unternehmeraktionärinnen und -aktionäre und der Gesamtrechnung der SICAV."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Jahresrechnung weist für die Teilvermögen der Anlegeraktionärinnen und -aktionäre die zulässigen Anlagen im Sinne der Artikel 70, 86 und 99 KKV aus."
+        },
+        {
+          "absatz": "3",
+          "text": "Für das Teilvermögen der Unternehmeraktionärinnen und -aktionäre weist die Jahresrechnung Folgendes aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulässigen Anlagen im Sinne von Absatz 2 sowie das beweg­liche, unbewegliche und immaterielle Vermögen, das für die unmittelbare Ausübung der betrieblichen Tätigkeit der SICAV unerlässlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die zulässigen Verbindlichkeiten."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Zulässig sind Verbindlichkeiten, die kurzfristig oder hypothekarisch sichergestellt sind und im Zusammenhang mit der unmittelbaren Ausübung der betrieblichen Tätigkeit der SICAV eingegangen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Jahresrechnungen eines oder mehrerer ausgewählter Teilvermögen für Anle­geraktionärinnen und -aktionäre dürfen nur zusammen mit der Gesamtrechnung der SICAV veröffentlicht werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Jahresrechnung ist Teil des Jahresberichts, der den Geschäftsbericht nach OR ersetzt. Ein Lagebericht und eine Geldflussrechnung sind nicht zu erstellen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_92",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "eadc0c1e957b34932356d8b263091e529c0768eacaa04a85b95009004476a241"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_93",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 91 KAG) Für den Anlagefonds und die Teilvermögen der Anlegeraktionärinnen und -aktio­näre sind die Vermögensrechnung beziehungsweise die Bilanz und die Erfolgs­rechnung im Jahres- und im Halbjahresbericht in der Mindestgliederung nach den Artikeln 94–98 zu veröffentlichen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_93",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "c5a0776e4ac22accfb4829ff953221ba0b66e099c8875b8824fa56417a27e26f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_94",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 53–57 und 89 KAG sowie 70–85 KKV 39 ) Die Vermögensrechnung beziehungsweise die Bilanz und die Erfolgsrechnung von Effektenfonds weisen die Mindestgliederung nach Anhang 2 auf."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_94",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "c8e54fa147a74fda615326bb8e148785fbd3572ae14129cf3c4599097eb05fd8"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_95",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 58–67 und 89 KAG sowie 86–98 KKV 40 ) Die Vermögensrechnung beziehungsweise die Bilanz und die Erfolgsrechnung eines Immobilienfonds weisen die Mindestgliederung nach Anhang 3 auf."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_95",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "995ad32ab0968fd3a87833b1ba1e16aaab0cd381a8e8064c0836fdb3817fb1a2"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_96",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 68–71 und 89 KAG sowie 99–102 KKV 41 ) Die Mindestgliederungsvorschriften für Effektenfonds (Art. 94) gelten für übrige Fonds sinngemäss. Sie beziehen zusätzlich die für übrige Fonds zulässigen Anlagen ein."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_96",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "bd0044b2ad2cf5e97deed2da2b726c62dbfaada6930e9b9b3198421d8cdbcc3c"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_97",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "97",
+      "artikelLabel": "Art. 97",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Teilvermögen der Unternehmeraktionärinnen und -aktionäre ist zu gliedern in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "Betriebsvermögen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Gliederung der Anlagen gelten die Artikel 94–96."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Gliederung des Betriebsvermögens gelten die Artikel 959 und 959 a OR sinngemäss."
+        },
+        {
+          "absatz": "4",
+          "text": "Für den Anhang gilt Artikel 959 c OR sinngemäss. Zusätzlich sind die Bewertungsgrundsätze für das materielle und immaterielle Anlagevermögen der Unternehmeraktionärinnen und -aktionäre offenzulegen. Im Weiteren muss im Anhang Aufschluss über die Durchführung der Risikobeurteilung gegeben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Unternehmeraktionärinnen und -aktionäre und stimmrechtsverbundene Aktionärs­gruppen, die 5 Prozent der Aktien oder mehr halten, sind im Jahresbericht wie folgt aufzuführen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name beziehungsweise Firma;"
+            },
+            {
+              "marke": "b",
+              "text": "Wohnsitz beziehungsweise Sitz;"
+            },
+            {
+              "marke": "c",
+              "text": "Höhe der Beteiligung in Prozent."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_97",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "651d17217bd416029c5aa6caeea6a4a6aaa9146ed8d14698c7ba2294f2964baa"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_98",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "98",
+      "artikelLabel": "Art. 98",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesamtrechnung der SICAV besteht aus Bilanz, Erfolgsrechnung und Anhang gemäss OR und umfasst die Teilvermö­gen der Anlegeraktionärinnen und -aktionäre und das Teilvermögen der Unterneh­meraktionärinnen und -aktionäre."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Erstellung der Bilanz und der Erfolgsrechnung sind die Positionen der Teilvermögen der Anlegeraktionärinnen und -aktionäre zu addieren. Die Gliederung richtet sich dabei nach den Artikeln 94–96."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Teilvermögen der Unternehmeraktionärinnen und -aktionäre ist in der Bilanz und der Erfolgsrechnung separat auszuweisen. Die Gliederung der Positionen richtet sich für die Anlagen nach den Artikeln 94–96 und für das Betriebsvermögen nach den Artikeln 959, 959 a und 959 b OR sinngemäss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gesamtrechnung der SICAV ist nach Teilvermögen der Anlegeraktionärinnen und -aktionäre, Teilvermögen der Unternehmeraktionärinnen und -aktionäre und Gesamt­vermögen der SICAV zu gliedern."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Angaben nach Artikel 97 Absatz 5 sind zusätzlich in der Gesamtrechnung offenzulegen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_98",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a72d395ac4530cdaa6f2f66f0b03fbd7a02354b161df261484d99ce75488217c"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_99",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "99",
+      "artikelLabel": "Art. 99",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Inventar ist mindestens zu gliedern nach Anlagearten wie Effekten, Bankguthaben, Geldmarktinstrumente, derivative Finanzinstrumente, Edelmetalle sowie Commodities und innerhalb der Anlagearten unter Berücksichtigung der Anlagepo­litik nach Branchen, geografischen Gesichtspunkten, Effektenarten (Anhang 2 Ziff. 1.4) und Währungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für jede Gruppe oder Untergruppe sind deren Summe sowie der prozentuale Anteil am Gesamtvermögen der kollektiven Kapitalanlage anzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für jeden einzelnen im Inventar ausgewiesenen Wert ist der Anteil am Gesamt­vermögen der kollektiven Kapitalanlage anzugeben."
+        },
+        {
+          "absatz": "4",
+          "text": "Effekten sind darüber hinaus zu gliedern in solche:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die an einer Börse gehandelt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die an einem andern geregelten, dem Publikum offen stehenden Markt gehandelt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Artikel 70 Absatz 3 der KKV;"
+            },
+            {
+              "marke": "d",
+              "text": "nach Artikel 71 Absatz 2 KKV;"
+            },
+            {
+              "marke": "e",
+              "text": "die nicht unter die Buchstaben a–d fallen."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Für jeden einzelnen im Inventar ausgewiesenen Wert ist die Bewertungskategorie gemäss Artikel 84 Absatz 2 anzugeben."
+        },
+        {
+          "absatz": "6",
+          "text": "Bei den unter Absatz 3 aufgeführten Effekten ist nur das Subtotal je Kategorie anzugeben und jede Position entsprechend zu kennzeichnen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_99",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "284eac18556fdb0c8bb4d049f054baccb6fbe25f4901389376eb54ecfac3eae7"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_100",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "100",
+      "artikelLabel": "Art. 100",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Inventar ist mindestens zu gliedern in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wohnbauten;"
+            },
+            {
+              "marke": "b",
+              "text": "kommerziell genutzte Liegenschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "gemischte Bauten;"
+            },
+            {
+              "marke": "d",
+              "text": "Bauland, einschliesslich Abbruchobjekte, und angefangene Bauten;"
+            },
+            {
+              "marke": "e",
+              "text": "Anteile an anderen Immobilienfonds und Immobilieninvestmentgesellschaf­ten;"
+            },
+            {
+              "marke": "f",
+              "text": "Hypotheken und andere hypothekarisch sichergestellte Darlehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei im Baurecht erstellten Bauten und im Stockwerkeigentum stehenden Objekten ist dieser Umstand für jedes Objekt und im Total für jede Position in Absatz 1 Buchstaben a–d im Inventar anzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Inventar enthält für jedes Grundstück getrennt folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Adresse;"
+            },
+            {
+              "marke": "b",
+              "text": "die Gestehungskosten;"
+            },
+            {
+              "marke": "c",
+              "text": "den geschätzten Verkehrswert;"
+            },
+            {
+              "marke": "d",
+              "text": "die erzielten Bruttoerträge."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Soweit in kurzfristige festverzinsliche Effekten, Immobilienzertifikate oder Deri­vate investiert wird, sind diese ebenfalls auszuweisen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Ende Jahr ausstehenden Hypotheken und anderen hypothekarisch sicher­gestellten Verbindlichkeiten sowie die Darlehen und Kredite sind mit den Zinskon­ditionen und der Laufzeit aufzuführen."
+        },
+        {
+          "absatz": "6",
+          "text": "Für jeden Immobilienfonds ist ein Verzeichnis der zu diesem gehörenden Immobi­liengesellschaften unter Angabe der jeweiligen Beteiligungsquote zu publizieren."
+        },
+        {
+          "absatz": "7",
+          "text": "Die Positionen im Inventar sind nach den drei Bewertungskategorien gemäss Artikel 84 Absatz 2 darzustellen. Haben alle Anlageobjekte dieselbe Bewertungskategorie, so können diese zusammenfassend für das gesamte Liegenschaftsportfolio aufgeführt werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_100",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "cb27b9eb5b7cba5e1102c38128c865b339a5dd23ed61422cc14012ee676fd0f2"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_101",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "101",
+      "artikelLabel": "Art. 101",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sämtliche Veränderungen in der Zusammensetzung der kollektiven Kapitalanlage, insbesondere Käufe, Verkäufe, Ausserbilanzgeschäfte, Gratisaktien, Bezugsrechte und Splits, sind im Jahresbericht zu veröffentlichen. Dabei sind die einzelnen Vermögensgegenstände genau zu bezeichnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Immobilienfonds ist jeder erworbene oder veräusserte Immobilienwert einzeln aufzuführen. Auf Begehren einer Anlegerin oder eines Anlegers ist der vereinbarte Preis bekannt zu geben."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Immobilienfonds sind Geschäfte zwischen kollektiven Kapitalanlagen, die von der gleichen oder von verbundenen Fondsleitungen oder SICAV verwaltet werden, speziell auszuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die im Laufe des Geschäftsjahres gewährten Hypotheken und hypothekarisch sichergestellten Darlehen, die vor Abschluss des Geschäftsjahres zurückbezahlt wurden, sind mit den Zinskonditionen und der Laufzeit aufzuführen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die im Laufe des Geschäftsjahres aufgenommenen Hypotheken und anderen hypothekarisch sichergestellten Verbindlichkeiten sowie Darlehen und Kredite, die vor Abschluss des Geschäftsjahres zurückbezahlt wurden, sind mit den Zinskondi­tionen und der Laufzeit oder summarisch pro Kategorie mit einer durchschnittlichen Laufzeit und einem Durchschnittszinssatz aufzuführen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_101",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "194a0d9f30218af837dfee5bf65ca0fbeb5624b0fe09fee5fd4213508087ce5e"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_102",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "102",
+      "artikelLabel": "Art. 102",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für jede kollektive Kapitalanlage ist eine Aufstellung über die Veränderung des Nettofondsvermögens zu erstellen, die mindestens zu gliedern ist in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Nettofondsvermögen zu Beginn des Berichtsjahres;"
+            },
+            {
+              "marke": "b",
+              "text": "Ausschüttungen;"
+            },
+            {
+              "marke": "c",
+              "text": "Saldo aus dem Anteilverkehr;"
+            },
+            {
+              "marke": "d",
+              "text": "Gesamterfolg;"
+            },
+            {
+              "marke": "e",
+              "text": "Nettofondsvermögen am Ende des Berichtsjahres."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Weiteren ist die Anteilstatistik des Berichtsjahres auszuweisen (Art. 89 Abs. 1 Bst. b KAG)."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_102",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "aa1f3ab5d940b84a49d0324af19452c2f73d8095cc3e7728dc627342c27b17cd"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_103",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "103",
+      "artikelLabel": "Art. 103",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Jahresbericht und im Halbjahresbericht sind in der Vermögensrechnung bezie­hungsweise der Bilanz und der Erfolgsrechnung auch die Angaben des Vorjahres auszuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Jahresbericht umfasst zusätzlich eine Aufstellung über das Nettofondsvermö­gen sowie den Nettoinventarwert pro Anteil der vergangenen drei Berichtsjahre. Stichtag ist der letzte Tag des Berichtsjahres."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_103",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "5d7ae3f01ba8552b13fed4a6c28b81b65c02fc8a21177ed202e96a9a5117ce55"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_104",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "104",
+      "artikelLabel": "Art. 104",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufstellung über die Verwendung des Erfolgs ist mindestens zu gliedern in:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Nettoertrag des Rechnungsjahres;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Ausschüttung bestimmte Kapitalgewinne des Rechnungsjahres;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Ausschüttung bestimmte Kapitalgewinne früherer Rechnungsjahre;"
+            },
+            {
+              "marke": "d",
+              "text": "Vortrag des Vorjahres;"
+            },
+            {
+              "marke": "e",
+              "text": "zur Verteilung verfügbarer Erfolg;"
+            },
+            {
+              "marke": "f",
+              "text": "zur Ausschüttung an die Anlegerinnen und Anleger vorgesehener Erfolg;"
+            },
+            {
+              "marke": "g",
+              "text": "zur Wiederanlage zurückbehaltener Ertrag;"
+            },
+            {
+              "marke": "h",
+              "text": "Vortrag auf neue Rechnung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es dürfen keine Reserven gebildet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_104",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "63ed4ad9a49402989ab1c679e343bf3a2bda3d602ff447b8a3ce86f4400a9178"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_105",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "105",
+      "artikelLabel": "Art. 105",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zwischenausschüttungen aus Erträgen sind nur erlaubt, wenn dies im Fondsregle­ment vorgesehen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Kapitalgewinne dürfen nur ausgeschüttet werden, wenn folgende Voraussetzungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Ausschüttung muss im Fondsreglement vorgesehen sein."
+            },
+            {
+              "marke": "b",
+              "text": "Die Kapitalgewinne müssen realisiert sein."
+            },
+            {
+              "marke": "c",
+              "text": "Es darf sich um keine Zwischenausschüttungen handeln."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Ausschüttung von Kapitalgewinnen ist auch zulässig, wenn Kapitalverluste früherer Rechnungsjahre bestehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Es dürfen keine Tantiemen ausgerichtet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_105",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "6bb47451010a131c8cf6fb86913809720f0d0186a8bc02ec1b249f164be53136"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_106",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "106",
+      "artikelLabel": "Art. 106",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Ausgabe- und Rücknahmepreis beziehungsweise der Nettoinventarwert ist in den im Prospekt genannten Printmedien oder elektronischen Plattformen bei jeder Ausgabe und Rücknahme von Anteilen zu publizieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Preise für Effektenfonds und übrige Fonds sind zudem mindestens zweimal pro Monat zu veröffentlichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für folgende kollektive Kapitalanlagen sind die Preise mindestens einmal pro Monat zu veröffentlichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Immobilienfonds;"
+            },
+            {
+              "marke": "b",
+              "text": "kollektive Kapitalanlagen, bei denen das Recht auf jederzeitige Rückgabe im Sinne von Artikel 109 Absatz 3 KKV eingeschränkt worden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Wochen und Wochentage, an denen die Publikation nach den Absätzen 2 und 3 stattfindet, sind im Prospekt festzulegen."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird der Nettoinventarwert publiziert, so ist der Hinweis «exklusive Kommis­sionen» anzufügen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_106",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a38efaab78b827a41f4d3d7bc4b074f029f54839ac0ad2f2812a05f0e3a37984"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_107",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "107",
+      "artikelLabel": "Art. 107",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_107",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_108",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "108",
+      "artikelLabel": "Art. 108",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechenschaftsablage richtet sich sinngemäss nach den Bestimmungen über die offenen kollektiven Kapitalanlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Beteiligungen, die zu reinen Anlagezwecken gehalten werden, sind nicht zu kon­solidieren, unabhängig vom prozentualen Anteil der Stimmen und des Kapitals an der gehaltenen Unternehmung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_108",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "cae905dfb796f99b7336089349d764427558d68c3a4bfad64f583d1987157dff"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_109",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "109",
+      "artikelLabel": "Art. 109",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechenschaftsablage des Einzelabschlusses richtet sich sinngemäss nach den Bestimmungen für die offenen kollektiven Kapitalanlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konsolidierungspflicht nach OR kommt nicht zur Anwendung. Eine allfäl­lige Konsolidierung hat nach einem anerkannten Standard gemäss VASR zu erfolgen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_109",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "11d044e845faad4dd14e58f9533040069bdaffe06f7dcf3a92e41fc5774b25a4"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_110",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "110",
+      "artikelLabel": "Art. 110",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "(Art. 126 KAG und 24 FINMAG 51 ) Die Prüfungen sind aufzuteilen in eine Rechnungsprüfung und eine Aufsichtsprüfung."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_110",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "909f078556cf81d38578a097ed1653bbfda14625d37650e03253cbd4d964a046"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_111",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "111",
+      "artikelLabel": "Art. 111",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Rechnungsprüfung kollektiver Kapitalanlagen werden die Angaben nach den Artikeln 89 Absatz 1 Buchstaben a–h und 90 KAG geprüft."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Prüfung der Verwaltung beziehungsweise der Leitung der kollektiven Kapitalanlage sowie der Einhaltung der nicht die Jahresrechnung betreffenden gesetzlichen, vertraglichen, statutarischen und reglementarischen Vorschriften ist Gegenstand der Aufsichtsprüfung bei der Fondsleitung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Rechnungsprüfung des Komplementärs einer Kommanditgesellschaft für kollektive Kapitalanlagen sowie des Vertreters ausländischer kollektiver Kapitalanlagen richtet sich nach den Artikeln 728–731 a OR."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Vertreter ausländischer kollektiver Kapitalanlagen kann die FINMA Abweichungen vorsehen."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_111",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a0fed9ef76eda000e6242f71bbaa8a035acbb606bbff6dc94a04876c160ba4c5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_112",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "112",
+      "artikelLabel": "Art. 112",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsichtsprüfung umfasst die Prüfung der Einhaltung der jeweils anwendbaren aufsichtsrechtlichen Vorschriften durch die Bewilligungsträger nach Artikel 13 Absatz 2 Buchstaben b–d und h KAG unter Einbezug der kollektiven Kapital­anlagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Kommanditgesellschaft für kollektive Kapitalanlagen ist der Komplementär in den Prüfumfang mit einzubeziehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsprüfung in Bezug auf kollektive Kapitalanlagen umfasst auch die Prüfung des Prospekts und des Basisinformationsblatts."
+        },
+        {
+          "absatz": "4",
+          "text": "..."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_112",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "a121d723ebdef7c459a446acccdf111711ae78115e3ca2147115a06be8526527"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_113",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "113",
+      "artikelLabel": "Art. 113",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Prüfgesellschaft erstattet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Prüfberichte über die aufsichtsrechtliche Prüfung der Bewilligungsträger und der kollektiven Kapitalanlagen sowie der nicht bewilligungspflichtigen Vertreter ausländischer kollektiver Kapitalanlagen (Aufsichtsprüfung);"
+            },
+            {
+              "marke": "b",
+              "text": "Prüfberichte über die Prüfung der Jahresrechnung nach Artikel 126 Absatz 5 KAG (Rechnungsprüfung);"
+            },
+            {
+              "marke": "c",
+              "text": "Kurzberichte über die Prüfung der kollektiven Kapitalanlagen (Rechnungsprüfung)."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_113",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "06a37afcf01d651788d3adc261f338efbc12012c58fb4ee6a632fbc47e827066"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_114",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "114",
+      "artikelLabel": "Art. 114",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfgesellschaft erstattet den Bericht über die Aufsichtsprüfung."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer Fondsleitung umfasst der Bericht auch die von ihr verwalteten Anlagefonds."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Prüfberichte der Kommanditgesellschaft für kollektive Kapitalanlagen beinhalten auch den Komplementär."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Prüfberichte über die Bewilligungsträger und die Anlagefonds sind dem Organ für die Oberleitung, Aufsicht und Kontrolle zur Kenntnis zu bringen. Die Prüfberichte sind in einer Sitzung dieses Organs zu besprechen und die Behandlung ist zu protokollieren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_114",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "871c50c6be366e92ad4b161ea35f998003ce1efdcb9cab3a68c89b8a4baa8a2d"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_115",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "115",
+      "artikelLabel": "Art. 115",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Prüfberichte zur Rechnungsprüfung gelten die Bestimmungen für die ordentliche Prüfung nach OR sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfgesellschaft erstattet die Kurzberichte rechtzeitig vor Publikation der Jahresberichte. Sie sind von der zuständigen leitenden Prüferin oder vom zuständigen leitenden Prüfer und einer oder einem weiteren zeichnungsberechtigten Mitarbeitenden der Prüfgesellschaft zu unterzeichnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei kollektiven Kapitalanlagen mit Teilvermögen ist für jedes einzeln zu berichten."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_115",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "bf76ff02f80e97c04cf0142dc712edb50c911a2831a94ceaa6304ba744b6d42f"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_116",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "116",
+      "artikelLabel": "Art. 116",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kurzbericht äussert sich zur Einhaltung der gesetzlichen, vertraglichen, statu­tarischen und reglementarischen Vorschriften betreffend die Jahresrechnung und zu den Prüfungen der Angaben nach Artikel 89 Absatz 1 Buchstaben a–h KAG, bei den Immobilienfonds zusätzlich zu denjenigen nach Artikel 90 KAG."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der SICAV und der SICAF kann der Kurzbericht auch die Berichterstattung der aktienrechtlichen Prüfgesellschaft gemäss Artikel 728 OR umfassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann eine Standard-Bestätigung der Branchenorganisation der Prüfge­sellschaften für allgemeinverbindlich erklären."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_116",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "7c28c2527ecfc2afabff64ec54fb091546d4631e418c041d802da86c9803a6fa"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_116_a",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "116_a",
+      "artikelLabel": "Art. 116a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Dokumente nach Artikel 142 Absatz 1 KKV sind in elektronischer Form einzureichen unter Verwendung der von der FINMA zur Verfügung gestellten Vor­lagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann Ausnahmen von der elektronischen Zustellung gewähren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_116_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "27c695d32681e2dea466cdffedb777f7ce085254341a0fed3ccdf3c45b3cd424"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_117",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "117",
+      "artikelLabel": "Art. 117",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kollektivanlagenverordnung-FINMA vom 21. Dezember 2006 79 wird aufge­hoben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_117",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b243a74ac7f43788d3d24fc631186ced59d9ff64a1ec802407a0590c15179302"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_118",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "118",
+      "artikelLabel": "Art. 118",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_118",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/KKV_FINMA/art_119",
+      "ebene": "bund",
+      "quelle": "KKV_FINMA",
+      "erlass": "KKV-FINMA",
+      "artikel": "119",
+      "artikelLabel": "Art. 119",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 2015 in Kraft."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/707/de#art_119",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20210101",
+      "sha": "40c400e27838165249c0e3a7dcf77d8f70b8ce39ed89b280cea3446648505eb6"
+    }
+  ]
+}

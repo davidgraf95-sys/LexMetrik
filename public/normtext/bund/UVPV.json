@@ -1,0 +1,856 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/UVPV/art_1",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Umweltverträglichkeitsprüfung nach Artikel 10 a des USG (Prüfung) unterstellt sind Anlagen, die im Anhang dieser Verordnung aufgeführt sind."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "eab6548133f08fc501cb92dcc97e061fdf74f45216fa211f82ca0752c2868bc0"
+    },
+    {
+      "id": "bund/UVPV/art_2",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Änderungen bestehender Anlagen, die im Anhang aufgeführt sind, unterliegen der Prüfung, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Änderung wesentliche Umbauten, Erweiterungen oder Betriebsänderungen betrifft und"
+            },
+            {
+              "marke": "b",
+              "text": "über die Änderung im Verfahren entschieden wird, das bei neuen Anlagen für die Prüfung massgeblich ist (Art. 5)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Änderungen bestehender Anlagen, die nicht im Anhang aufgeführt sind, unterliegen der Prüfung, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anlage nach der Änderung einer Anlage im Anhang entspricht und"
+            },
+            {
+              "marke": "b",
+              "text": "über die Änderung im Verfahren entschieden wird, das bei neuen Anlagen für die Prüfung massgeblich ist (Art. 5)."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "f9f5ef90ef31b902a6a7e64fdb7c5db9860c2165d57fdd098b4fa3c57d710d4f"
+    },
+    {
+      "id": "bund/UVPV/art_3",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Prüfung wird festgestellt, ob das Projekt den Vorschriften über den Schutz der Umwelt entspricht. Dazu gehören das USG und die Vorschriften, die den Natur- und Heimatschutz, den Landschaftsschutz, den Gewässerschutz, die Walderhaltung, die Jagd, die Fischerei und die Gentechnik betreffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Ergebnis der Prüfung bildet eine Grundlage für den Entscheid über die Bewilligung, Genehmigung oder Konzessionierung des Vorhabens im massgeblichen Verfahren (Art. 5) sowie für weitere Bewilligungen zum Schutz der Umwelt (Art. 21)."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "43ec9c6c477be1ef09e6cddcf1199aba0cd07605a7a0e1e3addde262c0c5eb50"
+    },
+    {
+      "id": "bund/UVPV/art_4",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Anlagen, die nicht der UVP-Pflicht unterliegen, werden die Vorschriften über den Schutz der Umwelt (Art. 3) angewendet, ohne dass ein Bericht nach Artikel 7 erstellt wird."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0b97c85defb046d2dfb8deacb75672a7d6b014ec5b8cdd40d2e7af74653350c3"
+    },
+    {
+      "id": "bund/UVPV/art_5",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfung wird von der Behörde durchgeführt, die im Rahmen eines Bewilligungs-, Genehmigungs- oder Konzessionsverfahrens über das Projekt entscheidet (zuständige Behörde)."
+        },
+        {
+          "absatz": "2",
+          "text": "Das für die Prüfung massgebliche Verfahren wird im Anhang bestimmt. Wird bei der nachträglichen Genehmigung von Detailplänen ausnahmsweise über wesentliche Umweltauswirkungen einer der UVP-Pflicht unterliegenden Anlage entschieden, so wird auch bei diesem Verfahrensschritt eine Prüfung durchgeführt."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit das massgebliche Verfahren im Anhang nicht bestimmt ist, wird es durch das kantonale Recht bezeichnet. Die Kantone wählen dasjenige Verfahren, das eine frühzeitige und umfassende Prüfung ermöglicht. Sehen die Kantone für bestimmte Anlagen eine Sondernutzungsplanung (Detailnutzungsplanung) vor, gilt diese als massgebliches Verfahren, wenn sie eine umfassende Prüfung ermöglicht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1a38dd83cb9a0e7af9859af2acdd58dec3856a4f11a831eeae878a9954bc44d0"
+    },
+    {
+      "id": "bund/UVPV/art_6",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sieht der Anhang oder das kantonale Recht eine mehrstufige Prüfung in verschiedenen Verfahrensschritten vor, so wird die Prüfung bei jedem Verfahrensschritt so weit durchgeführt, als die Auswirkungen des Projektes auf die Umwelt für den jeweiligen Entscheid bekannt sein müssen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "95ee9b5df336d186d6048d8bd5992885cc06d27967f4f2ad5340a66a0c017cc2"
+    },
+    {
+      "id": "bund/UVPV/art_6_a",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steht fest oder ist zu erwarten, dass die Schweiz von erheblichen grenzüberschreitenden Auswirkungen eines ausländischen Projekts betroffen ist, so sind für die Ausübung der Rechte und Pflichten der Schweiz nach der Espoo-Konvention zuständig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Bundesamt für Umwelt (BAFU): 1. für die Entgegennahme der Benachrichtigung durch die Ursprungspartei sowie"
+            },
+            {
+              "marke": "2",
+              "text": "für die Übermittlung der Stellungnahmen an die Ursprungspartei bei Vorhaben, über die in der Schweiz eine kantonale Behörde entscheiden würde;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Entscheidet die Behörde nach Artikel 5 Absatz 1 über ein Projekt, bei dem feststeht oder zu erwarten ist, dass es erhebliche grenzüberschreitende Auswirkungen hat, so nimmt sie auch die Rechte und Pflichten der Schweiz als Ursprungspartei nach der Espoo-Konvention wahr; bei kantonalen Vorhaben können die Kantone eine andere Zuständigkeit festlegen. Die Behörde informiert das BAFU über die Benachrichtigung der betroffenen Partei."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "5ea2b7bcf6f174e8d9ac7548948730a0ab1f487a229800d6885c1347e57648c7"
+    },
+    {
+      "id": "bund/UVPV/art_7",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer eine Anlage, die nach dieser Verordnung geprüft werden muss, errichten oder ändern will, muss bei der Projektierung einen Umweltverträglichkeitsbericht über die Auswirkungen der Anlage auf die Umwelt (Bericht) erstellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7520575f845c97943c6259b1fa43cc901e49cb684ec6398b215bb0874464555d"
+    },
+    {
+      "id": "bund/UVPV/art_8",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gesuchsteller erarbeitet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Voruntersuchung, die aufzeigt, welche Auswirkungen der Anlage die Umwelt voraussichtlich belasten können;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Pflichtenheft, das aufzeigt, welche Umweltauswirkungen der Anlage im Bericht untersucht werden müssen, und das die vorgesehenen Untersuchungsmethoden sowie den örtlichen und zeitlichen Rahmen für die Untersuchungen nennt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gesuchsteller legt der zuständigen Behörde Voruntersuchung und Pflichtenheft vor. Diese leitet die Unterlagen an die Umweltschutzfachstelle (Art. 12) weiter, welche dazu Stellung nimmt und den Gesuchsteller berät."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8e47ea8f3ded3d171f0c871d9c664de80ad4f4162ac49ed848a8c55fa1235772"
+    },
+    {
+      "id": "bund/UVPV/art_8_a",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden in der Voruntersuchung die Auswirkungen des Vorhabens auf die Umwelt und die Umweltschutzmassnahmen abschliessend ermittelt und dargestellt, so gilt die Voruntersuchung als Bericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Inhalt des Berichts gelten die Artikel 9 und 10. Die Behandlungsfristen richten sich nach Artikel 12 b ."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "dfa4137f992cf03b825b3effcfe57093b68cc4bea1aba29593d4ed6847d302fc"
+    },
+    {
+      "id": "bund/UVPV/art_9",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bericht muss den Anforderungen nach Artikel 10 b Absatz 2 USG entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er muss insbesondere alle Angaben enthalten, welche die zuständige Behörde benötigt, um das Projekt gemäss Artikel 3 prüfen zu können."
+        },
+        {
+          "absatz": "3",
+          "text": "Er muss die der geplanten Anlage zurechenbaren Auswirkungen auf die Umwelt sowohl einzeln als auch gesamthaft und in ihrem Zusammenwirken ermitteln und bewerten."
+        },
+        {
+          "absatz": "4",
+          "text": "Er muss auch darlegen, wie die Umweltabklärungen berücksichtigt sind, die im Rahmen der Raumplanung durchgeführt worden sind."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "f086ae5564c2f144f657d6be86923edb84f2525c35e3b334153af1c7df7810e1"
+    },
+    {
+      "id": "bund/UVPV/art_10",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Voruntersuchung, das Pflichtenheft und den Bericht sind als Vollzugshilfe die Richtlinien des BAFU massgebend, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Prüfung von einer Bundesbehörde durchgeführt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "der Bericht eine Anlage betrifft, zu der nach dem Anhang das BAFU anzuhören ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die kantonale Umweltschutzfachstelle keine eigenen Richtlinien erlassen hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In den übrigen Fällen sind für die Voruntersuchung, das Pflichtenheft und den Bericht als Vollzugshilfe die Richtlinien der kantonalen Umweltschutzfachstelle massgebend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "03ccac0c785a1544284b8e69586499e23690b30e1e108ade2ef5c635fd3c1a18"
+    },
+    {
+      "id": "bund/UVPV/art_11",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Gesuchsteller muss den Bericht zusammen mit den Unterlagen bei der Einleitung des massgeblichen Verfahrens der zuständigen Behörde einreichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "d6d75a9e3b62573fd979e55a308b729b9ddb4707a3afd58dae2da33731f5a04c"
+    },
+    {
+      "id": "bund/UVPV/art_12",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Umweltschutzfachstelle beurteilt die Voruntersuchung, das Pflichtenheft und den Bericht zu Projekten, die von einer kantonalen Behörde geprüft werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU beurteilt die Voruntersuchung, das Pflichtenheft und den Bericht zu Projekten, die von einer Bundesbehörde geprüft werden. Es berücksichtigt dabei die Stellungnahme des Kantons."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Projekten, zu denen nach dem Anhang das BAFU anzuhören ist, nimmt es gestützt auf die Stellungnahme der kantonalen Umweltschutzfachstelle summarisch zu Voruntersuchung, Pflichtenheft und Bericht Stellung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0bf89463c3efd7fac6e8d50e67d981994f820145bcb182ea680d4346b788f426"
+    },
+    {
+      "id": "bund/UVPV/art_12_a",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Projekten, die von einer kantonalen Behörde geprüft werden, legt das kantonale Recht die Frist fest, innert der die kantonale Umweltschutzfachstelle zu Voruntersuchung und Pflichtenheft Stellung nimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Projekten, die von einer Bundesbehörde geprüft werden, nimmt das BAFU zu Voruntersuchung und Pflichtenheft innert zwei Monaten Stellung. Nach Eingang der kantonalen Stellungnahme ist dem BAFU mindestens ein Monat für seine Stellungnahme einzuräumen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Projekten, zu denen nach dem Anhang das BAFU anzuhören ist, nimmt es zu Voruntersuchung und Pflichtenheft innert zwei Monaten Stellung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_12_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e6f9e860ba8ae33b0c8da1c36a989a1d3574cc8f30d3b2d823550f6dd6e0b18e"
+    },
+    {
+      "id": "bund/UVPV/art_12_b",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "12_b",
+      "artikelLabel": "Art. 12b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Projekten, die von einer kantonalen Behörde geprüft werden, legt das kantonale Recht die Frist fest, innert der die kantonale Umweltschutzfachstelle zum Bericht Stellung nimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU beurteilt innert fünf Monaten die Berichte zu Projekten, die von einer Bundesbehörde geprüft werden. Nach Eingang der kantonalen Stellungnahme sind dem BAFU mindestens zwei Monate für seine Stellungnahme einzuräumen, bei Projekten nach Ziffer 22.2 des Anhangs einen Monat."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Projekten, zu denen nach dem Anhang das BAFU anzuhören ist, beurteilt es innert zwei Monaten, ob die geplante Anlage den Vorschriften zum Schutz der Umwelt entspricht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_12_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8953e0a5de7838b94986f26ebb98703b6da1e7643174dd9fe2d6a0438885a643"
+    },
+    {
+      "id": "bund/UVPV/art_13",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Umweltschutzfachstelle untersucht anhand der Richtlinien, ob die für die Prüfung erforderlichen Angaben im Bericht vollständig und richtig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt sie Mängel fest, so beantragt sie der zuständigen Behörde, vom Gesuchsteller ergänzende Abklärungen zu verlangen oder Experten beizuziehen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2f613ce756a91aacdbdc3081d3b83140f175146cd26ef642ee5adb8c383fa558"
+    },
+    {
+      "id": "bund/UVPV/art_13_a",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_13_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/UVPV/art_14",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde sorgt für die Koordination der Vorarbeiten, insbesondere der Aufgaben von Gesuchsteller und Umweltschutzfachstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sorgt dafür, dass die Umweltschutzfachstelle über den Bericht des Gesuchstellers sowie über die weiteren Grundlagen des massgeblichen Verfahrens verfügt, welche dazu dienen, dass die Auswirkungen des Projektes auf die Umwelt beurteilt werden können. Bei einem Projekt, das von einer Bundesbehörde geprüft wird, gehören dazu auch Stellungnahmen, welche die Kantone im massgeblichen Verfahren abgeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone können die Aufgaben der zuständigen Behörde nach den Absätzen 1 und 2 einer andern Behörde übertragen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Projekten, zu denen nach dem Anhang das BAFU anzuhören ist, sorgt die zuständige Behörde dafür, dass das BAFU über die Voruntersuchung, das Pflichtenheft und den Bericht sowie über die Beurteilung der kantonalen Umweltschutzfachstelle verfügt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "68d2137fd69ae822a67b76cf6f13055456b34cb537dad6a11beef01311e73f9b"
+    },
+    {
+      "id": "bund/UVPV/art_15",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde sorgt dafür, dass der Bericht öffentlich zugänglich ist. Vorbehalten bleiben die gesetzlichen Geheimhaltungspflichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Muss das Gesuch für die Anlage öffentlich aufgelegt werden, so wird in der Publikation darauf hingewiesen, dass auch der Bericht eingesehen werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist für das Gesuch keine öffentliche Auflage vorgeschrieben, so machen die Kantone den Bericht nach ihrem Recht bekannt. Die zuständige Behörde des Bundes kündigt im Bundesblatt oder in einem andern geeigneten Publikationsorgan an, wo der Bericht eingesehen werden kann."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bericht kann während 30 Tagen eingesehen werden; vorbehalten bleiben abweichende Fristen über die Auflage im massgeblichen Verfahren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "217e3351da5d99c28bd9d4b449a68f40cbb03354102ca4e524a91b5cce6cbaab"
+    },
+    {
+      "id": "bund/UVPV/art_16",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde trifft die Anordnungen, die für die Durchführung der Prüfung erforderlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie entscheidet insbesondere über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anträge der Umweltschutzfachstelle;"
+            },
+            {
+              "marke": "b",
+              "text": "die Vornahme ergänzender Abklärungen und den Beizug von Experten;"
+            },
+            {
+              "marke": "c",
+              "text": "den Antrag des Gesuchstellers auf Geheimhaltung von Teilen seines Berichts."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie eröffnet dem Gesuchsteller den Entscheid über die Geheimhaltung von Teilen seines Berichts, bevor der Bericht öffentlich zugänglich gemacht wird."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4e5009a026bd0ba4c5ac481415cf78fb888e4f4e376eafee91aef84f196e1a65"
+    },
+    {
+      "id": "bund/UVPV/art_17",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zuständige Behörde stützt sich bei der Prüfung auf folgende Grundlagen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bericht;"
+            },
+            {
+              "marke": "b",
+              "text": "Stellungnahmen der Behörden, die für eine Bewilligung nach Artikel 21 oder für eine Subventionierung nach Artikel 22 zuständig sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Beurteilung des Berichts durch die Umweltschutzfachstelle;"
+            },
+            {
+              "marke": "d",
+              "text": "Anträge der Umweltschutzfachstelle;"
+            },
+            {
+              "marke": "e",
+              "text": "Ergebnisse allfälliger eigener oder von Experten durchgeführter Abklärungen;"
+            },
+            {
+              "marke": "f",
+              "text": "allfällige Stellungnahmen von weiteren Personen, Kommissionen, Organisationen oder Behörden, soweit sie als Grundlage für die Prüfung dienen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c13af26311673bae51cec74d1ec4e9154bf09f0853df93cf17f0981351a99ff4"
+    },
+    {
+      "id": "bund/UVPV/art_17_a",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist die zuständige Bundesbehörde mit der Beurteilung des BAFU im massgeblichen Verfahren nicht einverstanden, so gilt für die Bereinigung Artikel 62 b des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_17_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8c04a1974e0f9b955404b46bc06c829b7807b6a9390372738784fa4d6b981574"
+    },
+    {
+      "id": "bund/UVPV/art_18",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde prüft, ob das Vorhaben den Vorschriften über den Schutz der Umwelt (Art. 3) entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Entspricht das Projekt diesen Vorschriften nicht, so klärt sie ab, ob es mit Auflagen oder Bedingungen bewilligt werden kann."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "5eddcf0a118b84a4f13ac337341816a24ee7077ba5d2f7ed00de58db9bb848b7"
+    },
+    {
+      "id": "bund/UVPV/art_19",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zuständige Behörde berücksichtigt die Ergebnisse der Prüfung bei ihrem Entscheid über das Gesuch im massgeblichen Verfahren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "52e24c195b033164dd65d3a283ff625be566f4c4150bced5644cf4024d03bef1"
+    },
+    {
+      "id": "bund/UVPV/art_20",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde gibt bekannt, wo der Bericht, die Beurteilung der Umweltschutzfachstelle, die Ergebnisse einer allfälligen Anhörung des BAFU sowie der Entscheid, soweit er die Ergebnisse der Prüfung betrifft, eingesehen werden können. Vorbehalten bleiben die gesetzlichen Geheimhaltungspflichten sowie das Akteneinsichtsrecht"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Unterlagen nach Absatz 1 können während 30 Tagen eingesehen werden; vorbehalten bleiben abweichende Fristen über die Auflage im massgeblichen Verfahren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a9c7d8b37a3c5e1cbea6d5717014601ba6295ce7ba5d4501071982a35fc24471"
+    },
+    {
+      "id": "bund/UVPV/art_21",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die zuständige Behörde fest, dass die Verwirklichung eines Projektes eine der folgenden Bewilligungen voraussetzt, so stellt sie der Bewilligungsbehörde alle nötigen Unterlagen zu, fordert sie zur Stellungnahme auf und leitet diese an die Umweltschutzfachstelle weiter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Rodungsbewilligung nach Waldgesetz vom 4. Oktober 1991,"
+            },
+            {
+              "marke": "b",
+              "text": "Bewilligung zur Beseitigung von Ufervegetation nach Natur- und Heimatschutzgesetz vom 1. Juli 1966;"
+            },
+            {
+              "marke": "c",
+              "text": "Bewilligung für technische Eingriffe in Gewässer nach dem Bundesgesetz vom 21. Juni 1991 über die Fischerei;"
+            },
+            {
+              "marke": "d",
+              "text": "Bewilligungen nach Gewässerschutzgesetz vom 24. Januar 1991;"
+            },
+            {
+              "marke": "e",
+              "text": "Deponiebewilligung nach USG."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Behörden, die für Bewilligungen nach Absatz 1 zuständig sind, erteilen bei Projekten, die auf ihre Umweltverträglichkeit geprüft werden müssen, die Bewilligung erst nach Abschluss der Prüfung (Art. 18)."
+        },
+        {
+          "absatz": "3",
+          "text": "Hat die Bewilligungsbehörde gegenüber der zuständigen Behörde eine Stellungnahme abgegeben, so ist sie bei der von ihr zu erteilenden Bewilligung daran gebunden, sofern sich die Voraussetzungen für die Beurteilung in der Zwischenzeit nicht geändert haben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "882028b9cafd6f694ec1124ba0be66d74982eae548b73593aafda9ec4e3554d6"
+    },
+    {
+      "id": "bund/UVPV/art_22",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kann ein Projekt voraussichtlich nur mit einer Subvention des Bundes verwirklicht werden, so holt die kantonale Behörde vor ihrem Entscheid die Stellungnahme der Subventionsbehörde des Bundes ein, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Subvention für ein einzelnes Projekt gewährt werden soll; und"
+            },
+            {
+              "marke": "b",
+              "text": "es sich nicht um eine Anlage zur Nutzung erneuerbarer Energien handelt, die Finanzhilfen nach dem Energiegesetz vom 30. September 2016 erhalten."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Subventionsbehörde hört das BAFU an und berücksichtigt seine Meinungsäusserung in ihrer Stellungnahme. Das BAFU äussert sich innert drei Monaten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Subventionsbehörde des Bundes gewährt bei Projekten, die auf ihre Umweltverträglichkeit geprüft werden müssen, eine Subvention im Einzelfall erst nach Abschluss der Prüfung (Art. 18)."
+        },
+        {
+          "absatz": "3",
+          "text": "Hat die Subventionsbehörde gegenüber der zuständigen kantonalen Behörde eine Stellungnahme abgegeben, so ist sie bei der Subventionierung daran gebunden, sofern sich die Voraussetzungen für die Beurteilung in der Zwischenzeit nicht geändert haben."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Projekten, an die der Bund globale Beiträge auf der Grundlage von Programmvereinbarungen gewährt, richtet sich die Koordination mit Subventionsentscheiden des Kantons nach kantonalem Recht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "347006c6d0c43ab248f62821c3d0e2bced648e7946b5ea59c31a3719d8044cd1"
+    },
+    {
+      "id": "bund/UVPV/art_23",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/UVPV/art_24",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gesuche, die bei Inkrafttreten dieser Änderung hängig sind, werden nach neuem Recht beurteilt. Hängige Beschwerden werden nach dem Recht beurteilt, das im Zeitpunkt des Erlasses der angefochtenen Verfügung galt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9294b91b31ac02437835a6679339568c415eb7e4c456861cf31f9f0c974f5a95"
+    },
+    {
+      "id": "bund/UVPV/art_25",
+      "ebene": "bund",
+      "quelle": "UVPV",
+      "erlass": "UVPV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 1989 in Kraft."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1988/1931_1931_1931/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bf363426549c756c1c5ccfa9ed36b32cd49b86aafc7fc3cd62a62b71fd3c132f"
+    }
+  ]
+}

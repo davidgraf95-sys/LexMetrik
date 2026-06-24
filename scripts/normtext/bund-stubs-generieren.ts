@@ -21,35 +21,24 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   // Staat & Verfassung
   // Privatrecht & Nebenerlasse
   // (PartG 211.231, IPRG 291 → Volltext-Snapshot 23.6.2026, im ERLASS_REGISTER)
-  ['232.16', 'SortG', 'privat'],
+  // (SortG 232.16, PRG 944.3, BEG 957.1 → Volltext Punkt 12 Batch 3, im ERLASS_REGISTER)
   ['221.112.944', 'PrHG', 'privat'],
-  ['944.3', 'PRG', 'privat'],
-  ['957.1', 'BEG', 'privat'],
   // Strafrecht & Strafverfahren
   // (JStG 311.1, BetmG 812.121, VStrR 313.0 → Volltext-Snapshot 23.6.2026, im ERLASS_REGISTER)
-  ['321.0', 'MStG', 'straf'],
-  ['322.1', 'MStP', 'straf'],
-  ['351.1', 'IRSG', 'straf'],
+  // (MStG 321.0, MStP 322.1, IRSG 351.1 → Volltext Punkt 12 Batch 3, im ERLASS_REGISTER)
   // Verwaltung: Verfahren & Rechtspflege
   // Sozialversicherung
-  ['833.1', 'MVG', 'sozial-abgaben'],
+  // (MVG 833.1 → Volltext Punkt 12 Batch 3, im ERLASS_REGISTER)
   // Migration & Gleichstellung
   // Raumplanung, Bau & Umwelt
-  ['730.0', 'EnG', 'oeffentlich'],
-  ['641.71', 'CO2-Gesetz', 'oeffentlich'],
+  // (EnG 730.0, CO2-Gesetz 641.71 → Volltext Punkt 12 Batch 3, im ERLASS_REGISTER)
   // Wirtschaft & Finanzmarkt
   // Gesundheit, Sicherheit & Infrastruktur
-  ['818.101', 'EpG', 'oeffentlich'],
-  ['810.21', 'TxG', 'oeffentlich'],
-  ['817.0', 'LMG', 'oeffentlich'],
-  ['748.0', 'LFG', 'oeffentlich'],
-  ['742.101', 'EBG', 'oeffentlich'],
-  ['784.10', 'FMG', 'oeffentlich'],
-  ['510.10', 'MG', 'oeffentlich'],
+  // (EpG/TxG/LMG/LFG/EBG/FMG/MG → Volltext Punkt 12 Batch 3, im ERLASS_REGISTER)
   // ── Wichtige Verordnungen (Ausführungsrecht zu den Leitgesetzen) ──
   // (AHVV/IVV/ELV/BVV 2/UVV/AVIV/ATSV/KLV/MWSTV/VStV/VZAE/VRV/VZV/SSV/DSV →
-  //  Volltext-Snapshot Punkt 12 Batch 2 (24.6.2026), im ERLASS_REGISTER.)
-  ['211.112.2', 'ZStV', 'privat'],
+  //  Volltext-Snapshot Punkt 12 Batch 2 (24.6.2026); ZStV 211.112.2 →
+  //  Volltext Punkt 12 Batch 3 (25.6.2026); im ERLASS_REGISTER.)
   // Völker- & Europarecht → Rubrik «International» (rechtsgebiet 'international').
   // Staatsverträge SR 0.* — Titel/ELI/Stand verifiziert via Fedlex-SPARQL (§7).
   ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention

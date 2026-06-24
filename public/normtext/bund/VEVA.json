@@ -1,0 +1,1784 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/VEVA/art_1",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung soll sicherstellen, dass Abfälle nur an geeignete Entsorgungsunternehmen übergeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Inlandverkehr mit Sonderabfällen und anderen kontrollpflichtigen Abfällen;"
+            },
+            {
+              "marke": "b",
+              "text": "den grenzüberschreitenden Verkehr mit allen Abfällen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Verkehr mit Sonderabfällen zwischen Drittstaaten, sofern er von Unternehmen in der Schweiz organisiert ist oder solche daran beteiligt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie gilt nicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für den Verkehr mit Sonderabfällen zwischen Formationen der Armee oder Bauten und Anlagen, die der Landesverteidigung dienen;"
+            },
+            {
+              "marke": "b",
+              "text": "für Abwasser, das in die Kanalisation eingeleitet werden darf;"
+            },
+            {
+              "marke": "c",
+              "text": "für radioaktive Abfälle, welche der Strahlenschutz- oder der Kernenergiegesetzgebung unterstehen;"
+            },
+            {
+              "marke": "d",
+              "text": "für tierische Nebenprodukte nach der Verordnung vom 23. Juni 2004 über die Entsorgung von tierischen Nebenprodukten."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Vorbehalten bleiben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorschriften des Bundes sowie völkerrechtliche Vereinbarungen und Beschlüsse über den Transport gefährlicher Güter auf der Strasse, der Schiene, dem Wasser und in der Luft;"
+            },
+            {
+              "marke": "b",
+              "text": "Vorschriften der Sprengstoffgesetzgebung über den Verkehr mit Sprengstoffen."
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "d0f8075541e895e3e60e53df3da42f48c74ef11eb30de20e5685e3f9f1fe9163"
+    },
+    {
+      "id": "bund/VEVA/art_2",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eidgenössische Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK) erlässt eine Verordnung mit einem Abfallverzeichnis und einem Verzeichnis der Entsorgungsverfahren. Es berücksichtigt dabei die Verzeichnisse der Abfälle und der Entsorgungsverfahren der EU und des Basler Übereinkommens."
+        },
+        {
+          "absatz": "2",
+          "text": "Es bezeichnet im Abfallverzeichnis als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sonderabfälle: Abfälle, deren umweltverträgliche Entsorgung auf Grund ihrer Zusammensetzung, ihrer chemisch-physikalischen oder ihrer biologischen Eigenschaften auch im Inlandverkehr umfassende besondere technische und organisatorische Massnahmen erfordert;"
+            },
+            {
+              "marke": "b",
+              "text": "andere kontrollpflichtige Abfälle mit Begleitscheinpflicht: Abfälle, deren umweltverträgliche Entsorgung auf Grund ihrer Zusammensetzung, ihrer chemisch-physikalischen oder ihrer biologischen Eigenschaften auch im Inlandverkehr beschränkte besondere technische und umfassende organisatorische Massnahmen erfordert;"
+            },
+            {
+              "marke": "c",
+              "text": "andere kontrollpflichtige Abfälle ohne Begleitscheinpflicht: Abfälle, deren umweltverträgliche Entsorgung auf Grund ihrer Zusammensetzung, ihrer chemisch-physikalischen oder ihrer biologischen Eigenschaften auch im Inlandverkehr beschränkte besondere technische und organisatorische Massnahmen erfordert."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "9b8f9912d67038d9a2920d81f23aa8a403b3f3e2a0a5d9c9bde461a40ea0af0a"
+    },
+    {
+      "id": "bund/VEVA/art_3",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Abgeberbetriebe gelten Unternehmen und Dienststellen von Behörden, die ihre Abfälle an örtlich getrennte Betriebsstätten oder an Dritte übergeben. Entsorgungsunternehmen, die Abfälle zur Entsorgung an örtlich getrennte Betriebsstätten oder an Dritte weiterleiten, gelten ebenfalls als Abgeberbetriebe. Nicht als Abgeberbetriebe gelten Unternehmen und Dienststellen von Behörden, die Abfälle Dritter lediglich transportieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Entsorgungsunternehmen gelten Unternehmen, die Abfälle zur Entsorgung entgegennehmen, sowie Sammelstellen, die von Kantonen oder Gemeinden oder in deren Auftrag von Privaten betrieben werden. Nicht als Entsorgungsunternehmen gelten Unternehmen, die Abfälle Dritter lediglich transportieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Als grenzüberschreitend gilt der Verkehr mit Abfällen, wenn diese über die schweizerische Zollgrenze verbracht werden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "71d5f11e80fa2aa4c56b6ecfe8495b5ba8979d175994f9fe85d1552b8b15ce49"
+    },
+    {
+      "id": "bund/VEVA/art_4",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Inhaberinnen und Inhaber von Abfällen müssen vor der Übergabe von Abfällen abklären, ob es sich dabei um Sonderabfälle oder andere kontrollpflichtige Abfälle handelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen Sonderabfälle sowie rückgabepflichtige andere kontrollpflichtige Abfälle nur solchen Stellen übergeben, die zur Entgegennahme dieser Abfälle berechtigt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Abgeberbetriebe dürfen sämtliche anderen kontrollpflichtigen Abfälle nur solchen Stellen übergeben, die zur Entgegennahme dieser Abfälle berechtigt sind."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "68bc338aa49310632c273267249aa371b77f84b3f5803a326826dece75d34b14"
+    },
+    {
+      "id": "bund/VEVA/art_5",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abgeberbetriebe dürfen Sonderabfälle für die Übergabe weder vermischen noch verdünnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen Sonderabfällen mit Zustimmung des Entsorgungsunternehmens Zuschlagstoffe beifügen, wenn damit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gefahren beim Transport vermindert werden; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Entsorgung nicht erschwert wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die kantonale Behörde kann Abgeberbetrieben für die regelmässige Übergabe grosser Mengen von Sonderabfällen das Vermischen oder Verdünnen erlauben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies nicht zu dem Zweck geschieht, dass die Abfälle durch die Herabsetzung des Schadstoffgehalts unter weniger strenge Vorschriften fallen;"
+            },
+            {
+              "marke": "b",
+              "text": "dies aus betrieblichen Gründen sinnvoll ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "dadurch die Umwelt nicht stärker belastet wird."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Entsorgungsunternehmen dürfen Sonderabfälle für die Übergabe vermischen oder verdünnen, wenn dies nicht zu dem Zweck geschieht, dass die Abfälle durch die Herabsetzung des Schadstoffgehalts unter weniger strenge Vorschriften fallen."
+        },
+        {
+          "absatz": "5",
+          "text": "Für das Vermischen und Verdünnen von anderen kontrollpflichtigen Abfällen gelten die Vorschriften der Abfallverordnung vom 4. Dezember 2015."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "148ea6143ce4240a5ecff4978953f9bd8816adf379cc458edd678635cd1269c8"
+    },
+    {
+      "id": "bund/VEVA/art_6",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abgeberbetriebe müssen bei der Übergabe von Sonderabfällen und anderen kontrollpflichtigen Abfällen mit Begleitscheinpflicht Begleitscheine nach Anhang 1 verwenden und die erforderlichen Angaben eintragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Begleitscheine sind nötig für die Übergabe von Sonderabfällen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Mengen bis 50 kg einschliesslich Gebinde pro Abfallcode und Lieferung (Kleinmengen); für die Übergabe betriebsspezifischer Sonderabfälle muss der Abgeberbetrieb dem Entsorgungsunternehmen seinen Namen und seine Adresse oder seine Betriebsnummer (Art. 40 Abs. 1) angeben und während mindestens 5 Jahren einen Beleg über die Übergabe aufbewahren; ausgenommen ist die Übergabe von Abfällen nach den Buchstaben b–e;"
+            },
+            {
+              "marke": "b",
+              "text": "in unveränderter Zusammensetzung und in der Originalverpackung an den Händler, von dem das Produkt stammt, oder an den Hersteller oder Importeur des Produktes (Warenretouren);"
+            },
+            {
+              "marke": "c",
+              "text": "zur Zwischenlagerung an eine andere Betriebsstätte des gleichen Unternehmens, soweit es sich um Produkte handelt, welche das Unternehmen im Kleinverkauf abgibt und von Haushalten als Abfälle zurücknimmt;"
+            },
+            {
+              "marke": "d",
+              "text": "die im Auftrag des Kantons bei Abgeberbetrieben eingesammelt und der Entsorgung zugeführt werden, soweit es sich um Produkte handelt, die die Unternehmen im Kleinverkauf abgeben und von Haushalten als Abfälle zurücknehmen;"
+            },
+            {
+              "marke": "e",
+              "text": "zur Zwischenlagerung an Unternehmen, die keine Bewilligung nach Artikel 8 benötigen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Abgeberbetriebe müssen dem Transporteur und dem Entsorgungsunternehmen zusätzliche Angaben über die Herkunft, die Zusammensetzung und die Eigenschaften der Abfälle machen, wenn diese Angaben für den Schutz der Umwelt, des Personals oder der Anlagen des Entsorgungsunternehmens oder für die umweltverträgliche Entsorgung der Abfälle nötig sind."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "7546b2d2bb1e9eeeb504d536ac2dd3316794f2d70def781018625e5580abd722"
+    },
+    {
+      "id": "bund/VEVA/art_7",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abgeberbetriebe müssen Verpackungen für den Transport von Sonderabfällen mit folgenden Angaben kennzeichnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit den Aufschriften «Sonderabfälle», «déchets spéciaux» und «rifiuti speciali»;"
+            },
+            {
+              "marke": "b",
+              "text": "mit dem Abfallcode oder der Bezeichnung der Abfälle nach dem Abfallverzeichnis;"
+            },
+            {
+              "marke": "c",
+              "text": "mit der Nummer des Begleitscheins."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kennzeichnung ist nicht erforderlich, wenn die Sonderabfälle ohne Begleitscheine übergeben werden dürfen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "17f513e4a00805cbf76c284bfe7e81914811be2ec7f95e257e67ec4bfca9fed9"
+    },
+    {
+      "id": "bund/VEVA/art_8",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entsorgungsunternehmen, die Sonderabfälle oder andere kontrollpflichtige Abfälle entgegennehmen, benötigen für jede Betriebsstätte eine Bewilligung der kantonalen Behörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Von der Bewilligungspflicht ausgenommen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Unternehmen, die Sonderabfälle oder andere kontrollpflichtige Abfälle lediglich einsammeln;"
+            },
+            {
+              "marke": "b",
+              "text": "Unternehmen, die ausschliesslich Batterien oder Akkumulatoren entgegennehmen, zu deren Rücknahme sie nach Anhang 2.15 der Chemikalien-Risikoreduktions-Verordnung vom 18. Mai 2005 verpflichtet sind und die diese Batterien oder Akkumulatoren lediglich zwischenlagern;"
+            },
+            {
+              "marke": "c",
+              "text": "Unternehmen, die andere kontrollpflichtige Abfälle, die sie auf Grund anderer Vorschriften zurücknehmen müssen oder im Rahmen einer von der kantonalen Behörde anerkannten Branchenvereinbarung zurücknehmen, lediglich zwischenlagern;"
+            },
+            {
+              "marke": "d",
+              "text": "Unternehmen, die Produkte, die sie im Kleinverkauf abgeben, von Haushalten als Abfälle zurücknehmen und lediglich zwischenlagern;"
+            },
+            {
+              "marke": "e",
+              "text": "von Behörden bezeichnete Sammelstellen, die ausschliesslich Motorenöl, Speiseöl, Leuchtstoffröhren, Gerätebatterien oder andere kontrollpflichtige Abfälle entgegennehmen und lediglich zwischenlagern."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "4f01655c93771697ff2758328f28c28d9a4a158e6c72f499d96bfda39cf918c1"
+    },
+    {
+      "id": "bund/VEVA/art_9",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bewilligungsgesuch muss Angaben darüber enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "welche Abfälle zur Entsorgung entgegengenommen werden sollen;"
+            },
+            {
+              "marke": "b",
+              "text": "wie die Abfälle bei der Entgegennahme kontrolliert werden sollen;"
+            },
+            {
+              "marke": "c",
+              "text": "wie die Abfälle entsorgt werden sollen;"
+            },
+            {
+              "marke": "d",
+              "text": "über welche Anlagen, Einrichtungen und Fachleute das Entsorgungsunternehmen verfügt, damit die Abfälle umweltverträglich entsorgt werden können."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "c2ddc2c2cb52b67b7e1dd16b9d2eaa846c5b7135693202436d43743c3cc2043a"
+    },
+    {
+      "id": "bund/VEVA/art_10",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Behörde erteilt die Bewilligung, wenn aus dem Gesuch hervorgeht, dass das Entsorgungsunternehmen in der Lage ist, die Abfälle umweltverträglich zu entsorgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie legt in der Bewilligung insbesondere fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "welche Abfälle entgegengenommen werden dürfen;"
+            },
+            {
+              "marke": "b",
+              "text": "wie die Abfälle entsorgt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "welche Auflagen für die umweltverträgliche Entsorgung der Abfälle einzuhalten sind, insbesondere Mengenbeschränkungen, Einsatz bestimmter Anlagen und Einrichtungen, Beizug von Fachleuten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erteilt die Bewilligung für höchstens 5 Jahre."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie trägt die Angaben nach Absatz 2 Buchstaben a und b in die Datenbank des Bundesamts für Umwelt (BAFU) (Art. 41 Abs. 1) ein ."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "5a494402a2ea6ccae8d9055004e860e823459381985ddbba5e97bc74ecb8e097"
+    },
+    {
+      "id": "bund/VEVA/art_11",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entsorgungsunternehmen prüfen bei jeder Entgegennahme von Sonderabfällen und anderen kontrollpflichtigen Abfällen mit Begleitscheinpflicht, bevor sie auf den Begleitscheinen mit ihrer Unterschrift die Entgegennahme bestätigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ob sie zur Entgegennahme berechtigt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "ob die Abfälle mit den Angaben auf den Begleitscheinen übereinstimmen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen auf den Begleitscheinen die nach Anhang 1 erforderlichen Angaben eintragen; offensichtlich fehlerhafte Angaben korrigieren sie in Absprache mit dem Abgeberbetrieb."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entgegennahme erfolgt am Standort des Entsorgungsunternehmens. Das Entsorgungsunternehmen kann die Entgegennahme auch am Standort des Abgeberbetriebs durchführen, sofern es sich um regelmässig an diesem Standort anfallende Produktionsabfälle mit bekannter und gleich bleibender Zusammensetzung handelt."
+        },
+        {
+          "absatz": "4",
+          "text": "Stellt ein Entsorgungsunternehmen fest, dass es nicht berechtigt ist, Sonderabfälle und andere kontrollpflichtige Abfälle mit Begleitscheinpflicht entgegenzunehmen oder dass die Abfälle nicht den Angaben auf den Begleitscheinen entsprechen, so weist es die Abfälle an den Abgeberbetrieb zurück oder sorgt in Absprache mit diesem für die Übergabe der Abfälle an einen berechtigten Dritten. Bei einer Umweltgefährdung informiert es die kantonale Behörde."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "2e17c94b4eb796aac211b97c6d342731f839707ba3c02f25d5e4c93ef7d16afe"
+    },
+    {
+      "id": "bund/VEVA/art_12",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entsorgungsunternehmen, die Sonderabfälle oder andere kontrollpflichtige Abfälle mit Begleitscheinpflicht entgegennehmen und dafür eine Bewilligung benötigen, müssen jede Entgegennahme von Abfällen, bei denen Begleitscheine verwendet werden oder der Abgabebetrieb einen Beleg aufbewahren muss, dem BAFU und der kantonalen Behörde mit folgenden Angaben melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eigene Betriebsnummer und jene des Abgabebetriebs;"
+            },
+            {
+              "marke": "b",
+              "text": "Datum der Anlieferung;"
+            },
+            {
+              "marke": "c",
+              "text": "Mengen und Codes der entgegengenommenen Abfälle;"
+            },
+            {
+              "marke": "d",
+              "text": "Codes der angewendeten Entsorgungsverfahren;"
+            },
+            {
+              "marke": "e",
+              "text": "Nummer des Begleitscheins."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Entsorgungsunternehmen, die andere kontrollpflichtige Abfälle ohne Begleitscheinpflicht entgegennehmen und dafür eine Bewilligung benötigen, müssen dem BAFU und der kantonalen Behörde über diese Abfälle folgende Angaben melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eigene Betriebsnummer;"
+            },
+            {
+              "marke": "b",
+              "text": "Codes und Jahresmengen der entgegengenommenen Abfälle und die Codes der auf sie angewendeten Entsorgungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "Jahresmenge der weitergeleiteten Abfälle und Betriebsnummer des Entsorgungsunternehmens, an das die Abfälle weitergeleitet wurden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Meldung muss für Sonderabfälle und andere kontrollpflichtige Abfälle mit Begleitscheinpflicht innert 30 Arbeitstagen nach Ende jedes Quartals und für andere kontrollpflichtige Abfälle ohne Begleitscheinpflicht innert 30 Arbeitstagen nach Ende jedes Kalenderjahres durch eine Online-Eingabe in die vom BAFU zur Verfügung gestellte elektronische Datenbank erfolgen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "f5f662ab468f5fe69c9dc5c03b6d6bfcded751f93e0a649c01a6a93cdd2d890d"
+    },
+    {
+      "id": "bund/VEVA/art_13",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Transporteure dürfen Abfälle, von denen sie wissen oder annehmen müssen, dass es sich um Abfälle handelt, die mit Begleitscheinen übergeben werden müssen, nur transportieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die erforderlichen Begleitscheine nach Anhang 1 mitgeführt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "das Entsorgungsunternehmen auf den Begleitscheinen eingetragen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Abfälle nach den Vorschriften von Artikel 7 gekennzeichnet sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen auf den Begleitscheinen die nach Anhang 1 erforderlichen Angaben eintragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie dürfen die Abfälle nur den auf den Begleitscheinen eingetragenen Entsorgungsunternehmen übergeben."
+        },
+        {
+          "absatz": "4",
+          "text": "Können sie die Abfälle den Entsorgungsunternehmen nicht übergeben, so müssen sie die Abfälle dem Abgeberbetrieb zurückgeben oder in Absprache mit diesem an berechtigte Dritte übergeben. Ist ihnen die Rückgabe an den Abgeberbetrieb oder die Übergabe an Dritte nicht möglich oder nicht zuzumuten, so müssen sie umgehend die kantonale Behörde informieren."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "7cad870e83217aac9c4969a0433a0b1c083af879e92b8eafaefdb8dd034e2226"
+    },
+    {
+      "id": "bund/VEVA/art_14",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ausfuhr von Abfällen nach dem Basler Übereinkommen ist nur erlaubt in Staaten, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mitglied der OECD oder der EU sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "Vertragsparteien des Basler Übereinkommens sind oder mit denen eine Übereinkunft nach Artikel 11 des Basler Übereinkommens besteht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einfuhr von Abfällen nach dem Basler Übereinkommen ist nur erlaubt aus Staaten, die Vertragsparteien des Basler Übereinkommens sind oder mit denen eine Übereinkunft nach Artikel 11 des Basler Übereinkommens besteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Abfälle nach dem Basler Übereinkommen gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sonderabfälle;"
+            },
+            {
+              "marke": "b",
+              "text": "andere kontrollpflichtige Abfälle;"
+            },
+            {
+              "marke": "c",
+              "text": "weitere Abfälle, die eine der folgenden Voraussetzungen erfüllen: 1. Sie gehören einer Gruppe nach Anlage I des Basler Übereinkommens an und weisen eine gefährliche Eigenschaft nach Anlage III des Übereinkommens auf."
+            },
+            {
+              "marke": "2",
+              "text": "Sie sind Abfälle nach Anlage II oder VIII des Basler Übereinkommens."
+            },
+            {
+              "marke": "3",
+              "text": "Sie sind Abfälle nach der gelben Abfallliste des OECD-Ratsbeschlusses."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "801b067d7e1381ec930cd6a102495453035fd0bbc607dc8f42c1960f107204a5"
+    },
+    {
+      "id": "bund/VEVA/art_15",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Abfälle ausführt, benötigt eine Bewilligung des BAFU."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Kantone können vorsehen, dass in Abweichung von Absatz 1 die kantonalen Behörden für die Erteilung der Bewilligung für die Ausfuhr von unverschmutztem Aushub- und Ausbruchsmaterial aus ihrem Kanton ins grenznahe Ausland zuständig sind. In diesem Fall gelten die Artikel 15–21 für das kantonale Bewilligungsverfahren sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Bewilligung benötigt, wer Abfälle ausführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Verwertung: 1. in einen Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
+            },
+            {
+              "marke": "2",
+              "text": "in einen Staat, der nicht Mitglied der OECD oder der EU ist, wenn es Abfälle nach Anlage IX des Basler Übereinkommens und nicht Abfälle nach Artikel 14 Absatz 3 sind;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das UVEK legt in einer Verordnung fest, welche Entsorgungsverfahren als Verwertung gelten; es orientiert sich dabei am Basler Übereinkommen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Exporteur darf einen bewilligungsfreien Export nach Absatz 2 nur dann durchführen, wenn er sich vorgängig Unterlagen beschafft hat, aus denen hervorgeht, dass die geplante Verwertung umweltverträglich ist. Der Exporteur muss die Unterlagen mindestens ein Jahr über das Datum der Ausfuhr hinaus aufbewahren."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "0b30c87f1dc99e8ec97a79a4a76888885c46095a536775c3d9ec1226618bc337"
+    },
+    {
+      "id": "bund/VEVA/art_16",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um eine Ausfuhrbewilligung muss die folgenden Unterlagen enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Nachweis, dass die Voraussetzungen für die Ausfuhrbewilligung gemäss Artikel 17 Buchstaben a–f erfüllt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Kopie des Vertrages des Exporteurs mit dem Entsorgungsunternehmen im Ausland nach Anhang 2 sowie bei einer Weitergabe der Abfälle an andere Entsorgungsunternehmen eine Kopie der entsprechenden Verträge;"
+            },
+            {
+              "marke": "c",
+              "text": "einen auf der elektronischen Datenbank des BAFU ausgefüllten Notifizierungsbogen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Exporteur reicht das Gesuch sowie je eine Kopie der Unterlagen für den Einfuhrstaat und die Durchfuhrstaaten dem BAFU ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAFU kontrolliert das Gesuch auf seine Vollständigkeit und holt, vor der Bewilligung der Ausfuhr, die Zustimmung der zuständigen Behörden des Einfuhrstaates und der Durchfuhrstaaten ein."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAFU informiert denjenigen Kanton, in dem sich die zur Ausfuhr angemeldeten Abfälle befinden, über den Eingang des Gesuchs."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "5513d991135e2748e13b93d0d1260ed0f675577fd905e7d95d103527ff19df25"
+    },
+    {
+      "id": "bund/VEVA/art_17",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAFU bewilligt die Ausfuhr, wenn:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Abfällen im Rahmen einer vertraglich vereinbarten regionalen grenzüberschreitenden Zusammenarbeit,"
+            },
+            {
+              "marke": "2",
+              "text": "Kehrichtschlacke aus importierten, gemischt gesammelten, brennbaren Abfällen aus Haushalten und Unternehmen, wie Kehricht und Sperrgut, sowie deren behandelte und energetisch zu verwertende Anteile, für welche die Rücknahme im Gesuch zur Einfuhr beantragt wurde,"
+            },
+            {
+              "marke": "2bis",
+              "text": "Kehrichtschlacke aus importierten, brennbaren, vermischten Bauabfällen sowie deren behandelte und energetisch zu verwertende Anteile, für welche die Rücknahme im Gesuch zur Einfuhr beantragt wurde,"
+            },
+            {
+              "marke": "3",
+              "text": "Abfällen zur Ablagerung in einer Untertagedeponie,"
+            },
+            {
+              "marke": "4",
+              "text": "unverschmutztem Aushub- und Ausbruchmaterial zur Ablagerung auf Deponien im grenznahen Ausland;"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "c8971cd919ced9b70d5a95c338e313af0ae03c8b19008b72231222f2234c9f9d"
+    },
+    {
+      "id": "bund/VEVA/art_18",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU befristet die Bewilligung auf höchstens ein Jahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Verfügt das Entsorgungsunternehmen im Einfuhrstaat über eine vorherige Zustimmung nach Kapitel II D Ziffer 2 Fall 2 des OECD-Ratsbeschlusses, so kann das BAFU die Bewilligung auf höchstens 3 Jahre befristen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "6c3270041af4478fa37d1e93d1fe367f32a1c829187f92e08040faca20c209f3"
+    },
+    {
+      "id": "bund/VEVA/art_19",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU entscheidet über das Gesuch innert 30 Tagen, nachdem die zuständige Behörde des Einfuhrstaates den Empfang des Notifizierungsbogens bestätigt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Sieht das Recht des Einfuhr- oder eines Durchfuhrstaates für die Zustimmung zur Ein- oder Durchfuhr längere Fristen vor, so entscheidet das BAFU spätestens 5 Tage, nachdem die Stellungnahme dieses Staates vorliegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAFU sendet demjenigen Kanton, in dem sich die zur Ausfuhr angemeldeten Abfälle befinden, eine Kopie der Verfügung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b71495c33d2e7e01ff47b7b60ee56b900bc9e96b65ff163bef8da113bb33ac00"
+    },
+    {
+      "id": "bund/VEVA/art_20",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer bewilligungspflichtige Abfälle ausführt, muss eine Sicherheitsleistung in Form einer Bankgarantie oder einer Versicherung zugunsten des BAFU erbringen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sicherheitsleistung dient zur Deckung sämtlicher Kosten, die anfallen, wenn der Exporteur den Pflichten gemäss Artikel 33 und 34 nicht nachkommt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAFU legt fest, in welcher Höhe und für welchen Zeitraum die Sicherheitsleistung erbracht werden muss."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Höhe der Sicherheitsleistung richtet sich nach den Kosten für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Lagerung für 180 Tage;"
+            },
+            {
+              "marke": "b",
+              "text": "den Transport;"
+            },
+            {
+              "marke": "c",
+              "text": "die Entsorgung (einschliesslich der Analysen)."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Sicherheitsleistung muss mindestens für die Gültigkeitsdauer der Bewilligung sowie für die darauffolgenden 360 Tage erbracht werden. Das BAFU gibt die Sicherheitsleistung auf Verlangen des Exporteurs frei, wenn dieser mittels Entsorgungsnachweis nach Anhang 2 Ziffer 1 Buchstabe e belegt, dass die Entsorgung der Abfälle im Ausland erfolgt ist."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "429938ceebf8ec1c3f0bcf918362a32a5a104a66a99d753962933eb86c246281"
+    },
+    {
+      "id": "bund/VEVA/art_21",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Erhält ein Exporteur Kenntnis, dass die Entsorgung seiner ausgeführten Abfälle nicht gemäss der ihm erteilten Bewilligung durchgeführt werden kann oder dass sie sich wesentlich verzögert, so muss er dies dem BAFU umgehend mitteilen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "7b4bccce985b3f5dd5deb30c06570168d74863c77a298182ea62e273d8206430"
+    },
+    {
+      "id": "bund/VEVA/art_22",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abfälle dürfen nur mit Zustimmung des BAFU eingeführt werden. Als Einfuhr gilt auch die Einlagerung in ein offenes Zollager, in ein Lager für Massengüter oder in ein Zollfreilager."
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Zustimmung ist erforderlich, wenn Abfälle eingeführt werden sollen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Verwertung: 1. aus einem Mitgliedstaat der OECD oder der EU, wenn es Abfälle nach der grünen Abfallliste des OECD-Ratsbeschlusses und nicht Abfälle nach Artikel 14 Absatz 3 sind, oder"
+            },
+            {
+              "marke": "2",
+              "text": "aus einem Staat, der nicht Mitglied der OECD oder der EU ist, wenn es Abfälle nach Anlage IX des Basler Übereinkommens und nicht Abfälle nach Artikel 14 Absatz 3 sind;"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "10a005f907c89f4cfc20741e9d6bb3cb90c9cb716d95496c14aeaf7ebc16bd02"
+    },
+    {
+      "id": "bund/VEVA/art_23",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU stimmt der Einfuhr zu, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die geplante Entsorgung umweltverträglich ist und dem Stand der Technik entspricht;"
+            },
+            {
+              "marke": "b",
+              "text": "die Abfälle nicht zum Zweck der Ablagerung auf einer Deponie eingeführt werden; ausgenommen ist die Einfuhr von Abfällen im Rahmen einer vertraglich vereinbarten regionalen grenzüberschreitenden Zusammenarbeit sowie von Kehrichtschlacke aus exportierten Siedlungsabfällen, für welche die Rücknahme im Gesuch zur Ausfuhr beantragt wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "genügend Kapazitäten für die Entsorgung der Abfälle bestehen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einfuhr der Abfälle der kantonalen Abfallplanung nicht widerspricht;"
+            },
+            {
+              "marke": "e",
+              "text": "das Entsorgungsunternehmen über die entsprechenden Bewilligungen verfügt;"
+            },
+            {
+              "marke": "f",
+              "text": "ein vollständig ausgefüllter Notifizierungsbogen vorliegt;"
+            },
+            {
+              "marke": "g",
+              "text": "ein schriftlicher Vertrag nach Anhang 2 zwischen dem Exporteur im Ausland und dem Entsorgungsunternehmen vorliegt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU holt vorgängig eine Stellungnahme der betroffenen Kantone ein."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "a21a9d81876d0fafc34a04440959f3db8aeb798e77a0e95bdf99b05e740e1349"
+    },
+    {
+      "id": "bund/VEVA/art_24",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU befristet die Zustimmung auf höchstens ein Jahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann die Zustimmung auf höchstens 3 Jahre befristen für Entsorgungsunternehmen, denen es eine vorherige Zustimmung nach Kapitel II D Ziffer 2 Fall 2 des OECD-Ratsbeschlusses erteilt hat."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "e4c5ce854a69de1149afbad9b22f324d1106ac95b3c6109c64c2f3731ee80624"
+    },
+    {
+      "id": "bund/VEVA/art_25",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU bestätigt dem Exporteur im Ausland sowie den zuständigen Behörden des Ausfuhrstaates und der Durchfuhrstaaten innert 3 Arbeitstagen den Empfang des Notifizierungsbogens."
+        },
+        {
+          "absatz": "2",
+          "text": "Es entscheidet innert 30 Tagen nach Versand dieser Bestätigung, ob es der geplanten Einfuhr in die Schweiz zustimmt, und teilt dies dem Exporteur, den zuständigen Behörden des Ausfuhrstaates und der Durchfuhrstaaten sowie den betroffenen Kantonen mit."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "520aab8ce347172f65d4f9c598100b9e968ce9b4ea112ea5de564a7ea5d69bb2"
+    },
+    {
+      "id": "bund/VEVA/art_26",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Unterliegt die Einfuhr von Abfällen nur nach schweizerischem Recht einer Kontrolle, so sorgt das Entsorgungsunternehmen in der Schweiz dafür, dass die Einfuhr dem BAFU notifiziert wird."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "a6e41deb7d69521d93ca17de27a27892ee3765cd4ce369241094eca6e61384a6"
+    },
+    {
+      "id": "bund/VEVA/art_27",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kann der Transporteur die eingeführten Abfälle nicht dem nach der Notifizierung vorgesehenen Entsorgungsunternehmen übergeben, so muss er dies dem BAFU und der zuständigen kantonalen Behörde umgehend mitteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann die Entsorgung von eingeführten Abfällen nicht gemäss der Notifizierung durchgeführt werden oder verzögert sich die Entsorgung wesentlich, so muss das Entsorgungsunternehmen dies dem BAFU und der zuständigen kantonalen Behörde umgehend mitteilen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b9547de81ba296149af62ccb55d8ccb5c98bd28276db1c64fc2d3969790b5942"
+    },
+    {
+      "id": "bund/VEVA/art_28",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VEVA/art_29",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abfälle dürfen nur durch die Schweiz durchgeführt werden, wenn die Durchfuhr dem BAFU notifiziert worden ist und dieses die Durchfuhr nicht innert 5 Tagen, nachdem die zuständige Behörde des Einfuhrstaates den Empfang des Notifizierungsbogens bestätigt hat, verboten hat."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Keine Notifizierung ist notwendig für die Durchfuhr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Verwertung von Abfällen nach der grünen Abfallliste des OECD-Ratsbeschlusses oder nach Anlage IX des Basler Übereinkommens;"
+            },
+            {
+              "marke": "b",
+              "text": "von Proben von Abfällen, die durchgeführt werden, um die technische Möglichkeit ihrer Entsorgung abzuklären; es dürfen nur so viele Abfallproben wie nötig durchgeführt werden und eine Probe darf höchstens 25 kg wiegen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU bestätigt dem Exporteur sowie den zuständigen Behörden im Ausland innert 3 Arbeitstagen den Empfang des Notifizierungsbogens."
+        },
+        {
+          "absatz": "3",
+          "text": "Es verbietet die Durchfuhr, wenn Anhaltspunkte dafür bestehen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vorgesehene Entsorgung der Abfälle die Umwelt gefährden kann; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein unerlaubter Verkehr nach Artikel 9 Absatz 1 des Basler Übereinkommens vorliegt."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "055ec488db15d274b398cd08e2620256ded6b21f91e919973227b4c632aa5b11"
+    },
+    {
+      "id": "bund/VEVA/art_30",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VEVA/art_31",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Aus-, Ein- und Durchfuhr von Abfällen sind unter Vorbehalt von Absatz 7 die internationalen Notifizierungsbögen und Begleitscheine gemäss den folgenden Erlassen zu verwenden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Basler Übereinkommen;"
+            },
+            {
+              "marke": "b",
+              "text": "Anhang 8 des OECD-Ratsbeschlusses; oder"
+            },
+            {
+              "marke": "c",
+              "text": "Anhang IA und IB der Verordnung (EG) Nr. 1013/2006."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU stellt die Notifizierungsbögen und Begleitscheine des Basler Übereinkommens und des OECD-Ratsbeschlusses auf einer elektronischen Datenbank zur Verfügung."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer Abfälle ausführt, muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mindestens 3 Arbeitstage vor dem Transportbeginn auf einem Begleitschein in der Datenbank des BAFU die erforderlichen Angaben eintragen;"
+            },
+            {
+              "marke": "b",
+              "text": "dafür sorgen, dass beim Grenzübertritt der Zollverwaltung die Abfälle als solche deklariert werden sowie der ausgedruckte und unterschriebene Begleitschein und eine Kopie der Ausfuhrbewilligung mitgeführt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "den vom Entsorgungsunternehmen im Ausland zurückerhaltenen Begleitschein einschliesslich der Entsorgungsbestätigung während mindestens 5 Jahren aufbewahren."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Wer Abfälle einführt, muss dafür sorgen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zollverwaltung beim Grenzübertritt die Abfälle als solche deklariert werden;"
+            },
+            {
+              "marke": "b",
+              "text": "der unterschriebene Begleitschein und eine Kopie der Zustimmung des BAFU mitgeführt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4bis",
+          "text": "Wer Abfälle durchführt, muss diese auf den Durchfuhrzolldokumenten als solche deklarieren und den unterschriebenen Begleitschein mitführen."
+        },
+        {
+          "absatz": "5",
+          "text": "Wer eingeführte Abfälle zur Entsorgung entgegennimmt, muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Exporteur, den zuständigen Behörden des Ausfuhrstaates und der Durchfuhrstaaten sowie dem BAFU jeweils innert 3 Arbeitstagen nach Anlieferung den Eingang der Abfälle auf dem Begleitschein bestätigen;"
+            },
+            {
+              "marke": "b",
+              "text": "dem Exporteur, den zuständigen Behörden des Ausfuhrstaates und der Durchfuhrstaaten sowie dem BAFU innert 30 Tagen nach Abschluss der Entsorgung, spätestens aber ein Jahr nach Anlieferung der Abfälle, die umweltverträgliche Entsorgung der Abfälle auf dem Begleitschein bestätigen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Angaben nach den Buchstaben a und b in die Datenbank des BAFU eintragen und den zuständigen Behörden des Ausfuhrstaates und der Durchfuhrstaaten sowie dem Exporteur elektronisch übermitteln, sofern dies zulässig und möglich ist;"
+            },
+            {
+              "marke": "d",
+              "text": "den Begleitschein einschliesslich der Entsorgungsbestätigung während mindestens 5 Jahren aufbewahren."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Wer Abfälle, die aus- oder eingeführt werden, transportiert, muss die notwendigen Begleitscheine mitführen. Er muss auf dem Begleitschein die erforderlichen Angaben machen."
+        },
+        {
+          "absatz": "7",
+          "text": "Keine Begleitscheine sind notwendig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausfuhr von Abfällen nach Artikel 15 Absatz 2 ohne Bewilligung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Einfuhr von Abfällen nach Artikel 22 Absatz 2 ohne Zustimmung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Durchfuhr von Abfällen nach Artikel 29 Absatz 1 bis ohne Notifizierung."
+            }
+          ]
+        },
+        {
+          "absatz": "8",
+          "text": "Das ausgefüllte Formular nach Anhang VII der Verordnung EG Nr. 1013/2006 hat mitzuführen, wer nach Absatz 7 Proben von Abfällen oder mehr als 20 kg Abfälle aus-, ein- oder durchführt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "2ee60e22c285c42bfdb40d8ca71d7b62444f042355719672bba4f779afbcdfa8"
+    },
+    {
+      "id": "bund/VEVA/art_32",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sonderabfälle, die eingeführt werden, müssen für den Transport auf schweizerischem Gebiet nach Artikel 7 oder mit einer im Herkunftsland gebräuchlichen entsprechenden Bezeichnung in deutscher, französischer, italienischer oder englischer Sprache gekennzeichnet sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Sonderabfälle, die ausgeführt werden, müssen für den Transport auf schweizerischem Gebiet nach Artikel 7 gekennzeichnet sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Kennzeichnung muss sorgen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Ausfuhr: der Exporteur;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Einfuhr: das Entsorgungsunternehmen in der Schweiz."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Transporteur muss sich für den Transport auf schweizerischem Gebiet vergewissern, dass die Sonderabfälle gekennzeichnet sind."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "467940e9d5a8ddb2e8c831a1981077db1a74e2c48f07d2dc4a4f414004b695a9"
+    },
+    {
+      "id": "bund/VEVA/art_33",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Anzeige der zuständigen Behörde des Einfuhrstaates verpflichtet das BAFU den Exporteur, dessen Verhalten bei der Ausfuhr nicht als unerlaubter Verkehr nach Artikel 9 Absatz 1 des Basler Übereinkommen gilt, zur Rücknahme der Abfälle, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Entsorgung der Abfälle nicht gemäss dem Vertrag des Exporteurs mit dem Entsorgungsunternehmen im Ausland zu Ende geführt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "eine andere umweltverträgliche Entsorgung im Ausland innerhalb von 90 Tagen nach Eingang der Anzeige oder nach einer zwischen der zuständigen ausländischen Behörde und dem BAFU vereinbarten längeren Frist nicht möglich ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "feststeht, dass das Verhalten des Importeurs oder des Entsorgungsunternehmens im Ausland bei der Einfuhr der Abfälle nicht als unerlaubter Verkehr nach Artikel 9 Absatz 1 des Basler Übereinkommens gilt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU verlangt die Rücknahme nur, wenn die Anzeige nicht später als 2 Jahre nach der Ausfuhr erfolgt ist oder die Behörde des Einfuhrstaates nachweist, dass eine frühere Anzeige nicht möglich war."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "072478b973213e68fab87fd92e9767c68606a1e1e3e6a12ea15cd8a2adfcc2f6"
+    },
+    {
+      "id": "bund/VEVA/art_34",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Anzeige der zuständigen Behörde des Einfuhrstaates verpflichtet das BAFU den Exporteur, dessen Verhalten bei der Ausfuhr als unerlaubter Verkehr nach Artikel 9 Absatz 1 des Basler Übereinkommens gilt, zur Rücknahme der Abfälle."
+        },
+        {
+          "absatz": "2",
+          "text": "Es verfügt die Rücknahme spätestens 30 Tage nach Eingang der vollständigen Anzeige oder innerhalb einer längeren zwischen den betroffenen Behörden vereinbarten Frist."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist die umweltverträgliche Entsorgung der Abfälle in der Schweiz nicht möglich, so verpflichtet das BAFU den Exporteur, dafür zu sorgen, dass die Abfälle im Ausland umweltverträglich entsorgt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAFU verlangt die Rücknahme nur, wenn die Anzeige nicht später als ein Jahr nach Kenntnis der vorschriftswidrigen Ausfuhr und nicht später als 10 Jahre nach der Ausfuhr erfolgt ist."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "2f5814572f17ab38d1c8288810188831b67dddcb11243f60d3b6386f13ddb4fb"
+    },
+    {
+      "id": "bund/VEVA/art_35",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anzeige zur Rücknahme von Abfällen muss schriftlich erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Begründung;"
+            },
+            {
+              "marke": "b",
+              "text": "möglichst genaue Angaben über die Art und Menge der Abfälle sowie über den Ort und die Verhältnisse der Zwischenlagerung;"
+            },
+            {
+              "marke": "c",
+              "text": "Unterlagen über die Ausfuhr."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ea979d7ddbdfc34ec6924fdf0f87f23114063c547449c6f6652e2b8755c0da09"
+    },
+    {
+      "id": "bund/VEVA/art_36",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer von der Schweiz aus den Verkehr mit Sonderabfällen zwischen Drittstaaten organisiert oder daran beteiligt ist, muss dem BAFU:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Tätigkeit jährlich melden;"
+            },
+            {
+              "marke": "b",
+              "text": "für jeden geplanten eine Landesgrenze überschreitenden Verkehr eine Kopie des Notifizierungsbogens senden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU informiert die zuständigen Behörden im Ausland und das Sekretariat des Basler Übereinkommens, wenn es feststellt, dass es sich bei einem geplanten eine Landesgrenze überschreitenden Verkehr um einen unerlaubten Verkehr nach Artikel 9 Absatz 1 des Basler Übereinkommens handelt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "f1282918aa20962bfb418a248b060bdfd892bdc83ec4def299328a9bd1d55435"
+    },
+    {
+      "id": "bund/VEVA/art_36_a",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "36_a",
+      "artikelLabel": "Art. 36a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAFU ist die zuständige Behörde und Anlaufstelle nach Artikel 5 des Basler Übereinkommens."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_36_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ddade0c0286f9268a8dd46929ef650bcb8d6b93fc95f8246bd64b6f19e7904a8"
+    },
+    {
+      "id": "bund/VEVA/art_37",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone vollziehen diese Verordnung, soweit diese den Vollzug nicht dem Bund überträgt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "3346a43b56ab205a3b5df484c74139b99739f19976b543629d6b4c9815d48f17"
+    },
+    {
+      "id": "bund/VEVA/art_38",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfordert die Aus- oder Einfuhr von Abfällen eine Bewilligung oder Zustimmung mehrerer Bundesbehörden, so koordinieren diese ihre Verfahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU darf in diesen Fällen eine Bewilligung oder Zustimmung nach dieser Verordnung nur erteilen, wenn die Bewilligung oder Zustimmung der anderen Bundesbehörde vorliegt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "958544eb7f93c604e8b6e768904ab0a37ec9ee53534b0e2412e670ddf3e0c521"
+    },
+    {
+      "id": "bund/VEVA/art_39",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAFU erarbeitet die Vollzugshilfen zur Anwendung dieser Verordnung. Es arbeitet dabei eng mit anderen betroffenen Stellen des Bundes, den Kantonen und den betroffenen Organisationen der Wirtschaft zusammen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "edee056eb697f920e2830e302f78d393c537c6498750a52585464234824603bc"
+    },
+    {
+      "id": "bund/VEVA/art_40",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone tragen die Abgeberbetriebe von Sonderabfällen und anderen kontrollpflichtigen Abfällen mit Begleitscheinpflicht sowie die Entsorgungsunternehmen, welche eine Bewilligung nach Art. 8 benötigen, mit der Betriebsnummer in die Datenbank des BAFU ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sorgen dafür, dass die Entsorgungsunternehmen, die in ihrem Gebiet Betriebsstätten unterhalten, ihre Meldepflichten erfüllen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie unterstützen die Zollverwaltung bei der Entnahme und Untersuchung von Abfallproben."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist nach dieser Verordnung die Rücknahme von Abfällen erforderlich, so sorgen die nach Absatz 5 zuständigen Kantone für die umweltverträgliche Entsorgung der Abfälle."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Entsorgung der Abfälle zuständig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Kanton, aus dem die Abfälle stammen;"
+            },
+            {
+              "marke": "b",
+              "text": "falls die Herkunft der Abfälle unbekannt ist oder die Abfälle aus mehreren Kantonen stammen, der Kanton, in dem der Inhaber der Abfälle seinen Sitz hat oder, falls der Inhaber seinen Sitz im Ausland hat, der Grenzkanton."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "1a51ff175031fa7c7139aeae4d3d5b87b8190aa3a9a7ef3164bb2280417b4928"
+    },
+    {
+      "id": "bund/VEVA/art_41",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU betreibt für die Daten, welche gemäss dieser Verordnung für den Verkehr mit Abfällen elektronisch erfasst werden müssen, eine Datenbank."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone und die Zollverwaltung haben Zugriff auf die sie betreffenden Daten."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "88ff5a6826dad127eacf122c13ac5310b3b487d34f744b2b0caca9e7e5c39e97"
+    },
+    {
+      "id": "bund/VEVA/art_42",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU veröffentlicht einmal jährlich eine Statistik der Sonderabfälle mit Angaben über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art und Menge der entsorgten Sonderabfälle;"
+            },
+            {
+              "marke": "b",
+              "text": "die für Sonderabfälle angewendeten Entsorgungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "Art und Menge der aus- und der eingeführten Sonderabfälle."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es veröffentlicht periodisch eine Statistik mit Angaben über die Art und die Menge der entsorgten anderen kontrollpflichtigen Abfälle."
+        },
+        {
+          "absatz": "3",
+          "text": "Es veröffentlicht auf dem Internet eine Liste:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Abgeberbetriebe in der Schweiz, die Sonderabfälle übergeben;"
+            },
+            {
+              "marke": "b",
+              "text": "der Entsorgungsunternehmen in der Schweiz, die Sonderabfälle oder andere kontrollpflichtige Abfälle entsorgen, mit Angabe der Art der Abfälle, die sie entsorgen, und der Art der Entsorgungsverfahren."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "bfb372c3bac060cce2b4cd45d54ceb621aec20c93188b6906b3137c6cd2acc36"
+    },
+    {
+      "id": "bund/VEVA/art_43",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zollverwaltung überprüft bei der Aus-, Ein- und Durchfuhr von Abfällen stichprobenweise die Begleitscheine sowie das Formular nach Artikel 31 Absatz 8."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie verweigert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aus-, Ein- oder Durchfuhr von Abfällen, wenn die notwendigen Begleitscheine nicht vorliegen oder darin wichtige Angaben fehlen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Aus- oder Einfuhr von Abfällen, wenn die nach dieser Verordnung notwendige Bewilligung oder Zustimmung des BAFU nicht vorliegt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Verweigert die Zollverwaltung die Aus-, Ein- oder Durchfuhr von Abfällen, so informiert sie das BAFU. Dieses entscheidet über die Rücknahme oder Rückweisung der Abfälle."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "a99e18c10eafcacad134f30c80ed5f51dcd2d5a6c90caec76e317f4cdd63d782"
+    },
+    {
+      "id": "bund/VEVA/art_44",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufhebung und die Änderung bisherigen Rechts werden im Anhang 3 geregelt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b5eee60064c09ec682befba545261bda8775dc80c2fbc9405870fa174d58d4d2"
+    },
+    {
+      "id": "bund/VEVA/art_45",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Bewilligungen, die vor Inkrafttreten dieser Verordnung erteilt worden sind, bleiben bis zu ihrem Ablauf gültig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bewilligungen nach Artikel 16 der Verordnung vom 12. November 1986 über den Verkehr mit Sonderabfällen;"
+            },
+            {
+              "marke": "b",
+              "text": "Bewilligungen nach Artikel 7 der Verordnung vom 14. Januar 1998 über die Rückgabe, die Rücknahme und die Entsorgung elektrischer und elektronischer Geräte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bewilligungen des BAFU zur Ausfuhr von Abfällen, die vor Inkrafttreten dieser Verordnung erteilt worden sind, bleiben bis zu ihrem Ablauf, längstens aber bis zum 31. Dezember 2006 gültig."
+        },
+        {
+          "absatz": "3",
+          "text": "Entsorgungsunternehmen, die beim Inkrafttreten dieser Verordnung bestehen und andere kontrollpflichtige Abfälle zur Entsorgung entgegennehmen, müssen spätestens bis zum 30. Juni 2006 ein Gesuch für eine Bewilligung nach Artikel 8 einreichen; vorbehalten bleibt Absatz 1 Buchstabe b. Sie dürfen die Abfälle noch spätestens bis zum 31. Dezember 2006 ohne Bewilligung entgegennehmen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "f487021f0c21135f30c0456d670852a982f0e718a3d3113ba2adadaad23742a5"
+    },
+    {
+      "id": "bund/VEVA/art_46",
+      "ebene": "bund",
+      "quelle": "VEVA",
+      "erlass": "VeVA",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 2006 in Kraft."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/551/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ec0894259b4b2c2a45607f10431fc1930611786228bc52109fdd74b931e85d3c"
+    }
+  ]
+}

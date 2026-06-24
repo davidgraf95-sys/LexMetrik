@@ -1,0 +1,1339 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/BEG/art_1",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Verwahrung von Wertpapieren und Wertrechten durch Verwahrungsstellen und deren Übertragung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gewährleistet den Schutz der Eigentumsrechte der Anlegerinnen und Anleger. Es trägt bei zur Rechtssicherheit im internationalen Verhältnis, zur effizienten Abwicklung von Effektengeschäften und zur Stabilität des Finanzsystems."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "5c19452361a05dbb8260625824f012892b1308960d7a4f790d3a131ef6beb0c0"
+    },
+    {
+      "id": "bund/BEG/art_2",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz findet Anwendung auf Bucheffekten, die eine Verwahrungsstelle einem Effektenkonto gutgeschrieben hat."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Artikel 31 Absatz 2 ist unter den Vorausset­zungen nach Artikel 31 Absatz 1 auf Bucheffek­ten anwendbar, welche bei einer Verwahrungs­stelle im In- oder Ausland verwahrt werden, auch wenn die Verwahrung ausländischem Recht untersteht."
+        },
+        {
+          "absatz": "2",
+          "text": "Es lässt Vorschriften über die Eintragung von Namenaktien in das Aktienbuch unberührt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "6003f3d80aa031ed2c61ed04c07dfcae3e36b692482f1c074f919c99445f1c7d"
+    },
+    {
+      "id": "bund/BEG/art_3",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bucheffekten im Sinne dieses Gesetzes sind vertretbare Forderungs- oder Mit­gliedschaftsrechte gegenüber dem Emittenten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die einem Effektenkonto gutgeschrieben sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "über welche die Kontoinhaberinnen und Kontoinhaber nach den Vorschrif­ten dieses Gesetzes verfügen können."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Als Bucheffekte im Sinne dieses Gesetzes gilt auch jedes nach ausländischem Recht verwahrte Finanzinstrument und jedes Recht an einem solchen Finanzin-strument, dem nach diesem ausländischen Recht eine vergleichbare Funktion zukommt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bucheffekte ist der Verwahrungsstelle und jedem Dritten gegenüber wirksam; sie ist dem Zugriff der weiteren Gläubigerinnen und Gläubiger der Verwahrungs­stelle entzogen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "827e43c5b20c8fdfce193558e9086a26d9e51da22b76f333f7811235f13f8e1a"
+    },
+    {
+      "id": "bund/BEG/art_4",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Verwahrungsstelle im Sinne dieses Gesetzes führt auf den Namen von Perso­nen oder Personengesamtheiten Effektenkonten."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Verwahrungsstellen gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Banken gemäss Bankengesetz vom 8. November 1934;"
+            },
+            {
+              "marke": "b",
+              "text": "Wertpapierhäuser nach Artikel 41 des Finanzinstitutsgesetzes vom 15. Juni 2018;"
+            },
+            {
+              "marke": "c",
+              "text": "Fondsleitungen nach Artikel 32 des Finanzinstitutsgesetzes, sofern sie Anteilskonten führen;"
+            },
+            {
+              "marke": "d",
+              "text": "Zentralverwahrer im Sinne von Artikel 61 des Finanzmarktinfrastruktur­gesetzes vom 19. Juni 2015;"
+            },
+            {
+              "marke": "e",
+              "text": "die Schweizerische Nationalbank gemäss Nationalbankgesetz vom 3. Oktober 2003;"
+            },
+            {
+              "marke": "f",
+              "text": "die Schweizerische Post gemäss Postorganisationsgesetz vom 17. Dezember 2010; und"
+            },
+            {
+              "marke": "g",
+              "text": "DLT-Handelssysteme nach den Artikeln 73 a –73 f des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 in Bezug auf immobilisierte Registerwertrechte nach den Artikeln 973 d– 973 i des Obligationenrechts."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Als Verwahrungsstelle gelten, sofern sie im Rahmen ihrer Geschäftstätigkeit Effektenkonten führen, auch ausländische Banken, ausländische Wertpapierhäuser und andere ausländische Finanzinstitute sowie ausländische zentrale Verwahrungsstellen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "aab56393bc31492d5dffa93cfa8e3da6bfa0e23a3cf7f4e29ed7fe5a957637ee"
+    },
+    {
+      "id": "bund/BEG/art_5",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In diesem Gesetz gelten als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Drittverwahrungsstelle : eine Verwahrungsstelle, die für andere Verwahrungs­stellen Effektenkonten führt;"
+            },
+            {
+              "marke": "b",
+              "text": "Kontoinhaberin oder Kontoinhaber : eine Person oder Personengesamtheit, auf deren Namen eine Verwahrungsstelle ein Effektenkonto führt;"
+            },
+            {
+              "marke": "c",
+              "text": "Anlegerin oder Anleger : eine Kontoinhaberin oder ein Kontoinhaber, die oder der nicht Verwahrungsstelle ist, oder eine Verwahrungsstelle, die Bucheffekten für eigene Rechnung hält;"
+            },
+            {
+              "marke": "d",
+              "text": "qualifizierte Anlegerin oder qualifizierter Anleger : eine Verwahrungsstelle; eine beaufsichtigte Versicherungseinrichtung; eine öffentlich-rechtliche Körperschaft, eine Vorsorgeeinrichtung oder ein Unternehmen mit profes­si­oneller Tresorerie;"
+            },
+            {
+              "marke": "e",
+              "text": "sammelverwahrte Wertpapiere : Wertpapiere im Sinne von Artikel 973 a des Obligationenrechts;"
+            },
+            {
+              "marke": "f",
+              "text": "Globalurkunde : ein Wertpapier im Sinne von Artikel 973 b des Obligationen­rechts;"
+            },
+            {
+              "marke": "g",
+              "text": "einfache Wertrechte : Rechte im Sinne von Artikel 973 c des Obligationenrechts ;"
+            },
+            {
+              "marke": "h",
+              "text": "Registerwertrechte : Rechte im Sinne von Artikel 973 d des Obligationenrechts."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8b67fccc727204cfc2f43cbe3b773071102a1906fd2e2cd1cb4165c3b2e56d2f"
+    },
+    {
+      "id": "bund/BEG/art_6",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bucheffekten entstehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit der Hinterlegung von Wertpapieren zur Sammelverwahrung bei einer Verwahrungsstelle und deren Gutschrift in einem oder mehreren Effekten­konten;"
+            },
+            {
+              "marke": "b",
+              "text": "mit der Hinterlegung von Globalurkunden bei einer Verwahrungsstelle und deren Gutschrift in einem oder mehreren Effektenkonten;"
+            },
+            {
+              "marke": "c",
+              "text": "mit der Eintragung von einfachen Wertrechten im Hauptregister einer Verwahrungsstelle und der Gutschrift in einem oder mehreren Effektenkonten;"
+            },
+            {
+              "marke": "d",
+              "text": "mit der Übertragung von Registerwertrechten auf eine Verwahrungsstelle und der Gutschrift in einem oder mehreren Effektenkonten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für jede Emission von einfachen Wertrechten führt eine einzige Verwahrungsstelle das Hauptregister. Es enthält Angaben über die Emission und die Anzahl sowie die Stückelung der ausgegebenen Wertrechte; es ist öffentlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Registerwertrechte sind bei deren Übertragung auf eine Verwahrungsstelle im Wertrechteregister zu immobilisieren."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "cd7270373702480ba03678c0eea32bbf156d11993d457d07dc0d10c01ecea3fe"
+    },
+    {
+      "id": "bund/BEG/art_7",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern die Ausgabebedingungen oder die Gesellschaftsstatuten nichts anderes bestimmen, kann der Emittent sammelverwahrte Wertpapiere, Globalurkunden oder einfache Wertrechte, die als Grundlage von Bucheffekten hinterlegt oder eingetragen sind, jederzeit und ohne Zustimmung der Kontoinhaberinnen oder Kontoinhaber in eine der beiden anderen Formen umwandeln. Er trägt dafür die Kosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kontoinhaberinnen und Kontoinhaber können vom Emittenten jederzeit verlangen, für die Bucheffekten, die durch Hinterlegung einer Globalurkunde oder durch Eintragung einfacher Wertrechte in ein Hauptregister entstehen, Wertpapiere gleicher Zahl und Gattung auszustellen, sofern die Ausgabebedingungen oder Gesellschafts­statuten es vorsehen. Sie tragen dafür die Kosten, es sei denn, die Ausgabebedingungen oder Gesellschaftsstatuten bestimmen etwas anderes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwahrungsstelle stellt sicher, dass durch eine Umwandlung die Gesamtzahl der ausgegebenen Forderungs- oder Mitgliedschaftsrechte nicht verändert wird."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8adc409ab8ecf5a1aacc818c4d43e25910098b8445c19cce7a32ed18e050461f"
+    },
+    {
+      "id": "bund/BEG/art_8",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontoinhaberinnen und Kontoinhaber können von der Verwahrungsstelle jederzeit verlangen, ihnen Wertpapiere gleicher Zahl und Gattung auszuliefern oder ausliefern zu lassen, wie ihrem Effektenkonto Bucheffekten gutgeschrieben sind, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Verwahrungsstelle oder bei einer Drittverwahrungsstelle Wertpapiere hinterlegt sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Kontoinhaberin oder der Kontoinhaber nach Artikel 7 Absatz 2 einen An­spruch auf Ausstellung von Wertpapieren hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kontoinhaberin oder der Kontoinhaber hat Anspruch auf die Auslieferung von Wertpapieren, die den Usanzen des Marktes entsprechen, auf dem diese Wertpapiere gehandelt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwahrungsstelle stellt sicher, dass die Wertpapiere nur ausgeliefert werden, wenn Bucheffekten gleicher Zahl und Gattung dem entsprechenden Effektenkonto belastet worden sind."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "4a91ddeb98182b2c1ac184b9b82361db620ea3921604a732f525a35bb20a8e87"
+    },
+    {
+      "id": "bund/BEG/art_8_a",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Aktiengesellschaften ohne börsenkotierte Beteiligungspapiere, deren Inhaber­aktien als Bucheffekten ausgestaltet sind, stellt die nach Artikel 697 j Absatz 5 des Obligationenrechts von der Gesellschaft bezeichnete Verwahrungsstelle sicher, dass die Wertpapiere nur ausgeliefert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Beendigung der Funktion der Verwahrungsstelle: an die Verwahrungs­stelle in der Schweiz, die von der Gesellschaft als Ersatz bezeichnet worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Umwandlung der Inhaberaktien in Namenaktien: an die Gesellschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Vernichtung der Inhaberaktien: an die Gesellschaft."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "28642b6c92a5d5cdffc3af537e89a0bfdb166a021cdbdecb2401a42952620c50"
+    },
+    {
+      "id": "bund/BEG/art_9",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Verwahrungsstelle kann Bucheffekten, Wertpapiere, einfache Wertrechte und Registerwertrechte durch eine Drittverwahrungsstelle in der Schweiz oder im Ausland verwahren lassen. Die Zustimmung der Kontoinhaberin oder des Kontoinhabers ist nicht erforderlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Drittverwahrung im Ausland bedarf jedoch der ausdrücklichen Zustimmung der Kontoinhaberin oder des Kontoinhabers, wenn die ausländische Verwahrungs­stelle nicht einer Aufsicht untersteht, welche ihrer Tätigkeit angemessen ist."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8e5a35df4829ec37cc72add9812a56d47e544225bb7c6d480fdfb197b9711544"
+    },
+    {
+      "id": "bund/BEG/art_10",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwahrungsstelle schreibt dem Effektenkonto der Kontoinhaberin oder des Kontoinhabers die Bucheffekten gut, welche die Drittverwahrungsstelle ihrem Effektenkonto gutgeschrieben hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Untersteht die Drittverwahrung nicht diesem Gesetz, so erwirbt die Kontoinhaberin oder der Kontoinhaber mit der Gutschrift zumindest Rechte entsprechend den Rechten, welche die Verwahrungsstelle aus der Drittverwahrung erhält."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "98b2fe2e4deb53470884178314a3bbee8220bdb24a39160c3f18f92515f4396e"
+    },
+    {
+      "id": "bund/BEG/art_11",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Verwahrungsstelle hält bei sich selber oder bei einer Drittverwahrungsstelle Bucheffekten verfügbar, deren Zahl und Gattung mindestens der Summe der in den Effektenkonten ihrer Kontoinhaberinnen und Kontoinhaber als Guthaben ausgewie­senen Bucheffekten (Effektenguthaben) entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Menge der verfügbaren Bucheffekten kleiner als die Summe der Effekten­guthaben, so muss die Verwahrungsstelle ohne Verzug Bucheffekten im Umfang des Unterbestandes erwerben."
+        },
+        {
+          "absatz": "3",
+          "text": "Als verfügbar gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bucheffekten, die einem Effektenkonto der Verwahrungsstelle bei einer Dritt­verwahrungsstelle gutgeschrieben sind;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Verwahrungsstelle sammelverwahrte Wertpapiere, Registerwertrechte, Globalurkunden oder einfache Wertrechte, die in ihrem Hauptregister eingetragen sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "frei verfügbare Ansprüche auf Lieferung von Bucheffekten durch andere Ver­wahrungsstellen während der Frist, die auf dem betreffenden Markt für eine ordentliche Abwicklung vorgeschrieben oder üblich ist, längstens jedoch während acht Tagen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "5647a7ae24517f7178f0eaad4bcbdd00b3ba65449bcd283e6bc94828943fa9e7"
+    },
+    {
+      "id": "bund/BEG/art_11_a",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwahrungsstelle ist verpflichtet, Eigen- und Drittbestände in ihren Büchern getrennt zu halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Hält die Verwahrungsstelle Eigen- und Drittbestände bei einer Drittverwahrungsstelle im Inland, so hat sie die Eigen- und die Drittbestände auf verschiedenen Effektenkonten zu halten. Drittverwahrungsstellen müssen den Verwahrungsstellen die Möglichkeit anbieten, Eigen- und Drittbestände auf verschiedenen Effektenkonten zu halten."
+        },
+        {
+          "absatz": "3",
+          "text": "Erfolgt die Verwahrung im Ausland, so vereinbart die Schweizer Verwahrungsstelle mit der ersten ausländischen Drittverwahrungsstelle, dass diese die Eigen- und die Drittbestände auf verschiedenen Effektenkonten hält."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist eine Vereinbarung nach Absatz 3 nach dem Recht des betroffenen Staates oder aus operationellen Gründen nicht möglich, so trifft die Schweizer Verwahrungsstelle andere Massnahmen, die der Kontoinhaberin oder dem Kontoinhaber ein vergleichbares Mass an Schutz bieten."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Schweizer Verwahrungsstelle muss keine Massnahmen nach Absatz 4 treffen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Drittverwahrung wegen der Eigenschaften der betreffenden Bucheffekten oder der mit diesen verbundenen Finanzdienstleistungen nur im betroffenen Staat erfolgen kann; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Kontoinhaberin oder der Kontoinhaber die Verwahrungsstelle schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, angewiesen hat, die Bucheffekten bei einer Drittverwahrungsstelle in diesem Staat zu verwahren."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Die Schweizer Verwahrungsstelle, die Drittbestände bei einer Drittverwahrungsstelle hält, stellt der Kontoinhaberin oder dem Kontoinhaber vorgängig in standardisierter Weise in Papierform oder elektronisch Informationen zur Verfügung. Sie legt dar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dass die Verwahrung in der Regel bei einer Drittverwahrungsstelle erfolgt;"
+            },
+            {
+              "marke": "b",
+              "text": "dass eine Drittverwahrungsstelle je nach Emittent allenfalls Sitz im Ausland hat und dass die Verwahrung in diesem Fall ausländischem Recht untersteht;"
+            },
+            {
+              "marke": "c",
+              "text": "dass mit einer Verwahrung im Ausland für die Kontoinhaberin oder den Kontoinhaber Risiken verbunden sind und um welche generellen Risiken es sich handelt;"
+            },
+            {
+              "marke": "d",
+              "text": "die Kosten der Verwahrung von Bucheffekten."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8f503c9c289f3a9d28e27a81be5a502c0848a581f4b3094e60c6f3e02ecc6b82"
+    },
+    {
+      "id": "bund/BEG/art_11_b",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "11_b",
+      "artikelLabel": "Art. 11b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schweizer Verwahrungsstelle darf der in- oder ausländischen Drittverwahrungsstelle und weiteren Stellen und Gesellschaften direkt alle Daten übermitteln, welche diese oder eine in der Verwahrungskette nachgelagerte Drittverwahrungsstelle, Stelle oder Gesellschaft zur Erfüllung ihrer mit der Verwahrung verbundenen rechtlichen Pflichten benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwahrungsstelle informiert die Kontoinhaberinnen und Kontoinhaber vorgängig in standardisierter Weise in Papierform oder elektronisch über die Möglichkeit der Datenübermittlung nach Absatz 1 und darüber, dass Kundendaten, je nach geltendem ausländischem Recht, Behörden des betroffenen Staates weitergeleitet werden können."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_11_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "eecb410abcac89b07392f7fd7fb95f348fbe5800514c5b7d1974edf325809b97"
+    },
+    {
+      "id": "bund/BEG/art_12",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hält die Verwahrungsstelle Eigen- und Drittbestände bei einer Drittverwahrungsstelle, so werden die Bucheffekten der Konto­inhaberinnen und Kontoinhaber sowie deren Lieferansprüche nicht berührt durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Aufrechnungsvereinbarung zwischen der Verwahrungsstelle und einer Drittverwahrungsstelle, welcher die Kontoinhaberin oder der Kontoinhaber nicht als Partei beigetreten ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Pfand-, Rückbehalts- und Verwertungsrechte der Drittverwahrungsstelle oder von Dritten, die über das Rückbehalts- und Verwertungsrecht der Verwahrungsstelle gemäss Artikel 21 hinausgehen und denen die Kontoinhaberin oder der Kontoinhaber nicht zugestimmt hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verwahrungsstelle kann über Bucheffekten einer Kontoinhaberin oder eines Kontoinhabers nur verfügen, nachdem sie diese in Ausübung ihres Nutzungsrechts in ihr eigenes Effektenkonto übertragen hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Abweichende Abreden sind nichtig."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "18d7fb0c6e4d9e30736c090b1b78dce5ff5c03212c6afd05cf9249d275bf29ad"
+    },
+    {
+      "id": "bund/BEG/art_13",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entstehung von Bucheffekten lässt die Rechte der Anlegerinnen und Anleger gegenüber dem Emittenten unberührt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kontoinhaberinnen und Kontoinhaber können ihre Rechte an Bucheffekten nur über ihre Verwahrungsstelle ausüben, sofern dieses Gesetz nichts anderes bestimmt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "418ab72c7165219c074fcb0516bdecae9761fb137892aeed529ae55ed9ede96a"
+    },
+    {
+      "id": "bund/BEG/art_14",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird gegen eine Kontoinhaberin oder einen Kontoinhaber eine Pfändung, ein Arrest oder eine andere vorsorgliche Massnahme verfügt, die Bucheffekten zum Gegenstand hat, so ist diese Massnahme ausschliesslich bei der Verwahrungsstelle zu vollziehen, die das Effektenkonto der Kontoinhaberin oder des Kontoinhabers führt, dem die Bucheffekten gutgeschrieben sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Pfändungen, Arreste und andere vorsorgliche Massnahmen gegen eine Kontoinha­berin oder einen Kontoinhaber, die bei einer Drittverwahrungsstelle vollzogen werden, sind nichtig."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "c9ddd0f9d17b09a954e820771b8980e1cff25a6b0f4fddc1914f8c2c3bf8e3e0"
+    },
+    {
+      "id": "bund/BEG/art_15",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwahrungsstelle ist nach Massgabe ihres Vertrags mit der Kontoinhaberin oder dem Kontoinhaber verpflichtet, deren oder dessen Weisungen zur Verfügung über Bucheffekten auszuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie hat weder das Recht noch die Pflicht, den Rechtsgrund der Weisung zu über­prüfen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kontoinhaberin oder der Kontoinhaber kann die Weisung widerrufen bis zum Zeitpunkt, der durch den Vertrag mit der Verwahrungsstelle oder die anwendbaren Regeln eines Effektenabrechnungs- und -abwicklungssystems festgelegt ist. Sobald die Verwahrungsstelle das Effektenkonto belastet hat, ist die Weisung in jedem Fall unwiderruflich."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "71ed73378c21b12b485c425b5a80829c2206379ca94a0076947a616428d31533"
+    },
+    {
+      "id": "bund/BEG/art_16",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kontoinhaberin oder der Kontoinhaber kann von der Verwahrungsstelle jeder­zeit einen Ausweis über die dem betreffenden Effektenkonto gutgeschriebenen Bucheffekten verlangen. Diesem Ausweis kommt nicht die Eigenschaft eines Wert­papiers zu."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "4b48d30328bf3ea1121201a43aa900782ea0addcfef8530a4b1dc01789852691"
+    },
+    {
+      "id": "bund/BEG/art_17",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird über eine Verwahrungsstelle ein Zwangsliquidationsverfahren zum Zwecke der Generalexekution eröffnet, so sondert die Liquidatorin oder der Liquidator im Umfang der Effektenguthaben ihrer Kontoinhaberinnen und Kontoinhaber von Amtes wegen ab:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bucheffekten, die einem Effektenkonto der Verwahrungsstelle bei einer Dritt­verwahrungsstelle gutgeschrieben sind;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Verwahrungsstelle sammelverwahrte Wertpapiere, Registerwertrechte, Globalurkunden oder einfache Wertrechte, die in ihrem Hauptregister eingetragen sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "frei verfügbare Ansprüche der Verwahrungsstelle gegenüber Dritten auf Liefe­rung von Bucheffekten aus Kassageschäften, abgelaufenen Termin­­geschäften, Deckungsgeschäften oder Emissionen für Rechnung der Konto­in­haberinnen oder Kontoinhaber."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Hält die Verwahrungsstelle Eigen- und Drittbestände bei einer Drittverwahrungs­stelle zusammengefasst auf einem einzigen Effektenkonto, so gilt die Vermutung, dass es sich dabei um Bucheffekten ihrer Kontoinhaberinnen und Kontoinhaber handelt ."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer eine Verwahrungsstelle liquidiert, muss deren Verpflichtungen gegenüber der Drittverwahrungsstelle erfüllen, die ihr entstanden sind aus der Drittverwahrung von Bucheffekten oder aus der Vorleistung der Drittverwahrungsstelle für den Erwerb von Bucheffekten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die abgesonderten Bucheffekten und Ansprüche auf Lieferung von Bucheffekten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf die Verwahrungsstelle übertragen, die von der Kontoinhaberin oder vom Kontoinhaber bezeichnet wird;"
+            },
+            {
+              "marke": "b",
+              "text": "in Form von Wertpapieren der Kontoinhaberin oder dem Kontoinhaber ausgeliefert; oder"
+            },
+            {
+              "marke": "c",
+              "text": "in Form von Registerwertrechten auf die Kontoinhaberin oder den Kontoinhaber übertragen."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Ansprüche der Verwahrungsstelle nach Artikel 21 bleiben vorbehalten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "94b37b25ee11fa72308ac6159a4cee40ec590a699de5a8762b222a4572e90199"
+    },
+    {
+      "id": "bund/BEG/art_18",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird über eine Drittverwahrungsstelle ein Zwangsliquidationsverfahren zum Zwe­cke einer Generalexekution eröffnet, so hat die Verwahrungsstelle die Absonderung der Bucheffekten ihrer Kontoinhaberinnen und Kontoinhaber bei der Drittverwah­rungsstelle geltend zu machen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "4e0a6d98dd448ac3e5acb79b2beea4ea5da24bc627007fb9320c1f90154f1882"
+    },
+    {
+      "id": "bund/BEG/art_19",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Genügen die abgesonderten Bucheffekten zur vollständigen Befriedigung der Ansprüche der Kontoinhaberinnen und Kontoinhaber nicht, so werden zu deren Gunsten im Umfang des Unterbestandes Bucheffekten derselben Gattung abgeson­dert, die die Verwahrungsstelle auf eigene Rechnung hält, auch wenn sie getrennt von den Bucheffekten ihrer Kontoinhaberinnen und Kontoinhaber verwahrt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Ansprüche der Kontoinhaberinnen und Kontoinhaber immer noch nicht vollständig befriedigt, so tragen die Kontoinhaberinnen und Kontoinhaber den Unterbestand im Verhältnis ihrer Effektenguthaben der betreffenden Gattung. In diesem Umfang steht jeder Kontoinhaberin und jedem Kontoinhaber eine Ersatz­forderung gegen die Verwahrungsstelle zu."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "b291042359bad166e89b708a1adb123c1293d13286c6c805a551aeac9814e1d6"
+    },
+    {
+      "id": "bund/BEG/art_20",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Weisung einer Verwahrungsstelle, die an einem Effektenabrechnungs- und ‑abwicklungssystem teilnimmt, ist auch im Falle eines Zwangsvollstreckungsverfah­rens gegen diese Verwahrungsstelle rechtlich verbindlich und Dritten gegenüber wirksam, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor Eröffnung des Verfahrens in das System eingebracht wurde; oder"
+            },
+            {
+              "marke": "b",
+              "text": "nach Eröffnung des Verfahrens in das System eingebracht und am Tag der Verfahrenseröffnung ausgeführt wurde, sofern der Systembetreiber nach­weist, dass er von der Eröffnung des Verfahrens keine Kenntnis hatte oder haben musste."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "151745bbe0310701e55271ea8606328414f1b885a7a1d4778e6b1f690a1fb329"
+    },
+    {
+      "id": "bund/BEG/art_21",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwahrungsstelle kann einem Effektenkonto gutgeschriebene Bucheffekten zurückbehalten und verwerten, sofern eine Forderung gegen die Inhaberin oder den Inhaber dieses Kontos fällig ist und sie aus der Verwahrung der Bucheffekten oder aus Vorleistungen der Verwahrungsstelle für den Erwerb von Bucheffekten herrührt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Rückbehalts- und Verwertungsrecht der Verwahrungsstelle erlischt, sobald die Bucheffekten dem Effektenkonto einer anderen Kontoinhaberin oder eines anderen Kontoinhabers gutgeschrieben werden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "99b5f77f40965fb582162a5f483db46502b3fdeba5b17bbfce0e3bbea338483e"
+    },
+    {
+      "id": "bund/BEG/art_22",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontoinhaberinnen und Kontoinhaber können der Verwahrungsstelle das Recht einräumen, über ihre Bucheffekten im eigenen Namen und auf eigene Rech­nung zu verfügen, namentlich die Bucheffekten als Sicherheit weiter zu verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Kontoinhaberin oder der Kontoinhaber keine qualifizierte Anlegerin oder kein qualifizierter Anleger, so ist die Ermächtigung schriftlich zu erteilen. Die Ermächtigung darf nicht in den allgemeinen Geschäftsbedingungen enthalten sein."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "57c8e15208d3933fab369f7303816d36b5384fae7931ff9514f702b3a5379cee"
+    },
+    {
+      "id": "bund/BEG/art_23",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hat die Kontoinhaberin oder der Kontoinhaber der Verwahrungsstelle Bucheffek­ten als Sicherheit übertragen und nutzt die Verwahrungsstelle diese Bucheffekten ihrerseits als Sicherheit, so muss die Verwahrungsstelle der Kontoinhaberin oder dem Kontoinhaber spätestens bei Fälligkeit der gesicherten Forderung Bucheffekten derselben Zahl und Gattung rückerstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Bucheffekten unterliegen demselben Sicherungsrecht wie das ursprüngliche Sicherungsrecht und werden so behandelt, als wären sie zum selben Zeitpunkt wie das ursprüngliche Sicherungsrecht bestellt worden."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit im Sicherungsvertrag mit der Kontoinhaberin oder dem Kontoinhaber vorgesehen, kann die Verwahrungsstelle die Bucheffekten, statt sie zurückzuerstat­ten, nach Artikel 31 verwerten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "525f857c077a31ee7d115190e4e6f9a6b83137fee9985ffdb8a7ac91283f39a0"
+    },
+    {
+      "id": "bund/BEG/art_23_a",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die von einer Aktiengesellschaft nach Artikel 697 i Absatz 4 oder Artikel 697 j Absatz 3 des Obligationenrechts bezeichnete Verwahrungsstelle muss sicherstellen, dass ihr die in der Kette nachgelagerten Verwahrungsstellen auf Anfrage die folgenden Informationen weiterleiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vor- und Nachname oder Firma sowie Adresse der Aktionärin oder des Aktionärs; und"
+            },
+            {
+              "marke": "b",
+              "text": "Vor- und Nachname sowie Adresse der wirtschaftlich berechtigten Person."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "2286aeda8dc459f2906bea4be0ba6c4d7d664e120b7d9a9b6b6cb4b27fc777ed"
+    },
+    {
+      "id": "bund/BEG/art_24",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über Bucheffekten wird verfügt durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Weisung der Kontoinhaberin oder des Kontoinhabers an die Verwahrungs­stelle, die Bucheffekten zu übertragen; und"
+            },
+            {
+              "marke": "b",
+              "text": "Gutschrift der Bucheffekten im Effektenkonto der Erwerberin oder des Erwerbers."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verfügung ist mit Abschluss der erforderlichen Gutschrift vollzogen und Dritten gegenüber wirksam. Wird durch die Verfügung das Vollrecht übertragen, so verliert die verfügende Kontoinhaberin oder der verfügende Kontoinhaber ihre oder seine Rechte an den Bucheffekten."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die Vorschriften über den Erwerb durch Universalsukzession oder Zwangsvollstreckung."
+        },
+        {
+          "absatz": "4",
+          "text": "Beschränkungen der Übertragbarkeit von Namenaktien bleiben vorbehalten. Andere Beschränkungen der Übertragbarkeit bleiben der Erwerberin oder dem Erwer­ber oder Dritten gegenüber ohne Wirkung."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "a284773434918cf1da76142f3ce25a18cf3e165617ca5fb7c720a30931f7f9d4"
+    },
+    {
+      "id": "bund/BEG/art_25",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über Bucheffekten kann mit Wirkung gegenüber Dritten auch verfügt werden, indem die Kontoinhaberin oder der Kontoinhaber mit der Verwahrungsstelle unwiderruflich vereinbart, dass diese die Weisungen der Erwerberin oder des Erwerbers ohne weitere Zustimmung oder Mitwirkung der Kontoinhaberin oder des Konto­inhabers auszuführen hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verfügung kann sich beziehen auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bestimmte Bucheffekten;"
+            },
+            {
+              "marke": "b",
+              "text": "alle Bucheffekten, die einem Effektenkonto gutgeschrieben sind; oder"
+            },
+            {
+              "marke": "c",
+              "text": "einen wertmässig bestimmten Anteil der Bucheffekten, die einem Effekten­konto gutgeschrieben sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "0ba2192be3d1ea55d90ede21288a70dd8916da1ed330f4aa4ed21e64086471ab"
+    },
+    {
+      "id": "bund/BEG/art_26",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontoinhaberin oder der Kontoinhaber kann durch Abschluss einer Vereinbarung mit der Verwahrungsstelle zu deren Gunsten über Bucheffekten verfügen. Die Verfügung ist Dritten gegenüber mit dem Abschluss der Vereinbarung wirksam."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 25 Absatz 2 ist anwendbar."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "149ca0900aed5dea02aa94ca0858073d4474a61482c22d1e6a53c140bea9fc78"
+    },
+    {
+      "id": "bund/BEG/art_27",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Belastung von Bucheffekten in einem Effektenkonto ist zu stornieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie ohne Weisung erfolgt;"
+            },
+            {
+              "marke": "b",
+              "text": "sie aufgrund einer Weisung erfolgt, die: 1. nichtig ist,"
+            },
+            {
+              "marke": "2",
+              "text": "nicht von der Kontoinhaberin oder dem Kontoinhaber beziehungsweise deren oder dessen Vertreterin oder Vertreter stammt,"
+            },
+            {
+              "marke": "3",
+              "text": "durch die Kontoinhaberin oder den Kontoinhaber rechtzeitig widerrufen wurde, oder"
+            },
+            {
+              "marke": "4",
+              "text": "wegen eines Erklärungsirrtums oder eines Übermittlungsfehlers, wegen absichtlicher Täuschung oder begründeter Furcht angefochten wurde; Artikel 26 des Obligationenrechts bleibt vorbehalten;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In den Fällen nach Absatz 1 Buchstaben a und b hat die Kontoinhaberin oder der Kontoinhaber nachzuweisen, dass die Weisung mangelhaft war. Der Anspruch auf Stornierung besteht nicht, wenn die Verwahrungsstelle nachweist, dass sie den Mangel der Weisung nicht kannte und trotz Anwendung von zumutbaren Massnah­men und Verfahren nicht kennen musste."
+        },
+        {
+          "absatz": "3",
+          "text": "Durch Stornierung wird die Kontoinhaberin oder der Kontoinhaber gestellt, wie wenn die Belastung nie stattgefunden hätte. Schadenersatzansprüche nach den Vorschriften des Obligationenrechts bleiben vorbehalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Ansprüche nach diesem Artikel verjähren mit Ablauf von drei Jahren nach der Entdeckung des Mangels, in jedem Fall jedoch mit Ablauf von zehn Jahren seit dem Tag der Belastung."
+        },
+        {
+          "absatz": "5",
+          "text": "Kontoinhaberinnen oder Kontoinhaber, die qualifizierte Anlegerinnen oder Anle­ger sind, können mit ihrer Verwahrungsstelle abweichende Vereinbarungen treffen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "b113be1ea7b80c35801d95419197c5ece4532be55191ad2e108f5a99f2e64ed4"
+    },
+    {
+      "id": "bund/BEG/art_28",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwahrungsstelle kann die Gutschrift von Bucheffekten in einem Effekten­konto stornieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die entsprechende Belastung storniert worden ist; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Gutschrift nicht der Weisung entspricht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Stornierung ist der Kontoinhaberin oder dem Kontoinhaber mitzuteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Stornierung ist ausgeschlossen, wenn das Effektenkonto keine Bucheffekten dieser Gattung mehr umfasst oder wenn Dritte daran gutgläubig Rechte erworben haben. In diesem Fall hat die Verwahrungsstelle Anspruch auf Ersatz, es sei denn, die Kontoinhaberin oder der Kontoinhaber war bei der Entäusserung der Buch­effekten in gutem Glauben oder musste mit der Rückerstattung nicht rechnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Ansprüche nach diesem Artikel verjähren mit Ablauf von drei Jahren nach der Entdeckung des Mangels, in jedem Fall jedoch mit Ablauf von zehn Jahren seit dem Tag der Gutschrift."
+        },
+        {
+          "absatz": "5",
+          "text": "Kontoinhaberinnen oder Kontoinhaber, die qualifizierte Anlegerinnen oder Anle­ger sind, können mit ihrer Verwahrungsstelle abweichende Vereinbarungen treffen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "a0e590426d5fcd4e1f5e783577137a48c605d31307214d5e67f205a345342ec7"
+    },
+    {
+      "id": "bund/BEG/art_29",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer nach Artikel 24, 25 oder 26 Bucheffekten oder Rechte an Bucheffekten in gutem Glauben entgeltlich erwirbt, ist in seinem Erwerb geschützt, auch wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Veräussererin oder der Veräusserer zur Verfügung über die Bucheffekten nicht befugt war; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Gutschrift von Bucheffekten im Effektenkonto der Veräussererin oder des Veräusserers storniert worden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Erwerb nicht geschützt, so ist die Erwerberin oder der Erwerber nach den Vorschriften des Obligationenrechts über die ungerechtfertigte Bereicherung zur Rückerstattung von Bucheffekten derselben Zahl und Gattung verpflichtet. Rechte Dritter werden dadurch nicht berührt. Weitere Ansprüche nach den Vorschriften des Obligationenrechts bleiben vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird über die rückerstattungspflichtige Erwerberin oder den rückerstattungs­pflichtigen Erwerber ein Zwangsvollstreckungsverfahren zum Zwecke der General­exekution eröffnet, so kann die berechtigte Person Bucheffekten derselben Zahl und Gattung aussondern, sofern sich solche Bucheffekten in der Masse befinden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Ansprüche nach Absatz 2 verjähren mit Ablauf von drei Jahren, nachdem die berechtige Person von ihrem Anspruch und von der Person ihrer Schuldnerin oder ihres Schuldners Kenntnis erhalten hat, in jedem Fall aber mit Ablauf von zehn Jahren seit dem Tag der Belastung. Artikel 60 Absatz 2 des Obligationenrechts bleibt vorbehalten."
+        },
+        {
+          "absatz": "5",
+          "text": "Sind die Stornierungsvoraussetzungen nach Artikel 28 erfüllt, so steht der Erwer­berin oder dem Erwerber aufgrund dieses Artikels keine Einwendung gegen die Stornierung einer Gutschrift zu."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "6acdb2c9e281b545f5e736a25ebbec1fbdc715ad988026a8f9a9c05f3858c450"
+    },
+    {
+      "id": "bund/BEG/art_30",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird über Bucheffekten oder Rechte an Bucheffekten nach den Vorschriften dieses Gesetzes verfügt, so geht die frühere Verfügung der späteren im Range vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Schliesst die Verwahrungsstelle mit der Kontoinhaberin oder dem Kontoinhaber eine Vereinbarung gemäss Artikel 25 Absatz 1 ab, ohne die Erwerberin oder den Erwerber ausdrücklich auf die ihr zustehenden früheren Rechte hinzuweisen, so gilt ihr Recht als dem Recht der Erwerberin oder des Erwerbers untergeordnet."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Abweichende Abreden über die Rangfolge bleiben vorbehalten, entfalten jedoch nur unter den Parteien dieser Abrede Wirkung."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "cdf877776635c4bdb7abc0d642df862b7f25691b39b73dba4e2d0f2102f01889"
+    },
+    {
+      "id": "bund/BEG/art_31",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sicherungsnehmerin oder der Sicherungsnehmer kann Bucheffekten, an denen eine Sicherheit bestellt worden ist, unter den im Sicherungsvertrag vereinbarten Voraussetzungen verwerten, indem sie oder er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bucheffekten verkauft und den Erlös mit der gesicherten Forderung verrechnet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "sich die Bucheffekten, deren Wert objektiv bestimmbar ist, aneignet und ihren Wert auf die gesicherte Forderung anrechnet."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Befugnis bleibt auch in einem Zwangsvollstreckungsverfahren gegen die Sicherungsgeberin oder den Sicherungsgeber sowie bei Anordnung von Sanierungs- oder Schutzmassnahmen jeglicher Art bestehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwahrungsstelle hat weder das Recht noch die Pflicht zu prüfen, ob die Voraussetzungen für die Verwertung der Bucheffekten erfüllt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Schreitet die Sicherungsnehmerin oder der Sicherungsnehmer zur Verwertung von Bucheffekten, ohne dass die Voraussetzungen dafür gegeben sind, so haftet sie oder er der Sicherungsgeberin oder dem Sicherungsgeber für den entstandenen Schaden."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "e9ce2bff48811861bb87d303ae72ea612ae2b6e34c9e40a5f24a2e5cad7d2c92"
+    },
+    {
+      "id": "bund/BEG/art_32",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwertung ist der Sicherungsgeberin oder dem Sicherungsgeber anzukündi­gen. Die Sicherungsgeberin oder der Sicherungsgeber kann auf die Ankündigung verzichten, wenn sie oder er eine qualifizierte Anlegerin oder ein qualifizierter Anleger ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sicherungsnehmerin oder der Sicherungsnehmer ist zur Abrechnung ver­pflichtet und hat der Sicherungsgeberin oder dem Sicherungsgeber einen Überschuss herauszugeben."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "71af69acf886093546506bacdab4736dbe2f4a78a3552e9417f5dd01c32a7295"
+    },
+    {
+      "id": "bund/BEG/art_33",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Schäden aus der Verwahrung oder der Übertragung von Bucheffekten haftet die Verwahrungsstelle der Kontoinhaberin oder dem Kontoinhaber nach den Vor­schriften des Obligationenrechts, soweit dieser Artikel nichts anderes bestimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Lässt die Verwahrungsstelle Bucheffekten befugterweise bei einer Drittverwah­rungsstelle verwahren, so haftet sie für gehörige Sorgfalt bei der Wahl und Instruk­tion der Drittverwahrungsstelle sowie bei der Überwachung der dauernden Einhal­tung der Auswahlkriterien."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verwahrungsstelle kann die Haftung nach Absatz 2 ausschliessen, sofern Bucheffekten auf ausdrückliche Weisung der Kontoinhaberin oder des Kontoinha­bers bei einer Drittverwahrungsstelle verwahrt werden, die von der Verwahrungs­stelle dafür nicht empfohlen wurde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verwahrungsstelle haftet für das Verschulden der Drittverwahrungsstelle wie für eigenes Verschulden, wenn diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Verwahrungsstelle selbstständig und dauernd die gesamte Effektenver­waltung und die Abwicklung von Effektengeschäften erledigt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "mit der Verwahrungsstelle eine wirtschaftliche Einheit bildet."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Abweichende Abreden sind nur unter Verwahrungsstellen oder zugunsten der Anlegerin oder des Anlegers wirksam."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "af9b034ebb114454fbe3608fff4040e798ba76d6705e0e045620c50172a02910"
+    },
+    {
+      "id": "bund/BEG/art_34",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung bisherigen Rechts wird im Anhang geregelt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "04b72ef2b9e140cdac1a886a6117816e152d482153b4fd42e962f7aa019f0a9a"
+    },
+    {
+      "id": "bund/BEG/art_35",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Emittenten von Wertrechten, die einem durch eine Verwahrungsstelle geführten Effektenkonto gutgeschrieben sind, haben innerhalb von sechs Monaten nach Inkrafttreten dieses Gesetzes bei einer Verwahrungsstelle das Hauptregister einrich­ten und die Wertrechte darin eintragen zu lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist vor Inkrafttreten dieses Gesetzes über sammelverwahrte Wertpapiere, Global­urkunden oder Wertrechte verfügt worden und genügt diese Verfügung nicht den Vorschriften dieses Gesetzes, so geht das dadurch erworbene Recht jedem nach Inkrafttreten dieses Gesetzes begründeten Recht vor, sofern die Erwerberin oder der Erwerber innerhalb von zwölf Monaten nach Inkrafttreten die nach diesem Gesetz erforderlichen Einträge vornimmt oder vornehmen lässt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8a7cc8072a0ef2c9f8022faec88b69e6db65bf0ef522086b2005d34e6913e081"
+    },
+    {
+      "id": "bund/BEG/art_36",
+      "ebene": "bund",
+      "quelle": "BEG",
+      "erlass": "BEG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/450/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

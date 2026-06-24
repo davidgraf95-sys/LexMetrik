@@ -1,0 +1,1381 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/FINMA_GEBV/art_1",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erhebung der Gebühren und Aufsichtsabgaben durch die Eidgenössische Finanzmarktaufsicht (FINMA);"
+            },
+            {
+              "marke": "b",
+              "text": "die Bildung von Reserven durch die FINMA."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d97b89b88697d5be17913fe5859d72b0807639d0cb031187da48c2d46bc7b414"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_2",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gesamtkosten der FINMA setzen sich zusammen aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Kosten, die ihr aus der Aufsichtstätigkeit in den einzelnen Aufsichtsbereichen direkt entstehen; und"
+            },
+            {
+              "marke": "b",
+              "text": "den Kosten, die sie keinem Aufsichtsbereich direkt zuordnen kann (Strukturkosten)."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "78220d01383af325b184edbd3ec8d106ecfb8dd3de674e25766133d8b0c7bd01"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_3",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA ordnet ihre Kosten so weit als möglich folgenden Aufsichtsbereichen direkt zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dem Bereich der Grossbanken und der mit ihnen als Finanzgruppe verbundenen Gesellschaften (Art. 15 Abs. 2 Bst. a FINMAG);"
+            },
+            {
+              "marke": "abis",
+              "text": "dem Bereich der übrigen Banken und Wertpapierhäuser (Art. 15 Abs. 2 Bst. a FINMAG);"
+            },
+            {
+              "marke": "ater",
+              "text": "…"
+            },
+            {
+              "marke": "aquater",
+              "text": "dem Bereich der Handelsplätze und der Handelssysteme für Distributed Ledger Technology-Effekten (DLT-Handelssysteme) (Art. 15 Abs. 2 Bst. a ter FINMAG);"
+            },
+            {
+              "marke": "aquinquies",
+              "text": "dem Bereich der zentralen Gegenparteien, Zentralverwahrer, Transaktionsregister und Zahlungssysteme (Art. 15 Abs. 2 Bst. a ter FINMAG);"
+            },
+            {
+              "marke": "a",
+              "text": "dem Bereich der Personen nach Artikel 1 b des Bankengesetzes vom 8. November 1934 (BankG);"
+            },
+            {
+              "marke": "b",
+              "text": "dem Bereich der kollektiven Kapitalanlagen (Art. 15 Abs. 2 Bst. a bis und b FINMAG);"
+            },
+            {
+              "marke": "c",
+              "text": "dem Bereich der Versicherungsunternehmen (Art. 15 Abs. 2 Bst. c FINMAG);"
+            },
+            {
+              "marke": "d",
+              "text": "dem Bereich der ungebundenen Versicherungsvermittlerinnen und Versicherungsvermittler (Art. 15 Abs. 2 Bst. c FINMAG);"
+            },
+            {
+              "marke": "e",
+              "text": "dem Bereich der Selbstregulierungsorganisationen (Art. 15 Abs. 2 Bst. d FINMAG); und"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            },
+            {
+              "marke": "h",
+              "text": "dem Bereich der Aufsichtsorganisationen nach dem 3. Titel des FINMAG (Art. 15 Abs. 2 Bst. e FINMAG)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie teilt die Strukturkosten im Verhältnis der direkt zugeordneten Kosten auf die Aufsichtsbereiche auf."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d212f4d2776e4e250654060ed0ad834a7b2c7c84c99a38a10b55a7873ccba579"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_4",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die einem Aufsichtsbereich zugeordneten Kosten werden vorab durch die Gebühreneinnahmen aus dem betreffenden Aufsichtsbereich gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten des Aufsichtsbereichs, die nicht durch Gebühreneinnahmen gedeckt werden, und die durch den betreffenden Aufsichtsbereich zu äufnenden Reserven sind durch die Aufsichtsabgaben zu decken."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a6dd25abfa081e01d7c92feb9144fc452b5fd91e672ff510ceda91fcff6f78ab"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_5",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gebührenpflichtig ist, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Verfügung veranlasst;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Aufsichtsverfahren veranlasst, das nicht mit einer Verfügung endet oder das eingestellt wird;"
+            },
+            {
+              "marke": "bbis",
+              "text": "als Beaufsichtigte oder Beaufsichtigter nach Massgabe der Finanzmarktgesetze durch die FINMA geprüft wird;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Dienstleistung der FINMA beansprucht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Gebühren bezahlen Bundes-, Kantons- und Gemeindebehörden für Leistungen der FINMA im Bereich der Amts- und Rechtshilfe."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "bfca03a33e8975f541e82991d70ae9e970a25daf51c6bff988021ae9116c5e0b"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_6",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Soweit die vorliegende Verordnung keine besondere Regelung enthält, gelten die Bestimmungen der Allgemeinen Gebührenverordnung vom 8. September 2004 (AllgGebV)."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "cf5b3dff6b01d8ca0f7d32856339612434e87eb3f248aef1a22009a5d5b0c612"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_7",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Auslagen gelten auch die Kosten für gesetzlich vorgeschriebene oder von der FINMA angeordnete Veröffentlichungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Reproduktionen gelten die Ansätze im Anhang."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d4b7df2694892b8e35a44782515d7072f0422035097c6a7c06f87f4fe5a8141f"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_8",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gebührenbemessung gelten die Ansätze im Anhang."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist im Anhang ein Rahmen festgelegt, so setzt die FINMA die konkret zu bezahlende Gebühr innerhalb des Rahmens anhand des durchschnittlichen Zeitaufwandes für gleichartige Verrichtungen und der Bedeutung der Sache für die gebührenpflichtige Person fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Verfügungen, Aufsichtsverfahren, Prüfungen und Dienstleistungen, für die im Anhang kein Ansatz festgelegt ist, bemisst sich die Gebühr nach dem Zeitaufwand und der Bedeutung der Sache für die gebührenpflichtige Person."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Stundenansatz für die Gebühren beträgt je nach Funktionsstufe der ausführenden Person innerhalb der FINMA und Bedeutung der Sache für die gebührenpflichtige Person 100–500 Franken."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Verfügungen, Aufsichtsverfahren und Prüfungen, die einen aussergewöhnlichen Umfang oder besondere Schwierigkeiten aufweisen, kann die Gebühr anstatt nach dem Ansatz im Anhang nach Zeitaufwand abgerechnet werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Für die Erteilung von telefonischen Auskünften kann die FINMA Mehrwertdienste einrichten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a8708374fdc7c137e8507f38af62fb544f597911ab8b4877be0820562c763610"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_9",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA kann einen Zuschlag von bis zu 50 Prozent der ordentlichen Gebühr für Verfügungen, Aufsichtsverfahren, Prüfungen und Dienstleistungen erheben, die sie auf Ersuchen hin dringlich oder ausserhalb der normalen Arbeitszeit erlässt, durchführt oder verrichtet."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3cc5928fb357d211afe6992e88dcf54889e724079e9bd8e41320db3548193365"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_10",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für Prüfungen und Aufsichtsverfahren, die ohne Verfügung enden, richten sich Rechnungsstellung und Gebührenverfügung nach den Regeln für Dienstleistungen gemäss Artikel 11 AllgGebV."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f1af16206f75160a39e99fc45ad7337e8c5dca277286f09b3871770881a9dfe3"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_11",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA erhebt von den Beaufsichtigten jährlich eine Aufsichtsabgabe."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsabgabe wird pro Aufsichtsbereich erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie bemisst sich gestützt auf die Gesamtkosten der FINMA für das dem Abgabejahr vorangegangene Jahr und auf die zu äufnenden Reserven."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3b1d1e59818b49ea8c10706b3b9ba569f84cb010185ed3ba6300ab7df76c4971"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_12",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsichtsabgabe setzt sich in allen Aufsichtsbereichen aus einer fixen Grundabgabe und einer variablen Zusatzabgabe zusammen, mit Ausnahme desjenigen der ungebundenen Versicherungsvermittlerinnen und -vermittler."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zusatzabgabe deckt die Kosten, soweit diese nicht aus dem Ertrag der Grundabgabe gedeckt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "19029e02fe71523b3d251f2ebccb02f96e3153e96c27693a3afa17a60a3b6b22"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_13",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabepflicht beginnt mit der Erteilung der Bewilligung, der Zulassung oder der Anerkennung und endet mit deren Entzug oder mit der Entlassung aus der Aufsicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Beginnt oder endet die Abgabepflicht nicht mit dem Rechnungsjahr, so ist die Abgabe pro rata temporis geschuldet."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Rückerstattungsanspruch gestützt auf Absatz 2 besteht bei der Beendigung der Abgabepflicht erst ab einem Betrag von 1 000 Franken."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "723fe6b7044295dcbaf527239c618a70b861b16d8f3f8b68351b7ca77f9c4537"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_14",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA erhebt die Aufsichtsabgabe gestützt auf ihre Rechnung für das dem Abgabejahr vorangegangene Jahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erstellt nach Abschluss ihrer Jahresrechnung für jeden Abgabepflichtigen eine Rechnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Ergibt sich in der Rechnung der FINMA eine Über- oder Unterdeckung, so wird der entsprechende Betrag pro Aufsichtsbereich auf das nächste Rechnungsjahr über tragen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "57faa4f43df74ed0f5b9440d6e2b87644bd0dc14f19df9ef363aec9121139a0d"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_15",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA stellt für die Abgaben Rechnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Abgabepflichtigen mit der Schlussrechnung nicht einverstanden, so können sie eine beschwerdefähige Verfügung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Fälligkeit, Stundung und Verjährung richten sich nach den Bestimmungen der AllgGebV."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1c5a76328d09925ff44c2ac9166cdd73e55e8e535fb28fcbd2f46cdfabcd61d7"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_16",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundabgabe beträgt pro Jahr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "15 000 Franken je Bank und je Pfandbriefzentrale,"
+            },
+            {
+              "marke": "2",
+              "text": "10 000 Franken je Wertpapierhaus,"
+            },
+            {
+              "marke": "3",
+              "text": "150 000 Franken pauschal für mehr als zehn nach Artikel 17 Buchstabe a der Bankenverordnung vom 30. April 2014 (BankV) zusammengeschlossene Banken und Wertpapierhäuser;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Pfandbriefzentralen entrichten einzig die Grundabgabe."
+        },
+        {
+          "absatz": "3",
+          "text": "Die jährliche Grundabgabe nach Absatz 1 wird um 3000 Franken je Vermögensverwalter oder Trustee erhöht, für den nach Artikel 83 Absatz 1 der Finanzinstitutsverordnung vom 6. November 2019 die laufende Aufsicht ausschliesslich im Rahmen der Gruppenaufsicht ausgeübt wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a4dc847753ef10f76f5ae7be081834fb9aff782c099e3e54d654e38e31678756"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_17",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag, der über die Zusatzabgabe gedeckt werden muss, wird in den beiden Bereichen der Grossbanken und der mit ihnen als Finanzgruppe verbundenen Gesellschaften sowie der übrigen Banken und Wertpapierhäuser je zur Hälfte über die Zusatzabgabe nach Bilanzsumme und über die Zusatzabgabe nach Effektenumsatz gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wertpapierhäuser und Banken mit Wertpapierhausstatus müssen die Zusatzabgabe nach Bilanzsumme und diejenige nach Effektenumsatz entrichten. Banken ohne Wertpapierhausstatus müssen nur die Zusatzabgabe nach Bilanzsumme entrichten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "71b99844ea349f679b6e3dee35ac06a9c1738b57126f6ecd99259ae14efeca71"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_18",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung der Zusatzabgabe nach Bilanzsumme ist die Bilanzsumme des Abgabepflichtigen massgebend, wie sie die genehmigte Jahresrechnung des dem Abgabejahr vorangehenden Jahres ausweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung der Zusatzabgabe nach Effektenumsatz ist das Gesamtvolumen der Abschlüsse des dem Abgabejahr vorangehenden Jahres massgebend, die den Handelsplätzen gemeldet werden müssen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fcbae9c7fa90c2ebc088db768493f7d8a1fe32d0f2fb39cdd8c6cbd7fb54b309"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ausländische Banken und Wertpapierhäuser müssen Grundabgabe und Zusatzabgabe nur entrichten, wenn sie in der Schweiz eine Zweigniederlassung betreiben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "552c93908b09d8f0fa0c1e5d4aa26d20e7cf7807f9461f8d6e27e473ba629cf1"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_a",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundabgabe für Finanzmarktinfrastrukturen beträgt pro Jahr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "550 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von über 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "225 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von 25–50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "100 000 Franken je DLT-Handelssystem mit einer Bilanzsumme von weniger als 25 Millionen Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für kleine DLT-Handelssysteme nach Artikel 58 k der Finanzmarktinfrastrukturverordnung vom 25. November 2015 beträgt die Grundabgabe pro Jahr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sie keine Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen: 7 500 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn sie Dienstleistungen nach Artikel 73 a Absatz 1 Buchstabe b oder c FinfraG erbringen: 50 000 Franken."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1f627f96e0af650e1875f38ae47ca718258a756cfe4e7d465c09d0b14e89a37f"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_b",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Betrag, der über die Zusatzabgaben gedeckt werden muss, wird wie folgt gedeckt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Bereich der Finanzmarktinfrastrukturen gemäss Artikel 3 Absatz 1 Buchstabe a quater : zu zwei Zehnteln über die Zusatzabgabe nach Bilanzsumme und zu acht Zehnteln über die Zusatzabgabe nach Effektenumsatz;"
+            },
+            {
+              "marke": "b",
+              "text": "im Bereich der Finanzmarktinfrastrukturen gemäss Artikel 3 Absatz 1 Buchstabe a quinquies : zu zwei Zehnteln über die Zusatzabgabe nach Bilanzsumme und zu acht Zehnteln über die Zusatzabgabe nach Bruttoertrag."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "07bde72283a5383845fefb5fe0cbe9b384fdaedaa7b7be8bb8c5b69809de1fc2"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_c",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_c",
+      "artikelLabel": "Art. 19c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung der Zusatzabgabe nach Bilanzsumme und Bruttoertrag sind die Bilanzsumme und der Bruttoertrag des Abgabepflichtigen massgebend, wie sie die genehmigte Jahresrechnung des dem Abgabejahr vorangehenden Jahres ausweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung der Zusatzabgabe nach Effektenumsatz sind die Anzahl Transaktionen und das Gesamtvolumen des dem Abgabejahr vorangehenden Jahres massgebend, die den Börsen nach der Finanzmarktinfrastrukturverordnung-FINMA vom 3. Dezember 2015 gemeldet werden müssen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c5405683f0f1ed098bc74b6f84105f9a034635de480f97ec8b1749ff2c837cc3"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_d",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_d",
+      "artikelLabel": "Art. 19d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bruttoertrag umfasst sämtliche Erlöse und Erträge nach Artikel 959 b des Obligationenrechts."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "63342c5aae6f55a1688c3b2f48e608ff31f3d5fb663a3f22b6d97da57331f1db"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_e",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_e",
+      "artikelLabel": "Art. 19e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Grundabgabe beträgt 3000 Franken je Person nach Artikel 1 b BankG pro Jahr."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e5669ff99111da744af29f3ed3ae5141f399b30ae20515bae7337ed1b358ecbf"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_19_f",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "19_f",
+      "artikelLabel": "Art. 19f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag, der über die Zusatzabgabe gedeckt werden muss, wird zu zwei Zehnteln über die Zusatzabgabe nach Bilanzsumme und zu acht Zehnteln über die Zusatzabgabe nach Bruttoertrag gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung der Zusatzabgabe nach Bilanzsumme und Bruttoertrag sind die Bilanzsumme und der Bruttoertrag des Abgabepflichtigen massgebend, wie sie die genehmigte Jahresrechnung des dem Abgabejahr vorangehenden Jahres ausweist."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bruttoertrag umfasst sämtliche Erlöse und Erträge nach Artikel 959 b des Obligationenrechts. Massgebend ist der Bruttoertrag ohne Abzug von Ertragsminderungen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_19_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "c027bda2116de7b66b84695752247e4d4e00c49c87233e94260b0c33d977d6bc"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_20",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundabgabe beträgt pro Jahr:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "20 000 Franken je Verwalter von Kollektivvermögen mit Bruttoertrag von mindestens 50 Millionen Franken,"
+            },
+            {
+              "marke": "2",
+              "text": "10 000 Franken je Verwalter von Kollektivvermögen mit Bruttoertrag zwischen 5 Millionen und 50 Millionen Franken,"
+            },
+            {
+              "marke": "3",
+              "text": "5000 Franken je Verwalter von Kollektivvermögen mit Bruttoertrag von weniger als 5 Millionen Franken;"
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Verfügt eine Fondsleitung oder ein Verwalter von Kollektivvermögen über eine Zusatzbewilligung als Trustee, so entspricht die Grundabgabe der jährlichen Grundabgabe nach Absatz 1 Buchstabe a oder g zuzüglich 5000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundabgabe betreffend schweizerische kollektive Kapitalanlagen wird entrichtet von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Fondsleitung für die von ihr verwalteten Anlagefonds;"
+            },
+            {
+              "marke": "b",
+              "text": "der SICAV;"
+            },
+            {
+              "marke": "c",
+              "text": "der Kommanditgesellschaft für kollektive Kapitalanlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "der SICAF."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Grundabgabe betreffend ausländische kollektive Kapitalanlagen wird von deren Vertreterinnen und Vertreter entrichtet (Art. 123 Abs. 1 des Kollektivanlagengesetzes vom 23. Juni 2006, KAG). Werden für eine ausländische kollektive Kapitalanlage mehrere Vertreterinnen und Vertreter bestimmt, so haften sie solidarisch."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bruttoertrag umfasst sämtliche Erlöse und Erträge nach Artikel 959 b des Obligationenrechts."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "fcbe6b3277cdba38a81a5da8c63aad881278044fb71e937f4e7b7e4e3eab58db"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_21",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zusatzabgabe wird je zur Hälfte geleistet von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den schweizerischen kollektiven Kapitalanlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Fondsleitungen, den Verwaltern von Kollektivvermögen, den selbstverwalteten SICAV und den Depotbanken schweizerischer kollektiver Kapitalanlagen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zusatzabgabe für schweizerische kollektive Kapitalanlagen wird entrichtet von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Fondsleitung für die von ihr verwalteten Anlagefonds;"
+            },
+            {
+              "marke": "b",
+              "text": "der SICAV;"
+            },
+            {
+              "marke": "c",
+              "text": "der Kommanditgesellschaft für kollektive Kapitalanlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "der SICAF."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4f58f0fd6f926594db6ee1213ec8c310a1bd918ed96e4ff67033fa53246deb1b"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_22",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung der Zusatzabgabe für schweizerische kollektive Kapitalanlagen ist das verwaltete Vermögen (Nettovermögen) mit Stand am 31. Dezember des dem Abgabejahr vorangehenden Jahres massgebend, wie es der SNB gemeldet werden musste."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zusatzabgabe beträgt höchstens 50 000 Franken. Diese Obergrenze gilt bei Umbrella-Fonds pro Teilvermögen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2e5e301d677a30b5736dbeb862746e6da0e9ef21a4942c90ef563a45ac3bf5c5"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_23",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fondsleitungen, Verwalter von Kollektivvermögen und selbstverwaltete SICAV entrichten die Zusatzabgabe nach dem Bruttoertrag und der Betriebsgrösse."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung der Zusatzabgabe sind je zur Hälfte der Bruttoertrag, berechnet nach Artikel 959 b des Obligationenrechts, und die Betriebsgrösse gemäss dem genehmigten Rechnungsabschluss des dem Abgabejahr vorangehenden Jahres massgebend. Die Betriebsgrösse entspricht den Fixkosten."
+        },
+        {
+          "absatz": "3",
+          "text": "Depotbanken schweizerischer kollektiver Kapitalanlagen entrichten die Zusatzabgabe nach dem Bruttoertrag. Dieser entspricht der Depotbankkommission."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "828db33e1d2181e0aa11549db8b3568bc30de7a473abc720538893c5f47de32d"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_24",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundabgabe beträgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "6000 Franken je Versicherungsunternehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "3000 Franken je Krankenkasse, die nach dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 (VAG) der FINMA unterstellt ist;"
+            },
+            {
+              "marke": "c",
+              "text": "100 000 Franken je Versicherungsgruppe;"
+            },
+            {
+              "marke": "d",
+              "text": "100 000 Franken je Versicherungskonglomerat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA legt jährlich aufgrund einer proportionalen Zurechnung der von den Versicherungsunternehmen und den Krankenkassen zu tragenden Aufsichtskosten zum Prämienvolumen der einzelnen Beaufsichtigten fest, bis zu welcher Prämiensumme einzig die Grundabgabe zu bezahlen ist. Für die Berechnung sind die Prämieneinnahmen des dem Abgabejahr vorangehenden Jahres gemäss den genehmigten Jahresrechnungen der Beaufsichtigten massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Grundabgabe von Versicherungsgruppen und Versicherungskonglomeraten wird vom Unternehmen, welches als Ansprechpartner nach Artikel 191 Absatz 3 der Aufsichtsverordnung vom 9. November 2005 (AVO) bezeichnet ist, entrichtet."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "79e68f1d9327ed7b0fd251cde0a52c41b44adda4942925db197f674905ca19e0"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_25",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag, der über die Zusatzabgabe gedeckt werden muss, wird zu neun Zehnteln von den Versicherungsunternehmen und Krankenkassen, die nach dem VAG der Aufsicht der FINMA unterstellt sind, und zu einem Zehntel von den Versicherungsgruppen und Versicherungskonglomeraten gedeckt."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Versicherungsunternehmen und Krankenkassen bezahlen eine Zusatzabgabe, wenn ihre Prämieneinnahmen die von der FINMA nach Artikel 24 Absatz 2 festgelegte Summe übersteigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die von einem Versicherungsunternehmen oder einer Krankenkasse zu tragende Zusatzabgabe berechnet sich nach seinem oder ihrem Anteil an den gesamten Prämieneinnahmen. Berechnungsgrundlage ist die genehmigte Jahresrechnung des dem Abgabejahr vorangehenden Jahres."
+        },
+        {
+          "absatz": "3",
+          "text": "Der massgebliche Betrag der Prämieneinnahmen entspricht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Versicherungsunternehmen, die das direkte Versicherungsgeschäft betreiben: 1. den Prämieneinnahmen aus dem direkten Versicherungsgeschäft in der Schweiz, abzüglich des zedierten Geschäfts,"
+            },
+            {
+              "marke": "2",
+              "text": "den Prämieneinnahmen aus dem direkten Versicherungsgeschäft, das das Unternehmen von der Schweiz aus selbst im Ausland tätigt (freier Dienstleistungsverkehr), abzüglich des zedierten Geschäfts, und"
+            },
+            {
+              "marke": "3",
+              "text": "den Prämieneinnahmen aus dem direkten Versicherungsgeschäft im Ausland durch Vermittlung einer Niederlassung im Ausland, abzüglich des zedierten Geschäfts;"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die von einer Versicherungsgruppe oder einem Versicherungskonglomerat zu tragende Zusatzabgabe berechnet sich nach ihrem Anteil an der Gesamtzahl aller zu einer Gruppe oder Konglomerat gehörenden juristischen Einheiten mit eigener Rechtspersönlichkeit. Berechnungsgrundlage ist die von den Prüfgesellschaften im Rahmen der Konzernberichterstattung im dem Abgabejahr vorangehenden Jahr gemeldeten Einheiten."
+        },
+        {
+          "absatz": "5",
+          "text": "Abgabepflichtig ist das Unternehmen, welches nach Artikel 191 Absatz 3 der AVO als Ansprechpartner bezeichnet ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9768200ec63c942eee66fb9b5b1cc98fc70c41f82b49e9d993a7b07ca5dbe0c3"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_26",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kosten für die gebundenen Versicherungsvermittlerinnen und -vermittler nach Artikel 43 Absatz 2 VAG werden von den Versicherungsunternehmen und den Krankenkassen getragen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d6d94bf22728b2cc0eec4f7783ccc7a97015f56cbb39ab023315e21da3170c77"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_27",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ungebundenen Versicherungsvermittlerinnen und Versicherungsvermittler bezahlen pro Registereintrag eine Aufsichtsabgabe."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Aufsichtsabgabe wird so bemessen, dass deren Summe die gesamten Kosten des Aufsichtsbereichs der ungebundenen Versicherungsvermittlerinnen und Versicherungsvermittler deckt. Sie wird gleichmässig auf die Anzahl Registereinträge verteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Massgebend sind die Registereinträge am 31. Dezember des dem Abgabejahr vorangehenden Jahres."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6c74675533f024c239adc83d497042b9e5dc17e166b408b953166ca10a3376b1"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_28",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Grundabgabe beträgt 3000 Franken je Selbstregulierungsorganisation."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6169716e66700185c72e0a1804629b03db89b6ac3a317f742b652c330f369f89"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_29",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag, der über die Zusatzabgabe gedeckt werden muss, wird je zur Hälfte über die Zusatzabgabe nach Bruttoertrag und über die Zusatzabgabe nach der Anzahl aller Finanzintermediäre, die einer Selbstregulierungsorganisation angeschlossen sind, gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die von einer Selbstregulierungsorganisation zu tragende Zusatzabgabe berechnet sich nach ihrem Anteil an der Summe der Bruttoerträge aller Selbstregulierungsorganisationen und nach ihrem Anteil an der Gesamtanzahl aller Finanzintermediäre, die einer Selbstregulierungsorganisation angeschlossen sind."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "56d0ae99d9d5824c9d99dc515cbfb05aa7fd3f24ebc9e904ef8adafa8829d7e8"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_30",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Anzahl der einer Selbstregulierungsorganisation angeschlossenen Finanzintermediäre ist der Stand am 31. Dezember des dem Abgabejahr vorangehenden Jahres massgebend."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d06b546cf9fea8388293179c4e25c8856f281c662e927d64f4c5fe6040519776"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_31",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bruttoertrag umfasst sämtliche n Erlöse und Erträge nach Artikel 959 b des Obligationenrechts abzüglich der Erträge aus:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Schulungen, welche die Selbstregulierungsorganisationen anbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "Revisionen nach dem Geldwäschereigesetz vom 10. Oktober 1997 (GwG);"
+            },
+            {
+              "marke": "c",
+              "text": "Bussen und Konventionalstrafen;"
+            },
+            {
+              "marke": "d",
+              "text": "einer Tätigkeit als Aufsichtsorganisation nach dem 3. Titel des FINMAG."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Massgebend ist das Ergebnis des Rechnungsabschlusses des dem Abgabejahr vorangehenden Jahres."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Selbstregulierungsorganisationen, die in die Geschäftsstrukturen eines Berufsverbands oder einer Unternehmung integriert sind und die keine selbstständige Rechnung führen, wird anstelle des Bruttoertrags der Bruttoaufwand zur Berechnung der Aufsichtsabgabe berücksichtigt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b693b437a1a72f4a8b036ec7a0ddbd3a0d33430f5de2bb5ebf74164f2b6f6f61"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_31_a",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "31_a",
+      "artikelLabel": "Art. 31a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Grundabgabe beträgt 3000 Franken je Aufsichtsorganisation und Jahr."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_31_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f32899deff1ba973a8bb2cc420f7aa4df39300cb26034a68d8c3dd0db6e07559"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_31_b",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "31_b",
+      "artikelLabel": "Art. 31b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Betrag, der über die Zusatzabgabe gedeckt werden muss, wird nach der Anzahl aller einer Aufsichtsorganisation unterstellten Vermögensverwalter und Trustees gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die von einer Aufsichtsorganisation zu tragende Zusatzabgabe berechnet sich nach ihrem Anteil an der Gesamtzahl aller Vermögensverwalter und Trustees, die von einer Aufsichtsorganisation beaufsichtigt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Anzahl der von einer Aufsichtsorganisation beaufsichtigen Vermögensverwalter und Trustees ist der Stand am 31. Dezember des dem Abgabejahr vorangehenden Jahres massgebend."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_31_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "dfc8f591ab3117b2ff8be54d1c23c96335fdc474cdae1356a62413957b98baa8"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_32_34",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "32_34",
+      "artikelLabel": "Art. 3234",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_32_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_35_36",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "35_36",
+      "artikelLabel": "Art. 3536",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_35_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_37",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA bildet jährlich pro Aufsichtsbereich Reserven im Umfang von 10 Prozent ihrer jährlichen Gesamtkosten bis die Gesamtreserve ein Jahresbudget erreicht oder wieder erreicht hat."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b2bc75421af2bd4f6b168a412c877fbef485d4982f75c2d70ad6ec6ffd1a2328"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_38",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verordnung vom 2. Dezember 1996 über die Erhebung von Abgaben und Gebühren durch die Eidgenössische Bankenkommission;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verordnung vom 26. Oktober 2005 über die Aufsichtsabgabe und die Gebühren der Kontrollstelle für die Bekämpfung der Geldwäscherei."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "16ee299eb0e7872dc3561881839839005d6d8292935d1390d7953dfe064fea1d"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_39",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Erhebung von Gebühren für Verfahren, die bei Inkrafttreten dieser Verordnung hängig sind, gilt das bisherige Recht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "2363a9743d54e77ee64965272832cad236ab56449d0589777aae24f495c04868"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_39_a",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "39_a",
+      "artikelLabel": "Art. 39a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_39_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_39_b",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "39_b",
+      "artikelLabel": "Art. 39b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Finanzmarktinfrastrukturen nach Artikel 159 Absatz 1 des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 gelten für die Erhebung von Grund- und Zusatzabgaben ab dem 1. Januar 2016 die Artikel 19 a– 19 d ."
+        },
+        {
+          "absatz": "2",
+          "text": "Finanzmarktinfrastrukturen nach Artikel 159 Absatz 2 des Finanzmarktinfrastrukturgesetzes unterliegen der Abgabepflicht ab dem Zeitpunkt ihrer Anerkennung oder Bewilligung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_39_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7263cd3f11ef3e3b5896e793c07a25edd67d87ff8bb59044c36d74a89d68df8e"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_39_c",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "39_c",
+      "artikelLabel": "Art. 39c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA evaluiert die Grundabgaben nach Artikel 19 a Absatz 1 Buchstaben f und g zwei Jahre nach Inkrafttreten dieser Änderung und erstattet dem Bundesrat Bericht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_39_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "403f177fc6af95882a59cbf507b627aec15fe560ef5ba2045c862d1fd95c8108"
+    },
+    {
+      "id": "bund/FINMA_GEBV/art_40",
+      "ebene": "bund",
+      "quelle": "FINMA_GEBV",
+      "erlass": "FINMA-GebV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 2009 in Kraft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/749/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "d89e879f408e760cc734fdc23f9f29c91b7a5c4015e29139f7869416f3aff5d9"
+    }
+  ]
+}

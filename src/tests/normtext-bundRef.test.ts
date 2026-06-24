@@ -63,10 +63,11 @@ describe('bundSnapshotRef', () => {
   });
 
   it('nur-live-link-Stub bleibt null (kein FEDLEX-Eintrag → kein Popover)', () => {
-    // Stubs (BUND_STUBS, z.B. MStG) stehen NICHT in FEDLEX → erkenneFedlexGesetz
+    // Stubs (BUND_STUBS, z.B. PrHG) stehen NICHT in FEDLEX → erkenneFedlexGesetz
     // liefert null → bundSnapshotRef null. Nur Volltext-Erlasse (FEDLEX + Snapshot
     // im Register) sind im abgeleiteten Map → Live-Link bleibt für Stubs.
-    expect(bundSnapshotRef('Art. 1 MStG')).toBeNull();
+    // (MStG war hier Beispiel-Stub bis Punkt 12 Batch 3, jetzt Volltext.)
+    expect(bundSnapshotRef('Art. 1 PrHG')).toBeNull();
   });
 
   // StGB/StG erschlossen (16.6.2026): FEDLEX-Key → Snapshot-quelle gemappt.

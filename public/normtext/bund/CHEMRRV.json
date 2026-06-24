@@ -1,0 +1,934 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/CHEMRRV/art_1",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "verbietet den Umgang mit den in den Anhängen geregelten besonders gefährlichen Stoffen, Zubereitungen und Gegenständen oder schränkt ihn ein;"
+            },
+            {
+              "marke": "b",
+              "text": "regelt die persönlichen und fachlichen Voraussetzungen für den Umgang mit bestimmten besonders gefährlichen Stoffen, Zubereitungen und Gegenständen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Stoffe, Zubereitungen und Gegenstände, die nach Artikel 7 Absatz 6 USG Abfälle sind, gelten unter Vorbehalt spezifischer Entsorgungsvorschriften dieser Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Abfallverordnung vom 4. Dezember 2015;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verordnung vom 22. Juni 2005 über den Verkehr mit Abfällen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Verordnung vom 14. Januar 1998 über die Rückgabe, die Rücknahme und die Entsorgung elektrischer und elektronischer Geräte."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Verordnung gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Transport von Stoffen, Zubereitungen und Gegenständen auf der Strasse, der Schiene, dem Wasser, in der Luft und in Rohrleitungsanlagen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Durchfuhr von Stoffen, Zubereitungen und Gegenständen unter Zollüberwachung, sofern dabei keine Be- oder Verarbeitung erfolgt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a828e125cbd36ca5d245772d88a879879a5c23656466b6845c32cc2cb7b7b279"
+    },
+    {
+      "id": "bund/CHEMRRV/art_2",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Unter Vorbehalt spezifischer Begriffsbestimmungen in den Anhängen bedeuten in dieser Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Herstellerin: jede natürliche oder juristische Person , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt; als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung unter eigenem Handelsnamen oder für einen anderen Verwendungszweck beruflich oder gewerblich abgibt; lässt eine Person einen Stoff, eine Zubereitung oder einen Gegenstand durch einen Dritten in der Schweiz herstellen, so gilt sie als alleinige Herstellerin, sofern sie in der Schweiz Wohnsitz oder Geschäftssitz hat;"
+            },
+            {
+              "marke": "b",
+              "text": "H ändlerin: jede natürliche oder juristische Person, die Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7725c1224b1383df6ce203880bbce21f6a239c697a5a3895b2e81983ef94b05c"
+    },
+    {
+      "id": "bund/CHEMRRV/art_3",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einschränkungen und Verbote des Umgangs mit bestimmten Stoffen, Zubereitungen und Gegenständen sowie die Ausnahmebewilligungen dazu sind in den Anhängen geregelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausnahmebewilligungen nach den Anhängen werden nur Personen erteilt, die ihren Wohn- oder Geschäftssitz in der Schweiz haben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "46cee4208947487a672282ce37fc880c4f7531c99b8b5714253c26de96b65663"
+    },
+    {
+      "id": "bund/CHEMRRV/art_3_a",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besondere Kennzeichnungen müssen gut lesbar und dauerhaft sein. Sie müssen in mindestens einer Amtssprache des Ortes erfolgen, an dem der Stoff, die Zubereitung, das Gerät oder der Gegenstand an Verwenderinnen abgegeben oder die Anlage installiert wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Einvernehmen mit einzelnen beruflichen Verwenderinnen oder Verwendern können in einer anderen Amtssprache oder in Englisch gekennzeichnet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Stoff oder eine Zubereitung für die Abgabe an die beruflichen Verwenderinnen und Verwender;"
+            },
+            {
+              "marke": "b",
+              "text": "Geräte und Anlagen für berufliche Verwenderinnen oder Verwender."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Als Amtssprachen gelten Deutsch, Französisch und Italienisch."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_3_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1d5a27e13622802841199b04c9c457f1a9fa1b65712ef7c83590dfca0e5fef5d"
+    },
+    {
+      "id": "bund/CHEMRRV/art_4",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für folgende Anwendungen ist eine Bewilligung der nachstehenden Behörden nötig:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "kopf": [
+              "Anwendung",
+              "Bewilligungsbehörde"
+            ],
+            "zeilen": [
+              [
+                "a. die berufliche oder gewerbliche Anwendung von Mitteln zum Schutz von Pflanzen gegen Nagetiere (Rodentizide) bei überbetrieblichem oder maschinellem Einsatz",
+                "kantonale Behörde; für regionale und überregionale Anwendungen im Einvernehmen mit dem Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV), dem Bundesamt für Landwirtschaft (BLW) und dem Bundesamt für Umwelt (BAFU)"
+              ],
+              [
+                "b. das Versprühen und Ausstreuen von Pflanzenschutzmitteln, Biozidprodukten und Düngern aus der Luft",
+                "Bundesamt für Zivilluftfahrt im Einvernehmen mit dem Bundesamt für Gesundheit (BAG), dem BLV, dem BLW, dem Staatssekretariat für Wirtschaft (SECO) und dem BAFU"
+              ],
+              [
+                "c. die Anwendung von Pflanzenschutzmitteln und Düngern im Wald, soweit sie nicht in eine Bewilligung nach Buchstabe a oder b eingeschlossen ist",
+                "kantonale Behörde"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "78a22eecbe3b4a273303361600255031477e25673ab1375de94e6cdf61a64dda"
+    },
+    {
+      "id": "bund/CHEMRRV/art_4_a",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "4_a",
+      "artikelLabel": "Art. 4a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Anwendungsbewilligung nach Artikel 4 Buchstabe b ist nicht erforderlich für das Ausbringen von Organismen mit einem unbemannten Luftfahrzeug."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_4_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "dedaced68c12d461293729e3a395c2a1a16e1c5ffdd88ee8da1164666778725e"
+    },
+    {
+      "id": "bund/CHEMRRV/art_5",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Anwendungsbewilligung nach Artikel 4 Buchstabe a oder c wird erteilt, wenn bei der geplanten Anwendung keine Gefährdung der Umwelt zu befürchten ist. Sie wird zeitlich befristet und geografisch begrenzt."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Eine Anwendungsbewilligung nach Artikel 4 Buchstabe b wird zeitlich befristet, geografisch begrenzt und nur erteilt, wenn bei der geplanten Anwendung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Ausbringen vom Boden aus nicht praktikabel oder das Ausbringen aus der Luft mit Vorteilen für den Schutz der menschlichen Gesundheit oder der Umwelt verbunden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "das Luftfahrtunternehmen Luftfahrzeuge und Ausrüstungen mit der besten verfügbaren Technologie zum Schutz der menschlichen Gesundheit und der Umwelt einsetzt; und"
+            },
+            {
+              "marke": "c",
+              "text": "keine Gefährdung der menschlichen Gesundheit und der Umwelt zu befürchten ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Anwendungsbewilligungen werden nur Personen erteilt, die ihren Wohn- oder Geschäftssitz in der Schweiz, in einem Mitgliedstaat der Europäischen Union (EU) oder der Europäischen Freihandelsassoziation (EFTA) haben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b401665bff4b28b2a41fd7fd9882095268873d702178a5365c1566da7780ece1"
+    },
+    {
+      "id": "bund/CHEMRRV/art_6",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist eine Bundesbehörde für die Bewilligung zuständig, so hört sie vor dem Entscheid die Behörde des betreffenden Kantons insbesondere dazu an, ob ihres Erachtens die Bewilligungsvoraussetzungen erfüllt sind und welche Nebenbestimmungen in einer allfälligen Bewilligung vorgesehen werden sollten. Die Bundesbehörde teilt der Behörde des Kantons ihren Entscheid mit."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "08b68477a4d2a8ea73506c0f6c6513b418bbde87aae2f2f22590bffd01cc0f05"
+    },
+    {
+      "id": "bund/CHEMRRV/art_7",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die folgenden Tätigkeiten dürfen beruflich oder gewerblich nur von natürlichen Personen mit einer entsprechenden Fachbewilligung oder als gleichwertig anerkannten Qualifikation oder unter Anleitung solcher Personen ausgeübt werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Herstellen, Installieren, Warten oder Entsorgen von Geräten oder Anlagen, die der Kühlung, Klimatisierung oder Wärmegewinnung dienen,"
+            },
+            {
+              "marke": "2",
+              "text": "Entsorgen von Kältemitteln."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schädlingsbekämpfung mit Begasungsmitteln darf nur von natürlichen Personen mit einer entsprechenden Fachbewilligung oder als gleichwertig anerkannten Qualifikation durchgeführt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement regelt die Einzelheiten der Fachbewilligungen. Es kann Ausnahmen von der Bewilligungspflicht vorsehen. Es berücksichtigt dabei die Schutzziele."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "adf194ac4e1580f2335a01ae3594abca6a69a578b44e3bfd96cb56acce841fea"
+    },
+    {
+      "id": "bund/CHEMRRV/art_8",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Fachbewilligung wird der Person ausgestellt, die in einer Fachprüfung die für ihre Tätigkeit notwendigen Kenntnisse nachgewiesen hat über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Grundlagen der Ökologie und Toxikologie;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesetzgebung über Umwelt-, Gesundheits- und Arbeitnehmerschutz;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen zum Schutze der Umwelt und der Gesundheit;"
+            },
+            {
+              "marke": "d",
+              "text": "Umweltverträglichkeit, sachgerechte Verwendung und Entsorgung der Stoffe, Zubereitungen und Gegenstände;"
+            },
+            {
+              "marke": "e",
+              "text": "Geräte und deren sachgerechte Handhabung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Fachbewilligungen aus Mitgliedstaaten der EU und der EFTA sind schweizerischen Fachbewilligungen gleichgestellt; vorbehalten bleiben die Bestimmungen über die Fachbewilligungen für die Verwendung von Pflanzenschutzmitteln."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement oder die von ihm bezeichnete Stelle entscheidet auf Antrag einer Schule oder einer Berufsbildungseinrichtung, ob ein bestimmter Ausbildungsabschluss als einer Fachbewilligung gleichwertig gilt. Für die Verwendung von Pflanzenschutzmitteln ist eine solche Gleichwertigkeit ausgeschlossen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das zuständige Departement legt fest, welche Stelle unter welchen Voraussetzungen Berufserfahrung als einer Fachbewilligung gleichwertig anerkennt. Für die Verwendung von Pflanzenschutzmitteln ist eine solche Gleichwertigkeit ausgeschlossen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Artikel 9–11 gelten sinngemäss für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fachbewilligungen aus Mitgliedstaaten der EU und der EFTA (Abs. 2);"
+            },
+            {
+              "marke": "b",
+              "text": "Ausbildungsabschlüsse, die als einer Fachbewilligung gleichwertig gelten (Abs. 3);"
+            },
+            {
+              "marke": "c",
+              "text": "Berufserfahrung, die als einer Fachbewilligung gleichwertig anerkannt ist (Abs. 4)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a0693aab739209ea20a71c2a848033e20805f8833b627cf17cbf5eb115a5535c"
+    },
+    {
+      "id": "bund/CHEMRRV/art_8_a",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Gleichstellung nach Artikel 8 Absatz 2 ausgeschlossen sind Fachbewilligungen für die Verwendung von Pflanzenschutzmitteln, deren Inhaberin oder Inhaber sich im Sinne des Abkommens vom 21. Juni 1999 zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit oder des Anhangs K des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation in der Schweiz niederlässt."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Antrag der Inhaberin oder des Inhabers einer entsprechenden Fachbewilligung eines Mitgliedstaats der EU oder der EFTA entscheidet das zuständige Departement über die Anerkennung der Berufsqualifikationen der antragstellenden Person. Die Anerkennung ermöglicht die Erlangung einer schweizerischen Fachbewilligung."
+        },
+        {
+          "absatz": "3",
+          "text": "Stellt das zuständige Departement erhebliche Unterschiede zwischen dem ausländischen und dem entsprechenden schweizerischen Bildungsabschluss fest, so sorgt es für Massnahmen zu deren Kompensation (Kompensationsmassnahmen), namentlich in Form einer Prüfung oder eines Anpassungslehrgangs."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Dienstleistungserbringerinnen und -erbringern ist keine Anerkennung erforderlich. Sie unterstehen jedoch der schweizerischen Gesetzgebung über die Meldepflicht und die Nachprüfung der Berufsqualifikationen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cd04d458c70d3fc011a73c85f7b6685990b83c029a2709b8b0023fb99b597972"
+    },
+    {
+      "id": "bund/CHEMRRV/art_9",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Fachbewilligung ist für die ganze Schweiz gültig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fachbewilligung, die zur beruflichen oder gewerblichen Verwendung von Pflanzenschutzmitteln gemäss Artikel 7 Absatz 1 Buchstabe a berechtigt, hat eine Gültigkeitsdauer von fünf Jahren. Sie verlängert sich um weitere fünf Jahre, sofern die Inhaberin oder der Inhaber vor Ablauf der Gültigkeitsdauer der Bewilligung die Weiterbildungen nach Artikel 10 absolviert hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement kann die Gültigkeitsdauer von Fachbewilligungen beschränken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4b8a1586994d2d3bda9f980a411f655538ccf7a125dd0293702b6229a7421317"
+    },
+    {
+      "id": "bund/CHEMRRV/art_10",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Fachbewilligung besitzt und entsprechend tätig ist, muss sich regelmässig über den Stand der besten fachlichen Praxis informieren und sich weiterbilden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Departement kann bei Bedarf die Einzelheiten der obligatorischen Weiterbildungen regeln, insbesondere hinsichtlich Umfang, Inhalt und Bedingungen sowie bezüglich der Anerkennung und Kontrolle der Weiterbildungseinrichtungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Fachbewilligungen, die zur beruflichen oder gewerblichen Verwendung von Pflanzenschutzmitteln berechtigen, müssen die Weiterbildungen bei einer vom BAFU anerkannten Weiterbildungseinrichtung absolviert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a74382728946b8446e7047d6cde89fd54444d132787ba69d038e1385aa06c661"
+    },
+    {
+      "id": "bund/CHEMRRV/art_11",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösst die Inhaberin oder der Inhaber einer Fachbewilligung gegen die für den Anwendungsbereich der Fachbewilligung relevanten Vorschriften der Umwelt-, der Gesundheits- oder der Arbeitnehmerschutzgesetzgebung, so kann die kantonale Behörde mittels Verfügung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von der betreffenden Person verlangen, dass sie einen Kurs besucht oder eine Fachprüfung ablegt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Fachbewilligung vorübergehend oder dauernd entziehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonale Behörde informiert das zuständige Bundesamt über die Verfügungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4d90dca734054c8ab3ab4c42dcd2bbc8839be7bfe3ecfb12168055e5e7ec8089"
+    },
+    {
+      "id": "bund/CHEMRRV/art_12",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eidgenössische Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK) ist zuständig für Fachbewilligungen nach Artikel 7 Absatz 1 Buchstabe a Ziffern 1 und 4 sowie Buchstabe b."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Eidgenössische Departement des Innern (EDI) ist zuständig für Fachbewilligungen nach Artikel 7 Absatz 1 Buchstabe a Ziffern 2 und 3 sowie Absatz 2."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement legt fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Inhalt, Umfang und Verfahren der Fachprüfungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Dokumentationspflichten der Prüfungsstellen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das Departement oder die von ihm bezeichnete Stelle bestimmt die Prüfungsstellen, welche die Fachprüfungen abnehmen und die Fachbewilligungen ausstellen. Die Fachbewilligungen, die zur beruflichen und gewerblichen Verwendung von Pflanzenschutzmitteln berechtigen, werden vom BAFU ausgestellt."
+        },
+        {
+          "absatz": "5",
+          "text": "Das UVEK sorgt für Vorbereitungsmöglichkeiten für die Fachprüfungen in seinem Zuständigkeitsbereich."
+        },
+        {
+          "absatz": "6",
+          "text": "Für die Fachbewilligungen, die zur beruflichen und gewerblichen Verwendung von Pflanzenschutzmitteln berechtigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entscheidet das BAFU auf schriftlichen Antrag hin, ob eine Weiterbildungseinrichtung für das Anbieten einer Weiterbildung im Sinne von Artikel 10 anerkannt werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "kontrolliert das BAFU die Weiterbildungseinrichtungen;"
+            },
+            {
+              "marke": "c",
+              "text": "entzieht das BAFU die Anerkennung einer Weiterbildungseinrichtung, falls diese trotz vorgängiger Verwarnung die angeordneten Korrekturmassnahmen nicht umsetzt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "da1abc50d3345e85a4e95fbb089dba27e764e19ef01e270d75430b77591e7946"
+    },
+    {
+      "id": "bund/CHEMRRV/art_12_a",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gestützt auf Artikel 49 Absatz 1 USG kann der Bund auf Gesuch beim BAFU den Prüfungsstellen und Weiterbildungseinrichtungen Finanzhilfen für Aus- und Weiterbildungen gewähren. Die genannten Stellen und Einrichtungen können Finanzhilfen für die folgenden Bereiche beziehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Landwirtschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "Gartenbau;"
+            },
+            {
+              "marke": "c",
+              "text": "spezielle Bereiche, namentlich die Anwendung von Herbiziden in der Landwirtschaft und beim Unterhalt von Bahn- und Militäranlagen sowie beim Unterhalt der Umgebung von Wohn-, Dienstleistungs-, Gewerbe-, Industrie- und öffentlichen Bauten;"
+            },
+            {
+              "marke": "d",
+              "text": "Waldwirtschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Finanzhilfen werden in Form von Pauschalbeträgen ausgezahlt und betragen höchstens 50 Prozent der Kosten für eine effiziente Ausbildung. Dazu gehören die Konzipierung, Organisation, Vorbereitung und Durchführung der Prüfungen und der Aus- und Weiterbildungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das UVEK bestimmt die Inhalte und Ziele der Aus- und Weiterbildungen und legt die für die Gewährung von Finanzhilfen massgebenden Kriterien auf dem Verordnungsweg fest. Die Inhalte, Ziele und Kriterien werden grundsätzlich für den Zeitraum festgelegt, auf den sich der Finanzierungsentscheid bezieht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_12_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2c243495b82d7a8e300b003e07f74de2ac33655ccbeb034be5f222a1c8271662"
+    },
+    {
+      "id": "bund/CHEMRRV/art_13",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone überwachen die Einhaltung der Bestimmungen dieser Verordnung, soweit die Zuständigkeiten nicht anders geregelt sind."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "48c6192ac97fcaf769766ee4bfd6f6336208ab6912b220fbca7f13adba378e98"
+    },
+    {
+      "id": "bund/CHEMRRV/art_14",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bund ist zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die ihm in den Artikeln 4, 7–12 (Fachbewilligungen) und 19 zugewiesenen Aufgaben;"
+            },
+            {
+              "marke": "b",
+              "text": "die Erteilung von Bewilligungen nach den Anhängen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Vollzug der Bestimmungen über die Ein- und Ausfuhr;"
+            },
+            {
+              "marke": "d",
+              "text": "den Vollzug, soweit er Stoffe, Zubereitungen und Gegenstände betrifft, die der Landesverteidigung dienen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "49955861952803a0cb81ae64bf7a46e5d11c495870872f00184c1c5b3f5a14d2"
+    },
+    {
+      "id": "bund/CHEMRRV/art_15",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Bundesstellen können die ihnen durch diese Verordnung zugewiesenen Aufgaben und Befugnisse ganz oder teilweise geeigneten öffentlich-rechtlichen Körperschaften oder Privaten übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit die Übertragung den Vollzug des Gesundheitsschutzes betrifft, ist sie eingeschränkt auf die Artikel 7–12 (Fachbewilligungen) sowie auf Informationstätigkeiten nach Artikel 28 ChemG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "45801e15e249ab88ddec70b4aa86cdb7231d3e2004c84d18bf64fe59adf8e227"
+    },
+    {
+      "id": "bund/CHEMRRV/art_16",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Medizinprodukten richtet sich der Vollzug nach der Medizinprodukteverordnung vom 17. Oktober 2001."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Stoffen, Zubereitungen und Gegenständen im Zusammenhang mit Anlagen und Tätigkeiten, die der Landesverteidigung dienen, gilt Artikel 82 der Chemikalienverordnung vom 5. Juni 2015 (ChemV) entsprechend."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Dünger gelten die Vollzugsvorschriften der Düngerverordnung vom 1. November 2023 zusätzlich."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4cb11be0a93a0baa346d7d9e4472fdbad9083ccb9e2d3940240424d691e9b4ba"
+    },
+    {
+      "id": "bund/CHEMRRV/art_17",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zollstellen kontrollieren auf Ersuchen des BAG, des BLW oder des BAFU, ob Stoffe, Zubereitungen oder Gegenstände den Bestimmungen dieser Verordnung entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Verdacht auf eine Widerhandlung sind sie berechtigt, die Ware an der Grenze zurückzuhalten und die übrigen Vollzugsbehörden nach dieser Verordnung beizuziehen. Diese nehmen die weiteren Abklärungen vor und treffen die erforderlichen Massnahmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a207f05c71c2676e11d28f601ac5a847b332477c22bf7614f278066e237442a4"
+    },
+    {
+      "id": "bund/CHEMRRV/art_18",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Vollzugsbehörden kontrollieren Stoffe, Zubereitungen und Gegenstände, die sich auf dem Markt befinden, bei Herstellerinnen, Händlerinnen und beruflichen oder gewerblichen Verwenderinnen anhand von Stichproben oder auf Ersuchen des BAG, des BLW, des BAFU oder des SECO. Sie überprüfen, ob die Stoffe, Zubereitungen und Gegenstände den Bestimmungen der Anhänge entsprechen, namentlich was ihre Zusammensetzung, ihre Kennzeichnung und die Information der Abnehmerinnen über sie betrifft."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kontrollieren zudem, ob der Umgang mit Stoffen, Zubereitungen und Gegenständen den Vorschriften dieser Verordnung entspricht."
+        },
+        {
+          "absatz": "3",
+          "text": "Geben die kontrollierten Stoffe, Zubereitungen oder Gegenstände selbst oder der Umgang mit ihnen Anlass zu Beanstandungen, so informiert die kontrollierende Behörde die nach Artikel 19 für die Verfügungen zuständigen Behörden. Sind dies kantonale Behörden, so informiert sie ausserdem das BAG, das BAFU und das SECO sowie, bei Beanstandungen von Pflanzenschutzmitteln, das BLV und das BLW, und, bei Beanstandungen von Düngern, das BLW."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3072708cfd50a15c127b7c92757e7358a60d810704a8f7600a2e606373cafcb9"
+    },
+    {
+      "id": "bund/CHEMRRV/art_19",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ergibt eine Kontrolle, dass Bestimmungen dieser Verordnung verletzt sind, so verfügt die Bundesbehörde oder die Behörde des Kantons, in dem die Herstellerin, die Händlerin oder die Verwenderin ihren Wohn- oder Geschäftssitz hat, die nötigen Massnahmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "82158548bf7cb645e1aede0aca95e423b3eea06f4f261a766ce96636ebf34414"
+    },
+    {
+      "id": "bund/CHEMRRV/art_20",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone sorgen dafür, dass für die Verwendung von Düngern und Pflanzenschutzmitteln eine Fachberatung angeboten wird; sie sichern deren Finanzierung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können bestimmen, dass Personen, die Dünger oder Pflanzenschutzmittel in belasteten Gebieten beruflich oder gewerblich verwenden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich zu diesem Zweck von der Fachberatung beraten lassen müssen;"
+            },
+            {
+              "marke": "b",
+              "text": "die für diese Beratung erforderlichen Betriebsdaten zur Verfügung stellen müssen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a74f6e6561fd2a84db2ad1c305ba3637f78481617ee62b4102713f8812e7e182"
+    },
+    {
+      "id": "bund/CHEMRRV/art_21",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vertraulichkeit von Daten sowie der Datenaustausch unter Vollzugsbehörden und mit dem Ausland richten sich nach den Artikeln 73–76 ChemV."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3716cc75c02631ddd8a45223e75c5a53622c368cbff93107e26d6ed35c14dda7"
+    },
+    {
+      "id": "bund/CHEMRRV/art_22",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebührenpflicht und die Gebührenbemessung für Verwaltungshandlungen der Bundesvollzugsbehörden nach dieser Verordnung richten sich nach der Chemikaliengebührenverordnung vom 18. Mai 2005."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9b114f8f9276c1231de8e8ac69f9f4d269e0b26f4e0fe4b1802ad9110b82d05e"
+    },
+    {
+      "id": "bund/CHEMRRV/art_23",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Übergangsbestimmungen zu den Fachbewilligungen nach den Artikeln 7–12 werden vom zuständigen Departement erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausnahmebewilligungen, die auf Grund der Stoffverordnung vom 9. Juni 1986 erteilt worden sind, bleiben bis zum Ablauf ihrer Befristung gültig."
+        },
+        {
+          "absatz": "3",
+          "text": "Gesuche um Ausnahmebewilligungen, die bei Inkrafttreten dieser Verordnung hängig sind, werden nach dieser Verordnung beurteilt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b76e203d97f5139538c8280419ea77247ab0e50d5a7912919e816b547952a54a"
+    },
+    {
+      "id": "bund/CHEMRRV/art_23_a",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Inhaberinnen und Inhaber einer Berechtigung zur Verwendung von Pflanzenschutzmitteln, die gemäss den bis zum 31. Dezember 2025 gültigen Bestimmungen des bisherigen Artikels 8 Absätze 1, 3 oder 4 ausgestellt wurde, können diese Berechtigung bis zum 30. Juni 2026 beim BAFU für einen Ersatz anmelden."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach bisherigem Recht erteilte Berechtigungen, die bis zum 30. Juni 2026 gemeldet wurden, werden durch eine Fachbewilligung mit einer Gültigkeitsdauer von fünf Jahren ersetzt, welche im Register Fachbewilligungen PSM gemäss Artikel 1 der Verordnung vom 16. November 2022 über das Register der Fachbewilligungen für die Verwendung von Pflanzenschutzmitteln erfasst ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Inhaberinnen und Inhaber einer Berechtigung, die vor dem 1. Januar 2000 erworben wurde, müssen sämtliche Weiterbildungen gemäss Artikel 9 Absatz 3 bis zum 31. Dezember 2029 absolvieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Nach bisherigem Recht erteilte Berechtigungen verlieren ihre Gültigkeit am 1. Januar 2027."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "18c69c9e76a271bb7c067455318ad38051a703b24977e9e5174357eaf3187be5"
+    },
+    {
+      "id": "bund/CHEMRRV/art_24",
+      "ebene": "bund",
+      "quelle": "CHEMRRV",
+      "erlass": "ChemRRV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. August 2005 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2005/478/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8e8b81aa597fc5aca3a8ab46cf64cc6b03532e3a681c421cf4f2b377d4728282"
+    }
+  ]
+}

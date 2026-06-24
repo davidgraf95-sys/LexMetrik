@@ -1,0 +1,1586 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/SORTG/art_1",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz regelt den Schutz von neuen Sorten in Ausführung des Internationalen Übereinkommens vom 2. Dezember 1961 6 zum Schutz von Pflanzenzüchtungen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "30e14cf887b92f9507fe1d8dda43a608cc667a7ac5b57d85838458f54b911fbd"
+    },
+    {
+      "id": "bund/SORTG/art_2",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Sorte gilt eine pflanzliche Gesamtheit innerhalb eines einzigen botanischen Taxons der untersten bekannten Rangstufe, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch die sich aus einem bestimmten Genotyp oder einer bestimmten Kombination von Genotypen ergebende Ausprägung der Merkmale definiert werden kann;"
+            },
+            {
+              "marke": "b",
+              "text": "durch die Ausprägung zumindest eines der Merkmale nach Buchstabe a von jeder anderen pflanzlichen Gesamtheit unterschieden werden kann; und"
+            },
+            {
+              "marke": "c",
+              "text": "in Anbetracht ihrer Eignung, unverändert vermehrt zu werden, als Einheit angesehen werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als im Wesentlichen von einer anderen Sorte (Ursprungssorte) abgeleitet gilt eine Sorte, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vorwiegend von der Ursprungssorte oder von einer Sorte, die selbst vorwiegend von der Ursprungssorte abgeleitet ist, abgeleitet ist;"
+            },
+            {
+              "marke": "b",
+              "text": "sich von der Ursprungssorte deutlich unterscheidet; und"
+            },
+            {
+              "marke": "c",
+              "text": "abgesehen von den sich aus der Ableitung ergebenden Unterschieden, in der Ausprägung der wesentlichen Merkmale, die sich aus dem Genotyp oder der Kombination von Genotypen der Ursprungssorte ergeben, der Ursprungs­sorte entspricht."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Als Vermehrungsmaterial gelten Saatgut, Pflanzgut, Edelreiser, Unterlagen und alle anderen Pflanzenteile, einschliesslich in vitro hergestellten Materials, die zur Vermehrung, Saat, Pflanzung oder Wiederpflanzung vorgesehen sind."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "bd213649da7be41f1718c7c9173e714a039428d3601c878a7fb84dd51246ebd9"
+    },
+    {
+      "id": "bund/SORTG/art_3",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer in der Schweiz weder Wohnsitz noch Sitz hat, muss eine in der Schweiz nie­dergelassene Vertretung bestellen, die ihn in Verfahren nach diesem Gesetz vor den Verwaltungsbehörden vertritt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "854921598ed6e012fe0e695bdf85d32a5c49c75e77024e2cb9f1eb28742410c3"
+    },
+    {
+      "id": "bund/SORTG/art_4",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Schutzbewerber und Schutzinhaber können sich auf die Bestimmungen der von der Schweiz zuletzt ratifizierten Texte mehrseitiger Staatsverträge berufen, wenn jene günstiger sind als die Bestimmungen dieses Gesetzes."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "e9939af76a2b1e13544e3b0268ec224ff0111c8bda5758a2e0c1972e4f0f0a1b"
+    },
+    {
+      "id": "bund/SORTG/art_5",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Sortenschutz bewirkt, dass niemand ohne Zustimmung des Sortenschutz­inhabers Vermehrungsmaterial der geschützten Sorte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erzeugen, vermehren oder für Vermehrungszwecke aufbereiten darf;"
+            },
+            {
+              "marke": "b",
+              "text": "anbieten darf;"
+            },
+            {
+              "marke": "c",
+              "text": "verkaufen oder sonst vertreiben darf;"
+            },
+            {
+              "marke": "d",
+              "text": "aus- oder einführen darf;"
+            },
+            {
+              "marke": "e",
+              "text": "zu einem der erwähnten Zwecke nach den Buchstaben a–d aufbewahren darf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Absatz 1 gilt auch für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sorten, die im Wesentlichen von der geschützten Sorte abgeleitet sind, sofern die geschützte Sorte selbst keine im Wesentlichen abgeleitete Sorte ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Sorten, die sich von der geschützten Sorte nicht deutlich unterscheiden lassen;"
+            },
+            {
+              "marke": "c",
+              "text": "Sorten, deren Erzeugung die fortlaufende Verwendung der geschützten Sorte erfordert;"
+            },
+            {
+              "marke": "d",
+              "text": "Erntegut der geschützten Sorte oder einer Sorte nach den Buchstaben a–c, wenn zu dessen Erzeugung Vermehrungsmaterial ohne Zustimmung des Sortenschutzinhabers verwendet wurde und der Sortenschutzinhaber keine angemessene Gelegenheit hatte, sein Recht hinsichtlich dieser Verwendung geltend zu machen."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "269391eb1747d99cdcfc83d15c8c8d45bf2ed050a7c95adee10965c7270fcdb6"
+    },
+    {
+      "id": "bund/SORTG/art_6",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zustimmung des Sortenschutzinhabers ist nicht notwendig für Handlungen nach Artikel 5:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im privaten Bereich zu nicht gewerblichen Zwecken;"
+            },
+            {
+              "marke": "b",
+              "text": "zu Versuchszwecken;"
+            },
+            {
+              "marke": "c",
+              "text": "zum Zweck der Schaffung neuer Sorten unter Verwendung einer geschützten Sorte sowie für Handlungen nach Artikel 5 Absatz 1 mit diesen Sorten, es sei denn, es betreffe Sorten nach Artikel 5 Absatz 2 Buchstaben a–c."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "9165b7202a1cd90dd7358e9a95120bee22fffa97593b510a633b740bc2e9a7c2"
+    },
+    {
+      "id": "bund/SORTG/art_7",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Landwirte, die durch den Sortenschutzinhaber oder mit dessen Zustimmung Vermehrungsmaterial einer geschützten landwirtschaftlichen Sorte erworben haben, dürfen das im eigenen Betrieb durch den Anbau dieses Materials gewonnene Erntegut im eigenen Betrieb vermehren."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die vom Landwirteprivileg erfassten Pflanzenarten; dabei berücksichtigt er insbesondere deren Bedeutung als Rohstoff für Nahrungsmittel und Futtermittel."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "afcd55fbb7517ac18f678815cbc2e8a50bf02637c318d5a2197ccaef0c3fa404"
+    },
+    {
+      "id": "bund/SORTG/art_8",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vertragliche Abmachungen, welche die Ausnahmen vom Sortenschutz nach den Artikeln 6 und 7 einschränken oder aufheben, sind nichtig."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "301863712acb52f64dcdb9e0b7cec4420b3f25f2fb8101dcb7044dfdf189c2ac"
+    },
+    {
+      "id": "bund/SORTG/art_8_a",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Sortenschutz nach Artikel 5 ist erschöpft, wenn Material durch den Sortenschutzinhaber oder mit dessen Zustimmung verkauft oder sonstwie vertrieben wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Sortenschutz ist nicht erschöpft, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine erneute Vermehrung der betreffenden Sorte stattfindet, ohne dass das Material bei der Abgabe dazu bestimmt war;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Ausfuhr von Material der Sorte in ein Land erfolgt ist, das die Sorten der betreffenden Art nicht schützt, und das ausgeführte Material nicht zum Endverbrauch bestimmt ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "7fab1838a33da1cf25bd7f4d9535be8ab5b67b0d52d9c44d96e0e3cfccc3b30f"
+    },
+    {
+      "id": "bund/SORTG/art_8_b",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "8_b",
+      "artikelLabel": "Art. 8b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Schutz wird für alle Sorten gewährt, die neu, unterscheidbar, homogen und beständig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sorte ist neu, wenn kein Vermehrungsmaterial oder Erntegut der Sorte in der Schweiz mehr als ein Jahr und im Ausland mehr als vier Jahre vor dem Tag der Anmeldung zum Sortenschutz durch den Züchter oder mit dessen Zustimmung zum Zweck der Auswertung der Sorte verkauft oder auf andere Weise abgegeben wurde. Für Bäume und Reben, die im Ausland verkauft oder auf andere Weise abgegeben wurden, beträgt die Frist sechs Jahre."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Sorte ist unterscheidbar, wenn sie sich von jeder anderen Sorte deutlich unterscheiden lässt, von der am Tag der Anmeldung allgemein bekannt ist, dass es sie gibt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Sorte ist homogen, wenn sie in ihren wesentlichen Merkmalen, abgesehen von Abweichungen, die aufgrund der Besonderheiten ihrer Vermehrung zu erwarten sind, hinreichend einheitlich ist."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Sorte ist beständig, wenn ihre wesentlichen Merkmale nach mehreren aufeinanderfolgenden Vermehrungen oder, im Falle eines besonderen Vermehrungszyklus, am Ende eines jeden Zyklus unverändert bleiben."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_8_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "c32ee86a96759fbecc261349d9734285821783092d757bb8d39fc85735b6233e"
+    },
+    {
+      "id": "bund/SORTG/art_9",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Recht auf Sortenschutz steht dem Züchter oder seinem Rechtsnachfolger zu. Artikel 332 des Obligationenrechts gilt sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Haben mehrere die Sorte gemeinsam gezüchtet, steht ihnen das Recht gemein­sam zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Haben mehrere die Sorte unabhängig voneinander gezüchtet, so steht das Recht demjenigen zu, der sich auf die frühere Anmeldung oder die Priorität berufen kann."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "58d13f761e8d4257acd75c5a38d1173051adc81fff5306434a5aaf38a73aae32"
+    },
+    {
+      "id": "bund/SORTG/art_10",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer eine Sorte anmeldet, gilt bis zum Beweis des Gegenteils als berechtigt, den Schutz zu beantragen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "909ead339993eb53c36426b0dd3c461e240d43dd26b73425b58b1e2b1b4e9e79"
+    },
+    {
+      "id": "bund/SORTG/art_11",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Sorte innerhalb von zwölf Monaten anmeldet, seitdem er oder sein Rechtsvorgänger sie erstmals im Ausland vorschriftsgemäss angemeldet hat, geniesst die Priorität der ersten Anmeldung. In diesem Fall können der Anmeldung keine Tatsachen entgegengehalten werden, die seit der ersten Anmeldung einge­treten sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Priorität muss bei der Anmeldung der Sorte geltend gemacht werden. Das Büro für Sortenschutz kann Unterlagen, die die Erstanmeldung belegen, verlangen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "580ecc32c4009a38135511d5535d6adc879b283c2ee782bb9f065288888c5749"
+    },
+    {
+      "id": "bund/SORTG/art_12",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sorte ist mit einer Sortenbezeichnung zu versehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sortenbezeichnung darf nicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "irreführend oder mit einer anderen Sortenbezeichnung verwechselbar sein, die für eine Sorte derselben oder einer botanisch verwandten Art in einem Staat oder in einer zwischenstaatlichen Organisation, der oder die Mitglied des Internationalen Verbandes zum Schutz von Pflanzenzüchtungen ist, angemeldet oder eingetragen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen die öffentliche Ordnung, die guten Sitten, das Bundesrecht oder gegen Staatsverträge verstossen;"
+            },
+            {
+              "marke": "c",
+              "text": "ausschliesslich aus Zahlen bestehen, es sei denn die Bezeichnung mit Zahlen ist eine feststehende Praxis für Sorten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Wurde die gleiche Sorte bereits in einem Staat oder einer zwischenstaatlichen Organisation nach Absatz 2 Buchstabe a angemeldet oder eingetragen, so ist die dort verwendete Sortenbezeichnung zu übernehmen, sofern sie nicht aus sprachlichen oder andern Gründen ungeeignet ist."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "84e30f6a6ee6df0ac3a8c3e54d1d9c4e07b2b9706e59d0ef2205f6ee456b9ba9"
+    },
+    {
+      "id": "bund/SORTG/art_13",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Vermehrungsmaterial einer geschützten Sorte anbietet oder gewerbsmässig vertreibt, muss die Sortenbezeichnung benützen, auch wenn die Schutzdauer abgelaufen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Rechte Dritter bleiben vorbehalten."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "3e6708077b872d5beec539473fbec21375e760d8759fb70b346dc3c1eb969dd7"
+    },
+    {
+      "id": "bund/SORTG/art_13_a",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach der Erteilung des Sortenschutzes darf das Büro für Sortenschutz die Sorten­bezeichnung nur ändern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "aufgrund eines rechtskräftigen Urteils;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn ein Dritter ein entgegenstehendes Recht glaubhaft macht und der Sortenschutzinhaber in die Änderung einwilligt."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_13_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "f0cea0bf6dab913bf2053c1571704082000b734f73b8f00463a4ed065eeda2f8"
+    },
+    {
+      "id": "bund/SORTG/art_13_b",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "13_b",
+      "artikelLabel": "Art. 13b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine geschützte Sorte darf zusätzlich mit einer Marke oder einer anderen Handelsbezeichnung, die sich deutlich von der Sortenbezeichnung unterscheidet, in Verkehr gebracht werden. Dabei muss klar erkennbar sein, welches die Sortenbezeichnung ist."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_13_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "54c40c91431a3dc3b3875c9e753027cb2c547fde61ae7dfb96f29f5c2af0759f"
+    },
+    {
+      "id": "bund/SORTG/art_14",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Sortenschutz endet mit dem 25., bei Sorten von Reben und Bäumen mit dem 30. vollen Kalenderjahr nach der Erteilung des Schutzes."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "dc7b46b876455df36f76e474f9b1ba94ce744a5be2238e72d9363106a55e175a"
+    },
+    {
+      "id": "bund/SORTG/art_15",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Sortenschutz erlischt, wenn der Sortenschutzinhaber dem Büro für Sortenschutz schriftlich seinen Verzicht erklärt."
+        },
+        {
+          "absatz": "2",
+          "text": "Solange das Büro für Sortenschutz den Verzicht nicht veröffentlicht hat, kann er wi­derrufen werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "685410adef2bce5637338ba4d8b193fa7311b87ad7f72a2440b3f5c8a9dc33b0"
+    },
+    {
+      "id": "bund/SORTG/art_16",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Richter erklärt den Sortenschutz auf Klage hin als nichtig, wenn sich herausstellt, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sorte bei der Erteilung des Schutzes nicht neu oder nicht unterscheidbar war;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sorte bei der Erteilung des Schutzes nicht homogen oder nicht beständig war und der Sortenschutz im Wesentlichen aufgrund der vom Schutzbewerber gegebenen Auskünfte und eingereichten Unterlagen erteilt wurde;"
+            },
+            {
+              "marke": "c",
+              "text": "der Sortenschutz einer nicht berechtigten Person erteilt wurde und diese ihn nicht der berechtigten Person übertragen hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Klageberechtigt ist jeder, der ein Interesse an der Nichtigerklärung nachweist."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "f072f552b48bcb6294c50fa7d8727fe5ee163ef08d362b8a7c0368b19884c572"
+    },
+    {
+      "id": "bund/SORTG/art_17",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Büro für Sortenschutz hebt den Sortenschutz auf, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Sortenschutzinhaber innert der vom Büro für Sortenschutz festgelegten Frist trotz Mahnung das Vermehrungsmaterial, die Unterlagen und die Auskünfte, die zur Überwachung notwendig sind, nicht beibringt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Sortenschutzinhaber eine Jahresgebühr auch nach erfolgter Mahnung nicht bezahlt;"
+            },
+            {
+              "marke": "c",
+              "text": "festgestellt wird, dass die Sorte nicht mehr homogen oder nicht mehr beständig ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufhebung des Sortenschutzes wird mit der Eintragung im Sortenschutz­­re­gister wirksam."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "e581be6530196f195467477da8bbe1178aa3b133b190858e300f24913656f3be"
+    },
+    {
+      "id": "bund/SORTG/art_18",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Recht auf Sortenschutz und am Sortenschutz ist ganz oder teilweise über­trag­bar und vererblich."
+        },
+        {
+          "absatz": "2",
+          "text": "Rechte Dritter sind gegenüber einem gutgläubigen Erwerber von Rechten am Sor­tenschutz nur wirksam, wenn sie im Sortenschutzregister eingetragen sind."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "ae854f79b1648b4c9b3755085d1c1fa3fd00a8a12da44ce9c359f1ae4abab5b6"
+    },
+    {
+      "id": "bund/SORTG/art_19",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wurde die Anmeldung von einem Unberechtigten eingereicht, so kann der Be­rech­tigte auf Abtretung der Anmeldung oder des bereits erteilten Sortenschutzes klagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Klage ist innert zwei Jahren seit der Veröffentlichung des Sortenschutzes ein­zu­reichen. Die Klage gegen einen Bösgläubigen ist jederzeit möglich."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Klage gutgeheissen, so fallen die Rechte dahin, die der Beklagte Drit­ten eingeräumt hat."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "28a4c72682a96cd51f3df2e916dfa9a9e8da0e81ed195ef5f88f8d756fdfd595"
+    },
+    {
+      "id": "bund/SORTG/art_20",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn es die Landesversorgung erfordert, kann der Bundesrat den Sortenschutz ganz oder teilweise enteignen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Enteignete hat Anspruch auf volle Entschädigung. Diese wird im Streitfall vom Bundesgericht festgesetzt. Der II. Abschnitt des Bundesgesetzes vom 20. Juni 1930 über die Enteignung gilt sinngemäss."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "45619e4f018a518e248135407d9636262ef5a1c8d676b6611c53564ba567ba76"
+    },
+    {
+      "id": "bund/SORTG/art_21",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Schutzinhaber kann einen andern zur Nutzung der geschützten Sorte er­mäch­ti­gen (Lizenzerteilung). Gehört die Sorte mehreren gemeinsam, so kann eine Li­zenz nur mit Zustimmung aller Beteiligten erteilt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegenüber einem gutgläubigen Erwerber von Rechten am Sortenschutz sind ent­ge­genstehende Lizenzen nur wirksam, wenn sie im Sortenschutzregister eingetra­gen sind."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "5507baccc81c447b52172074464e4dfdede662a7e608ad517e15a6c8bb04773c"
+    },
+    {
+      "id": "bund/SORTG/art_22",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wenn es das öffentliche Interesse verlangt, kann die Person, deren Lizenzgesuch vom Sortenschutzinhaber ohne ausreichende Gründe abgelehnt wurde, beim Richter auf Erteilung einer nicht ausschliesslichen und nicht übertragbaren Lizenz klagen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "ce3703daa5e3db05880a39b8c43caa696af4b541e7f420adfba8239511eaf56d"
+    },
+    {
+      "id": "bund/SORTG/art_22_a",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kann ein Patent für eine Erfindung, die biologisches Material betrifft, ohne Verletzung eines früher erteilten Sortenschutzrechtes nicht benutzt werden, so hat der Patentinhaber Anspruch auf eine nicht ausschliessliche Lizenz in dem für die Benützung seines Patents erforderlichen Umfang, sofern die Erfindung einen namhaften Fortschritt von erheblicher wirtschaftlicher Bedeutung im Vergleich mit der geschützten Pflanzensorte darstellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Gegenzug hat der Sortenschutzinhaber Anspruch darauf, dass ihm der Patentinhaber eine Lizenz zur Benützung seines Patentrechtes erteilt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "dbb23511c6c00aa8274258b2ffc95e2bc54235fa316cf4f8dc5833a00064f3ec"
+    },
+    {
+      "id": "bund/SORTG/art_22_b",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "22_b",
+      "artikelLabel": "Art. 22b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lizenzen nach den Artikeln 22 und 22 a werden erteilt, wenn Bemühungen des Gesuchstellers um Erteilung einer vertraglichen Lizenz zu angemessenen Markt­bedingungen innerhalb einer angemessenen Frist erfolglos geblieben sind. Solche Bemühungen sind nicht notwendig im Falle eines nationalen Notstandes oder bei äusserster Dringlichkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Umfang und Dauer der Lizenzen sind auf den Zweck beschränkt, für den sie gewährt wurden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Lizenzen können nur zusammen mit dem Geschäftsteil, auf den sich ihre Verwertung bezieht, übertragen werden. Dies gilt auch für Unterlizenzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Lizenzen werden vorwiegend für die Versorgung des inländischen Marktes erteilt."
+        },
+        {
+          "absatz": "5",
+          "text": "Auf Antrag entzieht der Richter dem Berechtigten die Lizenz, wenn die Umstände die zu ihrer Erteilung geführt haben, nicht mehr gegeben sind und auch nicht zu erwarten ist, dass sie erneut eintreten. Vorbehalten bleibt ein angemessener Schutz der rechtmässigen Interessen des Berechtigten."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Sortenschutzinhaber hat Anspruch auf eine angemessene Vergütung. Bei der Bemessung werden die Umstände des Einzelfalles und der wirtschaftliche Wert der Lizenz berücksichtigt."
+        },
+        {
+          "absatz": "7",
+          "text": "Der Richter entscheidet über Erteilung und Entzug der Lizenz, über deren Umfang und Dauer sowie über die zu leistende Vergütung."
+        },
+        {
+          "absatz": "8",
+          "text": "Erscheint die Klage als begründet, so kann der Richter nach Anhörung des Beklagten die Lizenz unter Vorbehalt des rechtskräftigen Urteils einräumen, wenn der Kläger dies beantragt und dem Beklagten angemessene Sicherheit leistet."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_22_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "2ca9a26bf56e31c45e1a395a9a2c861836a8f5c6a8454d32dc0e9c3f01117d1a"
+    },
+    {
+      "id": "bund/SORTG/art_23",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Erteilung des Sortenschutzes und für alle damit zusammenhängenden Fragen ist das Büro für Sortenschutz zuständig, soweit dieses Gesetz nichts anderes bestimmt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "c49e6b8210b7f67a12085bd9d4aa4b10e1c6f2df892289a1a1c7d9af8c770cbb"
+    },
+    {
+      "id": "bund/SORTG/art_24",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Büro für Sortenschutz beauftragt für die Prüfung der Sorte auf Unterscheidbarkeit, Homogenität und Beständigkeit eine eidgenössische landwirtschaftliche Forschungsanstalt oder eine andere geeignete Stelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann Prüfungsergebnisse einer ausländischen Stelle anerkennen, soweit deren Prüfungsmethoden den Anforderungen dieses Gesetzes und den darauf gestützten Bestimmungen entsprechen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "ef07e4e44f8a58cb35fc2c9835b90f673192c5950e7db30768bf3ce187b9743c"
+    },
+    {
+      "id": "bund/SORTG/art_25",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_26",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Sorte schützen lassen will, hat sie dem Büro für Sortenschutz in der vor­ge­schriebenen Form und mit den verlangten Angaben und Unterlagen anzu­melden und die Anmeldegebühren zu bezahlen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Anmeldungsdatum gilt der Zeitpunkt, in welchem alle erforderlichen Ak­ten­stüc­ke eingereicht und die Anmeldungsgebühr bezahlt sind."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "22120afab268293a80bc1fae65850768a746a54693d05837129763e8f830d5b0"
+    },
+    {
+      "id": "bund/SORTG/art_27",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine mangelhafte Anmeldung ist auf Verlangen des Büros für Sortenschutz zu ver­bessern. Es kann jederzeit weitere Beanstandungen erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden die Mängel nicht innert der angesetzten Frist behoben, so wird die An­mel­dung zurückgewiesen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "1a77516dc94be875568436e3073552212138ac3c7a4d90ec89fe515efe15b06e"
+    },
+    {
+      "id": "bund/SORTG/art_28",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ordnungsgemäss eingereichte Anmeldung wird vom Büro für Sortenschutz öffentlich bekannt gemacht. Es sind mindestens zu veröffentlichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Datum der Anmeldung;"
+            },
+            {
+              "marke": "b",
+              "text": "Name oder Firma und Adresse des Bewerbers und gegebenenfalls seines Ver­tre­ters;"
+            },
+            {
+              "marke": "c",
+              "text": "Name oder Firma und Adresse des Züchters, wenn dieser nicht der Bewerber ist;"
+            },
+            {
+              "marke": "d",
+              "text": "Vorschlag für eine Sortenbezeichnung;"
+            },
+            {
+              "marke": "e",
+              "text": "Gattung oder Art, zu welcher die angemeldete Sorte gehört;"
+            },
+            {
+              "marke": "f",
+              "text": "gegebenenfalls Prioritätsland und -datum."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine Anmeldung nach ihrer Bekanntmachung zurückgezogen oder zurück­­gewiesen oder der bekannt gemachte Inhalt einer Anmeldung nachträglich geän­dert, so ist dies ebenfalls zu veröffentlichen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "0352d1183d280b3aa731ae79293a012d1bc0ef55f164a11b3d6cd12e9b7648fe"
+    },
+    {
+      "id": "bund/SORTG/art_29",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jedermann kann innerhalb von drei Monaten seit der Bekanntmachung beim Bü­ro für Sortenschutz gegen die Anmeldung Einwendungen erheben. Die Einwen­dungen sind schriftlich einzureichen und zu begründen. Als Beweismittel angeru­fene Ur­kun­den und Pflanzen sind beizulegen oder namhaft zu machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit den Einwendungen kann nur geltend gemacht werden, die angemeldete Sorte sei nicht schutzfähig nach Artikel 8 b oder die Sortenbezeichnung sei nach Artikel 12 unzulässig."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Schutzbewerber kann zu den Einwendungen Stellung nehmen. Er soll erklä­ren, ob er die Anmeldung aufrechterhält, ändert oder zurückzieht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "8fe3f64a3f6adb6fd0342726f77f776b8dde858d63f8ccfa87173971d25e0a0b"
+    },
+    {
+      "id": "bund/SORTG/art_30",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Schutzbewerber hat der Prüfungsstelle innert der festgelegten Frist das erforderliche Vermehrungsmaterial zuzustellen, die notwendigen Auskünfte zu erteilen und deren Nachprüfung zu gestatten. Wenn er die Priorität der Anmeldung nach Artikel 11 beansprucht, muss er das Vermehrungsmaterial innert zwei Jahren nach Ablauf der Prioritätsfrist beibringen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfungsstelle hält die Ergebnisse in einem Prüfungsbericht fest. Ist die Sorte schutzfähig, so beschreibt sie in einer offiziellen Sortenbeschreibung ihre Merkmale."
+        },
+        {
+          "absatz": "3",
+          "text": "Nimmt die Prüfungsstelle einen Versuchsanbau vor, so kann der Bewerber Einblick in die Versuche nehmen und sich zum Ergebnis der Prüfung äussern."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "afe3dd1e494dd6da651764494f3ebd72914ebb712d609ac2f3d898c09c3ac368"
+    },
+    {
+      "id": "bund/SORTG/art_31",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach der Prüfung erteilt das Büro den Sortenschutz, wenn alle Voraussetzungen erfüllt sind; andernfalls weist es die Anmeldung zurück."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Sortenschutz wird durch Eintragung in das Sortenschutzregister ohne Ge­währ­leistung des Bundes erteilt. Der Bewerber erhält als Schutztitel einen Aus­zug aus dem Register (Sortenschutzschein)."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zum Beweis des Gegenteils gilt der erteilte Schutz als zu Recht bestehend und der Inhaber als der Berechtigte."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b1b13ed889e46a76daa78ec0747a1a6bce175770d4f5b190a284ad68e09185f6"
+    },
+    {
+      "id": "bund/SORTG/art_31_a",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "31_a",
+      "artikelLabel": "Art. 31a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat regelt die Anerkennung von Sortenschutztiteln, die von Staaten mit vergleichbaren Anforderungen erteilt worden sind."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_31_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "5b15d4776363d65040fc5805eea22ce2e6be022c31b92b322dd5f865c3471b97"
+    },
+    {
+      "id": "bund/SORTG/art_32",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Büro für Sortenschutz führt das Register, worin der Schutz mit den erfor­der­lichen Angaben eingetragen wird, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sortenbezeichnung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Sortenbeschreibung;"
+            },
+            {
+              "marke": "c",
+              "text": "Name oder Firma und Adresse des Schutzinhabers und seines allfälligen Ver­tre­ters;"
+            },
+            {
+              "marke": "d",
+              "text": "Name oder Firma und Adresse des Züchters, wenn dieser nicht der Schutz­inha­ber ist;"
+            },
+            {
+              "marke": "e",
+              "text": "Datum der Anmeldung und deren Bekanntmachung;"
+            },
+            {
+              "marke": "f",
+              "text": "gegebenenfalls Prioritätsland und -datum."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Einzutragen sind ferner alle Änderungen im Bestand des Sortenschutzes oder im Recht am Sortenschutz. Rechtskräftige Urteile, welche solche Änderungen herbei­füh­ren, sind dem Büro für Sortenschutz von den Gerichten in vollständiger Aus­fer­ti­gung unentgeltlich zuzustellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Büro für Sortenschutz kann unter vorheriger Benachrichtigung des Schutz­­inha­bers die Beschreibung einer Sorte ergänzen, sofern die Beschreibung einer andern Sorte dies notwendig macht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "7fc2469251e2ba6a8acfecce6566b96f1d7054c7289fab2eed660d252305d646"
+    },
+    {
+      "id": "bund/SORTG/art_33",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Büro für Sortenschutz veröffentlicht die im Sortenschutzregister vorge­nom­me­nen Eintragungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einwendung, dass jemand einen Registereintrag nicht gekannt habe, ist aus­ge­schlossen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "253bfe6a01445d2495727f50842fad2fc0b93dacb5c9afcb666cd40fc3c2dde5"
+    },
+    {
+      "id": "bund/SORTG/art_34",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Entrichtung einer Gebühr kann jedermann in das Sortenschutzregister Ein­sicht nehmen oder über dessen Inhalt Auskünfte einholen und Auszüge ver­langen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Registerunterlagen sind mit Ausnahme des Berichtes der Prüfungsstelle ver­trau­lich. Dritten darf nur mit Einwilligung des Schutzinhabers Einsicht gewährt werden. Gerichte bedürfen dieser Einwilligung nicht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "9dbe4271ebcc650781ac80139ed0bdda09967e9af7776f2eb468feaa643b3700"
+    },
+    {
+      "id": "bund/SORTG/art_35",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Büro für Sortenschutz verwahrt die Sortenschutzakten im Original oder in Wie­dergabe bis zum Ablauf von fünf Jahren nach dem Erlöschen des Schutzes, das Sor­tenschutzregister unbegrenzt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "3acd6b70817b5e551eb16d5d8e156504aea0a5dcf8afbac6152aac9d95d9d6ac"
+    },
+    {
+      "id": "bund/SORTG/art_36",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Stellen erheben im Zusammenhang mit der Erteilung des Sor­ten­schutzes folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Anmeldungsgebühr;"
+            },
+            {
+              "marke": "b",
+              "text": "Gebühren für die Sortenprüfung;"
+            },
+            {
+              "marke": "c",
+              "text": "Jahresgebühren während der Dauer des Schutzes."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren sind im Voraus zu bezahlen und so anzusetzen, dass sie die Auf­wen­dungen decken."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat stellt Vorschriften auf über Höhe und Fälligkeit der Gebühren so­wie über die Zahlungsfristen. Er kann weitere Verrichtungen der mit dem Sor­ten­schutz beauftragten Stellen gebührenpflichtig erklären."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "7641a544217d75bf174068318b5c29e9bb04322df10838e68458f0fc7e53cb7f"
+    },
+    {
+      "id": "bund/SORTG/art_37",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer in seinem Recht aus dem Sortenschutz oder in seinem Recht an der Sorten­­bezeichnung bedroht oder verletzt ist, kann auf Unterlassung oder auf Beseiti­gung des rechtswidrigen Zustandes klagen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "9a9b6ba074496890ff482bfbea824bb86df0b4388efba28568dd85024b8eb80a"
+    },
+    {
+      "id": "bund/SORTG/art_38",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach der Bekanntmachung der Anmeldung kann der Bewerber schon vor Ertei­lung des Sortenschutzes auf Unterlassung oder Beseitigung des rechtswidrigen Zu­standes klagen, wenn er der Gegenpartei angemessene Sicherheit leistet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schadenersatzklage kann er erst nach Erteilung des Schutzes erheben, mit ihr aber den Schaden geltend machen, den der Beklagte seit der Bekanntmachung der Anmeldung schuldhaft verursacht hat."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "312f0e524c3f3cbea09fa25e90497539450c130cb5d848e5de4f8db406b197f9"
+    },
+    {
+      "id": "bund/SORTG/art_39",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_41",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_42",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_43",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ersucht eine Person um die Anordnung vorsorglicher Massnahmen, so kann sie insbesondere verlangen, dass das Gericht Massnahmen anordnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Beweissicherung;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Ermittlung der Herkunft von Material, das mit der Sortenbezeichnung einer in der Schweiz geschützten Sorte versehen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Wahrung des bestehenden Zustandes; oder"
+            },
+            {
+              "marke": "d",
+              "text": "zur vorläufigen Vollstreckung von Unterlassungs- und Beseitigungsansprü­chen."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "1a83933af876e10a1809d0324f396d60be2e5008cb01f424ca5e484effe5cbfc"
+    },
+    {
+      "id": "bund/SORTG/art_47",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_48",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Wer unberechtigt Handlungen nach Artikel 5 Absatz 1 mit Vermehrungs­material oder Erntegut einer geschützten Sorte oder einer Sorte nach Artikel 5 Absatz 2 Buchstaben a–c vornimmt oder dieses Material zur Erzeugung von Vermehrungsmaterial einer neuen Sorte fortlaufend verwendet,"
+            },
+            {
+              "marke": "2",
+              "text": "Handelt der Täter fahrlässig, so ist die Strafe Busse."
+            },
+            {
+              "marke": "3",
+              "text": "Das Antragsrecht erlischt nach Ablauf von sechs Monaten seit dem Tag, an dem der Täter dem Verletzten bekannt wurde."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "f4f606ecc045b9b1743045943a24f4b43907a99410fc51aedfcc7a8ab4c7dfee"
+    },
+    {
+      "id": "bund/SORTG/art_49",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Wer in der Werbung, auf Geschäftspapieren oder in Verbindung mit Erzeug­nis­sen, die er in Verkehr setzt, Angaben macht, die zu Unrecht den Eindruck er­wecken, dass ein Sortenschutz besteht,"
+            },
+            {
+              "marke": "2",
+              "text": "Versuch und Gehilfenschaft sind strafbar."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "20b5bf16345e3572e795b9f2752ae137416ed327c2ac79edfda1167e913cf3ba"
+    },
+    {
+      "id": "bund/SORTG/art_50",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Richter kann ohne Rücksicht auf die Strafbarkeit einer bestimmten Person die Einziehung von widerrechtlich hergestellten Erzeugnissen verfügen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "20714bba34bf3e816120e4b0a1e7d3c991863098482c769fb995ce5ee1da6de6"
+    },
+    {
+      "id": "bund/SORTG/art_51",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Strafverfolgung obliegt den Kantonen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "619fdfb5c84180c0e49f113815238da73449519ede8073be8c8cb801eda89dd9"
+    },
+    {
+      "id": "bund/SORTG/art_52",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "… 44"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "255f3282e6ec4a13203a1ed53f55ba8156f7123582c66f8a2d830e120d7d0984"
+    },
+    {
+      "id": "bund/SORTG/art_53",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Abweichend von Artikel 8 b Absatz 2 gelten während einer Übergangszeit von einem Jahr ab Inkrafttreten der Änderung vom 5. Oktober 2007 Sorten auch dann als neu, wenn deren Vermehrungsmaterial oder Erntegut seit weniger als einem Jahr vor Inkrafttreten dieser Änderung in der Schweiz mit Zustimmung des Züchters zum Zwecke der Auswertung der Sorte verkauft oder auf andere Weise abgegeben wurde."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 5 Absatz 2 Buchstabe a gilt nicht für im Wesentlichen abgeleitete Sorten, die bereits vor Inkrafttreten der Änderung vom 5. Oktober 2007 bekannt waren."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "5da7602e63227dea64ec0b56476af8c40471e13768ff44faafc725af34f498c7"
+    },
+    {
+      "id": "bund/SORTG/art_54",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat erlässt die erforderlichen Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "ef35abe57bc2ad463ea916a9f6d3aceaab39c53d07c8215b47811c93b9b8e8eb"
+    },
+    {
+      "id": "bund/SORTG/art_55",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SORTG/art_56",
+      "ebene": "bund",
+      "quelle": "SORTG",
+      "erlass": "SortG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1977/862_862_862/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20110101",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

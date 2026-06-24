@@ -1,0 +1,1064 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/ZEMIS_V/art_1",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt für das Zentrale Migrationsinformationssystem (ZEMIS), das der Bearbeitung der Personendaten aus dem Ausländer- und Asylbereich dient:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Struktur und Inhalt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Meldepflichten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Zugriffsrechte;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bekanntgabe der Daten;"
+            },
+            {
+              "marke": "e",
+              "text": "den Datenschutz und die Informatiksicherheit."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "d19e527d88e2de07f84fac79a1bb3a523ab5adb60a86e474b9a1a926a4fc4dc6"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_2",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In dieser Verordnung bedeuten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Asylgesetz vom 26. Juni 1998 (AsylG),"
+            },
+            {
+              "marke": "2",
+              "text": "Abkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge,"
+            },
+            {
+              "marke": "3",
+              "text": "Übereinkommen vom 28. September 1954 über die Rechtsstellung der Staatenlosen,"
+            },
+            {
+              "marke": "4",
+              "text": "die Dublin-Assoziierungsabkommen;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b42b7c05cb78ad06cf6cac759dfbd9d8ebdd95ebbf5b4f5a03336c2fa0707e0b"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_3",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "ZEMIS umfasst folgende Subsysteme:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "ein automatisiertes Personendossier- und Dokumentationssystem (ZEMIS-eDossier)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern die Benutzerin oder der Benutzer die Berechtigung dazu hat, kann bei der Suche nach einer Person oder vor dem Ausstellen einer Bewilligung in ZEMIS automatisch eine Abfrage in den folgenden Datenbanken stattfinden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im nationalen Visumsinformationssystem (ORBIS) nach der Visa-Informationssystem-Verordnung vom 18. Dezember 2013;"
+            },
+            {
+              "marke": "b",
+              "text": "im automatisierte Polizeifahndungssystem (RIPOL) nach der RIPOL-Verordnung vom 26. Oktober 2016;"
+            },
+            {
+              "marke": "c",
+              "text": "im Schengener Informationssystem (SIS) nach der N-SIS-Verordnung vom 8. März 2013;"
+            },
+            {
+              "marke": "d",
+              "text": "in der Interpol-Datenbank Automated Search Facility (ASF-Interpol) nach der Interpol-Verordnung vom 21. Juni 2013;"
+            },
+            {
+              "marke": "e",
+              "text": "im Strafregister-Informationssystem (VOSTRA) nach dem Strafregistergesetz vom 17. Juni 2016."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Rechnungsverwaltung verfügt ZEMIS über eine Schnittstelle zum vom Staatssekretariat für Migration (SEM) benutzten Finanzinformationssystem."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "1c3058ed48542d39946570b1658ab23cb004b268556d4c2a33dede9d44738ffc"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_4",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "ZEMIS enthält zwei Teile:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen allgemeinen, allen zugriffsberechtigten Benutzerinnen und Benutzern zugänglichen Teil mit den Stammdaten;"
+            },
+            {
+              "marke": "b",
+              "text": "einen besonderen Teil, auf dessen Daten die Behörden oder beauftragte Dritte entsprechend ihren gesetzlichen Aufgaben (Benutzerprofile) Zugriff haben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der allgemeine Teil mit den Stammdaten setzt sich aus Personendaten der folgenden Kategorien zusammen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personalien der betroffenen Person (Namen, Vornamen, Aliasnamen, Geburtsdatum, Geschlecht, Staatsangehörigkeit, Zivilstand);"
+            },
+            {
+              "marke": "b",
+              "text": "Personennummer;"
+            },
+            {
+              "marke": "c",
+              "text": "AHV-Nummer."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In Anhang 1 werden die in ZEMIS enthaltenen Daten abschliessend aufgeführt und die Berechtigungen zur Abfrage und Bearbeitung der Daten festgelegt."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "d5b69c8602d7280b54df3ff80cddb0ff559cb7ef0c5f0c5429871eda8ae6940a"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_5",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen und kommunalen Ausländerbehörden, die für den Vollzug der Landesverweisung zuständigen Behörden sowie die kantonalen und kommunalen Arbeitsmarktbehörden melden unverzüglich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die erstmaligen Kurzaufenthalts- oder Aufenthaltsbewilligungen sowie deren Erneuerung, Verlängerung, Änderung oder Widerruf und die arbeitsmarktlichen Vorentscheide;"
+            },
+            {
+              "marke": "b",
+              "text": "die Umwandlungen von Kurzaufenthaltsbewilligungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Stellenantritte sowie die Stellen- und Berufswechsel im Kanton;"
+            },
+            {
+              "marke": "d",
+              "text": "die Austrittsmeldungen der Arbeitgeberinnen und Arbeitgeber;"
+            },
+            {
+              "marke": "e",
+              "text": "den Zu-, Um- und Wegzug von Ausländerinnen und Ausländern;"
+            },
+            {
+              "marke": "f",
+              "text": "die neu erteilten Niederlassungsbewilligungen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Verlängerung der Kontrollfristen der Ausländerausweise von Niedergelassenen und die übrigen Daten in diesen Ausweisen;"
+            },
+            {
+              "marke": "h",
+              "text": "die Geburten und die Todesfälle;"
+            },
+            {
+              "marke": "i",
+              "text": "die Adoptionen;"
+            },
+            {
+              "marke": "j",
+              "text": "die ordentlichen Einbürgerungen, die Bürgerrechtsfeststellungen und die Nichtigkeitserklärungen;"
+            },
+            {
+              "marke": "k",
+              "text": "die Änderungen und die Berichtigungen der Personalien;"
+            },
+            {
+              "marke": "l",
+              "text": "die Adressen der um eine Bewilligung ersuchenden Arbeitgeberinnen und Arbeitgeber;"
+            },
+            {
+              "marke": "m",
+              "text": "die entsandten Arbeitnehmerinnen und Arbeitnehmer nach Artikel 1 des Bundesgesetzes vom 8. Oktober 1999 über die in die Schweiz entsandten Arbeitnehmerinnen und Arbeitnehmer sowie die übrigen Arbeitnehmerinnen und Arbeitnehmer und die selbständig Erwerbstätigen, die keine Kurzaufenthalts- oder Aufenthaltsbewilligung benötigen;"
+            },
+            {
+              "marke": "n",
+              "text": "das Verschwinden sowie das Wiederauftauchen von Personen im Asylbereich;"
+            },
+            {
+              "marke": "o",
+              "text": "die Wegweisungsentscheide, jede Verzögerung oder Aussetzung des Vollzugs sowie deren Aufhebung;"
+            },
+            {
+              "marke": "p",
+              "text": "die Landesverweisungen bei der Vollzugsanordnung, deren Aufschub und die Aufhebung des Aufschubs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonalen und kommunalen Sozialhilfebehörden melden das Verschwinden sowie das Wiederauftauchen von Personen im Asylbereich."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "08102b7692470a8c29b5c767cfb6c73ef70366553d07aca64002833fa8d42303"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_6",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Behörden melden folgende Daten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Staatssekretariat des Eidgenössischen Departements für auswärtige Angelegenheiten (EDA), die schweizerischen Auslandvertretungen sowie die Missionen: die Personendaten nach den Weisungen des SEM im Zusammenhang mit der Erteilung von Visa, soweit diese Personendaten für die Erfüllung der Aufgaben nach dem AIG und nach den Schengen-Assoziierungsabkommen benötigt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Grenzposten: die Personendaten über Rückweisungen und die Erteilung von Ausnahmevisa. Das SEM erlässt hierüber Weisungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die zuständigen Behörden des Bundes und der Kantone: die Listen von Ausländerinnen und Ausländern, bei denen eine vertiefte Prüfung von allfälligen Einreise- oder Aufenthaltsgesuchen erforderlich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM kann Meldungen über Ausländerinnen und Ausländer aufnehmen, die aus der Schweiz ausgereist sind oder deren Aufenthaltsort nicht bekannt ist und die ihren öffentlich-rechtlichen Pflichten oder ihren Alimentenverpflichtungen nicht nachkommen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "8ee0de77678722914fa4046878af2a73defe3f44550530d0e0b027c0323c09fc"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_6_a",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_7",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Personendaten können gemeldet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "online über die Webanwendung;"
+            },
+            {
+              "marke": "b",
+              "text": "elektronisch über die entsprechenden Schnittstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "in Papierform auf Meldeformularen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM legt fest, unter welchen Voraussetzungen die Personendaten automatisiert gemeldet werden können und wie sie bei einer Online-Meldung vor der Übermittlung zu überprüfen sind (Plausibilitätstests)."
+        },
+        {
+          "absatz": "3",
+          "text": "Es erfasst die gemeldeten Daten unverzüglich in ZEMIS."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "5241124f9fd3ee275ca64ffaf5cf8468dfc9cbd4a1d9f1b614647d3e07cf82f7"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_8",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesverwaltungsgericht übermittelt dem SEM regelmässig in elektronischer Form die Daten über den Eingang und über die Erledigung von Beschwerden."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "37dd12324fbbe3ec49a8bd4c6d5296af9e45dd89bdfd45345632c36dc79a517a"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_9",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Daten des Ausländerbereichs kann das SEM folgenden Behörden durch ein Abrufverfahren zugänglich machen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "als zuständige Behörde für Amtshilfe nach Artikel 76 Absatz 2 der Verordnung (EG) Nr. 883/2004,"
+            },
+            {
+              "marke": "2",
+              "text": "als Verbindungsstelle bei der Durchführung der Amtshilfe im Bereich der Familienleistungen nach den Artikeln 67–69 der Verordnung (EG) Nr. 883/2004;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "42767d8adea97497a7e52aa4d3b056cb00e1823644cc390c9f7a485d1eb155a8"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_10",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Daten des Asylbereichs kann das SEM folgenden Behörden durch ein Abrufverfahren zugänglich machen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bei der Erhebung der Mehrwertsteuer auf der Einfuhr von Gegenständen (Einfuhrsteuer),"
+            },
+            {
+              "marke": "2",
+              "text": "im Bereich der Zollfahndung: zur Personenidentifikation;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "2e220d058bb00ef6264546606a6111850f657265d30e63dccccfcb03912d38f5"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_11",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM prüft, ob die beauftragten Dritten nach Artikel 11 BGIAA die anwendbaren Datenschutz- und die Informatiksicherheitsbestimmungen einhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Prüfung erfolgt beim Verfahren zur Erteilung der Zugriffsrechte und mittels der Protokollierung der Abrufe. Die erzeugten Protokolldaten können stichprobenweise oder bei Verdachtsfällen ausgewertet werden. Das SEM kann von den beauftragten Dritten Auskünfte über ergriffene Sicherheitsmassnahmen verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM legt namentlich fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "welche Daten der beauftragte Dritte für die Erfüllung der gesetzlichen Aufgaben benötigt;"
+            },
+            {
+              "marke": "b",
+              "text": "wie die Personendaten verwendet werden dürfen;"
+            },
+            {
+              "marke": "c",
+              "text": "wer die Personendaten bearbeiten darf;"
+            },
+            {
+              "marke": "d",
+              "text": "wie die Personendaten zu sichern sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Es kann das Zugriffsrecht einschränken oder widerrufen, wenn der beauftragte Dritte die Datenschutz- und Informatiksicherheitsbestimmungen nicht einhält."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "9a5c6fc7bb80ce7505a67b99d40f56fce01e21e7d21191a2b320d9ef634f45c4"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_12",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das EJPD regelt das Verfahren zur Erteilung der Zugriffsrechte auf ZEMIS."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b00254c636cc0fffd725614d7384881d89813ab805a9bbc7e8a0932ca4498b12"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_13",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann in ZEMIS bearbeitete Personendaten den folgenden Behörden oder Organisationen zur Erfüllung ihrer gesetzlichen Aufgaben einmalig oder periodisch in Form von elektronischen Datensätzen oder Listen bekannt geben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Behörden nach Artikel 9 und 10;"
+            },
+            {
+              "marke": "b",
+              "text": "den beauftragten Dritten nach Artikel 11 BGIAA;"
+            },
+            {
+              "marke": "c",
+              "text": "der Schweizerischen Flüchtlingshilfe zur Koordination der den zugelassenen Hilfswerken nach dem AsylG übertragenen Aufgaben;"
+            },
+            {
+              "marke": "d",
+              "text": "der Schweizerischen Ausgleichskasse und den kantonalen Ausgleichskassen für ihre Aufgaben im Bereich der Finanzierung und allfälligen Rückvergütung der AHV-Mindestbeiträge für nicht erwerbstätige Asylsuchende."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Den Behörden und Stellen nach Absatz 1 Buchstaben c und d dürfen nur die Personendaten in Anhang 2 bekannt gegeben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Datenlieferungen im Rahmen der Bundesstatistikverordnung vom 30. April 2025 und der Registerharmonisierungsverordnung vom 21. November 2007 erfolgen über Sedex oder mittels elektronischer Datenträger."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Daten nach Artikel 5 Absatz 2 Buchstabe a werden dem UID-Register des Bundesamtes für Statistik laufend in Form von elektronischen Datensätzen bekannt gegeben."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b421a4f491e3abb0b0fe1c05afb47c79e30a2cdc093530fd5cfc5433b4761806"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_14",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann anonymisierte Personendaten bekannt geben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "schweizerischen Behörden sowie deren Planungsbeauftragten für planerische und statistische Zwecke;"
+            },
+            {
+              "marke": "b",
+              "text": "schweizerischen Hochschulen und deren Instituten für wissenschaftliche Zwecke;"
+            },
+            {
+              "marke": "c",
+              "text": "privaten Organisationen für planerische und wissenschaftliche Zwecke."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "24c050d82a50f4e8e143bf12cd27b33de45b2c56d4333dfdf775e98981300549"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_15",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM leitet Einzelfall-Anfragen ausländischer Behörden sowie privater Personen und Organisationen an die betroffene Person zur allfälligen Beantwortung weiter. Es macht sie darauf aufmerksam, dass sie nicht verpflichtet ist, die Anfrage zu beantworten und dass das SEM die gewünschte Auskunft von sich aus nicht erteilen wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann der ausländischen Behörde, der privaten Person oder Organisation ausschliesslich die Adresse und bei Personen aus dem Ausländerbereich zusätzlich die Art der Anwesenheitsbewilligung der betroffenen Person bekannt geben, wenn die anfragende Behörde, Person oder Organisation glaubhaft macht, dass die betroffene Person die Auskunft verweigert hat, um die Durchsetzung von Rechtsansprüchen oder die Wahrnehmung anderer schutzwürdiger Interessen zu verwehren. Das SEM gibt der betroffenen Person vorher Gelegenheit zur Stellungnahme, sofern dies möglich und zumutbar ist."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b4583deb29cf86ddc2d685ebb494166e6349a0f89e5dda578429495c8ed5fc80"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_15_a",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_15_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_16",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM bezeichnet eine Datenschutz- und Informatiksicherheitsberatung. Diese überprüft die Datenrichtigkeit und die Datensicherheit in ZEMIS regelmässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Es legt in einem Bearbeitungsreglement insbesondere die organisatorischen und technischen Massnahmen gegen unbefugtes Bearbeiten der Daten fest und regelt die automatische Protokollierung der Datenbearbeitung und der Dateneinsicht."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "039afc8544a124e315fd627f84536d9520fcb31901a44604f254ba893372b9a9"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_17",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Datensicherheit richtet sich nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Datenschutzverordnung vom 31. August 2022 (DSV);"
+            },
+            {
+              "marke": "b",
+              "text": "der Informationssicherheitsverordnung vom 8. November 2023."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM, die Behörden nach den Artikeln 9 und 10, das Bundesamt für Statistik, die Schweizerische Flüchtlingshilfe, die mit der Führung der Sicherheitskonti nach dem AsylG beauftragten Dritten, die Schweizerische Ausgleichskasse und die kantonalen Ausgleichskassen treffen in ihrem Bereich die angemessenen organisatorischen und technischen Massnahmen zur Sicherung der Personendaten."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "7959de11919a7d8cbb85c40ed8f1114c833ea90fade385728ea753afee3cca0d"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_18",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Daten, die nicht mehr benötigt werden, werden dem Bundesarchiv zur Archivierung angeboten. Die vom Bundesarchiv als nicht archivwürdig bezeichneten Daten werden vernichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Daten des Asylbereichs werden in jedem Fall archiviert."
+        },
+        {
+          "absatz": "3",
+          "text": "Daten einer in die Schweiz eingebürgerten Person sind zwei Jahre seit deren Einbürgerung ausschliesslich den zuständigen Sachbearbeiterinnen und Sachbearbeitern des SEM (Bereich Bürgerrecht) zugänglich. Alle Daten des Bereichs Bürgerrecht sind 50 Jahre nach der Einbürgerung oder der letzten Gesuchsstellung um Einbürgerung dem Bundesarchiv zur Archivierung anzubieten."
+        },
+        {
+          "absatz": "4",
+          "text": "Das SEM vernichtet die nicht archivwürdigen Personendaten in ZEMIS nach folgenden Regeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bei einer Adoption werden die Namen der Pflegeeltern durch die Namen des Kindes ersetzt, sobald diese bekannt sind. Spätestens einen Monat nach Erhalt der Meldung über die Adoption werden alle Daten über das Pflegekind und die Pflegeeltern vernichtet."
+            },
+            {
+              "marke": "b",
+              "text": "Sofern für ein Pflege- oder Adoptivkind keine Anwesenheitsregelung erfolgt ist, werden die Daten des Einreiseentscheids für Pflege- und Adoptivkinder nach 26 Monaten vernichtet."
+            },
+            {
+              "marke": "c",
+              "text": "Im Todesfall werden die Daten fünf Jahre nach dem Tod vernichtet."
+            },
+            {
+              "marke": "d",
+              "text": "Im Falle der Beendigung der Anwesenheit in der Schweiz werden die Daten 15 Jahre nach der Beendigung vernichtet."
+            },
+            {
+              "marke": "e",
+              "text": "Die Engagementsdaten nach den Artikeln 19 Absatz 4 Buchstabe b und 34 der Verordnung vom 24. Oktober 2007 über Zulassung, Aufenthalt und Erwerbstätigkeit werden nach zehn Jahren vernichtet."
+            },
+            {
+              "marke": "f",
+              "text": "Verpflichtungserklärungen werden nach fünf Jahren vernichtet;"
+            },
+            {
+              "marke": "g",
+              "text": "Die biometrischen Daten zum Ausländerausweis werden bei jeder neuen Erfassung oder spätestens fünf Jahre nach der Erfassung vernichtet."
+            },
+            {
+              "marke": "h",
+              "text": "Die Daten zu schweizerischen Reisedokumenten für Ausländerinnen und Ausländer werden 20 Jahre nach ihrer ersten Speicherung vernichtet."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Bestand in einem Fall nach Absatz 4 Buchstabe d eine Entfernungs- oder Fernhaltemassnahme, so werden die Personendaten frühestens fünf Jahre nach Ablauf dieser Massnahme vernichtet."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "7b1841c46e49bbe9fac794b823c250180f0fe2c46d9abff08de5f7696e811cbe"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_19",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechte der Betroffenen, insbesondere das Auskunfts-, das Berichtigungs- und das Vernichtungsrecht sowie das Recht auf Information über die Beschaffung von Personendaten, richten sich nach den Bestimmungen des Datenschutzgesetzes vom 25. September 2020 (DSG) und des Verwaltungsverfahrensgesetzes vom 20. Dezember 1968 sowie nach den Artikeln 111 e– 111 g AIG."
+        },
+        {
+          "absatz": "2",
+          "text": "Will eine betroffene Person Rechte geltend machen, so muss sie in der Form nach Artikel 16 DSV ein Gesuch beim SEM einreichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Unrichtige Daten sind von Amtes wegen zu berichtigen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "c2e7b9ca02a7bab90713d394d615b92c1563657e7c05c943de8faafde8b81558"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_20",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM erstellt, soweit es zur Erfüllung seiner gesetzlichen Aufgaben erforderlich ist, in Zusammenarbeit mit dem Bundesamt für Statistik periodisch Statistiken aufgrund der in ZEMIS erfassten Daten. Diese Statistiken dürfen keine Rückschlüsse auf die betroffenen Personen zulassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gibt den Behörden des Bundes, der Kantone und der Gemeinden die Statistiken ab, die sie für die Erfüllung ihrer Aufgaben nach dem AIG, AsylG, BüG, Freizügigkeitsabkommen und EFTA-Übereinkommen sowie nach den Schengen-Assoziierungsabkommen und den Dublin-Assoziierungsabkommen benötigen."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Es erstellt nach Anhang XII Teil A der Verordnung (EU) 2016/399 Statistiken zum Wegweisungsverfahren nach Artikel 64 c bis AIG und gibt diese der Europäischen Kommission jährlich bekannt."
+        },
+        {
+          "absatz": "3",
+          "text": "Es veröffentlicht die wichtigsten Statistiken."
+        },
+        {
+          "absatz": "4",
+          "text": "Es kann Behörden sowie privaten Personen und Organisationen auf Anfrage für ihre Bedürfnisse ergänzende Statistiken zur Verfügung stellen. Es kann für sie besondere statistische Auswertungen vornehmen."
+        },
+        {
+          "absatz": "5",
+          "text": "Es wirkt bei der jährlichen eidgenössischen Erhebung für die Statistik der Bevölkerung und der Haushalte, bei der Migrationsstatistik und bei der Erwerbstätigenstatistik mit. Es liefert dem Bundesamt für Statistik zur Erfüllung seiner Aufgaben nach der Bundesstatistikverordnung vom 30. April 2025:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "regelmässig Einzeldaten über Bestand und Bewegungen der in ZEMIS aufgeführten Ausländerinnen und Ausländer;"
+            },
+            {
+              "marke": "b",
+              "text": "die für die Erstellung der Sozialhilfestatistik notwendigen Daten über Asylsuchende, vorläufig Aufgenommene und Flüchtlinge."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Es kann den auf ZEMIS zugriffsberechtigten Stellen bewilligen, aufgrund ihrer eigenen Daten selbst Statistiken zu erstellen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "3fe8f049ae331ecba9797bd8f0ca77815a3b371276dc8db6f1affbed5105aeaf"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_21",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM führt mit Hilfe von ZEMIS periodisch Kontrollen über die erteilten Bewilligungen und über den Bestand der Ausländerinnen und Ausländer durch."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausländerbehörden der Kantone und die Amtsstellen, die für die Gemeinde die Kontrolle der Ausländerinnen und Ausländer führen, wirken bei den Kontrollen mit. Das SEM liefert ihnen zum Zweck der Kontrolle Bestandeslisten über die Ausländerinnen und Ausländer sowie Listen mit den Verfalldaten ihrer Bewilligungen."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b9f36a9381c8a9d795a066f8d5713aa458e7664cde5eece5a31e26158448170f"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_22",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Private Personen und Organisationen schulden dem SEM für Anfragen nach Artikel 15 Absatz 2 eine Gebühr von 40 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine kostendeckende Gebühr schuldet dem SEM:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die private Person oder Organisation, wenn das SEM ihr ergänzende Statistiken zur Verfügung stellt oder für sie besondere statistische Auswertungen vornimmt (Art. 20 Abs. 4);"
+            },
+            {
+              "marke": "b",
+              "text": "die Behörde, private Person oder Organisation, wenn das SEM für sie besondere statistische Auswertungen nach den Artikeln 14 und 20 Absatz 4 vornimmt und dies mit erheblichen Kosten oder besonders grossem Arbeitsaufwand verbunden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Hat eine Person die unrichtige Erfassung ihrer Daten pflichtwidrig verursacht, so können ihr die Kosten für die Berichtigung in Rechnung gestellt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Übrigen sind die allgemeinen Bestimmungen der Gebührenverordnung AIG vom 24. Oktober 2007 anwendbar."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "f25e440bada14546307e48216fc797a8baae5809a906a9f6c630da899af322be"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_23",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verordnung vom 23. November 1994 über das Zentrale Ausländerregister wird aufgehoben."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "742c44c196c0c468171cfafbb06cb8ae9e3df405cab19a9168f0dd83b4ea2aa3"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_24",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung bisherigen Rechts wird im Anhang 3 geregelt."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "7f76e32eb608c84e2c9d7aed3dc57441570c825de1f8298ea5f62815acb556d0"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_25",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_25_a",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Änderung vom 21. November 2007 tritt gleichzeitig mit den Artikeln 6 Buchstabe a und 13 Absatz 1 sowie den Ziffern 1–3 des Anhangs des Registerharmonisierungsgesetzes vom 23. Juni 2006 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die im Zeitpunkt der erstmaligen und umfassenden Zuweisung und Bekanntgabe der AHV-Nummer bereits in ZEMIS verzeichneten Personen wird die AHV-Nummer erfasst, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es sich um eine Person des Ausländerbereichs handelt, welche über eine gültige Aufenthaltsbewilligung von mehr als vier Monaten verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "es sich um eine Person des Asylbereichs handelt, deren Einreisegeschäft in der Schweiz noch nicht abgeschlossen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Verfahren zur erstmaligen und umfassenden Bekanntgabe der AHV-Nummer an ZEMIS richtet sich nach den Artikeln 133 bis und 134 quater der Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung."
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_25_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "cf4ad7610a3235b5c80a19cf1ef459e6a4d10bd304eed65b6dfdfc2c5d2864a6"
+    },
+    {
+      "id": "bund/ZEMIS_V/art_26",
+      "ebene": "bund",
+      "quelle": "ZEMIS_V",
+      "erlass": "ZEMIS-V",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt unter Vorbehalt von Absatz 2 am 29. Mai 2006 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Folgende Datenfelder von Anhang 1 treten am 1. Januar 2007 in Kraft:",
+          "items": [
+            {
+              "marke": "–",
+              "text": "«Staatsangehörigkeit eingetragene/r Partner/in» (unter Ziff. IV., 2., a.);"
+            },
+            {
+              "marke": "–",
+              "text": "«Eingetragene/r Partner/in Schweizer/in» (unter Ziff. IV., 2., a.);"
+            },
+            {
+              "marke": "–",
+              "text": "«Ausländerkategorie eingetragene/r Partner/in» (unter Ziff. IV., 2., d.);"
+            },
+            {
+              "marke": "–",
+              "text": "«Geburtsdatum eingetragene/r Partner/in» (unter Ziff. IV., 2., i.);"
+            },
+            {
+              "marke": "–",
+              "text": "«Eingetragene/r Partner/in Schweizer/in» (unter Ziff. IV., 2., i.)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-06-12",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2006/303/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260612",
+      "sha": "1cfaab359c903b65459e8bfe4927876d709c641223b9bcd5b06390afe65dfc69"
+    }
+  ]
+}

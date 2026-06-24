@@ -1,0 +1,1879 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/SKV/art_1",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt die Verkehrskontrollen und die damit zusammenhängenden Massnahmen, Meldungen und statistischen Erhebungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ac0a3f7986238bb594b6c0d02b3cb1d5b085c0778dc4fe8e148dfd64e6a074be"
+    },
+    {
+      "id": "bund/SKV/art_2",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden folgende Abkürzungen verwendet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ASTRA: Bundesamt für Strassen;"
+            },
+            {
+              "marke": "b",
+              "text": "BAV: Bundesamt für Verkehr;"
+            },
+            {
+              "marke": "c",
+              "text": "SVG: Strassenverkehrsgesetz vom 19. Dezember 1958;"
+            },
+            {
+              "marke": "d",
+              "text": "VRV: Verkehrsregelnverordnung vom 13. November 1962;"
+            },
+            {
+              "marke": "e",
+              "text": "VTS: Verordnung vom 19. Juni 1995 über die technischen Anforderungen an Strassenfahrzeuge;"
+            },
+            {
+              "marke": "f",
+              "text": "VZV: Verkehrszulassungsverordnung vom 27. Oktober 1976;"
+            },
+            {
+              "marke": "g",
+              "text": "ARV 1: Chauffeurverordnung vom 19. Juni 1995;"
+            },
+            {
+              "marke": "h",
+              "text": "ARV 2: Verordnung vom 6. Mai 1981 über die Arbeits- und Ruhezeit der berufsmässigen Führer von leichten Personentransport- fahrzeugen und schweren Personenwagen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nutzfahrzeuge sind Sattelschlepper und Anhänger mit einem Gesamtgewicht von mehr als 3,5 t sowie Gesellschaftswagen, Kleinbusse und Lastwagen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7cd7ac9272027d29f45c115303bccbcbb599b26c9e5d1a44232ccbcbf9c86bbf"
+    },
+    {
+      "id": "bund/SKV/art_3",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontrolle des Verkehrs auf öffentlichen Strassen, einschliesslich der Kontrolle der Personenbeförderung und der Zulassung als Strassentransportunternehmung, obliegt der nach kantonalem Recht zuständigen Polizei. Vorbehalten bleibt die Verordnung vom 11. Februar 2004 über den militärischen Strassenverkehr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Polizei wirkt helfend und verkehrserziehend, verhindert Widerhandlungen, verzeigt Fehlbare und erhebt Ordnungsbussen nach dem Ordnungsbussengesetz vom 24. Juni 1970."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cbaae10258e35fb6a8bd33ed9c39e20b8176eedb1bd2d03f1f17e50415ee268e"
+    },
+    {
+      "id": "bund/SKV/art_4",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt für Zoll und Grenzsicherheit (BAZG ) ist an den Zollstellen für die verkehrspolizeiliche Kontrolle von Fahrzeugen sowie Fahrzeugführern und ‑führerinnen, die in die Schweiz einfahren oder die Schweiz verlassen, zuständig. Es führt die verkehrspolizeilichen Kontrollen zusammen mit der Zollkontrolle von Fahrzeugen sowie ihren Ladungen und Insassen durch."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kontrolliert insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Führer- und den Fahrzeugausweis sowie die Kontrollschilder;"
+            },
+            {
+              "marke": "b",
+              "text": "den Zustand der Fahrzeugführer und -führerinnen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Einhaltung der Arbeits-, Lenk- und Ruhezeiten;"
+            },
+            {
+              "marke": "d",
+              "text": "den technischen Allgemeinzustand der Fahrzeuge;"
+            },
+            {
+              "marke": "e",
+              "text": "die Abmessungen und Gewichte;"
+            },
+            {
+              "marke": "f",
+              "text": "den Transport von gefährlichen Gütern;"
+            },
+            {
+              "marke": "g",
+              "text": "das Sonntags- und Nachtfahrverbot;"
+            },
+            {
+              "marke": "h",
+              "text": "die Motorfahrzeug-Haftpflichtversicherung;"
+            },
+            {
+              "marke": "i",
+              "text": "die Einhaltung der Vorschriften über die Personenbeförderung und die Zulassung als Strassentransportunternehmung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Kontrolle von Fahrzeugen und ihrer Ladung: die gleichen Massnahmen wie die kantonalen Polizeiorgane;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Kontrolle von Fahrzeugführern und -führerinnen: die Verhinderung der Weiterfahrt (Art. 30)."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Stellt das BAZG eine Widerhandlung fest, so verhindert es die Weiterfahrt."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird den Anordnungen des BAZG nicht Folge geleistet oder kann es eine Widerhandlung nicht im Ordnungsbussenverfahren nach dem Ordnungsbussengesetz vom 18. März 2016 ahnden, so bietet es die nächstgelegene kantonale Polizei auf."
+        },
+        {
+          "absatz": "6",
+          "text": "Ist die kantonale Polizei nicht erreichbar, so erstellt das BAZG die Verzeigungsrapporte und übergibt sie mit den vorhandenen Beweismitteln dem zuständigen Polizeikommando. Dieses leitet das Strafverfahren ein."
+        },
+        {
+          "absatz": "7",
+          "text": "Das ASTRA regelt im Einvernehmen mit dem BAZG die Einzelheiten der Durchführung verkehrspolizeilicher Kontrollen. Vorbehalten bleiben weitergehende Vereinbarungen der Kantone mit dem Eidgenössischen Finanzdepartement nach Artikel 97 des Zollgesetzes vom 18. März 2005."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3ae0245e0884484ba5159355494f82b34da72c85d1e18be1d04db7dc510dd11e"
+    },
+    {
+      "id": "bund/SKV/art_5",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Behörden richten die Kontrollen schwerpunktmässig nach sicherheitsrelevantem Fehlverhalten, den Gefahrenstellen und der Unterstützung des Verlagerungsziels nach dem Güterverkehrsverlagerungsgesetz vom 19. Dezember 2008 aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kontrollen erfolgen stichprobenweise, systematisch oder im Rahmen von Grosskontrollen. Sie können kantons- oder staatenübergreifend koordiniert werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Polizei nimmt nach ihren Möglichkeiten an international organisierten Kontrollen teil."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8438800e45f8cc8686d8e362cb3a8f62cad85cd14665b08f7f2c2178ef10353b"
+    },
+    {
+      "id": "bund/SKV/art_6",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf öffentlichen Strassen ist die Kontrolle von Ausweisen und Bewilligungen jederzeit zulässig; ausserhalb ist sie nur zur Abklärung von Widerhandlungen und Unfällen oder bei Verdacht auf Widerhandlungen, die in einem unmittelbaren örtlichen und zeitlichen Zusammenhang zur Kontrolle stehen, zulässig. Vorbehalten bleiben Betriebskontrollen nach den Artikeln 22 und 27."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "62f3d65196ddd1904fd59ef4f959cf33e1d02264c1de05e065e66b6d0dbaa15f"
+    },
+    {
+      "id": "bund/SKV/art_7",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Polizei kann Motorfahrzeuge und Anhänger zum Wägen auf Waagen und zu umfassenden Kontrollen in Kontrollzentren umleiten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "eadc82d071d9d948ec9dd4b9f69aed7a362c98b9f5a9900837a8f90ddaeb91b4"
+    },
+    {
+      "id": "bund/SKV/art_8",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SKV/art_9",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Möglichkeit sind bei den Kontrollen technische Hilfsmittel einzusetzen, insbesondere bei der Kontrolle:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Geschwindigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "der Beachtung von Lichtsignalen;"
+            },
+            {
+              "marke": "c",
+              "text": "des Sicherheitsabstandes beim Hintereinanderfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "der Arbeits-, Lenk- und Ruhezeit;"
+            },
+            {
+              "marke": "e",
+              "text": "des technischen Zustandes der Fahrzeuge;"
+            },
+            {
+              "marke": "f",
+              "text": "der Abmessungen und Gewichte;"
+            },
+            {
+              "marke": "g",
+              "text": "des Ladegutes;"
+            },
+            {
+              "marke": "h",
+              "text": "der Verwendung eines Telefons ohne Freisprecheinrichtung während der Fahrt;"
+            },
+            {
+              "marke": "i",
+              "text": "der Atemalkoholkonzentration."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Für technische Hilfsmittel, die Messzwecken dienen, gelten die Messmittelverordnung vom 15. Februar 2006 und die entsprechenden Ausführungsvorschriften des Eidgenössischen Justiz- und Polizeidepartements."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Kontrollen mit technischen Hilfsmitteln regelt das ASTRA im Einvernehmen mit dem Eidgenössischen Institut für Metrologie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Durchführung und das Verfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anforderungen an die Messsysteme und Messarten sowie die technisch bedingten Sicherheitsabzüge."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das ASTRA legt die Anforderungen an das Kontroll- und Auswertungspersonal fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Zur Erprobung neuer technischer Hilfsmittel kann das ASTRA gestützt auf einen Prüfbericht des Eidgenössischen Instituts für Metrologie eine befristete Betriebsbewilligung erteilen und die technisch bedingten Sicherheitsabzüge festlegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a1e81656b92e7f178488459741e755bc86ad6ca61e72f45697b394b233410bca"
+    },
+    {
+      "id": "bund/SKV/art_10",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei kann zur Feststellung des Alkoholkonsums Vortestgeräte verwenden, die Auskunft über die Alkoholisierung geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen Hinweise dafür, dass die kontrollierte Person wegen einer anderen Substanz als Alkohol fahrunfähig ist und in diesem Zustand ein Fahrzeug geführt hat, so kann die Polizei zum Nachweis von Betäubungs- oder Arzneimitteln namentlich im Urin, Speichel oder Schweiss Vortests durchführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vortests sind nach den Vorschriften des Geräteherstellers durchzuführen."
+        },
+        {
+          "absatz": "4",
+          "text": "Auf weitere Untersuchungen wird verzichtet, wenn die Vortests ein negatives Resultat ergeben und die kontrollierte Person keine Anzeichen von Fahrunfähigkeit aufweist."
+        },
+        {
+          "absatz": "5",
+          "text": "Ergibt der Vortest hinsichtlich Alkoholkonsums ein positives Resultat oder hat die Polizei auf den Einsatz eines Vortestgerätes verzichtet, so führt sie eine Atemalkoholprobe durch."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ace68b885739ca59424085ccd5f9a14032f179783bb32dce0dd91b9ddf098821"
+    },
+    {
+      "id": "bund/SKV/art_10_a",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Atemalkoholprobe kann durchgeführt werden mit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einem Atemalkoholtestgerät (Testgerät) nach Artikel 11;"
+            },
+            {
+              "marke": "b",
+              "text": "einem Atemalkoholmessgerät (Messgerät) nach Artikel 11 a ."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine Messung mit einem Testgerät durchgeführt, so können bestimmte Werte unterschriftlich anerkannt werden (Art. 11 Abs. 3)."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_10_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2a69dd3ef10ab9a96091eaba75fd1a848037c8bb0cc78454a69484ffc82f2d39"
+    },
+    {
+      "id": "bund/SKV/art_11",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Atemalkoholprobe mit einem Testgerät darf durchgeführt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "frühestens nach einer Wartezeit von 20 Minuten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "nach der Vornahme einer Mundspülung unter Beachtung allfälliger Angaben des Geräteherstellers."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Probe sind zwei Messungen erforderlich. Weichen diese um mehr als 0,05 mg/l voneinander ab, so sind zwei neue Messungen vorzunehmen. Ergeben auch diese Messungen eine Differenz von mehr als 0,05 mg/l und bestehen Hinweise auf eine Alkoholisierung, so ist eine Atemalkoholprobe mit einem Messgerät durchzuführen oder eine Blutprobe anzuordnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Massgebend ist der tiefere Wert der beiden Messungen. Dieser kann von der betroffenen Person unterschriftlich anerkannt werden, wenn er folgenden Atemalkoholkonzentrationen entspricht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Personen, die ein Motorfahrzeug geführt haben: 0,25 oder mehr, aber weniger als 0,40 mg/l;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Personen, die dem Verbot des Fahrens unter Alkoholeinfluss nach Artikel 2 a Absatz 1 VRV unterstehen: 0,05 oder mehr, aber weniger als 0,40 mg/l;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Personen, die ein motorloses Fahrzeug oder ein Motorfahrrad geführt haben: 0,25 oder mehr, aber weniger als 0,55 mg/l."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Testgeräte müssen die Anforderungen der Messmittelverordnung vom 15. Februar 2006 und der entsprechenden Ausführungsvorschriften des Eidgenössischen Justiz- und Polizeidepartements erfüllen."
+        },
+        {
+          "absatz": "5",
+          "text": "Das ASTRA regelt die Handhabung der Testgeräte."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "96284be110a8cc9522ff68e63c47c45a48de49ae996f50771d7b427f0be32278"
+    },
+    {
+      "id": "bund/SKV/art_11_a",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Atemalkoholprobe mit einem Messgerät darf frühestens nach einer Wartezeit von 10 Minuten durchgeführt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Weist das Messgerät Mundalkohol nach, so muss mit der Durchführung der Atemalkoholprobe mindestens weitere 5 Minuten gewartet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Messgeräte müssen die Anforderungen der Messmittelverordnung vom 15. Februar 2006 und der entsprechenden Ausführungsvorschriften des Eidgenössischen Justiz- und Polizeidepartements erfüllen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das ASTRA regelt die Handhabung der Messgeräte."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5565cfa9449648f2269efaa8e60fa1b06072d01bb554ab59c98f495aac4f52aa"
+    },
+    {
+      "id": "bund/SKV/art_12",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Blutprobe zum Nachweis von Alkohol ist anzuordnen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Resultat einer Atemalkoholprobe mit einem Testgerät: 1. über den Werten liegt, die unterschriftlich anerkannt werden können, und keine Atemalkoholprobe mit einem Messgerät durchgeführt werden kann,"
+            },
+            {
+              "marke": "2",
+              "text": "durch die betroffene Person unterschriftlich anerkannt werden könnte, sie den Wert aber nicht anerkannt hat und keine Atemalkoholprobe mit einem Messgerät durchgeführt werden kann;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Blutprobe kann angeordnet werden, wenn Anzeichen von Fahrunfähigkeit oder Hinweise auf Fahrunfähigkeit vorliegen und keine Atemalkoholprobe durchgeführt werden kann oder diese nicht geeignet ist, um die Widerhandlung festzustellen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c557005fef0e78678e08cbdac811f51414e9236df2f5d90ede8bc03357093e87"
+    },
+    {
+      "id": "bund/SKV/art_12_a",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Blutprobe ist anzuordnen, wenn Anzeichen von Fahrunfähigkeit oder Hinweise auf Fahrunfähigkeit vorliegen, die nicht oder nicht allein auf Alkoholeinfluss zurückzuführen sind. Zusätzlich kann eine Sicherstellung von Urin angeordnet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_12_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0abaa49805d6336d105177352a8864ebee6222a639a4f277588c4d6be9511b09"
+    },
+    {
+      "id": "bund/SKV/art_12_b",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "12_b",
+      "artikelLabel": "Art. 12b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Steht nicht fest, welche von mehreren Personen ein Fahrzeug geführt hat, so können alle in Frage kommenden Personen den Untersuchungen nach den Artikeln 10–12 a unterzogen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_12_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "caf9baaaa4ccb48566b34c942514d40f98e8bc47b3a0d994c2f4c1b8dc6804f7"
+    },
+    {
+      "id": "bund/SKV/art_13",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei muss die betroffene Person insbesondere darauf hinweisen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Weigerung, an der Durchführung eines Vortests oder der Atemalkoholprobe mitzuwirken, die Anordnung der Blutprobe zur Folge hat (Art. 55 Abs. 3 SVG);"
+            },
+            {
+              "marke": "b",
+              "text": "die Anerkennung des Resultats der Atemalkoholprobe nach Artikel 11 die Einleitung massnahme- und strafrechtlicher Verfahren zur Folge hat;"
+            },
+            {
+              "marke": "c",
+              "text": "die betroffene Person die Durchführung einer Blutprobe verlangen kann."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Verweigert die betroffene Person die Durchführung eines Vortests, die Atemalkoholprobe, die Blutentnahme, die Sicherstellung von Urin oder die ärztliche Untersuchung, so ist sie auf die Folgen aufmerksam zu machen (Art. 16 c Abs. 1 Bst. d in Verbindung mit Abs. 2 und Art. 91 a Abs. 1 SVG)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Durchführung der Atemalkoholprobe, die Sicherstellung von Urin, die Feststellungen der Polizei, die Anerkennung der Atemalkoholmessungen sowie der Auftrag zur Blutentnahme und Sicherstellung von Urin oder die Bestätigung des Auftrags sind in einem Protokoll festzuhalten. Das ASTRA legt die Mindestanforderungen an die Form und den Inhalt des Protokolls fest."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a290bd23d5cb5207bb5f08368636c4c02c82e1b3b5f8ff3cc20c4c0923e10515"
+    },
+    {
+      "id": "bund/SKV/art_14",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Blut ist durch einen Arzt oder eine Ärztin oder, unter seiner oder ihrer Verantwortung, durch eine von ihm oder ihr bezeichnete sachkundige Hilfsperson zu entnehmen. Die Sicherstellung des Urins erfolgt unter angemessener Sichtkontrolle durch eine sachkundige Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gefäss mit dem Blut oder dem Urin ist unverwechselbar anzuschreiben, transportsicher zu verpacken, gekühlt aufzubewahren und auf dem schnellsten Weg an ein vom ASTRA anerkanntes Laboratorium zur Auswertung zu senden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das ASTRA anerkennt auf Antrag der Kantone Laboratorien, welche die für forensische Blut- und Urinanalysen erforderlichen Einrichtungen besitzen und für eine zuverlässige Untersuchung Gewähr bieten. Es überprüft die Tätigkeit der anerkannten Laboratorien oder lässt sie überprüfen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0f721d7c5a2f1665f67300579f8471acccd35bdc0409f5f5476a2e4f8849a6a5"
+    },
+    {
+      "id": "bund/SKV/art_15",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wurde eine Blutentnahme angeordnet, so hat der damit beauftragte Arzt oder die damit beauftragte Ärztin die betroffene Person auf die medizinisch feststellbaren Anzeichen von Fahrunfähigkeit aufgrund von Alkohol-, Betäubungs- oder Arzneimittelkonsum zu untersuchen. Das ASTRA legt die Mindestanforderungen an die Form und den Inhalt des entsprechenden Protokolls fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Lässt die betroffene Person in ihrem Verhalten keine Auffälligkeiten erkennen, die auf eine andere Ursache der Fahrunfähigkeit als Alkohol hinweisen, so kann die zuständige Behörde den Arzt oder die Ärztin von der Untersuchungspflicht entbinden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e9b71ff8014f6650413f8bb717705a55b7e34cf80f28d8aefeb9589218d5af9f"
+    },
+    {
+      "id": "bund/SKV/art_16",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ergebnisse der Blut- oder Urinanalyse sind zuhanden der Straf- und Entzugsbehörde durch anerkannte Sachverständige hinsichtlich ihrer Bedeutung für die Fahrfähigkeit begutachten zu lassen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine die Fahrfähigkeit herabsetzende Substanz im Blut nachgewiesen wird und es sich dabei nicht um Alkohol oder eine in Artikel 2 Absatz 2 VRV aufgeführte Substanz handelt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Person eine Substanz nach Artikel 2 Absatz 2 VRV gemäss ärztlicher Verschreibung eingenommen hat, jedoch Hinweise auf Fahrunfähigkeit bestehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der oder die Sachverständige berücksichtigt die Feststellungen der Polizei, die Ergebnisse der ärztlichen sowie der chemisch-toxikologischen Untersuchung und begründet die daraus gezogenen Schlussfolgerungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das ASTRA anerkennt auf Antrag der Laboratorien Personen als Sachverständige, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Facharzttitel Rechtsmedizin, den Titel «Forensischer Toxikologe/Forensische Toxikologin SGRM» der Schweizerischen Gesellschaft für Rechtsmedizin oder einen gleichwertigen ausländischen Fachtitel besitzen; und"
+            },
+            {
+              "marke": "b",
+              "text": "umfassende theoretische Kenntnisse und praktische Erfahrungen in der Interpretation medizinischer und toxikologischer Befunde hinsichtlich ihrer Bedeutung für die Fahrfähigkeit nachweisen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1706c9ed6153edd81a35544c485ff0a87203a206323069a0776983a2f435c61b"
+    },
+    {
+      "id": "bund/SKV/art_17",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Angetrunkenheit oder der Einfluss einer anderen die Fahrfähigkeit herabsetzenden Substanz als Alkohol kann auch aufgrund von Zustand und Verhalten der verdächtigten Person oder durch Ermittlung über den Konsum festgestellt werden, namentlich wenn die Atemalkoholprobe, der Betäubungsmittel- oder Arzneimittelvortest oder die Blutprobe nicht vorgenommen werden konnten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "67d7b52e8ef58fdee77265295761ca2ea445c2150c3aadaf324bd2216c0341fb"
+    },
+    {
+      "id": "bund/SKV/art_18",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das ASTRA regelt die weiteren Anforderungen an das Verfahren zur Feststellung der Fahrunfähigkeit im Strassenverkehr infolge Alkohol-, Betäubungsmittel- oder Arzneimitteleinflusses."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c045ebee535c5c513b02541a003afa587108336b2d5dce35729e2f4acf918cef"
+    },
+    {
+      "id": "bund/SKV/art_19",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gegenüber Führern und Führerinnen mit diplomatischen oder konsularischen Vorrechten und Immunitäten dürfen ohne ihre Zustimmung keine Untersuchungen zur Feststellung der Fahrunfähigkeit angeordnet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc74211145393dce41cfaf5b5577553a93a075604e534b2b9f335bee1c1e2a29"
+    },
+    {
+      "id": "bund/SKV/art_20",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kontrolliert werden die Arbeits-, Lenk- und Ruhezeit der Motorfahrzeugführer und -führerinnen, die der ARV 1 und der ARV 2 unterstehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei den der ARV 1 unterstehenden Führern und Führerinnen stellen die kantonalen Behörden sicher, dass jährlich mindestens 3 Prozent der Arbeitstage kontrolliert werden; mindestens 30 Prozent dieser Kontrollen müssen im Rahmen von Strassenkontrollen und mindestens 50 Prozent im Rahmen von Betriebskontrollen erfolgen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5d4ff816c05ed5d3c47a35669b76e3be6dd8c787916b24439941fdfd563e14b2"
+    },
+    {
+      "id": "bund/SKV/art_21",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei kontrolliert auf der Strasse insbesondere die Einhaltung der Vorschriften betreffend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Tageslenkzeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Arbeits- und die Lenkpausen;"
+            },
+            {
+              "marke": "c",
+              "text": "die täglichen Ruhezeiten;"
+            },
+            {
+              "marke": "d",
+              "text": "die der Kontrolle vorangegangene wöchentliche Ruhezeit;"
+            },
+            {
+              "marke": "e",
+              "text": "das Mitführen und Führen der Kontrollmittel;"
+            },
+            {
+              "marke": "f",
+              "text": "die Bedienung und das einwandfreie Funktionieren des Fahrtschreibers."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Polizei kann für die Früherkennung von Missbräuchen und Manipulationen des Fahrtschreibers, als Entscheidungshilfe, ob ein Fahrzeug zur Kontrolle anzuhalten ist, per Funkverbindung die folgenden Daten abrufen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "letzter Versuch einer Sicherheitsverletzung;"
+            },
+            {
+              "marke": "b",
+              "text": "längste Unterbrechung der Stromversorgung in den letzten 10 Tagen;"
+            },
+            {
+              "marke": "c",
+              "text": "Sensorstörung in den letzten 10 Tagen;"
+            },
+            {
+              "marke": "d",
+              "text": "Datenfehler in Bezug auf Weg und Geschwindigkeit in den letzten 10 Tagen;"
+            },
+            {
+              "marke": "e",
+              "text": "Datenkonflikt Fahrzeugbewegung in den letzten 10 Tagen;"
+            },
+            {
+              "marke": "f",
+              "text": "Fahren ohne gültige Karte;"
+            },
+            {
+              "marke": "g",
+              "text": "Einstecken der Karte während des Lenkens in den letzten 10 Tagen;"
+            },
+            {
+              "marke": "h",
+              "text": "Zeiteinstellungsdaten;"
+            },
+            {
+              "marke": "i",
+              "text": "Kalibrierungsdaten einschliesslich des Datums der zwei letzten Kalibrierungen;"
+            },
+            {
+              "marke": "j",
+              "text": "Kontrollschildnummer des Fahrzeugs;"
+            },
+            {
+              "marke": "k",
+              "text": "vom Fahrtschreiber aufgezeichnete Geschwindigkeit."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die per Funkverbindung übertragenen Daten müssen von der Polizei spätestens drei Stunden nach ihrer Übermittlung vernichtet werden, ausser die Daten lassen eine Manipulation oder einen Missbrauch des Fahrtschreibers vermuten. Bestätigt sich diese Vermutung im Lauf der anschliessenden Strassenkontrolle nicht, so sind die übertragenen Daten zu vernichten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e761d1752940138bbea7cb9d318f2d9cb64c3fcc4dae71eaeed9b165e22fecbd"
+    },
+    {
+      "id": "bund/SKV/art_22",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Betriebskontrollen werden am Geschäftssitz des Betriebs oder am Sitz seiner Zweigniederlassungen durchgeführt. Ist ein Fahrzeug nicht in dem Kanton zugelassen, in dem der Geschäftssitz oder eine Zweigniederlassung liegt, so informiert der Zulassungskanton die für die Betriebskontrolle zuständige Behörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Betriebskontrollen sind insbesondere dann durchzuführen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Strassenkontrollen schwere Widerhandlungen festgestellt werden; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Verdacht einer Widerhandlung durch den Arbeitgeber besteht."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kontrollen nach Absatz 2 werden an die Anzahl Kontrollen nach Artikel 20 angerechnet."
+        },
+        {
+          "absatz": "4",
+          "text": "Anstelle einer Kontrolle vor Ort kann die Kontrolle anhand von Kontrolldokumenten erfolgen. Erfasst ein Betrieb sämtliche Daten mit Kontrollmitteln nach Artikel 13 Buchstaben b, c und d ARV 1 oder Artikel 16 a ARV 2, so können die Daten der Kontrollbehörde in der von ihr verlangten Form und unter Einhaltung der notwendigen Sicherheitsvorkehrungen auch auf elektronischem Weg übermittelt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Nach Möglichkeit sind mindestens die Kontrollmittel eines Monats in die Auswertung einzubeziehen."
+        },
+        {
+          "absatz": "6",
+          "text": "Gegenstand der Kontrollen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Kontrollpunkte nach Artikel 21;"
+            },
+            {
+              "marke": "b",
+              "text": "die Tageslenkzeiten zwischen zwei wöchentlichen Ruhezeiten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Lenkzeiten innerhalb einer beziehungsweise zwei Wochen;"
+            },
+            {
+              "marke": "d",
+              "text": "die wöchentliche Höchstarbeitszeit;"
+            },
+            {
+              "marke": "e",
+              "text": "allenfalls das Total der im Kalenderjahr geleisteten Überzeitarbeit;"
+            },
+            {
+              "marke": "f",
+              "text": "die wöchentlichen Ruhezeiten;"
+            },
+            {
+              "marke": "g",
+              "text": "der Ausgleich für die Verkürzung der täglichen beziehungsweise der wöchentlichen Ruhezeiten;"
+            },
+            {
+              "marke": "h",
+              "text": "die Verwendung und Aufbewahrung der Kontrollmittel;"
+            },
+            {
+              "marke": "i",
+              "text": "die Aufstellungen über die Arbeits-, Lenk- und Ruhezeiten;"
+            },
+            {
+              "marke": "j",
+              "text": "das Herunterladen von Daten beim digitalen Fahrtschreiber."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2d38d864a1d8a90aad39597846eeaf58189049bf87acede3f974ca5b79e702da"
+    },
+    {
+      "id": "bund/SKV/art_23",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die kantonalen Behörden stellen sicher, dass der technische Zustand von Fahrzeugen ausreichend kontrolliert wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "12d6bedb33e315175added5a263a7cbeae819994fa99d7197f8f93eba7c6116b"
+    },
+    {
+      "id": "bund/SKV/art_24",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es wird mindestens eines der folgenden Kontrollverfahren durchgeführt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sichtkontrolle des Fahrzeugs im Stillstand;"
+            },
+            {
+              "marke": "b",
+              "text": "Prüfung der Dokumente betreffend: 1. eine kürzlich erfolgte Kontrolle des technischen Zustandes (Abs. 4),"
+            },
+            {
+              "marke": "2",
+              "text": "die letzte periodische Nachprüfung nach Artikel 33 VTS oder nach ausländischem Recht;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Überprüfung der Bremsanlagen und der Abgasemissionen muss nach den Bestimmungen des Anhanges II der Richtlinie 2000/30/EG erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Vor der technischen Prüfung nach Absatz 1 Buchstabe c sind die Dokumente nach Absatz 1 Buchstabe b zu konsultieren. Die Kontrolle von Prüfpunkten, die erwiesenermassen während der letzten drei Monate bereits kontrolliert wurden, darf nur bei offensichtlichen Mängeln oder Nichtübereinstimmungen mit den Dokumenten nach Absatz 1 Buchstabe b durchgeführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Nach der technischen Prüfung nach Absatz 1 Buchstaben c und d ist dem Führer oder der Führerin ein Prüfbericht nach Anhang I der Richtlinie 2000/30/EG auszuhändigen. Das ASTRA legt die Form und den Inhalt des Prüfberichtes fest."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Kontrolle des technischen Zustandes von Nutzfahrzeugen auf der Strasse erfolgt ohne behördliche Ankündigung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "192ea029bc166b81ef45f9eb4b791575824d429ca337adaad8f9022e217fcb0f"
+    },
+    {
+      "id": "bund/SKV/art_25",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei kontrolliert bei Fahrzeugen, die nach Artikel 59 a VRV der Abgaswartung unterstehen, anhand des Abgas-Wartungsdokuments (Art. 35 Abs. 4 VTS), ob der Halter oder die Halterin die Abgaswartung durchgeführt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann in Zusammenarbeit mit der Zulassungsbehörde im Verkehr Abgas-Nachkontrollen nach Artikel 36 VTS durchführen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "89963a9c949ac6cacc1e77accad873cfa67e91574b2055810996e71842142993"
+    },
+    {
+      "id": "bund/SKV/art_26",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kontrolle von Gefahrguttransporten auf der Strasse muss nach der Prüfliste nach Anhang I der Richtlinie (EU) 2022/1999 erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonalen Behörden stellen sicher, dass ein repräsentativer Anteil der Gefahrguttransporte auf der Strasse kontrolliert wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Nach der Kontrolle ist dem Führer oder der Führerin die ausgefüllte Prüfliste oder eine Bescheinigung über die durchgeführte Kontrolle auszuhändigen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bevor eine Kontrolle durchgeführt wird, sind eine allenfalls vorhandene Prüfliste oder eine Bescheinigung über eine kürzlich durchgeführte Kontrolle zu konsultieren. Die Kontrolle ist gegebenenfalls auf den erforderlichen Umfang zu reduzieren."
+        },
+        {
+          "absatz": "5",
+          "text": "Das ASTRA legt die Form und den Inhalt der Prüfliste und der Bescheinigung fest."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "aa6abca416cf5277ed3501379b398b99478c7bdcb5c08e3076ad60f7222deba7"
+    },
+    {
+      "id": "bund/SKV/art_27",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Behörden führen in den Unternehmen, die gefährliche Güter versenden, befördern oder empfangen, Kontrollen durch."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird bei einer Betriebskontrolle ein Verstoss gegen die Vorschriften über die Beförderung gefährlicher Güter festgestellt, so müssen die beabsichtigten Transporte in einen vorschriftsgemässen Zustand versetzt werden, bevor sie das Unternehmen verlassen, oder anderen geeigneten Massnahmen unterzogen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "11b0ea43340ee55ec49eb75dec17770110e856abe3ce212f894e5de2c5eac365"
+    },
+    {
+      "id": "bund/SKV/art_28",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei den Kontrollen auf der Strasse oder im Betrieb können Muster von Gütern oder Verpackungen verlangt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Transportgut können Proben entnommen werden, wenn dadurch kein Sicherheitsrisiko entsteht. Die Proben werden einem vom Kanton anerkannten Laboratorium zur Untersuchung zugestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Entspricht das Transportgut nicht dem vorschriftsgemässen Zustand, so kann die Durchführung der Transporte untersagt oder es können die Verpackungen beschlagnahmt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a744f761c796b63d3329843a20f6d29de7a4adb35b89b4e9823e56047643e2b8"
+    },
+    {
+      "id": "bund/SKV/art_29",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei sorgt dafür, dass vor der Weiterfahrt der vorschriftsgemässe Zustand wiederhergestellt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Gewichtsüberschreitungen, die nicht im Ordnungsbussenverfahren geahndet werden können, ist das Um- bzw. Entladen auf das zulässige Gewicht anzuordnen und zu überwachen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Missachtung der Abgas-Wartungspflicht ordnet die Polizei an, dass die Wartung nachgeholt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e73fb8cdf6ceacaa01bc3cf0562cdfe7d90502c9dd158194e3ce3d147447f270"
+    },
+    {
+      "id": "bund/SKV/art_30",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Polizei verhindert die Weiterfahrt, wenn der Führer oder die Führerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht den erforderlichen Führerausweis besitzt oder trotz Verweigerung oder Entzug des Ausweises gefahren ist;"
+            },
+            {
+              "marke": "b",
+              "text": "in einem die sichere Führung ausschliessenden Zustand ein Fahrzeug führt, für das ein Führerausweis nicht erforderlich ist;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Atemalkoholkonzentration von 0,25 mg/l oder mehr aufweist;"
+            },
+            {
+              "marke": "cbis",
+              "text": "eine Atemalkoholkonzentration von 0,05 mg/l oder mehr aufweist, sofern er oder sie dem Verbot nach Artikel 2 a Absatz 1 VRV, unter Alkoholeinfluss zu fahren, untersteht;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Auflage missachtet, die das Sehvermögen betrifft;"
+            },
+            {
+              "marke": "e",
+              "text": "die im Führerausweis eingetragene Beschränkung auf Fahrzeuge missachtet, die der Behinderung oder Körpergrösse angepasst sind;"
+            },
+            {
+              "marke": "f",
+              "text": "ein Fahrzeug führt, das nach Artikel 72 VZV ohne Fahrzeugausweis und ohne Kontrollschilder verkehren darf, wenn Gründe nach Artikel 32 vorliegen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4c1751328257d3e8280e6c726e10221f04e1418393d8459a11538107b675c915"
+    },
+    {
+      "id": "bund/SKV/art_31",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei nimmt den Lernfahr- oder den Führerausweis auf der Stelle ab, wenn der Führer oder die Führerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "offensichtlich angetrunken erscheint oder eine Atemalkoholkonzentration von 0,40 mg/l oder mehr aufweist;"
+            },
+            {
+              "marke": "b",
+              "text": "aus anderen Gründen offensichtlich fahrunfähig erscheint;"
+            },
+            {
+              "marke": "c",
+              "text": "ohne die erforderliche Begleitperson eine Lernfahrt ausführt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Lernfahr- oder der Führerausweis kann abgenommen werden bei einer Gefährdung des Verkehrs, namentlich wenn der Führer oder die Führerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulässige Höchstgeschwindigkeit innerorts um mehr als 30 km/h, ausserorts um mehr als 35 km/h oder auf Autobahnen um mehr als 40 km/h überschreitet;"
+            },
+            {
+              "marke": "b",
+              "text": "auf Autobahnen oder Autostrassen wendet, den Mittelstreifen überfährt, in der falschen Richtung oder rückwärts fährt;"
+            },
+            {
+              "marke": "c",
+              "text": "auf unübersichtlichen oder nicht freien Strassenstücken überholt;"
+            },
+            {
+              "marke": "d",
+              "text": "durch grobe Verletzung von Verkehrsregeln einen Verkehrsunfall verursacht, bei dem ein Mensch getötet oder verletzt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abnahme des Lernfahr- oder des Führerausweises für eine bestimmte Kategorie, Unterkategorie oder Spezialkategorie hat bis zur Rückgabe des Ausweises oder bis zum Entscheid der Entzugsbehörde die Abnahme des Lernfahr- oder des Führerausweises für alle Kategorien, Unterkategorien und Spezialkategorien zur Folge."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b37db501a527086ac48b9149c6e17722f911b71b499de1ca1acbe51bcdf4bc0d"
+    },
+    {
+      "id": "bund/SKV/art_32",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Polizei nimmt den Fahrzeugausweis auf der Stelle ab, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die vorgeschriebene Versicherung für das Fahrzeug fehlt;"
+            },
+            {
+              "marke": "b",
+              "text": "bei einer Kontrolle von Gefahrguttransporten auf der Strasse ein die Sicherheit der übrigen Verkehrsteilnehmer und Verkehrsteilnehmerinnen unmittelbar gefährdender Verstoss gegen die massgeblichen Vorschriften festgestellt wird und der vorschriftsgemässe Zustand nicht an Ort und Stelle wiederhergestellt werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Fahrzeugausweis kann abgenommen werden, wenn das Fahrzeug durch seinen Zustand oder seine Ladung den Verkehr gefährdet oder vermeidbaren Lärm verursacht oder Fahrzeugausweis und Kontrollschilder missbräuchlich verwendet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit der Abnahme des Fahrzeugausweises sind auch die Kontrollschilder zu beschlagnahmen und die Weiterfahrt zu verhindern. Das Fahrzeug kann sichergestellt und eine Nachprüfung des Fahrzeugs angeordnet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "827bf97003aa1725d41c2ddc3b3e9114a3abfbaa4a4c9bd9e7baeb229e764859"
+    },
+    {
+      "id": "bund/SKV/art_33",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abnahme des Lernfahrausweises, Führerausweises und Fahrzeugausweises und die Verhinderung der Weiterfahrt sind schriftlich zu bestätigen unter Hinweis auf die gesetzliche Wirkung dieser Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Abgenommene Lernfahrausweise und Führerausweise sind der Entzugsbehörde des Wohnsitzkantons innert drei Arbeitstagen zu übermitteln. Abgenommene Fahrzeugausweise und Kontrollschilder sind der Entzugsbehörde des Standortkantons innert drei Arbeitstagen zu übermitteln. In beiden Fällen sind eine schriftliche Abnahmebestätigung mit einer Kurzbegründung der Abnahme und der Polizeirapport beizufügen. Liegt der Polizeirapport noch nicht vor, so ist er ohne Verzug nachzureichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Entfallen die Gründe, die zur Abnahme eines Ausweises oder zur Verhinderung der Weiterfahrt geführt haben, so sind Ausweis und Kontrollschilder zurückzugeben und das Fahrzeug zur Weiterverwendung freizugeben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cb98576e362fabbec4e556ca09808fb7188a34e0f1745a2b35ef97f08dd8936a"
+    },
+    {
+      "id": "bund/SKV/art_34",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abnahme des Fahrzeugausweises und der Kontrollschilder, das Verbot der Weiterverwendung des Fahrzeugs oder die Sicherstellung sind bei ausländischen Fahrzeugen zulässig, wenn sie sich offensichtlich in einem nicht vorschriftsgemässen Zustand befinden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abnahme ausländischer Fahrzeugausweise und Kontrollschilder ist auch bei deren missbräuchlichen Verwendung zulässig. Artikel 60 Ziffer 4 zweiter Satz der Verkehrsversicherungsverordnung vom 20. November 1959 bleibt vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die nach Absatz 1 angeordneten Massnahmen sind aufzuheben, wenn sich das beanstandete Fahrzeug wieder in vorschriftsgemässem Zustand befindet. Kann der vorschriftsgemässe Zustand nicht wiederhergestellt werden, so annulliert die kantonale Behörde die Ausweise und vernichtet oder entwertet die Kontrollschilder. Sie sendet die Ausweise an die Zulassungsbehörde unter Hinweis auf die Vernichtung oder Entwertung der Kontrollschilder. Der Halter oder die Halterin kann verlangen, dass ihm oder ihr entwertete Kontrollschilder zurückgegeben werden oder die Vernichtung bestätigt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "32c03686047ccd9c5a8bc826eebaf7b3bc7d0705255e689777fdcae288a675f7"
+    },
+    {
+      "id": "bund/SKV/art_35",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Begehen Führer oder Führerinnen mit diplomatischen oder konsularischen Vorrechten und Immunitäten Widerhandlungen im Strassenverkehr, so können sie zur Prüfung der Identität angehalten werden. Sie haben den vom Eidgenössischen Departement für auswärtige Angelegenheiten ausgestellten Ausweis vorzuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Legitimationspapiere sowie Führer- und Fahrzeugausweise dürfen nicht abgenommen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Polizei verhindert die Weiterfahrt, wenn der Führer oder die Führerin oder das Fahrzeug sich in einem Zustand befindet, der die Weiterfahrt ohne schwere Gefährdung des Verkehrs ausschliesst."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "6c108c8f01fad6b50e2a821af23d72164a5e56bc2109499af4b45a072a180779"
+    },
+    {
+      "id": "bund/SKV/art_36",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Polizei meldet Verzeigungen wegen Widerhandlungen gegen Strassenverkehrsvorschriften der für den Strassenverkehr zuständigen Behörde des Kantons, in dem der Täter oder die Täterin wohnt. Keine Meldung ist zu erstatten, wenn die Verzeigung gestützt auf Artikel 6 Absatz 4 des Ordnungsbussengesetzes vom 18. März 2016 erfolgt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "efbac2e81c9e5755348e521ade928e64de1b6e618f2b0d8b2ed38942db0fca8d"
+    },
+    {
+      "id": "bund/SKV/art_37",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Erhält die Polizei Kenntnis von Tatsachen, wie von schwerer Krankheit oder von Süchten, die zur Verweigerung oder zum Entzug des Ausweises führen können, so benachrichtigt sie die für den Strassenverkehr zuständige Behörde des Kantons."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "00390d86ebfadbffcb1e84c3f45e4b0d4559f20f0834a32d88ccd86cbbc47675"
+    },
+    {
+      "id": "bund/SKV/art_38",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Polizei meldet der Zulassungsbehörde Fahrzeuge, die bei Unfällen starke Schäden erlitten haben oder bei Kontrollen erhebliche Mängel aufwiesen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e599163419559c055d04fbd6d38b1fb4c43ac22cc7b53d6c8c82e5d046077dd9"
+    },
+    {
+      "id": "bund/SKV/art_39",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Polizei meldet festgestellte Widerhandlungen von Führern oder Führerinnen mit diplomatischen oder konsularischen Vorrechten und Immunitäten unverzüglich dem Eidgenössischen Departement für auswärtige Angelegenheiten. Dasselbe gilt, wenn nach Artikel 35 Absatz 3 die Weiterfahrt verhindert werden musste. Die Meldung erfolgt unter Angabe des Fahrzeugs und der Personalien des Führers oder der Führerin."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7c3e5b8e8d7d902f6d8a6a0ac0f63e12b32c0fb87c3c8772d6c9af21078ee499"
+    },
+    {
+      "id": "bund/SKV/art_40",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gefährden ein Führer oder eine Führerin eines Fahrzeugs oder ein Unternehmen aus einem Mitgliedstaat der Europäischen Union durch schwerwiegende oder wiederholte Verstösse die Sicherheit der Gefahrguttransporte, so melden die kantonalen Behörden diese Verstösse den zuständigen Behörden des Staates, in dem das Fahrzeug zugelassen ist oder das Unternehmen seinen Sitz hat. Die kantonalen Behörden können die Behörden des ausländischen Staates ersuchen, gegenüber den betreffenden Personen oder Unternehmen angemessene Massnahmen zu ergreifen."
+        },
+        {
+          "absatz": "2",
+          "text": "Begehen die Führer und Führerinnen schweizerischer Fahrzeuge oder schweizerische Unternehmen in einem Mitgliedstaat der Europäischen Union schwerwiegende oder wiederholte Verstösse und führen die kantonalen Behörden daraufhin im entsprechenden Unternehmen eine Betriebskontrolle durch, so informieren sie den meldenden oder den ersuchenden Staat über das Ergebnis."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "d74920609d62da5e92fb479ccc662d2d124c5582e557c3a9d66fac10da2bf55c"
+    },
+    {
+      "id": "bund/SKV/art_41",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösst ein Führer oder eine Führerin aus einem Mitgliedstaat der Europäischen Union schwerwiegend oder wiederholt gegen die Vorschriften über die Arbeits-, Lenk- und Ruhezeit, so melden die kantonalen Behörden diese Verstösse sowie allfällige Massnahmen den zuständigen Behörden des Staates, in dem das Unternehmen des Führers oder der Führerin seinen Sitz hat. Die kantonalen Behörden können den ausländischen Staat ersuchen, im betroffenen Unternehmen eine Betriebskontrolle durchzuführen und ihnen das Ergebnis mitzuteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Verstossen schweizerische Führer oder Führerinnen in einem Mitgliedstaat der Europäischen Union schwerwiegend oder wiederholt gegen die Vorschriften über die Arbeits-, Lenk- und Ruhezeit und führen die kantonalen Behörden daraufhin im entsprechenden Unternehmen eine Betriebskontrolle durch, so informieren sie den meldenden oder den ersuchenden Staat über das Ergebnis."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4841a1956488172e2e6d090dab7e95e89eee8cc8e0779c66bc261511adaff194"
+    },
+    {
+      "id": "bund/SKV/art_42",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden an einem Nutzfahrzeug aus einem Mitgliedstaat der Europäischen Union schwerwiegende Mängel festgestellt, so melden die kantonalen Behörden diese den zuständigen Behörden des Staates, in dem das Fahrzeug zugelassen ist. Die kantonalen Behörden können den ausländischen Staat ersuchen, die erforderlichen Massnahmen zu treffen und ihnen das Ergebnis mitzuteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden in einem Mitgliedstaat der Europäischen Union an einem in der Schweiz zugelassenen Nutzfahrzeug schwerwiegende Mängel festgestellt, so informieren die kantonalen Behörden den meldenden oder den ersuchenden Staat über die getroffenen Massnahmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5393545574f48a4d6faeda504e27a516a4d44a9f9dc8540f0e48e3f65f84244e"
+    },
+    {
+      "id": "bund/SKV/art_43",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das ASTRA nimmt Meldungen von Mitgliedstaaten der Europäischen Union über Verstösse von in der Schweiz zugelassenen Fahrzeugen oder hier domizilierten Unternehmungen entgegen und leitet sie an die zuständige kantonale Behörde weiter."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5e584a4c459bac92018a3f5253fbc143f9da516aa156e72081716c03f546d755"
+    },
+    {
+      "id": "bund/SKV/art_44",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone melden dem ASTRA jährlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die bei Gefahrgutkontrollen erhobenen Daten nach Artikel 48 Buchstabe b Ziffer 1;"
+            },
+            {
+              "marke": "b",
+              "text": "die bei technischen Kontrollen erhobenen Daten nach Artikel 48 Buchstabe b Ziffer 2;"
+            },
+            {
+              "marke": "c",
+              "text": "die bei Kontrollen der Arbeits-, Lenk- und Ruhezeit erhobenen Daten nach Artikel 48 Buchstabe b Ziffer 3;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anzahl der im Kanton niedergelassenen und die Anzahl der kontrollierten Betriebe, die der ARV 1 unterstehen;"
+            },
+            {
+              "marke": "e",
+              "text": "die von ausländischen Fahrzeugführern und -führerinnen in der Schweiz begangenen Widerhandlungen gegen die Arbeits-, Lenk- und Ruhezeitvorschriften und deren Ahndung sowie die Ahndung von solchen Widerhandlungen, die inländische Fahrzeugführer und Fahrzeugführerinnen in einem Mitgliedstaat der Europäischen Union begangen haben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das ASTRA regelt die Form der Meldungen und das Meldeverfahren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a0af9e7740579b10314d8b797cd2b710e2edcde9f199e09b1fac063f819e066a"
+    },
+    {
+      "id": "bund/SKV/art_45",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone melden dem BAV:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verstösse nach den Artikeln 40–42 sowie die getroffenen Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "die übrigen schweren und wiederholten Verstösse, die bei Kontrollen nach dieser Verordnung festgestellt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Widerhandlungen, die lediglich eine Ordnungsbusse zur Folge haben, sind nicht zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das ASTRA regelt im Einvernehmen mit dem BAV die Form der Meldungen und das Meldeverfahren bei Verstössen gegen die Bestimmungen über die Personenbeförderung und die Zulassung als Strassentransportunternehmung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e94e66aeeacc47904d59b96ff50c10aa8255f4e7bc7a0f3485bc2c06f9b73708"
+    },
+    {
+      "id": "bund/SKV/art_46",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das ASTRA erstattet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Europäischen Kommission: 1. jährlich einen Bericht über die Gefahrgutkontrollen,"
+            },
+            {
+              "marke": "2",
+              "text": "jedes zweite Jahr einen Bericht über die Arbeits-, Lenk- und Ruhezeitkontrollen sowie über die technischen Kontrollen;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc4f2b1a417469d4b98ec22aaa8b16e069cc64330d829fc0b54303d79dff7dce"
+    },
+    {
+      "id": "bund/SKV/art_47",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das ASTRA betreibt in Zusammenarbeit mit den Kantonen und der Oberzolldirektion eine zentrale Datenbank."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Datenbank dient:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Erstellung von Statistiken über die Kontrolltätigkeit nach dieser Verordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "der Berichterstattung an die Europäische Kommission und an das ITF über die Kontrolltätigkeit nach dieser Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Es dürfen keine Daten bearbeitet werden (Art. 44–46 und 48), die sich auf eine bestimmte oder bestimmbare Person beziehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das ASTRA erlässt die erforderlichen technisch-administrativen Weisungen, namentlich das Bearbeitungsreglement."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "846f3cd1f0fe4e9231eecdaece30bb3a14b094f9188b993ace7f0d91c82eaede"
+    },
+    {
+      "id": "bund/SKV/art_48",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Datenbank enthält:",
+          "items": [
+            {
+              "marke": "–",
+              "text": "Anzahl der bei Strassenkontrollen kontrollierten Fahrzeugführer und Fahrzeugführerinnen, aufgeschlüsselt nach Staatsangehörigkeit sowie Personen- und Güterverkehr,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der bei Betriebskontrollen kontrollierten Fahrzeugführer und Fahrzeugführerinnen, aufgeschlüsselt nach Personen- und Güterverkehr,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der bei Strassenkontrollen kontrollierten Arbeitstage, aufgeschlüsselt nach Personen- und Güterverkehr,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der bei Betriebskontrollen kontrollierten Arbeitstage, aufgeschlüsselt nach Personen- und Güterverkehr,"
+            },
+            {
+              "marke": "–",
+              "text": "Anzahl der kontrollierten Betriebe,"
+            },
+            {
+              "marke": "–",
+              "text": "Art und Anzahl der festgestellten Verstösse."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7f00f63787333d6d9bd712016632df8a0027cc59d8bf6f4512352c45f7d36efa"
+    },
+    {
+      "id": "bund/SKV/art_49",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit Busse wird bestraft, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich weigert, den Vollzugsbehörden auf Verlangen die für Kontrollen nach dieser Verordnung erforderlichen Ausweise, Bewilligungen, elektronischen Datenträger und weiteren Kontrolldokumente vorzuweisen oder die notwendigen Auskünfte zu erteilen oder wer bei den Kontrollen vorsätzlich wahrheitswidrige Angaben macht;"
+            },
+            {
+              "marke": "b",
+              "text": "den Vollzugsbehörden bei den in dieser Verordnung vorgesehenen Betriebskontrollen den Zutritt zum Betrieb verweigert;"
+            },
+            {
+              "marke": "c",
+              "text": "in anderer Weise die nach dieser Verordnung vorgesehenen Kontrolltätigkeiten vorsätzlich behindert oder zu vereiteln versucht."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "6abdb959ca4f2e9617e31aea36a0b5e12ef36fd2c9ee94ce718eff5a5b828345"
+    },
+    {
+      "id": "bund/SKV/art_50",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Abweichung von Artikel 20 müssen in den Jahren 2008 und 2009 jährlich lediglich 2 Prozent der Arbeitstage der der ARV 1 unterstehenden Fahrzeugführer und ‑führerinnen kontrolliert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "db3b9a1a2b2376922b32e46887d344e799548a3d6559b5c65d4cfe8f7641a940"
+    },
+    {
+      "id": "bund/SKV/art_50_a",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "50_a",
+      "artikelLabel": "Art. 50a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_50_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/SKV/art_51",
+      "ebene": "bund",
+      "quelle": "SKV",
+      "erlass": "SKV",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 2008 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/296/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "406bee80d5032efec6de2454fa88fdc8c8dce4618b3432c9b9d222e0d1bb41f2"
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/VVK/art_1",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Versicherer müssen allen nach der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV) versicherungspflichtigen Personen eine Versichertenkarte ausstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Personen, die nach Artikel 1 Absatz 2 Buchstaben d–e bis KVV in der Schweiz versicherungspflichtig sind, aber ausser über die internationale Leistungsaushilfe keine Leistungen zulasten der obligatorischen Krankenpflegeversicherung im Gebiet der Schweiz beziehen können, wird keine Versichertenkarte ausgestellt."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "caff8858f3c9e82c51e0e9b362b03ac12f1a75f9472db34276c4e3096d93dc71"
+    },
+    {
+      "id": "bund/VVK/art_2",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Versichertenkarte muss einen Mikroprozessor enthalten, der folgende Anwendungen unterstützt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bearbeitung von Personendaten;"
+            },
+            {
+              "marke": "b",
+              "text": "Überprüfen der Berechtigung für den Datenzugriff;"
+            },
+            {
+              "marke": "c",
+              "text": "Sperren von Daten mit einem persönlichen Geheimcode (PIN-Code);"
+            },
+            {
+              "marke": "d",
+              "text": "weitere Anwendungen für kantonale Modellversuche."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die von den Versicherern herausgegebenen Karten müssen untereinander kompatibel sein."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "5ca34b7704361f1de2cadf5d8339aa853320e657acb7d7c7dfa1cc0ada7c0628"
+    },
+    {
+      "id": "bund/VVK/art_3",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Versicherer muss auf der Versichertenkarte folgende Daten aufdrucken:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname der versicherten Person;"
+            },
+            {
+              "marke": "b",
+              "text": "AHV-Nummer;"
+            },
+            {
+              "marke": "c",
+              "text": "Geburtsdatum der versicherten Person;"
+            },
+            {
+              "marke": "d",
+              "text": "Geschlecht der versicherten Person;"
+            },
+            {
+              "marke": "e",
+              "text": "Name und Kennnummer des Versicherers (BAG-Nummer);"
+            },
+            {
+              "marke": "f",
+              "text": "Kennnummer der Versichertenkarte;"
+            },
+            {
+              "marke": "g",
+              "text": "Ablaufdatum der Versichertenkarte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Auf der Rückseite der Versichertenkarte können zusätzlich die Daten der Europäischen Krankenversicherungskarte aufgedruckt sein. In diesem Fall muss die Kennnummer der Versichertenkarte mit der Kennnummer der Europäischen Krankenversicherungskarte identisch sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Eidgenössische Departement des Inneren legt die Anforderungen an die grafische Gestaltung fest."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "384555dcd9de8a74a704a19ef220e892c0e8208d8e03e338eb4f4b386d995b39"
+    },
+    {
+      "id": "bund/VVK/art_4",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Versicherer muss die Daten nach Artikel 3 Absatz 1 elektronisch auf der Versichertenkarte abspeichern."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann zusätzlich folgende Angaben elektronisch auf der Versichertenkarte abspeichern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zustelladresse der versicherten Person;"
+            },
+            {
+              "marke": "b",
+              "text": "Rechnungsadresse des Versicherers;"
+            },
+            {
+              "marke": "c",
+              "text": "besondere Versicherungsformen nach Artikel 62 KVG;"
+            },
+            {
+              "marke": "d",
+              "text": "Angabe, ob die Unfalldeckung nach Artikel 8 KVG sistiert ist;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben über Zusatzversicherungen, sofern die versicherte Person damit einverstanden ist;"
+            },
+            {
+              "marke": "f",
+              "text": "Daten der Europäischen Krankenversicherungskarte."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Versicherer darf den Entscheid der versicherten Person über die Aufnahme oder die Nichtaufnahme von Angaben über Zusatzversicherungen nach Absatz 2 Buchstabe e weder mit Vorteilen noch mit Nachteilen beeinflussen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "e7e5f88422cadd738e85392044f27e03120faf228b0e3127e00a101573f7b2d9"
+    },
+    {
+      "id": "bund/VVK/art_5",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor der Ausstellung der Versichertenkarte muss der Versicherer die AHV-Nummer bei der zuständigen Stelle verifizieren und nötigenfalls deren Zuweisung veranlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er muss zum Schutz der AHV-Nummer die technischen und organisatorischen Massnahmen nach Artikel 153 d des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung treffen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leistungserbringer melden der Zentralen Ausgleichsstelle der AHV die systematische Verwendung der AHV-Nummer gemäss Artikel 134 ter der Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung. Sie können eine Stelle bezeichnen, welche eine Sammelmeldung macht."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "b86cd22b31ac6ed67b1d7f0e394af4c0345eb6ca8fd69f67e4f0a58c5a0ef250"
+    },
+    {
+      "id": "bund/VVK/art_6",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Personen nach dem Anhang können zur Verbesserung der Effizienz, der Sicherheit und der Qualität der medizinischen Behandlung folgende Daten in elektronischer Form auf der Versichertenkarte abspeichern, sofern die versicherte Person damit einverstanden ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Blutgruppen- und Transfusionsdaten;"
+            },
+            {
+              "marke": "b",
+              "text": "Immunisierungsdaten;"
+            },
+            {
+              "marke": "c",
+              "text": "Transplantationsdaten;"
+            },
+            {
+              "marke": "d",
+              "text": "Allergien;"
+            },
+            {
+              "marke": "e",
+              "text": "Krankheiten und Unfallfolgen;"
+            },
+            {
+              "marke": "f",
+              "text": "in medizinisch begründeten Fällen einen zusätzlichen Eintrag;"
+            },
+            {
+              "marke": "g",
+              "text": "Medikation;"
+            },
+            {
+              "marke": "h",
+              "text": "eine oder mehrere Kontaktadressen für den Notfall;"
+            },
+            {
+              "marke": "i",
+              "text": "Hinweis auf bestehende Patientenverfügungen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die Daten nach Absatz 1 Buchstaben a–g mit ihrer EAN-Nummer (European Article Numbering) und dem Datum des Eintrages versehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie sind nicht verpflichtet, die Daten nach Absatz 1 aufzunehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Versicherer darf den Entscheid der versicherten Person über die Aufnahme oder die Nichtaufnahme von Daten nach Absatz 1 weder mit Vorteilen noch mit Nachteilen beeinflussen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "df2ff9580968aef38e193329015c6e638d13b4465c80c55350c471d009abd305"
+    },
+    {
+      "id": "bund/VVK/art_7",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Personen nach dem Anhang haben Zugriff auf die Daten nach Artikel 6. Der Umfang der Bearbeitung richtet sich nach dem Anhang."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugriff erfolgt mit einem elektronischen Leistungserbringernachweis."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Personen nach dem Anhang dürfen die Daten nach Artikel 6 nur mit Einwilligung der versicherten Person bearbeiten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die versicherte Person kann die Daten nach Artikel 6 Absatz 1 Buchstaben a–g mit einem PIN-Code sperren."
+        },
+        {
+          "absatz": "5",
+          "text": "Ist es für die Versorgung im Notfall erforderlich und kann die versicherte Person ihre Einwilligung nicht erteilen, so dürfen die Personen nach dem Anhang ohne Einwilligung der versicherten Person auf die Daten nach Artikel 6 zugreifen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "ce80416d57fb45dcb281d50f40729c5f2355edc766748afa9e0823898e5bf023"
+    },
+    {
+      "id": "bund/VVK/art_8",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der elektronische Leistungserbringernachweis muss eine Authentifizierung der zugriffsberechtigten Person ermöglichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Ausgabe der elektronischen Leistungserbringernachweise sind die zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung zugelassenen Leistungserbringer zuständig. Sie können diese Aufgabe auch Dritten übertragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leistungserbringer müssen sicherstellen, dass der elektronische Leistungs­erbringernachweis nur den Personen nach dem Anhang ausgestellt wird, die über eine nach den Vorschriften des Bundes oder der Kantone anerkannte Ausbildung verfügen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "930aaca394c47ab9c77bda547e1ee8dde7217c54bf5676f407bf4a4894633ca0"
+    },
+    {
+      "id": "bund/VVK/art_9",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die versicherte Person hat das Recht, über die auf der Versichertenkarte enthaltenen Daten informiert zu werden und sie nötigenfalls berichtigen zu lassen. Freiwillig aufgenommene Daten kann sie jederzeit löschen lassen. Diese Rechte kann sie für die Daten nach den Artikeln 3 und 4 beim Versicherer und für die Daten nach Artikel 6 bei den Personen nach dem Anhang geltend machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann die Offenlegung der Daten nach Artikel 6 ohne Angabe von Gründen verweigern."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "e631f6e433407c5688862095e029d59c489df0481ba590e28312f755e86e14b5"
+    },
+    {
+      "id": "bund/VVK/art_10",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die versicherte Person muss dem Leistungserbringer die Versichertenkarte beim Bezug von Leistungen vorweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Weist die versicherte Person die Versichertenkarte nicht vor und verursacht sie dadurch zusätzliche Aufwendungen bei der Vergütung von Leistungen, so kann der Versicherer eine angemessene Gebühr erheben."
+        },
+        {
+          "absatz": "3",
+          "text": "Nach Beendigung des Versicherungsverhältnisses und nach Ablauf der Gültigkeitsdauer muss die versicherte Person die Versichertenkarte dem Versicherer auf Verlangen zurückgeben."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "ed8b579fe486612f14b353e72920178029a16a3f862595481364982d773ddbac"
+    },
+    {
+      "id": "bund/VVK/art_11",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eigentum an der Versichertenkarte bleibt beim Versicherer, der sie ausgestellt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Versicherer kann die Gültigkeit der Versichertenkarte befristen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "e0133fed2837c0b2366b15f90d5feb312c01322ae89113ec027c47d9602ecc2e"
+    },
+    {
+      "id": "bund/VVK/art_12",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Abgabe der Versichertenkarte muss der Versicherer die versicherte Person schriftlich, ausführlich und verständlich über die ihr zustehenden Rechte und Pflichten informieren. Diese Information muss insbesondere umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Pflicht zur Verwendung der Karte beim Bezug von Leistungen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Aufklärung über die Rechte nach Artikel 9;"
+            },
+            {
+              "marke": "c",
+              "text": "die Aufklärung darüber, wer berechtigt ist, Daten von der Versichertenkarte abzurufen und zu welchen Zwecken diese bearbeitet werden;"
+            },
+            {
+              "marke": "d",
+              "text": "den Hinweis, die Daten nach Artikel 6 vor der Rückgabe der Versichertenkarte an den Versicherer löschen zu lassen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "bb6383f1edd12b84d803b307e13d125d8190c6d9226bf3208a52a2a58551a6f4"
+    },
+    {
+      "id": "bund/VVK/art_13",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Personen nach dem Anhang, die Daten nach Artikel 6 auf der Versichertenkarte abspeichern, sind verpflichtet, die versicherte Person über ihre Rechte aufzuklären. Diese Information muss insbesondere umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aufklärung über die Rechte nach Artikel 9;"
+            },
+            {
+              "marke": "b",
+              "text": "die Aufklärung darüber, wer die Daten zu welchen Zwecken bearbeiten kann;"
+            },
+            {
+              "marke": "c",
+              "text": "den Hinweis auf die Möglichkeit, die Daten mittels PIN-Code zu sperren sowie die Vor- und Nachteile einer solchen Sperrung;"
+            },
+            {
+              "marke": "d",
+              "text": "den Hinweis, die Daten nach Artikel 6 vor Rückgabe der Versichertenkarte an den Versicherer löschen zu lassen."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "3e927626f176b9348822015f5446211ce53cdc26e0ad7f28f7a48f47fe734ceb"
+    },
+    {
+      "id": "bund/VVK/art_14",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Leistungserbringer muss die für die Rechnungstellung erforderlichen Daten von der Versichertenkarte übernehmen. Er kann die Daten auch über ein Online-Ver­fahren abfragen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "36ed5fd231e58dad118d884c2836e74aaed1cf501c0005e005da66b7d859bdd4"
+    },
+    {
+      "id": "bund/VVK/art_15",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Versicherer muss ein Online-Verfahren anbieten. Er muss dem Leistungs­erbringer folgende Informationen zur Verfügung stellen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben darüber, ob ein Versicherungsverhältnis besteht;"
+            },
+            {
+              "marke": "b",
+              "text": "Gültigkeit der Versichertenkarte;"
+            },
+            {
+              "marke": "c",
+              "text": "Daten nach Artikel 3 Absatz 1."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Abfrage im Online-Verfahren kann der Versicherer dem Leistungserbringer zusätzlich die Informationen nach Artikel 4 Absatz 2 zur Verfügung stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abfrage im Online-Verfahren darf nur im Einverständnis der versicherten Person erfolgen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Versicherer muss das Online-Verfahren so einrichten, dass die Abfrage nur mittels der Kennnummer der Versichertenkarte erfolgen kann."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Versicherer und der Leistungserbringer müssen durch angemessene technische Vorkehren eine sichere Datenübermittlung gewährleisten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "79def0271956e6048d22bd52be2ba5890fe0e486f936fa7f91036e84be7f74e6"
+    },
+    {
+      "id": "bund/VVK/art_16",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rahmen von kantonalen Modellversuchen im Gesundheitsbereich ist die erweiterte Nutzung der Versichertenkarte über den Zweck von Artikel 42 a Absatz 2 KVG und über die Nutzungsmöglichkeiten nach Artikel 42 a Absatz 4 KVG hinaus möglich, sofern dies im kantonalen Recht vorgesehen ist. Die Funktion der Versichertenkarte nach Artikel 42 a Absätze 1–3 KVG muss gewährleistet bleiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das kantonale Recht muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Rahmen und den Zweck des Versuchs festlegen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine zeitliche Befristung des Versuchs festlegen;"
+            },
+            {
+              "marke": "c",
+              "text": "das zuständige kantonale Organ bezeichnen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Freiwilligkeit der Teilnahme der Versicherten und der Leistungserbringer gewährleisten;"
+            },
+            {
+              "marke": "e",
+              "text": "die im Rahmen des Versuchs bearbeiteten Personendaten festlegen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Zugriffsrechte auf Personendaten regeln."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Modellversuch ist durch eine Evaluation des Kantons zu begleiten. Der Kanton erstattet dem Bundesamt für Gesundheit über den Modellversuch Bericht."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "f57f29291f8c73d25d20abf8699bd7dbc179bf799547ff067b40461c8ea39b53"
+    },
+    {
+      "id": "bund/VVK/art_17",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Eidgenössische Departement des Inneren legt unter Einbezug der interessierten Kreise die technischen Standards für die Versichertenkarte und das Online-Verfahren fest. Bei der Festlegung der technischen Standards ist die internationale Normung zu berücksichtigen."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "88817acb215a9511372185b10b174641cfd88f382e0906e2ede2c74507cefd40"
+    },
+    {
+      "id": "bund/VVK/art_18",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "… 8"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "e7cdc2bc0c44ffc32c6bd027cf11413a30650710970dedfa6a43cbe1520426f1"
+    },
+    {
+      "id": "bund/VVK/art_19",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VVK/art_19_a",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Versicherer müssen die Versichertenkarte bis zum 1. Januar 2010 ausstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen das Online-Verfahren nach Artikel 15 bis zum 1. Januar 2010 einrichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Versicherer und die Leistungserbringer müssen die sichere Datenübermittlung nach Artikel 15 Absatz 5 ab dem 1. Januar 2010 gewährleisten."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "9d8f06ded5aa620e454d009c230817d21aed213c6bc3267ba5bb3830ba31ea3c"
+    },
+    {
+      "id": "bund/VVK/art_20",
+      "ebene": "bund",
+      "quelle": "VVK",
+      "erlass": "VVK",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt unter Vorbehalt der Absätze 2 und 3 am 1. März 2007 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 5 tritt zusammen mit der Änderung vom 23. Juni 2006 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung («Neue AHV-Versicher­ten­nummer») in Kraft."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 18 tritt am 1. Januar 2010 in Kraft."
+        }
+      ],
+      "stand": "2023-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/101/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230101",
+      "sha": "8910865110bbddaef3841ba67e25cb630f22995bf6f75886817be87c8ad11108"
+    }
+  ]
+}

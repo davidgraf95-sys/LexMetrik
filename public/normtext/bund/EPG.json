@@ -1,0 +1,2845 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/EPG/art_1",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Gesetz regelt den Schutz des Menschen vor übertragbaren Krankheiten und sieht die dazu nötigen Massnahmen vor."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "aaf77fc17272cd836c23d28c2272809221b88e7b01d920c7e2b34eeee38f85f7"
+    },
+    {
+      "id": "bund/EPG/art_2",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz bezweckt, den Ausbruch und die Verbreitung übertragbarer Krankheiten zu verhüten und zu bekämpfen."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit den Massnahmen nach diesem Gesetz sollen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "übertragbare Krankheiten überwacht und Grundlagenwissen über ihre Verbreitung und Entwicklung bereitgestellt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Gefahren des Ausbruchs und der Verbreitung übertragbarer Krankheiten frühzeitig erkannt, beurteilt und vermieden werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die einzelne Person, bestimmte Personengruppen und Institutionen veranlasst werden, zur Verhütung und Bekämpfung übertragbarer Krankheiten beizutragen;"
+            },
+            {
+              "marke": "d",
+              "text": "die organisatorischen, fachlichen und finanziellen Voraussetzungen für die Erkennung, Überwachung, Verhütung und Bekämpfung übertragbarer Krankheiten geschaffen werden;"
+            },
+            {
+              "marke": "e",
+              "text": "der Zugang zu Einrichtungen und Mitteln für den Schutz vor Übertragungen gesichert werden;"
+            },
+            {
+              "marke": "f",
+              "text": "die Auswirkungen von übertragbaren Krankheiten auf die Gesellschaft und die betroffenen Personen reduziert werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "8f391fbcc82bb3419ebb0503b6f2e180a4b124ebdb279f10efad9d8215438eb0"
+    },
+    {
+      "id": "bund/EPG/art_3",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In diesem Gesetz gelten als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "übertragbare Krankheit: Krankheit, die durch Krankheitserreger oder deren toxische Produkte auf den Menschen übertragbar ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Beobachtungen : klinische Befunde (z.B. Verdachtsdiagnosen, bestätigte Diagnosen, Todesfälle), laboranalytische Befunde (z.B. Testresultate, direkte und indirekte Krankheitserregernachweise, Typisierungen, Resistenzprüfungen), epidemiologische Befunde (z.B. Kennzahlen zu therapieassoziierten Infektionen) sowie Ereignisse (z.B. verdächtige Substanzen, Gegenstände), die mit übertragbaren Krankheiten in Zusammenhang stehen;"
+            },
+            {
+              "marke": "c",
+              "text": "Krankheitserreger: natürliche und gentechnisch veränderte Organismen (z.B. Viren, Bakterien, Pilze, Protozoen und andere Parasiten), Stoffe (z.B. Prionen, Toxine) sowie genetisches Material, die eine übertragbare Krankheit verursachen oder verschlimmern können;"
+            },
+            {
+              "marke": "d",
+              "text": "Umgang mit Krankheitserregern: jede Tätigkeit mit Krankheitserregern, insbesondere die Herstellung, Vermehrung, Freisetzung, Inverkehrbringung, Einfuhr, Ausfuhr, Durchfuhr, Aufbewahrung, Verwendung, Lagerung, Entsorgung oder den Transport."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "7c7169c88895196e073eda3fccf05c27c77a5bbbfe5b1cca9f9a6fec89c410e2"
+    },
+    {
+      "id": "bund/EPG/art_4",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat legt unter Einbezug der Kantone die Ziele und Strategien der Erkennung, Überwachung, Verhütung und Bekämpfung übertragbarer Krankheiten fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Festlegung der Ziele und Strategien sind insbesondere zu berücksichtigen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Erkenntnisse der Berichterstattung nach Artikel 76;"
+            },
+            {
+              "marke": "b",
+              "text": "internationale Empfehlungen und Richtlinien;"
+            },
+            {
+              "marke": "c",
+              "text": "der aktuelle Stand der Wissenschaft."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bund und Kantone überprüfen aufgrund der Berichterstattung, ob die Ziele erreicht sind, und ergreifen bei Bedarf entsprechende Massnahmen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "d0bb5de8f12daecd35c77022209cf9d1e4b148d260e033b13a2e3ec6a076c65d"
+    },
+    {
+      "id": "bund/EPG/art_5",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt für Gesundheit (BAG) erarbeitet unter Einbezug der Kantone themenspezifische nationale Programme zur Erkennung, Überwachung, Verhütung und Bekämpfung von übertragbaren Krankheiten, insbesondere in den Bereichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Impfungen;"
+            },
+            {
+              "marke": "b",
+              "text": "therapieassoziierte Infektionen und Resistenzen bei Krankheitserregern;"
+            },
+            {
+              "marke": "c",
+              "text": "HIV und andere sexuell übertragbare Krankheitserreger."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bund und Kantone sorgen im Rahmen ihrer Zuständigkeiten für die Umsetzung der nationalen Programme."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "15526d53e57cccda5a0b5085e6b3c31c6c2b13f625cfc6a7b79531e170c51fdc"
+    },
+    {
+      "id": "bund/EPG/art_6",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine besondere Lage liegt vor, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die ordentlichen Vollzugsorgane nicht in der Lage sind, den Ausbruch und die Verbreitung übertragbarer Krankheiten zu verhüten und zu bekämpfen, und eine der folgenden Gefahren besteht: 1. eine erhöhte Ansteckungs- und Ausbreitungsgefahr,"
+            },
+            {
+              "marke": "2",
+              "text": "eine besondere Gefährdung der öffentlichen Gesundheit,"
+            },
+            {
+              "marke": "3",
+              "text": "schwerwiegende Auswirkungen auf die Wirtschaft oder auf andere Lebensbereiche;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann nach Anhörung der Kantone folgende Massnahmen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Massnahmen gegenüber einzelnen Personen;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen gegenüber der Bevölkerung;"
+            },
+            {
+              "marke": "c",
+              "text": "Ärztinnen, Ärzte und weitere Gesundheitsfachpersonen verpflichten, bei der Bekämpfung übertragbarer Krankheiten mitzuwirken;"
+            },
+            {
+              "marke": "d",
+              "text": "Impfungen bei gefährdeten Bevölkerungsgruppen, bei besonders exponierten Personen und bei Personen, die bestimmte Tätigkeiten ausüben, für obligatorisch erklären."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Eidgenössische Departement des Innern (EDI) koordiniert die Massnahmen des Bundes."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "6f19672e1a2072f97d4edeaa6f0ad6952b6943cd6d92f836d7d2588158df75c1"
+    },
+    {
+      "id": "bund/EPG/art_7",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wenn es eine ausserordentliche Lage erfordert, kann der Bundesrat für das ganze Land oder für einzelne Landesteile die notwendigen Massnahmen anordnen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b842a2b4da148f5caa57f7afd05cfa6819145a785e44f5b51deeabcf5f7cc2d7"
+    },
+    {
+      "id": "bund/EPG/art_8",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bund und Kantone treffen Vorbereitungsmassnahmen, um Gefährdungen und Beeinträchtigungen der öffentlichen Gesundheit zu verhüten und frühzeitig zu begrenzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAG kann die Kantone anweisen, im Hinblick auf eine besondere Gefährdung der öffentlichen Gesundheit bestimmte Massnahmen zu treffen, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Erkennung und Überwachung von übertragbaren Krankheiten;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen gegenüber einzelnen Personen;"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen gegenüber der Bevölkerung;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Verteilung von Heilmitteln."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "10c21d208ec94baf6f7b1a61ceb64c50a0dc03cd242dffdfc60ff0b6351e799a"
+    },
+    {
+      "id": "bund/EPG/art_9",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG informiert die Öffentlichkeit, bestimmte Personengruppen sowie Behörden und Fachpersonen über die Gefahren übertragbarer Krankheiten und über die Möglichkeiten zu deren Verhütung und Bekämpfung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es veröffentlicht regelmässig Zusammenstellungen und Analysen über die Art, das Auftreten, die Ursachen und die Verbreitung übertragbarer Krankheiten."
+        },
+        {
+          "absatz": "3",
+          "text": "Es veröffentlicht Empfehlungen zu Massnahmen gegen übertragbare Krankheiten und zum Umgang mit Krankheitserregern und passt sie regelmässig dem aktuellen Stand der Wissenschaft an. Sind andere Bundesämter betroffen, so handelt das BAG im Einvernehmen mit diesen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAG und die zuständigen kantonalen Behörden koordinieren ihre Informationstätigkeit."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "e7f6a0a8a6fb56c9be8e957ba489186b91e53e6287eb46782db319d55b4357c0"
+    },
+    {
+      "id": "bund/EPG/art_10",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG sorgt dafür, dass die Kantone die für die Verhütung und Bekämpfung übertragbarer Krankheiten massgeblichen Informationen erhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Stellen des Bundes und der Kantone tauschen Forschungsergebnisse, Fachwissen und Informationen über Ausbildungs- und Überwachungsprogramme untereinander aus."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "22f047412565f500e44f69ea0c9f15e52e4090284d866f20affe708c1433df80"
+    },
+    {
+      "id": "bund/EPG/art_11",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG betreibt in Zusammenarbeit mit weiteren Bundesstellen und den zuständigen kantonalen Stellen Systeme zur Früherkennung und Überwachung von übertragbaren Krankheiten. Es sorgt für die Koordination mit internationalen Systemen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ec04bfe83e2c7aba2ada86f30675f9a8dad6032acb8a86b038f6b2db2809da45"
+    },
+    {
+      "id": "bund/EPG/art_12",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte, Spitäler und andere öffentliche oder private Institutionen des Gesundheitswesens melden Beobachtungen zu übertragbaren Krankheiten mit den Angaben, die zur Identifizierung der erkrankten, infizierten oder exponierten Personen sowie zur Feststellung des Übertragungswegs notwendig sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der zuständigen kantonalen Behörde;"
+            },
+            {
+              "marke": "b",
+              "text": "bei bestimmten Erregern zusätzlich direkt dem BAG."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Laboratorien melden laboranalytische Befunde zu übertragbaren Krankheiten mit den Angaben, die zur Identifizierung der erkrankten oder infizierten Personen notwendig sind, der zuständigen kantonalen Behörde und dem BAG."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat kann die Pflicht vorsehen, Verhütungs- und Bekämpfungsmassnahmen sowie deren Wirkung zu melden und Proben und Untersuchungsergebnisse an die von den zuständigen Behörden bestimmten Laboratorien zu senden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zuständigen kantonalen Behörden melden dem BAG Beobachtungen, die auf eine Gefahr für die öffentliche Gesundheit hinweisen."
+        },
+        {
+          "absatz": "5",
+          "text": "Wer ein Schiff oder ein Luftfahrzeug führt, meldet dem Betreiber von Hafenanlagen beziehungsweise dem Flughafenhalter Beobachtungen, die auf eine Gefahr für die öffentliche Gesundheit hinweisen."
+        },
+        {
+          "absatz": "6",
+          "text": "Zu melden sind Beobachtungen zu übertragbaren Krankheiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Epidemien verursachen können;"
+            },
+            {
+              "marke": "b",
+              "text": "die schwerwiegende Auswirkungen zur Folge haben können;"
+            },
+            {
+              "marke": "c",
+              "text": "die neuartig oder unerwartet sind; oder"
+            },
+            {
+              "marke": "d",
+              "text": "deren Überwachung international vereinbart ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b52151b5e9e92fa8b2be185de54b920a177174057556a4bd8ea8b72c07407caf"
+    },
+    {
+      "id": "bund/EPG/art_13",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat legt die meldepflichtigen Beobachtungen zu übertragbaren Krankheiten, die Meldewege, Meldekriterien und Meldefristen fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann die Meldepflicht für bestimmte Meldeinhalte auf ausgewählte Ärztinnen und Ärzte, Spitäler und andere öffentliche oder private Institutionen des Gesundheitswesens sowie Laboratorien beschränken."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "3ddd57cd070d4c48118421dfe15ae781773376b8b30c33a1293949a083916369"
+    },
+    {
+      "id": "bund/EPG/art_14",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG kann zur epidemiologischen Überwachung und zu Forschungszwecken mit Ärztinnen und Ärzten, Laboratorien, Spitälern und anderen öffentlichen oder privaten Institutionen des Gesundheitswesens vereinbaren, dass sie Beobachtungen, die nicht der Meldepflicht unterstehen, der vom BAG bezeichneten Stelle melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldung muss in anonymisierter Form erfolgen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "f83d8ed0cdd1fbb3373098134d5b32dba53d51e65bb9d787ca1daf3c5d6b941a"
+    },
+    {
+      "id": "bund/EPG/art_15",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen kantonalen Behörden sorgen für die notwendigen epidemiologischen Abklärungen, insbesondere zur Art, Ursache, Ansteckungsquelle und Ausbreitung einer festgestellten oder vermuteten Krankheit. Sie koordinieren ihre Tätigkeiten und informieren das BAG über die Ergebnisse."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Bundesbehörde gewährt den kantonalen Behörden bei den epidemiologischen Abklärungen fachliche Unterstützung. Sie kann selber solche Abklärungen durchführen, insbesondere wenn der betroffene Kanton darum ersucht."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "0f1833d7455e19816b7dde892d99f125f7855054abdbeb292026c61223b874e3"
+    },
+    {
+      "id": "bund/EPG/art_16",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Laboratorien, die mikrobiologische Untersuchungen zur Erkennung übertragbarer Krankheiten durchführen, benötigen eine Bewilligung der zuständigen Bundesbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat nimmt folgende Aufgaben wahr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er bezeichnet die zuständige Bundesbehörde."
+            },
+            {
+              "marke": "b",
+              "text": "Er regelt die Voraussetzungen und das Verfahren für die Erteilung der Bewilligung."
+            },
+            {
+              "marke": "c",
+              "text": "Er umschreibt die Pflichten der Inhaberin oder des Inhabers der Bewilligung."
+            },
+            {
+              "marke": "d",
+              "text": "Er regelt die Aufsicht und sieht insbesondere die Möglichkeit unangemeldeter Inspektionen vor."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Praxislaboratorien von Ärztinnen und Ärzten, Spitallaboratorien, die Offizin eines Apothekers oder einer Apothekerin und weitere Laboratorien, die Analysen im Rahmen der Grundversorgung nach dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung (KVG) durchführen, sind von der Bewilligungspflicht ausgenommen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b5fad653f9c85452936b1e9bb5e797586e8fc64a24266b52ad16e79cfdc16829"
+    },
+    {
+      "id": "bund/EPG/art_17",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG kann einzelne Laboratorien als nationale Referenzzentren oder als Bestätigungslaboratorien bezeichnen und diese mit besonderen Untersuchungen und weiteren Sonderaufgaben betrauen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "fd2782941e2f08f772ddd20c9d9b5a2c609637ed342d6546d61a0a1fb74a6951"
+    },
+    {
+      "id": "bund/EPG/art_18",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone betreiben ein Netzwerk von Regionallaboratorien und stellen die Zusammenarbeit mit den zuständigen Bundesbehörden und den Hochsicherheitslaboratorien sicher."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "e720aa8a731c4e073aff4bfc18135fefaf542abaab958a5ed79908162aafff7b"
+    },
+    {
+      "id": "bund/EPG/art_19",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bund und Kantone treffen Massnahmen zur Kontrolle, Verminderung und Beseitigung von Risiken der Übertragung von Krankheiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat kann folgende Vorschriften erlassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er kann Spitäler, Kliniken und andere Institutionen des Gesundheitswesens verpflichten, ihre Medizinprodukte zu dekontaminieren, zu desinfizieren und zu sterilisieren."
+            },
+            {
+              "marke": "b",
+              "text": "Er kann Betriebe und Veranstalter, die mit ihren Aktivitäten das Risiko der Krankheitsübertragung erhöhen, dazu verpflichten, Präventions- und Informationsmaterial bereitzustellen und bestimmte Verhaltensregeln einzuhalten."
+            },
+            {
+              "marke": "c",
+              "text": "Er kann Institutionen des Bildungs- und Gesundheitswesens verpflichten, Informationen über die Gefahren übertragbarer Krankheiten und Beratungen zu deren Verhütung und Bekämpfung anzubieten."
+            },
+            {
+              "marke": "d",
+              "text": "Er kann öffentliche und private Institutionen, die eine besondere Pflicht zum Schutz der Gesundheit von Menschen haben, die in ihrer Obhut sind, zur Durchführung geeigneter Verhütungsmassnahmen verpflichten."
+            },
+            {
+              "marke": "e",
+              "text": "Er kann technische Installationen, die übertragbare Krankheiten verbreiten können, einer Registrierungspflicht unterstellen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann die Transplantation von menschlicher Dura mater verbieten."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "052ee844b74ba380b463337095d5572bd707f71f98fcb14aa2eb4b7535ce3816"
+    },
+    {
+      "id": "bund/EPG/art_20",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG erarbeitet und veröffentlicht in Zusammenarbeit mit der Eidgenössischen Kommission für Impffragen Impfempfehlungen in Form eines nationalen Impfplans."
+        },
+        {
+          "absatz": "2",
+          "text": "Ärztinnen, Ärzte und weitere Gesundheitsfachpersonen tragen im Rahmen ihrer Tätigkeit zur Umsetzung des nationalen Impfplans bei."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie informieren die von den Impfempfehlungen betroffenen Personen über den nationalen Impfplan."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "40632f8b09893cd4eeaff7e433099cbf1b8115207ca604ed19d7897e188a7d1a"
+    },
+    {
+      "id": "bund/EPG/art_21",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone fördern Impfungen, indem sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die von den Impfempfehlungen betroffenen Personen über den nationalen Impfplan informieren;"
+            },
+            {
+              "marke": "b",
+              "text": "den Impfstatus von Kindern und Jugendlichen während der obligatorischen Schulzeit regelmässig überprüfen;"
+            },
+            {
+              "marke": "c",
+              "text": "dafür sorgen, dass die von den Impfempfehlungen betroffenen Personen vollständig geimpft sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Impfungen im Rahmen des Schulgesundheitsdienstes anbieten;"
+            },
+            {
+              "marke": "b",
+              "text": "Impfungen unentgeltlich durchführen oder Impfstoffe unter dem Marktpreis abgeben."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "3c5b48cbd30ddd102bd414b0033e8dcab06da7de0e77116ed3fd4d1227c92838"
+    },
+    {
+      "id": "bund/EPG/art_22",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone können Impfungen von gefährdeten Bevölkerungsgruppen, von besonders exponierten Personen und von Personen, die bestimmte Tätigkeiten ausüben, für obligatorisch erklären, sofern eine erhebliche Gefahr besteht."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "cb0cc725d5038dedd464ef15ae926e4acd07df76ae3fc68b0ad36a1b100cdab5"
+    },
+    {
+      "id": "bund/EPG/art_23",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann für Impfungen, für die eine internationale Impf- oder Prophylaxebescheinigung nach Artikel 36 der Internationalen Gesundheitsvorschriften (2005) vom 23. Mai 2005 notwendig ist, eine Melde- oder Bewilligungspflicht vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat nimmt die folgenden Aufgaben wahr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er bezeichnet die zuständige Behörde."
+            },
+            {
+              "marke": "b",
+              "text": "Er regelt die Voraussetzungen und das Verfahren für die Erteilung der Bewilligung."
+            },
+            {
+              "marke": "c",
+              "text": "Er bezeichnet die bei der Impfung anzuwendenden Verfahren und die zulässigen Impfstoffe."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "a8379588202b98178446af533fa71012090581f149498a14da976ef8f8618c83"
+    },
+    {
+      "id": "bund/EPG/art_24",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Bundesbehörden überprüfen unter Einbezug der Kantone regelmässig die Zweckmässigkeit und Wirksamkeit der Impfmassnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen kantonalen Behörden erheben den Anteil der geimpften Personen und informieren das BAG regelmässig über die Impfungsrate und über die Massnahmen, die zu deren Erhöhung getroffen wurden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAG verfasst regelmässig Berichte zur Überwachung und Evaluation und veröffentlicht diese in geeigneter Form."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "9ea05e3b7dbf65f2d6a43c54a172299a0c8f9befab35a46066c6bea70c0090ad"
+    },
+    {
+      "id": "bund/EPG/art_25",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer mit Krankheitserregern oder mit deren toxischen Produkten umgeht, muss alle erforderlichen Massnahmen treffen, damit keine Menschen zu Schaden kommen können."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "f67a088582859ac6aee6f32d9218fe1dfb97197a6d84eacc7984df45d2b5a86b"
+    },
+    {
+      "id": "bund/EPG/art_26",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Tätigkeiten mit Krankheitserregern in geschlossenen Systemen sind sämtliche Einschliessungsmassnahmen zu treffen, die notwendig sind, um eine Gefährdung des Menschen zu verhindern."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat führt eine Melde- oder Bewilligungspflicht ein; er regelt die Voraussetzungen und das Verfahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann bei bestimmten Krankheitserregern und Tätigkeiten die Melde- oder Bewilligungspflicht vereinfachen oder Ausnahmen vorsehen, wenn nach dem Stand der Wissenschaft und der Erfahrung eine Gefährdung der Gesundheit ausgeschlossen ist."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "25a42b8a535725cf26be974f0310a1992820c20b5a9acb22bd076d24302adac8"
+    },
+    {
+      "id": "bund/EPG/art_27",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Krankheitserreger im Versuch freisetzen oder in Verkehr bringen will, braucht dafür eine Bewilligung des Bundes."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt die Voraussetzungen und das Verfahren für die Erteilung der Bewilligung sowie die Information der Öffentlichkeit über Freisetzungsversuche."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann für bestimmte Krankheitserreger Ausnahmen von der Bewilligungspflicht vorsehen, wenn nach dem Stand der Wissenschaft und der Erfahrung eine Gefährdung der Gesundheit ausgeschlossen ist."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "cb027e16bdaa077fbeabe5e45c12878c49a51499a2c170c73512db17707802b3"
+    },
+    {
+      "id": "bund/EPG/art_28",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer Krankheitserreger in Verkehr bringt, muss Abnehmer über die gesundheitsrelevanten Eigenschaften und Gefahren sowie über die erforderlichen Vorsichts- und Schutzmassnahmen informieren."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "19c826c298ee09b6186d121da54ddbae98ca3feeadf189504b9039128869c35e"
+    },
+    {
+      "id": "bund/EPG/art_29",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann folgende Vorschriften erlassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Er kann den Transport von Krankheitserregern regeln und für ihre Ein-, Aus- und Durchfuhr eine Bewilligungspflicht vorschreiben."
+            },
+            {
+              "marke": "b",
+              "text": "Er kann den Umgang mit bestimmten Krankheitserregern einschränken oder verbieten."
+            },
+            {
+              "marke": "c",
+              "text": "Er kann die Anforderungen an die Ausrüstung des geschlossenen Systems und an die Aus- oder Weiterbildung der Personen festlegen, die mit Krankheitserregern umgehen."
+            },
+            {
+              "marke": "d",
+              "text": "Er kann die Kennzeichnung von Behältern, die Krankheitserreger enthalten, vorschreiben."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "fba1b2019c2a51fb28eed796fd7eeedaaa1fa1f999ece8862c7e9a27649dffa1"
+    },
+    {
+      "id": "bund/EPG/art_30",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Massnahme nach den Artikeln 33–38 darf nur angeordnet werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "weniger einschneidende Massnahmen, um die Verbreitung einer übertragbaren Krankheit zu verhindern, nicht ausreichen oder nicht geeignet sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Massnahme dazu dient, eine ernsthafte Gefahr für die Gesundheit Dritter abzuwenden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Massnahme muss erforderlich und zumutbar sein."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "1acf2f4d997827cf6e0de0d743e964be526a5cdf0b698da327bbeceea95a411c"
+    },
+    {
+      "id": "bund/EPG/art_31",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen kantonalen Behörden ordnen die Massnahmen nach den Artikeln 33–38 an."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Bundesbehörden unterstützen die Kantone bei der Identifizierung und Benachrichtigung von Personen, insbesondere von Reisenden im internationalen Verkehr."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Anordnung von Massnahmen ist die betroffene Person darüber aufzuklären, warum die Massnahmen angeordnet werden und wie lange diese voraussichtlich dauern."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Massnahmen dürfen nur so lange dauern, wie es notwendig ist, um die Verbreitung einer übertragbaren Krankheit zu verhindern und um eine ernsthafte Gefahr für die Gesundheit Dritter abzuwenden. Sie sind regelmässig zu überprüfen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "054756f8d879daa7b652eec9da4f57a378032ce6363c4680500388a1d8e24c02"
+    },
+    {
+      "id": "bund/EPG/art_32",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zuständigen kantonalen Behörden können die von ihnen angeordnete medizinische Überwachung, Quarantäne, Absonderung oder ärztliche Untersuchung zwangsweise durchsetzen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "8aed42927d888e60c61b4d148112a676d67cf48f54205d1c7c25d023dbd2e72c"
+    },
+    {
+      "id": "bund/EPG/art_33",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann identifiziert und benachrichtigt werden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "528e894588a4b7652f28c1635e112b82d607fab8cc81f94b1ff0e7fb6cd277de"
+    },
+    {
+      "id": "bund/EPG/art_34",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann einer medizinischen Überwachung unterstellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die betroffene Person ist verpflichtet, der zuständigen Ärztin oder dem zuständigen Arzt Auskunft über ihren Gesundheitszustand und über ihre Kontakte zu anderen Personen zu geben."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "667ca472aa4ae9e85eeb7a1d19279311006d11fd4e1d64bfadc5a76b1f041f2d"
+    },
+    {
+      "id": "bund/EPG/art_35",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Genügt die medizinische Überwachung nicht, so kann:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Person, die krankheitsverdächtig oder ansteckungsverdächtig ist, unter Quarantäne gestellt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Person, die krank oder angesteckt ist oder Krankheitserreger ausscheidet, abgesondert werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die betroffene Person kann wenn nötig in ein Spital oder in eine andere geeignete Institution eingewiesen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Spital oder die Institution muss dafür sorgen, dass das Personal und weitere gefährdete Personen vor Übertragungen geschützt werden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "13383ba5ed71a0537e2331fd3a7759b7cb574d8a575d62aa6fef22bc8c4869df"
+    },
+    {
+      "id": "bund/EPG/art_36",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann verpflichtet werden, sich ärztlich untersuchen zu lassen und sich Proben entnehmen zu lassen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "20d0d14098ae6a7ffc0764e127004fa7d8e3fa459f3d6c6418aa700b457ca5db"
+    },
+    {
+      "id": "bund/EPG/art_37",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann verpflichtet werden, sich ärztlich behandeln zu lassen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "544e38c0c9d0267c89cd7e4b995125edf104036610c5c3c1daa3319a611202cf"
+    },
+    {
+      "id": "bund/EPG/art_38",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einer Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann die Ausübung bestimmter Tätigkeiten oder ihres Berufs ganz oder teilweise untersagt werden. Sie kann verpflichtet werden, einen Wechsel des Wohnkantons, ihrer Tätigkeit oder Berufsausübung der zuständigen kantonalen Behörde unverzüglich zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist einer Person die Ausübung bestimmter Tätigkeiten oder ihres Berufs ganz oder teilweise untersagt und wurde sie verpflichtet, einen Wechsel des Wohnkantons, ihrer Tätigkeit oder ihrer Berufsausübung zu melden, so informiert die zuständige kantonale Behörde die zuständige Behörde des betreffenden Kantons über das Verbot oder die Einschränkung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "310f4f31258d2e91b15a3ffb35988c048b1e74d83f5f59479f4057b776648b17"
+    },
+    {
+      "id": "bund/EPG/art_39",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ärztinnen und Ärzte, die eine Person behandeln oder überwachen, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, treffen die in ihren Möglichkeiten liegenden Massnahmen, um die Verbreitung einer übertragbaren Krankheit zu verhindern. Sind behördliche Massnahmen notwendig, so ist dies der zuständigen kantonalen Behörde zu melden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "eec39000e728da8a5ad5c3680b2ba92318dcddbe4d063ed2ff392cc16dc0997c"
+    },
+    {
+      "id": "bund/EPG/art_40",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen kantonalen Behörden ordnen Massnahmen an, um die Verbreitung übertragbarer Krankheiten in der Bevölkerung oder in bestimmten Personengruppen zu verhindern. Sie koordinieren ihre Massnahmen untereinander."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können insbesondere folgende Massnahmen treffen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Veranstaltungen verbieten oder einschränken;"
+            },
+            {
+              "marke": "b",
+              "text": "Schulen, andere öffentliche Institutionen und private Unternehmen schliessen oder Vorschriften zum Betrieb verfügen;"
+            },
+            {
+              "marke": "c",
+              "text": "das Betreten und Verlassen bestimmter Gebäude und Gebiete sowie bestimmte Aktivitäten an definierten Orten verbieten oder einschränken."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Massnahmen dürfen nur so lange dauern, wie es notwendig ist, um die Verbreitung einer übertragbaren Krankheit zu verhindern. Sie sind regelmässig zu überprüfen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "4f71f167bdeadb48017b7f6cd4f6c04221308a0bc835ce9dec5fe224f1a9c9b8"
+    },
+    {
+      "id": "bund/EPG/art_41",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat erlässt Vorschriften über den internationalen Personenverkehr, die verhindern, dass übertragbare Krankheiten sich grenzüberschreitend ausbreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn es zur Verhinderung der Verbreitung einer übertragbaren Krankheit notwendig ist, kann das BAG Personen, die in die Schweiz einreisen oder aus der Schweiz ausreisen, verpflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihre Identität, Reiseroute und Kontaktdaten bekannt zu geben;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Impf- oder Prophylaxebescheinigung vorzulegen;"
+            },
+            {
+              "marke": "c",
+              "text": "Auskunft über ihren Gesundheitszustand zu geben;"
+            },
+            {
+              "marke": "d",
+              "text": "einen Nachweis einer ärztlichen Untersuchung vorzulegen;"
+            },
+            {
+              "marke": "e",
+              "text": "sich ärztlich untersuchen zu lassen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAG kann Personen, die in die Schweiz einreisen, einer Massnahme nach den Artikeln 34, 35, 37 und 38 unterstellen; die Artikel 30–32 sind sinngemäss anwendbar. Wenn es erforderlich ist, kann der Bundesrat diese Massnahmen vorübergehend auf alle aus gefährdeten Gebieten einreisenden Personen ausdehnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Einer Person, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, kann das BAG die Ausreise vorübergehend verweigern, wenn die Verhinderung der Verbreitung einer übertragbaren Krankheit dies erfordert."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "cbbd8eea78b0ab2521f438ebe61040e4fbb13d5dd8f62032948643114a915d84"
+    },
+    {
+      "id": "bund/EPG/art_42",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Betreiber von Hafenanlagen und die Flughafenhalter treffen die notwendigen betrieblichen Vorbereitungen zur Umsetzung der Massnahmen nach Artikel 41. Sie verfügen über eigene Notfallpläne."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bezeichnet die Betreiber von Hafenanlagen und die Flughafenhalter, welche die notwendigen Kapazitäten nach Anlage 1 B der Internationalen Gesundheitsvorschriften (2005) vom 23. Mai 2005 bereitstellen müssen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "0b9abde6a37a731a08fbc7aef2e063800dd366d9631296a4aefc3f36bc8fa4c5"
+    },
+    {
+      "id": "bund/EPG/art_43",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unternehmen, die im Eisenbahn-, Bus-, Schiffs- oder Flugverkehr grenzüberschreitend Personen befördern, Flughafenhalter, Betreiber von Hafenanlagen, Bahnhöfen und Busstationen und Reiseveranstalter sind verpflichtet, bei der Durchführung der Massnahmen nach Artikel 41 mitzuwirken. Sie können im Rahmen ihrer betrieblichen und technischen Möglichkeiten verpflichtet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Reisende über die Gefahren übertragbarer Krankheiten und die Möglichkeiten zu deren Verhütung und Bekämpfung zu informieren;"
+            },
+            {
+              "marke": "b",
+              "text": "die zur Identifizierung einer Person oder zur Früherkennung von kranken, krankheitsverdächtigen, angesteckten, ansteckungsverdächtigen und Krankheitserreger ausscheidenden Personen notwendigen Angaben zu erheben;"
+            },
+            {
+              "marke": "c",
+              "text": "Passagier- oder Warenlisten den zuständigen Behörden zur Verfügung zu stellen;"
+            },
+            {
+              "marke": "d",
+              "text": "ärztliche Untersuchungen von Reisenden zu ermöglichen;"
+            },
+            {
+              "marke": "e",
+              "text": "den Transport einer Person, die krank, krankheitsverdächtig, angesteckt, ansteckungsverdächtig ist oder Krankheitserreger ausscheidet, in ein Spital oder in eine andere geeignete Institution zu ermöglichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die notwendigen betrieblichen und personellen Kapazitäten zur Durchführung der Massnahmen nach Absatz 1 bereitstellen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "46bb2ce66a46bc5593eda7c52b853b85e59c972425c4cd573cdd09247e0774fd"
+    },
+    {
+      "id": "bund/EPG/art_44",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat stellt die Versorgung der Bevölkerung mit den wichtigsten zur Bekämpfung übertragbarer Krankheiten geeigneten Heilmitteln sicher, soweit er sie nicht durch Massnahmen nach dem Landesversorgungsgesetz vom 8. Oktober 1982 gewährleisten kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann Vorschriften erlassen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zuteilung der Heilmittel;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verteilung der Heilmittel;"
+            },
+            {
+              "marke": "c",
+              "text": "die Erleichterung der Einfuhr und die Beschränkung oder das Verbot der Ausfuhr der Heilmittel, sofern dies zur Abwehr einer Gefährdung der Gesundheit notwendig ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die Vorratshaltung von Heilmitteln in Spitälern und weiteren Institutionen des Gesundheitswesens."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann Massnahmen zur Versorgung der Auslandschweizerinnen und Auslandschweizer mit Heilmitteln vorsehen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "e53b8a77bbf50982a5fa0b3c713cd3c38f51294befb062dfa4bb5c096c3880e0"
+    },
+    {
+      "id": "bund/EPG/art_45",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann Vorschriften über den Transport und über die Ein-, Aus- und Durchfuhr von Waren erlassen, die Träger von Krankheitserregern sein können. Er kann insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anforderungen an die Schutzmassnahmen beim Transport von Waren festlegen;"
+            },
+            {
+              "marke": "b",
+              "text": "Untersuchungen von Waren auf bestimmte Krankheitserreger vorschreiben;"
+            },
+            {
+              "marke": "c",
+              "text": "Einschränkungen und Verbote für den Transport sowie für die Ein-, Aus- und Durchfuhr von Waren erlassen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann die Kantone beauftragen, einzelne Massnahmen durchzuführen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "1f735cc086dd9093075365828b0756c9fcdd4f302162a48f87d702384fb57e4b"
+    },
+    {
+      "id": "bund/EPG/art_46",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat erlässt die nötigen Vorschriften über den Transport und die Beisetzung von Leichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er regelt den Leichentransport durch die Schweiz, vom Ausland in die Schweiz und von der Schweiz ins Ausland."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "83168f110ab271c35870d52cc06e2f149000234364a131b944f686f053bdf02b"
+    },
+    {
+      "id": "bund/EPG/art_47",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Treten Organismen auf, die Krankheitserreger auf den Menschen übertragen können, so ergreifen die zuständigen Bundesstellen und die kantonalen Stellen in gegenseitiger Koordination die erforderlichen Massnahmen zur Bekämpfung dieser Organismen oder zur Verhütung ihres Auftretens."
+        },
+        {
+          "absatz": "2",
+          "text": "Unternehmen, die im Eisenbahn-, Bus-, Schiffs- oder Flugverkehr Personen befördern, Flughafenhalter, Betreiber von Hafenanlagen, Bahnhöfen und Busstationen und Reiseveranstalter sind bei der Durchführung dieser Massnahmen zur Mitwirkung verpflichtet."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "149626c708924451ed5410825982413a72b82885cc4dd67d9997a00ce8d25e70"
+    },
+    {
+      "id": "bund/EPG/art_48",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen kantonalen Behörden sorgen für die Desinfektion und Entwesung, insbesondere von Transportmitteln und Waren, um die Verbreitung von übertragbaren Krankheiten zu verhindern."
+        },
+        {
+          "absatz": "2",
+          "text": "Unternehmen, die im Eisenbahn-, Bus-, Schiffs- oder Flugverkehr Personen befördern, Flughafenhalter, Betreiber von Hafenanlagen, Bahnhöfen und Busstationen und Reiseveranstalter sind bei Desinfektionen und Entwesungen zur Mitwirkung verpflichtet."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "41dd4710f8ca3cc0782389dd2d3c6d3b7cf684a3d51ddbc12ad517fd9306b5e6"
+    },
+    {
+      "id": "bund/EPG/art_49",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zuständigen kantonalen Behörden stellen die für den grenzüberschreitenden Schiffsverkehr erforderlichen Gesundheitsbescheinigungen aus."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ec393a3bcc60cf1cbf5f6598d05180289415547af70de53340bc0aa1293540de"
+    },
+    {
+      "id": "bund/EPG/art_50",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG kann im Rahmen der bewilligten Kredite Finanzhilfen gewähren an öffentliche und private Organisationen für Massnahmen im nationalen öffentlichen Interesse zur Erkennung, Überwachung, Verhütung und Bekämpfung übertragbarer Krankheiten."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "fe5e0e4ab2d4c948afe834856b2354bd1f9569fb36c2173aa293cb558346d4f8"
+    },
+    {
+      "id": "bund/EPG/art_51",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund kann die Herstellung von Heilmitteln nach Artikel 44 in der Schweiz mit Finanzhilfen fördern, wenn die Versorgung der Bevölkerung in besonderen oder ausserordentlichen Lagen nicht anderweitig gewährleistet werden kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann die Finanzhilfen im Rahmen der bewilligten Kredite in Form von Grundbeiträgen, Investitionsbeiträgen und projektgebundenen Beiträgen leisten."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann die Beiträge ausrichten, wenn die Herstellerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nachweislich über das Wissen und die Fähigkeit zur Entwicklung oder Produktion solcher Heilmittel verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "sich zur Herstellung solcher Heilmittel in der Schweiz verpflichtet; und"
+            },
+            {
+              "marke": "c",
+              "text": "die vorrangige Belieferung der Behörden mit solchen Heilmitteln in besonderen oder ausserordentlichen Lagen zusichert."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "df28077a3ba683875949be5d576da28f85adacf730e8b3a0960d7ff417f93525"
+    },
+    {
+      "id": "bund/EPG/art_52",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG gewährt Abgeltungen an die als nationale Referenzzentren oder als Bestätigungslaboratorien bezeichneten Laboratorien für die Ausgaben, die ihnen im Rahmen ihrer Sonderaufgaben erwachsen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "df3223b12d9b67b0180f6fda9a608d91f93dbaaae9c4cf2ae850c4f3053a6dab"
+    },
+    {
+      "id": "bund/EPG/art_53",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jeder Kanton bezeichnet eine Kantonsärztin oder einen Kantonsarzt. Die Kantone können gemeinsam eine Kantonsärztin oder einen Kantonsarzt bezeichnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantonsärztin oder der Kantonsarzt koordiniert ihre oder seine Tätigkeiten mit anderen an der Bekämpfung übertragbarer Krankheiten beteiligten Behörden und Institutionen. Steht das Auftreten einer übertragbaren Krankheit mit einem Lebensmittel im Zusammenhang, so unterrichtet sie oder er die Kantonschemikerin oder den Kantonschemiker."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bundesrat legt die fachlichen Voraussetzungen der Kantonsärztinnen und Kantonsärzte fest."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "74e0fe8c797c7527ef71a51d1c82bd2fb55297a7a5bbca5e09dfcfe5288ee12a"
+    },
+    {
+      "id": "bund/EPG/art_54",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bund und Kantone schaffen ein Organ zur Förderung der Zusammenarbeit (Koordinationsorgan). Für bestimmte Themen, insbesondere für die Erkennung und Überwachung, Verhütung und Bekämpfung von Zoonosen, können Unterorgane gebildet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Koordinationsorgan und seine Unterorgane setzen sich zusammen aus Vertreterinnen und Vertretern des Bundes und der Kantone. Bei Bedarf können sie mit weiteren sachkundigen Personen ergänzt werden ."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie haben insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Koordination der Massnahmen zur Vorbereitung auf Situationen, von denen eine besondere Gefährdung der öffentlichen Gesundheit ausgeht;"
+            },
+            {
+              "marke": "b",
+              "text": "die Koordination der Erkennungs-, Verhütungs- und Bekämpfungsmassnahmen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Förderung eines einheitlichen Vollzugs;"
+            },
+            {
+              "marke": "d",
+              "text": "die Koordination der Information und Kommunikation;"
+            },
+            {
+              "marke": "e",
+              "text": "die Unterstützung des Einsatzorgans des Bundes bei der Bewältigung von besonderen oder ausserordentlichen Lagen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bundesrat regelt die Einsetzung und Führung des Koordinationsorgans und seiner Unterorgane."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b0f52904813c08f1f6e89bd077ab7ba3a935a50e19bdc08085247a3214bc8886"
+    },
+    {
+      "id": "bund/EPG/art_55",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat verfügt über ein Einsatzorgan für Ereignisse, die eine besondere Gefährdung der öffentlichen Gesundheit hervorrufen können, insbesondere zur Bewältigung einer besonderen oder ausserordentlichen Lage."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Einsatzorgan hat folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Es berät den Bundesrat."
+            },
+            {
+              "marke": "b",
+              "text": "Es unterstützt den Bund und die Kantone bei der Koordination der Massnahmen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "d1c609a74dc7ba445749d96778434a032f5618d9e35a58e98058b8659fc728bb"
+    },
+    {
+      "id": "bund/EPG/art_56",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Eidgenössische Kommission für Impffragen berät den Bundesrat beim Erlass von Vorschriften und die Behörden beim Vollzug dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommission hat insbesondere folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie erarbeitet Impfempfehlungen zuhanden des BAG."
+            },
+            {
+              "marke": "b",
+              "text": "Sie entwickelt medizinische Kriterien zur Beurteilung des Schweregrads einer Impfreaktion."
+            },
+            {
+              "marke": "c",
+              "text": "Sie berät das EDI in Fragen im Zusammenhang mit einer Entschädigung (Art. 64) oder Genugtuung (Art. 65)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie setzt sich zusammen aus verwaltungsexternen Fachleuten, die über wissenschaftliche oder praktische Kenntnisse in Impffragen verfügen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie arbeitet mit anderen eidgenössischen und kantonalen Instanzen zusammen, die sich mit Impffragen befassen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "53265aa5a94659f43781466e6aeff821a891b26b8bac9c9f729641986621bd49"
+    },
+    {
+      "id": "bund/EPG/art_57",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Eidgenössische Fachkommission für biologische Sicherheit berät den Bundesrat beim Erlass von Vorschriften und die Behörden beim Vollzug dieses Gesetzes."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "bf85da1065143c295ccf75c13d28e510dcb18f7f34ad80ccc37b699609c14ce8"
+    },
+    {
+      "id": "bund/EPG/art_58",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG, die zuständigen kantonalen Behörden und die mit Aufgaben nach diesem Gesetz betrauten öffentlichen und privaten Institutionen können Personendaten, einschliesslich Daten über die Gesundheit, bearbeiten oder bearbeiten lassen, soweit dies zur Identifizierung von kranken, krankheitsverdächtigen, angesteckten, ansteckungsverdächtigen und Krankheitserreger ausscheidenden Personen im Hinblick auf Massnahmen zum Schutz der öffentlichen Gesundheit, insbesondere zur Erkennung, Überwachung und Bekämpfung übertragbarer Krankheiten, erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie sind für die Einhaltung der Datenschutzvorschriften verantwortlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Daten dürfen höchstens zehn Jahre aufbewahrt werden, es sei denn, die Besonderheiten der Krankheit erfordere eine längere Aufbewahrung. Sie werden anschliessend vernichtet oder anonymisiert."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "5af6ddbcad70878f18fc0d6418ba79702f20c5628375dafef75dca695ab34883"
+    },
+    {
+      "id": "bund/EPG/art_59",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für den Vollzug dieses Gesetzes zuständigen Stellen des Bundes und der Kantone können sich gegenseitig Personendaten, einschliesslich Daten über die Gesundheit, bekannt geben, die sie zur Erfüllung der ihnen durch dieses Gesetz zugewiesenen Aufgaben benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere können folgende Daten bekannt gegeben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Vorname, Adresse, Geburtsdatum und berufliche Tätigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben über Reisewege, Aufenthaltsorte und Kontakte mit Personen, Tieren und Gegenständen;"
+            },
+            {
+              "marke": "c",
+              "text": "Ergebnisse von medizinischen Untersuchungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Ergebnisse von epidemiologischen Abklärungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben über die Zugehörigkeit zu einer bestimmten Risikogruppe;"
+            },
+            {
+              "marke": "f",
+              "text": "Angaben zu Massnahmen zur Verhütung und Bekämpfung einer übertragbaren Krankheit."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAG und die für den Vollzug dieses Gesetzes zuständigen kantonalen Behörden können Personendaten, einschliesslich Daten über die Gesundheit, die erforderlich sind, um die Verbreitung einer übertragbaren Krankheit zu verhindern, den folgenden Personen und Behörden bekannt geben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den mit der Behandlung übertragbarer Krankheiten beauftragten Ärztinnen und Ärzten;"
+            },
+            {
+              "marke": "b",
+              "text": "den kantonalen Behörden, die Aufgaben im Bereich der Erkennung, Überwachung, Verhütung und Bekämpfung von übertragbaren Krankheiten wahrnehmen;"
+            },
+            {
+              "marke": "c",
+              "text": "anderen Bundesbehörden, sofern dies für den Vollzug der von diesen Behörden anzuwendenden Erlasse notwendig ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "ef64c340d395e36b07b803668924e6710a41c4b94da6ee50e56656a6ab9b8798"
+    },
+    {
+      "id": "bund/EPG/art_60",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG betreibt ein Informationssystem, in das Daten über Personen aufgenommen werden, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig sind oder Krankheitserreger ausscheiden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Informationssystem enthält folgende Daten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Daten zur Identität, die eine eindeutige Identifizierung und die Kontaktaufnahme ermöglichen;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben über Reisewege, Aufenthaltsorte und Kontakte mit Personen, Tieren und Gegenständen;"
+            },
+            {
+              "marke": "c",
+              "text": "Ergebnisse von medizinischen Untersuchungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Angaben zu Massnahmen zur Verhütung und Bekämpfung einer übertragbaren Krankheit."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Informationssystem dient:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Identifizierung und Benachrichtigung von Personen, die krank, krankheitsverdächtig, angesteckt oder ansteckungsverdächtig sind oder Krankheitserreger ausscheiden;"
+            },
+            {
+              "marke": "b",
+              "text": "der Organisation von Massnahmen gegenüber einzelnen Personen im Sinne der Artikel 33–38."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Es dient ferner der einheitlichen Bearbeitung der Daten durch die zuständigen Behörden, der Erstellung von Statistiken und der Vollzugskontrolle."
+        },
+        {
+          "absatz": "5",
+          "text": "Das BAG ist für die Sicherheit des Informationssystems und die Rechtmässigkeit der Bearbeitung der Personendaten verantwortlich. Die Kantone treffen in ihrem Bereich die angemessenen organisatorischen und technischen Massnahmen zur Sicherung der Personendaten."
+        },
+        {
+          "absatz": "6",
+          "text": "Das BAG prüft, ob die Daten, die ihm übermittelt werden, richtig sind. Es korrigiert unrichtige und vernichtet nicht notwendige Daten und benachrichtigt den jeweiligen Datenlieferanten."
+        },
+        {
+          "absatz": "7",
+          "text": "Das Informationssystem steht dem BAG, den für den Vollzug dieses Gesetzes zuständigen kantonalen Stellen und dem Koordinierten Sanitätsdienst für Aufgaben in ihrem Zuständigkeitsbereich über ein Abrufverfahren zur Verfügung."
+        },
+        {
+          "absatz": "8",
+          "text": "Der Bundesrat legt die Voraussetzungen für die Aufbewahrung und Löschung der Daten fest und regelt die Zugriffsrechte."
+        },
+        {
+          "absatz": "9",
+          "text": "Das Recht, Auskünfte über die Daten im Informationssystem zu erhalten, und das Recht, die Daten berichtigen zu lassen, richten sich nach den Artikeln 25 und 41 des Datenschutzgesetzes vom 25. September 2020 (DSG). Begehren um Auskunft über Personendaten und um Berichtigung sind an das BAG zur richten."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "c980ed4099dba9ef8a94edfd1ce8583b79462038cdccefb7c1180cd5aaf64205"
+    },
+    {
+      "id": "bund/EPG/art_60_a",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "60_a",
+      "artikelLabel": "Art. 60a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_60_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/EPG/art_61",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesamt für Statistik stellt dem BAG jährlich für statistische Zwecke die Daten aus der Todesursachenstatistik und der Medizinischen Statistik der Krankenhäuser zur Verfügung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b57e99cad79eae43310723eb9c2e2fcd737e465d6a7edc7d75bb00fec3ad31b1"
+    },
+    {
+      "id": "bund/EPG/art_62",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG und die zuständigen kantonalen Behörden dürfen zum Vollzug dieses Gesetzes den mit entsprechenden Aufgaben betrauten ausländischen Behörden sowie supranationalen und internationalen Organisationen Personendaten, einschliesslich Daten über die Gesundheit, bekannt geben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gesetzgebung des betreffenden Staates oder die supranationale oder internationale Organisation einen angemessenen Datenschutz nach Artikel 16 Absatz 1 DSG gewährleistet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Personendaten mit spezifischen Garantien nach Artikel 16 Absatz 2 Buchstabe c DSG bekannt gegeben werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Insbesondere dürfen folgende Daten bekannt gegeben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Vorname, Adresse, Geburtsdatum und berufliche Tätigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben über Reisewege, Aufenthaltsorte und Kontakte mit Personen, Tieren und Gegenständen;"
+            },
+            {
+              "marke": "c",
+              "text": "Ergebnisse von medizinischen Untersuchungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Ergebnisse von epidemiologischen Abklärungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben über die Zugehörigkeit zu einer bestimmten Risikogruppe;"
+            },
+            {
+              "marke": "f",
+              "text": "Angaben zu Massnahmen zur Verhütung und Bekämpfung einer übertragbaren Krankheit."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In Abweichung von Absatz 1 können die Personendaten nur ins Ausland bekannt gegeben werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "die betroffene Person im Einzelfall eingewilligt hat;"
+            },
+            {
+              "marke": "c",
+              "text": "die Bekanntgabe im Einzelfall für die Wahrung der öffentlichen Gesundheit unerlässlich ist; oder"
+            },
+            {
+              "marke": "d",
+              "text": "die Bekanntgabe im Einzelfall erforderlich ist, um das Leben oder die körperliche Integrität der betroffenen Person zu schützen, und es nicht möglich ist, innerhalb einer angemessenen Frist die Einwilligung der betroffenen Person einzuholen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b58548ee7bacdb4fb277000b069ff16db09a56a7b17250558850e1e7b9f350f9"
+    },
+    {
+      "id": "bund/EPG/art_62_a",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "62_a",
+      "artikelLabel": "Art. 62a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_62_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/EPG/art_63",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die anordnende Behörde kann Personen, die aufgrund behördlicher Massnahmen nach den Artikeln 33–38 sowie 41 Absatz 3 Schäden erleiden, unter Berücksichtigung der wirtschaftlichen Verhältnisse dieser Personen entschädigen, soweit die Schäden nicht anderweitig gedeckt werden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "d5789fe28e3b66c521bc6aae89b34f65893521abb23372e0330032d519f7f15a"
+    },
+    {
+      "id": "bund/EPG/art_64",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer durch eine behördlich angeordnete oder behördlich empfohlene Impfung geschädigt wird, hat Anspruch auf eine Entschädigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Entschädigung wird nur gewährt, soweit der Schaden mit zumutbaren Bemühungen nicht anderweitig gedeckt werden kann."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "0c2ccd3d0927f8bf6bd794eb6b4ada6a1ced4113426ed5094d44828d18718032"
+    },
+    {
+      "id": "bund/EPG/art_65",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer durch eine behördlich angeordnete oder behördlich empfohlene Impfung geschädigt wird, hat Anspruch auf Genugtuung, wenn die Schwere der Beeinträchtigung dies rechtfertigt; die Artikel 47 und 49 des Obligationenrechts sind sinngemäss anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Genugtuung wird nach der Schwere der Beeinträchtigung bemessen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie beträgt höchstens 70 000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine Genugtuung wird nur gewährt, soweit Dritte keine oder keine genügende Leistung erbringen. Die Genugtuung wird um die Genugtuungsleistungen Dritter reduziert."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "bd8c662fa970759237ed1f8c07c397e5c52806625547805ef9a48cf253f39063"
+    },
+    {
+      "id": "bund/EPG/art_66",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Anspruch auf eine Entschädigung oder Genugtuung geltend machen will, muss beim EDI ein Gesuch stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer durch eine Impfung geschädigt wurde, muss das Gesuch um Entschädigung oder Genugtuung bis zum vollendeten 21. Lebensjahr oder innert fünf Jahren nach der Impfung einreichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Entschädigung und die Genugtuung werden keine Zinsen geschuldet."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "38292a4189ce3cc39a65685d1a906d126064221d314b10586ef27d4387a86418"
+    },
+    {
+      "id": "bund/EPG/art_67",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das EDI kann die Entschädigung und die Genugtuung herabsetzen oder gänzlich davon absehen, wenn die oder der Geschädigte den Schaden wesentlich mitverschuldet hat."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "8062dcae5ab621f6cfbd24ce4edfb1ffacbc3d0714714e391d0367b178eac326"
+    },
+    {
+      "id": "bund/EPG/art_68",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei empfohlenen Impfungen tragen der Bund und der Kanton, in dem die Impfung erfolgt ist, die Kosten der Entschädigung oder Genugtuung je zur Hälfte."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei obligatorischen Impfungen trägt die vollen Kosten der Entschädigung oder Genugtuung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Bund, wenn er die Impfung für obligatorisch erklärt hat;"
+            },
+            {
+              "marke": "b",
+              "text": "der Kanton, der die Impfung für obligatorisch erklärt hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "d05b53d42288948201b9f81aa20bc587525a0318b1c8a67aa3895483466a3153"
+    },
+    {
+      "id": "bund/EPG/art_69",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EDI entscheidet nach Anhörung der Eidgenössischen Kommission für Impffragen und des betroffenen Kantons, ob eine Entschädigung oder eine Genugtuung ausgerichtet wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer eine Entschädigung oder eine Genugtuung beansprucht, muss glaubhaft machen, dass Dritte keine oder keine genügenden Leistungen erbringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Beschwerdeverfahren richtet sich nach den allgemeinen Bestimmungen über die Bundesrechtspflege."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "3b07e5207f0d3366e176ef2d7ff3e344bc918d3e4509e2be7044f45f1c8bab3e"
+    },
+    {
+      "id": "bund/EPG/art_70",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund kann sich gegenüber der Herstellerin eines Heilmittels nach Artikel 44 verpflichten, den Schaden zu decken, für den sie als Folge einer vom Bund in einer besonderen oder ausserordentlichen Lage empfohlenen oder angeordneten Verwendung einstehen muss."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Umfang und die Modalitäten der Schadensdeckung werden in einer Vereinbarung zwischen dem Bund und der Herstellerin festgelegt."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "aa272317bbdc002843b68b7263e905f66a8de6e7f9151ed9ea6eee8419c67c25"
+    },
+    {
+      "id": "bund/EPG/art_71",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone tragen die Kosten für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Massnahmen gegenüber der Bevölkerung oder einzelnen Personen, soweit die Kosten nicht anderweitig gedeckt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die epidemiologischen Abklärungen nach Artikel 15 Absatz 1."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "79486f292a9525b201923cdf830c3e428cab94f4fc1c047e1bc3dc9ed88baff6"
+    },
+    {
+      "id": "bund/EPG/art_72",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Inhaberin oder der Inhaber eines Transportmittels, einer Anlage oder einer Ware trägt die Kosten der Desinfektion oder Entwesung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "cea0e0869e670772a74394778cbc1becdb015d8e78811d7e2c74cd6b24451f1d"
+    },
+    {
+      "id": "bund/EPG/art_73",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund trägt die Kosten für die Versorgung der Bevölkerung mit Heilmitteln nach Artikel 44."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden Heilmittel abgegeben, so richtet sich die Übernahme der Kosten nach den Voraussetzungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung;"
+            },
+            {
+              "marke": "b",
+              "text": "des Bundesgesetzes vom 20. März 1981 über die Unfallversicherung;"
+            },
+            {
+              "marke": "c",
+              "text": "des Bundesgesetzes vom 19. Juni 1992 über die Militärversicherung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Kosten nicht oder nicht vollständig nach Absatz 2 übernommen, so trägt sie der Bund."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "c3c4aa7c448d00cd31f24331f2dc97f16eceb079585b445223a707481deec12b"
+    },
+    {
+      "id": "bund/EPG/art_74",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund trägt die Kosten für die von seinen Organen angeordnete Untersuchung, Überwachung, Quarantäne, Absonderung und Behandlung von Reisenden im internationalen Verkehr, sowie die Kosten der Mitwirkungspflicht nach Artikel 43 Absatz 1 Buchstaben b, d und e."
+        },
+        {
+          "absatz": "2",
+          "text": "Unternehmen, die im Eisenbahn-, Bus-, Schiffs- oder Flugverkehr grenzüberschreitend Personen befördern, Flughafenhalter, Betreiber von Hafenanlagen, Bahnhöfen und Busstationen und Reiseveranstalter tragen die Kosten, die aus der Vorbereitung nach Artikel 42 und der Mitwirkungspflicht nach Artikel 43 Absatz 1 Buchstaben a und c entstehen. Der Bund kann sich an ausserordentlichen Auslagen und Aufwendungen beteiligen, falls sie für die betroffenen Unternehmen zu einer unzumutbaren wirtschaftlichen Belastung führen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "0eeda1a6d9b7a646814b3fc8aaf78c21ee7c1b6c29d6205bebc38579ffef4f5b"
+    },
+    {
+      "id": "bund/EPG/art_75",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone vollziehen dieses Gesetz, soweit nicht der Bund zuständig ist."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_75",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "127c3e3a18b9b3670379f6898e6eb5f97d3c5a2939fc4c9ec1c9e4ee8caae806"
+    },
+    {
+      "id": "bund/EPG/art_76",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone berichten dem EDI über den Vollzug des Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat regelt Häufigkeit, Art und Inhalt der Berichterstattung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_76",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "200fc70096bc67408c6e731178d23a2c8eae4100d8f8605a5dc6f70a005e003c"
+    },
+    {
+      "id": "bund/EPG/art_77",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund beaufsichtigt den Vollzug dieses Gesetzes durch die Kantone."
+        },
+        {
+          "absatz": "2",
+          "text": "Er koordiniert die Vollzugsmassnahmen der Kantone, soweit ein Interesse an einem einheitlichen Vollzug besteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Er kann zu diesem Zweck:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Kantonen Massnahmen für einen einheitlichen Vollzug vorschreiben;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Gefährdungen der öffentlichen Gesundheit die Kantone anweisen, bestimmte Vollzugsmassnahmen umzusetzen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kantone verpflichten, den Bund über Vollzugsmassnahmen zu informieren;"
+            },
+            {
+              "marke": "d",
+              "text": "den Kantonen Vorgaben für ihre Vorbereitungs- und Notfallpläne machen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "b3667d64f739d157581049902e6599effa0c42e275e18f02ff1ce741aee70a84"
+    },
+    {
+      "id": "bund/EPG/art_78",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat erlässt die Ausführungsbestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann den Erlass von Ausführungsbestimmungen unter Berücksichtigung von deren Tragweite dem zuständigen Bundesamt übertragen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "6618305cfacc83e6ba1eef814b1fc8a679fdbc9d38eda19ecf9390d235ebe558"
+    },
+    {
+      "id": "bund/EPG/art_79",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann Vollzugsaufgaben auf Organisationen und Personen des öffentlichen oder privaten Rechts übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er beaufsichtigt die mit Vollzugsaufgaben betrauten Organisationen und Personen."
+        },
+        {
+          "absatz": "3",
+          "text": "Organisationen und Personen des öffentlichen oder privaten Rechts, die Vollzugsaufgaben nach Absatz 1 wahrnehmen, haben Anspruch auf Entschädigung. Der Bundesrat regelt den Umfang und die Modalitäten der Entschädigung."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "dd098a3ff921d272aa89edd0fdcd8be9f4a08fa3e8f0582d4a9a068c66440df4"
+    },
+    {
+      "id": "bund/EPG/art_80",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesrat kann völkerrechtliche Vereinbarungen abschliessen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Austausch von Daten, die der epidemiologischen Überwachung dienen;"
+            },
+            {
+              "marke": "b",
+              "text": "die gegenseitige Information über den Ausbruch und die Verbreitung übertragbarer Krankheiten;"
+            },
+            {
+              "marke": "c",
+              "text": "die sofortige Benachrichtigung, wenn die Gefahr droht, dass übertragbare Krankheiten die Landesgrenze überschreiten;"
+            },
+            {
+              "marke": "d",
+              "text": "die Harmonisierung der Massnahmen zur Erkennung, Überwachung, Verhütung und Bekämpfung übertragbarer Krankheiten;"
+            },
+            {
+              "marke": "e",
+              "text": "den Leichentransport über die Landesgrenze hinweg;"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Bundesstellen arbeiten mit ausländischen Behörden und Institutionen sowie mit internationalen Organisationen zusammen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAG übernimmt die Aufgaben der nationalen Anlaufstelle nach den Internationalen Gesundheitsvorschriften (2005) vom 23. Mai 2005. Insbesondere meldet es der WHO Ereignisse, die zu einer gesundheitlichen Notlage von internationaler Tragweite führen können."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "bee799532b95f7a482ea18ba2b0596138e4ed32861d3017bf568c551ca1f68ca"
+    },
+    {
+      "id": "bund/EPG/art_81",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat überprüft periodisch die Wirksamkeit, Zweckmässigkeit und Wirtschaftlichkeit der Massnahmen nach diesem Gesetz."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "fb9f3a2b4668a18f137389b59787bb8bda9158ff4652d8bc5bae11a8dbc4fcd2"
+    },
+    {
+      "id": "bund/EPG/art_82",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sofern keine schwerere strafbare Handlung nach dem Strafgesetzbuch vorliegt, wird mit Freiheitsstrafe bis zu drei Jahren oder Geldstrafe bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Tätigkeiten mit gefährlichen Krankheitserregern in geschlossenen Systemen die erforderlichen Einschliessungsmassnahmen unterlässt (Art. 26);"
+            },
+            {
+              "marke": "b",
+              "text": "Krankheitserreger im Versuch ohne Bewilligung freisetzt oder in Verkehr bringt (Art. 27);"
+            },
+            {
+              "marke": "c",
+              "text": "Krankheitserreger in Verkehr bringt, ohne den Abnehmer vorschriftsgemäss über die gesundheitsrelevanten Eigenschaften und Gefahren sowie über die erforderlichen Vorsichts- und Schutzmassnahmen zu informieren (Art. 28);"
+            },
+            {
+              "marke": "d",
+              "text": "der Einschränkung bestimmter Tätigkeiten oder der Berufsausübung zuwiderhandelt (Art. 38)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer fahrlässig handelt, wird für Vergehen nach Absatz 1 mit Geldstrafe bestraft."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "4fe874202509f632b7754f2e483851d21ef5b9d394b8c684ff336c38366af4a7"
+    },
+    {
+      "id": "bund/EPG/art_83",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer vorsätzlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Meldepflicht verletzt (Art. 12);"
+            },
+            {
+              "marke": "b",
+              "text": "ohne Bewilligung eine mikrobiologische Untersuchung zur Erkennung übertragbarer Krankheiten durchführt (Art. 16);"
+            },
+            {
+              "marke": "c",
+              "text": "die Vorschriften über die Verhütung der Übertragung von Krankheiten verletzt (Art. 19);"
+            },
+            {
+              "marke": "d",
+              "text": "ohne Bewilligung eine internationale Impf- oder Prophylaxebescheinigung ausstellt (Art. 23);"
+            },
+            {
+              "marke": "e",
+              "text": "die Sorgfaltspflicht im Umgang mit Krankheitserregern oder ihren toxischen Produkten verletzt (Art. 25);"
+            },
+            {
+              "marke": "f",
+              "text": "die weiteren Vorschriften über den Umgang mit Krankheitserregern verletzt (Art. 29);"
+            },
+            {
+              "marke": "g",
+              "text": "sich einer angeordneten medizinischen Überwachung entzieht (Art. 34);"
+            },
+            {
+              "marke": "h",
+              "text": "sich einer angeordneten Quarantäne oder Absonderung entzieht (Art. 35);"
+            },
+            {
+              "marke": "i",
+              "text": "sich einer angeordneten ärztlichen Untersuchung entzieht (Art. 36);"
+            },
+            {
+              "marke": "j",
+              "text": "sich Massnahmen gegenüber der Bevölkerung widersetzt (Art. 40);"
+            },
+            {
+              "marke": "k",
+              "text": "die Vorschriften über die Ein- oder Ausreise verletzt (Art. 41);"
+            },
+            {
+              "marke": "l",
+              "text": "Mitwirkungspflichten verletzt (Art. 43, 47 Abs. 2 und 48 Abs. 2);"
+            },
+            {
+              "marke": "m",
+              "text": "die Vorschriften über den Transport sowie die Ein-, Aus- und Durchfuhr von Waren verletzt (Art. 45);"
+            },
+            {
+              "marke": "n",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer fahrlässig handelt, wird für Übertretungen nach Absatz 1 mit Busse bis zu 5000 Franken bestraft."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "5ec5b11afcb728b0b57c9fd1ee75d060ac4d0486a78035e617d7f6f027103d06"
+    },
+    {
+      "id": "bund/EPG/art_84",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfolgung und Beurteilung strafbarer Handlungen sind Sache der Kantone."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Artikel 6, 7 (Widerhandlung in Geschäftsbetrieben) und 15 (Urkundenfälschung, Erschleichen einer falschen Beurkundung) des Bundesgesetzes vom 22. März 1974 über das Verwaltungsstrafrecht gelten auch für die kantonalen Behörden."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "882380fc6507aea0ccc99e29993fe7483086ad951dea103bcc504f982f90bb21"
+    },
+    {
+      "id": "bund/EPG/art_85",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Folgende Bundesgesetze werden aufgehoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Bundesgesetz vom 18. Dezember 1970 über die Bekämpfung übertragbarer Krankheiten des Menschen;"
+            },
+            {
+              "marke": "2",
+              "text": "Bundesgesetz vom 13. Juni 1928 betreffend Massnahmen gegen die Tuberkulose."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "8da76ca32ac5f158431feb6f23d86583b9f09ef502900a9b3e84a095552dc8c7"
+    },
+    {
+      "id": "bund/EPG/art_86",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die nachstehenden Bundesgesetze werden wie folgt geändert:"
+        },
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "97366a4d33b12c2d6dd022e17fdc6adafacc0e6a2b9fd31786c89202439eb7bf"
+    },
+    {
+      "id": "bund/EPG/art_87",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bewilligungen nach den Artikeln 5 Absatz 1 bis , 29 a Absatz 1 und 29 c Absatz 2 des Epidemiengesetzes vom 18. Dezember 1970 bleiben bis zum Ablauf der Bewilligungsdauer, höchstens aber bis fünf Jahre nach Inkrafttreten dieses Gesetzes gültig."
+        },
+        {
+          "absatz": "2",
+          "text": "Anerkennungen nach Artikel 5 Absatz 1 des Epidemiengesetzes vom 18. Dezember 1970 bleiben bis zum Ablauf der Gültigkeitsdauer, höchstens aber bis fünf Jahre nach Inkrafttreten dieses Gesetzes gültig."
+        },
+        {
+          "absatz": "3",
+          "text": "Laboratorien, die bis zum Inkrafttreten dieses Gesetzes weder bewilligungspflichtig waren noch über eine gültige Anerkennung verfügten, die aber nach Inkrafttreten dieses Gesetzes eine Bewilligung benötigen, haben das Bewilligungsgesuch innerhalb eines Jahres nach Inkrafttreten dieses Gesetzes einzureichen. Bis zum Bewilligungsentscheid der zuständigen Bundesbehörde dürfen sie weiter Untersuchungen durchführen."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "9a19004717b7e8bbd4babf5058aa468fe3cb301c9193260bc0762987b5981823"
+    },
+    {
+      "id": "bund/EPG/art_88",
+      "ebene": "bund",
+      "quelle": "EPG",
+      "erlass": "EpG",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bundesrat bestimmt das Inkrafttreten."
+        }
+      ],
+      "stand": "2025-08-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/297/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250801",
+      "sha": "917f2b9dc0ea8d81aa43538af7c6943f35d4219aa1a845ffaf8965b1017bf238"
+    }
+  ]
+}

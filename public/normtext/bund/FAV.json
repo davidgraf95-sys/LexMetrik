@@ -1,0 +1,1675 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/FAV/art_1",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Anbieten, die Bereitstellung auf dem Markt, die Inbetriebnahme, das Erstellen und das Betreiben von Fernmeldeanlagen nach Artikel 3 Buchstabe d FMG;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anerkennung von Prüf- und Konformitätsbewertungsstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kontrolle der Fernmeldeanlagen."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "0e628b54002076c5de8ccdd7ecc694afc750c7859271c6bf8f25c15b55ea5a08"
+    },
+    {
+      "id": "bund/FAV/art_2",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In dieser Verordnung bedeutet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Funkanlage: ein elektrisches oder elektronisches Erzeugnis, das per Funkwellen bewusst Informationen sendet oder empfängt, oder ein elektrisches oder elektronisches Erzeugnis, das Zubehör, wie eine Antenne, benötigt, damit es per Funkwellen bewusst Informationen senden oder empfangen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "leitungsgebundene Anlage : alle elektrischen oder elektronischen Erzeugnisse, die dazu bestimmt sind, Informationen über Leitungen zu übertragen oder zu diesem Zwecke benutzt zu werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Fernmeldeendeinrichtung : alle Anlagen, die für den mit irgendeinem Mittel herzustellenden direkten oder indirekten Anschluss an Schnittstellen von Fernmeldenetzen, die ganz oder teilweise für die Bereitstellung von Fernmeldediensten genutzt werden (Art. 3 Bst. b FMG), bestimmt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Schnittstelle: 1. ein Netzabschlusspunkt eines Fernmeldenetzes, das ganz oder teilweise für die Bereitstellung von Fernmeldediensten genutzt wird, d. h. der physische Anschlusspunkt, über den die Benutzerinnen und Benutzer Zugang zu einem solchen Netz erhalten (Schnittstelle von ganz oder teilweise für die Bereitstellung von Fernmeldediensten genutzten Fernmeldenetzen), sowie die entsprechenden technischen Spezifikationen, oder"
+            },
+            {
+              "marke": "2",
+              "text": "eine Schnittstelle für den Funkweg zwischen Funkanlagen (Luftschnittstelle) sowie die entsprechenden technischen Spezifikationen;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Import von Fernmeldeanlagen für den Schweizer Markt ist dem Inverkehrbringen gleichzusetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Anbieten einer Fernmeldeanlage ist der Bereitstellung auf dem Markt gleichzusetzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bauteile oder Unterbaugruppen, die für die Installation in einer Fernmeldeanlage durch die Benutzerinnen und Benutzer bestimmt sind, und Auswirkungen auf die Konformität der Anlage mit den grundlegenden Anforderungen dieser Verordnung (Art. 7) haben können, sind den Fernmeldeanlagen gleichzusetzen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bausätze für Fernmeldeanlagen sind den Fernmeldeanlagen gleichzusetzen."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Besetzung einer oder mehrerer Frequenzen zur Verhinderung oder Störung des Fernmeldeverkehrs oder Rundfunks ist dem Senden von Informationen gleichzusetzen."
+        },
+        {
+          "absatz": "7",
+          "text": "Das Inverkehrbringen einer gebrauchten, importierten Fernmeldeanlage ist dem Inverkehrbringen einer neuen Anlage gleichzusetzen, unter der Bedingung, dass noch keine neue, identische Fernmeldeanlage auf dem Schweizer Markt in Verkehr gebracht wurde."
+        },
+        {
+          "absatz": "8",
+          "text": "Eine Importeurin oder eine Händlerin ist einer Herstellerin gleichzusetzen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Fernmeldeanlage unter ihrem eigenen Namen oder ihrer eigenen Handelsmarke in Verkehr bringt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "eine bereits auf dem Markt befindliche Anlage so verändert, dass die Konformität mit dieser Verordnung beeinträchtigt werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "9",
+          "text": "Die Reparatur einer Fernmeldeanlage ist dem Betreiben gleichzusetzen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "704818a786a684f1e7efc61ce6debef87ee8cf0256a162d7bac53aff3ec9f295"
+    },
+    {
+      "id": "bund/FAV/art_3",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt für Kommunikation (BAKOM) bestimmt die für Schnittstellen geltenden technischen Vorschriften und publiziert diese Liste in der Amtlichen Sammlung des Bundesrechts durch Verweis."
+        },
+        {
+          "absatz": "2",
+          "text": "Es bestimmt unter Berücksichtigung der internationalen Praxis die Lage der Schnittstellen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "9fce6030caa8c7cc48ccd6864b2e36882d6b54041466b19e7fc8fb65f108fa63"
+    },
+    {
+      "id": "bund/FAV/art_4",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM kann unabhängige schweizerische Normierungsstellen beauftragen, technische Normen auszuarbeiten oder dies selbst übernehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es veröffentlicht die nach Artikel 31 Absatz 2 Buchstabe a FMG bezeichneten technischen Normen im Bundesblatt durch Verweis."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "c4e8dea9bdc5f801225f6272b8e0f29983ce7db3800e50f8243f94ee5941225a"
+    },
+    {
+      "id": "bund/FAV/art_5",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM bestimmt unter Berücksichtigung der internationalen Praxis die Funkanlageklassen und die diesen zugeordneten Anlagen; es führt deren Liste."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Klasse umfasst Funkanlagenkategorien, die als ähnlich gelten, und die Funkschnittstellen, für welche diese Anlagen ausgelegt sind. Eine Anlage kann mehr als einer Anlagenklasse angehören."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "762a536d2f72354f3fd8588f05a50d1677d2cf5d031f785613bf26cd5705d98b"
+    },
+    {
+      "id": "bund/FAV/art_6",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Funkanlagen dürfen nur auf dem Markt bereitgestellt werden, wenn sie bei ordnungsgemässer Installation und Wartung sowie bei bestimmungsgemässer Verwendung dieser Verordnung entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Abweichung von Absatz 1 untersteht die Bereitstellung auf dem Markt von Funkanlagen, die dazu bestimmt sind, von Behörden zur Wahrung der öffentlichen Sicherheit betrieben zu werden, den Artikeln 26 und 27, sofern keine Anlage, welche die anderen Vorschriften dieser Verordnung und denselben Zweck erfüllt, auf dem Markt verfügbar ist."
+        },
+        {
+          "absatz": "3",
+          "text": "In Abweichung von Absatz 1 untersteht die Bereitstellung auf dem Markt von Funkanlagen, die durch die Armee oder den Zivilschutz in Frequenzbereichen betrieben werden, die sowohl für militärische als auch zivile Nutzungen vorgesehen sind, Artikel 29 a , sofern keine Anlage, welche die anderen Vorschriften dieser Verordnung und denselben Zweck erfüllt, auf dem Markt verfügbar ist."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "0d4111ff8e280ff19c9225862061673ea7e546549e9de04232c4533b8fb092f3"
+    },
+    {
+      "id": "bund/FAV/art_7",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Funkanlagen müssen so hergestellt sein, damit sie Folgendes gewährleisten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Schutz der Gesundheit und der Sicherheit von Menschen und Haus- und Nutztieren sowie den Schutz von Gütern einschliesslich der in der Verordnung vom 25. November 2015 über elektrische Niederspannungserzeugnisse (NEV) enthaltenen Ziele in Bezug auf die Sicherheitsanforderungen, aber ohne Spannungsgrenze;"
+            },
+            {
+              "marke": "b",
+              "text": "ein angemessenes Niveau an elektromagnetischer Verträglichkeit nach der Verordnung vom 25. November 2015 über die elektromagnetische Verträglichkeit (VEMV)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Funkanlagen müssen so hergestellt sein, dass sie das Spektrum der Frequenzen effizient nutzen und zur verbesserten Nutzung beitragen, um Störungen zu verhindern."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Mit Kabel aufladbare Funkanlagen, die im Markt verbreitet sind, müssen über einen USB-C-Anschluss aufgeladen werden können. Das BAKOM legt die Anlagekategorien und die Spezifikationen für Ladeleistungen und -protokolle dieser Funkanlagen fest. Es erlässt die dafür notwendigen administrativen Vorschriften unter Berücksichtigung der entsprechenden delegierten Rechtsakte der Europäischen Kommission."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM bezeichnet, welche zusätzlichen grundlegenden Anforderungen anwendbar sind, sowie die betroffenen Funkanlagen oder Anlageklassen unter Berücksichtigung der entsprechenden delegierten Rechtsakte der Europäischen Kommission. Die zusätzlichen grundlegenden Anforderungen sind die folgenden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anlagen müssen neben den Ladenetzteilen nach Absatz 2 bis mit weiterem Zubehör kompatibel sein;"
+            },
+            {
+              "marke": "abis",
+              "text": "ohne Kabel aufladbare Funkanlagen, die im Markt verbreitet sind, müssen mit einem Ladegerät über Induktion oder Magnetresonanz aufgeladen werden können;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anlagen müssen über Netze mit anderen Funkanlagen zusammenwirken;"
+            },
+            {
+              "marke": "c",
+              "text": "die Anlagen können in der Schweiz an Schnittstellen des geeigneten Typs angeschlossen werden;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anlagen dürfen weder schädliche Wirkungen für das Netz oder seinen Betrieb haben noch Netzressourcen missbrauchen, wodurch eine unannehmbare Beeinträchtigung des Dienstes verursacht würde;"
+            },
+            {
+              "marke": "e",
+              "text": "die Anlagen müssen über Sicherheitsvorrichtungen zum Schutz personenbezogener Daten und der Privatsphäre der Benutzerinnen und Benutzer sowie der Teilnehmerinnen und Teilnehmer verfügen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anlagen müssen bestimmte Funktionen zum Schutz vor Betrug unterstützen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Anlagen müssen bestimmte Funktionen unterstützen, die den Zugang zu Rettungsdiensten erlauben;"
+            },
+            {
+              "marke": "h",
+              "text": "die Anlagen müssen bestimmte Funktionen unterstützen, damit sie von Benutzerinnen und Benutzern mit Behinderung leichter genutzt werden können;"
+            },
+            {
+              "marke": "i",
+              "text": "die Anlagen müssen bestimmte Funktionen unterstützen, mit denen sichergestellt werden soll, dass nur solche Software auf eine Funkanlage geladen werden kann, für die die Konformität ihrer Kombination mit der Anlage nachgewiesen wurde."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "eec1c75ef6f0ce50d24847ef49d898f04071629b788ecaeacca62710de4a07ee"
+    },
+    {
+      "id": "bund/FAV/art_8",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es wird davon ausgegangen, dass die nach den technischen Normen von Artikel 31 Absatz 2 Buchstabe a FMG hergestellten Funkanlagen die grundlegenden Anforderungen an die Aspekte erfüllen, die unter die besagte Bestimmung fallen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine bezeichnete technische Norm geändert, so veröffentlicht das BAKOM im Bundesblatt, ab welchem Zeitpunkt die Vermutung der Konformität für konforme Funkanlagen nach der vorangehenden Fassung dahinfällt."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "f52af20ee3ed632498d59883072ba77032f231fa71f8d047210addfcd930c0f1"
+    },
+    {
+      "id": "bund/FAV/art_9",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Funkanlage kann nur auf dem Markt bereitgestellt werden, wenn sie die Anforderungen an die Nutzung des Frequenzspektrums von mindestens einer der vom BAKOM bestimmten technischen Vorschriften für Funkschnittstellen nach Artikel 3 Absatz 1 erfüllt."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "472990954445dc72193dae63fe5eedb48928b3c2db275331e8c4732031c40ef3"
+    },
+    {
+      "id": "bund/FAV/art_10",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerinnen von Funkanlagen und die Herausgeberinnen von Software, die die bestimmungsgemässe Nutzung dieser Anlagen ermöglicht, liefern dem BAKOM Informationen über die Konformität beabsichtigter Kombinationen von Funkanlagen und Software mit den grundlegenden Anforderungen dieser Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Solche Informationen sind das Ergebnis einer Konformitätsbewertung nach Massgabe der Artikel 12 und 13 und werden stets auf dem aktuellen Stand gehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM bestimmt unter Berücksichtigung der internationalen Praxis die Kategorien oder Klassen von Funkanlagen, die den Anforderungen nach Absatz 1 unterliegen, und erlässt die notwendigen administrativen Vorschriften."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "cb6a74e8b511525424144373c9c86a3b537297dada386657e7fedc0b9b3ff5a3"
+    },
+    {
+      "id": "bund/FAV/art_11",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM bestimmt unter Berücksichtigung der internationalen Praxis die Kategorien von Funkanlagen, die ein geringes Mass an Konformität mit den grundlegenden Anforderungen dieser Verordnung aufweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Herstellerinnen müssen beim BAKOM die Funkanlagen, die zu den Kategorien gemäss Absatz 1 gehören, registrieren, bevor die Funkanlagen dieser Kategorien angeboten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM teilt jeder registrierten Funkanlage eine Registrierungsnummer zu. Die Herstellerinnen müssen diese Nummer auf den in Verkehr gebrachten Anlagen anbringen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM erlässt unter Berücksichtigung der internationalen Praxis die notwendigen technischen und administrativen Vorschriften."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "acb2139ad3f331206ffb3db698011b58cfd419bd801a4e2c51a9a36cd580e301"
+    },
+    {
+      "id": "bund/FAV/art_12",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin führt eine Konformitätsbewertung der Funkanlagen durch, um sicherzustellen, dass diese die grundlegenden Anforderungen dieser Verordnung erfüllen. Bei der Konformitätsbewertung werden alle bestimmungsgemässen Betriebsbedingungen berücksichtigt, und in Bezug auf die grundlegende Anforderungen nach Artikel 7 Absatz 1 Buchstabe a werden ausserdem die nach vernünftigem Ermessen vorhersehbaren Nutzungsbedingungen berücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann eine Funkanlage in unterschiedlichen Konfigurationen betrieben werden, so ist bei der Konformitätsbewertung zu prüfen, ob die Funkanlage die grundlegenden Anforderungen dieser Verordnung in allen möglichen Konfigurationen erfüllt."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "83e4bc1ef74058d4281835f9c3394e463cf0c7dfea76c22b14bd30f4b542e72a"
+    },
+    {
+      "id": "bund/FAV/art_13",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin muss die Konformität der Funkanlagen mit den in Artikel 7 Absätze 1 und 2 bis aufgeführten grundlegenden Anforderungen mit einem der folgenden Konformitätsbewertungsverfahren nachweisen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die interne Fertigungskontrolle (Anhang 2);"
+            },
+            {
+              "marke": "b",
+              "text": "die Baumusterprüfung mit anschliessender Prüfung der Konformität mit der Bauart auf der Grundlage einer internen Fertigungskontrolle (Anhang 3);"
+            },
+            {
+              "marke": "c",
+              "text": "die umfassende Qualitätssicherung (Anhang 4)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Hat die Herstellerin bei der Bewertung der Konformität der Funkanlagen mit den grundlegenden Anforderungen nach Artikel 7 Absätze 2 und 3 die vom BAKOM bezeichneten technischen Normen (Art 31 Abs. 2 Bst. a FMG) angewandt, so wendet er eines der in Absatz 1 Buchstabe a–c (Anhänge 2–4) genannten Verfahren nach Wahl an."
+        },
+        {
+          "absatz": "3",
+          "text": "Hat die Herstellerin bei der Bewertung der Konformität der Funkanlagen mit den grundlegenden Anforderungen nach Artikel 7 Absätze 2 und 3 die vom BAKOM bezeichneten technischen Normen (Art. 31 Abs. 2 Bst. a FMG) nicht oder nur zum Teil angewandt oder sind solche bezeichneten technischen Normen nicht vorhanden, so wendet sie im Hinblick auf die grundlegenden Anforderungen eines der in Absatz 1 Buchstabe b (Anhang 3) oder Buchstabe c (Anhang 4) genannten Verfahren nach Wahl an."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "8b99aced7bb5746f2edb8141c3c8c0ef367c793d9b1b713f4650fe9adabdadd1"
+    },
+    {
+      "id": "bund/FAV/art_14",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin erstellt die technischen Unterlagen vor dem Inverkehrbringen der Funkanlage und hält sie auf dem aktuellen Stand. Die technischen Unterlagen müssen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Bewertung der Konformität der Funkanlage mit den grundlegenden Anforderungen dieser Verordnung ermöglichen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Konformität der Funkanlage mit den genannten Anforderungen nachweisen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führen die anwendbaren Anforderungen auf und erfassen den Entwurf, die Herstellung und den Betrieb der Funkanlage, soweit sie für die Bewertung von Belang sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die technischen Unterlagen müssen eine geeignete Risikoanalyse und -bewertung enthalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die technischen Unterlagen müssen gegebenenfalls mindestens folgende Elemente enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine allgemeine Beschreibung der Funkanlage bestehend aus: 1. Fotografien oder Illustrationen, aus denen die äusseren Merkmale, die Kennzeichnungen und der innere Aufbau hervorgehen,"
+            },
+            {
+              "marke": "2",
+              "text": "Software- oder Firmwareversionen, durch die die Erfüllung der grundlegenden Anforderungen dieser Verordnung beeinflusst wird,"
+            },
+            {
+              "marke": "3",
+              "text": "Benutzungs- und Installationsanweisungen;"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Sind die technischen Unterlagen nicht in einer Amtssprache der Schweiz oder in Englisch abgefasst, so kann das BAKOM die vollständige oder teilweise Übersetzung in eine der vorgenannten Sprachen verlangen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "a05822a4c61291cadcc9d4b8403864a00027c02a5dbca86c2db606a4b3f14b03"
+    },
+    {
+      "id": "bund/FAV/art_15",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jeder Funkanlage, die auf dem Markt bereitgestellt wird, muss nach Wahl der Herstellerin eine Erklärung über die Konformität mit den grundlegenden Anforderungen in ihrer vollständigen Form nach Anhang 5 oder in ihrer vereinfachten Form nach Anhang 6 beigefügt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Konformitätserklärung ist von der Herstellerin oder von ihrer bevollmächtigten Person nach den Vorlagen in Anhang 5 und 6 auszustellen. Sie bestätigt, dass die Erfüllung der grundlegenden Anforderungen nachgewiesen wurde, und wird stets auf dem aktuellen Stand gehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Konformitätserklärung muss in einer der Amtssprachen der Schweiz oder in Englisch abgefasst oder in eine dieser Sprachen übersetzt sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Fällt die Funkanlage unter mehrere Regelungen, die eine Konformitätserklärung verlangen, so muss eine einzige Erklärung ausgestellt werden. Ein Dossier, das aus mehreren einzelnen Erklärungen besteht, ist einer einzigen Erklärung gleichzusetzen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "0e697531e5090622ab77277beeb1cebf1266aadcc18945e7a9ee6240065aac9f"
+    },
+    {
+      "id": "bund/FAV/art_16",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin, ihre bevollmächtigte Person, oder, wenn keiner diesen beiden Personen in der Schweiz niedergelassen ist, die Importeurin müssen während zehn Jahren ab dem Datum des Inverkehrbringens eine Kopie der Konformitätserklärung und der technischen Unterlagen vorlegen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Inverkehrbringen von Funkanlageserien beginnt diese Frist mit dem Datum des Inverkehrbringens der letzten Anlage der betroffenen Serie zu laufen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Fulfilment-Dienstleisterin untersteht der Pflicht nach Absatz 1, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Herstellerin und die von ihr bevollmächtigte Person nicht in der Schweiz niedergelassen sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Importeurin die Anlage für den Eigengebrauch importiert."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "4826df2d5d764ba378981566480b9edbacb904f1abbc1012db2258e605fec2a9"
+    },
+    {
+      "id": "bund/FAV/art_17",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüf- und Konformitätsbewertungsstellen, die Berichte ausarbeiten oder Bescheinigungen ausstellen, müssen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entsprechend der Akkreditierungs- und Bezeichnungsverordnung vom 17. Juni 1996 (AkkBV) akkreditiert sein;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Schweiz aufgrund internationaler Abkommen anerkannt sein; oder"
+            },
+            {
+              "marke": "c",
+              "text": "nach schweizerischem Recht auf andere Weise ermächtigt sein."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wer sich auf Dokumente einer anderen Stelle als der in Absatz 1 genannten stützt, muss glaubhaft darlegen, dass die Prüfverfahren oder Bewertungen und die Qualifikationen der besagten Stelle den schweizerischen Anforderungen genügen (Art. 18 Abs. 2 THG)."
+        },
+        {
+          "absatz": "3",
+          "text": "Zusätzlich zu den in der AkkBV vorgesehenen Pflichten müssen die Konformitätsbewertungsstellen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "an den Reglementierungstätigkeiten auf dem Gebiet der Funkanlagen und der Frequenzplanung mitwirken;"
+            },
+            {
+              "marke": "b",
+              "text": "die Informationspflichten nach den Anhängen 3 und 4 erfüllen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM erlässt die notwendigen administrativen Vorschriften zu den Pflichten nach Absatz 3 Buchstabe a unter Berücksichtigung der internationalen Praxis."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "2844e120ef3fe7d6e7c5f13b4b1f4fb4d79a452c089a9ea8ee52f8d137f5b038"
+    },
+    {
+      "id": "bund/FAV/art_18",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Funkanlage muss das Konformitätskennzeichen nach Anhang 1 Ziffer 1 oder das ausländische Konformitätskennzeichen nach Anhang 1 Ziffer 2 tragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Konformitätskennzeichen muss gut sichtbar, leserlich und dauerhaft auf der Funkanlage oder ihrer Datenplakette angebracht werden, es sei denn, dies ist aufgrund der Art der Anlage nicht möglich oder nicht gerechtfertigt. Es muss gut sichtbar und leserlich auf der Verpackung angebracht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Jede Funkanlage muss gegebenenfalls mit der Identifikationsnummer der Konformitätsbewertungsstelle gekennzeichnet sein. Diese Nummer hat die gleiche Höhe wie das Konformitätskennzeichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Jede Funkanlage muss durch Typenbezeichnung, Baureihe, Seriennummer oder durch andere geeignete Angaben so gekennzeichnet sein, dass sie eindeutig identifiziert werden kann. Ist dies wegen der Grösse oder der Art der Funkanlage nicht möglich, so müssen diese Informationen auf der Verpackung oder in einem Begleitdokument der Funkanlage angebracht werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Auf jeder Funkanlage müssen der Name, die Firma oder die eingetragene Handelsmarke der Herstellerin und die Postadresse, unter der sie erreicht werden kann, angegeben werden. Ist dies nicht möglich, so müssen diese Informationen auf der Verpackung oder in einem Begleitdokument angebracht werden. Die Adresse bezieht sich auf eine zentrale Anlaufstelle, unter der die Herstellerin erreicht werden kann. Die Kontaktdaten sind in einer Sprache anzugeben, die für die Endnutzerinnen und Endnutzer leicht verständlich ist."
+        },
+        {
+          "absatz": "6",
+          "text": "Wenn die Herstellerin nicht in der Schweiz ansässig ist, muss jede Funkanlage zusätzlich den Namen, die Firma oder die eingetragene Handelsmarke der Importeurin und die Postadresse, unter der sie erreicht werden kann, enthalten. Ist dies nicht möglich, müssen diese Informationen auf der Verpackung der Anlage oder in einem Begleitdokument angebracht werden. Die Kontaktdaten sind in einer Sprache anzugeben, die für die Endnutzerinnen und Endnutzer leicht verständlich ist."
+        },
+        {
+          "absatz": "6bis",
+          "text": "Wenn die Herstellerin und die von ihr bevollmächtigte Person nicht in der Schweiz ansässig sind und die Importeurin die Funkanlage für den Eigengebrauch importiert, müssen auf jeder Anlage zusätzlich der Name, die Firma oder die eingetragene Handelsmarke der Fulfilment-Dienstleisterin sowie die Postadresse, unter der sie erreicht werden kann, angebracht werden. Ist dies nicht möglich, so müssen diese Informationen auf der Verpackung der Anlage oder in einem Begleitdokument angegeben werden. Die Kontaktdaten sind in einer Sprache anzugeben, die für die Endnutzerinnen und Endnutzer leicht verständlich ist."
+        },
+        {
+          "absatz": "7",
+          "text": "Das BAKOM erlässt die notwendigen administrativen Vorschriften."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "5c495d248aa93163f03c9ef3d048fe107adfc780041d70154166b889f3752a1d"
+    },
+    {
+      "id": "bund/FAV/art_19",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jeder Funkanlage müssen Sicherheitsanweisungen und -informationen beigefügt sein. In den Anweisungen müssen die Informationen enthalten sein, die für die bestimmungsgemässe Verwendung der Funkanlage erforderlich sind. Dies umfasst gegebenenfalls eine Beschreibung des Zubehörs und der Bestandteile einschliesslich der Software, die den bestimmungsgemässen Betrieb der Funkanlage ermöglichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Jeder Sendeanlage müssen ausserdem folgende Informationen beigefügt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Frequenzbänder, in denen die Funkanlage betrieben wird;"
+            },
+            {
+              "marke": "b",
+              "text": "die in den Frequenzbändern, in denen die Funkanlage betrieben wird, abgestrahlte maximale Sendeleistung;"
+            },
+            {
+              "marke": "c",
+              "text": "gegebenenfalls die Betriebsbeschränkungen, insbesondere die Pflicht, eine Konzession für den Betrieb zu erlangen;"
+            },
+            {
+              "marke": "d",
+              "text": "bei Funkanlagen nach Artikel 7 Absatz 2 bis die Angaben zur Ladefunktion, zu den kompatiblen Ladenetzteilen sowie zum allenfalls beiliegenden Ladenetzteil."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Informationen nach Absatz 2 Buchstaben c und d sind auch auf der Verpackung anzubringen. Die Informationen nach Absatz 2 Buchstabe d sind im Fall von Fernabsatz bei der Preisangabe anzubringen. Ist keine Verpackung vorhanden, so sind die Informationen zur Ladefunktion und zu den kompatiblen Ladenetzteilen an der Funkanlage anzubringen. Ist dies wegen der Grösse oder Art der Funkanlage nicht möglich, so muss die Benutzerin oder der Benutzer die Informationen als gesondertes Begleitdokument ausdrucken können."
+        },
+        {
+          "absatz": "4",
+          "text": "Jedes Angebot von Funkanlagen, bei dem kein physisches Muster vorhanden ist, insbesondere im Internet oder in Prospekten, und deren Betrieb Einschränkungen unterliegt, muss deutlich auf diese Einschränkungen hinweisen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Informationen müssen für die Benutzerinnen und Benutzer gut sichtbar, leserlich und verständlich sowie in der Amtssprache des Verkaufsorts abgefasst sein. In zweisprachigen Orten müssen sie in beiden Amtssprachen abgefasst sein."
+        },
+        {
+          "absatz": "6",
+          "text": "Das BAKOM erlässt die notwendigen administrativen Vorschriften unter Berücksichtigung der internationalen Praxis."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "eb2ee24b13462a72b65fa694664d56116dc176577d2c5f8e2aa29c386fde7cc7"
+    },
+    {
+      "id": "bund/FAV/art_20",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Können mit einer Funkempfangsanlage sowohl öffentliche als auch nicht öffentliche Funksendungen im Sinne von Artikel 179 bis des Strafgesetzbuches abgehört werden, darf beim Anbieten und in den mitgelieferten Informationen nur das Abhören der öffentlichen Funksendungen erwähnt werden."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "a22524069946cd0579a662717538276429862a07f85cff65a254e612d5878b45"
+    },
+    {
+      "id": "bund/FAV/art_21",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Verlangen des BAKOM nennen die Wirtschaftsakteurinnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Wirtschaftsakteurinnen, von denen sie eine Funkanlage bezogen haben;"
+            },
+            {
+              "marke": "b",
+              "text": "alle Wirtschaftsakteurinnen, denen sie eine Funkanlage abgegeben haben."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen die Informationen nach Absatz 1 zehn Jahre nach dem Bezug der Funkanlage sowie zehn Jahre nach der Abgabe der Funkanlage vorlegen können."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "e6c4f10c733c2d7fb217b654e62da9c07f987230cd3c303cef43ab4811148f38"
+    },
+    {
+      "id": "bund/FAV/art_22",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Solange sich eine Funkanlage in der Verantwortung der Importeurinnen und der Händlerinnen befindet, müssen diese gewährleisten, dass die Bedingungen ihrer Lagerung oder ihres Transports die Konformität der Funkanlage mit den grundlegenden Anforderungen dieser Verordnung nicht beeinträchtigen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "bbd1d7ce938854fa1275956985619efb21f5dd53e3327f45f04b63311bae3fbf"
+    },
+    {
+      "id": "bund/FAV/art_23",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerinnen und die Importeurinnen nehmen, falls dies angesichts der von einer Funkanlage ausgehenden Gefahren gerechtfertigt erscheint, zum Schutz der Gesundheit und der Sicherheit der Endnutzerinnen und Endnutzer Stichproben von auf dem Markt bereitgestellten Funkanlagen, prüfen diese und führen, wenn nötig, ein Beschwerdenverzeichnis der nichtkonformen Funkanlagen und deren Rückrufe und halten die Händlerinnen über diese Verfolgung auf dem Laufenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Herstellerinnen und Importeurinnen, die der Auffassung sind oder Grund zu der Annahme haben, dass eine von ihnen in Verkehr gebrachte Funkanlage nicht dieser Verordnung entspricht, müssen unverzüglich die erforderlichen Korrekturmassnahmen ergreifen, um die Konformität dieser Anlage herzustellen, oder, falls nötig, sie zurückzunehmen oder zurückzurufen."
+        },
+        {
+          "absatz": "3",
+          "text": "Händlerinnen, die der Auffassung sind oder Grund zu der Annahme haben, dass eine von ihnen auf dem Markt bereitgestellte Funkanlage nicht dieser Verordnung entsprechen, müssen dafür sorgen, dass die erforderlichen Korrekturmassnahmen ergriffen werden, um die Konformität dieser Anlage herzustellen, oder, falls nötig, sie zurückzunehmen oder zurückzurufen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sind mit der Funkanlage Risiken verbunden, so müssen die Herstellerinnen, bevollmächtigten Personen, Importeurinnen und Händlerinnen unverzüglich das BAKOM darüber unterrichten und dabei ausführliche Angaben machen, insbesondere über die Nichtkonformität und die ergriffenen Korrekturmassnahmen."
+        },
+        {
+          "absatz": "5",
+          "text": "Sind mit der Funkanlage Risiken verbunden, so müssen die Fulfilment-Dienstleisterinnen unverzüglich das BAKOM darüber unterrichten und dabei ausführliche Angaben machen, insbesondere über die Nichtkonformität und die ergriffenen Korrekturmassnahmen, sofern weder die Herstellerin noch die von ihr bevollmächtigte Person in der Schweiz ansässig ist und die Importeurin die Anlage für den Eigengebrauch importiert hat."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "30b65cd850b46230987d42e67f487057d606610b6d9f4048966313b07aa3660a"
+    },
+    {
+      "id": "bund/FAV/art_24",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf begründetes Verlangen des BAKOM müssen ihm die Wirtschaftsakteurinnen alle Informationen und Unterlagen, die für den Nachweis der Konformität der Funkanlage mit dieser Verordnung erforderlich sind, übermitteln."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Informationen und Dokumente müssen schriftlich in Papierform oder auf elektronischem Wege in einer Sprache, die für das BAKOM leicht verständlich ist, übermittelt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Auf Verlangen des BAKOM wirken die Wirtschaftsakteurinnen und Anbieterinnen von Diensten der Informationsgesellschaft bei der Umsetzung aller Massnahmen zur Abwendung von Risiken mit, die mit den von ihnen auf dem Markt bereitgestellten Funkanlagen verbunden sind. Diese Pflicht gilt auch für die bevollmächtige Person für die Funkanlagen, die von ihrer Vollmacht betroffen sind."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "281bb56f75f72cf63f138d510d67e72881834fffeaee5bfcffe488ff8a42f071"
+    },
+    {
+      "id": "bund/FAV/art_24_a",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Wirtschaftsakteurinnen müssen Funkanlagen nach Artikel 7 Absatz 2 bis , die sie zusammen mit einem Ladenetzteil anbieten, auch ohne dieses anbieten."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_24_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "902404bc22ec0fcf82c9261398a7fac17d76008a3ad56a46b748d691c6d8e225"
+    },
+    {
+      "id": "bund/FAV/art_25",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Bestimmungen in Kapitel 2 ausgenommen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Funkanlagen, die für militärische Zwecke, für Zwecke des Zivilschutzes oder für andere Ausnahmesituationszwecke ausschliesslich auf Frequenzen, die der Armee zugewiesen sind, erstellt und betrieben werden, sofern sie nicht in einem gemeinsamen Funknetz zusammen mit anderen Organisationen erstellt und betrieben werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Funkanlagen, die ausschliesslich zu technischen Versuchszwecken aufgrund einer diesbezüglich erteilten Funkkonzession erstellt und betrieben werden;"
+            },
+            {
+              "marke": "c",
+              "text": "Funkanlagen, die auf Frequenzen über 3000 GHz erstellt und betrieben werden;"
+            },
+            {
+              "marke": "d",
+              "text": "Funkanlagen für die Teilnahme am Amateurfunk, die nicht auf dem Markt bereitgestellt werden;"
+            },
+            {
+              "marke": "e",
+              "text": "Bausätze (Art. 2 Abs. 5) für die Teilnahme am Amateurfunk, und zwar unabhängig davon, ob sie auf dem Markt bereitgestellt sind oder nicht;"
+            },
+            {
+              "marke": "f",
+              "text": "auf dem Markt bereitgestellte Funkanlagen für die Teilnahme am Amateurfunk, die von einer nach Artikel 44 Absatz 1 Buchstaben a und b der Verordnung vom 18. November 2020 über die Nutzung des Funkfrequenzspektrums (VNF) ermächtigten Funkamateurin oder einem nach der genannten Bestimmung ermächtigten Funkamateur für den Eigengebrauch nach Artikel 47 Absatz 3 und 4 VNF geändert wurden;"
+            },
+            {
+              "marke": "g",
+              "text": "Funkanlagen, die von Personen mit Wohnsitz oder Sitz im Ausland provisorisch erstellt und nicht länger als drei Monate betrieben werden, wenn: 1. ihr Erstellen und Betreiben im betreffenden Staat erlaubt ist, und"
+            },
+            {
+              "marke": "2",
+              "text": "ihre Leistung und ihre Frequenzen den durch das BAKOM festgelegten technischen Vorschriften entsprechen;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Funkanlagen, die in den Anwendungsbereich von Kapitel 3 dieser Verordnung fallen, unterliegen bezüglich der Voraussetzungen für die Bereitstellung auf dem Markt der NEV und der VEMV. Vorbehalten bleiben Artikel 36–40 dieser Verordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Funkanlagen nach Absatz 1 Buchstaben b und g dürfen nicht auf dem Markt bereitgestellt werden."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "f5a3083878f3ec3b08d45f6235f9691d81e53b5f92486e3205ec1709f2a78ab2"
+    },
+    {
+      "id": "bund/FAV/art_26",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt von Artikel 6 Absatz 2 können Funkanlagen, die dazu bestimmt sind, zur Wahrung der öffentlichen Sicherheit von den Behörden betrieben zu werden, erst auf dem Markt bereitgestellt werden, nachdem sie vom BAKOM zugelassen wurden. Die Zulassung durch das BAKOM gilt für alle Anlagen desselben Typs."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anlagen nach Absatz 1 müssen die grundlegenden Anforderungen nach Artikel 7 Absatz 1 Buchstabe a erfüllen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anlagen nach Absatz 1 müssen auch gewisse Anforderungen in Bezug auf die Frequenznutzung nach den Artikeln 7 Absatz 2 und 9 sowie auf die elektromagnetische Verträglichkeit nach Artikel 7 Absatz 1 Buchstabe b erfüllen."
+        },
+        {
+          "absatz": "4",
+          "text": "Zugelassene Anlagen müssen nach Artikel 18 Absatz 4 gekennzeichnet werden und die vom BAKOM ausgestellte Zulassungsnummer tragen. Die zur vorgesehenen Verwendung erforderlichen Informationen müssen beigelegt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Das BAKOM erlässt die notwendigen technischen und administrativen Vorschriften."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "ece94196bfe182f35309e72376167a017327d7b9143b9e1f371a07a94509c31c"
+    },
+    {
+      "id": "bund/FAV/art_27",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vorgängig eine Bewilligung des BAKOM einholen muss, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Funkanlagen nach Artikel 6 Absatz 2 importieren oder nach Artikel 26 Absatz 1 auf dem Markt bereitstellen will;"
+            },
+            {
+              "marke": "b",
+              "text": "störende Anlagen nach Artikel 32 b FMG herstellen will."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Das BAKOM kann die Bewilligung mit Bedingungen und Auflagen ergänzen. Es erlässt die notwendigen administrativen Vorschriften."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden die Bedingungen und Auflagen der Bewilligung nicht eingehalten, so kann das BAKOM die Bewilligung entschädigungslos entziehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM stellt den Behörden nach Absatz 4 eine Liste mit den Personen, die eine Bewilligung nach Absatz 1 innehaben, und eine Liste der zugelassenen Anlagen nach Artikel 26 Absatz 1 zur Verfügung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Funkanlagen nach Artikel 26 Absatz 1 dürfen nur angeboten oder auf dem Markt bereitgestellt werden für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Polizei-, Strafverfolgungs- oder Strafvollzugsbehörden;"
+            },
+            {
+              "marke": "b",
+              "text": "den Nachrichtendienst des Bundes;"
+            },
+            {
+              "marke": "c",
+              "text": "die Armee;"
+            },
+            {
+              "marke": "d",
+              "text": "Behörden, die für die Durchführung von Notsuchen sowie Fahndungen nach verurteilten Personen zuständig sind;"
+            },
+            {
+              "marke": "e",
+              "text": "Personen mit einer Bewilligung nach Absatz 1."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "b1f1e7a8061b78aad5bd29acc656789c5bd43bf7660a9cb7d12786fe437bfb73"
+    },
+    {
+      "id": "bund/FAV/art_27_a",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer eine Funkanlage, die dazu bestimmt ist, zur Wahrung der öffentlichen Sicherheit von Behörden betrieben zu werden, zu Vorführungs-, Test- und Reparaturzwecken erstellen und betreiben will, benötigt eine Bewilligung des BAKOM nach Artikel 59 a VNF."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_27_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "f5f5008f84ba9bd386c00954f41bec98fa3ab00f57c52e3f6226790251fb9179"
+    },
+    {
+      "id": "bund/FAV/art_28",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Funkanlagen nach Artikel 6 Absatz 2 dürfen nur unter den Bedingungen nach den Artikeln 53–59 a VNF betrieben werden."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "f5307a48d721fa154c59fa5d50363ae970d733edf8fc7dc43573f8674ef7f324"
+    },
+    {
+      "id": "bund/FAV/art_28_a",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gesuchstellerinnen mit Sitz im Ausland müssen eine Korrespondenzadresse in der Schweiz angeben, an welche insbesondere Mitteilungen und Verfügungen rechtsgültig zugestellt werden können."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_28_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "bd18b93d030bd5c477d605ac3bcafee9af74b2429cdbdc235b9180750f6f6d21"
+    },
+    {
+      "id": "bund/FAV/art_29",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Funkanlage ausstellt, die den Voraussetzungen für ihre Bereitstellung auf dem Markt nicht entspricht, muss deutlich darauf hinweisen, dass die betreffende Anlage die Vorschriften nicht erfüllt und nicht auf dem Markt bereitgestellt oder in Betrieb genommen werden darf."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer eine Funkanlage, die den Voraussetzungen für ihre Bereitstellung auf dem Markt nicht entspricht, zu Vorführungszwecken erstellen und betreiben will, muss die erforderliche Konzession erlangen (Art. 30 VNF)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 22 NEV und 22 VEMV sind vorbehalten."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "50d36c7942598b9712b9486d213f41710d9ea648a4fea76fb3c2651eaceab53f"
+    },
+    {
+      "id": "bund/FAV/art_29_a",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "29_a",
+      "artikelLabel": "Art. 29a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Funkanlagen nach Artikel 6 Absatz 3 dürfen nur unter Einhaltung der vom BAKOM nach Konsultation der zuständigen militärischen Stelle festgelegten technischen Parameter nach Artikel 8 Absatz 2 Buchstabe i VNF auf dem Markt bereitgestellt, erstellt und betrieben werden."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_29_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "787c6c8f908fa97b01bdd0098c46d40237db674ab50a234d7f62e04080653aea"
+    },
+    {
+      "id": "bund/FAV/art_30",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Leitungsgebundene Fernmeldeanlagen dürfen nur auf dem Markt bereitgestellt werden, wenn sie bezüglich Bereitstellung auf dem Markt den anwendbaren Bestimmungen der NEV und der VEMV entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die folgenden leitungsgebundenen Fernmeldeendeinrichtungen sind von Absatz 1 ausgenommen, dürfen aber nur in Betrieb genommen und betrieben werden, wenn sie weder Personen noch Güter gefährden und den Fernmeldeverkehr und den Rundfunk nicht stören:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anlagen, die ausschliesslich zu technischen Versuchszwecken während maximal 18 Monaten in Betrieb genommen und betrieben werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Anlagen, die ausschliesslich von institutionellen Begünstigten, die Vorrechte, Immunitäten und Erleichterungen nach Artikel 2 Absatz 1 Buchstaben a, b, d–f, i, k und l des Gaststaatgesetzes vom 22. Juni 2007 geniessen, innerhalb ihrer Gebäude oder Gebäudeteile oder auf unmittelbar daran angrenzendem Gelände in Betrieb genommen und betrieben werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "c2e7d73ad972605894ffd3084cc99fca66f615e14b9ca52e201b77cb631fd814"
+    },
+    {
+      "id": "bund/FAV/art_31",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine leitungsgebundene Fernmeldeendeinrichtung, die den Voraussetzungen für ihre Bereitstellung auf dem Markt nicht entspricht, zu Vorführungszwecken durch Anschluss an ein Netz einer Fernmeldedienstanbieterin in Betrieb nehmen und betreiben will, muss die Einwilligung dieser Anbieterin erlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Artikel 22 NEV und 22 VEMV sind vorbehalten."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "eab56fecfd8229d5b2078ab423948498f8079fa721acc1de9bbe2a2dc71c4f83"
+    },
+    {
+      "id": "bund/FAV/art_32",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Funkanlagen, die durch diese Verordnung abgedeckt sind und in Betrieb genommen werden, müssen dieser Verordnung entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Betrieb genommene leitungsgebundene Fernmeldeanlagen müssen den anwendbaren Bestimmungen der VEMV bezüglich der Bedingungen der Inbetriebnahme entsprechen."
+        },
+        {
+          "absatz": "3",
+          "text": "Fernmeldeanlagen müssen ordnungsgemäss installiert und gewartet sowie bestimmungsgemäss betrieben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Inbetriebnahme und beim Betreiben einer Fernmeldeanlage müssen die Anweisungen der Herstellerin respektiert werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Nimmt ein Dienstleistungserbringer eine Fernmeldeanlage in Betrieb, so muss er die anerkannten Regeln der Technik respektieren."
+        },
+        {
+          "absatz": "6",
+          "text": "Bei der Reparatur einer Fernmeldeanlage müssen die grundlegenden Anforderungen und die Anforderungen an die Benutzung des Frequenzspektrums eingehalten werden."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "62f067d02baeea33210eb74893b9c4defae2bcdd176e892c6908aab35b113711"
+    },
+    {
+      "id": "bund/FAV/art_33",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Um Störungen zu vermeiden, kann das BAKOM technische und administrative Vorschriften über die Inbetriebnahme, das Erstellen und Betreiben von leitungsgebundenen Fernmeldeanlagen, die zur Datenübertragung das Stromnetz, einschliesslich Hausinstallation, verwenden (Powerline Communication, PLC), erlassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Inbetriebnahme von PLC-Anlagen für die Datenübertragung im Rahmen von Fernmeldediensten und privaten Netzen, die sich über mehrere nicht aneinander angrenzende Gebäude erstrecken, muss dem BAKOM vorgängig gemeldet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAKOM kann den Betrieb von PLC-Anlagen in problematischen Fällen wie bei der Benutzung von Freileitungen einer vorgängigen Genehmigung unterstellen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "2ef921307a75a7626e9c2e9336f6775b993a1e89289ba600689dc213df133957"
+    },
+    {
+      "id": "bund/FAV/art_34",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine gebrauchte Fernmeldeanlage darf nur auf dem Markt bereitgestellt werden, wenn sie die zum Zeitpunkt ihres Inverkehrbringens gültigen Anforderungen erfüllt und die anwendbaren technischen Normen oder Vorschriften nicht wesentlich geändert wurden. Artikel 35 gilt sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine gebrauchte Fernmeldeanlage, bei der für ihre Funktion wichtige Bauteile geändert wurden, unterliegt den gleichen Bestimmungen wie eine neue Anlage."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer eine gebrauchte Funkanlage auf dem Markt bereitstellt, muss der Erwerberin oder dem Erwerber Informationen betreffend eventuellen Verwendungseinschränkungen, die der Anlage zum Zeitpunkt des Kaufes beilagen, übermitteln."
+        },
+        {
+          "absatz": "4",
+          "text": "Artikel 19 Absatz 4 gilt sinngemäss."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "8ccc11452a301cff4412a3f32f863ce2894dc19028455ef16441f1af48aa0a53"
+    },
+    {
+      "id": "bund/FAV/art_35",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Werden die anwendbaren technischen Normen oder Vorschriften wesentlich geändert, so erlässt das BAKOM bei Bedarf technische und administrative Vorschriften über das Erstellen und das Betreiben von gebrauchten Fernmeldeanlagen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "a794c9f8db6f8676d913abd7aef5cd24bbd8379d75cee0b57116dac7b1ed7cd7"
+    },
+    {
+      "id": "bund/FAV/art_36",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM kontrolliert, ob die auf dem Markt bereitgestellten, in Betrieb genommenen, erstellten oder betriebenen Fernmeldeanlagen den Bestimmungen dieser Verordnung und seinen eigenen Vorschriften (Art. 33 Abs. 1 FMG) entsprechen. Die Kontrolle der Aspekte betreffend den Schutz der Gesundheit und Sicherheit (Art. 7 Abs. 1 Bst. a) obliegt der Vollzugsbehörde der NEV."
+        },
+        {
+          "absatz": "2",
+          "text": "Es führt zu diesem Zweck Stichproben durch. Es führt auch eine Kontrolle durch, wenn es Grund zur Annahme hat, dass eine Fernmeldeanlage nicht den Bestimmungen dieser Verordnung und den Vorschriften des BAKOM entspricht. Es ist zudem ermächtigt, anlässlich eines Konzessionsgesuchs Kontrollen von Fernmeldeanlagen durchzuführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Es kann vom Bundesamt für Zoll und Grenzsicherheit (BAZG) verlangen, dass sie ihm Auskünfte über die Einfuhr von Fernmeldeanlagen für einen bestimmten Zeitraum erteilt."
+        },
+        {
+          "absatz": "4",
+          "text": "Stösst das BAZG im Rahmen seiner normalen Tätigkeiten auf Fernmeldeanlagen, bei denen es aufgrund einer vom BAKOM erstellten Kontrollliste den Verdacht hat, dass sie den Bestimmungen dieser Verordnung nicht entsprechen, erhebt es ein Muster und übermittelt es unverzüglich dem BAKOM."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anlageschutzverordnung vom 2. Mai 1990 bleibt für die militärischen Fernmeldeanlagen vorbehalten."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "b1db06a2eb8e7a49d4235ff7aca2c03e12bb2922b409b0df1d9d602bf5e0b747"
+    },
+    {
+      "id": "bund/FAV/art_37",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM ist ermächtigt, von den Wirtschaftsakteurinnen die zum Nachweis der Konformität der Fernmeldeanlagen mit den Bestimmungen dieser Verordnung und seinen eigenen Vorschriften notwendigen Dokumente und Informationen sowie die unentgeltliche Übergabe der betreffenden Fernmeldeanlagen zu verlangen, um sie zu prüfen oder von einer in Artikel 17 bezeichneten Prüfstelle prüfen zu lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei den Kontrollen müssen die Benutzerinnen und Benutzer Folgendes vorlegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Dokumente für die Fernmeldeanlage, die in ihrem Besitz sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Informationen, die zur Identifizierung der für die Bereitstellung auf dem Markt verantwortlichen Person dienlich sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "fd8339567f4e93e5fb7f8bc6fc9e96b1efe7465b8e2ded4ebeb731b2e3a1bebe"
+    },
+    {
+      "id": "bund/FAV/art_38",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM lässt eine Fernmeldeanlage von einer Stelle nach Artikel 17 prüfen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Prüfungen, die das BAKOM durchgeführt hat, belegen, dass diese Anlage die Anforderungen nach Artikel 7 oder 9 nicht erfüllt, und"
+            },
+            {
+              "marke": "b",
+              "text": "das Gesuch von der für die Bereitstellung dieser Anlage auf dem Markt verantwortlichen Person gestellt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bevor das BAKOM die Anlagen von einer Stelle nach Artikel 17 prüfen lässt, hört es die für die Bereitstellung auf dem Markt verantwortliche Person an, insbesondere betreffend die gewählte Stelle, den Umfang der Prüfung und deren geschätzten Kosten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für die Prüfungen durch die Stelle trägt die für die Bereitstellung auf dem Markt verantwortliche Person, wenn die Prüfungen belegen, dass die Fernmeldeanlagen die verlangten Anforderungen nicht erfüllen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAKOM kann die Prüfung durch eine Stelle durchführen lassen, wenn es diese nicht selber durchführen kann. In diesem Fall werden der Person, die verantwortlich ist für die Bereitstellung einer Anlage auf dem Markt, die die erforderlichen Anforderungen nicht erfüllt, dieselben Kosten in Rechnung gestellt, wie wenn das BAKOM selbst die Prüfung durchgeführt hätte. Die Absätze 2 und 3 sind nicht anwendbar."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "8091056cb77845e154d920cb350c7152c8e8f39a64d3784a22137858690cddcb"
+    },
+    {
+      "id": "bund/FAV/art_39",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Belegt die Kontrolle, dass Bestimmungen dieser Verordnung oder die Vorschriften des BAKOM verletzt sind, so kann dieses nach Anhörung der für die Bereitstellung auf dem Markt oder das Betreiben verantwortlichen Person die entsprechenden Massnahmen nach Artikel 33 Absatz 3 FMG treffen. Es kann die getroffenen Massnahmen veröffentlichen oder im Abrufverfahren zugänglich machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Liefern die technischen Unterlagen nicht genügend nützliche Informationen oder Hinweise zur Sicherstellung der Konformität der Fernmeldeanlagen mit den grundlegenden Anforderungen in dieser Verordnung und erfüllen somit die Anforderungen nach Artikel 14 nicht, kann das BAKOM die Herstellerin oder die Importeurin auffordern, dass sie innerhalb einer bestimmten Frist die Konformität mit den grundlegenden Anforderungen dieser Verordnung durch eine vom BAKOM akzeptierten Stelle auf eigene Kosten überprüfen lässt."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 19 Absatz 7 THG ist anwendbar."
+        },
+        {
+          "absatz": "4",
+          "text": "Wenn das BAKOM die Bevölkerung in Anwendung von Artikel 33 Absatz 4 FMG informiert, veröffentlicht es insbesondere folgende Informationen oder macht diese im Abrufverfahren zugänglich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die getroffenen Massnahmen;"
+            },
+            {
+              "marke": "b",
+              "text": "den bestimmungsgemässe Gebrauch der Fernmeldeanlage;"
+            },
+            {
+              "marke": "c",
+              "text": "die Informationen, die deren Identifizierung erlauben, wie Herstellerin, Marke und Typ;"
+            },
+            {
+              "marke": "d",
+              "text": "Fotografien der Fernmeldeanlage und deren Verpackung;"
+            },
+            {
+              "marke": "e",
+              "text": "das Datum der Verfügung betreffend Nichtkonformität."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "89ddf3eb9a8559619dcfa02f9dac9361f1879095b4e1c2aeecce74f2c3e4960c"
+    },
+    {
+      "id": "bund/FAV/art_40",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM hat jederzeit Zutritt zu Fernmeldeanlagen, die den Fernmeldeverkehr oder den Rundfunk stören, und kann die in Artikel 34 FMG vorgesehenen Massnahmen ergreifen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen gelten die Artikel 36–39 sinngemäss."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "1bf8fef4cd5ce32e96e1de36711d79cd1014dfd75a605080047f9326c0d5c8a9"
+    },
+    {
+      "id": "bund/FAV/art_41",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAKOM vollzieht diese Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann im Geltungsbereich dieser Verordnung mit dem Ausland Vereinbarungen technischen und administrativen Inhalts abschliessen."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "a193f8620d06610234b16400bb14cf2798a66c9a82be75e0c78b5a8b6e3fe73f"
+    },
+    {
+      "id": "bund/FAV/art_42",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verordnung vom 14. Juni 2002 über Fernmeldeanlagen wird aufgehoben."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "05729bc2b9ddeabebb04f7d7c8b0a3b56c47fac3de7629ca3326f723ff8adb57"
+    },
+    {
+      "id": "bund/FAV/art_43",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "und 2 …"
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "3c87ce6f01efa49c5f95aa673749fbde1594060952536ddcfc3b762932b9f35e"
+    },
+    {
+      "id": "bund/FAV/art_44",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Funkempfangsanlagen und Anlagen für die Teilnahme am Amateurfunk, die vor dem 1. Mai 2001 keinem Konformitätsbewertungsverfahren unterlagen und die vor diesem Datum in Verkehr gebracht worden sind, dürfen weiterhin erstellt und betrieben werden, ohne dass sie ein Konformitätsbewertungsverfahren durchlaufen müssen. Diese Anlagen dürfen jedoch ohne Konformitätsbewertungsverfahren nicht auf dem Markt bereitgestellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bis zum 12. Juni 2017 dürfen Funkanlagen, die nicht der vorliegenden Verordnung entsprechen, weiterhin in Verkehr gebracht werden, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Verordnung vom 14. Juni 2002 über Fernmeldeanlagen entsprechen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "von einer Konformitätsbewertung gemäss Artikel 16 Buchstabe g bis –h bis der Verordnung vom 14. Juni 2002 über Fernmeldeanlagen ausgenommen waren und: 1. konform zu der Verordnung vom 9. April 1997 über elektrische Niederspannungserzeugnisse und der Verordnung vom 18. November 2009 über die elektromagnetische Verträglichkeit waren, oder"
+            },
+            {
+              "marke": "2",
+              "text": "konform zu der Verordnung vom 25. November 2015 über elektrische Niederspannungserzeugnisse und der Verordnung vom 25. November 2015 über die elektromagnetische Verträglichkeit sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "64cdb44103b42b57fdd1db2137c14a9a50780646fee5f55d77a350e9669b06db"
+    },
+    {
+      "id": "bund/FAV/art_44_a",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "44_a",
+      "artikelLabel": "Art. 44a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Funkanlagen, welche die Anforderungen nach den Artikeln 7 Absatz 2 bis , 19 Absätze 2 Buchstabe d und 3 sowie 24 a nicht erfüllen, dürfen bis zum folgenden Zeitpunkt in Verkehr gebracht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Laptops: bis 27. April 2026;"
+            },
+            {
+              "marke": "b",
+              "text": "übrige Funkanlagen: bis 27. Dezember 2024."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_44_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "625d2299fa613a6e0f1f48b287e46b842b1a07e1c7c7349e4ce83b5186e32608"
+    },
+    {
+      "id": "bund/FAV/art_45",
+      "ebene": "bund",
+      "quelle": "FAV",
+      "erlass": "FAV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt unter Vorbehalt von Absatz 2 am 13. Juni 2016 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 11 tritt am 12. Juni 2018 in Kraft."
+        }
+      ],
+      "stand": "2024-08-15",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2016/24/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240815",
+      "sha": "6397e20ee36ea342746da0c5787d8ccb3c32cfc44bc1faa78412897eb4c189fc"
+    }
+  ]
+}
