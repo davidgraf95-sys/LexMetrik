@@ -6,7 +6,7 @@
 
 import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { kuerzeRegeste } from '../../src/lib/rechtsprechung/register';
+import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidRef } from '../../src/lib/rechtsprechung/norm-index';
@@ -33,7 +33,9 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     const wrap: EntscheidSnapshotDatei = { erzeugt: datum, eintraege: [snap] };
     writeFileSync(ziel, JSON.stringify(wrap, null, 2) + '\n', 'utf8');
 
-    const regesteKurz = snap.regeste ? kuerzeRegeste(snap.regeste.text) : null;
+    // regesteKurz aus dem GEGLÄTTETEN Text (normalisiereRegeste strippt u.a. die
+    // führende „Regeste"-Überschrift) — sonst stünde „Regeste" doppelt bzw. als Präfix.
+    const regesteKurz = snap.regeste ? kuerzeRegeste(normalisiereRegeste(snap.regeste.text)) : null;
     manifest.push({
       key, gericht: snap.gericht, gerichtName: snap.gerichtName, gerichtstyp: snap.gerichtstyp,
       kanton: snap.kanton, nummer: snap.nummer, bgeReferenz: snap.bgeReferenz, datum: snap.datum,

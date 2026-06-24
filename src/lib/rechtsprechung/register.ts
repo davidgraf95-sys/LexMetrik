@@ -75,6 +75,12 @@ export function normalisiereRegeste(roh: string): string {
   return roh
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/\r\n/g, '\n')
+    // Führende „Regeste"-Eigenüberschrift entfernen (die Quelle stellt sie dem Text
+    // voran) — die UI zeigt das Label „Regeste" separat, sonst stünde es doppelt.
+    // Zwei Formate: „Regeste\n…" und mehrteilig „Regeste a\n…" (nbsp + Teilbuchstabe;
+    // dort bleibt der Teilbuchstabe erhalten). „Regeste." (Satz) wird NICHT angetastet.
+    .replace(/^\s*Regeste\b[ \t ]*\n+/i, '')
+    .replace(/^\s*Regeste\b[ \t ]+(?=[a-zäöü]\b)/i, '')
     .replace(/\[([^\]]+)\]\((?:https?:|\/)[^)]+\)/g, '$1')
     .replace(/\s*\|\s*[^|\n]+\s*$/, '')   // OCL-Suffix " | <Rechtsgebiet>" (redundant zu sachgebiet) abschneiden
     .replace(/[ \t]+\n/g, '\n')

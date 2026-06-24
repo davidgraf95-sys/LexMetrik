@@ -22,6 +22,15 @@ describe('normalisiereRegeste', () => {
   it('kollabiert 3+ Leerzeilen und trimmt', () => {
     expect(normalisiereRegeste('A\n\n\n\nB\n')).toBe('A\n\nB');
   });
+  it('entfernt die führende „Regeste"-Überschrift (sonst doppelt unter dem Label)', () => {
+    expect(normalisiereRegeste('Regeste\n Art. 88 SchKG; Fristenstillstand.')).toBe('Art. 88 SchKG; Fristenstillstand.');
+  });
+  it('behält bei mehrteiliger Regeste den Teilbuchstaben („Regeste\\xa0a" → „a …")', () => {
+    expect(normalisiereRegeste('Regeste a\n Art. 259 StGB; Aufforderung.')).toBe('a\n Art. 259 StGB; Aufforderung.');
+  });
+  it('tastet „Regeste." (Satzanfang mit Punkt) NICHT an', () => {
+    expect(normalisiereRegeste('Regeste. Art. 8 ZGB.')).toBe('Regeste. Art. 8 ZGB.');
+  });
   it('schneidet das OCL-Rechtsgebiet-Suffix " | X" ab', () => {
     expect(normalisiereRegeste('Unfallversicherung (Kausalzusammenhang) | Unfallversicherung'))
       .toBe('Unfallversicherung (Kausalzusammenhang)');
