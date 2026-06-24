@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { merkeTab } from '../lib/tabs';
 import { labelAusMeta } from '../lib/verlaufLabel';
 
-// Unsichtbarer Geschwister von <VerlaufTracker/>: öffnet für jede besuchte
+// Unsichtbarer Tracker in App.tsx: öffnet für jede besuchte
 // Inhalts-Route einen Reiter im Tab-Streifen (lexmetrik-tabs). Reines
 // localStorage-Schreiben (§3). Die Startseite und die statischen Info-Seiten
 // werden NICHT zu Reitern (Reiter sind für Engines/Gesetze/Vorlagen/Entscheide,
