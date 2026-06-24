@@ -1,0 +1,1595 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/DSV/art_1",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Gewährleistung einer angemessenen Datensicherheit müssen der Verantwortliche und der Auftragsbearbeiter den Schutzbedarf der Personendaten bestimmen und die im Hinblick auf das Risiko geeigneten technischen und organisatorischen Massnahmen festlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Schutzbedarf der Personendaten wird nach den folgenden Kriterien beurteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Art der bearbeiteten Daten;"
+            },
+            {
+              "marke": "b",
+              "text": "Zweck, Art, Umfang und Umstände der Bearbeitung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Risiko für die Persönlichkeit oder die Grundrechte der betroffenen Person wird nach den folgenden Kriterien beurteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ursachen des Risikos;"
+            },
+            {
+              "marke": "b",
+              "text": "hauptsächliche Gefahren;"
+            },
+            {
+              "marke": "c",
+              "text": "ergriffene oder vorgesehene Massnahmen, um das Risiko zu verringern;"
+            },
+            {
+              "marke": "d",
+              "text": "Wahrscheinlichkeit und Schwere einer Verletzung der Datensicherheit trotz der ergriffenen oder vorgesehenen Massnahmen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Festlegung der technischen und organisatorischen Massnahmen werden zudem die folgenden Kriterien berücksichtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Stand der Technik;"
+            },
+            {
+              "marke": "b",
+              "text": "Implementierungskosten."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Der Schutzbedarf der Personendaten, das Risiko und die technischen und organisatorischen Massnahmen sind über die gesamte Bearbeitungsdauer hinweg zu überprüfen. Die Massnahmen sind nötigenfalls anzupassen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "08c2fca84c2a692af8cdab53129fb18ed6fb3133d8ddf55ba24dab305af9e970"
+    },
+    {
+      "id": "bund/DSV/art_2",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Verantwortliche und der Auftragsbearbeiter müssen technische und organisatorische Massnahmen treffen, damit die bearbeiteten Daten ihrem Schutzbedarf entsprechend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nur Berechtigten zugänglich sind (Vertraulichkeit);"
+            },
+            {
+              "marke": "b",
+              "text": "verfügbar sind, wenn sie benötigt werden (Verfügbarkeit);"
+            },
+            {
+              "marke": "c",
+              "text": "nicht unberechtigt oder unbeabsichtigt verändert werden (Integrität);"
+            },
+            {
+              "marke": "d",
+              "text": "nachvollziehbar bearbeitet werden (Nachvollziehbarkeit)."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "7e0f78dda4a6d7bcc226a4896f4f2f5198375e82422773ac0f1c589f4e83137f"
+    },
+    {
+      "id": "bund/DSV/art_3",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Um die Vertraulichkeit zu gewährleisten, müssen der Verantwortliche und der Auftragsbearbeiter geeignete Massnahmen treffen, damit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "berechtigte Personen nur auf diejenigen Personendaten Zugriff haben, die sie zur Erfüllung ihrer Aufgaben benötigen (Zugriffskontrolle);"
+            },
+            {
+              "marke": "b",
+              "text": "nur berechtigte Personen Zugang zu den Räumlichkeiten und Anlagen haben, in denen Personendaten bearbeitet werden (Zugangskontrolle);"
+            },
+            {
+              "marke": "c",
+              "text": "unbefugte Personen automatisierte Datenbearbeitungssysteme nicht mittels Einrichtungen zur Datenübertragung benutzen können (Benutzerkontrolle)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Um die Verfügbarkeit und Integrität zu gewährleisten, müssen der Verantwortliche und der Auftragsbearbeiter geeignete Massnahmen treffen, damit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unbefugte Personen Datenträger nicht lesen, kopieren, verändern, verschieben, löschen oder vernichten können (Datenträgerkontrolle);"
+            },
+            {
+              "marke": "b",
+              "text": "unbefugte Personen Personendaten im Speicher nicht speichern, lesen, ändern, löschen oder vernichten können (Speicherkontrolle);"
+            },
+            {
+              "marke": "c",
+              "text": "unbefugte Personen bei der Bekanntgabe von Personendaten oder beim Transport von Datenträgern Personendaten nicht lesen, kopieren, verändern, löschen oder vernichten können (Transportkontrolle);"
+            },
+            {
+              "marke": "d",
+              "text": "die Verfügbarkeit der Personendaten und der Zugang zu ihnen bei einem physischen oder technischen Zwischenfall rasch wiederhergestellt werden können (Wiederherstellung);"
+            },
+            {
+              "marke": "e",
+              "text": "alle Funktionen des automatisierten Datenbearbeitungssystems zur Verfügung stehen (Verfügbarkeit), Fehlfunktionen gemeldet werden (Zuverlässigkeit) und gespeicherte Personendaten nicht durch Fehlfunktionen des Systems beschädigt werden können (Datenintegrität);"
+            },
+            {
+              "marke": "f",
+              "text": "Betriebssysteme und Anwendungssoftware stets auf dem neusten Sicherheitsstand gehalten und bekannte kritische Lücken geschlossen werden (Systemsicherheit)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Um die Nachvollziehbarkeit zu gewährleisten, müssen der Verantwortliche und der Auftragsbearbeiter geeignete Massnahmen treffen, damit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "überprüft werden kann, welche Personendaten zu welcher Zeit und von welcher Person im automatisierten Datenbearbeitungssystem eingegeben oder verändert werden (Eingabekontrolle);"
+            },
+            {
+              "marke": "b",
+              "text": "überprüft werden kann, wem Personendaten mit Hilfe von Einrichtungen zur Datenübertragung bekanntgegeben werden (Bekanntgabekontrolle);"
+            },
+            {
+              "marke": "c",
+              "text": "Verletzungen der Datensicherheit rasch erkannt (Erkennung) und Massnahmen zur Minderung oder Beseitigung der Folgen ergriffen werden können (Beseitigung)."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "b6ca987d9530d699cc256d44e5a9fc11dfb7fa86d68f7bb3e2158ddae791fedc"
+    },
+    {
+      "id": "bund/DSV/art_4",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden besonders schützenswerte Personendaten in grossem Umfang automatisiert bearbeitet oder wird ein Profiling mit hohem Risiko durchgeführt und können die präventiven Massnahmen den Datenschutz nicht gewährleisten, so müssen der private Verantwortliche und sein privater Auftragsbearbeiter zumindest das Speichern, Verändern, Bekanntgeben, Löschen und Vernichten der Daten sowie das Zugreifen auf die Daten protokollieren. Eine Protokollierung muss insbesondere dann erfolgen, wenn sonst nachträglich nicht festgestellt werden kann, ob die Daten für diejenigen Zwecke bearbeitet wurden, für die sie beschafft oder bekanntgegeben wurden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das verantwortliche Bundesorgan und sein Auftragsbearbeiter protokollieren bei der automatisierten Bearbeitung von besonders schützenswerten Personendaten, bei der Durchführung von Profilings und bei automatisierten Datenbearbeitungen, die in den Anwendungsbereich der Richtlinie (EU) 2016/680 fallen, zumindest das Speichern, Verändern, Bekanntgeben, Löschen und Vernichten der Daten sowie das Zugreifen auf die Daten. Bei den übrigen automatisierten Datenbearbeitungen beurteilen sie vorgängig das Risiko für die Grundrechte der betroffenen Personen. Sie legen gestützt darauf sowie unter Berücksichtigung des Stands der Technik und der Implementierungskosten fest, ob und in welchem Umfang sie die genannten Vorgänge protokollieren. Bei der Risikobeurteilung berücksichtigen sie insbesondere die Art der bearbeiteten Daten sowie den Zweck, die Art, den Umfang und die Umstände der Bearbeitung."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Prüfung der Protokollierung nach Absatz 2 erfolgt schriftlich. Resultat und Inhalt der Prüfung werden dem Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) auf Anfrage mitgeteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Personendaten, die allgemein zugänglich sind, sind in den Fällen der Absätze 1 und 2 erster Satz zumindest das Speichern, Verändern, Löschen und Vernichten der Daten zu protokollieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Protokollierung muss Aufschluss geben über die Identität der Person, die die Bearbeitung vorgenommen hat, die Art, das Datum und die Uhrzeit der Bearbeitung sowie gegebenenfalls die Identität der Empfängerin oder des Empfängers der Daten."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Protokolle müssen während mindestens einem Jahr getrennt vom System, in welchem die Personendaten bearbeitet werden, aufbewahrt werden. Sie dürfen ausschliesslich den Organen und Personen zugänglich sein, denen die Überprüfung der Anwendung der Datenschutzvorschriften oder die Wahrung oder Wiederherstellung der Vertraulichkeit, Integrität, Verfügbarkeit und Nachvollziehbarkeit der Daten obliegt, und dürfen nur für diesen Zweck verwendet werden."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "c6655d577f9f435b33c7582c31261583d6eaa0576b2ec289854b45be3b25fb01"
+    },
+    {
+      "id": "bund/DSV/art_5",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der private Verantwortliche und sein privater Auftragsbearbeiter müssen ein Reglement für automatisierte Bearbeitungen erstellen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "besonders schützenswerte Personendaten in grossem Umfang bearbeiten; oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein Profiling mit hohem Risiko durchführen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Reglement muss insbesondere Angaben zur internen Organisation, zum Datenbearbeitungs- und Kontrollverfahren sowie zu den Massnahmen zur Gewährleistung der Datensicherheit enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der private Verantwortliche und sein privater Auftragsbearbeiter müssen das Reglement regelmässig aktualisieren. Wurde eine Datenschutzberaterin oder ein Datenschutzberater ernannt, so muss dieser oder diesem das Reglement zur Verfügung gestellt werden."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "764540af66fe31be6ee443e2a2f72e1d83e185a673b974c6f1937c369afc36f2"
+    },
+    {
+      "id": "bund/DSV/art_6",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche Bundesorgan und sein Auftragsbearbeiter erstellen ein Bearbeitungsreglement für automatisierte Bearbeitungen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "besonders schützenswerte Personendaten bearbeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "ein Profiling durchführen;"
+            },
+            {
+              "marke": "c",
+              "text": "nach Artikel 34 Absatz 2 Buchstabe c DSG Personendaten bearbeiten;"
+            },
+            {
+              "marke": "d",
+              "text": "Kantonen, ausländischen Behörden, internationalen Organisationen oder privaten Personen Personendaten zugänglich machen;"
+            },
+            {
+              "marke": "e",
+              "text": "Datenbestände miteinander verknüpfen; oder"
+            },
+            {
+              "marke": "f",
+              "text": "mit anderen Bundesorganen zusammen ein Informationssystem betreiben oder Datenbestände bewirtschaften."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Reglement muss insbesondere Angaben zur internen Organisation, zum Datenbearbeitungs- und Kontrollverfahren sowie zu den Massnahmen zur Gewährleistung der Datensicherheit enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das verantwortliche Bundesorgan und sein Auftragsbearbeiter müssen das Reglement regelmässig aktualisieren und der Datenschutzberaterin oder dem Datenschutzberater zur Verfügung stellen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "998001bfa0c9a6c354dccd6fd05be727e122c02d0f264f74b42a572efef4b96c"
+    },
+    {
+      "id": "bund/DSV/art_7",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vorgängige Genehmigung des Verantwortlichen, die dem Auftragsbearbeiter erlaubt, die Datenbearbeitung einem Dritten zu übertragen, kann spezifischer oder allgemeiner Art sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer allgemeinen Genehmigung informiert der Auftragsbearbeiter den Verantwortlichen über jede beabsichtigte Änderung in Bezug auf die Hinzuziehung oder die Ersetzung anderer Dritter. Der Verantwortliche kann Widerspruch gegen diese Änderung erheben."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "bb73b18df43b7600784728b720d9ee1f71b3c5bf5c1bba44cd908fb8410fda6a"
+    },
+    {
+      "id": "bund/DSV/art_8",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staaten, Gebiete, spezifischen Sektoren in einem Staat und internationalen Organe mit einem angemessenen Datenschutz werden in Anhang 1 aufgeführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Beurteilung, ob ein Staat, ein Gebiet, ein spezifischer Sektor in einem Staat oder ein internationales Organ einen angemessenen Datenschutz gewährleistet, werden insbesondere die folgenden Kriterien berücksichtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die internationalen Verpflichtungen des Staates oder internationalen Organs, insbesondere im Bereich des Datenschutzes;"
+            },
+            {
+              "marke": "b",
+              "text": "die Rechtsstaatlichkeit und die Achtung der Menschenrechte;"
+            },
+            {
+              "marke": "c",
+              "text": "die geltende Gesetzgebung insbesondere zum Datenschutz sowie deren Umsetzung und die einschlägige Rechtsprechung;"
+            },
+            {
+              "marke": "d",
+              "text": "die wirksame Gewährleistung der Rechte der betroffenen Personen und des Rechtsschutzes;"
+            },
+            {
+              "marke": "e",
+              "text": "das wirksame Funktionieren einer oder mehrerer unabhängiger Behörden, die im betreffenden Staat für den Datenschutz zuständig sind oder denen ein internationales Organ untersteht und die über ausreichende Befugnisse und Kompetenzen verfügen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der EDÖB wird bei jeder Beurteilung konsultiert. Die Einschätzungen von internationalen Organen oder ausländischen Behörden, die für den Datenschutz zuständig sind, können berücksichtigt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Angemessenheit des Datenschutzes wird periodisch neu beurteilt."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Beurteilungen werden veröffentlicht."
+        },
+        {
+          "absatz": "6",
+          "text": "Wenn die Beurteilung nach Absatz 4 oder andere Informationen zeigen, dass kein angemessener Datenschutz mehr gewährleistet ist, wird Anhang 1 geändert; dies hat keine Auswirkungen auf die bereits erfolgten Datenbekanntgaben."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "996a19e109ca175a544850d91c49ff7ea287624b9e661c7a6f494ecf1d206065"
+    },
+    {
+      "id": "bund/DSV/art_9",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Datenschutzklauseln in einem Vertrag nach Artikel 16 Absatz 2 Buchstabe b DSG und die spezifischen Garantien nach Artikel 16 Absatz 2 Buchstabe c DSG müssen mindestens die folgenden Punkte enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anwendung der Grundsätze der Rechtmässigkeit, von Treu und Glauben, der Verhältnismässigkeit, der Transparenz, der Zweckbindung und der Richtigkeit;"
+            },
+            {
+              "marke": "b",
+              "text": "die Kategorien der bekanntgegebenen Personendaten sowie der betroffenen Personen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Art und den Zweck der Bekanntgabe von Personendaten;"
+            },
+            {
+              "marke": "d",
+              "text": "gegebenenfalls die Namen der Staaten oder internationalen Organe, in die oder denen Personendaten bekanntgegeben werden, sowie die Anforderungen an die Bekanntgabe;"
+            },
+            {
+              "marke": "e",
+              "text": "die Anforderungen an die Aufbewahrung, die Löschung und die Vernichtung von Personendaten;"
+            },
+            {
+              "marke": "f",
+              "text": "die Empfängerinnen und Empfänger oder die Kategorien der Empfängerinnen und Empfänger;"
+            },
+            {
+              "marke": "g",
+              "text": "die Massnahmen zur Gewährleistung der Datensicherheit;"
+            },
+            {
+              "marke": "h",
+              "text": "die Pflicht, Verletzungen der Datensicherheit zu melden;"
+            },
+            {
+              "marke": "i",
+              "text": "falls die Empfängerinnen und Empfänger Verantwortliche sind: die Pflicht, die betroffenen Personen über die Bearbeitung zu informieren;"
+            },
+            {
+              "marke": "j",
+              "text": "die Rechte der betroffenen Person, insbesondere: 1. das Auskunftsrecht und das Recht auf Datenherausgabe oder -übertragung,"
+            },
+            {
+              "marke": "2",
+              "text": "das Recht, der Datenbekanntgabe zu widersprechen,"
+            },
+            {
+              "marke": "3",
+              "text": "das Recht auf Berichtigung, Löschung oder Vernichtung ihrer Daten,"
+            },
+            {
+              "marke": "4",
+              "text": "das Recht, eine unabhängige Behörde um Rechtsschutz zu ersuchen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Verantwortliche und im Fall von Datenschutzklauseln in einem Vertrag der Auftragsbearbeiter müssen angemessene Massnahmen treffen, um sicherzustellen, dass die Empfängerin oder der Empfänger diese Klauseln oder die spezifischen Garantien einhält."
+        },
+        {
+          "absatz": "3",
+          "text": "Wurde der EDÖB über die Datenschutzklauseln in einem Vertrag oder die spezifischen Garantien informiert, so gilt die Informationspflicht für alle weiteren Bekanntgaben als erfüllt, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unter denselben Datenschutzklauseln oder Garantien erfolgen, sofern die Kategorien der Empfängerinnen und Empfänger, der Zweck der Bearbeitung und die Datenkategorien im Wesentlichen unverändert bleiben; oder"
+            },
+            {
+              "marke": "b",
+              "text": "innerhalb derselben juristischen Person oder Gesellschaft oder zwischen Unternehmen, die zum selben Konzern gehören, stattfinden."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "4e1140c08def6023729bf2c840db79e695cc26c3ec8c9baff59ccf9ac15b7320"
+    },
+    {
+      "id": "bund/DSV/art_10",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gibt der Verantwortliche oder der Auftragsbearbeiter Personendaten mittels Standarddatenschutzklauseln nach Artikel 16 Absatz 2 Buchstabe d DSG ins Ausland bekannt, so trifft er angemessene Massnahmen, um sicherzustellen, dass die Empfängerin oder der Empfänger diese beachtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB veröffentlicht eine Liste von Standarddatenschutzklauseln, die er genehmigt, ausgestellt oder anerkannt hat. Er teilt das Ergebnis der Prüfung der Standarddatenschutzklauseln, die ihm unterbreitet werden, innerhalb von 90 Tagen mit."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "dddf169bee18918f49011dadf9403851bc69eae3a95deb849ec84f801925deda"
+    },
+    {
+      "id": "bund/DSV/art_11",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verbindliche unternehmensinterne Datenschutzvorschriften nach Artikel 16 Absatz 2 Buchstabe e DSG gelten für alle Unternehmen, die zum selben Konzern gehören."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie umfassen mindestens die in Artikel 9 Absatz 1 genannten Punkte sowie die folgenden Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Organisation und die Kontaktdaten des Konzerns und seiner Unternehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "die innerhalb des Konzerns getroffenen Massnahmen zur Einhaltung der verbindlichen unternehmensinternen Datenschutzvorschriften."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der EDÖB teilt das Ergebnis der Prüfung der verbindlichen unternehmensinternen Datenschutzvorschriften, die ihm unterbreitet werden, innerhalb von 90 Tagen mit."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "b604618a79a2adbcf2aa95e68887cdfbe6565268aa3f9333445262c8c4d50dd7"
+    },
+    {
+      "id": "bund/DSV/art_12",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personendaten dürfen ins Ausland bekanntgegeben werden, wenn ein Verhaltenskodex oder eine Zertifizierung einen geeigneten Datenschutz gewährleistet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Verhaltenskodex muss vorgängig dem EDÖB zur Genehmigung unterbreitet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verhaltenskodex oder die Zertifizierung muss mit einer verbindlichen und durchsetzbaren Verpflichtung des Verantwortlichen oder des Auftragsbearbeiters im Drittstaat verbunden werden, die darin enthaltenen Massnahmen anzuwenden."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "7e2f691301acaccdea4c54a091ec9238253002bd89d4b40b97a7d4a1d6ee5270"
+    },
+    {
+      "id": "bund/DSV/art_13",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Verantwortliche muss der betroffenen Person die Information über die Beschaffung von Personendaten in präziser, transparenter, verständlicher und leicht zugänglicher Form mitteilen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "236cd864182790875e366ff92b23557b019993812428f089b8858066ec18d779"
+    },
+    {
+      "id": "bund/DSV/art_14",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Verantwortliche muss die Datenschutz-Folgenabschätzung nach Beendigung der Datenbearbeitung mindestens zwei Jahren aufbewahren."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "8f78396e256fbaee791fdeec26d84a0ca2b0aa8ff17ab022a3ffa9dc161fbfd6"
+    },
+    {
+      "id": "bund/DSV/art_15",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Meldung einer Verletzung der Datensicherheit an den EDÖB muss folgende Angaben enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Art der Verletzung;"
+            },
+            {
+              "marke": "b",
+              "text": "soweit möglich den Zeitpunkt und die Dauer;"
+            },
+            {
+              "marke": "c",
+              "text": "soweit möglich die Kategorien und die ungefähre Anzahl der betroffenen Personendaten;"
+            },
+            {
+              "marke": "d",
+              "text": "soweit möglich die Kategorien und die ungefähre Anzahl der betroffenen Personen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Folgen, einschliesslich der allfälligen Risiken, für die betroffenen Personen;"
+            },
+            {
+              "marke": "f",
+              "text": "welche Massnahmen getroffen wurden oder vorgesehen sind, um den Mangel zu beheben und die Folgen, einschliesslich der allfälligen Risiken, zu mindern;"
+            },
+            {
+              "marke": "g",
+              "text": "den Namen und die Kontaktdaten einer Ansprechperson."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist es dem Verantwortlichen nicht möglich, alle Angaben gleichzeitig zu melden, so liefert er die fehlenden Angaben so rasch als möglich nach."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist der Verantwortliche verpflichtet, die betroffene Person zu informieren, so teilt er ihr in einfacher und verständlicher Sprache mindestens die Angaben nach Absatz 1 Buchstaben a und e–g mit."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Verantwortliche muss die Verletzungen dokumentieren. Die Dokumentation muss die mit den Vorfällen zusammenhängenden Tatsachen, deren Auswirkungen und die ergriffenen Massnahmen enthalten. Sie ist ab dem Zeitpunkt der Meldung nach Absatz 1 mindestens zwei Jahre aufzubewahren."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "2de09e29231cf4ecc06e7ba8b85d265d4f1fc761c91b26048152c662c9098fb1"
+    },
+    {
+      "id": "bund/DSV/art_16",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer vom Verantwortlichen Auskunft darüber verlangt, ob Personendaten über sie oder ihn bearbeitet werden, muss dies schriftlich tun. Ist der Verantwortliche einverstanden, so kann das Begehren auch mündlich mitgeteilt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Auskunftserteilung erfolgt schriftlich oder in der Form, in der die Daten vorliegen. Im Einvernehmen mit dem Verantwortlichen kann die betroffene Person ihre Daten an Ort und Stelle einsehen. Die Auskunft kann mündlich erteilt werden, wenn die betroffene Person einverstanden ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Auskunftsbegehren und die Auskunftserteilung können auf elektronischem Weg erfolgen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Auskunft muss der betroffenen Person in einer verständlichen Form erteilt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Verantwortliche muss angemessene Massnahmen treffen, um die betroffene Person zu identifizieren. Diese ist zur Mitwirkung verpflichtet."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "7f6b22edacea63c9d3fd8bdfacf53329fa1a6e6e9ab249164fe0eb0cc659dc63"
+    },
+    {
+      "id": "bund/DSV/art_17",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bearbeiten mehrere Verantwortliche Personendaten gemeinsam, so kann die betroffene Person ihr Auskunftsrecht bei jedem Verantwortlichen geltend machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Betrifft das Begehren Daten, die von einem Auftragsbearbeiter bearbeitet werden, so unterstützt der Auftragsbearbeiter den Verantwortlichen bei der Erteilung der Auskunft, sofern er das Begehren nicht im Auftrag des Verantwortlichen beantwortet."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "87ce9690397a781f6fe7b129d9e3eca0281a1a13f6e04f6d7050f87af9666af1"
+    },
+    {
+      "id": "bund/DSV/art_18",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Auskunft muss innerhalb von 30 Tagen seit dem Eingang des Begehrens erteilt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann die Auskunft nicht innerhalb von 30 Tagen erteilt werden, so muss der Verantwortliche die betroffene Person darüber informieren und ihr mitteilen, innerhalb welcher Frist die Auskunft erfolgt."
+        },
+        {
+          "absatz": "3",
+          "text": "Verweigert der Verantwortliche die Auskunft, schränkt er sie ein oder schiebt er sie auf, so muss er dies innerhalb derselben Frist mitteilen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "b7c019ca4ae90f243599405fe3d08f2de6e7b3c117ad1fa92d47b15caa2fe194"
+    },
+    {
+      "id": "bund/DSV/art_19",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Erteilung der Auskunft mit einem unverhältnismässigen Aufwand verbunden, so kann der Verantwortliche von der betroffenen Person verlangen, dass sie sich an den Kosten angemessen beteiligt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beteiligung beträgt maximal 300 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Verantwortliche muss der betroffenen Person die Höhe der Beteiligung vor der Auskunftserteilung mitteilen. Bestätigt die betroffene Person das Gesuch nicht innerhalb von zehn Tagen, so gilt es als ohne Kostenfolge zurückgezogen. Die Frist nach Artikel 18 Absatz 1 beginnt nach Ablauf der zehntägigen Bedenkzeit zu laufen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "f752aecca11c87647fadef361640dcbd64d4a0712d933bd5fd08a52ec1892c8a"
+    },
+    {
+      "id": "bund/DSV/art_20",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Personendaten, die die betroffene Person dem Verantwortlichen bekanntgegeben hat, gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Daten, die sie diesem wissentlich und willentlich zur Verfügung stellt;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten, die der Verantwortliche über die betroffene Person und ihr Verhalten im Rahmen der Nutzung eines Diensts oder Geräts erhoben hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Personendaten, die vom Verantwortlichen durch eigene Auswertung der bereitgestellten oder beobachteten Personendaten erzeugt werden, gelten nicht als Personendaten, die die betroffene Person dem Verantwortlichen bekannt gegeben hat."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "083de2cea26f42197720e7c3f341a868adc306b3fe8334fddbe855eedd1cdfe4"
+    },
+    {
+      "id": "bund/DSV/art_21",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als gängiges elektronisches Format gelten Formate, die es ermöglichen, dass die Personendaten mit verhältnismässigem Aufwand übertragen und von der betroffenen Person oder einem anderen Verantwortlichen weiterverwendet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Recht auf Datenherausgabe oder -übertragung begründet für den Verantwortlichen nicht die Pflicht, technisch kompatible Datenbearbeitungssysteme zu übernehmen oder beizubehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein unverhältnismässiger Aufwand für die Übertragung von Personendaten auf einen anderen Verantwortlichen liegt vor, wenn die Übertragung technisch nicht möglich ist."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "511c60d89c0a617e87de45c70bfdeea27a87fb9c13180edd89cc2516883be6dc"
+    },
+    {
+      "id": "bund/DSV/art_22",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Artikel 16 Absätze 1 und 5 sowie 17–19 gelten sinngemäss für das Recht auf Datenherausgabe oder -übertragung."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "d737de2401ec8d4e6f4b315de571a3da95fcd29ba62a2e0d1d33b5a0d05cc444"
+    },
+    {
+      "id": "bund/DSV/art_23",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Verantwortliche muss der Datenschutzberaterin oder dem Datenschutzberater:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die notwendigen Ressourcen zur Verfügung stellen;"
+            },
+            {
+              "marke": "b",
+              "text": "Zugang zu allen Auskünften, Unterlagen, Verzeichnissen der Bearbeitungstätigkeiten und Personendaten gewähren, die die Beraterin oder der Berater zur Erfüllung ihrer oder seiner Aufgaben benötigt;"
+            },
+            {
+              "marke": "c",
+              "text": "das Recht einräumen, in wichtigen Fällen das oberste Leitungs- oder Verwaltungsorgan zu informieren."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "5cc747247f2e26c2bff6f567977f6e574ad97cd2a83d6c137dc2b5a983631a2c"
+    },
+    {
+      "id": "bund/DSV/art_24",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Unternehmen und andere privatrechtliche Organisationen, die am 1. Januar eines Jahres weniger als 250 Mitarbeiterinnen und Mitarbeiter beschäftigen, sowie natürliche Personen sind von der Pflicht befreit, ein Verzeichnis der Bearbeitungstätigkeiten zu führen, ausser eine der folgenden Voraussetzungen ist erfüllt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Es werden besonders schützenswerte Personendaten in grossem Umfang bearbeitet."
+            },
+            {
+              "marke": "b",
+              "text": "Es wird ein Profiling mit hohem Risiko durchgeführt."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "f5abca1430d65e73d1d7e193efc3fe7f044612cdd164bcddecbefb15ea8608be"
+    },
+    {
+      "id": "bund/DSV/art_25",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Jedes Bundesorgan ernennt eine Datenschutzberaterin oder einen Datenschutzberater. Mehrere Bundesorgane können gemeinsam eine Datenschutzberaterin oder einen Datenschutzberater ernennen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "178ecb547712f90365690953f02d7c8111b7c880ab15aa3af5e6d9accbfc947d"
+    },
+    {
+      "id": "bund/DSV/art_26",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Datenschutzberaterin oder der Datenschutzberater muss die folgenden Anforderungen erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie oder er verfügt über die erforderlichen Fachkenntnisse."
+            },
+            {
+              "marke": "b",
+              "text": "Sie oder er übt ihre oder seine Funktion gegenüber dem Bundesorgan fachlich unabhängig und weisungsungebunden aus."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er muss folgende Aufgaben wahrnehmen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie oder er wirkt bei der Anwendung der Datenschutzvorschriften mit, indem sie oder er insbesondere: 1. die Bearbeitung von Personendaten prüft und Korrekturmassnahmen empfiehlt, wenn eine Verletzung der Datenschutzvorschriften festgestellt wird,"
+            },
+            {
+              "marke": "2",
+              "text": "den Verantwortlichen bei der Erstellung der Datenschutz-Folgenabschätzung berät und deren Ausführung überprüft."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "a59ded965c4780231a037e21fe0f9d6a8255dadfff7e4b4508925bb016c4b3df"
+    },
+    {
+      "id": "bund/DSV/art_27",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesorgan hat gegenüber der Datenschutzberaterin oder dem Datenschutzberater folgende Pflichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Es gewährt ihr oder ihm Zugang zu allen Auskünften, Unterlagen, Verzeichnissen der Bearbeitungstätigkeiten und Personendaten, die sie oder er zur Erfüllung ihrer oder seiner Aufgaben benötigt."
+            },
+            {
+              "marke": "b",
+              "text": "Es sorgt dafür, dass sie oder er über eine Verletzung der Datensicherheit informiert wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es veröffentlicht die Kontaktdaten der Datenschutzberaterin oder des Datenschutzberaters im Internet und teilt diese dem EDÖB mit."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "8cd22b9c62580cac3662f1e3fa249971c4406ca25e727b65c8e45944771ab92a"
+    },
+    {
+      "id": "bund/DSV/art_28",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Datenschutzberaterin oder der Datenschutzberater dient dem EDÖB als Anlaufstelle für Fragen im Zusammenhang mit der Bearbeitung von Personendaten durch das betreffende Bundesorgan."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "05839d630f218c065dcb81fc09004b7197089a76751b66dd3d2826f96bb82abe"
+    },
+    {
+      "id": "bund/DSV/art_29",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesorgan informiert die Empfängerin oder den Empfänger über die Aktualität, Zuverlässigkeit und Vollständigkeit der von ihm bekanntgegebenen Personendaten, soweit sich diese Informationen nicht aus den Daten selbst oder aus den Umständen ergeben."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "c42090bccd3337c122c89dd8155f93a27f567043cc21642cde1965c8313d0343"
+    },
+    {
+      "id": "bund/DSV/art_30",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist die betroffene Person nicht zur Auskunft verpflichtet, so weist das verantwortliche Bundesorgan sie bei einer systematischen Beschaffung von Personendaten darauf hin."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "dd4e1f00e7aa7ab7726c60aa66d09970ada0d9cccebf1db0a7d7bc83cd068c9f"
+    },
+    {
+      "id": "bund/DSV/art_31",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das verantwortliche Bundesorgan meldet dem EDÖB die geplanten automatisierten Bearbeitungstätigkeiten im Zeitpunkt des Entscheids zur Projektentwicklung oder der Projektfreigabe."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldung muss die Angaben nach Artikel 12 Absatz 2 Buchstaben a–d DSG sowie das voraussichtliche Datum des Beginns der Bearbeitungstätigkeiten enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Der EDÖB nimmt diese Meldung in das Register der Bearbeitungstätigkeiten auf."
+        },
+        {
+          "absatz": "4",
+          "text": "Das verantwortliche Bundesorgan aktualisiert die Meldung beim Übergang in den produktiven Betrieb oder bei der Projekteinstellung."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "70aebc8db04b196c2a571b4b1ce98e8434c9b0157145337d61c2c7e73932081b"
+    },
+    {
+      "id": "bund/DSV/art_32",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Pilotversuch ist unentbehrlich, wenn eine der folgenden Bedingungen erfüllt ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Erfüllung einer Aufgabe erfordert technische Neuerungen, deren Auswirkungen zunächst evaluiert werden müssen."
+            },
+            {
+              "marke": "b",
+              "text": "Die Erfüllung einer Aufgabe erfordert bedeutende organisatorische oder technische Massnahmen, deren Wirksamkeit zunächst geprüft werden muss, insbesondere bei der Zusammenarbeit zwischen Organen des Bundes und der Kantone."
+            },
+            {
+              "marke": "c",
+              "text": "Die Erfüllung einer Aufgabe erfordert, dass die Personendaten im Abrufverfahren zugänglich sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "33b2ea48af49e811ccd7555628da09213d4143236dabbb071237a773618ef5ed"
+    },
+    {
+      "id": "bund/DSV/art_33",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor der Konsultation der interessierten Verwaltungseinheiten legt das für den Pilotversuch zuständige Bundesorgan dar, wie die Einhaltung der Voraussetzungen nach Artikel 35 DSG erfüllt werden soll, und lädt den EDÖB zur Stellungnahme ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB nimmt zur Frage Stellung, ob die Bewilligungsvoraussetzungen nach Artikel 35 DSG erfüllt sind. Das Bundesorgan stellt ihm alle dazu notwendigen Unterlagen zur Verfügung, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine allgemeine Beschreibung des Pilotversuchs;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Bericht, der nachweist, dass die Erfüllung der gesetzlich vorgesehenen Aufgaben eine Bearbeitung nach Artikel 34 Absatz 2 DSG erfordert und dass eine Testphase vor dem Inkrafttreten des Gesetzes im formellen Sinn unentbehrlich ist;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Beschreibung der internen Organisation sowie der Datenbearbeitungs- und Kontrollverfahren;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Beschreibung der Sicherheits- und Datenschutzmassnahmen;"
+            },
+            {
+              "marke": "e",
+              "text": "den Entwurf einer Verordnung, welche die Einzelheiten der Bearbeitung regelt, oder das Konzept einer Verordnung;"
+            },
+            {
+              "marke": "f",
+              "text": "die Planung der verschiedenen Phasen des Pilotversuchs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der EDÖB kann weitere Dokumente anfordern und zusätzliche Abklärungen vornehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Bundesorgan informiert den EDÖB über jede wichtige Änderung, welche die Einhaltung der Voraussetzungen nach Artikel 35 DSG betrifft. Der EDÖB nimmt, falls erforderlich, erneut Stellung."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Stellungnahme des EDÖB ist dem Antrag an den Bundesrat beizufügen."
+        },
+        {
+          "absatz": "6",
+          "text": "Die automatisierte Datenbearbeitung wird in einer Verordnung geregelt."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "936e074d9f09280f207bf747970da5f6fe62c7ef5bc0ace21a49a09a8388cea9"
+    },
+    {
+      "id": "bund/DSV/art_34",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das zuständige Bundesorgan unterbreitet dem EDÖB den Entwurf des Evaluationsberichts an den Bundesrat zur Stellungnahme."
+        },
+        {
+          "absatz": "2",
+          "text": "Es unterbreitet dem Bundesrat den Evaluationsbericht mit der Stellungnahme des EDÖB."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "cfdd8c5804577187cabae7e5d866ef8872af82f6f3c710f95092e0cd2615b92b"
+    },
+    {
+      "id": "bund/DSV/art_35",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Werden Personendaten zu nicht personenbezogenen Zwecken, insbesondere der Forschung, der Planung und der Statistik, und gleichzeitig zu einem anderen Zweck bearbeitet, so sind die Ausnahmen nach Artikel 39 Absatz 2 DSG nur für die Bearbeitung zu den nicht personenbezogenen Zwecken anwendbar."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "564e6cf42a806ddfd61fb550e6a68fedc12957e424ee9be3c563f1fe55eb7e7d"
+    },
+    {
+      "id": "bund/DSV/art_36",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Sitz des EDÖB befindet sich in Bern."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf die Arbeitsverhältnisse der Angestellten des ständigen Sekretariats des EDÖB ist die Bundespersonalgesetzgebung anwendbar. Die Angestellten sind im Rahmen des Vorsorgewerks Bund bei der Pensionskasse des Bundes versichert."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "ac3d95d3d3028d8faa6d4295acb04629d84eba3ad3b4666bf10fb6e7a8cd89ca"
+    },
+    {
+      "id": "bund/DSV/art_37",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der EDÖB kommuniziert mit dem Bundesrat über die Bundeskanzlerin oder den Bundeskanzler. Diese oder dieser leitet die Vorschläge, Stellungnahmen und Berichte unverändert an den Bundesrat weiter."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB reicht Berichte zuhanden der Bundesversammlung über die Parlamentsdienste ein."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "26836ea992013bd3b09df43c709561d6cd9df601bb2976f095d7e71425f6c40a"
+    },
+    {
+      "id": "bund/DSV/art_37_a",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "37_a",
+      "artikelLabel": "Art. 37a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der EDÖB erstattet dem Bundesrat jährlich Bericht über die von ihm abgeschlossenen und geänderten Absichtsabklärungen über seine Zusammenarbeit mit ausländischen Datenschutzbehörden."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_37_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "d253de70ff6bafbb5fae03bc885f101f3ce9ce070348f9fe75f6c8cdb2a2cca8"
+    },
+    {
+      "id": "bund/DSV/art_38",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Departemente und die Bundeskanzlei teilen dem EDÖB im Bereich des Datenschutzes ihre Entscheide in anonymisierter Form sowie ihre Richtlinien mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bundesorgane legen dem EDÖB alle Rechtsetzungsentwürfe vor, welche die Bearbeitung von Personendaten, den Datenschutz sowie den Zugang zu amtlichen Dokumenten betreffen."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "18d158f7f2fc1986df29d293efd58940929f6138fcd3f761e5a861c2d14f4264"
+    },
+    {
+      "id": "bund/DSV/art_39",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der EDÖB kann Personendaten, einschliesslich besonders schützenswerter Personendaten, insbesondere zu folgenden Zwecken bearbeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Ausübung seiner Aufsichtstätigkeiten;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Ausübung seiner Beratungstätigkeiten;"
+            },
+            {
+              "marke": "c",
+              "text": "zur Zusammenarbeit mit Bundesbehörden, kantonalen und ausländischen Behörden;"
+            },
+            {
+              "marke": "d",
+              "text": "zur Aufgabenerfüllung im Rahmen der Strafbestimmungen nach dem DSG;"
+            },
+            {
+              "marke": "e",
+              "text": "zur Durchführung von Schlichtungsverfahren und zum Erlass von Empfehlungen nach dem Öffentlichkeitsgesetz vom 17. Dezember 2004 (BGÖ);"
+            },
+            {
+              "marke": "f",
+              "text": "zur Durchführung von Evaluationen nach dem BGÖ;"
+            },
+            {
+              "marke": "g",
+              "text": "zur Durchführung von Verfahren für den Zugang zu amtlichen Dokumenten nach dem BGÖ;"
+            },
+            {
+              "marke": "h",
+              "text": "zur Information der parlamentarischen Aufsicht;"
+            },
+            {
+              "marke": "i",
+              "text": "zur Information der Öffentlichkeit;"
+            },
+            {
+              "marke": "j",
+              "text": "zur Ausübung seiner Schulungstätigkeiten."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "a3f28546bc531f44433e9693681263c40ec95ed11fe17906fc9f22f936e10c14"
+    },
+    {
+      "id": "bund/DSV/art_40",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der EDÖB erstellt ein Bearbeitungsreglement für sämtliche automatisierten Bearbeitungen; Artikel 6 Absatz 1 ist nicht anwendbar."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "09f05360e21780de3561770abfadac513006b54b617171c546f7f91b9bb0d3a3"
+    },
+    {
+      "id": "bund/DSV/art_41",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB lädt das Bundesamt für Cybersicherheit zur Stellungnahme ein, bevor er anordnet, dass das Bundesorgan die Vorkehren nach Artikel 8 DSG trifft."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "4e52b83f8bc128f01d3e3d4b520b9199be62f12e84d07012d1762a5971adf063"
+    },
+    {
+      "id": "bund/DSV/art_42",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Register der Bearbeitungstätigkeiten der Bundesorgane enthält die von den Bundesorganen gemachten Angaben nach Artikel 12 Absatz 2 DSG sowie nach Artikel 31 Absatz 2 dieser Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist im Internet zu veröffentlichen. Nicht veröffentlicht werden die Registereinträge über geplante automatisierte Bearbeitungstätigkeiten nach Artikel 31."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "11251c1035d3afc8f31c96b11dc6337af8aa8ba6c3c2477b57d0e2607a1b1e2a"
+    },
+    {
+      "id": "bund/DSV/art_43",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird dem EDÖB ein Verhaltenskodex vorgelegt, so teilt dieser in seiner Stellungnahme mit, ob der Verhaltenskodex die Voraussetzungen nach Artikel 22 Absatz 5 Buchstaben a und b DSG erfüllt."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "57203008bbe511a8a270f7ebda74451d9a5c352a0138f0906c410a6bb47f4e42"
+    },
+    {
+      "id": "bund/DSV/art_44",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vom EDÖB in Rechnung gestellten Gebühren bemessen sich nach dem Zeitaufwand."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gilt ein Stundenansatz von 150 bis 250 Franken, je nach Funktion des ausführenden Personals."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Dienstleistungen von aussergewöhnlichem Umfang, besonderer Schwierigkeit oder Dringlichkeit können Zuschläge bis zu 50 Prozent der Gebühr nach Absatz 2 erhoben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann die Dienstleistung des EDÖB von der gebührenpflichtigen Person zu kommerziellen Zwecken weiterverwendet werden, so können Zuschläge bis zu 100 Prozent der Gebühr nach Absatz 2 erhoben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Im Übrigen gilt die Allgemeine Gebührenverordnung vom 8. September 2004."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "f290a02c576ee78d7df3174338c917df0ee81cedcdf7c3f385bd5174848a5208"
+    },
+    {
+      "id": "bund/DSV/art_45",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufhebung und die Änderung anderer Erlasse werden in Anhang 2 geregelt."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "e8ff0c8819d0982ab678deadac454977f655a5d0ccad6f6598308333571cd583"
+    },
+    {
+      "id": "bund/DSV/art_46",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei automatisierten Bearbeitungen von Personendaten, die vor Inkrafttreten der Änderung vom 29. Oktober 2025 geplant oder begonnen wurden, muss die Prüfung der Protokollierung nach Artikel 4 Absatz 2 bis am 31. Dezember 2026 vorgenommen werden. Erweist sich eine Protokollierung als nötig, so muss diese bis am 31. Dezember 2029 implementiert werden. Ausgenommen sind die automatisierte Bearbeitung von besonders schützenswerten Personendaten, die Durchführung von Profilings und automatisierte Datenbearbeitungen, die in den Anwendungsbereich der Richtlinie (EU) 2016/680 fallen."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 8 Absatz 5 gilt nicht für Beurteilungen, die vor dem Inkrafttreten dieser Verordnung durchgeführt wurden."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 31 gilt nicht für geplante automatisierte Bearbeitungstätigkeiten, bei welchen im Zeitpunkt des Inkrafttretens dieser Verordnung die Projektfreigabe oder der Entscheid zur Projektentwicklung bereits erfolgt ist."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "5e3480b6e089080467c83e8ea333cb889259fbf577293f56bc234e50ca00e519"
+    },
+    {
+      "id": "bund/DSV/art_47",
+      "ebene": "bund",
+      "quelle": "DSV",
+      "erlass": "DSV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. September 2023 in Kraft."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2022/568/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20251201",
+      "sha": "d6a324c6c9eff495fd6c680d53f26f28edeb4d35e23cdc0b63f8b18503303264"
+    }
+  ]
+}

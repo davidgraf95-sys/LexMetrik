@@ -1,0 +1,710 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/VGKE/art_1",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Verfahren vor dem Bundesverwaltungsgericht (Gericht) setzen sich zusammen aus der Gerichtsgebühr und den Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit der Gerichtsgebühr sind die Kosten für das Kopieren von Rechtsschriften und der für Dienstleistungen normalerweise anfallende Verwaltungsaufwand wie Personal-, Raum- und Materialkosten sowie Post-, Telefon- und Telefaxspesen abgegolten."
+        },
+        {
+          "absatz": "3",
+          "text": "Auslagen sind insbesondere die Kosten für Übersetzungen und für die Beweis­erhebung. Die Kosten für Übersetzungen werden nicht verrechnet, wenn es sich um Übersetzungen zwischen Amtssprachen handelt."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "6e42e35d0e6d7197d34c5cde1b41aba93340b037b1fed8535ac6eaeda5b745e7"
+    },
+    {
+      "id": "bund/VGKE/art_2",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsgebühr bemisst sich nach Umfang und Schwierigkeit der Streitsache, Art der Prozessführung und finanzieller Lage der Parteien. Vorbehalten bleiben spezialgesetzliche Kostenregelungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gericht kann bei der Bestimmung der Gerichtsgebühr über die Höchstbeträge nach den Artikeln 3 und 4 hinausgehen, wenn besondere Gründe, namentlich mutwillige Prozessführung oder ausserordentlicher Aufwand, es rechtfertigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei wenig aufwändigen Entscheiden über vorsorgliche Massnahmen, Ausstand, Wiederherstellung der Frist, Revision oder Erläuterung sowie bei Beschwerden gegen Zwischenentscheide kann die Gerichtsgebühr herabgesetzt werden. Der Mindestbetrag nach Artikel 3 oder 4 darf nicht unterschritten werden."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "82b0bdca8134fa351d9528d684478913ad984c201efbf9953488312639b7c730"
+    },
+    {
+      "id": "bund/VGKE/art_3",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Streitigkeiten ohne Vermögensinteresse beträgt die Gerichtsgebühr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einzelrichterlicher Streiterledigung: 200–3000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Fällen: 200–5000 Franken."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "5023d039c69ceb5911269c7bd1b463340b4e0e0729bec2f932fd3cb959a30117"
+    },
+    {
+      "id": "bund/VGKE/art_4",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "zeilen": [
+              [
+                "Streitwert in Franken",
+                "Gebühr in Franken"
+              ],
+              [
+                "0",
+                "–",
+                "010 000",
+                "",
+                "200– 5 000"
+              ],
+              [
+                "10 000",
+                "–",
+                "020 000",
+                "",
+                "500– 5 000"
+              ],
+              [
+                "20 000",
+                "–",
+                "50 000",
+                "",
+                "1 000– 5 000"
+              ],
+              [
+                "50 000",
+                "–",
+                "100 000",
+                "",
+                "1 500– 7 000"
+              ],
+              [
+                "100 000",
+                "–",
+                "200 000",
+                "",
+                "2 000–10 000"
+              ],
+              [
+                "200 000",
+                "–",
+                "500 000",
+                "",
+                "3 000–14 000"
+              ],
+              [
+                "500 000",
+                "–",
+                "1 000 000",
+                "",
+                "5 000–20 000"
+              ],
+              [
+                "1 000 000",
+                "–",
+                "5 000 000",
+                "",
+                "7 000–40 000"
+              ],
+              [
+                "über 5 000 000",
+                "",
+                "15 000–50 000"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "ae19d3ba9c0e299426c321ce1344197647a8baa31bb1ee0b5b6cd75f41e492d1"
+    },
+    {
+      "id": "bund/VGKE/art_5",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird ein Verfahren gegenstandslos, so werden die Verfahrenskosten in der Regel jener Partei auferlegt, deren Verhalten die Gegenstandslosigkeit bewirkt hat. Ist das Verfahren ohne Zutun der Parteien gegenstandslos geworden, so werden die Kosten auf Grund der Sachlage vor Eintritt des Erledigungsgrunds festgelegt."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "a8e5301a89cf0917aa8d7746ff655748ae35490b2f55d9c49e3a5561d2388d5b"
+    },
+    {
+      "id": "bund/VGKE/art_6",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verfahrenskosten können einer Partei, der keine unentgeltliche Rechtspflege im Sinne von Artikel 65 des Bundesgesetzes vom 20. Dezember 1968 über das Verwaltungsverfahren gewährt wird, ganz oder teilweise erlassen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein Rechtsmittel ohne erheblichen Aufwand für das Gericht durch Rückzug oder Vergleich erledigt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "andere Gründe in der Sache oder in der Person der Partei es als unverhält­nismässig erscheinen lassen, sie ihr aufzuerlegen."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "9a8e6c9bbb0212105a34a617aeaa95fe7c1e0818483f7b34a9a54bba3a5b257d"
+    },
+    {
+      "id": "bund/VGKE/art_6_a",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mehrere Personen haben die ihnen gemeinsam auferlegten Verfahrenskosten, wenn nichts anderes bestimmt ist, zu gleichen Teilen und unter solidarischer Haftung zu tragen."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "16285fd164f2e7743e3a65b91cc2bdf04808c95c3f66fe2163758b07b24ab81f"
+    },
+    {
+      "id": "bund/VGKE/art_7",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Obsiegende Parteien haben Anspruch auf eine Parteientschädigung für die ihnen erwachsenen notwendigen Kosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Obsiegt die Partei nur teilweise, so ist die Parteientschädigung entsprechend zu kürzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Keinen Anspruch auf Parteientschädigung haben Bundesbehörden und, in der Regel, andere Behörden, die als Parteien auftreten."
+        },
+        {
+          "absatz": "4",
+          "text": "Sind die Kosten verhältnismässig gering, so kann von einer Parteientschädigung abgesehen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Artikel 6 a ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "6c71e3b600e69cfab8ec30969696f255624e69d14ab424935c5ae58b4622983a"
+    },
+    {
+      "id": "bund/VGKE/art_8",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteientschädigung umfasst die Kosten der Vertretung sowie allfällige weitere Auslagen der Partei."
+        },
+        {
+          "absatz": "2",
+          "text": "Unnötiger Aufwand wird nicht entschädigt."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "c630cbe202987cbfcd095515a67c254582d688f1cdb9b8f885f4081a95d2628c"
+    },
+    {
+      "id": "bund/VGKE/art_9",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Vertretung umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Anwaltshonorar oder die Entschädigung für eine nichtanwaltliche berufs­­mässige Vertretung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Auslagen, namentlich die Kosten für das Kopieren von Schriftstücken, die Reise-, Verpflegungs- und Unterkunftskosten, die Porti und die Telefonspesen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Mehrwertsteuer für die Entschädigungen nach den Buchstaben a und b, soweit eine Steuerpflicht besteht und die Mehrwertsteuer nicht bereits berücksichtigt wurde."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Entschädigung ist geschuldet, wenn der Vertreter oder die Vertreterin in einem Arbeitsverhältnis zur Partei steht."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "8a62367a2d837d54b715932a6e2a3c73b32ea8ad73f09856638966679aa90cc5"
+    },
+    {
+      "id": "bund/VGKE/art_10",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Anwaltshonorar und die Entschädigung für eine nichtanwaltliche berufsmäs­sige Vertretung werden nach dem notwendigen Zeitaufwand des Vertreters oder der Vertreterin bemessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Stundenansatz beträgt für Anwälte und Anwältinnen mindestens 200 und höchstens 400 Franken, für nichtanwaltliche Vertreter und Vertreterinnen mindestens 100 und höchstens 300 Franken. In diesen Stundenansätzen ist die Mehr­wertsteuer nicht enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Streitigkeiten mit Vermögensinteresse kann das Anwaltshonorar oder die Entschädigung für eine nichtanwaltliche berufsmässige Vertretung angemessen erhöht werden."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "931414301050c54ecbbf3bcb0ead69c441ac75488e7f643ea4fb0de91a7b831d"
+    },
+    {
+      "id": "bund/VGKE/art_11",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Spesen werden aufgrund der tatsächlichen Kosten ausbezahlt. Dabei werden höchstens vergütet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Reisen: die Kosten für die Benützung der öffentlichen Verkehrsmittel in der ersten Klasse;"
+            },
+            {
+              "marke": "b",
+              "text": "für Flugreisen aus dem Ausland: ein kostengünstiges Arrangement der Economy-Klasse;"
+            },
+            {
+              "marke": "c",
+              "text": "für Mittag- und Nachtessen: je 25 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "für Übernachtungen einschliesslich Frühstück: 170 Franken pro Nacht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Anstelle der Bahnkosten kann ausnahmsweise, insbesondere bei erheblicher Zeitersparnis, für die Benutzung des privaten Motorfahrzeuges eine Entschädigung ausgerichtet werden. Der Kilometeransatz richtet sich nach Artikel 46 der Verordnung des EFD vom 6. Dezember 2001 zur Bundespersonalverordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Anstelle der tatsächlichen Kosten nach den Absätzen 1 und 2 kann ein angemessener Pauschalbetrag vergütet werden, wenn besondere Verhältnisse es rechtfertigen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Kopien können 50 Rappen pro Seite berechnet werden."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "3cbc102878b35b117302d836831cdaa78718773a8867e4a26ce7fb6b3cd68e0e"
+    },
+    {
+      "id": "bund/VGKE/art_12",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für amtlich bestellte Anwältinnen und Anwälte sind die Artikel 8‒11 sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "c52b945dc83ee97bebbfbfdf643297c42a5d61af3da601cf7d725c7dc792efb0"
+    },
+    {
+      "id": "bund/VGKE/art_13",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als weitere notwendige Auslagen der Partei werden ersetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Spesen der Partei im Umfang von Artikel 11 Absätze 1–4, soweit sie 100 Franken übersteigen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Verdienstausfall der Partei, soweit er einen Tagesverdienst übersteigt und die Partei in bescheidenen finanziellen Verhältnissen lebt."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "580020cf92f1f017fb76c045c72d02a33a73e14b82a6cb0a0b2ac6290b271f8b"
+    },
+    {
+      "id": "bund/VGKE/art_14",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien, die Anspruch auf Parteientschädigung erheben, und die amtlich bestellten Anwälte und Anwältinnen haben dem Gericht vor dem Entscheid eine detaillierte Kostennote einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gericht setzt die Parteientschädigung und die Entschädigung für die amtlich bestellten Anwälte und Anwältinnen auf Grund der Kostennote fest. Wird keine Kostennote eingereicht, so setzt das Gericht die Entschädigung auf Grund der Akten fest."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "4c7b5e481360c9a4f23cd6b7a31e7f967969a89a596d2e8dac5d82b79649f27f"
+    },
+    {
+      "id": "bund/VGKE/art_15",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird ein Verfahren gegenstandslos, so prüft das Gericht, ob eine Parteientschädigung zuzusprechen ist. Für die Festsetzung der Parteientschädigung gilt Artikel 5 sinngemäss."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "07905f9e8ab1f14e6971d7c1b5c7a40c1750f4b7ef20f530f54e2675df96cb91"
+    },
+    {
+      "id": "bund/VGKE/art_16",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zeugen und Zeuginnen haben Anspruch auf ein Zeugengeld und auf Ersatz der belegten notwendigen Auslagen."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "c044da590b2b00e50524dd6e692ba5f40905dbc59729be02278647c6649a1dbd"
+    },
+    {
+      "id": "bund/VGKE/art_17",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeugen und Zeuginnen erhalten ein Zeugengeld von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "30–100 Franken, wenn die Inanspruchnahme einschliesslich der notwendigen Reisezeit nicht länger als einen halben Tag dauert;"
+            },
+            {
+              "marke": "b",
+              "text": "50–150 Franken pro Tag, wenn die Inanspruchnahme länger dauert."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Erwerbsausfall beträgt die Entschädigung in der Regel 25–150 Franken pro Stunde. Wenn besondere Verhältnisse es rechtfertigen, kann der tatsächliche Erwerbsausfall entschädigt werden. Ausserordentlich hoher Erwerbsausfall wird nicht berücksichtigt."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "c63cd94a59ad5434d5356afcd0e23deaa8f5196e4dca3ca3a1de51503c48bd88"
+    },
+    {
+      "id": "bund/VGKE/art_18",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung für Spesen richtet sich nach Artikel 11 Absätze 1–3."
+        },
+        {
+          "absatz": "2",
+          "text": "Muss ein Zeuge oder eine Zeugin wegen Krankheit, Gebrechens, Alters oder anderer Gründe ein besonderes Transportmittel in Anspruch nehmen, so sind die dafür erforderlichen Auslagen zu ersetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Muss ein Zeuge oder eine Zeugin wegen besonderer Umstände begleitet werden, so hat die Begleitung Anspruch auf die gleiche Entschädigung wie Zeugen und Zeuginnen."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "0c0478e94833e8c9d906e5e68d2197c66d205a9b8bf26d27dcc3a5040724cd17"
+    },
+    {
+      "id": "bund/VGKE/art_19",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auskunftspersonen oder andere Dritte, die von Beweismassnahmen betroffen sind, werden wie Zeugen und Zeuginnen entschädigt."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "3d6012ea4a05fa19831f566a1f6146fb5bbc3085a51e17690b0273ef182824d3"
+    },
+    {
+      "id": "bund/VGKE/art_20",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vom Gericht beauftragte Sachverständige werden nach Aufwand entschädigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Ansatz richtet sich nach den erforderlichen Fachkenntnissen und der Schwierigkeit der Leistung, bei freiberuflich tätigen Sachverständigen in der Regel nach den branchenüblichen Ansätzen oder nach Vereinbarung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entschädigung wird auf Grund der von der sachverständigen Person eingereichten Kostennote festgesetzt."
+        },
+        {
+          "absatz": "4",
+          "text": "Besteht eine Steuerpflicht, so wird die Mehrwertsteuer zusätzlich zu den Entschädigungen vergütet."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Gericht kann vor Erteilung des Gutachterauftrags einen Kostenvoranschlag verlangen."
+        },
+        {
+          "absatz": "6",
+          "text": "Ist nichts anderes vereinbart, so richtet sich die Entschädigung für Auslagen und Spesen nach Artikel 11."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "95044c49f432389f7bbbd59765b27ab2b249c5d7f45076ff34967f866a5bb5af"
+    },
+    {
+      "id": "bund/VGKE/art_21",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dolmetscher und Dolmetscherinnen werden in der Regel mit 60–120 Franken pro Stunde entschädigt. Der Ansatz richtet sich nach der Ausbildung und der beruflichen Erfahrung."
+        },
+        {
+          "absatz": "2",
+          "text": "Übersetzer und Übersetzerinnen werden nach den branchenüblichen Ansätzen entschädigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Besteht eine Steuerpflicht, so wird die Mehrwertsteuer zusätzlich zu den Entschädigungen vergütet."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist nichts anderes vereinbart, so richtet sich die Entschädigung für Auslagen und Spesen nach Artikel 11."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "579df8720cc604f7e08d961cec7b9f41d06ec7d0a6232c9cfd0a73390a1ceea1"
+    },
+    {
+      "id": "bund/VGKE/art_22",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Reglement vom 11. Dezember 2006 16 über Kosten und Entschädigungen vor dem Bundesverwaltungsgericht wird aufgehoben."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "f7b655dd1b7a1ccc0a321fefaaa329989d97cb5d739dc82e6e5a255d62e376ca"
+    },
+    {
+      "id": "bund/VGKE/art_23",
+      "ebene": "bund",
+      "quelle": "VGKE",
+      "erlass": "VGKE",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dieses Reglement tritt am 1. Juni 2008 in Kraft."
+        }
+      ],
+      "stand": "2010-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2008/321/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20100401",
+      "sha": "03798fa12ef12d17a1a1694be60bb9749ddff87e760481dca0e7df277046b009"
+    }
+  ]
+}

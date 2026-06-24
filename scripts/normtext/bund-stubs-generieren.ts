@@ -47,22 +47,9 @@ const LISTE: Array<[string, string, Rechtsgebiet]> = [
   ['784.10', 'FMG', 'oeffentlich'],
   ['510.10', 'MG', 'oeffentlich'],
   // ── Wichtige Verordnungen (Ausführungsrecht zu den Leitgesetzen) ──
-  ['831.101', 'AHVV', 'sozial-abgaben'],
-  ['831.201', 'IVV', 'sozial-abgaben'],
-  ['831.301', 'ELV', 'sozial-abgaben'],
-  ['831.441.1', 'BVV 2', 'sozial-abgaben'],
-  ['832.202', 'UVV', 'sozial-abgaben'],
-  ['837.02', 'AVIV', 'sozial-abgaben'],
-  ['830.11', 'ATSV', 'sozial-abgaben'],
-  ['832.112.31', 'KLV', 'sozial-abgaben'],
-  ['641.201', 'MWSTV', 'sozial-abgaben'],
-  ['642.211', 'VStV', 'sozial-abgaben'],
-  ['142.201', 'VZAE', 'oeffentlich'],
-  ['741.11', 'VRV', 'oeffentlich'],
-  ['741.51', 'VZV', 'oeffentlich'],
-  ['741.21', 'SSV', 'oeffentlich'],
+  // (AHVV/IVV/ELV/BVV 2/UVV/AVIV/ATSV/KLV/MWSTV/VStV/VZAE/VRV/VZV/SSV/DSV →
+  //  Volltext-Snapshot Punkt 12 Batch 2 (24.6.2026), im ERLASS_REGISTER.)
   ['211.112.2', 'ZStV', 'privat'],
-  ['235.11', 'DSV', 'oeffentlich'],
   // Völker- & Europarecht → Rubrik «International» (rechtsgebiet 'international').
   // Staatsverträge SR 0.* — Titel/ELI/Stand verifiziert via Fedlex-SPARQL (§7).
   ['0.101', 'EMRK', 'international'],            // Europäische Menschenrechtskonvention

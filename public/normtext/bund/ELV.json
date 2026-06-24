@@ -1,0 +1,2945 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/ELV/art_1",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hält sich eine Person ohne wichtigen Grund ununterbrochen mehr als drei Monate (90 Tage) oder in einem Kalenderjahr insgesamt mehr als 90 Tage im Ausland auf, so werden die Ergänzungsleistungen rückwirkend auf den Beginn des Monats eingestellt, in dem die Person den 91. Tag im Ausland verbracht hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Begibt sich eine Person in einem Kalenderjahr, in dem sie bereits mindestens 90 Tage im Ausland verbracht hat, erneut ins Ausland, so werden die Ergänzungsleistungen auf den Beginn des Monats eingestellt, in dem die Person die Schweiz erneut verlassen hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Ergänzungsleistungen werden ab dem Monat wieder ausgerichtet, der auf die Rückkehr in die Schweiz folgt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Tage der Ein- und Ausreise gelten nicht als Auslandaufenthalt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4b67317c059e2470110e695b252ad95d0fb1a3d025693ab5f117fa5551035920"
+    },
+    {
+      "id": "bund/ELV/art_1_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hält sich eine Person aus einem wichtigen Grund mehr als ein Jahr im Ausland auf, so werden die Ergänzungsleistungen auf das Ende des Monats eingestellt, in dem die Person den 365. Tag im Ausland verbracht hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ergänzungsleistungen werden ab dem Monat wieder ausgerichtet, in dem die Person in die Schweiz zurückkehrt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Tage der Ein- und Ausreise gelten nicht als Auslandaufenthalt."
+        },
+        {
+          "absatz": "4",
+          "text": "Als wichtige Gründe gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Ausbildung im Sinne von Artikel 49 bis der Verordnung vom 31. Oktober 1947 über die Alters- und Hinterlassenenversicherung (AHVV), die einen Auslandaufenthalt zwingend erfordert;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Krankheit oder ein Unfall der Bezügerin oder des Bezügers oder einer angehörigen Person nach Artikel 29 septies des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG), die den Auslandaufenthalt zusammen mit der Bezügerin oder dem Bezüger angetreten hat, wenn dadurch eine Rückkehr in die Schweiz unmöglich ist;"
+            },
+            {
+              "marke": "c",
+              "text": "die Verhinderung der Rückkehr in die Schweiz durch höhere Gewalt."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Wird ein Auslandaufenthalt fortgesetzt, obwohl der wichtige Grund dafür weggefallen ist, so gelten die weiteren Aufenthaltstage im Ausland als Auslandaufenthalt ohne wichtigen Grund."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_1_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "59503e5644c26ce873052b0b2419f823bc8a7526b2dd6c65e4d40c82dce38f64"
+    },
+    {
+      "id": "bund/ELV/art_1_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "1_b",
+      "artikelLabel": "Art. 1b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Hält sich eine Person während der Dauer der Karenzfrist aus einem Grund nach Artikel 1 a Absatz 4 im Ausland auf, so wird die Karenzfrist erst unterbrochen, nachdem die Person den 365. Tag im Ausland verbracht hat. Artikel 1 a Absatz 5 ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_1_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "66b778c0278a32e415c977703c4e70dba15f2fec1f8872f4c13ae6f91df8c304"
+    },
+    {
+      "id": "bund/ELV/art_2",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist eine Liegenschaft, die nach Artikel 9 a Absatz 2 ELG nicht Bestandteil des Reinvermögens ist, mit Hypothekarschulden belastet, so bleiben diese bei der Ermittlung des Reinvermögens für die Vermögensschwelle nach Artikel 9 a Absatz 1 ELG ausser Acht."
+        },
+        {
+          "absatz": "2",
+          "text": "Meldet sich eine Person für eine jährliche Ergänzungsleistung an, ist für den Anspruch das Vermögen massgebend, das am ersten Tag des Monats vorhanden ist, ab dem die Ergänzungsleistung beansprucht wird."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e5f3bf88c15eff00167e88250ffbddce516a8effd29dc110bb9a9a76cd0df8f7"
+    },
+    {
+      "id": "bund/ELV/art_3",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird beiden Ehegatten eine Rente der Alters-, Hinterlassenen- oder Invalidenversicherung oder einem Ehegatten gestützt auf Artikel 22 bis Absatz 2 des Bundesgesetzes vom 20. Dezember 1946 über die Alters- und Hinterlassenenversicherung (AHVG) eine Zusatzrente ausbezahlt, so hat bei Trennung der Ehe jeder Ehegatte einen eigenen Anspruch auf Ergänzungsleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ehegatten, die weder rentenberechtigt sind noch einen Anspruch auf Auszahlung der Zusatzrente der Alters- und Hinterlassenenversicherung begründen, haben bei Trennung der Ehe keinen Anspruch auf Ergänzungsleistungen."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Als getrennt lebend gelten im Sinne der Absätze 1 und 2 Ehegatten, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ehe gerichtlich getrennt ist, oder"
+            },
+            {
+              "marke": "b",
+              "text": "eine Scheidungs- oder Trennungsklage anhängig ist, oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine tatsächliche Trennung mindestens ein Jahr ohne Unterbruch gedauert hat, oder"
+            },
+            {
+              "marke": "d",
+              "text": "glaubhaft gemacht wird, dass eine tatsächliche Trennung längere Zeit dauern wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "dd90b2ccbcb63f475c540ecd50eb21149c0fb36d33cbf92b64e4601ce13575fa"
+    },
+    {
+      "id": "bund/ELV/art_3_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Ehepaaren, von denen mindestens ein Ehegatte dauernd oder für längere Zeit in einem Heim oder Spital lebt, wird die jährliche Ergänzungsleistung für jeden Ehegatten nach den Artikeln 4 und 5 gesondert berechnet ."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_3_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9271224ca04b284ddf2be08a7fd52c088cdc05e679f4e5e515ec7f73918fbcae"
+    },
+    {
+      "id": "bund/ELV/art_4",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die anrechenbaren Einnahmen der beiden Ehegatten werden zusammengerechnet. Der Totalbetrag wird anschliessend hälftig auf die Ehegatten aufgeteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Freibeträge gelten die Werte für Ehepaare."
+        },
+        {
+          "absatz": "3",
+          "text": "Lebt nur einer der Ehegatten im Heim oder Spital, so ist Artikel 11 Absatz 2 ELG nur für diesen Ehegatten anwendbar."
+        },
+        {
+          "absatz": "4",
+          "text": "Von der Zusammenrechnung und hälftigen Aufteilung ausgenommen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leistungen der Kranken- und Unfallversicherung an den Heim- oder Spitalaufenthalt;"
+            },
+            {
+              "marke": "b",
+              "text": "Hilflosenentschädigungen, die nach Artikel 15 b angerechnet werden können;"
+            },
+            {
+              "marke": "c",
+              "text": "der Mietwert der von einem Ehegatten bewohnten Liegenschaft;"
+            },
+            {
+              "marke": "d",
+              "text": "der Vermögensverzehr."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Einnahmen nach Absatz 4 werden demjenigen Ehegatten zugerechnet, den sie betreffen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "5278eb665346456e289787d09ae9606f88259e93b18e3133cd9cba9e1f1e676e"
+    },
+    {
+      "id": "bund/ELV/art_5",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die anerkannten Ausgaben werden demjenigen Ehegatten zugerechnet, den sie betreffen. Betrifft eine Ausgabe beide Ehegatten, so wird sie je hälftig angerechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Ehegatten, der nicht im Heim oder Spital lebt, werden die Mietzinsausgaben für Alleinstehende berücksichtigt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e601cb582e292775aef70ce8cebbe079ee45e2c6e3d7448c769d5c6c747f9914"
+    },
+    {
+      "id": "bund/ELV/art_6",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jährliche Ergänzungsleistung für rentenberechtigte Hinterlassene wird wie folgt berechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Für die zusammenlebenden rentenberechtigten Hinterlassenen erfolgt eine gemeinsame Berechnung."
+            },
+            {
+              "marke": "b",
+              "text": "Leben die rentenberechtigten Hinterlassenen getrennt, so ist die Ergänzungsleistung gesondert zu berechnen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer eigenen Berechnung für Waisen ist das Einkommen von Vater oder Mutter nebst allfälligen Unterstützungsleistungen des Stiefvaters oder der Stiefmutter zu berücksichtigen, soweit es deren eigenen Unterhalt und den der übrigen unterhaltsberechtigten Familienangehörigen übersteigt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6e0b86049e75cabc65e18f7c6f396e9467f705bd69b670e31a94ec9092158c62"
+    },
+    {
+      "id": "bund/ELV/art_7",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jährliche Ergänzungsleistung für Kinder, die einen Anspruch auf eine Kinderrente der Alters- und Hinterlassenenversicherung (AHV) oder der Invalidenversicherung (IV) begründen, wird wie folgt berechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leben die Kinder mit den Eltern zusammen, erfolgt eine gemeinsame Berechnung der Ergänzungsleistung."
+            },
+            {
+              "marke": "b",
+              "text": "Leben die Kinder nur mit einem Elternteil zusammen, der rentenberechtigt ist oder für den Anspruch auf eine Zusatzrente der AHV besteht, so wird die Ergänzungsleistung zusammen mit diesem Elternteil festgelegt."
+            },
+            {
+              "marke": "c",
+              "text": "Lebt das Kind nicht bei den Eltern oder lebt es bei einem Elternteil, der nicht rentenberechtigt ist und für den auch kein Anspruch auf eine Zusatzrente besteht, so ist die Ergänzungsleistung gesondert zu berechnen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einer Berechnung nach Absatz 1 Buchstaben b und c ist das Einkommen der Eltern soweit zu berücksichtigen, als es deren eigenen Unterhalt und den der übrigen unterhaltsberechtigten Familienangehörigen übersteigt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bbd1138421bf9f7370c8c30e8e5208aa16280a58f771911e74b743db5bb2fd1b"
+    },
+    {
+      "id": "bund/ELV/art_8",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Minderjährige Kinder, die weder Anspruch auf eine Waisenrente haben noch Anspruch auf eine Kinderrente der AHV oder der IV begründen, fallen mit ihren vom Gesetz anerkannten Ausgaben und anrechenbaren Einnahmen und ihrem Vermögen bei der Berechnung der jährlichen Ergänzungsleistung ausser Betracht."
+        },
+        {
+          "absatz": "2",
+          "text": "Kinder, die einen Anspruch auf eine Waisenrente haben oder einen Anspruch auf eine Kinderrente der AHV oder der IV begründen und deren anrechenbare Einnahmen die anerkannten Ausgaben erreichen oder übersteigen, fallen nach Artikel 9 Absatz 4 ELG bei der Berechnung der jährlichen Ergänzungsleistung ausser Betracht. Um festzustellen, welche Kinder bei der Berechnung der jährlichen Ergänzungsleistung ausser Betracht fallen, sind die anrechenbaren Einnahmen und die anerkannten Ausgaben einschliesslich des Betrages für die obligatorische Krankenpflegeversicherung nach Artikel 10 Absatz 3 Buchstabe d ELG der Kinder, auf die dies zutreffen könnte, einander gegenüberzustellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4943174ed7b354855a9711532e861dbac01e7689ba03cfced5fd4beb860b499d"
+    },
+    {
+      "id": "bund/ELV/art_9",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rentenberechtigte Familienglieder, die in einem andern Kanton wohnhaft sind, fallen bei der Zusammenrechnung der anerkannten Ausgaben und anrechenbaren Einnahmen ausser Betracht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "860933a8e559541ae699fc953c6c61122c1e0ad153d1476250280399d82ef952"
+    },
+    {
+      "id": "bund/ELV/art_10",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Hält sich einer der Ehegatten oder ein anderes Familienglied längere Zeit im Ausland auf oder ist sein Aufenthaltsort unbekannt, so fällt es bei der Bemessung der Ergänzungsleistung ausser Betracht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4e31c43dbee3d03af3451334c01912a476aad3a5e9d861b6e6316a81bf232173"
+    },
+    {
+      "id": "bund/ELV/art_10_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Durchführungsstellen prüfen von Amtes wegen, ob bei einer Person, die Überbrückungsleistungen nach dem Bundesgesetz vom 19. Juni 2020 über Überbrückungsleistungen für ältere Arbeitslose bezieht, auf den Zeitpunkt des Erreichens des Referenzalters nach Artikel 21 Absatz 1 AHVG hin ein Anspruch auf Ergänzungsleistungen absehbar ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_10_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6486ca3448f3a53e939b24e6b50a9ec96d1d9a94ee1576881ca7abf6cfac35c3"
+    },
+    {
+      "id": "bund/ELV/art_11",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Naturaleinkommen wird gemäss den für die Alters- und Hinterlassenenversicherung geltenden Vorschriften bewertet. Bei Kindern, die der Beitragspflicht nach AHVG nicht unterliegen, sind für die Bewertung von Verpflegung und Unterkunft die halben Ansätze nach Artikel 11 AHVV massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "72890653cba43b22a39933c2ec23348712785437f78e62eb856805138d1761a0"
+    },
+    {
+      "id": "bund/ELV/art_11_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das jährliche Erwerbseinkommen wird ermittelt, indem vom Bruttoerwerbseinkommen die ausgewiesenen Gewinnungskosten sowie die einkommensabhängigen obligatorischen Sozialversicherungsbeiträge abgezogen werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "5cc21483d45b8d22b4c5dce9ade87408d4ae1028afe26126b379a65690b773b2"
+    },
+    {
+      "id": "bund/ELV/art_12",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Bemessung des Mietwertes der vom Eigentümer oder Nutzniesser bewohnten Wohnung sowie des Einkommens aus Untermiete sind die Grundsätze der Gesetzgebung über die direkte kantonale Steuer im Wohnsitzkanton massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "Fehlen solche Grundsätze, sind diejenigen über die direkte Bundessteuer massgebend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6b564b5d2e9770c0c5197152c568e2f13728a3d3f41fba173b8cd97c9af28aa2"
+    },
+    {
+      "id": "bund/ELV/art_13",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Versicherten, die als Pfrundnehmer vollen Lebensunterhalt und Pflege beanspruchen können, wird keine Ergänzungsleistung ausgerichtet, es sei denn, es werde der Nachweis erbracht, dass der Pfrundgeber die geschuldete Leistung nicht zu erbringen vermag oder der geleistete Lebensunterhalt nach den ortsüblichen Verhältnissen als besonders bescheiden zu betrachten ist. Vorbehalten bleibt Absatz 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Stehen die Leistungen des Pfrundgebers in einem offensichtlichen Missverhältnis zu der Leistung des Pfründers, so sind diesem die dem Wert des abgetretenen Vermögens entsprechenden Gegenleistungen anzurechnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die in den Absätzen 1 und 2 enthaltenen Vorschriften sind auch für verpfründungsähnliche Verhältnisse anzuwenden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6fe41e958fb4a58a075bfb24a51ede6a37e3de0ccc1c8743651e6703771add0e"
+    },
+    {
+      "id": "bund/ELV/art_14",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_14_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Invaliden wird als Erwerbseinkommen grundsätzlich der Betrag angerechnet, den sie im massgebenden Zeitabschnitt tatsächlich verdient haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Invaliden unter 60 Jahren ist als Erwerbseinkommen jedoch mindestens anzurechnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der um einen Drittel erhöhte Höchstbetrag für den Lebensbedarf von Alleinstehenden nach Artikel 10 Absatz 1 Buchstabe a Ziffer 1 ELG bei einem Invaliditätsgrad von 40 bis unter 50 Prozent;"
+            },
+            {
+              "marke": "b",
+              "text": "der Höchstbetrag für den Lebensbedarf nach Buchstabe a bei einem Invaliditätsgrad von 50 bis unter 60 Prozent;"
+            },
+            {
+              "marke": "c",
+              "text": "zwei Drittel des Höchstbetrages für den Lebensbedarf nach Buchstabe a bei einem Invaliditätsgrad von 60 bis unter 70 Prozent."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 ist nicht anwendbar, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Invalidität von Nichterwerbstätigen aufgrund von Artikel 28 a Absatz 2 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung (IVG) festgelegt wurde; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Invalide in einer Werkstätte im Sinne von Artikel 3 Absatz 1 Buchstabe a des Bundesgesetzes vom 6. Oktober 2006 über die Institutionen zur Förderung der Eingliederung von invaliden Personen (IFEG) arbeitet."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_14_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c6a3b9a25efcd758339156231326ea92947dd467bf5cbd1089e7351b89146e90"
+    },
+    {
+      "id": "bund/ELV/art_14_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "14_b",
+      "artikelLabel": "Art. 14b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nichtinvaliden Witwen ohne minderjährige Kinder ist als Erwerbseinkommen mindestens anzurechnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der doppelte Höchstbetrag für den Lebensbedarf von Alleinstehenden nach Artikel 10 Absatz 1 Buchstabe a Ziffer 1 ELG bis zur Vollendung des 40. Altersjahres;"
+            },
+            {
+              "marke": "b",
+              "text": "der Höchstbetrag für den Lebensbedarf nach Buchstabe a vom 41. bis zum 50. Altersjahr;"
+            },
+            {
+              "marke": "c",
+              "text": "zwei Drittel des Höchstbetrages für den Lebensbedarf nach Buchstabe a vom 51. bis zum 60. Altersjahr."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_14_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "affbd0802599509c61e368b7a6467351a51407b760e4e73f2abd421cc2fb4bdd"
+    },
+    {
+      "id": "bund/ELV/art_15",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Einkommen, das eine invalide Person in einer Werkstätte im Sinne von Artikel 3 Absatz 1 Buchstabe a IFEG erzielt, wird bei der Ermittlung der Ergänzungsleistung als Erwerbseinkommen angerechnet, soweit es für die Berechnung der Beiträge an die Alters- und Hinterlassenenversicherung zum massgebenden Lohn gehört oder zu zählen wäre, falls die invalide Person der Beitragspflicht unterläge."
+        },
+        {
+          "absatz": "2",
+          "text": "Arbeitet eine versicherte Person im Haushalt oder Betrieb eines Blutsverwandten, so sind die ihr von diesem ausgerichteten Geld- und Naturalleistungen in dem Masse als Erwerbseinkommen anzurechnen, als sie eine Arbeitskraft ersetzt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8f551ef92b0ea388898eb297a82b5453f04558b47536079a4b87faf53d5ea5d7"
+    },
+    {
+      "id": "bund/ELV/art_15_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei einem Vorbezug der Altersrente nach Artikel 40 Absatz 1 AHVG wird für die Berechnung der jährlichen Ergänzungsleistung die ganze aufgrund des Vorbezugs gekürzte Rente als Einnahme angerechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0eccf982da8b67401d2682e1b8f9a66c30cfbb3ec3f682ef8b9e8008c392771d"
+    },
+    {
+      "id": "bund/ELV/art_15_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15_b",
+      "artikelLabel": "Art. 15b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sind in der Tagestaxe eines Heims oder Spitals auch die Kosten für die Pflege einer hilflosen Person enthalten, so wird die Hilflosenentschädigung der AHV, IV, Militär- oder Unfallversicherung als Einnahme angerechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "39276c959c525829f4e055b35b8c980df6458f531b8d44a023d2b2191933f718"
+    },
+    {
+      "id": "bund/ELV/art_15_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15_c",
+      "artikelLabel": "Art. 15c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Leibrenten mit Rückgewähr ist der Rückkaufswert als Vermögen anzurechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Vom Rückkaufswert der Leibrente ist kein hypothetischer Zinsertrag als Einnahme anzurechnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Als Einnahme werden angerechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die einzelne Rentenzahlung zu 80 Prozent;"
+            },
+            {
+              "marke": "b",
+              "text": "ein allfälliger Überschussanteil in vollem Umfang."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "313a14084319fec703dbe618beea663145afccbdc15987a2c35187135f0c3d54"
+    },
+    {
+      "id": "bund/ELV/art_15_d",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15_d",
+      "artikelLabel": "Art. 15d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird gestützt auf Artikel 65 d Absatz 3 Buchstabe b des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge ein Beitrag zur Behebung einer Unterdeckung von Rentnerinnen und Rentnern erhoben, so wird für die Berechnung der jährlichen Ergänzungsleistung die um den Beitrag gekürzte Rente als Einnahme angerechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a75e432503c024b96caa4db40d85dce29f876465128dbfbf4f745bfb5cf70b48"
+    },
+    {
+      "id": "bund/ELV/art_15_e",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "15_e",
+      "artikelLabel": "Art. 15e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verzichtet eine Person freiwillig auf eine Nutzniessung oder ein Wohnrecht, so ist der Jahreswert der Nutzniessung oder des Wohnrechts als Einnahme anzurechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Jahreswert entspricht dem Mietwert abzüglich der Kosten, die von der Person, welche die Nutzniessung oder das Wohnrecht innehatte, im Zusammenhang mit der Nutzniessung oder dem Wohnrecht übernommen wurden oder hätten übernommen werden müssen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_15_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "68b3e4b42c13e199a510efa5cd5cdde868c7d72e3c030b427dcf30076ee2cc21"
+    },
+    {
+      "id": "bund/ELV/art_16",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gebäudeunterhaltskosten gilt der für die direkte kantonale Steuer im Wohnsitzkanton anwendbare Pauschalabzug."
+        },
+        {
+          "absatz": "2",
+          "text": "Sieht die kantonale Steuergesetzgebung keinen Pauschalabzug vor, gilt der für die direkte Bundessteuer anwendbare."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "49d3bf66720653bde3960c28b9663d3f37ef872cc3866b550413c5517d60ed48"
+    },
+    {
+      "id": "bund/ELV/art_16_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_a",
+      "artikelLabel": "Art. 16a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Personen, die eine ihnen gehörende Liegenschaft bewohnen, wird für die Nebenkosten ausschliesslich eine Pauschale anerkannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Absatz 1 gilt auch für Personen, denen die Nutzniessung oder ein Wohnrecht an der Liegenschaft zusteht, welche sie bewohnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Pauschale beträgt pro Jahr 3480 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Begrenzung nach Artikel 10 Absatz 1 Buchstabe b ELG ist zu beachten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "607b8ed3fcd4011880a20988b595fce583877b98f32b3386c5fae3fbdc1af5b5"
+    },
+    {
+      "id": "bund/ELV/art_16_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_b",
+      "artikelLabel": "Art. 16b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Personen, welche ihre Mietwohnungen selber beheizen müssen und dem Vermieter keine Heizungskosten nach Artikel 257 b Absatz 1 Obligationenrecht (OR) zu zahlen haben, wird für die Heizkosten zu den übrigen Nebenkosten eine Pauschale hinzugezählt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Pauschale beträgt pro Jahr die Hälfte derjenigen nach Artikel 16 a ."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a7c2d832f9856e524c9bd979f8c26e7f3aa0d8bcd083e56b9a4c8bdfbab7f8fb"
+    },
+    {
+      "id": "bund/ELV/art_16_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_c",
+      "artikelLabel": "Art. 16c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden Wohnungen oder Einfamilienhäuser auch von Personen bewohnt, welche nicht in die EL-Berechnung eingeschlossen sind, dann ist der Mietzins auf die einzelnen Personen aufzuteilen. Die Mietzinsanteile der Personen, welche nicht in die EL-Berechnung eingeschlossen sind, werden bei der Berechnung der jährlichen Ergänzungsleistung ausser Betracht gelassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufteilung hat grundsätzlich zu gleichen Teilen zu erfolgen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ff7a207746b0e920741548280547f4db91282aaab2dd67360ac10a968a3855e2"
+    },
+    {
+      "id": "bund/ELV/art_16_c_bis",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_c_bis",
+      "artikelLabel": "Art. 16cbis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Leben mehrere Personen, deren jährliche Ergänzungsleistung nach Artikel 9 Absatz 2 ELG gemeinsam berechnet wird, mit weiteren Personen in einer gemeinschaftlichen Wohnform, so werden die Zusatzbeträge für den Höchstbetrag des anerkannten Mietzinses nach Artikel 10 Absatz 1 Buchstabe b ELG nur für diejenigen Personen gewährt, die in die gemeinsame Berechnung eingeschlossen sind. Artikel 10 Absatz 1 bis erster Satz ELG ist nicht anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_c_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4f85806d81f5d2ea8c5a9684bb674ead15180307f569dd6cac91c21c4f723203"
+    },
+    {
+      "id": "bund/ELV/art_16_d",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_d",
+      "artikelLabel": "Art. 16d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als tatsächliche Prämie nach Artikel 10 Absatz 3 Buchstabe d ELG gilt die Prämie, die die Aufsichtsbehörde nach Artikel 16 des Krankenversicherungsaufsichtsgesetzes vom 26. September 2014 genehmigt hat für den Krankenversicherer, den Kanton und die Prämienregion in den Bereichen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Altersgruppe;"
+            },
+            {
+              "marke": "b",
+              "text": "Franchise;"
+            },
+            {
+              "marke": "c",
+              "text": "besondere Versicherungsform;"
+            },
+            {
+              "marke": "d",
+              "text": "Unfalldeckung der Bezügerin oder des Bezügers."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fe74779f7ef03d110c917bb6e094101c8e37aa5509645253f71601d5e802f4d2"
+    },
+    {
+      "id": "bund/ELV/art_16_e",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "16_e",
+      "artikelLabel": "Art. 16e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die familienergänzende Betreuung von Kindern unter 11 Jahren werden Kosten anerkannt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Kindertagesstätten;"
+            },
+            {
+              "marke": "b",
+              "text": "Einrichtungen für die schulergänzende Betreuung von Kindern; und"
+            },
+            {
+              "marke": "c",
+              "text": "Tagesfamilien."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten werden nur anerkannt, wenn ein alleinerziehender Elternteil oder beide Elternteile:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gleichzeitig einer Erwerbstätigkeit nachgehen; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die zur Wahrung des Kindeswohls erforderliche Kinderbetreuung aus gesundheitlichen Gründen nicht vollumfänglich wahrnehmen können."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_16_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "5a4b0fba4864e45fa81e8e0e8b050d79bfb39f40b1e7d9ad6dfa36b710494722"
+    },
+    {
+      "id": "bund/ELV/art_17",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Reinvermögen wird ermittelt, indem vom Bruttovermögen die nachgewiesenen Schulden abgezogen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Hypothekarschulden können höchstens bis zum Liegenschaftswert abgezogen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Vom Wert einer Liegenschaft, die von der Bezügerin oder dem Bezüger oder einer Person, die in die Berechnung der Ergänzungsleistungen eingeschlossen ist, bewohnt wird und im Eigentum einer dieser Personen steht, wird in folgender Reihenfolge abgezogen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Freibetrag nach Artikel 11 Absatz 1 Buchstabe c zweiter Teilsatz ELG oder Artikel 11 Absatz 1 bis ELG;"
+            },
+            {
+              "marke": "b",
+              "text": "die Hypothekarschulden, soweit sie den nach Abzug nach Buchstabe a verbleibenden Liegenschaftswert nicht übersteigen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "28106cb54169ec4f59cc204051fb30220f112a4a2f8d044550e9444add831c83"
+    },
+    {
+      "id": "bund/ELV/art_17_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das anrechenbare Vermögen ist nach den Grundsätzen der Gesetzgebung über die direkte kantonale Steuer für die Bewertung des Vermögens im Wohnsitzkanton zu bewerten."
+        },
+        {
+          "absatz": "2",
+          "text": "und 3 …"
+        },
+        {
+          "absatz": "4",
+          "text": "Dienen Grundstücke dem Bezüger oder einer Person, die in der EL-Berechnung eingeschlossen ist, nicht zu eigenen Wohnzwecken, so sind diese zum Verkehrswert einzusetzen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der entgeltlichen oder unentgeltlichen Entäusserung eines Grundstückes ist der Verkehrswert für die Prüfung, ob ein Vermögensverzicht im Sinne von Artikel 11 a Absatz 2 ELG vorliegt, massgebend. Der Verkehrswert gelangt nicht zur Anwendung, wenn von Gesetzes wegen ein Rechtsanspruch auf den Erwerb zu einem tieferen Wert besteht."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Kantone können anstelle des Verkehrswertes einheitlich den für die interkantonale Steuerausscheidung massgebenden Repartitionswert anwenden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e472c77507c22397d344846d62e6e7d26ba64e73249c27f8859e72fbb03c4db8"
+    },
+    {
+      "id": "bund/ELV/art_17_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17_b",
+      "artikelLabel": "Art. 17b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Vermögensverzicht liegt vor, wenn eine Person:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vermögenswerte veräussert, ohne dazu rechtlich verpflichtet zu sein, und die Gegenleistung weniger als 90 Prozent des Wertes der Leistung entspricht; oder"
+            },
+            {
+              "marke": "b",
+              "text": "im zu betrachtenden Zeitraum mehr Vermögen verbrauchte, als gemäss Artikel 11 a Absatz 3 ELG zulässig gewesen wäre."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ab00e26165552b1284d816b06e37572bc76be72dbffc8619a397ee54d0304797"
+    },
+    {
+      "id": "bund/ELV/art_17_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17_c",
+      "artikelLabel": "Art. 17c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Höhe des Verzichts bei Veräusserung entspricht der Differenz zwischen dem Wert der Leistung und dem Wert der Gegenleistung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "88cc49ef70c7e7c03778fb98a30bc3d82e10e808064d39e5c3e143d6884d64f8"
+    },
+    {
+      "id": "bund/ELV/art_17_d",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17_d",
+      "artikelLabel": "Art. 17d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Höhe des Verzichts bei übermässigem Vermögensverbrauch entspricht der Differenz zwischen dem tatsächlichen Vermögensverbrauch und dem zulässigen Vermögensverbrauch im zu betrachtenden Zeitraum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der zulässige Vermögensverbrauch wird ermittelt, indem die Obergrenze für den Vermögensverbrauch nach Artikel 11 a Absatz 3 ELG auf jedes Jahr des zu betrachtenden Zeitraums angewendet wird und die auf diese Weise ermittelten Jahresbeträge zusammengerechnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Ermittlung der Höhe des Verzichts werden nicht berücksichtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Vermögensverzehr nach Artikel 11 Absatz 1 Buchstabe c ELG;"
+            },
+            {
+              "marke": "b",
+              "text": "Vermögenverminderungen aufgrund von: 1. Ausgaben zum Werterhalt von Liegenschaften, an denen die Bezügerin oder der Bezüger das Eigentum oder die Nutzniessung hat,"
+            },
+            {
+              "marke": "2",
+              "text": "Kosten für zahnärztliche Behandlungen,"
+            },
+            {
+              "marke": "3",
+              "text": "Kosten im Zusammenhang mit Krankheit und Behinderung, die nicht von einer Sozialversicherung übernommen werden,"
+            },
+            {
+              "marke": "4",
+              "text": "Gewinnungskosten zur Erzielung eines Erwerbseinkommens,"
+            },
+            {
+              "marke": "5",
+              "text": "Auslagen für berufsorientierte Aus- und Weiterbildung,"
+            },
+            {
+              "marke": "6",
+              "text": "Ausgaben für den gewohnten Lebensunterhalt der versicherten Person während der Jahre vor dem Bezug der jährlichen Ergänzungsleistung, wenn das erzielte Einkommen unzureichend war;"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c3d125fb0a85f5b971db39dcebcb24e1542ff469541a6679113fa2c4031ba79b"
+    },
+    {
+      "id": "bund/ELV/art_17_e",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "17_e",
+      "artikelLabel": "Art. 17e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der anzurechnende Betrag des Vermögens, auf das gemäss Artikel 11 a Absätze 2 und 3 ELG verzichtet wurde, wird für die Berechnung der Ergänzungsleistungen jährlich um 10 000 Franken vermindert."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Betrag des Vermögens im Zeitpunkt des Verzichts ist unverändert auf den 1. Januar des Jahres, das auf den Verzicht folgt, zu übertragen und dann jeweils nach einem Jahr zu vermindern."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Berechnung der jährlichen Ergänzungsleistung ist der verminderte Betrag am 1. Januar des Bezugsjahres massgebend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_17_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "88b4f3b3fba91396c3416df772d73526a4380ddcb7d7c50119daaac9e4c0bcc4"
+    },
+    {
+      "id": "bund/ELV/art_18",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Solange der überlebende Ehegatte von seinem Wahlrecht am Nachlass des vor dem 1. Januar 1988 verstorbenen Ehegatten keinen Gebrauch macht, werden ein Viertel des Nachlasses ihm und drei Viertel desselben zu gleichen Teilen den Kindern als Vermögen angerechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fd254bc22024944d83370ab9922bd3d8c3673828a229d47c93f3b3ee87dce9cf"
+    },
+    {
+      "id": "bund/ELV/art_19",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Krankheits- und Behinderungskosten von Kindern, die nach Artikel 8 Absatz 2 ausser Rechnung bleiben, sind zu vergüten, soweit sie den Einnahmenüberschuss übersteigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "68a85ceaf3c7fb50f3a793f80491ed67b17eb3b488e46a12b64c8aa7ef3b3e4d"
+    },
+    {
+      "id": "bund/ELV/art_19_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_19_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für zu Hause lebende Personen mit einem Anspruch auf eine Hilflosenentschädigung der IV oder der Unfallversicherung erhöht sich der Betrag nach Artikel 14 Absatz 3 Buchstabe a Ziffer 1 ELG bei mittelschwerer Hilflosigkeit auf 60 000 Franken, soweit die Kosten für Pflege und Betreuung nicht gedeckt sind durch die Hilflosenentschädigung und den Assistenzbeitrag der AHV oder der IV."
+        },
+        {
+          "absatz": "2",
+          "text": "Für zu Hause lebende Ehepaare mit Anspruch auf eine Hilflosenentschädigung der IV oder der Unfallversicherung erhöht sich der Betrag nach Artikel 14 Absatz 3 Buchstabe a Ziffer 2 ELG, soweit die Kosten für Pflege und Betreuung nicht gedeckt sind durch die Hilflosenentschädigung und den Assistenzbeitrag der AHV oder der IV, wie folgt:"
+        },
+        {
+          "absatz": null,
+          "text": "",
+          "mehrspaltig": {
+            "zeilen": [
+              [
+                "Anzahl Personen",
+                "Grad der Hilflosigkeit",
+                "Höchstbetrag"
+              ],
+              [
+                "beide Ehegatten",
+                "je schwer",
+                "180 000 Franken"
+              ],
+              [
+                "beide Ehegatten",
+                "je mittelschwer",
+                "120 000 Franken"
+              ],
+              [
+                "ein Ehegatte ein Ehegatte",
+                "schwer, mittelschwer",
+                "150 000 Franken"
+              ],
+              [
+                "nur ein Ehegatte",
+                "schwer",
+                "115 000 Franken"
+              ],
+              [
+                "nur ein Ehegatte",
+                "mittelschwer",
+                "85 000 Franken"
+              ]
+            ]
+          }
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_19_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "08c59182b26a0b2f200c0bb0ddc54a28d06f93d8a16677023a2b70e1aadb6e5d"
+    },
+    {
+      "id": "bund/ELV/art_20",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Anspruch auf eine jährliche Ergänzungsleistung ist durch Einreichen des Anmeldeformulars geltend zu machen. Artikel 67 Absatz 1 AHVV ist sinngemäss anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Anmeldeformular hat Aufschluss zu geben über die Personalien und die Einkommens- und Vermögensverhältnisse aller in die Berechnung der jährlichen Ergänzungsleistung eingeschlossenen Personen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "894ba11020dc860bd6208f1c94ab183f03f542f7b18630d277d9a2e89d1dffc6"
+    },
+    {
+      "id": "bund/ELV/art_21",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Eingang einer Anmeldung für eine jährliche Ergänzungsleistung ist grundsätzlich innerhalb von 90 Tagen über Anspruch und Höhe der Leistung zu verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann diese Frist nicht eingehalten werden, so sind Vorschussleistungen im Sinne von Artikel 19 Absatz 4 ATSG auszurichten, wenn die antragstellende Person ihrer Mitwirkungspflicht vollumfänglich nachgekommen ist und ein Anspruch nachgewiesen erscheint."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bdaa8a7ad97f20e79489f8ce584ab9dc8c68bd2ea72829a4c6a683f0f0096809"
+    },
+    {
+      "id": "bund/ELV/art_21_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "21_a",
+      "artikelLabel": "Art. 21a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Monatsbeträge der jährlichen Ergänzungsleistung sind auf den nächsten Franken aufzurunden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_21_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c4b125b015cc070f03a0b6e1569633632d958e26a0c0e76684dc8400e5217fd7"
+    },
+    {
+      "id": "bund/ELV/art_21_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "21_b",
+      "artikelLabel": "Art. 21b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jährliche Ergänzungsleistung wird den beiden Ehegatten monatlich je zur Hälfte und getrennt ausbezahlt, wenn jeder Ehegatte einen Anspruch auf eine Rente der AHV oder IV hat. Bei einmaligen Vergütungen können die EL-Stellen den ganzen Betrag dem betroffenen Ehegatten ausrichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ehegatten können jederzeit gemeinsam verlangen, dass die gesamte Ergänzungsleistung nur einem von ihnen ausbezahlt wird; jeder Ehegatte kann jederzeit die getrennte Auszahlung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Abweichende zivilrechtliche Anordnungen bleiben vorbehalten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_21_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a6a2f4ac6590c0884448a5892c7ba8ae5c5c749e269fb7aa8a70ba736d6ff022"
+    },
+    {
+      "id": "bund/ELV/art_21_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "21_c",
+      "artikelLabel": "Art. 21c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Tritt die Bezügerin oder der Bezüger den Betrag der jährlichen Ergänzungsleistung für den Aufenthalt in Heimen oder Spitälern nach Artikel 21 a Absatz 3 ELG dem Leistungserbringer ab, so gilt für die Auszahlung der jährlichen Ergänzungsleistung folgende Reihenfolge:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zuerst wird dem Krankenversicherer der Betrag für die obligatorische Krankenpflegeversicherung nach Artikel 10 Absatz 3 Buchstabe d ELG ausbezahlt."
+            },
+            {
+              "marke": "b",
+              "text": "Von der restlichen Ergänzungsleistung erhält die Bezügerin oder der Bezüger einen Betrag, der höchstens dem ihr oder ihm für persönliche Auslagen nach Artikel 10 Absatz 2 Buchstabe b ELG zustehenden Betrag entspricht."
+            },
+            {
+              "marke": "c",
+              "text": "Von der nach den Auszahlungen nach den Buchstaben a und b verbleibenden Ergänzungsleistung erhält der Leistungserbringer einen Betrag bis zur Höhe der Tagestaxe nach Artikel 10 Absatz 2 Buchstabe a."
+            },
+            {
+              "marke": "d",
+              "text": "Verbleibt nach den Auszahlungen nach den Buchstaben a–c ein Restbetrag, so wird er der Bezügerin oder dem Bezüger ausbezahlt."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_21_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "d7b729430680b236e5c1bec6eb1579ee5e5739ca2a78704e76e541cc3aab9e89"
+    },
+    {
+      "id": "bund/ELV/art_22",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird die Anmeldung für eine jährliche Ergänzungsleistung innert sechs Monaten seit der Zustellung der Verfügung über eine Rente der AHV oder der IV eingereicht, so beginnt der Anspruch mit dem Monat der Anmeldung für die Rente, frühestens jedoch mit der Rentenberechtigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird eine laufende Rente der Alters- und Hinterlassenenversicherung oder der Invalidenversicherung mit Verfügung geändert, findet Absatz 1 sinngemäss Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Anspruch auf bereits zugesprochene, aber unzustellbare Ergänzungsleistungen erlischt, wenn innert Jahresfrist keine Zahlung verlangt wurde."
+        },
+        {
+          "absatz": "4",
+          "text": "Hat eine private oder eine öffentliche Fürsorgestelle einer Person im Hinblick auf Ergänzungsleistungen Vorschussleistungen für den Lebensunterhalt während einer Zeitspanne gewährt, für die rückwirkend Ergänzungsleistungen ausgerichtet werden, so kann ihr bei der Nachzahlung dieser Vorschuss direkt vergütet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Hat ein Kanton in der Krankenversicherung Prämienverbilligungen während einer Zeitspanne gewährt, für die rückwirkend Ergänzungsleistungen ausgerichtet werden, so kann der Kanton diese bei der Nachzahlung mit den bereits ausbezahlten Prämienverbilligungen verrechnen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "dc231d46aa0af8f2e511125f039675ab18ee035d23a17404646f3de4e6857ba9"
+    },
+    {
+      "id": "bund/ELV/art_22_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_23",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeitlich massgebend für die Berechnung der jährlichen Ergänzungsleistung sind in der Regel die während des vorausgegangenen Kalenderjahres erzielten anrechenbaren Einnahmen sowie das am 1. Januar des Bezugsjahres vorhandene Vermögen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Versicherten, deren anrechenbare Einnahmen und deren Vermögen im Sinne des ELG aufgrund einer Steuerveranlagung ermittelt werden kann, sind die kantonalen Durchführungsstellen befugt, als Berechnungsperiode die der letzten Steuerveranlagung zugrunde liegende Berechnungsperiode zu wählen, falls inzwischen keine Änderung der wirtschaftlichen Verhältnisse der versicherten Person eingetreten ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Bemessung der jährlichen Ergänzungsleistung sind die laufenden Renten, Pensionen und anderen wiederkehrenden Leistungen (Art. 11 Abs. 1 Bst. d und d bis ELG) anzurechnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann die Person, die eine jährliche Ergänzungsleistung beansprucht, mit der Anmeldung glaubhaft machen, dass sie während des Zeitraumes, für welchen sie die jährliche Ergänzungsleistung begehrt, wesentlich kleinere anrechenbare Einnahmen erzielen werde als während der Berechnungsperiode nach Absatz 1 oder 2, so ist auf die mutmasslichen, auf ein Jahr umgerechneten anrechenbaren Einnahmen und auf das Vermögen im Zeitpunkt des Anspruchsbeginns abzustellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "32cafaa0dbf43390876394942e206df0bdfbdd3b724f347a9d7caf5b1d2939d9"
+    },
+    {
+      "id": "bund/ELV/art_24",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Von jeder Änderung der persönlichen und von jeder ins Gewicht fallenden Änderung der wirtschaftlichen Verhältnisse des Anspruchsberechtigten hat dieser, sein gesetzlicher Vertreter oder gegebenenfalls die Drittperson oder die Behörde, welcher eine Ergänzungsleistung ausbezahlt wird, der kantonalen Durchführungsstelle unverzüglich Mitteilung zu machen. Diese Meldepflicht erstreckt sich auch auf Veränderungen, welche bei an der Ergänzungsleistung beteiligten Familiengliedern des Bezugsberechtigten eintreten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4a7fbf959ae6ac8a1ff828689408a99ff8a6e54bcc8c2be7664e1acaa3933a3b"
+    },
+    {
+      "id": "bund/ELV/art_25",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die jährliche Ergänzungsleistung ist zu erhöhen, herabzusetzen oder aufzuheben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei jeder Veränderung der der Berechnung der jährlichen Ergänzungsleistung zugrunde liegenden Personengemeinschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "bei jeder Änderung der Rente der Alters-, Hinterlassenen- oder Invalidenversicherung;"
+            },
+            {
+              "marke": "bbis",
+              "text": "bei einem Heim- oder Spitalaufenthalt, für den die Tagestaxe nach Artikel 10 Absatz 2 Buchstabe a ELG nicht für alle Tage eines Monats in Rechnung gestellt wird;"
+            },
+            {
+              "marke": "c",
+              "text": "bei Eintritt einer voraussichtlich längere Zeit dauernden Verminderung oder Erhöhung der vom ELG anerkannten Ausgaben und anrechenbaren Einnahmen sowie des Vermögens; massgebend sind die neuen, auf ein Jahr umgerechneten dauernden Ausgaben und Einnahmen und das bei Eintritt der Veränderung vorhandene Vermögen; macht die Änderung weniger als 120 Franken im Jahr aus, so kann auf eine Anpassung verzichtet werden;"
+            },
+            {
+              "marke": "d",
+              "text": "bei der periodischen Überprüfung, wenn eine Änderung der vom ELG anerkannten Ausgaben und anrechenbaren Einnahmen sowie des Vermögens festgestellt wird; macht die Änderung weniger als 120 Franken im Jahr aus, so kann auf eine Anpassung verzichtet werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die jährliche Ergänzungsleistung ist auf folgenden Zeitpunkt neu zu verfügen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in den Fällen von Absatz 1 Buchstaben a und b bei Veränderung der Personengemeinschaft ohne Einfluss auf die Rente auf den Beginn des der Veränderung folgenden Monats; bei Änderung der Rente auf den Beginn des neuen Rentenanspruchs oder des Monats, in dem der Rentenanspruch erlischt;"
+            },
+            {
+              "marke": "abis",
+              "text": "im Fall von Absatz 1 Buchstabe b bis auf den Beginn des Monats, für den das Heim oder Spital nicht alle Tage in Rechnung stellt;"
+            },
+            {
+              "marke": "b",
+              "text": "im Fall von Absatz 1 Buchstabe c bei Erhöhung des Ausgabenüberschusses auf den Beginn des Monats, in dem die Änderung gemeldet wurde, frühestens aber des Monats, in dem diese eingetreten ist;"
+            },
+            {
+              "marke": "c",
+              "text": "im Fall von Absatz 1 Buchstabe c bei Verminderung des Ausgabenüberschusses spätestens auf den Beginn des Monats, der auf die neue Verfügung folgt; vorbehalten bleibt die Rückforderung bei Verletzung der Meldepflicht;"
+            },
+            {
+              "marke": "d",
+              "text": "im Fall von Absatz 1 Buchstabe d auf Beginn des Monats, in dem die Änderung gemeldet wurde, frühestens aber des Monats, in dem diese eingetreten ist, und spätestens auf den Beginn des Monats, der auf die neue Verfügung folgt. Vorbehalten bleibt die Rückforderung bei Verletzung der Meldepflicht."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Neuberechnung der jährlichen Ergänzungsleistung wegen Vermögensverzehrs ist nur einmal jährlich möglich."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Herabsetzung einer laufenden Ergänzungsleistung infolge der Anrechnung eines Mindesteinkommens nach den Artikeln 14 a Absatz 2 und 14 b wird erst sechs Monate nach Zustellung der entsprechenden Verfügung wirksam."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "cb7a43f2433d1275b15709f4c06209d47a19d507ae1750c2a30df91414dd2a67"
+    },
+    {
+      "id": "bund/ELV/art_25_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Heim gilt jede Einrichtung, die von einem Kanton als Heim anerkannt wird oder über eine kantonale Betriebsbewilligung verfügt."
+        },
+        {
+          "absatz": "2",
+          "text": "Hat die IV-Stelle eine versicherte Person im Zusammenhang mit der Gewährung einer Hilflosenentschädigung als Heimbewohnerin im Sinne von Artikel 42 ter Absatz 2 IVG eingestuft, so gilt diese Person auch für den Anspruch auf Ergänzungsleistungen als Heimbewohnerin."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_25_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a14fde20563620f52c4fb376e342150feab92fdb25e9f854355cf0f227726d1d"
+    },
+    {
+      "id": "bund/ELV/art_26",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Region 1 entspricht der Kategorie 111 der Gemeindetypologie 2020 (25 Typen). Sie umfasst die fünf Grosszentren Bern, Zürich, Basel, Genf und Lausanne."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Einteilung der übrigen Gemeinden in die zwei Regionen liegt die Stadt/Land-Typologie 2020 zugrunde. Der Region 2 werden die Gemeinden der Kategorien «städtisch» und «intermediär», der Region 3 die Gemeinden der Kategorie «ländlich» zugeteilt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "68208dfe51cecd7afebe66e92deca9576b096ab30eb14b7868bd6322f0698ea1"
+    },
+    {
+      "id": "bund/ELV/art_26_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "26_a",
+      "artikelLabel": "Art. 26a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eidgenössische Departement des Innern (Departement) legt in einer Verordnung fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Berechnungsmodalitäten für die Senkung oder Erhöhung der Mietzinshöchstbeträge nach Artikel 10 Absatz 1 sexies ELG;"
+            },
+            {
+              "marke": "b",
+              "text": "jeweils bis spätestens Ende Oktober die Senkung oder Erhöhung der Höchstbeträge für die betroffenen Gemeinden ab dem nächsten Jahr."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Antrag, die Mietzinshöchstbeträge nach Artikel 10 Absatz 1 sexies ELG zu senken oder zu erhöhen, ist beim Bundesamt für Sozialversicherungen (Bundesamt) einzureichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Er hat insbesondere zu umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Namen der Gemeinden, für die eine Senkung oder Erhöhung der Mietzinshöchstbeträge verlangt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "den Umfang, um den die Höchstbeträge gesenkt oder erhöht werden sollen;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Begründung."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Er ist jeweils bis zum 30. Juni des Vorjahres einzureichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_26_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bed3721047021fed9d8e3b312a849bbc11d86a08769529cf359fe291246ea482"
+    },
+    {
+      "id": "bund/ELV/art_26_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "26_b",
+      "artikelLabel": "Art. 26b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_26_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ddc95dfb7da4c0a2f12f0bf1f750f52505bb94c1bb33db1cb2fea5bb9f641a11"
+    },
+    {
+      "id": "bund/ELV/art_27",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Frist zur Rückerstattung rechtmässig bezogener Leistungen nach Artikel 16 a Absätze 1 und 2 ELG beträgt drei Monate nach Eintritt der Rechtskraft der Rückforderungsverfügung."
+        },
+        {
+          "absatz": "2",
+          "text": "Macht die Rückerstattung den Verkauf einer oder mehrerer Liegenschaften nötig, so erstreckt sich diese Frist auf ein Jahr, höchstens jedoch auf 30 Tage nach der Eigentumsübertragung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bccf1092cf245e15a5a279a2e55126ed070d16606c58ddd68708ded82df7cc25"
+    },
+    {
+      "id": "bund/ELV/art_27_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Berechnung der Rückforderung rechtmässig bezogener Leistungen ist der Nachlass nach den Grundsätzen der Gesetzgebung über die direkte kantonale Steuer für die Bewertung des Vermögens im Wohnsitzkanton zu bewerten. Massgebend ist das Vermögen am Todestag."
+        },
+        {
+          "absatz": "2",
+          "text": "Grundstücke sind zum Verkehrswert einzusetzen. Vorbehalten sind Fälle, in denen das Gesetz die Anrechnung an den Erbteil zu einem tieferen Wert vorsieht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone können anstelle des Verkehrswertes einheitlich den für die interkantonale Steuerausscheidung massgebenden Repartitionswert anwenden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_27_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "666dbd4b3563905d5331f599771f7cb1c4bbd426d740fd640a5e5f0c313cbc84"
+    },
+    {
+      "id": "bund/ELV/art_27_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "27_b",
+      "artikelLabel": "Art. 27b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Artikel 209 bis AHVV ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_27_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c3a0c5456aa3de281aacd6cfc231a1bb60c6ce1781baa2827b6b0125c2eb8580"
+    },
+    {
+      "id": "bund/ELV/art_27_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "27_c",
+      "artikelLabel": "Art. 27c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Artikel 209 ter AHVV ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_27_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "204820eeb0aec09623edd9e27558afcd046a4eeec516e7b42906f1ec840ce211"
+    },
+    {
+      "id": "bund/ELV/art_27_d",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "27_d",
+      "artikelLabel": "Art. 27d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Übergangsleistung nach Artikel 32 IVG ist einer Rente der IV gleichgestellt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_27_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "eebb6ad31ef683541040ffdd091f003dc44e420a4a86cbf7373574ed9b84e970"
+    },
+    {
+      "id": "bund/ELV/art_28",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die mit der Festsetzung und Auszahlung der Ergänzungsleistungen betrauten Stellen sind verpflichtet, eine Buchhaltung zu führen, die jederzeit über den Zahlungsverkehr sowie die Forderungs- und Schuldverhältnisse auf dem Gebiet der Ergänzungsleistungen Aufschluss gibt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ergänzungsleistungen für Personen, welche gestützt auf Artikel 4 Absatz 1 Buchstaben a oder b ELG Anspruch haben (EL zur AHV), sind getrennt von den Ergänzungsleistungen für Personen, welche gestützt auf Artikel 4 Absatz 1 Buchstaben c oder d ELG Anspruch haben (EL zur IV), zu verbuchen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ebenfalls getrennt zu verbuchen sind die jährlichen Ergänzungsleistungen (Art. 3 Abs. 1 Bst. a ELG) sowie die Vergütung von Krankheits- und Behinderungskosten (Art. 3 Abs. 1 Bst. b ELG)."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Absätze 2 und 3 sind auch anwendbar für geltend gemachte, abgeschriebene oder erlassene Rückforderungen."
+        },
+        {
+          "absatz": "5",
+          "text": "Leistungen nach Artikel 2 Absatz 2 ELG müssen getrennt verbucht werden, auch wenn sie zusammen mit den Ergänzungsleistungen ausgerichtet werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ae7bda4d55531e37e31ef16299b01ec8275c226ea7ae936dd2dba0b45e6b0f47"
+    },
+    {
+      "id": "bund/ELV/art_28_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die pro Kalenderjahr vergüteten Krankheits- und Behinderungskosten sind dem Bundesamt zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesamt bestimmt im Rahmen seiner Weisungsbefugnis den Zeitpunkt und die Einzelheiten der Meldung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_28_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a58c48d53e5560dfd0395a1f2797ead89ad5e14a1b41dc349f360f3ba50a6caa"
+    },
+    {
+      "id": "bund/ELV/art_29",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Akten haben in jedem Einzelfall über die persönlichen und wirtschaftlichen Verhältnisse des Berechtigten sowie über die Berechnung der Ergänzungsleistungen in übersichtlicher Weise Aufschluss zu geben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Aktenaufbewahrung ist die in der Alters- und Hinterlassenenversicherung geltende Regelung sinngemäss anwendbar."
+        },
+        {
+          "absatz": "3",
+          "text": "Kantone und Gemeinden, die neben den Ergänzungsleistungen eigene Versicherungs- oder Fürsorgeleistungen gewähren, haben diese in der Berechnung und Verfügung gesondert aufzuführen. Dies gilt auch für die Rückerstattung, den Erlass und die Abschreibung zuviel bezogener Leistungen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fe433627836a29c3491c4b1143e31f29e2d70187e848677e6af4c9dc1aa20971"
+    },
+    {
+      "id": "bund/ELV/art_30",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die mit der Festsetzung und Auszahlung der Ergänzungsleistungen betrauten Stellen haben die wirtschaftlichen Verhältnisse der Bezüger periodisch, mindestens aber alle vier Jahre zu überprüfen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fb75c3de3551b90f205f0b57474e5614a8a248c86e5543a4fb7c5e351a45cf90"
+    },
+    {
+      "id": "bund/ELV/art_31",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_32",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Hat ein Kanton die Festsetzung und Auszahlung der Ergänzungsleistungen seiner Ausgleichskasse übertragen, so hat er ihr die daraus erwachsenden Verwaltungskosten zu vergüten. Die Vergütungsregelung bedarf der Genehmigung des Bundesamtes."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e976129b503188ea65550930613f30b7581c20611c15e3c89a2e089fd12f6335"
+    },
+    {
+      "id": "bund/ELV/art_32_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "32_a",
+      "artikelLabel": "Art. 32a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zentrale Ausgleichsstelle führt ein Register über alle Bezüger von Ergänzungsleistungen, die keine Rente der Alters-, Hinterlassenen- oder Invalidenversicherung beziehen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_32_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "260508048b5ff986235a6c2662198ecf3e78747f43e005282c2520880fd24f2f"
+    },
+    {
+      "id": "bund/ELV/art_33",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kantone, welche die Festsetzung und Auszahlung der Ergänzungsleistungen den Gemeinden überlassen, haben dafür zu sorgen, dass bei der zuständigen Gemeindestelle in der Regel jedes Jahr eine Revision durchgeführt wird."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "54cc278534da3b6b4fef2e78e086c7a7233b4437c34d5ce1b5150374022ae4c4"
+    },
+    {
+      "id": "bund/ELV/art_34",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_35",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über jede Revision einer Stelle, die Ergänzungsleistungen festsetzt und auszahlt, ist ein Bericht abzufassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Berichte sind dem Bundesamt in einer von diesem zu bestimmenden Frist in doppelter Ausfertigung zuzustellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 169 Absätze 2 und 3 AHVV ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "181b855482bb32d9bec0dadf1101a925d1eae9ff924a3ab79a58e7a7dd59e978"
+    },
+    {
+      "id": "bund/ELV/art_36",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kosten der Revisionen gelten als Verwaltungskosten im Sinne von Artikel 24 ELG."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6694dff9bc26744c274184d3a1b5d6ead2fa07fcaf75129c10f1595001e2adad"
+    },
+    {
+      "id": "bund/ELV/art_37",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt kann im Rahmen seiner Weisungsbefugnis festlegen, welche Punkte bei der Revision nach Artikel 23 Absatz 1 ELG besonders beachtet werden müssen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zeigt es sich, dass bundesrechtliche Vorschriften nicht oder unrichtig angewendet worden sind, so hat das Bundesamt die Behebung der Mängel innert angemessener Frist zu verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "95a3d6135734c5ae9264fa46d979eb08783582ec0aa23eab8dccc98110f6d1f3"
+    },
+    {
+      "id": "bund/ELV/art_38",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt und die beteiligten kantonalen Durchführungsstellen sind berechtigt, gegen Entscheide der kantonalen Versicherungsgerichte beim Bundesgericht Beschwerde zu erheben. Das Bundesamt ist auch zur Beschwerde gegen Entscheide des Bundesverwaltungsgerichts berechtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entscheide sind den beschwerdeberechtigten Behörden mit eingeschriebenem Brief zuzustellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "42fd504c1c816c762d6ffa2390be1fea66c51f1d18990679240a9a8d400c0b33"
+    },
+    {
+      "id": "bund/ELV/art_39",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt legt jährlich für jeden Kanton den Bundesanteil in Prozent fest. Der Anteil wird nach mathematischen Regeln auf eine Stelle nach dem Komma gerundet."
+        },
+        {
+          "absatz": "2",
+          "text": "Massgebend für die Festlegung des Bundesanteils in Prozent sind die laufenden Fälle für den Monat Mai des Leistungsjahres."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Berechnungselemente der Fälle nach Absatz 2 sind der Zentralen Ausgleichsstelle jeweils bis 10. Juni des Leistungsjahres zu melden. Das Bundesamt bestimmt die Einzelheiten der Meldung."
+        },
+        {
+          "absatz": "4",
+          "text": "Am Betrag für die obligatorische Krankenpflegeversicherung nach Artikel 10 Absatz 3 Buchstabe d ELG beteiligt sich der Bund im Rahmen der Ergänzungsleistungen nicht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "556632c141c35416f11c1670981a22da52539c39ced6df04dec938219700438b"
+    },
+    {
+      "id": "bund/ELV/art_39_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "39_a",
+      "artikelLabel": "Art. 39a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als mit dem Heim- oder Spitalaufenthalt in direktem Zusammenhang stehende Einnahmen nach Artikel 13 Absatz 2 ELG gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leistungen der Kranken- und Unfallversicherung für die Hotellerie und für die Pflege und Betreuung im Heim oder Spital;"
+            },
+            {
+              "marke": "b",
+              "text": "Hilflosenentschädigungen, die nach Artikel 15 b angerechnet werden können; und"
+            },
+            {
+              "marke": "c",
+              "text": "der erhöhte Vermögensverzehr nach Artikel 11 Absatz 2 ELG."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_39_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b7ba9f147658275449df57d2a512e0669e5a56c5751ae0203dc189c109c99a50"
+    },
+    {
+      "id": "bund/ELV/art_40",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone erstellen eine Abrechnung über die jährlichen Ergänzungsleistungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist getrennt abzurechnen über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ergänzungsleistungen für Personen, die gestützt auf Artikel 4 Absatz 1 Buchstaben a oder b ELG Anspruch haben (EL zur AHV); und"
+            },
+            {
+              "marke": "b",
+              "text": "Ergänzungsleistungen für Personen, die gestützt auf Artikel 4 Absatz 1 Buchstaben c oder d ELG Anspruch haben (EL zur IV)."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Abrechnung hat insbesondere über die Leistungen Aufschluss zu geben. Das Bundesamt bestimmt im Rahmen seiner Weisungsbefugnis die Einzelheiten und kann verbindliche Formulare vorschreiben."
+        },
+        {
+          "absatz": null,
+          "text": "3 Kantone, welche die Festsetzung und Auszahlung von Ergänzungsleistungen den Gemeinden überlassen, haben die Abrechnungen der Gemeinden zu überprüfen und zuhanden des Bundesamtes nach dessen Richtlinien zusammenzufassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Abrechnung erstreckt sich jeweils auf ein Kalenderjahr und ist dem Bundesamt bis 31. Dezember des betreffenden Jahres einzureichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e2a0a029c8391232a3baf81caf563a17404c374e0c7ae75006564327fa6a11aa"
+    },
+    {
+      "id": "bund/ELV/art_40_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "40_a",
+      "artikelLabel": "Art. 40a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesamt setzt die Beiträge aufgrund der Abrechnung des Kantons und des nach Artikel 39 Absatz 2 berechneten Bundesanteils fest."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_40_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "924f067810580f7f91dc192f82ca280ffc962adf08df63ea99268c3ab1e86ec1"
+    },
+    {
+      "id": "bund/ELV/art_41",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt zahlt die Beiträge in der Regel innert Monatsfrist nach Eingang der Abrechnung aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gewährt den Kantonen im Leistungsjahr vierteljährlich einen Vorschuss. Das Total der Vorschüsse darf pro Kanton und Jahr in der Regel 80 Prozent des voraussichtlichen Beitrags nicht übersteigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "aa8a25b52fdd50a2715ddd402e997203f71a348ed3a07bae38b80fa4ca5226e3"
+    },
+    {
+      "id": "bund/ELV/art_42",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zu Unrecht ausbezahlte Beiträge an die jährlichen Ergänzungsleistungen sind nach Artikel 28 des Subventionsgesetzes vom 5. Oktober 1990 (SuG) zurückzuerstatten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b8f653ec28ef26cce170e4624451d2c54e218da6feed3bacd8566b6bc486784d"
+    },
+    {
+      "id": "bund/ELV/art_42_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_a",
+      "artikelLabel": "Art. 42a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund richtet Fallpauschalen aus, welche wie folgt abgestuft sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "je 210 Franken für die ersten 2500 Fälle;"
+            },
+            {
+              "marke": "b",
+              "text": "je 135 Franken für die Fälle 2501 bis 15 000;"
+            },
+            {
+              "marke": "c",
+              "text": "je 50 Franken für jeden weiteren Fall."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Hat ein Kanton die Festsetzung und die Auszahlung der Ergänzungsleistungen mehr als einer Stelle übertragen, so werden die Fälle zusammengezählt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e6f0c61704f839911e6b8749d8cddba09d65e9412ab88192b38ac8f43bb44121"
+    },
+    {
+      "id": "bund/ELV/art_42_b",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_b",
+      "artikelLabel": "Art. 42b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt ermittelt für jeden Kanton die Anzahl Fälle."
+        },
+        {
+          "absatz": "2",
+          "text": "Massgebend sind die laufenden Fälle für den Monat Mai des Leistungsjahres."
+        },
+        {
+          "absatz": "3",
+          "text": "Jede gesonderte Berechnung zählt dabei als ein Fall."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "00c7988ea8f29c74b80fe82e86f1b9c30de84d8e4be3b006ef40c9649321781d"
+    },
+    {
+      "id": "bund/ELV/art_42_c",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_c",
+      "artikelLabel": "Art. 42c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt setzt die Beiträge fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gewährt den Kantonen im Leistungsjahr vierteljährlich einen Vorschuss. Das Total der Vorschüsse darf pro Kanton und Jahr in der Regel 80 Prozent des voraussichtlichen Beitrags nicht übersteigen. Die Berechnung erfolgt auf der Basis der Fallzahlen des Vorjahres."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Saldozahlung erfolgt bis Mitte Dezember des Leistungsjahres."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9d8295bebbfd6b78cd2aff9960a5d49d31809fe5471e931dea2695cbd3dffff6"
+    },
+    {
+      "id": "bund/ELV/art_42_d",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_d",
+      "artikelLabel": "Art. 42d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zu Unrecht an die Verwaltungskosten ausbezahlte Beiträge sind nach Artikel 28 Absatz 1 SuG zurückzuerstatten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2fbf8fff5dec2af08e7047756b6486c22856defb4d01a56758b218acc84439b7"
+    },
+    {
+      "id": "bund/ELV/art_42_e",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_e",
+      "artikelLabel": "Art. 42e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesbeitrag an die Verwaltungskosten kann in den Fällen nach Artikel 24 Absatz 2 ELG um höchstens 30 Prozent gekürzt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "3d9acc62b7d7ad1f51416fd6f5938a92d15d8851c053ab4a14a6902a5126597c"
+    },
+    {
+      "id": "bund/ELV/art_42_f",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "42_f",
+      "artikelLabel": "Art. 42f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt das Bundesamt im Rahmen seiner Aufsicht (Art. 55) fest, dass eine Durchführungsstelle Vorschriften wiederholt nicht beachtet, so räumt es ihr eine angemessene Frist zur Behebung des Mangels ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Behebt die Durchführungsstelle den Mangel nicht innerhalb dieser Frist, so wird der Bundesbeitrag an die Verwaltungskosten ab dem Folgejahr gekürzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Beitrag bleibt so lange gekürzt, bis die Durchführungsstelle nachweist, dass sie den Mangel behoben hat."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_42_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "11f4f25e262d501dfffaf7ec437fee17fe2f8e3c18c4b4fb9fc23f3b98915f6a"
+    },
+    {
+      "id": "bund/ELV/art_43",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt setzt die jährlichen Beiträge im Rahmen von Artikel 17 Absatz 1 ELG fest und zahlt sie der Stiftung Pro Senectute, der Vereinigung Pro Infirmis und der Stiftung Pro Juventute je zur Hälfte anfangs Januar und spätestens im Monat Juli aus. Das Bundesamt kann abweichende Zahlungstermine festlegen, jedoch höchstens vier Zahlungen pro Jahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die gemeinnützigen Institutionen haben die Beiträge gesondert zu verwalten. Sie erstellen über die Verwendung der Bundesbeiträge jährlich einen Voranschlag. Über die Beiträge und die daraus gewährten Leistungen ist gesondert Buch zu führen. Allfällige Zinsen sind zu den gleichen Zwecken zu verwenden wie die Beiträge."
+        },
+        {
+          "absatz": "3",
+          "text": "Zur Deckung der ausgewiesenen Durchführungskosten dürfen bis zu 10 Prozent der Beiträge verwendet werden, sofern diese Kosten nicht im Rahmen eines Leistungsvertrag mit der AHV oder der IV bereits abgegolten sind. Ab 2 Millionen Franken beträgt der Höchstansatz 5 Prozent. Als Durchführungskosten gelten Löhne und Sozialaufwendungen, Raum-, Sekretariats- und Transportkosten. Das Bundesamt kann die anrechenbaren Kosten festlegen und einen höheren Kostenanteil bewilligen, wenn der entsprechende Nachweis erbracht wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Artikel 42 ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fadcda4aa947b48213dfcca071fdf14a7028ebef7538e6e15596ab4f7a6f644e"
+    },
+    {
+      "id": "bund/ELV/art_44",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vom Beitrag an die Stiftung Pro Senectute nach Artikel 10 Absatz 1 ELG werden fünf Sechstel den kantonalen Organen zugewiesen. Den Rest verwendet das Direktionskomitee im Einvernehmen mit dem Bundesamt."
+        },
+        {
+          "absatz": "2",
+          "text": "Vom Beitrag an die Vereinigung Pro Infirmis gehen drei Viertel an die von dieser Institution bezeichneten Organe in den Kantonen, während ein Viertel dem Zentralsekretariat zur Verfügung steht."
+        },
+        {
+          "absatz": "3",
+          "text": "Vom Beitrag an die Stiftung Pro Juventute ist ein Viertel für die Verteilung in den Kantonen bestimmt, während drei Viertel dem Zentralsekretariat zur Verfügung stehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die den Zentralorganen der gemeinnützigen Institutionen zur Verfügung stehenden Mittel sind, soweit sie nicht für besondere Leistungen bestimmt sind, denjenigen Organen in den Kantonen zuzuwenden, die mit ihrem festen Anteil ihre Aufgaben nicht zu erfüllen vermögen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die gemeinnützigen Institutionen stellen einen Schlüssel für die Verteilung der Bundesbeiträge an die Organe in den einzelnen Kantonen auf."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "843538c4fd2630daa8408037ec0934257b671a47c9cc687697ec100b44c01b7c"
+    },
+    {
+      "id": "bund/ELV/art_45",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Leistungen im Sinne von Artikel 18 ELG gewährt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Stiftung Pro Senectute den Personen, die das Referenzalter nach Artikel 21 Absatz 1 AHVG erreicht haben, sowie den Personen, die ihre ganze Altersrente vorbeziehen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Vereinigung Pro Infirmis den Invaliden, sofern sie nicht zu dem unter Buchstabe a umschriebenen Personenkreis gehören;"
+            },
+            {
+              "marke": "c",
+              "text": "die Stiftung Pro Juventute: 1. den Witwern mit minderjährigen Kindern und den Witwen, sofern sie nicht zu dem unter Buchstabe a oder b umschriebenen Personenkreis gehören,"
+            },
+            {
+              "marke": "2",
+              "text": "den Waisen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "f985d55a44c8843736b7a66339c02071566535342b76ebecf22bd4136161ca2f"
+    },
+    {
+      "id": "bund/ELV/art_46",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bedürftigen Invaliden, denen keine Rente oder Hilflosenentschädigung der Invalidenversicherung zusteht, können Geldleistungen gewährt werden, sofern sie voraussichtlich eine Leistung dieser Versicherung beziehen werden oder ihnen wegen Eingliederung oder Verminderung der Invalidität eine solche Leistung nicht mehr ausgerichtet werden kann."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "eff6e4ed172b08b22031a198c863b9cd431aa0938ad8bb8f5fbc8075c45a9690"
+    },
+    {
+      "id": "bund/ELV/art_47",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Einzelleistungen werden auf Gesuch hin ausgerichtet. Der Gesuchsteller hat dem Organ der gemeinnützigen Institution die für die Prüfung der Verhältnisse nötigen Auskünfte zu erteilen. Die gemeinnützigen Institutionen prüfen die Richtigkeit der Angaben und teilen dem Gesuchsteller den Entscheid schriftlich mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Geldleistungen sind durch die Post, eine Bank oder persönlich gegen Quittung auszurichten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ae214ec6086dbeba954e924f52c62291ee2e6c39d04b682fdd734a882b146afb"
+    },
+    {
+      "id": "bund/ELV/art_48",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Grundsätze der Stiftung Pro Senectute, der Vereinigung Pro Infirmis und der Stiftung Pro Juventute müssen Bestimmungen enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Verteilung der Beiträge an die Organe in den einzelnen Kantonen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Voraussetzungen für die Gewährung der Leistungen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Grundsätze, nach welchen die Leistungen im Einzelfalle zu bemessen sind;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einreichung und Behandlung der Gesuche;"
+            },
+            {
+              "marke": "e",
+              "text": "die Auszahlung der Leistungen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Kontrollstellen und die Kontrolle über die richtige Verwendung der Mittel;"
+            },
+            {
+              "marke": "g",
+              "text": "die Rückerstattung zu Unrecht bezogener Leistungen;"
+            },
+            {
+              "marke": "h",
+              "text": "die Befugnis des Zentralorgans, den Organen in den Kantonen Weisungen über den Vollzug der Leitsätze im Allgemeinen und im Einzelfall zu erteilen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "70ece05dd494faafe2866d16c4f606c522601b248f5fed2b37a1af3e74bc9386"
+    },
+    {
+      "id": "bund/ELV/art_49",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Revisionsstellen, welche die Buchhaltung der gemeinnützigen Institutionen prüfen, haben die Bundesbeiträge in die Prüfung einzubeziehen. Über diese Prüfung ist gesondert Bericht zu erstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die gemeinnützigen Institutionen haben dafür zu sorgen, dass bei ihren Organen in den Kantonen die Verwendung der Mittel periodisch geprüft wird. Die Kontrollberichte gehen an die zentralen Organe der gemeinnützigen Institutionen und an das Bundesamt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Bundesamt kann den Revisionsstellen bestimmte Revisionsaufträge erteilen oder von ihnen ergänzende Angaben einholen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "3596bdc869ccb74c2f8c454f3b0f5c5b632bf3d29a31448c38117ba6de295f07"
+    },
+    {
+      "id": "bund/ELV/art_50",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Bundesamt prüft periodisch bei den zentralen Organen der gemeinnützigen Institutionen die gesetzmässige Verwendung der Bundesbeiträge; es kann bei den kantonalen Organen ergänzende Kontrollen durchführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Ergebnis der Kontrolle wird in einem Bericht festgehalten, der den gemeinnützigen Institutionen zur Stellungnahme unterbreitet wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Zeigt es sich, dass die massgebenden Vorschriften nicht oder unrichtig angewendet worden sind, so hat das Bundesamt die Behebung der Mängel innert angemessener Frist zu verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0bfcb5e791265c7e2bfc1af8b71949bd1be56626238b628cb1fcf51f2d0ff99c"
+    },
+    {
+      "id": "bund/ELV/art_51",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Jahresbericht und Jahresrechnung sind jeweils dem Bundesamt einzureichen. Dieses kann Richtlinien über die Ausgestaltung des Berichtes, die statistischen Angaben und den Einreichungstermin erlassen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "289d2c670ac89535f8d4d8bc337504cd4a89931c9c5305d248fc6aee9765b5bf"
+    },
+    {
+      "id": "bund/ELV/art_52",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone haben Vorkehren zu treffen, um Doppelzahlungen von jährlichen Ergänzungsleistungen durch einen oder mehrere Kantone zu verhindern. Der Bundesbeitrag wird für den gleichen Zeitraum jeweils nur für eine Ergänzungsleistung gewährt. Das Bundesamt kann überdies von den Kantonen Vorkehren zur Feststellung und Vermeidung von Doppelzahlungen verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ee86516a4576be45b00f52203aba2b3bb681b29c7ee4cf759cabfa2f23dd55c6"
+    },
+    {
+      "id": "bund/ELV/art_53",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "und 2 …"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone können mit den gemeinnützigen Institutionen Vereinbarungen über die Koordination der Tätigkeit der für die Gewährung von Ergänzungsleistungen zuständigen kantonalen Stellen und der Organe der gemeinnützigen Institutionen treffen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ffd919bb8b3c92dc9c53c42b9291b871c10e2cb39fc258a77e3ab94bb5a5fed0"
+    },
+    {
+      "id": "bund/ELV/art_54",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesamt kann die Ausgleichskassen verpflichten, über Änderungen, die im Rentenanspruch einer ihnen bekannten Person mit Ergänzungsleistungen eintreten, laufend den Durchführungsstellen Meldung zu erstatten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0514b7740602035867023b3f830cbab053f6b0aeb9441524e306063cb382dbbf"
+    },
+    {
+      "id": "bund/ELV/art_54_a",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "54_a",
+      "artikelLabel": "Art. 54a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone dürfen in der Abrechnung über die Ergänzungsleistungen die jährlichen Beträge für die obligatorische Krankenpflegeversicherung nach Artikel 10 Absatz 3 Buchstabe d ELG nicht einsetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Das Departement legt die jährlichen Pauschalbeträge für die obligatorische Krankenpflegeversicherung nach Artikel 10 Absatz 3 Buchstabe d ELG spätestens Ende Oktober für das nächste Jahr fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Wohnsitzwechsel der Bezügerin oder des Bezügers ist die Ergänzungsleistung einschliesslich des Betrages für die obligatorische Krankenpflegeversicherung durch folgende Kantone auszurichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch den früheren Wohnsitzkanton bis zum Erlöschen des Anspruchs auf die monatlich auszurichtende Ergänzungsleistung im Wegzugskanton;"
+            },
+            {
+              "marke": "b",
+              "text": "durch den neuen Wohnsitzkanton ab Anspruchsbeginn auf die monatlich auszurichtende Ergänzungsleistung."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die kantonale Durchführungsstelle meldet der Stelle nach Artikel 106 b Absatz 1 der Verordnung vom 27. Juni 1995 über die Krankenversicherung (KVV) die Daten, die diese für das Meldeverfahren mit den Versicherern benötigt. Daten, die für das Meldeverfahren nicht benötigt werden, wie Einzelheiten der Berechnung der jährlichen Ergänzungsleistung, dürfen nicht gemeldet werden."
+        },
+        {
+          "absatz": "5bis",
+          "text": "Die Versicherer melden der Stelle nach Artikel 106 b Absatz 1 KVV auf Anfrage innert 7 Kalendertagen die tatsächlichen Prämien für die obligatorische Krankenpflegeversicherung des laufenden oder des folgenden Jahres für die Personen, deren Prämien verbilligt werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Artikel 106 b –106 e KVV sind sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_54_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8a97811b6d437a0fd90a80d3ba8a0801643050597a3a6fdb588d195831b2445e"
+    },
+    {
+      "id": "bund/ELV/art_55",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufsicht gemäss Artikel 28 ELG wird durch das Bundesamt ausgeübt. Es sorgt für eine einheitliche Anwendung der gesetzlichen Vorschriften und kann zu diesem Zwecke den Durchführungsstellen vorbehältlich der Rechtsprechung Weisungen über den Vollzug der Bestimmungen im Allgemeinen und im Einzelfalle erteilen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "90355d83b7415d97c98e75bb630a1654e5c592ff7822b4a0af81428f2883fff6"
+    },
+    {
+      "id": "bund/ELV/art_56",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ELV/art_57",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Vollzugsbestimmungen nach Artikel 29 Absatz 1 ELG sind der Bundeskanzlei zur Genehmigung einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die gemeinnützigen Institutionen reichen ihre Grundsätze dem Bundesamt zur Genehmigung ein."
+        },
+        {
+          "absatz": "3",
+          "text": "Weitere Vorschriften über Ergänzungsleistungen, namentlich Weisungen und Richtlinien sowie Vereinbarungen im Sinne von Artikel 53 Absatz 3 sind dem Bundesamt zur Kenntnis zu bringen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "36c74d671a8415246f853a83141ed7c14c9105bab779912e40042cfa081dfc0f"
+    },
+    {
+      "id": "bund/ELV/art_58",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bundesanteil für das Jahr 2008 wird aufgrund der laufenden Fälle der Hauptauszahlung für den Monat Dezember 2008 festgelegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Ermittlung der Fallzahlen zur Festsetzung der Fallpauschale für das Jahr 2008 sind die laufenden Fälle der Hauptauszahlung für den Monat Dezember 2008 massgebend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "024d84a987d4e693d8bd05828f54ff71a783ef9b0835c3165ff9b5561df19710"
+    },
+    {
+      "id": "bund/ELV/art_59",
+      "ebene": "bund",
+      "quelle": "ELV",
+      "erlass": "ELV",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt rückwirkend auf den 1. Januar 1971 in Kraft. Auf den gleichen Zeitpunkt wird die Verordnung vom 6. Dezember 1965 zum Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung aufgehoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Departement ist mit dem Vollzug beauftragt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b257cc3d38edf18a66bfd3891eaf87cc85b8751e977ba30b0ecc661065948e0e"
+    }
+  ]
+}

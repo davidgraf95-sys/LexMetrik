@@ -1,0 +1,3282 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/BANKV/art_1",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt namentlich:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Einlagensicherung,"
+            },
+            {
+              "marke": "2",
+              "text": "die Übertragung und die Liquidation nachrichtenloser Vermögenswerte;"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b80623d8f67465d549d1f109b9869f6403a44993844154c6b674d78ca15a8c37"
+    },
+    {
+      "id": "bund/BANKV/art_2",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Banken werden von der Eidgenössischen Finanzmarktaufsicht (FINMA) anhand folgender Kriterien in die Kategorien nach Anhang 3 eingeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bilanzsumme;"
+            },
+            {
+              "marke": "b",
+              "text": "verwaltete Vermögen;"
+            },
+            {
+              "marke": "c",
+              "text": "privilegierte Einlagen;"
+            },
+            {
+              "marke": "d",
+              "text": "Mindesteigenmittel."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Bank wird ausgehend von der Kategorie 5 in die höchste Kategorie nach Anhang 3 eingeteilt, in der sie mindestens drei Schwellenwerte erreicht."
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA kann in begründeten Einzelfällen von den Schwellenwerten abweichende Einteilungen vornehmen."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Eidgenössische Finanzdepartement prüft in Zusammenarbeit mit der FINMA mindestens jedes fünfte Jahr die Schwellenwerte für die Kriterien nach Absatz 2 Buchstaben a–c. Es orientiert sich dabei an der längerfristigen Entwicklung der Summe der Werte aller Banken in der Schweiz in Bezug auf das jeweilige Kriterium und beantragt dem Bundesrat allfällige Anpassungen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "519ca87d6d12e20fd1d1c43d93ffb570330e9e7f271ec50bc1e07bdf5cc294a8"
+    },
+    {
+      "id": "bund/BANKV/art_3",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Körperschaften und Anstalten des öffentlichen Rechts sowie Kassen, für die eine solche Körperschaft oder Anstalt vollumfänglich haftet, gelten nicht als Banken oder Personen nach Artikel 1 b BankG, auch wenn sie gewerbsmässig Publikumseinlagen entgegennehmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2287425ab0d2e3778d9f0ea654863b4dcc0021a5efef191766accdcdb1e2a6d2"
+    },
+    {
+      "id": "bund/BANKV/art_3_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Funktionen einer Gruppengesellschaft sind für die bewilligungspflichtigen Tätigkeiten wesentlich, wenn sie notwendig sind für die Weiterführung wichtiger Geschäftsprozesse, namentlich in den Bereichen Liquiditätsmanagement, Tresorerie, Risikomanagement, Stammdatenverwaltung und Rechnungswesen, Personal, Informationstechnologie, Handel und Abwicklung sowie Recht und Compliance."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_3_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8529ca1f5753df892d165bc2b0d2b065182ba466c56d0e9c42b65a8fe945cbde"
+    },
+    {
+      "id": "bund/BANKV/art_4",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Finanzbereich tätig ist, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Dienstleistungen für Finanzgeschäfte erbringt oder vermittelt, insbesondere für sich selbst oder für Dritte das Einlagen- oder Kreditgeschäft, den Effektenhandel, das Kapitalanlagegeschäft oder die Vermögensverwaltung betreibt oder kryptobasierte Vermögenswerte nach Artikel 5 a entgegennimmt;"
+            },
+            {
+              "marke": "b",
+              "text": "qualifizierte Beteiligungen überwiegend an im Finanzbereich tätigen Unternehmen hält (Holdinggesellschaft); oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine wesentliche Gruppengesellschaft nach Artikel 3 a ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tätigkeit der Versicherungsunternehmen (Versicherungsbereich) wird der Tätigkeit im Finanzbereich gleichgestellt, sofern diese Verordnung oder die Eigenmittelverordnung vom 1. Juni 2012 (ERV) für diese Unternehmen keine abweichenden Regelungen vorsieht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "59d813798dcbaf96a84225590d590de39bd67cb38bb3ec3254a9442b75f15a45"
+    },
+    {
+      "id": "bund/BANKV/art_5",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Publikumseinlagen gelten die Verbindlichkeiten gegenüber Kundinnen und Kunden mit Ausnahme derjenigen nach den Absätzen 2 und 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht als Publikumseinlagen gelten Einlagen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von in- und ausländischen Banken oder anderen staatlich beaufsichtigten Unternehmen;"
+            },
+            {
+              "marke": "b",
+              "text": "von Aktionärinnen und Aktionären oder Gesellschafterinnen und Gesellschaftern mit einer qualifizierten Beteiligung am betreffenden Schuldner;"
+            },
+            {
+              "marke": "c",
+              "text": "von Personen, die mit denjenigen nach Buchstabe b wirtschaftlich oder familiär verbunden sind;"
+            },
+            {
+              "marke": "d",
+              "text": "von institutionellen Anlegern mit professioneller Tresorerie;"
+            },
+            {
+              "marke": "e",
+              "text": "von aktiven und pensionierten Arbeitnehmerinnen und Arbeitnehmern bei ihrem Arbeitgeber; oder"
+            },
+            {
+              "marke": "f",
+              "text": "bei Vereinen, Stiftungen oder Genossenschaften, sofern: 1. diese nicht im Finanzbereich tätig sind,"
+            },
+            {
+              "marke": "2",
+              "text": "diese einen ideellen Zweck oder die gemeinsame Selbsthilfe verfolgen und die Einlagen ausschliesslich dafür verwenden, und"
+            },
+            {
+              "marke": "3",
+              "text": "die Laufzeit der Einlagen mindestens sechs Monate beträgt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Nicht als Einlagen gelten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "von Edelmetallhändlern, Vermögensverwaltern oder ähnlichen Unternehmen, sofern die Abwicklung innert 60 Tagen erfolgt, oder"
+            },
+            {
+              "marke": "2",
+              "text": "von Wertpapierhäusern oder von Handelssystemen für Distributed Ledger Technology-Effekten (DLT-Handelssystemen) nach Artikel 73 a des Finanzmarktinfrastrukturgesetzes vom 19. Juni 2015 (FinfraG);"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b61b86273459f127b033cda128ddbc8c8ac14052b32e0de7ad35589863a6f3d4"
+    },
+    {
+      "id": "bund/BANKV/art_5_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "5_a",
+      "artikelLabel": "Art. 5a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kryptobasierte Vermögenswerte im Sinne von Artikel 1 b Absatz 1 Buchstabe a BankG sind Vermögenswerte nach Artikel 16 Ziffer 1 bis Buchstabe b BankG (sammelverwahrte kryptobasierte Vermögenswerte), die tatsächlich oder nach der Absicht des Organisators oder Herausgebers in einem erheblichen Umfang als Zahlungsmittel für den Erwerb von Waren oder Dienstleistungen oder der Geld- oder Wertübertragung dienen."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht als kryptobasierte Vermögenswerte nach Absatz 1 gelten Vermögenswerte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die als nicht verzinste und einzig der Abwicklung von Kundengeschäften dienende Habensaldi auf Kundenkonti gehalten werden: 1. von Edelmetallhändlern, Vermögensverwaltern oder ähnlichen Unternehmen, sofern die Abwicklung innert 60 Tagen erfolgt, oder"
+            },
+            {
+              "marke": "2",
+              "text": "von Wertpapierhäusern oder von DLT-Handelssystemen;"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_5_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "469552cdc552e66808a2b18b88c39798cf4a895d1ba39357dc720d45cf32aff3"
+    },
+    {
+      "id": "bund/BANKV/art_6",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gewerbsmässig im Sinne des BankG handelt, wer:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dauernd mehr als 20 Publikumseinlagen oder sammelverwahrte kryptobasierte Vermögenswerte entgegennimmt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "sich öffentlich zur Entgegennahme von Publikumseinlagen oder sammelverwahrten kryptobasierten Vermögenswerten empfiehlt, selbst wenn in der Folge weniger als 20 Publikumseinlagen oder kryptobasierte Vermögenswerte entgegengenommen werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht gewerbsmässig im Sinne des BankG handelt, wer dauernd mehr als 20 Publikumseinlagen oder sammelverwahrte kryptobasierte Vermögenswerte entgegennimmt oder sich öffentlich dafür empfiehlt, wenn er:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Publikumseinlagen oder sammelverwahrte kryptobasierte Vermögenswerte von gesamthaft höchstens 1 Million Franken entgegennimmt;"
+            },
+            {
+              "marke": "b",
+              "text": "kein Zinsdifferenzgeschäft betreibt; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Einlegerinnen und Einleger, bevor sie die Einlage tätigen, schriftlich oder in einer anderen Form, die den Nachweis durch Text ermöglicht, darüber informiert, dass: 1. er von der FINMA nicht beaufsichtigt wird, und"
+            },
+            {
+              "marke": "2",
+              "text": "die Einlage nicht von der Einlagensicherung erfasst wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Wird der Schwellenwert nach Absatz 2 Buchstabe a überschritten, so muss dies innerhalb von 10 Tagen der FINMA gemeldet und ihr innerhalb von 30 Tagen ein Bewilligungsgesuch nach den Vorschriften des BankG eingereicht werden. Die FINMA kann, sofern es der Schutzzweck des BankG gebietet, der Gesuchstellerin oder dem Gesuchsteller untersagen, bis zum Entscheid über das Bewilligungsgesuch weitere Publikumseinlagen entgegenzunehmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "bd6eb4d67f44e9bd0059b713dbed65d53cc03f1a461b9fd572887f2a5aa911c7"
+    },
+    {
+      "id": "bund/BANKV/art_7",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wem es untersagt ist, gewerbsmässig Publikumseinlagen oder sammelverwahrte kryptobasierte Vermögenswerte entgegenzunehmen, der darf auf keine Art und Weise dafür Werbung treiben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "d44432a3a3ee37ff79038ff7dfe128ec5a57be2d73d48169481a1df9a83fa861"
+    },
+    {
+      "id": "bund/BANKV/art_7_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "7_a",
+      "artikelLabel": "Art. 7a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen nach Artikel 1 b BankG informieren ihre Kundinnen und Kunden schriftlich oder in einer anderen Form, die den Nachweis der Information durch Text ermöglicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über die mit ihrem Geschäftsmodell, ihren Dienstleistungen und den verwendeten Technologien verbundenen Risiken;"
+            },
+            {
+              "marke": "b",
+              "text": "darüber, dass für die Publikumseinlagen oder die sammelverwahrten kryptobasierten Vermögenswerte keine Einlagensicherung nach dem dreizehnten Abschnitt des BankG besteht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kundinnen und Kunden sind so zu informieren, dass ihnen vor Vertragsschluss genügend Zeit bleibt, um die Informationen mit Blick auf den Vertragsschluss zu verstehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Information über die Risiken nach Absatz 1 Buchstabe a sowie über die nicht bestehende Einlagensicherung nach Absatz 1 Buchstabe b darf nicht nur in den Allgemeinen Geschäftsbestimmungen enthalten sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden die Informationen elektronisch zur Verfügung gestellt, so haben die Personen nach Artikel 1 b BankG dafür zu sorgen, dass sie jederzeit abgefragt, heruntergeladen und auf einem dauerhaften Datenträger erfasst werden können."
+        },
+        {
+          "absatz": "5",
+          "text": "Als dauerhafter Datenträger gilt Papier und jedes andere Medium, das die Speicherung und unveränderte Wiedergabe einer Information ermöglicht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_7_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b440ab05f3e94ac3e186470070c63031a68004b15c361ef70eee8d2105a538a4"
+    },
+    {
+      "id": "bund/BANKV/art_7_b",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "7_b",
+      "artikelLabel": "Art. 7b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vertretung einer ausländischen Bank, die Finanzdienstleistungen nach Artikel 3 Buchstabe c FIDLEG erbringt, muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bestimmungen des FIDLEG einhalten;"
+            },
+            {
+              "marke": "b",
+              "text": "ihre Kundenberaterinnen und -berater in ein Beraterregister nach Artikel 28 FIDLEG eintragen lassen, wenn diese ihre Dienstleistungen in der Schweiz nicht ausschliesslich gegenüber professionellen oder institutionellen Kunden nach Artikel 4 FIDLEG erbringen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_7_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "cb6214739b2a83190906d21054cf104cf8956813bd3ffe346b7696f299cf82e5"
+    },
+    {
+      "id": "bund/BANKV/art_8",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Bewilligung für eine neue Bank oder Person nach Artikel 1 b BankG muss zu den mit der Verwaltung und Geschäftsführung betrauten Personen nach Artikel 3 Absatz 2 Buchstabe c BankG sowie zu den Inhaberinnen und Inhabern einer qualifizierten Beteiligung nach Artikel 3 Absatz 2 Buchstabe c bis BankG insbesondere folgende Angaben und Unterlagen enthalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Statuten,"
+            },
+            {
+              "marke": "2",
+              "text": "einen Auszug aus dem Handelsregister oder eine entsprechende Bestätigung,"
+            },
+            {
+              "marke": "3",
+              "text": "einen Beschrieb der Geschäftstätigkeiten, der finanziellen Situation und, gegebenenfalls, der Gruppenstruktur,"
+            },
+            {
+              "marke": "4",
+              "text": "Angaben über abgeschlossene und hängige Gerichts- und Verwaltungsverfahren."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Personen, die eine qualifizierte Beteiligung besitzen, müssen der FINMA eine Erklärung abgeben, ob sie die Beteiligung für eigene Rechnung oder treuhänderisch für Dritte halten und ob sie für diese Beteiligung Optionen oder ähnliche Rechte eingeräumt haben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "63cf17ea8c3efb293e59b0f7fcf94a9aec9ab15c522f5e8605610a7fd603c004"
+    },
+    {
+      "id": "bund/BANKV/art_8_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Banken und Personen nach Artikel 1 b BankG melden der FINMA jegliche Änderung von Tatsachen, die der Bewilligung zugrunde liegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Änderungen von wesentlicher Bedeutung, so ist für die Weiterführung der Tätigkeit vorgängig die Bewilligung der FINMA einzuholen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0ed9228da4fb618544c845d37c1787d9f0431f2d7f3cfc25ffc8907e9d5d1bd5"
+    },
+    {
+      "id": "bund/BANKV/art_9",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank muss ihren Geschäftsbereich in den Statuten, den Gesellschaftsverträgen oder den Reglementen sachlich und geografisch genau umschreiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Geschäftsbereich und dessen geografische Ausdehnung müssen den finanziellen Möglichkeiten sowie der Verwaltungsorganisation entsprechen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "dbe8ebdeb66690906502d023dd63ccb5fb52acfbf11f49dda2491e51e4222366"
+    },
+    {
+      "id": "bund/BANKV/art_10",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bank muss tatsächlich von der Schweiz aus geleitet werden. Vorbehalten bleiben allgemeine Weisungen und Entscheide im Rahmen der Konzernüberwachung, sofern die Bank Teil einer im Finanzbereich tätigen Gruppe bildet, die einer angemessenen konsolidierten Aufsicht durch ausländische Aufsichtsbehörden untersteht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b89359fdffb4b4986a556377f23c6bdbdf980967fa0a736039e0484d3ea18c97"
+    },
+    {
+      "id": "bund/BANKV/art_11",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfordert der Geschäftszweck oder der Geschäftsumfang ein besonderes Organ für die Oberleitung, Aufsicht und Kontrolle, so muss dieses mindestens drei Mitglieder umfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kein Mitglied des für die Oberleitung, Aufsicht und Kontrolle verantwortlichen Organs einer Bank darf dem Organ angehören, das mit der Geschäftsführung betraut ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann in besonderen Fällen einer Bank eine Ausnahme bewilligen und diese an Bedingungen knüpfen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1c538624854896317feb0259d7c152e9358c90060769bd6ad65f1cddc8b29b17"
+    },
+    {
+      "id": "bund/BANKV/art_12",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank sorgt für eine wirksame betriebsinterne Trennung von Kreditgeschäft, Handel, Vermögensverwaltung und Abwicklung. Die FINMA kann in begründeten Einzelfällen Ausnahmen gestatten oder die Trennung weiterer Funktionen anordnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bank regelt die Grundzüge des Risikomanagements sowie die Zuständigkeit und das Verfahren für die Bewilligung von mit Risiko verbundenen Geschäften in einem Reglement oder in internen Richtlinien. Sie muss insbesondere Markt-, Kredit-, Ausfall-, Abwicklungs-, Liquiditäts- und Imagerisiken sowie operationelle und rechtliche Risiken erfassen, begrenzen und überwachen."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Bank stellt auf Stufe Einzelinstitut und Gruppe sicher, dass neue Verträge oder Änderungen an bestehenden Verträgen, die ausländischem Recht unterstehen oder einen ausländischen Gerichtsstand vorsehen, nur vereinbart werden, sofern die Gegenpartei einen Aufschub der Beendigung von Verträgen nach Artikel 30 a BankG anerkennt. Die FINMA kann regeln, für welche Arten von Verträgen ein solcher Aufschub erforderlich ist und für welche nicht."
+        },
+        {
+          "absatz": "3",
+          "text": "Die interne Dokumentation der Bank über die Beschlussfassung und Überwachung der mit Risiko verbundenen Geschäfte ist so auszugestalten, dass sie der Prüfgesellschaft erlaubt, sich ein zuverlässiges Urteil über die Geschäftstätigkeit zu bilden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bank sorgt für ein wirksames internes Kontrollsystem. Sie bestellt insbesondere eine von der Geschäftsführung unabhängige interne Revision. Die FINMA kann in begründeten Einzelfällen eine Bank von der Pflicht, eine interne Revision zu bestellen, befreien."
+        },
+        {
+          "absatz": "5",
+          "text": "Die FINMA regelt die Anforderungen an die Offenlegung von Informationen über die Organisation und die Risiken, insbesondere über das Risikomanagement und die Vergütungen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7178a90cb3282c2ef92b96066f432463923d9a21f465934bd50251a1081be8e2"
+    },
+    {
+      "id": "bund/BANKV/art_13",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank hat der FINMA innert 60 Tagen nach Abschluss des Geschäftsjahres eine Aufstellung der an ihr qualifiziert Beteiligten einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufstellung enthält Angaben über die Identität und die Beteiligungsquote aller am Abschlusstag qualifiziert Beteiligten sowie allfällige Veränderungen gegenüber dem Vorjahr."
+        },
+        {
+          "absatz": "3",
+          "text": "Über vorher nicht gemeldete Beteiligte sind zusätzlich die Angaben und Unterlagen nach Artikel 8 beizufügen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "254371086fc666a59b0e4cec54871f3a3a0af7d842d9ee364a81261443b0600b"
+    },
+    {
+      "id": "bund/BANKV/art_14",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Privatbankiers haben die erforderlichen organisatorischen Bestimmungen in den Gesellschaftsvertrag oder in ein Reglement aufzunehmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "3713cfebfdc65fde00d995bd5f5b79950b037f38678695e126722bac1572c1c1"
+    },
+    {
+      "id": "bund/BANKV/art_14_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_a",
+      "artikelLabel": "Art. 14a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Person nach Artikel 1 b BankG muss eine der folgenden Rechtsformen aufweisen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Aktiengesellschaft;"
+            },
+            {
+              "marke": "b",
+              "text": "Kommanditaktiengesellschaft;"
+            },
+            {
+              "marke": "c",
+              "text": "Gesellschaft mit beschränkter Haftung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss ihren Sitz in der Schweiz haben und die tatsächliche Verwaltung in der Schweiz ausüben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1558b39f761541a08c9fa9c5b1927953a72bdfdb34c4f6fec58def8f1fc2a580"
+    },
+    {
+      "id": "bund/BANKV/art_14_b",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_b",
+      "artikelLabel": "Art. 14b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen nach Artikel 1 b BankG müssen ihren Geschäftskreis in den Statuten oder in einem Reglement sachlich und geografisch genau umschreiben."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Geschäftskreis und seine geografische Ausdehnung müssen den finanziellen Möglichkeiten sowie der Verwaltungsorganisation der Person entsprechen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ba19e814da2404c330ec81b245f1f24145774cbd399fc0bb7af38c6dc4bd550a"
+    },
+    {
+      "id": "bund/BANKV/art_14_c",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_c",
+      "artikelLabel": "Art. 14c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Person nach Artikel 1 b BankG muss tatsächlich von der Schweiz aus geleitet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die mit der Geschäftsführung betrauten Personen müssen an einem Ort Wohnsitz haben, von dem aus sie die Geschäftsführung tatsächlich ausüben können."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "20270e84d10771281f0b5161697d34cad29f212b7b81cdbf6fb5a047c718fb4a"
+    },
+    {
+      "id": "bund/BANKV/art_14_d",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_d",
+      "artikelLabel": "Art. 14d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfordert der Geschäftszweck oder der Geschäftsumfang einer Person nach Artikel 1 b BankG ein besonderes Organ für die Oberleitung, Aufsicht und Kontrolle, so muss dieses mindestens drei Mitglieder umfassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Mindestens ein Drittel der Mitglieder des für die Oberleitung, Aufsicht und Kontrolle verantwortlichen Organs muss von der Geschäftsführung unabhängig sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Die natürlichen und juristischen Personen, die an einer Person nach Artikel 1 b BankG mit mindestens 10 Prozent der Stimmen oder des Kapitals beteiligt sind oder deren Geschäftstätigkeit auf andere Weise massgebend beeinflussen können (qualifizierte Beteiligte), müssen einen guten Ruf geniessen und gewährleisten, dass sich ihr Einfluss nicht zum Schaden einer umsichtigen und soliden Geschäftstätigkeit auswirkt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA kann in besonderen Fällen Ausnahmen von den Erfordernissen nach den Absätzen 1 und 2 bewilligen und diese an Bedingungen knüpfen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ae9509915adf7861b599d56e92afd36094c845847b91eed1598e415cd569b17b"
+    },
+    {
+      "id": "bund/BANKV/art_14_e",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_e",
+      "artikelLabel": "Art. 14e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Person nach Artikel 1 b BankG stellt sicher, dass die rechtlichen und unternehmensinternen Vorgaben eingehalten werden (Compliance), und sorgt für eine wirksame Erkennung, Beurteilung, Steuerung und Überwachung der mit ihrem Geschäft einhergehenden Risiken (Risikomanagement) und ein wirksames internes Kontrollsystem."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie hält in internen Dokumentationen und Weisungen fest, wie die Anforderungen nach Absatz 1 erfüllt werden können."
+        },
+        {
+          "absatz": "3",
+          "text": "Die für die Überwachung der Compliance und das Risikomanagement zuständigen Stellen müssen betriebsintern vom ertragsorientierten Geschäft unabhängig sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Person nach Artikel 1 b BankG kann für die Überwachung der Compliance und für das Risikomanagement Dritte beiziehen, sofern diese über die für diese Tätigkeiten notwendigen Fähigkeiten, Kenntnisse und Erfahrungen und über die erforderlichen Bewilligungen verfügen. Sie instruiert und überwacht die beigezogenen Dritten sorgfältig."
+        },
+        {
+          "absatz": "5",
+          "text": "Die FINMA kann im Einzelfall Personen nach Artikel 1 b BankG Erleichterungen von den Anforderungen nach Absatz 3 gewähren, wenn diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Bruttoertrag von weniger als 1,5 Millionen Franken erzielen;"
+            },
+            {
+              "marke": "b",
+              "text": "den Nachweis erbringen, dass sie über ein Geschäftsmodell mit geringen Risiken verfügen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "231070623cce322924a38527f3f17a6dbc9ba075ed33d95abd35fa3d3226bca3"
+    },
+    {
+      "id": "bund/BANKV/art_14_f",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_f",
+      "artikelLabel": "Art. 14f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen nach Artikel 1 b BankG müssen die entgegengenommenen Publikumseinlagen und sammelverwahrten kryptobasierten Vermögenswerte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "getrennt von den eigenen Mitteln verwahren; oder"
+            },
+            {
+              "marke": "b",
+              "text": "in ihren Büchern so erfassen, dass diese jederzeit separat von den eigenen Mitteln ausgewiesen werden können; in diesem Fall müssen sie eine ordentliche Revision nach Artikel 727 OR durchführen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Publikumseinlagen können gehalten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Sichteinlage bei einer Bank oder einer Person nach Artikel 1 b BankG;"
+            },
+            {
+              "marke": "b",
+              "text": "als qualitativ hochwertige, liquide Aktiva der Kategorie 1 gemäss Artikel 15 a der Liquiditätsverordnung vom 30. November 2012 (LiqV)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie sind in derjenigen Währung zu halten, in der die jeweiligen Rückforderungsansprüche der Kundinnen und Kunden bestehen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kryptobasierte Vermögenswerte müssen wie folgt gehalten werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der Schweiz;"
+            },
+            {
+              "marke": "b",
+              "text": "in der Form, in der sie entgegengenommen wurden."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die FINMA kann in begründeten Einzelfällen Ausnahmen von der Pflicht nach Absatz 4 Buchstabe a gewähren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "46c6f89868cc4f979daab972f58099b6f2c4d907f560ba56c095d5af8e56626c"
+    },
+    {
+      "id": "bund/BANKV/art_14_g",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "14_g",
+      "artikelLabel": "Art. 14g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen nach Artikel 1 b BankG treffen angemessene organisatorische Vorkehrungen, um Interessenkonflikte, die bei der Erbringung ihrer Dienstleistungen entstehen können, zu vermeiden oder die Benachteiligung der Kundinnen und Kunden durch Interessenkonflikte auszuschliessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann eine Benachteiligung der Kundinnen und Kunden nicht ausgeschlossen werden, so ist ihnen dies offenzulegen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_14_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7211d1cdb9b58738060c5b05d9c3a011f237a95b539b07e70d4d67bd92c966a7"
+    },
+    {
+      "id": "bund/BANKV/art_15",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Mindestkapital beträgt 10 Millionen Franken. Es muss voll einbezahlt sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Sacheinlagegründungen ist der Wert der eingebrachten Aktiven und der Umfang der Passiven durch eine zugelassene Prüfgesellschaft zu überprüfen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "87c124e4932e3c3fa32d5e2dd2bc61c9b5b417107485051430a6d006dab88c62"
+    },
+    {
+      "id": "bund/BANKV/art_16",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Unternehmen in eine Bank umgewandelt, so darf das voll einbezahlte Kapital weniger als 10 Millionen Franken betragen, wenn das harte Kernkapital nach Artikel 21 ERV in Berücksichtigung der Korrekturen nach den Artikeln 31–40 ERV diesen Betrag erreicht. Die FINMA entscheidet darüber im Einzelfall."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Sacheinlagen ist Artikel 15 Absatz 2 sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "d6fcc528423cc49cd6f4689c418ab41ed7f0600cde0c711af1b3c4e5c5bbf8d4"
+    },
+    {
+      "id": "bund/BANKV/art_17",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In besonderen Fällen kann die FINMA Ausnahmen von den Mindestkapitalvorschriften nach den Artikeln 15 und 16 gewähren, namentlich wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Bank einer zentralen Organisation angeschlossen ist, die deren Verpflichtungen garantiert;"
+            },
+            {
+              "marke": "b",
+              "text": "die zentrale Organisation nach Buchstabe a und die ihr angeschlossenen Banken die Vorschriften über die Eigenmittel und die Risikoverteilung auf konsolidierter Basis erfüllen; und"
+            },
+            {
+              "marke": "c",
+              "text": "die Leitung der zentralen Organisation nach Buchstabe a den angeschlossenen Banken verbindliche Weisungen erteilen kann."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a96c2316cfb80e763ec64baa7703e19e96d8fd9754d92dab9685cfcb81575184"
+    },
+    {
+      "id": "bund/BANKV/art_17_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "17_a",
+      "artikelLabel": "Art. 17a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Mindestkapital von Personen nach Artikel 1 b BankG beträgt 3 Prozent der entgegengenommenen Publikumseinlagen und der entgegengenommenen sammelverwahrten kryptobasierten Vermögenswerte, jedoch mindestens 300 000 Franken. Es muss voll einbezahlt sein und ist dauernd zu halten. Es darf nicht den qualifiziert Beteiligten oder diesen nahestehenden natürlichen oder juristischen Personen ausgeliehen oder in Beteiligungen investiert werden, die von diesen beherrscht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA regelt die Einzelheiten und kann im Einzelfall höhere Anforderungen an das Mindestkapital stellen, wenn dies aufgrund der mit dem Geschäft verbundenen Risiken als geboten erscheint."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bestimmungen der ERV und der LiqV finden keine Anwendung auf Personen nach Artikel 1 b BankG."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_17_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "360792b597508b800a2b98c3ca197486546fb3c6f098abad4ff3a5564eee2a2f"
+    },
+    {
+      "id": "bund/BANKV/art_18",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gesuche um eine Zusatzbewilligung als ausländisch beherrschte Bank oder Person nach Artikel 1 b BankG nach Artikel 3 ter BankG müssen die Angaben nach Artikel 8 enthalten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1d25eacc20b1ed4a800b311710be231cc84289b6216e66cf3e2d7a686ebb0347"
+    },
+    {
+      "id": "bund/BANKV/art_19",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gegenrecht ist insbesondere gewährleistet, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen mit Sitz oder Wohnsitz in der Schweiz im ausländischen Staat Banken oder Personen nach Artikel 1 b BankG eröffnen können, seien dies selbstständige Gesellschaften, Zweigniederlassungen oder Agenturen; und"
+            },
+            {
+              "marke": "b",
+              "text": "die eröffneten Banken oder Personen nach Artikel 1 b BankG im ausländischen Staat in der Ausübung ihrer Geschäftstätigkeit nicht wesentlich einschränkenderen Bestimmungen unterliegen als ausländische Banken oder Personen nach Artikel 1 b BankG in der Schweiz."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Bestellung einer ständigen Vertretung einer ausländischen Bank oder Person nach Artikel 1 b BankG im Sinne von Artikel 3 bis Absatz 1 BankG ist das Gegenrecht auch gewährleistet, wenn schweizerische Banken im ausländischen Staat ständige Vertretungen mit gleichen Funktionen eröffnen können."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "16e5e2c59b56b27bfca39174037bdb296570702c6e90347f85497c0e80620950"
+    },
+    {
+      "id": "bund/BANKV/art_20",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Meldung, die eine Bank oder Person nach Artikel 1 b BankG der FINMA machen muss, bevor sie im Ausland tätig wird, muss alle zur Beurteilung der Tätigkeit nötigen Angaben und Unterlagen enthalten, namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einen Geschäftsplan, der insbesondere die Art der geplanten Geschäfte und die Organisationsstruktur beschreibt;"
+            },
+            {
+              "marke": "b",
+              "text": "die Adresse der Geschäftsstelle im Ausland;"
+            },
+            {
+              "marke": "c",
+              "text": "die Namen der mit der Verwaltung und der Geschäftsführung betrauten Personen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Prüfgesellschaft;"
+            },
+            {
+              "marke": "e",
+              "text": "die Aufsichtsbehörde im Gastland."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG muss auch die Aufgabe oder jede wesentliche Änderung der Geschäftstätigkeit im Ausland sowie einen Wechsel der Prüfgesellschaft oder der Aufsichtsbehörde melden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "56418782b4f164f7235b81fc2b89aad93ac8f69caa7752520240a14d84c19182"
+    },
+    {
+      "id": "bund/BANKV/art_21",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unternehmen bilden eine wirtschaftliche Einheit, wenn eines der Unternehmen an den anderen Unternehmen direkt oder indirekt mit mehr als der Hälfte der Stimmen oder des Kapitals beteiligt ist oder diese auf andere Weise beherrscht."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Beistandszwang kann sich insbesondere ergeben aufgrund:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "personeller oder finanzieller Verflechtungen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Verwendung einer gemeinsamen Firma;"
+            },
+            {
+              "marke": "c",
+              "text": "eines einheitlichen Marktauftritts; oder"
+            },
+            {
+              "marke": "d",
+              "text": "von Patronatserklärungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "19d1d0e0781686c8375a526e6052f8f1d996cfb4ae81fe22bcccc110986aeb8a"
+    },
+    {
+      "id": "bund/BANKV/art_22",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gruppengesellschaften sind durch eine wirtschaftliche Einheit oder einen Beistandszwang verbundene Unternehmen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e0993f1ef7a166ca7ab10766ab925782e359191b1290a375676b573aa2aba398"
+    },
+    {
+      "id": "bund/BANKV/art_23",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gruppenaufsicht durch die FINMA umfasst sämtliche im Finanzbereich gemäss Artikel 4 Absatz 1 tätigen Gruppengesellschaften einer Finanzgruppe. Die Konglomeratsaufsicht umfasst zusätzlich Gruppengesellschaften, deren Tätigkeit als Versicherungsunternehmen nach Artikel 4 Absatz 2 der Tätigkeit im Finanzbereich gleichgestellt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann in begründeten Fällen Gruppengesellschaften des Finanzbereichs von der konsolidierten Aufsicht ausnehmen oder deren Inhalt für sie nur teilweise anwendbar erklären, namentlich wenn eine Gruppengesellschaft für die konsolidierte Aufsicht unwesentlich ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann ein Unternehmen im Finanzbereich, das von einer durch die FINMA beaufsichtigten Finanzgruppe oder einem Finanzkonglomerat gemeinsam mit Dritten beherrscht wird, ganz oder teilweise in die konsolidierte Aufsicht einschliessen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "678f605abef190d5b748313b3435e5aad311afde33df0d07fdb5d67ce0a579fd"
+    },
+    {
+      "id": "bund/BANKV/art_24",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der konsolidierten Aufsicht prüft die FINMA namentlich, ob die Finanzgruppe:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "angemessen organisiert ist;"
+            },
+            {
+              "marke": "b",
+              "text": "über ein angemessenes internes Kontrollsystem verfügt;"
+            },
+            {
+              "marke": "c",
+              "text": "die mit ihrer Geschäftstätigkeit verbundenen Risiken angemessen erfasst, begrenzt und überwacht;"
+            },
+            {
+              "marke": "d",
+              "text": "von Personen geleitet wird, die Gewähr für eine einwandfreie Geschäftstätigkeit bieten;"
+            },
+            {
+              "marke": "e",
+              "text": "die personelle Trennung zwischen dem mit der Geschäftsführung betrauten Organ und dem Organ für Oberleitung, Aufsicht und Kontrolle nach Artikel 11 einhält;"
+            },
+            {
+              "marke": "f",
+              "text": "die Eigenmittel- und Risikoverteilungsvorschriften einhält;"
+            },
+            {
+              "marke": "g",
+              "text": "über eine angemessene Liquidität verfügt;"
+            },
+            {
+              "marke": "h",
+              "text": "die Rechnungslegungsvorschriften korrekt anwendet;"
+            },
+            {
+              "marke": "i",
+              "text": "über eine anerkannte, unabhängige und sachkundige Prüfgesellschaft verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann für die konsolidierte Aufsicht über Finanzkonglomerate von Absatz 1 abweichen, um den Besonderheiten der Tätigkeit im Versicherungsbereich Rechnung zu tragen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "143bef560e1fd5fe88cc03c3f79f62b09740058d4b61ff338b9ae33cc8805649"
+    },
+    {
+      "id": "bund/BANKV/art_24_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bilden mehrere Personen nach Artikel 1 b BankG eine Gruppe nach Artikel 22, so ist der Schwellenwert von 100 Millionen Franken für Publikumseinlagen nach Artikel 1 b BankG über die ganze Gruppe zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann einzelne Personen nach Artikel 1 b BankG von der Gruppenbetrachtung ausnehmen, wenn sie von den anderen Gruppengesellschaften offensichtlich unabhängig sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Unabhängigkeit kann namentlich bei deutlich unterschiedlichen Geschäftsmodellen oder Geschäftszielen gegeben sein."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_24_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "17e28ed3cfd202c8640a1fd36583b817f44c205dc9111d46fc7bfc1df7974730"
+    },
+    {
+      "id": "bund/BANKV/art_25",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank erstellt eine Jahresrechnung. Darin stellt sie ihre wirtschaftliche Lage so dar, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sich Dritte ein zuverlässiges Urteil bilden können (statutarischer Einzelabschluss mit zuverlässiger Darstellung); oder"
+            },
+            {
+              "marke": "b",
+              "text": "ein den tatsächlichen Verhältnissen entsprechendes Bild nach dem True-and-Fair-View-Prinzip vermittelt wird (statutarischer Einzelabschluss True and Fair View)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im statutarischen Einzelabschluss True and Fair View sind die Bestimmungen des OR zu folgenden Gegenständen nicht anwendbar:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Vornahme von zusätzlichen Abschreibungen und Wertberichtigungen sowie zum Verzicht auf Auflösung nicht mehr begründeter Abschreibungen und Wertberichtigungen (Art. 960 a Abs. 4 OR);"
+            },
+            {
+              "marke": "b",
+              "text": "zur Bildung von Rückstellungen für Sanierungen von Sachanlagen und für die Sicherung des dauernden Gedeihens des Unternehmens (Art. 960 e Abs. 3 Ziff. 2 und 4 OR);"
+            },
+            {
+              "marke": "c",
+              "text": "zur Auflösung nicht mehr begründeter Rückstellungen (Art. 960 e Abs. 4 OR)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Jahresrechnung besteht aus Bilanz, Erfolgsrechnung, Eigenkapitalnachweis, Geldflussrechnung und Anhang. Banken, die einen statutarischen Einzelabschluss mit zuverlässiger Darstellung erstellen, sind von der Erstellung einer Geldflussrechnung befreit."
+        },
+        {
+          "absatz": "4",
+          "text": "Artikel 962 Absatz 1 Ziffer 2 OR findet keine Anwendung für Genossenschaften, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Genossenschaft einer zentralen Organisation angeschlossen ist, die deren Verpflichtungen garantiert;"
+            },
+            {
+              "marke": "b",
+              "text": "die zentrale Organisation nach Buchstabe a eine Konzernrechnung nach den Artikeln 33–41 oder nach einem durch die FINMA anerkannten internationalen Standard, welche alle angeschlossenen Genossenschaften integriert, erstellt und veröffentlicht; und"
+            },
+            {
+              "marke": "c",
+              "text": "keine Beteiligungstitel kotiert sind."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Personen nach Artikel 962 Absatz 2 OR können eine Jahresrechnung nach dem True-and-Fair-View-Prinzip verlangen, wenn die Bank weder eine Konzernrechnung nach den Artikeln 33–41 noch eine Konzernrechnung nach einem durch die FINMA anerkannten internationalen Standard erstellt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9d75e1c63fd2649682d1a8bd8508d4a79d68c337f3b85a5f9c3bf36123494c0a"
+    },
+    {
+      "id": "bund/BANKV/art_26",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundlagen für die Erstellung der Jahresrechnung sind die Annahme der Fortführung (Art. 958 a OR) sowie die zeitliche und sachliche Abgrenzung (Art. 958 b Abs. 1 OR)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Jahresrechnung folgt insbesondere den Grundsätzen der:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ordnungsmässigen Erfassung der Geschäftsvorfälle;"
+            },
+            {
+              "marke": "b",
+              "text": "Klarheit und Verständlichkeit;"
+            },
+            {
+              "marke": "c",
+              "text": "Vollständigkeit;"
+            },
+            {
+              "marke": "d",
+              "text": "Verlässlichkeit;"
+            },
+            {
+              "marke": "e",
+              "text": "Wesentlichkeit der Angaben;"
+            },
+            {
+              "marke": "f",
+              "text": "Vorsicht;"
+            },
+            {
+              "marke": "g",
+              "text": "Stetigkeit in Darstellung und Bewertung;"
+            },
+            {
+              "marke": "h",
+              "text": "Unzulässigkeit der Verrechnung von Aktiven und Passiven sowie von Aufwand und Ertrag;"
+            },
+            {
+              "marke": "i",
+              "text": "wirtschaftlichen Betrachtungsweise."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7f6942c03093c895f1b9eb581ffd154d0ed24fe2975d13b1ac5fc10f0ed4742d"
+    },
+    {
+      "id": "bund/BANKV/art_27",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Aktiven werden in der Regel zum Anschaffungswert abzüglich Abschreibungen oder Wertberichtigungen bilanziert und Verbindlichkeiten zum Nennwert. Die FINMA bestimmt, welche Bilanzpositionen davon abweichend bilanziert werden. Schwankungsreserven nach Artikel 960 b Absatz 2 OR sind nicht zulässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Aktiven, Verbindlichkeiten und Ausserbilanzgeschäfte werden in der Regel einzeln bewertet, sofern sie wesentlich sind und aufgrund ihrer Gleichartigkeit für die Bewertung nicht üblicherweise als Gruppe zusammengefasst werden. Beteiligungen, Sachanlagen und immaterielle Werte werden in jedem Fall einzeln bewertet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2e0c40c172acd8f0e7f43664e65256e3711ff0926304865b45bff3c2e93a2b26"
+    },
+    {
+      "id": "bund/BANKV/art_28",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gliederung der Jahresrechnung richtet sich nach Anhang 1."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "58477661d1b67305c11244169e7ae4eff0af6f11ecd7c3a9a97a03f5dce4c52f"
+    },
+    {
+      "id": "bund/BANKV/art_29",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Lagebericht der Bank richtet sich nach Artikel 961 c OR."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2c439afde8f8ac4a88e0b14a7844393893c99fd1bd2a183625c5cbfd93417872"
+    },
+    {
+      "id": "bund/BANKV/art_30",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Geschäftsbericht nach Artikel 6 Absatz 1 BankG enthält den zusammenfassenden Bericht der Revisionsstelle."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "24e29e238589ad080b319dc0d4307a426940adea0d4073ed2c68a5fd5794512a"
+    },
+    {
+      "id": "bund/BANKV/art_31",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank erstellt halbjährlich einen Zwischenabschluss. Er besteht aus Bilanz und Erfolgsrechnung. Er ist nach den gleichen Grundlagen und Grundsätzen zu erstellen wie die Jahresrechnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zwischenabschluss für Banken, deren Beteiligungstitel oder Schuldtitel kotiert sind, enthält zusätzlich einen Eigenkapitalnachweis und einen verkürzten Anhang. Die FINMA legt den Inhalt des verkürzten Anhangs in Ausführungsbestimmungen fest."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b21f3a4f04c536734f8c1b0b6b9f5ff24456d08a3a88f645824ad104e42a7288"
+    },
+    {
+      "id": "bund/BANKV/art_32",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Geschäftsbericht ist innerhalb von vier Monaten und der Zwischenabschluss innerhalb von zwei Monaten nach Abschlusstermin der Öffentlichkeit zugänglich zu machen. Sie sind in gedruckter Form zur Verfügung zu stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Geschäftsbericht und Zwischenabschlüsse sind der FINMA einzureichen. Die FINMA regelt in Ausführungsbestimmungen, in wie vielen Ausfertigungen, auf welche Art und innert welcher Frist der Geschäftsbericht und der Zwischenabschluss einzureichen sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA kann die Fristen auf Gesuch der Bank hin erstrecken."
+        },
+        {
+          "absatz": "4",
+          "text": "Privatbankiers sind von der Pflicht zur Veröffentlichung befreit, wenn sich ihre Werbung einzig auf ihre Tätigkeit als Vermögensverwalter oder Effektenhändler bezieht und das Einlagengeschäft nicht umfasst."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a892127b3325ba262f13e1fab0fa1f29a5399a3e2a81d95be5fff6bc2e5c6a88"
+    },
+    {
+      "id": "bund/BANKV/art_33",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Konzernrechnung wird nach dem True-and-Fair-View-Prinzip (Art. 25 Abs. 1 Bst. b) erstellt und besteht aus Bilanz, Erfolgsrechnung, Eigenkapitalnachweis, Geldflussrechnung und Anhang."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Konzernrechnung gelten die Grundlagen und Grundsätze von Artikel 26. Zudem muss sie nach der Methode der Vollkonsolidierung erstellt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aktiven und Passiven werden in der Konzernrechnung nach Artikel 27 erfasst und bewertet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9e9b4f9632835c9de0499c4757652faaf387d65471778c1e46cff5caaad6ddca"
+    },
+    {
+      "id": "bund/BANKV/art_34",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank erstellt zusätzlich zu ihrer Jahresrechnung eine Konzernrechnung, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein oder mehrere Unternehmen kontrolliert;"
+            },
+            {
+              "marke": "b",
+              "text": "die Geschäftsaktivitäten eines Unternehmens derart beeinflussen kann, dass dessen Nutzen hauptsächlich ihr zukommt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "hauptsächlich die Risiken für die Geschäftstätigkeiten eines anderen Unternehmens trägt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist eine Holdinggesellschaft die Obergesellschaft einer Finanzgruppe nach Artikel 3 c BankG, so erstellt die Holdinggesellschaft die Konzernrechnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bank oder die Holdinggesellschaft kontrolliert ein Unternehmen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "direkt oder indirekt über die Mehrheit der Stimmen im obersten Organ verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "direkt oder indirekt über das Recht verfügt, die Mehrheit der Mitglieder des obersten Leitungs- oder Verwaltungsorgans zu bestellen oder abzuberufen; oder"
+            },
+            {
+              "marke": "c",
+              "text": "auf andere Weise als nach den Buchstaben a und b einen beherrschenden Einfluss ausüben kann."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bank oder die Holdinggesellschaft konsolidiert ein kontrolliertes Unternehmen nicht, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie weder gegenwärtig noch in Zukunft Anteil am Erfolg des kontrollierten Unternehmens oder einen anderen Nutzen hat und keine Risiken aus den Geschäftsaktivitäten dieses Unternehmens trägt;"
+            },
+            {
+              "marke": "b",
+              "text": "der Nutzen aus den Geschäftsaktivitäten des kontrollierten Unternehmens unabhängigen Dritten zufliesst und die Risiken ausschliesslich von diesen getragen werden; und"
+            },
+            {
+              "marke": "c",
+              "text": "das ihr aus der Beziehung zu einem solchen kontrollierten Unternehmen zufliessende monetäre oder nicht monetäre Entgelt marktkonform ist und ihren Leistungen entspricht."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Erstellung der Konzernrechnung darf nicht an ein kontrolliertes Unternehmen delegiert werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8ad25ac7e62b22b088a2fa30c5ce8e4b8bba0d59c3f06239a2c106ae340207a7"
+    },
+    {
+      "id": "bund/BANKV/art_35",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es müssen nicht konsolidiert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beteiligungen an Unternehmen, die für die finanzielle Berichterstattung oder die Risikolage unwesentlich sind;"
+            },
+            {
+              "marke": "b",
+              "text": "wesentliche, aber ohne strategische Absicht übernommene Beteiligungen, für die die Bank darlegen kann, dass sie diese innert 12 Monaten wieder veräussert oder liquidiert."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Beteiligungen nach Absatz 1 Buchstabe b sind im Anhang der Konzernrechnung offenzulegen. Deren Nichtkonsolidierung ist zu begründen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Teilkonzern, der in die Konzernrechnung einer Obergesellschaft einbezogen ist, muss keine eigene Konzernrechnung erstellen, wenn die Konzernrechnung der Obergesellschaft:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach dieser Verordnung oder nach einem durch die FINMA anerkannten internationalen Standard erstellt und geprüft wird; und"
+            },
+            {
+              "marke": "b",
+              "text": "öffentlich zugänglich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die FINMA kann in begründeten Fällen die Erstellung einer Teilkonzernrechnung und deren Offenlegung verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c3d8fa34edd54e858a218d855cf14a596a313f1f8aa5a554ac778588c0f3326f"
+    },
+    {
+      "id": "bund/BANKV/art_36",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Bank ist von der Erstellung einer Geldflussrechnung in der Jahresrechnung sowie des Lageberichts auf Einzelstufe befreit, sofern sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Konzernrechnung nach den Artikeln 33–41 oder nach einem durch die FINMA anerkannten internationalen Standard erstellt und zusammen mit dem Konzernlagebericht publiziert; oder"
+            },
+            {
+              "marke": "b",
+              "text": "als gemäss Artikel 34 konsolidierte Gesellschaft einer von der FINMA beaufsichtigten Finanzgruppe angehört, die Buchstabe a erfüllt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Befreiung nach Absatz 1 Buchstabe b gilt nicht, wenn die Beteiligungstitel der Bank kotiert sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die FINMA legt in Ausführungsbestimmungen fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf welche Angaben in der Jahresrechnung verzichtet werden kann, wenn eine Konzernrechnung erstellt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "inwieweit die Offenlegung eines Zwischenabschlusses auf Konzernstufe von der Offenlegung des Zwischenabschlusses auf Einzelstufe befreit."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Personen nach Artikel 961 d Absatz 2 OR können verlangen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine vollständige Jahresrechnung und einen Lagebericht;"
+            },
+            {
+              "marke": "b",
+              "text": "die Offenlegung eines Zwischenabschlusses auf Einzelstufe."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "467c7206f0e01b657ab45afc73533670576693cb1783279775e81c2896b19f0f"
+    },
+    {
+      "id": "bund/BANKV/art_37",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA legt die besonderen Gliederungsvorschriften für die Konzernrechnung in Ausführungsbestimmungen fest. Dabei trägt sie den Eigenheiten des Bankgeschäfts Rechnung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "90236d7cc63c0256a6be5201192952c6ad658f9b9090f5c7e208df5df319b41b"
+    },
+    {
+      "id": "bund/BANKV/art_38",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Lagebericht des Konzerns richtet sich nach Artikel 961 c OR."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7ba4d3758c66599c73f0093f2085622a796c8d9dae784ffa43581297bc3a1218"
+    },
+    {
+      "id": "bund/BANKV/art_39",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Geschäftsbericht enthält neben der Jahresrechnung, dem Lagebericht und der Konzernrechnung die zusammenfassenden Berichte der Revisionsstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Obergesellschaft eine Holdinggesellschaft, so ist die Publikation der Jahresrechnung nicht zwingend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "304e1e20184c718272270e54478af7775fc256a39a8c6950b8e6a2eee15c282b"
+    },
+    {
+      "id": "bund/BANKV/art_40",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Banken und Holdinggesellschaften, die eine Konzernrechnung erstellen müssen, erstellen halbjährlich einen konsolidierten Zwischenabschluss."
+        },
+        {
+          "absatz": "2",
+          "text": "Er umfasst die gleichen Bestandteile wie der Zwischenabschluss auf Einzelstufe gemäss Artikel 31 und basiert auf den gleichen Grundlagen und Grundsätzen wie die Konzernrechnung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "83db06a581b59070286a029124b5d9ee39250720ec69f32f3520c07966d7427f"
+    },
+    {
+      "id": "bund/BANKV/art_41",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Veröffentlichung des Geschäftsberichts und des Zwischenabschlusses richtet sich nach Artikel 32."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "9bd385abe47f12efc10d7aab99e9c46855a59039b9b5b79d551c22c06f0374bf"
+    },
+    {
+      "id": "bund/BANKV/art_42",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA führt die Bestimmungen dieser Verordnung zur Rechnungslegung näher aus, insbesondere zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zusammensetzung und Bewertung der Positionen der Jahresrechnung und der Konzernrechnung;"
+            },
+            {
+              "marke": "b",
+              "text": "den Besonderheiten der Konzernrechnung;"
+            },
+            {
+              "marke": "c",
+              "text": "der Offenlegung von Angaben, die im von der Bank angewendeten und von der FINMA anerkannten internationalen Standard nicht vorgesehen, aber für die Beurteilung der wirtschaftlichen Lage nötig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2e7c30d1f1bf9a4fb4afc9a39fb4fa8a9c8c0bf90496b8a7b5ed77bffd02f519"
+    },
+    {
+      "id": "bund/BANKV/art_42_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_a",
+      "artikelLabel": "Art. 42a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Ansprüche von Einlegerinnen und Einlegern nach Artikel 42 c gelten als privilegiert Einlagen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Forderungen gegenüber einer Bank, die: 1. als Saldo auf Konten bei der Bank gebucht sind und auf eine staatliche oder von einer Zentralbank herausgegebene Währung lauten, oder"
+            },
+            {
+              "marke": "2",
+              "text": "auf Gold, Silber, Platin oder Palladium lauten und bei denen die Einlegerin oder der Einleger einen ausschliesslichen oder alternativen Anspruch auf Leistung in einer staatlichen oder von einer Zentralbank herausgegebenen Währung hat;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als auf Konten gebucht im Sinne von Absatz 1 Buchstabe a Ziffer 1 gelten auch Termin- und Tagesgelder."
+        },
+        {
+          "absatz": "3",
+          "text": "Keine privilegierten Einlagen sind insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf die Inhaberin oder den Inhaber lautende Forderungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Kassenobligationen, die nicht bei der Bank hinterlegt sind;"
+            },
+            {
+              "marke": "c",
+              "text": "vertragliche und ausservertragliche Schadenersatzforderungen wie Ersatzforderungen für nicht vorhandene Depotwerte nach Artikel 16 BankG;"
+            },
+            {
+              "marke": "d",
+              "text": "Ansprüche oder Ersatzforderungen aus Derivaten;"
+            },
+            {
+              "marke": "e",
+              "text": "nachrichtenlose Vermögenswerte;"
+            },
+            {
+              "marke": "f",
+              "text": "Forderungen gegenüber der Bank, die nicht aus dem Bankgeschäft stammen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "113ac155369409d01404ebc89ce7bcfb6dba30f1fb175ae3e3f63945653578d0"
+    },
+    {
+      "id": "bund/BANKV/art_42_b",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_b",
+      "artikelLabel": "Art. 42b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Feststellung der Höhe des nach Artikel 37 a Absatz 1 BankG privilegierten Betrags der privilegierten Einlagen werden die einzelnen Saldi einschliesslich der aufgelaufenen Zinsen zugunsten der Einlegerin oder des Einlegers addiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Hypotheken, Darlehen oder in anderen Konti vorliegende Überzüge sowie nicht gebuchte Zinsen und Gebühren zugunsten der Bank dürfen nicht berücksichtigt werden, unabhängig davon, ob sie aufgelaufen, fällig oder verfallen sind."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "912857881b4b1691226395d13fcf5bbe1ae9ce678ee4525a3ca164308af2d3e7"
+    },
+    {
+      "id": "bund/BANKV/art_42_c",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_c",
+      "artikelLabel": "Art. 42c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als privilegierte Einlegerin oder privilegierter Einleger gelten die aus dem Forderungsverhältnis mit der Bank berechtigte Vertragspartei oder die Einlegerin oder der Einleger der Kassenobligation, wie sie im Zeitpunkt der Anordnung von einer Schutzmassnahme nach Artikel 26 Absatz 1 Buchstaben e–h BankG oder des Bankenkonkurses aus den Büchern der Bank ersichtlich sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Nicht als privilegierte Einlegerinnen oder Einleger gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Finanzintermediäre nach dem BankG, dem Finanzinstitutsgesetz vom 15. Juni 2018 (FINIG) und dem Kollektivanlagengesetz vom 23. Juni 2006 ;"
+            },
+            {
+              "marke": "b",
+              "text": "Versicherungsunternehmen nach dem Versicherungsaufsichtsgesetz vom 17. Dezember 2004 ;"
+            },
+            {
+              "marke": "c",
+              "text": "ausländische Kunden, die einer prudenziellen Aufsicht unterstehen wie die Finanzintermediäre oder Versicherungsunternehmen nach den Buchstaben a und b;"
+            },
+            {
+              "marke": "d",
+              "text": "Zentralbanken;"
+            },
+            {
+              "marke": "e",
+              "text": "Bankstiftungen als Vorsorgeeinrichtungen nach Artikel 82 des Bundesgesetzes vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (Säule-3a-Stiftungen) und Freizügigkeitsstiftungen als Freizügigkeitseinrichtung nach dem Freizügigkeitsgesetz vom 17. Dezember 1993 (Freizügigkeitsstiftungen);"
+            },
+            {
+              "marke": "f",
+              "text": "Kundinnen und Kunden von Wertpapierhäusern, die selbst keine Konten nach Artikel 44 Absatz 1 Buchstabe a FINIG führen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Steht eine Forderung einer Personenmehrheit zu, so gilt diese als eine eigene, von den einzelnen Personen der Personenmehrheit unabhängige Einlegerin. Die Personenmehrheit kann den Höchstbetrag von Artikel 37 a Absatz 1 BankG nur einmal für die gesamte Personenmehrheit geltend machen."
+        },
+        {
+          "absatz": "4",
+          "text": "Hält eine Einlegerin oder ein Einleger privilegierte Einlagen bei einer ausländischen Geschäftsstelle der Bank, so gilt sie oder er für diese Einlagen als eigene, unabhängige Einlegerin beziehungsweise als eigener, unabhängiger Einleger."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e40b5e38c790805a1b9f0038c74b0eddd0ff3cc2dc94f5e7f73a795f6b50705c"
+    },
+    {
+      "id": "bund/BANKV/art_42_d",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_d",
+      "artikelLabel": "Art. 42d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Banken, die Geldanlagen einer Säule-3a- oder Freizügigkeitsstiftung halten, müssen sich von der Stiftung schriftlich bestätigen lassen, dass diese die Verteilung der privilegierten Einlagen der Vorsorgenehmerinnen und Vorsorgenehmer und der Versicherten dokumentiert, wenn sie Geldanlagen bei mehreren Banken hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorsorgerechtliche Ansprüche der Vorsorgenehmerin oder des Vorsorgenehmers gegenüber verschiedenen Säule-3a- und Freizügigkeitsstiftungen, die Einlagen bei der gleichen Bank haben, werden nicht zusammengezählt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8eb18b81883119d12869b9e849543632a694e70e2850917cacbdbe069cbf1d6d"
+    },
+    {
+      "id": "bund/BANKV/art_42_e",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_e",
+      "artikelLabel": "Art. 42e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bank muss dem Träger der Einlagensicherung das Gesuch um Anschluss mindestens drei Monate vor Entgegennahme von privilegierten Einlagen einreichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "880dc9e46b19dd7bbb823994c83911805460ae2ab180954891d9fa8b8d54098a"
+    },
+    {
+      "id": "bund/BANKV/art_42_f",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_f",
+      "artikelLabel": "Art. 42f",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Möglichkeit, dem Träger der Einlagensicherung zur Sicherstellung der Beitragsverpflichtung Bardarlehen zu gewähren, steht den Banken der Kategorien 4 und 5 zur Verfügung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fe6d45f3b31c9660bd4b02dc3c9f7c2edd25681d879c40230659c1043ff818e4"
+    },
+    {
+      "id": "bund/BANKV/art_42_g",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_g",
+      "artikelLabel": "Art. 42g",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Banken müssen im Rahmen ihrer ordentlichen Geschäftstätigkeit folgende Vorbereitungen treffen, um die Erstellung des Auszahlungsplans, die Kontaktierung der Einlegerinnen und Einleger und die Auszahlung nach den Vorgaben des BankG zu gewährleisten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Infrastruktur: Sie stellen sicher, dass ein der Anzahl der Einlegerinnen und Einleger angemessenes Informatik-System und das nötige Personal zur Verfügung stehen. Es muss gewährleistet sein, dass allfällige Dienstleistungsverträge in diesem Rahmen aufrechterhalten bleiben."
+            },
+            {
+              "marke": "b",
+              "text": "Prozesse: Sie legen standardisierte Abläufe fest, die insbesondere gewährleisten, dass innerhalb der gesetzlichen Fristen die Einlegerinnen und Einleger kontaktiert, deren Zahlungsinstruktionen eingeholt und diese verarbeitet werden können."
+            },
+            {
+              "marke": "c",
+              "text": "Einlegerliste: Sie führen eine Einlegerliste (Art. 42 i Abs. 1), die es der oder dem Untersuchungs- oder Sanierungsbeauftragten oder der Konkursliquidatorin oder dem Konkursliquidator (Beauftragte oder Beauftragter) ermöglicht, innert 72 Stunden nach Anordnung einer Schutzmassnahme nach Artikel 26 Absatz 1 Buchstaben e–h BankG oder des Bankenkonkurses die gesicherten Einlagen pro Einlegerin oder Einleger festzustellen."
+            },
+            {
+              "marke": "d",
+              "text": "Summarische Aufstellung: Sie führen eine summarische Aufstellung der privilegierten Einlagen, die nicht zu den gesicherten Einlagen gehören (Art. 42 i Abs. 2). Einlagen bei ausländischen Geschäftsstellen sind als Gesamtsaldo der privilegierten Einlagen für die jeweilige Jurisdiktion auszuweisen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "3c83591fbc026f604db06948f88608c914058625f2952df52cd56fd99ebbdb5d"
+    },
+    {
+      "id": "bund/BANKV/art_42_h",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_h",
+      "artikelLabel": "Art. 42h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Systemrelevante Banken müssen die Vorbereitungshandlungen nach Artikel 42 g Buchstaben a und b nicht vornehmen. Stattdessen müssen sie ein Konzept erstellen, das darlegt, wie sie beim Scheitern einer Sanierung die Anforderungen nach Artikel 42 g Buchstaben a und b erfüllen können. Im Rahmen der Sanierung legt die FINMA bankenspezifisch entsprechend der konkreten Entwicklung der Sanierung fest, ab welchem Zeitpunkt die Bank die Anforderungen gemäss Konzept erfüllen muss. Sie berücksichtigt dabei das Geschäftsmodell und die Liquiditätssituation der Bank sowie die Anzahl der betroffenen Einlegerinnen und Einleger."
+        },
+        {
+          "absatz": "2",
+          "text": "Banken mit weniger als 2500 Einlegerinnen und Einlegern müssen nur eine Einlegerliste und eine summarische Aufstellung führen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_h",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ec5c55e9889d00b14f3a966760e1c8e259239354bfa3331ecda05e8ceafb2731"
+    },
+    {
+      "id": "bund/BANKV/art_42_i",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "42_i",
+      "artikelLabel": "Art. 42i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einlegerliste umfasst den Bestand aller gesicherten Einlagen der einzelnen Einlegerinnen und Einleger bei schweizerischen Geschäftsstellen der Bank."
+        },
+        {
+          "absatz": "2",
+          "text": "In der summarischen Aufstellung werden die privilegierten Einlagen aufgeführt, die nicht zu den gesicherten Einlagen gehören; sie umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Einlagen nach Artikel 37 a Absatz 1 BankG, bei einer ausländischen Geschäftsstelle der Bank;"
+            },
+            {
+              "marke": "b",
+              "text": "Einlagen nach Artikel 37 a Absatz 5 BankG;"
+            },
+            {
+              "marke": "c",
+              "text": "Einlagen nach Artikel 42 a Absatz 1 Buchstaben c und d."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Träger der Einlagensicherung gibt das Format der Einlegerliste vor."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_42_i",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "7fe55d024a6f6d43f5da02f4877253bfdd34532d712d8fe059f5477784cf7996"
+    },
+    {
+      "id": "bund/BANKV/art_43",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der von der FINMA eingesetzte Beauftragte oder Beauftragter ist nicht verpflichtet, die aufgrund der Einlegerliste in den Auszahlungsplan aufzunehmenden Forderungen zu prüfen. Offensichtlich unberechtigte Forderungen werden nicht in den Auszahlungsplan aufgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen Anhaltspunkte dafür, dass die Bücher nicht ordnungsgemäss geführt wurden, so kann die oder der Beauftragte die Einlegerinnen und Einleger auffordern, die Berechtigung ihrer Forderung nachzuweisen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6c6fec0699497eb095a2bb6233233903d9c59434a67fd56cc2cfd0c7a7b858e4"
+    },
+    {
+      "id": "bund/BANKV/art_44",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die oder der Beauftragte zahlt den Einlegerinnen und Einlegern gestützt auf den Auszahlungsplan die privilegierten Einlagen aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Genügen die verfügbaren Mittel nicht zur Befriedigung sämtlicher in den Auszahlungsplan aufgenommener Forderungen, so werden die privilegierten Einlagen anteilsmässig ausgezahlt."
+        },
+        {
+          "absatz": "3",
+          "text": "An Dritte verpfändete oder sicherungszedierte Einlagen oder Einlagen auf Mietkautionskonten werden ausbezahlt, wenn die Person, deren Anspruch gesichert wird, zustimmt oder wenn die Auszahlung gesetzlich oder vertraglich zulässig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Forderungen der Säule-3a- und der Freizügigkeitsstiftungen werden an die betreffenden Stiftungen ausbezahlt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "ba87a90ae23cfa90addce4abf02a1c3fa3258b5175fd926d4750a867f69c289d"
+    },
+    {
+      "id": "bund/BANKV/art_44_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "44_a",
+      "artikelLabel": "Art. 44a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Information nach Artikel 37 i BankG durch die FINMA an den Träger der Einlagensicherung erfolgt soweit möglich vorab."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Träger der Einlagensicherung stellt den Schutz der Vertraulichkeit sicher und regelt den Umgang mit Interessenkonflikten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_44_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1eee5474835ab4d01ed652b8433268fddd1f1f9e32961cb4f63c14dbc781e672"
+    },
+    {
+      "id": "bund/BANKV/art_45",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vermögenswerte gelten als nachrichtenlos, wenn die Bank oder Person nach Artikel 1 b BankG während 10 Jahren ab dem letzten Kontakt zur Bankkundin oder zum Bankkunden oder zu deren Rechtsnachfolgerinnen und -nachfolgern (berechtigte Personen) oder zu einer von diesen bevollmächtigten Person keinen Kontakt mehr herstellen konnte."
+        },
+        {
+          "absatz": "2",
+          "text": "Als letzter Kontakt gilt der aus den Akten der Bank oder Person nach Artikel 1 b BankG ersichtliche letzte Kontakt."
+        },
+        {
+          "absatz": "3",
+          "text": "Vermögenswerte, die im Hinblick auf die Liquidation einer Bank oder Person nach Artikel 1 b BankG auf eine andere Bank oder Person nach Artikel 1 b BankG übertragen werden, gelten schon vor Ablauf der 10 Jahre als nachrichtenlos, wenn die übertragende Bank oder Person nach Artikel 1 b BankG nachweist, dass sie alle notwendigen Schritte zur Wiederherstellung des Kontakts zu der berechtigten Person unternommen hat."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "716f611c5aef1f577308ef52c4b49b92ff2d9ecfc3efb03a8aa3b722553ce0a1"
+    },
+    {
+      "id": "bund/BANKV/art_46",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bestandteile des schriftlichen Vertrags, mit dem nachrichtenlose Vermögenswerte von einer Bank oder Person nach Artikel 1 b BankG auf eine andere Bank oder Person nach Artikel 1 b BankG übertragen werden (Übertragungsvertrag), sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Name der berechtigten Person oder andere Angaben, die diese Person zu identifizieren erlauben; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Auflistung der Vermögenswerte, die der berechtigten Person zugeordnet sind und übertragen werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die übertragende Bank oder Person nach Artikel 1 b BankG stellt der übernehmenden Bank oder Person nach Artikel 1 b BankG folgende Unterlagen zur Verfügung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Belege zum letzten festgehaltenen Kontakt mit der berechtigten Person;"
+            },
+            {
+              "marke": "b",
+              "text": "die Unterlagen zum Vertragsverhältnis mit der berechtigten Person."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Kosten, die bei der Übertragung nachrichtenloser Vermögenswerte entstehen, können diesen Vermögenswerten nicht belastet werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6cdbc464c639b9b83995d0006e02a415152096e2c2db54da6a8e30a42c9c1e5c"
+    },
+    {
+      "id": "bund/BANKV/art_47",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die übernehmende Bank oder Person nach Artikel 1 b BankG muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über eine für die Verwahrung und Verwaltung nachrichtenloser Vermögenswerte geeignete Organisation verfügen; und"
+            },
+            {
+              "marke": "b",
+              "text": "jederzeit in der Lage sein, die ihr übertragenen nachrichtenlosen Vermögenswerte der berechtigten Person zuzuordnen, soweit die verfügbaren Informationen dies ermöglichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Werden einer Bank oder Person nach Artikel 1 b BankG von verschiedenen Banken oder Personen nach Artikel 1 b BankG nachrichtenlose Vermögenswerte für dieselbe berechtigte Person übertragen, so fasst die übernehmende Bank diese zusammen."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Bank oder Person nach Artikel 1 b BankG, die zum ersten Mal nachrichtenlose Vermögenswerte von einer anderen Bank übernimmt, meldet dies der FINMA."
+        },
+        {
+          "absatz": "4",
+          "text": "Sind die nachrichtenlosen Vermögenswerte in einer zentralen Datenbank für nachrichtenlose Vermögenswerte (Datenbank) eingetragen, so vermerkt die Bank oder Person nach Artikel 1 b BankG darin deren Übertragung und gibt ihren Namen an."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8778d2d24d1defe480866a07a4bce2df728599fd0f604f1414892f351f08e61a"
+    },
+    {
+      "id": "bund/BANKV/art_48",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die übertragende Bank oder Person nach Artikel 1 b BankG verweist Personen, die Ansprüche an übertragenen Vermögenswerten erheben, an die übernehmende Bank oder Person nach Artikel 1 b BankG oder an die Datenbank."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "336ae3af51b9fb269e99df01d9dfd295e3841ca69ed9a8720392845d033c9359"
+    },
+    {
+      "id": "bund/BANKV/art_49",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Banken oder Personen nach Artikel 1 b BankG rufen die berechtigten Personen öffentlich auf, innert einer Frist von einem Jahr (Meldefrist) Ansprüche an Vermögenswerten anzumelden, die seit 50 Jahren nachrichtenlos sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Keine Publikation ist erforderlich für Vermögenswerte von höchstens 500 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit vorhanden und sofern nicht ein offenkundiges Interesse der berechtigten Person entgegensteht, enthält die Publikation folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Adresse, an welche die Meldung zu richten ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Name, Geburtsdatum und Staatsangehörigkeit oder die Firma der berechtigten Person und der letzte bekannte Wohnsitz oder Sitz;"
+            },
+            {
+              "marke": "c",
+              "text": "die Konto- oder Heftnummer, sofern die vorhandenen Angaben für die Legitimationsprüfung ungenügend erscheinen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Publikation muss ausdrücklich darauf hinweisen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bank oder Person nach Artikel 1 b BankG die bei der Prüfung der Meldung entstehenden Kosten der Person, die einen Anspruch erhebt, unter den Voraussetzungen von Artikel 53 Absatz 3 in Rechnung stellen kann;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ansprüche mit der Liquidation der Vermögenswerte erlöschen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "c2f7e2283e0f03683fb13aa7ba568165d6b4fec92f64101181dd9ef6b5ae8442"
+    },
+    {
+      "id": "bund/BANKV/art_50",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Aufruf nach Artikel 49 wird im Schweizerischen Handelsamtsblatt (SHAB) publiziert."
+        },
+        {
+          "absatz": "2",
+          "text": "Anstelle der Publikation im SHAB können die Banken oder Personen nach Artikel 1 b BankG die Aufrufe auf einer von ihnen organisierten und verwalteten zentralen elektronischen Plattform veröffentlichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Erscheint für ein Auffinden der berechtigten Personen nach den Umständen des Einzelfalls eine Publikation in einem anderen geeigneten Kommunikationsmittel angezeigt, so veröffentlicht die Bank oder Person nach Artikel 1 b BankG den Aufruf zudem auch in diesem Kommunikationsmittel."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie berücksichtigt dabei den letzten bekannten Wohnsitz, Aufenthaltsort oder Sitz der berechtigten Person."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Publikation kann mehrere nachrichtenlose Vermögenswerte zusammenfassen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e20f0f4dc0c36ddd9f116a95329aae8dfe6dbfd5913d1e9ab3db55fb10d94999"
+    },
+    {
+      "id": "bund/BANKV/art_51",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ergeben sich vor Abschluss der Liquidation (Art. 57) neue Erkenntnisse über berechtigte Personen, so passt die Bank oder Person nach Artikel 1 b BankG den Aufruf an und veröffentlicht ihn erneut. Mit der Publikation beginnt die Meldefrist von einem Jahr neu zu laufen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a41b0ea02d66b386c732f0744e4e36c95f380a99f18e3be526f902103049174c"
+    },
+    {
+      "id": "bund/BANKV/art_52",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Publikation werden aus den betroffenen nachrichtenlosen Vermögenswerten gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie haben in einem angemessenen Verhältnis zu den nachrichtenlosen Vermögenswerten zu stehen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "8ed4794e6d60ecb7adce7b88a3f5f19f7f864ca1ccf5addf272831ca808dc8cf"
+    },
+    {
+      "id": "bund/BANKV/art_53",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG prüft gemeldete Ansprüche an nachrichtenlosen Vermögenswerten nach den im Einzelfall massgebenden gesetzlichen und vertraglichen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt sie bei der Prüfung fest, dass ein Anspruch gerechtfertigt ist, so gelten die betreffenden Vermögenswerte nicht mehr als nachrichtenlos."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist ein Anspruch offensichtlich unbegründet und kann die Person, die den Anspruch erhebt, keinerlei Verbindung zum beanspruchten Vermögenswert glaubhaft machen, so kann die Bank oder Person nach Artikel 1 b BankG von dieser Person den Ersatz der Kosten verlangen, die ihr durch die Prüfung des erhobenen Anspruchs entstanden sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG dokumentiert die Ergebnisse ihrer Prüfungen so, dass deren Nachvollziehbarkeit gewährleistet ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "284b2e48e72c1b9ee88fd10d6520824ed5e1a23c72b279bd481f1cc8efc1c624"
+    },
+    {
+      "id": "bund/BANKV/art_54",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG liquidiert nachrichtenlose Vermögenswerte, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine Meldungen eingegangen sind: spätestens zwei Jahre nach Ablauf der Meldefrist;"
+            },
+            {
+              "marke": "b",
+              "text": "Meldungen eingegangen sind: spätestens zwei Jahre, nachdem feststeht, dass die geltend gemachten Ansprüche nicht berechtigt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nachrichtenlose Vermögenswerte, die nicht verwertbar sind oder keinen Liquidationswert haben, bietet die Bank oder Person nach Artikel 1 b BankG dem Bund zur Übernahme an. Lehnt dieser ab, so kann sie die Bank oder Person nach Artikel 1 b BankG vernichten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "e4c2b71e155f0b96d7b77aaba5c72939c17f1d9ec837c259fe207fd92bd1e760"
+    },
+    {
+      "id": "bund/BANKV/art_55",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG führt ein Protokoll über ihren Beschluss, nachrichtenlose Vermögenswerte zu liquidieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Protokoll enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Dokumentation der Prüfung nach Artikel 53;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Auflistung der zu liquidierenden Vermögenswerte;"
+            },
+            {
+              "marke": "c",
+              "text": "Angaben zum vorgesehenen Liquidationsverfahren."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "183887d12c10f59402e584bfbf56dacf74bef278a5d4bdd096a8406e636c1c9c"
+    },
+    {
+      "id": "bund/BANKV/art_56",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG führt ein Protokoll über die Liquidation."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Protokoll hält pro Vermögenswert insbesondere fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Art der Liquidation;"
+            },
+            {
+              "marke": "b",
+              "text": "den Liquidationserlös;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kosten der Liquidation."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "af93018db08eda9dafc46f46b960e17d801bbc044df0fba517d007bde3314af4"
+    },
+    {
+      "id": "bund/BANKV/art_57",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der Liquidation werden vorab aus dem Liquidationserlös gedeckt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bank oder Person nach Artikel 1 b BankG überweist die Nettoerlöse mindestens einmal jährlich der Eidgenössischen Finanzverwaltung."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit dieser Überweisung gilt die Liquidation als abgeschlossen."
+        },
+        {
+          "absatz": "4",
+          "text": "Mit Abschluss der Liquidation erlöschen die Ansprüche der berechtigten Personen. Die Ansprüche an nicht verwertbaren nachrichtenlosen Vermögenswerten erlöschen mit der Übergabe an den Bund oder deren Vernichtung."
+        },
+        {
+          "absatz": "5",
+          "text": "Macht eine berechtigte Person nach der Liquidation, aber noch vor der Überweisung Ansprüche an den liquidierten Vermögenswerten geltend, so richten sich die Ansprüche ausschliesslich auf den Liquidationserlös."
+        },
+        {
+          "absatz": "6",
+          "text": "Sind die nachrichtenlosen Vermögenswerte in einer Datenbank eingetragen, so vermerkt die Bank oder Person nach Artikel 1 b BankG den Abschluss der Liquidation."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "459d46eafe1640d0b45cb0223bafeb5506b69495af4e845e5e532c534ed301ab"
+    },
+    {
+      "id": "bund/BANKV/art_58",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die liquidierende Bank oder Person nach Artikel 1 b BankG bewahrt die Unterlagen über die Übernahme, Liquidation und Überweisung an den Bund gemäss den anwendbaren gesetzlichen Bestimmungen auf."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4443998f38b9151456d190c4528585df3645fcc0df8f797ce02049db6856c756"
+    },
+    {
+      "id": "bund/BANKV/art_59",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Liquidation nachrichtenloser Vermögenswerte, die gestützt auf Artikel 37 m Absatz 1 zweiter Satz des BankG ohne vorgängige Publikation liquidiert werden, gelten die Artikel 54–57 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Wert solcher Vermögenswerte berechnet sich nach dem Gesamtwert der nachrichtenlosen Vermögenswerte, die eine Bank oder Person nach Artikel 1 b BankG von derselben berechtigten Person gebucht hat, verwahrt oder verwaltet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "2f2e401b8ecf8cf331618bf8f36998b8bc1958870e2b671b1c72b9830add021e"
+    },
+    {
+      "id": "bund/BANKV/art_60",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die systemrelevante Bank stellt sicher, dass ihre systemrelevanten Funktionen nach Artikel 8 BankG im Fall drohender Insolvenz unabhängig von den übrigen Teilen der Bank ohne Unterbrechung weitergeführt werden können. Sie trifft die dafür notwendigen Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beschreibt die notwendigen Massnahmen in einem Notfallplan und weist darin gegenüber der FINMA nach, dass sie nach der allgemeinen Erfahrung und dem aktuellen Wissensstand in der Lage ist, ihrer Pflicht nach Absatz 1 erster Satz nachzukommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Schweizer Notfallplan ist durch nicht nach Artikel 124 a ERV international tätige systemrelevante Banken innert drei Jahren nach der Feststellung ihrer Systemrelevanz durch die SNB umsetzbar zu erstellen. Die FINMA kann diese Frist in begründeten Fällen erstrecken. Massnahmen des Notfallplans sind vorbereitend umzusetzen, soweit dies für die ununterbrochene Weiterführung der systemrelevanten Funktionen notwendig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die systemrelevante Bank hat den Notfallplan jährlich bis zum Ende des zweiten Quartals zu aktualisieren und der FINMA einzureichen. Aktualisierungen sind auch einzureichen, wenn Veränderungen eine Überarbeitung notwendig machen oder wenn die FINMA dies verlangt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6124020597bacd8cc8f45888891d5d1e2ec1d34d9a8a1bba9606658aae24d80b"
+    },
+    {
+      "id": "bund/BANKV/art_61",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA prüft die Massnahmen des Notfallplans im Hinblick auf deren Wirksamkeit im Fall einer drohenden Insolvenz der Bank. Sie berücksichtigt dabei, wie weit die Massnahmen nach Artikel 60 Absatz 3 umgesetzt worden sind. Sie prüft namentlich, ob:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unter Berücksichtigung der zur Verfügung stehenden Zeit, des Aufwands, der rechtlichen Hindernisse und der erforderlichen Mittel die Weiterführung der systemrelevanten Funktionen technisch und organisatorisch sichergestellt ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die rechtlichen und wirtschaftlichen Beziehungen innerhalb der Finanzgruppe, insbesondere konzerninterne Garantien und Finanzierungen, und solche Beziehungen mit Kundinnen und Kunden und anderen Drittparteien so ausgestaltet sind, dass sie der Weiterführung der systemrelevanten Funktionen nicht entgegenstehen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kapital- und Liquiditätsplanung für die Weiterführung der systemrelevanten Funktionen ausreichend Eigenmittel und Liquidität zur Umsetzung des Notfallplans vorsieht;"
+            },
+            {
+              "marke": "d",
+              "text": "für die Operabilität der systemrelevanten Funktionen geeignete Prozesse und die dafür notwendige Infrastruktur vorgesehen sind und der Zugriff auf die erforderlichen Ressourcen jederzeit unabhängig von den nicht systemrelevanten Teilen der Bank gewährleistet ist;"
+            },
+            {
+              "marke": "e",
+              "text": "für die Weiterführung der systemrelevanten Funktionen inklusive der Führungs- und Kontrollfunktionen die notwendigen personellen Ressourcen bereitgestellt sind;"
+            },
+            {
+              "marke": "f",
+              "text": "die mit der Weiterführung der systemrelevanten Funktionen zusammenhängenden Verträge innerhalb der Finanzgruppe, insbesondere konzerninterne Garantien und Finanzierungen, und solche Verträge mit Kundinnen und Kunden und anderen Drittparteien, mit den dazugehörenden Geschäftsunterlagen vollständig erfasst sind und die Liste regelmässig aktualisiert wird;"
+            },
+            {
+              "marke": "g",
+              "text": "der Notfallplan mit den wesentlichen ausländischen Gesetzen und Aufsichtsanforderungen zu vereinbaren ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die globale Abwicklungsfähigkeit bildet Teil der Prüfung des Schweizer Notfallplans, soweit sie für dessen Umsetzung massgebend ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fca9560a92b2b3afe037d6e015ff715c649ecd7c024299155c90252253154e08"
+    },
+    {
+      "id": "bund/BANKV/art_62",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Genügt der Notfallplan den Anforderungen an den Nachweis zur Weiterführung der systemrelevanten Funktionen im Fall drohender Insolvenz nicht, so setzt die FINMA der Bank eine angemessene Frist zur Behebung der festgestellten Mängel. Die FINMA kann dabei konkrete Vorgaben machen."
+        },
+        {
+          "absatz": "2",
+          "text": "Behebt die Bank die Mängel nicht innert der angesetzten Frist, so setzt ihr die FINMA eine Nachfrist. Werden die Mängel auch innerhalb dieser Nachfrist nicht behoben, so kann die FINMA insbesondere folgende Massnahmen anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bildung eines unabhängigen Rechtsträgers in der Schweiz, an den die systemrelevanten Funktionen übertragen werden können;"
+            },
+            {
+              "marke": "b",
+              "text": "Anpassungen der rechtlichen und operativen Struktur der Bank, sodass die systemrelevanten Funktionen innert kurzer Zeit ausgegliedert werden können;"
+            },
+            {
+              "marke": "c",
+              "text": "Auslagerung der für die Weiterführung der systemrelevanten Funktionen erforderlichen Infrastruktur und Dienstleistungen in eine zentral geführte Gesellschaft innerhalb der Finanzgruppe oder in eine Einheit ausserhalb der Finanzgruppe."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "6d34bc1d040475c6316c7a1ee5d853ccf16ec308dc7a7bf23e165600c386bba1"
+    },
+    {
+      "id": "bund/BANKV/art_63",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind die Voraussetzungen nach Artikel 25 Absatz 1 BankG erfüllt, so kann die FINMA aufbauend auf dem Notfallplan die Schutz- und Insolvenzmassnahmen nach dem elften Abschnitt des BankG anordnen, die für die Sicherstellung der systemrelevanten Funktionen notwendig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine systemrelevante Bank erfüllt die Eigenmittelvorschriften nach Artikel 25 Absatz 1 BankG nicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn das anrechenbare harte Kernkapital 5 Prozent der risikogewichteten Positionen unterschreitet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "im Falle von Artikel 42 Absatz 4 ERV."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "4b7ccc1e4929801cd505e9edfe052a0f8d23b395ccf75b45b764966ffbf3f091"
+    },
+    {
+      "id": "bund/BANKV/art_63_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "63_a",
+      "artikelLabel": "Art. 63a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verbindlichkeiten aus Absicherungsgeschäften im Zusammenhang mit der Ausgabe von Bail-in-Bonds sind bei der Berechnung der 5 %-Obergrenze nach Artikel 30 b Absatz 8 BankG nicht zu berücksichtigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_63_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "3621f70787274b313b53ad6a103f5fdc96e5d9dfe0e06c4eb99f10e65adca20a"
+    },
+    {
+      "id": "bund/BANKV/art_64",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die systemrelevante Bank hat einen Stabilisierungsplan ( Recovery-Plan ) zu erstellen. Darin legt sie dar, mit welchen Massnahmen sie sich im Fall einer Krise nachhaltig so stabilisieren will, dass sie ihre Geschäftstätigkeit ohne staatliche Eingriffe fortführen kann. Der Stabilisierungsplan bedarf der Genehmigung durch die FINMA."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA erstellt einen Abwicklungsplan ( Resolution-Plan ) und legt darin dar, wie eine von ihr angeordnete Sanierung oder Liquidation der systemrelevanten Bank durchgeführt werden kann. Die Bank hat ihr die dafür erforderlichen Informationen einzureichen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Stabilisierungsplan und der Abwicklungsplan haben die Vorgaben ausländischer Aufsichtsbehörden und Zentralbanken über die Stabilisierung, Sanierung und Liquidation zu berücksichtigen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die systemrelevante Bank reicht der FINMA jährlich bis zum Ende des zweiten Quartals den Stabilisierungsplan und die für den Abwicklungsplan erforderlichen Informationen ein. Dieselben Dokumente sind auch einzureichen, wenn Veränderungen ihre Überarbeitung notwendig machen oder wenn die FINMA dies verlangt."
+        },
+        {
+          "absatz": "5",
+          "text": "Eine nach Artikel 124 a ERV international tätige systemrelevante Bank muss bei der Einreichung dokumentieren, welche Massnahmen sie vorbereitet oder umgesetzt hat, um die in Artikel 65a Absatz 2 aufgeführten Kriterien für die Sanier- und Liquidierbarkeit im In- und Ausland zu erfüllen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "901a73d86fa74cfcd87440971ca605a293410e3763f4564f3640ccb506d44a77"
+    },
+    {
+      "id": "bund/BANKV/art_65",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine nach Artikel 124 a ERV international tätige systemrelevante Bank muss ihre Sanier- und Liquidierbarkeit im In- und Ausland aufrechterhalten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "16e776c808c8af1d53711fda62bf0b7958fac0670db4ed98af4abb1efdcf5e4f"
+    },
+    {
+      "id": "bund/BANKV/art_65_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "65_a",
+      "artikelLabel": "Art. 65a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die FINMA beurteilt jährlich die Sanier- und Liquidierbarkeit der international tätigen systemrelevanten Bank im In- und Ausland auf der Grundlage der eingereichten Dokumentation."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA nimmt ihre Beurteilung insbesondere anhand folgender Kriterien vor:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Bank hat eine Organisationsstruktur, die die Sanierung und Liquidation erleichtert."
+            },
+            {
+              "marke": "b",
+              "text": "Die Bank hat Verfahren festgelegt, mit denen sie Verluste, die in den einzelnen Einheiten der Finanzgruppe entstehen, durch Rekapitalisierungsmassnahmen ausgleichen kann."
+            },
+            {
+              "marke": "c",
+              "text": "Die Bank ist ständig in der Lage, den Liquiditätsbedarf für den Fall einer Sanierung oder Liquidation abzuschätzen und die Möglichkeiten zur Deckung des entsprechenden Bedarfs zu analysieren, und sie gewährleistet die Bewirtschaftung der in der Finanzgruppe verfügbaren Sicherheiten."
+            },
+            {
+              "marke": "d",
+              "text": "Die Bank gewährleistet die operationelle Kontinuität im Fall einer Sanierung."
+            },
+            {
+              "marke": "e",
+              "text": "Die Bank gewährleistet den Zugang zu den Finanzmarktinfrastrukturen im Fall einer Sanierung."
+            },
+            {
+              "marke": "f",
+              "text": "Die Bank gestaltet vertikale gruppeninterne Finanzierungen zu Drittbedingungen aus und unterhält keine wesentlichen horizontalen gruppeninternen Finanzierungen."
+            },
+            {
+              "marke": "g",
+              "text": "Die Bank verfügt ständig über die Fähigkeit zur sofortigen Durchführung der notwendigen Bewertungen und Berichterstattungen für den Fall einer Sanierung."
+            },
+            {
+              "marke": "h",
+              "text": "Die Bank gewährleistet die operativen Voraussetzungen für die Sanierung durch eine Forderungsreduktion oder Wandlung von Fremd- in Eigenkapital unter Gläubigerbeteiligung."
+            },
+            {
+              "marke": "i",
+              "text": "Die Bank verfügt über eine Strategie mit verschiedenen Optionen zur Restrukturierung des Geschäftsmodells."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_65_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0fa1ff500375266e01b9daa0a3219aabceafc5415f9c4ef1cf938f3813966433"
+    },
+    {
+      "id": "bund/BANKV/art_65_b",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "65_b",
+      "artikelLabel": "Art. 65b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die FINMA bei einer international tätigen systemrelevanten Bank Hindernisse für die Sanier- und Liquidierbarkeit im In- und Ausland fest, so setzt sie eine Frist, innert der die Hindernisse zu beseitigen sind. Beseitigt die Bank diese nicht innert der Frist, so kann die FINMA für Einheiten nach Artikel 124 Absatz 3 Buchstaben b–d ERV Folgendes festlegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ergänzende zusätzliche verlustabsorbierende Mittel nach Artikel 133 ERV;"
+            },
+            {
+              "marke": "b",
+              "text": "einen Zuschlag nach Artikel 25 Absatz 1 LiqV, wenn das Hindernis das Kriterium nach Artikel 65 a Absatz 2 Buchstabe c betrifft."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann ausländische Aufsichts- und Insolvenzbehörden konsultieren und die Beurteilung dieser Behörden bei der Beurteilung der Sanier- und Liquidierbarkeit und bei der Festlegung von Massnahmen berücksichtigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_65_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "fe7f6960bbb49a37b5a538a54a0343f816bf32ebacc7194e783337507ce0eceb"
+    },
+    {
+      "id": "bund/BANKV/art_66",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die FINMA veröffentlicht jährlich ihre Beurteilung der Notfallplanung und der Stabilisierungsplanung der systemrelevanten Banken sowie der Sanier- und Liquidierbarkeit im In- und Ausland der international tätigen systemrelevanten Banken und informiert über den Stand der Abwicklungsplanung. Sie orientiert dabei über die wesentlichen Feststellungen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b582988eb6ebef0e24f9763d79fa6237c1835462f9aba80b6e9bb21bd23954b9"
+    },
+    {
+      "id": "bund/BANKV/art_66_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "66_a",
+      "artikelLabel": "Art. 66a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die wesentlichen Gruppengesellschaften einer systemrelevanten Bank, die Sitz in der Schweiz haben, sind angemessen mit Kapital und Liquidität auszustatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA setzt die Höhe fest unter Berücksichtigung der voraussichtlichen Dauer einer Sanierung und mit Blick auf Umfang und Art der wesentlichen Dienstleistungen, die während der Sanierung zu erbringen sind."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_66_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1e773cd615395f3d8ed1dc04e94f99bc5135721630845820f5f452e49f2d277e"
+    },
+    {
+      "id": "bund/BANKV/art_66_b",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "66_b",
+      "artikelLabel": "Art. 66b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Leitungsorgane wesentlicher Gruppengesellschaften einer systemrelevanten Bank, die Sitz in der Schweiz haben, so zu besetzen, dass Interessenkonflikte möglichst vermieden und die Interessen der wesentlichen Gruppengesellschaft im Fall eines Interessenkonflikts innerhalb der Finanzgruppe gewahrt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_66_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "b6da607ce8471e6e80fb8b295c448eb99acdbbbd9d237a28a4d381a298a9b9ad"
+    },
+    {
+      "id": "bund/BANKV/art_66_c",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "66_c",
+      "artikelLabel": "Art. 66c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wesentliche Gruppengesellschaften einer systemrelevanten Bank, die Sitz in der Schweiz haben, sind so zu organisieren, dass sie ihre wesentlichen Dienstleistungen zugunsten der Finanzgruppe im Fall einer Sanierung oder einer Liquidation weiterhin erbringen können. Insbesondere müssen sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Dienstleistungen in einem Leistungskatalog inventarisieren;"
+            },
+            {
+              "marke": "b",
+              "text": "Verträge mit externen Dienstleistungserbringern, die mit der Erbringung dieser Dienstleistungen im Zusammenhang stehen, sanierungs- und konkursfest ausgestalten und die Übertragbarkeit der Verträge sicherstellen;"
+            },
+            {
+              "marke": "c",
+              "text": "Abhängigkeiten von internen und externen Dienstleistungserbringern im Ausland durch geeignete Massnahmen begrenzen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_66_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "0df1ce2f2d4791d51b9af4020c5999ad0b959acb6d75ff65b92ed1b15079ff3d"
+    },
+    {
+      "id": "bund/BANKV/art_67",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bankenverordnung vom 17. Mai 1972 wird aufgehoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "99e2f780e365ec436c8a4358e0bf07c4e328413bcd2db3e6340f21e6350fe330"
+    },
+    {
+      "id": "bund/BANKV/art_68",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung anderer Erlasse wird im Anhang 2 geregelt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "a08a6663ac8414032f566e2bbddace98ffd4d0b8dd99b8891e7e99e4ccecbfb5"
+    },
+    {
+      "id": "bund/BANKV/art_69",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Banken können in den ersten beiden Geschäftsjahren nach Inkrafttreten dieser Verordnung die Wertberichtigungen gemäss Artikel 27 Absatz 1 als Gesamt- oder Teilbetrag global als Minusposition in den Aktiven ausweisen. Die FINMA regelt die Einzelheiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Einzelbewertung gemäss Artikel 27 Absatz 2 für Beteiligungen, Sachanlagen und immaterielle Werte muss bis spätestens am 1. Januar 2020 umgesetzt werden. Die nicht erfassten unrealisierten Verluste sind im Anhang zur Jahresrechnung offenzulegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die nach Artikel 124 a ERV international tätigen systemrelevanten Banken müssen die Massnahmen des Schweizer Notfallplans nach Artikel 60 Absatz 3 bis zum 31. Dezember 2019 vorbereitend umsetzen, soweit dies für die ununterbrochene Weiterführung systemrelevanter Funktionen notwendig ist. Die FINMA kann diese Frist in begründeten Fällen erstrecken."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erstellung und Publikation des Zwischenabschlusses 2015 ist nach bisherigem Recht erlaubt. Ausgenommen ist die Regelung gemäss Artikel 23 b Absatz 1 des bisherigen Rechts."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Umsetzung der Massnahmen nach Artikel 12 Absatz 2 bis kann die FINMA unter Berücksichtigung anerkannter internationaler Standards den Banken angemessene Fristen einräumen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "af7a93df6571c308431d1691e1e2755ad97a8b8b566b9e6f657b73c9003565d4"
+    },
+    {
+      "id": "bund/BANKV/art_69_a",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "69_a",
+      "artikelLabel": "Art. 69a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Banken müssen die Pflicht nach Artikel 37 h Absatz 3 Buchstabe c BankG zur Hinterlegung in Form von Wertschriften oder in bar oder die Gewährung des Bardarlehens innert 11 Monaten nach Inkrafttreten der Änderung vom 23. November 2022 erfüllt haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die international tätigen systemrelevanten Banken müssen die Dokumentation nach Artikel 64 Absatz 5 erstmals Ende Juni 2024 einreichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_69_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "1f6d1df0e1cda7ce4abfaa88b913389e5aceec1185e23c8efa16cfb7d7d9b394"
+    },
+    {
+      "id": "bund/BANKV/art_70",
+      "ebene": "bund",
+      "quelle": "BANKV",
+      "erlass": "BankV",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2015 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die FINMA kann die Anwendung der neuen Rechnungslegungsvorschriften gemäss 4. Kapitel für das Geschäftsjahr erlauben, das vor dem Inkrafttreten dieser Verordnung beginnt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/273/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20250101",
+      "sha": "d7254e39c69c7f433a28fc27c74a5c39105c0aee924b64ca9561a9e7c00efcfd"
+    }
+  ]
+}

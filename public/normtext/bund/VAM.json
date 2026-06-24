@@ -1,0 +1,2950 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/VAM/art_1",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zulassung verwendungsfertiger Arzneimittel;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zulassung von Verfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kriterien für die Einteilung in die Abgabekategorien;"
+            },
+            {
+              "marke": "d",
+              "text": "die Vertriebsbeschränkungen;"
+            },
+            {
+              "marke": "e",
+              "text": "die Bewilligung für den Versandhandel mit Arzneimitteln;"
+            },
+            {
+              "marke": "f",
+              "text": "die Marktüberwachung und die Vigilance;"
+            },
+            {
+              "marke": "g",
+              "text": "die Information der Öffentlichkeit;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "die Veröffentlichung von Ergebnissen klinischer Studien."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gilt sinngemäss auch für Transplantatprodukte nach Artikel 2 Absatz 1 Buchstabe c der Transplantationsverordnung vom 16. März 2007."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 31 gilt nicht für Transplantatprodukte nach Artikel 2 Absatz 1 Buchstabe c Ziffer 2 der Transplantationsverordnung vom 16. März 2007."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Begriffe richten sich nach Artikel 2 der Arzneimittel-Bewilligungsverordnung vom 14. November 2018 (AMBV)."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "79b6516316ed4a8af538865e0a12df5794eaf338e22ec8bfb86bfe763a85ab61"
+    },
+    {
+      "id": "bund/VAM/art_2",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zulassungspflicht für verwendungsfertige Arzneimittel richtet sich nach Artikel 9 HMG."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Zulassung ist auf jeden Fall erforderlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für ein verwendungsfertiges Arzneimittel, das gentechnisch veränderte Organismen (GVO) enthält;"
+            },
+            {
+              "marke": "b",
+              "text": "für ein Transplantatprodukt nach Artikel 2 Absatz 1 Buchstabe c der Transplantationsverordnung vom 16. März 2007."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "26c96979f1b5f588efaf551d4608040b703cbc4899949810eeca920bfa9ad678"
+    },
+    {
+      "id": "bund/VAM/art_3",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Zulassungsgesuch ist mit den erforderlichen Angaben und Unterlagen nach den Artikeln 11 und 14 a HMG beim Schweizerischen Heilmittelinstitut (Swissmedic) einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Zulassungsgesuch für ein Arzneimittel, dessen Entwicklung auf der Nutzung genetischer Ressourcen oder auf sich darauf beziehendem traditionellem Wissen basiert, muss zudem die Registernummer gemäss Artikel 4 Absatz 3 oder 8 Absatz 5 der Nagoya-Verordnung vom 11. Dezember 2015 enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Swissmedic tritt auf das Gesuch nicht ein, wenn es unvollständig oder mangelhaft ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie kann eine Frist von höchstens 60 Tagen zur Nachbesserung ansetzen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4f62c2619b4634b8fa13e194337ae72681b73effd244ef92393baf8b9c2ba1fd"
+    },
+    {
+      "id": "bund/VAM/art_4",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Risikomanagement-Plan muss folgenden Gesuchen beigelegt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesuchen um Zulassung eines Humanarzneimittels, das mindestens einen neuen Wirkstoff enthält, im Verfahren nach Artikel 11 HMG (ordentliches Verfahren);"
+            },
+            {
+              "marke": "b",
+              "text": "Gesuchen um Zulassung eines wichtigen Arzneimittels für seltene Krankheiten (Orphan Drug), das mindestens einen neuen Wirkstoff enthält;"
+            },
+            {
+              "marke": "c",
+              "text": "Gesuchen um Zulassung einer neuen Indikation eines bereits zugelassenen Arzneimittels nach den Buchstaben a und b."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Er umfasst eine Bewertung der Risiken und einen Pharmacovigilance-Plan."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Pharmacovilance-Plan wird dargestellt, wie die Risiken, die mit der Anwendung des Arzneimittels einhergehen, systematisch erfasst und abgeklärt und welche Präventionsmassnahmen vorgesehen werden (Art. 11 Abs. 2 Bst. a Ziff. 5 HMG)."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "df430a277558632987a431b9e456ae163002428f2ab67d555f991ee4b593eca2"
+    },
+    {
+      "id": "bund/VAM/art_5",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das pädiatrische Prüfkonzept nach Artikel 54 a HMG muss ein Forschungs- und Entwicklungsprogramm beinhalten, das sicherstellt, dass die Daten zur Festlegung der Voraussetzungen, unter denen ein Arzneimittel zur Behandlung in der pädiatrischen Bevölkerungsgruppe zugelassen werden kann, erarbeitet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein pädiatrisches Prüfkonzept muss folgenden Gesuchen beigelegt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesuchen um Zulassung eines Arzneimittels, das mindestens einen neuen Wirkstoff enthält, im ordentlichen Verfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesuchen um Zulassung eines wichtigen Arzneimittels für seltene Krankheiten (Orphan Drug), das mindestens einen neuen Wirkstoff enthält;"
+            },
+            {
+              "marke": "c",
+              "text": "Gesuchen um Zulassung einer neuen Indikation, einer neuen Darreichungsform oder eines neuen Applikationsweges eines Arzneimittels nach den Buchstaben a und b."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Diese Pflicht ist auch erfüllt, wenn die Gesuchstellerin das von einem von der Swissmedic bezeichneten Land mit vergleichbarer Arzneimittelkontrolle zuletzt genehmigte pädiatrische Prüfkonzept einreicht. Die Gesuchstellerin benachrichtigt die Swissmedic unverzüglich über die Erfüllung aller in dem genehmigten ausländischen Prüfkonzept vorgesehenen Massnahmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Swissmedic kann auf Gesuch hin oder von Amtes wegen eine ganze oder teilweise Freistellung von der Pflicht zur Erstellung eines pädiatrischen Prüfkonzepts gewähren, namentlich wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Hinweise bestehen, dass das Arzneimittel in der pädiatrischen Bevölkerungsgruppe wahrscheinlich unwirksam ist oder dessen Einsatz aus Sicherheitsgründen bedenklich erscheint;"
+            },
+            {
+              "marke": "b",
+              "text": "die Krankheit, die mit dem Arzneimittel behandelt werden soll, lediglich bei Erwachsenen auftritt;"
+            },
+            {
+              "marke": "c",
+              "text": "das Arzneimittel im Vergleich zu bestehenden pädiatrischen Behandlungen voraussichtlich keinen signifikanten therapeutischen Nutzen bietet."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Sie kann auf Gesuch hin oder von Amtes wegen bewilligen, dass Studien oder andere Massnahmen aus dem pädiatrischen Prüfkonzept zu einem späteren Zeitpunkt eingeleitet oder abgeschlossen werden, namentlich wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Studien an Erwachsenen vor Einleitung der Studien in der pädiatrischen Bevölkerungsgruppe angezeigt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Studien in der pädiatrischen Bevölkerungsgruppe länger dauern als Studien an Erwachsenen."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Auf Gesuch hin kann die Swissmedic bereits vor der Einreichung eines Zulassungsgesuchs:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ein pädiatrisches Prüfkonzept genehmigen;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Freistellung nach Absatz 4 gewähren; oder"
+            },
+            {
+              "marke": "c",
+              "text": "eine Zurückstellung nach Absatz 5 bewilligen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e50db0efdbba39dec24cf714a173a70d09dc3dd52831e98883cf25149def87eb"
+    },
+    {
+      "id": "bund/VAM/art_6",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Zulassung eines Arzneimittels mit GVO muss zusätzlich zu den Anforderungen nach dem HMG auch diejenigen nach Artikel 28 der Freisetzungsverordnung vom 10. September 2008 erfüllen."
+        },
+        {
+          "absatz": "2",
+          "text": "Unter Berücksichtigung der Freisetzungsverordnung leitet und koordiniert die zuständige Behörde das Zulassungsverfahren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "78cbd2ff988c9e9c85ca9d87ed14cc4b1c95d0fd65fcefe1cbd59c05613901ac"
+    },
+    {
+      "id": "bund/VAM/art_7",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eine Gesuchstellerin kann bei der Swissmedic für ein Humanarzneimittel oder für dessen Änderung die Durchführung eines beschleunigten Zulassungsverfahrens beantragen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es sich um eine erfolgversprechende Prävention oder Therapie gegen eine schwere, invalidisierende oder lebensbedrohliche Krankheit handelt;"
+            },
+            {
+              "marke": "b",
+              "text": "keine oder nur unbefriedigende Behandlungsmöglichkeiten mit zugelassenen Arzneimitteln vorhanden sind; und"
+            },
+            {
+              "marke": "c",
+              "text": "vom Einsatz des neuen Arzneimittels ein hoher therapeutischer Nutzen erwartet wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f14c987d6374ae29c036ccee95a1abb058197eb7f39d9e2107e4f92e3dd317ac"
+    },
+    {
+      "id": "bund/VAM/art_8",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic teilt der Gesuchstellerin vor dem Erlass einer Zulassungsverfügung das Ergebnis der Begutachtung mit, wenn sie deren Begehren nicht voll zu entsprechen gedenkt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann die Gesuchstellerin während des Zulassungsverfahrens auffordern, innert angemessener Frist Fragen zu klären und allfällige zusätzliche Unterlagen nachzureichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a5077da67e54b8d53721a8efd484256fe861075c8374aea80c555c6ed3adf1dd"
+    },
+    {
+      "id": "bund/VAM/art_9",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic erteilt die Zulassung, wenn das Arzneimittel die Anforderungen der Heilmittelgesetzgebung und, im Fall von Arzneimitteln mit GVO, die Voraussetzungen der Freisetzungsverordnung vom 10. September 2008 erfüllt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erteilt die Zulassung für ein Arzneimittel, dessen Entwicklung auf der Nutzung genetischer Ressourcen oder auf sich darauf beziehendem traditionellem Wissen basiert, zudem erst dann, wenn der Nachweis für die Erfüllung der Meldepflicht gemäss Artikel 4 oder 8 der Nagoya-Verordnung vom 11. Dezember 2015 erbracht worden ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erteilt für Tierarzneimittel, die zur Behandlung von Nutztieren bestimmt sind, die Zulassung nur, wenn diese Arzneimittel so beschaffen sind, dass die gewonnenen Lebensmittel die Gesundheit nicht gefährden."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie weist ein Gesuch ab, wenn es die Voraussetzungen nicht erfüllt oder wenn die Arzneimittelbezeichnung oder die Gestaltung des Behälters oder Packungsmaterials der öffentlichen Ordnung oder den guten Sitten widerspricht, irreführend sein oder zu Verwechslungen führen kann."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie vermerkt auf Gesuch hin in der Zulassungsverfügung, dass die Arzneimittelinformation die relevanten Ergebnisse der Studien wiedergibt, die in Übereinstimmung mit dem genehmigten pädiatrischen Prüfkonzept nach Artikel 54 a HMG durchgeführt wurden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7f97476fc3aee939b333e95722872ec5b747d8aa920bc4419e6b0f59e5b6baf6"
+    },
+    {
+      "id": "bund/VAM/art_10",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zulassung ist übertragbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "db1e4ed288f0456b28aebc2781b41bfd47006be000e72582523117824fc8f9ed"
+    },
+    {
+      "id": "bund/VAM/art_11",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Arzneimittel innerhalb von einem Jahr nach Erteilung der Zulassung nicht in Verkehr gebracht, so hat die Zulassungsinhaberin dies der Swissmedic innerhalb von 30 Tagen nach Ablauf dieses Jahres zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der Vertrieb eines Arzneimittels eingestellt oder für länger als ein Jahr unterbrochen, so hat die Zulassungsinhaberin dies der Swissmedic zu melden. Diese Meldung hat mindestens zwei Monate im Voraus zu erfolgen, es sei denn, der Vertrieb wird aufgrund von Umständen eingestellt oder unterbrochen, deren Eintritt die Zulassungsinhaberin nicht rechtzeitig voraussehen konnte."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird der Vertrieb eines für die pädiatrische Anwendung zugelassenen Arzneimittels eingestellt, für das die Zulassungsinhaberin den Schutz nach Artikel 11 b Absatz 3 oder 4 HMG oder nach Artikel 140 n oder 140 t des Patentgesetzes vom 25. Juni 1954 erhalten hat, so hat sie dies der Swissmedic zu melden. Diese Meldung hat mindestens drei Monate im Voraus zu erfolgen, es sei denn, der Vertrieb wird aufgrund von Umständen eingestellt, deren Eintritt die Zulassungsinhaberin nicht rechtzeitig voraussehen konnte."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird ein nach Absatz 1 gemeldetes Arzneimittel zu einem späteren Zeitpunkt in Verkehr gebracht oder wird nach einer Unterbrechung der Vertrieb eines Arzneimittels wieder aufgenommen, so hat die Zulassungsinhaberin dies der Swissmedic innerhalb von 30 Tagen zu melden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Swissmedic publiziert die nach den Absätzen 2–4 eingegangenen Meldungen. Handelt es sich um eine Vertriebseinstellung nach Absatz 3, so gibt die Swissmedic zugleich bekannt, dass die für die pädiatrische Anwendung erforderliche Zulassungsdokumentation bei der Zulassungsinhaberin unentgeltlich erworben werden kann."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "dfee3783e0c3acc616420025abfc560a313e320780b038fcbea90b01ac44e61c"
+    },
+    {
+      "id": "bund/VAM/art_12",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Erneuerung der Zulassung ist mit den erforderlichen Unterlagen spätestens sechs Monate vor Ablauf der Zulassungsdauer einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic kann, insbesondere bei Arzneimitteln, die einer zusätzlichen Überwachung unterliegen, in der Zulassungsverfügung einen anderen Einreichungszeitpunkt festlegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f2d59bd62596aa292fdf562a708cb5df4c4394ae7f866122efbbbbe8e6beb1b8"
+    },
+    {
+      "id": "bund/VAM/art_13",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic widerruft oder sistiert die Zulassung, wenn die Voraussetzungen des HMG nicht mehr erfüllt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie widerruft die Zulassung, wenn der Vertrieb eines Arzneimittels eingestellt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Arzneimitteln, die einzig im Hinblick auf die Bewältigung einer Notsituation zugelassen worden sind oder die einzig für die Ausfuhr bestimmt sind, wird die Zulassung auch nach Ablauf der Fristen nach Artikel 16 a Absatz 1 HMG nicht widerrufen."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Fristenlauf nach Artikel 16 a Absatz 1 Buchstabe a HMG beginnt mit dem Datum der Zulassung. Steht zu diesem Zeitpunkt dem Inverkehrbringen des Arzneimittels ein Patentschutz entgegen, so beginnt der Fristenlauf erst nach Ablauf des Patentschutzes."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Fristenlauf nach Artikel 16 a Absatz 1 Buchstabe b HMG beginnt am Tag, an dem die Zulassungsinhaberin die letzte Packung der letzten Charge an den Grosshandel liefert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "6fbb6de2c1494e02b7e4073f895c2d2dbb853d1bad467c2095a8c925d95afa93"
+    },
+    {
+      "id": "bund/VAM/art_14",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic überprüft nach Artikel 16 c HMG die Arzneimittel einzeln oder als Gruppe."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie berücksichtigt bei der Überprüfung der Arzneimittel oder Arzneimittelgruppen insbesondere folgende Kriterien:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Anwendungsgebiet des Arzneimittels;"
+            },
+            {
+              "marke": "b",
+              "text": "das Risikoprofil des Arzneimittels;"
+            },
+            {
+              "marke": "c",
+              "text": "die Entwicklung von Wissenschaft und Technik."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie fordert jede betroffene Zulassungsinhaberin auf, die für die Überprüfung notwendigen Angaben und Unterlagen vorzulegen. Sie setzt ihr dafür eine angemessene Frist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "281ac8dbc7e8d7156667fde15e85c3c8286cd374e8732ddf18a48717dbddf7a5"
+    },
+    {
+      "id": "bund/VAM/art_15",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Swissmedic ordnet geeignete Massnahmen an, namentlich eine Änderung der Bezeichnung oder der grafischen Gestaltung, falls das Risiko einer Verwechslung von Arzneimitteln oder von Arzneimitteln mit anderen Heilmitteln mit ähnlicher Bezeichnung oder ähnlicher Gestaltung erst festgestellt wird, nachdem ein Arzneimittel in Verkehr gebracht wurde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2f5eca8c29acde18be97905ff13da3a633146b333dba802052746cc6ead31dcb"
+    },
+    {
+      "id": "bund/VAM/art_16",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beantragt eine Gesuchstellerin die Zulassung oder die Änderung einer Zulassung für ein Arzneimittel oder ein Verfahren, für das die Zulassung in einem Land mit vergleichbarer Arzneimittelkontrolle bereits erteilt worden ist, so berücksichtigt die Swissmedic die Ergebnisse der dafür durchgeführten Prüfungen, falls folgende Anforderungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die eingereichten Unterlagen aus dem ausländischen Verfahren, einschliesslich aller Änderungsanzeigen, sind nicht älter als fünf Jahre und entsprechen dem Stand der Zulassung im Ausland."
+            },
+            {
+              "marke": "b",
+              "text": "Es liegen die Begutachtungsentscheide vor, die im Rahmen von ausländischen Zulassungsverfahren ergangen sind, einschliesslich der dazu gehörigen Prüfungsergebnisse."
+            },
+            {
+              "marke": "c",
+              "text": "Die Unterlagen enthalten alle für die Schweiz geforderten Angaben, insbesondere die Angaben zur Arzneimittelinformation und zur Kennzeichnung."
+            },
+            {
+              "marke": "d",
+              "text": "Die Unterlagen liegen in einer Amtssprache, in Englisch oder in einer Übersetzung in eine dieser Sprachen vor. Im Falle einer Übersetzung muss die Gesuchstellerin die Korrektheit der Übersetzung bestätigen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Unterlagen nach Absatz 1 Buchstabe a können geringfügig von den im Ausland eingereichten Unterlagen abweichen, wenn dies hinreichend begründet wird. Eine geringfügige Abweichung ist namentlich eine andere Bezeichnung des Arzneimittels, eine andere Packungsgrösse oder eine andere Sekundärverpackung."
+        },
+        {
+          "absatz": "3",
+          "text": "Liegt eine Zulassung in einem Mitgliedstaat der EU oder der EFTA vor, so kann die Swissmedic die jeweils gültige Form der Arzneimittelinformation auch für das Inverkehrbringen des Arzneimittels in der Schweiz genehmigen; vorbehalten bleiben die Artikel 26–29."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Swissmedic veröffentlicht eine Liste der Länder mit vergleichbarer Arzneimittelkontrolle."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "23f543f22df6d9c735d4fbf9be8aeeb9895550a04b51adb76ec8d2e7e8b6b014"
+    },
+    {
+      "id": "bund/VAM/art_17",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic führt keine eigene wissenschaftliche Begutachtung folgender Gesuche durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesuche um Zulassung eines Verfahrens oder eines Arzneimittels mit bekannten Wirkstoffen, für das die Zulassung in einem Land mit vergleichbarer Arzneimittelkontrolle bereits erteilt worden ist;"
+            },
+            {
+              "marke": "b",
+              "text": "Gesuche um Zulassung eines Biosimilars, für das die Europäische Kommission oder die Arzneimittelbehörde der Vereinigten Staaten von Amerika (United States Food and Drug Administration) eine Zulassung bereits erteilt hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führt eine eigene wissenschaftliche Begutachtung durch, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für das Verfahren oder das Arzneimittel in zwei oder mehreren Ländern mit vergleichbarer Arzneimittelkontrolle ein Zulassungsverfahren durchgeführt wurde und sich die Entscheide der Behörden dieser Staaten widersprechen;"
+            },
+            {
+              "marke": "b",
+              "text": "sie aufgrund eigener früherer Begutachtungen, neuer Erkenntnisse aus der veröffentlichten Fachliteratur oder von Informationen aus der Zusammenarbeit mit anderen Arzneimittelbehörden wesentliche Bedenken gegenüber dem ausländischen Zulassungsentscheid hat."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die wissenschaftliche Begutachtung nach Absatz 2 beschränkt sich auf die bedenkenerweckenden Punkte."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "dce46f8b1407694c13c0a949b4ab2514291072a4965da4f61378ac3bae9609e3"
+    },
+    {
+      "id": "bund/VAM/art_18",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesuche um Zulassung eines Arzneimittels mit neuem Wirkstoff oder der Erweiterung von dessen Indikation unterzieht die Swissmedic einer umfassenden wissenschaftlichen Begutachtung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann diese Begutachtung in begründeten Fällen auf Gesuch hin oder von Amtes wegen, gestützt auf entsprechende ausländische Prüfungsergebnisse, angemessen reduzieren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5505a55e32cb90d427f789d0e1473efbeed916ffca72261ed56afedc339ecff4"
+    },
+    {
+      "id": "bund/VAM/art_19",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Gesuchen um Zulassung eines Arzneimittels, für das die Zulassung in einem Land mit vergleichbarer Arzneimittelkontrolle aufgrund noch fehlender Daten zur Qualität, Sicherheit und Wirksamkeit nur bedingt erteilt und mit besonderen Auflagen verknüpft worden ist, werden die Prüfungsergebnisse der ausländischen Behörde nur für die Erteilung einer befristeten Zulassung nach Artikel 9 a HMG berücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Alle nachgereichten Daten sowie alle Begutachtungsergebnisse der ausländischen Behörde in Bezug auf die Erfüllung der für diese Zulassung geltenden spezifischen Auflagen sind der Swissmedic jeweils umgehend vorzulegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cda14c31289fe28199e6696c6a563cb3be2ab165e68ce78cc6d637cbbd57a11e"
+    },
+    {
+      "id": "bund/VAM/art_20",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ergeht während eines laufenden Zulassungsverfahrens in der Schweiz für das gleiche Arzneimittel oder Verfahren eine Empfehlung der Europäischen Arzneimittel-Agentur (EMA) an die Europäische Kommission oder ein Zulassungsentscheid in einem Land mit vergleichbarer Arzneimittelkontrolle, so wendet die Swissmedic auf Gesuch hin die Artikel 16–19 sinngemäss an."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen aufgrund der bis zu diesem Zeitpunkt erfolgten eigenen Begutachtung wesentliche Bedenken an den Prüfungsergebnissen der ausländischen Behörde, so setzt die Swissmedic ihre wissenschaftliche Begutachtung fort."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ee7587f4d09a104854c75243f52a9451cfaf52774f33f34c66f5b4e73ef419f7"
+    },
+    {
+      "id": "bund/VAM/art_21",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zulassungsinhaberin muss geringfügige Änderungen, die keine oder nur minimale Folgen für die Qualität, Sicherheit oder Wirksamkeit des Arzneimittels haben, der Swissmedic innerhalb von zwölf Monaten nach ihrer Umsetzung schriftlich melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Solche Änderungen müssen der Swissmedic sofort nach ihrer Umsetzung schriftlich gemeldet werden, wenn dies für die ständige Überwachung des Arzneimittels erforderlich ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8a10838b06843c1d151ebeba3063b465109d42aaaf7890d79babb2d1950338c1"
+    },
+    {
+      "id": "bund/VAM/art_22",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zulassungsinhaberin muss Änderungen, bei denen es sich weder um eine Änderung nach Artikel 21 oder 23 noch um eine Zulassungserweiterung handelt, der Swissmedic vor ihrer Umsetzung schriftlich melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Erhebt die Swissmedic innerhalb von 60 Tagen nach Erhalt einer gültigen Meldung und der vollständigen Unterlagen keine Einwände, so gilt die Änderung ab dem ersten Tag nach Ablauf dieser Frist als genehmigt. Erhebt sie innerhalb dieser Frist Einwände, so kann die Zulassungsinhaberin innerhalb von 30 Tagen Unterlagen einreichen, um die Einwände auszuräumen, oder eine geänderte Meldung einreichen, die die Einwände der Swissmedic berücksichtigt. Andernfalls gilt die Änderung als abgelehnt."
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 findet keine Anwendung, wenn die Meldung einer Änderung nach Absatz 1 zusammen mit einem Gesuch um Genehmigung einer grösseren Änderung oder einer Zulassungserweiterung eingereicht wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1b11c5ffc3d754eb2b027604d8bb3738f44f7f83c0fc6b01e96ac63b64a879b4"
+    },
+    {
+      "id": "bund/VAM/art_23",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Änderungen des Arzneimittels, die umfangreiche Folgen für dessen Qualität, Sicherheit oder Wirksamkeit haben können und bei denen es sich nicht um eine Zulassungserweiterung handelt, müssen vor ihrer Umsetzung von der Swissmedic genehmigt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "95e783e810b4421b34d0b8db8d61a7acb4fa2f8d96aebe8e005a984173c4ea1b"
+    },
+    {
+      "id": "bund/VAM/art_24",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Änderungen des Arzneimittels, die als Zulassungserweiterungen eingestuft werden, müssen in einem neuen Zulassungsverfahren genehmigt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "d712669462555a5319a839e4078425b9b33050d475ee1fd59c57b260458c6c24"
+    },
+    {
+      "id": "bund/VAM/art_25",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic ordnet die einzelnen Änderungen den verschiedenen Kategorien zu und umschreibt die Verfahren nach den Artikeln 21–24 sowie die erforderlichen Unterlagen näher. Sie berücksichtigt dabei international anerkannte Normen und Richtlinien, namentlich die Verordnung (EG) Nr. 1234/2008 sowie die auf diese Verordnung gestützten Leitlinien der Europäischen Kommission."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie legt fest, wie in einem Gesuch mehrere Änderungen zusammen beantragt werden können."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c16b33cf7baa1df8e771c372ffc6b334f2146a8cdd13c58549a81d994fc44228"
+    },
+    {
+      "id": "bund/VAM/art_25_a",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zulassungsinhaberin muss Änderungen, die keine Bewertung erfordern, weil sie keine oder nur minimale Folgen für die Qualität, Sicherheit oder Wirksamkeit des Arzneimittels haben, der Swissmedic nach ihrer Umsetzung schriftlich melden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_25_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "bb309678042cf3a89d17c8a84d0f460fcdb5b1b4e817ee934649265d27ab301f"
+    },
+    {
+      "id": "bund/VAM/art_25_b",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "25_b",
+      "artikelLabel": "Art. 25b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Änderungen des Arzneimittels, die eine Bewertung erfordern, weil sie umfangreiche Folgen für dessen Qualität, Sicherheit oder Wirksamkeit haben können, müssen vor ihrer Umsetzung von der Swissmedic genehmigt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_25_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "bd1536fc464681a8b34de9bab23d161b8a51e800b198f5f1f4b118dc3d922673"
+    },
+    {
+      "id": "bund/VAM/art_25_c",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "25_c",
+      "artikelLabel": "Art. 25c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic ordnet die einzelnen Änderungen den beiden Kategorien zu und umschreibt die Verfahren nach den Artikeln 25 a und 25 b sowie die erforderlichen Unterlagen näher. Sie berücksichtigt dabei international anerkannte Normen und Richtlinien, namentlich die Verordnung (EU) 2019/6 sowie die auf diese Verordnung gestützten Durchführungsrechtsakte."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie legt fest, wie in einem Gesuch mehrere Änderungen zusammen beantragt werden können."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_25_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "257e365ccd64a4188f1ad51fd3b6cfe70910fab1e81edfae6d45482c2a810427"
+    },
+    {
+      "id": "bund/VAM/art_26",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Angaben und Texte auf dem Behälter und dem Packungsmaterial sind mindestens in zwei Amtssprachen abzufassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Fachinformation und die Packungsbeilage von Human- und Tierarzneimitteln müssen in den drei Amtssprachen abgefasst werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zusammensetzung des Arzneimittels kann auf dem Behälter und dem Packungsmaterial sowie in der Fachinformation auch in lateinischer Sprache oder mit international gebräuchlichen Kurzbezeichnungen wie den Internationalen Freinamen der Weltgesundheitsorganisation angegeben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Arzneimittel, die ausschliesslich für die Anwendung im Spital vorgesehen sind und entsprechend gekennzeichnet werden, reichen die Angaben nach den Absätzen 1 und 2 in einer Amtssprache oder in Englisch. Die Zulassungsinhaberin stellt sicher, dass zusätzliche Informationen in der von den Anwenderinnen und Anwendern gewünschten Amtssprache zur Verfügung gestellt werden können."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b6e0832e71c22a0a0386618795a3c3995f00459dd566b41fcd801e392fb1dddd"
+    },
+    {
+      "id": "bund/VAM/art_27",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Arzneimittel, die aus GVO bestehen oder solche Organismen enthalten, müssen mit einer entsprechenden Bezeichnung gekennzeichnet sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf dem für die Abgabe bestimmten Behälter, auf der äusseren Packung sowie in der Packungsbeilage ist der Hinweis «enthält gentechnisch verändertes X», «enthält genetisch verändertes X», «besteht aus gentechnisch verändertem X» oder «besteht aus genetisch verändertem X» anzubringen. In der Fachinformation muss die Art des GVO und der gentechnischen Veränderung angegeben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Kennzeichnung von Wirk- und Hilfsstoffen, die aus GVO gewonnen werden, gelten die Bestimmungen der Gesetzgebung über die Kennzeichnung gentechnisch veränderter Lebensmittel sinngemäss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7cfff1c5a2f8b964c066a8f5df7be2a24f51bb36745e1a939557ce628ac1f0c9"
+    },
+    {
+      "id": "bund/VAM/art_28",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zulassungsinhaberin ist verpflichtet, die Arzneimittelinformation laufend und unaufgefordert dem aktuellen Stand von Wissenschaft und Technik sowie neuen Ereignissen und Bewertungen anzupassen. Die Artikel 21–24, 25 a und 25 b sind anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b65128e8a90bb5b3dba335a4e3bced801f5f824921491996e68b719fd3efcbc3"
+    },
+    {
+      "id": "bund/VAM/art_29",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Inhaberin einer Zulassung für Human- und Tierarzneimittel muss die gesetzlich vorgeschriebenen Inhalte der Arzneimittelinformationen spätestens beim erstmaligen Inverkehrbringen ihres Präparates in der dafür vorgesehenen Form der Einrichtung gemäss Artikel 67 Absatz 3 HMG übermittelt haben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3cefb21d4863e16742f84e8b2908ea9b99369bd4155abf17aa948b1c608d10a3"
+    },
+    {
+      "id": "bund/VAM/art_30",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Zulassung eines Arzneimittels, das im Wesentlichen gleich ist wie ein bereits zugelassenes Arzneimittel und für die gleiche Anwendung vorgesehen ist, kann sich auf die Ergebnisse von dessen pharmakologischen, toxikologischen und klinischen Prüfungen abstützen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zulassungsinhaberin des bereits zugelassenen Arzneimittels schriftlich zustimmt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der Unterlagenschutz für das bereits zugelassene Arzneimittel abgelaufen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde für das bereits zugelassene Arzneimittel eine neue Indikation, ein neuer Applikationsweg, eine neue Darreichungsform, eine neue Dosisstärke, eine neue Dosierungsempfehlung oder die Anwendung auf eine neue Zieltierart zugelassen, so kann sich ein Gesuch nach Absatz 1 auf die entsprechenden Prüfungsergebnisse abstützen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zulassungsinhaberin des bereits zugelassenen Arzneimittels schriftlich zustimmt; oder"
+            },
+            {
+              "marke": "b",
+              "text": "der für die Änderung der Zulassung erteilte Unterlagenschutz abgelaufen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Auf Gesuch hin legt die Swissmedic bei einer neuen Indikation die Schutzdauer nach Absatz 2 Buchstabe b auf zehn Jahre fest, wenn durch die neue Indikation ein bedeutender klinischer Nutzen gegenüber bestehenden Therapien erwartet werden kann und die Indikation durch umfangreiche klinische Prüfungen gestützt wird."
+        },
+        {
+          "absatz": "4",
+          "text": "Ein Unterlagenschutz nach Artikel 11 b Absatz 3 HMG wird nur erteilt, wenn die eingereichten Studien mit dem genehmigten pädiatrischen Prüfkonzept nach Artikel 54 a HMG übereinstimmen."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Unterlagenschutz wird mit der Zulassung verfügt und publiziert."
+        },
+        {
+          "absatz": "6",
+          "text": "Wird ein Gesuch um Zulassung eines Arzneimittels nach Artikel 12 HMG ohne schriftliche Zustimmung der Zulassungsinhaberin des bereits zugelassenen Arzneimittels mehr als zwei Jahre vor dem Ablauf des Unterlagenschutzes gestellt, so tritt die Swissmedic auf das Gesuch nicht ein."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1c268003806dcb9ce63460fa732279a0a849a99c269f6d5b3be9c0680d08bdb4"
+    },
+    {
+      "id": "bund/VAM/art_31",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahren zur Behandlung von Blut oder labilen Blutprodukten mit dem Ziel, bestimmte Krankheitserreger zu inaktivieren oder zu eliminieren, dürfen nur in Verkehr gebracht oder eingesetzt werden, wenn sie von der Swissmedic zugelassen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic erteilt die Zulassung, wenn die Gesuchstellerin nachweist, dass das Verfahren Krankheitserreger inaktiviert oder eliminiert und weder die Wirksamkeit, die Sicherheit noch die Qualität des Produktes beeinträchtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden am Verfahren Änderungen vorgenommen, so müssen diese der Swissmedic vorgängig zur Genehmigung unterbreitet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "83156e2a812ccb58981ac7beb4f1d32ae1e58343b405ebb8df9916aaea9d3ea7"
+    },
+    {
+      "id": "bund/VAM/art_32",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nichtstandardisierbare Transplantatprodukte, deren Herstellungsverfahren standardisierbar ist, dürfen nur in Verkehr gebracht oder autolog transplantiert werden, wenn das Herstellungsverfahren von der Swissmedic zugelassen worden ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b3ca639c074ceada29beb5a5066a2b60e3603cb76b40a46da488c0cc1c6c45ac"
+    },
+    {
+      "id": "bund/VAM/art_33",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nichtstandardisierbare Arzneimittel, deren Herstellungsverfahren standardisierbar ist und die aufgrund ihrer Indikation, Zusammensetzung, Dosierung oder ihres Applikationsweges oder wegen der unzureichenden Belege über ihre Sicherheit und Wirksamkeit in der veröffentlichten wissenschaftlichen Literatur ein erhöhtes Risiko aufweisen, dürfen nur in Verkehr gebracht werden, wenn ihr Herstellungsverfahren von der Swissmedic zugelassen worden ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic bezeichnet nach Anhörung der Kantone die Arzneimittel oder Arzneimittelgruppen, für die eine Zulassung nach Absatz 1 beantragt werden muss, und passt diese Liste regelmässig dem Stand von Wissenschaft und Technik an. Sie kann für Anpassungen Übergangsbestimmungen festlegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Entspricht die Liste nach Absatz 2 den neuesten Erkenntnissen oder Entwicklungen nicht mehr und sind sofortige Massnahmen zum Schutz der Gesundheit erforderlich, so kann sie bis zur Anpassung der Liste den kantonalen Vollzugsbehörden nach vorgängiger Anhörung die notwendigen Weisungen erteilen. Diese Weisungen werden im Internet veröffentlicht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9c530dba6b4b3dd3d8714049dd07b31ff295083237d924f33c2ef1ad893f398d"
+    },
+    {
+      "id": "bund/VAM/art_34",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf die Zulassung von Verfahren nach den Artikeln 31–33 sind die Bestimmungen über die Zulassung verwendungsfertiger Arzneimittel sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2bf77d06fbd3a5f35e5f11477a0ede03d6488197ed1b5ce7953034108861aaba"
+    },
+    {
+      "id": "bund/VAM/art_35",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Arzneimittel nach Artikel 9 Absatz 2 Buchstaben b–c bis HMG dürfen nur an die eigene Kundschaft abgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Als eigene Kundschaft gelten die Kundinnen und Kunden einer öffentlichen Apotheke, einer Drogerie oder eines anderen Betriebs mit einer kantonalen Detailhandelsbewilligung, die Arzneimittel zur Anwendung an sich selber oder für die Anwendung an Drittpersonen oder an Tieren beziehen."
+        },
+        {
+          "absatz": "3",
+          "text": "In Spitälern und anderen klinisch-medizinisch betreuten Institutionen, in denen dieselbe Fachperson die pharmazeutische Verantwortung innehat, sind dies die Patientinnen und Patienten, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in der betreffenden Institution stationär behandelt werden; oder"
+            },
+            {
+              "marke": "b",
+              "text": "im Rahmen einer ambulanten Behandlung, für welche die spezifischen Kenntnisse und Einrichtungen der betreffenden Institution erforderlich sind, behandelt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Stationär behandelten Patientinnen und Patienten dürfen unmittelbar bei der Entlassung Arzneimittel zur kurzfristigen Erstversorgung abgegeben werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "de41724bf910cbf2ced5f9a3479e41e64be8301e420637a561332980f601ab5e"
+    },
+    {
+      "id": "bund/VAM/art_36",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von einem Arzneimittel nach Artikel 9 Absatz 2 Buchstaben a–c bis HMG darf pro Kalenderjahr höchstens der betriebsübliche Jahresbedarf hergestellt oder auf Vorrat gehalten werden, es sei denn, Stabilitätsdaten rechtfertigen eine längere Lagerungszeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Mit einer Lohnherstellung beauftragte Betriebe gemäss Artikel 9 Absatz 2 bis HMG dürfen pro Kalenderjahr höchstens 3000 abgabefertige Packungen, mit insgesamt höchstens 90 000 Einzeldosen, jeder Darreichungsform und jeder Dosisstärke eines Arzneimittels nach Artikel 9 Absatz 2 Buchstaben a–c HMG herstellen. Ein abgabeberechtigter Betrieb darf pro Kalenderjahr nicht mehr als diese Höchstmengen eines solchen Arzneimittels im Lohnauftrag herstellen lassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einschränkung gemäss Absatz 2 gilt nicht, falls kein alternativ anwendbares und gleichwertiges Arzneimittel, das in der Schweiz oder in einem Land mit vergleichbarer Arzneimittelkontrolle zugelassen ist, verfügbar ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "25616e330fdf400394de78dbc870598c19cc1e80ccbea3c8aa478c041f940fb9"
+    },
+    {
+      "id": "bund/VAM/art_37",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Herstellung von Arzneimitteln, für die nach Artikel 9 Absätze 2 Buchstaben a–c bis , 2 bis und 2 ter HMG keine Zulassung erforderlich ist, dürfen ausschliesslich Wirkstoffe verwendet werden, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in einem Arzneimittel enthalten sind, das von der Swissmedic oder in einem anderen Land mit vergleichbarer Arzneimittelkontrolle zugelassen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "in der von der Swissmedic erlassenen Liste der traditionellen asiatischen Therapierichtung aufgeführt sind und gemäss den entsprechenden Einschränkungen eingesetzt werden;"
+            },
+            {
+              "marke": "c",
+              "text": "in der von der Swissmedic erlassenen Liste der homöopathischen und anthroposophischen Therapierichtungen aufgeführt sind und gemäss den entsprechenden Einschränkungen eingesetzt werden;"
+            },
+            {
+              "marke": "d",
+              "text": "in der Pharmakopöe oder einem andern von der Swissmedic anerkannten Arzneibuch oder Formularium enthalten sind;"
+            },
+            {
+              "marke": "e",
+              "text": "als Radiopharmazeutika eingesetzt werden und in Anhang 1 aufgeführt sind; oder"
+            },
+            {
+              "marke": "f",
+              "text": "als Antidote oder Antivenine eingesetzt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In begründeten Ausnahmefällen können unter Beachtung der anerkannten Regeln der medizinischen und pharmazeutischen Wissenschaften für die Herstellung von Arzneimitteln nach Artikel 9 Absatz 2 Buchstabe a HMG auch Wirkstoffe verwendet werden, die den Anforderungen nach Absatz 1 nicht entsprechen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nicht als Radiopharmazeutika eingesetzt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "das Arzneimittel der Erkennung, Verhütung oder Behandlung einer schweren, invalidisierenden oder lebensbedrohlichen Krankheit dient;"
+            },
+            {
+              "marke": "c",
+              "text": "kein alternativ anwendbares und gleichwertiges Arzneimittel erhältlich ist;"
+            },
+            {
+              "marke": "d",
+              "text": "vom beabsichtigten Einsatz ein grosser therapeutischer Nutzen zu erwarten ist; und"
+            },
+            {
+              "marke": "e",
+              "text": "eine dokumentierte Risikoanalyse den beabsichtigten Einsatz rechtfertigt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kantone führen und veröffentlichen eine Liste mit den Arzneimitteln nach Absatz 2, unter Angabe der verwendeten Wirkstoffe und der behandelten Indikationen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4b8fa65ba9e730b58657e669857d837ddbd59de43f087334b70e6bf0fb707785"
+    },
+    {
+      "id": "bund/VAM/art_38",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Herstellung von Radiopharmazeutika nach Artikel 9 Absatz 2 Buchstaben a–c bis und Absatz 2 bis HMG gilt als Spitalapotheke im Sinne von Artikel 4 Absatz 1 Buchstabe j HMG auch ein spitalinterner radiopharmazeutischer Betrieb."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "52be73a6097519d1395069323d6fbcf57048f81fb38c9a7d13a2ed4b28630583"
+    },
+    {
+      "id": "bund/VAM/art_39",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf dem für die Abgabe oder für die Anwendung bestimmten Behälter und Packungsmaterial von Arzneimitteln, für die nach Artikel 9 Absatz 2 Buchstaben a–c bis HMG keine Zulassung erforderlich ist, ist mindestens in Schriftgrösse 7-Punkt der folgende Hinweis anzubringen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Arzneimittel nach Artikel 9 Absatz 2 Buchstabe a HMG: «Formula magistralis»;"
+            },
+            {
+              "marke": "b",
+              "text": "Arzneimittel nach Artikel 9 Absatz 2 Buchstabe b HMG: «Formula officinalis»;"
+            },
+            {
+              "marke": "c",
+              "text": "Arzneimittel nach Artikel 9 Absatz 2 Buchstabe c HMG: «Eigene Formel»;"
+            },
+            {
+              "marke": "d",
+              "text": "Arzneimittel nach Artikel 9 Absatz 2 Buchstabe c bis HMG: «Formula hospitalis»."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Angaben und Texte sowie deren formale Gestaltung richten sich nach der Pharmakopöe."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "23fe86f3dfeaddef484528812c210eae23858229c204ba724b2b793a06d174d4"
+    },
+    {
+      "id": "bund/VAM/art_40",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic teilt beim Entscheid über das Zulassungsgesuch das Arzneimittel in eine Abgabekategorie ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Einteilung berücksichtigt sie insbesondere folgende Aspekte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die pharmakologische Wirkung;"
+            },
+            {
+              "marke": "b",
+              "text": "die akute und chronische Toxizität;"
+            },
+            {
+              "marke": "c",
+              "text": "die klinischen Erfahrungen, insbesondere in Bezug auf Sicherheit und unerwünschte Wirkungen;"
+            },
+            {
+              "marke": "d",
+              "text": "das Anwendungsgebiet;"
+            },
+            {
+              "marke": "e",
+              "text": "das Missbrauchspotenzial;"
+            },
+            {
+              "marke": "f",
+              "text": "die aus Gründen der Arzneimittelsicherheit erforderliche medizinische und pharmazeutische Fachkompetenz bei der Wahl und Anwendung des Arzneimittels."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie passt die Einteilung von Amtes wegen oder auf Gesuch hin dem Stand von Wissenschaft und Technik an."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie veröffentlicht auf ihrer Internetseite eine Liste der Wirkstoffe, die in einem von ihr zugelassenen Arzneimittel enthalten sind. Auf der Liste sind auch die Abgabekategorien dieser Arzneimittel aufgeführt."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Betäubungsmittel und psychotrope Stoffe gelten die besonderen Bestimmungen der Betäubungsmittelkontrollverordnung vom 25. Mai 2011."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "98c8ab31c3f12873f4b24960abf466cc68903e9929e51443562598132379f545"
+    },
+    {
+      "id": "bund/VAM/art_41",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Arzneimittel wird in die Kategorie der verschärft verschreibungspflichtigen Arzneimittel (Abgabekategorie A) eingeteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Therapiedauer begrenzt ist und aus Gründen der Sicherheit nicht ohne ärztliche oder tierärztliche Verschreibung verlängert werden darf;"
+            },
+            {
+              "marke": "b",
+              "text": "sein Gebrauch ohne ärztliche oder tierärztliche Diagnose und Überwachung der Anwendung zu ernsten Schäden führen kann;"
+            },
+            {
+              "marke": "c",
+              "text": "durch eine falsche Anwendung die spätere Behandlung ernsthafter Leiden entscheidend beeinträchtigt werden könnte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2f202827234b07256f97e9b73f2fdbb1b564cc8a285d5aa8d235015790e36927"
+    },
+    {
+      "id": "bund/VAM/art_42",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Arzneimittel wird in die Kategorie der verschreibungspflichtigen Arzneimittel (Abgabekategorie B) eingeteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es gegen Krankheiten empfohlen wird, für deren Behandlung eine ärztliche oder tierärztliche Diagnose oder Überwachung erforderlich ist;"
+            },
+            {
+              "marke": "b",
+              "text": "es bei bestimmungsgemässem Gebrauch ohne ärztliche oder tierärztliche Diagnose oder Überwachung die Gesundheit direkt oder indirekt gefährden kann;"
+            },
+            {
+              "marke": "c",
+              "text": "es häufig nicht bestimmungsgemäss verwendet wird und dies die Gesundheit direkt oder indirekt gefährden kann;"
+            },
+            {
+              "marke": "d",
+              "text": "es Wirkstoffe oder Zubereitungen aus Wirkstoffen enthält, deren Wirkungen und unerwünschte Wirkungen noch genauer erforscht werden müssen;"
+            },
+            {
+              "marke": "e",
+              "text": "es zur parenteralen Anwendung bestimmt ist;"
+            },
+            {
+              "marke": "f",
+              "text": "seine Abgabe die Fachberatung durch eine Medizinalperson erfordert."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "faa7630f86fba1ef540c2f0c9fc33a29c27332b3b042e3a9d7533ec0abee4ada"
+    },
+    {
+      "id": "bund/VAM/art_43",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Arzneimittel wird in die Kategorie der Arzneimittel mit Abgabe nach Fachberatung (Abgabekategorie D) eingeteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es nicht unter die Kategorien A oder B fällt; und"
+            },
+            {
+              "marke": "b",
+              "text": "seine Abgabe oder Anwendung eine Fachberatung erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Arzneimittel können ohne ärztliche oder tierärztliche Verschreibung von den Personen nach Artikel 25 Absatz 1 Buchstaben a, b und d HMG abgegeben werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5d1f142885a61963ced4f20104410209fbdd9b0f57bf16e196f120e08de0a578"
+    },
+    {
+      "id": "bund/VAM/art_44",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Arzneimittel wird in die Kategorie der frei verkäuflichen Arzneimittel (Abgabekategorie E) eingeteilt, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es nicht unter die Kategorien A, B oder D fällt; und"
+            },
+            {
+              "marke": "b",
+              "text": "seine Abgabe und Anwendung keine Fachberatung erfordert."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Arzneimittel können ohne ärztliche oder tierärztliche Verschreibung von allen Personen abgegeben werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a477480839eb0cffe88f1861ac39db9ad6e05e1ec3960ab5834595f19eddefef"
+    },
+    {
+      "id": "bund/VAM/art_45",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ohne Vorliegen einer ärztlichen Verschreibung können Apothekerinnen und Apotheker folgende Humanarzneimittel der Abgabekategorie B abgeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Arzneimittel zur Behandlung von häufig auftretenden Krankheiten, sofern es sich um Arzneimittel mit bekannten, seit mehreren Jahren zugelassenen Wirkstoffen handelt;"
+            },
+            {
+              "marke": "b",
+              "text": "Arzneimittel zur Weiterführung einer Dauermedikation während eines Jahres nach der Erstverschreibung durch eine Ärztin oder einen Arzt;"
+            },
+            {
+              "marke": "c",
+              "text": "Arzneimittel, für deren sichere Anwendung bei der Abgabe eine Fachberatung durch eine Medizinalperson erforderlich ist und die bis zum 1. Januar 2019 der Abgabekategorie C angehörten und von der Swissmedic neu in die Abgabekategorie B eingeteilt werden. Dies betrifft namentlich Arzneimittel, die: 1. Wirkstoffe mit einem bekannten Missbrauchspotenzial enthalten, die zur Gewöhnung oder Abhängigkeit führen können,"
+            },
+            {
+              "marke": "2",
+              "text": "Wirkstoffe enthalten, die zu schwerwiegenden Interaktionen mit verschreibungspflichtigen Arzneimitteln führen können, oder"
+            },
+            {
+              "marke": "3",
+              "text": "eine spezielle Dokumentationspflicht erfordern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Indikationen und die dafür zulässigen Arzneimittel sowie die weiteren Voraussetzungen für die Abgabe nach Absatz 1 Buchstabe a sind in Anhang 2 aufgeführt."
+        },
+        {
+          "absatz": "3",
+          "text": "Arzneimittel nach Absatz 1 Buchstabe c werden auf der Internetseite der Swissmedic publiziert."
+        },
+        {
+          "absatz": "4",
+          "text": "Systemisch wirkende Antibiotika sind von einer Abgabe nach Absatz 1 ausgeschlossen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a3c4b9a7757bbf2ba515afbebd683dcbf0af9651027a387711eb1e6b9ad5c65d"
+    },
+    {
+      "id": "bund/VAM/art_46",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Apothekerinnen und Apotheker können die von einer Chiropraktorin oder einem Chiropraktoren nach Artikel 4 Buchstabe b der Krankenpflege-Leistungsverordnung vom 29. September 1995 verschriebene Arzneimittel abgeben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "22f019fb04e0c42c67c82059cae462c236467105213a2b7cd1685192d173bee7"
+    },
+    {
+      "id": "bund/VAM/art_47",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe nach Artikel 24 Absatz 1 Buchstabe a Ziffern 1 und 2 HMG darf nur durch die Apothekerin oder den Apotheker persönlich erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Patient oder die Patientin, für den oder die das Arzneimittel bestimmt ist, muss für die Beurteilung und die Übergabe des Arzneimittels persönlich anwesend sein."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "468f0bfa2d616f4be5795cbcdec011ade6709af718d26872360652dbdf12d963"
+    },
+    {
+      "id": "bund/VAM/art_48",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Abgabe nach Artikel 24 Absatz 1 Buchstabe a Ziffern 1 und 2 HMG muss in elektronischer oder schriftlicher Form dokumentiert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Dokumentation muss folgende Informationen enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Vorname, Geburtsdatum und Geschlecht der Patientin oder des Patienten;"
+            },
+            {
+              "marke": "b",
+              "text": "Bezeichnung der Abgabestelle und der abgebenden Person;"
+            },
+            {
+              "marke": "c",
+              "text": "Bezeichnung des abgegebenen Arzneimittels, Dosierung und Packungsgrösse;"
+            },
+            {
+              "marke": "d",
+              "text": "Datum der Abgabe;"
+            },
+            {
+              "marke": "e",
+              "text": "Angaben, die die Nachvollziehbarkeit des Entscheides über die Abgabe ermöglichen."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Bei der Abgabe von Arzneimitteln nach Artikel 45 Absatz 1 Buchstabe c, welche keine Wirkstoffe mit einem bekannten Missbrauchspotenzial enthalten, gilt die Anforderung nach Absatz 2 Buchstabe e als erfüllt, wenn die Indikation dokumentiert ist. Enthält das Arzneimittel einen Wirkstoff mit einem bekannten Missbrauchspotenzial, kann ein Missbrauch aufgrund der Anamnese aber weitgehend ausgeschlossen werden, so ist dies zusätzlich entsprechend zu dokumentieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Dokumentation in das elektronische Patientendossier nach dem Bundesgesetz vom 19. Juni 2015 über das elektronische Patientendossier (EPDG) integriert, so sind die vom Eidgenössischen Departement des Innern (EDI) gestützt auf Artikel 10 Absatz 3 Buchstabe b der Verordnung vom 22. März 2017 über das elektronische Patientendossier (EPDV) geregelten Austauschformate zu verwenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc315648fb5aac281a832b2db4375ee30155d943520668ceb28db06e4f9aefd1"
+    },
+    {
+      "id": "bund/VAM/art_49",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Neben den Personen nach Artikel 25 Absatz 1 HMG dürfen Fachleute der Komplementärmedizin mit eidgenössischem Diplom bei der Ausübung ihres Berufs durch die Swissmedic bezeichnete nicht verschreibungspflichtige Arzneimittel selbstständig abgeben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0eb8854bce98b86a6b9eef79d40e76c6287bc5f16793f79616b4ef10f73a0c99"
+    },
+    {
+      "id": "bund/VAM/art_50",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Kanton kann Beraterinnen und Berater von Familienplanungsstellen, die über eine entsprechende kantonal anerkannte Ausbildung verfügen, ermächtigen, im Rahmen ihrer Tätigkeit die «Pille danach» abzugeben. Er sorgt bei der Abgabe für ein einheitliches und sicheres Verfahren unter direkter Aufsicht einer Medizinalperson."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1c561675aa63ad6af0eebace4a2c16ad947e6dbe00a64787c3a2eed10d3a3e41"
+    },
+    {
+      "id": "bund/VAM/art_51",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ärztliche und die chiropraktische Verschreibung eines Humanarzneimittels müssen mindestens folgende Angaben enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Vorname und Praxisadresse der ausstellenden Person sowie ihre im Medizinalberuferegister eingetragene eindeutige Identifikationsnummer (GLN);"
+            },
+            {
+              "marke": "b",
+              "text": "die rechtsgültige Unterschrift der ausstellenden Person;"
+            },
+            {
+              "marke": "c",
+              "text": "Name, Vorname, Geburtsdatum und Geschlecht der Patientin oder des Patienten;"
+            },
+            {
+              "marke": "d",
+              "text": "das Datum der Ausstellung;"
+            },
+            {
+              "marke": "e",
+              "text": "Präparate- oder Wirkstoffname, Darreichungsform, gegebenenfalls Wirkstoffmenge pro Einheit;"
+            },
+            {
+              "marke": "f",
+              "text": "die Dosierung und Anwendungsdauer;"
+            },
+            {
+              "marke": "g",
+              "text": "die Anwendungsanweisung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Verschreibung in Papierform ausgestellt, so muss sie eigenhändig unterschrieben sein. Elektronische Verschreibungen können mit einer qualifizierten elektronischen Signatur versehen werden oder aber so übermittelt werden, dass sie in Bezug auf Authentizität, Datenintegrität und Vertraulichkeit die Anforderungen an die Sicherheit in vergleichbarer Weise erfüllen, wie wenn sie mit einer qualifizierten elektronischen Signatur versehen wären."
+        },
+        {
+          "absatz": "3",
+          "text": "Absätze 1 und 2 gelten sinngemäss auch für Verschreibungen von Humanarzneimitteln durch weitere Gesundheitsfachpersonen."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird die elektronische Verschreibung ins elektronische Patientendossier nach dem EPDG integriert, so sind die vom EDI gestützt auf Artikel 10 Absatz 3 Buchstabe b EPDV geregelten Austauschformate zu verwenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f689263d7c5bb9c5516785218c6e701dcf394e1bf75f654bd410b8d52a32a439"
+    },
+    {
+      "id": "bund/VAM/art_52",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer im Rahmen der Berufsausübung verschreibungspflichtige Arzneimittel eigenverantwortlich anwenden will, bedarf einer Bewilligung des Kantons, in dem der Beruf ausgeübt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine solche Bewilligung kann neben Medizinalpersonen auch Personen folgender Berufskategorien erteilt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bachelor of Science FH in Hebamme;"
+            },
+            {
+              "marke": "b",
+              "text": "diplomierten Dentalhygienikerinnen HF und Dentalhygienikern HF;"
+            },
+            {
+              "marke": "c",
+              "text": "diplomierten Chiropraktorinnen und Chiropraktoren;"
+            },
+            {
+              "marke": "d",
+              "text": "diplomierten Rettungssanitäterinnen HF und -sanitätern HF;"
+            },
+            {
+              "marke": "e",
+              "text": "Personen nach Artikel 49;"
+            },
+            {
+              "marke": "f",
+              "text": "Bachelor of Science in Optometrie FH."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Kanton bestimmt die Arzneimittel, die durch die in Absatz 2 genannten Personen angewendet werden dürfen."
+        },
+        {
+          "absatz": "4",
+          "text": "Er sorgt für eine regelmässige Aufsicht durch die kantonale Behörde oder durch eine geeignete Medizinalperson."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "42ee467ae2ed76bdb598389dbd38965f5edcf37e4c2c77c9d3dfe2de7a2c5842"
+    },
+    {
+      "id": "bund/VAM/art_53",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Kanton kann kantonal approbierten Zahnärztinnen und Zahnärzten bewilligen, im Rahmen der Berufsausübung notwendige verschreibungspflichtige Arzneimittel anzuwenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "d379f04364b3f0e883ee1f5ebd2937ae9f827dd3c227122b8f9d50def3ca664d"
+    },
+    {
+      "id": "bund/VAM/art_54",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zulassungsinhaberin darf immunologische Arzneimittel für den tierärztlichen Gebrauch, mit Ausnahme der Allergene, nur an Tierärztinnen und Tierärzte oder an die zuständigen Behörden vertreiben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2bac308ed0242c36646503fadfcc87aa6bbdd3f90c58bd04b951cbfa6471c7eb"
+    },
+    {
+      "id": "bund/VAM/art_55",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer eine Bewilligung für den Versandhandel mit Arzneimitteln beantragt, muss im Besitz einer kantonalen Bewilligung zur Führung einer öffentlichen Apotheke sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausserdem muss die Gesuchstellerin durch ein Qualitätssicherungssystem sicherstellen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Person, an die das Arzneimittel versandt wird, mit derjenigen Person, auf die das ärztliche Rezept ausgestellt ist, identisch ist;"
+            },
+            {
+              "marke": "b",
+              "text": "das ärztliche Rezept in Bezug auf mögliche unerwünschte Interaktionen mit anderen von der betreffenden Person gleichzeitig angewandten Arzneimitteln überprüft wird;"
+            },
+            {
+              "marke": "c",
+              "text": "das zu versendende Arzneimittel so verpackt, transportiert und ausgeliefert wird, dass seine Qualität und Wirksamkeit gesichert sind;"
+            },
+            {
+              "marke": "d",
+              "text": "das Arzneimittel in der Originalpackung einschliesslich Packungsbeilage und mit einer spezifischen Gebrauchsanweisung ausgeliefert wird;"
+            },
+            {
+              "marke": "e",
+              "text": "das versandte Arzneimittel nur derjenigen Person, auf die das ärztliche Rezept ausgestellt ist, oder von ihr schriftlich bevollmächtigten Dritten ausgeliefert wird;"
+            },
+            {
+              "marke": "f",
+              "text": "die Patientin oder der Patient darauf hingewiesen wird, dass sie oder er mit der behandelnden Ärztin oder dem behandelnden Arzt Kontakt aufnehmen soll, sofern Probleme bei der Medikation auftreten; und"
+            },
+            {
+              "marke": "g",
+              "text": "die sachgemässe Beratung durch eine Fachperson wahrgenommen wird."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die für die Verschreibung, Abgabe und Anwendung von Tierarzneimitteln geltenden Anforderungen nach der Tierarzneimittelverordnung vom 18. August 2004 müssen eingehalten werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1f0c044bd17d428311447b0e1d3a9e8b7b1a45c4577673d7e30d53832e7bdc29"
+    },
+    {
+      "id": "bund/VAM/art_56",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone führen eine gemeinsame Liste der Apotheken, die über eine Versandhandelsbewilligung verfügen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5a1fda0df79c03e1b1f0eb1507daa324a02e05d697f9c20dd3eed3e5c2b0b026"
+    },
+    {
+      "id": "bund/VAM/art_57",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die nachträgliche Kontrolle der Rechtmässigkeit von Abgabe und Anwendung der in Verkehr gebrachten Arzneimittel obliegt den Kantonen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone kontrollieren an den Abgabestellen anhand von Stichproben oder auf Ersuchen der Swissmedic insbesondere, ob:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vorschriften über die Abgabeberechtigungen eingehalten werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Vorschriften über die Arzneimittelwerbung eingehalten werden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Arzneimittel richtig gekennzeichnet sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Ergibt die Kontrolle, dass Bestimmungen nach Absatz 2 Buchstabe a verletzt werden, so nimmt der Kanton die notwendigen Abklärungen vor und verfügt die erforderlichen Massnahmen. Er informiert die Swissmedic."
+        },
+        {
+          "absatz": "4",
+          "text": "Ergibt die Kontrolle, dass Bestimmungen nach Absatz 2 Buchstaben b und c oder andere Bestimmungen des HMG oder dieser Verordnung verletzt werden, so informiert der Kanton die Swissmedic. Diese nimmt die notwendigen Abklärungen vor und ordnet die erforderlichen Massnahmen an. Sie informiert die Kantone."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0681698f77ad3d8f6aff02b255df3839a4fc9cb7c89d5a7f287c347c3a646e75"
+    },
+    {
+      "id": "bund/VAM/art_58",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Kontrolle der Rechtmässigkeit des Vertriebs von zugelassenen und zulassungspflichtigen Arzneimitteln sowie labilen Blutprodukten ist die Swissmedic zuständig. Sie überwacht insbesondere, ob:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die zulassungspflichtigen Arzneimittel über eine gültige Zulassung der Swissmedic verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "die von ihr angeordneten Auflagen und Bedingungen erfüllt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Weiteren überprüft sie nach Artikel 58 Absatz 2 HMG die zugelassenen Arzneimittel periodisch auf ihre Übereinstimmung mit der Zulassung, insbesondere mit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Zusammensetzung;"
+            },
+            {
+              "marke": "b",
+              "text": "den Spezifikationen;"
+            },
+            {
+              "marke": "c",
+              "text": "den Qualitätsanforderungen;"
+            },
+            {
+              "marke": "d",
+              "text": "der Arzneimittelinformation;"
+            },
+            {
+              "marke": "e",
+              "text": "dem Packungsmaterial."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Anlässlich dieser Qualitätskontrollen kann die Swissmedic die notwendigen Unterlagen anfordern."
+        },
+        {
+          "absatz": "4",
+          "text": "Ergibt die Kontrolle, dass Bestimmungen des HMG oder dieser Verordnung verletzt werden, so ordnet sie die erforderlichen Massnahmen an."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "558a37fb8a70e8495cbeb20a91f3e90ae87531923bdba22f7bce16e50a1d8632"
+    },
+    {
+      "id": "bund/VAM/art_59",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic kann jederzeit produktespezifische Inspektionen durchführen, wenn sie dies für erforderlich erachtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Durchführung von Inspektionen im Ausland sowie die Befugnisse der Inspektorinnen und Inspektoren richten sich nach den Artikeln 60 Absätze 2 und 3 und 62 AMBV."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "14bfba771a1e6f01729226dd4659806faa2c960024ce8d834724409eb86c5b8c"
+    },
+    {
+      "id": "bund/VAM/art_60",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin einer Zulassung für ein Arzneimittel mit einem neuen Wirkstoff oder mit einem Biosimilar muss der Swissmedic während vier Jahren nach der Zulassung periodisch und unaufgefordert einen aktualisierten Bericht über die Sicherheit und das Nutzen-Risiko-Verhältnis dieses Arzneimittels einreichen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Für Tierarzneimittel kann der aktualisierte Bericht nach Absatz 1 in Form eines Jahresberichts mit den Ergebnissen und Schlussfolgerungen zur Nutzen-Risiko-Bilanz sowie Verweisen auf sachdienliche wissenschaftliche Fachliteratur, die im Rahmen des Signalmanagementprozesses in der Pharmacovigilance-Datenbank der Europäischen Union erfasst werden, eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Berichte sind nach den anerkannten Regeln der Guten Vigilance-Praxis gemäss Anhang 3 zu erstellen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4847a838bb92ac7b8ce5ca53af1a8d245478c19ed807d51335f88d071304d435"
+    },
+    {
+      "id": "bund/VAM/art_61",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Schwerwiegende unerwünschte Wirkungen und bisher nicht bekannte Wirkungen, von denen vermutet wird, dass sie mit einem Arzneimittel zusammenhängen, und die in der Schweiz festgestellt werden, sind von der Herstellerin oder der Zulassungsinhaberin des betreffenden Arzneimittels der Swissmedic zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Herstellerin oder die Zulassungsinhaberin muss ebenfalls melden, wenn unerwünschte Arzneimittelwirkungen nach Absatz 1 gehäuft festgestellt werden"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Meldungen nach den Absätzen 1 und 2 müssen anonymisiert eingereicht werden, alle verfügbaren zur Beurteilung relevanten Informationen enthalten und insbesondere darlegen, ob die unerwünschte Arzneimittelwirkung bekannt ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Unerwünschte Wirkungen, von denen vermutet wird, dass sie mit einem Arzneimittel zusammenhängen, und die im In- oder Ausland festgestellt werden, müssen von der Herstellerin oder der Zulassungsinhaberin der Swissmedic gemeldet werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "es sich um bisher unbekannte Risiken oder um neue Aspekte bekannter Risiken handelt, die im Hinblick auf risikomindernde Massnahmen weiter abgeklärt werden, risikomindernde Massnahmen erfordern oder die zu risikomindernden Massnahmen im Ausland geführt haben; oder"
+            },
+            {
+              "marke": "b",
+              "text": "solche unerwünschten Arzneimittelwirkungen gehäuft festgestellt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Informationen zu den Risiken nach Absatz 4 (Sicherheitssignale) sind in einem Bericht zusammenzufassen und zu bewerten. Der Bericht ist der Swissmedic mit den vorgesehenen Massnahmen und Abklärungen einzureichen."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Herstellerin oder die Zulassungsinhaberin muss der Swissmedic melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die in der Schweiz festgestellten Qualitätsmängel;"
+            },
+            {
+              "marke": "b",
+              "text": "die im Ausland festgestellten Qualitätsmängel, die in der Schweiz in Verkehr gebrachte Chargen betreffen können."
+            }
+          ]
+        },
+        {
+          "absatz": "7",
+          "text": "Die Meldung von Qualitätsmängeln richtet sich bei labilen Blutprodukten nach Artikel 37 AMBV."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b63077b3f87637b9819fba6454338d49e4e6bcc24d18b3b668973e33cc7d1ed0"
+    },
+    {
+      "id": "bund/VAM/art_62",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende unerwünschte Arzneimittelwirkungen sind nach Kenntnisnahme zu melden innerhalb von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "15 Tagen: 1. schwerwiegende unerwünschte Arzneimittelwirkungen,"
+            },
+            {
+              "marke": "2",
+              "text": "Häufungen bekannter oder bisher nicht bekannter unerwünschter Arzneimittelwirkungen;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sicherheitssignale sind nach ihrer Feststellung zu melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unverzüglich, spätestens aber innerhalb von fünf Tagen, wenn es sich um Sicherheitssignale handelt, die kurzfristig Massnahmen zur Wahrung der Arzneimittelsicherheit erfordern;"
+            },
+            {
+              "marke": "b",
+              "text": "innerhalb von 15 Tagen, wenn es sich um andere Sicherheitssignale mit schwerwiegendem Gefährdungspotenzial handelt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Im In- oder Ausland festgestellte Qualitätsmängel gemäss Artikel 61 Absatz 6 sind der Swissmedic unverzüglich, spätestens aber 15 Tage nach Kenntnisnahme zu melden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b170901d088d37dd55f372a3fb3f50601a5c7735a12b83b4c197d7d47fec4420"
+    },
+    {
+      "id": "bund/VAM/art_62_a",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "62_a",
+      "artikelLabel": "Art. 62a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer Arzneimittel herstellt oder in Verkehr bringt, muss der Swissmedic jeden Verdacht auf illegalen Arzneimittelhandel durch Dritte in Zusammenhang mit seiner Tätigkeit, mit einem seiner Produkte oder mit dessen Bestandteilen unverzüglich, spätestens aber 5 Tage nach der Feststellung melden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_62_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0622b176e6c49c06986896953ab9d4275e93a894996f58461ae1356421185198"
+    },
+    {
+      "id": "bund/VAM/art_63",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Personen, die Arzneimittel berufsmässig anwenden, abgeben oder dazu berechtigt sind, müssen melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vermutete schwerwiegende unerwünschte Arzneimittelwirkungen;"
+            },
+            {
+              "marke": "b",
+              "text": "vermutete, bisher nicht bekannte unerwünschte Arzneimittelwirkungen;"
+            },
+            {
+              "marke": "c",
+              "text": "vermutete Qualitätsmängel;"
+            },
+            {
+              "marke": "d",
+              "text": "Beobachtungen schwerwiegender oder bisher nicht bekannter, die Arzneimittelsicherheit gefährdender Tatsachen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Meldungen sind bei den von der Swissmedic bezeichneten Stellen einzureichen und müssen alle verfügbaren relevanten Informationen enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Schwerwiegende unerwünschte Arzneimittelwirkungen oder Beobachtungen schwerwiegender Tatsachen müssen innerhalb von 15 Tagen gemeldet werden. Vermutete Qualitätsmängel müssen unverzüglich, spätestens aber 15 Tage nach deren Kenntnisnahme gemeldet werden. Alle übrigen zu meldenden Ereignisse müssen innerhalb von 60 Tagen gemeldet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5c6b0ee032df44622b4e0e2d489062368c3f47890c462b6a65bed50a5185f8ed"
+    },
+    {
+      "id": "bund/VAM/art_64",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Pflicht, unerwünschte Ereignisse und Arzneimittelwirkungen sowie Qualitätsmängel zu melden, besteht vom Zeitpunkt der Einreichung des Zulassungsgesuchs bis zum Ablauf des Verfalldatums der letzten ausgelieferten Charge."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "07eca1745d1ac4e303f63b97a919a64e29952b2b3c844b3d5934f713ad45cd81"
+    },
+    {
+      "id": "bund/VAM/art_65",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Arzneimittel herstellt oder verwendungsfertige Arzneimittel vertreibt, muss sicherstellen, dass sämtliche Informationen, die gemeldet werden müssen, an einer zentralen Stelle bei der Zulassungsinhaberin oder der Herstellerin gesammelt werden. Diese Informationen sind laufend zu evaluieren, und die entsprechenden risikomindernden Massnahmen sind zu treffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldestelle nach Absatz 1 muss sicherstellen, dass die Informationen, die gemeldet werden müssen, vorschriftsgemäss der Swissmedic weitergeleitet werden. Sie ist für die vollständige und fristgerechte Beantwortung von Fragen der Swissmedic im Zusammenhang mit Risiken des Arzneimittels verantwortlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zulassungsinhaberin oder die Herstellerin bezeichnet eine fachlich qualifizierte Person, die für die Erfüllung der Meldepflicht für unerwünschte Arzneimittelwirkungen verantwortlich ist. Sie kann diese Pflicht einer geeigneten Drittperson übertragen. Die Anforderungen an die fachlich qualifizierte Person sind in Artikel 12 Absätze 1 Buchstabe d und 2 AMBV festgelegt."
+        },
+        {
+          "absatz": "4",
+          "text": "Institutionen, die labile Blutprodukte anwenden, richten ein System der Qualitätssicherung für die Anwendung von labilen Blutprodukten nach dem aktuellen Stand der medizinischen Wissenschaft und Technik ein. Sie bezeichnen eine Person, die für die Erfüllung der Meldepflichten verantwortlich ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "dcb332241b0fb63b7e87dc6a2132041264acfbf0ac28fbb2634d9c07f097d6fd"
+    },
+    {
+      "id": "bund/VAM/art_66",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Inhalt der Meldungen nach den Artikeln 61–65 richtet sich nach den anerkannten Regeln der Guten Vigilance-Praxis gemäss Anhang 3."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic stellt die Formulare zur Verfügung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5b6bdbf4ef3c90a128b013dc9892d271a58d6a4e1c1eab5bda5153f878d0899f"
+    },
+    {
+      "id": "bund/VAM/art_67",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gesuchstellerin muss sicherstellen, dass die Prüfprogramme, die Durchführung der einzelnen Prüfungen und die angewendeten Methoden sowie die Beurteilung der Prüfergebnisse dem Stand von Wissenschaft und Technik entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Nichtklinische Prüfungen zur Bestimmung der Eigenschaften oder der Sicherheit von Prüfgegenständen sind unter Einhaltung der Grundsätze der Guten Laborpraxis nach der Verordnung vom 18. Mai 2005 über die Gute Laborpraxis durchzuführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 gilt nicht für Untersuchungen zur Wirkungsweise."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann die Gesuchstellerin für einzelne Prüfungen die Anforderungen nach Absatz 2 nicht oder nicht vollständig einhalten, so begründet sie das gegenüber der Swissmedic. In begründeten Fällen bewertet die Swissmedic die Qualität und die Zuverlässigkeit der Prüfung sowie die Einhaltung der Anforderungen nach Absatz 1 und entscheidet über den Einbezug der entsprechenden nichtklinischen Prüfungen zur Begutachtung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9f40bcc7e89eee6eeab6190f06d0e6443d92d1c0d82ead81098234c0b6e5035d"
+    },
+    {
+      "id": "bund/VAM/art_68",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic veröffentlicht:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "gutheissenden und abweisenden Entscheiden zur Zulassung von Humanarzneimitteln mit neuen Wirkstoffen sowie zur Erweiterung von deren Indikation,"
+            },
+            {
+              "marke": "2",
+              "text": "Risikomanagement-Plänen;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gesuchstellerin hat allfällige schützenswerte Geheimhaltungsinteressen, die der Veröffentlichung der Angaben nach Absatz 1 Buchstabe a entgegenstehen, bei der Gesuchseinreichung geltend zu machen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Veröffentlichungen nach Absatz 1 erfolgen in der jeweiligen Verfahrenssprache. Sie können in Englisch erfolgen, wenn die ihnen zugrunde liegenden wissenschaftlichen Dokumente in dieser Sprache erstellt wurden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4893f7b35048e191e4825477db44d74e1bda0abec7826345cef45b64e68b7d53"
+    },
+    {
+      "id": "bund/VAM/art_69_70",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "69_70",
+      "artikelLabel": "Art. 6970",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_69_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VAM/art_71",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zulassungsinhaberin eines Humanarzneimittels, das einen neuen Wirkstoff enthält, muss die Ergebnisse klinischer Versuche, die im Hinblick auf die Entwicklung dieses Arzneimittels durchgeführt wurden, innert drei Monaten nach Erteilung der Zulassung in Form eines Berichts veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sofern die Zulassungsbehörde eines Landes mit vergleichbarer Arzneimittelkontrolle diesen Bericht über die Ergebnisse klinischer Versuche bereits öffentlich zugänglich gemacht hat, kann die Zulassungsinhaberin auch auf diesen verweisen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "74fd20f1b4300ac4ac9708833bebe12f39ed96ab3e4d770b775a034c89a5e747"
+    },
+    {
+      "id": "bund/VAM/art_72",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berichte über die Ergebnisse klinischer Versuche müssen mindestens die Angaben nach Anhang 5 enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können in einer der Amtssprachen oder in Englisch veröffentlicht werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4f008d2afd67f9d521bd328caa9e5122299490e0dd2377ee08c6bd2fe735bcc"
+    },
+    {
+      "id": "bund/VAM/art_73",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Berichte über die Ergebnisse klinischer Versuche sind zu anonymisieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zulassungsinhaberin kann Angaben, die Betriebs- oder Geschäftsgeheimnisse darstellen, von der Veröffentlichung ausnehmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5ac16faf8a5afe47f9f5f5d13dfa1ac25ed4fd3db648a1a1203e274e0cbe7325"
+    },
+    {
+      "id": "bund/VAM/art_74",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Swissmedic und von ihr beauftragte Dritte sind befugt, die Personendaten zu bearbeiten, die sie benötigen, um die ihnen nach dieser Verordnung übertragenen Aufgaben zu erfüllen. Dazu gehören namentlich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Daten über die Gesundheit, die im Rahmen der Marktüberwachung erhoben werden;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten, welche die Vertrauenswürdigkeit und die fachliche Qualifikation der Personen belegen, die gemäss Artikel 65 Absatz 3 für die Erfüllung der Meldepflicht für unerwünschte Arzneimittelwirkungen verantwortlich sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "250ad62a44c3a9e24979386d93a6f83a8f45605296695a1e5a96b1c4f2579f8d"
+    },
+    {
+      "id": "bund/VAM/art_75",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic ist verantwortlich für den sicheren Betrieb ihrer Informationssysteme und die Rechtmässigkeit der Datenbearbeitung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erlässt für jedes Informationssystem ein Bearbeitungsreglement. Sie legt darin die technischen und organisatorischen Massnahmen fest, mit denen die Sicherheit und der Schutz der bearbeiteten Daten sichergestellt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit sie Aufgaben im Bereich der Vigilance Dritten überträgt, stellt sie vertraglich die Einhaltung des Datenschutzes sicher."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_75",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "fa15565bcf14603cf9e7da51b8654bb2958a8c9951bd7d14242f8e037e822cb7"
+    },
+    {
+      "id": "bund/VAM/art_76",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Online-Zugriff auf die Informationssysteme erhalten die folgenden Stellen und Personen, soweit dies zur Erfüllung ihrer jeweiligen Aufgabe notwendig ist:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die im Bereich der Vigilance und der Marktüberwachung tätigen Mitarbeiterinnen und Mitarbeiter der Swissmedic und mit Aufgaben in diesem Bereich beauftragte Dritte;"
+            },
+            {
+              "marke": "b",
+              "text": "die im Bereich des Verwaltungsstrafrechts tätigen Mitarbeiterinnen und Mitarbeiter der Swissmedic;"
+            },
+            {
+              "marke": "c",
+              "text": "Administratorinnen und Administratoren der Swissmedic und beauftragter Dritter."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zugriffe auf die Informationssysteme werden protokolliert. Die Protokolldaten werden während zwei Jahren getrennt vom System, in welchem die Personendaten bearbeitet werden, aufbewahrt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_76",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "72e791647c981c7b609a3ad0af258cbdcf000afd40d83055b5d11b3ac32b9e26"
+    },
+    {
+      "id": "bund/VAM/art_77",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Daten einer Person werden aufbewahrt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "während zehn Jahren nach dem letzten Eintrag;"
+            },
+            {
+              "marke": "b",
+              "text": "während zwanzig Jahren nach dem letzten Eintrag, wenn dieser gestützt auf ein Strafurteil oder eine rechtskräftige Feststellung der Swissmedic über die Ausübung einer Tätigkeit ohne die erforderliche Bewilligung der Swissmedic erfolgte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Personendaten in den Informationssystemen der Swissmedic werden vernichtet, sobald die Zulassung des von den Meldungen betroffenen Arzneimittels erloschen ist und das zugrunde liegende Dossier archiviert wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cddd7487f35bc379be043211541606e736fcf6d6b85b0148aabfc9a47481de55"
+    },
+    {
+      "id": "bund/VAM/art_78",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Swissmedic kann technische Anforderungen und Einzelheiten zum Vollzug dieser Verordnung näher umschreiben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e2fce603e41ad9decdf52a3792459bdebb91b5db62499944ee59cdd386b42f89"
+    },
+    {
+      "id": "bund/VAM/art_79",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EDI kann die Anhänge zu dieser Verordnung entsprechend der internationalen oder der technischen Entwicklung anpassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es nimmt Anpassungen, die sich als technische Handelshemmnisse auswirken können, im Einvernehmen mit dem Eidgenössischen Departement für Wirtschaft, Bildung und Forschung vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Anpassung von Anhang 1 wird es von der Fachkommission für Radiopharmazeutika gemäss Artikel 32 der Strahlenschutzverordnung vom 22. Juni 1994 beraten."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Anpassung von Anhang 2 kann es Expertinnen und Experten zur Beratung beiziehen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9fe78eae6cbdf9032ebde0034064b8f17666567cff1bb8703c22994f09ac651c"
+    },
+    {
+      "id": "bund/VAM/art_80",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/VAM/art_81",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bevor ein Wirkstoff zum ersten Mal als Bestandteil eines Tierarzneimittels zugelassen wird, ist die Zustimmung des Bundesamtes für Umwelt (BAFU) einzuholen. Beim übrigen Vollzug ist das BAFU in Fällen mit besonderer Umweltrelevanz oder auf dessen Antrag anzuhören."
+        },
+        {
+          "absatz": "2",
+          "text": "Bevor ein Wirkstoff zum ersten Mal als Bestandteil eines Humanarzneimittels zugelassen wird, sind die Umweltrisiken zu beurteilen. Die Beurteilung richtet sich nach der Leitlinie der EMA vom 1. Juni 2006 über die Beurteilung des Umweltrisikos von Arzneimitteln zum menschlichen Gebrauch. Das BAFU ist in Fällen mit besonderer Umweltrelevanz oder auf dessen Antrag anzuhören."
+        },
+        {
+          "absatz": "3",
+          "text": "Beim Vollzug von Bestimmungen über Arzneimittel mit GVO richtet sich die Mitwirkung nach der Freisetzungsverordnung vom 10. September 2008."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "86495acc8b6a66f82d58593c907c82e759a9e6814187e5703a01ed1947adc696"
+    },
+    {
+      "id": "bund/VAM/art_82",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic gibt dem BAG auf Anfrage bekannt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Daten zum Risikoprofil von Impfstoffen;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten zu Arzneimitteln, soweit dies für den Vollzug des Bundesgesetzes vom 18. März 1994 über die Krankenversicherung und seiner Ausführungsbestimmungen erforderlich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Daten nach Absatz 1 dürfen keine besonders schützenswerten Personendaten enthalten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1fd71708f24541975cfb6bd85c03f3dab4690606ff512f2438cfcb7bd1bbc6d0"
+    },
+    {
+      "id": "bund/VAM/art_83",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Aufhebung und die Änderung anderer Erlasse werden in Anhang 6 geregelt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3b9cf555f3bed1ad0edfd4fe1898bd293bafb3611113baf4497b4e6e7f26a370"
+    },
+    {
+      "id": "bund/VAM/art_84",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wird der Swissmedic ein pädiatrisches Prüfkonzept zur Genehmigung vorgelegt, das sich auf ein Arzneimittel bezieht, dessen Zulassung vor dem 1. Januar 2019 beantragt worden ist, so gilt die Pflicht zur Einreichung eines pädiatrischen Prüfkonzepts nach Artikel 5 Absatz 2 Buchstabe c für alle späteren Änderungen des Arzneimittels."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "74fc66180d915a86f74f27bcbd1014d7247927baba6ce0ab1ee3cdff1ec4fee9"
+    },
+    {
+      "id": "bund/VAM/art_85",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Zulassung von Arzneimitteln, die vor dem Inkrafttreten des Artikels 16 b HMG ausgestellt wurde, muss nach dem 1. Januar 2019 mindestens einmal erneuert werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2d4af2df5081f7dbf8eb6a647371f7421146cbae082765c296401267b4a7b521"
+    },
+    {
+      "id": "bund/VAM/art_86",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Unterlagenschutz nach Artikel 11 b HMG wird nur für Arzneimittel erteilt, für die ein Zulassungs- oder Änderungsgesuch nach dem 1. Januar 2019 bei der Swissmedic eingereicht wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "2b13128bfa4fc3eea7920e4b4fe757c392c49a0c8ff6347fd88ffb66fd422061"
+    },
+    {
+      "id": "bund/VAM/art_87",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Verfahren zur Herstellung nichtstandardisierbarer Arzneimittel, für die bis zum 1. Januar 2019 keine Zulassung erforderlich war und die neu gemäss Artikel 33 Absatz 1 zugelassen werden müssen, ist das Zulassungsgesuch innert eines Jahres nach der Veröffentlichung in der Liste nach Artikel 33 Absatz 2 einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Arzneimittel, die in Anwendung eines Verfahrens nach Absatz 1 hergestellt werden, dürfen bis zum Entscheid der Swissmedic weiter in Verkehr bleiben, es sei denn, die Swissmedic sieht es aus Sicherheitsgründen anders vor."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "55e335fa9df47f199a9f3062db3d1a85ff0565e1224a5667a28935e103f6d1de"
+    },
+    {
+      "id": "bund/VAM/art_88",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Arzneimittel der Abgabekategorie C bleiben die Abgabeberechtigungen nach bisherigem Recht so lange bestehen, bis das Arzneimittel rechtskräftig in die neue Abgabekategorie umgeteilt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Kantonale Ermächtigungen nach bisherigem Recht, die Drogistinnen und Drogisten gestatten, Arzneimittel der bisherigen Abgabekategorie C abzugeben, können so lange bestehen bleiben beziehungsweise erneuert werden, bis alle betroffenen Arzneimittel rechtskräftig in eine neue Abgabekategorie umgeteilt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Swissmedic informiert die Kantone über den Abschluss des Umteilungsverfahrens."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ae927d386f635996204ad309b38ef0122188a0cbb170df791485462bf455bf33"
+    },
+    {
+      "id": "bund/VAM/art_89",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Drogistinnen und Drogisten ohne eidgenössisches Diplom, die am 1. Januar 2019 gestützt auf Artikel 44 c der Arzneimittelverordnung vom 17. Oktober 2001 zur Abgabe von Arzneimitteln der Abgabekategorie D berechtigt waren, dürfen diese Arzneimittel bis zum 1. Januar 2024 weiterhin abgeben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ac570d0290c5e6f07897ef3f8b40e3bf96fca8a251ffda088d9eab0c84815d6d"
+    },
+    {
+      "id": "bund/VAM/art_90",
+      "ebene": "bund",
+      "quelle": "VAM",
+      "erlass": "VAM",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt unter Vorbehalt von Absatz 2 am 1. Januar 2019 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Artikel 37 Absätze 2 und 3 sowie 51 treten am 1. Januar 2020 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2018/588/de#art_90",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f8148bfdf6c6e8d2b6d948cf97413f49e899b64212d699091e66b4c54bee484e"
+    }
+  ]
+}

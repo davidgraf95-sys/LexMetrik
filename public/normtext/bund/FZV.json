@@ -1,0 +1,1047 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/FZV/art_1",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Arbeitgeber müssen die Adresse oder, wenn diese fehlt, die AHV-Nummer der Versicherten, deren Arbeitsverhältnis aufgelöst oder deren Beschäftigungsgrad reduziert wird, unverzüglich der Vorsorgeeinrichtung melden. Gleichzeitig ist mitzuteilen, ob die Auflösung des Arbeitsverhältnisses oder die Änderung des Beschäftigungsgrades aus gesundheitlichen Gründen erfolgt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Versicherten geben der Vorsorgeeinrichtung vor dem Austritt bekannt, an welche neue Vorsorgeeinrichtung oder an welche Freizügigkeitseinrichtung die Austrittsleistung zu überweisen ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Arbeitgeber müssen Versicherte, die heiraten oder eine eingetragene Partnerschaft eingehen, der Vorsorgeeinrichtung melden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "99f02a6a11790d98af09dd95909fcb002fe1ff080ac1f215f0228e7e837e923e"
+    },
+    {
+      "id": "bund/FZV/art_2",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorsorge- oder Freizügigkeitseinrichtung muss für Versicherte, die das 50. Altersjahr vollenden oder die eine Ehe schliessen oder eine eingetragene Partnerschaft eingehen, die bis zu diesem Zeitpunkt erworbene Austrittsleistung festhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss für Versicherte, die vor dem 1. Januar 1995 geheiratet haben, die erste Austrittsleistung, die nach dem 1. Januar 1995 aufgrund von Artikel 24 FZG mitgeteilt oder fällig wurde, sowie den Zeitpunkt der Mitteilung beziehungsweise Fälligkeit festhalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Übertragung der Austrittsleistung auf eine neue Vorsorge- oder Freizügigkeitseinrichtung muss die bisherige Vorsorge- oder Freizügigkeitseinrichtung der neuen Einrichtung die Angaben nach den Absätzen 1 und 2 mitteilen. Fehlen diese Angaben, so muss die neue Einrichtung sie von der bisherigen Einrichtung verlangen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "20cdc233033506dd31481ccf004a971f77317abd63628e1810013d503a851fec"
+    },
+    {
+      "id": "bund/FZV/art_3",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Medizinische Daten dürfen nur vom vertrauensärztlichen Dienst der bisherigen Vorsorgeeinrichtung demjenigen der neuen Vorsorgeeinrichtung übermittelt werden. Es bedarf dazu der Einwilligung der Versicherten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "702b8f6eae198fbe6e7cae57ec11c5c47b37a104baac74fe2ecdd9db6c4be44f"
+    },
+    {
+      "id": "bund/FZV/art_4",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Muss die neue Vorsorgeeinrichtung Austrittsleistungen an die frühere nach Artikel 3 Absatz 2 FZG zurückerstatten, dürfen allfällige Kürzungen der Leistungen wegen Überentschädigung bei der Berechnung des Barwertes unberücksichtigt bleiben. Der Barwert berechnet sich aufgrund der versicherungstechnischen Grundlagen der leistungspflichtigen Vorsorgeeinrichtung."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "95119cf273079ba480a45857cfd2fd9c31aba54c43540812870cb6b533b1aac0"
+    },
+    {
+      "id": "bund/FZV/art_5",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vorsorgeeinrichtung hat in ihrem Reglement festzulegen, ob sie die Austrittsleistung nach Artikel 15 FZG (Beitragsprimat) oder nach Artikel 16 FZG (Leistungsprimat) berechnet."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e201f1c1d3a1132a17e39d392a24d31b5c0926d7cb95306c0ca21262868eab5f"
+    },
+    {
+      "id": "bund/FZV/art_6",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Grundlage für die Berechnung des Mindestbetrages nach Artikel 17 FZG gelten die Beiträge und Eintrittsleistungen der Versicherten. Wurden während einer gewissen Zeit nur Risikobeiträge bezahlt, so fallen diese ausser Betracht."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zinssatz nach Artikel 17 Absätze 1 und 4 FZG entspricht dem Mindestzinssatz nach dem Bundesgesetz vom 25. Juni 1982 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG). Während der Dauer einer Unterdeckung kann der Zinssatz, sofern das Reglement dies vorsieht, höchstens reduziert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Spareinrichtungen: auf den Zinssatz, mit welchem die Sparguthaben verzinst werden;"
+            },
+            {
+              "marke": "b",
+              "text": "bei versicherungsmässig geführten Beitragsprimatkassen und bei Vorsorgeeinrichtungen im Leistungsprimat: auf den um 0.5 Prozentpunkte reduzierten BVG-Mindestzinssatz."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Teile von eingebrachten Eintrittsleistungen, welche für Aufwendungen nach Artikel 17 Absatz 2 Buchstaben a–c FZG verwendet wurden, müssen bei der Ermittlung der Mindestleistung nicht berücksichtigt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Beiträge für die Finanzierung von AHV-Überbrückungsrenten können nach Artikel 17 Absatz 2 Buchstabe c FZG abgezogen werden, wenn diese Renten frühestens fünf Jahre vor Erreichen des Referenzalters nach Artikel 13 Absatz 1 BVG zu laufen beginnen . Bei hinreichender Begründung kann diese Frist höchstens zehn Jahre betragen."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Zuschlag nach Artikel 17 Absatz 1 FZG beträgt im Alter 21 4 Prozent und erhöht sich jährlich um 4 Prozent."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8d8aa3dc25929c8801f07b100e402663ce7ccead0fc6191c3546f4d3975e2bb3"
+    },
+    {
+      "id": "bund/FZV/art_6_a",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für den Einkauf in die vollen reglementarischen Leistungen (Art. 9 Abs. 2 FZG) gilt die Einschränkung nach Artikel 60 a der Verordnung vom 18. April 1984 über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVV 2)."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "07a6492551a6c33b4e11f6a762309eba76550f938ec75d4e4b2f5ff584549703"
+    },
+    {
+      "id": "bund/FZV/art_7",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Verzugszinssatz entspricht dem BVG-Mindestzinssatz plus einem Prozent. Artikel 65 d Absatz 4 BVG ist nicht anwendbar."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9b0266963bff8f57373756a4b393c638a4ede0e05e4d3aeaa894d6922f308cfe"
+    },
+    {
+      "id": "bund/FZV/art_8",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Zinsrahmen für den technischen Zinssatz beträgt 1,0–3,5 Prozent."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b0d4b72a7c5726fa5eb65831c1de0ace4e7b14f0aaf29691c643ed0ed2cb23ab"
+    },
+    {
+      "id": "bund/FZV/art_8_a",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Teilung der Austrittsleistung infolge Scheidung nach Artikel 22 FZG wird für die Aufzinsung der im Zeitpunkt der Eheschliessung erworbenen Austritts- und Freizügigkeitsleistungen und der Einmaleinlagen bis zum Zeitpunkt der Ehescheidung der im entsprechenden Zeitraum gültige BVG-Mindestzinssatz nach Artikel 12 BVV 2 angewandt. Artikel 65 d Absatz 4 BVG ist nicht anwendbar."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Absatz 1 gilt sinngemäss bei der Teilung der Austrittsleistung infolge gerichtlicher Auflösung einer eingetragenen Partnerschaft, nach Artikel 22 d FZG."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Zeit vor dem 1. Januar 1985 gilt der Zinssatz von 4 Prozent."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_8_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b13c03dc138e53af08307e56f99ffb183037139310b9fdf881916121ad1048a4"
+    },
+    {
+      "id": "bund/FZV/art_9",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FZV/art_10",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Vorsorgeschutz wird durch eine Freizügigkeitspolice oder durch ein Freizügigkeitskonto erhalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Freizügigkeitspolicen gelten besondere, ausschliesslich und unwiderruflich der Vorsorge dienende Kapital- oder Rentenversicherungen, einschliesslich allfälliger Zusatzversicherungen für den Todes- oder Invaliditätsfall bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einer der ordentlichen Versicherungsaufsicht unterstellten Versicherungseinrichtung oder einer durch diese Versicherungseinrichtungen gebildeten Gruppe; oder"
+            },
+            {
+              "marke": "b",
+              "text": "einer öffentlich-rechtlichen Versicherungseinrichtung nach Artikel 67 Absatz 1 des BVG."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Als Freizügigkeitskonten gelten besondere, ausschliesslich und unwiderruflich der Vorsorge dienende Verträge mit einer Stiftung, welche die Voraussetzungen nach Artikel 19 erfüllt. Diese Verträge können durch eine Versicherung für den Todes- oder Invaliditätsfall ergänzt werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "4d4227d911e8ea21a3d82754b72ba71caf5a9e0f2623ab0f99a9c597910a8090"
+    },
+    {
+      "id": "bund/FZV/art_11",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Artikel 14 FZG und Artikel 331 c des Obligationenrechts (OR) gelten sinngemäss für Freizügigkeitspolicen sowie für Zusatzversicherungen nach Artikel 10 Absatz 3 zweiter Satz."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5ba805567673a94bce09d35b210f2c8ef080a5047e11232806da31e1bc1e4f15"
+    },
+    {
+      "id": "bund/FZV/art_12",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Austrittsleistung darf von der bisherigen Vorsorgeeinrichtung höchstens an zwei Freizügigkeitseinrichtungen übertragen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Versicherten können jederzeit die Freizügigkeitseinrichtung oder die Form der Erhaltung des Vorsorgeschutzes wechseln."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ee712bea3b5ed25d1cd6bc92866a7e0b69ce95a59dfbd08431b27d8e2a4f21fc"
+    },
+    {
+      "id": "bund/FZV/art_13",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Umfang der Leistungen bei Alter, Tod und Invalidität ergibt sich aus dem Vertrag oder Reglement."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leistungen werden nach Vertrag oder Reglement als Rente oder als Kapitalabfindung ausbezahlt. Als Leistungen gelten auch die Barauszahlung (Art. 5 FZG) und der Vorbezug (Art. 30 c BVG und Art. 331 e OR)."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Hinterlassenen- und die Invalidenrenten sind im Umfange der gesetzlichen Mindestvorsorge der Preisentwicklung nach Artikel 36 Absatz 1 BVG anzupassen. Die gesetzliche Mindestvorsorge wird aufgrund des nach BVG erworbenen Altersguthabens im Freizügigkeitsfall berechnet."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Freizügigkeitspolice entspricht die Höhe des Vorsorgekapitals dem Deckungskapital."
+        },
+        {
+          "absatz": "5",
+          "text": "Beim Freizügigkeitskonto in Form der reinen Sparlösung entspricht die Höhe des Vorsorgekapitals der eingebrachten Austrittsleistung mit Zins, beim Freizügigkeitskonto in Form der anlagegebundenen Sparlösung (Wertschriftensparen) dem aktuellen Wert der Anlage. Verwaltungskosten sowie Aufwendungen für Zusatzversicherungen nach Artikel 10 Absatz 3 zweiter Satz können abgezogen werden, wenn dies schriftlich vereinbart ist."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5220e90d07e6bb1d8b24627969025a961eae7afdf8708e7a7cc61f3ccf394017"
+    },
+    {
+      "id": "bund/FZV/art_14",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Barauszahlung gilt Artikel 5 FZG sinngemäss."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9ed34cc544ef72d9a739a3dcbc5185d40a9bc197cb2ccb20532a9ab7f6aa3cd9"
+    },
+    {
+      "id": "bund/FZV/art_15",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Erhaltung des Vorsorgeschutzes gelten als Begünstigte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Erlebensfall die Versicherten;"
+            },
+            {
+              "marke": "b",
+              "text": "im Todesfall in nachstehender Reihe: 1. die Hinterlassenen nach Artikel 19, 19 a und 20 BVG,"
+            },
+            {
+              "marke": "2",
+              "text": "natürliche Personen, die von der versicherten Person in erheblichem Masse unterstützt worden sind, oder die Person, die mit dieser in den letzten fünf Jahren bis zu ihrem Tod ununterbrochen eine Lebensgemeinschaft geführt hat oder die für den Unterhalt eines oder mehrerer gemeinsamer Kinder aufkommen muss,"
+            },
+            {
+              "marke": "3",
+              "text": "die Kinder des Verstorbenen, welche die Voraussetzungen nach Artikel 20 BVG nicht erfüllen, die Eltern oder die Geschwister,"
+            },
+            {
+              "marke": "4",
+              "text": "die übrigen gesetzlichen Erben, unter Ausschluss des Gemeinwesens."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Versicherten können im Vertrag die Ansprüche der Begünstigten näher bezeichnen und den Kreis von Personen nach Absatz 1 Buchstabe b Ziffer 1 mit solchen nach Ziffer 2 erweitern."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "6dde129ad5f96b80c5f458c14c4dad05d2e9a139613dbdc04e1459a6e2f0bcbd"
+    },
+    {
+      "id": "bund/FZV/art_15_a",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Freizügigkeitseinrichtung kann in ihrem Reglement vorsehen, dass sie die Leistung an eine begünstigte Person kürzt oder verweigert, wenn sie Kenntnis davon erlangt, dass diese den Tod der versicherten Person vorsätzlich herbeigeführt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die frei gewordene Leistung fällt den nächsten Begünstigten nach Artikel 15 zu."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_15_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9c0cd1c0ac806b3baee5ed504354dfea4e1d7589d1b918f2701b9ec49f4330b8"
+    },
+    {
+      "id": "bund/FZV/art_16",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "1 Altersleistungen von Freizügigkeitspolicen und Freizügigkeitskonten dürfen frühestens fünf Jahre vor Erreichen des Referenzalters ausbezahlt werden. Sie werden bei Erreichen des Referenzalters fällig. Weist die versicherte Person nach, dass sie weiterhin erwerbstätig ist, so kann sie den Leistungsbezug höchstens fünf Jahre über das Erreichen des Referenzalters hinaus aufschieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Beziehen die Versicherten eine volle Invalidenrente der Eidgenössischen Invalidenversicherung und wird das Invaliditätsrisiko nach Artikel 10 Absätze 2 und 3 zweiter Satz nicht zusätzlich versichert, so wird die Altersleistung auf Begehren der Versicherten vorzeitig ausbezahlt."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist die versicherte Person verheiratet oder lebt sie in eingetragener Partnerschaft, so ist die Auszahlung der Altersleistung in Kapitalform nur zulässig, wenn der Ehegatte, der eingetragene Partner oder die eingetragene Partnerin schriftlich zustimmt. Kann die versicherte Person die Zustimmung nicht einholen oder wird sie ihr verweigert, so kann sie das Zivilgericht anrufen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ca5cdf5efaf4df8fe1a13fe78eef07619e7a1825c97996535843454e48f953af"
+    },
+    {
+      "id": "bund/FZV/art_17",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Vorsorgekapital oder der nicht fällige Leistungsanspruch kann weder verpfändet noch abgetreten werden. Vorbehalten bleiben die Artikel 22 und 22 d FZG sowie die Artikel 30 b BVG und 331 d OR."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "28b3ce8fd467fd433f9a444f19e71ab41db85dc5329a12ce2e73de7315c45578"
+    },
+    {
+      "id": "bund/FZV/art_18",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leistungen werden durch die eingebrachte Austrittsleistung finanziert."
+        },
+        {
+          "absatz": "2",
+          "text": "Aufwendungen für die zusätzliche Deckung der Risiken Tod und Invalidität können auf dem Vorsorgekapital erhoben oder durch zusätzliche Prämien finanziert werden."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f32648f0b76fc444083898ab69a5cc4d8cefe207c0c39c8b80d37cc90f5d158d"
+    },
+    {
+      "id": "bund/FZV/art_19",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gelder der Freizügigkeitskonten in Form der reinen Sparlösung sind als Spareinlagen bei einer Bank anzulegen, die der Aufsicht der Eidgenössischen Finanzmarktaufsicht (FINMA) untersteht. Die Höhe des Vorsorgekapitals muss jederzeit den Vorschriften von Artikel 13 Absatz 5 entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Gelder, die eine Freizügigkeitsstiftung im eigenen Namen bei einer Bank anlegt, gelten als Spareinlagen der einzelnen Versicherten im Sinne des Bankengesetzes vom 8. November 1934."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Auffangeinrichtung untersteht bei der Anlage der Gelder im Freizügigkeitsbereich den Anlagevorschriften für Vorsorgeeinrichtungen nach Artikel 71 BVG und den Artikeln 49–58 BVV 2. Sie muss insbesondere darauf achten, dass das Vermögen zweckgemäss verwendet wird und dass bei der Anlage des Vermögens die Sicherheit ihrer Leistungen ausreichend gewährleistet ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Aufsichtsbehörde über die Auffangeinrichtung kann insbesondere Gutachten und Stresstests anordnen. Erweist sich die Sicherheit der Leistungen als ungenügend, so trifft sie angemessene Massnahmen; sie kann auch die Anpassung der Vermögensanlage verlangen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "787bb5b9fa4dd85f76dc347602d6e7aee11e8e6b81449aa024896d284663f998"
+    },
+    {
+      "id": "bund/FZV/art_19_a",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Wertschriftensparen muss die versicherte Person ausdrücklich auf die jeweiligen Risiken hingewiesen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anlage des Vermögens gelten die Artikel 49–58 BVV 2 sinngemäss. Bei der Beurteilung der Risikofähigkeit und der Diversifikation nach Anlagekategorien kann die Höhe des Vorsorgekapitals auf Freizügigkeitskonten in Form der reinen Sparlösung mitberücksichtigt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Wertschriften sind bei Banken oder Wertpapierhäusern zu deponieren, die der Aufsicht der FINMA unterstehen. Die Wertpapierhäuser müssen von der FINMA für die Depotverwahrung zugelassen sein. In Abweichung von Artikel 53 BVV 2 sind ausschliesslich folgende Anlagen zulässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anleihensobligationen mit direkter oder indirekter Garantie von Bund oder Kantonen, schweizerische Pfandbriefe, Kassenobligationen und Festgelder von der Aufsicht der FINMA unterstellten Banken; entsprechende Forderungen müssen auf Schweizer Franken lauten; von einer Begrenzung einzelner Schuldner kann abgesehen werden;"
+            },
+            {
+              "marke": "b",
+              "text": "kollektive Anlagen, die der Aufsicht der FINMA unterstehen oder von ihr zum Angebot in der Schweiz genehmigt worden sind oder die von schweizerischen Anlagestiftungen aufgelegt wurden;"
+            },
+            {
+              "marke": "c",
+              "text": "Anlagen im Rahmen eines Vermögensverwaltungsvertrags, den die Freizügigkeitsstiftung mit der Aufsicht der FINMA unterstellten Banken, Wertpapierhäusern, Fondsleitungen oder Verwaltern von Kollektivvermögen nach Artikel 24 des Finanzinstitutsgesetzes vom 15. Juni 2018 abgeschlossen hat; die Ermittlung, der Kauf und die Rücknahme der Anteile an solchen Anlagen, das Interesse der beteiligten Versicherten sowie die Deckung der Anteilsrechte müssen jederzeit in nachvollziehbarer Weise gewährleistet sein; im Vermögensverwaltungsvertrag ist die sinngemässe Einhaltung der Artikel 49–58 BVV 2 ausdrücklich festzuhalten."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8c80715e7501dd6469ccbe1f3ebcc0b84126cb2ed49d2312f4283301582c6b84"
+    },
+    {
+      "id": "bund/FZV/art_19_a_bis",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_a_bis",
+      "artikelLabel": "Art. 19abis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zentralstelle 2. Säule führt ein zentrales Register (Register), in das die nach Artikel 24 a FZG gemeldeten Personen mit Vorsorgeguthaben eingetragen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Sicherheitsfonds ist für die Führung und die Verwaltung des Registers verantwortlich. Er sorgt insbesondere für die Beachtung der Bestimmungen der Datenschutzgesetzgebung und für die Datensicherheit."
+        },
+        {
+          "absatz": "3",
+          "text": "In das Register werden folgende Daten aufgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname, Geburtsdatum und AHV-Nummer der Versicherten; sowie"
+            },
+            {
+              "marke": "b",
+              "text": "der Name der Vorsorgeeinrichtungen oder der Einrichtungen, die für die betroffenen Versicherten Freizügigkeitskonten oder -policen führen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Im Register wird vermerkt, ob die Vorsorge- oder Freizügigkeitseinrichtung mit der gemeldeten Person noch einen Kontakt herstellen kann oder nicht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_a_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "8bb8a241c14cae7bde907f47e3900f1b9f05e5384c6b3434debe9c75f0e4baba"
+    },
+    {
+      "id": "bund/FZV/art_19_b",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_b",
+      "artikelLabel": "Art. 19b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Register kann eingesehen werden durch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Bundesamt für Sozialversicherungen (BSV);"
+            },
+            {
+              "marke": "b",
+              "text": "die kantonalen Aufsichtsbehörden;"
+            },
+            {
+              "marke": "c",
+              "text": "die Oberaufsichtskommission."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "ee4df6bc6c66d162f490032a56524348283ed4efba1c3eea445cf59cbfecb2ff"
+    },
+    {
+      "id": "bund/FZV/art_19_c",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_c",
+      "artikelLabel": "Art. 19c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "1 Als Vorsorgeguthaben, die nach Artikel 24 d Absatz 2 FZG als vergessene Guthaben zu melden sind, gelten Guthaben von Personen, die das Referenzalter erreicht haben und weder ihren Anspruch auf Auszahlung der Altersleistungen geltend gemacht noch den Nachweis erbracht haben, dass sie weiterhin erwerbstätig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Als kontaktlose Vorsorgeguthaben gelten Guthaben von Personen, mit denen die Vorsorge- oder Freizügigkeitseinrichtung keinen Kontakt mehr herstellen kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vorsorge- oder Freizügigkeitseinrichtungen teilen der Zentralstelle 2. Säule bei der Meldung nach Artikel 24 a FZG mit, für welche der gemeldeten Personen sie ein kontaktloses Vorsorgeguthaben führen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "3692f228724de415cad07a0acba71696658366adb7f3e03a2d701d0fda7b540d"
+    },
+    {
+      "id": "bund/FZV/art_19_d",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_d",
+      "artikelLabel": "Art. 19d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zentralstelle 2. Säule teilt versicherten Personen auf deren Verlangen mit, welche Einrichtungen gemeldet haben, dass sie im Dezember des Vorjahres ein Vorsorgeguthaben für sie führten."
+        },
+        {
+          "absatz": "2",
+          "text": "Dieselbe Auskunftspflicht besteht bei einem hängigen Scheidungsverfahren gegenüber dem Gericht und nach dem Tod der versicherten Person gegenüber den Begünstigten."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b96a3f0e745aebd21423c96caeab468ca6b965a8543eb773585e7258c4856c72"
+    },
+    {
+      "id": "bund/FZV/art_19_e",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_e",
+      "artikelLabel": "Art. 19e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Sicherheitsfonds berichtet in seinem Jahresbericht über die Tätigkeit der Zentralstelle 2. Säule, insbesondere über die eingegangenen Anfragen und über die Anzahl der behandelten und der erledigten Fälle."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "7615f26ee635e0abaed3c14a84881c4967d8aa226760b1c116c2e1267ef67c95"
+    },
+    {
+      "id": "bund/FZV/art_19_f",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_f",
+      "artikelLabel": "Art. 19f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Sicherheitsfonds deckt die in seiner Rechnung separat auszuweisenden Kosten für die Zentralstelle 2. Säule aus den Mitteln nach Artikel 12 a der Verordnung vom 22. Juni 1998 über den Sicherheitsfonds BVG."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Sicherheitsfonds kann von Einrichtungen, die Freizügigkeitskonten oder ‑policen führen, jeweils per Jahresende einen kostendeckenden Beitrag für die vermittelten Fälle erheben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "a9027d20db0be049d6551914969ebf12eb51403b8b90f7030d3f70f7d2c12d3d"
+    },
+    {
+      "id": "bund/FZV/art_19_g",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_g",
+      "artikelLabel": "Art. 19g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tritt beim verpflichteten Ehegatten während des Scheidungsverfahrens der Vorsorgefall Alter ein, so kann die Vorsorgeeinrichtung den nach Artikel 123 ZGB zu übertragenden Teil der Austrittsleistung und die Altersrente kürzen. Die Kürzung entspricht höchstens der Summe, um die die Rentenzahlungen bis zur Rechtskraft des Scheidungsurteils tiefer ausgefallen wären, wenn ihrer Berechnung ein um den übertragenen Teil der Austrittsleistung vermindertes Guthaben zugrunde gelegt worden wäre. Die Kürzung wird je hälftig auf die beiden Ehegatten verteilt."
+        },
+        {
+          "absatz": null,
+          "text": "2 Bezieht der verpflichtete Ehegatte eine Invalidenrente und erreicht er während des Scheidungsverfahrens das reglementarische Referenzalter, so kann die Vorsorgeeinrichtung die Austrittsleistung nach Artikel 124 Absatz 1 ZGB und die Rente kürzen. Die Kürzung entspricht höchstens der Summe, um die die Rentenzahlungen zwischen dem Erreichen des reglementarischen Referenzalters und der Rechtskraft des Scheidungsurteils tiefer ausgefallen wären, wenn ihrer Berechnung ein um den übertragenen Teil der Austrittsleistung vermindertes Guthaben zugrunde gelegt worden wäre. Die Kürzung wird je hälftig auf die beiden Ehegatten verteilt."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "1dfac36b8cf52f61ab307688a86b3590773bbc6865dff680aec456039f47212a"
+    },
+    {
+      "id": "bund/FZV/art_19_h",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_h",
+      "artikelLabel": "Art. 19h",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorsorgeeinrichtung des verpflichteten Ehegatten rechnet den dem berechtigten Ehegatten zugesprochenen Rentenanteil nach der Formel im Anhang in eine lebenslange Rente um. Das BSV macht kostenlos ein elektronisches Umrechnungsprogramm zugänglich."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Umrechnung massgebend ist der Zeitpunkt, in dem die Scheidung rechtskräftig wird."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_h",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "5a0a2bf0dcbea79a9f8a22c21a5af51f57a07eac9fb303f938fc7e8e7d1d2059"
+    },
+    {
+      "id": "bund/FZV/art_19_i",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_i",
+      "artikelLabel": "Art. 19i",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Hat ein Ehegatte im Zeitpunkt der Einleitung des Scheidungsverfahrens das reglementarische Referenzalter erreicht und den Bezug der Altersleistung aufgeschoben, so ist sein in diesem Zeitpunkt vorhandenes Vorsorgeguthaben wie eine Austrittsleistung zu teilen."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_i",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "9a81a320a10378f81b1897b27e022b5e52877cd3b04ba220f7bb3c1d8f77ca53"
+    },
+    {
+      "id": "bund/FZV/art_19_j",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_j",
+      "artikelLabel": "Art. 19j",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die lebenslange Rente nach Artikel 124 a Absatz 2 ZGB ist von der Vorsorgeeinrichtung des verpflichteten Ehegatten an die Vorsorge- oder Freizügigkeitseinrichtung des berechtigten Ehegatten zu übertragen. Die Übertragung umfasst die für ein Kalenderjahr geschuldete Rente und ist jährlich jeweils bis zum 15. Dezember des betreffenden Jahres vorzunehmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Entsteht während des betreffenden Jahres ein Anspruch auf Auszahlung aufgrund von Alter oder Invalidität (Art. 22 e FZG) oder stirbt der berechtigte Ehegatte, so umfasst die Übertragung die vom Beginn dieses Jahres bis zu diesem Zeitpunkt geschuldete Rente."
+        },
+        {
+          "absatz": "3",
+          "text": "Der berechtigte Ehegatte informiert seine Vorsorge- oder Freizügigkeitseinrichtung über seinen Anspruch auf eine lebenslange Rente und nennt ihr die Vorsorgeeinrichtung des verpflichteten Ehegatten. Wechselt er seine Vorsorge- oder Freizügigkeitseinrichtung, so informiert er die Vorsorgeeinrichtung des verpflichteten Ehegatten bis spätestens am 15. November des betreffenden Jahres darüber."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird der Vorsorgeeinrichtung des verpflichteten Ehegatten die Vorsorge- oder Freizügigkeitseinrichtung des berechtigten Ehegatten nicht mitgeteilt, so überweist sie frühestens sechs Monate, spätestens aber zwei Jahre nach dem Termin für diese Übertragung den Betrag an die Auffangeinrichtung. Sie überweist die folgenden Übertragungen jährlich an die Auffangeinrichtung, bis sie eine Information nach Absatz 3 erhält."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Vorsorgeeinrichtung des verpflichteten Ehegatten schuldet auf dem Betrag der jährlichen Übertragung einen Zins, welcher der Hälfte des für das betreffende Jahr geltenden reglementarischen Zinssatzes entspricht."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_j",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "77a0529938bc57e944f663d638f7212145ae2ec2145387cc03865cd75c53ea35"
+    },
+    {
+      "id": "bund/FZV/art_19_k",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "19_k",
+      "artikelLabel": "Art. 19k",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Falle der Scheidung hat die Vorsorge- oder Freizügigkeitseinrichtung der versicherten Person oder dem Gericht auf Verlangen zusätzlich zu den Angaben nach Artikel 24 Absatz 3 FZG folgende Auskünfte zu geben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ob und in welchem Umfang die Freizügigkeitsleistung im Rahmen der Wohneigentumsförderung vorbezogen wurde;"
+            },
+            {
+              "marke": "b",
+              "text": "die Höhe der Austrittsleistung im Zeitpunkt eines allfälligen Vorbezugs;"
+            },
+            {
+              "marke": "c",
+              "text": "ob und in welchem Umfang die Freizügigkeits- oder die Vorsorgeleistung verpfändet ist;"
+            },
+            {
+              "marke": "d",
+              "text": "die voraussichtliche Höhe der Altersrente;"
+            },
+            {
+              "marke": "e",
+              "text": "ob Kapitalabfindungen ausgerichtet wurden;"
+            },
+            {
+              "marke": "f",
+              "text": "die Höhe der Invaliden- oder Altersrente;"
+            },
+            {
+              "marke": "g",
+              "text": "ob und in welchem Umfang eine Invalidenrente gekürzt wird, ob sie wegen Zusammentreffens mit Invalidenrenten der Unfall- oder Militärversicherung gekürzt wird und in diesem Fall, ob sie auch ohne Anspruch auf Kinderrenten gekürzt würde;"
+            },
+            {
+              "marke": "h",
+              "text": "die Höhe der Austrittsleistung, die dem Bezüger oder der Bezügerin einer Invalidenrente nach Aufhebung der Invalidenrente zukommen würde;"
+            },
+            {
+              "marke": "i",
+              "text": "die Kürzung der Invalidenrente nach Artikel 24 Absatz 5 BVG;"
+            },
+            {
+              "marke": "j",
+              "text": "weitere Auskünfte, die für die Durchführung des Vorsorgeausgleichs nötig sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_19_k",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "f28c18301b9f190219fcd250a081b02150aa9016336b8ecec3e75c0a789470a7"
+    },
+    {
+      "id": "bund/FZV/art_20",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FZV/art_21",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verordnung vom 12. November 1986 über die Erhaltung des Vorsorgeschutzes und die Freizügigkeit wird aufgehoben."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "e414270ee006aacadcfe70fca5fb701129bddbe6cbf519ad11c3546bbf30e99b"
+    },
+    {
+      "id": "bund/FZV/art_22",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FZV/art_23",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FZV/art_23_a",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/FZV/art_24",
+      "ebene": "bund",
+      "quelle": "FZV",
+      "erlass": "FZV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Januar 1995 in Kraft."
+        }
+      ],
+      "stand": "2024-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240301",
+      "sha": "62ea159d1e6b3f7ed6d61a3773255d2c86f809b83d3c0c6d73c4d07a5dd74fbe"
+    }
+  ]
+}

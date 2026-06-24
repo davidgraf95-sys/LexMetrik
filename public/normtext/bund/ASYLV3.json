@@ -1,0 +1,963 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/ASYLV3/art_1",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt, soweit die Dublin-Assoziierungsabkommen keine abweichenden Bestimmungen vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Dublin-Assoziierungsabkommen sind in Anhang 4 aufgeführt."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "a96936fbcb7e7a285026ef7e1b3c2968991f31cd23f4abb71b28e7adfa520afe"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_a",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Staatssekretariat für Migration (SEM) betreibt zur Erfüllung seiner gesetzlichen Aufgaben folgende Informationssysteme:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zentrales Migrationsinformationssystem (ZEMIS) nach der ZEMIS-Verordnung vom 12. April 2006;"
+            },
+            {
+              "marke": "b",
+              "text": "Datenbank Kompass;"
+            },
+            {
+              "marke": "c",
+              "text": "Geschäftsverwaltung Darlehen;"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "Datenbank Finanzierung, Statistik und Controlling (FiSCo);"
+            },
+            {
+              "marke": "f",
+              "text": "Datenbank Medizinalfälle;"
+            },
+            {
+              "marke": "g",
+              "text": "Datenbank individuelle Rückkehrhilfe;"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            },
+            {
+              "marke": "i",
+              "text": "Informationssystem der Zentren des Bundes und der Unterkünfte an den Flughäfen (MIDES);"
+            },
+            {
+              "marke": "j",
+              "text": "Informationssystem AURORA nach Artikel 12 der Verordnung vom 11. August 1999 über den Vollzug der Weg- und Ausweisung sowie der Landesverweisung von ausländischen Personen;"
+            },
+            {
+              "marke": "k",
+              "text": "Datenbank Dolmetscher Pool (DOPO);"
+            },
+            {
+              "marke": "l",
+              "text": "das Fristenmanagementtool (FM-Tool) ."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "9726de518a8987f29ab9f7d40a6db0bc15f83806338f65880e7c4df9c0447994"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_b",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_b",
+      "artikelLabel": "Art. 1b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Datenbank Kompass werden Dokumente mit Informationen über die Herkunftsländer der Asylsuchenden erfasst."
+        },
+        {
+          "absatz": "2",
+          "text": "Es werden keine besonders schützenswerten Personendaten gespeichert. Enthält ein nicht aus öffentlicher Quelle stammendes Dokument Personennamen, so werden diese vor dem Einlesen in das System anonymisiert."
+        },
+        {
+          "absatz": "3",
+          "text": "Zugriff auf die Daten haben alle Mitarbeiterinnen und Mitarbeiter des SEM und des Bundesverwaltungsgerichts."
+        },
+        {
+          "absatz": "4",
+          "text": "Das SEM kann die in Kompass gespeicherten Informationen folgenden Behörden mittels Abrufverfahren zugänglich machen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den kantonalen Ausländerbehörden;"
+            },
+            {
+              "marke": "b",
+              "text": "Behördenvertreterinnen und Behördenvertretern der Bundesverwaltung, welche für die Erfüllung ihrer Arbeit auf Informationen über Herkunftsstaaten von Asylsuchenden angewiesen sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Partnerbehörden ausländischer Staaten sowie internationalen Organisationen, mit denen die Schweiz einen institutionalisierten Austausch von Länderinformationen pflegt."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "d832cd56b4588755eeef2e0b3f0525e4dde0a64534f3737e0afe38dd3e84e3be"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_c",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_c",
+      "artikelLabel": "Art. 1c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Geschäftsverwaltung Darlehen werden die anerkannten Flüchtlingen gewährten Darlehen verwaltet."
+        },
+        {
+          "absatz": "2",
+          "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Darlehensverwaltung befasst sind."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "a2284eb27eb47ff6c8ae8ecacf219e8bd4aaf3dd781dc619d270a13f75862ce1"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_d",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_d",
+      "artikelLabel": "Art. 1d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_e",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_e",
+      "artikelLabel": "Art. 1e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Datenbank FiSCo werden die Daten erfasst, die zur Auszahlung und für statistische Auswertungen hinsichtlich der Pauschalen nach den Artikeln 20, 22–24 a , 26–29 und 31 der Asylverordnung 2 vom 11. August 1999 über Finanzierungsfragen (AsylV 2) und Artikel 15 der Verordnung vom 15. August 2018 über die Integration von Ausländerinnen und Ausländern (VIntA) benötigt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Datenbank FiSCo weist eine Schnittstelle zum System ZEMIS auf, um die folgenden Personendaten von Asylsuchenden, vorläufig Aufgenommenen, Schutzbedürftigen, Flüchtlingen und Staatenlosen einzusehen: Name, Vorname, Geburtsdatum, Geschlecht, Staatsangehörigkeit, Wohnadresse (von – bis), ZEMIS-Nummer, N-Nummer, Einreisedatum, Stand des Verfahrens (mit Datum), Geschäftsart (mit Datum, Erledigungsart (mit Datum), Rechtskraft der Verfügungen oder Entscheide im Asylverfahren (mit Datum), Wegweisung mit Ausreisefrist, Zulassungscode, Aufenthaltszweck, Ausweis-Kategorie (mit Datum), Datum und Grund des Weggangs, Erwerb Asyl und Erwerb AIG (von – bis), AHV-Nummer, Zuweisung und Verteilung (mit Datum)."
+        },
+        {
+          "absatz": "3",
+          "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Auszahlung der Pauschalen und mit entsprechenden statistischen Auswertungen beauftragt sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Einen auf die letzten vier Kalenderjahre beschränkten Lesezugriff auf die für die Subventionierung relevanten Daten ihres Kantons haben die Mitarbeiterinnen und Mitarbeiter der Kantone, die mit der Bearbeitung dieser Subventionierung beauftragt sind."
+        },
+        {
+          "absatz": "5",
+          "text": "Alle Personen, die Schreib- und Leserechte in FiSCo haben, können in FiSCo zu einzelnen Personen zusätzliche Bemerkungen zur Finanzierung eines Einzelfalls erfassen."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "9fa8f54669f3b40e1aa5956843a30a20a77989747a25a36688dbb6bdceb724a5"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_f",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_f",
+      "artikelLabel": "Art. 1f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Datenbank Medizinalfälle werden Sachverhalt und Entscheid bei Medizinalfällen gesammelt. Dadurch soll ein einheitlicher Umgang mit Medizinalfällen erleichtert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit Medizinalfällen befasst sind."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "404b035b0b2ec86e0e1f62803323835be86ac3476e4889bf1a755de05e0b4585"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_g",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_g",
+      "artikelLabel": "Art. 1g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Datenbank individuelle Rückkehrhilfe werden die Abrechnungen der an Asylsuchende ausbezahlten individuellen Rückkehrhilfe erfasst."
+        },
+        {
+          "absatz": "2",
+          "text": "Zugriff auf die Daten haben die Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Kontrolle und der Auswertung der individuellen Rückkehrhilfe befasst sind."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "c9fec986bf68dde48df49a064a8f2aa4ddcf8b7f5e800a0997b39100e60d3812"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_h",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_h",
+      "artikelLabel": "Art. 1h",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_h",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_i",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_i",
+      "artikelLabel": "Art. 1i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "MIDES dient der Bearbeitung von Personendaten von Asylsuchenden und Schutzbedürftigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Anhang 5 werden die in MIDES enthaltenen Daten abschliessend aufgeführt und der Umfang des Zugriffs sowie die Berechtigung zur Datenbearbeitung festgelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM legt in einem Bearbeitungsreglement insbesondere die organisatorischen und technischen Massnahmen gegen unbefugtes Bearbeiten der Daten fest und regelt die automatische Protokollierung der Datenbearbeitung und die Datensicherheit."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_i",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "00d7fb8e4164dc29a66661ee5f5d9df0e59ae720d62772840ee57c89bad5642e"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_j",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_j",
+      "artikelLabel": "Art. 1j",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Datenbank DOPO werden von Personen, die für die Planung und Durchführung der Anhörung erforderlich sind, die folgenden Daten gespeichert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personalien;"
+            },
+            {
+              "marke": "b",
+              "text": "Einsatzpläne; und"
+            },
+            {
+              "marke": "c",
+              "text": "für die Entlöhnung der folgenden Personen relevante Daten: 1. Dolmetscherin oder Dolmetscher,"
+            },
+            {
+              "marke": "2",
+              "text": "Protokollführerin oder Protokollführer,"
+            },
+            {
+              "marke": "3",
+              "text": "Herkunftsspezialistin oder Herkunftsspezialist,"
+            },
+            {
+              "marke": "4",
+              "text": "Expertin oder Experte LINGUA,"
+            },
+            {
+              "marke": "5",
+              "text": "Interviewerin oder Interviewer LINGUA,"
+            },
+            {
+              "marke": "6",
+              "text": "Bewerterin oder Bewerter von Dolmetschleistungen,"
+            },
+            {
+              "marke": "7",
+              "text": "Befragerin oder Befrager im Anhörungspool."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zugriff auf diese Daten haben diejenigen Mitarbeiterinnen und Mitarbeiter des SEM, die mit der Planung und Durchführung der Anhörungen sowie der Entlöhnung nach Absatz 1 Buchstabe c befasst sind."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Leistungserbringer, die mit der Beratung und Rechtsvertretung nach Artikel 102 f Absatz 2 AsylG beauftragt sind, erhalten folgende Zugriffsrechte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zugriffsrecht auf den Einsatzplan der Rechtsvertreterinnen und Rechtsvertreter ihrer Organisation und ihrer Region, der die geplanten Gespräche und die Verfügbarkeiten enthält;"
+            },
+            {
+              "marke": "b",
+              "text": "Leserecht für die geplanten Gespräche;"
+            },
+            {
+              "marke": "c",
+              "text": "Berechtigung, in ihrem Personaleinsatzplan die Verfügbarkeiten der Rechtsvertreterinnen und Rechtsvertreter ihrer Organisation und ihrer Region zu erfassen und zu ändern;"
+            },
+            {
+              "marke": "d",
+              "text": "Leserecht für den Einsatzplan ihrer Region."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die folgenden Personen haben ausschliesslich Zugriff auf ihre eigenen Einsatzpläne:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Dolmetscherin oder Dolmetscher;"
+            },
+            {
+              "marke": "b",
+              "text": "Protokollführerin oder Protokollführer;"
+            },
+            {
+              "marke": "c",
+              "text": "Herkunftsspezialistin oder Herkunftsspezialist;"
+            },
+            {
+              "marke": "d",
+              "text": "Expertin oder Experte LINGUA;"
+            },
+            {
+              "marke": "e",
+              "text": "Interviewerin oder Interviewer LINGUA;"
+            },
+            {
+              "marke": "f",
+              "text": "Bewerterin oder Bewerter von Dolmetschleistungen;"
+            },
+            {
+              "marke": "g",
+              "text": "Befragerin oder Befrager im Anhörungspool;"
+            },
+            {
+              "marke": "h",
+              "text": "Rechtsvertreterin oder Rechtsvertreter."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Datenbank DOPO weist die folgenden Schnittstellen auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zum System ZEMIS, um die Daten der Asylsuchenden, die zur Planung der Anhörung notwendig sind, abzurufen, insbesondere die Referenznummern, die Nationalität, die Sprache sowie Datum und Ort der Gesuchseinreichung;"
+            },
+            {
+              "marke": "b",
+              "text": "zum Personalinformationssystem BV PLUS, um die für die Entlöhnung nach Absatz 1 Buchstabe c relevanten Daten zu übernehmen;"
+            },
+            {
+              "marke": "c",
+              "text": "zum Standardprodukt GEVER Bund, um die elektronische Personaldossierverwaltung und Verbesserungen im Prozessmanagement zu gewährleisten."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_j",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "f15116d8ea7042390a5b7245b63d071194d32b1afc9fd55c2409d839ae3652c3"
+    },
+    {
+      "id": "bund/ASYLV3/art_1_k",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "1_k",
+      "artikelLabel": "Art. 1k",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das FM-Tool verfügt über Schnittstellen zu den Systemen ZEMIS, MIDES und DOPO, damit die massgebenden Daten, die für das Asylverfahren erforderlich sind, zentral eingesehen werden können."
+        },
+        {
+          "absatz": "2",
+          "text": "Anhang 6 legt sämtliche Daten nach Absatz 1, ihre Herkunft sowie die Schnittstellen zwischen dem FM-Tool und den Systemen ZEMIS, MIDES und DOPO fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Keine der Daten nach Absatz 1 werden im FM-Tool erfasst. Es können nur die Bemerkungen im Zusammenhang mit den verschiedenen Verfahrensschritten erfasst werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Zugriff auf das FM-Tool haben Benutzerinnen und Benutzer, die bereits auf die Systeme ZEMIS, MIDES und DOPO zugreifen können."
+        },
+        {
+          "absatz": "5",
+          "text": "Das SEM legt in einem Bearbeitungsreglement insbesondere die organisatorischen und technischen Massnahmen gegen unbefugtes Bearbeiten der Daten fest und regelt die automatische Protokollierung der Datenbearbeitung und die Datensicherheit."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_1_k",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "a44542cd4a2ab38fe4ab1ccfda714b799ced8483603737a0e44d97ed53f8ba67"
+    },
+    {
+      "id": "bund/ASYLV3/art_2",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Behörden des Bundes und der Kantone, die Daten von sich in der Schweiz befindenden Asylsuchenden, anerkannten Flüchtlingen und Schutzbedürftigen an deren Heimat- oder Herkunftsstaat bekannt zu geben beabsichtigen, haben sich vorgängig beim SEM zu vergewissern, dass in erster Instanz das Asylgesuch abgelehnt oder ein Nichteintretensentscheid verfügt wurde oder dass durch die Bekanntgabe weder die betroffene Person noch deren Angehörige gefährdet werden."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "faaf79d8ce6ebafeac1aa41b5ff7f6d2fd7cef9e96d82bf9cae3e96292644259"
+    },
+    {
+      "id": "bund/ASYLV3/art_3",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist es für den Vollzug einer Wegweisung notwendig, dem Heimat- oder Herkunftsstaat die Fingerabdrücke der betroffenen Person weiterzugeben, so darf aus dieser Weitergabe nicht erkenntlich sein, dass die betroffene Person in der Schweiz ein Asylgesuch eingereicht hat."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "5bfe98ed4475f2855705902674f2ddfcccf82b9b532bb48552b38f14487ceaec"
+    },
+    {
+      "id": "bund/ASYLV3/art_4",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das SEM übermittelt den zuständigen Strafverfolgungsbehörden Informationen und Beweismittel, wenn ernsthafte Gründe für den Verdacht auf ein Verbrechen nach Artikel 1 Abschnitt F Buchstaben a und c des Abkommens vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge bestehen."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "dfb386e5bf36f34265acecf112bd3630232fba6fb78b77014eee63342fa907bb"
+    },
+    {
+      "id": "bund/ASYLV3/art_5",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Feststellung der Identität von Asylsuchenden und Schutzbedürftigen können die zuständigen Behörden folgende biometrischen Daten erheben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fingerabdrücke;"
+            },
+            {
+              "marke": "b",
+              "text": "Fotos."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Zugriff auf die Daten nach Absatz 1 ist in Anhang 1 der Verordnung vom 12. April 2006 über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung) geregelt. Die biometrischen Daten sind im AFIS-System gespeichert. Dieses enthält keine Angaben zur Person der Betroffenen."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "3f6cc5eb0b1112291baa3e1671df8b29c3c359843bd267cfce96c395b11eaca9"
+    },
+    {
+      "id": "bund/ASYLV3/art_6",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von Kindern unter 14 Jahren in Begleitung eines Elternteils werden keine biometrischen Daten erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Von unbegleiteten Kindern unter 14 Jahren werden nur biometrische Daten erhoben, wenn deren Auswertung Rückschlüsse auf ihre Identität zulässt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Gesuchen aus dem Ausland, an der Grenze, an den Flughäfen und in den Kantonen sind die biometrische Daten von den dort zuständigen Behörden zu erstellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Gesuchen von Personen, die sich in Haft befinden, fordert das SEM den von der Polizei erstellten Fingerabdruckbogen beim Bundesamt für Polizei (Fedpol) an. Es versieht den Bogen mit einer Asyl-Prozesskontrollnummer und übermittelt den Bogen anschliessend zur separaten Speicherung als Asylbogen dem Fedpol."
+        },
+        {
+          "absatz": "5",
+          "text": "Das SEM kann private Unternehmen mit der Erhebung und Auswertung von biometrischen Daten in den Zentren des Bundes und an Flughäfen beauftragen, sofern diese die Einhaltung der Datenschutzbestimmungen garantieren können."
+        },
+        {
+          "absatz": "6",
+          "text": "Das SEM stellt biometrische Daten den ermittelnden Polizeistellen zur Verfügung, wenn dies zur Aufklärung von strafbaren Handlungen notwendig ist. Diese Daten dürfen von den Polizeistellen nur mit Zustimmung des SEM an ausländische Behörden weitergeleitet werden."
+        },
+        {
+          "absatz": "7",
+          "text": "Stimmen die biometrischen Daten ausländischer Polizeistellen (INTERPOL) mit denjenigen des SEM überein, so entscheidet dieses nach Artikel 97 Absatz 1 des AsylG, ob die Weiterleitung der Ergebnisse an ausländische Behörden zulässig ist."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "81391143d85968ec49d128c81403ee36d048d39719eff87c69c4323fa7377155"
+    },
+    {
+      "id": "bund/ASYLV3/art_6_a",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein geeigneter Datenschutz der betroffenen Person im Sinne von Artikel 102 c Absatz 3 AsylG liegt vor, wenn die geeigneten Garantien die Anforderungen der Artikel 9–12 der Datenschutzverordnung vom 31. August 2022 (DSV) erfüllen."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "c352431d11fdc48f84598aaf84c2f2bcc7b6ccbdcf35a353cb04f5cf43bafb6c"
+    },
+    {
+      "id": "bund/ASYLV3/art_6_b",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "6_b",
+      "artikelLabel": "Art. 6b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM hat im Rahmen der Anwendung der Dublin-Assoziierungsabkommen vor der Überstellung einer asylsuchenden Person in den zuständigen Staat, der durch eines der Dublin-Assoziierungsabkommen gebunden ist (Dublin-Staat), die folgenden Daten zu übermitteln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Personendaten gemäss Anhang VI der Verordnung (EG) Nr. 1560/ 2003; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Informationen über den körperlichen und geistigen Gesundheitszustand der betroffenen Person gemäss Anhang IX der Verordnung (EG) Nr. 1560/ 2003, wenn diese Informationen für die medizinische Versorgung oder Behandlung erforderlich sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Informationen gemäss Absatz 1 Buchstabe b dürfen nur zwischen Angehörigen der Gesundheitsberufe oder Personen, die einem entsprechenden Berufsgeheimnis unterliegen, und nur mit ausdrücklicher Einwilligung der betroffenen Person oder ihres Vertreters oder ihrer Vertreterin übermittelt werden. Ist die betroffene Person aus physischen oder rechtlichen Gründen ausserstande, ihre Einwilligung zu geben, so können Informationen ausnahmsweise auch ohne ausdrückliche Einwilligung übermittelt werden, wenn es der Schutz lebenswichtiger Interessen der betroffenen Person oder einer Drittperson erfordert."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Verfahren der Datenübermittlung richtet sich nach den Artikeln 31 und 32 der Verordnung (EU) Nr. 604/2013 und nach den Artikeln 8 Absatz 3 und 15 a der Verordnung (EG) Nr. 1560/2003."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_6_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "bdd44f63ac747d7e5630e2c9552e57ca4bc1b59e596535a1886c66ffa4a97e32"
+    },
+    {
+      "id": "bund/ASYLV3/art_7_8",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "7_8",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_7_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV3/art_9",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann im Einzelfall den Behörden des Bundes, der Kantone und Gemeinden sowie privaten Organisationen diejenigen Personendaten bekannt geben, die sie zur Erfüllung ihrer gesetzlichen Aufgaben benötigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Privatpersonen werden in der Regel keine Personendaten bekannt gegeben. Ausnahmsweise kann die Adresse bekannt gegeben werden, wenn die um Auskunft ersuchende Person nachweist, dass sie diese zur Durchsetzung von bestehenden Rechtsansprüchen oder zur Wahrnehmung anderer schutzwürdiger Interessen benötigt."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "0c5e6606e3f638bfb502d9a9307367d47b38bdf242a6b3a0fb102f0518eb9418"
+    },
+    {
+      "id": "bund/ASYLV3/art_10",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann Listen mit Personendaten an Behörden des Bundes, der Kantone und Gemeinden sowie privaten Organisationen abgeben, wenn diese die Listen zur Erfüllung ihrer gesetzlichen Aufgaben benötigen und die Bearbeitung durch die ersuchende Behörde mit dem Bearbeitungszweck nach dem Gesetz vereinbar ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abgabe von Listen mit Personendaten an Privatpersonen ist nicht zulässig."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "2336154d992f1e2bdbf6d56b50d5a444d66265522327bf71702f6cb432c7f03d"
+    },
+    {
+      "id": "bund/ASYLV3/art_11",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Überprüfung von Treffern bei Eurodac-Abfragen werden Fingerabdruckspezialinnen und -spezialisten der AFIS/DNA-Services des Bundesamtes für Polizei (fedpol) eingesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Treffern macht das SEM den AFIS/DNA-Services die Resultate der Eurodac-Abfragen zugänglich. Die Spezialistinnen und -spezialisten nehmen die Überprüfung so rasch wie möglich vor und übermitteln das Resultat der Überprüfung unverzüglich dem SEM."
+        },
+        {
+          "absatz": "3",
+          "text": "Ergibt die Überprüfung, dass die Fingerabdrücke nicht übereinstimmen, so löscht das SEM unverzüglich das Resultat der Abfrage."
+        },
+        {
+          "absatz": "4",
+          "text": "Das SEM informiert die Europäische Kommission und die Agentur EU-LISA so bald wie möglich, spätestens jedoch innerhalb von drei Arbeitstagen, über die Nicht-Übereinstimmung der Fingerabdrücke."
+        },
+        {
+          "absatz": "5",
+          "text": "Die AFIS/DNA-Services müssen die Fingerabdrücke ebenfalls überprüfen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach der Gewährung internationalen Schutzes durch einen Dublin-Staat und die entsprechende Markierung der Daten im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke vom Zentralsystem zur Markierung erhält; oder"
+            },
+            {
+              "marke": "b",
+              "text": "bei der vorzeitigen Löschung der Daten einer Person im Eurodac das SEM informiert wird, dass es die Daten dieser Person bereits erfasst hat und die Fingerabdrücke der Zentraleinheit zur Löschung erhält."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "fd064565a2956b8cad953f7034e04a63b01edc1a2f8bada1407bc040991fe174"
+    },
+    {
+      "id": "bund/ASYLV3/art_11_a",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Macht eine Person ihr Recht auf Auskunft oder ihr Recht auf Berichtigung oder Löschung von Daten im Eurodac geltend, so muss sie die zu ihrer Identifizierung erforderlichen Angaben einschliesslich der Fingerabdrücke und ein schriftliches Gesuch beim SEM einreichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM bearbeitet Auskunftsgesuche im Einvernehmen mit der Behörde, die die Daten erfasst hat, oder mit dem Staat, der die Daten an die Zentraleinheit übermittelt hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Es registriert die Auskunftsgesuche und übermittelt sie an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB). Es informiert diesen darüber, wie es die Gesuche behandelt hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Macht eine Person ihr Recht auf Berichtigung oder Löschung von Daten im Eurodac geltend, die nicht von schweizerischen Behörden erfasst wurden, so nimmt das SEM mit den Staaten, die die Daten erfasst haben, innert einer angemessenen Frist Kontakt auf und übermittelt ihnen das Gesuch. Das SEM unterrichtet die betroffene Person über die Übermittlung des Gesuchs."
+        },
+        {
+          "absatz": "5",
+          "text": "Das SEM bearbeitet Auskunfts-, Berichtigungs- und Löschungsgesuche unverzüglich."
+        },
+        {
+          "absatz": "6",
+          "text": "Es bestätigt der betroffenen Person unverzüglich schriftlich, dass es die Daten berichtigt oder gelöscht hat. Ist es nicht bereit, die Daten zu berichtigen oder zu löschen, so gibt es die Gründe dafür an."
+        },
+        {
+          "absatz": "7",
+          "text": "Die zur Identifizierung erforderlichen Angaben einschliesslich der Fingerabdrücke gemäss Absatz 1 werden nach der Bearbeitung des Gesuchs unverzüglich gelöscht."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "2c302a813b9cdc0c46002e1bd9dbc73a9182409dac1fb58ba759b39ed5c05dd5"
+    },
+    {
+      "id": "bund/ASYLV3/art_11_b",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11_b",
+      "artikelLabel": "Art. 11b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Haftung für Schäden im Zusammenhang mit dem Betrieb des Eurodac richtet sich nach dem Verantwortlichkeitsgesetz vom 14. März 1958, insbesondere nach dessen Artikeln 19 a –19 c , die sinngemäss anwendbar sind."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "3e41740fab6d99b4519f508a1d8596407780b2bf59c87f4ecce258ef0e97b102"
+    },
+    {
+      "id": "bund/ASYLV3/art_11_c",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "11_c",
+      "artikelLabel": "Art. 11c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der EDÖB arbeitet bei der Wahrnehmung seiner Aufgaben mit dem Europäischen Datenschutzbeauftragten zusammen; für diesen ist er nationale Ansprechstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Der EDÖB ist die nationale Behörde nach den Artikeln 29 Absätze 11–13 und 30 der Verordnung (EU) Nr. 603/2013. Er ist für die Wahrnehmung der in diesen Artikeln festgelegten Aufgaben verantwortlich."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_11_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "9f57049daa131deecabfb4109d700cd6ea397b9c3ad2fd335793129efc42da83"
+    },
+    {
+      "id": "bund/ASYLV3/art_12",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Datensicherheit richtet sich nach:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der DSV;"
+            },
+            {
+              "marke": "b",
+              "text": "der Informationssicherheitsverordnung vom 8. November 2023 ;"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "dc7b0146fc1167e7e98e9070396cd3369312904572d3f03d76fc51124ed56051"
+    },
+    {
+      "id": "bund/ASYLV3/art_13",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Daten, die nicht mehr benötigt werden, müssen archiviert oder vernichtet werden. Die Archivierung oder Löschung der Daten erfolgt in Zusammenarbeit mit dem Schweizerischen Bundesarchiv."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "d19cb1e96202249506b9cbe7abf20ac6f8e637d6d5e8a63e4cf52a90848e6400"
+    },
+    {
+      "id": "bund/ASYLV3/art_14",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM kann Personendaten zu Forschungs- oder Planungszwecken Behörden, Universitäten und deren Instituten sowie privaten Organisationen bekannt geben. Die Daten müssen anonymisiert werden, soweit der Zweck des Bearbeitens es erlaubt. Die Ergebnisse sind so zu veröffentlichen, dass die betroffenen Personen nicht bestimmbar sind. Die Weiterleitung dieser Daten ist nur mit Zustimmung des SEM zulässig."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "f7880a3300365207dc94b72cba45c697f80354acbdf3fa9d1750baa74cb4ccfc"
+    },
+    {
+      "id": "bund/ASYLV3/art_15",
+      "ebene": "bund",
+      "quelle": "ASYLV3",
+      "erlass": "AsylV 3",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Oktober 1999 in Kraft."
+        }
+      ],
+      "stand": "2024-06-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/361/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20240601",
+      "sha": "d87fdab272de6acd082d49c6120f109556485adb44a1e19d3c243eaa8b33576a"
+    }
+  ]
+}

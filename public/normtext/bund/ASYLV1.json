@@ -1,0 +1,2539 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/ASYLV1/art_1",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung gilt, soweit die Dublin-Assoziierungsabkommen keine abweichenden Bestimmungen vorsehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Dublin-Assoziierungsabkommen sind in Anhang 1 aufgeführt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "92e7f46183f13edebba8ab99cfe3401a1fad14b237f66c64668cb3531b650f82"
+    },
+    {
+      "id": "bund/ASYLV1/art_1_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In dieser Verordnung gelten als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Identität: Namen, Vornamen, Staatsangehörigkeiten, Ethnie, Geburtsdatum, Geburtsort und Geschlecht;"
+            },
+            {
+              "marke": "b",
+              "text": "Reisepapier: ein amtliches Dokument, das zur Einreise in den Heimatstaat oder in andere Staaten berechtigt, namentlich ein Pass oder ein Ersatzreisedokument;"
+            },
+            {
+              "marke": "c",
+              "text": "Identitätsausweis bzw. Identitätspapier: ein amtliches Dokument mit Fotografie, welches zum Zweck des Nachweises der Identität seiner Inhaberin oder seines Inhabers ausgestellt wurde;"
+            },
+            {
+              "marke": "d",
+              "text": "minderjährig: wer nach Artikel 14 des Zivilgesetzbuches das 18. Lebensjahr noch nicht vollendet hat;"
+            },
+            {
+              "marke": "e",
+              "text": "Familie: Ehegatten und deren minderjährige Kinder; den Ehegatten gleichgestellt sind die eingetragenen Partnerinnen und Partner und die in dauernder eheähnlicher Gemeinschaft zusammenlebenden Personen; im Dublin-Verfahren richten sich die Begriffe Familienangehörige und Verwandte nach der Verordnung (EU) Nr. 604/2013."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c195d80e25a2a3ec55328a503deb20c700567e0b69991d1db144e5c02dbfaac6"
+    },
+    {
+      "id": "bund/ASYLV1/art_1_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "1_b",
+      "artikelLabel": "Art. 1b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zur Durchführung der Asyl- und Wegweisungsverfahren werden die Kantone den folgenden Regionen zugeordnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Region Westschweiz: Kantone Freiburg, Genf, Jura, Neuenburg, Waadt, Wallis;"
+            },
+            {
+              "marke": "b",
+              "text": "Region Nordwestschweiz: Kantone Aargau, Basel-Landschaft, Basel-Stadt, Solothurn;"
+            },
+            {
+              "marke": "c",
+              "text": "Region Bern: Kanton Bern;"
+            },
+            {
+              "marke": "d",
+              "text": "Region Zürich: Kanton Zürich;"
+            },
+            {
+              "marke": "e",
+              "text": "Region Tessin und Zentralschweiz: Kantone Luzern, Nidwalden, Obwalden, Schwyz, Tessin, Uri, Zug;"
+            },
+            {
+              "marke": "f",
+              "text": "Region Ostschweiz: Kantone Appenzell AR, Appenzell IR, Glarus, Graubünden, Schaffhausen, St. Gallen, Thurgau."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9b6a0f11e8f3253f6a8688cafcc2894beb72358c2fcf95bf80bf84ecde906d12"
+    },
+    {
+      "id": "bund/ASYLV1/art_1_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "1_c",
+      "artikelLabel": "Art. 1c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Berechnet sich eine Frist im Asylverfahren nach Arbeitstagen, so gelten Samstage, Sonntage, Feiertage des Bundes sowie nach kantonalem Recht am Wohnsitz oder Sitz der Partei oder ihrer Vertretung anerkannte Feiertage nicht als Arbeitstage."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_1_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b7f514931faefdf9d9ae12f2785d67122fb997064967c0bdf0457813b654a280"
+    },
+    {
+      "id": "bund/ASYLV1/art_2",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Hinblick auf die Feststellung eines Heimat- oder Herkunftsstaats als verfolgungssicher werden berücksichtigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die politische Stabilität;"
+            },
+            {
+              "marke": "b",
+              "text": "die Einhaltung der Menschenrechte;"
+            },
+            {
+              "marke": "c",
+              "text": "die Einschätzung anderer EU- und EFTA-Mitgliedstaaten und des Hochkommissariats der Vereinten Nationen für die Flüchtlinge (UNHCR);"
+            },
+            {
+              "marke": "d",
+              "text": "weitere landesspezifische Eigenheiten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die als verfolgungssicher bezeichneten Heimat- oder Herkunftsstaaten sind in Anhang 2 aufgeführt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f29965e6c2390b287fd048f8829ef631ce8cfd75cfad62658b19e91f97e33adc"
+    },
+    {
+      "id": "bund/ASYLV1/art_2_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "2_a",
+      "artikelLabel": "Art. 2a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die asylsuchende Person ist verpflichtet, alle Dokumente abzugeben, insbesondere diejenigen, die Auskunft über ihre Identität, Herkunft und ihren Reiseweg geben oder Rückschlüsse darauf erlauben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f98fed281d366034d9ecb799e9163aee01ae06ee7545d9472404d2e983612771"
+    },
+    {
+      "id": "bund/ASYLV1/art_2_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "2_b",
+      "artikelLabel": "Art. 2b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Behörden und Amtsstellen sind verpflichtet, sämtliche im Ausland oder auf einer ausländischen Vertretung ausgestellten Reisepapiere, Identitätsausweise oder andere Dokumente sicherzustellen und unverzüglich im Original dem SEM zu übermitteln."
+        },
+        {
+          "absatz": "2",
+          "text": "Zu den anderen Dokumenten gehören insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zivilstandsdokumente;"
+            },
+            {
+              "marke": "b",
+              "text": "Nachweise über die Familienbeziehungen;"
+            },
+            {
+              "marke": "c",
+              "text": "Taufscheine;"
+            },
+            {
+              "marke": "d",
+              "text": "Staatsangehörigkeitsnachweise;"
+            },
+            {
+              "marke": "e",
+              "text": "Flüchtlingsausweise;"
+            },
+            {
+              "marke": "f",
+              "text": "Führerausweise;"
+            },
+            {
+              "marke": "g",
+              "text": "Militärausweise."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dokumente nach Absatz 1 sind während des Asylverfahrens und nach einem rechtskräftigen Abschluss des Asylverfahrens sicherzustellen, solange die betroffene Person nicht über eine Aufenthalts- oder Niederlassungsbewilligung verfügt. Bei anerkannten Flüchtlingen gilt Artikel 10 Absatz 5 AsylG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_2_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c8beca4df3659d83b57c08eb2ee2063c09039677a6a9241373cde0200bc9cef8"
+    },
+    {
+      "id": "bund/ASYLV1/art_3",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfügen Asylsuchende an einem schweizerischen Flughafen über eine zugewiesene Rechtsvertretung, so gilt eine per Telefax übermittelte Verfügung mit der Aushändigung an den mit der Rechtsvertretung beauftragten Leistungserbringer als eröffnet. Dieser gibt der zugewiesenen Rechtsvertretung die Eröffnung am gleichen Tag bekannt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Asylsuchenden ohne zugewiesene Rechtsvertretung gilt eine per Telefax übermittelte Verfügung mit der Aushändigung an die asylsuchende Person als eröffnet. Die Bekanntgabe der Eröffnung einer Verfügung an eine von der asylsuchenden Person selbst bevollmächtigten Person richtet sich nach Artikel 3 a ."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5d4c819946b3c4a5e4125f98c8e59bbcca745531c52e77b7c499a4cf24163089"
+    },
+    {
+      "id": "bund/ASYLV1/art_3_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Einer von der asylsuchenden Person bevollmächtigten Person wird die Eröffnung einer Verfügung oder die Zustellung einer Mitteilung unverzüglich bekannt gegeben. Dabei ist auf Artikel 12 a Absatz 3 oder Artikel 13 Absatz 1 AsylG hinzuweisen, wonach die Eröffnung oder die Zustellung gegenüber der asylsuchenden Person erfolgt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_3_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c4fe097a1a57ae14f6e3418b486e639b5b09cb74a02da3e40ad4725f86db7cf7"
+    },
+    {
+      "id": "bund/ASYLV1/art_4",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Eingaben von Asylsuchenden, die von einer bevollmächtigten Person vertreten werden, sind in den Zentren des Bundes in einer der Amtssprachen der Region des Standortkantons des Zentrums einzureichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "bdd50492175e769a21c075800e4f5171171fab44a7c41d93beae0b9fe2eaab8b"
+    },
+    {
+      "id": "bund/ASYLV1/art_5",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Asylgesuchen von Ehepaaren, eingetragenen Partnerinnen und Partnern oder Familien hat jede urteilsfähige asylsuchende Person Anspruch auf Prüfung ihrer eigenen Asylvorbringen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5d923ae00e2d360cd3b4d094440a4d0bcd4118a52a0439bcb799949e16991d23"
+    },
+    {
+      "id": "bund/ASYLV1/art_6",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Liegen konkrete Hinweise auf geschlechtsspezifische Verfolgung vor oder deutet die Situation im Herkunftsland auf geschlechtsspezifische Verfolgung hin, so wird die asylsuchende Person von einer Person gleichen Geschlechts angehört."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0c935d501480c3bd34fdb46e8815ec459feb9ac3f9e5d8eefc515c964d8e2551"
+    },
+    {
+      "id": "bund/ASYLV1/art_7",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rahmen der Feststellung des Sachverhaltes kann mit Unterstützung wissenschaftlicher Methoden abgeklärt werden, ob die Altersangabe der asylsuchenden Person dem tatsächlichen Alter entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Einreichung des Asylgesuches beginnt die Tätigkeit der zugewiesenen Rechtsvertretung als Vertrauensperson in den Zentren des Bundes und am Flughafen. Diese Tätigkeit dauert an, solange sich die unbegleitete minderjährige asylsuchende Person im Zentrum des Bundes oder am Flughafen aufhält oder bis zum Eintritt der Volljährigkeit."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Im Dublin-Verfahren dauert die Tätigkeit der zugewiesenen Rechtsvertretung als Vertrauensperson bis zur Überstellung der unbegleiteten minderjährigen asylsuchenden Person in den zuständigen Dublin-Staat oder bis zum Eintritt der Volljährigkeit und erstreckt sich auch auf Verfahren nach den Artikeln 76 a und 80 a des Ausländer- und Integrationsgesetzes vom 16. Dezember 2005 (AIG)."
+        },
+        {
+          "absatz": "2ter",
+          "text": "Verzichtet eine unbegleitete minderjährige asylsuchende Person auf die in den Zentren des Bundes oder am Flughafen zugewiesene Rechtsvertretung, so bleibt diese für die Wahrnehmung der Interessen der minderjährigen asylsuchenden Person als Vertrauensperson weiterhin zuständig."
+        },
+        {
+          "absatz": "2quater",
+          "text": "Für unbegleitete minderjährige asylsuchende Personen wird nach Zuweisung in den Kanton eine Beistand- oder Vormundschaft eingesetzt. Ist dies nicht sofort möglich, so ernennt die zuständige kantonale Behörde für die Dauer des Asyl- und Wegweisungsverfahrens, längstens aber bis zur Ernennung eines Beistandes oder Vormundes oder bis zum Eintritt der Volljährigkeit, unverzüglich eine Vertrauensperson."
+        },
+        {
+          "absatz": "2quinquies",
+          "text": "Hält sich eine unbegleitete minderjährige asylsuchende Person nicht mehr im Zentrum des Bundes auf und wurde diese keinem Kanton zugewiesen, richtet sich die Ernennung der Vertrauensperson nach Absatz 2 quater . Die Dauer der Tätigkeit der Vertrauensperson richtet sich für das Dublin-Verfahren nach Absatz 2 bis und für das beschleunigte Verfahren nach Absatz 2 quater ."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vertrauensperson muss über Kenntnisse des Asylrechts, des Rechts betreffend das Dublin-Verfahren und der Kinderrechte sowie über Erfahrung im Umgang mit Minderjährigen verfügen. Die Vertrauensperson begleitet und unterstützt die unbegleitete minderjährige Person im Asyl- oder im Dublin-Verfahren und erfüllt namentlich folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beratung vor und während den Befragungen;"
+            },
+            {
+              "marke": "b",
+              "text": "Unterstützung bei der Nennung und Beschaffung von Beweismitteln;"
+            },
+            {
+              "marke": "c",
+              "text": "Beistand insbesondere im Verkehr mit Behörden sowie mit Einrichtungen des Gesundheitswesens."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die kantonale Behörde teilt dem Staatssekretariat für Migration (SEM) oder dem Bundesverwaltungsgericht sowie den Minderjährigen die Ernennung der Vertrauensperson und sämtliche vormundschaftlichen Massnahmen unverzüglich mit."
+        },
+        {
+          "absatz": "5",
+          "text": "Personen, die minderjährige asylsuchende Personen anhören, tragen den besonderen Aspekten der Minderjährigkeit Rechnung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "d4726c9a2857120ae0fb6c59731b66693054ea5359a3891605f6d34a6255c33e"
+    },
+    {
+      "id": "bund/ASYLV1/art_7_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "7_a",
+      "artikelLabel": "Art. 7a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_7_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "7_b",
+      "artikelLabel": "Art. 7b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das SEM erhebt für Dienstleistungen zu Gunsten der Behörden des Bundes, der Kantone und der Gemeinden keine Gebühren und stellt keine Auslagen in Rechnung, sofern die Behörden diese Dienstleistungen für sich selbst in Anspruch nehmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "371ecb5a1c04d3ffb2f51e44a7a5fbe87c8b7186b10e08185d517752a11168be"
+    },
+    {
+      "id": "bund/ASYLV1/art_7_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "7_c",
+      "artikelLabel": "Art. 7c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Verfahren nach Artikel 111 b und 111 c AsylG beträgt 600 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Verfahren von aussergewöhnlichem Umfang oder besonderer Schwierigkeit beträgt der Gebührenzuschlag bis zu 50 Prozent der Gebühr."
+        },
+        {
+          "absatz": "3",
+          "text": "Geleistete Sonderabgaben können nicht zur Deckung des Gebührenvorschusses herangezogen werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Soweit diese Verordnung keine besondere Regelung enthält, gelten die Bestimmungen der Allgemeinen Gebührenverordnung vom 8. September 2004."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_7_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9a7379f7361cb72de60c3d6acb0e813d4b14f546d818f70700cc83a8ce25ea5d"
+    },
+    {
+      "id": "bund/ASYLV1/art_8",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Meldet sich eine ausländische Person bei einer kantonalen oder eidgenössischen Behörde, so:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nimmt diese deren vollständige Personalien auf;"
+            },
+            {
+              "marke": "b",
+              "text": "weist diese sie einem Zentrum des Bundes nach Artikel 24 AsylG oder einem kantonal oder kommunal geführten Zentrum nach Artikel 24 d AsylG zu und benachrichtigt das Zentrum; und"
+            },
+            {
+              "marke": "c",
+              "text": "stellt diese einen Passierschein aus."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die asylsuchende Person hat sich spätestens im Verlauf des folgenden Arbeitstags in dem ihr gemäss Absatz 1 Buchstabe b zugewiesenen Zentrum des Bundes zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Asylgesuche von Personen, die sich in Haft oder im Strafvollzug befinden, sind durch die kantonalen Behörden entgegenzunehmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kinder unter 14 Jahren, die ihren Eltern in die Schweiz nachreisen, stellen ihr Asylgesuch direkt bei den Behörden des Aufenthaltskantons ihrer Eltern."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cf758992d2461f2138955e1f09f62fa882acad458df21fd59c8d21adca73fcb9"
+    },
+    {
+      "id": "bund/ASYLV1/art_9_10",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "9_10",
+      "artikelLabel": "Art. 910",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_9_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_11",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_11_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "11_a",
+      "artikelLabel": "Art. 11a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Person mit dem Flugzeug in die Schweiz gereist, so gilt dasjenige Land, aus welchem der Abflug in die Schweiz erfolgt ist, als Land der direkten Einreise."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM kann die Einreise auch bewilligen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die asylsuchende Person enge Beziehungen zu Personen hat, die in der Schweiz leben; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Schweiz für die Durchführung des Asylverfahrens aufgrund der Verordnung (EU) Nr. 604/2013 zuständig ist und die asylsuchende Person nicht direkt aus ihrem Heimat- oder Herkunftsstaat an die Schweizer Grenze gelangt ist, aber glaubhaft macht, dass sie diesen Staat aus einem Grund nach Artikel 3 Absatz 1 AsylG verlassen hat und ohne Verzug an die Schweizer Grenze gelangt ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM kann eine Einreise aus humanitären Gründen bewilligen; dies gilt auch dann, wenn die Zuständigkeit der Schweiz für die Durchführung des Asylverfahrens aufgrund der Verordnung (EG) Nr. 343/2003 nicht feststeht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_11_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "c8fecdded93030de428ecf8647aa2f8fc2f1ba3d8ac3a3ddc2baad93bbeb2bd1"
+    },
+    {
+      "id": "bund/ASYLV1/art_12",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für die Grenzkontrolle zuständige Behörde meldet dem SEM unverzüglich Asylgesuche, die in einem schweizerischen Flughafen eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Eidgenössische Justiz- und Polizeidepartement (EJPD) erlässt in einer Verordnung Bestimmungen über den Betrieb von Unterkünften am Flughafen, insbesondere den Ort, an welchem sich die Asylsuchenden am Flughafen aufhalten, die Unterkunft, die Modalitäten der Zimmerbelegung, den Spaziergang im Freien und die Verwahrung von Gegenständen dieser Personen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM kann eine Einreise aus humanitären Gründen bewilligen; dies gilt auch dann, wenn die Zuständigkeit der Schweiz für die Durchführung des Asylverfahrens aufgrund der Verordnung (EU) Nr. 604/2013 nicht feststeht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a4401055c2d397c0fb94539ae6a481e3645ca1f28912b492dba7974b02821bd4"
+    },
+    {
+      "id": "bund/ASYLV1/art_13",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In den Zentren des Bundes werden Asylverfahren durchgeführt und können Wegweisungen angeordnet und ab Zentrum des Bundes vollzogen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "d6daaddf0303c78f69faf1c22b10d0aa708cfba8dbcecdd3264a1636e037e5c4"
+    },
+    {
+      "id": "bund/ASYLV1/art_14",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die asylsuchende Person hat sich in den Zentren des Bundes den Behörden zur Verfügung zu halten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Höchstdauer des Aufenthaltes in den Zentren des Bundes von 140 Tagen kann angemessen verlängert werden, insbesondere wenn im Rahmen des beschleunigten Verfahrens oder des Dublin-Verfahrens weitere Abklärungen getätigt werden müssen, die innerhalb kurzer Zeit vorgenommen werden können, oder wenn der Vollzug der Wegweisung absehbar ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cabfe5b9b46b81436cef81ced0e99902f1e9fb7abad23e6725ea2413ebf73e68"
+    },
+    {
+      "id": "bund/ASYLV1/art_15",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM weist eine volljährige asylsuchende Person, die sich in einem Zentrum des Bundes befindet und die öffentliche Sicherheit und Ordnung erheblich gefährdet oder durch ihr Verhalten den ordentlichen Betrieb und die Sicherheit des Zentrums des Bundes erheblich stört, einem besonderen Zentrum zu."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine erhebliche Störung des Betriebs und der Sicherheit eines Zentrums des Bundes liegt insbesondere vor, wenn die asylsuchende Person:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Hausordnung des Zentrums des Bundes grob verletzt, insbesondere weil sie Waffen oder Betäubungsmittel besitzt oder aufbewahrt, oder ein Ausgangsverbot wiederholt missachtet; oder"
+            },
+            {
+              "marke": "b",
+              "text": "sich den Verhaltensanweisungen des Personals des Zentrum des Bundes widersetzt und dadurch insbesondere andere Asylsuchende oder das Personal belästigt, bedroht oder gefährdet."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM informiert die für die Anordnung der Ein- oder Ausgrenzung nach Artikel 74 Absatz 1 bis AIG zuständige kantonale Behörde unverzüglich über die Gründe der Zuweisung in ein besonderes Zentrum."
+        },
+        {
+          "absatz": "4",
+          "text": "Die zuständige kantonale Behörde ordnet die im Zusammenhang mit der Unterbringung in einem besonderen Zentrum erforderliche Ein- oder Ausgrenzung an und informiert darüber unverzüglich das SEM."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "609d75891065cd98cbade66179a7090a1101756be71b9bb2648401f860de24af"
+    },
+    {
+      "id": "bund/ASYLV1/art_16",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das EJPD erlässt in einer Verordnung Bestimmungen über den Betrieb der Zentren des Bundes, insbesondere über die Öffnungszeiten, das Zutrittsrecht, die Eintritts-, Aufenthalts- und Austrittsbedingungen, die Durchsuchungen der Asylsuchenden und die Verwahrung von Gegenständen der Asylsuchenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "fe7013c1052d52815fb92b105e19c20cd10e84d5f805a59baf3ffedbf53a849f"
+    },
+    {
+      "id": "bund/ASYLV1/art_16_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "16_a",
+      "artikelLabel": "Art. 16a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_16_b_16_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "16_b_16_c",
+      "artikelLabel": "Art. 16b16c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_16_b_16_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_17",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann innerhalb und ausserhalb der Gebäude, die es im Rahmen des Asylverfahrens verwaltet, namentlich in den Zentren des Bundes und in den Unterkünften an den Flughäfen, ein Videoüberwachungssystem einsetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist verboten, die Zimmer, die Duschen und Toiletten sowie die Büros der Mitarbeitenden des SEM oder der vom SEM beauftragten Dritten per Video zu überwachen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bild- und Tondaten werden auf Festplatten in einem abschliessbaren Raum, zu dem nur berechtigte Personen Zutritt haben, aufbewahrt."
+        },
+        {
+          "absatz": "4",
+          "text": "Lässt ein Sachverhalt die Schädigung einer Sache oder einer Person vermuten, kann der Direktor bzw. die Direktorin oder der stellvertretende Direktor bzw. die stellvertretende Direktorin des SEM eine Administrativuntersuchung anordnen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei einer strafrechtlichen Untersuchung werden die Aufzeichnungen physisch auf einem elektronischen Datenträger den Strafverfolgungsbehörden übergeben."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Videoüberwachung wird an allen Haupt- und Nebeneingängen der Gebäude deutlich gekennzeichnet."
+        },
+        {
+          "absatz": "7",
+          "text": "Asylsuchende und Schutzbedürftige, die neu in einem Zentrum des Bundes oder einer Unterkunft am Flughafen ankommen, werden schriftlich in einer ihnen verständlichen Sprache über die Videoüberwachung und den Zweck der Bearbeitung der aufgezeichneten Daten informiert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cf714be0c870e44b4b10c8bb61cdbece067d10dc23f60ccfbe0280de8d3df56c"
+    },
+    {
+      "id": "bund/ASYLV1/art_18",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_19",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Überprüfung der Identität der asylsuchenden Person können in den Zentren des Bundes weitere Abklärungen durchgeführt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die summarische Befragung wird sofern notwendig eine Dolmetscherin oder ein Dolmetscher beigezogen. Das Befragungsprotokoll wird der asylsuchenden Person rückübersetzt und von den Beteiligten unterzeichnet. Die summarische Befragung kann durch die Anhörung zu den Asylgründen nach Artikel 29 AsylG ersetzt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ccd83226a98e31493ccdd0fbbb4770976245dfbf1060858f56f4dbfd93d6ee36"
+    },
+    {
+      "id": "bund/ASYLV1/art_20",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_20_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "20_a",
+      "artikelLabel": "Art. 20a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM informiert die asylsuchenden Personen in der Vorbereitungsphase über die gesetzliche Regelung bei der Geltendmachung der für das Asyl- und Wegweisungsverfahren massgeblichen gesundheitlichen Beeinträchtigungen und unterbreitet diesen eine Einwilligungserklärung zur Weitergabe der für den Vollzug der Wegweisung relevanten medizinischen Daten an die zuständigen Vollzugsbehörden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM erlässt unter Einbezug des Bundesamtes für Gesundheit (BAG) die notwendigen Weisungen über die Abgrenzung der Untersuchung nach Artikel 26 a Absatz 2 AsylG zu den Massnahmen nach dem Bundesgesetz vom 28. September 2012 über die Bekämpfung übertragbarer Krankheiten des Menschen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7586c0be2307b2e39243f1f3b28398e78fceb30282eb4f7d843db4e0a0c1f6cb"
+    },
+    {
+      "id": "bund/ASYLV1/art_20_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "20_b",
+      "artikelLabel": "Art. 20b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zusätzlich zu den Verfahrensschritten gemäss Artikel 26 Absätze 2 und 4 AsylG wird während der Vorbereitungsphase anlässlich der Befragung nach Artikel 26 Absatz 3 AsylG das rechtliche Gehör zur Rückkehr in einen Dublin-Staat gewährt, wenn von dessen Zuständigkeit für das Asylverfahren ausgegangen werden kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Abschluss der Vorbereitungsphase richtet sich das weitere Verfahren sinngemäss nach Artikel 20 c Buchstaben g und h."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "54e83314a9210ac03fb94219ca6f27d402d7124eaa8100252b3791b761982234"
+    },
+    {
+      "id": "bund/ASYLV1/art_20_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "20_c",
+      "artikelLabel": "Art. 20c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach Abschluss der Vorbereitungsphase folgt das beschleunigte Verfahren. Dabei werden insbesondere folgende Verfahrensschritte vorgenommen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vorbereitung der Anhörung zu den Asylgründen;"
+            },
+            {
+              "marke": "b",
+              "text": "Anhörung zu den Asylgründen oder Gewährung des rechtlichen Gehörs;"
+            },
+            {
+              "marke": "c",
+              "text": "allfällige weitere Stellungnahme der Rechtsvertretung;"
+            },
+            {
+              "marke": "d",
+              "text": "Triage: Fortführung des beschleunigten Verfahrens oder Wechsel in das erweiterte Verfahren;"
+            },
+            {
+              "marke": "e",
+              "text": "Redaktion des Entwurfs des Asylentscheids;"
+            },
+            {
+              "marke": "f",
+              "text": "Stellungnahme der Rechtsvertretung zum Entwurf des ablehnenden Asylentscheids;"
+            },
+            {
+              "marke": "g",
+              "text": "Schlussredaktion des Asylentscheids;"
+            },
+            {
+              "marke": "h",
+              "text": "Eröffnung des Asylentscheids."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_20_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "61d8f2844bc031306b5b63f3deb55f6f93b19f533d1457328743e4bb11f3edcc"
+    },
+    {
+      "id": "bund/ASYLV1/art_21",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone verständigen sich über die Verteilung der Asylsuchenden und über die Anrechnung besonderer Leistungen der Standortkantone von Zentren des Bundes oder der Flughafenkantone. Können sie sich nicht einigen, nimmt das SEM die Verteilung und Zuweisung unter Anrechnung der besonderen Leistungen nach den Absätzen 2 bis 6 vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM weist den Kantonen bevölkerungsproportional zu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Asylsuchende, deren Gesuch im erweiterten Verfahren behandelt wird;"
+            },
+            {
+              "marke": "b",
+              "text": "Personen, denen im beschleunigten Verfahren Asyl gewährt oder die vorläufig aufgenommen wurden;"
+            },
+            {
+              "marke": "c",
+              "text": "Asylsuchende im beschleunigten Verfahren und im Dublin-Verfahren, über deren Asylgesuch in den Zentren des Bundes nach Ablauf der Höchstdauer des Aufenthaltes nach Artikel 24 Absätze 4 und 5 AsylG noch nicht rechtskräftig entschieden worden ist;"
+            },
+            {
+              "marke": "d",
+              "text": "Asylsuchende aufgrund einer besonderen Situation gemäss Artikel 24 Absatz 6 AsylG."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die bevölkerungsproportionale Zuweisung erfolgt nach dem im Anhang 3 festgelegten Schlüssel. Dieser Schlüssel wird vom SEM periodisch überprüft und falls notwendig vom EJPD nachgeführt."
+        },
+        {
+          "absatz": "4",
+          "text": "Liegt in den Fällen nach Absatz 2 Buchstaben c und d bereits ein erstinstanzlicher Asyl- und Wegweisungsentscheid in den Zentren des Bundes vor, werden die betroffenen Asylsuchenden unter Vorbehalt von Artikel 34 dem Standortkanton des Zentrums des Bundes zugewiesen. Dasselbe gilt für Asylsuchende im Verfahren am Flughafen, wenn nach Ablauf eines 60-tägigen Aufenthalts ein erstinstanzlicher, aber noch nicht rechtskräftiger Asyl- und Wegweisungsentscheid vorliegt. Die Kompensation des Standortkantons richtet sich nach Absatz 5 Buchstabe d."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der Zuweisung von Asylsuchenden, deren Asylgesuch im erweiterten Verfahren behandelt wird, werden folgende Abzüge vom bevölkerungsproportionalen Anteil gemäss Anhang 3 an im erweiterten Verfahren zu übernehmende Personen gewährt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "0,2 Personen pro Unterbringungsplatz in einem Zentrum des Bundes nach Artikel 24, 24 c und 24 d AsylG;"
+            },
+            {
+              "marke": "b",
+              "text": "0,4 Personen pro Unterbringungsplatz in einem besonderen Zentrum nach Artikel 24 a AsylG;"
+            },
+            {
+              "marke": "c",
+              "text": "0,1 Personen pro polizeilich begleitete kontrollierte Ausreise über einen Flughafen;"
+            },
+            {
+              "marke": "d",
+              "text": "0,15 Personen pro zum Vollzug zugeteilte Person."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Jeder Kanton hat mindestens zehn Prozent seines Anteils gemäss Anhang 3 an Personen im erweiterten Verfahren zu übernehmen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e69062ead512a4e4db90673591e95ff5bf86298c4137f01961450f689d2d6878"
+    },
+    {
+      "id": "bund/ASYLV1/art_22",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM weist die Asylsuchenden unter Berücksichtigung bereits in der Schweiz lebender Familienangehöriger, der Staatsangehörigkeiten und besonders betreuungsintensiver Fälle bevölkerungsproportional den Kantonen zu."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Kantonswechsel wird vom SEM nur bei Zustimmung beider Kantone, bei Anspruch auf Einheit der Familie oder bei schwerwiegender Gefährdung der asylsuchenden Person oder anderer Personen verfügt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "5333040774ff951970669a016c24d97c756b3878e4642a1f6a26e0958668de83"
+    },
+    {
+      "id": "bund/ASYLV1/art_23",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das SEM teilt Personen, bei denen der Vollzug der Wegweisung angeordnet worden ist und deren Asylentscheid in einem Zentrum des Bundes oder am Flughafen in Rechtskraft erwachsen ist oder deren Asylgesuch in einem Zentrum des Bundes oder am Flughafen abgeschrieben wurde, dem Standortkanton zum Vollzug der Wegweisung zu. Vorbehalten bleibt Artikel 34 Absatz 2."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8a846ae09ac284bdd9e38474d24f6a759fcf585b074abff67d7eadb0ea3caa41"
+    },
+    {
+      "id": "bund/ASYLV1/art_23_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_23_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_24",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone bezeichnen die Stelle, bei der sich die Person, welche einem Kanton zugewiesen oder zugeteilt wurde, nach Verlassen des Zentrums des Bundes oder des Flughafens zu melden hat. Die Asylsuchenden müssen sich dort innerhalb von 24 Stunden melden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e8c7d4f4af3f99aa5762586bdd29f56f0dea15f80138f79d23c90e8be29e6037"
+    },
+    {
+      "id": "bund/ASYLV1/art_25_26",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "25_26",
+      "artikelLabel": "Art. 2526",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_25_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_27",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EJPD regelt die inhaltlichen und organisatorischen Grundsätze für die Vorbereitung von Asylentscheiden sowie den Informationsaustausch zwischen dem SEM und den Kantonen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird gegen den Entscheid, den ein Kanton vorbereitet hat, Beschwerde erhoben und ordnet das Bundesverwaltungsgericht einen Schriftenwechsel an, so kann das SEM beim Kanton eine Stellungnahme einholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Alle Personen, die vom Kanton mit der Vorbereitung von Asylentscheiden betraut werden, unterliegen der gleichen Sorgfalts- und Verschwiegenheitspflicht wie das Bundespersonal. In fachlicher Hinsicht sind sie an die Anordnungen des SEM gebunden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b60efe987ce10450377db12fc79d5b3f0dc281a5c6440f44096fa61fe93c881f"
+    },
+    {
+      "id": "bund/ASYLV1/art_28",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zur Abklärung von Asylgesuchen kann das SEM die Stellungnahme des UNHCR einholen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f4e9c24057796f2abf7cc89a370d9149188c921ab593ad8d1c51eb8a4396afad"
+    },
+    {
+      "id": "bund/ASYLV1/art_28_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "28_a",
+      "artikelLabel": "Art. 28a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_28_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "28_b",
+      "artikelLabel": "Art. 28b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Vereinbarungen über die Zusammenarbeit bei der Ermittlung des Sachverhaltes gewährleisten die Einhaltung von Artikel 98 AsylG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_28_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3cb7ae450151ea4a75b8d0a49f558665e51ea4d79c542de4296df4890217e136"
+    },
+    {
+      "id": "bund/ASYLV1/art_29",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_29_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "29_a",
+      "artikelLabel": "Art. 29a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM prüft die Zuständigkeit zur Behandlung eines Asylgesuchs nach den Kriterien, die in der Verordnung (EU) Nr. 604/2013 geregelt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Ergibt die Prüfung, dass ein anderer Staat für die Behandlung des Asylgesuches zuständig ist, und hat dieser Staat der Aufnahme oder Wiederaufnahme der asylsuchenden Person zugestimmt, so fällt das SEM einen Nichteintretensentscheid."
+        },
+        {
+          "absatz": "3",
+          "text": "Das SEM kann aus humanitären Gründen das Gesuch auch dann behandeln, wenn die Prüfung ergeben hat, dass ein anderer Staat dafür zuständig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Verfahren für die Aufnahme oder Wiederaufnahme der asylsuchenden Person durch den zuständigen Staat richtet sich nach der Verordnung (EG) Nr. 1560/2003."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "173dda76cba300a93d69ee7af99fd27f92b7b40e9f904e33cf1463856c1a21fd"
+    },
+    {
+      "id": "bund/ASYLV1/art_29_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "29_b",
+      "artikelLabel": "Art. 29b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Wiederaufnahme des Asylverfahrens ist in einer Zwischenverfügung festzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde eine asylsuchende Person bei einem früheren Asylverfahren bereits einem Kanton zugewiesen, so bleibt dieser bei einer Wiederaufnahme des Asylverfahrens weiterhin zuständig."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "55b6686d81186bbc9f70576799e51d12360f7a13b8ca7e5893a6babf037991f4"
+    },
+    {
+      "id": "bund/ASYLV1/art_29_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "29_c",
+      "artikelLabel": "Art. 29c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM kann einen Nichteintretensentscheid nach Artikel 31 a Absatz 1 Buchstabe f AsylG aufgrund eines vom zuständigen Dublin-Staat erlassenen Asyl- und Wegweisungsentscheids erlassen, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Asyl- und Wegweisungsentscheid feststellt, dass die Voraussetzungen für die Schutzgewährung nicht erfüllt sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "es sich um einen Nichteintretensentscheid handelt aufgrund eines Folgeantrags, der kein neues Element enthält."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten für den Wegweisungsvollzug werden nach Artikel 7 der Richtlinie 2001/40/EG und nach der Entscheidung 2004/191/EG zurückerstattet. Das SEM ist die Kontaktstelle im Sinne dieser Entscheidung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_29_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1230054b015d2073413a10087e578716372b953264893a94506bfbffe73b86cc"
+    },
+    {
+      "id": "bund/ASYLV1/art_30",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Asylsuchenden Personen, die einem Kanton zugewiesen wurden, stellt die kantonale Behörde einen Ausweis N aus; dieser hat eine Gültigkeitsdauer von höchstens einem Jahr und ist verlängerbar. In den übrigen Fällen erhalten asylsuchende Personen eine Bestätigung. Der Ausweis N und die Bestätigung bescheinigen ausschliesslich die Einreichung des Asylgesuchs und gelten gegenüber allen eidgenössischen und kantonalen Behörden als Ausweispapier. Sie berechtigen nicht zum Grenzübertritt."
+        },
+        {
+          "absatz": "2",
+          "text": "Aus der Gültigkeitsdauer des Ausweises N kann kein Anwesenheitsrecht abgeleitet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Ausweis N wird eingezogen, wenn die ausländische Person die Schweiz verlassen muss oder verlässt oder wenn ihr Anwesenheitsverhältnis fremdenpolizeilich geregelt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8406e4d7bdcf0cf17c41cde0422c2f0c2d532a88bf9c33c7f629c3b11749b79d"
+    },
+    {
+      "id": "bund/ASYLV1/art_31",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_32",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Wegweisung wird nicht verfügt, wenn die asylsuchende Person:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Besitze einer gültigen Aufenthalts- oder Niederlassungsbewilligung ist;"
+            },
+            {
+              "marke": "b",
+              "text": "von einer Auslieferungsverfügung betroffen ist;"
+            },
+            {
+              "marke": "c",
+              "text": "von einer Ausweisungsverfügung nach Artikel 121 Absatz 2 der Bundesverfassung oder nach Artikel 68 AIG betroffen ist; oder"
+            },
+            {
+              "marke": "d",
+              "text": "von einer rechtskräftigen Landesverweisung nach Artikel 66 a oder 66 a bis des Strafgesetzbuchs oder Artikel 49 a oder 49 a bis des Militärstrafgesetzes vom 13. Juni 1927 betroffen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In den Fällen nach Absatz 1 Buchstaben c und d kann die kantonale Behörde beim SEM eine Stellungnahme zu allfälligen Vollzugshindernissen einholen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "52e975dd384a8022c21d01401b78bf7d47f4320f06bf78f397ea261b87a06d81"
+    },
+    {
+      "id": "bund/ASYLV1/art_33",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_34",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM bezeichnet in der Wegweisungsverfügung den nach Artikel 46 Absatz 1 bis AsylG für den Vollzug zuständigen Kanton."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM kann in der Wegweisungsverfügung einen anderen Kanton als den Standortkanton als zuständig bezeichnen, wenn ein Standortkanton die Abzüge nach Artikel 21 Absatz 5 nicht ausschöpfen kann."
+        },
+        {
+          "absatz": "3",
+          "text": "In Fällen nach Absatz 2 können Kantone einer Region andere Zuständigkeiten für den Wegweisungsvollzug vereinbaren. Nach der Zustimmung der anderen Kantone der Region meldet der neue Vollzugskanton dem SEM, in welchem Umfang und für welche Dauer er zuständig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Bund erstattet dem anstelle des Standorkantons bezeichneten Vollzugskanton die Ausreisekosten nach Artikel 54–61 der Asylverordnung 2 vom 11. August 1999 über Finanzierungsfragen (AsylV 2), die Nothilfepauschale nach Artikel 28 AsylV 2 sowie den Pauschalbetrag nach Artikel 15 der Verordnung vom 11. August 1999 über den Vollzug der Weg- und Ausweisung sowie der Landesverweisung von ausländischen Personen."
+        },
+        {
+          "absatz": "5",
+          "text": "Den für den Wegweisungsvollzug neu zuständigen Kantonen wird der Abzug nach Artikel 21 Absatz 5 gewährt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "79636daedefa7024d233f2a96de69b998df0bb26843f8bd8e8f3e71fe271a00f"
+    },
+    {
+      "id": "bund/ASYLV1/art_34_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "34_a",
+      "artikelLabel": "Art. 34a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei einer überdurchschnittlichen Belastung des Standortkantons aufgrund einer konstant hohen Anzahl zu vollziehender Wegweisungen, können sich die Kantone einer Region gegenseitig unterstützen, wobei der Standortkanton für den Vollzug der Wegweisung zuständig bleibt. Sofern die Abzüge nach Artikel 21 Absatz 5 an die unterstützenden Kantone abgetreten werden sollen, melden die Kantone der Region dem SEM frühzeitig den Umfang und die Dauer der Abtretung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "543beb819c568ab8a23d5d28cb8f7b7cb5d3defeba7c3c6b77c5c0b0e9eba66a"
+    },
+    {
+      "id": "bund/ASYLV1/art_34_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "34_b",
+      "artikelLabel": "Art. 34b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die kantonale Behörde meldet dem SEM den Vollzug einer Wegweisung oder einer Landesverweisung, die kontrollierte Ausreise, die Feststellung der unkontrollierten Abreise oder die Regelung des Anwesenheitsverhältnisses innerhalb von 14 Tagen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_34_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9b30f4ed1af2f37dec78d196b0b855ffe110954e8c77d84a091d6fb7ec230340"
+    },
+    {
+      "id": "bund/ASYLV1/art_35",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kantone richten ihre Gesuche um polizeiliche Ausschreibung direkt an das Bundesamt für Polizeiwesen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "807a9698adc8e1f42c95485172c7cf7f8ff77b0d5e77f468b3b93e3304411e01"
+    },
+    {
+      "id": "bund/ASYLV1/art_36",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Aufenthalt von Flüchtlingen in der Schweiz ist ordnungsgemäss, wenn die Flüchtlinge die Bestimmungen einhalten, die allgemein für ausländische Personen gelten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Aufenthalt gilt als ununterbrochen, wenn die Flüchtlinge in den letzten zwei Jahren insgesamt nicht länger als sechs Monate im Ausland weilten. Bei längerer Abwesenheit gilt der Aufenthalt nur dann als ununterbrochen, wenn zwingende Gründe für die Abwesenheit vorliegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "86dc19626e0497612022dc8178788b1fd4e2d561151f73b22b781347d814d59f"
+    },
+    {
+      "id": "bund/ASYLV1/art_37",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein Einbezug in die Flüchtlingseigenschaft eines Ehegatten, einer eingetragenen Partnerin oder eines eingetragenen Partners oder eines Elternteils nach Artikel 51 Absatz 1 AsylG erfolgt erst, wenn in Anwendung von Artikel 5 festgestellt wurde, dass die einzubeziehende Person die Flüchtlingseigenschaft nicht selbstständig nach Artikel 3 AsylG erfüllt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "9b5a7c6d6df756781daa34348f2fe439b0727ba0bbb872be4ba87ad17ba1d237"
+    },
+    {
+      "id": "bund/ASYLV1/art_38",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_39",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_40",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_41",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anwesenheit einer Person, der die Schweiz Asyl gewährt hat, wird von dem Kanton geregelt, dem sie als asylsuchende Person nach ihrer Einreise zugewiesen wurde. Wurde sie während des Asylverfahrens vom SEM nach Artikel 22 Absatz 2 einem anderen Kanton zugewiesen, so ist dieser Kanton zuständig."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0eb5f2150980ac10ecece3a21d065b88d6482024d6afa4c411e4ebd36797ba5d"
+    },
+    {
+      "id": "bund/ASYLV1/art_42",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/ASYLV1/art_43",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Erlöschen des Asyls geht dem Widerruf vor."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonale Behörde kann vor dem Vollzug der Ausweisung oder der Landesverweisung beim SEM eine Stellungnahme zu allfälligen Vollzugshindernissen einholen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f95b6ab3e36f3c5684399bcc472d0f48a2a8885d36111af355ac5ffee5233153"
+    },
+    {
+      "id": "bund/ASYLV1/art_44",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Neu eingereiste Personen, denen nach Artikel 68 Absatz 1 oder Artikel 69 Absatz 2 AsylG vorübergehender Schutz gewährt wurde, werden gemäss Artikel 21 Absätze 2 bis 6 den Kantonen zugewiesen. Die Verteilung erfolgt getrennt von jener der Asylsuchenden. Die Verteilung und ein allfälliger Kantonswechsel richten sich sinngemäss nach Artikel 22."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "a9640ddd5b09b633b7c09e749c022f8194ef4072d7545acee1400c27892389cc"
+    },
+    {
+      "id": "bund/ASYLV1/art_45",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Schutzbedürftige erhalten während der ersten fünf Jahre der Gewährung vorübergehenden Schutzes einen auf höchstens ein Jahr befristeten und verlängerbaren Ausweis S. Dieser gilt gegenüber allen eidgenössischen und kantonalen Behörden als Ausweispapier. Er berechtigt nicht zum Grenzübertritt."
+        },
+        {
+          "absatz": "2",
+          "text": "Aus der Gültigkeitsdauer des Ausweises S kann kein Anwesenheitsrecht abgeleitet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Ausweis S wird eingezogen, wenn die ausländische Person die Schweiz verlassen muss oder verlässt oder wenn ihr Anwesenheitsverhältnis fremdenpolizeilich geregelt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "39a6d631a500f94f36aa905156d651b635589fbdf33605e5dca4f78f21a839a3"
+    },
+    {
+      "id": "bund/ASYLV1/art_46",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Schutzbedürftige mit einer Aufenthaltsbewilligung nach Artikel 33 AIG erhalten einen auf höchstens ein Jahr befristeten Ausweis B. Der Aufenthaltskanton verlängert ihn unter Vorbehalt von Absatz 2 in der Regel um jeweils höchstens ein Jahr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufenthaltsbewilligung ist nur so lange gültig, wie der vorübergehende Schutz besteht. Sie erlischt in dem Zeitpunkt, den der Bundesrat für die Aufhebung des vorübergehenden Schutzes festlegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der weitere Aufenthalt der ausländischen Person bis zum Vollzug einer Wegweisung richtet sich sinngemäss nach den Artikeln 42 und 43 AsylG."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ecf4171112cfaff1bbe9436d93d8a09bba208e1543c166ccd7d48ccbe428df2a"
+    },
+    {
+      "id": "bund/ASYLV1/art_47",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Allgemeinverfügung über die Aufhebung des vorübergehenden Schutzes wird im Bundesblatt veröffentlicht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "23c24345c9f17e5d31b83a59502c9cb86b9c00a15f9261092453fc92365876dc"
+    },
+    {
+      "id": "bund/ASYLV1/art_48",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gewährung des rechtlichen Gehörs erfolgt in der Regel schriftlich."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "867213fb7b4098bdfda2adf5e194523f1ebee0099c4ab12a328564d745df3567"
+    },
+    {
+      "id": "bund/ASYLV1/art_49",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit der Wegweisungsverfügung wird gleichzeitig ein allfälliges noch hängiges Gesuch um Anerkennung als Flüchtling als gegenstandslos geworden abgeschrieben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3361dc84095f37cbc8e0a7a835fbd07c170334cd95fd2ac685eedbaad6f36630"
+    },
+    {
+      "id": "bund/ASYLV1/art_50",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Inhalt der Wegweisungsverfügung richtet sich nach Artikel 45 AsylG. Das SEM legt insbesondere die Frist zur Ausreise fest."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "7f7c3a4644dc955317d7cd02d865879c19f9fedb75060afeefda27d3f27d971c"
+    },
+    {
+      "id": "bund/ASYLV1/art_51",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Längere Zeit bedeutet in der Regel 15 Tage."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "29ac031c8d724de7f951fc9f4056d0c0b58818c6b8cabb5036a538304b59ca27"
+    },
+    {
+      "id": "bund/ASYLV1/art_52",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wurde die ausländische Person bereits vor der Gewährung des vorübergehenden Schutzes nach Artikel 29 AsylG angehört, so wird ihr an Stelle einer weiteren Anhörung das rechtliche Gehör gewährt. Die Gewährung des rechtlichen Gehörs erfolgt in der Regel schriftlich."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "e07e72e3f4ac5ae03cdabbada1e91a191d8e9c02ccf0b7fc6017600303620787"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_a",
+      "artikelLabel": "Art. 52a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Während des Aufenthaltes in den Zentren des Bundes, am Flughafen oder in den Kantonen nach Zuteilung in das erweiterte Verfahren haben Asylsuchende den für die Durchführung des Asylverfahrens notwendigen Zugang zu einer unabhängigen Beratung und Rechtsvertretung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die beauftragten Leistungserbringer und die zugelassenen Rechtsberatungsstellen stellen sicher, dass die für die Durchführung des Asylverfahrens erforderliche Qualität bei der Beratung und Rechtsvertretung gewährleistet ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Wurden mehrere Leistungserbringer beauftragt und mehrere Rechtsberatungsstellen zugelassen, ist die Qualität der Beratung und Rechtsvertretung insbesondere durch eine angemessene Koordination sicherzustellen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "728e280735af5dc15c0c6eb9a44a13f05fccbba5bd8ddd9841c5ed688526fdc8"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_a_bis",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_a_bis",
+      "artikelLabel": "Art. 52abis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Während des Aufenthaltes in den Zentren des Bundes oder am Flughafen werden die Asylsuchenden im Rahmen der Beratung nach Artikel 102 g AsylG zu den Beschwerdemöglichkeiten bei der Europäischen Agentur für die Grenz- und Küstenwache (Agentur) in Bezug auf Grundrechtsverletzungen im Zusammenhang mit Einsätzen der Agentur informiert."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Information umfasst namentlich den Beschwerdemechanismus bei der Agentur gemäss Artikel 111 der Verordnung (EU) 2019/1896 sowie die Aufklärung hinsichtlich möglicher Verletzungen der Grundrechte gemäss der Charta der Grundrechte der Europäischen Union."
+        },
+        {
+          "absatz": "3",
+          "text": "Die beauftragten Leistungserbringer stellen sicher, dass die Information den Bedürfnissen der Betroffenen angemessen ist und so früh wie möglich nach der Einreichung des Asylgesuchs erfolgt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_a_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ac191944809fa87f6ce4ed63f74269d05a8bc71450dfa855617e73bf7279657c"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_b",
+      "artikelLabel": "Art. 52b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Während des Aufenthalts am Flughafen haben Asylsuchende Zugang zur Beratung über das Asylverfahren. Diese beinhaltet namentlich die Information über Rechte und Pflichten im Verfahren am Flughafen."
+        },
+        {
+          "absatz": "2",
+          "text": "Jeder asylsuchenden Person wird ab Einreichung des Asylgesuches und für das weitere Asylverfahren eine Rechtsvertretung zugeteilt, sofern die asylsuchende Person nicht ausdrücklich darauf verzichtet."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zugewiesene Rechtsvertretung informiert die asylsuchende Person so rasch als möglich über ihre Chancen im Asylverfahren."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Rechtsvertretung dauert bis zur Rechtskraft des Entscheides oder bis zur Bewilligung der Einreise in die Schweiz."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Rechtsvertretung endet mit der Mitteilung der zugewiesenen Rechtsvertreterin oder des zugewiesenen Rechtsvertreters an die asylsuchende Person, sie oder er sei wegen Aussichtslosigkeit nicht gewillt, eine Beschwerde einzureichen. Diese Mitteilung erfolgt so rasch als möglich nach Eröffnung des ablehnenden Asylentscheides."
+        },
+        {
+          "absatz": "6",
+          "text": "Zusätzlich zu den Aufgaben gemäss Artikel 102 k Absatz 1 Buchstaben a–g AsylG erfüllt die Rechtsvertretung am Flughafen namentlich folgende Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Teilnahme an der summarischen Befragung gemäss Artikel 22 Absatz 1 AsylG;"
+            },
+            {
+              "marke": "b",
+              "text": "Wahrnehmung der Rechtsvertretung bei der Gewährung des rechtlichen Gehörs gemäss Artikel 22 Absatz 4 AsylG;"
+            },
+            {
+              "marke": "c",
+              "text": "Stellungnahme zum Entwurf eines ablehnenden Asylentscheids gemäss Artikel 52 d ."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ad21f1b12844af30d1a2869b1904c76358c6b5555d2d740c650f75fbddf89493"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_b_bis",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_b_bis",
+      "artikelLabel": "Art. 52bbis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Macht eine asylsuchende Person geltend, aufgrund von Tätigkeiten oder Unterlassungen des an einem Einsatz der Agentur beteiligten Personals in ihren Grundrechten verletzt worden zu sein, wird diese in den Zentren des Bundes und am Flughafen durch die zugewiesene Rechtsvertretung bei der Einreichung einer schriftlichen Beschwerde gemäss Artikel 111 der Verordnung (EU) 2019/1896 beraten und unterstützt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beratung und Unterstützung nach Absatz 1 dauert bis zum Zeitpunkt der abschliessenden Übermittlung der Beschwerde an die Agentur."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_b_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "33b946f6516ef5697df73e154603b842302a7b50491d4cef2336f954192f9877"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_c",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_c",
+      "artikelLabel": "Art. 52c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM teilt dem Leistungserbringer Termine für Verfahrensschritte in den Zentren des Bundes und am Flughafen, bei denen eine Mitwirkung der Rechtsvertretung notwendig ist, unverzüglich nach deren Festsetzung, mindestens jedoch einen Arbeitstag vor der Durchführung des entsprechenden Verfahrensschrittes mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Das SEM teilt dem Leistungserbringer Termine für Anhörungen zu den Asylgründen sowie für die Gewährung des rechtlichen Gehörs im Rahmen des beschleunigten Verfahren und des Dublin-Verfahrens in den Zentren des Bundes mindestens zwei Arbeitstage vor deren Durchführung mit."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b1b71c90837d2ac17dfcdeebbe0db7fd042f52c7b415579efe57858070640eff"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_d",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_d",
+      "artikelLabel": "Art. 52d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Frist zur Einreichung einer Stellungnahme zum Entwurf eines ablehnenden Asylentscheides endet am nachfolgenden Arbeitstag zur selben Uhrzeit, an welcher die Übergabe des Entwurfs an den Leistungserbringer stattgefunden hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Im beschleunigten Verfahren und im Verfahren am Flughafen gelten die Entscheide des SEM nach Artikel 31 a Absatz 1 Buchstaben a, c bis f, Absätze 3 und 4 AsylG als ablehnende Asylentscheide im Sinne von Absatz 1."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "1f7f899a3e97813e65f3f7a9c8c802e7cf32d39433836d589d67db105e5d2c58"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_e",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_e",
+      "artikelLabel": "Art. 52e",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist die zugewiesene Rechtvertretung in den Zentren des Bundes und am Flughafen wegen Aussichtslosigkeit nicht gewillt, eine Beschwerde einzureichen, so informiert sie die asylsuchende Person über weitere Möglichkeiten der Beratung und Rechtsvertretung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "b5a5ae19f6b49df34bec21eb209e35d94f8f150b54b37e366871c628aa09b15e"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_f",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_f",
+      "artikelLabel": "Art. 52f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor der Zuweisung auf den Kanton zur Durchführung des erweiterten Verfahrens informiert die zugewiesene Rechtsvertretung die asylsuchende Person im Rahmen des Austrittsgesprächs über den weiteren Verlauf des Asylverfahrens und über die Möglichkeiten der Beratung und Rechtsvertretung im erweiterten Verfahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach der Zuweisung auf den Kanton zur Durchführung des erweiterten Verfahrens kann sich die asylsuchende Person für die Beratung und Rechtsvertretung bei entscheidrelevanten Schritten im erstinstanzlichen Verfahren an die im Zuweisungskanton zugelassene Rechtsberatungsstelle wenden."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Nach der Zuweisung auf den Kanton kann sich die asylsuchende Person für die Beratung und Unterstützung nach Artikel 52 b bis an die im Zuweisungskanton zugelassene Rechtsberatungsstelle wenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die im Zentrum des Bundes oder am Flughafen zugewiesene Rechtsvertretung kann ausnahmsweise für die Beratung und Rechtsvertretung im erweiterten Verfahren zuständig bleiben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die asylsuchende Person und die zugewiesene Rechtsvertretung im Rahmen des Austrittsgespräches ein besonderes Vertrauensverhältnis feststellen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Leistungserbringer seine Zustimmung erteilt; er kann seine Zustimmung namentlich dann verweigern, wenn er nicht über genügende personelle Ressourcen verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Leistungserbringer teilt dem SEM bis spätestens zum Zeitpunkt des Austritts aus den Zentren des Bundes oder dem Flughafen mit, ob die im Zentrum zugewiesene Rechtsvertretung auch im erweiterten Verfahren zur Verfügung steht."
+        },
+        {
+          "absatz": "5",
+          "text": "Verzichtet die asylsuchende Person auf die zugewiesene Rechtsvertretung, so kann sie sich für die Beratung und Vertretung bei entscheidrelevanten Schritten im erstinstanzlichen Verfahren an die im Zuweisungskanton zugelassene Rechtsberatungsstelle wenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc38eae45cd28c8f3da1e333d707cae65c3ffe51eb64cdca5ceac8fd64a38d62"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_g",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_g",
+      "artikelLabel": "Art. 52g",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die zugewiesene Rechtsvertretung im Zentrum des Bundes oder am Flughafen nicht mehr zuständig, informiert sie mit dem Einverständnis der asylsuchenden Person die im Zuweisungskanton zugelassene Rechtsberatungsstelle umgehend über den bisherigen Verfahrensstand. Das SEM teilt der Rechtsberatungsstelle mit Einverständnis der asylsuchenden Person Folgendes mit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Termine der entscheidrelevanten Schritte im erstinstanzlichen Verfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "den erstinstanzlichen Asylentscheid."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Fehlt das Einverständnis nach Absatz 1, kann die zuständige Rechtsberatungsstelle auf ihre Tätigkeit verzichten, wenn die asylsuchende Person die Termine für die entscheidrelevanten Schritte im erstinstanzlichen Verfahren nicht rechtzeitig nach deren Bekanntgabe durch das SEM der Rechtsberatungsstelle zur Kenntnis bringt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "6e81da67e3be958bf8c043b89958f331c3bf06132a2e9ef60a894db5952dabc1"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_h",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_h",
+      "artikelLabel": "Art. 52h",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entscheidrelevante Schritte im erstinstanzlichen Verfahren sind zusätzliche Anhörungen zu den Asylgründen, die Gewährung des rechtlichen Gehörs sowie Eingaben, welche massgeblich zur Feststellung des Sachverhaltes beitragen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_h",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3383408821d5d8f24ef43faa585343e30f52694f988f98778273731e658e7ee4"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_i",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_i",
+      "artikelLabel": "Art. 52i",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM teilt dem Leistungserbringer der zugewiesenen Rechtsvertretung oder gemäss Artikel 52 g Absatz 1 Buchstabe a der zuständigen Rechtsberatungsstelle die Termine für Anhörungen und die mündliche Gewährung des rechtlichen Gehörs rechtzeitig mit. Der Leistungserbringer der zugewiesenen Rechtsvertretung oder die zuständige Rechtsberatungsstelle informiert darüber unverzüglich die mit der Beratung und Vertretung betraute Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Termine gelten als rechtzeitig mitgeteilt, wenn sie unverzüglich nach deren Festsetzung, mindestens jedoch zehn Arbeitstage vor der Durchführung der Anhörung oder der mündlichen Gewährung des rechtlichen Gehörs dem Leistungserbringer der zugewiesenen Rechtsvertretung oder der zuständigen Rechtsberatungsstelle zur Kenntnis gebracht werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_i",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4cad970b62763f10aff35ad3d4b85e3c4ebb471e3bebdc57e10086f3f7f7abe1"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_j",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_j",
+      "artikelLabel": "Art. 52j",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM entscheidet auf Gesuch über die Zulassung und bezeichnet die für den Zuweisungskanton zuständige Rechtsberatungsstelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Rechtsberatungsstelle kann zugelassen werden, wenn sie Gewähr bietet für eine langfristige Übernahme der Aufgaben nach Artikel 102 l Absatz 1 AsylG. Sie muss namentlich ausreichend finanziert sein, um die Aufgaben bei Schwankungen der Asylgesuchszahlen langfristig erfüllen zu können. Für die Zulassung erforderlich sind Kenntnisse namentlich im Asyl- und Verfahrensrecht und Erfahrung in der Beratung und Rechtsvertretung von asylsuchenden Personen in der Schweiz."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Beurteilung der Voraussetzungen gemäss Absatz 2 berücksichtigt das SEM insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Anteil an rechtsvertretenden Personen mit einem universitären juristischen Hochschulabschluss oder Anwaltspatent;"
+            },
+            {
+              "marke": "b",
+              "text": "die Dauer des Bestehens der Rechtsberatungsstelle;"
+            },
+            {
+              "marke": "c",
+              "text": "die Qualitätssicherung durch einen regelmässigen fachlichen Austausch mit anderen Rechtsberatungsstellen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Entschädigung der Rechtsberatungsstelle nach Artikel 102 l Absatz 2 AsylG wird vom SEM in einer Vereinbarung mit der zugelassenen Rechtsberatungsstelle festgelegt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_j",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "f69257491a5e86c49ee7ab581141e43eee3739b0f78c9470f170ce33b776ae62"
+    },
+    {
+      "id": "bund/ASYLV1/art_52_k",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "52_k",
+      "artikelLabel": "Art. 52k",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zwischen den Rechtsberatungsstellen und dem SEM findet ein regelmässiger Informationsaustausch statt, namentlich zur Koordination der Aufgaben und zur Qualitätssicherung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_52_k",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "ce43c60592263eb7ec1b02d96eeffb7f599d34214c65415045ce71019c3944fb"
+    },
+    {
+      "id": "bund/ASYLV1/art_53",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Personen nach Artikel 102 m Absatz 3 können zur amtlichen Verbeiständung insbesondere zugelassen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie handlungsfähig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen sie keine Verlustscheine bestehen und keine strafrechtlichen Verurteilungen vorliegen, die mit der amtlichen Verbeiständung nicht vereinbar sind;"
+            },
+            {
+              "marke": "c",
+              "text": "sie über einen universitären juristischen Hochschulabschluss einer schweizerischen Universität oder über ein gleichwertiges ausländisches Diplom verfügen; und"
+            },
+            {
+              "marke": "d",
+              "text": "sie sich seit mindestens einem Jahr hauptberuflich mit der Beratung und Rechtsvertretung von Asylsuchenden befassen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "4fb448fba9726564cafe9844d278d8730f5d7acbfdbe5b5ee51ac49ba54b54a2"
+    },
+    {
+      "id": "bund/ASYLV1/art_53_a",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "53_a",
+      "artikelLabel": "Art. 53a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verfügt die unbegleitete minderjährige asylsuchende Person nicht über einen Vormund, eine Beistandschaft oder Rechtsvertretung, so ist die erstinstanzliche Verfügung der minderjährigen Person sowie der Vertrauensperson zu eröffnen. Die Beschwerdefrist beginnt an dem auf die spätere Eröffnung dieser Verfügung folgenden Tag zu laufen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "0a92af9d8eb6a7d297fb295e93a96a249051a4cbb270bb6bb59994829360347c"
+    },
+    {
+      "id": "bund/ASYLV1/art_53_b",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "53_b",
+      "artikelLabel": "Art. 53b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das SEM ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von Durchführungsrechtsakten der Europäischen Kommission zur Verordnung (EU) 2024/1351, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997 (RVOG) darstellen und sofern die Durchführungsrechtsakte gestützt auf die nachfolgend genannten Bestimmungen der Verordnung (EU) 2024/1351 erlassen wurden und Folgendes regeln oder festlegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Standardformblatt für den Austausch relevanter Informationen zwischen den Dublin-Staaten zur Ermittlung von im Hoheitsgebiet eines anderen Dublin-Staates lebenden Familienangehörigen oder Verwandten einer oder eines unbegleiteten Minderjährigen (Art. 23 Abs. 7);"
+            },
+            {
+              "marke": "b",
+              "text": "einheitliche Methoden für Konsultationen und den Informationsaustausch zwischen den Dublin-Staaten zur Bestimmung des zuständigen Dublin-Staats bei unbegleiteten Minderjährigen (Art. 25 Abs. 7);"
+            },
+            {
+              "marke": "c",
+              "text": "einheitliche Methoden für Konsultationen und den Informationsaustausch zwischen den Dublin-Staaten zur Bestimmung des zuständigen Dublin-Staats bei abhängigen Personen (Art. 34 Abs. 4);"
+            },
+            {
+              "marke": "d",
+              "text": "einheitliche Methoden für die Erstellung und Übermittlung von Aufnahmegesuchen (Art. 39 Abs. 3);"
+            },
+            {
+              "marke": "e",
+              "text": "die Erstellung und regelmässige Überprüfung der beiden Verzeichnisse, in denen die sachdienlichen Beweismittel beziehungsweise Indizien zur Festlegung der Zuständigkeit für die Durchführung des Asylverfahrens aufgeführt sind (Art. 40 Abs. 4);"
+            },
+            {
+              "marke": "f",
+              "text": "das Standardformblatt für Antworten auf ein Aufnahmegesuch (Art. 40 Abs. 8);"
+            },
+            {
+              "marke": "g",
+              "text": "einheitliche Methoden für die Erstellung und Übermittlung von Wiederaufnahmemitteilungen (Art. 41 Abs. 5);"
+            },
+            {
+              "marke": "h",
+              "text": "das Muster des Laissez-passer zum Zweck einer Überstellung im Rahmen eines Dublin-Verfahrens (Art. 46 Abs. 1);"
+            },
+            {
+              "marke": "i",
+              "text": "einheitliche Methoden für Konsultationen und den Informationsaustausch zwischen den Dublin-Staaten zum Zweck einer Überstellung im Rahmen eines Dublin-Verfahrens (Art. 46 Abs. 4);"
+            },
+            {
+              "marke": "j",
+              "text": "das Standardformblatt für die Übermittlung der erforderlichen Daten vor einer Überstellung im Rahmen eines Dublin-Verfahrens (Art. 48 Abs. 4);"
+            },
+            {
+              "marke": "k",
+              "text": "das Muster für die gemeinsamen Gesundheitsbescheinigungen (Art. 50 Abs. 1);"
+            },
+            {
+              "marke": "l",
+              "text": "einheitliche Methoden für den Informationsaustausch von Gesundheitsdaten vor der Durchführung einer Überstellung im Rahmen eines Dublin-Verfahrens (Art. 50 Abs. 5);"
+            },
+            {
+              "marke": "m",
+              "text": "gesicherte elektronische Kommunikationskanäle für den Informationsaustausch zwischen den jeweiligen für die Dublin-Verfahren zuständigen Behörden sowie zwischen diesen und der Asylagentur der Europäischen Union (Art. 52 Abs. 4)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Es ist zuständig für den Abschluss von völkerrechtlichen Verträgen zur Übernahme von delegierten Rechtsakten der Europäischen Kommission zur Verordnung (EU) 2024/1351, sofern sie völkerrechtliche Verträge von beschränkter Tragweite im Sinne von Artikel 7 a RVOG darstellen und sofern die delegierten Rechtsakte gestützt auf die nachfolgend genannten Bestimmungen der Verordnung (EU) 2024/1351 erlassen wurden und Folgendes regeln oder festlegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ermittlung von Familienangehörigen, Geschwistern oder Verwandten unbegleiteter Minderjähriger (Art. 25 Abs. 6 Bst. a);"
+            },
+            {
+              "marke": "b",
+              "text": "die Kriterien für die Feststellung des Bestehens einer nachgewiesenen familiären Bindung bei unbegleiteten Minderjährigen (Art. 25 Abs. 6 Bst. b);"
+            },
+            {
+              "marke": "c",
+              "text": "die Kriterien zur Bewertung der Fähigkeit eines Verwandten, für eine unbegleitete Minderjährige oder einen unbegleiteten Minderjährigen zu sorgen (Art. 25 Abs. 6 Bst. c);"
+            },
+            {
+              "marke": "d",
+              "text": "die Gesichtspunkte, die bei der Beurteilung eines Abhängigkeitsverhältnisses zu berücksichtigen sind (Art. 34 Abs. 3 Bst. a);"
+            },
+            {
+              "marke": "e",
+              "text": "die Kriterien für die Feststellung des Bestehens einer nachgewiesenen familiären Bindung bei abhängigen Personen (Art. 34 Abs. 3 Bst. b);"
+            },
+            {
+              "marke": "f",
+              "text": "die Kriterien zur Beurteilung der Fähigkeit, für eine abhängige Person zu sorgen (Art. 34 Abs. 3 Bst. c);"
+            },
+            {
+              "marke": "g",
+              "text": "die Gesichtspunkte, die bei der Beurteilung einer längerfristigen Reiseunfähigkeit zu berücksichtigen sind (Art. 34 Abs. 3 Bst. d)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_53_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "3fce3f39ffe2a3fa4d86368ef233b11a70c42303fff004594d0bd3e5dc0e7e48"
+    },
+    {
+      "id": "bund/ASYLV1/art_54",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Asylverordnung 1 vom 22. Mai 1991 wird aufgehoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "49ec5e4b8a500b13e0433f12589ea579ead0bd73490f74566f97d97bd2104469"
+    },
+    {
+      "id": "bund/ASYLV1/art_55",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bis zum Inkrafttreten von Artikel 21 gilt betreffend dieser Bestimmung das bisherige Recht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc769f12d010b74b91c808015782db47ce5f38824f51151f50f17a391e0237dd"
+    },
+    {
+      "id": "bund/ASYLV1/art_55_bis",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "55_bis",
+      "artikelLabel": "Art. 55bis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für alle Asylgesuche, die vor dem 29. September 2012 bei einer schweizerischen Vertretung im Ausland eingereicht wurden gilt, Artikel 10 in der Fassung vom 12. Dezember 2008."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55_bis",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "739e165edb0426fa97e142c9eb7fa10375a2a602dcbe25b8d00a060ac70e9b4c"
+    },
+    {
+      "id": "bund/ASYLV1/art_55_ter",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "55_ter",
+      "artikelLabel": "Art. 55ter",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ausweise N, die bis zum 30. Juni 2021 ausgestellt werden, haben abweichend von Artikel 30 Absatz 1 eine Gültigkeitsdauer von höchstens sechs Monaten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_55_ter",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "cc582b79709d0baa1e04c1eb8209d8820d9d1b34cac8e778ca7155e0163eafcf"
+    },
+    {
+      "id": "bund/ASYLV1/art_56",
+      "ebene": "bund",
+      "quelle": "ASYLV1",
+      "erlass": "AsylV 1",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt mit Ausnahme von Artikel 21 am 1. Oktober 1999 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 21 tritt am 1. Januar 2000 in Kraft."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Geltungsdauer der folgenden, bisher bis zum 28. September 2015 befristeten Artikel wird bis zum 28. September 2019 verlängert: die Artikel 7 a Absätze 2 und 3, 12 Absatz 2, 16 b , 16 c , 17, 18, 19 Absatz 1, 21 Absatz 3, 23 und 55 bis ."
+        },
+        {
+          "absatz": "4",
+          "text": "Die bisher bis zum 28. September 2015 gültige Aufhebung der Artikel 9, 10 und 21 Absatz 2 wird bis zum 28. September 2019 verlängert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1999/359/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260101",
+      "sha": "8a3d8d17d8e2be31340ce0a942ceb37de12b6b370d371a4f4097cabe6637866f"
+    }
+  ]
+}

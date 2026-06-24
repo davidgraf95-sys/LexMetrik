@@ -1,0 +1,1834 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/LSV/art_1",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung soll vor schädlichem und lästigem Lärm schützen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Begrenzung von Aussenlärmemissionen, die beim Betrieb neuer und bestehender Anlagen nach Artikel 7 des Gesetzes erzeugt werden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Ausscheidung von Bauzonen und die Änderung von Nutzungsplänen in lärmbelasteten Gebieten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Erteilung von Baubewilligungen für Gebäude, die lärmempfindliche Räume enthalten und in lärmbelasteten Gebieten liegen;"
+            },
+            {
+              "marke": "d",
+              "text": "den Schallschutz gegen Aussen- und Innenlärm an neuen Gebäuden mit lärmempfindlichen Räumen;"
+            },
+            {
+              "marke": "e",
+              "text": "den Schallschutz gegen Aussenlärm an bestehenden Gebäuden mit lärmempfindlichen Räumen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Ermittlung von Aussenlärmimmissionen und ihre Beurteilung anhand von Belastungsgrenzwerten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie regelt nicht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Schutz gegen Lärm, der in einem Betriebsareal erzeugt wird, soweit er auf Betriebsgebäude und zugehörige Wohnungen innerhalb dieses Areals einwirkt;"
+            },
+            {
+              "marke": "b",
+              "text": "den Schutz gegen Infra- und Ultraschall."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "a30f1c3a00f2ac74749bedca85d63cabb5f0be0e88712fa14c0937c502f22335"
+    },
+    {
+      "id": "bund/LSV/art_2",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ortsfeste Anlagen sind Bauten, Verkehrsanlagen, haustechnische Anlagen und andere nichtbewegliche Einrichtungen, die beim Betrieb Aussenlärm erzeugen. Dazu gehören insbesondere Strassen, Eisenbahnanlagen, Flugplätze, Anlagen der Industrie, des Gewerbes und der Landwirtschaft, Schiessanlagen sowie fest eingerichtete militärische Schiess- und Übungsplätze."
+        },
+        {
+          "absatz": "2",
+          "text": "Als neue ortsfeste Anlagen gelten auch ortsfeste Anlagen und Bauten, deren Zweck vollständig geändert wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Emissionsbegrenzungen sind technische, bauliche, betriebliche, verkehrslenkende, -beschränkende oder -beruhigende Massnahmen an Anlagen sowie bauliche Massnahmen auf dem Ausbreitungsweg der Emissionen. Sie sind geeignet, die Erzeugung oder Ausbreitung des Aussenlärms zu verhindern oder zu verringern."
+        },
+        {
+          "absatz": "4",
+          "text": "Sanierungen sind Emissionsbegrenzungen für bestehende ortsfeste Anlagen."
+        },
+        {
+          "absatz": "5",
+          "text": "Belastungsgrenzwerte sind Immissionsgrenzwerte, Planungswerte und Alarmwerte. Sie werden nach der Lärmart, der Tageszeit und der Lärmempfindlichkeit der zu schützenden Gebäude und Gebiete festgelegt."
+        },
+        {
+          "absatz": "6",
+          "text": "Lärmempfindliche Räume sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Räume in Wohnungen, ausgenommen Küchen ohne Wohnanteil, Sanitärräume und Abstellräume;"
+            },
+            {
+              "marke": "b",
+              "text": "Räume in Betrieben, in denen sich Personen regelmässig während längerer Zeit aufhalten, ausgenommen Räume für die Nutztierhaltung und Räume mit erheblichem Betriebslärm."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "9c083fd5b44f721b9df41b031a1eca049188c010b5bc4baec149dcd260f66e99"
+    },
+    {
+      "id": "bund/LSV/art_3",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lärmemissionen von Motor-, Luft-, Wasser- und Schienenfahrzeugen müssen so weit begrenzt werden, als dies technisch und betrieblich möglich sowie wirtschaftlich tragbar ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Emissionsbegrenzungen gelten die Gesetzgebungen über den Strassenverkehr, die Zivilluftfahrt, die Binnenschifffahrt und die Eisenbahnen, wenn ein Fahrzeug einer dieser Gesetzgebungen untersteht."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Emissionsbegrenzungen bei den übrigen Fahrzeugen gelten die Vorschriften über bewegliche Geräte und Maschinen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "929b53202d769c948285a7c3be70335e02d83dfea67637d9ca50773122e40fed"
+    },
+    {
+      "id": "bund/LSV/art_4",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aussenlärmemissionen beweglicher Geräte und Maschinen müssen so weit begrenzt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als dies technisch und betrieblich möglich sowie wirtschaftlich tragbar ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "dass die betroffene Bevölkerung in ihrem Wohlbefinden nicht erheblich gestört wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörden ordnen betriebliche oder bauliche Massnahmen oder Massnahmen für den fachgerechten Unterhalt an."
+        },
+        {
+          "absatz": "3",
+          "text": "Lassen sich erheblich störende Lärmimmissionen, die beim Betrieb oder Einsatz militärischer Geräte, Maschinen und Waffen verursacht werden, nicht vermeiden, so gewährt die Vollzugsbehörde Erleichterungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Emissionen von Geräten und Maschinen, die dem Betrieb einer ortsfesten Anlage dienen, werden nach den Vorschriften über ortsfeste Anlagen begrenzt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "a547e5ef1c08c42945f6de556fbec36b18b6bbc0badd81ca4024475f7f11fc91"
+    },
+    {
+      "id": "bund/LSV/art_5",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Geräte und Maschinen, die zur Verwendung im Freien vorgesehen sind, dürfen nur nach einer Konformitätsbewertung und Kennzeichnung in Verkehr gebracht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Eidgenössische Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK) legt fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Arten von Geräten und Maschinen, die der Konformitätsbewertung und Kennzeichnung unterliegen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anforderungen an die vorsorgliche Emissionsbegrenzung und an die Kennzeichnung unter Berücksichtigung international anerkannter Normen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterlagen, die für die Konformitätsbewertung eingereicht werden müssen;"
+            },
+            {
+              "marke": "d",
+              "text": "die massgebenden Prüf-, Mess- und Berechnungsverfahren;"
+            },
+            {
+              "marke": "e",
+              "text": "die nachträgliche Kontrolle;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anerkennung ausländischer Prüfergebnisse und Kennzeichnungen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "fbb7808d85d459aade249b228c147b92fa2ca3425f1da441f30f8f2eb5c378fb"
+    },
+    {
+      "id": "bund/LSV/art_6",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Bundesamt für Umwelt (BAFU) erlässt Richtlinien über bauliche und betriebliche Massnahmen zur Begrenzung des Baulärms."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "6323acde9909ad7dcff6d424370a398e814d8d1ddbd187fe49a43abf26ab1523"
+    },
+    {
+      "id": "bund/LSV/art_7",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lärmemissionen einer neuen ortsfesten Anlage müssen nach den Anordnungen der Vollzugsbehörde so weit begrenzt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als dies technisch und betrieblich möglich sowie wirtschaftlich tragbar ist und"
+            },
+            {
+              "marke": "b",
+              "text": "dass die von der Anlage allein erzeugten Lärmimmissionen die Planungswerte nicht überschreiten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vollzugsbehörde gewährt Erleichterungen, soweit die Einhaltung der Planungswerte zu einer unverhältnismässigen Belastung für die Anlage führen würde und ein überwiegendes öffentliches, namentlich auch raumplanerisches Interesse an der Anlage besteht. Die Immissionsgrenzwerte dürfen jedoch nicht überschritten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei neuen Luft/Wasser-Wärmepumpen, die überwiegend der Raumheizung oder der Erwärmung von Trinkwasser dienen und deren Lärmimmissionen die Planungswerte nicht überschreiten, sind weitergehende Emissionsbegrenzungen nach Absatz 1 Buchstabe a nur zu treffen, wenn mit höchstens einem Prozent der Investitionskosten der Anlage eine Begrenzung der Emissionen von mindestens 3 dB erzielt werden kann."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "44273aac868539cf030bb4ed24f3c6e4bc5b4ba6b77911f4b5204d736a257a76"
+    },
+    {
+      "id": "bund/LSV/art_8",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird eine bestehende ortsfeste Anlage geändert, so müssen die Lärmemissionen der neuen oder geänderten Anlageteile nach den Anordnungen der Vollzugsbehörde so weit begrenzt werden, als dies technisch und betrieblich möglich sowie wirtschaftlich tragbar ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Anlage wesentlich geändert, so müssen die Lärmemissionen der gesamten Anlage mindestens so weit begrenzt werden, dass die Immissionsgrenzwerte nicht überschritten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Als wesentliche Änderungen ortsfester Anlagen gelten Umbauten, Erweiterungen und vom Inhaber der Anlage verursachte Änderungen des Betriebs, wenn zu erwarten ist, dass die Anlage selbst oder die Mehrbeanspruchung bestehender Verkehrsanlagen wahrnehmbar stärkere Lärmimmissionen erzeugen. Der Wiederaufbau von Anlagen gilt in jedem Fall als wesentliche Änderung."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird eine neue ortsfeste Anlage geändert, so gilt Artikel 7."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "09d0c638b9ef54962b41550ee2e8e572df588b953a751af1d4830392e3c67f11"
+    },
+    {
+      "id": "bund/LSV/art_9",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Betrieb neuer oder wesentlich geänderter ortsfester Anlagen darf nicht dazu führen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch die Mehrbeanspruchung einer Verkehrsanlage die Immissionsgrenzwerte überschritten werden oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch die Mehrbeanspruchung einer sanierungsbedürftigen Verkehrsanlage wahrnehmbar stärkere Lärmimmissionen erzeugt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "d4807544b16f8b4c791503b6863e7e7c315b65f2058849c85850e69eaa9cfc60"
+    },
+    {
+      "id": "bund/LSV/art_10",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Können bei neuen oder wesentlich geänderten öffentlichen oder konzessionierten ortsfesten Anlagen die Anforderungen nach den Artikeln 7 Absatz 2 und 8 Absatz 2 oder nach Artikel 9 nicht eingehalten werden, so verpflichtet die Vollzugsbehörde die Eigentümer der lärmbelasteten bestehenden Gebäude, die Fenster lärmempfindlicher Räume nach Anhang 1 gegen Schall zu dämmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebäudeeigentümer können mit Zustimmung der Vollzugsbehörde am Gebäude andere bauliche Schallschutzmassnahmen treffen, wenn diese den Lärm im Innern der Räume im gleichen Mass verringern."
+        },
+        {
+          "absatz": "3",
+          "text": "Schallschutzmassnahmen müssen nicht getroffen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie keine wahrnehmbare Verringerung des Lärms im Gebäude erwarten lassen;"
+            },
+            {
+              "marke": "b",
+              "text": "überwiegende Interessen des Ortsbildschutzes oder der Denkmalpflege entgegenstehen;"
+            },
+            {
+              "marke": "c",
+              "text": "das Gebäude voraussichtlich innerhalb von drei Jahren nach Inbetriebnahme der neuen oder geänderten Anlage abgebrochen wird oder die betroffenen Räume innerhalb dieser Frist einer lärmunempfindlichen Nutzung zugeführt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "1eae62c6c0c05291a84d815974ee7143cd94915f020563270fbc29c4ff091e4b"
+    },
+    {
+      "id": "bund/LSV/art_11",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Inhaber der neuen oder wesentlich geänderten Anlage trägt die Kosten für die Begrenzung der Emissionen, die seine Anlage verursacht."
+        },
+        {
+          "absatz": "2",
+          "text": "Muss der Gebäudeeigentümer Schallschutzmassnahmen nach Artikel 10 Absatz 1 treffen, so trägt der Inhaber der Anlage überdies die ausgewiesenen ortsüblichen Kosten für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Projektierung und Bauleitung;"
+            },
+            {
+              "marke": "b",
+              "text": "die nach Anhang 1 notwendige Schalldämmung der Fenster und die hiefür notwendigen Anpassungsarbeiten;"
+            },
+            {
+              "marke": "c",
+              "text": "die Finanzierung, wenn er trotz Aufforderung des Gebäudeeigentümers keinen Vorschuss geleistet hat;"
+            },
+            {
+              "marke": "d",
+              "text": "allfällige Gebühren."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Muss der Gebäudeeigentümer Schallschutzmassnahmen nach Artikel 10 Absatz 2 treffen, so trägt der Inhaber der Anlage die ausgewiesenen ortsüblichen Kosten, soweit sie die nach Absatz 2 nicht übersteigen. Die übrigen Kosten trägt der Gebäudeeigentümer."
+        },
+        {
+          "absatz": "4",
+          "text": "Müssen Emissionsbegrenzungen oder Schallschutzmassnahmen wegen des Lärms mehrerer Anlagen getroffen werden, so werden die Kosten entsprechend den Anteilen der Anlagen an den Lärmimmissionen aufgeteilt."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Kosten für den Unterhalt und die Erneuerung der Schallschutzmassnahmen trägt der Gebäudeeigentümer."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "85af205d85f84e3608a5b02eb82399ab17aced8f7e975d01c75ac88b9a654ac6"
+    },
+    {
+      "id": "bund/LSV/art_12",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vollzugsbehörde kontrolliert spätestens ein Jahr nach der Inbetriebnahme der neuen oder geänderten Anlage, ob die angeordneten Emissionsbegrenzungen und Schallschutzmassnahmen getroffen sind. In Zweifelsfällen prüft sie die Wirksamkeit der Massnahmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "40235f80911bad02743d4704872dc45e7060e3e7247d49035d143827f516061c"
+    },
+    {
+      "id": "bund/LSV/art_13",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei ortsfesten Anlagen, die wesentlich zur Überschreitung der Immissionsgrenzwerte beitragen, ordnet die Vollzugsbehörde nach Anhören der Inhaber der Anlagen die notwendigen Sanierungen an."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anlagen müssen so weit saniert werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als dies technisch und betrieblich möglich sowie wirtschaftlich tragbar ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "dass die Immissionsgrenzwerte nicht überschritten werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Stehen keine überwiegenden Interessen entgegen, so gibt die Vollzugsbehörde den Massnahmen, welche die Lärmerzeugung verhindern oder verringern, den Vorzug gegenüber Massnahmen, die lediglich die Lärmausbreitung verhindern oder verringern."
+        },
+        {
+          "absatz": "4",
+          "text": "Sanierungen müssen nicht getroffen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Immissionsgrenzwerte nur in noch nicht erschlossenen Bauzonen überschritten sind;"
+            },
+            {
+              "marke": "b",
+              "text": "aufgrund des kantonalen Bau- und Planungsrechts am Ort der Lärmimmissionen planerische, gestalterische oder bauliche Massnahmen getroffen werden, mit denen die Immissionsgrenzwerte bis zum Ablauf der festgesetzten Fristen (Art. 17) eingehalten werden können."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "c8f6b3a4d533bc78f02ec8b662463b8c247fe253bf34dc4890a6a100a2bdab97"
+    },
+    {
+      "id": "bund/LSV/art_14",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde gewährt Erleichterungen, soweit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Sanierung unverhältnismässige Betriebseinschränkungen oder Kosten verursachen würde;"
+            },
+            {
+              "marke": "b",
+              "text": "überwiegende Interessen namentlich des Ortsbild‑, Natur- und Landschaftsschutzes, der Verkehrs- und Betriebssicherheit sowie der Gesamtverteidigung der Sanierung entgegenstehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Alarmwerte dürfen jedoch bei privaten, nicht konzessionierten Anlagen nicht überschritten werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "f5d52938acc0aeab3f88e68e3455791e6dada295b61194361dc7481c5e593c26"
+    },
+    {
+      "id": "bund/LSV/art_15",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Können bei öffentlichen oder konzessionierten ortsfesten Anlagen wegen gewährten Erleichterungen die Alarmwerte nicht eingehalten werden, so verpflichtet die Vollzugsbehörde die Eigentümer der lärmbelasteten bestehenden Gebäude, die Fenster lärmempfindlicher Räume nach Anhang 1 gegen Schall zu dämmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebäudeeigentümer können mit Zustimmung der Vollzugsbehörde am Gebäude andere bauliche Schallschutzmassnahmen treffen, wenn diese den Lärm im Innern der Räume im gleichen Mass verringern."
+        },
+        {
+          "absatz": "3",
+          "text": "Schallschutzmassnahmen müssen nicht getroffen werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie keine wahrnehmbare Verringerung des Lärms im Gebäude erwarten lassen;"
+            },
+            {
+              "marke": "b",
+              "text": "überwiegende Interessen des Ortsbildschutzes oder der Denkmalpflege entgegenstehen;"
+            },
+            {
+              "marke": "c",
+              "text": "das Gebäude voraussichtlich innerhalb von drei Jahren nach Zustellung der Verfügung über die zu treffenden Schallschutzmassnahmen abgebrochen wird oder die betroffenen Räume innerhalb dieser Frist einer lärmunempfindlichen Nutzung zugeführt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "8b3bf3466459c87509075cc8591ec4b8e32b4f8aa72367ed0988033eb2cbd79e"
+    },
+    {
+      "id": "bund/LSV/art_16",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Inhaber der Anlage trägt die Kosten für die Sanierung seiner Anlage."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Inhaber einer öffentlichen oder konzessionierten Anlage trägt überdies die Kosten nach Artikel 11 für die Schallschutzmassnahmen an bestehenden Gebäuden, wenn er sich nicht nach Artikel 20 Absatz 2 des Gesetzes von der Übernahme der Kosten befreien kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Müssen Sanierungen oder Schallschutzmassnahmen wegen des Lärms mehrerer Anlagen getroffen werden, so werden die Kosten entsprechend den Anteilen der Anlagen an den Lärmimmissionen aufgeteilt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kosten für den Unterhalt und die Erneuerung der Schallschutzmassnahmen trägt der Gebäudeeigentümer."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "c9d25f9c423e66a6998d8554abf0df38f8026300ddcd1018aef3eecb847ed2b7"
+    },
+    {
+      "id": "bund/LSV/art_17",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde setzt die Fristen für Sanierungen und Schallschutzmassnahmen nach deren Dringlichkeit fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Beurteilung der Dringlichkeit sind massgebend:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Ausmass der Überschreitung der Immissionsgrenzwerte;"
+            },
+            {
+              "marke": "b",
+              "text": "die Anzahl der vom Lärm betroffenen Personen;"
+            },
+            {
+              "marke": "c",
+              "text": "das Verhältnis von Kosten und Nutzen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Sanierungen und Schallschutzmassnahmen müssen spätestens 15 Jahre nach Inkrafttreten dieser Verordnung durchgeführt sein."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Durchführung von Sanierungen und Schallschutzmassnahmen bei Strassen wird die Frist (Abs. 3) verlängert:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Nationalstrassen bis zum 31. März 2015;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Hauptstrassen nach Artikel 12 des Bundesgesetzes vom 22. März 1985 über die Verwendung der zweckgebundenen Mineralölsteuer (MinVG) und für übrige Strassen bis zum 31. März 2018."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Durchführung von Sanierungen und Schallschutzmassnahmen bei Eisenbahnanlagen gelten die Fristen des Bundesgesetzes vom 24. März 2000 über die Lärmsanierung der Eisenbahnen."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Sanierungen und Schallschutzmassnahmen müssen durchgeführt sein:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Militärflugplätzen: am 31. Juli 2020;"
+            },
+            {
+              "marke": "b",
+              "text": "bei zivilen Flugplätzen, auf denen Grossflugzeuge verkehren: am 31. Mai 2016;"
+            },
+            {
+              "marke": "c",
+              "text": "bei zivilen Schiessanlagen, die aufgrund der Änderung vom 23. August 2006 von Anhang 7 sanierungspflichtig wurden: am 1. November 2016;"
+            },
+            {
+              "marke": "d",
+              "text": "bei militärischen Waffen-, Schiess- und Übungsplätzen: am 31. Juli 2025."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "338cade118ceaae3ca74f0509bdd25586a431a26176f1de64d1ee566f8148e5f"
+    },
+    {
+      "id": "bund/LSV/art_18",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Vollzugsbehörde kontrolliert spätestens ein Jahr nach der Durchführung der Sanierungen und Schallschutzmassnahmen, ob diese den angeordneten Massnahmen entsprechen. In Zweifelsfällen prüft sie die Wirksamkeit der Massnahmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "0f5534d94d6c451c9a83d81a242bfbf54b902a55e680e81ef5619ef2c4dcfa68"
+    },
+    {
+      "id": "bund/LSV/art_19",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_20",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU führt bei den Vollzugsbehörden periodisch Erhebungen über den Stand der Sanierungen und Schallschutzmassnahmen durch, namentlich bei Strassen, Eisenbahnanlagen, Flugplätzen, Schiessanlagen sowie militärischen Schiess- und Übungsplätzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Strassen verlangt es von den Vollzugsbehörden jährlich insbesondere die folgenden, bis zum 31. März einzureichenden Unterlagen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die im vorangegangenen Jahr durchgeführten Sanierungen von Strassen oder Strassenabschnitten und die Schallschutzmassnahmen, und"
+            },
+            {
+              "marke": "2",
+              "text": "die Wirksamkeit und die Kosten dieser Sanierungen und Schallschutzmassnahmen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für Nationalstrassen verlangt es die Angaben nach Absatz 2 vom Bundesamt für Strassen. Für die Hauptstrassen und die übrigen Strassen verlangt es diese Angaben von den Kantonen. Die Angaben sind nach den Vorgaben des BAFU einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAFU beurteilt die Angaben insbesondere in Bezug auf den Sanierungsfortschritt sowie auf Kosten und Wirksamkeit der Massnahmen. Es teilt den Vollzugsbehörden die Ergebnisse mit und veröffentlicht sie."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "3aef1876d1efddabefaacfd84c69e05ec235f140269188cb478deb7b625c589e"
+    },
+    {
+      "id": "bund/LSV/art_21",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bund gewährt Beiträge für Sanierungen und Schallschutzmassnahmen an bestehenden Gebäuden bei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Hauptstrassen nach Artikel 12 MinVG;"
+            },
+            {
+              "marke": "b",
+              "text": "übrigen Strassen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beiträge nach Absatz 1 Buchstabe a sind Bestandteil der Globalbeiträge gemäss Artikel 13 MinVG. Die Beiträge nach Absatz 1 Buchstabe b werden global im Rahmen von Programmvereinbarungen mit den Kantonen gewährt."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "695e2a600b0f945290d103cc9e09c21107df464180b74912fec31d03cd9042a6"
+    },
+    {
+      "id": "bund/LSV/art_22",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton reicht das Gesuch um Beiträge für Sanierungen und Schallschutzmassnahmen bei Strassen nach Artikel 21 Absatz 1 Buchstabe b beim BAFU ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch muss insbesondere Angaben enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "die vorgesehenen Sanierungs- und Schallschutzmassnahmen und deren Kosten;"
+            },
+            {
+              "marke": "c",
+              "text": "die zu erzielende Wirksamkeit der Sanierungsmassnahmen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b95bb351c970df3d3326686c0b54dd31a5737fdece4705cbfc121130a932653c"
+    },
+    {
+      "id": "bund/LSV/art_23",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU schliesst die Programmvereinbarung mit der zuständigen kantonalen Behörde ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegenstand der Programmvereinbarung sind insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Wirksamkeit der Sanierungsmassnahmen;"
+            },
+            {
+              "marke": "abis",
+              "text": "die Schallschutzmassnahmen an bestehenden Gebäuden;"
+            },
+            {
+              "marke": "b",
+              "text": "die Beitragsleistung des Bundes;"
+            },
+            {
+              "marke": "c",
+              "text": "das Controlling."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Dauer der Programmvereinbarung beträgt vier Jahre; in begründeten Fällen kann eine längere oder kürzere Dauer vereinbart werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Das BAFU erlässt Richtlinien über das Vorgehen bei Programmvereinbarungen sowie über die Angaben und Unterlagen zu den Gegenständen der Programmvereinbarung."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "2c8d1ab3ce0af686b42cea252d6f5bdb9852c26ec5c05b6b5dc041995b3191ef"
+    },
+    {
+      "id": "bund/LSV/art_24",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Höhe der Beiträge für Sanierungen richtet sich nach der Wirksamkeit der Sanierungsmassnahmen. Massgebend dafür sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anzahl Personen, die durch die Sanierungsmassnahmen vor schädlichen oder lästigen Lärmimmissionen geschützt werden; und"
+            },
+            {
+              "marke": "b",
+              "text": "die Anzahl Personen, bei denen die Lärmbelastung durch diese Massnahmen wahrnehmbar gesenkt wird."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Schallschutzmassnahmen an bestehenden Gebäuden werden 200 Franken pro Schallschutzfenster oder andere bauliche, in ihrer Wirkung gleichwertige Schallschutzmassnahme gewährt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Höhe der Beiträge wird zwischen Bund und Kanton ausgehandelt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "85b829eb039c092fe1eb988fb906e64a984608299836f5e542db5ac73226bf93"
+    },
+    {
+      "id": "bund/LSV/art_24_a_24_b",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "24_a_24_b",
+      "artikelLabel": "Art. 24a24b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_24_a_24_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "bund/LSV/art_25",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Globale Beiträge werden in Tranchen ausbezahlt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "924c3698e03fa741c93f2cc71db1a8c23d4e5eed8f7a36647d20d1fe0155ab73"
+    },
+    {
+      "id": "bund/LSV/art_26",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton erstattet dem BAFU jährlich Bericht über die Verwendung der Beiträge."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAFU kontrolliert stichprobenweise:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausführung einzelner Massnahmen gemäss den Programmzielen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verwendung der ausbezahlten Beiträge."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "da0dc548cbc5bd0606dd3ea12f2e772b4544ce8b5015a6701bc98c797a5d31c0"
+    },
+    {
+      "id": "bund/LSV/art_27",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAFU hält die Tranchenzahlungen während der Programmdauer ganz oder teilweise zurück, wenn der Kanton:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "seiner Berichterstattungspflicht (Art. 26 Abs. 1) nicht nachkommt;"
+            },
+            {
+              "marke": "b",
+              "text": "eine erhebliche Störung seiner Leistung schuldhaft verursacht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt sich nach der Programmdauer heraus, dass die Leistung mangelhaft ist, so verlangt das BAFU vom Kanton Nachbesserung; es setzt ihm dafür eine angemessene Frist."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden Anlagen, an die Beiträge geleistet wurden, ihrem Zweck entfremdet, so kann das BAFU vom Kanton verlangen, dass er innerhalb einer angemessenen Frist die Unterlassung oder Rückgängigmachung der Zweckentfremdung erwirkt."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden die Mängel nicht behoben oder wird die Zweckentfremdung nicht unterlassen oder nicht rückgängig gemacht, so richtet sich die Rückforderung nach den Artikeln 28 und 29 des Subventionsgesetzes vom 5. Oktober 1990."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "c7c5632f27bc9243b3f8de98484df58d22f6a1df7cd3a5810381b356bbfec615"
+    },
+    {
+      "id": "bund/LSV/art_28",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "bund/LSV/art_29",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die massgebenden Belastungsgrenzwerte können durch planerische, gestalterische oder bauliche Massnahmen eingehalten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Freiräume nach Artikel 24 Absatz 3 Buchstabe b des Gesetzes müssen eine angemessene Grösse aufweisen sowie zu Fuss und hindernisfrei erreichbar sein. Sie weisen eine auf die Erholung ausgerichtete Gestaltung und Infrastruktur auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Massnahmen nach Artikel 24 Absatz 3 Buchstabe c des Gesetzes müssen stufengerecht festgelegt werden. Sie tragen in akustischer Hinsicht zu einer angemessenen Wohnqualität bei, wenn sie die Lärmemissionen begrenzen oder die Störung des Wohlbefindens auf andere Weise mindern."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "9dbe2ea4d73644f863143e7cc8fa5cc591f45c970f9c84d33cf8ba0963bccc27"
+    },
+    {
+      "id": "bund/LSV/art_30",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_31",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind die Immissionsgrenzwerte überschritten, so dürfen Neubauten und wesentliche Änderungen von Gebäuden mit lärmempfindlichen Räumen nur bewilligt werden, wenn diese Werte eingehalten werden können:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch die Anordnung der lärmempfindlichen Räume auf der dem Lärm abgewandten Seite des Gebäudes; oder"
+            },
+            {
+              "marke": "b",
+              "text": "durch bauliche oder gestalterische Massnahmen, die das Gebäude gegen Lärm abschirmen."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Kontrollierte Wohnraumlüftungen und Kühlsysteme müssen dem Stand der Technik entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Können die Anforderungen nach Artikel 22 Absatz 2 Buchstabe a des Gesetzes bei Fluglärm oder bei höchstens zehn Prozent der Wohneinheiten von grossen Wohnüberbauungen nicht eingehalten werden, so darf die Baubewilligung ausnahmsweise erteilt werden, wenn an der Errichtung des Gebäudes ein überwiegendes Interesse besteht und die kantonale Behörde zustimmt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Grundeigentümer tragen die Kosten für die Massnahmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "bc32a8ace11d2458b2d174e4a595ca71d1420f25725f0eba24b331d23bf7509b"
+    },
+    {
+      "id": "bund/LSV/art_31_a",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "31_a",
+      "artikelLabel": "Art. 31a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_31_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_32",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bauherr eines neuen Gebäudes sorgt dafür, dass der Schallschutz bei Aussenbauteilen und Trennbauteilen lärmempfindlicher Räume sowie bei Treppen und haustechnischen Anlagen den anerkannten Regeln der Baukunde entspricht. Als solche gelten beim Lärm der zivilen Flugplätze mit Verkehr von Grossflugzeugen insbesondere die erhöhten Anforderungen und beim Lärm der übrigen ortsfesten Anlagen insbesondere die Mindestanforderungen nach der SIA-Norm 181 des Schweizerischen Ingenieur- und Architekten-Vereins."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind zwar die Immissionsgrenzwerte überschritten, jedoch die Voraussetzungen nach Artikel 22 des Gesetzes für die Erteilung der Baubewilligung erfüllt, so verschärft die Vollzugsbehörde die Anforderungen an die Schalldämmung der Aussenbauteile angemessen. Die Kosten für diese Verschärfung gelten in der Regel als angemessen, wenn sie höchstens ein Prozent der Gebäudekosten betragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anforderungen gelten auch für Aussenbauteile, Trennbauteile, Treppen und haustechnische Anlagen, die umgebaut, ersetzt oder neu eingebaut werden. Die Vollzugsbehörde gewährt auf Gesuch hin Erleichterungen, wenn die Einhaltung der Anforderungen unverhältnismässig ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "dd21aa21bd1fb69bae32f31314c436b762ca060953143f76bd3ea13a082fe0e6"
+    },
+    {
+      "id": "bund/LSV/art_33",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Aussenbauteile grenzen einen Raum gegen aussen ab (z. B. Fenster, Aussentüren, Aussenwände, Dächer)."
+        },
+        {
+          "absatz": "2",
+          "text": "Trennbauteile grenzen Räume verschiedener Nutzungseinheiten wie z. B. Wohnungen gegeneinander ab (z.B. Innenwände, Decken, Türen)."
+        },
+        {
+          "absatz": "3",
+          "text": "Haustechnische Anlagen sind mit einem Gebäude fest verbundene Anlagen wie Heizungs-, Lüftungs-, Versorgungs- und Entsorgungsanlagen, Aufzüge oder Waschmaschinen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "7b015ac5cdb159266a29ddf2d53d64b16c325a5072137f5bba7825303c566742"
+    },
+    {
+      "id": "bund/LSV/art_34",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bauherr muss im Baugesuch angeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Aussenlärmbelastung und die nach Artikel 31 Absatz 1 geprüften Massnahmen, sofern die Immissionsgrenzwerte überschritten sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Nutzung der Räume;"
+            },
+            {
+              "marke": "c",
+              "text": "die Aussenbauteile und Trennbauteile lärmempfindlicher Räume."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Bauvorhaben in Gebieten, in denen die Immissionsgrenzwerte überschritten sind, kann die Vollzugsbehörde Angaben über die Schalldämmung der Aussenbauteile verlangen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "ba185ad33876971f4abb52c7d1311a9c1763cd42a59acccd2b0b89f8482120fc"
+    },
+    {
+      "id": "bund/LSV/art_35",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach Abschluss der Bauarbeiten prüft die Vollzugsbehörde durch Stichproben, ob die Schallschutzmassnahmen die Anforderungen erfüllen. In Zweifelsfällen muss sie die Prüfung vornehmen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "4521db69b80b9659a37ce40184d39454174a67fc2bfe48eb4a09d0ba5271a716"
+    },
+    {
+      "id": "bund/LSV/art_36",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde ermittelt die Aussenlärmimmissionen ortsfester Anlagen oder ordnet deren Ermittlung an, wenn sie Grund zur Annahme hat, dass die massgebenden Belastungsgrenzwerte überschritten sind oder ihre Überschreitung zu erwarten ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie berücksichtigt dabei die Zu- oder Abnahme der Lärmimmissionen, die zu erwarten ist wegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Errichtung, Änderung oder Sanierung ortsfester Anlagen, insbesondere wenn entsprechende Projekte im Zeitpunkt der Ermittlung bereits bewilligt oder öffentlich aufgelegt worden sind; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Errichtung, der Änderung oder dem Abbruch anderer Bauten, wenn die Projekte im Zeitpunkt der Ermittlung bereits öffentlich aufgelegt sind."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "2a60329ec5d2459a72de6f6d6cdf1e6a7f2f9b50e281271b9330d1a0fb289794"
+    },
+    {
+      "id": "bund/LSV/art_37",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Strassen, Eisenbahnanlagen, Flugplätzen und militärischen Waffen-, Schiess- und Übungsplätzen hält die Vollzugsbehörde die nach Artikel 36 ermittelten Lärmimmissionen in je einem Kataster fest (Lärmbelastungskataster)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Lärmbelastungskataster geben an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die ermittelte Lärmbelastung;"
+            },
+            {
+              "marke": "b",
+              "text": "die angewendeten Berechnungsverfahren;"
+            },
+            {
+              "marke": "c",
+              "text": "die Eingabedaten für die Lärmberechnung;"
+            },
+            {
+              "marke": "d",
+              "text": "die in der Nutzungsplanung festgelegte Nutzung der lärmbelasteten Gebiete;"
+            },
+            {
+              "marke": "e",
+              "text": "die geltenden Empfindlichkeitsstufen;"
+            },
+            {
+              "marke": "f",
+              "text": "die Anlagen und ihre Eigentümer;"
+            },
+            {
+              "marke": "g",
+              "text": "die Anzahl Personen, die von über den massgebenden Belastungsgrenzwerten liegenden Lärmimmissionen betroffen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vollzugsbehörde sorgt für die Überprüfung und Berichtigung der Kataster."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie reicht die Lärmbelastungskataster auf Aufforderung hin dem BAFU ein. Dieses kann Empfehlungen für eine vergleichbare Erfassung und Darstellung der Daten erlassen."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Ermittlung der Lärmimmissionen, die der Flughafen Basel-Mülhausen auf dem Gebiet der Schweiz erzeugt, sorgt das Bundesamt für Zivilluftfahrt."
+        },
+        {
+          "absatz": "6",
+          "text": "Jede Person kann die Lärmbelastungskataster so weit einsehen, als nicht das Fabrikations- und Geschäftsgeheimnis und keine anderen überwiegenden Interessen entgegenstehen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "716f7827bd9bffef57dbee3e6d4a00f9daed369951ef7ef1e369729c3c84972f"
+    },
+    {
+      "id": "bund/LSV/art_37_a",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "37_a",
+      "artikelLabel": "Art. 37a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde hält in ihrem Entscheid über die Erstellung, Änderung oder Sanierung einer Anlage die zulässigen Lärmimmissionen fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Steht fest oder ist zu erwarten, dass die Lärmimmissionen einer Anlage von den im Entscheid festgehaltenen Immissionen auf Dauer wesentlich abweichen, so trifft die Vollzugsbehörde die notwendigen Massnahmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAFU kann Empfehlungen für eine vergleichbare Erfassung und Darstellung der in diesen Entscheiden festgehaltenen Lärmimmissionen erlassen."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_37_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "25f77d5a20318d0653ce01607279333af8199902df410b916c6ad7fbd4f60ac7"
+    },
+    {
+      "id": "bund/LSV/art_38",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lärmimmissionen werden als Beurteilungspegel Lr oder als Maximalpegel Lmax anhand von Berechnungen oder Messungen ermittelt."
+        },
+        {
+          "absatz": "2",
+          "text": "Fluglärmimmissionen werden grundsätzlich durch Berechnungen ermittelt. Die Berechnungen sind nach dem anerkannten Stand der Technik durchzuführen. Das BAFU empfiehlt geeignete Berechnungsverfahren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anforderungen an die Berechnungsverfahren und Messgeräte richten sich nach Anhang 2."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "699a235fb2680811fd3d20c48dfb6a1ce5f03f7a7a6a29121cf9832809ad9695"
+    },
+    {
+      "id": "bund/LSV/art_39",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Gebäuden werden die Lärmimmissionen in der Mitte der offenen Fenster lärmempfindlicher Räume ermittelt. Fluglärmimmissionen können auch in der Nähe der Gebäude ermittelt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Im nicht überbauten Gebiet von Zonen mit erhöhtem Lärmschutzbedürfnis werden die Lärmimmissionen 1,5 m über dem Boden ermittelt."
+        },
+        {
+          "absatz": "3",
+          "text": "In noch nicht überbauten Bauzonen werden die Lärmimmissionen dort ermittelt, wo nach dem Bau- und Planungsrecht Gebäude mit lärmempfindlichen Räumen erstellt werden dürfen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei privat nutzbaren Aussenräumen werden die Lärmimmissionen 1,5 m über dem Boden des Aussenraums ermittelt."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "d2396667ba6833e8f92ff702cc2bcb6ac13299337785d93c5af92da2dce1eab3"
+    },
+    {
+      "id": "bund/LSV/art_40",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde beurteilt die ermittelten Aussenlärmimmissionen ortsfester Anlagen anhand der Belastungsgrenzwerte nach den Anhängen 3 ff."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Belastungsgrenzwerte sind auch überschritten, wenn die Summe gleichartiger Lärmimmissionen, die von mehreren Anlagen erzeugt werden, sie überschreitet. Dies gilt nicht für die Planungswerte bei neuen ortsfesten Anlagen (Art. 7 Abs. 1)."
+        },
+        {
+          "absatz": "3",
+          "text": "Fehlen Belastungsgrenzwerte, so beurteilt die Vollzugsbehörde die Lärmimmissionen nach Artikel 15 des Gesetzes. Sie berücksichtigt auch die Artikel 19 und 23 des Gesetzes."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "53fb8724c1378f57292a05fc180f557bbae751a7fbf8b3c2c1f156990b0c5727"
+    },
+    {
+      "id": "bund/LSV/art_41",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Belastungsgrenzwerte gelten bei Gebäuden mit lärmempfindlichen Räumen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gelten ausserdem:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in noch nicht überbauten Bauzonen dort, wo nach dem Bau- und Planungsrecht Gebäude mit lärmempfindlichen Räumen erstellt werden dürfen;"
+            },
+            {
+              "marke": "b",
+              "text": "im nicht überbauten Gebiet von Zonen mit erhöhtem Lärmschutzbedürfnis."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die Immissionsgrenzwerte gelten zusätzlich bei der Erteilung der Baubewilligung auf der gesamten Fläche des privat nutzbaren Aussenraums nach Artikel 22 Absatz 2 Buchstabe a Ziffer 3 des Gesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Gebiete und Gebäude, in denen sich Personen in der Regel nur am Tag oder in der Nacht aufhalten, gelten für die Nacht bzw. den Tag keine Belastungsgrenzwerte."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "e9e28ea91389aa2b16a9a4d7da67a715d31d5b673c0379122886d499a71328d8"
+    },
+    {
+      "id": "bund/LSV/art_42",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Räumen in Betrieben (Art. 2 Abs. 6 Bst. b) , die in Gebieten der Empfindlichkeitsstufen I, II oder III liegen, gelten um 5 dB(A) höhere Planungswerte und Immissionsgrenzwerte."
+        },
+        {
+          "absatz": "2",
+          "text": "Absatz 1 gilt nicht für Räume in Schulen, Anstalten und Heimen. Für Räume in Gasthäusern gilt er nur, soweit sie auch bei geschlossenen Fenstern ausreichend belüftet werden können."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "dea2748b8e59ac9a19803cef4aa9addc94ff8a22580c639f8448896113a6c404"
+    },
+    {
+      "id": "bund/LSV/art_43",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Nutzungszonen nach Artikel 14 ff. des Raumplanungsgesetzes vom 22. Juni 1979 gelten folgende Empfindlichkeitsstufen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Empfindlichkeitsstufe I in Zonen mit einem erhöhten Lärmschutzbedürfnis, namentlich in Erholungszonen;"
+            },
+            {
+              "marke": "b",
+              "text": "die Empfindlichkeitsstufe II in Zonen, in denen keine störenden Betriebe zugelassen sind, namentlich in Wohnzonen sowie Zonen für öffentliche Bauten und Anlagen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Empfindlichkeitsstufe III in Zonen, in denen mässig störende Betriebe zugelassen sind, namentlich in Wohn- und Gewerbezonen (Mischzonen) sowie Landwirtschaftszonen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Empfindlichkeitsstufe IV in Zonen, in denen stark störende Betriebe zugelassen sind, namentlich in Industriezonen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Teilen von Nutzungszonen der Empfindlichkeitsstufe I oder II kann die nächst höhere Stufe zugeordnet werden, wenn sie mit Lärm vorbelastet sind."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "d1224aed971d8db31b509bead48dfa85e8ad504f52ec5d029f42f26335851898"
+    },
+    {
+      "id": "bund/LSV/art_44",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone sorgen dafür, dass die Empfindlichkeitsstufen den Nutzungszonen in den Baureglementen oder Nutzungsplänen der Gemeinden zugeordnet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Empfindlichkeitsstufen werden bei der Ausscheidung oder Änderung der Nutzungszonen oder bei der Änderung der Baureglemente zugeordnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zur Zuordnung bestimmen die Kantone die Empfindlichkeitsstufen im Einzelfall nach Artikel 43."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "3fb9dff31ab7e593d2cacfb9388c556ab99f1f4aad5362ffd44ad8b72af05ad4"
+    },
+    {
+      "id": "bund/LSV/art_45",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone vollziehen diese Verordnung, soweit diese den Vollzug nicht dem Bund überträgt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenden Bundesbehörden andere Bundesgesetze oder völkerrechtliche Vereinbarungen oder Beschlüsse an, die Gegenstände dieser Verordnung betreffen, so vollziehen sie dabei auch diese Verordnung. Für die Mitwirkung des BAFU sowie der Kantone gilt Artikel 41 Absätze 2 und 4 des Gesetzes; gesetzliche Geheimhaltungspflichten bleiben vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den Vollzug der Vorschriften über Emissionsbegrenzungen (Art. 4, 7–9 und 12), Sanierungen (Art. 13, 14, 16–18 und 20) sowie über die Ermittlung und Beurteilung von Lärmimmissionen (Art. 36, 37, 37 a und 40) sorgt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "das Bundesamt für Energie in den Fällen, in denen das Eidgenössische Starkstrominspektorat ( ESTI ) nach Artikel 16 Absatz 2 Buchstabe b des Elektrizitätsgesetzes vom 24. Juni 1902 Einsprachen nicht erledigen oder Differenzen mit den beteiligten Bundesbehörden nicht ausräumen konnte,"
+            },
+            {
+              "marke": "2",
+              "text": "in den anderen Fällen das ESTI ;"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Sind für das Anordnen von Emissionsbegrenzungen und Sanierungen Bundesbehörden, für das Anordnen von Schallschutzmassnahmen jedoch kantonale Behörden zuständig, so stimmen beide Behörden die Massnahmen aufeinander ab."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei Nationalstrassen sorgt das UVEK auch für den Vollzug der Vorschriften über Schallschutzmassnahmen (Art. 10 und 15). Dabei koordiniert es den Vollzug der Vorschriften mit den Schallschutzmassnahmen, die von den Kantonen angeordnet werden."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "11d60394f608f1f0fc0d83892a7607eea0aea4ee04ce6d18b59ff777805b5ac2"
+    },
+    {
+      "id": "bund/LSV/art_45_a",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "45_a",
+      "artikelLabel": "Art. 45a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAFU führt eine nationale Übersicht über die Lärmbelastung. Es veröffentlicht eine georeferenzierte Darstellung der Lärmbelastung insbesondere für Strassen-, Eisenbahn- und Fluglärm sowie für den Lärm von militärischen Waffen-, Schiess- und Übungsplätzen. Es aktualisiert diese Darstellung mindestens alle fünf Jahre."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_45_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "5459261bdfd0b11c495a03869a410f1cc5568644391911b67133cb66755e9730"
+    },
+    {
+      "id": "bund/LSV/art_46",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAFU gibt die minimalen Geodatenmodelle und Darstellungsmodelle für Geobasisdaten nach dieser Verordnung vor, für die es im Anhang 1 der Geoinformationsverordnung vom 21. Mai 2008 als Fachstelle des Bundes bezeichnet ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "1dd5f76eec3f30255252ff96838190644dde04402eccdd1f6d4592885d5ed484"
+    },
+    {
+      "id": "bund/LSV/art_47",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ortsfeste Anlagen gelten als neue ortsfeste Anlagen, wenn der Entscheid, der den Beginn der Bauarbeiten gestattet, bei Inkrafttreten des Gesetzes noch nicht rechtskräftig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für ortsfeste Anlagen, die geändert werden sollen, gelten die Artikel 8–12 nur, wenn der Entscheid, der die Änderung gestattet, bei Inkrafttreten des Gesetzes noch nicht rechtskräftig ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Gebäude gelten als neue Gebäude, wenn die Baubewilligung bei Inkrafttreten des Gesetzes noch nicht rechtskräftig ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Gebäude, die geändert werden sollen, gelten die Artikel 31 und 32 Absatz 3 nur, wenn die Baubewilligung bei Inkrafttreten des Gesetzes noch nicht rechtskräftig ist."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "9ce09fdd32532192637c906bb351c27e5fed6308da0cc95fd03fd1579de9d09e"
+    },
+    {
+      "id": "bund/LSV/art_48",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_48_a",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "48_a",
+      "artikelLabel": "Art. 48a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_48_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_49",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/LSV/art_50",
+      "ebene": "bund",
+      "quelle": "LSV",
+      "erlass": "LSV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. April 1987 in Kraft."
+        }
+      ],
+      "stand": "2026-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260401",
+      "sha": "2c49d5cd874198d85fe9acbf848b42439a1ee2af7ef8b9da619612037562eba3"
+    }
+  ]
+}

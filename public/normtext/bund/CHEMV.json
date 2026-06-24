@@ -1,0 +1,3727 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/CHEMV/art_1",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ermittlung und Beurteilung der Gefahren und Risiken für das Leben und die Gesundheit des Menschen sowie für die Umwelt, die von Stoffen und Zubereitungen ausgehen können;"
+            },
+            {
+              "marke": "b",
+              "text": "die Voraussetzungen für das Inverkehrbringen von Stoffen und Zubereitungen, die den Menschen oder die Umwelt gefährden können;"
+            },
+            {
+              "marke": "c",
+              "text": "den Umgang mit Stoffen und Zubereitungen, die den Menschen oder die Umwelt gefährden können;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bearbeitung von Daten über Stoffe und Zubereitungen durch die Vollzugsbehörden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Biozidprodukte und deren Wirkstoffe sowie für Pflanzenschutzmittel und deren Wirkstoffe und Formulierungsbeistoffe gilt diese Verordnung, soweit in der Biozidprodukteverordnung vom 18. Mai 2005 beziehungsweise in der Pflanzenschutzmittelverordnung vom 20. August 2025 darauf verwiesen wird."
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die vorliegende Verordnung gilt für Tabakprodukte und elektronische Zigaretten nach Artikel 3 Buchstaben a–f des Tabakproduktegesetzes vom 1. Oktober 2021 sowie für gleichartige Produkte, die ihnen nach Artikel 3 der Tabakprodukteverordnung vom 28. August 2024 (TabPV) gleichgestellt sind, soweit in der TabPV darauf verwiesen wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Für radioaktive Stoffe und Zubereitungen gilt diese Verordnung, soweit es nicht um Wirkungen geht, die auf der radioaktiven Strahlung dieser Stoffe und Zubereitungen beruhen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für kosmetische Mittel im Sinne von Artikel 53 Absatz 1 der Lebensmittel- und Gebrauchsgegenständeverordnung vom 16. Dezember 2016 in Form von Fertigerzeugnissen, die für private oder berufliche Verwenderinnen bestimmt sind, gelten ausschliesslich die Artikel 5–7 und 81 und nur insoweit, als es um die Belange des Umweltschutzes sowie die Einstufung und die Beurteilung hinsichtlich der Umweltgefährlichkeit geht."
+        },
+        {
+          "absatz": "5",
+          "text": "Diese Verordnung gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Transport von Stoffen und Zubereitungen auf der Strasse, der Schiene, dem Wasser, in der Luft und in Rohrleitungsanlagen, mit Ausnahme von Artikel 10 Absatz 1 Buchstabe b;"
+            },
+            {
+              "marke": "b",
+              "text": "die Durchfuhr von Stoffen und Zubereitungen unter Zollüberwachung, sofern dabei keine Be- oder Verarbeitung erfolgt;"
+            },
+            {
+              "marke": "c",
+              "text": "Stoffe und Zubereitungen in Form folgender Fertigerzeugnisse, die für private und berufliche Verwenderinnen bestimmt sind: 1. Lebensmittel nach Artikel 4 des Lebensmittelgesetzes vom 20. Juni 2014 (LMG),"
+            },
+            {
+              "marke": "2",
+              "text": "Arzneimittel nach Artikel 4 Absatz 1 Buchstabe a und Medizinprodukte nach Artikel 4 Absatz 1 Buchstabe b des Heilmittelgesetzes vom 15. Dezember 2000,"
+            },
+            {
+              "marke": "3",
+              "text": "Futtermittel im Sinne von Artikel 3 Absatz 1 der Futtermittel-Verordnung vom 26. Oktober 2011;"
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Für eingeführte Stoffe und Zubereitungen, die ausschliesslich umetikettiert und ansonsten unverändert ausgeführt werden, gelten die Artikel 57, 62 und 67."
+        },
+        {
+          "absatz": "7",
+          "text": "Für gefährliche Stoffe und Zubereitungen, die ausgeführt werden, gilt zusätzlich die PIC-Verordnung vom 10. November 2004."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1be0e39c99cd56d852481a03cacd664e0df7862fe82b60c531166a0f2cb499f8"
+    },
+    {
+      "id": "bund/CHEMV/art_2",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Sinne einer näheren Ausführung gegenüber dem ChemG bedeuten in dieser Verordnung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Stoff: chemisches Element und seine Verbindungen in natürlicher Form oder gewonnen durch ein Herstellungsverfahren, einschliesslich der zur Wahrung seiner Stabilität notwendigen Zusatzstoffe und der durch das angewandte Verfahren bedingten Verunreinigungen, aber mit Ausnahme von Lösungsmitteln, die von dem Stoff ohne Beeinträchtigung seiner Stabilität und ohne Änderung seiner Zusammensetzung abgetrennt werden können;"
+            },
+            {
+              "marke": "b",
+              "text": "Herstellerin: 1. jede natürliche oder juristische Person mit Wohnsitz, Geschäftssitz oder Zweigniederlassung in der Schweiz , die Stoffe, Zubereitungen oder Gegenstände beruflich oder gewerblich herstellt, gewinnt oder einführt,"
+            },
+            {
+              "marke": "2",
+              "text": "als Herstellerin gilt auch, wer Stoffe, Zubereitungen oder Gegenstände in der Schweiz bezieht und sie in unveränderter Zusammensetzung gewerblich abgibt: – unter eigenem Namen ohne Angabe des Namens der ursprünglichen Herstellerin"
+            },
+            {
+              "marke": "–",
+              "text": "unter eigenem Handelsnamen"
+            },
+            {
+              "marke": "–",
+              "text": "in einer anderen als von der ursprünglichen Herstellerin vorgesehenen Verpackung"
+            },
+            {
+              "marke": "–",
+              "text": "für einen anderen Verwendungszweck oder"
+            },
+            {
+              "marke": "–",
+              "text": "an einem Ort, in dessen Amtssprache die Kennzeichnung nach Artikel 10 Absatz 3 Buchstabe b durch die ursprüngliche Herstellerin nicht erfolgt ist,"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Darüber hinaus bedeuten in dieser Verordnung:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "eine einfache Gewichtsmehrheit von Molekülen mit mindestens drei Monomereinheiten, die zumindest mit einer weiteren Monomereinheit oder einem sonstigen Reaktanden eine kovalente Bindung eingegangen sind, und"
+            },
+            {
+              "marke": "2",
+              "text": "weniger als eine einfache Gewichtsmehrheit von Molekülen mit demselben Molekulargewicht; diese Moleküle liegen innerhalb eines bestimmten Molekulargewichtsbereichs, wobei die Unterschiede beim Molekulargewicht im Wesentlichen auf die Unterschiede in der Zahl der Monomereinheiten zurückzuführen sind;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Im Übrigen werden in dieser Verordnung Begriffe, die in den Gesetzen, die die Grundlage dieser Verordnung bilden, unterschiedlich verwendet werden, im Sinne des ChemG verwendet."
+        },
+        {
+          "absatz": "4",
+          "text": "Es gelten die Entsprechungen von Ausdrücken zwischen der EU-REACH-Verordnung, der Verordnung (EG) Nr. 1272/2008 (EU-CLP-Verordnung) und der Richtlinie 75/324/EWG und der vorliegenden Verordnung nach Anhang 1 Ziffer 1."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird in dieser Verordnung auf Bestimmungen der EU-REACH-Verordnung, der EU-CLP-Verordnung oder der Richtlinie 75/324/EWG verwiesen, die ihrerseits auf andere Bestimmungen dieser Rechtsakte verweisen, so gelten auch diese anderen Bestimmungen; massgebend ist dabei die in der Fussnote zu Absatz 2 Buchstabe f beziehungsweise Absatz 4 festgelegte Fassung des betreffenden EU-Rechtsakts oder, bei Verweisen auf die Anhänge der EU-CLP-Verordnung oder der EU-REACH-Verordnung, die in Anhang 2 Ziffer 1 beziehungsweise Anhang 4 Ziffer 3 festgelegte Fassung. Ausgenommen sind Weiterverweise auf die Bestimmungen der EU-REACH-Verordnung und der EU-CLP-Verordnung nach Anhang 1 Ziffer 2; an deren Stelle gelten die in Anhang 1 Ziffer 2 aufgeführten schweizerischen Bestimmungen."
+        },
+        {
+          "absatz": "6",
+          "text": "Wird in dieser Verordnung auf Bestimmungen der EU-REACH-Verordnung oder der EU-CLP-Verordnung verwiesen, die ihrerseits auf anderes EU-Recht verweisen, so gilt statt dieses EU-Rechts das schweizerische Recht nach Anhang 1 Ziffer 3."
+        },
+        {
+          "absatz": "7",
+          "text": "Für das Inverkehrbringen von Stoffen und Zubereitungen, deren Entwicklung auf genutzten genetischen Ressourcen oder auf sich darauf beziehendem traditionellem Wissen basiert, bleiben die Bestimmungen der Nagoya-Verordnung vom 11. Dezember 2015 vorbehalten."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "7f8d2a0a49fc06f3699fdbf49dbe5902643d9a08929ceca0cb149c222b2b27d9"
+    },
+    {
+      "id": "bund/CHEMV/art_3",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Stoffe und Zubereitungen sind gefährlich, wenn sie die in den technischen Vorschriften nach Anhang 2 Ziffer 1 genannten Kriterien zur Einstufung hinsichtlich physikalischer Gefahren, Gesundheitsgefahren, Umweltgefahren oder weiterer Gefahren erfüllen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "63de6b7bda4c73187fdba0366a04553b41ffb21c06fcb963674d8bcd2f99eb32"
+    },
+    {
+      "id": "bund/CHEMV/art_4",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als persistent, bioakkumulierbar und toxisch (PBT) gelten Stoffe, die die Kriterien nach Anhang XIII Abschnitte 1.1.1–1.1.3 der EU-REACH-Verordnung erfüllen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als sehr persistent und sehr bioakkumulierbar (vPvB) gelten Stoffe, die die Kriterien nach Anhang XIII Abschnitte 1.2.1 und 1.2.2 der EU-REACH-Verordnung erfüllen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1e45dd3b5638f29bb5dac73fcbbfcb878ae2c8d74aa4cb98db8f35e379e44bbd"
+    },
+    {
+      "id": "bund/CHEMV/art_5",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Selbstkontrolle nach Artikel 5 ChemG und Artikel 26 USG muss die Herstellerin beurteilen, ob Stoffe oder Zubereitungen das Leben oder die Gesundheit des Menschen oder die Umwelt gefährden können. Sie muss die Stoffe und Zubereitungen zu diesem Zweck nach den Bestimmungen dieser Verordnung einstufen, verpacken und kennzeichnen sowie Expositionsszenarien und ein Sicherheitsdatenblatt für diese erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Enthalten Gegenstände gefährliche Stoffe, als PBT geltende Stoffe, als vPvB geltende Stoffe oder Stoffe nach Anhang 3, so muss die Herstellerin zur Selbstkontrolle nach Artikel 26 USG beurteilen, ob diese bei der bestimmungsgemässen oder der zu erwartenden Verwendung der Gegenstände oder bei der vorschriftsgemässen Entsorgung die Umwelt oder mittelbar den Menschen gefährden können."
+        },
+        {
+          "absatz": "3",
+          "text": "Enthalten Gegenstände Stoffe nach Anhang 3, so muss die Herstellerin beurteilen, ob diese bei der bestimmungsgemässen oder der zu erwartenden Verwendung der Gegenstände oder bei der vorschriftsgemässen Entsorgung den Menschen gefährden können."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Herstellerin muss alle zugänglichen Daten beschaffen, die für die in den Absätzen 1 und 2 genannten Pflichten relevant sind."
+        },
+        {
+          "absatz": "5",
+          "text": "Wer Stoffe, Zubereitungen oder Gegenstände mit gefährlichen Inhaltsstoffen zu beruflichen oder gewerblichen Zwecken einführt, muss die in den Absätzen 1 und 2 genannten Pflichten vor der ersten Abgabe an Dritte oder bei Eigengebrauch vor der ersten Verwendung erfüllen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "e81dba190ff1ce8a417bb837d5949af7e4f8bdc55f504764b2f0efc60ce8b97e"
+    },
+    {
+      "id": "bund/CHEMV/art_6",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin eines Stoffs muss diesen nach den Artikeln 5, 7–13 und 15 der EU-CLP-Verordnung einstufen."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist für einen Stoff eine harmonisierte Einstufung in der nach Anhang 2 Ziffer 1 massgebenden Fassung von Anhang VI der EU-CLP-Verordnung festgelegt, so muss die Herstellerin diesen Stoff zusätzlich nach Artikel 4 Absatz 3 der EU-CLP-Verordnung einstufen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einstufung hat zu erfolgen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei alten Stoffen: gestützt auf die nach Artikel 5 Absatz 4 beschafften Daten;"
+            },
+            {
+              "marke": "b",
+              "text": "bei neuen Stoffen: gestützt auf die Daten nach Artikel 5 Absatz 4 und auf die Daten des technischen Dossiers nach Artikel 27 Absatz 2 Buchstabe b."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Das Eidgenössische Departement des Innern (EDI) kann im Einvernehmen mit dem Eidgenössischen Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK) und dem Eidgenössische Departement für Wirtschaft, Bildung und Forschung (WBF) für bestimmte Gefahrenklassen eines Stoffs eine harmonisierte Einstufung und die davon abhängende Kennzeichnung festlegen, wenn Anhang VI der EU-CLP-Verordnung in der gemäss Anhang 2 Ziffer 1 massgebenden Fassung für den Stoff keine harmonisierte Einstufung für die betreffende Gefahrenklasse festlegt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "078428d0d5d74c6bd36b08e0bdbaa044f5c6df8218c7367c0ed90db3ff8a9158"
+    },
+    {
+      "id": "bund/CHEMV/art_7",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Herstellerin einer Zubereitung muss diese nach den Artikeln 6–15 der EU-CLP-Verordnung einstufen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "fb3fff14b3dea9e9806d5c85f92fd296415ec2c6a292c0307e4bae6f471a266d"
+    },
+    {
+      "id": "bund/CHEMV/art_8",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Herstellerin, die gefährliche Stoffe oder Zubereitungen Dritten bereitstellt oder abgibt, muss sie nach Artikel 35 der EU-CLP-Verordnung verpacken."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "cd63b5489009771b8d925f3e714cd193d3644915a6d391bff8b072cb962b22a1"
+    },
+    {
+      "id": "bund/CHEMV/art_9",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für Aerosolpackungen, die nicht in den Geltungsbereich des LMG fallen, gelten zusätzlich zu den Verpackungsvorschriften dieser Verordnung die Artikel 1 und 2 sowie die Ziffern 2.1, 2.3, 3, 4, 5 und 6 des Anhangs der Richtlinie 75/324/EWG."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "edea32d1cc386fa9b819fb56a55bf2baf914ceccc3dc82fe0eade2e643975f50"
+    },
+    {
+      "id": "bund/CHEMV/art_10",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin, die gefährliche Stoffe oder Zubereitungen Dritten bereitstellt oder abgibt, muss sie nach den folgenden Bestimmungen kennzeichnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nach den Artikeln 17 Absatz 1, 18 ausgenommen Absatz 2 letzter Satz, 19–23, 25 Absätze 1, 3 und 4, 26–28, 29 Absätze 1–4, 31, 32 Absätze 1–5 der EU-CLP-Verordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "nach den Vorschriften für die Kennzeichnung von äusserer Verpackung, innerer Verpackung und Einzelverpackung nach Artikel 33 der EU-CLP-Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zubereitungen mit besonderen Gefahren, die in Artikel 4 Absatz 7 der EU-CLP-Verordnung genannt sind, müssen zusätzlich nach Artikel 25 Absatz 6 der EU-CLP-Verordnung gekennzeichnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Zusätzlich zu den Absätzen 1 und 2 müssen bei der Kennzeichnung folgende Anforderungen erfüllt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Es sind Name, Adresse und Telefonnummer der Herstellerin anzugeben."
+            },
+            {
+              "marke": "b",
+              "text": "Die Kennzeichnung muss in mindestens einer Amtssprache des Ortes erfolgen, an dem der Stoff oder die Zubereitung an private oder berufliche Verwenderinnen abgegeben wird. Im Einvernehmen mit einzelnen beruflichen Verwenderinnen kann ein Stoff oder eine Zubereitung für die Abgabe an diese in einer anderen Amtssprache oder auf Englisch gekennzeichnet werden."
+            },
+            {
+              "marke": "c",
+              "text": "Erfolgt die Kennzeichnung in mehr als den nach Buchstabe b verlangten Sprachen, so müssen alle Angaben in allen verwendeten Sprachen gemacht werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3bis",
+          "text": "Werden Stoffe oder Zubereitungen aus einem Mitgliedstaat des EWR eingeführt, so kann bei der Kennzeichnung der Name der Herstellerin durch den Namen jener Person ersetzt werden, die für das Inverkehrbringen im EWR zuständig ist, wenn die Stoffe oder Zubereitungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nicht zur Abgabe an private Verwenderinnen bestimmt sind; oder"
+            },
+            {
+              "marke": "b",
+              "text": "an private Verwenderinnen abgegeben werden, in einer inneren Verpackung in Portionen von höchstens 125 ml oder g enthalten sind und auf der äusseren Verpackung Name, Adresse und Telefonnummer der Herstellerin angegeben sind."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Sind aufgrund der Vorschriften anderer Erlasse weitere Kennzeichnungselemente erforderlich, so sind diese im Abschnitt für ergänzende Informationen nach Artikel 25 der EU-CLP-Verordnung anzubringen."
+        },
+        {
+          "absatz": "5",
+          "text": "Besteht der Name der IUPAC-Nomenklatur aus über 100 Zeichen, so darf ein anderer Name verwendet werden, sofern die Meldung nach Artikel 49 sowohl den in der IUPAC-Nomenklatur aufgeführten Namen als auch den verwendeten Namen umfasst."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Anforderungen von Absatz 1 gelten als erfüllt, wenn die inneren Verpackungen vor oder unmittelbar nach Entfernen der Transportverpackung gekennzeichnet werden. Die Verantwortung für die Verpackung und Kennzeichnung verbleibt bei der Herstellerin."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "84e32a80303dcafe57866f909a024c39f2c95b4b3cc19cdd7793e4f3f42224b8"
+    },
+    {
+      "id": "bund/CHEMV/art_10_a",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "10_a",
+      "artikelLabel": "Art. 10a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Als Amtssprachen gelten Deutsch, Französisch und Italienisch."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_10_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b64681860065b86c9f302bba16b68d6913e90579d04c35ec5e2cee14f0eef72c"
+    },
+    {
+      "id": "bund/CHEMV/art_11",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Aerosolpackungen, die nicht in den Geltungsbereich des LMG fallen, gelten zusätzlich zu den Kennzeichnungsvorschriften dieser Verordnung die Artikel 1, 2, 8 Absätze 1 und 1 a sowie die Punkte 1.8, 1.9 und 1.10, die einleitende Bestimmung der Ziffer 2 sowie die Punkte 2.2 und 2.3 des Anhangs der Richtlinie 75/324/EWG ."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Aerosolpackungen, die nicht gefährlich im Sinne von Artikel 3 sind, müssen der Name und die Adresse der Herstellerin angegeben werden. Wird eine solche Aerosolpackung aus einem EWR-Mitgliedsstaat eingeführt, so kann der Name der Herstellerin durch den Namen der Person, die für das Inverkehrbringen im EWR zuständig ist, ersetzt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "f85333b926b57956c51f6d7f1c0e378276dabf1efa6ab2ec7913a7a8ed538fbe"
+    },
+    {
+      "id": "bund/CHEMV/art_12",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle kann im Einvernehmen mit den Beurteilungsstellen Ausnahmen von den Kennzeichnungsvorschriften für bestimmte Stoffe oder Zubereitungen oder für bestimmte Gruppen von Stoffen oder Zubereitungen gewähren und zulassen, dass diese nicht oder in einer anderen geeigneten Form gekennzeichnet werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "geringe Abmessungen oder eine andere ungünstige Beschaffenheit der Verpackung eine Kennzeichnung nach Artikel 10 verunmöglichen;"
+            },
+            {
+              "marke": "b",
+              "text": "der Stoff oder die Zubereitung in so geringer Menge abgegeben wird, dass er oder sie unter Berücksichtigung der Gefahreneigenschaften kein Risiko für Mensch und Umwelt darstellt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "der Stoff oder die Zubereitung nicht in den Geltungsbereich der EU-CLP-Verordnung fällt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erlässt eine Verfügung auf begründeten Antrag hin oder erlässt eine Allgemeinverfügung."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie führt eine Liste der gewährten Ausnahmen und veröffentlicht sie auf ihrer Website."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "3168c1f72f19e6d6e851a7f5f122c2732fa64722f03a9a6cd9a79fe65d6ff9f0"
+    },
+    {
+      "id": "bund/CHEMV/art_13",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/CHEMV/art_14",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin einer Zubereitung kann für einen Stoff eine alternative chemische Bezeichnung verwenden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie nachweist, dass die Angabe der Bezeichnung eines Stoffs auf der Etikette oder dem Sicherheitsdatenblatt ihre Betriebs- oder Geschäftsgeheimnisse, insbesondere ihr geistiges Eigentum, gefährden würde; und"
+            },
+            {
+              "marke": "b",
+              "text": "der Stoff den Kriterien nach Anhang I Abschnitt 1.4 der EU-CLP-Verordnung in der gemäss Anhang 2 Ziffer 1 massgebenden Fassung entspricht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die alternative chemische Bezeichnung entspricht einem Namen, der die wichtigsten funktionellen Gruppen nennt, oder einem Ersatznamen."
+        },
+        {
+          "absatz": "3",
+          "text": "Hat die Europäische Chemikalienagentur die Verwendung einer alternativen chemischen Bezeichnung nach Artikel 24 der EU-CLP-Verordnung bewilligt, so gilt die Verwendung der Bezeichnung ab dem Zeitpunkt als in der Schweiz bewilligt, in dem die Anmeldestelle Kenntnis von folgenden Unterlagen und Daten genommen hat:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheid der Europäischen Chemikalienagentur;"
+            },
+            {
+              "marke": "b",
+              "text": "Angaben zur Stoffidentität gemäss Artikel 49 Buchstabe c Ziffern 1–3."
+            }
+          ]
+        },
+        {
+          "absatz": "3bis",
+          "text": "Werden bei der Verwendung der chemischen Bezeichnung nach Artikel 18 Absatz 2 Buchstabe b der EU-CLP-Verordnung Name und Identifikationsnummer wie im Einstufungs- und Kennzeichnungsverzeichnis nach Artikel 42 der EU-CLP-Verordnung verwendet, so muss auf Anfrage der Anmeldestelle die Stoffidentität nach Anhang VI Abschnitte 2.1–2.3 der EU-REACH-Verordnung vorgelegt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Verwendung einer alternativen chemischen Bezeichnung eines Stoffs kann nur beantragt werden für eine Zubereitung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in einer bestimmten Zusammensetzung;"
+            },
+            {
+              "marke": "b",
+              "text": "mit einem bestimmten Handelsnamen oder einer bestimmten Bezeichnung; und"
+            },
+            {
+              "marke": "c",
+              "text": "für bestimmte Verwendungszwecke."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Bewilligung zur Verwendung einer alternativen chemischen Bezeichnung wird der Herstellerin gewährt; sie ist nicht übertragbar."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Verwendung einer alternativen chemischen Bezeichnung ist für die Herstellerin und die beruflichen Verwenderinnen derselben Lieferkette ohne Bewilligung zulässig während den ersten sechs Jahren ab:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Meldung, Mitteilung oder Anmeldung eines neuen Stoffs;"
+            },
+            {
+              "marke": "b",
+              "text": "der Registrierung eines Stoffes, der unter Artikel 119 Absatz 2 Buchstabe f der EU-REACH-Verordnung fällt und für den der Anmeldestelle der entsprechende Nachweis über die erfolgte Registrierung sowie Angaben zur Stoffidentität gemäss Artikel 49 Buchstabe c Ziffern 1–3 vorgelegt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "7",
+          "text": "Wird innerhalb der Frist nach Absatz 6 weder ein Gesuch um Verwendung einer alternativen chemischen Bezeichnung noch ein Entscheid der Europäischen Chemikalienagentur und die Angaben nach Absatz 3 eingereicht, so muss nach Ablauf der Frist die chemische Bezeichnung nach Artikel 18 Absatz 2 der EU-CLP-Verordnung verwendet werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "69a88991b2c366ae180c6cea0eaab0158f9c4b2d8d871b85c6a9ad923c761fc4"
+    },
+    {
+      "id": "bund/CHEMV/art_15",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Verwendung einer alternativen chemischen Bezeichnung eines Stoffs in einer Zubereitung muss in einer Amtssprache oder auf Englisch und in dem von der Anmeldestelle verlangten Format elektronisch eingereicht werden. Das Begleitschreiben muss in einer Amtssprache eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch muss enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Namen, die Adresse und die Telefonnummer der Herstellerin;"
+            },
+            {
+              "marke": "b",
+              "text": "folgende Angaben zu denjenigen Stoffen, deren Identität im Rahmen der Kennzeichnung geheim gehalten werden soll: 1. die chemische Bezeichnung,"
+            },
+            {
+              "marke": "2",
+              "text": "die vom Chemical Abstract Service festgelegte Nummer (CAS-Nr.),"
+            },
+            {
+              "marke": "3",
+              "text": "die EG-Nr.;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anmeldestelle entscheidet im Einvernehmen mit den Beurteilungsstellen über das Gesuch."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a445fdcd9a0ca6399e44164cfa3d48975f11d307adc5c2da4d23616830724778"
+    },
+    {
+      "id": "bund/CHEMV/art_15_a",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bringt eine Herstellerin eine Zubereitung in Verkehr, die aufgrund der von ihr ausgehenden physikalischen Gefahren oder Gesundheitsgefahren als gefährlich eingestuft ist, so muss die Herstellerin die Zubereitung mit einem eindeutigen Rezepturidentifikator (UFI) versehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss den UFI mit dem elektronischen System erzeugen, das von der Anmeldestelle zur Verfügung gestellt wird. Von der Erzeugung des UFI mit dem elektronischen System kann abgesehen werden, wenn die Zubereitung bereits über einen gestützt auf die EU-CLP-Verordnung generierten UFI verfügt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der UFI muss deutlich sichtbar, lesbar und unverwischbar zusammen mit dem ihm voranstehenden Akronym «UFI:» in Grossbuchstaben an folgender Stelle aufgedruckt oder angebracht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "auf der Etikette im Abschnitt für ergänzende Informationen nach Artikel 25 der EU-CLP-Verordnung; oder"
+            },
+            {
+              "marke": "b",
+              "text": "auf der inneren Verpackung zusammen mit den anderen Kennzeichnungselementen; ist die innere Verpackung so beschaffen oder derart klein, dass der UFI darauf nicht aufgedruckt oder angebracht werden kann, so kann er zusammen mit den anderen Kennzeichnungselementen auf einer äusseren Verpackung aufgedruckt oder angebracht werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Zubereitungen, die nicht verpackt werden, muss der UFI auf dem Sicherheitsdatenblatt oder, im Fall einer Abgabe an private Verwenderinnen, in einer Kopie der Kennzeichnungselemente nach Artikel 29 Absatz 3 der EU-CLP-Verordnung, zusammen mit den anderen Kennzeichnungselementen, angegeben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Unterliegt die Zubereitung nicht der Meldepflicht nach Artikel 54, so sind die Absätze 1–4 nicht anwendbar."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_15_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "c6398ca5c877444b70d76eddd6206f1b75477a4f414f411b82c5f8827f7fe0a6"
+    },
+    {
+      "id": "bund/CHEMV/art_16",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin eines alten Stoffs, der die Kriterien nach Artikel 14 Absatz 4 der EU-REACH-Verordnung erfüllt und als solcher in einer Gesamtmenge von 10 Tonnen oder mehr pro Jahr an Dritte abgegeben wird, muss für jede identifizierte Verwendung des Stoffs ein Expositionsszenario erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer einen Stoff bezieht, für den Expositionsszenarien erstellt wurden, und diesen in einer Menge von 1 Tonne oder mehr pro Jahr als Stoff oder in einer Zubereitung gewerblich an Dritte abgibt für eine Verwendung, die im Sicherheitsdatenblatt nicht beschrieben ist, muss für diese Verwendung ein Expositionsszenario erstellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 gilt nicht, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Expositionsszenario für die neue Verwendung ausschliesslich Bedingungen umfassen würde, die im Expositionsszenario des Sicherheitsdatenblatts beschrieben sind;"
+            },
+            {
+              "marke": "b",
+              "text": "der Stoff in der Zubereitung in einer Konzentration enthalten ist, die unter den Grenzen nach Artikel 27 Absatz 3 liegt; oder"
+            },
+            {
+              "marke": "c",
+              "text": "der Stoff für Zwecke der produkt- und verfahrensorientierten Forschung und Entwicklung verwendet wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a024973e2a3b96b14c66ec76f4442eecfa44a108a41f4cc03f758fe29e401d61"
+    },
+    {
+      "id": "bund/CHEMV/art_17",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Expositionsszenarien müssen nach den Bestimmungen von Anhang I Abschnitt 5.1 der EU-REACH-Verordnung erstellt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "ed721db88d9df46c866c0e2b6ffe726bc8e36e7c7e941dbc2ca811eda2097d07"
+    },
+    {
+      "id": "bund/CHEMV/art_18",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Sicherheitsdatenblatt dient dazu, berufliche Verwenderinnen und Händlerinnen in den Stand zu versetzen, die für den Gesundheitsschutz und die Sicherheit am Arbeitsplatz sowie den Umweltschutz erforderlichen Massnahmen zu treffen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "81d837971ad87fde80da08344954559c53588674673862395913a7dae5d6d9ea"
+    },
+    {
+      "id": "bund/CHEMV/art_19",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Herstellerin muss ein Sicherheitsdatenblatt für folgende Stoffe und Zubereitungen erstellen, soweit eine Pflicht zur Übermittlung nach Artikel 21 besteht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gefährliche Stoffe und Zubereitungen;"
+            },
+            {
+              "marke": "b",
+              "text": "PBT- oder vPvB-Stoffe;"
+            },
+            {
+              "marke": "c",
+              "text": "Stoffe nach Anhang 3;"
+            },
+            {
+              "marke": "d",
+              "text": "Zubereitungen, die nicht gefährlich im Sinne von Artikel 3 sind und mindestens einen der folgenden Stoffe enthalten: 1. einen gesundheitsgefährdenden oder umweltgefährlichen Stoff in einer Einzelkonzentration von ≥ 1,0 Gewichtsprozent (nicht gasförmige Zubereitungen) beziehungsweise von ≥ 0,2 Volumenprozent (gasförmige Zubereitungen),"
+            },
+            {
+              "marke": "2",
+              "text": "einen karzinogenen Stoff der Kategorie 2, einen reproduktionstoxischen Stoff der Kategorie 1A, 1B oder 2, ein Hautallergen der Kategorie 1, ein Inhalationsallergen der Kategorie 1, einen Stoff, der Wirkungen auf oder über die Laktation hat, oder einen PBT- oder vPvB-Stoff in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,"
+            },
+            {
+              "marke": "3",
+              "text": "einen Stoff nach Anhang 3 in einer Einzelkonzentration von ≥ 0,1 Gewichtsprozent,"
+            },
+            {
+              "marke": "4",
+              "text": "einen Stoff, für den ein Grenzwert für die Exposition am Arbeitsplatz in der Richtlinie 2000/39/EG, 2006/15/EG, 2009/161/EU, (EU) 2017/164 oder (EU) 2019/1831 festgelegt ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "6b6b969a17842e781d2b03ae2ae9ab9a57fbd0b699e4cefa32bc8dd513b48ead"
+    },
+    {
+      "id": "bund/CHEMV/art_20",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Sicherheitsdatenblatt muss nach den in Anhang 2 Ziffer 3 genannten technischen Vorschriften erstellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Sicherheitsdatenblatt müssen die Expositionsszenarien, die nach Artikel 16 erstellt werden oder im Stoffsicherheitsbericht (Art. 28) enthalten sind beigefügt werden; die Informationen nach den Abschnitten 1, 7, 8 und 13 des Sicherheitsdatenblatts müssen den Verwendungen in den Expositionsszenarien entsprechen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das EDI kann im Einvernehmen mit dem UVEK und dem WBF die für die Erstellung von Sicherheitsdatenblättern erforderlichen fachlichen Kenntnisse festlegen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "4d45bdea22403a88992d262580b1b3d90cd9ab4ea7c6579ee5fd0d8145a60ef9"
+    },
+    {
+      "id": "bund/CHEMV/art_21",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer Stoffe oder Zubereitungen nach Artikel 19 gewerblich an berufliche Verwenderinnen oder an Händlerinnen abgibt, muss diesen ein aktuelles Sicherheitsdatenblatt übermitteln. Im Detailhandel muss das Sicherheitsdatenblatt auf Verlangen übermittelt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Sicherheitsdatenblatt muss übermittelt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei der Abgabe eines Stoffs oder einer Zubereitung nach Artikel 19 Buchstaben a–c: spätestens bei der ersten Abgabe und auf Verlangen bei weiteren Abgaben;"
+            },
+            {
+              "marke": "b",
+              "text": "bei der Abgabe einer Zubereitung nach Artikel 19 Buchstaben d: auf Verlangen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Sicherheitsdatenblatt muss wie folgt übermittelt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "kostenlos;"
+            },
+            {
+              "marke": "b",
+              "text": "in den von der beruflichen Verwenderin oder der Händlerin gewünschten Amtssprachen oder, im gegenseitigen Einvernehmen, in einer anderen Sprache; der Anhang zum Sicherheitsdatenblatt kann in Englisch abgefasst werden;"
+            },
+            {
+              "marke": "c",
+              "text": "auf Papier oder elektronisch; auf Verlangen der beruflichen Verwenderin oder der Händlerin ist das Sicherheitsdatenblatt auf Papier zu übermitteln."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "2de91590af2711d0f871e299d2edaf05a12a45210f5efff4db62cacd4a522a4f"
+    },
+    {
+      "id": "bund/CHEMV/art_22",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Liegen wichtige neue Informationen über einen Stoff oder eine Zubereitung vor, so muss die Herstellerin das entsprechende Sicherheitsdatenblatt umgehend aktualisieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Abgeberin muss das aktualisierte Sicherheitsdatenblatt den beruflichen Verwenderinnen oder den Händlerinnen übermitteln, denen sie den betreffenden Stoff oder die betreffende Zubereitung in den letzten zwölf Monaten abgegeben hat."
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 gilt nicht für Sicherheitsdatenblätter, die im Detailhandel abgegeben worden sind."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "ea2c32cf1a6ca8b78e799e458104e5de4408aa76fb205d2d3e2baac96d878aea"
+    },
+    {
+      "id": "bund/CHEMV/art_23",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die berufliche Verwenderin oder die Händlerin muss das Sicherheitsdatenblatt aufbewahren, solange in ihrem Betrieb mit dem betreffenden Stoff oder der betreffenden Zubereitung umgegangen wird."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "53dc367297b517237bf98f84c6629a1a3defa0e064d2c82db2b8b74ee753f574"
+    },
+    {
+      "id": "bund/CHEMV/art_24",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin eines neuen Stoffs oder die Alleinvertreterin muss den neuen Stoff bei der Anmeldestelle anmelden, bevor sie ihn erstmals in Verkehr bringt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als solchen;"
+            },
+            {
+              "marke": "b",
+              "text": "in einer Zubereitung; oder"
+            },
+            {
+              "marke": "c",
+              "text": "in einem Gegenstand, aus dem der neue Stoff unter normalen oder vernünftigerweise vorhersehbaren Verwendungsbedingungen freigesetzt werden soll."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist ein neuer Stoff in einem Polymer als Monomer, als anderer Stoff in Form von Monomereinheiten oder chemisch gebunden enthalten, so gilt Absatz 1 für den Stoff als solchen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anmeldestelle kann die Anmeldung eines in einem Gegenstand enthaltenen Stoffs verlangen, wenn es Gründe zur Annahme gibt, dass der Stoff bei der Verwendung des Gegenstands freigesetzt werden kann."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1be351b298214bc8f9ca6a1f6b56a330e78d1203e05e7d1b5939861f0b950c5d"
+    },
+    {
+      "id": "bund/CHEMV/art_25",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wenn ein Stoff anmeldepflichtig wird, weil er nicht mehr nach Artikel 5 der EU-REACH-Verordnung registriert ist, darf die Herstellerin ihn noch bis zum Ende des Kalenderjahres, das auf die Änderung des Registrierungsstatus folgt, ohne Anmeldung in Verkehr bringen. Die Anmeldestelle kann die Frist auf begründeten Antrag um maximal zwei Jahre verlängern."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d5810d119e41cc3eba1707be1d71d6e660aa2bd3332b1c2a339feb0dc6dd6efa"
+    },
+    {
+      "id": "bund/CHEMV/art_26",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Anmeldung ist nicht erforderlich für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "es sich um denselben Stoff handelt,"
+            },
+            {
+              "marke": "2",
+              "text": "ihr für den exportierten Stoff ein Sicherheitsdatenblatt nach Artikel 20 übermittelt wurde, falls dies nach Artikel 19 erforderlich ist;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht Grund zur Annahme, dass ein bestimmter Stoff, der nach Absatz 1 von der Anmeldepflicht ausgenommen ist, eine Gefahr für den Menschen oder die Umwelt darstellen kann, so verlangt die Anmeldestelle auf Antrag einer Beurteilungsstelle von der Herstellerin die Vorlage bestimmter Prüfberichte. Für diese Prüfberichte dürfen nicht weitergehende Angaben verlangt werden als die Angaben, die für das technische Dossier nach Anhang 4 Ziffer 8 Buchstabe a, Ziffer 9 Buchstabe a und Ziffer 10 Buchstabe a eingereicht werden müssen."
+        },
+        {
+          "absatz": "3",
+          "text": "Gefährliche Stoffe sowie PBT- und vPvB-Stoffe, die nach Absatz 1 Buchstaben a, c, g, h und j von der Anmeldepflicht ausgenommen sind, unterliegen der Meldepflicht nach Artikel 48."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a2b405d131d65e061c439e29df44ff93bdd5cb85bd14c1198c04411e44ab98c0"
+    },
+    {
+      "id": "bund/CHEMV/art_27",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldung muss in einer Amtssprache oder auf Englisch und in dem von der Anmeldestelle verlangten Format elektronisch eingereicht werden. Das Begleitschreiben muss in einer Amtssprache eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmeldung muss folgende Daten und Unterlagen umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Menge, die die Anmelderin in Verkehr zu bringen beabsichtigt;"
+            },
+            {
+              "marke": "b",
+              "text": "ein technisches Dossier mit folgenden, in Anhang 4 genauer aufgeführten Angaben: 1. Identität der Anmelderin,"
+            },
+            {
+              "marke": "2",
+              "text": "Identität des Stoffs,"
+            },
+            {
+              "marke": "3",
+              "text": "Informationen zu Herstellung und Verwendung,"
+            },
+            {
+              "marke": "4",
+              "text": "Einstufung und Kennzeichnung,"
+            },
+            {
+              "marke": "5",
+              "text": "Leitlinien für die sichere Verwendung,"
+            },
+            {
+              "marke": "6",
+              "text": "Beurteilung der Exposition,"
+            },
+            {
+              "marke": "7",
+              "text": "qualifizierte Prüfungszusammenfassungen und weitere Daten zu den physikalisch-chemischen Eigenschaften,"
+            },
+            {
+              "marke": "8",
+              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die gesundheitsgefährdenden Eigenschaften,"
+            },
+            {
+              "marke": "9",
+              "text": "qualifizierte Prüfungszusammenfassungen mit Bezug auf die umweltgefährlichen Eigenschaften;"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Absatz 2 Buchstabe c ist nicht anwendbar für neue Stoffe, die in Form von Zubereitungen in Verkehr gebracht werden, wenn die Konzentration des Stoffs unter folgenden Werten liegt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Berücksichtigungsgrenzwerten nach Artikel 11 Absatz 3 der EU-CLP-Verordnung; oder"
+            },
+            {
+              "marke": "b",
+              "text": "0,1 Gewichtsprozent bei PBT- oder vPvB-Stoffen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die Anmeldestelle kann von der Anmelderin Prüfberichte verlangen, die über das technische Dossier hinausgehen und für die Beurteilung des Stoffs relevant sind, sofern sie vorhanden sind und mit zumutbarem Aufwand beschafft werden können."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "88996394b59ab8f3f4786ed4731ddc7c5f1c170a30ce08d5538b2a9388dd0483"
+    },
+    {
+      "id": "bund/CHEMV/art_28",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Stoffsicherheitsbericht enthält die Stoffsicherheitsbeurteilung gemäss den Bestimmungen von Anhang I der EU-REACH-Verordnung. Die Stoffsicherheitsbeurteilung umfasst folgende Schritte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ermittlung schädlicher Wirkungen auf die Gesundheit des Menschen;"
+            },
+            {
+              "marke": "b",
+              "text": "Ermittlung schädlicher Wirkungen durch physikalisch-chemische Eigenschaften;"
+            },
+            {
+              "marke": "c",
+              "text": "Ermittlung schädlicher Wirkungen auf die Umwelt;"
+            },
+            {
+              "marke": "d",
+              "text": "Ermittlung der PBT- und der vPvB-Eigenschaften;"
+            },
+            {
+              "marke": "e",
+              "text": "falls der Stoff die Anforderungen nach Artikel 14 Absatz 4 der EU-REACH-Verordnung erfüllt: 1. eine Beurteilung der Exposition, bei der alle identifizierten Verwendungen zu berücksichtigen sind,"
+            },
+            {
+              "marke": "2",
+              "text": "eine Beschreibung der Risiken, bei der alle identifizierten Verwendungen zu berücksichtigen sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "60d039f69616936b5e998f00b0cb2ef7c85aaa6fdf16f1fec1aead9ec05af202"
+    },
+    {
+      "id": "bund/CHEMV/art_29",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die Anmeldestelle fest, dass ein neuer Stoff bereits in der Schweiz angemeldet wurde, so teilt sie der Anmelderin die Namen und Adressen der früheren Anmelderinnen mit."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Anmeldestelle verzichtet auf Daten der Anmelderin und legt diejenigen einer früheren Anmelderin zu Grunde, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die neue Anmelderin mit einer Zugangsbescheinigung einer früheren Anmelderin nachweist, dass diese damit einverstanden ist, dass die Anmeldestelle auf ihre Daten zurückgreift; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Schutzdauer für die Daten abgelaufen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmelderin darf auf folgende Daten früherer Anmelderinnen nicht verweisen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Identität, Reinheit und Art der Verunreinigungen des Stoffs;"
+            },
+            {
+              "marke": "b",
+              "text": "Unschädlichmachung des Stoffs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Regelungen des Wettbewerbs- und des Immaterialgüterrechts werden durch die Bestimmungen dieses Abschnitts nicht berührt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "2eb2edf6f169ef3d67155d7e18db5da5461a6f6ffb5c905fbee91cb530a4383d"
+    },
+    {
+      "id": "bund/CHEMV/art_30",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schutzdauer für Daten beträgt 12 Jahre."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Daten, die nach Artikel 47 nachgereicht werden müssen, beträgt die Schutzdauer 5 Jahre. Ist die Schutzdauer für eingereichte Daten nach Absatz 1 noch nicht abgelaufen, so verlängert sich die Schutzdauer für die nachgereichten Daten entsprechend."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "4d05684fee1eb11bbe5ca90005d6294a2890007d747864ca04d8a3bc1a26e299"
+    },
+    {
+      "id": "bund/CHEMV/art_31",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer im Hinblick auf eine Anmeldung Versuche an Wirbeltieren plant, muss bei der Anmeldestelle anfragen, ob über diese Tierversuche bereits Daten vorliegen. Die Anfrage muss im von der Anmeldestelle vorgegebenen Format erfolgen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anfrage muss Angaben enthalten über:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Identität des Stoffs nach Artikel 27 Absatz 2 Buchstabe b Ziffer 2;"
+            },
+            {
+              "marke": "b",
+              "text": "die Menge des Stoffs, die die Anfragende in Verkehr zu bringen beabsichtigt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Verfügt die Anmeldestelle bereits über ausreichende Daten aus früheren Versuchen an Wirbeltieren und ist keine der Voraussetzungen nach Artikel 29 Absatz 1 bis erfüllt, so:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "teilt sie den früheren Anmelderinnen die beabsichtigte Verwendung der Daten durch die neue Anmelderin sowie deren Name und Adresse mit; und"
+            },
+            {
+              "marke": "b",
+              "text": "legt sie der neuen Anmelderin die Namen und Adressen der früheren Anmelderinnen offen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Studien mit Versuchen an Wirbeltieren dürfen nicht wiederholt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "c989507ec90f109597acd05ff344115eda4bbbe7c4662530dd5238ff9ced5153"
+    },
+    {
+      "id": "bund/CHEMV/art_32",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die früheren Anmelderinnen haben Anspruch auf eine angemessene Entschädigung durch die neue Anmelderin für die Verwendung ihrer Daten aus früheren Versuchen an Wirbeltieren, wenn die Schutzdauer für diese Daten noch nicht abgelaufen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmelderinnen bemühen sich selbstständig um eine Einigung über die gemeinsame Datennutzung und die Entschädigung. Sie können ein Schiedsgutachten einholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kommt keine Einigung zustande, so kann die neue Anmelderin bei der Anmeldestelle den Erlass einer Verfügung über die Höhe der Entschädigung beantragen; der Antrag kann frühestens vier Monate nach Eingang der Mitteilung nach Artikel 31 Absatz 3 erfolgen. Die neue Anmelderin informiert die früheren Anmelderinnen über ihren Antrag."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anmeldestelle erlässt die Verfügung über die Höhe der Entschädigung spätestens 60 Tage nach Eingang des Antrags nach Absatz 3. Wird ihr ein Schiedsgutachten vorgelegt, so ist sie daran gebunden, es sei denn, die Parteien bringen innert 30 Tagen Einwände im Sinne von Artikel 189 Absatz 3 der Zivilprozessordnung vor. Besteht kein Schiedsgutachten, so berücksichtigt die Anmeldestelle bei ihrer Verfügung insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den von den früheren Anmelderinnen belegten Aufwand zur Erlangung der Untersuchungsergebnisse;"
+            },
+            {
+              "marke": "b",
+              "text": "die verbleibende Schutzdauer für die betreffenden Daten."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d3d61a3e2971b2050744cb85c7108d33aa3661b80b8fe0d18828ff828c76aa4a"
+    },
+    {
+      "id": "bund/CHEMV/art_33",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Anmeldestelle verwendet die Daten aus früheren Versuchen an Wirbeltieren für die Anmeldung nach Artikel 24, vorbehältlich anderer Vereinbarungen zwischen den Anmelderinnen, sobald:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die neue Anmelderin und die früheren Anmelderinnen eine Vereinbarung über die gemeinsame Nutzung der Daten und die Entschädigung getroffen haben oder die Anmeldestelle eine entsprechende Verfügung erlassen hat; und"
+            },
+            {
+              "marke": "b",
+              "text": "die neue Anmelderin die Entschädigung bezahlt oder sich durch mit Unterschrift bekräftigter Schuldanerkennung dazu verpflichtet hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "89f6efc91489fe4430daa46bca217315858b37da4f749bed215149c73ed9839d"
+    },
+    {
+      "id": "bund/CHEMV/art_34",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Beträgt die in Verkehr gebrachte Menge pro Jahr 1 Tonne oder mehr und ist dieser neue Stoff nach Artikel 26 Absatz 1 Buchstabe d nicht anmeldepflichtig, so muss die Herstellerin oder ihre Alleinvertreterin der Anmeldestelle eine Mitteilung machen, bevor sie den neuen Stoff als solchen oder als Inhaltsstoff einer Zubereitung oder eines Gegenstandes, aus dem er unter normalen oder vernünftigerweise vorhersehbaren Verwendungsbedingungen freigesetzt werden soll, erstmals in Verkehr bringt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "36245de559282e5de4845dd7565fc92422f4ed0d57f77aec95386a3137a1c80e"
+    },
+    {
+      "id": "bund/CHEMV/art_35",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitteilung muss in einer Amtssprache oder auf Englisch und in dem von der Anmeldestelle verlangten Format elektronisch eingereicht werden. Das Begleitschreiben muss in einer Amtssprache eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitteilung muss folgende Daten und Unterlagen umfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Adresse der Herstellerin;"
+            },
+            {
+              "marke": "b",
+              "text": "falls die Herstellerin den Stoff eingeführt hat: Name und Adresse der ausländischen Herstellerin;"
+            },
+            {
+              "marke": "c",
+              "text": "die wesentlichen Angaben zur Identität des Stoffs;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verwendungszwecke;"
+            },
+            {
+              "marke": "e",
+              "text": "die voraussichtliche Menge des Stoffs, die die Herstellerin jährlich in der Schweiz in Verkehr bringen wird;"
+            },
+            {
+              "marke": "f",
+              "text": "die vorgesehene Einstufung und Kennzeichnung;"
+            },
+            {
+              "marke": "g",
+              "text": "das Forschungsprogramm und eine Liste der Personen, an die der Stoff abgegeben werden soll;"
+            },
+            {
+              "marke": "h",
+              "text": "bei gefährlichen Stoffen oder PBT- oder vPvB-Stoffen: einen Vorschlag für ein Sicherheitsdatenblatt."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Anmeldestelle kann von der Herstellerin oder der Alleinvertreterin Prüfberichte verlangen, die für die Beurteilung des Stoffs relevant sind, sofern die Prüfberichte vorhanden sind und mit zumutbarem Aufwand beschafft werden können."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "be62279070ade5fe97a25370b03dd0d0d1cd109e41cecc474621fc9fe096ad1b"
+    },
+    {
+      "id": "bund/CHEMV/art_36",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle bestätigt der Herstellerin oder der Alleinvertreterin das Datum des Eingangs der Anmeldung oder der Mitteilung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind die Unterlagen nicht offensichtlich unvollständig, so leitet sie diese an die Beurteilungsstellen weiter."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "4bb4ce843034925f8ceb469da32709eafa3fcbb4738be664f7966b7e98f18264"
+    },
+    {
+      "id": "bund/CHEMV/art_37",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beurteilungsstellen überprüfen in ihrem Zuständigkeitsbereich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ob die Unterlagen vollständig sind oder ob andernfalls die von der Anmelderin vorgebrachten Gründe stichhaltig sind;"
+            },
+            {
+              "marke": "b",
+              "text": "ob die Angaben wissenschaftlich plausibel sind;"
+            },
+            {
+              "marke": "c",
+              "text": "ob die Prüfberichte auf Prüfungen basieren, die die Anforderungen nach Artikel 43 erfüllen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt eine Beurteilungsstelle bei der Überprüfung der Anmeldungsunterlagen fest, dass der Stoff aufgrund seiner Gefährlichkeit, seiner Eigenschaften, seiner voraussichtlichen Verwendung oder seiner in Verkehr gebrachten Menge ein besonderes Risiko für die Gesundheit des Menschen oder die Umwelt darstellt, so kann sie vor der Annahme der Anmeldung eine gezielte Risikobewertung durchführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beurteilungsstellen teilen das Ergebnis ihrer Überprüfung der Anmeldestelle mit."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "8a9fc92aa15a3f6568bec2db8ed9270152259e5e81deea5b5d8017629bcb77d4"
+    },
+    {
+      "id": "bund/CHEMV/art_38",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stellt die Anmeldestelle fest, dass die Unterlagen offensichtlich unvollständig sind, so teilt sie dies der Herstellerin oder der Alleinvertreterin unverzüglich mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt eine Beurteilungsstelle fest, dass die Unterlagen unvollständig oder fehlerhaft sind oder dass für eine Beurteilung der mit dem Stoff verbundenen Gefahren und Risiken zusätzliche Angaben oder Prüfungen erforderlich sind, so teilt sie dies der Anmeldestelle mit. Diese fordert die Herstellerin oder die Alleinvertreterin zur Ergänzung oder Berichtigung auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Ermöglicht eine qualifizierte Prüfungszusammenfassung nach Artikel 27 Absatz 2 Buchstabe b Ziffern 7–9 keine unabhängige Beurteilung einer bestimmten Prüfung, so kann die Anmeldestelle den vollständigen Prüfbericht verlangen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anmeldestelle bestätigt der Herstellerin oder der Alleinvertreterin das Datum des Eingangs der Ergänzungen und Berichtigungen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "6cbd4b9466cfad2d15c650aee439d2716f3d79fd644861f90c9558c783421f79"
+    },
+    {
+      "id": "bund/CHEMV/art_39",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle verfügt die Annahme der Anmeldung oder Mitteilung im Einvernehmen mit den Beurteilungsstellen, wenn die Überprüfung ergeben hat, dass die Anmelde- oder Mitteilungsunterlagen vollständig sind und ausreichen, um die mit dem Stoff verbundenen Gefahren und Risiken zu beurteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wurde eine gezielte Risikobewertung durchgeführt, so enthält die Verfügung die angeordneten Massnahmen zur Verminderung der Risiken."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "78b8aea0fdfd5ea4bffd4103372589bfcaa9719d35a9bef02af6663e18efb873"
+    },
+    {
+      "id": "bund/CHEMV/art_40",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein anmeldepflichtiger Stoff darf in Verkehr gebracht werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anmeldestelle die Annahme seiner Anmeldung verfügt hat; oder"
+            },
+            {
+              "marke": "b",
+              "text": "seit dem bestätigten Datum des Eingangs seiner Anmeldung und allenfalls nachgeforderter Ergänzungen und Berichtigungen 60 Tage verstrichen sind, ohne dass sich die Anmeldestelle dazu geäussert hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "856b64324f67ffa64e5206b0e6f8d9f5715ea8a5e8f0b974b8f50b59f4a24790"
+    },
+    {
+      "id": "bund/CHEMV/art_41",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ein mitteilungspflichtiger Stoff darf in Verkehr gebracht werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anmeldestelle die Annahme seiner Mitteilung verfügt hat; oder"
+            },
+            {
+              "marke": "b",
+              "text": "seit dem bestätigten Datum des Eingangs der Mitteilung und allenfalls nachgeforderter Ergänzungen und Berichtigungen 30 Tage verstrichen sind, ohne dass sich die Anmeldestelle dazu geäussert hat."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b3ee5265d7cbf89a23bc5eefa5be28153dbaf9926ede635c6fa77623e69a20e2"
+    },
+    {
+      "id": "bund/CHEMV/art_42",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin muss sicherstellen, dass die Durchführung der für die Gefahren- und Risikobeurteilung von Stoffen und Zubereitungen erforderlichen Prüfungen und die angewendeten Methoden sowie die Beurteilung der Prüfergebnisse dem Stand von Wissenschaft und Technik entsprechen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Sie darf keine Versuche an Wirbeltieren durchführen, falls die Gefahren mittels anderer Methoden bewertet werden können oder falls der Versuch aus wissenschaftlicher Sicht nicht notwendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Das EDI, das UVEK und das WBF können je in ihrem Bereich technische Einzelheiten regeln."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "0d88673e3feafd5440d58920fcf891a015ca022611351ebfa7d59900875f87a2"
+    },
+    {
+      "id": "bund/CHEMV/art_43",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Prüfungen zur Bestimmung der Eigenschaften von Stoffen und Zubereitungen sind nach den Prüfmethoden gemäss den in Anhang 2 Ziffer 2 genannten technischen Vorschriften durchzuführen."
+        },
+        {
+          "absatz": "2",
+          "text": "Andere Prüfmethoden dürfen angewendet werden, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "keine Methode nach Absatz 1 vorgeschrieben ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Herstellerin begründen kann, dass eine vorgeschriebene Methode zur Bestimmung einer physikalisch-chemischen Eigenschaft nicht geeignet ist; oder"
+            },
+            {
+              "marke": "c",
+              "text": "die Methode in der EU nach Artikel 13 Absatz 3 der EU-REACH-Verordnung anerkannt ist."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Werden andere Prüfmethoden angewendet, so muss die Herstellerin nachweisen, dass diese:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zu validen Ergebnissen führen; und"
+            },
+            {
+              "marke": "b",
+              "text": "im Fall von Tierversuchen dem Tierschutz gebührend Rechnung tragen."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die nicht-klinischen Prüfungen zur Bestimmung von gesundheitsgefährdenden und umweltgefährlichen Eigenschaften sind unter Einhaltung der Grundsätze der Guten Laborpraxis (GLP) nach der Verordnung vom 18. Mai 2005 über die Gute Laborpraxis durchzuführen."
+        },
+        {
+          "absatz": "5",
+          "text": "Sind bei einzelnen Prüfungen die Grundsätze der GLP nicht oder nicht vollständig eingehalten worden, so hat die Person, die die Prüfberichte einreicht, dies zu begründen. Die Anmeldestelle entscheidet im Einvernehmen mit den Beurteilungsstellen, ob sie diese Prüfergebnisse annimmt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b41d76162f762ac61dfeaf1566acedf51686a2818b154d7a42b94270735733e9"
+    },
+    {
+      "id": "bund/CHEMV/art_44",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Herstellerin muss Stoffe und Zubereitungen sowie Gegenstände mit gefährlichen Inhaltsstoffen neu oder ergänzend beurteilen und sie gegebenenfalls neu einstufen, kennzeichnen und verpacken, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sie für andere Zwecke abgegeben werden sollen;"
+            },
+            {
+              "marke": "b",
+              "text": "sie auf andere Weise verwendet werden sollen;"
+            },
+            {
+              "marke": "c",
+              "text": "sie in wesentlich grösseren Mengen als bisher verwendet werden sollen;"
+            },
+            {
+              "marke": "d",
+              "text": "Abweichungen in der Art und Menge von Verunreinigungen auftreten, die sich auf den Menschen oder die Umwelt nachteilig auswirken können;"
+            },
+            {
+              "marke": "e",
+              "text": "die Gefährdung des Menschen oder die Umweltverträglichkeit aufgrund der bisherigen Erfahrungen bei der praktischen Anwendung, aufgrund neuer Angaben oder aufgrund neuer Erkenntnisse anders beurteilt werden muss."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "e3ad0f3072b1fbdc386df6d1459be6f68a2c38614cec03c7628c53cf589048f5"
+    },
+    {
+      "id": "bund/CHEMV/art_45",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin muss die zur Verfügung stehenden Unterlagen laufend durch neue gesundheits- und umweltrelevante Angaben ergänzen, solange sie den Stoff, die Zubereitung oder den Gegenstand mit gefährlichen Inhaltsstoffen in Verkehr bringt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie muss die für die Beurteilung und Einstufung verwendeten wichtigen Unterlagen zusammen mit dem Ergebnis der Beurteilung und der Einstufung während mindestens 10 Jahren nach dem letztmaligen Inverkehrbringen aufbewahren oder für ihre Verfügbarkeit sorgen. Muster und Proben muss sie so lange aufbewahren, wie deren Zustand eine Auswertung zulässt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "9f90c4f4fa831a9e3da977baf048c13eaf9322a6060ba7a2b7f57ecaaf4efd22"
+    },
+    {
+      "id": "bund/CHEMV/art_46",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmelderin muss die Anmeldestelle unverzüglich schriftlich informieren, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Angaben nach Artikel 27 Absatz 2 Buchstabe b Ziffern 1–6 oder nach Artikel 35 Absatz 2 ändern;"
+            },
+            {
+              "marke": "b",
+              "text": "die in Verkehr gebrachte Menge voraussichtlich eine der Mengenschwellen nach Artikel 47 Absatz 1 erreicht hat; in diesem Fall gibt die Anmelderin an, welche Prüfungen sie vorzunehmen gedenkt, um die zusätzlichen Angaben nach Artikel 47 Absatz 1 beizubringen;"
+            },
+            {
+              "marke": "c",
+              "text": "die in Verkehr gebrachte Menge sich gegenüber der zuletzt gemeldeten Menge mehr als verdoppelt oder mehr als halbiert hat;"
+            },
+            {
+              "marke": "d",
+              "text": "ihr neue Erkenntnisse über die Wirkung des Stoffs auf den Menschen oder die Umwelt vorliegen;"
+            },
+            {
+              "marke": "e",
+              "text": "sie den Stoff für eine neue Verwendung in Verkehr bringt oder ihr bekannt ist, dass er für Zwecke verwendet wird, die sie der Anmeldestelle nicht bekannt gegeben hat;"
+            },
+            {
+              "marke": "f",
+              "text": "sie für den Stoff Prüfberichte erstellt oder erstellen lässt, die über das technische Dossier nach Artikel 27 Absatz 2 Buchstabe b hinausgehen;"
+            },
+            {
+              "marke": "g",
+              "text": "sie weitere Prüfberichte beschaffen kann, die über das technische Dossier nach Artikel 27 Absatz 2 Buchstabe b hinausgehen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Folgeinformationen nach Absatz 1 müssen in einer Amtssprache oder auf Englisch und in dem von der Anmeldestelle verlangten Format elektronisch eingereicht werden. Das Begleitschreiben muss in einer Amtssprache eingereicht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Alleinvertreterin muss sicherstellen, dass sie über aktualisierte Angaben verfügt, insbesondere über die Stoffmengen, die von den von ihr vertretenen Importeurinnen jährlich eingeführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Importeurinnen, die bei der Anmeldung eines neuen Stoffs durch eine Alleinvertreterin vertreten werden, müssen diese jährlich über die eingeführte Menge des betreffenden Stoffs informieren."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d565197e8f45b7a4f012c2dccbe1e37b5618a7cef1bc2c6b2ae9334229f8780d"
+    },
+    {
+      "id": "bund/CHEMV/art_47",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmelderin muss der Anmeldestelle gestützt auf die in Verkehr gebrachte Menge folgende zusätzliche Angaben liefern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Mengen von 10 Tonnen oder mehr pro Jahr: die Informationen nach Anhang 4 Ziffer 9 Buchstabe b und Ziffer 10 Buchstabe b sowie einen Stoffsicherheitsbericht nach Artikel 28;"
+            },
+            {
+              "marke": "b",
+              "text": "für Mengen von 100 Tonnen oder mehr pro Jahr: die Informationen nach Anhang 4 Ziffer 8 Buchstabe b, Ziffer 9 Buchstabe c, Ziffer 10 Buchstabe c sowie einen Stoffsicherheitsbericht nach Artikel 28;"
+            },
+            {
+              "marke": "c",
+              "text": "für Mengen von 1000 Tonnen oder mehr pro Jahr: die Informationen nach Anhang 4 Ziffer 9 Buchstabe d, Ziffer 10 Buchstabe d sowie einen Stoffsicherheitsbericht nach Artikel 28."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Erhalt der Information nach Artikel 46 Absatz 1 Buchstabe b informiert die Anmeldestelle die Anmelderin gemäss Artikel 31 Absatz 3, über welche Daten sie bereits verfügt."
+        },
+        {
+          "absatz": "3",
+          "text": "Können die mit einem Stoff verbundenen Gefahren nicht genügend beurteilt werden, so verlangt die Anmeldestelle auf Antrag einer Beurteilungsstelle von der Anmelderin zusätzliche Auskünfte oder Prüfungen in Bezug auf den Stoff oder seine Umwandlungsprodukte."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anmeldestelle erstellt nach Anhörung der Anmelderin und im Einvernehmen mit den Beurteilungsstellen einen Zeitplan für die Durchführung der zusätzlichen Prüfungen."
+        },
+        {
+          "absatz": "5",
+          "text": "Kommt die Anmelderin der Pflicht zur Vorlage zusätzlicher Prüfberichte nicht fristgerecht nach, so kann die Anmeldestelle die erforderlichen Prüfungen auf Kosten der Anmelderin vornehmen lassen und nötigenfalls das weitere Inverkehrbringen des Stoffs verbieten."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b2996a3b28f62154af4a1488189ed7f20f95cdaf4287880990045df9f25337de"
+    },
+    {
+      "id": "bund/CHEMV/art_48",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Herstellerin muss folgende Stoffe und Zubereitungen innert drei Monaten nach dem erstmaligen Inverkehrbringen der Anmeldestelle melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die in Artikel 19 genannten Stoffe und Zubereitungen, unabhängig davon, ob für diese ein Sicherheitsdatenblatt erstellt werden muss;"
+            },
+            {
+              "marke": "b",
+              "text": "Nanomaterialien, die nicht unter Buchstabe a fallen und die gezielt biopersistente Fasern oder Röhren mit einer Länge von mehr als 5 µm enthalten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als biopersistent gelten Materialien mit einer Wasserlöslichkeit von weniger als 100 mg pro Liter oder mit einer Halbwertszeit in der Lunge von 40 Tagen oder mehr."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "114e3e8675599d96a09bc590f0926520e90096e721c68ed8fda57f58466ff87a"
+    },
+    {
+      "id": "bund/CHEMV/art_49",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Meldung muss die folgenden Angaben enthalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "den Handelsnamen,"
+            },
+            {
+              "marke": "1a",
+              "text": "den UFI,"
+            },
+            {
+              "marke": "2",
+              "text": "die Angaben zu den Bestandteilen nach den Bestimmungen über das Sicherheitsdatenblatt,"
+            },
+            {
+              "marke": "3",
+              "text": "die Einstufung und die Kennzeichnung,"
+            },
+            {
+              "marke": "4",
+              "text": "die Verwendungszwecke,"
+            },
+            {
+              "marke": "5",
+              "text": "den Aggregatszustand,"
+            },
+            {
+              "marke": "6",
+              "text": "bei umweltgefährlichen Zubereitungen: die voraussichtliche jährlich in Verkehr gebrachte Menge nach einer der folgenden Kategorien: weniger als 1 Tonne, 1–10 Tonnen, 10– 100 Tonnen, mehr als 100 Tonnen,"
+            },
+            {
+              "marke": "7",
+              "text": "bei Zubereitungen, die Nanomaterialien enthalten: die folgenden Daten, soweit sie im Sicherheitsdatenblatt aufgeführt sind: die Zusammensetzung der Nanomaterialien, deren Teilchenform und mittlere Korngrösse sowie die Anzahlgrössenverteilung, das spezifische Oberflächen-Volumen-Verhältnis, die Kristallstruktur, den Aggregationsstatus, die Oberflächenbeschichtung und die Oberflächenfunktionalisierung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Handelt es sich bei den Bestandteilen nach Absatz 1 Buchstabe d Ziffer 2, die der Zubereitung beigefügt werden, ausschliesslich um ein Parfüm oder ein Farbmittel, so dürfen die generischen Produktidentifikatoren «Parfüm» oder «Farbmittel» angegeben werden, wenn die folgenden Bedingungen erfüllt sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die folgenden Konzentrationen werden nicht überschritten: 1. bei Parfümen: insgesamt 5 Gewichtsprozent,"
+            },
+            {
+              "marke": "2",
+              "text": "bei Farbmitteln: insgesamt 25 Gewichtsprozent;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "e5cb734f9d538c63d44f1f3c6cab407b8446df3d486132da3745868bdd001c23"
+    },
+    {
+      "id": "bund/CHEMV/art_50",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für gefährliche Zubereitungen, die für private Verwenderinnen erhältlich sind, ist der Anmeldestelle die vollständige Zusammensetzung zu melden. Bestandteile, die nicht gefährlich im Sinne von Artikel 3 sind, können mit einem Namen, der die wichtigsten funktionellen Gruppen nennt, benannt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "3e16d057409b0e2e23b11c8c411208c402c5b654301b6c57c5b9a3a1c191ea82"
+    },
+    {
+      "id": "bund/CHEMV/art_51",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Meldung und die erweiterte Meldung haben wie folgt zu erfolgen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "elektronisch in dem von der Anmeldestelle verlangten Format;"
+            },
+            {
+              "marke": "b",
+              "text": "in einer Amtssprache oder in Englisch."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d747c1797c4895bc16a0fee5e460a3686107263512e98ade62457503e190ec0f"
+    },
+    {
+      "id": "bund/CHEMV/art_52",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Änderungen der Angaben nach den Artikeln 49 und 50 müssen innert 3 Monaten gemeldet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Weicht die jährlich tatsächlich abgegebene Menge umweltgefährlicher Stoffe und Zubereitungen von der gemeldeten Kategorie der in Verkehr gebrachten Menge ab, so ist die im Vorjahr in Verkehr gebrachte Menge bis zum 31. März des Folgejahres nach den Kategorien nach Artikel 49 Absatz 1 Buchstabe c Ziffer 6 und Buchstabe d Ziffer 6 zu melden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "579f1af9cbaf5007f9ffc9c9e2351506c0cb9cc5f65558330b903ce8d7140252"
+    },
+    {
+      "id": "bund/CHEMV/art_53",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Meldepflichten für Zubereitungen nach Artikel 48 gelten als erfüllt, wenn ein Gesuch um Verwendung einer alternativen chemischen Bezeichnung (Art. 15) gestellt worden ist und die Anmeldestelle über die Informationen verfügt, die in Artikel 49 Absatz 1 Buchstaben a, b und d und gegebenenfalls in Artikel 50 verlangt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "4e00060a4e3f4066c091f63e5d08f50d827a19347754efabb57aee94031495e0"
+    },
+    {
+      "id": "bund/CHEMV/art_54",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Meldepflichten nach diesem Kapitel ausgenommen sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Anforderungen von Artikel 25 Absatz 8 der EU-CLP-Verordnung eingehalten werden, oder"
+            },
+            {
+              "marke": "2",
+              "text": "die möglichen gesundheitsgefährlichen Farbmittel in der Konzentration, in der sie maximal zugemischt werden, in der Meldung der Basisfarbe angegeben sind; in diesem Fall ist das Produkt mit dem UFI der Basisfarbe zu kennzeichnen;"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Von den Meldepflichten nach diesem Kapitel nicht ausgenommen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zwischenprodukte nach Absatz 1 Buchstabe a in Form von Monomeren, die neue Stoffe sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Zubereitungen nach Absatz 1 Buchstaben b, c, h, i und j, die über einen UFI verfügen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d70e65ac95a7a06bfa69a3875e7fde0cca1597cc9063edefda1bb24ed4ddb43e"
+    },
+    {
+      "id": "bund/CHEMV/art_55",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe, Zubereitungen und Gegenstände dürfen beruflich oder gewerblich nur für die von der Herstellerin angegebenen Verwendungszwecke und Entsorgungsarten angepriesen, angeboten oder abgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die auf der Verpackung, der Kennzeichnung und dem Sicherheitsdatenblatt angegebenen Hinweise müssen berücksichtigt werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "97951d1a220731ad53263e03c3ff9c5ff9d175fa3d67d24bef8c00cb1892411b"
+    },
+    {
+      "id": "bund/CHEMV/art_56",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe und Zubereitungen dürfen nur so weit direkt in die Umwelt ausgebracht werden, als dies für den angestrebten Zweck erforderlich ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Dabei sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Geräte einzusetzen, die eine fachgerechte und gezielte Anwendung ermöglichen;"
+            },
+            {
+              "marke": "b",
+              "text": "Massnahmen zu treffen, damit Stoffe und Zubereitungen möglichst nicht in benachbarte Gebiete oder Gewässer gelangen; und"
+            },
+            {
+              "marke": "c",
+              "text": "Massnahmen zu treffen, damit Tiere, Pflanzen, ihre Lebensgemeinschaften und Lebensräume möglichst nicht gefährdet werden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Zubereitungen dürfen nur für die von der Herstellerin genannten Verwendungen direkt in die Umwelt ausgebracht werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a1c1dce3440112cd6426befc3a4130db03e35a51d8f8dfd3b94e19a8717cf174"
+    },
+    {
+      "id": "bund/CHEMV/art_57",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Aufbewahrung von Stoffen und Zubereitungen sind die auf der Verpackung, der Kennzeichnung und gegebenenfalls dem Sicherheitsdatenblatt angegebenen Hinweise zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Gefährliche Stoffe und Zubereitungen sowie deren Behälter sind vor gefährlichen Einwirkungen, insbesondere mechanischer Art, zu schützen."
+        },
+        {
+          "absatz": "3",
+          "text": "Gefährliche Stoffe und Zubereitungen müssen übersichtlich und von anderen Waren getrennt aufbewahrt werden. In unmittelbarer Nähe dürfen keine Lebens-, Futter- oder Heilmittel aufbewahrt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Absätze 1–3 gelten auch für Gegenstände, aus denen Stoffe oder Zubereitungen in Mengen freigesetzt werden, die den Menschen oder die Umwelt gefährden können."
+        },
+        {
+          "absatz": "5",
+          "text": "Stoffe und Zubereitungen, die miteinander gefährliche Reaktionen eingehen können, sind getrennt aufzubewahren."
+        },
+        {
+          "absatz": "6",
+          "text": "Gefährliche Stoffe und Zubereitungen dürfen nur in Behälter umgefüllt und in Behältern aufbewahrt werden, welche die folgenden Anforderungen erfüllen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie dürfen nicht mit Verpackungen von Lebensmitteln, kosmetischen Mitteln, Heilmitteln oder Futtermitteln verwechselt werden können."
+            },
+            {
+              "marke": "b",
+              "text": "Der Name des Stoffs oder der Zubereitung muss in der Kennzeichnung des Behälters angegeben werden."
+            },
+            {
+              "marke": "c",
+              "text": "Sie müssen den Anforderungen nach Artikel 35 Absätze 1 und 3 der EU-CLP-Verordnung entsprechen."
+            },
+            {
+              "marke": "d",
+              "text": "Sie müssen derart gestaltet sein, dass sie nicht die Neugierde von Kindern wecken oder fördern."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "9b2cc80e462a1092d3044889db9cceee25e373a13dc0d113f4ce03cb6ad71567"
+    },
+    {
+      "id": "bund/CHEMV/art_58",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer einen Stoff oder eine Zubereitung gewerblich abgibt und ein Sicherheitsdatenblatt zu übermitteln hat, muss den Inhalt des Sicherheitsdatenblatts kennen und interpretieren können."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "ada75257f657642aec98316aab653195012b3bf31f7fa7bb1e1855d0c910ee11"
+    },
+    {
+      "id": "bund/CHEMV/art_59",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Betriebe und Bildungsstätten müssen die nach Artikel 25 Absatz 2 ChemG zu bezeichnende Chemikalien-Ansprechperson den kantonalen Vollzugsbehörden mitteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das EDI regelt die Mitteilungspflicht nach Absatz 1; es legt Form und Inhalt der Mitteilung fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Es legt die Anforderungen an die Chemikalien-Ansprechperson fest, insbesondere an deren fachliche Qualifikationen und betriebliche Kompetenzen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a53ad6b896e90d97fa75cd9e60fcd6ae28cbc7aad0b6159fb084f4e6b92501cd"
+    },
+    {
+      "id": "bund/CHEMV/art_60",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werbung für Stoffe, Zubereitungen und Gegenstände darf weder zu einer falschen Vorstellung über deren Gefährlichkeit für Mensch und Umwelt oder über deren Umweltverträglichkeit noch zu unsachgemässer oder missbräuchlicher Verwendung oder Entsorgung verleiten."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Werbung dürfen Bezeichnungen wie «abbaubar», «ökologisch ungefährlich», «umweltfreundlich» und «gewässerfreundlich» nur dann verwendet werden, wenn die damit bezeichneten Eigenschaften gleichzeitig näher umschrieben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer für gefährliche Stoffe oder Zubereitungen wirbt, welche die private Verwenderin kaufen kann, ohne vorher die Kennzeichnung gesehen zu haben, muss in allgemeinverständlicher und deutlich lesbarer oder hörbarer Form auf die gefährlichen Eigenschaften hinweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Absatz 3 gilt auch für Zubereitungen, die nach Artikel 25 Absatz 6 der EU-CLP-Verordnung gekennzeichnet sind."
+        },
+        {
+          "absatz": "5",
+          "text": "Stoffe und Zubereitungen dürfen nicht für Verwendungen angepriesen werden, für die sie nicht in Verkehr gebracht werden dürfen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "525afc3254775159f150ea6bb465c95352abc5c2a5f158926db7e8aaba1241b1"
+    },
+    {
+      "id": "bund/CHEMV/art_61",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Stoffe und Zubereitungen der Gruppe 1 gelten Stoffe und Zubereitungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren Kennzeichnung nach der EU-CLP-Verordnung mindestens ein Element nach Anhang 5 Ziffer 1.1 der vorliegenden Verordnung enthält; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die noch nicht nach der EU-CLP-Verordnung gekennzeichnet sind und deren Kennzeichnung mindestens ein Element nach Anhang 5 Ziffer 2.1 der vorliegenden Verordnung enthält."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Als Stoffe und Zubereitungen der Gruppe 2 gelten Stoffe und Zubereitungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "deren Kennzeichnung nach der EU-CLP-Verordnung mindestens ein Element nach Anhang 5 Ziffer 1.2 der vorliegenden Verordnung enthält; oder"
+            },
+            {
+              "marke": "b",
+              "text": "die noch nicht nach der EU-CLP-Verordnung gekennzeichnet sind und deren Kennzeichnung mindestens ein Element nach Anhang 5 Ziffer 2.2 der vorliegenden Verordnung enthält."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a33e0c54f8f2aee5500fb7314aeb21109a34fcc6e72e88eb69d9c4ff9583f88d"
+    },
+    {
+      "id": "bund/CHEMV/art_62",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Aufbewahrung von Stoffen oder Zubereitungen der Gruppen 1 und 2 gilt Artikel 57."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer Stoffe und Zubereitungen der Gruppen 1 und 2 aufbewahrt, muss dafür sorgen, dass sie für Unbefugte unzugänglich sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Stoffe und Zubereitungen der Gruppen 1 und 2 dürfen nur in Behälter umgefüllt und in Behältern aufbewahrt werden, die mit den zutreffenden Gefahrensymbolen oder Gefahrenpiktogrammen gekennzeichnet sind."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "580c2b58543a184153b4a124b95210f3272ce05468017f5a927e1e7f15ccd46e"
+    },
+    {
+      "id": "bund/CHEMV/art_63",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe und Zubereitungen der Gruppe 2, die für private Verwenderinnen bestimmt sind, dürfen nicht in Selbstbedienung angeboten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verbot nach Absatz 1 gilt nicht für Motorkraftstoff."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "8b404dc8768659f2584f642d3bc8c0c421902b9b71f09e7723813104e5117a4a"
+    },
+    {
+      "id": "bund/CHEMV/art_64",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe und Zubereitungen der Gruppe 1 dürfen gewerblich nicht an private Verwenderinnen abgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Stoffe und Zubereitungen der Gruppen 1 und 2 dürfen gewerblich nur an handlungsfähige Personen abgegeben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "An minderjährige Personen dürfen Stoffe und Zubereitungen der Gruppen 1 und 2 abgegeben werden, sofern diese urteilsfähig sind und mit diesen Stoffen oder Zubereitungen im Rahmen ihrer Ausbildung oder beruflich oder gewerblich umzugehen haben."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Abgabebeschränkungen nach den Absätzen 1 und 2 gelten nicht für Motorkraftstoff."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b557141e9e8ec5f3d55bad90f3179440bc1631ee5fa927bb0cc861a8f836b16b"
+    },
+    {
+      "id": "bund/CHEMV/art_65",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen Stoff oder eine Zubereitung der Gruppe 1 gewerblich an berufliche Verwenderinnen oder an Händlerinnen abgibt, muss diese bei der Abgabe ausdrücklich über die erforderlichen Schutzmassnahmen und die vorschriftsgemässe Entsorgung informieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer einen Stoff oder eine Zubereitung der Gruppe 2 gewerblich an private Verwenderinnen abgibt, muss diese bei der Abgabe ausdrücklich über die erforderlichen Schutzmassnahmen und die vorschriftsgemässe Entsorgung informieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Stoffe und Zubereitungen dürfen nach Absatz 2 nur an Personen abgegeben werden, von denen die Abgeberin annehmen kann, dass sie urteilsfähig sind und die Sorgfaltspflicht nach Artikel 8 ChemG sowie die Anforderungen nach Artikel 28 USG einhalten können."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Pflichten nach den Absätzen 1 und 2 gelten nicht für die Abgabe von Motorkraftstoff."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a6079e16d478bc9bdff5c88601675b6c6fb1045b34ce6f77173d7135bb26a158"
+    },
+    {
+      "id": "bund/CHEMV/art_66",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über Sachkenntnis muss verfügen, wer gewerblich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Stoffe und Zubereitungen der Gruppe 1 an Personen abgibt, die diese beziehen, um sie beruflich zu verwenden, ohne sie in anderer Form in Verkehr zu bringen;"
+            },
+            {
+              "marke": "b",
+              "text": "Stoffe und Zubereitungen der Gruppe 2 an private Verwenderinnen abgibt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das EDI kann regeln:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wie die Anforderungen an die Sachkenntnis zu erfüllen sind; es berücksichtigt dabei Berufsausbildung und Berufserfahrung;"
+            },
+            {
+              "marke": "b",
+              "text": "Inhalt, Dauer und Organisation von Kursen zur Erlangung von Sachkenntnis."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Artikel 10 und 11 der Chemikalien-Risikoreduktions-Verordnung vom 18. Mai 2005 (ChemRRV) gelten sinngemäss."
+        },
+        {
+          "absatz": "4",
+          "text": "Absatz 1 gilt nicht für Motorkraftstoff."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "d9cb0f02ae2565df81aa14e35163656a09f9ec8f8ad04cae98c6520c482d8e2a"
+    },
+    {
+      "id": "bund/CHEMV/art_67",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Diebstahl oder Verlust von Stoffen oder Zubereitungen der Gruppe 1 muss die bestohlene Person beziehungsweise die Person, die den Stoff oder die Zubereitung verloren hat, unverzüglich die Polizei benachrichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Polizei setzt die für den Vollzug dieser Verordnung zuständige kantonale Behörde sowie das Bundesamt für Polizei davon in Kenntnis."
+        },
+        {
+          "absatz": "3",
+          "text": "Wer einen Stoff oder eine Zubereitung der Gruppe 1 oder 2 irrtümlich in Verkehr bringt, muss die für den Vollzug dieser Verordnung zuständige kantonale Behörde unverzüglich benachrichtigen und ihr die folgenden Informationen liefern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Angaben, die für eine genaue Identifizierung des Stoffs oder der Zubereitung erforderlich sind;"
+            },
+            {
+              "marke": "b",
+              "text": "eine umfassende Beschreibung der Gefahr, die vom Stoff oder von der Zubereitung ausgehen kann;"
+            },
+            {
+              "marke": "c",
+              "text": "alle verfügbaren Angaben darüber, von wem sie oder er den Stoff oder die Zubereitung bezogen hat und an wen sie oder er den Stoff oder die Zubereitung abgegeben hat;"
+            },
+            {
+              "marke": "d",
+              "text": "die Massnahmen, die zur Abwendung der Gefahr getroffen worden sind, wie Warnungen, Verkaufsstopp, Rücknahme vom Markt oder Rückruf."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die kantonale Behörde entscheidet, ob und wie auf eine Gefährdung aufmerksam gemacht wird."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "f4ea4362347fa70aa3e1dfb0753eca4e7d470a0a557f8009a8e51d6a1ae645e5"
+    },
+    {
+      "id": "bund/CHEMV/art_68",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Stoffe und Zubereitungen der Gruppen 1 und 2 dürfen zu Werbezwecken nur an berufliche Verwenderinnen und Händlerinnen abgegeben werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "6e02081a05274842bd76711e06ced1aebb7a6a15c91338a2355e9026eb7d7eaa"
+    },
+    {
+      "id": "bund/CHEMV/art_69",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Umgang mit Stoffen und Zubereitungen, die bestimmungsgemäss der Selbstverteidigung dienen, gelten die Artikel 62, 64 Absätze 2 und 3, 65 Absätze 2 und 3, 66 Absatz 1 Buchstabe b, 67 Absätze 3 und 4 und 68 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Stoffe und Zubereitungen, die bestimmungsgemäss der Selbstverteidigung dienen, dürfen nicht in Selbstbedienung angeboten werden."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "9c570385adfc5242a8c573923a737d574c208c41353de9dcc3c3f15a10017e88"
+    },
+    {
+      "id": "bund/CHEMV/art_70",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe nach Artikel 57 der EU-REACH-Verordnung gelten als besonders besorgniserregend, wenn sie in Anhang 3 (Kandidatenliste) aufgeführt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesamt für Umwelt (BAFU) entscheidet im Einvernehmen mit dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO), ob ein Stoff der Kandidatenliste, der in Anhang XIV der EU-REACH-Verordnung aufgeführt ist, in Anhang 1.17 ChemRRV aufgenommen wird."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "f3161e28390ae03c872b228d3ee005850a7a7cad86df5a367718a178546458a8"
+    },
+    {
+      "id": "bund/CHEMV/art_71",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer einen Gegenstand, der einen besonders besorgniserregenden Stoff in einer Konzentration von über 0,1 Gewichtsprozent enthält, gewerblich abgibt, muss die folgenden Informationen abgeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Namen des betreffenden Stoffs;"
+            },
+            {
+              "marke": "b",
+              "text": "alle Informationen, die nötig sind für eine sichere Verwendung des Gegenstands, soweit diese der Abgeberin vorliegen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er muss die Informationen kostenlos abgeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "beruflichen Verwenderinnen und Händlerinnen: unaufgefordert;"
+            },
+            {
+              "marke": "b",
+              "text": "privaten Verwenderinnen: auf Verlangen innerhalb von 45 Tagen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "bc6ec2eedef5939694bd31730e79f6dadfa7fa956279decb06f3dfda9a3422b3"
+    },
+    {
+      "id": "bund/CHEMV/art_72",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle führt ein Register über Stoffe und Zubereitungen, die in den Geltungsbereich der folgenden Verordnungen fallen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese Verordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "ChemRRV;"
+            },
+            {
+              "marke": "c",
+              "text": "Biozidprodukteverordnung vom 18. Mai 2005;"
+            },
+            {
+              "marke": "d",
+              "text": "Pflanzenschutzmittelverordnung vom 20. August 2025;"
+            },
+            {
+              "marke": "e",
+              "text": "Düngerverordnung vom 1. November 2023."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die nach Artikel 27 Absatz 1 TabPV erhobenen Daten zu den Zubereitungen werden ebenfalls in das Produkteregister aufgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Register wird erstellt gestützt auf Daten, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "von einer schweizerischen Behörde im Rahmen einer der Verordnungen nach Absatz 1 oder 1 bis erhoben oder erarbeitet worden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "von ausländischen Behörden oder von internationalen Organisationen zur Verfügung gestellt werden."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "3daa3980ec7df8b6317c3a142d53e4bbdb74b002cbb9375cc82d319a3bd431cf"
+    },
+    {
+      "id": "bund/CHEMV/art_73",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörden behandeln die Daten, an deren Geheimhaltung ein schutzwürdiges Interesse besteht, vertraulich, soweit nicht ein überwiegendes öffentliches Interesse an deren Bekanntgabe besteht."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmeldestelle bezeichnet im Einvernehmen mit den Beurteilungsstellen die vertraulichen Daten. Sie bezeichnet sie vor der Weitergabe an die nach Artikel 75 Absatz 2 zuständigen kantonalen und eidgenössischen Behörden."
+        },
+        {
+          "absatz": "3",
+          "text": "Als schutzwürdig gilt insbesondere das Interesse an der Wahrung des Geschäfts- und Fabrikationsgeheimnisses, einschliesslich:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Angaben über die Identität von Zwischenprodukten;"
+            },
+            {
+              "marke": "b",
+              "text": "der vollständigen Zusammensetzung einer Zubereitung;"
+            },
+            {
+              "marke": "c",
+              "text": "der in Verkehr gebrachten Mengen eines Stoffs oder einer Zubereitung;"
+            },
+            {
+              "marke": "d",
+              "text": "der Informationen über Nanomaterialien nach Artikel 49 Absatz 1 Buchstabe c Ziffer 7 und Buchstabe d Ziffer 7."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Erhält die Anmeldestelle davon Kenntnis, dass als vertraulich geltende Daten nachträglich rechtmässig bekannt gegeben wurden, so sind diese Angaben nicht mehr vertraulich zu behandeln."
+        },
+        {
+          "absatz": "5",
+          "text": "In keinem Fall als vertraulich gelten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Handelsname;"
+            },
+            {
+              "marke": "b",
+              "text": "der Name und die Adresse der anmelde-, mitteilungs- oder meldepflichtigen Person;"
+            },
+            {
+              "marke": "c",
+              "text": "die physikalisch-chemischen Eigenschaften;"
+            },
+            {
+              "marke": "d",
+              "text": "die Verfahren zur ordnungsgemässen Entsorgung, zur möglichen Wiederverwertung und sonstigen Unschädlichmachung;"
+            },
+            {
+              "marke": "e",
+              "text": "die Zusammenfassung der Ergebnisse der toxikologischen und ökotoxikologischen Prüfungen;"
+            },
+            {
+              "marke": "f",
+              "text": "der Reinheitsgrad eines Stoffs und die Identität der für die Einstufung relevanten Verunreinigungen und Zusatzstoffe;"
+            },
+            {
+              "marke": "g",
+              "text": "die Empfehlungen über Vorsichtsmassnahmen bei der Verwendung und über Sofortmassnahmen bei Unfällen;"
+            },
+            {
+              "marke": "h",
+              "text": "die im Sicherheitsdatenblatt enthaltenen Informationen, ausgenommen die Identität von Zwischenprodukten;"
+            },
+            {
+              "marke": "i",
+              "text": "die geeigneten Analysemethoden zur Feststellung der Exposition des Menschen und des Vorkommens in der Umwelt."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Die Anmeldestelle und die Beurteilungsstellen können Daten des Produkteregisters, die in keinem Fall als vertraulich gelten, veröffentlichen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a373bae1be9ff243804a4741edde5f51f6838fa5c39a7bdd7f053d49b83efeeb"
+    },
+    {
+      "id": "bund/CHEMV/art_74",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Verlangen der Anmeldestelle, der Zulassungsstelle Pflanzenschutzmittel und der Beurteilungsstellen und wenn es zum Vollzug dieser Verordnung erforderlich ist, sind folgende Daten über Stoffe, Zubereitungen und Gegenstände weiterzugeben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Pflanzenschutzmittelverordnung vom 20. August 2025,"
+            },
+            {
+              "marke": "2",
+              "text": "die Verordnung vom 27. Mai 2020 über den Vollzug der Lebensmittelgesetzgebung;"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "5cc68d57773f25ef941adc7b0a95d06b095de2f6e84641fcbf440ba7b1216fc7"
+    },
+    {
+      "id": "bund/CHEMV/art_75",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle und die Beurteilungsstellen stellen sich, soweit dies zur Erfüllung ihrer Aufgaben erforderlich ist, gegenseitig die Daten zur Verfügung, die sie gestützt auf diese Verordnung oder andere Erlasse, die den Schutz des Menschen oder der Umwelt vor Stoffen, Zubereitungen oder Gegenständen regeln, selbst erhoben haben oder haben erheben lassen. Sie können zu diesem Zweck automatisierte Abrufverfahren einrichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie stellen den kantonalen und eidgenössischen Behörden, die zuständig sind für den Vollzug von Erlassen, die den Schutz des Menschen oder der Umwelt vor Stoffen, Zubereitungen oder Gegenständen regeln, die für die Erfüllung ihrer Aufgaben erforderlichen Daten zur Verfügung."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie dürfen Daten über Herstellerinnen und die von ihnen in Verkehr gebrachten Stoffe oder Zubereitungen den nachfolgend genannten Behörden im Abrufverfahren zugänglich machen, sofern für sie die Daten für den Vollzug notwendig sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Zollbehörden;"
+            },
+            {
+              "marke": "b",
+              "text": "den Behörden gemäss Absatz 2;"
+            },
+            {
+              "marke": "c",
+              "text": "der Auskunftsstelle für Vergiftungen (Art. 79)."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Sie können in Einzelfällen anderen als den in Absatz 2 genannten Stellen Daten über Stoffe, Zubereitung und Gegenstände weitergeben, wenn diese die Daten zur Erfüllung ihrer Aufgaben benötigen."
+        },
+        {
+          "absatz": "5",
+          "text": "Soweit es sich um vertrauliche Daten über die Zusammensetzung von Zubereitungen handelt, gilt Folgendes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Im Abrufverfahren dürfen die Daten nur den kantonalen Behörden nach Absatz 2 und nur zum Zweck der Überprüfung des UFI zugänglich gemacht werden."
+            },
+            {
+              "marke": "b",
+              "text": "Eine Weitergabe an die Behörden und Stellen nach den Absätzen 2, 3 und 4 ist nur zulässig, wenn sie: 1. von einer Strafverfolgungsbehörde verlangt wird;"
+            },
+            {
+              "marke": "2",
+              "text": "der Beantwortung medizinischer Anfragen, insbesondere in Notfällen, dient; oder"
+            },
+            {
+              "marke": "3",
+              "text": "die Abwehr einer unmittelbar drohenden Gefahr für das Leben oder die Gesundheit des Menschen oder für die Umwelt zum Ziel hat."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Die Kantone informieren das BAG über die Ergebnisse von Erhebungen und Abklärungen zur Qualität der Innenraumluft und leiten ihm die ihnen verfügbaren Daten zur Innenraumluft weiter."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_75",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1ce65ac35280adc81c01d422648cb8f1eaaa3fdafbfe926bac52151c9413d3e9"
+    },
+    {
+      "id": "bund/CHEMV/art_76",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle und die Beurteilungsstellen dürfen Daten, die nicht vertraulich sind, an ausländische Behörden und Institutionen sowie internationale Organisationen weitergeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie dürfen vertrauliche Daten weitergeben, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "völkerrechtliche Vereinbarungen oder Beschlüsse internationaler Organisationen dies erfordern; oder"
+            },
+            {
+              "marke": "b",
+              "text": "es zur Abwendung unmittelbar drohender Gefahr für Leben oder Gesundheit des Menschen oder für die Umwelt erforderlich ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_76",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "7ae06f03c4edd72398e5c1cad9bea44503ba3e1d8ec180708273be710bd1be86"
+    },
+    {
+      "id": "bund/CHEMV/art_77",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle ist dem BAG administrativ zugewiesen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anmeldestelle wird ein Steuerungsausschuss eingesetzt. Dieser besteht aus den Direktorinnen und Direktoren folgender Bundesämter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "BAG;"
+            },
+            {
+              "marke": "b",
+              "text": "BLW;"
+            },
+            {
+              "marke": "c",
+              "text": "BAFU;"
+            },
+            {
+              "marke": "d",
+              "text": "SECO;"
+            },
+            {
+              "marke": "e",
+              "text": "BLV."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Steuerungsausschuss hat folgende Aufgaben und Befugnisse:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Wahl der Leitung der Anmeldestelle;"
+            },
+            {
+              "marke": "b",
+              "text": "Festlegung der Strategie der Anmeldestelle;"
+            },
+            {
+              "marke": "c",
+              "text": "Einsicht in und Antragsrecht für das Budget der Anmeldestelle."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Der Steuerungsausschuss entscheidet einvernehmlich."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "42491218e8cf114915934ea58ba09d65320161c3cc01d42f5aa8fc659a881e0c"
+    },
+    {
+      "id": "bund/CHEMV/art_78",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Beurteilungsstellen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das BAG für die Belange des Schutzes des Lebens und der Gesundheit des Menschen;"
+            },
+            {
+              "marke": "b",
+              "text": "das BAFU für die Belange des Umweltschutzes und des mittelbaren Schutzes des Menschen;"
+            },
+            {
+              "marke": "c",
+              "text": "das SECO für die Belange des Arbeitnehmerschutzes."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "86c6116be5d52bae45263517ceeacef9ac7108dce56b6641363a95ed5f3aad8e"
+    },
+    {
+      "id": "bund/CHEMV/art_79",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auskunftsstelle für Vergiftungen nach Artikel 30 ChemG ist das Tox Info Suisse."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAG schliesst mit dem Tox Info Suisse eine Vereinbarung über die Höhe der Abgeltung für seine Leistungen nach Artikel 30 Absatz 2 ChemG ab."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "f51d9dc317cea4354f72b6cbae6005474990818a9c8e84720e509691ae90754e"
+    },
+    {
+      "id": "bund/CHEMV/art_80",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beurteilungsstellen können alte Stoffe überprüfen, die:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "aufgrund der hergestellten oder in Verkehr gebrachten Mengen oder aufgrund ihrer Gefährlichkeit oder der Gefährlichkeit ihrer Folgeprodukte oder Abfälle ein besonderes Risiko für das Leben oder die Gesundheit des Menschen oder für die Umwelt darstellen können; oder"
+            },
+            {
+              "marke": "b",
+              "text": "Gegenstand eines internationalen Altstoff-Programms sind."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Soll ein alter Stoff überprüft werden, so verlangt die Anmeldestelle auf Antrag einer Beurteilungsstelle von allen betroffenen Herstellerinnen folgende Angaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Adresse der Herstellerin sowie Name und Adresse der ausländischen Herstellerin, falls die Herstellerin den Stoff einführt;"
+            },
+            {
+              "marke": "b",
+              "text": "alle Unterlagen, die zur Ermittlung und Feststellung der gefährlichen Eigenschaften des Stoffs gedient haben;"
+            },
+            {
+              "marke": "c",
+              "text": "die bekannten Verwendungszwecke;"
+            },
+            {
+              "marke": "d",
+              "text": "Angaben über die von den Herstellerinnen in Verkehr gebrachten Mengen;"
+            },
+            {
+              "marke": "e",
+              "text": "soweit vorhanden und von der Herstellerin mit zumutbarem Aufwand zu beschaffen: das Registrierungsdossier, das der Europäischen Chemikalienagentur eingereicht wurde."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Auf Antrag einer Beurteilungsstelle verlangt die Anmeldestelle von einer der Herstellerinnen Abklärungen oder Untersuchungen. Für die der Herstellerin entstehenden Kosten haften alle betroffenen Herstellerinnen solidarisch."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "068217ecf47d5f54907c930bb3cd41b75099cb604ccaddad7952c993658742c6"
+    },
+    {
+      "id": "bund/CHEMV/art_81",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beurteilungsstellen überprüfen in ihrem Zuständigkeitsbereich bei Stoffen, Zubereitungen und Gegenständen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beurteilung und die Einstufung;"
+            },
+            {
+              "marke": "b",
+              "text": "die Angaben auf dem Sicherheitsdatenblatt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können die Anmeldestelle beauftragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Zusammensetzung und die physikalisch-chemischen Eigenschaften von Stoffen, Zubereitungen und Gegenständen zu überprüfen;"
+            },
+            {
+              "marke": "b",
+              "text": "kantonale Vollzugsbehörden zu ersuchen, Proben zu entnehmen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Besteht Grund zur Annahme, dass die Beurteilung oder die Einstufung nicht oder nicht korrekt erfolgt ist, so verlangt die Anmeldestelle auf Antrag einer Beurteilungsstelle von der Herstellerin:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "alle Unterlagen, die zur Feststellung der gefährlichen Eigenschaften oder zur Beurteilung gedient haben;"
+            },
+            {
+              "marke": "b",
+              "text": "gegebenenfalls das Sicherheitsdatenblatt."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Anmeldestelle verlangt auf Antrag einer Beurteilungsstelle von der Herstellerin die Durchführung von Prüfungen oder vertieften Beurteilungen, wenn Anhaltspunkte dafür bestehen, dass:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Stoffe oder Zubereitungen, ihre Folgeprodukte oder ihre Abfälle den Menschen oder die Umwelt gefährden können;"
+            },
+            {
+              "marke": "b",
+              "text": "Gegenstände, ihre Folgeprodukte oder ihre Abfälle die Umwelt gefährden können."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Im Übrigen haben die Vollzugsbehörden die Befugnisse nach Artikel 42 ChemG und hinsichtlich einer Gefahr für die Umwelt auch die nach Artikel 41 ChemG."
+        },
+        {
+          "absatz": "6",
+          "text": "Kommt die Herstellerin einer Verfügung nicht nach, so verbietet die Anmeldestelle auf Antrag einer Beurteilungsstelle die weitere Abgabe der betreffenden Stoffe, Zubereitungen oder Gegenstände."
+        },
+        {
+          "absatz": null,
+          "text": "7 Für kosmetische Mittel sowie für ausschliesslich dafür bestimmte Ausgangs- und Zusatzstoffe verfügt die für diese Produkte zuständige Stelle die erforderlichen Massnahmen. Die Mitwirkung des BAFU richtet sich nach den Artikeln 62 a und 62 b des Regierungs- und Verwaltungsorganisationsgesetzes vom 21. März 1997."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a935c0c8b2423c59d5294564a461175b03c3501e120cae114a9892d811875059"
+    },
+    {
+      "id": "bund/CHEMV/art_82",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Angelegenheiten, die die Landesverteidigung betreffen, prüft die Anmeldestelle im Einvernehmen mit den Beurteilungsstellen, ob die Bestimmungen dieser Verordnung eingehalten sind."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "bbedf2def2b87ab88d491c87b4a9c2b789bb1ae918fa8ad558c651d9e9168524"
+    },
+    {
+      "id": "bund/CHEMV/art_83",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zollstellen kontrollieren auf Ersuchen der Anmeldestelle, ob Stoffe, Zubereitungen oder Gegenstände den Bestimmungen dieser Verordnung entsprechen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beurteilungsstellen können die Anmeldestelle auffordern, ein Ersuchen nach Absatz 1 zu stellen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Verdacht auf eine Widerhandlung sind die Zollstellen berechtigt, die Ware an der Grenze zurückzuhalten und die übrigen Vollzugsbehörden nach dieser Verordnung beizuziehen. Diese nehmen die weiteren Abklärungen vor und treffen die erforderlichen Massnahmen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1f85a5f3f9aaaa73086b54d46e55c2a8b47f0af193f1b5a2fc95dab0040fdd8e"
+    },
+    {
+      "id": "bund/CHEMV/art_84",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG passt im Einvernehmen mit dem BAFU und dem SECO die folgenden Anhänge an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Anhang 2: 1. Es bezeichnet die massgebende Fassung der Anhänge der EU-CLP-Verordnung."
+            },
+            {
+              "marke": "2",
+              "text": "Es berücksichtigt die Änderungen der Testrichtlinien für Chemikalien der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) und bezeichnet die massgebende Fassung der Verordnung (EG) Nr. 440/2008 und des Handbuchs der UNO über Prüfungen und Kriterien zur Bestimmung physikalischer Gefahren (UN Manual of Tests and Criteria)."
+            },
+            {
+              "marke": "3",
+              "text": "Es bezeichnet die massgebende Fassung des Anhangs II der EU-REACH-Verordnung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a9a9098bf8346312f37f90e24ad6dd64ebfbe50bac1b02a1d28afe1fba150a2f"
+    },
+    {
+      "id": "bund/CHEMV/art_85",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständigen Bundesstellen können die ihnen durch diese Verordnung zugewiesenen Aufgaben und Befugnisse ganz oder teilweise geeigneten öffentlich-rechtlichen Körperschaften oder Privaten übertragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit der Vollzug des Gesundheitsschutzes betroffen ist, ist die Übertragung eingeschränkt auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Überprüfung der Selbstkontrolle;"
+            },
+            {
+              "marke": "b",
+              "text": "die Beurteilung im Rahmen der Überprüfung der Anmeldung und der Folgeinformationen;"
+            },
+            {
+              "marke": "c",
+              "text": "Informationstätigkeiten nach Artikel 28 ChemG;"
+            },
+            {
+              "marke": "d",
+              "text": "die Risikobewertung nach Artikel 16 ChemG."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "931d2e86116048ff46276f5826964f7e25ac49a996b7426ef3a8cc7b89c97f7e"
+    },
+    {
+      "id": "bund/CHEMV/art_86",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebührenpflicht und die Gebührenbemessung für Verwaltungshandlungen der Bundesvollzugsbehörden nach dieser Verordnung richten sich nach der Chemikaliengebührenverordnung vom 18. Mai 2005."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "9b114f8f9276c1231de8e8ac69f9f4d269e0b26f4e0fe4b1802ad9110b82d05e"
+    },
+    {
+      "id": "bund/CHEMV/art_87",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Vollzugsbehörden kontrollieren Stoffe, Zubereitungen und Gegenstände, die sich auf dem Markt befinden, anhand von Stichproben."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Rahmen dieser Kontrollen überprüfen die kantonalen Vollzugsbehörden, ob:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Anmelde-, Mitteilungs- und Meldepflicht (Art. 24, 34, 48, 52, 53) sowie die Bestimmungen über die Folgeinformationen (Art. 46) erfüllt worden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "die Verpackung den Bestimmungen über die Verpackung (Art. 8 und 9) entspricht;"
+            },
+            {
+              "marke": "c",
+              "text": "die Kennzeichnung und der UFI den Bestimmungen über die Kennzeichnung (Art. 10–13) und den UFI (Art. 15 a ) entsprechen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Vorschriften über die Bereitstellung, Aktualisierung und Aufbewahrung des Sicherheitsdatenblatts (Art. 21–23) eingehalten werden und ob die Angaben auf dem Sicherheitsdatenblatt nicht offensichtlich fehlerhaft sind;"
+            },
+            {
+              "marke": "e",
+              "text": "die Vorschriften über die Werbung (Art. 60) und die Warenmuster (Art. 68) eingehalten werden;"
+            },
+            {
+              "marke": "f",
+              "text": "die Informationspflicht bei der Abgabe von Gegenständen, die besonders besorgniserregende Stoffe enthalten (Art. 71), erfüllt worden ist."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "c05d733f691ac556ceefc84c707bf9e15040567f55d0322b36d83eececebf282"
+    },
+    {
+      "id": "bund/CHEMV/art_88",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Anmeldestelle weist von sich aus oder auf Antrag einer Beurteilungsstelle die kantonalen Vollzugsbehörden an, bestimmte Stoffe, Zubereitungen oder Gegenstände zu kontrollieren, insbesondere auch nach Artikel 81 Absatz 1."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonalen Vollzugsbehörden erheben auf Ersuchen der Anmeldestelle Proben."
+        },
+        {
+          "absatz": "3",
+          "text": "Geben die Kontrollen Anlass zu erheblichen Beanstandungen, so informiert die kontrollierende Behörde die Anmeldestelle und die nach Artikel 90 a für die Verfügungen zuständigen Behörden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei begründetem Verdacht auf eine fehlerhafte Einstufung informiert die kontrollierende Behörde die Anmeldestelle."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "5a51f816c2ec14ac94604608d31f89f37c8d58e8e3448f12e8ed1b3a45f4dfe8"
+    },
+    {
+      "id": "bund/CHEMV/art_89",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/CHEMV/art_90",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonalen Vollzugsbehörden überwachen, ob die besonderen Bestimmungen über den Umgang (Art. 55–59, 61–67 und 69) eingehalten werden. Artikel 25 Absatz 1 zweiter Satz ChemG gilt entsprechend."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kantone fördern das umweltgerechte Verhalten."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_90",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "1970ffb1d28b17d17ff66963a487a44771ad9f51b6f4dcc0ecff809ca74823d0"
+    },
+    {
+      "id": "bund/CHEMV/art_90_a",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "90_a",
+      "artikelLabel": "Art. 90a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ergibt die Kontrolle, dass Verstösse gegen die in Artikel 87 Absatz 2, 88 Absatz 1 und 90 Absatz 1 genannten Bestimmungen vorliegen, so verfügt die Behörde des Kantons, in dem die Pflichtigen ihren Wohn- oder Geschäftssitz haben, die nötigen Massnahmen. Bei Verstössen gegen die in Artikel 90 Absatz 1 genannten Bestimmungen kann auch die zuständige Behörde des Kantons, in dem die Verstösse begangen wurden, verfügen. Die Kantone koordinieren die nötigen Massnahmen."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_90_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "6b03c88adb16f7536a9e80ddbed538111469673c3269a4f012ba277222e63859"
+    },
+    {
+      "id": "bund/CHEMV/art_91",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Chemikalienverordnung vom 18. Mai 2005 wird aufgehoben."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_91",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "af0b2147d58f460e301db6ac821f029a7bbf6fb98097f8bab70beed271f62a42"
+    },
+    {
+      "id": "bund/CHEMV/art_92",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Änderung anderer Erlasse wird in Anhang 6 geregelt."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_92",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "4981d26b098440031b057831c9c3d8af713ef4b2b99521643fc5b4b7125f39ab"
+    },
+    {
+      "id": "bund/CHEMV/art_93",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Zubereitungen, die vor dem Inkrafttreten der vorliegenden Verordnung nach den Artikeln 35–50 der Chemikalienverordnung vom 18. Mai 2005 verpackt und gekennzeichnet worden sind, gelten folgende Übergangsbestimmungen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Sie dürfen bis zum 31. Mai 2017 abgegeben werden, wenn für sie ein Sicherheitsdatenblatt nach Artikel 19 der vorliegenden Verordnung erstellt und eine Meldung nach Artikel 48 der vorliegenden Verordnung vorgenommen wurde; handelt es sich dabei um flüssige, für private Verwenderinnen bestimmte Waschmittel in auflösbaren Verpackungen, welche die Anforderungen der Verordnung (EU) Nr. 1297/2014 nicht erfüllen, so dürfen sie nur noch bis zum 31. Dezember 2015 abgegeben werden."
+            },
+            {
+              "marke": "b",
+              "text": "Eine doppelte Kennzeichnung nach den Artikeln 35–50 der Chemikalienverordnung vom 18. Mai 2005 und nach Artikel 10 der vorliegenden Verordnung ist nicht zulässig."
+            },
+            {
+              "marke": "c",
+              "text": "Für den Umgang gelten die Bestimmungen nach dem 4. Titel der vorliegenden Verordnung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Aerosolpackungen, die vor dem Inkrafttreten der vorliegenden Verordnung verpackt und gekennzeichnet worden sind, nicht in den Geltungsbereich des LMG fallen und die Anforderungen der Artikel 9 und 11 nicht erfüllen, dürfen bis zum 31. Mai 2017 abgegeben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird eine Zubereitung, die vor dem Inkrafttreten der vorliegenden Verordnung nach den Artikeln 39–50 der Chemikalienverordnung vom 18. Mai 2005 in der Fassung vom 1. Dezember 2012 gekennzeichnet worden ist, aus der Originalverpackung in kleinere Verpackungen umgefüllt, ohne dass die Zusammensetzung oder der Verwendungszweck geändert werden, so darf sie auch in diesen kleineren Verpackungen bis zum 31. Mai 2017 mit bisheriger Kennzeichnung abgegeben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Pflicht zur Erstellung von Expositionsszenarien nach Artikel 16 muss die Herstellerin für Stoffe, die jährlich in Mengen von 10 bis 100 Tonnen in Verkehr gebracht werden, bis zum 1. Juni 2018 nachkommen"
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b0280b03f94103b950edaede98b6144fd34c022c10d5cbc893b5c71553a16b53"
+    },
+    {
+      "id": "bund/CHEMV/art_93_a",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "93_a",
+      "artikelLabel": "Art. 93a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Herstellerinnen von Stoffen, Zubereitungen und Nanomaterialien nach Artikel 48, die zum Zeitpunkt des Inkrafttretens der Änderung vom 31. Januar 2018 bereits in Verkehr gebracht worden sind und die nach Inkrafttreten der Änderung vom 31. Januar 2018 erneut in Verkehr gebracht werden, müssen der Meldepflicht nach den Artikeln 48–54 spätestens drei Monate nach dem erneuten Inverkehrbringen nachkommen."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "eebeb3007f7be93f9124d11075bc004b3a45aa655d6574277af309107dec98a2"
+    },
+    {
+      "id": "bund/CHEMV/art_93_b",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "93_b",
+      "artikelLabel": "Art. 93b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Herstellerinnen dürfen die folgenden Zubereitungen, wenn diese am 1. Januar 2022 über keinen UFI verfügen, noch längstens bis zum 31. Dezember 2025 ohne Angabe des UFI nach Artikel 15 a in Verkehr bringen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zubereitungen, die für berufliche Verwenderinnen bestimmt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Zubereitungen, die für private Verwenderinnen bestimmt sind und vor dem 1. Januar 2022 in Verkehr gebracht worden sind."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "a7ef64d1e51a5503cd79d962c7c2a43d349da9b4cd9bee7369e105537e35e22d"
+    },
+    {
+      "id": "bund/CHEMV/art_93_c",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "93_c",
+      "artikelLabel": "Art. 93c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Stoffe und Zubereitungen dürfen bis zum 31. Dezember 2025 mit bisheriger Kennzeichnung an Dritte abgegeben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Beabsichtigt eine Herstellerin, Versuche an Wirbeltieren durchzuführen, so muss sie für Stoffe, die bereits vor Inkrafttreten dieser Änderung in Verkehr gebracht wurden und neu der Anmeldepflicht unterliegen, die Voranfragepflicht nach Artikel 31 Absätze 1 und 2 bis zum 31. Oktober 2023 erfüllen. Hat sie diese erfüllt, so darf sie den Stoff noch bis zum 30. April 2027 ohne Anmeldung in Verkehr bringen. Die Anmeldestelle kann die Frist um höchstens zwei Jahre verlängern. Beabsichtigen mehrere Herstellerinnen, den gleichen Stoff anzumelden, so teilt die Anmeldestelle dies den Herstellerinnen unverzüglich nach Ablauf der Voranfragefrist mit. Artikel 31 Absatz 4 gilt sinngemäss."
+        },
+        {
+          "absatz": "3",
+          "text": "Neue Stoffe, die nicht vor dem Inkrafttreten dieser Änderung angemeldet worden sind und nicht unter Absatz 2 fallen, dürfen noch bis zum 30. April 2024 ohne Anmeldung in Verkehr gebracht werden. Die Anmeldestelle kann die Frist um höchstens ein Jahr verlängern."
+        },
+        {
+          "absatz": "4",
+          "text": "Für alte Stoffe, die vor Inkrafttreten dieser Änderung angemeldet worden sind, gilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Die Anmelderin ist von den Pflichten nach den Artikeln 46 und 47 entbunden, die Alleinvertreterin und die Importeurin von der Pflicht nach Artikel 46."
+            },
+            {
+              "marke": "b",
+              "text": "Die Ausnahme nach Artikel 54 Absatz 1 Buchstabe k gilt nicht."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_93_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "b6b1b137c1b440f829ad705ecbd60e541d604f0bd259b1210daf2068a0f3a27d"
+    },
+    {
+      "id": "bund/CHEMV/art_94",
+      "ebene": "bund",
+      "quelle": "CHEMV",
+      "erlass": "ChemV",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt am 1. Juli 2015 in Kraft."
+        }
+      ],
+      "stand": "2026-04-24",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2015/366/de#art_94",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20260424",
+      "sha": "6ffd59c9d9fca71fd560a3738001d7c3cf33f85a609e653aa1cf6bf1ff33df9f"
+    }
+  ]
+}

@@ -33,7 +33,7 @@ export const SYSTEMATIK: SystematikKategorie[] = [
     nr: '01', id: 'staat', titel: 'Staats- und Verfassungsrecht',
     lede: 'Das Fundament der Rechtsordnung — alles Übrige fusst auf der Bundesverfassung.',
     gruppen: [
-      { id: 'verfassung', titel: 'Verfassung & Bundesorgane', keys: ['BV', 'PARLG', 'RVOG', 'BPR', 'PUBLG', 'BGG', 'BGERR', 'STBOG'] },
+      { id: 'verfassung', titel: 'Verfassung & Bundesorgane', keys: ['BV', 'PARLG', 'RVOG', 'RVOV', 'BPR', 'PUBLG', 'BGG', 'BGERR', 'STBOG'] },
     ],
   },
   {
@@ -53,7 +53,7 @@ export const SYSTEMATIK: SystematikKategorie[] = [
     standardOffen: true,
     gruppen: [
       { id: 'zpo', titel: 'Zivilprozess (ZPO)', keys: ['ZPO'] },
-      { id: 'schkg', titel: 'Schuldbetreibung & Konkurs (SchKG)', keys: ['SCHKG', 'GEBV_SCHKG'] },
+      { id: 'schkg', titel: 'Schuldbetreibung & Konkurs (SchKG)', keys: ['SCHKG', 'GEBV_SCHKG', 'KOV', 'VBB', 'VZG'] },
     ],
   },
   {
@@ -63,22 +63,22 @@ export const SYSTEMATIK: SystematikKategorie[] = [
     gruppen: [
       { id: 'stgb', titel: 'Strafrecht (StGB)', keys: ['STGB'] },
       { id: 'stpo', titel: 'Strafverfahren', keys: ['STPO', 'JSTPO', 'JSTG'] },
-      { id: 'neben', titel: 'Neben- & Militärstrafrecht, Opferhilfe, Rechtshilfe', keys: ['BETMG', 'VSTRR', 'OHG', 'IRSG', 'MSTG', 'MSTP', 'MG'] },
+      { id: 'neben', titel: 'Neben- & Militärstrafrecht, Opferhilfe, Rechtshilfe', keys: ['BETMG', 'BETMKV', 'VSTRR', 'OHG', 'IRSG', 'MSTG', 'MSTP', 'MG'] },
     ],
   },
   {
     nr: '05', id: 'verwaltung', titel: 'Verwaltungsrecht',
     lede: 'Das Verhältnis Bürger ↔ Staat — der praktisch umfangreichste Ast: Verfahren, Steuern, Sozialversicherung, Migration, Bau/Umwelt, Finanzmarkt.',
     gruppen: [
-      { id: 'verfahren', titel: 'Verwaltungsverfahren & Rechtspflege', keys: ['VWVG', 'VGG', 'VG', 'BGOE', 'BPG'] },
-      { id: 'steuern', titel: 'Steuern & Abgaben', keys: ['DBG', 'STHG', 'MWSTG', 'MWSTV', 'VSTG', 'VSTV', 'STG'] },
-      { id: 'sozial', titel: 'Sozialversicherung', keys: ['ATSG', 'ATSV', 'AHVG', 'AHVV', 'IVG', 'IVV', 'ELG', 'ELV', 'BVG', 'FZG', 'BVV_2', 'UVG', 'UVV', 'MVG', 'FAMZG', 'KVG', 'KVV', 'KLV', 'EOG', 'AVIG', 'AVIV'] },
-      { id: 'migration', titel: 'Migration & Gleichstellung', keys: ['AIG', 'VZAE', 'ASYLG', 'BUEG', 'GLG'] },
-      { id: 'umwelt', titel: 'Raumplanung, Bau & Umwelt', keys: ['RPG', 'USG', 'GSCHG', 'NHG', 'WAG', 'ENG', 'CO2_GESETZ', 'ENTG'] },
-      { id: 'wirtschaft', titel: 'Wirtschaft & Finanzmarkt', keys: ['BANKG', 'KAG', 'FINMAG', 'FINIG', 'FINFRAG', 'VAG', 'FIDLEG', 'PUEG', 'GWG', 'BEWG'] },
-      { id: 'gesundheit', titel: 'Gesundheit & Lebensmittel', keys: ['HMG', 'EPG', 'TXG', 'LMG'] },
-      { id: 'sektoren', titel: 'Beschaffung, Verkehr & Kommunikation', keys: ['BOEB', 'SVG', 'VRV', 'VZV', 'SSV', 'LFG', 'EBG', 'FMG'] },
-      { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'ENTSG', 'BBG', 'BGFA'] },
+      { id: 'verfahren', titel: 'Verwaltungsverfahren & Rechtspflege', keys: ['VWVG', 'VGG', 'VGKE', 'VG', 'BGOE', 'BPG', 'BPV'] },
+      { id: 'steuern', titel: 'Steuern & Abgaben', keys: ['DBG', 'STHG', 'MWSTG', 'MWSTV', 'VSTG', 'VSTV', 'QSTV', 'STG'] },
+      { id: 'sozial', titel: 'Sozialversicherung', keys: ['ATSG', 'ATSV', 'AHVG', 'AHVV', 'IVG', 'IVV', 'ELG', 'ELV', 'BVG', 'FZG', 'BVV_2', 'BVV3', 'UVG', 'UVV', 'MVG', 'MVV', 'FAMZG', 'FAMZV', 'KVG', 'KVV', 'KLV', 'EOG', 'EOV', 'AVIG', 'AVIV', 'FZV'] },
+      { id: 'migration', titel: 'Migration & Gleichstellung', keys: ['AIG', 'VZAE', 'ASYLG', 'ASYLV1', 'ASYLV2', 'ASYLV3', 'VEV', 'VINTA', 'BUEG', 'BUEV', 'GLG'] },
+      { id: 'umwelt', titel: 'Raumplanung, Bau & Umwelt', keys: ['RPG', 'RPV', 'USG', 'GSCHG', 'GSCHV', 'NHG', 'NHV', 'WAG', 'WAV', 'LRV', 'LSV', 'VVEA', 'CHEMV', 'ENG', 'CO2_GESETZ', 'ENTG'] },
+      { id: 'wirtschaft', titel: 'Wirtschaft & Finanzmarkt', keys: ['BANKG', 'BANKV', 'ERV', 'KAG', 'KKV', 'FINMAG', 'FINIG', 'FINIV', 'FINFRAG', 'FINFRAV', 'VAG', 'AVO', 'FIDLEG', 'FIDLEV', 'PUEG', 'GWG', 'GWV_FINMA', 'BEWG', 'BEWV'] },
+      { id: 'gesundheit', titel: 'Gesundheit & Lebensmittel', keys: ['HMG', 'VAM', 'AMBV', 'MEPV', 'EPG', 'EPV', 'TXG', 'LMG'] },
+      { id: 'sektoren', titel: 'Beschaffung, Verkehr & Kommunikation', keys: ['BOEB', 'VOEB', 'SVG', 'VRV', 'VZV', 'VTS', 'SSV', 'LFG', 'EBG', 'FMG'] },
+      { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'ARGV1', 'ARGV2', 'ARGV3', 'ARGV4', 'ENTSG', 'BBG', 'BGFA'] },
     ],
   },
   // Völker- & Europarecht (EMRK/LugÜ/VRK u. a.) liegt seit 24.6.2026 in der

@@ -180,6 +180,71 @@ export const FEDLEX = {
   // 25.6.2026 fing den Fehlgriff (Snapshot trug zunächst die Agrar-VO); Cache-Tor
   // um SR-Identitäts-Sonde gehärtet (fedlex-cache.sh, 6. Feld = erwartete SR).
   VAG:     'https://www.fedlex.admin.ch/eli/cc/2005/734/de', // SR 961.01, Kons. 20240901 (html-1)
+  // ── Punkt 12 Batch 2 (24.6.2026, Bund-VERORDNUNGEN, Promotion aus nur-live-
+  //    link-Stubs). Geltende Konsolidierung via date-geordnete Taxonomie-Abfrage
+  //    (Resolver lieferte für viele die REPEALTE Vorgänger-VO) + Filestore-HTML-
+  //    Inhalts-Sonde (art_1 + Artikelzahl == Snapshot) doppelt verifiziert (§7). ──
+  AHVV: 'https://www.fedlex.admin.ch/eli/cc/63/1185_1183_1185/de', // SR 831.101, Kons. 20260101
+  IVV: 'https://www.fedlex.admin.ch/eli/cc/1961/29_29_29/de', // SR 831.201, Kons. 20250601
+  ELV: 'https://www.fedlex.admin.ch/eli/cc/1971/37_37_37/de', // SR 831.301, Kons. 20250101
+  'BVV 2': 'https://www.fedlex.admin.ch/eli/cc/1984/543_543_543/de', // SR 831.441.1, Kons. 20250101
+  UVV: 'https://www.fedlex.admin.ch/eli/cc/1983/38_38_38/de', // SR 832.202, Kons. 20260101
+  AVIV: 'https://www.fedlex.admin.ch/eli/cc/1983/1205_1205_1205/de', // SR 837.02, Kons. 20260101
+  ATSV: 'https://www.fedlex.admin.ch/eli/cc/2002/569/de', // SR 830.11, Kons. 20240101
+  KLV: 'https://www.fedlex.admin.ch/eli/cc/1995/4964_4964_4964/de', // SR 832.112.31, Kons. 20260511
+  MWSTV: 'https://www.fedlex.admin.ch/eli/cc/2009/828/de', // SR 641.201, Kons. 20250101
+  VStV: 'https://www.fedlex.admin.ch/eli/cc/1966/1585_1641_1624/de', // SR 642.211, Kons. 20250101
+  VZAE: 'https://www.fedlex.admin.ch/eli/cc/2007/759/de', // SR 142.201, Kons. 20260612
+  VRV: 'https://www.fedlex.admin.ch/eli/cc/1962/1364_1409_1420/de', // SR 741.11, Kons. 20260401
+  VZV: 'https://www.fedlex.admin.ch/eli/cc/1976/2423_2423_2423/de', // SR 741.51, Kons. 20260101
+  SSV: 'https://www.fedlex.admin.ch/eli/cc/1979/1961_1961_1961/de', // SR 741.21, Kons. 20250701
+  DSV: 'https://www.fedlex.admin.ch/eli/cc/2022/568/de', // SR 235.11, Kons. 20251201
+  'ArGV 1': 'https://www.fedlex.admin.ch/eli/cc/2000/243/de', // SR 822.111, Kons. 20240901
+  BewV: 'https://www.fedlex.admin.ch/eli/cc/1984/1164_1164_1164/de', // SR 211.412.411, Kons. 20240301
+  'BüV': 'https://www.fedlex.admin.ch/eli/cc/2016/405/de', // SR 141.01, Kons. 20190709
+  FZV: 'https://www.fedlex.admin.ch/eli/cc/1994/2399_2399_2399/de', // SR 831.425, Kons. 20240301
+  KOV: 'https://www.fedlex.admin.ch/eli/cc/27/751_749_771/de', // SR 281.32, Kons. 20210801
+  RPV: 'https://www.fedlex.admin.ch/eli/cc/2000/310/de', // SR 700.1, Kons. 20260520
+  VFRR: 'https://www.fedlex.admin.ch/eli/cc/1996/2877_2877_2877/de', // SR 281.31, Kons. 20160101
+  'VöB': 'https://www.fedlex.admin.ch/eli/cc/2020/127/de', // SR 172.056.11, Kons. 20230901
+  VZG: 'https://www.fedlex.admin.ch/eli/cc/36/425_433_469/de', // SR 281.42, Kons. 20120101
+  'BVV 3': 'https://www.fedlex.admin.ch/eli/cc/1985/1778_1778_1778/de', // SR 831.461.3, Kons. 20250101
+  MVV: 'https://www.fedlex.admin.ch/eli/cc/1993/3080_3080_3080/de', // SR 833.11, Kons. 20260101
+  EOV: 'https://www.fedlex.admin.ch/eli/cc/2005/187/de', // SR 834.11, Kons. 20260601
+  FamZV: 'https://www.fedlex.admin.ch/eli/cc/2008/52/de', // SR 836.21, Kons. 20250101
+  'ArGV 2': 'https://www.fedlex.admin.ch/eli/cc/2000/244/de', // SR 822.112, Kons. 20251201
+  'ArGV 3': 'https://www.fedlex.admin.ch/eli/cc/1993/2553_2553_2553/de', // SR 822.113, Kons. 20240901
+  'ArGV 4': 'https://www.fedlex.admin.ch/eli/cc/1993/2564_2564_2564/de', // SR 822.114, Kons. 20150501
+  VEV: 'https://www.fedlex.admin.ch/eli/cc/2018/493/de', // SR 142.204, Kons. 20260612
+  VIntA: 'https://www.fedlex.admin.ch/eli/cc/2018/511/de', // SR 142.205, Kons. 20251201
+  'AsylV 1': 'https://www.fedlex.admin.ch/eli/cc/1999/359/de', // SR 142.311, Kons. 20260101
+  'AsylV 2': 'https://www.fedlex.admin.ch/eli/cc/1999/360/de', // SR 142.312, Kons. 20220101
+  'AsylV 3': 'https://www.fedlex.admin.ch/eli/cc/1999/361/de', // SR 142.314, Kons. 20240601
+  GSchV: 'https://www.fedlex.admin.ch/eli/cc/1998/2863_2863_2863/de', // SR 814.201, Kons. 20251201
+  LRV: 'https://www.fedlex.admin.ch/eli/cc/1986/208_208_208/de', // SR 814.318.142.1, Kons. 20260101
+  LSV: 'https://www.fedlex.admin.ch/eli/cc/1987/338_338_338/de', // SR 814.41, Kons. 20260401
+  VVEA: 'https://www.fedlex.admin.ch/eli/cc/2015/891/de', // SR 814.600, Kons. 20260101
+  ChemV: 'https://www.fedlex.admin.ch/eli/cc/2015/366/de', // SR 813.11, Kons. 20260424
+  NHV: 'https://www.fedlex.admin.ch/eli/cc/1991/249_249_249/de', // SR 451.1, Kons. 20250801
+  WaV: 'https://www.fedlex.admin.ch/eli/cc/1992/2538_2538_2538/de', // SR 921.01, Kons. 20250801
+  VTS: 'https://www.fedlex.admin.ch/eli/cc/1995/4425_4425_4425/de', // SR 741.41, Kons. 20260430
+  BankV: 'https://www.fedlex.admin.ch/eli/cc/2014/273/de', // SR 952.02, Kons. 20250101
+  KKV: 'https://www.fedlex.admin.ch/eli/cc/2006/859/de', // SR 951.311, Kons. 20251125
+  ERV: 'https://www.fedlex.admin.ch/eli/cc/2012/629/de', // SR 952.03, Kons. 20250124
+  FINIV: 'https://www.fedlex.admin.ch/eli/cc/2019/763/de', // SR 954.11, Kons. 20250101
+  FinfraV: 'https://www.fedlex.admin.ch/eli/cc/2015/854/de', // SR 958.11, Kons. 20250101
+  FIDLEV: 'https://www.fedlex.admin.ch/eli/cc/2019/759/de', // SR 950.11, Kons. 20220101
+  AVO: 'https://www.fedlex.admin.ch/eli/cc/2005/735/de', // SR 961.011, Kons. 20260226
+  'GwV-FINMA': 'https://www.fedlex.admin.ch/eli/cc/2015/390/de', // SR 955.033.0, Kons. 20230101
+  VAM: 'https://www.fedlex.admin.ch/eli/cc/2018/588/de', // SR 812.212.21, Kons. 20260101
+  AMBV: 'https://www.fedlex.admin.ch/eli/cc/2018/786/de', // SR 812.212.1, Kons. 20250315
+  MepV: 'https://www.fedlex.admin.ch/eli/cc/2020/552/de', // SR 812.213, Kons. 20231101
+  EpV: 'https://www.fedlex.admin.ch/eli/cc/2015/298/de', // SR 818.101.1, Kons. 20250101
+  BPV: 'https://www.fedlex.admin.ch/eli/cc/2001/319/de', // SR 172.220.111.3, Kons. 20260101
+  RVOV: 'https://www.fedlex.admin.ch/eli/cc/1999/170/de', // SR 172.010.1, Kons. 20260301
+  VGKE: 'https://www.fedlex.admin.ch/eli/cc/2008/321/de', // SR 173.320.2, Kons. 20100401
+  BetmKV: 'https://www.fedlex.admin.ch/eli/cc/2011/362/de', // SR 812.121.1, Kons. 20230123
+  QStV: 'https://www.fedlex.admin.ch/eli/cc/2018/274/de', // SR 642.118.2, Kons. 20250110
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

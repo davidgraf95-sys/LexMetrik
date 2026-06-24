@@ -1,0 +1,3381 @@
+{
+  "erzeugt": "2026-06-25",
+  "eintraege": [
+    {
+      "id": "bund/BETMKV/art_1",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Bewilligung und die Kontrolle von Betäubungsmitteln, psychotropen Stoffen, Vorläuferstoffen und Hilfschemikalien nach Artikel 2 BetmG sowie von Rohmaterialien und Erzeugnissen mit betäubungsmittelähnlicher Wirkung nach Artikel 7 BetmG."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie regelt die Ein-, Aus- und Durchfuhr kontrollierter Substanzen sowie den Handel damit. Sie stellt sicher, dass für medizinische Zwecke und Forschungszwecke genügend kontrollierte Substanzen verfügbar sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist auch auf Personen und Unternehmen mit Sitz in der Schweiz anwendbar, die mit kontrollierten Substanzen im Ausland handeln."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_1",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c32375b0a1d4192a10e43192e520f0972a8011c55bca6778c483f3f46eecf5be"
+    },
+    {
+      "id": "bund/BETMKV/art_2",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In dieser Verordnung bedeuten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Durchfuhr: Beförderung von Waren durch das Zollgebiet;"
+            },
+            {
+              "marke": "b",
+              "text": "Handel: entgeltliche Vermittlung von kontrollierten Substanzen an berechtigte Personen, einschliesslich Tätigkeiten der Mäklerinnen und Mäkler sowie Agentinnen und Agenten;"
+            },
+            {
+              "marke": "c",
+              "text": "Herstellung: sämtliche Arbeitsgänge vom Gewinnen, Anfertigen, Zubereiten, Be- oder Verarbeiten, Reinigen und Umwandeln bis zum Verpacken, Lagern und Ausliefern des Endprodukts sowie die Qualitätskontrollen und die Freigabe;"
+            },
+            {
+              "marke": "d",
+              "text": "Medizinalpersonen: Ärztinnen und Ärzte, Zahnärztinnen und Zahnärzte, Tierärztinnen und Tierärzte sowie Apothekerinnen und Apotheker;"
+            },
+            {
+              "marke": "e",
+              "text": "Spital: Krankenanstalt im Sinne des BetmG;"
+            },
+            {
+              "marke": "f",
+              "text": "Unternehmen: Firma im Sinne des BetmG;"
+            },
+            {
+              "marke": "g",
+              "text": "Verschreiben: das Ausstellen eines Rezepts für Patientinnen und Patienten oder Tierhalterinnen und Tierhalter, damit diese Arzneimittel mit kontrollierten Substanzen beziehen dürfen. Dieser Begriff entspricht dem Begriff verordnen im BetmG;"
+            },
+            {
+              "marke": "h",
+              "text": "kontrollierte Substanzen: Betäubungsmittel, psychotrope Stoffe, Vorläuferstoffe und Hilfschemikalien nach Artikel 2 BetmG sowie Rohmaterialien und Erzeugnisse mit vermuteter betäubungsmittelähnlicher Wirkung nach Artikel 7 BetmG;"
+            },
+            {
+              "marke": "i",
+              "text": "Zielland: die im Verzeichnis g genannten Länder."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_2",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "686560cbeb29439a8e46704343e58fa57cbc4c51bf3928a6b39bb4548b171e5c"
+    },
+    {
+      "id": "bund/BETMKV/art_3",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Eidgenössische Departement des Innern (EDI) bezeichnet die einzelnen kontrollierten Substanzen und bestimmt, welchen Kontrollmassnahmen sie unterliegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es erstellt dazu folgende Verzeichnisse:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Verzeichnis a: kontrollierte Substanzen, die allen Kontrollmassnahmen unterstellt sind;"
+            },
+            {
+              "marke": "b",
+              "text": "Verzeichnis b: kontrollierte Substanzen, die teilweise von den Kontrollmassnahmen ausgenommen sind;"
+            },
+            {
+              "marke": "c",
+              "text": "Verzeichnis c: kontrollierte Substanzen, die in Präparaten in reduzierten Konzentrationen enthalten sein dürfen und teilweise von den Kontrollmassnahmen ausgenommen sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Verzeichnis d: verbotene kontrollierte Substanzen;"
+            },
+            {
+              "marke": "e",
+              "text": "Verzeichnis e: Rohmaterialien und Erzeugnisse mit vermuteter betäubungsmittelähnlicher Wirkung nach Artikel 7 Absatz 1 BetmG, die den Kontrollmassnahmen der Betäubungsmittel des Verzeichnisses a unterstellt sind;"
+            },
+            {
+              "marke": "f",
+              "text": "Verzeichnis f: Vorläuferstoffe unter Angabe der jeweiligen Menge, die eine Kontrolle nach dieser Verordnung notwendig macht;"
+            },
+            {
+              "marke": "g",
+              "text": "Verzeichnis g: Hilfschemikalien unter Angabe der Zielländer und der jeweiligen Menge, die eine Kontrolle nach dieser Verordnung notwendig macht."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Es legt für Vorläuferstoffe die Menge fest, ab der sie der Kontrolle unterliegen. Zudem legt es für Hilfschemikalien die Menge fest, ab der sie für ein bestimmtes Zielland der Kontrolle unterliegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Kontrollierte Substanzen der Verzeichnisse a, b und d werden neben ihrem Namen mit ihrer weltweit geltenden Handelsnummer (Global Trade Identification Number, GTIN) aufgenommen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei der Festlegung des Ziellandes richtet sich das EDI nach den Ersuchen gemäss Artikel 12 Absatz 10 des Übereinkommens der Vereinten Nationen vom 20. De­zember 1988 gegen den unerlaubten Verkehr mit Betäubungsmitteln und psychotropen Stoffen und den Regelungen der wichtigsten Handelspartner der Schweiz."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_3",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "e7bbca4eea52eaca149c149d5cb5f6ec86c8b69213c124c389735624d09ceb5f"
+    },
+    {
+      "id": "bund/BETMKV/art_4",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestimmungen dieser Verordnung sind nicht anwendbar auf:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "homöopathische Präparate, die zwar kontrollierte Substanzen enthalten, deren Verdünnung aber mehr als D8/C4 beträgt;"
+            },
+            {
+              "marke": "b",
+              "text": "Vorläuferstoffe und Hilfschemikalien in pharmazeutischen Präparaten oder Mischungen, die nicht auf einfache Art aus diesen zurückgewonnen werden können."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bezug und die Verwendung kleiner Mengen von kontrollierten Substanzen zu analytischen Zwecken durch Behörden oder durch von ihnen direkt Beauftragte sind von dieser Verordnung ausgenommen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Bezug und die Verwendung von kontrollierten Substanzen in Lösung und in einer Konzentration bis 1 mg pro 1 ml zu analytischen Zwecken sind vom 6. Kapitel (Kontrolle) dieser Verordnung ausgenommen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Hilfschemikalien sind nur Artikel 10 sowie, soweit sie die Ausfuhr betreffen, die Bestimmungen des 3. Kapitels und Artikel 57 Absatz 2 anwendbar."
+        },
+        {
+          "absatz": "5",
+          "text": "Das EDI kann für einzelne kontrollierte Substanzen reduzierte Kontrollmassnahmen vorsehen, wenn dies notwendig ist, um den legalen Handel mit diesen Substanzen nicht übermässig einzuschränken. Der Umfang der Kontrollmassnahmen wird in den entsprechenden Verzeichnissen geregelt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_4",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "93786ff6566ad7281f5e4e88d056d9b31c3cb43f627a48b577269950c1491316"
+    },
+    {
+      "id": "bund/BETMKV/art_5",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Betriebsbewilligung für den Umgang mit kontrollierten Substanzen der Verzeichnisse a, b, c und f und mit zugelassenen Arzneimitteln, die kontrollierte Substanzen des Verzeichnisses d enthalten, wird erteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen und Unternehmen, einschliesslich Mäklerinnen und Mäklern sowie Agentinnen und Agenten, und der Armeeapotheke: vom Schweizerische Heilmittelinstitut (Swissmedic);"
+            },
+            {
+              "marke": "b",
+              "text": "Apotheken, Spitälern und wissenschaftliche Instituten sowie kantonalen und kommunalen Behörden: vom Kanton."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Betriebsbewilligung für den Umgang mit kontrollierten Substanzen des Verzeichnisses e wird vom EDI erteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen der Verzeichnisse a, b und f enthalten, wird von der Swissmedic erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_5",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "33ebed503ac96a4e187f26369879a2139a3818103ce963977aa5da16d29d13d6"
+    },
+    {
+      "id": "bund/BETMKV/art_6",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bewilligung für die diacetylmorphingestützte Behandlung wird vom Bundesamt für Gesundheit (BAG) erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_6",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "4dfe356a6455bee8d6d59bdf46059f155c287430c4011cc107b13a9c1af6eb47"
+    },
+    {
+      "id": "bund/BETMKV/art_6_a",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Einzelanbaubewilligung wird von der Swissmedic erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_6_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c152e328f6344cbeaf7671ec2912d3f31243f6154e70584a9b37e6ac48ba45fd"
+    },
+    {
+      "id": "bund/BETMKV/art_7",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Ein- und Ausfuhrbewilligungen werden von der Swissmedic erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_7",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "208c20e0803430efbdda98d3a82bdc55dbf64438c3433b68c572551c3e6d2e7e"
+    },
+    {
+      "id": "bund/BETMKV/art_8",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG kann Ausnahmebewilligungen für den Umgang mit kontrollierten Substanzen des Verzeichnisses d erteilen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_8",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "1c36cd55c7252fac42d537a9604adba1c2f28692b4ff638ea8153f876a30b42b"
+    },
+    {
+      "id": "bund/BETMKV/art_9",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bewilligungen für die internationalen und nationalen Organisationen sowie Behörden nach Artikel 14 a Absatz 1 BetmG werden vom Bundesrat erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_9",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c2255339cd96a1d92d7b985cd63ce63d0a83b1da6427a226b1821c5cb521adbc"
+    },
+    {
+      "id": "bund/BETMKV/art_10",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer kontrollierte Substanzen anbaut, herstellt, abgibt oder mit ihnen Handel treibt, hat sich bei jeder Weitergabe zu vergewissern, dass die Empfängerin oder der Empfänger berechtigt ist, diese zu beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständigen Behörden des Bundes und der Kantone sowie die Berufs- oder Branchenverbände informieren die zur Herstellung und Abgabe von oder zum Handel mit kontrollierten Substanzen berechtigten Personen über die Umstände möglicher Missbräuche und beraten sie bei der Abklärung einzelner Verdachts­momente."
+        },
+        {
+          "absatz": "3",
+          "text": "Erwecken Umstände den Verdacht eines Missbrauchs, so treffen die verantwortlichen Personen, gegebenenfalls zusammen mit dem betroffenen Berufs- oder Branchenverband oder der verschreibenden Medizinalperson, die notwendigen Abklärungen und benachrichtigen umgehend die für sie zuständige Kontrollbehörde. In einem solchen Fall darf die kontrollierte Substanz nur weitergegeben werden, wenn die Untersuchungen durch die Behörde den Verdacht als unbegründet erscheinen lassen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei begründetem Verdacht eines wesentlichen Missbrauchs informieren die kantonalen Behörden unverzüglich die Swissmedic. Dieses trägt die Informationen zusammen und leitet sie der Zentralstelle für die Bekämpfung des unerlaubten Betäubungsmittelverkehrs beim Bundesamt für Polizei (Art. 29 b BetmG) und dem BAG weiter."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_10",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c0d653aaf32da0a5df3db2a836d33b990a8e2e56fecd6d269d0a8a5ccb55c48e"
+    },
+    {
+      "id": "bund/BETMKV/art_11",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer kontrollierte Substanzen, ausgenommen Hilfschemikalien, herstellen, beziehen, vermitteln, ein- und ausführen, abgeben oder mit diesen Handel treiben will, benötigt eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer Pflanzen oder Pilze, die kontrollierte Substanzen enthalten, anbauen will, benötigt eine Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Medizinalpersonen benötigen neben ihrer Berufsausübungsbewilligung keine zusätzliche Betriebsbewilligung für den Umgang mit kontrollierten Substanzen."
+        },
+        {
+          "absatz": "4",
+          "text": "Apotheken benötigen für die einzelfallweise Vermittlung von Arzneimitteln mit kontrollierten Substanzen keine Betriebsbewilligung der Swissmedic für den Umgang mit kontrollierten Substanzen. Bei mehr als neun Vermittlungen pro Kalenderjahr ist eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen erforderlich."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_11",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "93941469e14fa797f99c6abfbb0a63371a0e223a64114e42c9e707e3cdf8688d"
+    },
+    {
+      "id": "bund/BETMKV/art_12",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen wird erteilt, wenn die Gesuchstellerin oder der Gesuchsteller:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Hauptregister des Handelsregisters eingetragen ist;"
+            },
+            {
+              "marke": "b",
+              "text": "die Lagerung der kontrollierten Substanzen nach Artikel 54 gewährleistet; und"
+            },
+            {
+              "marke": "c",
+              "text": "eine für kontrollierte Substanzen verantwortliche Person bezeichnet, die für die Einhaltung der betäubungsmittelrechtlichen Bestimmungen verantwortlich ist."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Eine Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, wird erteilt, wenn die Gesuchstellerin oder der Gesuchsteller:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Voraussetzungen nach Absatz 1 erfüllt; und"
+            },
+            {
+              "marke": "b",
+              "text": "nachweist, dass Massnahmen getroffen wurden, um: 1. ausreichenden Schutz vor Diebstahl zu gewähren, und"
+            },
+            {
+              "marke": "2",
+              "text": "die Verwendung der Pflanzen oder Pilze für andere Zwecke zu verhindern."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Erfordernis des Handelsregistereintrags gilt nicht für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Armeeapotheke;"
+            },
+            {
+              "marke": "b",
+              "text": "Behörden;"
+            },
+            {
+              "marke": "c",
+              "text": "Hochschulen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Organisationen der Vereinten Nationen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bewilligungen für betäubungsmittelgestützte Behandlungen richten sich nach der Betäubungsmittelsuchtverordnung vom 25. Mai 2011 (BetmSV)."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_12",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "9bdeb4eddfa4e09ee7fe80ae44a15caea403792903b12167a24411cf54530be1"
+    },
+    {
+      "id": "bund/BETMKV/art_13",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verantwortliche Person muss:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Medizinalperson sein oder über einen naturwissenschaftlichen Hochschulabschluss verfügen;"
+            },
+            {
+              "marke": "b",
+              "text": "mit der Gesuchstellerin oder dem Gesuchsteller in einem schriftlichen Vertrag die Verantwortlichkeit und Präsenzpflicht regeln, sofern sie nicht selber Gesuchstellerin ist; und"
+            },
+            {
+              "marke": "c",
+              "text": "ihre fachliche Tätigkeit weisungsunabhängig ausüben können."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, verantwortliche Person kann auch über ein Diplom einer universitären Hochschule oder Fachhochschule in den Bereichen Agrar-, Umwelt- oder Forstwissenschaft verfügen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Behörde kann Personen als verantwortliche Personen zulassen, die über gleichwertige, an ausländischen Hochschulen erworbene Diplome der genannten Berufe und nachweislich über die nötigen Fachkenntnisse verfügen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist die Betriebsbewilligung auf kontrollierte Substanzen des Verzeichnisses f (Vorläuferstoffe) begrenzt, so kann die Swissmedic als verantwortliche Person Personen zulassen, die über ein Diplom einer Fachhochschule oder einer höheren Fachschule im Bereich der Naturwissenschaften und nachweislich über die nötigen Fachkenntnisse verfügen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_13",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "a9cb5ef02132fcacaf26039ea771a1b620797aed9543713c9430f099882d401d"
+    },
+    {
+      "id": "bund/BETMKV/art_14",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_14",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "bund/BETMKV/art_15",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Gesuch für eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen oder für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, sind folgende Angaben zu machen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname beziehungsweise Bezeichnung gemäss Handelsregister, wenn es sich um eine juristische Person handelt, sowie Name, Vorname, Geburtsdatum und Funktion der für die kontrollierten Substanzen verantwortlichen Person;"
+            },
+            {
+              "marke": "b",
+              "text": "Wohn- oder Geschäftssitz und Betriebsstandorte (Adressen);"
+            },
+            {
+              "marke": "c",
+              "text": "Auflistung der nachgesuchten kontrollierten Substanzen;"
+            },
+            {
+              "marke": "d",
+              "text": "Art der Tätigkeit, um deren Bewilligung nachgesucht wird;"
+            },
+            {
+              "marke": "e",
+              "text": "allfälliger Anbau- und Lagerstandort (inkl. Zolllager und Zollfreilager)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Bewilligungsgesuch sind folgende Ausweise beizulegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "aktueller und vollständiger Handelsregisterauszug;"
+            },
+            {
+              "marke": "b",
+              "text": "Privatauszug aus dem Strafregister-Informationssystem VOSTRA der verantwortlichen Person, der nicht älter als sechs Monate ist; von einer Person mit Wohnsitz im Ausland kann die zuständige Behörde auch einen ausländischen Strafregisterauszug verlangen;"
+            },
+            {
+              "marke": "c",
+              "text": "Berufsabschlussdiplome und den beruflichen Werdegang der verantwortlichen Person."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_15",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "8578637c5f2abf364740a6c960a9b189a517cb94a6a51b26d31d56125a11df3f"
+    },
+    {
+      "id": "bund/BETMKV/art_16",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Betriebsbewilligung für den Umgang mit kontrollierten Substanzen ermächtigt deren Inhaberin oder Inhaber zur Abgabe und zur Vermittlung kontrollierter Substanzen an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Personen und Unternehmen, die eine Bewilligung nach Artikel 4 Absatz 1 BetmG oder eine Ausnahmebewilligung nach Artikel 8 Absätze 5–8 BetmG besitzen;"
+            },
+            {
+              "marke": "b",
+              "text": "verantwortliche Leiterinnen und Leiter einer Apotheke oder einer Spital­apotheke;"
+            },
+            {
+              "marke": "c",
+              "text": "die verantwortliche Person von Spitälern, die eine Bewilligung nach Artikel 14 Absatz 1 BetmG besitzen;"
+            },
+            {
+              "marke": "d",
+              "text": "Medizinalpersonen, die zum Umgang mit kontrollierten Stoffen berechtigt sind;"
+            },
+            {
+              "marke": "e",
+              "text": "die verantwortliche Person von wissenschaftlichen Instituten, die eine Bewilligung gemäss Artikel 14 Absatz 2 BetmG besitzen;"
+            },
+            {
+              "marke": "f",
+              "text": "die verantwortliche Person von nationalen oder internationalen Organisationen, die eine Bewilligung nach Artikel 14 a Absatz 1 BetmG besitzen;"
+            },
+            {
+              "marke": "g",
+              "text": "die verantwortliche Person von Behörden des Bundes, der Kantone und der Gemeinden, die eine Bewilligung gemäss Artikel 14 a Absatz 1 oder 1 bis BetmG besitzen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, ermächtigt deren Inhaberin oder Inhaber:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zum Bezug von zum Anbau benötigtem Saat- und Pflanzgut;"
+            },
+            {
+              "marke": "b",
+              "text": "zur Abgabe von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, an die im Abnahmevertrag genannte Auftraggeberin oder den im Abnahmevertrag genannten Auftraggeber."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_16",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "eea8383b62759951c9c9de77ef65c23385c79b87127efe7642b6ad04cfa3edcb"
+    },
+    {
+      "id": "bund/BETMKV/art_17",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Betriebsbewilligung für den Umgang mit kontrollierten Substanzen oder für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, lautet auf den Namen der Gesuchstellerin oder des Gesuchstellers und der verantwortlichen Person."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie gilt für die in der Bewilligung aufgeführten einzelnen kontrollierten Substanzen oder Verzeichnisse nach Artikel 3."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_17",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "5e190f855b523a514ba8e639d1529484aaf3e97861c28d933b60b21f9ef944de"
+    },
+    {
+      "id": "bund/BETMKV/art_18",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen oder für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, gilt höchsten fünf Jahre."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann auf Antrag für jeweils weitere fünf Jahre erneuert werden. Das Erneuerungsgesuch muss spätestens sechs Monate vor Ablauf der Bewilligungsdauer eingereicht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Vor der Erteilung und vor der Erneuerung einer Betriebsbewilligung für den Umgang mit kontrollierten Substanzen oder für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, kann eine Inspektion durchgeführt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Behörden der Kantone können in ihrem Zuständigkeitsbereich eine andere Geltungsdauer vorsehen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_18",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "93b6f025abfc0836550e9816e79cb8c39a8e8ce67a74f8e1fc29600e66afe0f0"
+    },
+    {
+      "id": "bund/BETMKV/art_19",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin oder der Inhaber einer Betriebsbewilligung für den Umgang mit kontrollierten Substanzen oder für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, hat der zuständigen Behörde jede Änderung der Bewilligungsvoraussetzungen sofort zu melden."
+        },
+        {
+          "absatz": "2",
+          "text": "Stellt der Betrieb seine Geschäftstätigkeit ein oder ist von deren Einstellung auszugehen, so muss die verantwortliche Person dies der Swissmedic unverzüglich melden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_19",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "1859810f88cbc50a5f18fdf8fe67f1558fb304bd6ba9073860f5d08400fb9753"
+    },
+    {
+      "id": "bund/BETMKV/art_20",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige Behörde entzieht die Bewilligung, wenn:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bewilligungsinhaberin oder der Bewilligungsinhaber oder die verantwortliche Person vorsätzlich oder wiederholt fahrlässig gegen das BetmG oder gegen das Heilmittelgesetz vom 15. Dezember 2000 (HMG) verstossen hat;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bewilligungsinhaberin oder der Bewilligungsinhaber dies verlangt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann die Bewilligung entziehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gestützt auf die Artikel 6 und 14 a Absatz 2 BetmG; oder"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die bewilligten Tätigkeiten während mehr als 24 Monaten nicht ausgeübt wurden."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_20",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "fc36db019ee8968d6e929c130841c6aacc673998a7af1eb413b5d0ddb98fa493"
+    },
+    {
+      "id": "bund/BETMKV/art_21",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Erlöschen oder beim Entzug einer Bewilligung überwacht die zuständige Behörde die Einstellung der Tätigkeiten im Zusammenhang mit angebauten oder gelagerten kontrollierten Substanzen, deren Weitergabe an Inhaberinnen oder Inhaber einer Betriebsbewilligung und ordnet nötigenfalls die Vernichtung der kontrollierten Substanzen an."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleibt die gerichtliche Verfügung über die Einziehung der Betäu­bungsmittel."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_21",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "44080306ae9e786a3edf7938111c7ebb9f2ad68733c40e3f1c2a5f35ea114459"
+    },
+    {
+      "id": "bund/BETMKV/art_22",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei laufenden Untersuchungen gegen eine Gesuchstellerin oder einen Gesuchsteller wegen Widerhandlungen gegen das BetmG oder gegen das HMG kann die Swiss­medic oder die zuständige Behörde das Bewilligungsverfahren oder die bestehenden Bewilligungen bis zur abschliessenden Beurteilung sistieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist gegen eine verantwortliche Person ein Strafverfahren wegen Widerhandlungen gegen das BetmG oder gegen das HMG hängig, so kann die Swissmedic oder die zuständige Behörde das Bewilligungsverfahren oder die bestehenden Bewilligungen sistieren."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "899505e23992ca63c7fe007519dc42f6b756c7873d674ff67869c2d439fe7d91"
+    },
+    {
+      "id": "bund/BETMKV/art_22_a",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Wer Pflanzen oder Pilze, die kontrollierte Substanzen enthalten, anbauen will, benötigt für jeden Anbau eine Einzelanbaubewilligung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "900e662f6d73ed26926468358237cc405377b89d10b42e6761a9542df8827633"
+    },
+    {
+      "id": "bund/BETMKV/art_22_b",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_b",
+      "artikelLabel": "Art. 22b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelanbaubewilligung wird erteilt, wenn die Gesuchstellerin oder der Gesuchsteller:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "über eine Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "nachweist, dass bei einem Anbau zu medizinischen Zwecken ein System vorhanden ist, das die Rückverfolgbarkeit der abgegebenen Substanzen und die Qualitätssicherung ermöglicht; und"
+            },
+            {
+              "marke": "c",
+              "text": "einen schriftlichen Abnahmevertrag mit einer Abnehmerin oder einem Abnehmer vorlegt, die oder der über eine Betriebsbewilligung für den Umgang mit kontrollierten Substanzen verfügt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Abnahmevertrag muss genaue Angaben über Art und Menge des Anbaus sowie die Verpflichtung der Auftraggeberin oder des Auftraggebers enthalten, die ganze Ernte der Gesuchstellerin oder des Gesuchstellers zu übernehmen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "2439d18848d05d43eb948750066daf01c2101ba8a670fad9506b4e9ef7f7871c"
+    },
+    {
+      "id": "bund/BETMKV/art_22_c",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_c",
+      "artikelLabel": "Art. 22c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Gesuch für eine Einzelanbaubewilligung sind folgende Angaben zu machen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Vorname oder Bezeichnung der Inhaberin oder des Inhabers der Betriebsbewilligung für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten;"
+            },
+            {
+              "marke": "b",
+              "text": "Art des Anbaus;"
+            },
+            {
+              "marke": "c",
+              "text": "anzubauende Sorte;"
+            },
+            {
+              "marke": "d",
+              "text": "genauer Standort und Grösse der Anbaufläche;"
+            },
+            {
+              "marke": "e",
+              "text": "erwarteter Ertrag."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic stellt die Gesuchsformulare für die Einzelanbaubewilligung zur Verfügung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "55e56bda9272b942f878b8ed06deea3551ff4fa5877cae0e35790708b8d3266b"
+    },
+    {
+      "id": "bund/BETMKV/art_22_d",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_d",
+      "artikelLabel": "Art. 22d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Einzelanbaubewilligung wird für einen einmaligen Anbau und längstens für ein Jahr erteilt."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "a2f2765621aa17f8063a2b514e4f3ae02fae89f2e690cb18642d742c7d3a0515"
+    },
+    {
+      "id": "bund/BETMKV/art_22_e",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_e",
+      "artikelLabel": "Art. 22e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin oder der Inhaber einer Einzelanbaubewilligung muss der Swissmedic jeweils innert einer Frist von höchstens zehn Arbeitstagen folgende Daten melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "den Anbaubeginn;"
+            },
+            {
+              "marke": "b",
+              "text": "Ereignisse, die einen Einfluss auf den erwarteten Ertrag haben;"
+            },
+            {
+              "marke": "c",
+              "text": "bei der Ernte oder Teilernte: das Erntedatum, die Erntemenge und die erwartete Restmenge;"
+            },
+            {
+              "marke": "d",
+              "text": "das Datum der Übergabe an die Abnehmerin oder den Abnehmer, deren oder dessen Namen und Adresse sowie die übergebene Menge."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn kein Anbau erfolgt, muss d ie Inhaberin oder der Inhaber einer Einzelanbaubewilligung dies der Swissmedic spätestens zehn Arbeitstage nach Ablauf der Gültigkeit der Einzelanbaubewilligung melden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "aa68e0e4dd94412928ceed2227fd355dc54d000895c1df033c8cf1b81a62bc21"
+    },
+    {
+      "id": "bund/BETMKV/art_22_f",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_f",
+      "artikelLabel": "Art. 22f",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Einzelanbaubewilligung ist nicht übertragbar."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "8751f422e1e8ab8dfa75fe8f77b02729b380a983ff965266a7c343e4dcdeebc5"
+    },
+    {
+      "id": "bund/BETMKV/art_22_g",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "22_g",
+      "artikelLabel": "Art. 22g",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Sistierung der Einzelanbaubewilligung richtet sich nach Artikel 22."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_22_g",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "7b31c215d4e8e283eb752da599bbd40cc89fb8f9caa32be7ba4698510bd3fda6"
+    },
+    {
+      "id": "bund/BETMKV/art_23",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer kontrollierte Substanzen ein- oder ausführen will, braucht eine Ein- oder Ausfuhrbewilligung."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Ein- oder Ausfuhrbewilligung wird nicht benötigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für kontrollierte Substanzen in Präparaten nach Verzeichnis c;"
+            },
+            {
+              "marke": "b",
+              "text": "für kontrollierte Substanzen, die zu analytischen Zwecken in Lösung in einer Konzentration bis 1 mg pro 1 ml ein- oder ausgeführt werden sollen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Für Hilfschemikalien des Verzeichnisses g wird eine Ausfuhrbewilligung nur für Zielländer benötigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Swissmedic stellt die Gesuchsformulare für die Ein- und die Ausfuhrbewilligung zur Verfügung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_23",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "6133acda07881b83a6da427542cc6740eca0cc2cfa1907df8543ec5842b392f7"
+    },
+    {
+      "id": "bund/BETMKV/art_24",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic erteilt die Ein- oder Ausfuhrbewilligung nur einer Gesuchstellerin oder einem Gesuchsteller, die oder der über eine der folgenden Bewilligungen verfügt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Bewilligung des Bundesrates nach Artikel 14 a Absatz 1 BetmG;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Bewilligung des EDI nach Artikel 7 Absatz 1 BetmG;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Ausnahmebewilligung des BAG nach Artikel 8 Absätze 5, 6 und 8 BetmG;"
+            },
+            {
+              "marke": "d",
+              "text": "eine Bewilligung der Swissmedic nach Artikel 4 BetmG und Artikel 5 Absatz 1 Buchstabe a dieser Verordnung;"
+            },
+            {
+              "marke": "e",
+              "text": "eine Bewilligung des Kantons nach den Artikeln 14 und 14 a Absatz 1 bis BetmG."
+            }
+          ]
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die Einfuhr von Saat- und Pflanzgut für den Anbau von Pflanzen oder Pilzen, die kontrollierte Substanzen enthalten, wird bewilligt, wenn die Gesuchstellerin oder der Gesuchsteller über eine Betriebsbewilligung für deren Anbau verfügt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic kann in Einzelfällen eine Ein- oder Ausfuhrbewilligung erteilen an:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Apothekerinnen und Apotheker;"
+            },
+            {
+              "marke": "b",
+              "text": "Ärztinnen und Ärzte;"
+            },
+            {
+              "marke": "c",
+              "text": "Tierärztinnen und Tierärzte;"
+            },
+            {
+              "marke": "d",
+              "text": "nationale oder internationale Organisationen im Rahmen humanitärer Nothilfe."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_24",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "35f7e0d2fbf2f443ba73ed29c4649ce73240d175c8c45ca364fcb49a1a21621d"
+    },
+    {
+      "id": "bund/BETMKV/art_25",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bewilligung wird für eine einmalige Ein- oder Ausfuhr erteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für kontrollierte Substanzen der Verzeichnisse b, f und g kann die Swissmedic gene­relle Bewilligungen für die Ein- oder Ausfuhr erteilen, sofern:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dies mit den Bestimmungen der von der Schweiz ratifizierten internationalen Abkommen vereinbar ist; und"
+            },
+            {
+              "marke": "b",
+              "text": "das Herkunfts- oder Bestimmungsland solche Bewilligungen akzeptiert."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die generelle Ein- oder Ausfuhrbewilligung wird für eine bestimmte maximale Menge ausgestellt und gilt nur im Rahmen der Geschäftsbeziehungen zwischen Lieferantin oder Lieferanten und Empfängerin oder Empfänger."
+        },
+        {
+          "absatz": "4",
+          "text": "Nicht benützte Ein- und Ausfuhrbewilligungen sind nach Ablauf der Geltungs-dauer ohne Verzug der Swissmedic zurückzusenden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_25",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "5dffbcf87543827b19f5978093ae65ffc3051f9f3bb3bbd5123e206007c6b636"
+    },
+    {
+      "id": "bund/BETMKV/art_26",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Ein- oder Ausfuhrbewilligung ist nicht übertragbar."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_26",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "3d0e7d9c1ef50454f1e2d2ead75ee8b7d9fe3c8e6945c2010ae354162bb4881c"
+    },
+    {
+      "id": "bund/BETMKV/art_27",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für Notfälle dürfen Ärztinnen und Ärzte, ärztlich geleitete Rettungsdienste sowie Tierärztinnen und Tierärzte ohne Bewilligung eine kleine Menge an Arzneimitteln mit kontrollierten Substanzen zu medizinischen Zwecken einführen oder, wenn die zuständigen Behörden der betroffenen Länder dies erlauben, ausführen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_27",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "be43a235398cb43f384339aafb9fcd2da6f4aaa5107ae9c27202abf50ef66358"
+    },
+    {
+      "id": "bund/BETMKV/art_28",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Sistierung weiterer Bewilligungen richtet sich nach Artikel 22."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_28",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "148f5ae23ee532b5ab2c66e728d52b2e7e7cb12f4fe3eb168762be5597dbd191"
+    },
+    {
+      "id": "bund/BETMKV/art_29",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die einmalige Einfuhrbewilligung gilt längstens vier Monate, die generelle Einfuhrbewilligung längstens bis Ende des laufenden Kalenderjahres."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_29",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "99616d747aaca7c826f0f1f9388157943004ba7beb7965d7ed341af6cc4d0678"
+    },
+    {
+      "id": "bund/BETMKV/art_30",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin oder der Inhaber einer einmaligen Einfuhrbewilligung muss der Swissmedic innert einer Frist von höchstens zehn Arbeitstagen den Eingang der kontrollierten Substanz schriftlich melden. Die Meldung muss die erhaltene Menge, das Einfuhrdatum und die entsprechende Einfuhrbewilligungsnummer der Swiss­medic enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Inhaberin oder der Inhaber einer generellen Einfuhrbewilligung muss der Swissmedic spätestens zehn Arbeitstage nach Ende des Kalenderjahrs die Jahresmenge der eingeführten kontrollierten Substanzen melden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_30",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "731557427901dc4cac9c454ef791d2d19cabcc033efafd4654cf438da982099f"
+    },
+    {
+      "id": "bund/BETMKV/art_31",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic übermittelt der Gesuchstellerin oder dem Gesuchsteller so viele Exemplare der einmaligen oder der generellen Einfuhrbewilligung, wie dies zum Belegen des Einfuhrrechts bei der Zollstelle und den zuständigen Behörden des Ausfuhrlandes notwendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informiert die zuständige Behörde des Ausfuhrlandes mit einem Exemplar der Einfuhrbewilligung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_31",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f6fe0e4e993c3d6649fb026e58a744a5accd62d315e9009717c2077bc42d184f"
+    },
+    {
+      "id": "bund/BETMKV/art_32",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Ausfuhrbewilligung wird nur erteilt, wenn die Gesuchstellerin oder der Gesuchsteller die Einfuhrbewilligung des Bestimmungslandes vorweist."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Ausfuhrbewilligung von Hilfschemikalien des Verzeichnisses g muss lediglich ein Nachweis zur berechtigten Einfuhr vorgewiesen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Swissmedic kann für humanitäre Nothilfe eine Ausfuhrbewilligung erteilen, auch wenn keine Einfuhrbewilligung vorliegt."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Rahmen humanitärer Nothilfe kann in Notfällen ausnahmsweise die Ausfuhrbewilligung innerhalb von drei Arbeitstagen nach erfolgter Ausfuhr beantragt werden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_32",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c98778e670ac4c22528af2ca3c215b92fc300dffe324e776a38d0b28fd222982"
+    },
+    {
+      "id": "bund/BETMKV/art_33",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die einmalige Ausfuhrbewilligung gilt längstens vier Monate, die generelle Ausfuhrbewilligung längstens bis Ende des laufenden Kalenderjahrs."
+        },
+        {
+          "absatz": "2",
+          "text": "Weder die einmalige noch die generelle Ausfuhrbewilligung darf die Geltungs­dauer der Einfuhrbewilligung des Bestimmungslandes überschreiten."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_33",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "1b216419eb85a6cf14919b8cc2bd7df5b6ce326904fe0d7770fb2932eab7779c"
+    },
+    {
+      "id": "bund/BETMKV/art_34",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Inhaberin oder der Inhaber einer einmaligen Ausfuhrbewilligung muss der Swissmedic innert einer Frist von höchstens zehn Arbeitstagen den Ausgang der kontrollierten Substanz schriftlich melden. Die Meldung muss die ausgeführte Menge, das Ausfuhrdatum und die entsprechende Ausfuhrbewilligungsnummer der Swissmedic enthalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Inhaberin oder der Inhaber einer generellen Ausfuhrbewilligung muss der Swissmedic spätestens zehn Arbeitstage nach Ende des Kalenderjahrs die Jahresmenge der ausgeführten kontrollierten Substanzen melden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_34",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "69efe161348fbcebe3d2410c6e42b9e960868ebc689f18af4eb22954e91fffa8"
+    },
+    {
+      "id": "bund/BETMKV/art_35",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic übermittelt der Gesuchstellerin oder dem Gesuchsteller so viele Exemplare der Ausfuhrbewilligung, wie dies zum Belegen des Ausfuhrrechts bei der Zollstelle notwendig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie informiert die zuständige Behörde des Bestimmungslandes mit einem Exemplar der Bewilligung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_35",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "93e6ee89e090c022809b74aeb3b56652ba1c5e8bda7b6f59cdcceaff3be9d948"
+    },
+    {
+      "id": "bund/BETMKV/art_36",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchfuhr von kontrollierten Substanzen ist zulässig, wenn die Warenführerin oder der Warenführer einen nach den Vorschriften des Ursprungslandes rechtmässigen Versand nach dem Bestimmungsland nachweisen kann."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nachweis über den rechtmässigen Versand nach dem neuen Bestimmungsland ist beim Eintritt der kontrollierten Substanz in das schweizerische Zollgebiet zu erbringen. In begründeten Fällen kann eine Nachfrist gewährt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Kann der Nachweis nicht erbracht werden, so wird die Ware nach Artikel 39 zurückbehalten."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_36",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "020da3a63303426351c36fd30c62adebf31e9f80b430798ef3e16d021e30220f"
+    },
+    {
+      "id": "bund/BETMKV/art_37",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kontrollierte Substanzen müssen über die vom Bundesamt für Zoll und Grenzsicherheit (BAZG) 35 bezeichneten Zollstellen ein-, aus- oder durchgeführt werden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_37",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "3188aa4d8ba0db4cc2f39380ffd1077f59c187b68bf9a100b2ba4426268fa5b3"
+    },
+    {
+      "id": "bund/BETMKV/art_38",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zollstelle teilt der Swissmedic jede Einfuhr oder jede Ausfuhr von kontrollierten Substanzen mit."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bestätigt bei der Einfuhr aufgrund einer einmaligen Einfuhrbewilligung die Einfuhr auf der Einfuhrbewilligung, die die Sendung begleitet, und leitet diese mit der Sendung an die Bewilligungsinhaberin oder den Bewilligungsinhaber weiter."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_38",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "807d1f018256b2606f537e2249aeb3e90b0a0b3e99ee7034c4d4154174e02661"
+    },
+    {
+      "id": "bund/BETMKV/art_39",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zollstellen behalten Sendungen mit kontrollierten Substanzen für die keine Ein- oder Ausfuhrbewilligung vorliegt, zurück und melden sie der Swissmedic. Ausgenommen sind Sendungen nach Artikel 32 Absätze 3 und 4."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic klärt ab, ob eine Einfuhr- oder eine Ausfuhrbewilligung erteilt wurde oder ob die Voraussetzung für eine nachträgliche Beantragung nach Artikel 32 Absatz 4 erfüllt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Liegt eine gültige Bewilligung vor, ohne dass ein Exemplar davon der Ware beiliegt, wird der Warenführerin oder dem Warenführer eine Frist gesetzt, um dieses beizubringen. Wird es beigebracht, so kann die Ware freigegeben werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Kann eine von der Zollstelle zurückbehaltene Sendung nicht freigegeben werden, so entscheidet die Swissmedic über die Beschlagnahmung, die Verwendung und Entsorgung nach Artikel 70 und informiert die zuständige kantonale Behörde."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_39",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "540681be7efae7dd70488a39aad33d258f4363285f10a3afa57a6f2b260882b0"
+    },
+    {
+      "id": "bund/BETMKV/art_40",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für eine Aus- oder eine Einfuhr beschlagnahmter kontrollierter Substanzen erstellt das Bundesamt für Polizei eine Bestätigung über die rechtmässige Verwendung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zentralstelle für die Bekämpfung des unerlaubten Betäubungsmittelverkehrs ist befugt, auf Anfrage den Verkehr von beschlagnahmten Mustern bei einer Untersuchung mit dem Ausland zu bewilligen und zu organisieren. Dazu verwendet sie das Formular der Interpol zur Genehmigung des Internationalen Versands sichergestellter Drogen. Die Kontrollstelle gibt der Zentralstelle eine Empfangsbestätigung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Zentralstelle legt fest, welche Angaben zertifizierte Labore machen müssen, die kontrollierte Substanzen analysieren."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_40",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f9b30171d12cd26cdbe2785ab63cdd41f10eb98ad74e1928df475af60f244dd5"
+    },
+    {
+      "id": "bund/BETMKV/art_41",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kranke Reisende dürfen Arzneimittel mit kontrollierten Substanzen, die sie für ihre Behandlung während höchstens 30 Tagen benötigen und keine Substanz aus dem Verzeichnis d enthalten, ohne Einfuhrbewilligung in die Schweiz einführen."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Kranke Reisende aus Staaten, die durch eines der Schengen-Assoziierungs­abkommen gebunden sind, dürfen Arzneimittel mit kontrollierten Substanzen, die sie für ihre Behandlung während höchstens 30 Tagen benötigen, ohne Einfuhrbewilligung in die Schweiz einführen, sofern sie über eine Bescheinigung nach Anhang 2 verfügen. Die Schengen-Assoziierungsabkommen sind in Anhang 1 aufgeführt."
+        },
+        {
+          "absatz": "2",
+          "text": "Dauert ihr Aufenthalt länger als 30 Tage, so haben sie sich an eine Ärztin oder einen Arzt, die oder der in der Schweiz zur Berufsausübung zugelassen ist, zu wenden und sich von ihr oder ihm die für die Behandlung notwendigen Arzneimittel verschreiben zu lassen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_41",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "2c3224532e562ecaae1c8e8348cf0ee9f8a47584fb9884992e57957fd03c271d"
+    },
+    {
+      "id": "bund/BETMKV/art_42",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kranke Reisende dürfen Arzneimittel mit kontrollierten Substanzen, die sie für ihre Behandlung während höchstens 30 Tagen benötigen und keine Substanz aus dem Verzeichnis d enthalten, ohne Ausfuhrbewilligung ausführen, wenn dies das Bestimmungsland erlaubt."
+        },
+        {
+          "absatz": "2",
+          "text": "Führt die Reise in einen Staat, der durch eines der Schengen-Assoziierungs­abkom­men gebunden ist, so haben kranke Reisende Anspruch auf eine Bescheinigung ihrer behandelnden Ärztin oder ihres behandelnden Arztes, die die notwendigen Informationen zum Nachweis der Behandlung enthält. Die Schengen-Assoziierungs­abkom­men sind in Anhang 1 aufgeführt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bescheinigung ist von der Apothekerin oder dem Apotheker, die oder der die Arzneimittel mit kontrollierten Substanzen gestützt auf das ärztliche Rezept abgibt, zu beglaubigen. Die Apothekerin oder der Apotheker stellt der zuständigen Behörde des Kantons, in dem die ärztliche Behandlung stattgefunden hat, umgehend eine Kopie der beglaubigten Bescheinigung zu."
+        },
+        {
+          "absatz": "4",
+          "text": "Behandelnde Ärztinnen und Ärzte, die nach kantonalem Recht zur Selbstdispensation befugt sind und das verschriebene Arzneimittel selber abgeben, müssen die Bescheinigung vollständig ausfüllen und der zuständigen kantonalen Behörde umgehend eine Kopie davon übermitteln."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Bescheinigung gilt höchstens für 30 Tage. Für jedes verschriebene Arzneimittel mit kontrollierten Substanzen ist eine gesonderte Bescheinigung erforderlich. Keine Bescheinigung ist erforderlich für Arzneimittel mit kontrollierten Substanzen aus dem Verzeichnis c."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Swissmedic stellt das offizielle Formular nach dem Muster im Anhang 2 in elektronischer Form zur Verfügung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_42",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "6088bd94a67a9fbaa50ff2435a7c9a64fad627858a2eb45528e7361b86de5230"
+    },
+    {
+      "id": "bund/BETMKV/art_43",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic ist die internationale Auskunftsstelle zur Klärung von Fragen im Zusammenhang mit der Ein- und Ausfuhr von Arzneimitteln mit kontrollierten Substanzen im Reiseverkehr."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kann im Einzelfall, soweit erforderlich, Anfragen ausländischer Behörden im Zusammenhang mit Bescheinigungen nach Artikel 42 an die zuständige kantonale Behörde zur weiteren Abklärung weiterleiten. Diese erteilt die erforderlichen Auskünfte diesfalls direkt an die anfragende ausländische Stelle."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige kantonale Stelle informiert die Swissmedic am Anfang des Jahres über die Anzahl der während dem vergangenen Jahr ausgestellten Bescheinigungen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_43",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "418d0f4d01b17d0f4dd42370838b902dce1471b004b61feba26870bb5f462fa1"
+    },
+    {
+      "id": "bund/BETMKV/art_44",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte, Zahnärztinnen und Zahnärzte sowie Tierärztinnen und Tierärzte, die ihren Beruf in eigener fachlicher Verantwortung ausüben, können Arzneimittel mit kontrollierten Substanzen von einer Apotheke oder von Personen und Unternehmen mit einer Betriebsbewilligung für den Umgang mit kontrollierten Substanzen beziehen. Für die einzelfallweise Vermittlung von Arzneimitteln mit kontrollierten Substanzen gilt Artikel 11 Absatz 4."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen ihre Bestellung mit der «Global Location Number» (GLN) und ihrem Stempel versehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie müssen Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a und d schriftlich bestellen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie tragen die Verantwortung für die korrekte Aufbewahrung und haben den Verbrauch zu dokumentieren."
+        },
+        {
+          "absatz": "5",
+          "text": "In den Gemeinschaftspraxen und den Rettungsdiensten können nur Medizinalpersonen Arzneimittel mit kontrollierten Substanzen bestellen. Die Sammelbestellung muss enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Adresse der Gemeinschaftspraxis oder des Rettungsdienstes;"
+            },
+            {
+              "marke": "b",
+              "text": "Name und Unterschrift der bestellenden Medizinalperson;"
+            },
+            {
+              "marke": "c",
+              "text": "Ausstellungsdatum;"
+            },
+            {
+              "marke": "d",
+              "text": "Bezeichnung des Arzneimittels, seine Dosierung und seine Darreichungsform;"
+            },
+            {
+              "marke": "e",
+              "text": "Menge."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_44",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "3b5bedca2e102c53d3cdcda0a319f6b63ba5b4d6c7ddc36e2e94243cf4d3f4c9"
+    },
+    {
+      "id": "bund/BETMKV/art_45",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte, Zahnärztinnen und Zahnärzte sowie Tierärztinnen und Tierärzte, die den Beruf nicht in eigener fachlicher Verantwortung ausüben, dürfen Arzneimittel mit kontrollierten Substanzen nur im Rahmen der Befugnisse ihrer Anstellung und unter Aufsicht einer befugten Berufskollegin oder eines befugten Berufskollegen (Art. 9 Abs. 1 BetmG) beziehen und verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Ärztinnen und Ärzte sowie Tierärztinnen und Tierärzte gilt diese Einschränkung auch für die Verschreibung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_45",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "a3ca26b5aad720e33b03d75f3e04963b90ade53a6a7fcab3e0c3d7691b97c394"
+    },
+    {
+      "id": "bund/BETMKV/art_46",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte dürfen Arzneimittel mit kontrollierten Substanzen nur für Patientinnen und Patienten verschreiben, die sie selber untersucht haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Verschreibung kontrollierter Substanzen der Verzeichnisse a und d ist das eigens dafür vorgesehene Betäubungsmittelrezept zu verwenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Verschreibung von Arzneimitteln mit kontrollierten Substanzen der Verzeichnisse b und c reicht ein einfaches Rezept."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_46",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "73ed45fe6e7454094c6a66664041fd53b9c10d4a043f9437b1b0e5f783c66880"
+    },
+    {
+      "id": "bund/BETMKV/art_47",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Betäubungsmittelrezept muss enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name, Adresse, Unterschrift und Stempel der verschreibenden Ärztin oder des verschreibenden Arztes;"
+            },
+            {
+              "marke": "b",
+              "text": "Name, Vorname, Geburtsdatum und Adresse der Patientin oder des Patienten;"
+            },
+            {
+              "marke": "c",
+              "text": "Ausstellungsdatum;"
+            },
+            {
+              "marke": "d",
+              "text": "Bezeichnung des Arzneimittels mit kontrollierten Substanzen, seine Darreichungsform und Dosierung;"
+            },
+            {
+              "marke": "e",
+              "text": "Menge;"
+            },
+            {
+              "marke": "f",
+              "text": "Anwendungsanweisung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Betäubungsmittelrezept ist einen Monat gültig."
+        },
+        {
+          "absatz": "3",
+          "text": "Die verschriebene Menge darf nicht über den Bedarf für die Behandlung während einem Monat hinausgehen. Wenn es die Umstände rechtfertigen, kann eine Menge verschrieben werden, die für die Behandlung während höchstens drei Monaten ausreicht. Die verschreibende Ärztin oder der verschreibende Arzt hat in diesem Fall die genaue Dauer der laufenden Behandlung auf dem Rezept anzugeben."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Betäubungsmittelrezept ist von der verschreibenden Ärztin oder dem verschreibenden Arzt zu unterschreiben, und eine Kopie davon ist in der Krankengeschichte der Patientin oder des Patienten aufzubewahren."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Swissmedic stellt den Kantonen die amtlichen Formulare für Betäubungsmittelrezepte gegen Entgelt zur Weitergabe an die verschreibungsbefugten Ärztinnen und Ärzte zu."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_47",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "473d19b00e04cbd901c157f28c518b551959ddc09e2605774a109967255c598d"
+    },
+    {
+      "id": "bund/BETMKV/art_48",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die verschriebene Menge darf nicht über den Bedarf für die Behandlung während einem Monats hinausgehen. Wenn es die Umstände rechtfertigen, kann eine Menge verschreiben werden, die für die Behandlung während höchstens sechs Monaten ausreicht. Die verschreibende Ärztin oder der verschreibende Arzt hat in diesem Fall die genaue Dauer der Behandlung auf dem Rezept anzugeben."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_48",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "e307d05a60a8ab2c68bec6069aa62456aff11a58c22c22d48bbe478594a0e95e"
+    },
+    {
+      "id": "bund/BETMKV/art_49",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In der Meldung nach Artikel 11 Absatz 1 bis BetmG sind anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung des Arzneimittels;"
+            },
+            {
+              "marke": "b",
+              "text": "die Menge;"
+            },
+            {
+              "marke": "c",
+              "text": "die Dosierung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Indikation."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Von dieser Meldepflicht ausgenommen sind Verschreibungen und Anwendungen im Rahmen von freigegebenen klinischen Versuchen nach dem Heilmittelgesetz vom 15. Dezember 2000 ( HMG )."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_49",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "9e03e33d3c2f6247e59e55898d613faa74fef13effad4b9bd4d803ffc3a679f2"
+    },
+    {
+      "id": "bund/BETMKV/art_50",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tierärztinnen und Tierärzte dürfen Arzneimittel mit kontrollierten Substanzen nur für Tiere verschreiben, die sie selber untersucht haben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für ambulant behandelte Tiere dürfen Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a und d nur auf dem Betäubungsmittelrezept verschrieben werden."
+        },
+        {
+          "absatz": "3",
+          "text": "In der Meldung nach Artikel 11 Absatz 1 bis BetmG sind anzugeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung des Arzneimittels;"
+            },
+            {
+              "marke": "b",
+              "text": "die Menge;"
+            },
+            {
+              "marke": "c",
+              "text": "die Dosierung;"
+            },
+            {
+              "marke": "d",
+              "text": "die Anzahl behandelter Tiere;"
+            },
+            {
+              "marke": "e",
+              "text": "die Indikation."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Swissmedic stellt den Kantonen die Betäubungsmittelrezepte gegen Entgelt zur Weitergabe an die verschreibungsbefugten Tierärztinnen und Tierärzten zu."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_50",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "187703d3ec353c4ae63253428830c56bb1e92b4c913df03875cbd663da5cdebc"
+    },
+    {
+      "id": "bund/BETMKV/art_51",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verantwortlichen Apothekerinnen und Apotheker einer Apotheke oder einer Spitalapotheke dürfen kontrollierte Substanzen nur von Personen und Unternehmen mit einer Betriebsbewilligung für den Umgang mit kontrollierten Substanzen und nur mit einer schriftlichen Bestellung beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Apothekerinnen und Apotheker einer Apotheke können Arzneimittel mit kontrollierten Substanzen auf Rezept folgender Personen abgeben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "einer Medizinalperson, die befugt ist, Arzneimittel mit kontrollierten Substanzen zu verschreiben;"
+            },
+            {
+              "marke": "b",
+              "text": "einer zur Grenzpraxis berechtigten ausländischen Medizinalperson, die befugt ist, kontrollierte Substanzen zu verwenden und zu verschreiben (Art. 10 Abs. 2 BetmG)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit die verschreibende Ärztin oder Tierärztin oder der verschreibende Arzt oder Tierarzt nichts anderes vermerkt, ist die Wiederholung des Bezugs von Arzneimitteln mit kontrollierten Substanzen des Verzeichnisses a und d nicht erlaubt."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Teilbezug verschriebener Arzneimittel mit kontrollierten Substanzen der Ver­zeichnisse b und c ist während der Geltungsdauer des Rezepts möglich. Die abgegebene Menge und die Abgabestelle sind auf dem Rezept anzugeben."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_51",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "dfc0b21d0c647e3d0cf3ee7393adbf901e823bf38f26277801bc9d125d8f6418"
+    },
+    {
+      "id": "bund/BETMKV/art_52",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Notfällen und wenn es unmöglich ist, eine ärztliche Verschreibung zu erlangen, darf die verantwortliche Apothekerin oder der verantwortliche Apotheker ausnahmsweise ohne Verschreibung die kleinste im Handel erhältliche Packung eines Arzneimittels mit kontrollierten Substanzen abgeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er hat bei Arzneimitteln mit kontrollierten Substanzen der Verzeich­nisse a, b und bei zugelassenen Arzneimitteln mit kontrollierten Substanzen des Verzeichnisses d ein Protokoll über den Namen und die Adresse der Empfängerin oder des Empfängers sowie über den Grund der Abgabe aufzunehmen. Das Protokoll ist innert fünf Tagen der zuständigen kantonalen Behörde zuzustellen. Die behandelnde Ärztin oder der behandelnde Arzt ist gleichzeitig zu informieren."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_52",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "534b9dbf5b69d4669e6b11dc92f6c04902ead314bf4610b1e1d7297d1af2e5df"
+    },
+    {
+      "id": "bund/BETMKV/art_53",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Spitäler, wissenschaftliche Institute, nationale oder internationale Organisationen sowie Behörden des Bundes, der Kantone und der Gemeinden, die zum Bezug und zur Verwendung von kontrollierten Substanzen berechtigt sind, können diese von einem Unternehmen, einer Apotheke oder einer dazu ermächtigten Spitalapotheke mit einer schriftlichen Bestellung beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie benennen eine für die kontrollierten Substanzen verantwortliche Person und betrauen diese mit folgenden Aufgaben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bestellung;"
+            },
+            {
+              "marke": "b",
+              "text": "interne Organisation;"
+            },
+            {
+              "marke": "c",
+              "text": "Aufbewahrung;"
+            },
+            {
+              "marke": "d",
+              "text": "Ausgabe;"
+            },
+            {
+              "marke": "e",
+              "text": "Kontrolle."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_53",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f59ae230e0bd5b43463acc62112bd461127e91ef042d910f056abbd5b2bd9c4a"
+    },
+    {
+      "id": "bund/BETMKV/art_54",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kontrollierte Substanzen der Verzeichnisse a, d und e müssen vor Diebstahl gesichert aufbewahrt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Kontrollierte Substanzen der Verzeichnisse b, c und f sind so aufzubewahren, dass Unbefugte keinen Zugang haben."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_54",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "dbc16f2d57970bb00ae88e252bd484fd9e8b69edbde3ca35febf1342c0c7aea9"
+    },
+    {
+      "id": "bund/BETMKV/art_55",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kontrollierte Substanzen aus den Verzeichnissen a und d dürfen in der Schweiz nur unter Angabe der gemeinsamen internationalen Bezeichnung (Denominatio communis internationalis, DCI ) oder des Markennamens in den Handel gebracht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen im internationalen Handel mit der DCI -Bezeichnung oder, wenn keine solche vorliegt, mit dem Namen bezeichnet werden, der in den von der Schweiz ratifizierten internationalen Abkommen verwendet wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beschriftung der Arzneimittel mit kontrollierten Substanzen richtet sich nach den heilmittelrechtlichen Bestimmungen. In den Patienteninformationen sind Angaben über die Vorsichtsmassregeln und die Warnvermerke aufzuführen, die für die Sicherheit der Patientinnen und Patienten notwendig sind."
+        },
+        {
+          "absatz": "4",
+          "text": "Die für den Handel in der Schweiz bestimmten Packungen verwendungsfertiger Arzneimittel mit kontrollierten Substanzen des Verzeichnisses a und zugelassener Arzneimittel mit kontrollierten Substanzen des Verzeichnisses d sind mit einer Vignette zu versehen. Diese wird von der Swissmedic zur Verfügung gestellt. Anstelle der Vignette kann auch ein Aufdruck angebracht werden, der der Vignette in allen Teilen entspricht."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_55",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "a3270aad07c1a4c3ec8bdd567e6f2808ca83937558192263f85c9821bcd47e5b"
+    },
+    {
+      "id": "bund/BETMKV/art_56",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Publikumswerbung für kontrollierte Substanzen ist verboten."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein gegenüber Medizinalpersonen angepriesenes Arzneimittel mit kontrollierten Substanzen ist ausdrücklich und gut sichtbar als ein der Kontrolle nach dem BetmG unterliegendes Arzneimittel zu bezeichnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a, b und d dürfen keine Musterpackungen abgegeben werden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_56",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "883fe3d5c1b5a80b3a6a6b211428892dbb376b67a43a4396b41481ecf8984f29"
+    },
+    {
+      "id": "bund/BETMKV/art_57",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Buchführung nach Artikel 17 BetmG muss für jede kontrollierte Substanz folgende Angaben enthalten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Datum,"
+            },
+            {
+              "marke": "2",
+              "text": "Name und Adresse der Lieferantin oder des Lieferanten,"
+            },
+            {
+              "marke": "3",
+              "text": "Name und Adresse der Empfängerin oder des Empfängers,"
+            },
+            {
+              "marke": "4",
+              "text": "Produktebezeichnung,"
+            },
+            {
+              "marke": "5",
+              "text": "Mengen,"
+            },
+            {
+              "marke": "6",
+              "text": "Kopien der Ein- und Ausfuhrbewilligungen der betroffenen Länder."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Buchführung über Hilfschemikalien umfasst nur die in Zielländer exportierten Mengen."
+        },
+        {
+          "absatz": "3",
+          "text": "Stimmt das Datum auf dem Lieferschein nicht mit demjenigen des Empfangs der kontrollierten Substanzen überein, so ist in der Buchführung ausschliesslich das auf dem Lieferschein aufgeführte Datum zu übernehmen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_57",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c1c3a1172d08fe9ca18d8258547b8b7dc759484199607c765a9b7cf7b4e2fb55"
+    },
+    {
+      "id": "bund/BETMKV/art_58",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Buchführung muss auf Ende Jahr abgeschlossen und der Swissmedic innert Monatsfrist über das von ihr zur Verfügung gestellte Meldesystem eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Verlangen sind der Swissmedic detaillierte Auskünfte über die Angaben nach Absatz 1 zu erteilen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_58",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "b9c50b8503530608ec7088f297da06f56d198bc4672d1ec60e0af9f5ad22459e"
+    },
+    {
+      "id": "bund/BETMKV/art_59",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Verlangen der Kantone müssen Inhaberinnen und Inhaber einer Betriebsbewilligung des Bundes Auskünfte über die Lieferungen an Inhaberinnen und Inhaber von Betriebsbewilligungen des betreffenden Kantons erteilen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_59",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "d3006f6f7390cef7312239f567a2b5b9b9a10e4aad2b38482d6c50a5f7ffd749"
+    },
+    {
+      "id": "bund/BETMKV/art_60",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Inlandverkehr müssen die Personen und Unternehmen mit einer Bewilligung einer Bundesbehörde in folgenden Fällen jeden Ausgang von kontrollierten Substanzen der Verzeichnisse a, b, d und e der Swissmedic melden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Lieferung von kontrollierten Substanzen an Empfängerinnen oder Empfänger im Inland;"
+            },
+            {
+              "marke": "b",
+              "text": "die Rücksendung von kontrollierten Substanzen und Arzneimitteln mit kontrollierten Substanzen an den Lieferanten;"
+            },
+            {
+              "marke": "c",
+              "text": "Sendungen an die zuständige kantonale Behörde."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldung hat bis zum 15. Tag des der Lieferung oder der Sendung folgenden Monats zu erfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Rücksendungen von kontrollierten Substanzen durch Medizinalpersonen, Apotheken, Spitäler, wissenschaftliche Institute und kantonale und kommunale Behörden an eine Person oder ein Unternehmen nach Artikel 4 BetmG müssen der Swissmedic von der Empfängerin oder vom Empfänger der kontrollierten Substanzen gemeldet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für jede kontrollierte Substanz sowie für jedes Arzneimittel mit kontrollierten Substanzen (Darreichungsform, Dosierung und Packungsgrösse) ist eine gesonderte Meldung zu erstellen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Swissmedic kann nach Anhörung der Kantone und der interessierten Kreise spezifische Lieferungen von der Meldepflicht vorübergehend oder dauerhaft entbinden, wenn die Kontrolle auf eine andere Art und Weise sichergestellt werden kann."
+        },
+        {
+          "absatz": "6",
+          "text": "Inhaberinnen und Inhaber einer Betriebsbewilligung des Kantons melden den Inlandverkehr dem Kanton auf Verlangen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_60",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "25780bb1ddf79bdf0eccee499e32d41d1b9e461af63720e9a69ec5bdf5254f86"
+    },
+    {
+      "id": "bund/BETMKV/art_61",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Meldung muss folgende Angaben enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezeichnung, die GLN und den Sitz beziehungsweise den Wohnsitz der Lieferantin oder des Lieferanten;"
+            },
+            {
+              "marke": "b",
+              "text": "die Bezeichnung, die GLN und den Sitz beziehungsweise den Wohnsitz der Empfängerin oder des Empfängers;"
+            },
+            {
+              "marke": "c",
+              "text": "das Datum des Ausgangs beziehungsweise der Ausbuchung der kontrollierten Substanz;"
+            },
+            {
+              "marke": "d",
+              "text": "die Bezeichnung der gelieferten oder ausgebuchten kontrollierten Substanzen und deren GTIN;"
+            },
+            {
+              "marke": "e",
+              "text": "die genaue Menge in Gewicht oder Einheiten."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Meldung von magistralen Präparaten, die kontrollierte Substanzen enthalten, muss die GTIN der kontrollierten Substanz enthalten und die Angabe, wie oft die Menge, der die GTIN entspricht, im Präparat enthalten sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist über das von der Swissmedic zur Verfügung gestellte Meldesystem zu erstatten. Die Swissmedic gestattet der zuständigen kantonalen Behörde den direkten Zugang zu diesem System."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_61",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "8fc7a46b0a78081cf4fe563e3554cb015a73489a4a4da1f839a7a4b07dc4d1ac"
+    },
+    {
+      "id": "bund/BETMKV/art_62",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Lieferantin oder der Lieferant von kontrollierten Substanzen der Verzeichnisse a, b, d, e und f muss die Lieferung mit einem Lieferschein versenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Rücksendungen zur Vernichtung von kontrollierten Substanzen der Verzeichnisse a, d und e sind ebenfalls mit einem Lieferschein zu versehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Belege, Daten und Dateiträger über die Verschreibung und den Verkehr mit kontrollierten Substanzen sind zehn Jahre lang aufzubewahren."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_62",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "9d696d0d97165752d32bc1447618dae93ee9f1bdb0d91831d597536fccac0059"
+    },
+    {
+      "id": "bund/BETMKV/art_63",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verantwortliche Leiterinnen und Leiter einer Apotheke oder einer Spitalapotheke müssen den Bezug und die Abgabe von kontrollierten Substanzen jederzeit belegen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bezüge sind durch die Lieferscheine (Art. 62) zu belegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Abgabe ist mit Ausnahme der Arzneimittel mit kontrollierten Substanzen der Verzeichnisse b und c durch die Betäubungsmittelrezepte zu belegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Apotheken müssen über jede kontrollierte Substanz und über jedes Arzneimittel mit kontrollierten Substanzen, unter Berücksichtigung der unterschiedlichen Dosierung und Darreichungsform, nach Artikel 57 Buch führen. Davon ausgenommen sind Arzneimittel mit kontrollierten Substanzen des Verzeichnisses c."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_63",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "356b1405070e7f4a54721297f3c33c165dc3861a9480fb69b2bfbdd454583f3f"
+    },
+    {
+      "id": "bund/BETMKV/art_64",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die für eine Arzt-, Zahnarzt- oder Tierarztpraxis zuständige Medizinalperson trägt die Verantwortung für den korrekten Bezug von Arzneimitteln mit kontrollierten Stoffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist verpflichtet, über die Verwendung der von ihr als Vorrat bestellten Arzneimittel mit kontrollierten Substanzen Buch zu führen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist sie nach den kantonalen Bestimmungen zur Selbstdispensation von Arzneimitteln befugt, so untersteht sie zusätzlich den Bestimmungen für Apotheken (Art. 63)."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_64",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "534cc8b50b8bdad97e335553dea78a807828f9c933bf4cf5630ee42a3ed5bacd"
+    },
+    {
+      "id": "bund/BETMKV/art_65",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verantwortliche Person eines Spitals muss den Bezug und die Verwendung von kontrollierten Substanzen in der Spitalapotheke sowie in allen Einheiten, welche kontrollierte Substanzen verwenden, jederzeit belegen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Die verantwortliche Person eines wissenschaftlichen Instituts, einer nationalen oder internationalen Organisation, einer Behörde des Bundes, des Kantons oder der Gemeinde muss den Bezug und die Verwendung von kontrollierten Substanzen jederzeit belegen können."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f729ba4d7620449679b6ebbbf8e71e9d6edd34bbe3dc51ae882c767f1f2e0f2e"
+    },
+    {
+      "id": "bund/BETMKV/art_65_a",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_a",
+      "artikelLabel": "Art. 65a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ärztinnen und Ärzte, die Personen mit Cannabisarzneimitten behandeln, sind berechtigt, für die Pseudonomysierung der Daten der Patientinnen und Patienten die AHV-Nummer systematisch zu verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für jede AHV-Nummer wird mittels einer Einwegverschlüsselung stets das gleiche Pseudonym erstellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die AHV-Nummer darf in Verbindung mit der pseudonymisierten AHV-Nummer (Patientencode) nur von der behandelnden Ärztin oder vom behandelnden Arzt nach Absatz 1 bearbeitet werden."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "701aacb3a91e9cc76231db6e5771db767610f298d49a2852e8286d907b48dbd4"
+    },
+    {
+      "id": "bund/BETMKV/art_65_b",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_b",
+      "artikelLabel": "Art. 65b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG betreibt ein elektronisches Informationssystem zur Erhebung von Daten über die ärztlichen Behandlungen mit Betäubungsmitteln des Wirkungstyps Cannabis (Cannabisarzneimittel) nach Artikel 8 b BetmG."
+        },
+        {
+          "absatz": "2",
+          "text": "Ärztinnen und Ärzte, die Personen mit Cannabisarzneimitten behandeln, müssen folgende Daten im Informationssystem nach Artikel 18 f BetmG erfassen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Zeitpunkt der Verschreibung,"
+            },
+            {
+              "marke": "2",
+              "text": "Vorbehandlung mit Cannabisarzneimitteln und deren Dauer,"
+            },
+            {
+              "marke": "3",
+              "text": "Indikation: Diagnose und Symptome,"
+            },
+            {
+              "marke": "4",
+              "text": "behandlungsrelevante Nebendiagnosen,"
+            },
+            {
+              "marke": "5",
+              "text": "Cannabisarzneimittel: Bezeichnung des Präparats, Darreichungsform, Gesamt-THC- und CBD-Gehalt, Dosierung,"
+            },
+            {
+              "marke": "6",
+              "text": "symptomrelevante Begleitmedikation: Bezeichnung des Präparats, Dosierung,"
+            },
+            {
+              "marke": "7",
+              "text": "Wirkungen,"
+            },
+            {
+              "marke": "8",
+              "text": "Nebenwirkungen der Behandlung,"
+            },
+            {
+              "marke": "9",
+              "text": "Symptomveränderung aufgrund der Behandlung,"
+            },
+            {
+              "marke": "10",
+              "text": "Behandlungsende: Zeitpunkt und Grund."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie müssen die Daten unmittelbar nach folgenden Zeitpunkten erfassen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Erstverschreibung;"
+            },
+            {
+              "marke": "b",
+              "text": "dem ersten sowie dem zweiten Jahr der Behandlung;"
+            },
+            {
+              "marke": "c",
+              "text": "dem Behandlungsende, falls dieses vor Ablauf des zweiten Jahres erfolgt."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "96d758594f6ad6b7c4b11c761a93af93958a3bca190bf1345fdfe3bb191b9fee"
+    },
+    {
+      "id": "bund/BETMKV/art_65_c",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_c",
+      "artikelLabel": "Art. 65c",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das BAG trägt die Verantwortung für das Informationssystem."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_c",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "6ffd676c4f0dc7440de090bc3f6ffa5d376d853acf6d174f6f48bcca166d519a"
+    },
+    {
+      "id": "bund/BETMKV/art_65_d",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_d",
+      "artikelLabel": "Art. 65d",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die zugriffsberechtigten Ärztinnen und Ärzte können die von ihnen erfassten Daten einsehen, ändern und löschen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_d",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "64b42588ffd3180f21c771f2bdf28e5c246b56a96067c59b179ade3a27a572ea"
+    },
+    {
+      "id": "bund/BETMKV/art_65_e",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_e",
+      "artikelLabel": "Art. 65e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Daten werden nach Abschluss der Datenerhebung höchstens zehn Jahre im Informationssystem aufbewahrt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Archivierung richtet sich nach der Archivierungsgesetzgebung des Bundes."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_e",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "32507be4cae63c0d5ac490dfcd2696ff456f08dbb6988322fc54ad2df62c8a88"
+    },
+    {
+      "id": "bund/BETMKV/art_65_f",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "65_f",
+      "artikelLabel": "Art. 65f",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG veröffentlicht jährlich statistische Auswertungen und Zusammenstellungen, insbesondere zur Indikation sowie zu den Wirkungen und Nebenwirkungen der ärztlichen Behandlungen mit Cannabisarzneimitteln."
+        },
+        {
+          "absatz": "2",
+          "text": "Die kantonalen Vollzugsbehörden und die an den Behandlungen beteiligten Ärztinnen und Ärzte können im Informationssystem auf anonymisierte statistische Auswertungen Zugriff haben, die für ihren spezifischen Aufgabenbereich relevant sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Auf Anfrage kann das BAG wissenschaftlich qualifizierten Forschungseinrichtungen anonymisierte Auswertungen oder anonymisierte Daten zu Forschungszwecken zur Verfügung stellen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_65_f",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "68a98683161f1ce9aa4fb311f8d7951af664a43c416c2b3a617980d653840f1a"
+    },
+    {
+      "id": "bund/BETMKV/art_66",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic vollzieht diese Verordnung, soweit nicht ausdrücklich eine andere Behörde zuständig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie veröffentlicht Listen folgender zum Umgang mit kontrollierten Substanzen Berechtigten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Unternehmen und Personen im Sinne von Artikel 4 Absatz 1 BetmG sowie Vermittlerinnen und Vermittler;"
+            },
+            {
+              "marke": "b",
+              "text": "Apotheken;"
+            },
+            {
+              "marke": "c",
+              "text": "Ärztinnen und Ärzte, Zahnärztinnen und Zahnärzte sowie Tierärztinnen Tierärzte mit der Angabe, ob sie nach den kantonalen Bestimmungen zur Selbstdispensation befugt sind;"
+            },
+            {
+              "marke": "d",
+              "text": "Spitäler;"
+            },
+            {
+              "marke": "e",
+              "text": "wissenschaftlichen Institute;"
+            },
+            {
+              "marke": "f",
+              "text": "nationalen oder internationalen Organisationen;"
+            },
+            {
+              "marke": "g",
+              "text": "grenzüberschreitend tätigen Rettungsdienste;"
+            },
+            {
+              "marke": "h",
+              "text": "kantonalen und kommunalen Behörden."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie übernimmt für Cannabis für medizinische Zwecke gegenüber der Organisation der Vereinten Nationen auf dem Gebiet der Betäubungsmittelkontrolle die Funktion der Nationalen Cannabis-Agentur gemäss Artikel 28 des Einheits-Übereinkommens vom 30. März 1961 über die Betäubungsmittel in der durch das Protokoll vom 25. März 1972 geänderten Fassung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_66",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "eed9c1be93ee944e5d8dfa6746042900c96ce524a0bb1b701e7b94abe449ee75"
+    },
+    {
+      "id": "bund/BETMKV/art_67",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic kann bei Verdacht auf Unregelmässigkeiten die zuständigen kantonalen Behörden beauftragen, besondere Kontrollen durchzuführen, oder anstelle der zuständigen kantonalen Behörden die Kontrolle der Bewilligungsinhaberin oder Bewilligungsinhaber selber vornehmen, wenn diese sie nicht wahrnehmen können."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie kontrolliert in Zusammenarbeit mit dem BAZG die Einhaltung der Bestimmungen über die Ein-, Aus- und Durchfuhr von kontrollierten Substanzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Zu Analysezwecken kann sie unentgeltlich Muster von Substanzen entnehmen, die der Kontrolle unterliegen könnten. Sie stellt der Eigentümerin oder dem Eigentümer eine Quittung aus."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie ist jederzeit befugt, die unter Zollüberwachung stehenden kontrollierten Substanzen, insbesondere solcher, die in offenen Zolllagern, Lagern für Massengüter oder Zollfreilagern aufbewahrt werden, zu kontrollieren und bei Unstimmigkeiten Massnahmen zu verfügen. Sie kann damit die zuständigen kantonalen Behörden beauftragen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_67",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "af072313edef395f90fd84f395d2cc8393ee53a1cbae902c63d09375b06deb96"
+    },
+    {
+      "id": "bund/BETMKV/art_68",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Swissmedic erstellt die jährlichen Schätzungen über den Bedarf an kontrollierten Substanzen, die die Schweiz in Ausführung der von ihr ratifizierten internationalen Abkommen abgeben muss."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_68",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "3b6add1eaaa02f6b69da8189a429a5a4905f786c4d8f7970e7027cb34c17f402"
+    },
+    {
+      "id": "bund/BETMKV/art_69",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone vollziehen diese Verordnung im Rahmen ihrer Zuständigkeit und kontrollieren den Verkehr zwischen den zum Umgang mit kontrollierten Substanzen Berechtigten."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie können unentgeltlich Muster von kontrollierten Substanzen zu Analysezwecken entnehmen. Im Fall einer solchen Entnahme stellen sie der Eigentümerin oder dem Eigentümer eine Quittung aus."
+        },
+        {
+          "absatz": "3",
+          "text": "Mit der Kontrolle beauftragte Personen dürfen nicht gleichzeitig eine Tätigkeit als verantwortliche Person im Sinne von Artikel 12 Absatz 1 Buschstabe c ausüben."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_69",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "609e4247d9dd0ca46d2b5805f5ac1c796a548e2ce9dda3e8a698c8ef4051ca5a"
+    },
+    {
+      "id": "bund/BETMKV/art_70",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Veränderte, verfallene, nicht mehr verwendete oder beschlagnahmte kontrollierte Substanzen der Verzeichnisse a, d und e werden von den Kantonen auf geeignete Weise entsorgt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige kantonale Behörde überwacht die Entsorgung der kontrollierten Substanzen der Verzeichnisse b, c, f und g. Die Rückverfolgung muss gewährleistet sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten für die Entsorgung gehen zulasten der Bewilligungsinhaberin, des Bewilligungsinhabers, der Eigentümerin, des Eigentümers, der Besitzerin oder des Besitzers."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_70",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "0ad308d177cf46c424855bce8adadb1be13008b1017114b9bd5390065a80129a"
+    },
+    {
+      "id": "bund/BETMKV/art_71",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EDI vollzieht diese Verordnung in Bezug auf Rohmaterialien und Erzeugnisse mit vermuteter betäubungsmittelähnlicher Wirkung des Verzeichnisses e."
+        },
+        {
+          "absatz": "2",
+          "text": "Erscheinen Rohmaterialien und Erzeugnisse mit vermuteter betäubungsmittelähnlicher Wirkung neu auf dem Markt oder besteht der Verdacht, dass bekannte Rohmaterialien und Erzeugnisse betäubungsmittelähnliche Wirkung haben, so nimmt sie das EDI auf Antrag der Swissmedic ohne Verzug in das Verzeichnis e auf."
+        },
+        {
+          "absatz": "3",
+          "text": "Es teilt diese Rohmaterialien und Erzeugnisse nach der Prüfung und auf Antrag der Swissmedic einem anderen Verzeichnis zu oder streicht sie aus dem Betäubungsmittelverzeichnis."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_71",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "014d2c0813cf967d25856b3d41b960227c5387c5c16ef13ac99a0fecff698e5e"
+    },
+    {
+      "id": "bund/BETMKV/art_72",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG vollzieht diese Verordnung in Bezug auf kontrollierte Substanzen des Verzeichnisses d, soweit diese nicht als Wirkstoff eines zugelassenen Arzneimittels dienen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es übernimmt für Cannabis für nicht medizinische Zwecke gegenüber der Organisation der Vereinten Nationen auf dem Gebiet der Betäubungsmittelkontrolle die Funktion der Nationalen Cannabis-Agentur gemäss Artikel 28 des Einheits-Übereinkommens vom 30. März 1961 über die Betäubungsmittel in der durch das Protokoll vom 25. März 1972 geänderten Fassung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_72",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "0f452fa65e2e8e7f98f96c6045b95e5e0e066bdcb956727d840644a7a57ba62b"
+    },
+    {
+      "id": "bund/BETMKV/art_73",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die für den Vollzug dieser Verordnung zuständigen Behörden des Bundes und der Kantone sorgen für die gegenseitige Bekanntgabe der Daten, die im Rahmen der Bewilligungen und Kontrollen notwendig sind."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_73",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c202021544972df3582a2ba2ad4ff2829415799deadeb780d2756c069701cae4"
+    },
+    {
+      "id": "bund/BETMKV/art_74",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Swissmedic betreibt ein internes Geschäfts- und Aufbewahrungssystem zur Erfassung der Daten im Zusammenhang mit Bewilligungserteilungen und der Entgegennahme von Meldungen. Das System kann auch Daten über administrative und strafrechtliche Verfolgungen enthalten."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_74",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "dbef6a7d38ca737787ff0e79e00581606d68509bac47cfe01ef5cc4c3cabb941"
+    },
+    {
+      "id": "bund/BETMKV/art_75",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die zuständige kantonale Behörde übermittelt der Swissmedic die vollständigen Angaben aller Medizinalpersonen, Spitäler und wissenschaftlichen Institute, die zum Bezug, zur Lagerung, Verschreibung, Verwendung oder Abgabe von kontrollierten Substanzen berechtigt sind. Zur Selbstdispensation befugte Ärztinnen und Ärzte werden besonders bezeichnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic bestimmt Form und Frist für die Übermittlung der Daten nach Absatz 1."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_75",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "ccacfe6dbbfb03cac2dfce0e2535c90040285b3b0fd36b9d98678625c6db7737"
+    },
+    {
+      "id": "bund/BETMKV/art_76",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic erteilt dem Bundesamt für Polizei die Auskünfte, die dieses zur Erfüllung seiner Aufgaben im Rahmen der Bekämpfung des illegalen Verkehrs mit kontrollierten Substanzen benötigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Bundesamt für Polizei informiert die Swissmedic über Feststellungen und Beobachtungen im Zusammenhang mit dem BetmG."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_76",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f3cc2b54c1e32158a1dae4adf4425dd63c908338d5929e93eec191ef93f51f7d"
+    },
+    {
+      "id": "bund/BETMKV/art_77",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das EDI und die Swissmedic arbeiten im Rahmen ihrer Kontrollaufgaben zusammen und informieren sich gegenseitig kontinuierlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Das EDI übermittelt der Swissmedic die vollständigen Angaben aller Bewilligungs­inhaberinnen und Bewilligungsinhaber, die kontrollierte Substanzen des Verzeichnisses e beziehen, vermitteln, ein- und ausführen, herstellen, abgeben oder mit diesen Handel treiben dürfen. Es meldet der Swissmedic jede Änderung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_77",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "45a894c022270dea5c54e448b889fc2c4ed6bfe5056de5315df6dc003a9f6cd8"
+    },
+    {
+      "id": "bund/BETMKV/art_78",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG und die Swissmedic arbeiten im Rahmen ihrer Kontrollaufgaben zusammen und informieren sich gegenseitig kontinuierlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAG übermittelt der Swissmedic die vollständigen Angaben aller Bewilligungs­inhaberinnen und Bewilligungsinhaber, die kontrollierte Substanzen des Verzeichnisses d beziehen, vermitteln, ein- und ausführen, anbauen, herstellen, abgeben oder mit diesen Handel treiben dürfen. Es meldet der Swissmedic jede Änderung."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_78",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "0986c1c74a6832dfea5eae4c00f7b85d304fc4297cf7b97abe3876af3e60790f"
+    },
+    {
+      "id": "bund/BETMKV/art_79",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Swissmedic sorgt dafür, dass die in den internationalen Abkommen verlangten Meldungen den zuständigen Organen innert der vorgeschriebenen Frist erstattet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie veröffentlicht die nach den ratifizierten internationalen Abkommen verlangten Meldungen und Informationen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann mit Zustimmung folgender Organe und Behörden Dokumente elektronisch bearbeiten, soweit Schutz und Sicherheit der Daten gewährleistet sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des Internationalen Betäubungsmittel-Kontrollorgans (INCB) nach Artikel 1 Absatz 1 Buchstabe a des Einheits-Übereinkommens vom 30. März 1961 über die Betäubungsmittel in der durch das Protokoll vom 25. März 1972 geänderten Fassung;"
+            },
+            {
+              "marke": "b",
+              "text": "des Büros der Vereinten Nationen für Drogen- und Verbrechensbekämpfung (UNODC) nach Artikel 29 der Charta der Vereinten Nationen vom 10. September 2002;"
+            },
+            {
+              "marke": "c",
+              "text": "der zuständigen Behörden der betroffenen Länder;"
+            },
+            {
+              "marke": "d",
+              "text": "der Oberzolldirektion."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_79",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "c67a3e58f8ab07de602987c677033789e5661a2ee01fff08d08e047bee40e15d"
+    },
+    {
+      "id": "bund/BETMKV/art_79_a",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "79_a",
+      "artikelLabel": "Art. 79a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das BAG und die Swissmedic können zur Erteilung der Bewilligungen nach den Artikeln 4, 5 und 8 Absätze 5–8 BetmG oder zur Überprüfung von deren Einhaltung folgende Personendaten der Gesuchstellerinnen und Gesuchsteller und der Bewilligungsinhaberinnen und -inhaber bearbeiten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Daten zur Identität;"
+            },
+            {
+              "marke": "b",
+              "text": "Daten zu Wohn-, Geschäfts- und Betriebsstandorten;"
+            },
+            {
+              "marke": "c",
+              "text": "Daten zu Handelsregistereinträgen;"
+            },
+            {
+              "marke": "d",
+              "text": "Daten zu strafrechtlichen Verfolgungen;"
+            },
+            {
+              "marke": "e",
+              "text": "Daten zu betreibungsrechtlichen Verfahren;"
+            },
+            {
+              "marke": "f",
+              "text": "Daten zur beruflichen Ausbildung und Qualifikation."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das BAG kann zur Erteilung von Ausnahmebewilligungen gemäss Artikel 8 Absätze 5–8 BetmG zudem folgende Personendaten bearbeiten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "zur Identität,"
+            },
+            {
+              "marke": "2",
+              "text": "zur Weiterbildung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das BAG und die Swissmedic stellen sicher, dass nur die mit der Bearbeitung der Bewilligungen nach den Artikeln 4, 5 und 8 Absätze 5–8 BetmG betrauten Personen Zugriff auf die Daten nach den Absätzen 1 und 2 haben."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_79_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "711e77d8f5996f337e19e6a9ab9b545830d521efa741a8cee3f1e9c6f34ddbc6"
+    },
+    {
+      "id": "bund/BETMKV/art_79_b",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "79_b",
+      "artikelLabel": "Art. 79b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Daten nach Artikel 79 a werden nach Abschluss der Datenerhebung höchstens zehn Jahre in einem elektronischen Geschäftsverwaltungssystem aufbewahrt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Archivierung richtet sich nach der Archivierungsgesetzgebung des Bundes."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_79_b",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "14c9688dc60b1e7e19302b2e197be383bee12c638792fc4ba2d136ed9629b8c1"
+    },
+    {
+      "id": "bund/BETMKV/art_80",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren der Swissmedic richten sich nach der Verordnung des Schweizerischen Heilmittelinstituts vom 14. September 2018 über seine Gebühren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic kann Organisationen mit humanitärem Charakter, internationale Organisationen und Behörden von der Gebührenpflicht ausnehmen, sofern diese nicht in der Bundesratsbewilligung geregelt wurde."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühren des EDI und des BAG richten sich nach den Artikeln 38–40 BetmSV."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_80",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "63aca69146ef99e7d78698b50a8777b68a711b67d566bae1137a40777e2f7794"
+    },
+    {
+      "id": "bund/BETMKV/art_81",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Bundesrat kann einer nationalen oder internationalen Organisation eine Bewilligung nach Artikel 14 a Absatz 1 BetmG für zugelassene Arzneimittel mit kontrollierten Substanzen für jeweils fünf Jahre erteilen, wenn sie:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im humanitären Bereich tätig ist und über einen medizinischen Auftrag verfügt;"
+            },
+            {
+              "marke": "b",
+              "text": "international tätig ist;"
+            },
+            {
+              "marke": "c",
+              "text": "gewährleistet, dass die Arzneimittel mit kontrollierten Substanzen nicht im Innern des Landes abgegeben werden;"
+            },
+            {
+              "marke": "d",
+              "text": "eine verantwortliche Person bestimmt;"
+            },
+            {
+              "marke": "e",
+              "text": "nachweisen kann, dass die kontrollierten Substanzen nach Artikel 54 aufbewahrt werden können."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_81",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "26601616de80d9c290b3327676da9eb364324530738b8ae5a46448d38ce9fe50"
+    },
+    {
+      "id": "bund/BETMKV/art_82",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nationale und internationale Organisationen mit einer Bewilligung nach Artikel 81 dürfen Betäubungsmittel nur bei zum Betäubungsmittelhandel berechtigten Personen und Unternehmen beziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie müssen nach Artikel 57 über die kontrollierten Substanzen Buch führen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_82",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "92d11e5a60642cf0b4c2d434a358ff192834bbb678b1c4205191610cd2202090"
+    },
+    {
+      "id": "bund/BETMKV/art_83",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die nationale oder internationale Organisation, die über eine Bewilligung des Bundesrates verfügt (Art. 14 a Abs. 1 BetmG), ist verpflichtet, für jedes zugelassene Arzneimittel mit kontrollierten Substanzen gleicher Art und gleicher Dosierung eine besondere Lagerkontrolle im Sinne von Artikel 57 zu führen und der Swissmedic auf Ende des Jahres ein Inventar nach Artikel 58 abzugeben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Swissmedic überprüft die Richtigkeit dieser Lagerkontrolle. Sie ist berechtigt, zu diesem Zweck die Lagerräume zu betreten und die Bestände an Arzneimitteln mit kontrollierten Substanzen zu kontrollieren."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_83",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "532a8be912364bae3ea46fc22eb9c67c356db425e1a2753547da331daf8d2d0c"
+    },
+    {
+      "id": "bund/BETMKV/art_84",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nach Artikel 22 Absatz 1 Buchstabe d BetmG wird bestraft, wer vorsätzlich oder fahrlässig:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "gegen die Meldepflicht nach Artikel 49 Absatz 1 verstösst;"
+            },
+            {
+              "marke": "b",
+              "text": "gegen die Meldepflicht nach Artikel 50 Absatz 3 verstösst;"
+            },
+            {
+              "marke": "c",
+              "text": "als verantwortliche Apothekerin oder verantwortlicher Apotheker ohne Notfall nach Artikel 52 ein Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a, b oder d abgibt;"
+            },
+            {
+              "marke": "d",
+              "text": "als verantwortliche Apothekerin oder verantwortlicher Apotheker ein Arzneimittel mit kontrollierten Substanzen der Verzeichnisse a, b oder d notfallmässig abgegeben und eine der folgenden Handlungen unterlassen hat: 1. Aufnahme eines Protokolls über den Namen und die Adresse der Empfängerin oder des Empfängers sowie über den Grund der Abgabe,"
+            },
+            {
+              "marke": "2",
+              "text": "Zustellung dieses Protokoll innert fünf Tagen an die zuständige kantonale Behörde,"
+            },
+            {
+              "marke": "3",
+              "text": "Information der behandelnden Ärztin oder des behandelnden Arztes gleichzeitig mit der Zustellung des Protokolls an die zuständige kantonale Behörde (Art. 52 Abs. 2)."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_84",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "59e9f34ee3e29b8b17de947c454331d7d16c2877e6fd3a431ca18c36560780bd"
+    },
+    {
+      "id": "bund/BETMKV/art_85",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden kontrollierte Substanzen von der Zollstelle zurückbehalten (Art. 40 Abs. 1) und ergeben die Abklärungen der Swissmedic (Art. 40 Abs. 2), dass der Verdacht einer Verletzung der Bestimmungen dieser Verordnung begründet ist oder kann der Nachweis über den rechtmässigen Versand nach dem neuen Bestimmungsland beim Eintritt der kontrollierten Substanzen in das schweizerische Zollgebiet nicht erbracht werden, so übergibt die Swissmedic das Dossier der für die Strafverfolgung von Widerhandlungen zuständigen kantonalen Behörde (Art. 28 BetmG)."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Strafverfolgung von Widerhandlungen eingezogene kontrollierte Substanzen (Art. 69 des Strafgesetzbuches) können einer rechtmässigen Verwendung zugeführt oder nach den Bestimmungen von Artikel 70 entsorgt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Erlös aus einem allfälligen Verkauf eingezogener kontrollierter Substanzen fällt an die für die Kontrolle zuständige Behörde, es sei denn, er wird durch einen richterlichen Entscheid der früheren Eigentümerin oder dem früheren Eigentümer zugesprochen."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_85",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "a4bf2320f7a073d935cf3f3a2f4483e9ab042cd2c1f2b00783a26db4d00aa2f5"
+    },
+    {
+      "id": "bund/BETMKV/art_86",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die folgenden Verordnungen werden aufgehoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Betäubungsmittelverordnung vom 29. Mai 1996;"
+            },
+            {
+              "marke": "2",
+              "text": "die Betäubungsmittelverordnung Swissmedic vom 12. Dezember 1996;"
+            },
+            {
+              "marke": "3",
+              "text": "die Vorläuferverordnung vom 29. Mai 1996;"
+            },
+            {
+              "marke": "4",
+              "text": "die Vorläuferverordnung Swissmedic vom 8. November 1996;"
+            },
+            {
+              "marke": "5",
+              "text": "die Verordnung vom 13. September 1930 über den Verkehr mit Betäubungsmitteln in der Armee;"
+            },
+            {
+              "marke": "6",
+              "text": "der Bundesratsbeschluss vom 5. Juli 1963 über Betäubungsmittel für das Schweizerische Rote Kreuz;"
+            },
+            {
+              "marke": "7",
+              "text": "der Bundesratsbeschluss vom 30. Dezember 1953 betreffend Betäubungsmittel für das Internationale Komitee vom Roten Kreuz."
+            }
+          ]
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_86",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "91d38614672479edbc1dad78bf0595bd92acea3712ee681384a23e8ad7ae5630"
+    },
+    {
+      "id": "bund/BETMKV/art_87",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die nachstehenden Verordnungen werden wie folgt geändert: … 63"
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_87",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "652dd6bac79e61ae776e0c3026544c2e0904788d57d8e8b9b23fa795d60f7c10"
+    },
+    {
+      "id": "bund/BETMKV/art_88",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Schweizerische Rote Kreuz und das internationale Komitee vom Roten Kreuz, die beim Inkrafttreten der vorliegenden Verordnung berechtigt sind, Arzneimittel mit kontrollierten Substanzen zu beziehen, aufzubewahren und auszuführen, sind weiterhin berechtigt, dies nach den verpflichtenden Bedingungen dieser Verordnung zu tun. Sie müssen innert zwei Jahren nach Inkrafttreten der Verordnung ein Gesuch nach Artikel 81 einreichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehende Bewilligungen, die vor Inkrafttreten dieser Verordnung ausgestellt wurden, bleiben gültig."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_88",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f16d794f38f4983424c09bb180e40d9277baf43f1706df8df111b9a85d36c585"
+    },
+    {
+      "id": "bund/BETMKV/art_88_a",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "88_a",
+      "artikelLabel": "Art. 88a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Ausnahmebewilligungen des BAG für den Anbau, die Einfuhr, die Herstellung und das Inverkehrbringen von Betäubungsmitteln des Wirkungstyps Cannabis zu medizinischen Zwecken nach Artikel 8 Absatz 5 BetmG in der bisherigen Fassung bleiben bis zum Ablauf der Geltungsdauer, längstens aber noch während 12 Monaten nach Inkrafttreten der Änderung vom 22. Juni 2022, gültig."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_88_a",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "f9a490fe2f862fc7c59944299d03b1e660d31cc391f14f8254dbddb676c61252"
+    },
+    {
+      "id": "bund/BETMKV/art_89",
+      "ebene": "bund",
+      "quelle": "BETMKV",
+      "erlass": "BetmKV",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt unter Vorbehalt von Absatz 2 am 1. Juli 2011 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Artikel 60 tritt für kontrollierte Substanzen des Verzeichnisses b am 1. Januar 2013 in Kraft."
+        }
+      ],
+      "stand": "2023-01-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2011/362/de#art_89",
+      "abgerufen": "2026-06-25",
+      "fassungsToken": "20230123",
+      "sha": "7e88edbd3f2af38bcc24982e9f6d261e1570bfb0485dc0c7c3e46d31d89ed354"
+    }
+  ]
+}
