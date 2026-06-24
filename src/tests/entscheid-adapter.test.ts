@@ -131,6 +131,21 @@ describe('markenPlausibel', () => {
   });
 });
 
+describe('mappeEntscheidOCL — #1 Zukunfts-Datum-Wächter', () => {
+  const det = (datum: string) => ({
+    decision_id: 'bge_test', court: 'bge', canton: 'CH', language: 'de',
+    decision_date: datum, docket_number: '152 III 1',
+    full_text: 'Sachverhalt:\n\nText.\n\nErwägungen:\n\nText.',
+  });
+  it('verwirft einen Entscheid, der NACH dem Abrufdatum datiert (unmögliches Quelldatum)', () => {
+    expect(mappeEntscheidOCL(det('2026-06-26'), null, '2026-06-24')).toBeNull();
+  });
+  it('akzeptiert Datum == Abrufdatum und Vergangenheit', () => {
+    expect(mappeEntscheidOCL(det('2026-06-24'), null, '2026-06-24')).not.toBeNull();
+    expect(mappeEntscheidOCL(det('2025-01-10'), null, '2026-06-24')).not.toBeNull();
+  });
+});
+
 describe('teileDispositivInline', () => {
   it('splittet einzeiligen Blob in aufsteigende Punkte', () => {
     const r = teileDispositivInline('1. Die Beschwerde wird abgewiesen. 2. Es werden keine Kosten erhoben. 3. Mitteilung.')!;

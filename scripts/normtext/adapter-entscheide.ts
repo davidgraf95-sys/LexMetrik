@@ -221,6 +221,11 @@ export function mappeEntscheidOCL(
   opts: HoleOpts = {},
 ): EntscheidSnapshot | null {
   if (!det || !det.decision_id) return null;
+  // #1 Plausibilität: ein Entscheid kann nicht NACH dem Abrufzeitpunkt datiert sein
+  // (der Crawl holt nichts aus der Zukunft). Solche Quelldaten sind unzuverlässig
+  // → nicht aufnehmen (ehrlich weglassen statt ein Zukunftsdatum zeigen, §8).
+  const datumRoh = String(det.decision_date ?? '');
+  if (datumRoh && abgerufen && datumRoh > abgerufen) return null;
   const sprache = (det.language ?? 'de') as EntscheidSprache;
 
   // ── Abschnitte aus der amtlichen Gliederung (oder Fallback full_text) ──

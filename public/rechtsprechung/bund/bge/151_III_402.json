@@ -36,31 +36,38 @@
           "typ": "erwaegung",
           "bloecke": [
             {
-              "marke": null,
+              "marke": "E. 6",
+              "tiefe": 1,
               "text": "(...)"
             },
             {
-              "marke": null,
+              "marke": "E. 6.4",
+              "tiefe": 2,
               "text": "Was die Beschwerdeführerin gegen die von den Vorinstanzen gewährte definitive Rechtsöffnung vorbringt, dringt durch."
             },
             {
-              "marke": null,
+              "marke": "E. 6.4.1",
+              "tiefe": 3,
               "text": "Die Erstinstanz hatte erwogen, die Grundforderung aus der Schenkungssteuer 2006 samt Verzugszinsen sei öffentlich-rechtlicher Natur. Für öffentlich-rechtliche Forderungen komme nur die definitive Rechtsöffnung in Frage. Dagegen hatte die Beschwerdeführerin schon im kantonalen Beschwerdeverfahren eingewendet, für die Schuldbriefforderung könne keine definitive Rechtsöffnung erteilt werden. Dies verwarf die Vorinstanz mit dem Argument, die definitive Rechtsöffnung sei nicht für die Schuldbriefforderung von Fr. 200'000.- erteilt worden, sondern für die Schenkungssteuer 2006 samt Zinsausständen."
             },
             {
-              "marke": null,
+              "marke": "E. 6.4.2",
+              "tiefe": 3,
               "text": "Wie die Beschwerdeführerin zutreffend vorträgt, ist es nicht möglich, für die Schuldbriefforderung definitive Rechtsöffnung zu erteilen. Denn es hiesse, dass die Grundforderung für die Schenkungssteuer 2006 samt Zinsausständen in Betreibung gesetzt worden wäre. Dies hätte aber auf dem Weg der Betreibung auf Pfändung und nicht durch Betreibung auf Pfandverwertung geschehen müssen. Wegen der Einheit von Schuldbriefforderung und Pfandrecht BGE 151 III 402 S. 404 (BGE 134 III 71 E. 3; vgl. dazu die nicht publ. E. 5.3.2) kann nur für die Schuldbriefforderung Rechtsöffnung erteilt werden. In welcher Höhe dies zu geschehen hat, wird durch die Grundforderung bestimmt, sofern die Schuldnerin die Einrede des \"pactum de non petendo\" erhebt. An der Rechtsnatur der Schuldbriefforderung ändert sich jedoch nichts."
             },
             {
-              "marke": null,
+              "marke": "E. 6.4.3",
+              "tiefe": 3,
               "text": "In der steuerrechtlichen Literatur findet sich der Hinweis, dass die Steuerforderung pfandgesichert werden kann, indem zum Beispiel Schuldbriefe als Faustpfand hinterlegt werden. Der Steuerschuldner kann auf diese Weise eine Sicherstellungsverfügung vermeiden. Denn für die Steuerbehörden besteht kein Sicherungsbedürfnis mehr, da sie durch Einleitung der Betreibung auf Pfandverwertung auf den ihnen vorbehaltenen Vermögenswert greifen können. Als pfandgesichert im Sinne von Art. 37 SchKG gelten dabei alle zivilrechtlichen Vorzugsrechte. Dies umfasst Grund-, Faust- und Forderungspfandrechte. Für den ungedeckten Teil der Forderung kann jederzeit zusätzlich eine entsprechende Sicherheitsleistung verlangt werden (HANS FREY, in: Bundesgesetz über die direkte Bundessteuer [DBG], Kommentar zum Schweizerischen Steuerrecht, 4. Aufl. 2022, N. 120 zu Art. 169 DBG; vgl. auch das Urteil 5A_894/2021 vom 20. April 2022, wo es ebenfalls um ein \"Engagement\" mittels Schuldbrief zwischen Steuerschuldnern und dem Fiskus geht)."
             },
             {
-              "marke": null,
+              "marke": "E. 6.4.4",
+              "tiefe": 3,
               "text": "Die privatrechtliche Schuldbriefforderung nimmt keinen öffentlich-rechtlichen Charakter an, nur weil sie eine öffentlich-rechtliche Grundforderung sichert. Die Schuldbriefforderung bleibt privatrechtlicher Natur und ist nur der provisorischen Rechtsöffnung zugänglich. Die Bedenken der Vorinstanzen, wonach das Zivilgericht keine öffentlich-rechtliche Forderung überprüfen kann, sind in dieser Konstellation unbegründet. Denn auf allfällige Aberkennungsklage hin würde sich die Überprüfung durch das Zivilgericht nur auf die Schuldbriefforderung und die Einrede des \"pactum de non petendo\" beziehen. Hingegen fände keine Überprüfung der öffentlich-rechtlichen Grundforderung statt."
             },
             {
-              "marke": null,
+              "marke": "E. 6.4.5",
+              "tiefe": 3,
               "text": "Nach dem Gesagten beanstandet die Beschwerdeführerin zu Recht, dass für die Forderung definitive Rechtsöffnung erteilt wurde."
             }
           ]
@@ -88,7 +95,7 @@
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-402%3Ade&lang=de&zoom==&type=show_document",
       "abgerufen": "2026-06-23",
       "fassungsToken": "34cf168eae85e0d95834059ad4c8be558a84132731d562ac57ff3cd2b442a41d",
-      "sha": "4e4a035348e3ea4011e8c90857822478cee08a53079f40074f9fd4bc6f7013ca"
+      "sha": "6f146c2ad35e787775d73cc75ee2728fc5a6a667d84b2fc2923899005e648103"
     }
   ]
 }
