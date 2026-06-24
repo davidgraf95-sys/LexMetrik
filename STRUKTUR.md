@@ -22,6 +22,14 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 25.6.2026 — Punkt 12 Batch 1: 25 Bund-Gesetze Volltext (autonom, in `main` lokal, NICHT deployt/gepusht)
+
+Auftrag David (Punkt 12): Bund-Gesetze aus seiner Anwaltsprüfungs-Bookmark-Liste als Volltext im LexMetrik-Reader (statt nur-live-link-Stub). Erster sauber-verifizierter Batch der **Gesetze** (keine Verordnungen). Gate grün (golden byte-gleich, kanton unberührt via `--nur=bund`), `check:normtext` grün (12614 Bund-Snapshots).
+- **25 Erlasse promoviert** (Stub → Volltext-Snapshot): BüG, BGÖ, BPR, VG, PublG, ParlG, RVOG, BöB, BPG, StBOG, DesG, OHG, NHG, EntG, GSchG, EntsG, ELG, FZG, WaG, PüG, FIDLEG, KAG, FINIG, FinfraG, VAG. Mechanik: `fedlex-cache.sh` (25 Pins) + `register.ts` (`bund()`) + `fedlex.ts` (FEDLEX-Keys) + `bundRef.ts` (Snapshot-Quelle) + `systematik.ts` (Sidebar) + `bund-stubs-generieren.ts` (16 promovierte aus LISTE entfernt). Bund jetzt 86 Erlasse mit Volltext.
+- **§7-Doppelverifikation (Kern):** Der ELI-Resolver gab für rvog/stbog/desg/finig/wag/pueg die REPEALTE Altfassung (Lektion [[lexmetrik-bund-volltext-ausbau]] bestätigt) — korrekte in-Kraft-ELI über die **date-geordnete Taxonomie-Abfrage** gewählt, gegen `check:fedlex-versionen` (8 weitere Pins als ÜBERHOLT erkannt + nachgepinnt) + **Filestore-HTML-Inhalts-Sonde** + den **Titel der gepinnten ELI** doppelt verifiziert. Adversarial: generierte Artikelzahl == Fedlex-`<article id=>`-Zahl bei ALLEN 25 (0 Verluste); Stichprobe erster/mittlerer/letzter Artikel sauber, keine Fussnoten-Leaks; alle leeren Artikel ausschliesslich amtlich «Aufgehoben»/Änderungs-Artikel («…»).
+- **§8-Fallback (bleiben Live-Link-Stub):** MitwG (SR 822.14), PrHG (SR 221.112.944) — Filestore-HTML nur ~15 kB (unter der 20-kB-SPA-Shell-Schwelle des Cache-Tors); nicht als fragwürdiger Volltext gespeichert.
+- `verified`/«geprüft» NICHT gesetzt (fachliche Abnahme David). **Offen:** ~78 weitere Bookmark-Gesetze + ~100 Verordnungen (separate Batches); MitwG/PrHG (eigener kleiner-Erlass-Sondertor-Entscheid).
+
 ## Session 24.6.2026 (spät) — 14-Punkte-UI/Redesign-Welle, autonom (in `main` lokal, PROD-DEPLOY je Welle)
 
 Auftrag David: Live-Review-Punkte am Stück, je Schritt Bug-Check (adversariale Opus-Agenten) + Deploy, ohne Rückfragen. Gate je Welle grün (golden byte-gleich), Playwright-/Prod-Preview-verifiziert. **12 von 14 erledigt + deployt; 11+12 (Gesetze-Ausbau) blockiert.**
