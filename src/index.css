@@ -247,6 +247,14 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23D8BD78' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
   }
   .lc-select { @apply lc-input; }
+  /* Kompaktes Select (lc-select + lc-input-sm): .lc-select bringt via @apply die
+     12px-Vertikal-Polsterung von .lc-input mit und steht in der Quelle NACH
+     .lc-input-sm → es gewann und stauchte den Text in der 36px-Höhe (oben/unten
+     abgeschnitten, Bug David «Sortierung»). Höhere Spezifität (zwei Klassen)
+     stellt die 0-Vertikalpolsterung wieder her — Chevron (padding-right) bleibt. */
+  select.lc-input.lc-input-sm, .lc-select.lc-input-sm {
+    padding-top: 0; padding-bottom: 0; font-size: .875rem; line-height: 1.2;
+  }
   .lc-textarea { @apply lc-input; height: auto; min-height: 88px; resize: vertical; line-height: 1.6; }
 
   .lc-btn {

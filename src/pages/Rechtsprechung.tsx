@@ -166,6 +166,10 @@ export function Rechtsprechung() {
 
           {/* Rechts: Ergebnis-Spalte. */}
           <div className="min-w-0 space-y-4">
+            {/* Discovery über den ganzen CH-Korpus (extern, opt-in) — prominent am
+                Kopf der Ergebnis-Spalte (Auftrag David), über der kuratierten Auswahl. */}
+            <LiveSuche initialQ={werte.q ?? ''} />
+
             <EntscheidFilter
               werte={werte}
               onChange={onFilter}
@@ -218,9 +222,6 @@ export function Rechtsprechung() {
             ) : (
               <Liste liste={gefiltert} dichte={dichte} onNorm={waehleNorm} />
             )}
-
-            {/* Discovery über den ganzen CH-Korpus (extern, opt-in) — über die kuratierte Auswahl hinaus. */}
-            <LiveSuche initialQ={werte.q ?? ''} />
 
             <p className="border-t border-line/60 pt-3 text-micro text-ink-400">
               Keine Rechtsberatung. «ungeprüft» = maschinell erfasst, fachlich noch nicht abgenommen; massgeblich ist stets die amtliche Fassung (Link je Entscheid).

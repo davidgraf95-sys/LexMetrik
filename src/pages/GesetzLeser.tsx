@@ -554,6 +554,23 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
     );
   };
 
+  // Geteilte Such-Steuerung (Eingabe + Fussnoten-Schalter). Wird an ZWEI Orten
+  // gerendert: in der Gliederungs-Spalte (2-Spalten-Fall, oberhalb der TOC) ODER
+  // als volle Breite (kein Gliederungs-Spalt: keine Sektionen oder eingeklappt).
+  const sucheEingabe = (
+    <>
+      <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
+        placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
+        className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
+      <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
+        className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
+        title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
+    </>
+  );
+  // 2-Spalten aktiv ⇒ die Suche lebt in der Gliederungs-Spalte (oberhalb der TOC),
+  // NICHT als Vollbreite über dem Gesetzestext (Auftrag David).
+  const zweiSpalten = sektionen.length > 0 && tocOffen;
+
   return (
     <div className="space-y-5">
       {/* Breadcrumb (scrollt weg; die Suchleiste ist die sticky Kopfzeile) */}
@@ -627,29 +644,39 @@ function GesetzLeserInhalt({ ebene, schluessel }: { ebene: string; schluessel: s
         </details>
       )}
 
-      {/* Suchleiste OBERHALB der Gliederung (Auftrag David): volle Breite, sticky
-          unter dem Header UND unter dem Reiter-Streifen (--tabstreifen-h, sonst würde
-          sie ihn verdecken) — gilt für Gliederungs-Spalte und Artikel gleichermassen. */}
-      <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
-        style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
-        <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
-          {sektionen.length > 0 && !tocOffen && (
-            <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
-              className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
-          )}
-          <input type="search" value={suche} onChange={(e) => setSuche(e.target.value)}
-            placeholder="Im Gesetz suchen …" aria-label="Im Gesetz suchen"
-            className="lc-input h-9 py-0 text-body-s flex-1 min-w-0" />
-          <button type="button" onClick={() => setFussnotenAuf((v) => !v)} aria-pressed={fussnotenAuf}
-            className={`shrink-0 text-micro ${fussnotenAuf ? 'text-brass-700' : 'text-ink-400 hover:text-brass-700'}`}
-            title="Fussnoten ein-/ausblenden">{fussnotenAuf ? '✓ Fussnoten' : 'Fussnoten'}</button>
+      {/* Suche als Vollbreite NUR ohne 2-Spalten (keine Sektionen ODER Gliederung
+          eingeklappt) — dann trägt sie auch den «☰ Gliederung»-Wiedereinblender.
+          Sticky unter Header + Reiter-Streifen (--tabstreifen-h). Im 2-Spalten-Fall
+          sitzt die Suche in der linken Spalte oberhalb der TOC (Auftrag David:
+          nicht über dem Gesetzestext). */}
+      {!zweiSpalten && (
+        <div data-such-bar className="sticky z-[16] mb-4 rounded-lg bg-paper"
+          style={{ top: 'calc(4rem + var(--tabstreifen-h, 0px))' }}>
+          <div className="flex items-center gap-3 rounded-lg border border-line bg-paper px-3 py-2 shadow-sm">
+            {sektionen.length > 0 && !tocOffen && (
+              <button type="button" onClick={() => setTocOffen(true)} title="Gliederung einblenden"
+                className="shrink-0 text-micro text-ink-500 hover:text-brass-700">☰ Gliederung</button>
+            )}
+            {sucheEingabe}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2-Spalten: links Gliederung (sticky), rechts Inhalt. */}
       <div className={sektionen.length > 0 && tocOffen ? 'lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8' : ''}>
         {sektionen.length > 0 && (
           <aside className={`mb-4 lg:mb-0 lg:sticky lg:top-[10.5rem] lg:max-h-[calc(100vh-11rem)] lg:flex-col ${tocOffen ? 'lg:flex' : 'lg:hidden'}`}>
+            {/* Suche oberhalb der Gliederung (Auftrag David) — im sticky Spaltenkopf,
+                die TOC scrollt darunter; der Gesetzestext rechts bleibt suchleisten­frei.
+                NUR im 2-Spalten-Fall: sonst (eingeklappt, auch wenn das Fenster mobil
+                schmal wird) trägt die Vollbreiten-Bar die Suche → kein Doppel (Review). */}
+            {zweiSpalten && (
+              <div data-such-bar className="mb-3 shrink-0">
+                <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2.5 py-1.5 shadow-sm">
+                  {sucheEingabe}
+                </div>
+              </div>
+            )}
             <button type="button" onClick={() => setTocAuf((v) => !v)} className="lg:hidden text-micro text-brass-700 mb-1">
               {tocAuf ? 'Gliederung ausblenden' : 'Gliederung anzeigen'}
             </button>
