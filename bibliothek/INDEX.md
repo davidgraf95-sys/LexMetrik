@@ -63,6 +63,13 @@ Falsch-Positive (Erwägungs-Fragmente) waren; deterministisches Plausibilitäts-
 `rubrumFeldPlausibel` (Anzeige + Extraktion + Bestands-Reinigung), narrative
 Vorinstanz-Anreicherung §1-bedingt verworfen. Abnahme David offen.
 
+**entscheidsuche-Live-Suche (B2) + Sachverhalt-Gliederung:** [rechtsprechung/entscheidsuche-livesuche-und-sachverhalt.md](rechtsprechung/entscheidsuche-livesuche-und-sachverhalt.md) —
+Teil B (Auftrag David 24.6.2026): Browser-Live-Suche über den ganzen CH-Korpus via
+`entscheidsuche.ch/_search.php` (CORS-verifiziert; MCP browser-untauglich/403), opt-in
++ extern markiert (§2/§8); plus sichere Sachverhalt-Gliederung (nur Sub-Marker A.a/B.b,
+sequenzvalidiert, 0 Fehl-Splits über 258 BGE) inkl. Bug-Check-MAJOR-Fix (Schluss-Namen).
+Branch, nicht deployt; Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
