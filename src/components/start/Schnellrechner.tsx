@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import type { AllgFristResult } from '../../lib/allgemeineFrist';
+import type { Kanton } from '../../types/legal';
 import { EinfacheFristForm } from '../forms/EinfacheFristForm';
 import { FristenKalender } from './FristenKalender';
 import { ProzesskostenForm } from '../forms/ProzesskostenForm';
@@ -75,6 +77,9 @@ function GebuehrenTab() {
 
 export function Schnellrechner() {
   const [tab, setTab] = useState<Tab>('fristen');
+  // #7: das Formular meldet sein Ergebnis hoch; der Kalender (rechts) ist reine
+  // Visualisierung davon — keine doppelten Eingaben mehr.
+  const [fristErgebnis, setFristErgebnis] = useState<{ ergebnis: AllgFristResult; kanton: Kanton } | null>(null);
   return (
     <div className="lc-card overflow-hidden">
       <div className="flex items-center justify-between gap-3 px-5 py-3.5 border-b border-line">
@@ -98,16 +103,16 @@ export function Schnellrechner() {
       <div className="p-5">
         {tab === 'fristen' && (
           <div className="space-y-4">
-            {/* Zwei Hälften (Auftrag David): links rechnen (Ferien-Wahl), rechts
-                der Fristen-Kalender als Monatsansicht — dieselbe Engine. */}
+            {/* Zwei Hälften: links rechnen (Eingabe), rechts der Kalender als reine
+                Visualisierung DESSELBEN Ergebnisses (#7 — keine doppelten Eingaben). */}
             <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
               <div className="space-y-2">
                 <span className="lc-overline text-ink-500">Berechnen</span>
-                <EinfacheFristForm minimal />
+                <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
               <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
                 <span className="lc-overline text-ink-500">Kalender-Ansicht</span>
-                <FristenKalender />
+                <FristenKalender ergebnis={fristErgebnis?.ergebnis ?? null} kanton={fristErgebnis?.kanton ?? 'ZH'} />
               </div>
             </div>
             <VollRechnerHinweis href="/rechner/tagerechner" name="Fristenrechner" was="Rückwärts, Zwischenfrist, ZPO/SchKG-Verfeinerung" />

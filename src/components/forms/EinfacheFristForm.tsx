@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { berechneAllgemeineFrist, type Einheit } from '../../lib/allgemeineFrist';
+import { berechneAllgemeineFrist, type Einheit, type AllgFristResult } from '../../lib/allgemeineFrist';
 import { berechneFrist } from '../../lib/zpoFristen';
 import { berechneSchkgFrist } from '../../lib/schkgFristen';
 import { berechneBggVwvgFrist, bvAusnahmenSatz } from '../../lib/bggVwvgFristen';
@@ -48,7 +48,13 @@ const EINHEITEN: { code: Einheit; label: string }[] = [
 
 const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
-export function EinfacheFristForm({ minimal = false }: { minimal?: boolean } = {}) {
+export function EinfacheFristForm({ minimal = false, onErgebnis }: {
+  minimal?: boolean;
+  /** #7: meldet das berechnete Ergebnis nach oben (für die Kalender-Ansicht im
+   *  Schnellrechner). Nur die ALLGEMEINE Frist («keine Ferien») trägt die ISO-
+   *  Stichtage, die der Kalender braucht; bei Stillstand-Regimes → null. */
+  onErgebnis?: (e: { ergebnis: AllgFristResult; kanton: Kanton } | null) => void;
+} = {}) {
   // Datum-Default heute in LOKALER Zeit (Bug-Check §9, NIEDRIG: toISOString
   // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag).
   // Im minimal-Modus (prerenderte Startseite) startet das Feld LEER: ein
@@ -116,6 +122,23 @@ export function EinfacheFristForm({ minimal = false }: { minimal?: boolean } = {
       fehler = 'Mit diesen Eingaben lässt sich keine Frist berechnen – bitte Datum und Dauer prüfen.';
     }
   }
+
+  // #7: berechnetes Ergebnis nach oben melden (Kalender-Ansicht im Schnellrechner).
+  // Nur die allgemeine Frist trägt die ISO-Stichtage; Stillstand-Regimes → null
+  // (der Kalender weist dann auf das massgebende Fristende hin). Deterministisch.
+  useEffect(() => {
+    if (!onErgebnis) return;
+    if (ferien !== 'keine' || !gueltig) { onErgebnis(null); return; }
+    try {
+      onErgebnis({
+        ergebnis: berechneAllgemeineFrist({
+          start, laenge, einheit: einheitEffektiv,
+          wochenendeVerschieben: true, feiertageVerschieben: true, kanton,
+        }),
+        kanton,
+      });
+    } catch { onErgebnis(null); }
+  }, [onErgebnis, ferien, gueltig, start, laenge, einheitEffektiv, kanton]);
 
   const verfeinernZiel = ferien === 'zpo'
     ? zpoFristenLink({ ereignis: start, einheit: einheitEffektiv, laenge, verfahren: 'ordentlich', kanton, fristnatur: 'gesetzlich' })

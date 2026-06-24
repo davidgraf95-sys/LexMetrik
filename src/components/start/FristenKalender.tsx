@@ -1,31 +1,19 @@
-import { useMemo, useState } from 'react';
-import { berechneAllgemeineFrist, type Einheit } from '../../lib/allgemeineFrist';
+import { useMemo } from 'react';
+import type { AllgFristResult } from '../../lib/allgemeineFrist';
 import { istArbeitsfreierTag } from '../../data/zpoFeiertage';
-import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 
-// ─── Fristen-Kalender im Schnellrechner (Auftrag David) ─────────────────────
+// ─── Fristen-Kalender im Schnellrechner (#7, Auftrag David) ─────────────────
 //
-// Visualisiert eine ALLGEMEINE Frist (Art. 77/78 OR — keine verfahrens-
-// spezifischen Stillstände) als Monatskalender: Ereignistag, erster
-// mitzählender Tag und Fristende markiert, arbeitsfreie Tage schattiert.
-// Reine Darstellung (§3): gerechnet wird ausschliesslich über die bestehende
-// Engine berechneAllgemeineFrist (dieselbe wie der Fristenrechner «keine
-// Ferien»); die Wochenend-/Feiertagslogik kommt aus data/zpoFeiertage. Für
-// verfahrensspezifische Stillstände (ZPO/SchKG) führt der Link zum Voll-Rechner.
-//
-// SSR/Prerender: das Datumsfeld startet LEER (kein gebackenes Build-Datum →
-// kein Hydration-Drift); der Kalender erscheint erst nach Eingabe.
-
-const EINHEITEN: { code: Einheit; label: string }[] = [
-  { code: 'tage', label: 'Tage' },
-  { code: 'wochen', label: 'Wochen' },
-  { code: 'monate', label: 'Monate' },
-  { code: 'jahre', label: 'Jahre' },
-];
+// REINE Visualisierung (§3): zeigt das Ergebnis des Eingabe-Formulars (links)
+// als Monatskalender — Ereignistag, erster mitzählender Tag und Fristende
+// markiert, arbeitsfreie Tage schattiert. KEINE eigenen Eingaben, KEINE eigene
+// Rechnung mehr (früher duplizierte der Kalender Formular-Felder + Engine-Aufruf,
+// «beide Seiten machten dasselbe»). Das Ergebnis kommt als Prop von der
+// EinfacheFristForm (allgemeine Frist «keine Ferien»); bei Stillstand-Regimes
+// ist `ergebnis` null und der Kalender verweist auf das Fristende links.
 
 const WOCHENTAGE_KURZ = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
-const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 const pad = (n: number) => String(n).padStart(2, '0');
 const isoVon = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
@@ -40,22 +28,10 @@ function monatsZellen(jahr: number, monat0: number): (Date | null)[] {
 
 const MONATSNAMEN = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
-export function FristenKalender() {
-  const [start, setStart] = useState('');
-  const [laenge, setLaenge] = useState('30');
-  const [einheit, setEinheit] = useState<Einheit>('tage');
-  const [kanton, setKanton] = useState<Kanton>('ZH');
-
-  const n = Number(laenge);
-  const gueltig = istISOTag(start) && Number.isInteger(n) && n > 0;
-
-  const ergebnis = useMemo(() => {
-    if (!gueltig) return null;
-    try {
-      return berechneAllgemeineFrist({ start, laenge: n, einheit, wochenendeVerschieben: true, feiertageVerschieben: true, kanton });
-    } catch { return null; }
-  }, [gueltig, start, n, einheit, kanton]);
-
+export function FristenKalender({ ergebnis, kanton }: {
+  ergebnis: AllgFristResult | null;
+  kanton: Kanton;
+}) {
   // Angezeigter Monat = Monat des Fristendes (der relevante Stichtag).
   const zellen = useMemo(() => {
     if (!ergebnis) return null;
@@ -65,31 +41,11 @@ export function FristenKalender() {
 
   return (
     <div className="space-y-3">
-      <div className="grid grid-cols-2 gap-3">
-        <label className="flex flex-col gap-1 col-span-2">
-          <span className="text-body-s text-ink-600">Ereignisdatum</span>
-          <input type="date" value={start} onChange={(e) => setStart(e.target.value)} className="lc-input" aria-label="Ereignisdatum" />
-        </label>
-        <label className="flex flex-col gap-1">
-          <span className="text-body-s text-ink-600">Frist</span>
-          <input type="number" min={1} step={1} value={laenge} onChange={(e) => setLaenge(e.target.value)} className="lc-input" aria-label="Fristlänge" />
-        </label>
-        <label className="flex flex-col gap-1">
-          <span className="text-body-s text-ink-600">Einheit</span>
-          <select value={einheit} onChange={(e) => setEinheit(e.target.value as Einheit)} className="lc-input" aria-label="Einheit">
-            {EINHEITEN.map((x) => <option key={x.code} value={x.code}>{x.label}</option>)}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1 col-span-2">
-          <span className="text-body-s text-ink-600">Kanton (Feiertage)</span>
-          <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className="lc-input" aria-label="Kanton">
-            {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-          </select>
-        </label>
-      </div>
-
       {!ergebnis || !zellen ? (
-        <p className="text-body-s text-ink-500 py-6 text-center">Datum und Frist eingeben – der Kalender markiert dann Ereignis und Fristende.</p>
+        <p className="text-body-s text-ink-500 py-6 text-center">
+          Datum und Frist links eingeben – der Kalender markiert dann Ereignis und Fristende.
+          Bei Gerichts-/Betreibungsferien gilt das berechnete Fristende links.
+        </p>
       ) : (
         <div className="space-y-2.5" aria-live="polite">
           <div className="lc-tile lc-akzent-brass flex items-baseline justify-between gap-3 flex-wrap">
