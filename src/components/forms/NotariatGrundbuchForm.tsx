@@ -135,7 +135,8 @@ export function NotariatGrundbuchForm({ minimal = false }: { minimal?: boolean }
   return (
     <BeruehrtRahmen>
     <div className="space-y-6">
-      <PflichtDisclaimer kurz="Beurkundung + Grundbuch (+ Grundpfand) + Handänderungssteuer nach kantonalem Tarif; Rahmentarife als Spanne." text={DISCLAIMER} />
+      {/* minimal = Startseite-Schnellrechner: globaler Pflicht-Hinweis dort (§8). */}
+      {!minimal && <PflichtDisclaimer kurz="Beurkundung + Grundbuch (+ Grundpfand) + Handänderungssteuer nach kantonalem Tarif; Rahmentarife als Spanne." text={DISCLAIMER} />}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Kanton">

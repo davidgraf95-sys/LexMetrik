@@ -40,7 +40,7 @@ const zahl = (roh: string): number | undefined => {
   return Number.isFinite(n) ? n : undefined;
 };
 
-export function GebvKostenForm() {
+export function GebvKostenForm({ minimal = false }: { minimal?: boolean } = {}) {
   const ausLink = useMemo(() => {
     try { return permalinkLesen(GK_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {} as Record<string, unknown>; }
@@ -97,7 +97,8 @@ export function GebvKostenForm() {
   return (
     <BeruehrtRahmen>
     <div className="space-y-6">
-      <PflichtDisclaimer kurz="Amtliche Gebühren je Betreibungsschritt (GebV SchKG); Rahmengebühren nur als Bandbreite, Auslagen effektiv." text={GK_DISCLAIMER} />
+      {/* minimal = Startseite-Schnellrechner: globaler Pflicht-Hinweis dort (§8). */}
+      {!minimal && <PflichtDisclaimer kurz="Amtliche Gebühren je Betreibungsschritt (GebV SchKG); Rahmengebühren nur als Bandbreite, Auslagen effektiv." text={GK_DISCLAIMER} />}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Forderung in Betreibung (CHF)" hint="bezifferte Forderung — nicht bezifferte Zinsen ausser Betracht (Art. 6 GebV SchKG)">

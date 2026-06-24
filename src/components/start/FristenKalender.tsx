@@ -18,6 +18,7 @@ export interface FristMarkierung {
   fristbeginnISO?: string;       // erster mitzählender Tag (nur «keine Ferien»)
   verschiebeGruende?: string[];  // Verschiebung (nur «keine Ferien»)
   hinweis?: string;              // z.B. «Stillstand (Art. 145 ZPO) berücksichtigt»
+  stillstand?: { vonISO: string; bisISO: string }[]; // Gerichtsferien-/Stillstand-Perioden (ISO, inkl.)
 }
 
 const WOCHENTAGE_KURZ = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
@@ -71,6 +72,7 @@ export function FristenKalender({ markierung, kanton }: {
                 const istEreignis = iso === markierung.startISO;
                 const istBeginn = iso === markierung.fristbeginnISO;
                 const istEnde = iso === markierung.endeISO;
+                const istStillstand = markierung.stillstand?.some((s) => iso >= s.vonISO && iso <= s.bisISO) ?? false;
                 const frei = istArbeitsfreierTag(d, kanton);
                 const klasse = istEnde
                   ? 'bg-brass-600 text-white font-semibold'
@@ -78,10 +80,12 @@ export function FristenKalender({ markierung, kanton }: {
                     ? 'bg-brass-100 text-brass-800 font-medium ring-1 ring-brass-400'
                     : istBeginn
                       ? 'ring-1 ring-brass-300 text-ink-700'
-                      : frei
-                        ? 'text-ink-500 bg-surface-sunken/40'
-                        : 'text-ink-700';
-                const titel = istEnde ? 'Fristende' : istEreignis ? 'Ereignistag (zählt nicht)' : istBeginn ? 'erster mitzählender Tag' : frei ? 'arbeitsfreier Tag' : undefined;
+                      : istStillstand
+                        ? 'bg-brass-50 text-ink-500 ring-1 ring-brass-200/70'
+                        : frei
+                          ? 'text-ink-500 bg-surface-sunken/40'
+                          : 'text-ink-700';
+                const titel = istEnde ? 'Fristende' : istEreignis ? 'Ereignistag (zählt nicht)' : istBeginn ? 'erster mitzählender Tag' : istStillstand ? 'Gerichtsferien / Fristenstillstand' : frei ? 'arbeitsfreier Tag' : undefined;
                 return (
                   <span key={iso} title={titel}
                     className={`num text-xs leading-none py-1.5 rounded text-center tabular-nums ${klasse}`}>
@@ -93,6 +97,9 @@ export function FristenKalender({ markierung, kanton }: {
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[0.65rem] text-ink-500">
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-600" /> Fristende</span>
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-100 ring-1 ring-brass-400" /> Ereignis</span>
+              {markierung.stillstand && markierung.stillstand.length > 0 && (
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-brass-50 ring-1 ring-brass-200" /> Gerichtsferien</span>
+              )}
               <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm bg-surface-sunken/60" /> arbeitsfrei</span>
             </div>
           </div>

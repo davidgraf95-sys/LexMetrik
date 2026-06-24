@@ -66,8 +66,8 @@ function GebuehrenTab() {
           );
         })}
       </div>
-      {art === 'prozess' && <ProzesskostenForm />}
-      {art === 'betreibung' && <GebvKostenForm />}
+      {art === 'prozess' && <ProzesskostenForm minimal />}
+      {art === 'betreibung' && <GebvKostenForm minimal />}
       {art === 'grundstueck' && <NotariatGrundbuchForm minimal />}
       <VollRechnerHinweis href={aktiv.href} name={aktiv.rechner} was={aktiv.was} />
     </div>
@@ -106,7 +106,6 @@ export function Schnellrechner() {
                 Visualisierung DESSELBEN Ergebnisses (#7 — keine doppelten Eingaben). */}
             <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
               <div className="space-y-2">
-                <span className="lc-overline text-ink-500">Berechnen</span>
                 <EinfacheFristForm minimal onErgebnis={setFristErgebnis} />
               </div>
               <div className="space-y-2 lg:border-l lg:border-line lg:pl-5">
@@ -120,7 +119,7 @@ export function Schnellrechner() {
         {tab === 'gebuehren' && <GebuehrenTab />}
         {tab === 'zustaendigkeit' && (
           <div className="space-y-4">
-            <ZustaendigkeitForm />
+            <ZustaendigkeitForm minimal />
             <VollRechnerHinweis href="/rechner/zustaendigkeit" name="Zuständigkeitsrechner" was="örtliche Zuständigkeit, Weichen, Rechenweg" />
           </div>
         )}

@@ -7,6 +7,7 @@ import { berechneBggVwvgFrist, bvAusnahmenSatz } from '../../lib/bggVwvgFristen'
 import { zpoFristenLink, SCHKG_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { permalinkKodieren } from '../../lib/permalink';
 import { KANTONE } from '../../lib/kantone';
+import { stillstandsperioden } from '../../data/zpoFeiertage';
 import type { Kanton } from '../../types/legal';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import type { FristMarkierung } from '../start/FristenKalender';
@@ -49,6 +50,17 @@ const EINHEITEN: { code: Einheit; label: string }[] = [
 
 const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
+const isoLokal = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+// Gerichtsferien-/Stillstand-Perioden rund um das Fristende für die Kalender-
+// Markierung (Auftrag David: Stillstand sichtbar machen). DIESELBEN Perioden, die
+// die Engine verwendet (§5, data/zpoFeiertage) — Jahr des Fristendes + Vorjahr, weil
+// die Weihnachtsperiode über den Jahreswechsel greift. Reine Anzeige (§3).
+function stillstandFenster(endeISO: string): { vonISO: string; bisISO: string }[] {
+  const jahr = Number(endeISO.slice(0, 4));
+  return [jahr - 1, jahr].flatMap((j) => stillstandsperioden(j)).map((p) => ({ vonISO: isoLokal(p.von), bisISO: isoLokal(p.bis) }));
+}
+
 // Kalender-Markierung je Ferien-Regime (reine Komposition, §3 — jede Engine liefert
 // ein ISO-Enddatum). So zeigt der Kalender das Fristende für ALLE Regimes, nicht nur
 // «keine Ferien» (Auftrag David: Kalender immer ersichtlich). null bei Fehleingabe.
@@ -60,11 +72,14 @@ function baueMarkierung(start: string, laenge: number, einheit: Einheit, ferien:
     }
     if (ferien === 'zpo') {
       const r = berechneFrist({ ereignis: start, einheit, laenge, verfahren: 'ordentlich', kanton, fristnatur: 'gesetzlich' });
-      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? 'Stillstand (Art. 145 ZPO) berücksichtigt' : undefined };
+      // ZPO-Gerichtsferien (Art. 145): immer markieren — die Perioden gelten unabhängig
+      // davon, ob diese konkrete Frist verschoben wurde (Sichtbarkeit, Auftrag David).
+      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? 'Stillstand (Art. 145 ZPO) berücksichtigt' : undefined, stillstand: stillstandFenster(r.diesAdQuemISO) };
     }
     if (ferien === 'vwvg' || ferien === 'bgg') {
       const r = berechneBggVwvgFrist({ regime: ferien, ereignis: start, einheit, laenge, kanton });
-      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? `Stillstand (${ferien === 'vwvg' ? 'Art. 22a VwVG' : 'Art. 46 BGG'}) berücksichtigt` : undefined };
+      // VwVG/BGG-Stillstand gilt NUR für nach Tagen bestimmte Fristen → nur dann markieren.
+      return { startISO: start, endeISO: r.diesAdQuemISO, hinweis: r.stillstandAktiv ? `Stillstand (${ferien === 'vwvg' ? 'Art. 22a VwVG' : 'Art. 46 BGG'}) berücksichtigt` : undefined, stillstand: r.stillstandAktiv ? stillstandFenster(r.diesAdQuemISO) : undefined };
     }
     const r = berechneSchkgFrist({ ereignis: start, einheit: einheit as 'tage' | 'monate' | 'jahre', laenge, modus: 'schkg_betreibungsferien', fristnatur: 'frist', kanton });
     return { startISO: start, endeISO: r.diesAdQuemISO };

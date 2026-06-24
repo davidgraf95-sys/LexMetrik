@@ -91,7 +91,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
   );
 }
 
-export function ProzesskostenForm() {
+export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {}) {
   const ausLink = useMemo(() => {
     try { return permalinkLesen(PK_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {} as Record<string, unknown>; }
@@ -189,7 +189,9 @@ export function ProzesskostenForm() {
   return (
     <BeruehrtRahmen>
     <div className="space-y-6">
-      <PflichtDisclaimer kurz="Gerichtskosten + Parteientschädigung nach kantonalem Tarif (Art. 95/96 ZPO); Ermessenstarife als Spanne." text={DISCLAIMER} />
+      {/* Startseite-Schnellrechner (minimal): kein per-Tab-Disclaimer — die Startseite
+          trägt den globalen Pflicht-Hinweis (§8). Voll-Rechner: Disclaimer bleibt. */}
+      {!minimal && <PflichtDisclaimer kurz="Gerichtskosten + Parteientschädigung nach kantonalem Tarif (Art. 95/96 ZPO); Ermessenstarife als Spanne." text={DISCLAIMER} />}
 
       <label className="flex items-start gap-2 text-body-s text-ink-700">
         <input type="checkbox" checked={nv} onChange={(e) => setNv(e.target.checked)} className="mt-0.5" aria-label="Nicht vermögensrechtliche Streitigkeit" />

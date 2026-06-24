@@ -22,6 +22,13 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 24.6.2026 (abends, Forts.) — Schnellrechner-Politur: «Berechnen» weg, Disclaimer entschlackt, Kalender zeigt Stillstand (in `main`, PROD-DEPLOY)
+
+Auftrag David (Live-Review): Startseite-Schnellrechner aufräumen. Worktree (§12) auf `45c1315`, Gate grün, Playwright-verifiziert.
+- **«Berechnen»-Label entfernt** (Fristen-Tab) — überflüssige Beschriftung.
+- **Rechtlicher Hinweis (`PflichtDisclaimer`) auf der Startseite unterdrückt** in Gebühren (Prozess/Betreibung/Grundstück) + Zuständigkeit via `minimal`-Prop der Formulare. §8 gewahrt: die Startseite trägt bereits den **globalen** Pflicht-Hinweis (Startseite.tsx + Footer); die VOLL-Rechner behalten ihren Disclaimer unverändert (verifiziert).
+- **(N) Kalender zeigt den Fristenstillstand**: `FristMarkierung.stillstand` (ISO-Perioden aus `data/zpoFeiertage`, §5) — ZPO immer, VwVG/BGG nur bei aktivem Tagesfristen-Stillstand; SchKG bewusst NICHT (eigene Betreibungsferien). FristenKalender schattiert die Gerichtsferien-Tage + Legende.
+
 ## Session 24.6.2026 (abends) — Fristen-Schnellrechner, Scroll-Erhalt, Rechtsprechungs-Bezeichnung, Gesetz-Suche/-Einzug & Navigation (in `main`, PROD-DEPLOY)
 
 Auftrag David (Live-Review, rapid-fire): mehrere UI-Punkte. Isolierter Worktree (§12) auf `78614d2`. Gate grün (golden byte-gleich), **adversarialer Bug-Check auf OPUS** (Daueranweisung) — fand 3 MAJOR an der Leitsatz-Extraktion (alle gefixt + gegen alle 271 echten Regesten validiert) + MINOR-Politur. Playwright-verifiziert.

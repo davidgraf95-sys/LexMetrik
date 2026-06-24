@@ -46,23 +46,26 @@ import { StrafZustaendigkeitTeil } from './StrafZustaendigkeitTeil';
 
 import { DISCLAIMER, RECHTSWEGE, STREITSACHEN, DELIKT_UNTERFAELLE, PERSOENLICHKEIT_UNTERFAELLE, MIETE_UNTERFAELLE, ORT_LABEL } from './zustaendigkeitFormDaten';
 import { useZustaendigkeitForm } from './useZustaendigkeitForm';
-export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
+export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minimal = false }: {
   onRechtswegChange?: (w: Rechtsweg) => void;
   /** Vorauswahl aus dem URL-Hash der Katalog-Split-Karten (#schkg/#straf). */
   rechtswegVorwahl?: Rechtsweg;
+  /** Startseite-Schnellrechner: ohne per-Tab-Disclaimer (globaler Hinweis dort, §8). */
+  minimal?: boolean;
 } = {}) {
   const { f, setF, rechtsweg, setRechtsweg, set, schritt, setSchritt, plzTreffer, istMiete, istArbeit, istGeld, istScheidung, vermoegensrechtlich, streitwert, vdStufe, soGleicheGemeinde, setSoGleicheGemeinde, amt, mieteAmt, mieteKandidaten, zhKreise, zhStrasse, setZhStrasse, zhNummer, setZhNummer, zhStrassenInfo, fehler, ergebnis, r, rechtsmittel, obereInstanz, stelle, recherche, kantonOffen, kantonDaten, gemeindeFremd, sgPrefill, fahrplan, kosten, hgWeicheAktiv, handelsgericht, eingabeText, aktenzeichen, setAktenzeichen, pdfConfig, schritte, maxIndex, aktiverSchritt, zeige, weiterAus } = useZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl });
 
   return (
     <BeruehrtRahmen>
       <div className="space-y-6">
-        <PflichtDisclaimer text={
+        {/* minimal = Startseite-Schnellrechner: globaler Pflicht-Hinweis dort (§8). */}
+        {!minimal && <PflichtDisclaimer text={
           rechtsweg === 'schkg'
             ? 'Automatisierte Orientierung zu Betreibungsort und SchKG-Foren (SchKG, Stand 1.1.2025; GebV SchKG Stand 1.1.2022) – keine Rechtsberatung. Internationale Sachverhalte und die materielle Begründetheit sind nicht abgebildet; Fristen sind Verwirkungsfristen und im Einzelfall zu prüfen.'
             : rechtsweg === 'straf'
               ? 'Automatisierte Orientierung zum Gerichtsstand im Strafverfahren (StPO, Stand 1.1.2024) – keine Rechtsberatung. Die Katalog-Subsumtion der Bundesgerichtsbarkeit (Art. 23/24 StPO) und jugendstrafrechtliche Sonderwege (JStPO) sind nicht abgebildet.'
               : DISCLAIMER
-        } />
+        } />}
 
         {/* Geführter Schritt-Dialog (Auftrag David 6.6.2026): klickbarer Stepper
             wie bei den Vorlagen-Wizards; je nach Rechtsweg/Instanz andere Strecke. */}
