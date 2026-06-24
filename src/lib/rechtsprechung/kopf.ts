@@ -15,15 +15,12 @@
 
 import type { EntscheidSnapshot } from './typen';
 import { synthThema } from './browse';
-import { normalisiereRegeste, kuerzeRegeste } from './register';
+import { rubrumFeldPlausibel, type RubrumFeld } from './rubrum';
 
-export type KopfLabelKey = 'gegenstand' | 'parteien' | 'vorinstanz' | 'besetzung';
+export type KopfLabelKey = RubrumFeld;
 
 /** Feste Reihenfolge der Rubrum-Zeilen im Kopf (amtliche Rubrum-Folge, Art. 112 BGG). */
 const RUBRUM_ORDER: KopfLabelKey[] = ['gegenstand', 'parteien', 'vorinstanz', 'besetzung'];
-
-/** Max-Länge der Thema-Leitzeile im Kopf (kürzer als die Karten-Regeste, 1-Zeilen-Anker). */
-const LEIT_MAX = 160;
 
 export interface KopfRubrumZeile {
   label: KopfLabelKey;
@@ -32,37 +29,34 @@ export interface KopfRubrumZeile {
 
 export interface KopfModell {
   /**
-   * Thema-Anker im Kopf, sofern KEIN Rubrum-Gegenstand vorhanden ist:
-   * gekürzte amtliche Regeste ODER (Fallback) synthThema. null ⇒ der
-   * Gegenstand führt als erste Rubrum-Zeile (keine Dopplung der Thema-Aussage).
+   * Abgeleitete Sachgebiets-Leitzeile (synthThema) — nur gesetzt, wenn den
+   * Thema-Anker sonst NICHTS trägt: weder ein Rubrum-Gegenstand noch die (im
+   * Reader unter dem Kopf gezeigte) Regeste. So bleibt der Kopf einheitlich,
+   * ohne die Regeste zu doppeln; nichts erfunden (§8, nur echte Strukturfelder).
    */
   leitzeile: string | null;
-  /** true ⇒ Leitzeile ist die abgeleitete Synthese (Darstellung: nüchtern + Marker, §8). */
-  leitIstSynth: boolean;
-  /** Nur befüllte Rubrum-Felder, in fester Reihenfolge. */
+  /** Nur plausible Rubrum-Felder, in fester Reihenfolge. */
   rubrumZeilen: KopfRubrumZeile[];
 }
 
 /**
- * Kopf-Modell eines Entscheids. Invariante: im Kopf steht IMMER genau eine
- * Thema-Aussage — entweder der Rubrum-Gegenstand (führt die Rubrum-Zeilen an)
- * oder die `leitzeile` (amtliche Regeste, sonst Synthese). Rein/deterministisch.
+ * Kopf-Modell eines Entscheids (rein/deterministisch). Der Kopf trägt die
+ * Identität; eine Thema-Aussage steht IMMER genau einmal zur Verfügung —
+ * entweder über einen Rubrum-Gegenstand, die Regeste-Box oder, wenn beides
+ * fehlt, die abgeleitete `leitzeile`. Keine Dopplung, kein Loch.
  */
 export function kopfModell(s: EntscheidSnapshot): KopfModell {
   const r = s.rubrum;
   const rubrumZeilen: KopfRubrumZeile[] = RUBRUM_ORDER
     .map((label) => ({ label, wert: (r?.[label] ?? '').trim() }))
-    .filter((z) => z.wert.length > 0);
+    // §1/§8: nur plausible Einträge zeigen — fehlgeschnittene Erwägungs-Fragmente
+    // (Falsch-Positive der Extraktion) werden verworfen, nicht prominent gerendert.
+    .filter((z) => rubrumFeldPlausibel(z.label, z.wert));
 
-  // Hat das Rubrum einen Gegenstand, ist die Thema-Aussage damit gesetzt → keine eigene Leitzeile.
-  if (rubrumZeilen.some((z) => z.label === 'gegenstand')) {
-    return { leitzeile: null, leitIstSynth: false, rubrumZeilen };
-  }
-
-  // Sonst Thema-Anker bilden: amtliche Regeste (gekürzt, §8 nur kürzen) — sonst Synthese.
-  if (s.regesteAmtlich && s.regeste) {
-    const kurz = kuerzeRegeste(normalisiereRegeste(s.regeste.text), LEIT_MAX);
-    if (kurz.length > 0) return { leitzeile: kurz, leitIstSynth: false, rubrumZeilen };
-  }
-  return { leitzeile: synthThema(s), leitIstSynth: true, rubrumZeilen };
+  const hatGegenstand = rubrumZeilen.some((z) => z.label === 'gegenstand');
+  // Die Regeste-Box (Reader) zeigt jede vorhandene Regeste → dann trägt sie das
+  // Thema, und eine Kopf-Leitzeile wäre eine Dopplung.
+  const regesteTraegtThema = !!(s.regeste && s.regeste.text.trim());
+  const leitzeile = hatGegenstand || regesteTraegtThema ? null : synthThema(s);
+  return { leitzeile, rubrumZeilen };
 }

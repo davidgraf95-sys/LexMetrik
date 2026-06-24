@@ -10,6 +10,7 @@ import type {
 } from '../../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../../src/lib/normtext/register';
 import { normalisiereRegeste, bereinigeFliesstext } from '../../src/lib/rechtsprechung/register';
+import { rubrumFeldPlausibel } from '../../src/lib/rechtsprechung/rubrum';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import { normalisiereErwaegung } from './erwaegung-normalisieren';
 // markenPlausibel/MONAT leben jetzt in erwaegung-normalisieren.ts (Single Source, §5);
@@ -134,9 +135,19 @@ export function extrahiereRubrum(fullText: string | undefined): EntscheidRubrum 
   const besetzung = sauber(cut(/\bBesetzung\b[\s:]*/, /\b(Verfahrensbeteiligte|Partei|Gegenstand|Sachverhalt)\b/));
   const parteien = sauber(cut(/\b(?:Verfahrensbeteiligte|Parteien)\b[\s:]*/, /\bGegenstand\b/, 800));
   const gegenstand = sauber(cut(/\bGegenstand\b[\s:]*/, /\b(Beschwerde|Berufung|Rekurs|Klage|Gesuch|Sachverhalt|In Erwägung|Erwägung)\b/, 300));
-  const vorinstanz = sauber(cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 400), { salvage: true });
-  if (!besetzung && !parteien && !gegenstand && !vorinstanz) return null;
-  return { besetzung, parteien, gegenstand, vorinstanz };
+  // Floskel „das Urteil/den Entscheid des …" abstreifen → Wert beginnt mit dem Gericht.
+  const vorinstanzRoh = cut(/\b(?:Beschwerde|Berufung|Rekurs)\s+gegen\s*/, /\b(Sachverhalt|In Erwägung|Erwägung)\b/, 400)
+    ?.replace(/^(?:das|der|die|den|dem|des)\s+(?:Urteil|Urteils|Entscheid|Entscheids|Beschluss|Beschlusses|Verfügung)\s+(?:des|der|vom|von)\s+/i, '') ?? null;
+  const vorinstanz = sauber(vorinstanzRoh, { salvage: true });
+  // §1/§8-Tor: erkennbar fragmentarische Werte (Erwägungs-/Satzmitten-Reste) verwerfen.
+  const rubrum = {
+    besetzung: rubrumFeldPlausibel('besetzung', besetzung) ? besetzung : null,
+    parteien: rubrumFeldPlausibel('parteien', parteien) ? parteien : null,
+    gegenstand: rubrumFeldPlausibel('gegenstand', gegenstand) ? gegenstand : null,
+    vorinstanz: rubrumFeldPlausibel('vorinstanz', vorinstanz) ? vorinstanz : null,
+  };
+  if (!rubrum.besetzung && !rubrum.parteien && !rubrum.gegenstand && !rubrum.vorinstanz) return null;
+  return rubrum;
 }
 
 /**

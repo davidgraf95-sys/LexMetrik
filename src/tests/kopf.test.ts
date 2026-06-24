@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { kopfModell } from '../lib/rechtsprechung/kopf';
 import { synthThema } from '../lib/rechtsprechung/browse';
-import { normalisiereRegeste, kuerzeRegeste } from '../lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidRubrum } from '../lib/rechtsprechung/typen';
 
 // Minimaler Snapshot-Bauer (nur kopf-relevante Felder gesetzt; Rest plausibel befüllt).
@@ -24,22 +23,30 @@ function mk(over: Partial<EntscheidSnapshot> = {}): EntscheidSnapshot {
 function rub(over: Partial<EntscheidRubrum>): EntscheidRubrum {
   return { besetzung: null, parteien: null, gegenstand: null, vorinstanz: null, ...over };
 }
+const regeste = (text: string) => ({ text, quelle: 'opencaselaw' as const });
 
-describe('kopfModell — Rubrum-Zeilen', () => {
+describe('kopfModell — Rubrum-Zeilen (nur plausible, feste Reihenfolge)', () => {
   it('zeigt nur befüllte Felder in fester Reihenfolge Gegenstand→Parteien→Vorinstanz→Besetzung', () => {
-    const k = kopfModell(mk({ rubrum: rub({ besetzung: 'Bovey', parteien: 'A. gegen B.', gegenstand: 'Konkurs', vorinstanz: 'OG AR' }) }));
+    const k = kopfModell(mk({ rubrum: rub({ besetzung: 'Bundesrichter Bovey', parteien: 'A. gegen B.', gegenstand: 'Konkurseröffnung', vorinstanz: 'Obergericht AR' }) }));
     expect(k.rubrumZeilen.map((z) => z.label)).toEqual(['gegenstand', 'parteien', 'vorinstanz', 'besetzung']);
   });
 
-  it('lässt leere und reine Whitespace-Felder weg (kein leeres "—", §8)', () => {
+  it('lässt leere/Whitespace-Felder weg (kein leeres „—", §8)', () => {
     const k = kopfModell(mk({ rubrum: rub({ parteien: '   ', vorinstanz: 'Obergericht ZH' }) }));
     expect(k.rubrumZeilen.map((z) => z.label)).toEqual(['vorinstanz']);
     expect(k.rubrumZeilen[0].wert).toBe('Obergericht ZH');
   });
 
   it('trimmt die Werte', () => {
-    const k = kopfModell(mk({ rubrum: rub({ gegenstand: '  Konkurseröffnung  ' }) }));
-    expect(k.rubrumZeilen[0].wert).toBe('Konkurseröffnung');
+    expect(kopfModell(mk({ rubrum: rub({ gegenstand: '  Konkurseröffnung  ' }) })).rubrumZeilen[0].wert).toBe('Konkurseröffnung');
+  });
+
+  it('verwirft erkennbar fragmentarische Werte (Erwägungs-Falsch-Positive, §1)', () => {
+    const k = kopfModell(mk({ rubrum: rub({
+      gegenstand: 'd.h. die Frage, ob der Schuldner zu neuem Vermögen gekommen ist (BGE 131 I 24 E. 2.2)',
+      parteien: 'die Dauer des Arbeitsverhältnisses, das Alter der Person',
+    }) }));
+    expect(k.rubrumZeilen).toEqual([]);
   });
 
   it('rubrum=null ⇒ keine Rubrum-Zeilen', () => {
@@ -47,62 +54,39 @@ describe('kopfModell — Rubrum-Zeilen', () => {
   });
 });
 
-describe('kopfModell — Thema-Leitzeile (genau EINE Thema-Aussage)', () => {
-  it('Gegenstand vorhanden ⇒ keine Leitzeile (Gegenstand führt die Rubrum-Zeilen)', () => {
-    const k = kopfModell(mk({ rubrum: rub({ gegenstand: 'Konkurseröffnung' }), regesteAmtlich: true, regeste: { text: 'Regeste …', quelle: 'opencaselaw' } }));
-    expect(k.leitzeile).toBeNull();
-    expect(k.leitIstSynth).toBe(false);
+describe('kopfModell — Thema-Leitzeile (keine Dopplung mit Regeste/Gegenstand)', () => {
+  it('Gegenstand vorhanden ⇒ keine Leitzeile (Gegenstand trägt das Thema)', () => {
+    expect(kopfModell(mk({ rubrum: rub({ gegenstand: 'Konkurseröffnung' }) })).leitzeile).toBeNull();
   });
 
-  it('kein Gegenstand + amtliche Regeste ⇒ gekürzte Regeste als Leitzeile (nicht Synthese)', () => {
-    const text = 'Art. 88 SchKG; Fristenstillstand. Während des Verfahrens steht die Frist still.';
-    const k = kopfModell(mk({ rubrum: rub({ parteien: 'A. gegen B.' }), regesteAmtlich: true, regeste: { text, quelle: 'opencaselaw' } }));
-    expect(k.leitIstSynth).toBe(false);
-    expect(k.leitzeile).toBe(kuerzeRegeste(normalisiereRegeste(text), 160));
-    // Nur befüllte Rubrum-Zeile bleibt erhalten (Parteien), aber Gegenstand fehlt → Leitzeile trägt das Thema.
-    expect(k.rubrumZeilen.map((z) => z.label)).toEqual(['parteien']);
+  it('Regeste vorhanden (amtlich) ⇒ keine Leitzeile (Regeste-Box trägt das Thema)', () => {
+    expect(kopfModell(mk({ regesteAmtlich: true, regeste: regeste('Art. 88 SchKG; Fristenstillstand.') })).leitzeile).toBeNull();
   });
 
-  it('kein Gegenstand + keine amtliche Regeste ⇒ Synthese als Leitzeile + Marker-Flag', () => {
-    const snap = mk({ rubrum: rub({ vorinstanz: 'Kantonsgericht' }), regesteAmtlich: false, regeste: null, normKeys: ['OR-336'] });
-    const k = kopfModell(snap);
-    expect(k.leitIstSynth).toBe(true);
-    expect(k.leitzeile).toBe(synthThema(snap));
+  it('Regeste vorhanden (nicht amtlich/Zusammenfassung) ⇒ ebenfalls keine Leitzeile (Box zeigt sie)', () => {
+    expect(kopfModell(mk({ regesteAmtlich: false, regeste: regeste('Maschinelle Zusammenfassung.') })).leitzeile).toBeNull();
   });
 
-  it('regesteAmtlich=false trotz vorhandener regeste ⇒ Synthese (nur amtliche Regeste als Leitzeile)', () => {
-    const snap = mk({ regesteAmtlich: false, regeste: { text: 'maschinelle Zusammenfassung', quelle: 'opencaselaw' } });
-    const k = kopfModell(snap);
-    expect(k.leitIstSynth).toBe(true);
-    expect(k.leitzeile).toBe(synthThema(snap));
+  it('weder Gegenstand noch Regeste ⇒ abgeleitete synthThema-Leitzeile', () => {
+    const snap = mk({ rubrum: rub({ vorinstanz: 'Kantonsgericht' }), regeste: null, normKeys: ['OR-336'] });
+    expect(kopfModell(snap).leitzeile).toBe(synthThema(snap));
+    // Vorinstanz-Zeile bleibt erhalten; die Leitzeile trägt zusätzlich das Sachgebiet.
+    expect(kopfModell(snap).rubrumZeilen.map((z) => z.label)).toEqual(['vorinstanz']);
   });
 });
 
-describe('kopfModell — Invariante: immer genau eine Thema-Aussage', () => {
+describe('kopfModell — Invariante: genau eine Thema-Aussage, nie doppelt', () => {
   for (const gegenstand of [null, 'Konkurseröffnung']) {
-    for (const amtlich of [false, true]) {
-      it(`Gegenstand=${!!gegenstand} amtlicheRegeste=${amtlich}: leitzeile XOR Gegenstand`, () => {
+    for (const hatRegeste of [false, true]) {
+      it(`Gegenstand=${!!gegenstand} Regeste=${hatRegeste}: Leitzeile nur ohne beide`, () => {
         const k = kopfModell(mk({
           rubrum: rub({ gegenstand }),
-          regesteAmtlich: amtlich,
-          regeste: amtlich ? { text: 'Eine Regeste zum Thema.', quelle: 'opencaselaw' } : null,
+          regeste: hatRegeste ? regeste('Eine Regeste zum Thema.') : null,
         }));
         const hatGegenstand = k.rubrumZeilen.some((z) => z.label === 'gegenstand');
-        // Entweder führt der Gegenstand (dann keine Leitzeile) oder es gibt genau eine Leitzeile.
-        expect(hatGegenstand ? k.leitzeile === null : k.leitzeile !== null).toBe(true);
+        // Leitzeile ist genau dann gesetzt, wenn weder Gegenstand noch Regeste das Thema tragen.
+        expect(k.leitzeile !== null).toBe(!hatGegenstand && !hatRegeste);
       });
     }
   }
-});
-
-describe('kopfModell — Kürzung erfindet nichts (§8)', () => {
-  it('langer Mehrsatz-Regestetext wird gekürzt; jedes Wort stammt aus dem Original', () => {
-    const text = 'Art. 8 ZGB. ' + 'Dies ist ein sehr langer Regestentext, der ganz bewusst die Maximallänge überschreitet, '.repeat(4);
-    const k = kopfModell(mk({ regesteAmtlich: true, regeste: { text, quelle: 'opencaselaw' } }));
-    expect(k.leitzeile).not.toBeNull();
-    expect(k.leitzeile!.length).toBeLessThanOrEqual(160);
-    // Kürzung = reine Teilkette (ggf. + Ellipse) der normalisierten Regeste — kein hinzugefügtes Wort.
-    const basis = normalisiereRegeste(text).replace(/\s+/g, ' ');
-    expect(basis.startsWith(k.leitzeile!.replace(/…$/, '').trimEnd())).toBe(true);
-  });
 });

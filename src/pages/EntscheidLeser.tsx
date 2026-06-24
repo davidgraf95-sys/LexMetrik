@@ -166,17 +166,13 @@ function EntscheidLeserInhalt({ schluessel }: { schluessel: string }) {
         {/* 2 Zitierung = Identitäts-Anker (stets, prominent) */}
         <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900 num">{snap.zitierung}</h1>
 
-        {/* 3 Thema-Leitzeile — nur wenn kein Rubrum-Gegenstand führt (kopf.ts entscheidet,
-            §3/§5). Amtliche Regeste in Serif/ink-900; abgeleitete Synthese nüchtern +
-            ehrlicher Marker (§8). So trägt JEDER Kopf genau eine Thema-Aussage. */}
+        {/* 3 Abgeleitete Sachgebiets-Leitzeile — nur wenn weder ein Rubrum-Gegenstand
+            noch die Regeste-Box das Thema trägt (kopf.ts entscheidet, §3/§5). Nüchtern +
+            ehrlicher Marker, dass sie aus der Struktur abgeleitet ist (§8). */}
         {kopf.leitzeile && (
           <div className="space-y-0.5">
-            <p className={`text-body-s leading-snug ${kopf.leitIstSynth ? 'text-ink-700' : 'font-serif text-ink-900'}`}>
-              {kopf.leitzeile}
-            </p>
-            {kopf.leitIstSynth && (
-              <p className="text-micro italic text-ink-400">{SYNTH_MARKER[snap.sprache]}</p>
-            )}
+            <p className="text-body-s leading-snug text-ink-700">{kopf.leitzeile}</p>
+            <p className="text-micro italic text-ink-400">{SYNTH_MARKER[snap.sprache]}</p>
           </div>
         )}
 
