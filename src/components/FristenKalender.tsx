@@ -19,10 +19,19 @@ const WTAGE = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
 type Props = {
   ereignisISO: string;
-  aQuoISO: string;
+  // aQuoISO (erster mitzählender Tag) optional: der Schnellrechner/Startseiten-
+  // Kalender kennt ihn nur im «keine Ferien»-Regime. Fehlt er, spannt das Band
+  // vom Ereignistag zum Fristende und es gibt keinen Fristbeginn-Marker.
+  aQuoISO?: string;
   adQuemISO: string;
   kanton: Kanton;
   stillstandAktiv: boolean;
+  // Explizite Stillstand-Perioden (regimeneutral, ISO inkl.): wenn gesetzt,
+  // ersetzen sie die interne ZPO-Gerichtsferien-Berechnung — so kann der
+  // Startseiten-Kalender SchKG-/andere Ferienregimes korrekt schraffieren.
+  // Fehlt der Prop, gilt unverändert die ZPO-interne Berechnung (Default für
+  // die sechs Fristen-Formulare — byte-gleiches Verhalten).
+  stillstandPerioden?: { vonISO: string; bisISO: string }[];
   feiertage?: boolean;                 // Sa/So/Feiertage abschwächen (default true)
   // band: Beschriftung der Messing-Fläche in der Legende — Standard
   // «laufende Frist»; abweichend, wo das Band keine Frist ist (z. B.
@@ -36,35 +45,44 @@ const fmtDatum = (d: Date) => `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYea
 
 type BandStatus = 'frist' | 'still' | null;
 
-export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, stillstandAktiv, feiertage = true, labels }: Props) {
+export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, stillstandAktiv, stillstandPerioden, feiertage = true, labels }: Props) {
   const L = labels ?? { ereignis: 'Ereignistag', aquo: 'Fristbeginn', adquem: 'Fristende' };
   const ereignis = parseISO(ereignisISO);
-  const aQuo = parseISO(aQuoISO);
+  const aQuo = aQuoISO ? parseISO(aQuoISO) : null;
   const adQuem = parseISO(adQuemISO);
 
   // Nur die Schlüssel-Monate zeigen (Ereignis / Fristbeginn / Fristende), dedupliziert.
-  const keys = Array.from(new Set([monatKey(ereignis), monatKey(aQuo), monatKey(adQuem)])).sort((a, b) => a - b);
+  const keys = Array.from(new Set([monatKey(ereignis), ...(aQuo ? [monatKey(aQuo)] : []), monatKey(adQuem)])).sort((a, b) => a - b);
   const monate = keys.map((k) => new Date(Math.floor(k / 12), k % 12, 1));
   const luecken = keys.length > 1 && keys.some((k, i) => i > 0 && k - keys[i - 1] > 1);
 
-  const fristStart = aQuo < adQuem ? aQuo : adQuem;
-  const fristEnde = aQuo < adQuem ? adQuem : aQuo;
+  // Bandrand = Fristbeginn (sofern bekannt), sonst der Ereignistag.
+  const bandRand = aQuo ?? ereignis;
+  const fristStart = bandRand < adQuem ? bandRand : adQuem;
+  const fristEnde = bandRand < adQuem ? adQuem : bandRand;
+
+  // Stillstand: explizite Perioden (regimeneutral) haben Vorrang; sonst die
+  // interne ZPO-Berechnung wie bisher (Default für die Fristen-Formulare).
+  const istStill = (d: Date): boolean =>
+    stillstandPerioden
+      ? stillstandPerioden.some((p) => isWithinInterval(d, { start: parseISO(p.vonISO), end: parseISO(p.bisISO) }))
+      : stillstandAktiv && stillstandsperiodeFuer(d) !== null;
 
   // Legende erklärt nur, was in den GEZEIGTEN Monaten wirklich vorkommt
   // (§8): der Stillstand kann ganz in einem ausgelassenen Zwischenmonat
   // liegen (z. B. Ostern zwischen Fristbeginn März und Fristende Mai) —
   // dann entfällt der Schraffur-Eintrag, statt Unsichtbares zu erklären.
-  const stillstandSichtbar = stillstandAktiv && monate.some((monat) => {
+  const stillstandSichtbar = monate.some((monat) => {
     const tage = new Date(monat.getFullYear(), monat.getMonth() + 1, 0).getDate();
     for (let t = 1; t <= tage; t++) {
-      if (stillstandsperiodeFuer(new Date(monat.getFullYear(), monat.getMonth(), t)) !== null) return true;
+      if (istStill(new Date(monat.getFullYear(), monat.getMonth(), t))) return true;
     }
     return false;
   });
 
   // Band-Ebene: laufende Frist (Messing) bzw. Gerichtsstillstand (Schraffur)
   const bandStatus = (d: Date): BandStatus => {
-    if (stillstandAktiv && stillstandsperiodeFuer(d) !== null) return 'still';
+    if (istStill(d)) return 'still';
     if (isWithinInterval(d, { start: fristStart, end: fristEnde })) return 'frist';
     return null;
   };
@@ -110,7 +128,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   {zellen.map((d, i) => {
                     if (!d) return <div key={i} />;
                     const isEreignis = isSameDay(d, ereignis);
-                    const isAQuo = isSameDay(d, aQuo);
+                    const isAQuo = aQuo ? isSameDay(d, aQuo) : false;
                     const isAdQuem = isSameDay(d, adQuem);
                     const frei = feiertage && istArbeitsfreierTag(d, kanton);
                     const band = bandStatus(d);
@@ -153,7 +171,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
       {/* Textgleichwertige Zusammenfassung für Screenreader (die Matrix oben
           ist aria-hidden). Datum deterministisch, keine Logik. */}
       <p className="sr-only">
-        {`Fristenlauf: ${L.ereignis} am ${fmtDatum(ereignis)}, ${L.aquo} am ${fmtDatum(aQuo)}, ${L.adquem} am ${fmtDatum(adQuem)}.${stillstandSichtbar ? ' Im Zeitraum liegt ein Gerichtsstillstand.' : ''}`}
+        {`Fristenlauf: ${L.ereignis} am ${fmtDatum(ereignis)}, ${aQuo ? `${L.aquo} am ${fmtDatum(aQuo)}, ` : ''}${L.adquem} am ${fmtDatum(adQuem)}.${stillstandSichtbar ? ' Im Zeitraum liegt ein Gerichtsstillstand.' : ''}`}
       </p>
 
       {luecken && <p className="text-body-s text-ink-500 mt-3 italic">Dazwischenliegende Monate sind nicht dargestellt.</p>}
@@ -166,7 +184,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4 pt-3 border-t border-line text-body-s text-ink-700">
         <span className="lc-overline text-ink-500">Legende</span>
         {ereignisISO !== aQuoISO && <Legende kreis="border-2 border-ink-900 bg-paper-raised" label={L.ereignis} />}
-        <Legende kreis="bg-brass-500" label={L.aquo} />
+        {aQuoISO && <Legende kreis="bg-brass-500" label={L.aquo} />}
         <Legende kreis="bg-sage-500 lc-termin-ring" label={L.adquem} />
         <span aria-hidden className="hidden sm:inline-block h-4 w-px bg-line" />
         <Legende band="bg-brass-100" label={L.band ?? 'laufende Frist'} />
