@@ -22,6 +22,16 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 24.6.2026 (abends) — Fristen-Schnellrechner, Scroll-Erhalt, Rechtsprechungs-Bezeichnung, Gesetz-Suche/-Einzug & Navigation (in `main`, PROD-DEPLOY)
+
+Auftrag David (Live-Review, rapid-fire): mehrere UI-Punkte. Isolierter Worktree (§12) auf `78614d2`. Gate grün (golden byte-gleich), **adversarialer Bug-Check auf OPUS** (Daueranweisung) — fand 3 MAJOR an der Leitsatz-Extraktion (alle gefixt + gegen alle 271 echten Regesten validiert) + MINOR-Politur. Playwright-verifiziert.
+- **(C) Startseite-Fristen-Schnellrechner** (`EinfacheFristForm`/`FristenKalender`/`Schnellrechner`): Kalender für ALLE Ferien-/Stillstand-Regimes sichtbar (FristMarkierung Start+Ende ISO je Engine), nicht mehr nur „keine Ferien"; Kacheln Datum/Frist/Einheit/Kanton via `items-end` gleiche Höhe; Datum default heute (App hydratisiert nicht → render-then-replace), Ferien default ZPO. Reine Darstellung/Komposition (§3).
+- **(I) Scroll-Erhalt beim Tab-/Routenwechsel** (`App.tsx` `ScrollWiederherstellung` ersetzt `ScrollToTop`): Position je Pfad gemerkt+wiederhergestellt (langer Reader→zurück landet an der Stelle); neue Pfade weiter oben; `scrollRestoration='manual'`, Listener während Restore/auf Anker-Routen stillgelegt; Anker via `ScrollZuHash`.
+- **(Übersicht) Bezeichnung führt mit dem Leitsatz** (`browse.ts` `regesteLeitsatz`): Artikel-Block der Regeste gestrippt (Semikolon-Segmente + Punkt-nach-Gesetzeskürzel, abkürzungs-feste Satzerkennung, Grossschreibung), bei Zweifel ehrlich die VOLLE Regeste statt Fragment (§8). `EntscheidZeile` thema-führend, BGE-Nr rechts, Datum links, klickbare Normen. **3 Bug-Check-MAJORs gefixt** (Abkürzungs-Schnitt/Norm-only/Krümel).
+- **(J) Gesetz-Suche oberhalb der Gliederung** (`GesetzLeser`): „Im Gesetz suchen" als volle Leiste über das 2-Spalten-Raster, sticky unter Header UND Reiter-Streifen (`--tabstreifen-h`).
+- **(K) Reiter nur bei konkretem Inhalt** (`TabTracker`): Tab öffnet nur bei `/(rechner|vorlagen|gesetze|rechtsprechung)/<item>`, nicht bei Übersichts-/Seitenleisten-Klicks. **(L)** Seitenleiste „Bund"/„Kantone" navigieren direkt zur Gesetze-Übersicht (`navigation.ts`/`Sidebar.tsx`; Chevron klappt weiter auf).
+- **(M) Absatzloser Artikel wird wie ein Absatz eingerückt** (`GesetzLeser`/`ArtikelLeser`): Artikel mit nur einem unnummerierten Absatz erhalten denselben Einzug wie nummerierte Absätze (einheitliches Schriftbild).
+
 ## Session 24.6.2026 — TEIL B + Rechtsprechungs-UI-Welle: Live-Suche, Sachverhalt-Gliederung, Lesemodus (ultracode, in `main`, PROD-DEPLOY)
 
 Auftrag David (Live-Review, rapid-fire): entscheidsuche nutzbar machen (Teil B) + Sachverhalt „aufteilen" + diverse Reader-/Listen-Verbesserungen. Isolierter Worktree (§12) auf `eaff07c`. Gate grün (golden byte-gleich), **adversarialer Bug-Check auf OPUS** (Daueranweisung David: immer bestes Modell — der erste Lauf auf Haiku übersah den MAJOR), Playwright hell/dunkel/desktop/mobil 0 Konsolenfehler.

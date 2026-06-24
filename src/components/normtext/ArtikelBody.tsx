@@ -282,10 +282,6 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
   // Im Lesefluss zitierte Normen/Urteile klickbar machen (D2); sonst Klartext.
   const verlinkt = (s: string) => (autolink ? <NormText text={s} intern={intern} /> : s);
   const zk = zitierKontext;
-  // Linke Rinne (pl-9) nur reservieren, wenn der Artikel überhaupt Absatznummern
-  // trägt. Sonst (einziger Absatz ohne Nummer, z. B. ZGB Art. 12) entstünde ein
-  // hängender Einzug mit leerer Rinne — der Text soll dann bündig stehen (§3).
-  const hatAbsatzNummern = bloecke.some((b) => absatzMarke(b.absatz, b.text).marke != null);
 
   return (
     <div data-lese={zitierKontext ? '' : undefined}
@@ -313,8 +309,10 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             }${zitierKontext ? ' rounded -mx-2 px-2 origin-left relative z-0 transition duration-200 will-change-transform hover:z-10 hover:scale-[1.012] hover:bg-brass-50/60' : ''}`}
           >
             {/* Lesesicht: Absatznummer als hängender, vollwertiger Messing-Marker
-                in der linken Rinne (Hanging Indent); Popover: hochgestellt wie bisher. */}
-            <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : (hatAbsatzNummern ? 'pl-9' : undefined)) : undefined}>
+                in der linken Rinne (Hanging Indent). Auch ein absatzloser Artikel wird
+                eingerückt (pl-9) — Auftrag David: einheitliches Schriftbild, als hätte er
+                einen Absatz. Popover (kein zk): hochgestellt/bündig wie bisher (golden §6). */}
+            <p className={zk ? (absMarke != null ? 'pl-9 -indent-9' : 'pl-9') : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="mr-3 !font-medium !text-ink-400" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`}>{absMarke}</ZitierMarke>
