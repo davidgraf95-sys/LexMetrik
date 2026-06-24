@@ -29,9 +29,9 @@ const TABS: { id: Tab; label: string }[] = [
 // volle Notariats-/Grundbuchrechner ist verlinkt («auf richtigen verweisen»).
 type GebuehrenArt = 'prozess' | 'betreibung' | 'grundstueck';
 const GEBUEHREN: { id: GebuehrenArt; kurz: string; href: string; rechner: string; was: string }[] = [
-  { id: 'prozess', kurz: 'Prozesskosten', href: '/rechner/prozesskosten', rechner: 'Prozesskostenrechner', was: 'Modifikatoren, Vorschuss, Kostenrisiko, Rechenweg' },
+  { id: 'prozess', kurz: 'Prozess', href: '/rechner/prozesskosten', rechner: 'Prozesskostenrechner', was: 'Modifikatoren, Vorschuss, Kostenrisiko, Rechenweg' },
   { id: 'betreibung', kurz: 'Betreibung', href: '/rechner/betreibungskosten', rechner: 'Betreibungskostenrechner', was: 'alle Gebührenarten, Rechenweg' },
-  { id: 'grundstueck', kurz: 'Grundstückkauf', href: '/rechner/notariat-grundbuch', rechner: 'Notariats-/Grundbuchrechner', was: 'Grundpfand, Handänderungssteuer, interkantonaler Vergleich, PDF' },
+  { id: 'grundstueck', kurz: 'Grundstück', href: '/rechner/notariat-grundbuch', rechner: 'Notariats-/Grundbuchrechner', was: 'Grundpfand, Handänderungssteuer, interkantonaler Vergleich, PDF' },
 ];
 
 // Ausführlicher Verweis auf den jeweiligen Voll-Rechner (Auftrag David).
