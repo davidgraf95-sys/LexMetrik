@@ -5,6 +5,7 @@ import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { RouteMeta } from './components/RouteMeta';
 import { VerlaufTracker } from './components/VerlaufTracker';
+import { TabTracker } from './components/TabTracker';
 import { ROUTEN_MANIFEST } from './routesManifest';
 import { lazyRetry } from './lazyRetry';
 
@@ -97,6 +98,8 @@ export default function App() {
       <RouteMeta />
       {/* Merkt besuchte Routen für die «Weiter wo du warst»-Schiene der Startseite */}
       <VerlaufTracker />
+      {/* Öffnet je Inhalts-Route einen Reiter im In-App-Tab-Streifen */}
+      <TabTracker />
       {/* key={pathname}: ein aufgefangener Fehler (z. B. einmal fehlgeschlagener
           Lazy-Chunk) setzt sich beim nächsten Seitenwechsel von selbst zurück —
           sonst bliebe die Fehlanzeige bis zum manuellen Neuladen stehen. */}

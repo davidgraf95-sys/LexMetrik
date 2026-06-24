@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation } from 'react-router-dom';
 import { Topbar } from './Topbar';
+import { TabStreifen } from './TabStreifen';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 import { useLocale } from '../locale';
@@ -112,6 +113,10 @@ export function Shell({ children }: { children: ReactNode }) {
             seitenleisteEingeklappt={seitenleiste.eingeklappt}
             onSeitenleisteUmschalten={seitenleiste.umschalten}
           />
+
+          {/* In-App-Reiter-Streifen: nur sichtbar ab 2 offenen Reitern
+              (sonst null → Optik/prerender byte-gleich). */}
+          <TabStreifen />
 
           {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück. */}
           {locale !== 'de' && (
