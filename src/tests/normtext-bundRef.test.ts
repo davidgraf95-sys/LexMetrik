@@ -40,12 +40,33 @@ describe('bundSnapshotRef', () => {
     expect('ziff' in r!).toBe(false);
   });
 
-  it('unbekanntes Gesetz → null', () => {
-    expect(bundSnapshotRef('Art. 8 ATSG')).toBeNull();
+  it('Gesetz ohne FEDLEX-Eintrag (echt unbekannt) → null', () => {
+    // 'ZZG' o.ä. existiert nicht in FEDLEX → erkenneFedlexGesetz liefert null.
+    expect(bundSnapshotRef('Art. 8 ZZG')).toBeNull();
   });
 
   it('kein Artikel im Text → null', () => {
     expect(bundSnapshotRef('siehe oben OR')).toBeNull();
+  });
+
+  // ── SNAPSHOT_QUELLE wird seit 25.6.2026 aus dem ERLASS_REGISTER abgeleitet
+  //    (SSoT §5). Damit sind ALLE Bund-Volltext-Snapshots im Inline-Popover
+  //    erreichbar — vorher fehlten 34 in der Handtabelle (u.a. ATSG/BV/DBG/KG),
+  //    deren Popover stumm auf den Live-Link zurückfiel (Ultracode-Review).
+  //    Deklarierte fachliche Änderung (§6.3): diese Erlasse lösen jetzt auf. ──
+  it('ATSG (vormals ungemappt) löst jetzt auf', () => {
+    expect(bundSnapshotRef('Art. 8 ATSG')).toEqual({ quelle: 'ATSG', token: '8', absatz: null });
+  });
+
+  it('BV (vormals ungemappt) löst jetzt auf', () => {
+    expect(bundSnapshotRef('Art. 8 BV')).toEqual({ quelle: 'BV', token: '8', absatz: null });
+  });
+
+  it('nur-live-link-Stub bleibt null (kein FEDLEX-Eintrag → kein Popover)', () => {
+    // Stubs (BUND_STUBS, z.B. MStG) stehen NICHT in FEDLEX → erkenneFedlexGesetz
+    // liefert null → bundSnapshotRef null. Nur Volltext-Erlasse (FEDLEX + Snapshot
+    // im Register) sind im abgeleiteten Map → Live-Link bleibt für Stubs.
+    expect(bundSnapshotRef('Art. 1 MStG')).toBeNull();
   });
 
   // StGB/StG erschlossen (16.6.2026): FEDLEX-Key → Snapshot-quelle gemappt.

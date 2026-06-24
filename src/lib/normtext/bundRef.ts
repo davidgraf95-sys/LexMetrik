@@ -10,46 +10,24 @@
 
 import { erkenneFedlexGesetz, type FedlexGesetz } from '../fedlex';
 import { parsePassus } from './passus';
+import { ERLASS_REGISTER } from './register';
 
 // FEDLEX-Key → Snapshot-quelle (Dateiname public/normtext/bund/<QUELLE>.json).
-// Nur hier gepflegt; nicht jeder FEDLEX-Key hat einen Snapshot (dann nicht
-// gelistet → kein Popover, Live-Link bleibt).
-const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
-  OR: 'OR',
-  ZGB: 'ZGB',
-  ZPO: 'ZPO',
-  SchKG: 'SCHKG',
-  ArG: 'ARG',
-  VMWG: 'VMWG',
-  StPO: 'STPO',
-  VwVG: 'VWVG',
-  GebVSchKG: 'GEBV_SCHKG',
-  BGG: 'BGG',
-  BGerR: 'BGERR',
-  VVG: 'VVG',
-  HRegV: 'HREGV',
-  KVG: 'KVG',
-  KVV: 'KVV',
-  StGB: 'STGB',
-  StG: 'STG',
-  GebVHReg: 'GEBV_HREG',
-  // Erweiterung 17.6.2026 (jedes zitierte Bundesgesetz mit Volltext-Snapshot).
-  MWSTG: 'MWSTG',
-  URG: 'URG',
-  BewG: 'BEWG',
-  EOG: 'EOG',
-  SVG: 'SVG',
-  DSG: 'DSG',
-  BBG: 'BBG',
-  GBV: 'GBV',
-  JStPO: 'JSTPO',
-  // Punkt 12 Batch 1 (24.6.2026): Bund-Gesetze aus Davids Bookmark-Liste.
-  BUEG: 'BUEG', BGOE: 'BGOE', BPR: 'BPR', VG: 'VG', PUBLG: 'PUBLG',
-  PARLG: 'PARLG', RVOG: 'RVOG', BOEB: 'BOEB', BPG: 'BPG', STBOG: 'STBOG',
-  DESG: 'DESG', OHG: 'OHG', NHG: 'NHG', ENTG: 'ENTG', GSCHG: 'GSCHG',
-  ENTSG: 'ENTSG', ELG: 'ELG', FZG: 'FZG', WAG: 'WAG', PUEG: 'PUEG',
-  FIDLEG: 'FIDLEG', KAG: 'KAG', FINIG: 'FINIG', FINFRAG: 'FINFRAG', VAG: 'VAG',
-};
+//
+// ABGELEITET aus dem ERLASS_REGISTER (SSoT §5): die Beziehung FEDLEX-Key →
+// Snapshot-Dateistamm ist genau `fedlexKey → key` jedes Bund-Eintrags mit
+// status 'snapshot'. Früher als 52-zeilige Handtabelle gepflegt — die driftete
+// (Ultracode-Review 25.6.2026 fand 34 Volltext-Snapshots, deren Inline-Popover
+// stumm auf den Live-Link zurückfiel, obwohl der Volltext lokal vorlag, weil
+// der Tabellen-Eintrag beim Promovieren vergessen wurde). Die Ableitung kann
+// nicht mehr driften: jeder im Register als Snapshot geführte Erlass ist im
+// Popover erreichbar. Nicht jeder FEDLEX-Key hat einen Snapshot (Stub → nicht
+// im Map → kein Popover, Live-Link bleibt).
+const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = Object.fromEntries(
+  ERLASS_REGISTER
+    .filter((r) => r.ebene === 'bund' && r.status === 'snapshot' && r.fedlexKey)
+    .map((r) => [r.fedlexKey as FedlexGesetz, r.key]),
+) as Partial<Record<FedlexGesetz, string>>;
 
 export function bundSnapshotRef(
   zitat: string,
