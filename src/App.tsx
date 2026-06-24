@@ -102,7 +102,13 @@ function ScrollWiederherstellung() {
       window.scrollTo({ top: ziel, left: 0, behavior: 'instant' as ScrollBehavior });
       const erreicht = Math.abs(window.scrollY - ziel) <= 2;
       const hoehe = document.documentElement.scrollHeight;
-      stabil = hoehe === letzteHoehe ? stabil + 1 : 0;
+      // «stabil» NUR zählen, wenn überhaupt genug Inhalt da ist. Sonst löst die
+      // stabile, aber noch KURZE Höhe der Ladephase (der Reader fetcht das
+      // Normtext-JSON erst NACH dem Mount) den Abbruch aus, bevor der Inhalt da
+      // ist → man landet oben (Bug David). Erst nach dem Laden gilt eine stabile
+      // Höhe als «Seite fertig, Ziel ggf. echt unerreichbar».
+      const geladen = hoehe > window.innerHeight * 1.5;
+      stabil = (geladen && hoehe === letzteHoehe) ? stabil + 1 : 0;
       letzteHoehe = hoehe;
       if (!erreicht && frames++ < 360 && stabil < 12) raf = requestAnimationFrame(versuche);
       else wiederherstellend.current = false;
