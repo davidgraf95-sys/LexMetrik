@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  themaText, synthThema, istSynth, normLabel, istBge, hauptIdentitaet,
+  themaText, regesteLeitsatz, synthThema, istSynth, normLabel, istBge, hauptIdentitaet,
   nachRelevanz, nachDatum, nachGericht, sortiere, gruppiereNachLeit,
   zaehleSachgebiete, normHaeufigkeit, filterEntscheide, filterNachNorm,
 } from '../lib/rechtsprechung/browse';
@@ -34,6 +34,21 @@ describe('themaText / synthThema / istSynth', () => {
     const e = be({ regesteKurz: 'Bauhandwerkerpfandrecht', normKeys: ['ZGB'] });
     expect(themaText(e)).toBe('Bauhandwerkerpfandrecht');
     expect(istSynth(e)).toBe(false);
+  });
+  it('regesteLeitsatz strippt den vorangestellten Artikel-Block', () => {
+    expect(regesteLeitsatz('Art. 88 Abs. 2, Art. 265a Abs. 1 und 4 SchKG; Verfahren betreffend Feststellung neuen Vermögens. Während des Verfahrens steht die Frist still.'))
+      .toBe('Verfahren betreffend Feststellung neuen Vermögens.');
+  });
+  it('regesteLeitsatz überspringt mehrere Artikel-Gruppen', () => {
+    expect(regesteLeitsatz('Art. 16 DBG; Art. 34b BPG; Art. 337c OR; steuerliche Behandlung einer Entschädigung. Die Entschädigung ist steuerbar.'))
+      .toBe('steuerliche Behandlung einer Entschädigung.');
+  });
+  it('regesteLeitsatz lässt einen reinen Schlagwort-Leitsatz unverändert', () => {
+    expect(regesteLeitsatz('Bauhandwerkerpfandrecht')).toBe('Bauhandwerkerpfandrecht');
+  });
+  it('themaText führt mit dem Leitsatz, nicht mit dem Artikel-Block', () => {
+    const e = be({ regesteKurz: 'Art. 8 ZGB; Beweislast bei der Vaterschaft. Der Kläger trägt die Beweislast.', normKeys: ['ZGB'] });
+    expect(themaText(e)).toBe('Beweislast bei der Vaterschaft.');
   });
   it('baut ohne Regeste eine Synth-Zeile aus Gebiet + Gericht + Normen', () => {
     const e = be({ sachgebiet: 'sozial-abgaben', gerichtName: 'Kantonsgericht GR', normKeys: ['ATSG', 'BGG'] });

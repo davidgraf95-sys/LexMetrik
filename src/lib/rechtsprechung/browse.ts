@@ -136,9 +136,31 @@ export function synthThema(e: ThemaFelder): string {
   return `${gebiet} — ${e.gerichtName}, ${jahr(e.datum)}`;
 }
 
-/** Leitelement-Text für Karte und Liste: amtliche Regeste, sonst synthThema. */
+// Eine Norm-Zitat-Segment (Regeste beginnt mit „Art. … Gesetz; Art. …;") —
+// diese Präfix-Segmente trägt der Norm-Chip schon; sie verraten nicht das Thema.
+const NORM_SEGMENT = /^\s*(?:a?Art\.|§|i\.V\.m\.|Ziff\.|lit\.)/;
+
+/**
+ * Leitsatz/Thema einer amtlichen Regeste — die eigentliche Sachaussage, OHNE den
+ * vorangestellten Artikel-Block. Aus „Art. 88 … SchKG; Verfahren betreffend
+ * Feststellung neuen Vermögens … . Während …" wird „Verfahren betreffend
+ * Feststellung neuen Vermögens …". Rein/deterministisch (§3); reine Anzeige, kürzt
+ * nur, erfindet nichts (§8). Greift nichts (kein Leitsatz) → ganze Regeste.
+ */
+export function regesteLeitsatz(regesteKurz: string): string {
+  const segmente = regesteKurz.split(';');
+  let i = 0;
+  while (i < segmente.length && NORM_SEGMENT.test(segmente[i])) i++;
+  const rest = segmente.slice(i).join(';').trim();
+  if (!rest) return regesteKurz.trim();
+  // Leitsatz = bis zum ersten Satzende (Punkt + Leer + Grossbuchstabe, oder Schluss).
+  const m = /^(.*?[.!?])(?:\s+[A-ZÄÖÜ].*)?$/s.exec(rest);
+  return (m ? m[1] : rest).trim();
+}
+
+/** Leitelement-Text für Karte und Liste: Leitsatz der Regeste, sonst synthThema. */
 export function themaText(e: BrowseEntscheid): string {
-  return e.regesteKurz ?? synthThema(e);
+  return e.regesteKurz ? regesteLeitsatz(e.regesteKurz) : synthThema(e);
 }
 
 /** Filter über das Manifest (Client, deterministisch, kein FTS). Leere Werte → kein Filter. */
