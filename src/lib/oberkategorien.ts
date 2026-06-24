@@ -14,19 +14,18 @@ export type OberkategorieId = 'zustaendigkeiten' | 'fristen' | 'gebuehren' | 'vo
 
 export interface Oberkategorie {
   id: OberkategorieId;
-  numeral: 'I' | 'II' | 'III' | 'IV';
   titel: string;
   lede: string;
 }
 
 export const OBERKATEGORIEN: Oberkategorie[] = [
-  { id: 'zustaendigkeiten', numeral: 'I', titel: 'Zuständigkeiten',
+  { id: 'zustaendigkeiten', titel: 'Zuständigkeiten',
     lede: 'Welches Gericht, welche Behörde, welches Rechtsmittel – die Eingangsfrage jedes Mandats.' },
-  { id: 'fristen', numeral: 'II', titel: 'Fristen',
+  { id: 'fristen', titel: 'Fristen',
     lede: 'Prozessuale und materielle Fristen – vom auslösenden Ereignis bis zum letzten Tag, mit Kalender-Export.' },
-  { id: 'gebuehren', numeral: 'III', titel: 'Gebühren & Beträge',
+  { id: 'gebuehren', titel: 'Gebühren & Beträge',
     lede: 'Gebühren, Zinsen, Quoten und Kosten – Franken für Franken hergeleitet.' },
-  { id: 'vorlagen', numeral: 'IV', titel: 'Vorlagen',
+  { id: 'vorlagen', titel: 'Vorlagen',
     lede: 'Verträge, Eingaben, Erklärungen und Dokumentmappen – regelbasiert aufgesetzt, mit ehrlichen Form-Grenzen.' },
 ];
 

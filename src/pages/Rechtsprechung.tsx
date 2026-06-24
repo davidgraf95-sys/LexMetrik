@@ -127,7 +127,7 @@ export function Rechtsprechung() {
   return (
     <div className="space-y-6">
       <SeitenKopf
-        overline="Rubrik VI · Rechtsprechung"
+        overline="Bundesgericht & Kantone"
         titel="Rechtsprechung"
         intro="Kuratierte Auswahl von Entscheiden des Bundesgerichts und kantonaler Gerichte — Leitentscheide und Sachfrage zuerst, verzahnt mit der angewandten Norm. Daten: OpenCaseLaw. Massgeblich bleibt stets die amtliche Fassung."
       />

@@ -416,8 +416,7 @@ export function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategori
           </button>
         )}
         <div className="flex items-baseline gap-4">
-          <h2 id={`register-titel-${kat.id}`} className="flex items-baseline gap-2.5 whitespace-nowrap">
-            <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
+          <h2 id={`register-titel-${kat.id}`} className="whitespace-nowrap">
             <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
           </h2>
           <span aria-hidden className="flex-1 h-px bg-line" />

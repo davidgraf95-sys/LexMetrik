@@ -11,7 +11,6 @@ import { OBERKATEGORIEN, kategorieFuer } from '../lib/oberkategorien';
 describe('Oberkategorien (Register-Primärachse)', () => {
   it('es gibt genau die vier bestellten Kategorien in fester Reihenfolge', () => {
     expect(OBERKATEGORIEN.map((k) => k.id)).toEqual(['zustaendigkeiten', 'fristen', 'gebuehren', 'vorlagen']);
-    expect(OBERKATEGORIEN.map((k) => k.numeral)).toEqual(['I', 'II', 'III', 'IV']);
   });
 
   it('JEDE Katalog-Karte hat eine Kategorie (Werkzeuge explizit zugeordnet)', () => {

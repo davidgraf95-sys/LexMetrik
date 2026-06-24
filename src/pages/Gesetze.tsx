@@ -335,7 +335,7 @@ export function Gesetze() {
   return (
     <div className="space-y-8">
       <SeitenKopf
-        overline="Rubrik V · Gesetze"
+        overline="Bund & Kantone"
         titel="Schweizer Gesetzessammlung"
         intro="Volltext der in LexMetrik verwendeten Bundesgesetze und kantonalen Erlasse — geltende Fassung, mit Stand und amtlichem Live-Link. Massgeblich bleibt stets die amtliche Quelle."
       />
