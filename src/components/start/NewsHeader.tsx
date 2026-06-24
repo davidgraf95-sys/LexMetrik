@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 
@@ -15,7 +15,7 @@ import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
 // abnahmebedürftiger Schritt offen (verifizierter API-Vertrag nötig, §1/§7) —
 // hier NICHT unverifiziert eingebaut, damit nie falsche Entscheiddaten erscheinen.
 
-const MAX = 6;
+const MAX = 12;
 
 /** ISO «YYYY-MM-DD…» → «DD.MM.YYYY» ohne Date-Objekt (deterministisch, SSR-sicher). */
 function deDatum(iso: string): string {
@@ -25,6 +25,17 @@ function deDatum(iso: string): string {
 
 export function NewsHeader() {
   const [news, setNews] = useState<BrowseEntscheid[] | null>(null);
+  const streifenRef = useRef<HTMLDivElement>(null);
+
+  // #9: per Klick durch die Entscheide blättern — scrollt den Streifen um EINE
+  // Karte (deren Breite + gap), in beide Richtungen.
+  const blaettere = (richtung: -1 | 1) => {
+    const el = streifenRef.current;
+    if (!el) return;
+    const karte = el.querySelector('li');
+    const schritt = karte ? (karte as HTMLElement).offsetWidth + 12 : el.clientWidth * 0.8;
+    el.scrollBy({ left: richtung * schritt, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     let lebt = true;
@@ -44,15 +55,28 @@ export function NewsHeader() {
 
   return (
     <section aria-label="Neue Bundesgerichtsentscheide" className="space-y-2">
-      <div className="flex items-baseline justify-between gap-3">
+      <div className="flex items-center justify-between gap-3">
         <span className="lc-overline text-ink-500">Neu aus dem Bundesgericht</span>
-        <Link to="/rechtsprechung" className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline whitespace-nowrap">
-          Alle Entscheide →
-        </Link>
+        <div className="flex items-center gap-2">
+          {/* Durchblättern per Klick (#9) — auf Touch/schmal ist zudem Wischen möglich. */}
+          <div className="hidden sm:flex items-center gap-1" role="group" aria-label="Entscheide durchblättern">
+            <button type="button" onClick={() => blaettere(-1)} aria-label="Vorherige Entscheide"
+              className="flex h-7 w-7 items-center justify-center rounded-md border border-line text-ink-500 transition-colors hover:border-brass-300 hover:text-brass-700">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
+            <button type="button" onClick={() => blaettere(1)} aria-label="Nächste Entscheide"
+              className="flex h-7 w-7 items-center justify-center rounded-md border border-line text-ink-500 transition-colors hover:border-brass-300 hover:text-brass-700">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
+          </div>
+          <Link to="/rechtsprechung" className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline whitespace-nowrap">
+            Alle Entscheide →
+          </Link>
+        </div>
       </div>
       {/* Block-Scrollcontainer (klippt zuverlässig) + w-max-Flex innen — so
           verbreitert der Streifen die Seite nicht (Mobil-Overflow-Tor 390px). */}
-      <div className="overflow-x-auto pb-1.5">
+      <div ref={streifenRef} className="overflow-x-auto pb-1.5">
       <ul className="flex gap-3 w-max max-w-full snap-x snap-mandatory">
         {news.map((e) => (
           <li key={e.key} className="snap-start shrink-0 w-[clamp(12rem,72vw,18rem)]">
